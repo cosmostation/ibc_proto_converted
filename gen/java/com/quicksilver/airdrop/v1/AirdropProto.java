@@ -14,24 +14,3874 @@ public final class AirdropProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * <pre>
+   * Action is used as an enum to denote specific actions or tasks.
+   * </pre>
+   *
+   * Protobuf enum {@code quicksilver.airdrop.v1.Action}
+   */
+  public enum Action
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * Undefined action (per protobuf spec)
+     * </pre>
+     *
+     * <code>ActionUndefined = 0;</code>
+     */
+    ActionUndefined(0),
+    /**
+     * <pre>
+     * Initial claim action
+     * </pre>
+     *
+     * <code>ActionInitialClaim = 1;</code>
+     */
+    ActionInitialClaim(1),
+    /**
+     * <pre>
+     * Deposit tier 1 (e.g. &gt; 5% of base_value)
+     * </pre>
+     *
+     * <code>ActionDepositT1 = 2;</code>
+     */
+    ActionDepositT1(2),
+    /**
+     * <pre>
+     * Deposit tier 2 (e.g. &gt; 10% of base_value)
+     * </pre>
+     *
+     * <code>ActionDepositT2 = 3;</code>
+     */
+    ActionDepositT2(3),
+    /**
+     * <pre>
+     * Deposit tier 3 (e.g. &gt; 15% of base_value)
+     * </pre>
+     *
+     * <code>ActionDepositT3 = 4;</code>
+     */
+    ActionDepositT3(4),
+    /**
+     * <pre>
+     * Deposit tier 4 (e.g. &gt; 22% of base_value)
+     * </pre>
+     *
+     * <code>ActionDepositT4 = 5;</code>
+     */
+    ActionDepositT4(5),
+    /**
+     * <pre>
+     * Deposit tier 5 (e.g. &gt; 30% of base_value)
+     * </pre>
+     *
+     * <code>ActionDepositT5 = 6;</code>
+     */
+    ActionDepositT5(6),
+    /**
+     * <pre>
+     * Active QCK delegation
+     * </pre>
+     *
+     * <code>ActionStakeQCK = 7;</code>
+     */
+    ActionStakeQCK(7),
+    /**
+     * <pre>
+     * Intent is set
+     * </pre>
+     *
+     * <code>ActionSignalIntent = 8;</code>
+     */
+    ActionSignalIntent(8),
+    /**
+     * <pre>
+     * Cast governance vote on QS
+     * </pre>
+     *
+     * <code>ActionQSGov = 9;</code>
+     */
+    ActionQSGov(9),
+    /**
+     * <pre>
+     * Governance By Proxy (GbP): cast vote on remote zone
+     * </pre>
+     *
+     * <code>ActionGbP = 10;</code>
+     */
+    ActionGbP(10),
+    /**
+     * <pre>
+     * Provide liquidity on Osmosis
+     * </pre>
+     *
+     * <code>ActionOsmosis = 11;</code>
+     */
+    ActionOsmosis(11),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * Undefined action (per protobuf spec)
+     * </pre>
+     *
+     * <code>ActionUndefined = 0;</code>
+     */
+    public static final int ActionUndefined_VALUE = 0;
+    /**
+     * <pre>
+     * Initial claim action
+     * </pre>
+     *
+     * <code>ActionInitialClaim = 1;</code>
+     */
+    public static final int ActionInitialClaim_VALUE = 1;
+    /**
+     * <pre>
+     * Deposit tier 1 (e.g. &gt; 5% of base_value)
+     * </pre>
+     *
+     * <code>ActionDepositT1 = 2;</code>
+     */
+    public static final int ActionDepositT1_VALUE = 2;
+    /**
+     * <pre>
+     * Deposit tier 2 (e.g. &gt; 10% of base_value)
+     * </pre>
+     *
+     * <code>ActionDepositT2 = 3;</code>
+     */
+    public static final int ActionDepositT2_VALUE = 3;
+    /**
+     * <pre>
+     * Deposit tier 3 (e.g. &gt; 15% of base_value)
+     * </pre>
+     *
+     * <code>ActionDepositT3 = 4;</code>
+     */
+    public static final int ActionDepositT3_VALUE = 4;
+    /**
+     * <pre>
+     * Deposit tier 4 (e.g. &gt; 22% of base_value)
+     * </pre>
+     *
+     * <code>ActionDepositT4 = 5;</code>
+     */
+    public static final int ActionDepositT4_VALUE = 5;
+    /**
+     * <pre>
+     * Deposit tier 5 (e.g. &gt; 30% of base_value)
+     * </pre>
+     *
+     * <code>ActionDepositT5 = 6;</code>
+     */
+    public static final int ActionDepositT5_VALUE = 6;
+    /**
+     * <pre>
+     * Active QCK delegation
+     * </pre>
+     *
+     * <code>ActionStakeQCK = 7;</code>
+     */
+    public static final int ActionStakeQCK_VALUE = 7;
+    /**
+     * <pre>
+     * Intent is set
+     * </pre>
+     *
+     * <code>ActionSignalIntent = 8;</code>
+     */
+    public static final int ActionSignalIntent_VALUE = 8;
+    /**
+     * <pre>
+     * Cast governance vote on QS
+     * </pre>
+     *
+     * <code>ActionQSGov = 9;</code>
+     */
+    public static final int ActionQSGov_VALUE = 9;
+    /**
+     * <pre>
+     * Governance By Proxy (GbP): cast vote on remote zone
+     * </pre>
+     *
+     * <code>ActionGbP = 10;</code>
+     */
+    public static final int ActionGbP_VALUE = 10;
+    /**
+     * <pre>
+     * Provide liquidity on Osmosis
+     * </pre>
+     *
+     * <code>ActionOsmosis = 11;</code>
+     */
+    public static final int ActionOsmosis_VALUE = 11;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static Action valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static Action forNumber(int value) {
+      switch (value) {
+        case 0: return ActionUndefined;
+        case 1: return ActionInitialClaim;
+        case 2: return ActionDepositT1;
+        case 3: return ActionDepositT2;
+        case 4: return ActionDepositT3;
+        case 5: return ActionDepositT4;
+        case 6: return ActionDepositT5;
+        case 7: return ActionStakeQCK;
+        case 8: return ActionSignalIntent;
+        case 9: return ActionQSGov;
+        case 10: return ActionGbP;
+        case 11: return ActionOsmosis;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<Action>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        Action> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Action>() {
+            public Action findValueByNumber(int number) {
+              return Action.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.quicksilver.airdrop.v1.AirdropProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final Action[] VALUES = values();
+
+    public static Action valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private Action(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:quicksilver.airdrop.v1.Action)
+  }
+
+  /**
+   * <pre>
+   * Status is used as an enum to denote zone status.
+   * </pre>
+   *
+   * Protobuf enum {@code quicksilver.airdrop.v1.Status}
+   */
+  public enum Status
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>StatusUndefined = 0;</code>
+     */
+    StatusUndefined(0),
+    /**
+     * <code>StatusActive = 1;</code>
+     */
+    StatusActive(1),
+    /**
+     * <code>StatusFuture = 2;</code>
+     */
+    StatusFuture(2),
+    /**
+     * <code>StatusExpired = 3;</code>
+     */
+    StatusExpired(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>StatusUndefined = 0;</code>
+     */
+    public static final int StatusUndefined_VALUE = 0;
+    /**
+     * <code>StatusActive = 1;</code>
+     */
+    public static final int StatusActive_VALUE = 1;
+    /**
+     * <code>StatusFuture = 2;</code>
+     */
+    public static final int StatusFuture_VALUE = 2;
+    /**
+     * <code>StatusExpired = 3;</code>
+     */
+    public static final int StatusExpired_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static Status valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static Status forNumber(int value) {
+      switch (value) {
+        case 0: return StatusUndefined;
+        case 1: return StatusActive;
+        case 2: return StatusFuture;
+        case 3: return StatusExpired;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<Status>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        Status> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Status>() {
+            public Status findValueByNumber(int number) {
+              return Status.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.quicksilver.airdrop.v1.AirdropProto.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final Status[] VALUES = values();
+
+    public static Status valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private Status(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:quicksilver.airdrop.v1.Status)
+  }
+
+  public interface ZoneDropOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.airdrop.v1.ZoneDrop)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The chainId.
+     */
+    java.lang.String getChainId();
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The bytes for chainId.
+     */
+    com.google.protobuf.ByteString
+        getChainIdBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    boolean hasStartTime();
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    com.google.protobuf.Timestamp getStartTime();
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the duration field is set.
+     */
+    boolean hasDuration();
+    /**
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The duration.
+     */
+    com.google.protobuf.Duration getDuration();
+    /**
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getDurationOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Duration decay = 4 [json_name = "decay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"decay&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the decay field is set.
+     */
+    boolean hasDecay();
+    /**
+     * <code>.google.protobuf.Duration decay = 4 [json_name = "decay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"decay&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The decay.
+     */
+    com.google.protobuf.Duration getDecay();
+    /**
+     * <code>.google.protobuf.Duration decay = 4 [json_name = "decay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"decay&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getDecayOrBuilder();
+
+    /**
+     * <code>uint64 allocation = 5 [json_name = "allocation"];</code>
+     * @return The allocation.
+     */
+    long getAllocation();
+
+    /**
+     * <code>repeated string actions = 6 [json_name = "actions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return A list containing the actions.
+     */
+    java.util.List<java.lang.String>
+        getActionsList();
+    /**
+     * <code>repeated string actions = 6 [json_name = "actions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The count of actions.
+     */
+    int getActionsCount();
+    /**
+     * <code>repeated string actions = 6 [json_name = "actions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @param index The index of the element to return.
+     * @return The actions at the given index.
+     */
+    java.lang.String getActions(int index);
+    /**
+     * <code>repeated string actions = 6 [json_name = "actions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the actions at the given index.
+     */
+    com.google.protobuf.ByteString
+        getActionsBytes(int index);
+
+    /**
+     * <code>bool is_concluded = 7 [json_name = "isConcluded"];</code>
+     * @return The isConcluded.
+     */
+    boolean getIsConcluded();
+  }
+  /**
+   * <pre>
+   * ZoneDrop represents an airdrop for a specific zone.
+   * </pre>
+   *
+   * Protobuf type {@code quicksilver.airdrop.v1.ZoneDrop}
+   */
+  public static final class ZoneDrop extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.airdrop.v1.ZoneDrop)
+      ZoneDropOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ZoneDrop.newBuilder() to construct.
+    private ZoneDrop(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ZoneDrop() {
+      chainId_ = "";
+      actions_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ZoneDrop();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.airdrop.v1.AirdropProto.internal_static_quicksilver_airdrop_v1_ZoneDrop_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.airdrop.v1.AirdropProto.internal_static_quicksilver_airdrop_v1_ZoneDrop_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop.class, com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop.Builder.class);
+    }
+
+    public static final int CHAIN_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object chainId_ = "";
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The chainId.
+     */
+    @java.lang.Override
+    public java.lang.String getChainId() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        chainId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The bytes for chainId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChainIdBytes() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        chainId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int START_TIME_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp startTime_;
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartTime() {
+      return startTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getStartTime() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+
+    public static final int DURATION_FIELD_NUMBER = 3;
+    private com.google.protobuf.Duration duration_;
+    /**
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the duration field is set.
+     */
+    @java.lang.Override
+    public boolean hasDuration() {
+      return duration_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The duration.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getDuration() {
+      return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+    }
+    /**
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
+      return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+    }
+
+    public static final int DECAY_FIELD_NUMBER = 4;
+    private com.google.protobuf.Duration decay_;
+    /**
+     * <code>.google.protobuf.Duration decay = 4 [json_name = "decay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"decay&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the decay field is set.
+     */
+    @java.lang.Override
+    public boolean hasDecay() {
+      return decay_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Duration decay = 4 [json_name = "decay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"decay&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The decay.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getDecay() {
+      return decay_ == null ? com.google.protobuf.Duration.getDefaultInstance() : decay_;
+    }
+    /**
+     * <code>.google.protobuf.Duration decay = 4 [json_name = "decay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"decay&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getDecayOrBuilder() {
+      return decay_ == null ? com.google.protobuf.Duration.getDefaultInstance() : decay_;
+    }
+
+    public static final int ALLOCATION_FIELD_NUMBER = 5;
+    private long allocation_ = 0L;
+    /**
+     * <code>uint64 allocation = 5 [json_name = "allocation"];</code>
+     * @return The allocation.
+     */
+    @java.lang.Override
+    public long getAllocation() {
+      return allocation_;
+    }
+
+    public static final int ACTIONS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList actions_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string actions = 6 [json_name = "actions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return A list containing the actions.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getActionsList() {
+      return actions_;
+    }
+    /**
+     * <code>repeated string actions = 6 [json_name = "actions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The count of actions.
+     */
+    public int getActionsCount() {
+      return actions_.size();
+    }
+    /**
+     * <code>repeated string actions = 6 [json_name = "actions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @param index The index of the element to return.
+     * @return The actions at the given index.
+     */
+    public java.lang.String getActions(int index) {
+      return actions_.get(index);
+    }
+    /**
+     * <code>repeated string actions = 6 [json_name = "actions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the actions at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getActionsBytes(int index) {
+      return actions_.getByteString(index);
+    }
+
+    public static final int IS_CONCLUDED_FIELD_NUMBER = 7;
+    private boolean isConcluded_ = false;
+    /**
+     * <code>bool is_concluded = 7 [json_name = "isConcluded"];</code>
+     * @return The isConcluded.
+     */
+    @java.lang.Override
+    public boolean getIsConcluded() {
+      return isConcluded_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, chainId_);
+      }
+      if (startTime_ != null) {
+        output.writeMessage(2, getStartTime());
+      }
+      if (duration_ != null) {
+        output.writeMessage(3, getDuration());
+      }
+      if (decay_ != null) {
+        output.writeMessage(4, getDecay());
+      }
+      if (allocation_ != 0L) {
+        output.writeUInt64(5, allocation_);
+      }
+      for (int i = 0; i < actions_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, actions_.getRaw(i));
+      }
+      if (isConcluded_ != false) {
+        output.writeBool(7, isConcluded_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, chainId_);
+      }
+      if (startTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getStartTime());
+      }
+      if (duration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getDuration());
+      }
+      if (decay_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getDecay());
+      }
+      if (allocation_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, allocation_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < actions_.size(); i++) {
+          dataSize += computeStringSizeNoTag(actions_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getActionsList().size();
+      }
+      if (isConcluded_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, isConcluded_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop other = (com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop) obj;
+
+      if (!getChainId()
+          .equals(other.getChainId())) return false;
+      if (hasStartTime() != other.hasStartTime()) return false;
+      if (hasStartTime()) {
+        if (!getStartTime()
+            .equals(other.getStartTime())) return false;
+      }
+      if (hasDuration() != other.hasDuration()) return false;
+      if (hasDuration()) {
+        if (!getDuration()
+            .equals(other.getDuration())) return false;
+      }
+      if (hasDecay() != other.hasDecay()) return false;
+      if (hasDecay()) {
+        if (!getDecay()
+            .equals(other.getDecay())) return false;
+      }
+      if (getAllocation()
+          != other.getAllocation()) return false;
+      if (!getActionsList()
+          .equals(other.getActionsList())) return false;
+      if (getIsConcluded()
+          != other.getIsConcluded()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CHAIN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getChainId().hashCode();
+      if (hasStartTime()) {
+        hash = (37 * hash) + START_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getStartTime().hashCode();
+      }
+      if (hasDuration()) {
+        hash = (37 * hash) + DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getDuration().hashCode();
+      }
+      if (hasDecay()) {
+        hash = (37 * hash) + DECAY_FIELD_NUMBER;
+        hash = (53 * hash) + getDecay().hashCode();
+      }
+      hash = (37 * hash) + ALLOCATION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAllocation());
+      if (getActionsCount() > 0) {
+        hash = (37 * hash) + ACTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getActionsList().hashCode();
+      }
+      hash = (37 * hash) + IS_CONCLUDED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsConcluded());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ZoneDrop represents an airdrop for a specific zone.
+     * </pre>
+     *
+     * Protobuf type {@code quicksilver.airdrop.v1.ZoneDrop}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.airdrop.v1.ZoneDrop)
+        com.quicksilver.airdrop.v1.AirdropProto.ZoneDropOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.airdrop.v1.AirdropProto.internal_static_quicksilver_airdrop_v1_ZoneDrop_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.airdrop.v1.AirdropProto.internal_static_quicksilver_airdrop_v1_ZoneDrop_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop.class, com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop.Builder.class);
+      }
+
+      // Construct using com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        chainId_ = "";
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        duration_ = null;
+        if (durationBuilder_ != null) {
+          durationBuilder_.dispose();
+          durationBuilder_ = null;
+        }
+        decay_ = null;
+        if (decayBuilder_ != null) {
+          decayBuilder_.dispose();
+          decayBuilder_ = null;
+        }
+        allocation_ = 0L;
+        actions_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        isConcluded_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.airdrop.v1.AirdropProto.internal_static_quicksilver_airdrop_v1_ZoneDrop_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop getDefaultInstanceForType() {
+        return com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop build() {
+        com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop buildPartial() {
+        com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop result = new com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.chainId_ = chainId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.startTime_ = startTimeBuilder_ == null
+              ? startTime_
+              : startTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.duration_ = durationBuilder_ == null
+              ? duration_
+              : durationBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.decay_ = decayBuilder_ == null
+              ? decay_
+              : decayBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.allocation_ = allocation_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          actions_.makeImmutable();
+          result.actions_ = actions_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.isConcluded_ = isConcluded_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop) {
+          return mergeFrom((com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop other) {
+        if (other == com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop.getDefaultInstance()) return this;
+        if (!other.getChainId().isEmpty()) {
+          chainId_ = other.chainId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasStartTime()) {
+          mergeStartTime(other.getStartTime());
+        }
+        if (other.hasDuration()) {
+          mergeDuration(other.getDuration());
+        }
+        if (other.hasDecay()) {
+          mergeDecay(other.getDecay());
+        }
+        if (other.getAllocation() != 0L) {
+          setAllocation(other.getAllocation());
+        }
+        if (!other.actions_.isEmpty()) {
+          if (actions_.isEmpty()) {
+            actions_ = other.actions_;
+            bitField0_ |= 0x00000020;
+          } else {
+            ensureActionsIsMutable();
+            actions_.addAll(other.actions_);
+          }
+          onChanged();
+        }
+        if (other.getIsConcluded() != false) {
+          setIsConcluded(other.getIsConcluded());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                chainId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getStartTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getDurationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getDecayFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                allocation_ = input.readUInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 50: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureActionsIsMutable();
+                actions_.add(s);
+                break;
+              } // case 50
+              case 56: {
+                isConcluded_ = input.readBool();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object chainId_ = "";
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @return The chainId.
+       */
+      public java.lang.String getChainId() {
+        java.lang.Object ref = chainId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          chainId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @return The bytes for chainId.
+       */
+      public com.google.protobuf.ByteString
+          getChainIdBytes() {
+        java.lang.Object ref = chainId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          chainId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @param value The chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        chainId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChainId() {
+        chainId_ = getDefaultInstance().getChainId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @param value The bytes for chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        chainId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp startTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the startTime field is set.
+       */
+      public boolean hasStartTime() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The startTime.
+       */
+      public com.google.protobuf.Timestamp getStartTime() {
+        if (startTimeBuilder_ == null) {
+          return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        } else {
+          return startTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          startTime_ = value;
+        } else {
+          startTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (startTimeBuilder_ == null) {
+          startTime_ = builderForValue.build();
+        } else {
+          startTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            startTime_ != null &&
+            startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getStartTimeBuilder().mergeFrom(value);
+          } else {
+            startTime_ = value;
+          }
+        } else {
+          startTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearStartTime() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getStartTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+        if (startTimeBuilder_ != null) {
+          return startTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return startTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getStartTimeFieldBuilder() {
+        if (startTimeBuilder_ == null) {
+          startTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getStartTime(),
+                  getParentForChildren(),
+                  isClean());
+          startTime_ = null;
+        }
+        return startTimeBuilder_;
+      }
+
+      private com.google.protobuf.Duration duration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> durationBuilder_;
+      /**
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return Whether the duration field is set.
+       */
+      public boolean hasDuration() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return The duration.
+       */
+      public com.google.protobuf.Duration getDuration() {
+        if (durationBuilder_ == null) {
+          return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+        } else {
+          return durationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setDuration(com.google.protobuf.Duration value) {
+        if (durationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          duration_ = value;
+        } else {
+          durationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (durationBuilder_ == null) {
+          duration_ = builderForValue.build();
+        } else {
+          durationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeDuration(com.google.protobuf.Duration value) {
+        if (durationBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            duration_ != null &&
+            duration_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getDurationBuilder().mergeFrom(value);
+          } else {
+            duration_ = value;
+          }
+        } else {
+          durationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearDuration() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        duration_ = null;
+        if (durationBuilder_ != null) {
+          durationBuilder_.dispose();
+          durationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getDurationBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
+        if (durationBuilder_ != null) {
+          return durationBuilder_.getMessageOrBuilder();
+        } else {
+          return duration_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : duration_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getDurationFieldBuilder() {
+        if (durationBuilder_ == null) {
+          durationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getDuration(),
+                  getParentForChildren(),
+                  isClean());
+          duration_ = null;
+        }
+        return durationBuilder_;
+      }
+
+      private com.google.protobuf.Duration decay_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> decayBuilder_;
+      /**
+       * <code>.google.protobuf.Duration decay = 4 [json_name = "decay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"decay&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return Whether the decay field is set.
+       */
+      public boolean hasDecay() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Duration decay = 4 [json_name = "decay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"decay&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return The decay.
+       */
+      public com.google.protobuf.Duration getDecay() {
+        if (decayBuilder_ == null) {
+          return decay_ == null ? com.google.protobuf.Duration.getDefaultInstance() : decay_;
+        } else {
+          return decayBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration decay = 4 [json_name = "decay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"decay&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setDecay(com.google.protobuf.Duration value) {
+        if (decayBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          decay_ = value;
+        } else {
+          decayBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration decay = 4 [json_name = "decay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"decay&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setDecay(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (decayBuilder_ == null) {
+          decay_ = builderForValue.build();
+        } else {
+          decayBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration decay = 4 [json_name = "decay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"decay&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeDecay(com.google.protobuf.Duration value) {
+        if (decayBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            decay_ != null &&
+            decay_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getDecayBuilder().mergeFrom(value);
+          } else {
+            decay_ = value;
+          }
+        } else {
+          decayBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration decay = 4 [json_name = "decay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"decay&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearDecay() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        decay_ = null;
+        if (decayBuilder_ != null) {
+          decayBuilder_.dispose();
+          decayBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration decay = 4 [json_name = "decay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"decay&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getDecayBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getDecayFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Duration decay = 4 [json_name = "decay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"decay&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getDecayOrBuilder() {
+        if (decayBuilder_ != null) {
+          return decayBuilder_.getMessageOrBuilder();
+        } else {
+          return decay_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : decay_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration decay = 4 [json_name = "decay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"decay&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getDecayFieldBuilder() {
+        if (decayBuilder_ == null) {
+          decayBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getDecay(),
+                  getParentForChildren(),
+                  isClean());
+          decay_ = null;
+        }
+        return decayBuilder_;
+      }
+
+      private long allocation_ ;
+      /**
+       * <code>uint64 allocation = 5 [json_name = "allocation"];</code>
+       * @return The allocation.
+       */
+      @java.lang.Override
+      public long getAllocation() {
+        return allocation_;
+      }
+      /**
+       * <code>uint64 allocation = 5 [json_name = "allocation"];</code>
+       * @param value The allocation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllocation(long value) {
+
+        allocation_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 allocation = 5 [json_name = "allocation"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllocation() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        allocation_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList actions_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureActionsIsMutable() {
+        if (!actions_.isModifiable()) {
+          actions_ = new com.google.protobuf.LazyStringArrayList(actions_);
+        }
+        bitField0_ |= 0x00000020;
+      }
+      /**
+       * <code>repeated string actions = 6 [json_name = "actions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return A list containing the actions.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getActionsList() {
+        actions_.makeImmutable();
+        return actions_;
+      }
+      /**
+       * <code>repeated string actions = 6 [json_name = "actions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The count of actions.
+       */
+      public int getActionsCount() {
+        return actions_.size();
+      }
+      /**
+       * <code>repeated string actions = 6 [json_name = "actions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param index The index of the element to return.
+       * @return The actions at the given index.
+       */
+      public java.lang.String getActions(int index) {
+        return actions_.get(index);
+      }
+      /**
+       * <code>repeated string actions = 6 [json_name = "actions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the actions at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getActionsBytes(int index) {
+        return actions_.getByteString(index);
+      }
+      /**
+       * <code>repeated string actions = 6 [json_name = "actions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param index The index to set the value at.
+       * @param value The actions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActions(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureActionsIsMutable();
+        actions_.set(index, value);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string actions = 6 [json_name = "actions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The actions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addActions(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureActionsIsMutable();
+        actions_.add(value);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string actions = 6 [json_name = "actions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param values The actions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllActions(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureActionsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, actions_);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string actions = 6 [json_name = "actions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearActions() {
+        actions_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string actions = 6 [json_name = "actions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The bytes of the actions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addActionsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureActionsIsMutable();
+        actions_.add(value);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private boolean isConcluded_ ;
+      /**
+       * <code>bool is_concluded = 7 [json_name = "isConcluded"];</code>
+       * @return The isConcluded.
+       */
+      @java.lang.Override
+      public boolean getIsConcluded() {
+        return isConcluded_;
+      }
+      /**
+       * <code>bool is_concluded = 7 [json_name = "isConcluded"];</code>
+       * @param value The isConcluded to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsConcluded(boolean value) {
+
+        isConcluded_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_concluded = 7 [json_name = "isConcluded"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsConcluded() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        isConcluded_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.airdrop.v1.ZoneDrop)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.airdrop.v1.ZoneDrop)
+    private static final com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop();
+    }
+
+    public static com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ZoneDrop>
+        PARSER = new com.google.protobuf.AbstractParser<ZoneDrop>() {
+      @java.lang.Override
+      public ZoneDrop parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ZoneDrop> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ZoneDrop> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ClaimRecordOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.airdrop.v1.ClaimRecord)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The chainId.
+     */
+    java.lang.String getChainId();
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The bytes for chainId.
+     */
+    com.google.protobuf.ByteString
+        getChainIdBytes();
+
+    /**
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <pre>
+     * Protobuf3 does not allow enum as map key
+     * </pre>
+     *
+     * <code>map&lt;int32, .quicksilver.airdrop.v1.CompletedAction&gt; actions_completed = 3 [json_name = "actionsCompleted"];</code>
+     */
+    int getActionsCompletedCount();
+    /**
+     * <pre>
+     * Protobuf3 does not allow enum as map key
+     * </pre>
+     *
+     * <code>map&lt;int32, .quicksilver.airdrop.v1.CompletedAction&gt; actions_completed = 3 [json_name = "actionsCompleted"];</code>
+     */
+    boolean containsActionsCompleted(
+        int key);
+    /**
+     * Use {@link #getActionsCompletedMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Integer, com.quicksilver.airdrop.v1.AirdropProto.CompletedAction>
+    getActionsCompleted();
+    /**
+     * <pre>
+     * Protobuf3 does not allow enum as map key
+     * </pre>
+     *
+     * <code>map&lt;int32, .quicksilver.airdrop.v1.CompletedAction&gt; actions_completed = 3 [json_name = "actionsCompleted"];</code>
+     */
+    java.util.Map<java.lang.Integer, com.quicksilver.airdrop.v1.AirdropProto.CompletedAction>
+    getActionsCompletedMap();
+    /**
+     * <pre>
+     * Protobuf3 does not allow enum as map key
+     * </pre>
+     *
+     * <code>map&lt;int32, .quicksilver.airdrop.v1.CompletedAction&gt; actions_completed = 3 [json_name = "actionsCompleted"];</code>
+     */
+    /* nullable */
+com.quicksilver.airdrop.v1.AirdropProto.CompletedAction getActionsCompletedOrDefault(
+        int key,
+        /* nullable */
+com.quicksilver.airdrop.v1.AirdropProto.CompletedAction defaultValue);
+    /**
+     * <pre>
+     * Protobuf3 does not allow enum as map key
+     * </pre>
+     *
+     * <code>map&lt;int32, .quicksilver.airdrop.v1.CompletedAction&gt; actions_completed = 3 [json_name = "actionsCompleted"];</code>
+     */
+    com.quicksilver.airdrop.v1.AirdropProto.CompletedAction getActionsCompletedOrThrow(
+        int key);
+
+    /**
+     * <code>uint64 max_allocation = 4 [json_name = "maxAllocation"];</code>
+     * @return The maxAllocation.
+     */
+    long getMaxAllocation();
+
+    /**
+     * <code>uint64 base_value = 5 [json_name = "baseValue"];</code>
+     * @return The baseValue.
+     */
+    long getBaseValue();
+  }
+  /**
+   * <pre>
+   * ClaimRecord represents a users' claim (including completed claims) for a
+   * given zone.
+   * </pre>
+   *
+   * Protobuf type {@code quicksilver.airdrop.v1.ClaimRecord}
+   */
+  public static final class ClaimRecord extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.airdrop.v1.ClaimRecord)
+      ClaimRecordOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ClaimRecord.newBuilder() to construct.
+    private ClaimRecord(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ClaimRecord() {
+      chainId_ = "";
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ClaimRecord();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.airdrop.v1.AirdropProto.internal_static_quicksilver_airdrop_v1_ClaimRecord_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 3:
+          return internalGetActionsCompleted();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.airdrop.v1.AirdropProto.internal_static_quicksilver_airdrop_v1_ClaimRecord_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord.class, com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord.Builder.class);
+    }
+
+    public static final int CHAIN_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object chainId_ = "";
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The chainId.
+     */
+    @java.lang.Override
+    public java.lang.String getChainId() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        chainId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId"];</code>
+     * @return The bytes for chainId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChainIdBytes() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        chainId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACTIONS_COMPLETED_FIELD_NUMBER = 3;
+    private static final class ActionsCompletedDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Integer, com.quicksilver.airdrop.v1.AirdropProto.CompletedAction> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Integer, com.quicksilver.airdrop.v1.AirdropProto.CompletedAction>newDefaultInstance(
+                  com.quicksilver.airdrop.v1.AirdropProto.internal_static_quicksilver_airdrop_v1_ClaimRecord_ActionsCompletedEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.INT32,
+                  0,
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  com.quicksilver.airdrop.v1.AirdropProto.CompletedAction.getDefaultInstance());
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.Integer, com.quicksilver.airdrop.v1.AirdropProto.CompletedAction> actionsCompleted_;
+    private com.google.protobuf.MapField<java.lang.Integer, com.quicksilver.airdrop.v1.AirdropProto.CompletedAction>
+    internalGetActionsCompleted() {
+      if (actionsCompleted_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            ActionsCompletedDefaultEntryHolder.defaultEntry);
+      }
+      return actionsCompleted_;
+    }
+    public int getActionsCompletedCount() {
+      return internalGetActionsCompleted().getMap().size();
+    }
+    /**
+     * <pre>
+     * Protobuf3 does not allow enum as map key
+     * </pre>
+     *
+     * <code>map&lt;int32, .quicksilver.airdrop.v1.CompletedAction&gt; actions_completed = 3 [json_name = "actionsCompleted"];</code>
+     */
+    @java.lang.Override
+    public boolean containsActionsCompleted(
+        int key) {
+
+      return internalGetActionsCompleted().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getActionsCompletedMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Integer, com.quicksilver.airdrop.v1.AirdropProto.CompletedAction> getActionsCompleted() {
+      return getActionsCompletedMap();
+    }
+    /**
+     * <pre>
+     * Protobuf3 does not allow enum as map key
+     * </pre>
+     *
+     * <code>map&lt;int32, .quicksilver.airdrop.v1.CompletedAction&gt; actions_completed = 3 [json_name = "actionsCompleted"];</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.Integer, com.quicksilver.airdrop.v1.AirdropProto.CompletedAction> getActionsCompletedMap() {
+      return internalGetActionsCompleted().getMap();
+    }
+    /**
+     * <pre>
+     * Protobuf3 does not allow enum as map key
+     * </pre>
+     *
+     * <code>map&lt;int32, .quicksilver.airdrop.v1.CompletedAction&gt; actions_completed = 3 [json_name = "actionsCompleted"];</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.quicksilver.airdrop.v1.AirdropProto.CompletedAction getActionsCompletedOrDefault(
+        int key,
+        /* nullable */
+com.quicksilver.airdrop.v1.AirdropProto.CompletedAction defaultValue) {
+
+      java.util.Map<java.lang.Integer, com.quicksilver.airdrop.v1.AirdropProto.CompletedAction> map =
+          internalGetActionsCompleted().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Protobuf3 does not allow enum as map key
+     * </pre>
+     *
+     * <code>map&lt;int32, .quicksilver.airdrop.v1.CompletedAction&gt; actions_completed = 3 [json_name = "actionsCompleted"];</code>
+     */
+    @java.lang.Override
+    public com.quicksilver.airdrop.v1.AirdropProto.CompletedAction getActionsCompletedOrThrow(
+        int key) {
+
+      java.util.Map<java.lang.Integer, com.quicksilver.airdrop.v1.AirdropProto.CompletedAction> map =
+          internalGetActionsCompleted().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int MAX_ALLOCATION_FIELD_NUMBER = 4;
+    private long maxAllocation_ = 0L;
+    /**
+     * <code>uint64 max_allocation = 4 [json_name = "maxAllocation"];</code>
+     * @return The maxAllocation.
+     */
+    @java.lang.Override
+    public long getMaxAllocation() {
+      return maxAllocation_;
+    }
+
+    public static final int BASE_VALUE_FIELD_NUMBER = 5;
+    private long baseValue_ = 0L;
+    /**
+     * <code>uint64 base_value = 5 [json_name = "baseValue"];</code>
+     * @return The baseValue.
+     */
+    @java.lang.Override
+    public long getBaseValue() {
+      return baseValue_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, chainId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, address_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeIntegerMapTo(
+          output,
+          internalGetActionsCompleted(),
+          ActionsCompletedDefaultEntryHolder.defaultEntry,
+          3);
+      if (maxAllocation_ != 0L) {
+        output.writeUInt64(4, maxAllocation_);
+      }
+      if (baseValue_ != 0L) {
+        output.writeUInt64(5, baseValue_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, chainId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, address_);
+      }
+      for (java.util.Map.Entry<java.lang.Integer, com.quicksilver.airdrop.v1.AirdropProto.CompletedAction> entry
+           : internalGetActionsCompleted().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Integer, com.quicksilver.airdrop.v1.AirdropProto.CompletedAction>
+        actionsCompleted__ = ActionsCompletedDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, actionsCompleted__);
+      }
+      if (maxAllocation_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, maxAllocation_);
+      }
+      if (baseValue_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, baseValue_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord other = (com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord) obj;
+
+      if (!getChainId()
+          .equals(other.getChainId())) return false;
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!internalGetActionsCompleted().equals(
+          other.internalGetActionsCompleted())) return false;
+      if (getMaxAllocation()
+          != other.getMaxAllocation()) return false;
+      if (getBaseValue()
+          != other.getBaseValue()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CHAIN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getChainId().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      if (!internalGetActionsCompleted().getMap().isEmpty()) {
+        hash = (37 * hash) + ACTIONS_COMPLETED_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetActionsCompleted().hashCode();
+      }
+      hash = (37 * hash) + MAX_ALLOCATION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMaxAllocation());
+      hash = (37 * hash) + BASE_VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getBaseValue());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ClaimRecord represents a users' claim (including completed claims) for a
+     * given zone.
+     * </pre>
+     *
+     * Protobuf type {@code quicksilver.airdrop.v1.ClaimRecord}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.airdrop.v1.ClaimRecord)
+        com.quicksilver.airdrop.v1.AirdropProto.ClaimRecordOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.airdrop.v1.AirdropProto.internal_static_quicksilver_airdrop_v1_ClaimRecord_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 3:
+            return internalGetActionsCompleted();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 3:
+            return internalGetMutableActionsCompleted();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.airdrop.v1.AirdropProto.internal_static_quicksilver_airdrop_v1_ClaimRecord_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord.class, com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord.Builder.class);
+      }
+
+      // Construct using com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        chainId_ = "";
+        address_ = "";
+        internalGetMutableActionsCompleted().clear();
+        maxAllocation_ = 0L;
+        baseValue_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.airdrop.v1.AirdropProto.internal_static_quicksilver_airdrop_v1_ClaimRecord_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord getDefaultInstanceForType() {
+        return com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord build() {
+        com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord buildPartial() {
+        com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord result = new com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.chainId_ = chainId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.actionsCompleted_ = internalGetActionsCompleted();
+          result.actionsCompleted_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.maxAllocation_ = maxAllocation_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.baseValue_ = baseValue_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord) {
+          return mergeFrom((com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord other) {
+        if (other == com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord.getDefaultInstance()) return this;
+        if (!other.getChainId().isEmpty()) {
+          chainId_ = other.chainId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        internalGetMutableActionsCompleted().mergeFrom(
+            other.internalGetActionsCompleted());
+        bitField0_ |= 0x00000004;
+        if (other.getMaxAllocation() != 0L) {
+          setMaxAllocation(other.getMaxAllocation());
+        }
+        if (other.getBaseValue() != 0L) {
+          setBaseValue(other.getBaseValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                chainId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.google.protobuf.MapEntry<java.lang.Integer, com.quicksilver.airdrop.v1.AirdropProto.CompletedAction>
+                actionsCompleted__ = input.readMessage(
+                    ActionsCompletedDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableActionsCompleted().getMutableMap().put(
+                    actionsCompleted__.getKey(), actionsCompleted__.getValue());
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                maxAllocation_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 40: {
+                baseValue_ = input.readUInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object chainId_ = "";
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @return The chainId.
+       */
+      public java.lang.String getChainId() {
+        java.lang.Object ref = chainId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          chainId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @return The bytes for chainId.
+       */
+      public com.google.protobuf.ByteString
+          getChainIdBytes() {
+        java.lang.Object ref = chainId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          chainId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @param value The chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        chainId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChainId() {
+        chainId_ = getDefaultInstance().getChainId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId"];</code>
+       * @param value The bytes for chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        chainId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.Integer, com.quicksilver.airdrop.v1.AirdropProto.CompletedAction> actionsCompleted_;
+      private com.google.protobuf.MapField<java.lang.Integer, com.quicksilver.airdrop.v1.AirdropProto.CompletedAction>
+          internalGetActionsCompleted() {
+        if (actionsCompleted_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              ActionsCompletedDefaultEntryHolder.defaultEntry);
+        }
+        return actionsCompleted_;
+      }
+      private com.google.protobuf.MapField<java.lang.Integer, com.quicksilver.airdrop.v1.AirdropProto.CompletedAction>
+          internalGetMutableActionsCompleted() {
+        if (actionsCompleted_ == null) {
+          actionsCompleted_ = com.google.protobuf.MapField.newMapField(
+              ActionsCompletedDefaultEntryHolder.defaultEntry);
+        }
+        if (!actionsCompleted_.isMutable()) {
+          actionsCompleted_ = actionsCompleted_.copy();
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return actionsCompleted_;
+      }
+      public int getActionsCompletedCount() {
+        return internalGetActionsCompleted().getMap().size();
+      }
+      /**
+       * <pre>
+       * Protobuf3 does not allow enum as map key
+       * </pre>
+       *
+       * <code>map&lt;int32, .quicksilver.airdrop.v1.CompletedAction&gt; actions_completed = 3 [json_name = "actionsCompleted"];</code>
+       */
+      @java.lang.Override
+      public boolean containsActionsCompleted(
+          int key) {
+
+        return internalGetActionsCompleted().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getActionsCompletedMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, com.quicksilver.airdrop.v1.AirdropProto.CompletedAction> getActionsCompleted() {
+        return getActionsCompletedMap();
+      }
+      /**
+       * <pre>
+       * Protobuf3 does not allow enum as map key
+       * </pre>
+       *
+       * <code>map&lt;int32, .quicksilver.airdrop.v1.CompletedAction&gt; actions_completed = 3 [json_name = "actionsCompleted"];</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.Integer, com.quicksilver.airdrop.v1.AirdropProto.CompletedAction> getActionsCompletedMap() {
+        return internalGetActionsCompleted().getMap();
+      }
+      /**
+       * <pre>
+       * Protobuf3 does not allow enum as map key
+       * </pre>
+       *
+       * <code>map&lt;int32, .quicksilver.airdrop.v1.CompletedAction&gt; actions_completed = 3 [json_name = "actionsCompleted"];</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.quicksilver.airdrop.v1.AirdropProto.CompletedAction getActionsCompletedOrDefault(
+          int key,
+          /* nullable */
+com.quicksilver.airdrop.v1.AirdropProto.CompletedAction defaultValue) {
+
+        java.util.Map<java.lang.Integer, com.quicksilver.airdrop.v1.AirdropProto.CompletedAction> map =
+            internalGetActionsCompleted().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Protobuf3 does not allow enum as map key
+       * </pre>
+       *
+       * <code>map&lt;int32, .quicksilver.airdrop.v1.CompletedAction&gt; actions_completed = 3 [json_name = "actionsCompleted"];</code>
+       */
+      @java.lang.Override
+      public com.quicksilver.airdrop.v1.AirdropProto.CompletedAction getActionsCompletedOrThrow(
+          int key) {
+
+        java.util.Map<java.lang.Integer, com.quicksilver.airdrop.v1.AirdropProto.CompletedAction> map =
+            internalGetActionsCompleted().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearActionsCompleted() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        internalGetMutableActionsCompleted().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Protobuf3 does not allow enum as map key
+       * </pre>
+       *
+       * <code>map&lt;int32, .quicksilver.airdrop.v1.CompletedAction&gt; actions_completed = 3 [json_name = "actionsCompleted"];</code>
+       */
+      public Builder removeActionsCompleted(
+          int key) {
+
+        internalGetMutableActionsCompleted().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, com.quicksilver.airdrop.v1.AirdropProto.CompletedAction>
+          getMutableActionsCompleted() {
+        bitField0_ |= 0x00000004;
+        return internalGetMutableActionsCompleted().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Protobuf3 does not allow enum as map key
+       * </pre>
+       *
+       * <code>map&lt;int32, .quicksilver.airdrop.v1.CompletedAction&gt; actions_completed = 3 [json_name = "actionsCompleted"];</code>
+       */
+      public Builder putActionsCompleted(
+          int key,
+          com.quicksilver.airdrop.v1.AirdropProto.CompletedAction value) {
+
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableActionsCompleted().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <pre>
+       * Protobuf3 does not allow enum as map key
+       * </pre>
+       *
+       * <code>map&lt;int32, .quicksilver.airdrop.v1.CompletedAction&gt; actions_completed = 3 [json_name = "actionsCompleted"];</code>
+       */
+      public Builder putAllActionsCompleted(
+          java.util.Map<java.lang.Integer, com.quicksilver.airdrop.v1.AirdropProto.CompletedAction> values) {
+        internalGetMutableActionsCompleted().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+
+      private long maxAllocation_ ;
+      /**
+       * <code>uint64 max_allocation = 4 [json_name = "maxAllocation"];</code>
+       * @return The maxAllocation.
+       */
+      @java.lang.Override
+      public long getMaxAllocation() {
+        return maxAllocation_;
+      }
+      /**
+       * <code>uint64 max_allocation = 4 [json_name = "maxAllocation"];</code>
+       * @param value The maxAllocation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxAllocation(long value) {
+
+        maxAllocation_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 max_allocation = 4 [json_name = "maxAllocation"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxAllocation() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        maxAllocation_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long baseValue_ ;
+      /**
+       * <code>uint64 base_value = 5 [json_name = "baseValue"];</code>
+       * @return The baseValue.
+       */
+      @java.lang.Override
+      public long getBaseValue() {
+        return baseValue_;
+      }
+      /**
+       * <code>uint64 base_value = 5 [json_name = "baseValue"];</code>
+       * @param value The baseValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBaseValue(long value) {
+
+        baseValue_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 base_value = 5 [json_name = "baseValue"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBaseValue() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        baseValue_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.airdrop.v1.ClaimRecord)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.airdrop.v1.ClaimRecord)
+    private static final com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord();
+    }
+
+    public static com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ClaimRecord>
+        PARSER = new com.google.protobuf.AbstractParser<ClaimRecord>() {
+      @java.lang.Override
+      public ClaimRecord parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ClaimRecord> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ClaimRecord> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CompletedActionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.airdrop.v1.CompletedAction)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.google.protobuf.Timestamp complete_time = 1 [json_name = "completeTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"complete_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the completeTime field is set.
+     */
+    boolean hasCompleteTime();
+    /**
+     * <code>.google.protobuf.Timestamp complete_time = 1 [json_name = "completeTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"complete_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The completeTime.
+     */
+    com.google.protobuf.Timestamp getCompleteTime();
+    /**
+     * <code>.google.protobuf.Timestamp complete_time = 1 [json_name = "completeTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"complete_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCompleteTimeOrBuilder();
+
+    /**
+     * <code>uint64 claim_amount = 2 [json_name = "claimAmount"];</code>
+     * @return The claimAmount.
+     */
+    long getClaimAmount();
+  }
+  /**
+   * <pre>
+   * CompletedAction represents a claim action completed by the user.
+   * </pre>
+   *
+   * Protobuf type {@code quicksilver.airdrop.v1.CompletedAction}
+   */
+  public static final class CompletedAction extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.airdrop.v1.CompletedAction)
+      CompletedActionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CompletedAction.newBuilder() to construct.
+    private CompletedAction(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CompletedAction() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CompletedAction();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.airdrop.v1.AirdropProto.internal_static_quicksilver_airdrop_v1_CompletedAction_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.airdrop.v1.AirdropProto.internal_static_quicksilver_airdrop_v1_CompletedAction_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.airdrop.v1.AirdropProto.CompletedAction.class, com.quicksilver.airdrop.v1.AirdropProto.CompletedAction.Builder.class);
+    }
+
+    public static final int COMPLETE_TIME_FIELD_NUMBER = 1;
+    private com.google.protobuf.Timestamp completeTime_;
+    /**
+     * <code>.google.protobuf.Timestamp complete_time = 1 [json_name = "completeTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"complete_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the completeTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasCompleteTime() {
+      return completeTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp complete_time = 1 [json_name = "completeTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"complete_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The completeTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCompleteTime() {
+      return completeTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : completeTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp complete_time = 1 [json_name = "completeTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"complete_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCompleteTimeOrBuilder() {
+      return completeTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : completeTime_;
+    }
+
+    public static final int CLAIM_AMOUNT_FIELD_NUMBER = 2;
+    private long claimAmount_ = 0L;
+    /**
+     * <code>uint64 claim_amount = 2 [json_name = "claimAmount"];</code>
+     * @return The claimAmount.
+     */
+    @java.lang.Override
+    public long getClaimAmount() {
+      return claimAmount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (completeTime_ != null) {
+        output.writeMessage(1, getCompleteTime());
+      }
+      if (claimAmount_ != 0L) {
+        output.writeUInt64(2, claimAmount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (completeTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCompleteTime());
+      }
+      if (claimAmount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, claimAmount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.airdrop.v1.AirdropProto.CompletedAction)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.airdrop.v1.AirdropProto.CompletedAction other = (com.quicksilver.airdrop.v1.AirdropProto.CompletedAction) obj;
+
+      if (hasCompleteTime() != other.hasCompleteTime()) return false;
+      if (hasCompleteTime()) {
+        if (!getCompleteTime()
+            .equals(other.getCompleteTime())) return false;
+      }
+      if (getClaimAmount()
+          != other.getClaimAmount()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasCompleteTime()) {
+        hash = (37 * hash) + COMPLETE_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getCompleteTime().hashCode();
+      }
+      hash = (37 * hash) + CLAIM_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getClaimAmount());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.airdrop.v1.AirdropProto.CompletedAction parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.airdrop.v1.AirdropProto.CompletedAction parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.airdrop.v1.AirdropProto.CompletedAction parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.airdrop.v1.AirdropProto.CompletedAction parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.airdrop.v1.AirdropProto.CompletedAction parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.airdrop.v1.AirdropProto.CompletedAction parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.airdrop.v1.AirdropProto.CompletedAction parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.airdrop.v1.AirdropProto.CompletedAction parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.airdrop.v1.AirdropProto.CompletedAction parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.airdrop.v1.AirdropProto.CompletedAction parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.airdrop.v1.AirdropProto.CompletedAction parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.airdrop.v1.AirdropProto.CompletedAction parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.airdrop.v1.AirdropProto.CompletedAction prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * CompletedAction represents a claim action completed by the user.
+     * </pre>
+     *
+     * Protobuf type {@code quicksilver.airdrop.v1.CompletedAction}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.airdrop.v1.CompletedAction)
+        com.quicksilver.airdrop.v1.AirdropProto.CompletedActionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.airdrop.v1.AirdropProto.internal_static_quicksilver_airdrop_v1_CompletedAction_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.airdrop.v1.AirdropProto.internal_static_quicksilver_airdrop_v1_CompletedAction_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.airdrop.v1.AirdropProto.CompletedAction.class, com.quicksilver.airdrop.v1.AirdropProto.CompletedAction.Builder.class);
+      }
+
+      // Construct using com.quicksilver.airdrop.v1.AirdropProto.CompletedAction.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        completeTime_ = null;
+        if (completeTimeBuilder_ != null) {
+          completeTimeBuilder_.dispose();
+          completeTimeBuilder_ = null;
+        }
+        claimAmount_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.airdrop.v1.AirdropProto.internal_static_quicksilver_airdrop_v1_CompletedAction_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.airdrop.v1.AirdropProto.CompletedAction getDefaultInstanceForType() {
+        return com.quicksilver.airdrop.v1.AirdropProto.CompletedAction.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.airdrop.v1.AirdropProto.CompletedAction build() {
+        com.quicksilver.airdrop.v1.AirdropProto.CompletedAction result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.airdrop.v1.AirdropProto.CompletedAction buildPartial() {
+        com.quicksilver.airdrop.v1.AirdropProto.CompletedAction result = new com.quicksilver.airdrop.v1.AirdropProto.CompletedAction(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.quicksilver.airdrop.v1.AirdropProto.CompletedAction result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.completeTime_ = completeTimeBuilder_ == null
+              ? completeTime_
+              : completeTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.claimAmount_ = claimAmount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.airdrop.v1.AirdropProto.CompletedAction) {
+          return mergeFrom((com.quicksilver.airdrop.v1.AirdropProto.CompletedAction)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.airdrop.v1.AirdropProto.CompletedAction other) {
+        if (other == com.quicksilver.airdrop.v1.AirdropProto.CompletedAction.getDefaultInstance()) return this;
+        if (other.hasCompleteTime()) {
+          mergeCompleteTime(other.getCompleteTime());
+        }
+        if (other.getClaimAmount() != 0L) {
+          setClaimAmount(other.getClaimAmount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getCompleteTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                claimAmount_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Timestamp completeTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> completeTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp complete_time = 1 [json_name = "completeTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"complete_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the completeTime field is set.
+       */
+      public boolean hasCompleteTime() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp complete_time = 1 [json_name = "completeTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"complete_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The completeTime.
+       */
+      public com.google.protobuf.Timestamp getCompleteTime() {
+        if (completeTimeBuilder_ == null) {
+          return completeTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : completeTime_;
+        } else {
+          return completeTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp complete_time = 1 [json_name = "completeTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"complete_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setCompleteTime(com.google.protobuf.Timestamp value) {
+        if (completeTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          completeTime_ = value;
+        } else {
+          completeTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp complete_time = 1 [json_name = "completeTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"complete_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setCompleteTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (completeTimeBuilder_ == null) {
+          completeTime_ = builderForValue.build();
+        } else {
+          completeTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp complete_time = 1 [json_name = "completeTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"complete_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeCompleteTime(com.google.protobuf.Timestamp value) {
+        if (completeTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            completeTime_ != null &&
+            completeTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCompleteTimeBuilder().mergeFrom(value);
+          } else {
+            completeTime_ = value;
+          }
+        } else {
+          completeTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp complete_time = 1 [json_name = "completeTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"complete_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearCompleteTime() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        completeTime_ = null;
+        if (completeTimeBuilder_ != null) {
+          completeTimeBuilder_.dispose();
+          completeTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp complete_time = 1 [json_name = "completeTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"complete_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCompleteTimeBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getCompleteTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp complete_time = 1 [json_name = "completeTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"complete_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCompleteTimeOrBuilder() {
+        if (completeTimeBuilder_ != null) {
+          return completeTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return completeTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : completeTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp complete_time = 1 [json_name = "completeTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"complete_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCompleteTimeFieldBuilder() {
+        if (completeTimeBuilder_ == null) {
+          completeTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCompleteTime(),
+                  getParentForChildren(),
+                  isClean());
+          completeTime_ = null;
+        }
+        return completeTimeBuilder_;
+      }
+
+      private long claimAmount_ ;
+      /**
+       * <code>uint64 claim_amount = 2 [json_name = "claimAmount"];</code>
+       * @return The claimAmount.
+       */
+      @java.lang.Override
+      public long getClaimAmount() {
+        return claimAmount_;
+      }
+      /**
+       * <code>uint64 claim_amount = 2 [json_name = "claimAmount"];</code>
+       * @param value The claimAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimAmount(long value) {
+
+        claimAmount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 claim_amount = 2 [json_name = "claimAmount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClaimAmount() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        claimAmount_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.airdrop.v1.CompletedAction)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.airdrop.v1.CompletedAction)
+    private static final com.quicksilver.airdrop.v1.AirdropProto.CompletedAction DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.airdrop.v1.AirdropProto.CompletedAction();
+    }
+
+    public static com.quicksilver.airdrop.v1.AirdropProto.CompletedAction getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CompletedAction>
+        PARSER = new com.google.protobuf.AbstractParser<CompletedAction>() {
+      @java.lang.Override
+      public CompletedAction parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CompletedAction> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CompletedAction> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.airdrop.v1.AirdropProto.CompletedAction getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_airdrop_v1_ZoneDrop_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_airdrop_v1_ZoneDrop_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_airdrop_v1_ClaimRecord_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_airdrop_v1_ClaimRecord_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_airdrop_v1_ClaimRecord_ActionsCompletedEntry_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_airdrop_v1_ClaimRecord_ActionsCompletedEntry_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_airdrop_v1_CompletedAction_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_airdrop_v1_CompletedAction_fieldAccessorTable;
 
@@ -81,13 +3931,13 @@ public final class AirdropProto {
       "nQSGov\020\t\022\r\n\tActionGbP\020\n\022\021\n\rActionOsmosis" +
       "\020\013\032\004\210\243\036\000*Z\n\006Status\022\023\n\017StatusUndefined\020\000\022" +
       "\020\n\014StatusActive\020\001\022\020\n\014StatusFuture\020\002\022\021\n\rS" +
-      "tatusExpired\020\003\032\004\210\243\036\000B\334\001\n\032com.quicksilver" +
-      ".airdrop.v1B\014AirdropProtoP\001Z6github.com/" +
-      "ingenuity-build/quicksilver/x/airdrop/ty" +
-      "pes\242\002\003QAX\252\002\026Quicksilver.Airdrop.V1\312\002\026Qui" +
-      "cksilver\\Airdrop\\V1\342\002\"Quicksilver\\Airdro" +
-      "p\\V1\\GPBMetadata\352\002\030Quicksilver::Airdrop:" +
-      ":V1b\006proto3"
+      "tatusExpired\020\003\032\004\210\243\036\000B\332\001\n\032com.quicksilver" +
+      ".airdrop.v1B\014AirdropProtoZ6github.com/in" +
+      "genuity-build/quicksilver/x/airdrop/type" +
+      "s\242\002\003QAX\252\002\026Quicksilver.Airdrop.V1\312\002\026Quick" +
+      "silver\\Airdrop\\V1\342\002\"Quicksilver\\Airdrop\\" +
+      "V1\\GPBMetadata\352\002\030Quicksilver::Airdrop::V" +
+      "1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

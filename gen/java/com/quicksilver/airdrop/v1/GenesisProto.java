@@ -14,9 +14,1369 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.airdrop.v1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.quicksilver.airdrop.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.quicksilver.airdrop.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.quicksilver.airdrop.v1.ParamsProto.Params getParams();
+    /**
+     * <code>.quicksilver.airdrop.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.quicksilver.airdrop.v1.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <code>repeated .quicksilver.airdrop.v1.ZoneDrop zone_drops = 2 [json_name = "zoneDrops"];</code>
+     */
+    java.util.List<com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop> 
+        getZoneDropsList();
+    /**
+     * <code>repeated .quicksilver.airdrop.v1.ZoneDrop zone_drops = 2 [json_name = "zoneDrops"];</code>
+     */
+    com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop getZoneDrops(int index);
+    /**
+     * <code>repeated .quicksilver.airdrop.v1.ZoneDrop zone_drops = 2 [json_name = "zoneDrops"];</code>
+     */
+    int getZoneDropsCount();
+    /**
+     * <code>repeated .quicksilver.airdrop.v1.ZoneDrop zone_drops = 2 [json_name = "zoneDrops"];</code>
+     */
+    java.util.List<? extends com.quicksilver.airdrop.v1.AirdropProto.ZoneDropOrBuilder> 
+        getZoneDropsOrBuilderList();
+    /**
+     * <code>repeated .quicksilver.airdrop.v1.ZoneDrop zone_drops = 2 [json_name = "zoneDrops"];</code>
+     */
+    com.quicksilver.airdrop.v1.AirdropProto.ZoneDropOrBuilder getZoneDropsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .quicksilver.airdrop.v1.ClaimRecord claim_records = 3 [json_name = "claimRecords"];</code>
+     */
+    java.util.List<com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord> 
+        getClaimRecordsList();
+    /**
+     * <code>repeated .quicksilver.airdrop.v1.ClaimRecord claim_records = 3 [json_name = "claimRecords"];</code>
+     */
+    com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord getClaimRecords(int index);
+    /**
+     * <code>repeated .quicksilver.airdrop.v1.ClaimRecord claim_records = 3 [json_name = "claimRecords"];</code>
+     */
+    int getClaimRecordsCount();
+    /**
+     * <code>repeated .quicksilver.airdrop.v1.ClaimRecord claim_records = 3 [json_name = "claimRecords"];</code>
+     */
+    java.util.List<? extends com.quicksilver.airdrop.v1.AirdropProto.ClaimRecordOrBuilder> 
+        getClaimRecordsOrBuilderList();
+    /**
+     * <code>repeated .quicksilver.airdrop.v1.ClaimRecord claim_records = 3 [json_name = "claimRecords"];</code>
+     */
+    com.quicksilver.airdrop.v1.AirdropProto.ClaimRecordOrBuilder getClaimRecordsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the airdrop module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code quicksilver.airdrop.v1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.airdrop.v1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      zoneDrops_ = java.util.Collections.emptyList();
+      claimRecords_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.airdrop.v1.GenesisProto.internal_static_quicksilver_airdrop_v1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.airdrop.v1.GenesisProto.internal_static_quicksilver_airdrop_v1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.airdrop.v1.GenesisProto.GenesisState.class, com.quicksilver.airdrop.v1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.quicksilver.airdrop.v1.ParamsProto.Params params_;
+    /**
+     * <code>.quicksilver.airdrop.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.quicksilver.airdrop.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.quicksilver.airdrop.v1.ParamsProto.Params getParams() {
+      return params_ == null ? com.quicksilver.airdrop.v1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.quicksilver.airdrop.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.quicksilver.airdrop.v1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.quicksilver.airdrop.v1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int ZONE_DROPS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop> zoneDrops_;
+    /**
+     * <code>repeated .quicksilver.airdrop.v1.ZoneDrop zone_drops = 2 [json_name = "zoneDrops"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop> getZoneDropsList() {
+      return zoneDrops_;
+    }
+    /**
+     * <code>repeated .quicksilver.airdrop.v1.ZoneDrop zone_drops = 2 [json_name = "zoneDrops"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.quicksilver.airdrop.v1.AirdropProto.ZoneDropOrBuilder> 
+        getZoneDropsOrBuilderList() {
+      return zoneDrops_;
+    }
+    /**
+     * <code>repeated .quicksilver.airdrop.v1.ZoneDrop zone_drops = 2 [json_name = "zoneDrops"];</code>
+     */
+    @java.lang.Override
+    public int getZoneDropsCount() {
+      return zoneDrops_.size();
+    }
+    /**
+     * <code>repeated .quicksilver.airdrop.v1.ZoneDrop zone_drops = 2 [json_name = "zoneDrops"];</code>
+     */
+    @java.lang.Override
+    public com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop getZoneDrops(int index) {
+      return zoneDrops_.get(index);
+    }
+    /**
+     * <code>repeated .quicksilver.airdrop.v1.ZoneDrop zone_drops = 2 [json_name = "zoneDrops"];</code>
+     */
+    @java.lang.Override
+    public com.quicksilver.airdrop.v1.AirdropProto.ZoneDropOrBuilder getZoneDropsOrBuilder(
+        int index) {
+      return zoneDrops_.get(index);
+    }
+
+    public static final int CLAIM_RECORDS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord> claimRecords_;
+    /**
+     * <code>repeated .quicksilver.airdrop.v1.ClaimRecord claim_records = 3 [json_name = "claimRecords"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord> getClaimRecordsList() {
+      return claimRecords_;
+    }
+    /**
+     * <code>repeated .quicksilver.airdrop.v1.ClaimRecord claim_records = 3 [json_name = "claimRecords"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.quicksilver.airdrop.v1.AirdropProto.ClaimRecordOrBuilder> 
+        getClaimRecordsOrBuilderList() {
+      return claimRecords_;
+    }
+    /**
+     * <code>repeated .quicksilver.airdrop.v1.ClaimRecord claim_records = 3 [json_name = "claimRecords"];</code>
+     */
+    @java.lang.Override
+    public int getClaimRecordsCount() {
+      return claimRecords_.size();
+    }
+    /**
+     * <code>repeated .quicksilver.airdrop.v1.ClaimRecord claim_records = 3 [json_name = "claimRecords"];</code>
+     */
+    @java.lang.Override
+    public com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord getClaimRecords(int index) {
+      return claimRecords_.get(index);
+    }
+    /**
+     * <code>repeated .quicksilver.airdrop.v1.ClaimRecord claim_records = 3 [json_name = "claimRecords"];</code>
+     */
+    @java.lang.Override
+    public com.quicksilver.airdrop.v1.AirdropProto.ClaimRecordOrBuilder getClaimRecordsOrBuilder(
+        int index) {
+      return claimRecords_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      for (int i = 0; i < zoneDrops_.size(); i++) {
+        output.writeMessage(2, zoneDrops_.get(i));
+      }
+      for (int i = 0; i < claimRecords_.size(); i++) {
+        output.writeMessage(3, claimRecords_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      for (int i = 0; i < zoneDrops_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, zoneDrops_.get(i));
+      }
+      for (int i = 0; i < claimRecords_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, claimRecords_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.airdrop.v1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.airdrop.v1.GenesisProto.GenesisState other = (com.quicksilver.airdrop.v1.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getZoneDropsList()
+          .equals(other.getZoneDropsList())) return false;
+      if (!getClaimRecordsList()
+          .equals(other.getClaimRecordsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (getZoneDropsCount() > 0) {
+        hash = (37 * hash) + ZONE_DROPS_FIELD_NUMBER;
+        hash = (53 * hash) + getZoneDropsList().hashCode();
+      }
+      if (getClaimRecordsCount() > 0) {
+        hash = (37 * hash) + CLAIM_RECORDS_FIELD_NUMBER;
+        hash = (53 * hash) + getClaimRecordsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.airdrop.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.airdrop.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.airdrop.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.airdrop.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.airdrop.v1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.airdrop.v1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.airdrop.v1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.airdrop.v1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.airdrop.v1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.airdrop.v1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.airdrop.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.airdrop.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.airdrop.v1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the airdrop module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code quicksilver.airdrop.v1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.airdrop.v1.GenesisState)
+        com.quicksilver.airdrop.v1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.airdrop.v1.GenesisProto.internal_static_quicksilver_airdrop_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.airdrop.v1.GenesisProto.internal_static_quicksilver_airdrop_v1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.airdrop.v1.GenesisProto.GenesisState.class, com.quicksilver.airdrop.v1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.quicksilver.airdrop.v1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        if (zoneDropsBuilder_ == null) {
+          zoneDrops_ = java.util.Collections.emptyList();
+        } else {
+          zoneDrops_ = null;
+          zoneDropsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (claimRecordsBuilder_ == null) {
+          claimRecords_ = java.util.Collections.emptyList();
+        } else {
+          claimRecords_ = null;
+          claimRecordsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.airdrop.v1.GenesisProto.internal_static_quicksilver_airdrop_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.airdrop.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.quicksilver.airdrop.v1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.airdrop.v1.GenesisProto.GenesisState build() {
+        com.quicksilver.airdrop.v1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.airdrop.v1.GenesisProto.GenesisState buildPartial() {
+        com.quicksilver.airdrop.v1.GenesisProto.GenesisState result = new com.quicksilver.airdrop.v1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.quicksilver.airdrop.v1.GenesisProto.GenesisState result) {
+        if (zoneDropsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            zoneDrops_ = java.util.Collections.unmodifiableList(zoneDrops_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.zoneDrops_ = zoneDrops_;
+        } else {
+          result.zoneDrops_ = zoneDropsBuilder_.build();
+        }
+        if (claimRecordsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            claimRecords_ = java.util.Collections.unmodifiableList(claimRecords_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.claimRecords_ = claimRecords_;
+        } else {
+          result.claimRecords_ = claimRecordsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.quicksilver.airdrop.v1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.airdrop.v1.GenesisProto.GenesisState) {
+          return mergeFrom((com.quicksilver.airdrop.v1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.airdrop.v1.GenesisProto.GenesisState other) {
+        if (other == com.quicksilver.airdrop.v1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (zoneDropsBuilder_ == null) {
+          if (!other.zoneDrops_.isEmpty()) {
+            if (zoneDrops_.isEmpty()) {
+              zoneDrops_ = other.zoneDrops_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureZoneDropsIsMutable();
+              zoneDrops_.addAll(other.zoneDrops_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.zoneDrops_.isEmpty()) {
+            if (zoneDropsBuilder_.isEmpty()) {
+              zoneDropsBuilder_.dispose();
+              zoneDropsBuilder_ = null;
+              zoneDrops_ = other.zoneDrops_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              zoneDropsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getZoneDropsFieldBuilder() : null;
+            } else {
+              zoneDropsBuilder_.addAllMessages(other.zoneDrops_);
+            }
+          }
+        }
+        if (claimRecordsBuilder_ == null) {
+          if (!other.claimRecords_.isEmpty()) {
+            if (claimRecords_.isEmpty()) {
+              claimRecords_ = other.claimRecords_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureClaimRecordsIsMutable();
+              claimRecords_.addAll(other.claimRecords_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.claimRecords_.isEmpty()) {
+            if (claimRecordsBuilder_.isEmpty()) {
+              claimRecordsBuilder_.dispose();
+              claimRecordsBuilder_ = null;
+              claimRecords_ = other.claimRecords_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              claimRecordsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getClaimRecordsFieldBuilder() : null;
+            } else {
+              claimRecordsBuilder_.addAllMessages(other.claimRecords_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop m =
+                    input.readMessage(
+                        com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop.parser(),
+                        extensionRegistry);
+                if (zoneDropsBuilder_ == null) {
+                  ensureZoneDropsIsMutable();
+                  zoneDrops_.add(m);
+                } else {
+                  zoneDropsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord m =
+                    input.readMessage(
+                        com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord.parser(),
+                        extensionRegistry);
+                if (claimRecordsBuilder_ == null) {
+                  ensureClaimRecordsIsMutable();
+                  claimRecords_.add(m);
+                } else {
+                  claimRecordsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.quicksilver.airdrop.v1.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.quicksilver.airdrop.v1.ParamsProto.Params, com.quicksilver.airdrop.v1.ParamsProto.Params.Builder, com.quicksilver.airdrop.v1.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.quicksilver.airdrop.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.quicksilver.airdrop.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.quicksilver.airdrop.v1.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.quicksilver.airdrop.v1.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.quicksilver.airdrop.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.quicksilver.airdrop.v1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.quicksilver.airdrop.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.quicksilver.airdrop.v1.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.quicksilver.airdrop.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.quicksilver.airdrop.v1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.quicksilver.airdrop.v1.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.quicksilver.airdrop.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.quicksilver.airdrop.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.quicksilver.airdrop.v1.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.quicksilver.airdrop.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.quicksilver.airdrop.v1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.quicksilver.airdrop.v1.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.quicksilver.airdrop.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.quicksilver.airdrop.v1.ParamsProto.Params, com.quicksilver.airdrop.v1.ParamsProto.Params.Builder, com.quicksilver.airdrop.v1.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.quicksilver.airdrop.v1.ParamsProto.Params, com.quicksilver.airdrop.v1.ParamsProto.Params.Builder, com.quicksilver.airdrop.v1.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private java.util.List<com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop> zoneDrops_ =
+        java.util.Collections.emptyList();
+      private void ensureZoneDropsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          zoneDrops_ = new java.util.ArrayList<com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop>(zoneDrops_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop, com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop.Builder, com.quicksilver.airdrop.v1.AirdropProto.ZoneDropOrBuilder> zoneDropsBuilder_;
+
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ZoneDrop zone_drops = 2 [json_name = "zoneDrops"];</code>
+       */
+      public java.util.List<com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop> getZoneDropsList() {
+        if (zoneDropsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(zoneDrops_);
+        } else {
+          return zoneDropsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ZoneDrop zone_drops = 2 [json_name = "zoneDrops"];</code>
+       */
+      public int getZoneDropsCount() {
+        if (zoneDropsBuilder_ == null) {
+          return zoneDrops_.size();
+        } else {
+          return zoneDropsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ZoneDrop zone_drops = 2 [json_name = "zoneDrops"];</code>
+       */
+      public com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop getZoneDrops(int index) {
+        if (zoneDropsBuilder_ == null) {
+          return zoneDrops_.get(index);
+        } else {
+          return zoneDropsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ZoneDrop zone_drops = 2 [json_name = "zoneDrops"];</code>
+       */
+      public Builder setZoneDrops(
+          int index, com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop value) {
+        if (zoneDropsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureZoneDropsIsMutable();
+          zoneDrops_.set(index, value);
+          onChanged();
+        } else {
+          zoneDropsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ZoneDrop zone_drops = 2 [json_name = "zoneDrops"];</code>
+       */
+      public Builder setZoneDrops(
+          int index, com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop.Builder builderForValue) {
+        if (zoneDropsBuilder_ == null) {
+          ensureZoneDropsIsMutable();
+          zoneDrops_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          zoneDropsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ZoneDrop zone_drops = 2 [json_name = "zoneDrops"];</code>
+       */
+      public Builder addZoneDrops(com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop value) {
+        if (zoneDropsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureZoneDropsIsMutable();
+          zoneDrops_.add(value);
+          onChanged();
+        } else {
+          zoneDropsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ZoneDrop zone_drops = 2 [json_name = "zoneDrops"];</code>
+       */
+      public Builder addZoneDrops(
+          int index, com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop value) {
+        if (zoneDropsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureZoneDropsIsMutable();
+          zoneDrops_.add(index, value);
+          onChanged();
+        } else {
+          zoneDropsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ZoneDrop zone_drops = 2 [json_name = "zoneDrops"];</code>
+       */
+      public Builder addZoneDrops(
+          com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop.Builder builderForValue) {
+        if (zoneDropsBuilder_ == null) {
+          ensureZoneDropsIsMutable();
+          zoneDrops_.add(builderForValue.build());
+          onChanged();
+        } else {
+          zoneDropsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ZoneDrop zone_drops = 2 [json_name = "zoneDrops"];</code>
+       */
+      public Builder addZoneDrops(
+          int index, com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop.Builder builderForValue) {
+        if (zoneDropsBuilder_ == null) {
+          ensureZoneDropsIsMutable();
+          zoneDrops_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          zoneDropsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ZoneDrop zone_drops = 2 [json_name = "zoneDrops"];</code>
+       */
+      public Builder addAllZoneDrops(
+          java.lang.Iterable<? extends com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop> values) {
+        if (zoneDropsBuilder_ == null) {
+          ensureZoneDropsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, zoneDrops_);
+          onChanged();
+        } else {
+          zoneDropsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ZoneDrop zone_drops = 2 [json_name = "zoneDrops"];</code>
+       */
+      public Builder clearZoneDrops() {
+        if (zoneDropsBuilder_ == null) {
+          zoneDrops_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          zoneDropsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ZoneDrop zone_drops = 2 [json_name = "zoneDrops"];</code>
+       */
+      public Builder removeZoneDrops(int index) {
+        if (zoneDropsBuilder_ == null) {
+          ensureZoneDropsIsMutable();
+          zoneDrops_.remove(index);
+          onChanged();
+        } else {
+          zoneDropsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ZoneDrop zone_drops = 2 [json_name = "zoneDrops"];</code>
+       */
+      public com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop.Builder getZoneDropsBuilder(
+          int index) {
+        return getZoneDropsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ZoneDrop zone_drops = 2 [json_name = "zoneDrops"];</code>
+       */
+      public com.quicksilver.airdrop.v1.AirdropProto.ZoneDropOrBuilder getZoneDropsOrBuilder(
+          int index) {
+        if (zoneDropsBuilder_ == null) {
+          return zoneDrops_.get(index);  } else {
+          return zoneDropsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ZoneDrop zone_drops = 2 [json_name = "zoneDrops"];</code>
+       */
+      public java.util.List<? extends com.quicksilver.airdrop.v1.AirdropProto.ZoneDropOrBuilder> 
+           getZoneDropsOrBuilderList() {
+        if (zoneDropsBuilder_ != null) {
+          return zoneDropsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(zoneDrops_);
+        }
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ZoneDrop zone_drops = 2 [json_name = "zoneDrops"];</code>
+       */
+      public com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop.Builder addZoneDropsBuilder() {
+        return getZoneDropsFieldBuilder().addBuilder(
+            com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ZoneDrop zone_drops = 2 [json_name = "zoneDrops"];</code>
+       */
+      public com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop.Builder addZoneDropsBuilder(
+          int index) {
+        return getZoneDropsFieldBuilder().addBuilder(
+            index, com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ZoneDrop zone_drops = 2 [json_name = "zoneDrops"];</code>
+       */
+      public java.util.List<com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop.Builder> 
+           getZoneDropsBuilderList() {
+        return getZoneDropsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop, com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop.Builder, com.quicksilver.airdrop.v1.AirdropProto.ZoneDropOrBuilder> 
+          getZoneDropsFieldBuilder() {
+        if (zoneDropsBuilder_ == null) {
+          zoneDropsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop, com.quicksilver.airdrop.v1.AirdropProto.ZoneDrop.Builder, com.quicksilver.airdrop.v1.AirdropProto.ZoneDropOrBuilder>(
+                  zoneDrops_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          zoneDrops_ = null;
+        }
+        return zoneDropsBuilder_;
+      }
+
+      private java.util.List<com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord> claimRecords_ =
+        java.util.Collections.emptyList();
+      private void ensureClaimRecordsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          claimRecords_ = new java.util.ArrayList<com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord>(claimRecords_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord, com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord.Builder, com.quicksilver.airdrop.v1.AirdropProto.ClaimRecordOrBuilder> claimRecordsBuilder_;
+
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ClaimRecord claim_records = 3 [json_name = "claimRecords"];</code>
+       */
+      public java.util.List<com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord> getClaimRecordsList() {
+        if (claimRecordsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(claimRecords_);
+        } else {
+          return claimRecordsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ClaimRecord claim_records = 3 [json_name = "claimRecords"];</code>
+       */
+      public int getClaimRecordsCount() {
+        if (claimRecordsBuilder_ == null) {
+          return claimRecords_.size();
+        } else {
+          return claimRecordsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ClaimRecord claim_records = 3 [json_name = "claimRecords"];</code>
+       */
+      public com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord getClaimRecords(int index) {
+        if (claimRecordsBuilder_ == null) {
+          return claimRecords_.get(index);
+        } else {
+          return claimRecordsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ClaimRecord claim_records = 3 [json_name = "claimRecords"];</code>
+       */
+      public Builder setClaimRecords(
+          int index, com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord value) {
+        if (claimRecordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimRecordsIsMutable();
+          claimRecords_.set(index, value);
+          onChanged();
+        } else {
+          claimRecordsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ClaimRecord claim_records = 3 [json_name = "claimRecords"];</code>
+       */
+      public Builder setClaimRecords(
+          int index, com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord.Builder builderForValue) {
+        if (claimRecordsBuilder_ == null) {
+          ensureClaimRecordsIsMutable();
+          claimRecords_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          claimRecordsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ClaimRecord claim_records = 3 [json_name = "claimRecords"];</code>
+       */
+      public Builder addClaimRecords(com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord value) {
+        if (claimRecordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimRecordsIsMutable();
+          claimRecords_.add(value);
+          onChanged();
+        } else {
+          claimRecordsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ClaimRecord claim_records = 3 [json_name = "claimRecords"];</code>
+       */
+      public Builder addClaimRecords(
+          int index, com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord value) {
+        if (claimRecordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimRecordsIsMutable();
+          claimRecords_.add(index, value);
+          onChanged();
+        } else {
+          claimRecordsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ClaimRecord claim_records = 3 [json_name = "claimRecords"];</code>
+       */
+      public Builder addClaimRecords(
+          com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord.Builder builderForValue) {
+        if (claimRecordsBuilder_ == null) {
+          ensureClaimRecordsIsMutable();
+          claimRecords_.add(builderForValue.build());
+          onChanged();
+        } else {
+          claimRecordsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ClaimRecord claim_records = 3 [json_name = "claimRecords"];</code>
+       */
+      public Builder addClaimRecords(
+          int index, com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord.Builder builderForValue) {
+        if (claimRecordsBuilder_ == null) {
+          ensureClaimRecordsIsMutable();
+          claimRecords_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          claimRecordsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ClaimRecord claim_records = 3 [json_name = "claimRecords"];</code>
+       */
+      public Builder addAllClaimRecords(
+          java.lang.Iterable<? extends com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord> values) {
+        if (claimRecordsBuilder_ == null) {
+          ensureClaimRecordsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, claimRecords_);
+          onChanged();
+        } else {
+          claimRecordsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ClaimRecord claim_records = 3 [json_name = "claimRecords"];</code>
+       */
+      public Builder clearClaimRecords() {
+        if (claimRecordsBuilder_ == null) {
+          claimRecords_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          claimRecordsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ClaimRecord claim_records = 3 [json_name = "claimRecords"];</code>
+       */
+      public Builder removeClaimRecords(int index) {
+        if (claimRecordsBuilder_ == null) {
+          ensureClaimRecordsIsMutable();
+          claimRecords_.remove(index);
+          onChanged();
+        } else {
+          claimRecordsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ClaimRecord claim_records = 3 [json_name = "claimRecords"];</code>
+       */
+      public com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord.Builder getClaimRecordsBuilder(
+          int index) {
+        return getClaimRecordsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ClaimRecord claim_records = 3 [json_name = "claimRecords"];</code>
+       */
+      public com.quicksilver.airdrop.v1.AirdropProto.ClaimRecordOrBuilder getClaimRecordsOrBuilder(
+          int index) {
+        if (claimRecordsBuilder_ == null) {
+          return claimRecords_.get(index);  } else {
+          return claimRecordsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ClaimRecord claim_records = 3 [json_name = "claimRecords"];</code>
+       */
+      public java.util.List<? extends com.quicksilver.airdrop.v1.AirdropProto.ClaimRecordOrBuilder> 
+           getClaimRecordsOrBuilderList() {
+        if (claimRecordsBuilder_ != null) {
+          return claimRecordsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(claimRecords_);
+        }
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ClaimRecord claim_records = 3 [json_name = "claimRecords"];</code>
+       */
+      public com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord.Builder addClaimRecordsBuilder() {
+        return getClaimRecordsFieldBuilder().addBuilder(
+            com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ClaimRecord claim_records = 3 [json_name = "claimRecords"];</code>
+       */
+      public com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord.Builder addClaimRecordsBuilder(
+          int index) {
+        return getClaimRecordsFieldBuilder().addBuilder(
+            index, com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .quicksilver.airdrop.v1.ClaimRecord claim_records = 3 [json_name = "claimRecords"];</code>
+       */
+      public java.util.List<com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord.Builder> 
+           getClaimRecordsBuilderList() {
+        return getClaimRecordsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord, com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord.Builder, com.quicksilver.airdrop.v1.AirdropProto.ClaimRecordOrBuilder> 
+          getClaimRecordsFieldBuilder() {
+        if (claimRecordsBuilder_ == null) {
+          claimRecordsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord, com.quicksilver.airdrop.v1.AirdropProto.ClaimRecord.Builder, com.quicksilver.airdrop.v1.AirdropProto.ClaimRecordOrBuilder>(
+                  claimRecords_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          claimRecords_ = null;
+        }
+        return claimRecordsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.airdrop.v1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.airdrop.v1.GenesisState)
+    private static final com.quicksilver.airdrop.v1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.airdrop.v1.GenesisProto.GenesisState();
+    }
+
+    public static com.quicksilver.airdrop.v1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.airdrop.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_airdrop_v1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_airdrop_v1_GenesisState_fieldAccessorTable;
 
@@ -37,13 +1397,13 @@ public final class GenesisProto {
       "\n\nzone_drops\030\002 \003(\0132 .quicksilver.airdrop" +
       ".v1.ZoneDropR\tzoneDrops\022H\n\rclaim_records" +
       "\030\003 \003(\0132#.quicksilver.airdrop.v1.ClaimRec" +
-      "ordR\014claimRecords:\004\210\240\037\000B\334\001\n\032com.quicksil" +
-      "ver.airdrop.v1B\014GenesisProtoP\001Z6github.c" +
-      "om/ingenuity-build/quicksilver/x/airdrop" +
-      "/types\242\002\003QAX\252\002\026Quicksilver.Airdrop.V1\312\002\026" +
-      "Quicksilver\\Airdrop\\V1\342\002\"Quicksilver\\Air" +
-      "drop\\V1\\GPBMetadata\352\002\030Quicksilver::Airdr" +
-      "op::V1b\006proto3"
+      "ordR\014claimRecords:\004\210\240\037\000B\332\001\n\032com.quicksil" +
+      "ver.airdrop.v1B\014GenesisProtoZ6github.com" +
+      "/ingenuity-build/quicksilver/x/airdrop/t" +
+      "ypes\242\002\003QAX\252\002\026Quicksilver.Airdrop.V1\312\002\026Qu" +
+      "icksilver\\Airdrop\\V1\342\002\"Quicksilver\\Airdr" +
+      "op\\V1\\GPBMetadata\352\002\030Quicksilver::Airdrop" +
+      "::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

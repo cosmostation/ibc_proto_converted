@@ -14,14 +14,3844 @@ public final class ClaimProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * <pre>
+   * ConditionType defines the type of condition that a recipient must execute in order to receive a claimable amount.
+   * </pre>
+   *
+   * Protobuf enum {@code crescent.claim.v1beta1.ConditionType}
+   */
+  public enum ConditionType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * CONDITION_TYPE_UNSPECIFIED specifies an unknown condition type
+     * </pre>
+     *
+     * <code>CONDITION_TYPE_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "ConditionTypeUnspecified"];</code>
+     */
+    CONDITION_TYPE_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * CONDITION_TYPE_DEPOSIT specifies deposit condition type
+     * </pre>
+     *
+     * <code>CONDITION_TYPE_DEPOSIT = 1 [(.gogoproto.enumvalue_customname) = "ConditionTypeDeposit"];</code>
+     */
+    CONDITION_TYPE_DEPOSIT(1),
+    /**
+     * <pre>
+     * CONDITION_TYPE_SWAP specifies swap condition type
+     * </pre>
+     *
+     * <code>CONDITION_TYPE_SWAP = 2 [(.gogoproto.enumvalue_customname) = "ConditionTypeSwap"];</code>
+     */
+    CONDITION_TYPE_SWAP(2),
+    /**
+     * <pre>
+     * CONDITION_TYPE_LIQUIDSTAKE specifies liquid stake condition type
+     * </pre>
+     *
+     * <code>CONDITION_TYPE_LIQUIDSTAKE = 3 [(.gogoproto.enumvalue_customname) = "ConditionTypeLiquidStake"];</code>
+     */
+    CONDITION_TYPE_LIQUIDSTAKE(3),
+    /**
+     * <pre>
+     * CONDITION_TYPE_VOTE specifies governance vote condition type
+     * </pre>
+     *
+     * <code>CONDITION_TYPE_VOTE = 4 [(.gogoproto.enumvalue_customname) = "ConditionTypeVote"];</code>
+     */
+    CONDITION_TYPE_VOTE(4),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * CONDITION_TYPE_UNSPECIFIED specifies an unknown condition type
+     * </pre>
+     *
+     * <code>CONDITION_TYPE_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "ConditionTypeUnspecified"];</code>
+     */
+    public static final int CONDITION_TYPE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * CONDITION_TYPE_DEPOSIT specifies deposit condition type
+     * </pre>
+     *
+     * <code>CONDITION_TYPE_DEPOSIT = 1 [(.gogoproto.enumvalue_customname) = "ConditionTypeDeposit"];</code>
+     */
+    public static final int CONDITION_TYPE_DEPOSIT_VALUE = 1;
+    /**
+     * <pre>
+     * CONDITION_TYPE_SWAP specifies swap condition type
+     * </pre>
+     *
+     * <code>CONDITION_TYPE_SWAP = 2 [(.gogoproto.enumvalue_customname) = "ConditionTypeSwap"];</code>
+     */
+    public static final int CONDITION_TYPE_SWAP_VALUE = 2;
+    /**
+     * <pre>
+     * CONDITION_TYPE_LIQUIDSTAKE specifies liquid stake condition type
+     * </pre>
+     *
+     * <code>CONDITION_TYPE_LIQUIDSTAKE = 3 [(.gogoproto.enumvalue_customname) = "ConditionTypeLiquidStake"];</code>
+     */
+    public static final int CONDITION_TYPE_LIQUIDSTAKE_VALUE = 3;
+    /**
+     * <pre>
+     * CONDITION_TYPE_VOTE specifies governance vote condition type
+     * </pre>
+     *
+     * <code>CONDITION_TYPE_VOTE = 4 [(.gogoproto.enumvalue_customname) = "ConditionTypeVote"];</code>
+     */
+    public static final int CONDITION_TYPE_VOTE_VALUE = 4;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ConditionType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ConditionType forNumber(int value) {
+      switch (value) {
+        case 0: return CONDITION_TYPE_UNSPECIFIED;
+        case 1: return CONDITION_TYPE_DEPOSIT;
+        case 2: return CONDITION_TYPE_SWAP;
+        case 3: return CONDITION_TYPE_LIQUIDSTAKE;
+        case 4: return CONDITION_TYPE_VOTE;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ConditionType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ConditionType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ConditionType>() {
+            public ConditionType findValueByNumber(int number) {
+              return ConditionType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.crescent.claim.v1beta1.ClaimProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final ConditionType[] VALUES = values();
+
+    public static ConditionType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ConditionType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:crescent.claim.v1beta1.ConditionType)
+  }
+
+  public interface AirdropOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.claim.v1beta1.Airdrop)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * id specifies index of the airdrop
+     * </pre>
+     *
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <pre>
+     * source_address defines the bech32-encoded source address
+     * where the source of coins from
+     * </pre>
+     *
+     * <code>string source_address = 2 [json_name = "sourceAddress"];</code>
+     * @return The sourceAddress.
+     */
+    java.lang.String getSourceAddress();
+    /**
+     * <pre>
+     * source_address defines the bech32-encoded source address
+     * where the source of coins from
+     * </pre>
+     *
+     * <code>string source_address = 2 [json_name = "sourceAddress"];</code>
+     * @return The bytes for sourceAddress.
+     */
+    com.google.protobuf.ByteString
+        getSourceAddressBytes();
+
+    /**
+     * <pre>
+     * conditions specifies a list of conditions
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.ConditionType conditions = 3 [json_name = "conditions"];</code>
+     * @return A list containing the conditions.
+     */
+    java.util.List<com.crescent.claim.v1beta1.ClaimProto.ConditionType> getConditionsList();
+    /**
+     * <pre>
+     * conditions specifies a list of conditions
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.ConditionType conditions = 3 [json_name = "conditions"];</code>
+     * @return The count of conditions.
+     */
+    int getConditionsCount();
+    /**
+     * <pre>
+     * conditions specifies a list of conditions
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.ConditionType conditions = 3 [json_name = "conditions"];</code>
+     * @param index The index of the element to return.
+     * @return The conditions at the given index.
+     */
+    com.crescent.claim.v1beta1.ClaimProto.ConditionType getConditions(int index);
+    /**
+     * <pre>
+     * conditions specifies a list of conditions
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.ConditionType conditions = 3 [json_name = "conditions"];</code>
+     * @return A list containing the enum numeric values on the wire for conditions.
+     */
+    java.util.List<java.lang.Integer>
+    getConditionsValueList();
+    /**
+     * <pre>
+     * conditions specifies a list of conditions
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.ConditionType conditions = 3 [json_name = "conditions"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of conditions at the given index.
+     */
+    int getConditionsValue(int index);
+
+    /**
+     * <pre>
+     * start_time specifies the start time of the airdrop
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    boolean hasStartTime();
+    /**
+     * <pre>
+     * start_time specifies the start time of the airdrop
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    com.google.protobuf.Timestamp getStartTime();
+    /**
+     * <pre>
+     * start_time specifies the start time of the airdrop
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
+
+    /**
+     * <pre>
+     * end_time specifies the start time of the airdrop
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the endTime field is set.
+     */
+    boolean hasEndTime();
+    /**
+     * <pre>
+     * end_time specifies the start time of the airdrop
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The endTime.
+     */
+    com.google.protobuf.Timestamp getEndTime();
+    /**
+     * <pre>
+     * end_time specifies the start time of the airdrop
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder();
+  }
+  /**
+   * <pre>
+   * Airdrop defines airdrop information.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.claim.v1beta1.Airdrop}
+   */
+  public static final class Airdrop extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.claim.v1beta1.Airdrop)
+      AirdropOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Airdrop.newBuilder() to construct.
+    private Airdrop(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Airdrop() {
+      sourceAddress_ = "";
+      conditions_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Airdrop();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.claim.v1beta1.ClaimProto.internal_static_crescent_claim_v1beta1_Airdrop_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.claim.v1beta1.ClaimProto.internal_static_crescent_claim_v1beta1_Airdrop_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.claim.v1beta1.ClaimProto.Airdrop.class, com.crescent.claim.v1beta1.ClaimProto.Airdrop.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <pre>
+     * id specifies index of the airdrop
+     * </pre>
+     *
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int SOURCE_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sourceAddress_ = "";
+    /**
+     * <pre>
+     * source_address defines the bech32-encoded source address
+     * where the source of coins from
+     * </pre>
+     *
+     * <code>string source_address = 2 [json_name = "sourceAddress"];</code>
+     * @return The sourceAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getSourceAddress() {
+      java.lang.Object ref = sourceAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sourceAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * source_address defines the bech32-encoded source address
+     * where the source of coins from
+     * </pre>
+     *
+     * <code>string source_address = 2 [json_name = "sourceAddress"];</code>
+     * @return The bytes for sourceAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSourceAddressBytes() {
+      java.lang.Object ref = sourceAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sourceAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONDITIONS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<java.lang.Integer> conditions_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, com.crescent.claim.v1beta1.ClaimProto.ConditionType> conditions_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, com.crescent.claim.v1beta1.ClaimProto.ConditionType>() {
+              public com.crescent.claim.v1beta1.ClaimProto.ConditionType convert(java.lang.Integer from) {
+                com.crescent.claim.v1beta1.ClaimProto.ConditionType result = com.crescent.claim.v1beta1.ClaimProto.ConditionType.forNumber(from);
+                return result == null ? com.crescent.claim.v1beta1.ClaimProto.ConditionType.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <pre>
+     * conditions specifies a list of conditions
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.ConditionType conditions = 3 [json_name = "conditions"];</code>
+     * @return A list containing the conditions.
+     */
+    @java.lang.Override
+    public java.util.List<com.crescent.claim.v1beta1.ClaimProto.ConditionType> getConditionsList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.crescent.claim.v1beta1.ClaimProto.ConditionType>(conditions_, conditions_converter_);
+    }
+    /**
+     * <pre>
+     * conditions specifies a list of conditions
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.ConditionType conditions = 3 [json_name = "conditions"];</code>
+     * @return The count of conditions.
+     */
+    @java.lang.Override
+    public int getConditionsCount() {
+      return conditions_.size();
+    }
+    /**
+     * <pre>
+     * conditions specifies a list of conditions
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.ConditionType conditions = 3 [json_name = "conditions"];</code>
+     * @param index The index of the element to return.
+     * @return The conditions at the given index.
+     */
+    @java.lang.Override
+    public com.crescent.claim.v1beta1.ClaimProto.ConditionType getConditions(int index) {
+      return conditions_converter_.convert(conditions_.get(index));
+    }
+    /**
+     * <pre>
+     * conditions specifies a list of conditions
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.ConditionType conditions = 3 [json_name = "conditions"];</code>
+     * @return A list containing the enum numeric values on the wire for conditions.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+    getConditionsValueList() {
+      return conditions_;
+    }
+    /**
+     * <pre>
+     * conditions specifies a list of conditions
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.ConditionType conditions = 3 [json_name = "conditions"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of conditions at the given index.
+     */
+    @java.lang.Override
+    public int getConditionsValue(int index) {
+      return conditions_.get(index);
+    }
+    private int conditionsMemoizedSerializedSize;
+
+    public static final int START_TIME_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp startTime_;
+    /**
+     * <pre>
+     * start_time specifies the start time of the airdrop
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartTime() {
+      return startTime_ != null;
+    }
+    /**
+     * <pre>
+     * start_time specifies the start time of the airdrop
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getStartTime() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+    /**
+     * <pre>
+     * start_time specifies the start time of the airdrop
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+
+    public static final int END_TIME_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp endTime_;
+    /**
+     * <pre>
+     * end_time specifies the start time of the airdrop
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the endTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasEndTime() {
+      return endTime_ != null;
+    }
+    /**
+     * <pre>
+     * end_time specifies the start time of the airdrop
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The endTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getEndTime() {
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    }
+    /**
+     * <pre>
+     * end_time specifies the start time of the airdrop
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, sourceAddress_);
+      }
+      if (getConditionsList().size() > 0) {
+        output.writeUInt32NoTag(26);
+        output.writeUInt32NoTag(conditionsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < conditions_.size(); i++) {
+        output.writeEnumNoTag(conditions_.get(i));
+      }
+      if (startTime_ != null) {
+        output.writeMessage(4, getStartTime());
+      }
+      if (endTime_ != null) {
+        output.writeMessage(5, getEndTime());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, sourceAddress_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < conditions_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(conditions_.get(i));
+        }
+        size += dataSize;
+        if (!getConditionsList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }conditionsMemoizedSerializedSize = dataSize;
+      }
+      if (startTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getStartTime());
+      }
+      if (endTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getEndTime());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.claim.v1beta1.ClaimProto.Airdrop)) {
+        return super.equals(obj);
+      }
+      com.crescent.claim.v1beta1.ClaimProto.Airdrop other = (com.crescent.claim.v1beta1.ClaimProto.Airdrop) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (!getSourceAddress()
+          .equals(other.getSourceAddress())) return false;
+      if (!conditions_.equals(other.conditions_)) return false;
+      if (hasStartTime() != other.hasStartTime()) return false;
+      if (hasStartTime()) {
+        if (!getStartTime()
+            .equals(other.getStartTime())) return false;
+      }
+      if (hasEndTime() != other.hasEndTime()) return false;
+      if (hasEndTime()) {
+        if (!getEndTime()
+            .equals(other.getEndTime())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (37 * hash) + SOURCE_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getSourceAddress().hashCode();
+      if (getConditionsCount() > 0) {
+        hash = (37 * hash) + CONDITIONS_FIELD_NUMBER;
+        hash = (53 * hash) + conditions_.hashCode();
+      }
+      if (hasStartTime()) {
+        hash = (37 * hash) + START_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getStartTime().hashCode();
+      }
+      if (hasEndTime()) {
+        hash = (37 * hash) + END_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getEndTime().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.claim.v1beta1.ClaimProto.Airdrop parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.claim.v1beta1.ClaimProto.Airdrop parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.ClaimProto.Airdrop parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.claim.v1beta1.ClaimProto.Airdrop parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.ClaimProto.Airdrop parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.claim.v1beta1.ClaimProto.Airdrop parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.ClaimProto.Airdrop parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.claim.v1beta1.ClaimProto.Airdrop parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.claim.v1beta1.ClaimProto.Airdrop parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.claim.v1beta1.ClaimProto.Airdrop parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.ClaimProto.Airdrop parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.claim.v1beta1.ClaimProto.Airdrop parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.claim.v1beta1.ClaimProto.Airdrop prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Airdrop defines airdrop information.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.claim.v1beta1.Airdrop}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.claim.v1beta1.Airdrop)
+        com.crescent.claim.v1beta1.ClaimProto.AirdropOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.claim.v1beta1.ClaimProto.internal_static_crescent_claim_v1beta1_Airdrop_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.claim.v1beta1.ClaimProto.internal_static_crescent_claim_v1beta1_Airdrop_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.claim.v1beta1.ClaimProto.Airdrop.class, com.crescent.claim.v1beta1.ClaimProto.Airdrop.Builder.class);
+      }
+
+      // Construct using com.crescent.claim.v1beta1.ClaimProto.Airdrop.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        sourceAddress_ = "";
+        conditions_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        endTime_ = null;
+        if (endTimeBuilder_ != null) {
+          endTimeBuilder_.dispose();
+          endTimeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.claim.v1beta1.ClaimProto.internal_static_crescent_claim_v1beta1_Airdrop_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.claim.v1beta1.ClaimProto.Airdrop getDefaultInstanceForType() {
+        return com.crescent.claim.v1beta1.ClaimProto.Airdrop.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.claim.v1beta1.ClaimProto.Airdrop build() {
+        com.crescent.claim.v1beta1.ClaimProto.Airdrop result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.claim.v1beta1.ClaimProto.Airdrop buildPartial() {
+        com.crescent.claim.v1beta1.ClaimProto.Airdrop result = new com.crescent.claim.v1beta1.ClaimProto.Airdrop(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.crescent.claim.v1beta1.ClaimProto.Airdrop result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          conditions_ = java.util.Collections.unmodifiableList(conditions_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.conditions_ = conditions_;
+      }
+
+      private void buildPartial0(com.crescent.claim.v1beta1.ClaimProto.Airdrop result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.sourceAddress_ = sourceAddress_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.startTime_ = startTimeBuilder_ == null
+              ? startTime_
+              : startTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.endTime_ = endTimeBuilder_ == null
+              ? endTime_
+              : endTimeBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.claim.v1beta1.ClaimProto.Airdrop) {
+          return mergeFrom((com.crescent.claim.v1beta1.ClaimProto.Airdrop)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.claim.v1beta1.ClaimProto.Airdrop other) {
+        if (other == com.crescent.claim.v1beta1.ClaimProto.Airdrop.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (!other.getSourceAddress().isEmpty()) {
+          sourceAddress_ = other.sourceAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.conditions_.isEmpty()) {
+          if (conditions_.isEmpty()) {
+            conditions_ = other.conditions_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureConditionsIsMutable();
+            conditions_.addAll(other.conditions_);
+          }
+          onChanged();
+        }
+        if (other.hasStartTime()) {
+          mergeStartTime(other.getStartTime());
+        }
+        if (other.hasEndTime()) {
+          mergeEndTime(other.getEndTime());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                sourceAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                int tmpRaw = input.readEnum();
+                ensureConditionsIsMutable();
+                conditions_.add(tmpRaw);
+                break;
+              } // case 24
+              case 26: {
+                int length = input.readRawVarint32();
+                int oldLimit = input.pushLimit(length);
+                while(input.getBytesUntilLimit() > 0) {
+                  int tmpRaw = input.readEnum();
+                  ensureConditionsIsMutable();
+                  conditions_.add(tmpRaw);
+                }
+                input.popLimit(oldLimit);
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getStartTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getEndTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <pre>
+       * id specifies index of the airdrop
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <pre>
+       * id specifies index of the airdrop
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id specifies index of the airdrop
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sourceAddress_ = "";
+      /**
+       * <pre>
+       * source_address defines the bech32-encoded source address
+       * where the source of coins from
+       * </pre>
+       *
+       * <code>string source_address = 2 [json_name = "sourceAddress"];</code>
+       * @return The sourceAddress.
+       */
+      public java.lang.String getSourceAddress() {
+        java.lang.Object ref = sourceAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sourceAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * source_address defines the bech32-encoded source address
+       * where the source of coins from
+       * </pre>
+       *
+       * <code>string source_address = 2 [json_name = "sourceAddress"];</code>
+       * @return The bytes for sourceAddress.
+       */
+      public com.google.protobuf.ByteString
+          getSourceAddressBytes() {
+        java.lang.Object ref = sourceAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sourceAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * source_address defines the bech32-encoded source address
+       * where the source of coins from
+       * </pre>
+       *
+       * <code>string source_address = 2 [json_name = "sourceAddress"];</code>
+       * @param value The sourceAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sourceAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * source_address defines the bech32-encoded source address
+       * where the source of coins from
+       * </pre>
+       *
+       * <code>string source_address = 2 [json_name = "sourceAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSourceAddress() {
+        sourceAddress_ = getDefaultInstance().getSourceAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * source_address defines the bech32-encoded source address
+       * where the source of coins from
+       * </pre>
+       *
+       * <code>string source_address = 2 [json_name = "sourceAddress"];</code>
+       * @param value The bytes for sourceAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sourceAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Integer> conditions_ =
+        java.util.Collections.emptyList();
+      private void ensureConditionsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          conditions_ = new java.util.ArrayList<java.lang.Integer>(conditions_);
+          bitField0_ |= 0x00000004;
+        }
+      }
+      /**
+       * <pre>
+       * conditions specifies a list of conditions
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ConditionType conditions = 3 [json_name = "conditions"];</code>
+       * @return A list containing the conditions.
+       */
+      public java.util.List<com.crescent.claim.v1beta1.ClaimProto.ConditionType> getConditionsList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, com.crescent.claim.v1beta1.ClaimProto.ConditionType>(conditions_, conditions_converter_);
+      }
+      /**
+       * <pre>
+       * conditions specifies a list of conditions
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ConditionType conditions = 3 [json_name = "conditions"];</code>
+       * @return The count of conditions.
+       */
+      public int getConditionsCount() {
+        return conditions_.size();
+      }
+      /**
+       * <pre>
+       * conditions specifies a list of conditions
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ConditionType conditions = 3 [json_name = "conditions"];</code>
+       * @param index The index of the element to return.
+       * @return The conditions at the given index.
+       */
+      public com.crescent.claim.v1beta1.ClaimProto.ConditionType getConditions(int index) {
+        return conditions_converter_.convert(conditions_.get(index));
+      }
+      /**
+       * <pre>
+       * conditions specifies a list of conditions
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ConditionType conditions = 3 [json_name = "conditions"];</code>
+       * @param index The index to set the value at.
+       * @param value The conditions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConditions(
+          int index, com.crescent.claim.v1beta1.ClaimProto.ConditionType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureConditionsIsMutable();
+        conditions_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * conditions specifies a list of conditions
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ConditionType conditions = 3 [json_name = "conditions"];</code>
+       * @param value The conditions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addConditions(com.crescent.claim.v1beta1.ClaimProto.ConditionType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureConditionsIsMutable();
+        conditions_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * conditions specifies a list of conditions
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ConditionType conditions = 3 [json_name = "conditions"];</code>
+       * @param values The conditions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllConditions(
+          java.lang.Iterable<? extends com.crescent.claim.v1beta1.ClaimProto.ConditionType> values) {
+        ensureConditionsIsMutable();
+        for (com.crescent.claim.v1beta1.ClaimProto.ConditionType value : values) {
+          conditions_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * conditions specifies a list of conditions
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ConditionType conditions = 3 [json_name = "conditions"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConditions() {
+        conditions_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * conditions specifies a list of conditions
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ConditionType conditions = 3 [json_name = "conditions"];</code>
+       * @return A list containing the enum numeric values on the wire for conditions.
+       */
+      public java.util.List<java.lang.Integer>
+      getConditionsValueList() {
+        return java.util.Collections.unmodifiableList(conditions_);
+      }
+      /**
+       * <pre>
+       * conditions specifies a list of conditions
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ConditionType conditions = 3 [json_name = "conditions"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of conditions at the given index.
+       */
+      public int getConditionsValue(int index) {
+        return conditions_.get(index);
+      }
+      /**
+       * <pre>
+       * conditions specifies a list of conditions
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ConditionType conditions = 3 [json_name = "conditions"];</code>
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for conditions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConditionsValue(
+          int index, int value) {
+        ensureConditionsIsMutable();
+        conditions_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * conditions specifies a list of conditions
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ConditionType conditions = 3 [json_name = "conditions"];</code>
+       * @param value The enum numeric value on the wire for conditions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addConditionsValue(int value) {
+        ensureConditionsIsMutable();
+        conditions_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * conditions specifies a list of conditions
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ConditionType conditions = 3 [json_name = "conditions"];</code>
+       * @param values The enum numeric values on the wire for conditions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllConditionsValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureConditionsIsMutable();
+        for (int value : values) {
+          conditions_.add(value);
+        }
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp startTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
+      /**
+       * <pre>
+       * start_time specifies the start time of the airdrop
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return Whether the startTime field is set.
+       */
+      public boolean hasStartTime() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of the airdrop
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return The startTime.
+       */
+      public com.google.protobuf.Timestamp getStartTime() {
+        if (startTimeBuilder_ == null) {
+          return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        } else {
+          return startTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of the airdrop
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          startTime_ = value;
+        } else {
+          startTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of the airdrop
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (startTimeBuilder_ == null) {
+          startTime_ = builderForValue.build();
+        } else {
+          startTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of the airdrop
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            startTime_ != null &&
+            startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getStartTimeBuilder().mergeFrom(value);
+          } else {
+            startTime_ = value;
+          }
+        } else {
+          startTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of the airdrop
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearStartTime() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of the airdrop
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getStartTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of the airdrop
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+        if (startTimeBuilder_ != null) {
+          return startTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return startTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        }
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of the airdrop
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getStartTimeFieldBuilder() {
+        if (startTimeBuilder_ == null) {
+          startTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getStartTime(),
+                  getParentForChildren(),
+                  isClean());
+          startTime_ = null;
+        }
+        return startTimeBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp endTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endTimeBuilder_;
+      /**
+       * <pre>
+       * end_time specifies the start time of the airdrop
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return Whether the endTime field is set.
+       */
+      public boolean hasEndTime() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * end_time specifies the start time of the airdrop
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return The endTime.
+       */
+      public com.google.protobuf.Timestamp getEndTime() {
+        if (endTimeBuilder_ == null) {
+          return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+        } else {
+          return endTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * end_time specifies the start time of the airdrop
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setEndTime(com.google.protobuf.Timestamp value) {
+        if (endTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          endTime_ = value;
+        } else {
+          endTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * end_time specifies the start time of the airdrop
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setEndTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (endTimeBuilder_ == null) {
+          endTime_ = builderForValue.build();
+        } else {
+          endTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * end_time specifies the start time of the airdrop
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeEndTime(com.google.protobuf.Timestamp value) {
+        if (endTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            endTime_ != null &&
+            endTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getEndTimeBuilder().mergeFrom(value);
+          } else {
+            endTime_ = value;
+          }
+        } else {
+          endTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * end_time specifies the start time of the airdrop
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearEndTime() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        endTime_ = null;
+        if (endTimeBuilder_ != null) {
+          endTimeBuilder_.dispose();
+          endTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * end_time specifies the start time of the airdrop
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getEndTimeBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getEndTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * end_time specifies the start time of the airdrop
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+        if (endTimeBuilder_ != null) {
+          return endTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return endTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+        }
+      }
+      /**
+       * <pre>
+       * end_time specifies the start time of the airdrop
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getEndTimeFieldBuilder() {
+        if (endTimeBuilder_ == null) {
+          endTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getEndTime(),
+                  getParentForChildren(),
+                  isClean());
+          endTime_ = null;
+        }
+        return endTimeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.claim.v1beta1.Airdrop)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.claim.v1beta1.Airdrop)
+    private static final com.crescent.claim.v1beta1.ClaimProto.Airdrop DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.claim.v1beta1.ClaimProto.Airdrop();
+    }
+
+    public static com.crescent.claim.v1beta1.ClaimProto.Airdrop getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Airdrop>
+        PARSER = new com.google.protobuf.AbstractParser<Airdrop>() {
+      @java.lang.Override
+      public Airdrop parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Airdrop> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Airdrop> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.claim.v1beta1.ClaimProto.Airdrop getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ClaimRecordOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.claim.v1beta1.ClaimRecord)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * airdrop_id specifies airdrop id
+     * </pre>
+     *
+     * <code>uint64 airdrop_id = 1 [json_name = "airdropId"];</code>
+     * @return The airdropId.
+     */
+    long getAirdropId();
+
+    /**
+     * <pre>
+     * recipient specifies the bech32-encoded address that is eligible to claim airdrop
+     * </pre>
+     *
+     * <code>string recipient = 2 [json_name = "recipient"];</code>
+     * @return The recipient.
+     */
+    java.lang.String getRecipient();
+    /**
+     * <pre>
+     * recipient specifies the bech32-encoded address that is eligible to claim airdrop
+     * </pre>
+     *
+     * <code>string recipient = 2 [json_name = "recipient"];</code>
+     * @return The bytes for recipient.
+     */
+    com.google.protobuf.ByteString
+        getRecipientBytes();
+
+    /**
+     * <pre>
+     * initial_claimable_coins specifies the initial claimable coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin initial_claimable_coins = 3 [json_name = "initialClaimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getInitialClaimableCoinsList();
+    /**
+     * <pre>
+     * initial_claimable_coins specifies the initial claimable coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin initial_claimable_coins = 3 [json_name = "initialClaimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getInitialClaimableCoins(int index);
+    /**
+     * <pre>
+     * initial_claimable_coins specifies the initial claimable coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin initial_claimable_coins = 3 [json_name = "initialClaimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getInitialClaimableCoinsCount();
+    /**
+     * <pre>
+     * initial_claimable_coins specifies the initial claimable coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin initial_claimable_coins = 3 [json_name = "initialClaimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getInitialClaimableCoinsOrBuilderList();
+    /**
+     * <pre>
+     * initial_claimable_coins specifies the initial claimable coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin initial_claimable_coins = 3 [json_name = "initialClaimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getInitialClaimableCoinsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * claimable_coins specifies the unclaimed claimable coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin claimable_coins = 4 [json_name = "claimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getClaimableCoinsList();
+    /**
+     * <pre>
+     * claimable_coins specifies the unclaimed claimable coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin claimable_coins = 4 [json_name = "claimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getClaimableCoins(int index);
+    /**
+     * <pre>
+     * claimable_coins specifies the unclaimed claimable coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin claimable_coins = 4 [json_name = "claimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getClaimableCoinsCount();
+    /**
+     * <pre>
+     * claimable_coins specifies the unclaimed claimable coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin claimable_coins = 4 [json_name = "claimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getClaimableCoinsOrBuilderList();
+    /**
+     * <pre>
+     * claimable_coins specifies the unclaimed claimable coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin claimable_coins = 4 [json_name = "claimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getClaimableCoinsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * claimed_conditions specifies a list of condition types
+     * initial values are empty and each condition type gets appended when claim is successfully executed
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.ConditionType claimed_conditions = 5 [json_name = "claimedConditions"];</code>
+     * @return A list containing the claimedConditions.
+     */
+    java.util.List<com.crescent.claim.v1beta1.ClaimProto.ConditionType> getClaimedConditionsList();
+    /**
+     * <pre>
+     * claimed_conditions specifies a list of condition types
+     * initial values are empty and each condition type gets appended when claim is successfully executed
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.ConditionType claimed_conditions = 5 [json_name = "claimedConditions"];</code>
+     * @return The count of claimedConditions.
+     */
+    int getClaimedConditionsCount();
+    /**
+     * <pre>
+     * claimed_conditions specifies a list of condition types
+     * initial values are empty and each condition type gets appended when claim is successfully executed
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.ConditionType claimed_conditions = 5 [json_name = "claimedConditions"];</code>
+     * @param index The index of the element to return.
+     * @return The claimedConditions at the given index.
+     */
+    com.crescent.claim.v1beta1.ClaimProto.ConditionType getClaimedConditions(int index);
+    /**
+     * <pre>
+     * claimed_conditions specifies a list of condition types
+     * initial values are empty and each condition type gets appended when claim is successfully executed
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.ConditionType claimed_conditions = 5 [json_name = "claimedConditions"];</code>
+     * @return A list containing the enum numeric values on the wire for claimedConditions.
+     */
+    java.util.List<java.lang.Integer>
+    getClaimedConditionsValueList();
+    /**
+     * <pre>
+     * claimed_conditions specifies a list of condition types
+     * initial values are empty and each condition type gets appended when claim is successfully executed
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.ConditionType claimed_conditions = 5 [json_name = "claimedConditions"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of claimedConditions at the given index.
+     */
+    int getClaimedConditionsValue(int index);
+  }
+  /**
+   * <pre>
+   * ClaimRecord defines claim record that corresponds to the airdrop.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.claim.v1beta1.ClaimRecord}
+   */
+  public static final class ClaimRecord extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.claim.v1beta1.ClaimRecord)
+      ClaimRecordOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ClaimRecord.newBuilder() to construct.
+    private ClaimRecord(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ClaimRecord() {
+      recipient_ = "";
+      initialClaimableCoins_ = java.util.Collections.emptyList();
+      claimableCoins_ = java.util.Collections.emptyList();
+      claimedConditions_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ClaimRecord();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.claim.v1beta1.ClaimProto.internal_static_crescent_claim_v1beta1_ClaimRecord_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.claim.v1beta1.ClaimProto.internal_static_crescent_claim_v1beta1_ClaimRecord_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.claim.v1beta1.ClaimProto.ClaimRecord.class, com.crescent.claim.v1beta1.ClaimProto.ClaimRecord.Builder.class);
+    }
+
+    public static final int AIRDROP_ID_FIELD_NUMBER = 1;
+    private long airdropId_ = 0L;
+    /**
+     * <pre>
+     * airdrop_id specifies airdrop id
+     * </pre>
+     *
+     * <code>uint64 airdrop_id = 1 [json_name = "airdropId"];</code>
+     * @return The airdropId.
+     */
+    @java.lang.Override
+    public long getAirdropId() {
+      return airdropId_;
+    }
+
+    public static final int RECIPIENT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object recipient_ = "";
+    /**
+     * <pre>
+     * recipient specifies the bech32-encoded address that is eligible to claim airdrop
+     * </pre>
+     *
+     * <code>string recipient = 2 [json_name = "recipient"];</code>
+     * @return The recipient.
+     */
+    @java.lang.Override
+    public java.lang.String getRecipient() {
+      java.lang.Object ref = recipient_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recipient_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * recipient specifies the bech32-encoded address that is eligible to claim airdrop
+     * </pre>
+     *
+     * <code>string recipient = 2 [json_name = "recipient"];</code>
+     * @return The bytes for recipient.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRecipientBytes() {
+      java.lang.Object ref = recipient_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recipient_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INITIAL_CLAIMABLE_COINS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> initialClaimableCoins_;
+    /**
+     * <pre>
+     * initial_claimable_coins specifies the initial claimable coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin initial_claimable_coins = 3 [json_name = "initialClaimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getInitialClaimableCoinsList() {
+      return initialClaimableCoins_;
+    }
+    /**
+     * <pre>
+     * initial_claimable_coins specifies the initial claimable coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin initial_claimable_coins = 3 [json_name = "initialClaimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getInitialClaimableCoinsOrBuilderList() {
+      return initialClaimableCoins_;
+    }
+    /**
+     * <pre>
+     * initial_claimable_coins specifies the initial claimable coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin initial_claimable_coins = 3 [json_name = "initialClaimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getInitialClaimableCoinsCount() {
+      return initialClaimableCoins_.size();
+    }
+    /**
+     * <pre>
+     * initial_claimable_coins specifies the initial claimable coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin initial_claimable_coins = 3 [json_name = "initialClaimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getInitialClaimableCoins(int index) {
+      return initialClaimableCoins_.get(index);
+    }
+    /**
+     * <pre>
+     * initial_claimable_coins specifies the initial claimable coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin initial_claimable_coins = 3 [json_name = "initialClaimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getInitialClaimableCoinsOrBuilder(
+        int index) {
+      return initialClaimableCoins_.get(index);
+    }
+
+    public static final int CLAIMABLE_COINS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> claimableCoins_;
+    /**
+     * <pre>
+     * claimable_coins specifies the unclaimed claimable coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin claimable_coins = 4 [json_name = "claimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getClaimableCoinsList() {
+      return claimableCoins_;
+    }
+    /**
+     * <pre>
+     * claimable_coins specifies the unclaimed claimable coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin claimable_coins = 4 [json_name = "claimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getClaimableCoinsOrBuilderList() {
+      return claimableCoins_;
+    }
+    /**
+     * <pre>
+     * claimable_coins specifies the unclaimed claimable coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin claimable_coins = 4 [json_name = "claimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getClaimableCoinsCount() {
+      return claimableCoins_.size();
+    }
+    /**
+     * <pre>
+     * claimable_coins specifies the unclaimed claimable coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin claimable_coins = 4 [json_name = "claimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getClaimableCoins(int index) {
+      return claimableCoins_.get(index);
+    }
+    /**
+     * <pre>
+     * claimable_coins specifies the unclaimed claimable coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin claimable_coins = 4 [json_name = "claimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getClaimableCoinsOrBuilder(
+        int index) {
+      return claimableCoins_.get(index);
+    }
+
+    public static final int CLAIMED_CONDITIONS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<java.lang.Integer> claimedConditions_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, com.crescent.claim.v1beta1.ClaimProto.ConditionType> claimedConditions_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, com.crescent.claim.v1beta1.ClaimProto.ConditionType>() {
+              public com.crescent.claim.v1beta1.ClaimProto.ConditionType convert(java.lang.Integer from) {
+                com.crescent.claim.v1beta1.ClaimProto.ConditionType result = com.crescent.claim.v1beta1.ClaimProto.ConditionType.forNumber(from);
+                return result == null ? com.crescent.claim.v1beta1.ClaimProto.ConditionType.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <pre>
+     * claimed_conditions specifies a list of condition types
+     * initial values are empty and each condition type gets appended when claim is successfully executed
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.ConditionType claimed_conditions = 5 [json_name = "claimedConditions"];</code>
+     * @return A list containing the claimedConditions.
+     */
+    @java.lang.Override
+    public java.util.List<com.crescent.claim.v1beta1.ClaimProto.ConditionType> getClaimedConditionsList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.crescent.claim.v1beta1.ClaimProto.ConditionType>(claimedConditions_, claimedConditions_converter_);
+    }
+    /**
+     * <pre>
+     * claimed_conditions specifies a list of condition types
+     * initial values are empty and each condition type gets appended when claim is successfully executed
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.ConditionType claimed_conditions = 5 [json_name = "claimedConditions"];</code>
+     * @return The count of claimedConditions.
+     */
+    @java.lang.Override
+    public int getClaimedConditionsCount() {
+      return claimedConditions_.size();
+    }
+    /**
+     * <pre>
+     * claimed_conditions specifies a list of condition types
+     * initial values are empty and each condition type gets appended when claim is successfully executed
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.ConditionType claimed_conditions = 5 [json_name = "claimedConditions"];</code>
+     * @param index The index of the element to return.
+     * @return The claimedConditions at the given index.
+     */
+    @java.lang.Override
+    public com.crescent.claim.v1beta1.ClaimProto.ConditionType getClaimedConditions(int index) {
+      return claimedConditions_converter_.convert(claimedConditions_.get(index));
+    }
+    /**
+     * <pre>
+     * claimed_conditions specifies a list of condition types
+     * initial values are empty and each condition type gets appended when claim is successfully executed
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.ConditionType claimed_conditions = 5 [json_name = "claimedConditions"];</code>
+     * @return A list containing the enum numeric values on the wire for claimedConditions.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+    getClaimedConditionsValueList() {
+      return claimedConditions_;
+    }
+    /**
+     * <pre>
+     * claimed_conditions specifies a list of condition types
+     * initial values are empty and each condition type gets appended when claim is successfully executed
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.ConditionType claimed_conditions = 5 [json_name = "claimedConditions"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of claimedConditions at the given index.
+     */
+    @java.lang.Override
+    public int getClaimedConditionsValue(int index) {
+      return claimedConditions_.get(index);
+    }
+    private int claimedConditionsMemoizedSerializedSize;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (airdropId_ != 0L) {
+        output.writeUInt64(1, airdropId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, recipient_);
+      }
+      for (int i = 0; i < initialClaimableCoins_.size(); i++) {
+        output.writeMessage(3, initialClaimableCoins_.get(i));
+      }
+      for (int i = 0; i < claimableCoins_.size(); i++) {
+        output.writeMessage(4, claimableCoins_.get(i));
+      }
+      if (getClaimedConditionsList().size() > 0) {
+        output.writeUInt32NoTag(42);
+        output.writeUInt32NoTag(claimedConditionsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < claimedConditions_.size(); i++) {
+        output.writeEnumNoTag(claimedConditions_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (airdropId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, airdropId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, recipient_);
+      }
+      for (int i = 0; i < initialClaimableCoins_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, initialClaimableCoins_.get(i));
+      }
+      for (int i = 0; i < claimableCoins_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, claimableCoins_.get(i));
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < claimedConditions_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(claimedConditions_.get(i));
+        }
+        size += dataSize;
+        if (!getClaimedConditionsList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }claimedConditionsMemoizedSerializedSize = dataSize;
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.claim.v1beta1.ClaimProto.ClaimRecord)) {
+        return super.equals(obj);
+      }
+      com.crescent.claim.v1beta1.ClaimProto.ClaimRecord other = (com.crescent.claim.v1beta1.ClaimProto.ClaimRecord) obj;
+
+      if (getAirdropId()
+          != other.getAirdropId()) return false;
+      if (!getRecipient()
+          .equals(other.getRecipient())) return false;
+      if (!getInitialClaimableCoinsList()
+          .equals(other.getInitialClaimableCoinsList())) return false;
+      if (!getClaimableCoinsList()
+          .equals(other.getClaimableCoinsList())) return false;
+      if (!claimedConditions_.equals(other.claimedConditions_)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AIRDROP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAirdropId());
+      hash = (37 * hash) + RECIPIENT_FIELD_NUMBER;
+      hash = (53 * hash) + getRecipient().hashCode();
+      if (getInitialClaimableCoinsCount() > 0) {
+        hash = (37 * hash) + INITIAL_CLAIMABLE_COINS_FIELD_NUMBER;
+        hash = (53 * hash) + getInitialClaimableCoinsList().hashCode();
+      }
+      if (getClaimableCoinsCount() > 0) {
+        hash = (37 * hash) + CLAIMABLE_COINS_FIELD_NUMBER;
+        hash = (53 * hash) + getClaimableCoinsList().hashCode();
+      }
+      if (getClaimedConditionsCount() > 0) {
+        hash = (37 * hash) + CLAIMED_CONDITIONS_FIELD_NUMBER;
+        hash = (53 * hash) + claimedConditions_.hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.claim.v1beta1.ClaimProto.ClaimRecord parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.claim.v1beta1.ClaimProto.ClaimRecord parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.ClaimProto.ClaimRecord parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.claim.v1beta1.ClaimProto.ClaimRecord parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.ClaimProto.ClaimRecord parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.claim.v1beta1.ClaimProto.ClaimRecord parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.ClaimProto.ClaimRecord parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.claim.v1beta1.ClaimProto.ClaimRecord parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.claim.v1beta1.ClaimProto.ClaimRecord parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.claim.v1beta1.ClaimProto.ClaimRecord parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.ClaimProto.ClaimRecord parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.claim.v1beta1.ClaimProto.ClaimRecord parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.claim.v1beta1.ClaimProto.ClaimRecord prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ClaimRecord defines claim record that corresponds to the airdrop.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.claim.v1beta1.ClaimRecord}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.claim.v1beta1.ClaimRecord)
+        com.crescent.claim.v1beta1.ClaimProto.ClaimRecordOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.claim.v1beta1.ClaimProto.internal_static_crescent_claim_v1beta1_ClaimRecord_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.claim.v1beta1.ClaimProto.internal_static_crescent_claim_v1beta1_ClaimRecord_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.claim.v1beta1.ClaimProto.ClaimRecord.class, com.crescent.claim.v1beta1.ClaimProto.ClaimRecord.Builder.class);
+      }
+
+      // Construct using com.crescent.claim.v1beta1.ClaimProto.ClaimRecord.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        airdropId_ = 0L;
+        recipient_ = "";
+        if (initialClaimableCoinsBuilder_ == null) {
+          initialClaimableCoins_ = java.util.Collections.emptyList();
+        } else {
+          initialClaimableCoins_ = null;
+          initialClaimableCoinsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (claimableCoinsBuilder_ == null) {
+          claimableCoins_ = java.util.Collections.emptyList();
+        } else {
+          claimableCoins_ = null;
+          claimableCoinsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        claimedConditions_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.claim.v1beta1.ClaimProto.internal_static_crescent_claim_v1beta1_ClaimRecord_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.claim.v1beta1.ClaimProto.ClaimRecord getDefaultInstanceForType() {
+        return com.crescent.claim.v1beta1.ClaimProto.ClaimRecord.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.claim.v1beta1.ClaimProto.ClaimRecord build() {
+        com.crescent.claim.v1beta1.ClaimProto.ClaimRecord result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.claim.v1beta1.ClaimProto.ClaimRecord buildPartial() {
+        com.crescent.claim.v1beta1.ClaimProto.ClaimRecord result = new com.crescent.claim.v1beta1.ClaimProto.ClaimRecord(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.crescent.claim.v1beta1.ClaimProto.ClaimRecord result) {
+        if (initialClaimableCoinsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            initialClaimableCoins_ = java.util.Collections.unmodifiableList(initialClaimableCoins_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.initialClaimableCoins_ = initialClaimableCoins_;
+        } else {
+          result.initialClaimableCoins_ = initialClaimableCoinsBuilder_.build();
+        }
+        if (claimableCoinsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            claimableCoins_ = java.util.Collections.unmodifiableList(claimableCoins_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.claimableCoins_ = claimableCoins_;
+        } else {
+          result.claimableCoins_ = claimableCoinsBuilder_.build();
+        }
+        if (((bitField0_ & 0x00000010) != 0)) {
+          claimedConditions_ = java.util.Collections.unmodifiableList(claimedConditions_);
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.claimedConditions_ = claimedConditions_;
+      }
+
+      private void buildPartial0(com.crescent.claim.v1beta1.ClaimProto.ClaimRecord result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.airdropId_ = airdropId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.recipient_ = recipient_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.claim.v1beta1.ClaimProto.ClaimRecord) {
+          return mergeFrom((com.crescent.claim.v1beta1.ClaimProto.ClaimRecord)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.claim.v1beta1.ClaimProto.ClaimRecord other) {
+        if (other == com.crescent.claim.v1beta1.ClaimProto.ClaimRecord.getDefaultInstance()) return this;
+        if (other.getAirdropId() != 0L) {
+          setAirdropId(other.getAirdropId());
+        }
+        if (!other.getRecipient().isEmpty()) {
+          recipient_ = other.recipient_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (initialClaimableCoinsBuilder_ == null) {
+          if (!other.initialClaimableCoins_.isEmpty()) {
+            if (initialClaimableCoins_.isEmpty()) {
+              initialClaimableCoins_ = other.initialClaimableCoins_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureInitialClaimableCoinsIsMutable();
+              initialClaimableCoins_.addAll(other.initialClaimableCoins_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.initialClaimableCoins_.isEmpty()) {
+            if (initialClaimableCoinsBuilder_.isEmpty()) {
+              initialClaimableCoinsBuilder_.dispose();
+              initialClaimableCoinsBuilder_ = null;
+              initialClaimableCoins_ = other.initialClaimableCoins_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              initialClaimableCoinsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getInitialClaimableCoinsFieldBuilder() : null;
+            } else {
+              initialClaimableCoinsBuilder_.addAllMessages(other.initialClaimableCoins_);
+            }
+          }
+        }
+        if (claimableCoinsBuilder_ == null) {
+          if (!other.claimableCoins_.isEmpty()) {
+            if (claimableCoins_.isEmpty()) {
+              claimableCoins_ = other.claimableCoins_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureClaimableCoinsIsMutable();
+              claimableCoins_.addAll(other.claimableCoins_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.claimableCoins_.isEmpty()) {
+            if (claimableCoinsBuilder_.isEmpty()) {
+              claimableCoinsBuilder_.dispose();
+              claimableCoinsBuilder_ = null;
+              claimableCoins_ = other.claimableCoins_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              claimableCoinsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getClaimableCoinsFieldBuilder() : null;
+            } else {
+              claimableCoinsBuilder_.addAllMessages(other.claimableCoins_);
+            }
+          }
+        }
+        if (!other.claimedConditions_.isEmpty()) {
+          if (claimedConditions_.isEmpty()) {
+            claimedConditions_ = other.claimedConditions_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureClaimedConditionsIsMutable();
+            claimedConditions_.addAll(other.claimedConditions_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                airdropId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                recipient_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (initialClaimableCoinsBuilder_ == null) {
+                  ensureInitialClaimableCoinsIsMutable();
+                  initialClaimableCoins_.add(m);
+                } else {
+                  initialClaimableCoinsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (claimableCoinsBuilder_ == null) {
+                  ensureClaimableCoinsIsMutable();
+                  claimableCoins_.add(m);
+                } else {
+                  claimableCoinsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 40: {
+                int tmpRaw = input.readEnum();
+                ensureClaimedConditionsIsMutable();
+                claimedConditions_.add(tmpRaw);
+                break;
+              } // case 40
+              case 42: {
+                int length = input.readRawVarint32();
+                int oldLimit = input.pushLimit(length);
+                while(input.getBytesUntilLimit() > 0) {
+                  int tmpRaw = input.readEnum();
+                  ensureClaimedConditionsIsMutable();
+                  claimedConditions_.add(tmpRaw);
+                }
+                input.popLimit(oldLimit);
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long airdropId_ ;
+      /**
+       * <pre>
+       * airdrop_id specifies airdrop id
+       * </pre>
+       *
+       * <code>uint64 airdrop_id = 1 [json_name = "airdropId"];</code>
+       * @return The airdropId.
+       */
+      @java.lang.Override
+      public long getAirdropId() {
+        return airdropId_;
+      }
+      /**
+       * <pre>
+       * airdrop_id specifies airdrop id
+       * </pre>
+       *
+       * <code>uint64 airdrop_id = 1 [json_name = "airdropId"];</code>
+       * @param value The airdropId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAirdropId(long value) {
+
+        airdropId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * airdrop_id specifies airdrop id
+       * </pre>
+       *
+       * <code>uint64 airdrop_id = 1 [json_name = "airdropId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAirdropId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        airdropId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object recipient_ = "";
+      /**
+       * <pre>
+       * recipient specifies the bech32-encoded address that is eligible to claim airdrop
+       * </pre>
+       *
+       * <code>string recipient = 2 [json_name = "recipient"];</code>
+       * @return The recipient.
+       */
+      public java.lang.String getRecipient() {
+        java.lang.Object ref = recipient_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          recipient_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * recipient specifies the bech32-encoded address that is eligible to claim airdrop
+       * </pre>
+       *
+       * <code>string recipient = 2 [json_name = "recipient"];</code>
+       * @return The bytes for recipient.
+       */
+      public com.google.protobuf.ByteString
+          getRecipientBytes() {
+        java.lang.Object ref = recipient_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          recipient_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * recipient specifies the bech32-encoded address that is eligible to claim airdrop
+       * </pre>
+       *
+       * <code>string recipient = 2 [json_name = "recipient"];</code>
+       * @param value The recipient to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipient(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        recipient_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * recipient specifies the bech32-encoded address that is eligible to claim airdrop
+       * </pre>
+       *
+       * <code>string recipient = 2 [json_name = "recipient"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecipient() {
+        recipient_ = getDefaultInstance().getRecipient();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * recipient specifies the bech32-encoded address that is eligible to claim airdrop
+       * </pre>
+       *
+       * <code>string recipient = 2 [json_name = "recipient"];</code>
+       * @param value The bytes for recipient to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipientBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        recipient_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> initialClaimableCoins_ =
+        java.util.Collections.emptyList();
+      private void ensureInitialClaimableCoinsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          initialClaimableCoins_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(initialClaimableCoins_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> initialClaimableCoinsBuilder_;
+
+      /**
+       * <pre>
+       * initial_claimable_coins specifies the initial claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin initial_claimable_coins = 3 [json_name = "initialClaimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getInitialClaimableCoinsList() {
+        if (initialClaimableCoinsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(initialClaimableCoins_);
+        } else {
+          return initialClaimableCoinsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * initial_claimable_coins specifies the initial claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin initial_claimable_coins = 3 [json_name = "initialClaimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getInitialClaimableCoinsCount() {
+        if (initialClaimableCoinsBuilder_ == null) {
+          return initialClaimableCoins_.size();
+        } else {
+          return initialClaimableCoinsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * initial_claimable_coins specifies the initial claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin initial_claimable_coins = 3 [json_name = "initialClaimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getInitialClaimableCoins(int index) {
+        if (initialClaimableCoinsBuilder_ == null) {
+          return initialClaimableCoins_.get(index);
+        } else {
+          return initialClaimableCoinsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * initial_claimable_coins specifies the initial claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin initial_claimable_coins = 3 [json_name = "initialClaimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setInitialClaimableCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (initialClaimableCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInitialClaimableCoinsIsMutable();
+          initialClaimableCoins_.set(index, value);
+          onChanged();
+        } else {
+          initialClaimableCoinsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * initial_claimable_coins specifies the initial claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin initial_claimable_coins = 3 [json_name = "initialClaimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setInitialClaimableCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (initialClaimableCoinsBuilder_ == null) {
+          ensureInitialClaimableCoinsIsMutable();
+          initialClaimableCoins_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          initialClaimableCoinsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * initial_claimable_coins specifies the initial claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin initial_claimable_coins = 3 [json_name = "initialClaimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addInitialClaimableCoins(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (initialClaimableCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInitialClaimableCoinsIsMutable();
+          initialClaimableCoins_.add(value);
+          onChanged();
+        } else {
+          initialClaimableCoinsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * initial_claimable_coins specifies the initial claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin initial_claimable_coins = 3 [json_name = "initialClaimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addInitialClaimableCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (initialClaimableCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInitialClaimableCoinsIsMutable();
+          initialClaimableCoins_.add(index, value);
+          onChanged();
+        } else {
+          initialClaimableCoinsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * initial_claimable_coins specifies the initial claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin initial_claimable_coins = 3 [json_name = "initialClaimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addInitialClaimableCoins(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (initialClaimableCoinsBuilder_ == null) {
+          ensureInitialClaimableCoinsIsMutable();
+          initialClaimableCoins_.add(builderForValue.build());
+          onChanged();
+        } else {
+          initialClaimableCoinsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * initial_claimable_coins specifies the initial claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin initial_claimable_coins = 3 [json_name = "initialClaimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addInitialClaimableCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (initialClaimableCoinsBuilder_ == null) {
+          ensureInitialClaimableCoinsIsMutable();
+          initialClaimableCoins_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          initialClaimableCoinsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * initial_claimable_coins specifies the initial claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin initial_claimable_coins = 3 [json_name = "initialClaimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllInitialClaimableCoins(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (initialClaimableCoinsBuilder_ == null) {
+          ensureInitialClaimableCoinsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, initialClaimableCoins_);
+          onChanged();
+        } else {
+          initialClaimableCoinsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * initial_claimable_coins specifies the initial claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin initial_claimable_coins = 3 [json_name = "initialClaimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearInitialClaimableCoins() {
+        if (initialClaimableCoinsBuilder_ == null) {
+          initialClaimableCoins_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          initialClaimableCoinsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * initial_claimable_coins specifies the initial claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin initial_claimable_coins = 3 [json_name = "initialClaimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeInitialClaimableCoins(int index) {
+        if (initialClaimableCoinsBuilder_ == null) {
+          ensureInitialClaimableCoinsIsMutable();
+          initialClaimableCoins_.remove(index);
+          onChanged();
+        } else {
+          initialClaimableCoinsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * initial_claimable_coins specifies the initial claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin initial_claimable_coins = 3 [json_name = "initialClaimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getInitialClaimableCoinsBuilder(
+          int index) {
+        return getInitialClaimableCoinsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * initial_claimable_coins specifies the initial claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin initial_claimable_coins = 3 [json_name = "initialClaimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getInitialClaimableCoinsOrBuilder(
+          int index) {
+        if (initialClaimableCoinsBuilder_ == null) {
+          return initialClaimableCoins_.get(index);  } else {
+          return initialClaimableCoinsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * initial_claimable_coins specifies the initial claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin initial_claimable_coins = 3 [json_name = "initialClaimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getInitialClaimableCoinsOrBuilderList() {
+        if (initialClaimableCoinsBuilder_ != null) {
+          return initialClaimableCoinsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(initialClaimableCoins_);
+        }
+      }
+      /**
+       * <pre>
+       * initial_claimable_coins specifies the initial claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin initial_claimable_coins = 3 [json_name = "initialClaimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addInitialClaimableCoinsBuilder() {
+        return getInitialClaimableCoinsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * initial_claimable_coins specifies the initial claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin initial_claimable_coins = 3 [json_name = "initialClaimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addInitialClaimableCoinsBuilder(
+          int index) {
+        return getInitialClaimableCoinsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * initial_claimable_coins specifies the initial claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin initial_claimable_coins = 3 [json_name = "initialClaimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getInitialClaimableCoinsBuilderList() {
+        return getInitialClaimableCoinsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getInitialClaimableCoinsFieldBuilder() {
+        if (initialClaimableCoinsBuilder_ == null) {
+          initialClaimableCoinsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  initialClaimableCoins_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          initialClaimableCoins_ = null;
+        }
+        return initialClaimableCoinsBuilder_;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> claimableCoins_ =
+        java.util.Collections.emptyList();
+      private void ensureClaimableCoinsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          claimableCoins_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(claimableCoins_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> claimableCoinsBuilder_;
+
+      /**
+       * <pre>
+       * claimable_coins specifies the unclaimed claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin claimable_coins = 4 [json_name = "claimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getClaimableCoinsList() {
+        if (claimableCoinsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(claimableCoins_);
+        } else {
+          return claimableCoinsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * claimable_coins specifies the unclaimed claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin claimable_coins = 4 [json_name = "claimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getClaimableCoinsCount() {
+        if (claimableCoinsBuilder_ == null) {
+          return claimableCoins_.size();
+        } else {
+          return claimableCoinsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * claimable_coins specifies the unclaimed claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin claimable_coins = 4 [json_name = "claimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getClaimableCoins(int index) {
+        if (claimableCoinsBuilder_ == null) {
+          return claimableCoins_.get(index);
+        } else {
+          return claimableCoinsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * claimable_coins specifies the unclaimed claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin claimable_coins = 4 [json_name = "claimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setClaimableCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (claimableCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimableCoinsIsMutable();
+          claimableCoins_.set(index, value);
+          onChanged();
+        } else {
+          claimableCoinsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claimable_coins specifies the unclaimed claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin claimable_coins = 4 [json_name = "claimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setClaimableCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (claimableCoinsBuilder_ == null) {
+          ensureClaimableCoinsIsMutable();
+          claimableCoins_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          claimableCoinsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claimable_coins specifies the unclaimed claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin claimable_coins = 4 [json_name = "claimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addClaimableCoins(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (claimableCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimableCoinsIsMutable();
+          claimableCoins_.add(value);
+          onChanged();
+        } else {
+          claimableCoinsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claimable_coins specifies the unclaimed claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin claimable_coins = 4 [json_name = "claimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addClaimableCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (claimableCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimableCoinsIsMutable();
+          claimableCoins_.add(index, value);
+          onChanged();
+        } else {
+          claimableCoinsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claimable_coins specifies the unclaimed claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin claimable_coins = 4 [json_name = "claimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addClaimableCoins(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (claimableCoinsBuilder_ == null) {
+          ensureClaimableCoinsIsMutable();
+          claimableCoins_.add(builderForValue.build());
+          onChanged();
+        } else {
+          claimableCoinsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claimable_coins specifies the unclaimed claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin claimable_coins = 4 [json_name = "claimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addClaimableCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (claimableCoinsBuilder_ == null) {
+          ensureClaimableCoinsIsMutable();
+          claimableCoins_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          claimableCoinsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claimable_coins specifies the unclaimed claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin claimable_coins = 4 [json_name = "claimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllClaimableCoins(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (claimableCoinsBuilder_ == null) {
+          ensureClaimableCoinsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, claimableCoins_);
+          onChanged();
+        } else {
+          claimableCoinsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claimable_coins specifies the unclaimed claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin claimable_coins = 4 [json_name = "claimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearClaimableCoins() {
+        if (claimableCoinsBuilder_ == null) {
+          claimableCoins_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          claimableCoinsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claimable_coins specifies the unclaimed claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin claimable_coins = 4 [json_name = "claimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeClaimableCoins(int index) {
+        if (claimableCoinsBuilder_ == null) {
+          ensureClaimableCoinsIsMutable();
+          claimableCoins_.remove(index);
+          onChanged();
+        } else {
+          claimableCoinsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claimable_coins specifies the unclaimed claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin claimable_coins = 4 [json_name = "claimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getClaimableCoinsBuilder(
+          int index) {
+        return getClaimableCoinsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * claimable_coins specifies the unclaimed claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin claimable_coins = 4 [json_name = "claimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getClaimableCoinsOrBuilder(
+          int index) {
+        if (claimableCoinsBuilder_ == null) {
+          return claimableCoins_.get(index);  } else {
+          return claimableCoinsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * claimable_coins specifies the unclaimed claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin claimable_coins = 4 [json_name = "claimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getClaimableCoinsOrBuilderList() {
+        if (claimableCoinsBuilder_ != null) {
+          return claimableCoinsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(claimableCoins_);
+        }
+      }
+      /**
+       * <pre>
+       * claimable_coins specifies the unclaimed claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin claimable_coins = 4 [json_name = "claimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addClaimableCoinsBuilder() {
+        return getClaimableCoinsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * claimable_coins specifies the unclaimed claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin claimable_coins = 4 [json_name = "claimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addClaimableCoinsBuilder(
+          int index) {
+        return getClaimableCoinsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * claimable_coins specifies the unclaimed claimable coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin claimable_coins = 4 [json_name = "claimableCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getClaimableCoinsBuilderList() {
+        return getClaimableCoinsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getClaimableCoinsFieldBuilder() {
+        if (claimableCoinsBuilder_ == null) {
+          claimableCoinsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  claimableCoins_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          claimableCoins_ = null;
+        }
+        return claimableCoinsBuilder_;
+      }
+
+      private java.util.List<java.lang.Integer> claimedConditions_ =
+        java.util.Collections.emptyList();
+      private void ensureClaimedConditionsIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          claimedConditions_ = new java.util.ArrayList<java.lang.Integer>(claimedConditions_);
+          bitField0_ |= 0x00000010;
+        }
+      }
+      /**
+       * <pre>
+       * claimed_conditions specifies a list of condition types
+       * initial values are empty and each condition type gets appended when claim is successfully executed
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ConditionType claimed_conditions = 5 [json_name = "claimedConditions"];</code>
+       * @return A list containing the claimedConditions.
+       */
+      public java.util.List<com.crescent.claim.v1beta1.ClaimProto.ConditionType> getClaimedConditionsList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, com.crescent.claim.v1beta1.ClaimProto.ConditionType>(claimedConditions_, claimedConditions_converter_);
+      }
+      /**
+       * <pre>
+       * claimed_conditions specifies a list of condition types
+       * initial values are empty and each condition type gets appended when claim is successfully executed
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ConditionType claimed_conditions = 5 [json_name = "claimedConditions"];</code>
+       * @return The count of claimedConditions.
+       */
+      public int getClaimedConditionsCount() {
+        return claimedConditions_.size();
+      }
+      /**
+       * <pre>
+       * claimed_conditions specifies a list of condition types
+       * initial values are empty and each condition type gets appended when claim is successfully executed
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ConditionType claimed_conditions = 5 [json_name = "claimedConditions"];</code>
+       * @param index The index of the element to return.
+       * @return The claimedConditions at the given index.
+       */
+      public com.crescent.claim.v1beta1.ClaimProto.ConditionType getClaimedConditions(int index) {
+        return claimedConditions_converter_.convert(claimedConditions_.get(index));
+      }
+      /**
+       * <pre>
+       * claimed_conditions specifies a list of condition types
+       * initial values are empty and each condition type gets appended when claim is successfully executed
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ConditionType claimed_conditions = 5 [json_name = "claimedConditions"];</code>
+       * @param index The index to set the value at.
+       * @param value The claimedConditions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimedConditions(
+          int index, com.crescent.claim.v1beta1.ClaimProto.ConditionType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureClaimedConditionsIsMutable();
+        claimedConditions_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * claimed_conditions specifies a list of condition types
+       * initial values are empty and each condition type gets appended when claim is successfully executed
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ConditionType claimed_conditions = 5 [json_name = "claimedConditions"];</code>
+       * @param value The claimedConditions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addClaimedConditions(com.crescent.claim.v1beta1.ClaimProto.ConditionType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureClaimedConditionsIsMutable();
+        claimedConditions_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * claimed_conditions specifies a list of condition types
+       * initial values are empty and each condition type gets appended when claim is successfully executed
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ConditionType claimed_conditions = 5 [json_name = "claimedConditions"];</code>
+       * @param values The claimedConditions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllClaimedConditions(
+          java.lang.Iterable<? extends com.crescent.claim.v1beta1.ClaimProto.ConditionType> values) {
+        ensureClaimedConditionsIsMutable();
+        for (com.crescent.claim.v1beta1.ClaimProto.ConditionType value : values) {
+          claimedConditions_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * claimed_conditions specifies a list of condition types
+       * initial values are empty and each condition type gets appended when claim is successfully executed
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ConditionType claimed_conditions = 5 [json_name = "claimedConditions"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClaimedConditions() {
+        claimedConditions_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * claimed_conditions specifies a list of condition types
+       * initial values are empty and each condition type gets appended when claim is successfully executed
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ConditionType claimed_conditions = 5 [json_name = "claimedConditions"];</code>
+       * @return A list containing the enum numeric values on the wire for claimedConditions.
+       */
+      public java.util.List<java.lang.Integer>
+      getClaimedConditionsValueList() {
+        return java.util.Collections.unmodifiableList(claimedConditions_);
+      }
+      /**
+       * <pre>
+       * claimed_conditions specifies a list of condition types
+       * initial values are empty and each condition type gets appended when claim is successfully executed
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ConditionType claimed_conditions = 5 [json_name = "claimedConditions"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of claimedConditions at the given index.
+       */
+      public int getClaimedConditionsValue(int index) {
+        return claimedConditions_.get(index);
+      }
+      /**
+       * <pre>
+       * claimed_conditions specifies a list of condition types
+       * initial values are empty and each condition type gets appended when claim is successfully executed
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ConditionType claimed_conditions = 5 [json_name = "claimedConditions"];</code>
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for claimedConditions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimedConditionsValue(
+          int index, int value) {
+        ensureClaimedConditionsIsMutable();
+        claimedConditions_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * claimed_conditions specifies a list of condition types
+       * initial values are empty and each condition type gets appended when claim is successfully executed
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ConditionType claimed_conditions = 5 [json_name = "claimedConditions"];</code>
+       * @param value The enum numeric value on the wire for claimedConditions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addClaimedConditionsValue(int value) {
+        ensureClaimedConditionsIsMutable();
+        claimedConditions_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * claimed_conditions specifies a list of condition types
+       * initial values are empty and each condition type gets appended when claim is successfully executed
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ConditionType claimed_conditions = 5 [json_name = "claimedConditions"];</code>
+       * @param values The enum numeric values on the wire for claimedConditions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllClaimedConditionsValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureClaimedConditionsIsMutable();
+        for (int value : values) {
+          claimedConditions_.add(value);
+        }
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.claim.v1beta1.ClaimRecord)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.claim.v1beta1.ClaimRecord)
+    private static final com.crescent.claim.v1beta1.ClaimProto.ClaimRecord DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.claim.v1beta1.ClaimProto.ClaimRecord();
+    }
+
+    public static com.crescent.claim.v1beta1.ClaimProto.ClaimRecord getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ClaimRecord>
+        PARSER = new com.google.protobuf.AbstractParser<ClaimRecord>() {
+      @java.lang.Override
+      public ClaimRecord parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ClaimRecord> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ClaimRecord> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.claim.v1beta1.ClaimProto.ClaimRecord getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_claim_v1beta1_Airdrop_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_claim_v1beta1_Airdrop_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_claim_v1beta1_ClaimRecord_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_claim_v1beta1_ClaimRecord_fieldAccessorTable;
 
@@ -61,13 +3891,13 @@ public final class ClaimProto {
       "onditionTypeSwap\022<\n\032CONDITION_TYPE_LIQUI" +
       "DSTAKE\020\003\032\034\212\235 \030ConditionTypeLiquidStake\022." +
       "\n\023CONDITION_TYPE_VOTE\020\004\032\025\212\235 \021ConditionTy" +
-      "peVote\032\004\210\243\036\000B\335\001\n\032com.crescent.claim.v1be" +
-      "ta1B\nClaimProtoP\001Z5github.com/crescent-n" +
-      "etwork/crescent/v5/x/claim/types\242\002\003CCX\252\002" +
-      "\026Crescent.Claim.V1beta1\312\002\026Crescent\\Claim" +
-      "\\V1beta1\342\002\"Crescent\\Claim\\V1beta1\\GPBMet" +
-      "adata\352\002\030Crescent::Claim::V1beta1\310\341\036\000b\006pr" +
-      "oto3"
+      "peVote\032\004\210\243\036\000B\333\001\n\032com.crescent.claim.v1be" +
+      "ta1B\nClaimProtoZ5github.com/crescent-net" +
+      "work/crescent/v5/x/claim/types\242\002\003CCX\252\002\026C" +
+      "rescent.Claim.V1beta1\312\002\026Crescent\\Claim\\V" +
+      "1beta1\342\002\"Crescent\\Claim\\V1beta1\\GPBMetad" +
+      "ata\352\002\030Crescent::Claim::V1beta1\310\341\036\000b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -46,14 +46,14 @@ public final class ServiceProto {
       "ar.permission.v1beta1.QueryGovernanceKey" +
       "Request\0325.axelar.permission.v1beta1.Quer" +
       "yGovernanceKeyResponse\"1\202\323\344\223\002+\022)/axelar/" +
-      "permission/v1beta1/governance_keyB\360\001\n\035co" +
+      "permission/v1beta1/governance_keyB\356\001\n\035co" +
       "m.axelar.permission.v1beta1B\014ServiceProt" +
-      "oP\001Z7github.com/axelarnetwork/axelar-cor" +
-      "e/x/permission/types\242\002\003APX\252\002\031Axelar.Perm" +
-      "ission.V1beta1\312\002\031Axelar\\Permission\\V1bet" +
-      "a1\342\002%Axelar\\Permission\\V1beta1\\GPBMetada" +
-      "ta\352\002\033Axelar::Permission::V1beta1\300\343\036\001b\006pr" +
-      "oto3"
+      "oZ7github.com/axelarnetwork/axelar-core/" +
+      "x/permission/types\242\002\003APX\252\002\031Axelar.Permis" +
+      "sion.V1beta1\312\002\031Axelar\\Permission\\V1beta1" +
+      "\342\002%Axelar\\Permission\\V1beta1\\GPBMetadata" +
+      "\352\002\033Axelar::Permission::V1beta1\300\343\036\001b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,9 +14,714 @@ public final class GroupidProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GroupIDOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.deployment.v1beta3.GroupID)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <code>uint64 dseq = 2 [json_name = "dseq", (.gogoproto.customname) = "DSeq", (.gogoproto.jsontag) = "dseq", (.gogoproto.moretags) = "yaml:&#92;"dseq&#92;""];</code>
+     * @return The dseq.
+     */
+    long getDseq();
+
+    /**
+     * <code>uint32 gseq = 3 [json_name = "gseq", (.gogoproto.customname) = "GSeq", (.gogoproto.jsontag) = "gseq", (.gogoproto.moretags) = "yaml:&#92;"gseq&#92;""];</code>
+     * @return The gseq.
+     */
+    int getGseq();
+  }
+  /**
+   * <pre>
+   * GroupID stores owner, deployment sequence number and group sequence number
+   * </pre>
+   *
+   * Protobuf type {@code akash.deployment.v1beta3.GroupID}
+   */
+  public static final class GroupID extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.deployment.v1beta3.GroupID)
+      GroupIDOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GroupID.newBuilder() to construct.
+    private GroupID(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GroupID() {
+      owner_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GroupID();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.deployment.v1beta3.GroupidProto.internal_static_akash_deployment_v1beta3_GroupID_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.deployment.v1beta3.GroupidProto.internal_static_akash_deployment_v1beta3_GroupID_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.deployment.v1beta3.GroupidProto.GroupID.class, com.akash.deployment.v1beta3.GroupidProto.GroupID.Builder.class);
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DSEQ_FIELD_NUMBER = 2;
+    private long dseq_ = 0L;
+    /**
+     * <code>uint64 dseq = 2 [json_name = "dseq", (.gogoproto.customname) = "DSeq", (.gogoproto.jsontag) = "dseq", (.gogoproto.moretags) = "yaml:&#92;"dseq&#92;""];</code>
+     * @return The dseq.
+     */
+    @java.lang.Override
+    public long getDseq() {
+      return dseq_;
+    }
+
+    public static final int GSEQ_FIELD_NUMBER = 3;
+    private int gseq_ = 0;
+    /**
+     * <code>uint32 gseq = 3 [json_name = "gseq", (.gogoproto.customname) = "GSeq", (.gogoproto.jsontag) = "gseq", (.gogoproto.moretags) = "yaml:&#92;"gseq&#92;""];</code>
+     * @return The gseq.
+     */
+    @java.lang.Override
+    public int getGseq() {
+      return gseq_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, owner_);
+      }
+      if (dseq_ != 0L) {
+        output.writeUInt64(2, dseq_);
+      }
+      if (gseq_ != 0) {
+        output.writeUInt32(3, gseq_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, owner_);
+      }
+      if (dseq_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, dseq_);
+      }
+      if (gseq_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, gseq_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.deployment.v1beta3.GroupidProto.GroupID)) {
+        return super.equals(obj);
+      }
+      com.akash.deployment.v1beta3.GroupidProto.GroupID other = (com.akash.deployment.v1beta3.GroupidProto.GroupID) obj;
+
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (getDseq()
+          != other.getDseq()) return false;
+      if (getGseq()
+          != other.getGseq()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + DSEQ_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDseq());
+      hash = (37 * hash) + GSEQ_FIELD_NUMBER;
+      hash = (53 * hash) + getGseq();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.deployment.v1beta3.GroupidProto.GroupID parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.GroupidProto.GroupID parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.GroupidProto.GroupID parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.GroupidProto.GroupID parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.GroupidProto.GroupID parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.GroupidProto.GroupID parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.GroupidProto.GroupID parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.deployment.v1beta3.GroupidProto.GroupID parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.deployment.v1beta3.GroupidProto.GroupID parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.deployment.v1beta3.GroupidProto.GroupID parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.GroupidProto.GroupID parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.deployment.v1beta3.GroupidProto.GroupID parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.deployment.v1beta3.GroupidProto.GroupID prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GroupID stores owner, deployment sequence number and group sequence number
+     * </pre>
+     *
+     * Protobuf type {@code akash.deployment.v1beta3.GroupID}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.deployment.v1beta3.GroupID)
+        com.akash.deployment.v1beta3.GroupidProto.GroupIDOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.deployment.v1beta3.GroupidProto.internal_static_akash_deployment_v1beta3_GroupID_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.deployment.v1beta3.GroupidProto.internal_static_akash_deployment_v1beta3_GroupID_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.deployment.v1beta3.GroupidProto.GroupID.class, com.akash.deployment.v1beta3.GroupidProto.GroupID.Builder.class);
+      }
+
+      // Construct using com.akash.deployment.v1beta3.GroupidProto.GroupID.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        owner_ = "";
+        dseq_ = 0L;
+        gseq_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.deployment.v1beta3.GroupidProto.internal_static_akash_deployment_v1beta3_GroupID_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.GroupidProto.GroupID getDefaultInstanceForType() {
+        return com.akash.deployment.v1beta3.GroupidProto.GroupID.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.GroupidProto.GroupID build() {
+        com.akash.deployment.v1beta3.GroupidProto.GroupID result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.GroupidProto.GroupID buildPartial() {
+        com.akash.deployment.v1beta3.GroupidProto.GroupID result = new com.akash.deployment.v1beta3.GroupidProto.GroupID(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.deployment.v1beta3.GroupidProto.GroupID result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.dseq_ = dseq_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.gseq_ = gseq_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.deployment.v1beta3.GroupidProto.GroupID) {
+          return mergeFrom((com.akash.deployment.v1beta3.GroupidProto.GroupID)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.deployment.v1beta3.GroupidProto.GroupID other) {
+        if (other == com.akash.deployment.v1beta3.GroupidProto.GroupID.getDefaultInstance()) return this;
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getDseq() != 0L) {
+          setDseq(other.getDseq());
+        }
+        if (other.getGseq() != 0) {
+          setGseq(other.getGseq());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                dseq_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                gseq_ = input.readUInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long dseq_ ;
+      /**
+       * <code>uint64 dseq = 2 [json_name = "dseq", (.gogoproto.customname) = "DSeq", (.gogoproto.jsontag) = "dseq", (.gogoproto.moretags) = "yaml:&#92;"dseq&#92;""];</code>
+       * @return The dseq.
+       */
+      @java.lang.Override
+      public long getDseq() {
+        return dseq_;
+      }
+      /**
+       * <code>uint64 dseq = 2 [json_name = "dseq", (.gogoproto.customname) = "DSeq", (.gogoproto.jsontag) = "dseq", (.gogoproto.moretags) = "yaml:&#92;"dseq&#92;""];</code>
+       * @param value The dseq to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDseq(long value) {
+
+        dseq_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 dseq = 2 [json_name = "dseq", (.gogoproto.customname) = "DSeq", (.gogoproto.jsontag) = "dseq", (.gogoproto.moretags) = "yaml:&#92;"dseq&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDseq() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        dseq_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int gseq_ ;
+      /**
+       * <code>uint32 gseq = 3 [json_name = "gseq", (.gogoproto.customname) = "GSeq", (.gogoproto.jsontag) = "gseq", (.gogoproto.moretags) = "yaml:&#92;"gseq&#92;""];</code>
+       * @return The gseq.
+       */
+      @java.lang.Override
+      public int getGseq() {
+        return gseq_;
+      }
+      /**
+       * <code>uint32 gseq = 3 [json_name = "gseq", (.gogoproto.customname) = "GSeq", (.gogoproto.jsontag) = "gseq", (.gogoproto.moretags) = "yaml:&#92;"gseq&#92;""];</code>
+       * @param value The gseq to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGseq(int value) {
+
+        gseq_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 gseq = 3 [json_name = "gseq", (.gogoproto.customname) = "GSeq", (.gogoproto.jsontag) = "gseq", (.gogoproto.moretags) = "yaml:&#92;"gseq&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGseq() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        gseq_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.deployment.v1beta3.GroupID)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.deployment.v1beta3.GroupID)
+    private static final com.akash.deployment.v1beta3.GroupidProto.GroupID DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.deployment.v1beta3.GroupidProto.GroupID();
+    }
+
+    public static com.akash.deployment.v1beta3.GroupidProto.GroupID getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GroupID>
+        PARSER = new com.google.protobuf.AbstractParser<GroupID>() {
+      @java.lang.Override
+      public GroupID parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GroupID> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GroupID> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.GroupidProto.GroupID getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_deployment_v1beta3_GroupID_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_deployment_v1beta3_GroupID_fieldAccessorTable;
 
@@ -34,13 +739,13 @@ public final class GroupidProto {
       "\005owner\362\336\037\014yaml:\"owner\"R\005owner\0223\n\004dseq\030\002 " +
       "\001(\004B\037\342\336\037\004DSeq\352\336\037\004dseq\362\336\037\013yaml:\"dseq\"R\004ds" +
       "eq\0223\n\004gseq\030\003 \001(\rB\037\342\336\037\004GSeq\352\336\037\004gseq\362\336\037\013ya" +
-      "ml:\"gseq\"R\004gseq:\010\230\240\037\000\350\240\037\000B\355\001\n\034com.akash." +
-      "deployment.v1beta3B\014GroupidProtoP\001Z=gith" +
-      "ub.com/akash-network/akash-api/go/node/d" +
-      "eployment/v1beta3\242\002\003ADX\252\002\030Akash.Deployme" +
-      "nt.V1beta3\312\002\030Akash\\Deployment\\V1beta3\342\002$" +
-      "Akash\\Deployment\\V1beta3\\GPBMetadata\352\002\032A" +
-      "kash::Deployment::V1beta3b\006proto3"
+      "ml:\"gseq\"R\004gseq:\010\230\240\037\000\350\240\037\000B\353\001\n\034com.akash." +
+      "deployment.v1beta3B\014GroupidProtoZ=github" +
+      ".com/akash-network/akash-api/go/node/dep" +
+      "loyment/v1beta3\242\002\003ADX\252\002\030Akash.Deployment" +
+      ".V1beta3\312\002\030Akash\\Deployment\\V1beta3\342\002$Ak" +
+      "ash\\Deployment\\V1beta3\\GPBMetadata\352\002\032Aka" +
+      "sh::Deployment::V1beta3b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

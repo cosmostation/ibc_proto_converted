@@ -14,64 +14,7896 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryContractAddressRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.QueryContractAddressRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ContractType is the type of contract
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.PoEContractType contract_type = 1 [json_name = "contractType"];</code>
+     * @return The enum numeric value on the wire for contractType.
+     */
+    int getContractTypeValue();
+    /**
+     * <pre>
+     * ContractType is the type of contract
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.PoEContractType contract_type = 1 [json_name = "contractType"];</code>
+     * @return The contractType.
+     */
+    com.confio.poe.v1beta1.PoeProto.PoEContractType getContractType();
+  }
+  /**
+   * <pre>
+   * QueryContractAddressRequest is the request type for the Query/ContractAddress
+   * RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.QueryContractAddressRequest}
+   */
+  public static final class QueryContractAddressRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.QueryContractAddressRequest)
+      QueryContractAddressRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryContractAddressRequest.newBuilder() to construct.
+    private QueryContractAddressRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryContractAddressRequest() {
+      contractType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryContractAddressRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryContractAddressRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryContractAddressRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest.class, com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest.Builder.class);
+    }
+
+    public static final int CONTRACT_TYPE_FIELD_NUMBER = 1;
+    private int contractType_ = 0;
+    /**
+     * <pre>
+     * ContractType is the type of contract
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.PoEContractType contract_type = 1 [json_name = "contractType"];</code>
+     * @return The enum numeric value on the wire for contractType.
+     */
+    @java.lang.Override public int getContractTypeValue() {
+      return contractType_;
+    }
+    /**
+     * <pre>
+     * ContractType is the type of contract
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.PoEContractType contract_type = 1 [json_name = "contractType"];</code>
+     * @return The contractType.
+     */
+    @java.lang.Override public com.confio.poe.v1beta1.PoeProto.PoEContractType getContractType() {
+      com.confio.poe.v1beta1.PoeProto.PoEContractType result = com.confio.poe.v1beta1.PoeProto.PoEContractType.forNumber(contractType_);
+      return result == null ? com.confio.poe.v1beta1.PoeProto.PoEContractType.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (contractType_ != com.confio.poe.v1beta1.PoeProto.PoEContractType.UNDEFINED.getNumber()) {
+        output.writeEnum(1, contractType_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (contractType_ != com.confio.poe.v1beta1.PoeProto.PoEContractType.UNDEFINED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, contractType_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest other = (com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest) obj;
+
+      if (contractType_ != other.contractType_) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTRACT_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + contractType_;
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryContractAddressRequest is the request type for the Query/ContractAddress
+     * RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.QueryContractAddressRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.QueryContractAddressRequest)
+        com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryContractAddressRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryContractAddressRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest.class, com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contractType_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryContractAddressRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest build() {
+        com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest buildPartial() {
+        com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest result = new com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.contractType_ = contractType_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest) {
+          return mergeFrom((com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest other) {
+        if (other == com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest.getDefaultInstance()) return this;
+        if (other.contractType_ != 0) {
+          setContractTypeValue(other.getContractTypeValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                contractType_ = input.readEnum();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int contractType_ = 0;
+      /**
+       * <pre>
+       * ContractType is the type of contract
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.PoEContractType contract_type = 1 [json_name = "contractType"];</code>
+       * @return The enum numeric value on the wire for contractType.
+       */
+      @java.lang.Override public int getContractTypeValue() {
+        return contractType_;
+      }
+      /**
+       * <pre>
+       * ContractType is the type of contract
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.PoEContractType contract_type = 1 [json_name = "contractType"];</code>
+       * @param value The enum numeric value on the wire for contractType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractTypeValue(int value) {
+        contractType_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ContractType is the type of contract
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.PoEContractType contract_type = 1 [json_name = "contractType"];</code>
+       * @return The contractType.
+       */
+      @java.lang.Override
+      public com.confio.poe.v1beta1.PoeProto.PoEContractType getContractType() {
+        com.confio.poe.v1beta1.PoeProto.PoEContractType result = com.confio.poe.v1beta1.PoeProto.PoEContractType.forNumber(contractType_);
+        return result == null ? com.confio.poe.v1beta1.PoeProto.PoEContractType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * ContractType is the type of contract
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.PoEContractType contract_type = 1 [json_name = "contractType"];</code>
+       * @param value The contractType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractType(com.confio.poe.v1beta1.PoeProto.PoEContractType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        contractType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ContractType is the type of contract
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.PoEContractType contract_type = 1 [json_name = "contractType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        contractType_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.QueryContractAddressRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.QueryContractAddressRequest)
+    private static final com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest();
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryContractAddressRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryContractAddressRequest>() {
+      @java.lang.Override
+      public QueryContractAddressRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryContractAddressRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryContractAddressRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.QueryProto.QueryContractAddressRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryContractAddressResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.QueryContractAddressResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+  }
+  /**
+   * <pre>
+   * QueryContractAddressRequest is the response type for the
+   * Query/ContractAddress RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.QueryContractAddressResponse}
+   */
+  public static final class QueryContractAddressResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.QueryContractAddressResponse)
+      QueryContractAddressResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryContractAddressResponse.newBuilder() to construct.
+    private QueryContractAddressResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryContractAddressResponse() {
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryContractAddressResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryContractAddressResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryContractAddressResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse.class, com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse other = (com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryContractAddressRequest is the response type for the
+     * Query/ContractAddress RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.QueryContractAddressResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.QueryContractAddressResponse)
+        com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryContractAddressResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryContractAddressResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse.class, com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryContractAddressResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse build() {
+        com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse buildPartial() {
+        com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse result = new com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse) {
+          return mergeFrom((com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse other) {
+        if (other == com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.QueryContractAddressResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.QueryContractAddressResponse)
+    private static final com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse();
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryContractAddressResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryContractAddressResponse>() {
+      @java.lang.Override
+      public QueryContractAddressResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryContractAddressResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryContractAddressResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.QueryProto.QueryContractAddressResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryUnbondingPeriodRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.QueryUnbondingPeriodRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryUnbondingPeriodRequest is request type for the Query/UnbondingPeriod RPC
+   * method
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.QueryUnbondingPeriodRequest}
+   */
+  public static final class QueryUnbondingPeriodRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.QueryUnbondingPeriodRequest)
+      QueryUnbondingPeriodRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryUnbondingPeriodRequest.newBuilder() to construct.
+    private QueryUnbondingPeriodRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryUnbondingPeriodRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryUnbondingPeriodRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryUnbondingPeriodRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryUnbondingPeriodRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest.class, com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest other = (com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryUnbondingPeriodRequest is request type for the Query/UnbondingPeriod RPC
+     * method
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.QueryUnbondingPeriodRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.QueryUnbondingPeriodRequest)
+        com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryUnbondingPeriodRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryUnbondingPeriodRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest.class, com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryUnbondingPeriodRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest build() {
+        com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest buildPartial() {
+        com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest result = new com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest) {
+          return mergeFrom((com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest other) {
+        if (other == com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.QueryUnbondingPeriodRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.QueryUnbondingPeriodRequest)
+    private static final com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest();
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryUnbondingPeriodRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryUnbondingPeriodRequest>() {
+      @java.lang.Override
+      public QueryUnbondingPeriodRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryUnbondingPeriodRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryUnbondingPeriodRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryUnbondingPeriodResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.QueryUnbondingPeriodResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Time is the time that must pass
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration time = 1 [json_name = "time", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the time field is set.
+     */
+    boolean hasTime();
+    /**
+     * <pre>
+     * Time is the time that must pass
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration time = 1 [json_name = "time", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return The time.
+     */
+    com.google.protobuf.Duration getTime();
+    /**
+     * <pre>
+     * Time is the time that must pass
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration time = 1 [json_name = "time", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getTimeOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryUnbondingPeriodResponse is response type for the Query/UnbondingPeriod
+   * RPC method
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.QueryUnbondingPeriodResponse}
+   */
+  public static final class QueryUnbondingPeriodResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.QueryUnbondingPeriodResponse)
+      QueryUnbondingPeriodResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryUnbondingPeriodResponse.newBuilder() to construct.
+    private QueryUnbondingPeriodResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryUnbondingPeriodResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryUnbondingPeriodResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryUnbondingPeriodResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryUnbondingPeriodResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse.class, com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse.Builder.class);
+    }
+
+    public static final int TIME_FIELD_NUMBER = 1;
+    private com.google.protobuf.Duration time_;
+    /**
+     * <pre>
+     * Time is the time that must pass
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration time = 1 [json_name = "time", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the time field is set.
+     */
+    @java.lang.Override
+    public boolean hasTime() {
+      return time_ != null;
+    }
+    /**
+     * <pre>
+     * Time is the time that must pass
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration time = 1 [json_name = "time", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return The time.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getTime() {
+      return time_ == null ? com.google.protobuf.Duration.getDefaultInstance() : time_;
+    }
+    /**
+     * <pre>
+     * Time is the time that must pass
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration time = 1 [json_name = "time", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getTimeOrBuilder() {
+      return time_ == null ? com.google.protobuf.Duration.getDefaultInstance() : time_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (time_ != null) {
+        output.writeMessage(1, getTime());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (time_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTime());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse other = (com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse) obj;
+
+      if (hasTime() != other.hasTime()) return false;
+      if (hasTime()) {
+        if (!getTime()
+            .equals(other.getTime())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTime()) {
+        hash = (37 * hash) + TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getTime().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryUnbondingPeriodResponse is response type for the Query/UnbondingPeriod
+     * RPC method
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.QueryUnbondingPeriodResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.QueryUnbondingPeriodResponse)
+        com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryUnbondingPeriodResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryUnbondingPeriodResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse.class, com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        time_ = null;
+        if (timeBuilder_ != null) {
+          timeBuilder_.dispose();
+          timeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryUnbondingPeriodResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse build() {
+        com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse buildPartial() {
+        com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse result = new com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.time_ = timeBuilder_ == null
+              ? time_
+              : timeBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse) {
+          return mergeFrom((com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse other) {
+        if (other == com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse.getDefaultInstance()) return this;
+        if (other.hasTime()) {
+          mergeTime(other.getTime());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Duration time_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> timeBuilder_;
+      /**
+       * <pre>
+       * Time is the time that must pass
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration time = 1 [json_name = "time", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       * @return Whether the time field is set.
+       */
+      public boolean hasTime() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Time is the time that must pass
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration time = 1 [json_name = "time", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       * @return The time.
+       */
+      public com.google.protobuf.Duration getTime() {
+        if (timeBuilder_ == null) {
+          return time_ == null ? com.google.protobuf.Duration.getDefaultInstance() : time_;
+        } else {
+          return timeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Time is the time that must pass
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration time = 1 [json_name = "time", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setTime(com.google.protobuf.Duration value) {
+        if (timeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          time_ = value;
+        } else {
+          timeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Time is the time that must pass
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration time = 1 [json_name = "time", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setTime(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (timeBuilder_ == null) {
+          time_ = builderForValue.build();
+        } else {
+          timeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Time is the time that must pass
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration time = 1 [json_name = "time", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeTime(com.google.protobuf.Duration value) {
+        if (timeBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            time_ != null &&
+            time_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getTimeBuilder().mergeFrom(value);
+          } else {
+            time_ = value;
+          }
+        } else {
+          timeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Time is the time that must pass
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration time = 1 [json_name = "time", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearTime() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        time_ = null;
+        if (timeBuilder_ != null) {
+          timeBuilder_.dispose();
+          timeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Time is the time that must pass
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration time = 1 [json_name = "time", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getTimeBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Time is the time that must pass
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration time = 1 [json_name = "time", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getTimeOrBuilder() {
+        if (timeBuilder_ != null) {
+          return timeBuilder_.getMessageOrBuilder();
+        } else {
+          return time_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : time_;
+        }
+      }
+      /**
+       * <pre>
+       * Time is the time that must pass
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration time = 1 [json_name = "time", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getTimeFieldBuilder() {
+        if (timeBuilder_ == null) {
+          timeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getTime(),
+                  getParentForChildren(),
+                  isClean());
+          time_ = null;
+        }
+        return timeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.QueryUnbondingPeriodResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.QueryUnbondingPeriodResponse)
+    private static final com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse();
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryUnbondingPeriodResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryUnbondingPeriodResponse>() {
+      @java.lang.Override
+      public QueryUnbondingPeriodResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryUnbondingPeriodResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryUnbondingPeriodResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.QueryProto.QueryUnbondingPeriodResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryValidatorDelegationRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.QueryValidatorDelegationRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * validator_addr defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+     * @return The validatorAddr.
+     */
+    java.lang.String getValidatorAddr();
+    /**
+     * <pre>
+     * validator_addr defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+     * @return The bytes for validatorAddr.
+     */
+    com.google.protobuf.ByteString
+        getValidatorAddrBytes();
+  }
+  /**
+   * <pre>
+   * QueryValidatorDelegationRequest is request type for the
+   * Query/ValidatorDelegation RPC method
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.QueryValidatorDelegationRequest}
+   */
+  public static final class QueryValidatorDelegationRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.QueryValidatorDelegationRequest)
+      QueryValidatorDelegationRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryValidatorDelegationRequest.newBuilder() to construct.
+    private QueryValidatorDelegationRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryValidatorDelegationRequest() {
+      validatorAddr_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryValidatorDelegationRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorDelegationRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorDelegationRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest.class, com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest.Builder.class);
+    }
+
+    public static final int VALIDATOR_ADDR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object validatorAddr_ = "";
+    /**
+     * <pre>
+     * validator_addr defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+     * @return The validatorAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getValidatorAddr() {
+      java.lang.Object ref = validatorAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        validatorAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * validator_addr defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+     * @return The bytes for validatorAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValidatorAddrBytes() {
+      java.lang.Object ref = validatorAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        validatorAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, validatorAddr_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, validatorAddr_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest other = (com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest) obj;
+
+      if (!getValidatorAddr()
+          .equals(other.getValidatorAddr())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VALIDATOR_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getValidatorAddr().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryValidatorDelegationRequest is request type for the
+     * Query/ValidatorDelegation RPC method
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.QueryValidatorDelegationRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.QueryValidatorDelegationRequest)
+        com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorDelegationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorDelegationRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest.class, com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        validatorAddr_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorDelegationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest build() {
+        com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest buildPartial() {
+        com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest result = new com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.validatorAddr_ = validatorAddr_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest) {
+          return mergeFrom((com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest other) {
+        if (other == com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest.getDefaultInstance()) return this;
+        if (!other.getValidatorAddr().isEmpty()) {
+          validatorAddr_ = other.validatorAddr_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                validatorAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object validatorAddr_ = "";
+      /**
+       * <pre>
+       * validator_addr defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+       * @return The validatorAddr.
+       */
+      public java.lang.String getValidatorAddr() {
+        java.lang.Object ref = validatorAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          validatorAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * validator_addr defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+       * @return The bytes for validatorAddr.
+       */
+      public com.google.protobuf.ByteString
+          getValidatorAddrBytes() {
+        java.lang.Object ref = validatorAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          validatorAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * validator_addr defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+       * @param value The validatorAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        validatorAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * validator_addr defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidatorAddr() {
+        validatorAddr_ = getDefaultInstance().getValidatorAddr();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * validator_addr defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+       * @param value The bytes for validatorAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        validatorAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.QueryValidatorDelegationRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.QueryValidatorDelegationRequest)
+    private static final com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest();
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryValidatorDelegationRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryValidatorDelegationRequest>() {
+      @java.lang.Override
+      public QueryValidatorDelegationRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryValidatorDelegationRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryValidatorDelegationRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryValidatorDelegationResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.QueryValidatorDelegationResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+     * @return Whether the balance field is set.
+     */
+    boolean hasBalance();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+     * @return The balance.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getBalance();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBalanceOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryValidatorDelegationResponse is response type for the
+   * Query/ValidatorDelegation RPC method
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.QueryValidatorDelegationResponse}
+   */
+  public static final class QueryValidatorDelegationResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.QueryValidatorDelegationResponse)
+      QueryValidatorDelegationResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryValidatorDelegationResponse.newBuilder() to construct.
+    private QueryValidatorDelegationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryValidatorDelegationResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryValidatorDelegationResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorDelegationResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorDelegationResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse.class, com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse.Builder.class);
+    }
+
+    public static final int BALANCE_FIELD_NUMBER = 1;
+    private com.cosmos.base.v1beta1.CoinProto.Coin balance_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+     * @return Whether the balance field is set.
+     */
+    @java.lang.Override
+    public boolean hasBalance() {
+      return balance_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+     * @return The balance.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getBalance() {
+      return balance_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : balance_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBalanceOrBuilder() {
+      return balance_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : balance_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (balance_ != null) {
+        output.writeMessage(1, getBalance());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (balance_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getBalance());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse other = (com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse) obj;
+
+      if (hasBalance() != other.hasBalance()) return false;
+      if (hasBalance()) {
+        if (!getBalance()
+            .equals(other.getBalance())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasBalance()) {
+        hash = (37 * hash) + BALANCE_FIELD_NUMBER;
+        hash = (53 * hash) + getBalance().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryValidatorDelegationResponse is response type for the
+     * Query/ValidatorDelegation RPC method
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.QueryValidatorDelegationResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.QueryValidatorDelegationResponse)
+        com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorDelegationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorDelegationResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse.class, com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        balance_ = null;
+        if (balanceBuilder_ != null) {
+          balanceBuilder_.dispose();
+          balanceBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorDelegationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse build() {
+        com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse buildPartial() {
+        com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse result = new com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.balance_ = balanceBuilder_ == null
+              ? balance_
+              : balanceBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse) {
+          return mergeFrom((com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse other) {
+        if (other == com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse.getDefaultInstance()) return this;
+        if (other.hasBalance()) {
+          mergeBalance(other.getBalance());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getBalanceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin balance_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> balanceBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+       * @return Whether the balance field is set.
+       */
+      public boolean hasBalance() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+       * @return The balance.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getBalance() {
+        if (balanceBuilder_ == null) {
+          return balance_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : balance_;
+        } else {
+          return balanceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBalance(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (balanceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          balance_ = value;
+        } else {
+          balanceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBalance(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (balanceBuilder_ == null) {
+          balance_ = builderForValue.build();
+        } else {
+          balanceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeBalance(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (balanceBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            balance_ != null &&
+            balance_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getBalanceBuilder().mergeFrom(value);
+          } else {
+            balance_ = value;
+          }
+        } else {
+          balanceBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearBalance() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        balance_ = null;
+        if (balanceBuilder_ != null) {
+          balanceBuilder_.dispose();
+          balanceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getBalanceBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getBalanceFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBalanceOrBuilder() {
+        if (balanceBuilder_ != null) {
+          return balanceBuilder_.getMessageOrBuilder();
+        } else {
+          return balance_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : balance_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 1 [json_name = "balance", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getBalanceFieldBuilder() {
+        if (balanceBuilder_ == null) {
+          balanceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getBalance(),
+                  getParentForChildren(),
+                  isClean());
+          balance_ = null;
+        }
+        return balanceBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.QueryValidatorDelegationResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.QueryValidatorDelegationResponse)
+    private static final com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse();
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryValidatorDelegationResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryValidatorDelegationResponse>() {
+      @java.lang.Override
+      public QueryValidatorDelegationResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryValidatorDelegationResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryValidatorDelegationResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.QueryProto.QueryValidatorDelegationResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryValidatorUnbondingDelegationsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.QueryValidatorUnbondingDelegationsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * validator_addr defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+     * @return The validatorAddr.
+     */
+    java.lang.String getValidatorAddr();
+    /**
+     * <pre>
+     * validator_addr defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+     * @return The bytes for validatorAddr.
+     */
+    com.google.protobuf.ByteString
+        getValidatorAddrBytes();
+
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryValidatorUnbondingDelegationsRequest is required type for the
+   * Query/ValidatorUnbondingDelegations RPC method
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.QueryValidatorUnbondingDelegationsRequest}
+   */
+  public static final class QueryValidatorUnbondingDelegationsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.QueryValidatorUnbondingDelegationsRequest)
+      QueryValidatorUnbondingDelegationsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryValidatorUnbondingDelegationsRequest.newBuilder() to construct.
+    private QueryValidatorUnbondingDelegationsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryValidatorUnbondingDelegationsRequest() {
+      validatorAddr_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryValidatorUnbondingDelegationsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorUnbondingDelegationsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorUnbondingDelegationsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest.class, com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest.Builder.class);
+    }
+
+    public static final int VALIDATOR_ADDR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object validatorAddr_ = "";
+    /**
+     * <pre>
+     * validator_addr defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+     * @return The validatorAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getValidatorAddr() {
+      java.lang.Object ref = validatorAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        validatorAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * validator_addr defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+     * @return The bytes for validatorAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValidatorAddrBytes() {
+      java.lang.Object ref = validatorAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        validatorAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, validatorAddr_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, validatorAddr_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest other = (com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest) obj;
+
+      if (!getValidatorAddr()
+          .equals(other.getValidatorAddr())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VALIDATOR_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getValidatorAddr().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryValidatorUnbondingDelegationsRequest is required type for the
+     * Query/ValidatorUnbondingDelegations RPC method
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.QueryValidatorUnbondingDelegationsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.QueryValidatorUnbondingDelegationsRequest)
+        com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorUnbondingDelegationsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorUnbondingDelegationsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest.class, com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        validatorAddr_ = "";
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorUnbondingDelegationsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest build() {
+        com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest buildPartial() {
+        com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest result = new com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.validatorAddr_ = validatorAddr_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest) {
+          return mergeFrom((com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest other) {
+        if (other == com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest.getDefaultInstance()) return this;
+        if (!other.getValidatorAddr().isEmpty()) {
+          validatorAddr_ = other.validatorAddr_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                validatorAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object validatorAddr_ = "";
+      /**
+       * <pre>
+       * validator_addr defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+       * @return The validatorAddr.
+       */
+      public java.lang.String getValidatorAddr() {
+        java.lang.Object ref = validatorAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          validatorAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * validator_addr defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+       * @return The bytes for validatorAddr.
+       */
+      public com.google.protobuf.ByteString
+          getValidatorAddrBytes() {
+        java.lang.Object ref = validatorAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          validatorAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * validator_addr defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+       * @param value The validatorAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        validatorAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * validator_addr defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidatorAddr() {
+        validatorAddr_ = getDefaultInstance().getValidatorAddr();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * validator_addr defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+       * @param value The bytes for validatorAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        validatorAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.QueryValidatorUnbondingDelegationsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.QueryValidatorUnbondingDelegationsRequest)
+    private static final com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest();
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryValidatorUnbondingDelegationsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryValidatorUnbondingDelegationsRequest>() {
+      @java.lang.Override
+      public QueryValidatorUnbondingDelegationsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryValidatorUnbondingDelegationsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryValidatorUnbondingDelegationsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryValidatorUnbondingDelegationsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.QueryValidatorUnbondingDelegationsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * unbonding delegation entries
+     * </pre>
+     *
+     * <code>repeated .cosmos.staking.v1beta1.UnbondingDelegationEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry> 
+        getEntriesList();
+    /**
+     * <pre>
+     * unbonding delegation entries
+     * </pre>
+     *
+     * <code>repeated .cosmos.staking.v1beta1.UnbondingDelegationEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry getEntries(int index);
+    /**
+     * <pre>
+     * unbonding delegation entries
+     * </pre>
+     *
+     * <code>repeated .cosmos.staking.v1beta1.UnbondingDelegationEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+     */
+    int getEntriesCount();
+    /**
+     * <pre>
+     * unbonding delegation entries
+     * </pre>
+     *
+     * <code>repeated .cosmos.staking.v1beta1.UnbondingDelegationEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntryOrBuilder> 
+        getEntriesOrBuilderList();
+    /**
+     * <pre>
+     * unbonding delegation entries
+     * </pre>
+     *
+     * <code>repeated .cosmos.staking.v1beta1.UnbondingDelegationEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntryOrBuilder getEntriesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryValidatorUnbondingDelegationsResponse is response type for the
+   * Query/ValidatorUnbondingDelegations RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.QueryValidatorUnbondingDelegationsResponse}
+   */
+  public static final class QueryValidatorUnbondingDelegationsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.QueryValidatorUnbondingDelegationsResponse)
+      QueryValidatorUnbondingDelegationsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryValidatorUnbondingDelegationsResponse.newBuilder() to construct.
+    private QueryValidatorUnbondingDelegationsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryValidatorUnbondingDelegationsResponse() {
+      entries_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryValidatorUnbondingDelegationsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorUnbondingDelegationsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorUnbondingDelegationsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse.class, com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse.Builder.class);
+    }
+
+    public static final int ENTRIES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry> entries_;
+    /**
+     * <pre>
+     * unbonding delegation entries
+     * </pre>
+     *
+     * <code>repeated .cosmos.staking.v1beta1.UnbondingDelegationEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry> getEntriesList() {
+      return entries_;
+    }
+    /**
+     * <pre>
+     * unbonding delegation entries
+     * </pre>
+     *
+     * <code>repeated .cosmos.staking.v1beta1.UnbondingDelegationEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntryOrBuilder> 
+        getEntriesOrBuilderList() {
+      return entries_;
+    }
+    /**
+     * <pre>
+     * unbonding delegation entries
+     * </pre>
+     *
+     * <code>repeated .cosmos.staking.v1beta1.UnbondingDelegationEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getEntriesCount() {
+      return entries_.size();
+    }
+    /**
+     * <pre>
+     * unbonding delegation entries
+     * </pre>
+     *
+     * <code>repeated .cosmos.staking.v1beta1.UnbondingDelegationEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry getEntries(int index) {
+      return entries_.get(index);
+    }
+    /**
+     * <pre>
+     * unbonding delegation entries
+     * </pre>
+     *
+     * <code>repeated .cosmos.staking.v1beta1.UnbondingDelegationEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntryOrBuilder getEntriesOrBuilder(
+        int index) {
+      return entries_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < entries_.size(); i++) {
+        output.writeMessage(1, entries_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < entries_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, entries_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse other = (com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse) obj;
+
+      if (!getEntriesList()
+          .equals(other.getEntriesList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getEntriesCount() > 0) {
+        hash = (37 * hash) + ENTRIES_FIELD_NUMBER;
+        hash = (53 * hash) + getEntriesList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryValidatorUnbondingDelegationsResponse is response type for the
+     * Query/ValidatorUnbondingDelegations RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.QueryValidatorUnbondingDelegationsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.QueryValidatorUnbondingDelegationsResponse)
+        com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorUnbondingDelegationsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorUnbondingDelegationsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse.class, com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (entriesBuilder_ == null) {
+          entries_ = java.util.Collections.emptyList();
+        } else {
+          entries_ = null;
+          entriesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorUnbondingDelegationsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse build() {
+        com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse buildPartial() {
+        com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse result = new com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse result) {
+        if (entriesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            entries_ = java.util.Collections.unmodifiableList(entries_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.entries_ = entries_;
+        } else {
+          result.entries_ = entriesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse) {
+          return mergeFrom((com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse other) {
+        if (other == com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse.getDefaultInstance()) return this;
+        if (entriesBuilder_ == null) {
+          if (!other.entries_.isEmpty()) {
+            if (entries_.isEmpty()) {
+              entries_ = other.entries_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureEntriesIsMutable();
+              entries_.addAll(other.entries_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.entries_.isEmpty()) {
+            if (entriesBuilder_.isEmpty()) {
+              entriesBuilder_.dispose();
+              entriesBuilder_ = null;
+              entries_ = other.entries_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              entriesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEntriesFieldBuilder() : null;
+            } else {
+              entriesBuilder_.addAllMessages(other.entries_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry m =
+                    input.readMessage(
+                        com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry.parser(),
+                        extensionRegistry);
+                if (entriesBuilder_ == null) {
+                  ensureEntriesIsMutable();
+                  entries_.add(m);
+                } else {
+                  entriesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry> entries_ =
+        java.util.Collections.emptyList();
+      private void ensureEntriesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          entries_ = new java.util.ArrayList<com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry>(entries_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry, com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry.Builder, com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntryOrBuilder> entriesBuilder_;
+
+      /**
+       * <pre>
+       * unbonding delegation entries
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.UnbondingDelegationEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry> getEntriesList() {
+        if (entriesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(entries_);
+        } else {
+          return entriesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * unbonding delegation entries
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.UnbondingDelegationEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public int getEntriesCount() {
+        if (entriesBuilder_ == null) {
+          return entries_.size();
+        } else {
+          return entriesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * unbonding delegation entries
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.UnbondingDelegationEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry getEntries(int index) {
+        if (entriesBuilder_ == null) {
+          return entries_.get(index);
+        } else {
+          return entriesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * unbonding delegation entries
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.UnbondingDelegationEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setEntries(
+          int index, com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry value) {
+        if (entriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntriesIsMutable();
+          entries_.set(index, value);
+          onChanged();
+        } else {
+          entriesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unbonding delegation entries
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.UnbondingDelegationEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setEntries(
+          int index, com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry.Builder builderForValue) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          entriesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unbonding delegation entries
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.UnbondingDelegationEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addEntries(com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry value) {
+        if (entriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntriesIsMutable();
+          entries_.add(value);
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unbonding delegation entries
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.UnbondingDelegationEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addEntries(
+          int index, com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry value) {
+        if (entriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntriesIsMutable();
+          entries_.add(index, value);
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unbonding delegation entries
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.UnbondingDelegationEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addEntries(
+          com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry.Builder builderForValue) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.add(builderForValue.build());
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unbonding delegation entries
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.UnbondingDelegationEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addEntries(
+          int index, com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry.Builder builderForValue) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unbonding delegation entries
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.UnbondingDelegationEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllEntries(
+          java.lang.Iterable<? extends com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry> values) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, entries_);
+          onChanged();
+        } else {
+          entriesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unbonding delegation entries
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.UnbondingDelegationEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearEntries() {
+        if (entriesBuilder_ == null) {
+          entries_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          entriesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unbonding delegation entries
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.UnbondingDelegationEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeEntries(int index) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.remove(index);
+          onChanged();
+        } else {
+          entriesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unbonding delegation entries
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.UnbondingDelegationEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry.Builder getEntriesBuilder(
+          int index) {
+        return getEntriesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * unbonding delegation entries
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.UnbondingDelegationEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntryOrBuilder getEntriesOrBuilder(
+          int index) {
+        if (entriesBuilder_ == null) {
+          return entries_.get(index);  } else {
+          return entriesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * unbonding delegation entries
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.UnbondingDelegationEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntryOrBuilder> 
+           getEntriesOrBuilderList() {
+        if (entriesBuilder_ != null) {
+          return entriesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(entries_);
+        }
+      }
+      /**
+       * <pre>
+       * unbonding delegation entries
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.UnbondingDelegationEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry.Builder addEntriesBuilder() {
+        return getEntriesFieldBuilder().addBuilder(
+            com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * unbonding delegation entries
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.UnbondingDelegationEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry.Builder addEntriesBuilder(
+          int index) {
+        return getEntriesFieldBuilder().addBuilder(
+            index, com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * unbonding delegation entries
+       * </pre>
+       *
+       * <code>repeated .cosmos.staking.v1beta1.UnbondingDelegationEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry.Builder> 
+           getEntriesBuilderList() {
+        return getEntriesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry, com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry.Builder, com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntryOrBuilder> 
+          getEntriesFieldBuilder() {
+        if (entriesBuilder_ == null) {
+          entriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry, com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntry.Builder, com.cosmos.staking.v1beta1.StakingProto.UnbondingDelegationEntryOrBuilder>(
+                  entries_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          entries_ = null;
+        }
+        return entriesBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.QueryValidatorUnbondingDelegationsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.QueryValidatorUnbondingDelegationsResponse)
+    private static final com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse();
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryValidatorUnbondingDelegationsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryValidatorUnbondingDelegationsResponse>() {
+      @java.lang.Override
+      public QueryValidatorUnbondingDelegationsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryValidatorUnbondingDelegationsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryValidatorUnbondingDelegationsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.QueryProto.QueryValidatorUnbondingDelegationsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryValidatorOutstandingRewardRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.QueryValidatorOutstandingRewardRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * validator_address defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+     * @return The validatorAddress.
+     */
+    java.lang.String getValidatorAddress();
+    /**
+     * <pre>
+     * validator_address defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+     * @return The bytes for validatorAddress.
+     */
+    com.google.protobuf.ByteString
+        getValidatorAddressBytes();
+  }
+  /**
+   * <pre>
+   * QueryValidatorOutstandingRewardRequest is the request type for the
+   * Query/ValidatorOutstandingReward RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.QueryValidatorOutstandingRewardRequest}
+   */
+  public static final class QueryValidatorOutstandingRewardRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.QueryValidatorOutstandingRewardRequest)
+      QueryValidatorOutstandingRewardRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryValidatorOutstandingRewardRequest.newBuilder() to construct.
+    private QueryValidatorOutstandingRewardRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryValidatorOutstandingRewardRequest() {
+      validatorAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryValidatorOutstandingRewardRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorOutstandingRewardRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorOutstandingRewardRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest.class, com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest.Builder.class);
+    }
+
+    public static final int VALIDATOR_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object validatorAddress_ = "";
+    /**
+     * <pre>
+     * validator_address defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+     * @return The validatorAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getValidatorAddress() {
+      java.lang.Object ref = validatorAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        validatorAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * validator_address defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+     * @return The bytes for validatorAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValidatorAddressBytes() {
+      java.lang.Object ref = validatorAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        validatorAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, validatorAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, validatorAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest other = (com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest) obj;
+
+      if (!getValidatorAddress()
+          .equals(other.getValidatorAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VALIDATOR_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getValidatorAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryValidatorOutstandingRewardRequest is the request type for the
+     * Query/ValidatorOutstandingReward RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.QueryValidatorOutstandingRewardRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.QueryValidatorOutstandingRewardRequest)
+        com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorOutstandingRewardRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorOutstandingRewardRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest.class, com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        validatorAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorOutstandingRewardRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest build() {
+        com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest buildPartial() {
+        com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest result = new com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.validatorAddress_ = validatorAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest) {
+          return mergeFrom((com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest other) {
+        if (other == com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest.getDefaultInstance()) return this;
+        if (!other.getValidatorAddress().isEmpty()) {
+          validatorAddress_ = other.validatorAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                validatorAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object validatorAddress_ = "";
+      /**
+       * <pre>
+       * validator_address defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @return The validatorAddress.
+       */
+      public java.lang.String getValidatorAddress() {
+        java.lang.Object ref = validatorAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          validatorAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * validator_address defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @return The bytes for validatorAddress.
+       */
+      public com.google.protobuf.ByteString
+          getValidatorAddressBytes() {
+        java.lang.Object ref = validatorAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          validatorAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * validator_address defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @param value The validatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        validatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * validator_address defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidatorAddress() {
+        validatorAddress_ = getDefaultInstance().getValidatorAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * validator_address defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @param value The bytes for validatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        validatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.QueryValidatorOutstandingRewardRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.QueryValidatorOutstandingRewardRequest)
+    private static final com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest();
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryValidatorOutstandingRewardRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryValidatorOutstandingRewardRequest>() {
+      @java.lang.Override
+      public QueryValidatorOutstandingRewardRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryValidatorOutstandingRewardRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryValidatorOutstandingRewardRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryValidatorOutstandingRewardResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.QueryValidatorOutstandingRewardResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
+     * @return Whether the reward field is set.
+     */
+    boolean hasReward();
+    /**
+     * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
+     * @return The reward.
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getReward();
+    /**
+     * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getRewardOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryValidatorOutstandingRewardResponse is the response type for the
+   * Query/ValidatorOutstandingReward RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.QueryValidatorOutstandingRewardResponse}
+   */
+  public static final class QueryValidatorOutstandingRewardResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.QueryValidatorOutstandingRewardResponse)
+      QueryValidatorOutstandingRewardResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryValidatorOutstandingRewardResponse.newBuilder() to construct.
+    private QueryValidatorOutstandingRewardResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryValidatorOutstandingRewardResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryValidatorOutstandingRewardResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorOutstandingRewardResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorOutstandingRewardResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse.class, com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse.Builder.class);
+    }
+
+    public static final int REWARD_FIELD_NUMBER = 1;
+    private com.cosmos.base.v1beta1.CoinProto.DecCoin reward_;
+    /**
+     * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
+     * @return Whether the reward field is set.
+     */
+    @java.lang.Override
+    public boolean hasReward() {
+      return reward_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
+     * @return The reward.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getReward() {
+      return reward_ == null ? com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : reward_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getRewardOrBuilder() {
+      return reward_ == null ? com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : reward_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (reward_ != null) {
+        output.writeMessage(1, getReward());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (reward_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getReward());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse other = (com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse) obj;
+
+      if (hasReward() != other.hasReward()) return false;
+      if (hasReward()) {
+        if (!getReward()
+            .equals(other.getReward())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasReward()) {
+        hash = (37 * hash) + REWARD_FIELD_NUMBER;
+        hash = (53 * hash) + getReward().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryValidatorOutstandingRewardResponse is the response type for the
+     * Query/ValidatorOutstandingReward RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.QueryValidatorOutstandingRewardResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.QueryValidatorOutstandingRewardResponse)
+        com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorOutstandingRewardResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorOutstandingRewardResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse.class, com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        reward_ = null;
+        if (rewardBuilder_ != null) {
+          rewardBuilder_.dispose();
+          rewardBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorOutstandingRewardResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse build() {
+        com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse buildPartial() {
+        com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse result = new com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.reward_ = rewardBuilder_ == null
+              ? reward_
+              : rewardBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse) {
+          return mergeFrom((com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse other) {
+        if (other == com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse.getDefaultInstance()) return this;
+        if (other.hasReward()) {
+          mergeReward(other.getReward());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getRewardFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.v1beta1.CoinProto.DecCoin reward_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> rewardBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
+       * @return Whether the reward field is set.
+       */
+      public boolean hasReward() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
+       * @return The reward.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getReward() {
+        if (rewardBuilder_ == null) {
+          return reward_ == null ? com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : reward_;
+        } else {
+          return rewardBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
+       */
+      public Builder setReward(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (rewardBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          reward_ = value;
+        } else {
+          rewardBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
+       */
+      public Builder setReward(
+          com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (rewardBuilder_ == null) {
+          reward_ = builderForValue.build();
+        } else {
+          rewardBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
+       */
+      public Builder mergeReward(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (rewardBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            reward_ != null &&
+            reward_ != com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance()) {
+            getRewardBuilder().mergeFrom(value);
+          } else {
+            reward_ = value;
+          }
+        } else {
+          rewardBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
+       */
+      public Builder clearReward() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        reward_ = null;
+        if (rewardBuilder_ != null) {
+          rewardBuilder_.dispose();
+          rewardBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getRewardBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getRewardFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getRewardOrBuilder() {
+        if (rewardBuilder_ != null) {
+          return rewardBuilder_.getMessageOrBuilder();
+        } else {
+          return reward_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : reward_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+          getRewardFieldBuilder() {
+        if (rewardBuilder_ == null) {
+          rewardBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
+                  getReward(),
+                  getParentForChildren(),
+                  isClean());
+          reward_ = null;
+        }
+        return rewardBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.QueryValidatorOutstandingRewardResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.QueryValidatorOutstandingRewardResponse)
+    private static final com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse();
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryValidatorOutstandingRewardResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryValidatorOutstandingRewardResponse>() {
+      @java.lang.Override
+      public QueryValidatorOutstandingRewardResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryValidatorOutstandingRewardResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryValidatorOutstandingRewardResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.QueryProto.QueryValidatorOutstandingRewardResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryValidatorEngagementRewardRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.QueryValidatorEngagementRewardRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * validator_address defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+     * @return The validatorAddress.
+     */
+    java.lang.String getValidatorAddress();
+    /**
+     * <pre>
+     * validator_address defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+     * @return The bytes for validatorAddress.
+     */
+    com.google.protobuf.ByteString
+        getValidatorAddressBytes();
+  }
+  /**
+   * <pre>
+   * QueryValidatorEngagementRewardRequest is the request type for the
+   * Query/ValidatorEngagementReward RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.QueryValidatorEngagementRewardRequest}
+   */
+  public static final class QueryValidatorEngagementRewardRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.QueryValidatorEngagementRewardRequest)
+      QueryValidatorEngagementRewardRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryValidatorEngagementRewardRequest.newBuilder() to construct.
+    private QueryValidatorEngagementRewardRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryValidatorEngagementRewardRequest() {
+      validatorAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryValidatorEngagementRewardRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorEngagementRewardRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorEngagementRewardRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest.class, com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest.Builder.class);
+    }
+
+    public static final int VALIDATOR_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object validatorAddress_ = "";
+    /**
+     * <pre>
+     * validator_address defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+     * @return The validatorAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getValidatorAddress() {
+      java.lang.Object ref = validatorAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        validatorAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * validator_address defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+     * @return The bytes for validatorAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValidatorAddressBytes() {
+      java.lang.Object ref = validatorAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        validatorAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, validatorAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, validatorAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest other = (com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest) obj;
+
+      if (!getValidatorAddress()
+          .equals(other.getValidatorAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VALIDATOR_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getValidatorAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryValidatorEngagementRewardRequest is the request type for the
+     * Query/ValidatorEngagementReward RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.QueryValidatorEngagementRewardRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.QueryValidatorEngagementRewardRequest)
+        com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorEngagementRewardRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorEngagementRewardRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest.class, com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        validatorAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorEngagementRewardRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest build() {
+        com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest buildPartial() {
+        com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest result = new com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.validatorAddress_ = validatorAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest) {
+          return mergeFrom((com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest other) {
+        if (other == com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest.getDefaultInstance()) return this;
+        if (!other.getValidatorAddress().isEmpty()) {
+          validatorAddress_ = other.validatorAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                validatorAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object validatorAddress_ = "";
+      /**
+       * <pre>
+       * validator_address defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @return The validatorAddress.
+       */
+      public java.lang.String getValidatorAddress() {
+        java.lang.Object ref = validatorAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          validatorAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * validator_address defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @return The bytes for validatorAddress.
+       */
+      public com.google.protobuf.ByteString
+          getValidatorAddressBytes() {
+        java.lang.Object ref = validatorAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          validatorAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * validator_address defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @param value The validatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        validatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * validator_address defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidatorAddress() {
+        validatorAddress_ = getDefaultInstance().getValidatorAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * validator_address defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @param value The bytes for validatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        validatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.QueryValidatorEngagementRewardRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.QueryValidatorEngagementRewardRequest)
+    private static final com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest();
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryValidatorEngagementRewardRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryValidatorEngagementRewardRequest>() {
+      @java.lang.Override
+      public QueryValidatorEngagementRewardRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryValidatorEngagementRewardRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryValidatorEngagementRewardRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryValidatorEngagementRewardResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.QueryValidatorEngagementRewardResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
+     * @return Whether the reward field is set.
+     */
+    boolean hasReward();
+    /**
+     * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
+     * @return The reward.
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getReward();
+    /**
+     * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getRewardOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryValidatorEngagementRewardResponse is the response type for the
+   * Query/ValidatorEngagementReward RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.QueryValidatorEngagementRewardResponse}
+   */
+  public static final class QueryValidatorEngagementRewardResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.QueryValidatorEngagementRewardResponse)
+      QueryValidatorEngagementRewardResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryValidatorEngagementRewardResponse.newBuilder() to construct.
+    private QueryValidatorEngagementRewardResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryValidatorEngagementRewardResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryValidatorEngagementRewardResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorEngagementRewardResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorEngagementRewardResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse.class, com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse.Builder.class);
+    }
+
+    public static final int REWARD_FIELD_NUMBER = 1;
+    private com.cosmos.base.v1beta1.CoinProto.DecCoin reward_;
+    /**
+     * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
+     * @return Whether the reward field is set.
+     */
+    @java.lang.Override
+    public boolean hasReward() {
+      return reward_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
+     * @return The reward.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getReward() {
+      return reward_ == null ? com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : reward_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getRewardOrBuilder() {
+      return reward_ == null ? com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : reward_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (reward_ != null) {
+        output.writeMessage(1, getReward());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (reward_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getReward());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse other = (com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse) obj;
+
+      if (hasReward() != other.hasReward()) return false;
+      if (hasReward()) {
+        if (!getReward()
+            .equals(other.getReward())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasReward()) {
+        hash = (37 * hash) + REWARD_FIELD_NUMBER;
+        hash = (53 * hash) + getReward().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryValidatorEngagementRewardResponse is the response type for the
+     * Query/ValidatorEngagementReward RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.QueryValidatorEngagementRewardResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.QueryValidatorEngagementRewardResponse)
+        com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorEngagementRewardResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorEngagementRewardResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse.class, com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        reward_ = null;
+        if (rewardBuilder_ != null) {
+          rewardBuilder_.dispose();
+          rewardBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.QueryProto.internal_static_confio_poe_v1beta1_QueryValidatorEngagementRewardResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse build() {
+        com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse buildPartial() {
+        com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse result = new com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.reward_ = rewardBuilder_ == null
+              ? reward_
+              : rewardBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse) {
+          return mergeFrom((com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse other) {
+        if (other == com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse.getDefaultInstance()) return this;
+        if (other.hasReward()) {
+          mergeReward(other.getReward());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getRewardFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.v1beta1.CoinProto.DecCoin reward_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> rewardBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
+       * @return Whether the reward field is set.
+       */
+      public boolean hasReward() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
+       * @return The reward.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getReward() {
+        if (rewardBuilder_ == null) {
+          return reward_ == null ? com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : reward_;
+        } else {
+          return rewardBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
+       */
+      public Builder setReward(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (rewardBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          reward_ = value;
+        } else {
+          rewardBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
+       */
+      public Builder setReward(
+          com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (rewardBuilder_ == null) {
+          reward_ = builderForValue.build();
+        } else {
+          rewardBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
+       */
+      public Builder mergeReward(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (rewardBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            reward_ != null &&
+            reward_ != com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance()) {
+            getRewardBuilder().mergeFrom(value);
+          } else {
+            reward_ = value;
+          }
+        } else {
+          rewardBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
+       */
+      public Builder clearReward() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        reward_ = null;
+        if (rewardBuilder_ != null) {
+          rewardBuilder_.dispose();
+          rewardBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getRewardBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getRewardFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getRewardOrBuilder() {
+        if (rewardBuilder_ != null) {
+          return rewardBuilder_.getMessageOrBuilder();
+        } else {
+          return reward_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : reward_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.DecCoin reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+          getRewardFieldBuilder() {
+        if (rewardBuilder_ == null) {
+          rewardBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
+                  getReward(),
+                  getParentForChildren(),
+                  isClean());
+          reward_ = null;
+        }
+        return rewardBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.QueryValidatorEngagementRewardResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.QueryValidatorEngagementRewardResponse)
+    private static final com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse();
+    }
+
+    public static com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryValidatorEngagementRewardResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryValidatorEngagementRewardResponse>() {
+      @java.lang.Override
+      public QueryValidatorEngagementRewardResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryValidatorEngagementRewardResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryValidatorEngagementRewardResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.QueryProto.QueryValidatorEngagementRewardResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_QueryContractAddressRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_QueryContractAddressRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_QueryContractAddressResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_QueryContractAddressResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_QueryUnbondingPeriodRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_QueryUnbondingPeriodRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_QueryUnbondingPeriodResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_QueryUnbondingPeriodResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_QueryValidatorDelegationRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_QueryValidatorDelegationRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_QueryValidatorDelegationResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_QueryValidatorDelegationResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_QueryValidatorUnbondingDelegationsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_QueryValidatorUnbondingDelegationsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_QueryValidatorUnbondingDelegationsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_QueryValidatorUnbondingDelegationsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_QueryValidatorOutstandingRewardRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_QueryValidatorOutstandingRewardRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_QueryValidatorOutstandingRewardResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_QueryValidatorOutstandingRewardResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_QueryValidatorEngagementRewardRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_QueryValidatorEngagementRewardRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_QueryValidatorEngagementRewardResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_QueryValidatorEngagementRewardResponse_fieldAccessorTable;
 
@@ -167,12 +7999,12 @@ public final class QueryProto {
       ":.confio.poe.v1beta1.QueryValidatorEngag" +
       "ementRewardResponse\"L\202\323\344\223\002F\022D/tgrade/poe" +
       "/v1beta1/validators/{validator_address}/" +
-      "engagement_rewardB\264\001\n\026com.confio.poe.v1b" +
-      "eta1B\nQueryProtoP\001Z$github.com/confio/tg" +
-      "rade/x/poe/types\242\002\003CPX\252\002\022Confio.Poe.V1be" +
-      "ta1\312\002\022Confio\\Poe\\V1beta1\342\002\036Confio\\Poe\\V1" +
-      "beta1\\GPBMetadata\352\002\024Confio::Poe::V1beta1" +
-      "b\006proto3"
+      "engagement_rewardB\262\001\n\026com.confio.poe.v1b" +
+      "eta1B\nQueryProtoZ$github.com/confio/tgra" +
+      "de/x/poe/types\242\002\003CPX\252\002\022Confio.Poe.V1beta" +
+      "1\312\002\022Confio\\Poe\\V1beta1\342\002\036Confio\\Poe\\V1be" +
+      "ta1\\GPBMetadata\352\002\024Confio::Poe::V1beta1b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

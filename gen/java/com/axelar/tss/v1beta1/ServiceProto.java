@@ -31,12 +31,12 @@ public final class ServiceProto {
       "axelar.tss.v1beta1.HeartBeatRequest\032%.ax" +
       "elar.tss.v1beta1.HeartBeatResponse\" \202\323\344\223" +
       "\002\032\"\025/axelar/tss/heartbeat:\001*2\016\n\014QuerySer" +
-      "viceB\306\001\n\026com.axelar.tss.v1beta1B\014Service" +
-      "ProtoP\001Z0github.com/axelarnetwork/axelar" +
-      "-core/x/tss/types\242\002\003ATX\252\002\022Axelar.Tss.V1b" +
-      "eta1\312\002\022Axelar\\Tss\\V1beta1\342\002\036Axelar\\Tss\\V" +
-      "1beta1\\GPBMetadata\352\002\024Axelar::Tss::V1beta" +
-      "1\300\343\036\001b\006proto3"
+      "viceB\304\001\n\026com.axelar.tss.v1beta1B\014Service" +
+      "ProtoZ0github.com/axelarnetwork/axelar-c" +
+      "ore/x/tss/types\242\002\003ATX\252\002\022Axelar.Tss.V1bet" +
+      "a1\312\002\022Axelar\\Tss\\V1beta1\342\002\036Axelar\\Tss\\V1b" +
+      "eta1\\GPBMetadata\352\002\024Axelar::Tss::V1beta1\300" +
+      "\343\036\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

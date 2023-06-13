@@ -47,13 +47,13 @@ public final class ServiceProto {
       "auseGroupResponse\022f\n\nStartGroup\022\'.akash." +
       "deployment.v1beta2.MsgStartGroup\032/.akash" +
       ".deployment.v1beta2.MsgStartGroupRespons" +
-      "eB\355\001\n\034com.akash.deployment.v1beta2B\014Serv" +
-      "iceProtoP\001Z=github.com/akash-network/aka" +
-      "sh-api/go/node/deployment/v1beta2\242\002\003ADX\252" +
-      "\002\030Akash.Deployment.V1beta2\312\002\030Akash\\Deplo" +
-      "yment\\V1beta2\342\002$Akash\\Deployment\\V1beta2" +
-      "\\GPBMetadata\352\002\032Akash::Deployment::V1beta" +
-      "2b\006proto3"
+      "eB\353\001\n\034com.akash.deployment.v1beta2B\014Serv" +
+      "iceProtoZ=github.com/akash-network/akash" +
+      "-api/go/node/deployment/v1beta2\242\002\003ADX\252\002\030" +
+      "Akash.Deployment.V1beta2\312\002\030Akash\\Deploym" +
+      "ent\\V1beta2\342\002$Akash\\Deployment\\V1beta2\\G" +
+      "PBMetadata\352\002\032Akash::Deployment::V1beta2b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

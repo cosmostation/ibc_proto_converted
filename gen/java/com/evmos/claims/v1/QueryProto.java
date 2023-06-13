@@ -14,44 +14,5944 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryTotalUnclaimedRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.claims.v1.QueryTotalUnclaimedRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryTotalUnclaimedRequest is the request type for the Query/TotalUnclaimed
+   * RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.claims.v1.QueryTotalUnclaimedRequest}
+   */
+  public static final class QueryTotalUnclaimedRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.claims.v1.QueryTotalUnclaimedRequest)
+      QueryTotalUnclaimedRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTotalUnclaimedRequest.newBuilder() to construct.
+    private QueryTotalUnclaimedRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTotalUnclaimedRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTotalUnclaimedRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryTotalUnclaimedRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryTotalUnclaimedRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest.class, com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest)) {
+        return super.equals(obj);
+      }
+      com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest other = (com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryTotalUnclaimedRequest is the request type for the Query/TotalUnclaimed
+     * RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.claims.v1.QueryTotalUnclaimedRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.claims.v1.QueryTotalUnclaimedRequest)
+        com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryTotalUnclaimedRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryTotalUnclaimedRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest.class, com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest.Builder.class);
+      }
+
+      // Construct using com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryTotalUnclaimedRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest getDefaultInstanceForType() {
+        return com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest build() {
+        com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest buildPartial() {
+        com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest result = new com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest) {
+          return mergeFrom((com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest other) {
+        if (other == com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.claims.v1.QueryTotalUnclaimedRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.claims.v1.QueryTotalUnclaimedRequest)
+    private static final com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest();
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTotalUnclaimedRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTotalUnclaimedRequest>() {
+      @java.lang.Override
+      public QueryTotalUnclaimedRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTotalUnclaimedRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTotalUnclaimedRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTotalUnclaimedResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.claims.v1.QueryTotalUnclaimedResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * coins defines the unclaimed coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getCoinsList();
+    /**
+     * <pre>
+     * coins defines the unclaimed coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getCoins(int index);
+    /**
+     * <pre>
+     * coins defines the unclaimed coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getCoinsCount();
+    /**
+     * <pre>
+     * coins defines the unclaimed coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getCoinsOrBuilderList();
+    /**
+     * <pre>
+     * coins defines the unclaimed coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * QueryTotalUnclaimedResponse is the response type for the Query/TotalUnclaimed
+   * RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.claims.v1.QueryTotalUnclaimedResponse}
+   */
+  public static final class QueryTotalUnclaimedResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.claims.v1.QueryTotalUnclaimedResponse)
+      QueryTotalUnclaimedResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTotalUnclaimedResponse.newBuilder() to construct.
+    private QueryTotalUnclaimedResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTotalUnclaimedResponse() {
+      coins_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTotalUnclaimedResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryTotalUnclaimedResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryTotalUnclaimedResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse.class, com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse.Builder.class);
+    }
+
+    public static final int COINS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> coins_;
+    /**
+     * <pre>
+     * coins defines the unclaimed coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getCoinsList() {
+      return coins_;
+    }
+    /**
+     * <pre>
+     * coins defines the unclaimed coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getCoinsOrBuilderList() {
+      return coins_;
+    }
+    /**
+     * <pre>
+     * coins defines the unclaimed coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getCoinsCount() {
+      return coins_.size();
+    }
+    /**
+     * <pre>
+     * coins defines the unclaimed coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getCoins(int index) {
+      return coins_.get(index);
+    }
+    /**
+     * <pre>
+     * coins defines the unclaimed coins
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinsOrBuilder(
+        int index) {
+      return coins_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < coins_.size(); i++) {
+        output.writeMessage(1, coins_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < coins_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, coins_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse)) {
+        return super.equals(obj);
+      }
+      com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse other = (com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse) obj;
+
+      if (!getCoinsList()
+          .equals(other.getCoinsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getCoinsCount() > 0) {
+        hash = (37 * hash) + COINS_FIELD_NUMBER;
+        hash = (53 * hash) + getCoinsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryTotalUnclaimedResponse is the response type for the Query/TotalUnclaimed
+     * RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.claims.v1.QueryTotalUnclaimedResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.claims.v1.QueryTotalUnclaimedResponse)
+        com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryTotalUnclaimedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryTotalUnclaimedResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse.class, com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse.Builder.class);
+      }
+
+      // Construct using com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (coinsBuilder_ == null) {
+          coins_ = java.util.Collections.emptyList();
+        } else {
+          coins_ = null;
+          coinsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryTotalUnclaimedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse getDefaultInstanceForType() {
+        return com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse build() {
+        com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse buildPartial() {
+        com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse result = new com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse result) {
+        if (coinsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            coins_ = java.util.Collections.unmodifiableList(coins_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.coins_ = coins_;
+        } else {
+          result.coins_ = coinsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse) {
+          return mergeFrom((com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse other) {
+        if (other == com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse.getDefaultInstance()) return this;
+        if (coinsBuilder_ == null) {
+          if (!other.coins_.isEmpty()) {
+            if (coins_.isEmpty()) {
+              coins_ = other.coins_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureCoinsIsMutable();
+              coins_.addAll(other.coins_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.coins_.isEmpty()) {
+            if (coinsBuilder_.isEmpty()) {
+              coinsBuilder_.dispose();
+              coinsBuilder_ = null;
+              coins_ = other.coins_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              coinsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCoinsFieldBuilder() : null;
+            } else {
+              coinsBuilder_.addAllMessages(other.coins_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (coinsBuilder_ == null) {
+                  ensureCoinsIsMutable();
+                  coins_.add(m);
+                } else {
+                  coinsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> coins_ =
+        java.util.Collections.emptyList();
+      private void ensureCoinsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          coins_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(coins_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> coinsBuilder_;
+
+      /**
+       * <pre>
+       * coins defines the unclaimed coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getCoinsList() {
+        if (coinsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(coins_);
+        } else {
+          return coinsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * coins defines the unclaimed coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getCoinsCount() {
+        if (coinsBuilder_ == null) {
+          return coins_.size();
+        } else {
+          return coinsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * coins defines the unclaimed coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getCoins(int index) {
+        if (coinsBuilder_ == null) {
+          return coins_.get(index);
+        } else {
+          return coinsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * coins defines the unclaimed coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCoinsIsMutable();
+          coins_.set(index, value);
+          onChanged();
+        } else {
+          coinsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins defines the unclaimed coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          coinsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins defines the unclaimed coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCoinsIsMutable();
+          coins_.add(value);
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins defines the unclaimed coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCoinsIsMutable();
+          coins_.add(index, value);
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins defines the unclaimed coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.add(builderForValue.build());
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins defines the unclaimed coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins defines the unclaimed coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllCoins(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, coins_);
+          onChanged();
+        } else {
+          coinsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins defines the unclaimed coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearCoins() {
+        if (coinsBuilder_ == null) {
+          coins_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          coinsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins defines the unclaimed coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeCoins(int index) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.remove(index);
+          onChanged();
+        } else {
+          coinsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins defines the unclaimed coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getCoinsBuilder(
+          int index) {
+        return getCoinsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * coins defines the unclaimed coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinsOrBuilder(
+          int index) {
+        if (coinsBuilder_ == null) {
+          return coins_.get(index);  } else {
+          return coinsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * coins defines the unclaimed coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getCoinsOrBuilderList() {
+        if (coinsBuilder_ != null) {
+          return coinsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(coins_);
+        }
+      }
+      /**
+       * <pre>
+       * coins defines the unclaimed coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addCoinsBuilder() {
+        return getCoinsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * coins defines the unclaimed coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addCoinsBuilder(
+          int index) {
+        return getCoinsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * coins defines the unclaimed coins
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 1 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getCoinsBuilderList() {
+        return getCoinsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getCoinsFieldBuilder() {
+        if (coinsBuilder_ == null) {
+          coinsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  coins_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          coins_ = null;
+        }
+        return coinsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.claims.v1.QueryTotalUnclaimedResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.claims.v1.QueryTotalUnclaimedResponse)
+    private static final com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse();
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTotalUnclaimedResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTotalUnclaimedResponse>() {
+      @java.lang.Override
+      public QueryTotalUnclaimedResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTotalUnclaimedResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTotalUnclaimedResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.claims.v1.QueryProto.QueryTotalUnclaimedResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.claims.v1.QueryParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryParamsRequest is the request type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.claims.v1.QueryParamsRequest}
+   */
+  public static final class QueryParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.claims.v1.QueryParamsRequest)
+      QueryParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsRequest.newBuilder() to construct.
+    private QueryParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.claims.v1.QueryProto.QueryParamsRequest.class, com.evmos.claims.v1.QueryProto.QueryParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.claims.v1.QueryProto.QueryParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.evmos.claims.v1.QueryProto.QueryParamsRequest other = (com.evmos.claims.v1.QueryProto.QueryParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.claims.v1.QueryProto.QueryParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsRequest is the request type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.claims.v1.QueryParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.claims.v1.QueryParamsRequest)
+        com.evmos.claims.v1.QueryProto.QueryParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.claims.v1.QueryProto.QueryParamsRequest.class, com.evmos.claims.v1.QueryProto.QueryParamsRequest.Builder.class);
+      }
+
+      // Construct using com.evmos.claims.v1.QueryProto.QueryParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+        return com.evmos.claims.v1.QueryProto.QueryParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.QueryProto.QueryParamsRequest build() {
+        com.evmos.claims.v1.QueryProto.QueryParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.QueryProto.QueryParamsRequest buildPartial() {
+        com.evmos.claims.v1.QueryProto.QueryParamsRequest result = new com.evmos.claims.v1.QueryProto.QueryParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.claims.v1.QueryProto.QueryParamsRequest) {
+          return mergeFrom((com.evmos.claims.v1.QueryProto.QueryParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.claims.v1.QueryProto.QueryParamsRequest other) {
+        if (other == com.evmos.claims.v1.QueryProto.QueryParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.claims.v1.QueryParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.claims.v1.QueryParamsRequest)
+    private static final com.evmos.claims.v1.QueryProto.QueryParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.claims.v1.QueryProto.QueryParamsRequest();
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsRequest>() {
+      @java.lang.Override
+      public QueryParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.claims.v1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.claims.v1.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>.evmos.claims.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>.evmos.claims.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.evmos.claims.v1.GenesisProto.Params getParams();
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>.evmos.claims.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.evmos.claims.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryParamsResponse is the response type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.claims.v1.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.claims.v1.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.claims.v1.QueryProto.QueryParamsResponse.class, com.evmos.claims.v1.QueryProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.evmos.claims.v1.GenesisProto.Params params_;
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>.evmos.claims.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>.evmos.claims.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.evmos.claims.v1.GenesisProto.Params getParams() {
+      return params_ == null ? com.evmos.claims.v1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>.evmos.claims.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.evmos.claims.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.evmos.claims.v1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.claims.v1.QueryProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.evmos.claims.v1.QueryProto.QueryParamsResponse other = (com.evmos.claims.v1.QueryProto.QueryParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.claims.v1.QueryProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsResponse is the response type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.claims.v1.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.claims.v1.QueryParamsResponse)
+        com.evmos.claims.v1.QueryProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.claims.v1.QueryProto.QueryParamsResponse.class, com.evmos.claims.v1.QueryProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.evmos.claims.v1.QueryProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.evmos.claims.v1.QueryProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.QueryProto.QueryParamsResponse build() {
+        com.evmos.claims.v1.QueryProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.QueryProto.QueryParamsResponse buildPartial() {
+        com.evmos.claims.v1.QueryProto.QueryParamsResponse result = new com.evmos.claims.v1.QueryProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.claims.v1.QueryProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.claims.v1.QueryProto.QueryParamsResponse) {
+          return mergeFrom((com.evmos.claims.v1.QueryProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.claims.v1.QueryProto.QueryParamsResponse other) {
+        if (other == com.evmos.claims.v1.QueryProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.evmos.claims.v1.GenesisProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.evmos.claims.v1.GenesisProto.Params, com.evmos.claims.v1.GenesisProto.Params.Builder, com.evmos.claims.v1.GenesisProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.evmos.claims.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.evmos.claims.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.evmos.claims.v1.GenesisProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.evmos.claims.v1.GenesisProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.evmos.claims.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.evmos.claims.v1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.evmos.claims.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.evmos.claims.v1.GenesisProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.evmos.claims.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.evmos.claims.v1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.evmos.claims.v1.GenesisProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.evmos.claims.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.evmos.claims.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.claims.v1.GenesisProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.evmos.claims.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.claims.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.evmos.claims.v1.GenesisProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.evmos.claims.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.evmos.claims.v1.GenesisProto.Params, com.evmos.claims.v1.GenesisProto.Params.Builder, com.evmos.claims.v1.GenesisProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.evmos.claims.v1.GenesisProto.Params, com.evmos.claims.v1.GenesisProto.Params.Builder, com.evmos.claims.v1.GenesisProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.claims.v1.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.claims.v1.QueryParamsResponse)
+    private static final com.evmos.claims.v1.QueryProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.claims.v1.QueryProto.QueryParamsResponse();
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.claims.v1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryClaimsRecordsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.claims.v1.QueryClaimsRecordsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryClaimsRecordsRequest is the request type for the Query/ClaimsRecords RPC
+   * method.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.claims.v1.QueryClaimsRecordsRequest}
+   */
+  public static final class QueryClaimsRecordsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.claims.v1.QueryClaimsRecordsRequest)
+      QueryClaimsRecordsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryClaimsRecordsRequest.newBuilder() to construct.
+    private QueryClaimsRecordsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryClaimsRecordsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryClaimsRecordsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryClaimsRecordsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryClaimsRecordsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest.class, com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 1;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(1, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest)) {
+        return super.equals(obj);
+      }
+      com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest other = (com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryClaimsRecordsRequest is the request type for the Query/ClaimsRecords RPC
+     * method.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.claims.v1.QueryClaimsRecordsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.claims.v1.QueryClaimsRecordsRequest)
+        com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryClaimsRecordsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryClaimsRecordsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest.class, com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest.Builder.class);
+      }
+
+      // Construct using com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryClaimsRecordsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest getDefaultInstanceForType() {
+        return com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest build() {
+        com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest buildPartial() {
+        com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest result = new com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest) {
+          return mergeFrom((com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest other) {
+        if (other == com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.claims.v1.QueryClaimsRecordsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.claims.v1.QueryClaimsRecordsRequest)
+    private static final com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest();
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryClaimsRecordsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryClaimsRecordsRequest>() {
+      @java.lang.Override
+      public QueryClaimsRecordsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryClaimsRecordsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryClaimsRecordsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.claims.v1.QueryProto.QueryClaimsRecordsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryClaimsRecordsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.claims.v1.QueryClaimsRecordsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * claims defines all claims records
+     * </pre>
+     *
+     * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress> 
+        getClaimsList();
+    /**
+     * <pre>
+     * claims defines all claims records
+     * </pre>
+     *
+     * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+     */
+    com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress getClaims(int index);
+    /**
+     * <pre>
+     * claims defines all claims records
+     * </pre>
+     *
+     * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+     */
+    int getClaimsCount();
+    /**
+     * <pre>
+     * claims defines all claims records
+     * </pre>
+     *
+     * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddressOrBuilder> 
+        getClaimsOrBuilderList();
+    /**
+     * <pre>
+     * claims defines all claims records
+     * </pre>
+     *
+     * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+     */
+    com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddressOrBuilder getClaimsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryClaimsRecordsResponse is the response type for the Query/ClaimsRecords
+   * RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.claims.v1.QueryClaimsRecordsResponse}
+   */
+  public static final class QueryClaimsRecordsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.claims.v1.QueryClaimsRecordsResponse)
+      QueryClaimsRecordsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryClaimsRecordsResponse.newBuilder() to construct.
+    private QueryClaimsRecordsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryClaimsRecordsResponse() {
+      claims_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryClaimsRecordsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryClaimsRecordsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryClaimsRecordsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse.class, com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse.Builder.class);
+    }
+
+    public static final int CLAIMS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress> claims_;
+    /**
+     * <pre>
+     * claims defines all claims records
+     * </pre>
+     *
+     * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress> getClaimsList() {
+      return claims_;
+    }
+    /**
+     * <pre>
+     * claims defines all claims records
+     * </pre>
+     *
+     * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddressOrBuilder> 
+        getClaimsOrBuilderList() {
+      return claims_;
+    }
+    /**
+     * <pre>
+     * claims defines all claims records
+     * </pre>
+     *
+     * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getClaimsCount() {
+      return claims_.size();
+    }
+    /**
+     * <pre>
+     * claims defines all claims records
+     * </pre>
+     *
+     * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress getClaims(int index) {
+      return claims_.get(index);
+    }
+    /**
+     * <pre>
+     * claims defines all claims records
+     * </pre>
+     *
+     * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddressOrBuilder getClaimsOrBuilder(
+        int index) {
+      return claims_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < claims_.size(); i++) {
+        output.writeMessage(1, claims_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < claims_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, claims_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse)) {
+        return super.equals(obj);
+      }
+      com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse other = (com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse) obj;
+
+      if (!getClaimsList()
+          .equals(other.getClaimsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getClaimsCount() > 0) {
+        hash = (37 * hash) + CLAIMS_FIELD_NUMBER;
+        hash = (53 * hash) + getClaimsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryClaimsRecordsResponse is the response type for the Query/ClaimsRecords
+     * RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.claims.v1.QueryClaimsRecordsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.claims.v1.QueryClaimsRecordsResponse)
+        com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryClaimsRecordsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryClaimsRecordsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse.class, com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse.Builder.class);
+      }
+
+      // Construct using com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (claimsBuilder_ == null) {
+          claims_ = java.util.Collections.emptyList();
+        } else {
+          claims_ = null;
+          claimsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryClaimsRecordsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse getDefaultInstanceForType() {
+        return com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse build() {
+        com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse buildPartial() {
+        com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse result = new com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse result) {
+        if (claimsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            claims_ = java.util.Collections.unmodifiableList(claims_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.claims_ = claims_;
+        } else {
+          result.claims_ = claimsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse) {
+          return mergeFrom((com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse other) {
+        if (other == com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse.getDefaultInstance()) return this;
+        if (claimsBuilder_ == null) {
+          if (!other.claims_.isEmpty()) {
+            if (claims_.isEmpty()) {
+              claims_ = other.claims_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureClaimsIsMutable();
+              claims_.addAll(other.claims_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.claims_.isEmpty()) {
+            if (claimsBuilder_.isEmpty()) {
+              claimsBuilder_.dispose();
+              claimsBuilder_ = null;
+              claims_ = other.claims_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              claimsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getClaimsFieldBuilder() : null;
+            } else {
+              claimsBuilder_.addAllMessages(other.claims_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress m =
+                    input.readMessage(
+                        com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.parser(),
+                        extensionRegistry);
+                if (claimsBuilder_ == null) {
+                  ensureClaimsIsMutable();
+                  claims_.add(m);
+                } else {
+                  claimsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress> claims_ =
+        java.util.Collections.emptyList();
+      private void ensureClaimsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          claims_ = new java.util.ArrayList<com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress>(claims_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress, com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.Builder, com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddressOrBuilder> claimsBuilder_;
+
+      /**
+       * <pre>
+       * claims defines all claims records
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress> getClaimsList() {
+        if (claimsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(claims_);
+        } else {
+          return claimsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * claims defines all claims records
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public int getClaimsCount() {
+        if (claimsBuilder_ == null) {
+          return claims_.size();
+        } else {
+          return claimsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * claims defines all claims records
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress getClaims(int index) {
+        if (claimsBuilder_ == null) {
+          return claims_.get(index);
+        } else {
+          return claimsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * claims defines all claims records
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setClaims(
+          int index, com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress value) {
+        if (claimsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimsIsMutable();
+          claims_.set(index, value);
+          onChanged();
+        } else {
+          claimsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claims defines all claims records
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setClaims(
+          int index, com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.Builder builderForValue) {
+        if (claimsBuilder_ == null) {
+          ensureClaimsIsMutable();
+          claims_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          claimsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claims defines all claims records
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClaims(com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress value) {
+        if (claimsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimsIsMutable();
+          claims_.add(value);
+          onChanged();
+        } else {
+          claimsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claims defines all claims records
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClaims(
+          int index, com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress value) {
+        if (claimsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimsIsMutable();
+          claims_.add(index, value);
+          onChanged();
+        } else {
+          claimsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claims defines all claims records
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClaims(
+          com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.Builder builderForValue) {
+        if (claimsBuilder_ == null) {
+          ensureClaimsIsMutable();
+          claims_.add(builderForValue.build());
+          onChanged();
+        } else {
+          claimsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claims defines all claims records
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClaims(
+          int index, com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.Builder builderForValue) {
+        if (claimsBuilder_ == null) {
+          ensureClaimsIsMutable();
+          claims_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          claimsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claims defines all claims records
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllClaims(
+          java.lang.Iterable<? extends com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress> values) {
+        if (claimsBuilder_ == null) {
+          ensureClaimsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, claims_);
+          onChanged();
+        } else {
+          claimsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claims defines all claims records
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearClaims() {
+        if (claimsBuilder_ == null) {
+          claims_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          claimsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claims defines all claims records
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeClaims(int index) {
+        if (claimsBuilder_ == null) {
+          ensureClaimsIsMutable();
+          claims_.remove(index);
+          onChanged();
+        } else {
+          claimsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claims defines all claims records
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.Builder getClaimsBuilder(
+          int index) {
+        return getClaimsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * claims defines all claims records
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddressOrBuilder getClaimsOrBuilder(
+          int index) {
+        if (claimsBuilder_ == null) {
+          return claims_.get(index);  } else {
+          return claimsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * claims defines all claims records
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddressOrBuilder> 
+           getClaimsOrBuilderList() {
+        if (claimsBuilder_ != null) {
+          return claimsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(claims_);
+        }
+      }
+      /**
+       * <pre>
+       * claims defines all claims records
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.Builder addClaimsBuilder() {
+        return getClaimsFieldBuilder().addBuilder(
+            com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * claims defines all claims records
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.Builder addClaimsBuilder(
+          int index) {
+        return getClaimsFieldBuilder().addBuilder(
+            index, com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * claims defines all claims records
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.Builder> 
+           getClaimsBuilderList() {
+        return getClaimsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress, com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.Builder, com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddressOrBuilder> 
+          getClaimsFieldBuilder() {
+        if (claimsBuilder_ == null) {
+          claimsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress, com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.Builder, com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddressOrBuilder>(
+                  claims_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          claims_ = null;
+        }
+        return claimsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.claims.v1.QueryClaimsRecordsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.claims.v1.QueryClaimsRecordsResponse)
+    private static final com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse();
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryClaimsRecordsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryClaimsRecordsResponse>() {
+      @java.lang.Override
+      public QueryClaimsRecordsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryClaimsRecordsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryClaimsRecordsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.claims.v1.QueryProto.QueryClaimsRecordsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryClaimsRecordRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.claims.v1.QueryClaimsRecordRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * address defines the user to query claims record for
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <pre>
+     * address defines the user to query claims record for
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+  }
+  /**
+   * <pre>
+   * QueryClaimsRecordRequest is the request type for the Query/ClaimsRecord RPC
+   * method.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.claims.v1.QueryClaimsRecordRequest}
+   */
+  public static final class QueryClaimsRecordRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.claims.v1.QueryClaimsRecordRequest)
+      QueryClaimsRecordRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryClaimsRecordRequest.newBuilder() to construct.
+    private QueryClaimsRecordRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryClaimsRecordRequest() {
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryClaimsRecordRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryClaimsRecordRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryClaimsRecordRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest.class, com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <pre>
+     * address defines the user to query claims record for
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * address defines the user to query claims record for
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest)) {
+        return super.equals(obj);
+      }
+      com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest other = (com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryClaimsRecordRequest is the request type for the Query/ClaimsRecord RPC
+     * method.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.claims.v1.QueryClaimsRecordRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.claims.v1.QueryClaimsRecordRequest)
+        com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryClaimsRecordRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryClaimsRecordRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest.class, com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest.Builder.class);
+      }
+
+      // Construct using com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryClaimsRecordRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest getDefaultInstanceForType() {
+        return com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest build() {
+        com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest buildPartial() {
+        com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest result = new com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest) {
+          return mergeFrom((com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest other) {
+        if (other == com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <pre>
+       * address defines the user to query claims record for
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address defines the user to query claims record for
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address defines the user to query claims record for
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address defines the user to query claims record for
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address defines the user to query claims record for
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.claims.v1.QueryClaimsRecordRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.claims.v1.QueryClaimsRecordRequest)
+    private static final com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest();
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryClaimsRecordRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryClaimsRecordRequest>() {
+      @java.lang.Override
+      public QueryClaimsRecordRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryClaimsRecordRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryClaimsRecordRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.claims.v1.QueryProto.QueryClaimsRecordRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryClaimsRecordResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.claims.v1.QueryClaimsRecordResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * initial_claimable_amount of the user
+     * </pre>
+     *
+     * <code>string initial_claimable_amount = 1 [json_name = "initialClaimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The initialClaimableAmount.
+     */
+    java.lang.String getInitialClaimableAmount();
+    /**
+     * <pre>
+     * initial_claimable_amount of the user
+     * </pre>
+     *
+     * <code>string initial_claimable_amount = 1 [json_name = "initialClaimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for initialClaimableAmount.
+     */
+    com.google.protobuf.ByteString
+        getInitialClaimableAmountBytes();
+
+    /**
+     * <pre>
+     * claims of the user
+     * </pre>
+     *
+     * <code>repeated .evmos.claims.v1.Claim claims = 2 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.evmos.claims.v1.ClaimsProto.Claim> 
+        getClaimsList();
+    /**
+     * <pre>
+     * claims of the user
+     * </pre>
+     *
+     * <code>repeated .evmos.claims.v1.Claim claims = 2 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+     */
+    com.evmos.claims.v1.ClaimsProto.Claim getClaims(int index);
+    /**
+     * <pre>
+     * claims of the user
+     * </pre>
+     *
+     * <code>repeated .evmos.claims.v1.Claim claims = 2 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+     */
+    int getClaimsCount();
+    /**
+     * <pre>
+     * claims of the user
+     * </pre>
+     *
+     * <code>repeated .evmos.claims.v1.Claim claims = 2 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.evmos.claims.v1.ClaimsProto.ClaimOrBuilder> 
+        getClaimsOrBuilderList();
+    /**
+     * <pre>
+     * claims of the user
+     * </pre>
+     *
+     * <code>repeated .evmos.claims.v1.Claim claims = 2 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+     */
+    com.evmos.claims.v1.ClaimsProto.ClaimOrBuilder getClaimsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * QueryClaimsRecordResponse is the response type for the Query/ClaimsRecord RPC
+   * method.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.claims.v1.QueryClaimsRecordResponse}
+   */
+  public static final class QueryClaimsRecordResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.claims.v1.QueryClaimsRecordResponse)
+      QueryClaimsRecordResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryClaimsRecordResponse.newBuilder() to construct.
+    private QueryClaimsRecordResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryClaimsRecordResponse() {
+      initialClaimableAmount_ = "";
+      claims_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryClaimsRecordResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryClaimsRecordResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryClaimsRecordResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse.class, com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse.Builder.class);
+    }
+
+    public static final int INITIAL_CLAIMABLE_AMOUNT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object initialClaimableAmount_ = "";
+    /**
+     * <pre>
+     * initial_claimable_amount of the user
+     * </pre>
+     *
+     * <code>string initial_claimable_amount = 1 [json_name = "initialClaimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The initialClaimableAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getInitialClaimableAmount() {
+      java.lang.Object ref = initialClaimableAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        initialClaimableAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * initial_claimable_amount of the user
+     * </pre>
+     *
+     * <code>string initial_claimable_amount = 1 [json_name = "initialClaimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for initialClaimableAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInitialClaimableAmountBytes() {
+      java.lang.Object ref = initialClaimableAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        initialClaimableAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLAIMS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.evmos.claims.v1.ClaimsProto.Claim> claims_;
+    /**
+     * <pre>
+     * claims of the user
+     * </pre>
+     *
+     * <code>repeated .evmos.claims.v1.Claim claims = 2 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.evmos.claims.v1.ClaimsProto.Claim> getClaimsList() {
+      return claims_;
+    }
+    /**
+     * <pre>
+     * claims of the user
+     * </pre>
+     *
+     * <code>repeated .evmos.claims.v1.Claim claims = 2 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.evmos.claims.v1.ClaimsProto.ClaimOrBuilder> 
+        getClaimsOrBuilderList() {
+      return claims_;
+    }
+    /**
+     * <pre>
+     * claims of the user
+     * </pre>
+     *
+     * <code>repeated .evmos.claims.v1.Claim claims = 2 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getClaimsCount() {
+      return claims_.size();
+    }
+    /**
+     * <pre>
+     * claims of the user
+     * </pre>
+     *
+     * <code>repeated .evmos.claims.v1.Claim claims = 2 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.evmos.claims.v1.ClaimsProto.Claim getClaims(int index) {
+      return claims_.get(index);
+    }
+    /**
+     * <pre>
+     * claims of the user
+     * </pre>
+     *
+     * <code>repeated .evmos.claims.v1.Claim claims = 2 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.evmos.claims.v1.ClaimsProto.ClaimOrBuilder getClaimsOrBuilder(
+        int index) {
+      return claims_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(initialClaimableAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, initialClaimableAmount_);
+      }
+      for (int i = 0; i < claims_.size(); i++) {
+        output.writeMessage(2, claims_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(initialClaimableAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, initialClaimableAmount_);
+      }
+      for (int i = 0; i < claims_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, claims_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse)) {
+        return super.equals(obj);
+      }
+      com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse other = (com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse) obj;
+
+      if (!getInitialClaimableAmount()
+          .equals(other.getInitialClaimableAmount())) return false;
+      if (!getClaimsList()
+          .equals(other.getClaimsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INITIAL_CLAIMABLE_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getInitialClaimableAmount().hashCode();
+      if (getClaimsCount() > 0) {
+        hash = (37 * hash) + CLAIMS_FIELD_NUMBER;
+        hash = (53 * hash) + getClaimsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryClaimsRecordResponse is the response type for the Query/ClaimsRecord RPC
+     * method.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.claims.v1.QueryClaimsRecordResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.claims.v1.QueryClaimsRecordResponse)
+        com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryClaimsRecordResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryClaimsRecordResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse.class, com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse.Builder.class);
+      }
+
+      // Construct using com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        initialClaimableAmount_ = "";
+        if (claimsBuilder_ == null) {
+          claims_ = java.util.Collections.emptyList();
+        } else {
+          claims_ = null;
+          claimsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.claims.v1.QueryProto.internal_static_evmos_claims_v1_QueryClaimsRecordResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse getDefaultInstanceForType() {
+        return com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse build() {
+        com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse buildPartial() {
+        com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse result = new com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse result) {
+        if (claimsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            claims_ = java.util.Collections.unmodifiableList(claims_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.claims_ = claims_;
+        } else {
+          result.claims_ = claimsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.initialClaimableAmount_ = initialClaimableAmount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse) {
+          return mergeFrom((com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse other) {
+        if (other == com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse.getDefaultInstance()) return this;
+        if (!other.getInitialClaimableAmount().isEmpty()) {
+          initialClaimableAmount_ = other.initialClaimableAmount_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (claimsBuilder_ == null) {
+          if (!other.claims_.isEmpty()) {
+            if (claims_.isEmpty()) {
+              claims_ = other.claims_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureClaimsIsMutable();
+              claims_.addAll(other.claims_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.claims_.isEmpty()) {
+            if (claimsBuilder_.isEmpty()) {
+              claimsBuilder_.dispose();
+              claimsBuilder_ = null;
+              claims_ = other.claims_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              claimsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getClaimsFieldBuilder() : null;
+            } else {
+              claimsBuilder_.addAllMessages(other.claims_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                initialClaimableAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.evmos.claims.v1.ClaimsProto.Claim m =
+                    input.readMessage(
+                        com.evmos.claims.v1.ClaimsProto.Claim.parser(),
+                        extensionRegistry);
+                if (claimsBuilder_ == null) {
+                  ensureClaimsIsMutable();
+                  claims_.add(m);
+                } else {
+                  claimsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object initialClaimableAmount_ = "";
+      /**
+       * <pre>
+       * initial_claimable_amount of the user
+       * </pre>
+       *
+       * <code>string initial_claimable_amount = 1 [json_name = "initialClaimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The initialClaimableAmount.
+       */
+      public java.lang.String getInitialClaimableAmount() {
+        java.lang.Object ref = initialClaimableAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          initialClaimableAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * initial_claimable_amount of the user
+       * </pre>
+       *
+       * <code>string initial_claimable_amount = 1 [json_name = "initialClaimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for initialClaimableAmount.
+       */
+      public com.google.protobuf.ByteString
+          getInitialClaimableAmountBytes() {
+        java.lang.Object ref = initialClaimableAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          initialClaimableAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * initial_claimable_amount of the user
+       * </pre>
+       *
+       * <code>string initial_claimable_amount = 1 [json_name = "initialClaimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The initialClaimableAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInitialClaimableAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        initialClaimableAmount_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * initial_claimable_amount of the user
+       * </pre>
+       *
+       * <code>string initial_claimable_amount = 1 [json_name = "initialClaimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInitialClaimableAmount() {
+        initialClaimableAmount_ = getDefaultInstance().getInitialClaimableAmount();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * initial_claimable_amount of the user
+       * </pre>
+       *
+       * <code>string initial_claimable_amount = 1 [json_name = "initialClaimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for initialClaimableAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInitialClaimableAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        initialClaimableAmount_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.evmos.claims.v1.ClaimsProto.Claim> claims_ =
+        java.util.Collections.emptyList();
+      private void ensureClaimsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          claims_ = new java.util.ArrayList<com.evmos.claims.v1.ClaimsProto.Claim>(claims_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.evmos.claims.v1.ClaimsProto.Claim, com.evmos.claims.v1.ClaimsProto.Claim.Builder, com.evmos.claims.v1.ClaimsProto.ClaimOrBuilder> claimsBuilder_;
+
+      /**
+       * <pre>
+       * claims of the user
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.Claim claims = 2 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.evmos.claims.v1.ClaimsProto.Claim> getClaimsList() {
+        if (claimsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(claims_);
+        } else {
+          return claimsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * claims of the user
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.Claim claims = 2 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public int getClaimsCount() {
+        if (claimsBuilder_ == null) {
+          return claims_.size();
+        } else {
+          return claimsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * claims of the user
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.Claim claims = 2 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.claims.v1.ClaimsProto.Claim getClaims(int index) {
+        if (claimsBuilder_ == null) {
+          return claims_.get(index);
+        } else {
+          return claimsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * claims of the user
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.Claim claims = 2 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setClaims(
+          int index, com.evmos.claims.v1.ClaimsProto.Claim value) {
+        if (claimsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimsIsMutable();
+          claims_.set(index, value);
+          onChanged();
+        } else {
+          claimsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claims of the user
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.Claim claims = 2 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setClaims(
+          int index, com.evmos.claims.v1.ClaimsProto.Claim.Builder builderForValue) {
+        if (claimsBuilder_ == null) {
+          ensureClaimsIsMutable();
+          claims_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          claimsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claims of the user
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.Claim claims = 2 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClaims(com.evmos.claims.v1.ClaimsProto.Claim value) {
+        if (claimsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimsIsMutable();
+          claims_.add(value);
+          onChanged();
+        } else {
+          claimsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claims of the user
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.Claim claims = 2 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClaims(
+          int index, com.evmos.claims.v1.ClaimsProto.Claim value) {
+        if (claimsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimsIsMutable();
+          claims_.add(index, value);
+          onChanged();
+        } else {
+          claimsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claims of the user
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.Claim claims = 2 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClaims(
+          com.evmos.claims.v1.ClaimsProto.Claim.Builder builderForValue) {
+        if (claimsBuilder_ == null) {
+          ensureClaimsIsMutable();
+          claims_.add(builderForValue.build());
+          onChanged();
+        } else {
+          claimsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claims of the user
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.Claim claims = 2 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClaims(
+          int index, com.evmos.claims.v1.ClaimsProto.Claim.Builder builderForValue) {
+        if (claimsBuilder_ == null) {
+          ensureClaimsIsMutable();
+          claims_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          claimsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claims of the user
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.Claim claims = 2 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllClaims(
+          java.lang.Iterable<? extends com.evmos.claims.v1.ClaimsProto.Claim> values) {
+        if (claimsBuilder_ == null) {
+          ensureClaimsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, claims_);
+          onChanged();
+        } else {
+          claimsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claims of the user
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.Claim claims = 2 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearClaims() {
+        if (claimsBuilder_ == null) {
+          claims_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          claimsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claims of the user
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.Claim claims = 2 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeClaims(int index) {
+        if (claimsBuilder_ == null) {
+          ensureClaimsIsMutable();
+          claims_.remove(index);
+          onChanged();
+        } else {
+          claimsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claims of the user
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.Claim claims = 2 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.claims.v1.ClaimsProto.Claim.Builder getClaimsBuilder(
+          int index) {
+        return getClaimsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * claims of the user
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.Claim claims = 2 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.claims.v1.ClaimsProto.ClaimOrBuilder getClaimsOrBuilder(
+          int index) {
+        if (claimsBuilder_ == null) {
+          return claims_.get(index);  } else {
+          return claimsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * claims of the user
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.Claim claims = 2 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.evmos.claims.v1.ClaimsProto.ClaimOrBuilder> 
+           getClaimsOrBuilderList() {
+        if (claimsBuilder_ != null) {
+          return claimsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(claims_);
+        }
+      }
+      /**
+       * <pre>
+       * claims of the user
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.Claim claims = 2 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.claims.v1.ClaimsProto.Claim.Builder addClaimsBuilder() {
+        return getClaimsFieldBuilder().addBuilder(
+            com.evmos.claims.v1.ClaimsProto.Claim.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * claims of the user
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.Claim claims = 2 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.claims.v1.ClaimsProto.Claim.Builder addClaimsBuilder(
+          int index) {
+        return getClaimsFieldBuilder().addBuilder(
+            index, com.evmos.claims.v1.ClaimsProto.Claim.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * claims of the user
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.Claim claims = 2 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.evmos.claims.v1.ClaimsProto.Claim.Builder> 
+           getClaimsBuilderList() {
+        return getClaimsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.evmos.claims.v1.ClaimsProto.Claim, com.evmos.claims.v1.ClaimsProto.Claim.Builder, com.evmos.claims.v1.ClaimsProto.ClaimOrBuilder> 
+          getClaimsFieldBuilder() {
+        if (claimsBuilder_ == null) {
+          claimsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.evmos.claims.v1.ClaimsProto.Claim, com.evmos.claims.v1.ClaimsProto.Claim.Builder, com.evmos.claims.v1.ClaimsProto.ClaimOrBuilder>(
+                  claims_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          claims_ = null;
+        }
+        return claimsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.claims.v1.QueryClaimsRecordResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.claims.v1.QueryClaimsRecordResponse)
+    private static final com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse();
+    }
+
+    public static com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryClaimsRecordResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryClaimsRecordResponse>() {
+      @java.lang.Override
+      public QueryClaimsRecordResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryClaimsRecordResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryClaimsRecordResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.claims.v1.QueryProto.QueryClaimsRecordResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_claims_v1_QueryTotalUnclaimedRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_claims_v1_QueryTotalUnclaimedRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_claims_v1_QueryTotalUnclaimedResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_claims_v1_QueryTotalUnclaimedResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_claims_v1_QueryParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_claims_v1_QueryParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_claims_v1_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_claims_v1_QueryParamsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_claims_v1_QueryClaimsRecordsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_claims_v1_QueryClaimsRecordsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_claims_v1_QueryClaimsRecordsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_claims_v1_QueryClaimsRecordsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_claims_v1_QueryClaimsRecordRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_claims_v1_QueryClaimsRecordRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_claims_v1_QueryClaimsRecordResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_claims_v1_QueryClaimsRecordResponse_fieldAccessorTable;
 
@@ -102,12 +6002,12 @@ public final class QueryProto {
       "s\022\230\001\n\014ClaimsRecord\022).evmos.claims.v1.Que" +
       "ryClaimsRecordRequest\032*.evmos.claims.v1." +
       "QueryClaimsRecordResponse\"1\202\323\344\223\002+\022)/evmo" +
-      "s/claims/v1/claims_records/{address}B\252\001\n" +
-      "\023com.evmos.claims.v1B\nQueryProtoP\001Z)gith" +
-      "ub.com/evmos/evmos/v13/x/claims/types\242\002\003" +
-      "ECX\252\002\017Evmos.Claims.V1\312\002\017Evmos\\Claims\\V1\342" +
-      "\002\033Evmos\\Claims\\V1\\GPBMetadata\352\002\021Evmos::C" +
-      "laims::V1b\006proto3"
+      "s/claims/v1/claims_records/{address}B\250\001\n" +
+      "\023com.evmos.claims.v1B\nQueryProtoZ)github" +
+      ".com/evmos/evmos/v13/x/claims/types\242\002\003EC" +
+      "X\252\002\017Evmos.Claims.V1\312\002\017Evmos\\Claims\\V1\342\002\033" +
+      "Evmos\\Claims\\V1\\GPBMetadata\352\002\021Evmos::Cla" +
+      "ims::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

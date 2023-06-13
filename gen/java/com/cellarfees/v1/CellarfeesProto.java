@@ -14,14 +14,1421 @@ public final class CellarfeesProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface FeeAccrualCounterOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cellarfees.v1.FeeAccrualCounter)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>uint64 count = 2 [json_name = "count"];</code>
+     * @return The count.
+     */
+    long getCount();
+  }
+  /**
+   * Protobuf type {@code cellarfees.v1.FeeAccrualCounter}
+   */
+  public static final class FeeAccrualCounter extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cellarfees.v1.FeeAccrualCounter)
+      FeeAccrualCounterOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FeeAccrualCounter.newBuilder() to construct.
+    private FeeAccrualCounter(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FeeAccrualCounter() {
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FeeAccrualCounter();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cellarfees.v1.CellarfeesProto.internal_static_cellarfees_v1_FeeAccrualCounter_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cellarfees.v1.CellarfeesProto.internal_static_cellarfees_v1_FeeAccrualCounter_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter.class, com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COUNT_FIELD_NUMBER = 2;
+    private long count_ = 0L;
+    /**
+     * <code>uint64 count = 2 [json_name = "count"];</code>
+     * @return The count.
+     */
+    @java.lang.Override
+    public long getCount() {
+      return count_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (count_ != 0L) {
+        output.writeUInt64(2, count_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (count_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, count_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter)) {
+        return super.equals(obj);
+      }
+      com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter other = (com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (getCount()
+          != other.getCount()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCount());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cellarfees.v1.FeeAccrualCounter}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cellarfees.v1.FeeAccrualCounter)
+        com.cellarfees.v1.CellarfeesProto.FeeAccrualCounterOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cellarfees.v1.CellarfeesProto.internal_static_cellarfees_v1_FeeAccrualCounter_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cellarfees.v1.CellarfeesProto.internal_static_cellarfees_v1_FeeAccrualCounter_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter.class, com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter.Builder.class);
+      }
+
+      // Construct using com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        count_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cellarfees.v1.CellarfeesProto.internal_static_cellarfees_v1_FeeAccrualCounter_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter getDefaultInstanceForType() {
+        return com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter build() {
+        com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter buildPartial() {
+        com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter result = new com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.count_ = count_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter) {
+          return mergeFrom((com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter other) {
+        if (other == com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getCount() != 0L) {
+          setCount(other.getCount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                count_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long count_ ;
+      /**
+       * <code>uint64 count = 2 [json_name = "count"];</code>
+       * @return The count.
+       */
+      @java.lang.Override
+      public long getCount() {
+        return count_;
+      }
+      /**
+       * <code>uint64 count = 2 [json_name = "count"];</code>
+       * @param value The count to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCount(long value) {
+
+        count_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 count = 2 [json_name = "count"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCount() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        count_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cellarfees.v1.FeeAccrualCounter)
+    }
+
+    // @@protoc_insertion_point(class_scope:cellarfees.v1.FeeAccrualCounter)
+    private static final com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter();
+    }
+
+    public static com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FeeAccrualCounter>
+        PARSER = new com.google.protobuf.AbstractParser<FeeAccrualCounter>() {
+      @java.lang.Override
+      public FeeAccrualCounter parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<FeeAccrualCounter> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FeeAccrualCounter> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FeeAccrualCountersOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cellarfees.v1.FeeAccrualCounters)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .cellarfees.v1.FeeAccrualCounter counters = 1 [json_name = "counters", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter> 
+        getCountersList();
+    /**
+     * <code>repeated .cellarfees.v1.FeeAccrualCounter counters = 1 [json_name = "counters", (.gogoproto.nullable) = false];</code>
+     */
+    com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter getCounters(int index);
+    /**
+     * <code>repeated .cellarfees.v1.FeeAccrualCounter counters = 1 [json_name = "counters", (.gogoproto.nullable) = false];</code>
+     */
+    int getCountersCount();
+    /**
+     * <code>repeated .cellarfees.v1.FeeAccrualCounter counters = 1 [json_name = "counters", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.cellarfees.v1.CellarfeesProto.FeeAccrualCounterOrBuilder> 
+        getCountersOrBuilderList();
+    /**
+     * <code>repeated .cellarfees.v1.FeeAccrualCounter counters = 1 [json_name = "counters", (.gogoproto.nullable) = false];</code>
+     */
+    com.cellarfees.v1.CellarfeesProto.FeeAccrualCounterOrBuilder getCountersOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code cellarfees.v1.FeeAccrualCounters}
+   */
+  public static final class FeeAccrualCounters extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cellarfees.v1.FeeAccrualCounters)
+      FeeAccrualCountersOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FeeAccrualCounters.newBuilder() to construct.
+    private FeeAccrualCounters(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FeeAccrualCounters() {
+      counters_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FeeAccrualCounters();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cellarfees.v1.CellarfeesProto.internal_static_cellarfees_v1_FeeAccrualCounters_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cellarfees.v1.CellarfeesProto.internal_static_cellarfees_v1_FeeAccrualCounters_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters.class, com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters.Builder.class);
+    }
+
+    public static final int COUNTERS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter> counters_;
+    /**
+     * <code>repeated .cellarfees.v1.FeeAccrualCounter counters = 1 [json_name = "counters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter> getCountersList() {
+      return counters_;
+    }
+    /**
+     * <code>repeated .cellarfees.v1.FeeAccrualCounter counters = 1 [json_name = "counters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cellarfees.v1.CellarfeesProto.FeeAccrualCounterOrBuilder> 
+        getCountersOrBuilderList() {
+      return counters_;
+    }
+    /**
+     * <code>repeated .cellarfees.v1.FeeAccrualCounter counters = 1 [json_name = "counters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getCountersCount() {
+      return counters_.size();
+    }
+    /**
+     * <code>repeated .cellarfees.v1.FeeAccrualCounter counters = 1 [json_name = "counters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter getCounters(int index) {
+      return counters_.get(index);
+    }
+    /**
+     * <code>repeated .cellarfees.v1.FeeAccrualCounter counters = 1 [json_name = "counters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cellarfees.v1.CellarfeesProto.FeeAccrualCounterOrBuilder getCountersOrBuilder(
+        int index) {
+      return counters_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < counters_.size(); i++) {
+        output.writeMessage(1, counters_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < counters_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, counters_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters)) {
+        return super.equals(obj);
+      }
+      com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters other = (com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters) obj;
+
+      if (!getCountersList()
+          .equals(other.getCountersList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getCountersCount() > 0) {
+        hash = (37 * hash) + COUNTERS_FIELD_NUMBER;
+        hash = (53 * hash) + getCountersList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cellarfees.v1.FeeAccrualCounters}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cellarfees.v1.FeeAccrualCounters)
+        com.cellarfees.v1.CellarfeesProto.FeeAccrualCountersOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cellarfees.v1.CellarfeesProto.internal_static_cellarfees_v1_FeeAccrualCounters_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cellarfees.v1.CellarfeesProto.internal_static_cellarfees_v1_FeeAccrualCounters_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters.class, com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters.Builder.class);
+      }
+
+      // Construct using com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (countersBuilder_ == null) {
+          counters_ = java.util.Collections.emptyList();
+        } else {
+          counters_ = null;
+          countersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cellarfees.v1.CellarfeesProto.internal_static_cellarfees_v1_FeeAccrualCounters_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters getDefaultInstanceForType() {
+        return com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters build() {
+        com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters buildPartial() {
+        com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters result = new com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters result) {
+        if (countersBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            counters_ = java.util.Collections.unmodifiableList(counters_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.counters_ = counters_;
+        } else {
+          result.counters_ = countersBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters) {
+          return mergeFrom((com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters other) {
+        if (other == com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters.getDefaultInstance()) return this;
+        if (countersBuilder_ == null) {
+          if (!other.counters_.isEmpty()) {
+            if (counters_.isEmpty()) {
+              counters_ = other.counters_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureCountersIsMutable();
+              counters_.addAll(other.counters_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.counters_.isEmpty()) {
+            if (countersBuilder_.isEmpty()) {
+              countersBuilder_.dispose();
+              countersBuilder_ = null;
+              counters_ = other.counters_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              countersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCountersFieldBuilder() : null;
+            } else {
+              countersBuilder_.addAllMessages(other.counters_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter m =
+                    input.readMessage(
+                        com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter.parser(),
+                        extensionRegistry);
+                if (countersBuilder_ == null) {
+                  ensureCountersIsMutable();
+                  counters_.add(m);
+                } else {
+                  countersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter> counters_ =
+        java.util.Collections.emptyList();
+      private void ensureCountersIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          counters_ = new java.util.ArrayList<com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter>(counters_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter, com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter.Builder, com.cellarfees.v1.CellarfeesProto.FeeAccrualCounterOrBuilder> countersBuilder_;
+
+      /**
+       * <code>repeated .cellarfees.v1.FeeAccrualCounter counters = 1 [json_name = "counters", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter> getCountersList() {
+        if (countersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(counters_);
+        } else {
+          return countersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cellarfees.v1.FeeAccrualCounter counters = 1 [json_name = "counters", (.gogoproto.nullable) = false];</code>
+       */
+      public int getCountersCount() {
+        if (countersBuilder_ == null) {
+          return counters_.size();
+        } else {
+          return countersBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cellarfees.v1.FeeAccrualCounter counters = 1 [json_name = "counters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter getCounters(int index) {
+        if (countersBuilder_ == null) {
+          return counters_.get(index);
+        } else {
+          return countersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cellarfees.v1.FeeAccrualCounter counters = 1 [json_name = "counters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCounters(
+          int index, com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter value) {
+        if (countersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCountersIsMutable();
+          counters_.set(index, value);
+          onChanged();
+        } else {
+          countersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cellarfees.v1.FeeAccrualCounter counters = 1 [json_name = "counters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCounters(
+          int index, com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter.Builder builderForValue) {
+        if (countersBuilder_ == null) {
+          ensureCountersIsMutable();
+          counters_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          countersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cellarfees.v1.FeeAccrualCounter counters = 1 [json_name = "counters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addCounters(com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter value) {
+        if (countersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCountersIsMutable();
+          counters_.add(value);
+          onChanged();
+        } else {
+          countersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cellarfees.v1.FeeAccrualCounter counters = 1 [json_name = "counters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addCounters(
+          int index, com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter value) {
+        if (countersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCountersIsMutable();
+          counters_.add(index, value);
+          onChanged();
+        } else {
+          countersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cellarfees.v1.FeeAccrualCounter counters = 1 [json_name = "counters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addCounters(
+          com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter.Builder builderForValue) {
+        if (countersBuilder_ == null) {
+          ensureCountersIsMutable();
+          counters_.add(builderForValue.build());
+          onChanged();
+        } else {
+          countersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cellarfees.v1.FeeAccrualCounter counters = 1 [json_name = "counters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addCounters(
+          int index, com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter.Builder builderForValue) {
+        if (countersBuilder_ == null) {
+          ensureCountersIsMutable();
+          counters_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          countersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cellarfees.v1.FeeAccrualCounter counters = 1 [json_name = "counters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllCounters(
+          java.lang.Iterable<? extends com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter> values) {
+        if (countersBuilder_ == null) {
+          ensureCountersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, counters_);
+          onChanged();
+        } else {
+          countersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cellarfees.v1.FeeAccrualCounter counters = 1 [json_name = "counters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearCounters() {
+        if (countersBuilder_ == null) {
+          counters_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          countersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cellarfees.v1.FeeAccrualCounter counters = 1 [json_name = "counters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeCounters(int index) {
+        if (countersBuilder_ == null) {
+          ensureCountersIsMutable();
+          counters_.remove(index);
+          onChanged();
+        } else {
+          countersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cellarfees.v1.FeeAccrualCounter counters = 1 [json_name = "counters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter.Builder getCountersBuilder(
+          int index) {
+        return getCountersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cellarfees.v1.FeeAccrualCounter counters = 1 [json_name = "counters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cellarfees.v1.CellarfeesProto.FeeAccrualCounterOrBuilder getCountersOrBuilder(
+          int index) {
+        if (countersBuilder_ == null) {
+          return counters_.get(index);  } else {
+          return countersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cellarfees.v1.FeeAccrualCounter counters = 1 [json_name = "counters", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.cellarfees.v1.CellarfeesProto.FeeAccrualCounterOrBuilder> 
+           getCountersOrBuilderList() {
+        if (countersBuilder_ != null) {
+          return countersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(counters_);
+        }
+      }
+      /**
+       * <code>repeated .cellarfees.v1.FeeAccrualCounter counters = 1 [json_name = "counters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter.Builder addCountersBuilder() {
+        return getCountersFieldBuilder().addBuilder(
+            com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cellarfees.v1.FeeAccrualCounter counters = 1 [json_name = "counters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter.Builder addCountersBuilder(
+          int index) {
+        return getCountersFieldBuilder().addBuilder(
+            index, com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cellarfees.v1.FeeAccrualCounter counters = 1 [json_name = "counters", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter.Builder> 
+           getCountersBuilderList() {
+        return getCountersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter, com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter.Builder, com.cellarfees.v1.CellarfeesProto.FeeAccrualCounterOrBuilder> 
+          getCountersFieldBuilder() {
+        if (countersBuilder_ == null) {
+          countersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter, com.cellarfees.v1.CellarfeesProto.FeeAccrualCounter.Builder, com.cellarfees.v1.CellarfeesProto.FeeAccrualCounterOrBuilder>(
+                  counters_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          counters_ = null;
+        }
+        return countersBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cellarfees.v1.FeeAccrualCounters)
+    }
+
+    // @@protoc_insertion_point(class_scope:cellarfees.v1.FeeAccrualCounters)
+    private static final com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters();
+    }
+
+    public static com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FeeAccrualCounters>
+        PARSER = new com.google.protobuf.AbstractParser<FeeAccrualCounters>() {
+      @java.lang.Override
+      public FeeAccrualCounters parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<FeeAccrualCounters> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FeeAccrualCounters> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cellarfees_v1_FeeAccrualCounter_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cellarfees_v1_FeeAccrualCounter_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cellarfees_v1_FeeAccrualCounters_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cellarfees_v1_FeeAccrualCounters_fieldAccessorTable;
 
@@ -38,12 +1445,12 @@ public final class CellarfeesProto {
       "?\n\021FeeAccrualCounter\022\024\n\005denom\030\001 \001(\tR\005den" +
       "om\022\024\n\005count\030\002 \001(\004R\005count\"X\n\022FeeAccrualCo" +
       "unters\022B\n\010counters\030\001 \003(\0132 .cellarfees.v1" +
-      ".FeeAccrualCounterB\004\310\336\037\000R\010countersB\255\001\n\021c" +
-      "om.cellarfees.v1B\017CellarfeesProtoP\001Z2git" +
-      "hub.com/peggyjv/sommelier/v4/x/cellarfee" +
-      "s/types\242\002\003CXX\252\002\rCellarfees.V1\312\002\rCellarfe" +
-      "es\\V1\342\002\031Cellarfees\\V1\\GPBMetadata\352\002\016Cell" +
-      "arfees::V1b\006proto3"
+      ".FeeAccrualCounterB\004\310\336\037\000R\010countersB\253\001\n\021c" +
+      "om.cellarfees.v1B\017CellarfeesProtoZ2githu" +
+      "b.com/peggyjv/sommelier/v4/x/cellarfees/" +
+      "types\242\002\003CXX\252\002\rCellarfees.V1\312\002\rCellarfees" +
+      "\\V1\342\002\031Cellarfees\\V1\\GPBMetadata\352\002\016Cellar" +
+      "fees::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

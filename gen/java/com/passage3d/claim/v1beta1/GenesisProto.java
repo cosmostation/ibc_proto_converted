@@ -14,9 +14,1423 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:passage3d.claim.v1beta1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * balance of the claim module's account
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin module_account_balance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"module_account_balance&#92;""];</code>
+     * @return Whether the moduleAccountBalance field is set.
+     */
+    boolean hasModuleAccountBalance();
+    /**
+     * <pre>
+     * balance of the claim module's account
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin module_account_balance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"module_account_balance&#92;""];</code>
+     * @return The moduleAccountBalance.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getModuleAccountBalance();
+    /**
+     * <pre>
+     * balance of the claim module's account
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin module_account_balance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"module_account_balance&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getModuleAccountBalanceOrBuilder();
+
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.passage3d.claim.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.passage3d.claim.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+     * @return The params.
+     */
+    com.passage3d.claim.v1beta1.ParamsProto.Params getParams();
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.passage3d.claim.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+     */
+    com.passage3d.claim.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <pre>
+     * list of claim records, one for every airdrop recipient
+     * </pre>
+     *
+     * <code>repeated .passage3d.claim.v1beta1.ClaimRecord claim_records = 3 [json_name = "claimRecords", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claim_records&#92;""];</code>
+     */
+    java.util.List<com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecord> 
+        getClaimRecordsList();
+    /**
+     * <pre>
+     * list of claim records, one for every airdrop recipient
+     * </pre>
+     *
+     * <code>repeated .passage3d.claim.v1beta1.ClaimRecord claim_records = 3 [json_name = "claimRecords", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claim_records&#92;""];</code>
+     */
+    com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecord getClaimRecords(int index);
+    /**
+     * <pre>
+     * list of claim records, one for every airdrop recipient
+     * </pre>
+     *
+     * <code>repeated .passage3d.claim.v1beta1.ClaimRecord claim_records = 3 [json_name = "claimRecords", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claim_records&#92;""];</code>
+     */
+    int getClaimRecordsCount();
+    /**
+     * <pre>
+     * list of claim records, one for every airdrop recipient
+     * </pre>
+     *
+     * <code>repeated .passage3d.claim.v1beta1.ClaimRecord claim_records = 3 [json_name = "claimRecords", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claim_records&#92;""];</code>
+     */
+    java.util.List<? extends com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecordOrBuilder> 
+        getClaimRecordsOrBuilderList();
+    /**
+     * <pre>
+     * list of claim records, one for every airdrop recipient
+     * </pre>
+     *
+     * <code>repeated .passage3d.claim.v1beta1.ClaimRecord claim_records = 3 [json_name = "claimRecords", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claim_records&#92;""];</code>
+     */
+    com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecordOrBuilder getClaimRecordsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the claim module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code passage3d.claim.v1beta1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:passage3d.claim.v1beta1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      claimRecords_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passage3d.claim.v1beta1.GenesisProto.internal_static_passage3d_claim_v1beta1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passage3d.claim.v1beta1.GenesisProto.internal_static_passage3d_claim_v1beta1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passage3d.claim.v1beta1.GenesisProto.GenesisState.class, com.passage3d.claim.v1beta1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int MODULE_ACCOUNT_BALANCE_FIELD_NUMBER = 1;
+    private com.cosmos.base.v1beta1.CoinProto.Coin moduleAccountBalance_;
+    /**
+     * <pre>
+     * balance of the claim module's account
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin module_account_balance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"module_account_balance&#92;""];</code>
+     * @return Whether the moduleAccountBalance field is set.
+     */
+    @java.lang.Override
+    public boolean hasModuleAccountBalance() {
+      return moduleAccountBalance_ != null;
+    }
+    /**
+     * <pre>
+     * balance of the claim module's account
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin module_account_balance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"module_account_balance&#92;""];</code>
+     * @return The moduleAccountBalance.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getModuleAccountBalance() {
+      return moduleAccountBalance_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : moduleAccountBalance_;
+    }
+    /**
+     * <pre>
+     * balance of the claim module's account
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin module_account_balance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"module_account_balance&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getModuleAccountBalanceOrBuilder() {
+      return moduleAccountBalance_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : moduleAccountBalance_;
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 2;
+    private com.passage3d.claim.v1beta1.ParamsProto.Params params_;
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.passage3d.claim.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.passage3d.claim.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.passage3d.claim.v1beta1.ParamsProto.Params getParams() {
+      return params_ == null ? com.passage3d.claim.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.passage3d.claim.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.passage3d.claim.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.passage3d.claim.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int CLAIM_RECORDS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecord> claimRecords_;
+    /**
+     * <pre>
+     * list of claim records, one for every airdrop recipient
+     * </pre>
+     *
+     * <code>repeated .passage3d.claim.v1beta1.ClaimRecord claim_records = 3 [json_name = "claimRecords", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claim_records&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecord> getClaimRecordsList() {
+      return claimRecords_;
+    }
+    /**
+     * <pre>
+     * list of claim records, one for every airdrop recipient
+     * </pre>
+     *
+     * <code>repeated .passage3d.claim.v1beta1.ClaimRecord claim_records = 3 [json_name = "claimRecords", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claim_records&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecordOrBuilder> 
+        getClaimRecordsOrBuilderList() {
+      return claimRecords_;
+    }
+    /**
+     * <pre>
+     * list of claim records, one for every airdrop recipient
+     * </pre>
+     *
+     * <code>repeated .passage3d.claim.v1beta1.ClaimRecord claim_records = 3 [json_name = "claimRecords", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claim_records&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getClaimRecordsCount() {
+      return claimRecords_.size();
+    }
+    /**
+     * <pre>
+     * list of claim records, one for every airdrop recipient
+     * </pre>
+     *
+     * <code>repeated .passage3d.claim.v1beta1.ClaimRecord claim_records = 3 [json_name = "claimRecords", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claim_records&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecord getClaimRecords(int index) {
+      return claimRecords_.get(index);
+    }
+    /**
+     * <pre>
+     * list of claim records, one for every airdrop recipient
+     * </pre>
+     *
+     * <code>repeated .passage3d.claim.v1beta1.ClaimRecord claim_records = 3 [json_name = "claimRecords", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claim_records&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecordOrBuilder getClaimRecordsOrBuilder(
+        int index) {
+      return claimRecords_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (moduleAccountBalance_ != null) {
+        output.writeMessage(1, getModuleAccountBalance());
+      }
+      if (params_ != null) {
+        output.writeMessage(2, getParams());
+      }
+      for (int i = 0; i < claimRecords_.size(); i++) {
+        output.writeMessage(3, claimRecords_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (moduleAccountBalance_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getModuleAccountBalance());
+      }
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getParams());
+      }
+      for (int i = 0; i < claimRecords_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, claimRecords_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passage3d.claim.v1beta1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.passage3d.claim.v1beta1.GenesisProto.GenesisState other = (com.passage3d.claim.v1beta1.GenesisProto.GenesisState) obj;
+
+      if (hasModuleAccountBalance() != other.hasModuleAccountBalance()) return false;
+      if (hasModuleAccountBalance()) {
+        if (!getModuleAccountBalance()
+            .equals(other.getModuleAccountBalance())) return false;
+      }
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getClaimRecordsList()
+          .equals(other.getClaimRecordsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasModuleAccountBalance()) {
+        hash = (37 * hash) + MODULE_ACCOUNT_BALANCE_FIELD_NUMBER;
+        hash = (53 * hash) + getModuleAccountBalance().hashCode();
+      }
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (getClaimRecordsCount() > 0) {
+        hash = (37 * hash) + CLAIM_RECORDS_FIELD_NUMBER;
+        hash = (53 * hash) + getClaimRecordsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passage3d.claim.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passage3d.claim.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passage3d.claim.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passage3d.claim.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passage3d.claim.v1beta1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passage3d.claim.v1beta1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passage3d.claim.v1beta1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passage3d.claim.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.passage3d.claim.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.passage3d.claim.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passage3d.claim.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passage3d.claim.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passage3d.claim.v1beta1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the claim module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code passage3d.claim.v1beta1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:passage3d.claim.v1beta1.GenesisState)
+        com.passage3d.claim.v1beta1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passage3d.claim.v1beta1.GenesisProto.internal_static_passage3d_claim_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passage3d.claim.v1beta1.GenesisProto.internal_static_passage3d_claim_v1beta1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passage3d.claim.v1beta1.GenesisProto.GenesisState.class, com.passage3d.claim.v1beta1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.passage3d.claim.v1beta1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        moduleAccountBalance_ = null;
+        if (moduleAccountBalanceBuilder_ != null) {
+          moduleAccountBalanceBuilder_.dispose();
+          moduleAccountBalanceBuilder_ = null;
+        }
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        if (claimRecordsBuilder_ == null) {
+          claimRecords_ = java.util.Collections.emptyList();
+        } else {
+          claimRecords_ = null;
+          claimRecordsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passage3d.claim.v1beta1.GenesisProto.internal_static_passage3d_claim_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passage3d.claim.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.passage3d.claim.v1beta1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passage3d.claim.v1beta1.GenesisProto.GenesisState build() {
+        com.passage3d.claim.v1beta1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passage3d.claim.v1beta1.GenesisProto.GenesisState buildPartial() {
+        com.passage3d.claim.v1beta1.GenesisProto.GenesisState result = new com.passage3d.claim.v1beta1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.passage3d.claim.v1beta1.GenesisProto.GenesisState result) {
+        if (claimRecordsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            claimRecords_ = java.util.Collections.unmodifiableList(claimRecords_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.claimRecords_ = claimRecords_;
+        } else {
+          result.claimRecords_ = claimRecordsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.passage3d.claim.v1beta1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.moduleAccountBalance_ = moduleAccountBalanceBuilder_ == null
+              ? moduleAccountBalance_
+              : moduleAccountBalanceBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passage3d.claim.v1beta1.GenesisProto.GenesisState) {
+          return mergeFrom((com.passage3d.claim.v1beta1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passage3d.claim.v1beta1.GenesisProto.GenesisState other) {
+        if (other == com.passage3d.claim.v1beta1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasModuleAccountBalance()) {
+          mergeModuleAccountBalance(other.getModuleAccountBalance());
+        }
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (claimRecordsBuilder_ == null) {
+          if (!other.claimRecords_.isEmpty()) {
+            if (claimRecords_.isEmpty()) {
+              claimRecords_ = other.claimRecords_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureClaimRecordsIsMutable();
+              claimRecords_.addAll(other.claimRecords_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.claimRecords_.isEmpty()) {
+            if (claimRecordsBuilder_.isEmpty()) {
+              claimRecordsBuilder_.dispose();
+              claimRecordsBuilder_ = null;
+              claimRecords_ = other.claimRecords_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              claimRecordsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getClaimRecordsFieldBuilder() : null;
+            } else {
+              claimRecordsBuilder_.addAllMessages(other.claimRecords_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getModuleAccountBalanceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecord m =
+                    input.readMessage(
+                        com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecord.parser(),
+                        extensionRegistry);
+                if (claimRecordsBuilder_ == null) {
+                  ensureClaimRecordsIsMutable();
+                  claimRecords_.add(m);
+                } else {
+                  claimRecordsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin moduleAccountBalance_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> moduleAccountBalanceBuilder_;
+      /**
+       * <pre>
+       * balance of the claim module's account
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin module_account_balance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"module_account_balance&#92;""];</code>
+       * @return Whether the moduleAccountBalance field is set.
+       */
+      public boolean hasModuleAccountBalance() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * balance of the claim module's account
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin module_account_balance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"module_account_balance&#92;""];</code>
+       * @return The moduleAccountBalance.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getModuleAccountBalance() {
+        if (moduleAccountBalanceBuilder_ == null) {
+          return moduleAccountBalance_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : moduleAccountBalance_;
+        } else {
+          return moduleAccountBalanceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * balance of the claim module's account
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin module_account_balance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"module_account_balance&#92;""];</code>
+       */
+      public Builder setModuleAccountBalance(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (moduleAccountBalanceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          moduleAccountBalance_ = value;
+        } else {
+          moduleAccountBalanceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * balance of the claim module's account
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin module_account_balance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"module_account_balance&#92;""];</code>
+       */
+      public Builder setModuleAccountBalance(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (moduleAccountBalanceBuilder_ == null) {
+          moduleAccountBalance_ = builderForValue.build();
+        } else {
+          moduleAccountBalanceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * balance of the claim module's account
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin module_account_balance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"module_account_balance&#92;""];</code>
+       */
+      public Builder mergeModuleAccountBalance(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (moduleAccountBalanceBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            moduleAccountBalance_ != null &&
+            moduleAccountBalance_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getModuleAccountBalanceBuilder().mergeFrom(value);
+          } else {
+            moduleAccountBalance_ = value;
+          }
+        } else {
+          moduleAccountBalanceBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * balance of the claim module's account
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin module_account_balance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"module_account_balance&#92;""];</code>
+       */
+      public Builder clearModuleAccountBalance() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        moduleAccountBalance_ = null;
+        if (moduleAccountBalanceBuilder_ != null) {
+          moduleAccountBalanceBuilder_.dispose();
+          moduleAccountBalanceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * balance of the claim module's account
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin module_account_balance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"module_account_balance&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getModuleAccountBalanceBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getModuleAccountBalanceFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * balance of the claim module's account
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin module_account_balance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"module_account_balance&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getModuleAccountBalanceOrBuilder() {
+        if (moduleAccountBalanceBuilder_ != null) {
+          return moduleAccountBalanceBuilder_.getMessageOrBuilder();
+        } else {
+          return moduleAccountBalance_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : moduleAccountBalance_;
+        }
+      }
+      /**
+       * <pre>
+       * balance of the claim module's account
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin module_account_balance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"module_account_balance&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getModuleAccountBalanceFieldBuilder() {
+        if (moduleAccountBalanceBuilder_ == null) {
+          moduleAccountBalanceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getModuleAccountBalance(),
+                  getParentForChildren(),
+                  isClean());
+          moduleAccountBalance_ = null;
+        }
+        return moduleAccountBalanceBuilder_;
+      }
+
+      private com.passage3d.claim.v1beta1.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passage3d.claim.v1beta1.ParamsProto.Params, com.passage3d.claim.v1beta1.ParamsProto.Params.Builder, com.passage3d.claim.v1beta1.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.passage3d.claim.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.passage3d.claim.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       * @return The params.
+       */
+      public com.passage3d.claim.v1beta1.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.passage3d.claim.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.passage3d.claim.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       */
+      public Builder setParams(com.passage3d.claim.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.passage3d.claim.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       */
+      public Builder setParams(
+          com.passage3d.claim.v1beta1.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.passage3d.claim.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       */
+      public Builder mergeParams(com.passage3d.claim.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            params_ != null &&
+            params_ != com.passage3d.claim.v1beta1.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.passage3d.claim.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.passage3d.claim.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       */
+      public com.passage3d.claim.v1beta1.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.passage3d.claim.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       */
+      public com.passage3d.claim.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.passage3d.claim.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.passage3d.claim.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passage3d.claim.v1beta1.ParamsProto.Params, com.passage3d.claim.v1beta1.ParamsProto.Params.Builder, com.passage3d.claim.v1beta1.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.passage3d.claim.v1beta1.ParamsProto.Params, com.passage3d.claim.v1beta1.ParamsProto.Params.Builder, com.passage3d.claim.v1beta1.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private java.util.List<com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecord> claimRecords_ =
+        java.util.Collections.emptyList();
+      private void ensureClaimRecordsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          claimRecords_ = new java.util.ArrayList<com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecord>(claimRecords_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecord, com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecord.Builder, com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecordOrBuilder> claimRecordsBuilder_;
+
+      /**
+       * <pre>
+       * list of claim records, one for every airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .passage3d.claim.v1beta1.ClaimRecord claim_records = 3 [json_name = "claimRecords", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claim_records&#92;""];</code>
+       */
+      public java.util.List<com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecord> getClaimRecordsList() {
+        if (claimRecordsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(claimRecords_);
+        } else {
+          return claimRecordsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * list of claim records, one for every airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .passage3d.claim.v1beta1.ClaimRecord claim_records = 3 [json_name = "claimRecords", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claim_records&#92;""];</code>
+       */
+      public int getClaimRecordsCount() {
+        if (claimRecordsBuilder_ == null) {
+          return claimRecords_.size();
+        } else {
+          return claimRecordsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * list of claim records, one for every airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .passage3d.claim.v1beta1.ClaimRecord claim_records = 3 [json_name = "claimRecords", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claim_records&#92;""];</code>
+       */
+      public com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecord getClaimRecords(int index) {
+        if (claimRecordsBuilder_ == null) {
+          return claimRecords_.get(index);
+        } else {
+          return claimRecordsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * list of claim records, one for every airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .passage3d.claim.v1beta1.ClaimRecord claim_records = 3 [json_name = "claimRecords", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claim_records&#92;""];</code>
+       */
+      public Builder setClaimRecords(
+          int index, com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecord value) {
+        if (claimRecordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimRecordsIsMutable();
+          claimRecords_.set(index, value);
+          onChanged();
+        } else {
+          claimRecordsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of claim records, one for every airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .passage3d.claim.v1beta1.ClaimRecord claim_records = 3 [json_name = "claimRecords", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claim_records&#92;""];</code>
+       */
+      public Builder setClaimRecords(
+          int index, com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecord.Builder builderForValue) {
+        if (claimRecordsBuilder_ == null) {
+          ensureClaimRecordsIsMutable();
+          claimRecords_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          claimRecordsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of claim records, one for every airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .passage3d.claim.v1beta1.ClaimRecord claim_records = 3 [json_name = "claimRecords", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claim_records&#92;""];</code>
+       */
+      public Builder addClaimRecords(com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecord value) {
+        if (claimRecordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimRecordsIsMutable();
+          claimRecords_.add(value);
+          onChanged();
+        } else {
+          claimRecordsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of claim records, one for every airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .passage3d.claim.v1beta1.ClaimRecord claim_records = 3 [json_name = "claimRecords", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claim_records&#92;""];</code>
+       */
+      public Builder addClaimRecords(
+          int index, com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecord value) {
+        if (claimRecordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimRecordsIsMutable();
+          claimRecords_.add(index, value);
+          onChanged();
+        } else {
+          claimRecordsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of claim records, one for every airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .passage3d.claim.v1beta1.ClaimRecord claim_records = 3 [json_name = "claimRecords", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claim_records&#92;""];</code>
+       */
+      public Builder addClaimRecords(
+          com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecord.Builder builderForValue) {
+        if (claimRecordsBuilder_ == null) {
+          ensureClaimRecordsIsMutable();
+          claimRecords_.add(builderForValue.build());
+          onChanged();
+        } else {
+          claimRecordsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of claim records, one for every airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .passage3d.claim.v1beta1.ClaimRecord claim_records = 3 [json_name = "claimRecords", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claim_records&#92;""];</code>
+       */
+      public Builder addClaimRecords(
+          int index, com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecord.Builder builderForValue) {
+        if (claimRecordsBuilder_ == null) {
+          ensureClaimRecordsIsMutable();
+          claimRecords_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          claimRecordsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of claim records, one for every airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .passage3d.claim.v1beta1.ClaimRecord claim_records = 3 [json_name = "claimRecords", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claim_records&#92;""];</code>
+       */
+      public Builder addAllClaimRecords(
+          java.lang.Iterable<? extends com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecord> values) {
+        if (claimRecordsBuilder_ == null) {
+          ensureClaimRecordsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, claimRecords_);
+          onChanged();
+        } else {
+          claimRecordsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of claim records, one for every airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .passage3d.claim.v1beta1.ClaimRecord claim_records = 3 [json_name = "claimRecords", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claim_records&#92;""];</code>
+       */
+      public Builder clearClaimRecords() {
+        if (claimRecordsBuilder_ == null) {
+          claimRecords_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          claimRecordsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of claim records, one for every airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .passage3d.claim.v1beta1.ClaimRecord claim_records = 3 [json_name = "claimRecords", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claim_records&#92;""];</code>
+       */
+      public Builder removeClaimRecords(int index) {
+        if (claimRecordsBuilder_ == null) {
+          ensureClaimRecordsIsMutable();
+          claimRecords_.remove(index);
+          onChanged();
+        } else {
+          claimRecordsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of claim records, one for every airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .passage3d.claim.v1beta1.ClaimRecord claim_records = 3 [json_name = "claimRecords", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claim_records&#92;""];</code>
+       */
+      public com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecord.Builder getClaimRecordsBuilder(
+          int index) {
+        return getClaimRecordsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * list of claim records, one for every airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .passage3d.claim.v1beta1.ClaimRecord claim_records = 3 [json_name = "claimRecords", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claim_records&#92;""];</code>
+       */
+      public com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecordOrBuilder getClaimRecordsOrBuilder(
+          int index) {
+        if (claimRecordsBuilder_ == null) {
+          return claimRecords_.get(index);  } else {
+          return claimRecordsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * list of claim records, one for every airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .passage3d.claim.v1beta1.ClaimRecord claim_records = 3 [json_name = "claimRecords", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claim_records&#92;""];</code>
+       */
+      public java.util.List<? extends com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecordOrBuilder> 
+           getClaimRecordsOrBuilderList() {
+        if (claimRecordsBuilder_ != null) {
+          return claimRecordsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(claimRecords_);
+        }
+      }
+      /**
+       * <pre>
+       * list of claim records, one for every airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .passage3d.claim.v1beta1.ClaimRecord claim_records = 3 [json_name = "claimRecords", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claim_records&#92;""];</code>
+       */
+      public com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecord.Builder addClaimRecordsBuilder() {
+        return getClaimRecordsFieldBuilder().addBuilder(
+            com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecord.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * list of claim records, one for every airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .passage3d.claim.v1beta1.ClaimRecord claim_records = 3 [json_name = "claimRecords", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claim_records&#92;""];</code>
+       */
+      public com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecord.Builder addClaimRecordsBuilder(
+          int index) {
+        return getClaimRecordsFieldBuilder().addBuilder(
+            index, com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecord.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * list of claim records, one for every airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .passage3d.claim.v1beta1.ClaimRecord claim_records = 3 [json_name = "claimRecords", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"claim_records&#92;""];</code>
+       */
+      public java.util.List<com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecord.Builder> 
+           getClaimRecordsBuilderList() {
+        return getClaimRecordsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecord, com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecord.Builder, com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecordOrBuilder> 
+          getClaimRecordsFieldBuilder() {
+        if (claimRecordsBuilder_ == null) {
+          claimRecordsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecord, com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecord.Builder, com.passage3d.claim.v1beta1.ClaimRecordProto.ClaimRecordOrBuilder>(
+                  claimRecords_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          claimRecords_ = null;
+        }
+        return claimRecordsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:passage3d.claim.v1beta1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:passage3d.claim.v1beta1.GenesisState)
+    private static final com.passage3d.claim.v1beta1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passage3d.claim.v1beta1.GenesisProto.GenesisState();
+    }
+
+    public static com.passage3d.claim.v1beta1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passage3d.claim.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_passage3d_claim_v1beta1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_passage3d_claim_v1beta1_GenesisState_fieldAccessorTable;
 
@@ -41,12 +1455,12 @@ public final class GenesisProto {
       ":\"params\"R\006params\022g\n\rclaim_records\030\003 \003(\013" +
       "2$.passage3d.claim.v1beta1.ClaimRecordB\034" +
       "\310\336\037\000\362\336\037\024yaml:\"claim_records\"R\014claimRecor" +
-      "dsB\325\001\n\033com.passage3d.claim.v1beta1B\014Gene" +
-      "sisProtoP\001Z*github.com/envadiv/passage3d" +
-      "/x/claim/types\242\002\003PCX\252\002\027Passage3d.Claim.V" +
-      "1beta1\312\002\027Passage3d\\Claim\\V1beta1\342\002#Passa" +
-      "ge3d\\Claim\\V1beta1\\GPBMetadata\352\002\031Passage" +
-      "3d::Claim::V1beta1b\006proto3"
+      "dsB\323\001\n\033com.passage3d.claim.v1beta1B\014Gene" +
+      "sisProtoZ*github.com/envadiv/passage3d/x" +
+      "/claim/types\242\002\003PCX\252\002\027Passage3d.Claim.V1b" +
+      "eta1\312\002\027Passage3d\\Claim\\V1beta1\342\002#Passage" +
+      "3d\\Claim\\V1beta1\\GPBMetadata\352\002\031Passage3d" +
+      "::Claim::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

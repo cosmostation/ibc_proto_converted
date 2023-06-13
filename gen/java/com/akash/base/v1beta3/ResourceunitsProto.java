@@ -14,9 +14,1763 @@ public final class ResourceunitsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ResourceUnitsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.base.v1beta3.ResourceUnits)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.akash.base.v1beta3.CPU cpu = 1 [json_name = "cpu", (.gogoproto.nullable) = true, (.gogoproto.customname) = "CPU", (.gogoproto.jsontag) = "cpu,omitempty", (.gogoproto.moretags) = "yaml:&#92;"cpu,omitempty&#92;""];</code>
+     * @return Whether the cpu field is set.
+     */
+    boolean hasCpu();
+    /**
+     * <code>.akash.base.v1beta3.CPU cpu = 1 [json_name = "cpu", (.gogoproto.nullable) = true, (.gogoproto.customname) = "CPU", (.gogoproto.jsontag) = "cpu,omitempty", (.gogoproto.moretags) = "yaml:&#92;"cpu,omitempty&#92;""];</code>
+     * @return The cpu.
+     */
+    com.akash.base.v1beta3.CpuProto.CPU getCpu();
+    /**
+     * <code>.akash.base.v1beta3.CPU cpu = 1 [json_name = "cpu", (.gogoproto.nullable) = true, (.gogoproto.customname) = "CPU", (.gogoproto.jsontag) = "cpu,omitempty", (.gogoproto.moretags) = "yaml:&#92;"cpu,omitempty&#92;""];</code>
+     */
+    com.akash.base.v1beta3.CpuProto.CPUOrBuilder getCpuOrBuilder();
+
+    /**
+     * <code>.akash.base.v1beta3.Memory memory = 2 [json_name = "memory", (.gogoproto.nullable) = true, (.gogoproto.jsontag) = "memory,omitempty", (.gogoproto.moretags) = "yaml:&#92;"memory,omitempty&#92;""];</code>
+     * @return Whether the memory field is set.
+     */
+    boolean hasMemory();
+    /**
+     * <code>.akash.base.v1beta3.Memory memory = 2 [json_name = "memory", (.gogoproto.nullable) = true, (.gogoproto.jsontag) = "memory,omitempty", (.gogoproto.moretags) = "yaml:&#92;"memory,omitempty&#92;""];</code>
+     * @return The memory.
+     */
+    com.akash.base.v1beta3.MemoryProto.Memory getMemory();
+    /**
+     * <code>.akash.base.v1beta3.Memory memory = 2 [json_name = "memory", (.gogoproto.nullable) = true, (.gogoproto.jsontag) = "memory,omitempty", (.gogoproto.moretags) = "yaml:&#92;"memory,omitempty&#92;""];</code>
+     */
+    com.akash.base.v1beta3.MemoryProto.MemoryOrBuilder getMemoryOrBuilder();
+
+    /**
+     * <code>repeated .akash.base.v1beta3.Storage storage = 3 [json_name = "storage", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "storage,omitempty", (.gogoproto.moretags) = "yaml:&#92;"storage,omitempty&#92;"", (.gogoproto.castrepeated) = "Volumes"];</code>
+     */
+    java.util.List<com.akash.base.v1beta3.StorageProto.Storage> 
+        getStorageList();
+    /**
+     * <code>repeated .akash.base.v1beta3.Storage storage = 3 [json_name = "storage", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "storage,omitempty", (.gogoproto.moretags) = "yaml:&#92;"storage,omitempty&#92;"", (.gogoproto.castrepeated) = "Volumes"];</code>
+     */
+    com.akash.base.v1beta3.StorageProto.Storage getStorage(int index);
+    /**
+     * <code>repeated .akash.base.v1beta3.Storage storage = 3 [json_name = "storage", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "storage,omitempty", (.gogoproto.moretags) = "yaml:&#92;"storage,omitempty&#92;"", (.gogoproto.castrepeated) = "Volumes"];</code>
+     */
+    int getStorageCount();
+    /**
+     * <code>repeated .akash.base.v1beta3.Storage storage = 3 [json_name = "storage", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "storage,omitempty", (.gogoproto.moretags) = "yaml:&#92;"storage,omitempty&#92;"", (.gogoproto.castrepeated) = "Volumes"];</code>
+     */
+    java.util.List<? extends com.akash.base.v1beta3.StorageProto.StorageOrBuilder> 
+        getStorageOrBuilderList();
+    /**
+     * <code>repeated .akash.base.v1beta3.Storage storage = 3 [json_name = "storage", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "storage,omitempty", (.gogoproto.moretags) = "yaml:&#92;"storage,omitempty&#92;"", (.gogoproto.castrepeated) = "Volumes"];</code>
+     */
+    com.akash.base.v1beta3.StorageProto.StorageOrBuilder getStorageOrBuilder(
+        int index);
+
+    /**
+     * <code>.akash.base.v1beta3.GPU gpu = 4 [json_name = "gpu", (.gogoproto.nullable) = true, (.gogoproto.customname) = "GPU", (.gogoproto.jsontag) = "gpu,omitempty", (.gogoproto.moretags) = "yaml:&#92;"gpu,omitempty&#92;""];</code>
+     * @return Whether the gpu field is set.
+     */
+    boolean hasGpu();
+    /**
+     * <code>.akash.base.v1beta3.GPU gpu = 4 [json_name = "gpu", (.gogoproto.nullable) = true, (.gogoproto.customname) = "GPU", (.gogoproto.jsontag) = "gpu,omitempty", (.gogoproto.moretags) = "yaml:&#92;"gpu,omitempty&#92;""];</code>
+     * @return The gpu.
+     */
+    com.akash.base.v1beta3.GpuProto.GPU getGpu();
+    /**
+     * <code>.akash.base.v1beta3.GPU gpu = 4 [json_name = "gpu", (.gogoproto.nullable) = true, (.gogoproto.customname) = "GPU", (.gogoproto.jsontag) = "gpu,omitempty", (.gogoproto.moretags) = "yaml:&#92;"gpu,omitempty&#92;""];</code>
+     */
+    com.akash.base.v1beta3.GpuProto.GPUOrBuilder getGpuOrBuilder();
+
+    /**
+     * <code>repeated .akash.base.v1beta3.Endpoint endpoints = 5 [json_name = "endpoints", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "endpoints", (.gogoproto.moretags) = "yaml:&#92;"endpoints&#92;"", (.gogoproto.castrepeated) = "Endpoints"];</code>
+     */
+    java.util.List<com.akash.base.v1beta3.EndpointProto.Endpoint> 
+        getEndpointsList();
+    /**
+     * <code>repeated .akash.base.v1beta3.Endpoint endpoints = 5 [json_name = "endpoints", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "endpoints", (.gogoproto.moretags) = "yaml:&#92;"endpoints&#92;"", (.gogoproto.castrepeated) = "Endpoints"];</code>
+     */
+    com.akash.base.v1beta3.EndpointProto.Endpoint getEndpoints(int index);
+    /**
+     * <code>repeated .akash.base.v1beta3.Endpoint endpoints = 5 [json_name = "endpoints", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "endpoints", (.gogoproto.moretags) = "yaml:&#92;"endpoints&#92;"", (.gogoproto.castrepeated) = "Endpoints"];</code>
+     */
+    int getEndpointsCount();
+    /**
+     * <code>repeated .akash.base.v1beta3.Endpoint endpoints = 5 [json_name = "endpoints", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "endpoints", (.gogoproto.moretags) = "yaml:&#92;"endpoints&#92;"", (.gogoproto.castrepeated) = "Endpoints"];</code>
+     */
+    java.util.List<? extends com.akash.base.v1beta3.EndpointProto.EndpointOrBuilder> 
+        getEndpointsOrBuilderList();
+    /**
+     * <code>repeated .akash.base.v1beta3.Endpoint endpoints = 5 [json_name = "endpoints", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "endpoints", (.gogoproto.moretags) = "yaml:&#92;"endpoints&#92;"", (.gogoproto.castrepeated) = "Endpoints"];</code>
+     */
+    com.akash.base.v1beta3.EndpointProto.EndpointOrBuilder getEndpointsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * ResourceUnits describes all available resources types for deployment/node etc
+   * if field is nil resource is not present in the given data-structure
+   * </pre>
+   *
+   * Protobuf type {@code akash.base.v1beta3.ResourceUnits}
+   */
+  public static final class ResourceUnits extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.base.v1beta3.ResourceUnits)
+      ResourceUnitsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ResourceUnits.newBuilder() to construct.
+    private ResourceUnits(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ResourceUnits() {
+      storage_ = java.util.Collections.emptyList();
+      endpoints_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ResourceUnits();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.base.v1beta3.ResourceunitsProto.internal_static_akash_base_v1beta3_ResourceUnits_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.base.v1beta3.ResourceunitsProto.internal_static_akash_base_v1beta3_ResourceUnits_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits.class, com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits.Builder.class);
+    }
+
+    public static final int CPU_FIELD_NUMBER = 1;
+    private com.akash.base.v1beta3.CpuProto.CPU cpu_;
+    /**
+     * <code>.akash.base.v1beta3.CPU cpu = 1 [json_name = "cpu", (.gogoproto.nullable) = true, (.gogoproto.customname) = "CPU", (.gogoproto.jsontag) = "cpu,omitempty", (.gogoproto.moretags) = "yaml:&#92;"cpu,omitempty&#92;""];</code>
+     * @return Whether the cpu field is set.
+     */
+    @java.lang.Override
+    public boolean hasCpu() {
+      return cpu_ != null;
+    }
+    /**
+     * <code>.akash.base.v1beta3.CPU cpu = 1 [json_name = "cpu", (.gogoproto.nullable) = true, (.gogoproto.customname) = "CPU", (.gogoproto.jsontag) = "cpu,omitempty", (.gogoproto.moretags) = "yaml:&#92;"cpu,omitempty&#92;""];</code>
+     * @return The cpu.
+     */
+    @java.lang.Override
+    public com.akash.base.v1beta3.CpuProto.CPU getCpu() {
+      return cpu_ == null ? com.akash.base.v1beta3.CpuProto.CPU.getDefaultInstance() : cpu_;
+    }
+    /**
+     * <code>.akash.base.v1beta3.CPU cpu = 1 [json_name = "cpu", (.gogoproto.nullable) = true, (.gogoproto.customname) = "CPU", (.gogoproto.jsontag) = "cpu,omitempty", (.gogoproto.moretags) = "yaml:&#92;"cpu,omitempty&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.akash.base.v1beta3.CpuProto.CPUOrBuilder getCpuOrBuilder() {
+      return cpu_ == null ? com.akash.base.v1beta3.CpuProto.CPU.getDefaultInstance() : cpu_;
+    }
+
+    public static final int MEMORY_FIELD_NUMBER = 2;
+    private com.akash.base.v1beta3.MemoryProto.Memory memory_;
+    /**
+     * <code>.akash.base.v1beta3.Memory memory = 2 [json_name = "memory", (.gogoproto.nullable) = true, (.gogoproto.jsontag) = "memory,omitempty", (.gogoproto.moretags) = "yaml:&#92;"memory,omitempty&#92;""];</code>
+     * @return Whether the memory field is set.
+     */
+    @java.lang.Override
+    public boolean hasMemory() {
+      return memory_ != null;
+    }
+    /**
+     * <code>.akash.base.v1beta3.Memory memory = 2 [json_name = "memory", (.gogoproto.nullable) = true, (.gogoproto.jsontag) = "memory,omitempty", (.gogoproto.moretags) = "yaml:&#92;"memory,omitempty&#92;""];</code>
+     * @return The memory.
+     */
+    @java.lang.Override
+    public com.akash.base.v1beta3.MemoryProto.Memory getMemory() {
+      return memory_ == null ? com.akash.base.v1beta3.MemoryProto.Memory.getDefaultInstance() : memory_;
+    }
+    /**
+     * <code>.akash.base.v1beta3.Memory memory = 2 [json_name = "memory", (.gogoproto.nullable) = true, (.gogoproto.jsontag) = "memory,omitempty", (.gogoproto.moretags) = "yaml:&#92;"memory,omitempty&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.akash.base.v1beta3.MemoryProto.MemoryOrBuilder getMemoryOrBuilder() {
+      return memory_ == null ? com.akash.base.v1beta3.MemoryProto.Memory.getDefaultInstance() : memory_;
+    }
+
+    public static final int STORAGE_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.akash.base.v1beta3.StorageProto.Storage> storage_;
+    /**
+     * <code>repeated .akash.base.v1beta3.Storage storage = 3 [json_name = "storage", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "storage,omitempty", (.gogoproto.moretags) = "yaml:&#92;"storage,omitempty&#92;"", (.gogoproto.castrepeated) = "Volumes"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.akash.base.v1beta3.StorageProto.Storage> getStorageList() {
+      return storage_;
+    }
+    /**
+     * <code>repeated .akash.base.v1beta3.Storage storage = 3 [json_name = "storage", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "storage,omitempty", (.gogoproto.moretags) = "yaml:&#92;"storage,omitempty&#92;"", (.gogoproto.castrepeated) = "Volumes"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.akash.base.v1beta3.StorageProto.StorageOrBuilder> 
+        getStorageOrBuilderList() {
+      return storage_;
+    }
+    /**
+     * <code>repeated .akash.base.v1beta3.Storage storage = 3 [json_name = "storage", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "storage,omitempty", (.gogoproto.moretags) = "yaml:&#92;"storage,omitempty&#92;"", (.gogoproto.castrepeated) = "Volumes"];</code>
+     */
+    @java.lang.Override
+    public int getStorageCount() {
+      return storage_.size();
+    }
+    /**
+     * <code>repeated .akash.base.v1beta3.Storage storage = 3 [json_name = "storage", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "storage,omitempty", (.gogoproto.moretags) = "yaml:&#92;"storage,omitempty&#92;"", (.gogoproto.castrepeated) = "Volumes"];</code>
+     */
+    @java.lang.Override
+    public com.akash.base.v1beta3.StorageProto.Storage getStorage(int index) {
+      return storage_.get(index);
+    }
+    /**
+     * <code>repeated .akash.base.v1beta3.Storage storage = 3 [json_name = "storage", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "storage,omitempty", (.gogoproto.moretags) = "yaml:&#92;"storage,omitempty&#92;"", (.gogoproto.castrepeated) = "Volumes"];</code>
+     */
+    @java.lang.Override
+    public com.akash.base.v1beta3.StorageProto.StorageOrBuilder getStorageOrBuilder(
+        int index) {
+      return storage_.get(index);
+    }
+
+    public static final int GPU_FIELD_NUMBER = 4;
+    private com.akash.base.v1beta3.GpuProto.GPU gpu_;
+    /**
+     * <code>.akash.base.v1beta3.GPU gpu = 4 [json_name = "gpu", (.gogoproto.nullable) = true, (.gogoproto.customname) = "GPU", (.gogoproto.jsontag) = "gpu,omitempty", (.gogoproto.moretags) = "yaml:&#92;"gpu,omitempty&#92;""];</code>
+     * @return Whether the gpu field is set.
+     */
+    @java.lang.Override
+    public boolean hasGpu() {
+      return gpu_ != null;
+    }
+    /**
+     * <code>.akash.base.v1beta3.GPU gpu = 4 [json_name = "gpu", (.gogoproto.nullable) = true, (.gogoproto.customname) = "GPU", (.gogoproto.jsontag) = "gpu,omitempty", (.gogoproto.moretags) = "yaml:&#92;"gpu,omitempty&#92;""];</code>
+     * @return The gpu.
+     */
+    @java.lang.Override
+    public com.akash.base.v1beta3.GpuProto.GPU getGpu() {
+      return gpu_ == null ? com.akash.base.v1beta3.GpuProto.GPU.getDefaultInstance() : gpu_;
+    }
+    /**
+     * <code>.akash.base.v1beta3.GPU gpu = 4 [json_name = "gpu", (.gogoproto.nullable) = true, (.gogoproto.customname) = "GPU", (.gogoproto.jsontag) = "gpu,omitempty", (.gogoproto.moretags) = "yaml:&#92;"gpu,omitempty&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.akash.base.v1beta3.GpuProto.GPUOrBuilder getGpuOrBuilder() {
+      return gpu_ == null ? com.akash.base.v1beta3.GpuProto.GPU.getDefaultInstance() : gpu_;
+    }
+
+    public static final int ENDPOINTS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.akash.base.v1beta3.EndpointProto.Endpoint> endpoints_;
+    /**
+     * <code>repeated .akash.base.v1beta3.Endpoint endpoints = 5 [json_name = "endpoints", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "endpoints", (.gogoproto.moretags) = "yaml:&#92;"endpoints&#92;"", (.gogoproto.castrepeated) = "Endpoints"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.akash.base.v1beta3.EndpointProto.Endpoint> getEndpointsList() {
+      return endpoints_;
+    }
+    /**
+     * <code>repeated .akash.base.v1beta3.Endpoint endpoints = 5 [json_name = "endpoints", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "endpoints", (.gogoproto.moretags) = "yaml:&#92;"endpoints&#92;"", (.gogoproto.castrepeated) = "Endpoints"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.akash.base.v1beta3.EndpointProto.EndpointOrBuilder> 
+        getEndpointsOrBuilderList() {
+      return endpoints_;
+    }
+    /**
+     * <code>repeated .akash.base.v1beta3.Endpoint endpoints = 5 [json_name = "endpoints", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "endpoints", (.gogoproto.moretags) = "yaml:&#92;"endpoints&#92;"", (.gogoproto.castrepeated) = "Endpoints"];</code>
+     */
+    @java.lang.Override
+    public int getEndpointsCount() {
+      return endpoints_.size();
+    }
+    /**
+     * <code>repeated .akash.base.v1beta3.Endpoint endpoints = 5 [json_name = "endpoints", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "endpoints", (.gogoproto.moretags) = "yaml:&#92;"endpoints&#92;"", (.gogoproto.castrepeated) = "Endpoints"];</code>
+     */
+    @java.lang.Override
+    public com.akash.base.v1beta3.EndpointProto.Endpoint getEndpoints(int index) {
+      return endpoints_.get(index);
+    }
+    /**
+     * <code>repeated .akash.base.v1beta3.Endpoint endpoints = 5 [json_name = "endpoints", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "endpoints", (.gogoproto.moretags) = "yaml:&#92;"endpoints&#92;"", (.gogoproto.castrepeated) = "Endpoints"];</code>
+     */
+    @java.lang.Override
+    public com.akash.base.v1beta3.EndpointProto.EndpointOrBuilder getEndpointsOrBuilder(
+        int index) {
+      return endpoints_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (cpu_ != null) {
+        output.writeMessage(1, getCpu());
+      }
+      if (memory_ != null) {
+        output.writeMessage(2, getMemory());
+      }
+      for (int i = 0; i < storage_.size(); i++) {
+        output.writeMessage(3, storage_.get(i));
+      }
+      if (gpu_ != null) {
+        output.writeMessage(4, getGpu());
+      }
+      for (int i = 0; i < endpoints_.size(); i++) {
+        output.writeMessage(5, endpoints_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (cpu_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCpu());
+      }
+      if (memory_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getMemory());
+      }
+      for (int i = 0; i < storage_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, storage_.get(i));
+      }
+      if (gpu_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getGpu());
+      }
+      for (int i = 0; i < endpoints_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, endpoints_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits)) {
+        return super.equals(obj);
+      }
+      com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits other = (com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits) obj;
+
+      if (hasCpu() != other.hasCpu()) return false;
+      if (hasCpu()) {
+        if (!getCpu()
+            .equals(other.getCpu())) return false;
+      }
+      if (hasMemory() != other.hasMemory()) return false;
+      if (hasMemory()) {
+        if (!getMemory()
+            .equals(other.getMemory())) return false;
+      }
+      if (!getStorageList()
+          .equals(other.getStorageList())) return false;
+      if (hasGpu() != other.hasGpu()) return false;
+      if (hasGpu()) {
+        if (!getGpu()
+            .equals(other.getGpu())) return false;
+      }
+      if (!getEndpointsList()
+          .equals(other.getEndpointsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasCpu()) {
+        hash = (37 * hash) + CPU_FIELD_NUMBER;
+        hash = (53 * hash) + getCpu().hashCode();
+      }
+      if (hasMemory()) {
+        hash = (37 * hash) + MEMORY_FIELD_NUMBER;
+        hash = (53 * hash) + getMemory().hashCode();
+      }
+      if (getStorageCount() > 0) {
+        hash = (37 * hash) + STORAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getStorageList().hashCode();
+      }
+      if (hasGpu()) {
+        hash = (37 * hash) + GPU_FIELD_NUMBER;
+        hash = (53 * hash) + getGpu().hashCode();
+      }
+      if (getEndpointsCount() > 0) {
+        hash = (37 * hash) + ENDPOINTS_FIELD_NUMBER;
+        hash = (53 * hash) + getEndpointsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ResourceUnits describes all available resources types for deployment/node etc
+     * if field is nil resource is not present in the given data-structure
+     * </pre>
+     *
+     * Protobuf type {@code akash.base.v1beta3.ResourceUnits}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.base.v1beta3.ResourceUnits)
+        com.akash.base.v1beta3.ResourceunitsProto.ResourceUnitsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.base.v1beta3.ResourceunitsProto.internal_static_akash_base_v1beta3_ResourceUnits_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.base.v1beta3.ResourceunitsProto.internal_static_akash_base_v1beta3_ResourceUnits_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits.class, com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits.Builder.class);
+      }
+
+      // Construct using com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        cpu_ = null;
+        if (cpuBuilder_ != null) {
+          cpuBuilder_.dispose();
+          cpuBuilder_ = null;
+        }
+        memory_ = null;
+        if (memoryBuilder_ != null) {
+          memoryBuilder_.dispose();
+          memoryBuilder_ = null;
+        }
+        if (storageBuilder_ == null) {
+          storage_ = java.util.Collections.emptyList();
+        } else {
+          storage_ = null;
+          storageBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        gpu_ = null;
+        if (gpuBuilder_ != null) {
+          gpuBuilder_.dispose();
+          gpuBuilder_ = null;
+        }
+        if (endpointsBuilder_ == null) {
+          endpoints_ = java.util.Collections.emptyList();
+        } else {
+          endpoints_ = null;
+          endpointsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.base.v1beta3.ResourceunitsProto.internal_static_akash_base_v1beta3_ResourceUnits_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits getDefaultInstanceForType() {
+        return com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits build() {
+        com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits buildPartial() {
+        com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits result = new com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits result) {
+        if (storageBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            storage_ = java.util.Collections.unmodifiableList(storage_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.storage_ = storage_;
+        } else {
+          result.storage_ = storageBuilder_.build();
+        }
+        if (endpointsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            endpoints_ = java.util.Collections.unmodifiableList(endpoints_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.endpoints_ = endpoints_;
+        } else {
+          result.endpoints_ = endpointsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.cpu_ = cpuBuilder_ == null
+              ? cpu_
+              : cpuBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.memory_ = memoryBuilder_ == null
+              ? memory_
+              : memoryBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.gpu_ = gpuBuilder_ == null
+              ? gpu_
+              : gpuBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits) {
+          return mergeFrom((com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits other) {
+        if (other == com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits.getDefaultInstance()) return this;
+        if (other.hasCpu()) {
+          mergeCpu(other.getCpu());
+        }
+        if (other.hasMemory()) {
+          mergeMemory(other.getMemory());
+        }
+        if (storageBuilder_ == null) {
+          if (!other.storage_.isEmpty()) {
+            if (storage_.isEmpty()) {
+              storage_ = other.storage_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureStorageIsMutable();
+              storage_.addAll(other.storage_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.storage_.isEmpty()) {
+            if (storageBuilder_.isEmpty()) {
+              storageBuilder_.dispose();
+              storageBuilder_ = null;
+              storage_ = other.storage_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              storageBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getStorageFieldBuilder() : null;
+            } else {
+              storageBuilder_.addAllMessages(other.storage_);
+            }
+          }
+        }
+        if (other.hasGpu()) {
+          mergeGpu(other.getGpu());
+        }
+        if (endpointsBuilder_ == null) {
+          if (!other.endpoints_.isEmpty()) {
+            if (endpoints_.isEmpty()) {
+              endpoints_ = other.endpoints_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureEndpointsIsMutable();
+              endpoints_.addAll(other.endpoints_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.endpoints_.isEmpty()) {
+            if (endpointsBuilder_.isEmpty()) {
+              endpointsBuilder_.dispose();
+              endpointsBuilder_ = null;
+              endpoints_ = other.endpoints_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              endpointsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEndpointsFieldBuilder() : null;
+            } else {
+              endpointsBuilder_.addAllMessages(other.endpoints_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getCpuFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getMemoryFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.akash.base.v1beta3.StorageProto.Storage m =
+                    input.readMessage(
+                        com.akash.base.v1beta3.StorageProto.Storage.parser(),
+                        extensionRegistry);
+                if (storageBuilder_ == null) {
+                  ensureStorageIsMutable();
+                  storage_.add(m);
+                } else {
+                  storageBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getGpuFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                com.akash.base.v1beta3.EndpointProto.Endpoint m =
+                    input.readMessage(
+                        com.akash.base.v1beta3.EndpointProto.Endpoint.parser(),
+                        extensionRegistry);
+                if (endpointsBuilder_ == null) {
+                  ensureEndpointsIsMutable();
+                  endpoints_.add(m);
+                } else {
+                  endpointsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.akash.base.v1beta3.CpuProto.CPU cpu_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.base.v1beta3.CpuProto.CPU, com.akash.base.v1beta3.CpuProto.CPU.Builder, com.akash.base.v1beta3.CpuProto.CPUOrBuilder> cpuBuilder_;
+      /**
+       * <code>.akash.base.v1beta3.CPU cpu = 1 [json_name = "cpu", (.gogoproto.nullable) = true, (.gogoproto.customname) = "CPU", (.gogoproto.jsontag) = "cpu,omitempty", (.gogoproto.moretags) = "yaml:&#92;"cpu,omitempty&#92;""];</code>
+       * @return Whether the cpu field is set.
+       */
+      public boolean hasCpu() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.akash.base.v1beta3.CPU cpu = 1 [json_name = "cpu", (.gogoproto.nullable) = true, (.gogoproto.customname) = "CPU", (.gogoproto.jsontag) = "cpu,omitempty", (.gogoproto.moretags) = "yaml:&#92;"cpu,omitempty&#92;""];</code>
+       * @return The cpu.
+       */
+      public com.akash.base.v1beta3.CpuProto.CPU getCpu() {
+        if (cpuBuilder_ == null) {
+          return cpu_ == null ? com.akash.base.v1beta3.CpuProto.CPU.getDefaultInstance() : cpu_;
+        } else {
+          return cpuBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.base.v1beta3.CPU cpu = 1 [json_name = "cpu", (.gogoproto.nullable) = true, (.gogoproto.customname) = "CPU", (.gogoproto.jsontag) = "cpu,omitempty", (.gogoproto.moretags) = "yaml:&#92;"cpu,omitempty&#92;""];</code>
+       */
+      public Builder setCpu(com.akash.base.v1beta3.CpuProto.CPU value) {
+        if (cpuBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          cpu_ = value;
+        } else {
+          cpuBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.base.v1beta3.CPU cpu = 1 [json_name = "cpu", (.gogoproto.nullable) = true, (.gogoproto.customname) = "CPU", (.gogoproto.jsontag) = "cpu,omitempty", (.gogoproto.moretags) = "yaml:&#92;"cpu,omitempty&#92;""];</code>
+       */
+      public Builder setCpu(
+          com.akash.base.v1beta3.CpuProto.CPU.Builder builderForValue) {
+        if (cpuBuilder_ == null) {
+          cpu_ = builderForValue.build();
+        } else {
+          cpuBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.base.v1beta3.CPU cpu = 1 [json_name = "cpu", (.gogoproto.nullable) = true, (.gogoproto.customname) = "CPU", (.gogoproto.jsontag) = "cpu,omitempty", (.gogoproto.moretags) = "yaml:&#92;"cpu,omitempty&#92;""];</code>
+       */
+      public Builder mergeCpu(com.akash.base.v1beta3.CpuProto.CPU value) {
+        if (cpuBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            cpu_ != null &&
+            cpu_ != com.akash.base.v1beta3.CpuProto.CPU.getDefaultInstance()) {
+            getCpuBuilder().mergeFrom(value);
+          } else {
+            cpu_ = value;
+          }
+        } else {
+          cpuBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.base.v1beta3.CPU cpu = 1 [json_name = "cpu", (.gogoproto.nullable) = true, (.gogoproto.customname) = "CPU", (.gogoproto.jsontag) = "cpu,omitempty", (.gogoproto.moretags) = "yaml:&#92;"cpu,omitempty&#92;""];</code>
+       */
+      public Builder clearCpu() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        cpu_ = null;
+        if (cpuBuilder_ != null) {
+          cpuBuilder_.dispose();
+          cpuBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.base.v1beta3.CPU cpu = 1 [json_name = "cpu", (.gogoproto.nullable) = true, (.gogoproto.customname) = "CPU", (.gogoproto.jsontag) = "cpu,omitempty", (.gogoproto.moretags) = "yaml:&#92;"cpu,omitempty&#92;""];</code>
+       */
+      public com.akash.base.v1beta3.CpuProto.CPU.Builder getCpuBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getCpuFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.base.v1beta3.CPU cpu = 1 [json_name = "cpu", (.gogoproto.nullable) = true, (.gogoproto.customname) = "CPU", (.gogoproto.jsontag) = "cpu,omitempty", (.gogoproto.moretags) = "yaml:&#92;"cpu,omitempty&#92;""];</code>
+       */
+      public com.akash.base.v1beta3.CpuProto.CPUOrBuilder getCpuOrBuilder() {
+        if (cpuBuilder_ != null) {
+          return cpuBuilder_.getMessageOrBuilder();
+        } else {
+          return cpu_ == null ?
+              com.akash.base.v1beta3.CpuProto.CPU.getDefaultInstance() : cpu_;
+        }
+      }
+      /**
+       * <code>.akash.base.v1beta3.CPU cpu = 1 [json_name = "cpu", (.gogoproto.nullable) = true, (.gogoproto.customname) = "CPU", (.gogoproto.jsontag) = "cpu,omitempty", (.gogoproto.moretags) = "yaml:&#92;"cpu,omitempty&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.base.v1beta3.CpuProto.CPU, com.akash.base.v1beta3.CpuProto.CPU.Builder, com.akash.base.v1beta3.CpuProto.CPUOrBuilder> 
+          getCpuFieldBuilder() {
+        if (cpuBuilder_ == null) {
+          cpuBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.base.v1beta3.CpuProto.CPU, com.akash.base.v1beta3.CpuProto.CPU.Builder, com.akash.base.v1beta3.CpuProto.CPUOrBuilder>(
+                  getCpu(),
+                  getParentForChildren(),
+                  isClean());
+          cpu_ = null;
+        }
+        return cpuBuilder_;
+      }
+
+      private com.akash.base.v1beta3.MemoryProto.Memory memory_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.base.v1beta3.MemoryProto.Memory, com.akash.base.v1beta3.MemoryProto.Memory.Builder, com.akash.base.v1beta3.MemoryProto.MemoryOrBuilder> memoryBuilder_;
+      /**
+       * <code>.akash.base.v1beta3.Memory memory = 2 [json_name = "memory", (.gogoproto.nullable) = true, (.gogoproto.jsontag) = "memory,omitempty", (.gogoproto.moretags) = "yaml:&#92;"memory,omitempty&#92;""];</code>
+       * @return Whether the memory field is set.
+       */
+      public boolean hasMemory() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.akash.base.v1beta3.Memory memory = 2 [json_name = "memory", (.gogoproto.nullable) = true, (.gogoproto.jsontag) = "memory,omitempty", (.gogoproto.moretags) = "yaml:&#92;"memory,omitempty&#92;""];</code>
+       * @return The memory.
+       */
+      public com.akash.base.v1beta3.MemoryProto.Memory getMemory() {
+        if (memoryBuilder_ == null) {
+          return memory_ == null ? com.akash.base.v1beta3.MemoryProto.Memory.getDefaultInstance() : memory_;
+        } else {
+          return memoryBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.base.v1beta3.Memory memory = 2 [json_name = "memory", (.gogoproto.nullable) = true, (.gogoproto.jsontag) = "memory,omitempty", (.gogoproto.moretags) = "yaml:&#92;"memory,omitempty&#92;""];</code>
+       */
+      public Builder setMemory(com.akash.base.v1beta3.MemoryProto.Memory value) {
+        if (memoryBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          memory_ = value;
+        } else {
+          memoryBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.base.v1beta3.Memory memory = 2 [json_name = "memory", (.gogoproto.nullable) = true, (.gogoproto.jsontag) = "memory,omitempty", (.gogoproto.moretags) = "yaml:&#92;"memory,omitempty&#92;""];</code>
+       */
+      public Builder setMemory(
+          com.akash.base.v1beta3.MemoryProto.Memory.Builder builderForValue) {
+        if (memoryBuilder_ == null) {
+          memory_ = builderForValue.build();
+        } else {
+          memoryBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.base.v1beta3.Memory memory = 2 [json_name = "memory", (.gogoproto.nullable) = true, (.gogoproto.jsontag) = "memory,omitempty", (.gogoproto.moretags) = "yaml:&#92;"memory,omitempty&#92;""];</code>
+       */
+      public Builder mergeMemory(com.akash.base.v1beta3.MemoryProto.Memory value) {
+        if (memoryBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            memory_ != null &&
+            memory_ != com.akash.base.v1beta3.MemoryProto.Memory.getDefaultInstance()) {
+            getMemoryBuilder().mergeFrom(value);
+          } else {
+            memory_ = value;
+          }
+        } else {
+          memoryBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.base.v1beta3.Memory memory = 2 [json_name = "memory", (.gogoproto.nullable) = true, (.gogoproto.jsontag) = "memory,omitempty", (.gogoproto.moretags) = "yaml:&#92;"memory,omitempty&#92;""];</code>
+       */
+      public Builder clearMemory() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        memory_ = null;
+        if (memoryBuilder_ != null) {
+          memoryBuilder_.dispose();
+          memoryBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.base.v1beta3.Memory memory = 2 [json_name = "memory", (.gogoproto.nullable) = true, (.gogoproto.jsontag) = "memory,omitempty", (.gogoproto.moretags) = "yaml:&#92;"memory,omitempty&#92;""];</code>
+       */
+      public com.akash.base.v1beta3.MemoryProto.Memory.Builder getMemoryBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getMemoryFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.base.v1beta3.Memory memory = 2 [json_name = "memory", (.gogoproto.nullable) = true, (.gogoproto.jsontag) = "memory,omitempty", (.gogoproto.moretags) = "yaml:&#92;"memory,omitempty&#92;""];</code>
+       */
+      public com.akash.base.v1beta3.MemoryProto.MemoryOrBuilder getMemoryOrBuilder() {
+        if (memoryBuilder_ != null) {
+          return memoryBuilder_.getMessageOrBuilder();
+        } else {
+          return memory_ == null ?
+              com.akash.base.v1beta3.MemoryProto.Memory.getDefaultInstance() : memory_;
+        }
+      }
+      /**
+       * <code>.akash.base.v1beta3.Memory memory = 2 [json_name = "memory", (.gogoproto.nullable) = true, (.gogoproto.jsontag) = "memory,omitempty", (.gogoproto.moretags) = "yaml:&#92;"memory,omitempty&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.base.v1beta3.MemoryProto.Memory, com.akash.base.v1beta3.MemoryProto.Memory.Builder, com.akash.base.v1beta3.MemoryProto.MemoryOrBuilder> 
+          getMemoryFieldBuilder() {
+        if (memoryBuilder_ == null) {
+          memoryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.base.v1beta3.MemoryProto.Memory, com.akash.base.v1beta3.MemoryProto.Memory.Builder, com.akash.base.v1beta3.MemoryProto.MemoryOrBuilder>(
+                  getMemory(),
+                  getParentForChildren(),
+                  isClean());
+          memory_ = null;
+        }
+        return memoryBuilder_;
+      }
+
+      private java.util.List<com.akash.base.v1beta3.StorageProto.Storage> storage_ =
+        java.util.Collections.emptyList();
+      private void ensureStorageIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          storage_ = new java.util.ArrayList<com.akash.base.v1beta3.StorageProto.Storage>(storage_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.akash.base.v1beta3.StorageProto.Storage, com.akash.base.v1beta3.StorageProto.Storage.Builder, com.akash.base.v1beta3.StorageProto.StorageOrBuilder> storageBuilder_;
+
+      /**
+       * <code>repeated .akash.base.v1beta3.Storage storage = 3 [json_name = "storage", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "storage,omitempty", (.gogoproto.moretags) = "yaml:&#92;"storage,omitempty&#92;"", (.gogoproto.castrepeated) = "Volumes"];</code>
+       */
+      public java.util.List<com.akash.base.v1beta3.StorageProto.Storage> getStorageList() {
+        if (storageBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(storage_);
+        } else {
+          return storageBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Storage storage = 3 [json_name = "storage", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "storage,omitempty", (.gogoproto.moretags) = "yaml:&#92;"storage,omitempty&#92;"", (.gogoproto.castrepeated) = "Volumes"];</code>
+       */
+      public int getStorageCount() {
+        if (storageBuilder_ == null) {
+          return storage_.size();
+        } else {
+          return storageBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Storage storage = 3 [json_name = "storage", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "storage,omitempty", (.gogoproto.moretags) = "yaml:&#92;"storage,omitempty&#92;"", (.gogoproto.castrepeated) = "Volumes"];</code>
+       */
+      public com.akash.base.v1beta3.StorageProto.Storage getStorage(int index) {
+        if (storageBuilder_ == null) {
+          return storage_.get(index);
+        } else {
+          return storageBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Storage storage = 3 [json_name = "storage", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "storage,omitempty", (.gogoproto.moretags) = "yaml:&#92;"storage,omitempty&#92;"", (.gogoproto.castrepeated) = "Volumes"];</code>
+       */
+      public Builder setStorage(
+          int index, com.akash.base.v1beta3.StorageProto.Storage value) {
+        if (storageBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStorageIsMutable();
+          storage_.set(index, value);
+          onChanged();
+        } else {
+          storageBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Storage storage = 3 [json_name = "storage", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "storage,omitempty", (.gogoproto.moretags) = "yaml:&#92;"storage,omitempty&#92;"", (.gogoproto.castrepeated) = "Volumes"];</code>
+       */
+      public Builder setStorage(
+          int index, com.akash.base.v1beta3.StorageProto.Storage.Builder builderForValue) {
+        if (storageBuilder_ == null) {
+          ensureStorageIsMutable();
+          storage_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          storageBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Storage storage = 3 [json_name = "storage", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "storage,omitempty", (.gogoproto.moretags) = "yaml:&#92;"storage,omitempty&#92;"", (.gogoproto.castrepeated) = "Volumes"];</code>
+       */
+      public Builder addStorage(com.akash.base.v1beta3.StorageProto.Storage value) {
+        if (storageBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStorageIsMutable();
+          storage_.add(value);
+          onChanged();
+        } else {
+          storageBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Storage storage = 3 [json_name = "storage", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "storage,omitempty", (.gogoproto.moretags) = "yaml:&#92;"storage,omitempty&#92;"", (.gogoproto.castrepeated) = "Volumes"];</code>
+       */
+      public Builder addStorage(
+          int index, com.akash.base.v1beta3.StorageProto.Storage value) {
+        if (storageBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStorageIsMutable();
+          storage_.add(index, value);
+          onChanged();
+        } else {
+          storageBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Storage storage = 3 [json_name = "storage", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "storage,omitempty", (.gogoproto.moretags) = "yaml:&#92;"storage,omitempty&#92;"", (.gogoproto.castrepeated) = "Volumes"];</code>
+       */
+      public Builder addStorage(
+          com.akash.base.v1beta3.StorageProto.Storage.Builder builderForValue) {
+        if (storageBuilder_ == null) {
+          ensureStorageIsMutable();
+          storage_.add(builderForValue.build());
+          onChanged();
+        } else {
+          storageBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Storage storage = 3 [json_name = "storage", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "storage,omitempty", (.gogoproto.moretags) = "yaml:&#92;"storage,omitempty&#92;"", (.gogoproto.castrepeated) = "Volumes"];</code>
+       */
+      public Builder addStorage(
+          int index, com.akash.base.v1beta3.StorageProto.Storage.Builder builderForValue) {
+        if (storageBuilder_ == null) {
+          ensureStorageIsMutable();
+          storage_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          storageBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Storage storage = 3 [json_name = "storage", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "storage,omitempty", (.gogoproto.moretags) = "yaml:&#92;"storage,omitempty&#92;"", (.gogoproto.castrepeated) = "Volumes"];</code>
+       */
+      public Builder addAllStorage(
+          java.lang.Iterable<? extends com.akash.base.v1beta3.StorageProto.Storage> values) {
+        if (storageBuilder_ == null) {
+          ensureStorageIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, storage_);
+          onChanged();
+        } else {
+          storageBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Storage storage = 3 [json_name = "storage", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "storage,omitempty", (.gogoproto.moretags) = "yaml:&#92;"storage,omitempty&#92;"", (.gogoproto.castrepeated) = "Volumes"];</code>
+       */
+      public Builder clearStorage() {
+        if (storageBuilder_ == null) {
+          storage_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          storageBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Storage storage = 3 [json_name = "storage", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "storage,omitempty", (.gogoproto.moretags) = "yaml:&#92;"storage,omitempty&#92;"", (.gogoproto.castrepeated) = "Volumes"];</code>
+       */
+      public Builder removeStorage(int index) {
+        if (storageBuilder_ == null) {
+          ensureStorageIsMutable();
+          storage_.remove(index);
+          onChanged();
+        } else {
+          storageBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Storage storage = 3 [json_name = "storage", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "storage,omitempty", (.gogoproto.moretags) = "yaml:&#92;"storage,omitempty&#92;"", (.gogoproto.castrepeated) = "Volumes"];</code>
+       */
+      public com.akash.base.v1beta3.StorageProto.Storage.Builder getStorageBuilder(
+          int index) {
+        return getStorageFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Storage storage = 3 [json_name = "storage", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "storage,omitempty", (.gogoproto.moretags) = "yaml:&#92;"storage,omitempty&#92;"", (.gogoproto.castrepeated) = "Volumes"];</code>
+       */
+      public com.akash.base.v1beta3.StorageProto.StorageOrBuilder getStorageOrBuilder(
+          int index) {
+        if (storageBuilder_ == null) {
+          return storage_.get(index);  } else {
+          return storageBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Storage storage = 3 [json_name = "storage", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "storage,omitempty", (.gogoproto.moretags) = "yaml:&#92;"storage,omitempty&#92;"", (.gogoproto.castrepeated) = "Volumes"];</code>
+       */
+      public java.util.List<? extends com.akash.base.v1beta3.StorageProto.StorageOrBuilder> 
+           getStorageOrBuilderList() {
+        if (storageBuilder_ != null) {
+          return storageBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(storage_);
+        }
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Storage storage = 3 [json_name = "storage", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "storage,omitempty", (.gogoproto.moretags) = "yaml:&#92;"storage,omitempty&#92;"", (.gogoproto.castrepeated) = "Volumes"];</code>
+       */
+      public com.akash.base.v1beta3.StorageProto.Storage.Builder addStorageBuilder() {
+        return getStorageFieldBuilder().addBuilder(
+            com.akash.base.v1beta3.StorageProto.Storage.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Storage storage = 3 [json_name = "storage", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "storage,omitempty", (.gogoproto.moretags) = "yaml:&#92;"storage,omitempty&#92;"", (.gogoproto.castrepeated) = "Volumes"];</code>
+       */
+      public com.akash.base.v1beta3.StorageProto.Storage.Builder addStorageBuilder(
+          int index) {
+        return getStorageFieldBuilder().addBuilder(
+            index, com.akash.base.v1beta3.StorageProto.Storage.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Storage storage = 3 [json_name = "storage", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "storage,omitempty", (.gogoproto.moretags) = "yaml:&#92;"storage,omitempty&#92;"", (.gogoproto.castrepeated) = "Volumes"];</code>
+       */
+      public java.util.List<com.akash.base.v1beta3.StorageProto.Storage.Builder> 
+           getStorageBuilderList() {
+        return getStorageFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.akash.base.v1beta3.StorageProto.Storage, com.akash.base.v1beta3.StorageProto.Storage.Builder, com.akash.base.v1beta3.StorageProto.StorageOrBuilder> 
+          getStorageFieldBuilder() {
+        if (storageBuilder_ == null) {
+          storageBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.akash.base.v1beta3.StorageProto.Storage, com.akash.base.v1beta3.StorageProto.Storage.Builder, com.akash.base.v1beta3.StorageProto.StorageOrBuilder>(
+                  storage_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          storage_ = null;
+        }
+        return storageBuilder_;
+      }
+
+      private com.akash.base.v1beta3.GpuProto.GPU gpu_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.base.v1beta3.GpuProto.GPU, com.akash.base.v1beta3.GpuProto.GPU.Builder, com.akash.base.v1beta3.GpuProto.GPUOrBuilder> gpuBuilder_;
+      /**
+       * <code>.akash.base.v1beta3.GPU gpu = 4 [json_name = "gpu", (.gogoproto.nullable) = true, (.gogoproto.customname) = "GPU", (.gogoproto.jsontag) = "gpu,omitempty", (.gogoproto.moretags) = "yaml:&#92;"gpu,omitempty&#92;""];</code>
+       * @return Whether the gpu field is set.
+       */
+      public boolean hasGpu() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.akash.base.v1beta3.GPU gpu = 4 [json_name = "gpu", (.gogoproto.nullable) = true, (.gogoproto.customname) = "GPU", (.gogoproto.jsontag) = "gpu,omitempty", (.gogoproto.moretags) = "yaml:&#92;"gpu,omitempty&#92;""];</code>
+       * @return The gpu.
+       */
+      public com.akash.base.v1beta3.GpuProto.GPU getGpu() {
+        if (gpuBuilder_ == null) {
+          return gpu_ == null ? com.akash.base.v1beta3.GpuProto.GPU.getDefaultInstance() : gpu_;
+        } else {
+          return gpuBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.base.v1beta3.GPU gpu = 4 [json_name = "gpu", (.gogoproto.nullable) = true, (.gogoproto.customname) = "GPU", (.gogoproto.jsontag) = "gpu,omitempty", (.gogoproto.moretags) = "yaml:&#92;"gpu,omitempty&#92;""];</code>
+       */
+      public Builder setGpu(com.akash.base.v1beta3.GpuProto.GPU value) {
+        if (gpuBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          gpu_ = value;
+        } else {
+          gpuBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.base.v1beta3.GPU gpu = 4 [json_name = "gpu", (.gogoproto.nullable) = true, (.gogoproto.customname) = "GPU", (.gogoproto.jsontag) = "gpu,omitempty", (.gogoproto.moretags) = "yaml:&#92;"gpu,omitempty&#92;""];</code>
+       */
+      public Builder setGpu(
+          com.akash.base.v1beta3.GpuProto.GPU.Builder builderForValue) {
+        if (gpuBuilder_ == null) {
+          gpu_ = builderForValue.build();
+        } else {
+          gpuBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.base.v1beta3.GPU gpu = 4 [json_name = "gpu", (.gogoproto.nullable) = true, (.gogoproto.customname) = "GPU", (.gogoproto.jsontag) = "gpu,omitempty", (.gogoproto.moretags) = "yaml:&#92;"gpu,omitempty&#92;""];</code>
+       */
+      public Builder mergeGpu(com.akash.base.v1beta3.GpuProto.GPU value) {
+        if (gpuBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            gpu_ != null &&
+            gpu_ != com.akash.base.v1beta3.GpuProto.GPU.getDefaultInstance()) {
+            getGpuBuilder().mergeFrom(value);
+          } else {
+            gpu_ = value;
+          }
+        } else {
+          gpuBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.base.v1beta3.GPU gpu = 4 [json_name = "gpu", (.gogoproto.nullable) = true, (.gogoproto.customname) = "GPU", (.gogoproto.jsontag) = "gpu,omitempty", (.gogoproto.moretags) = "yaml:&#92;"gpu,omitempty&#92;""];</code>
+       */
+      public Builder clearGpu() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        gpu_ = null;
+        if (gpuBuilder_ != null) {
+          gpuBuilder_.dispose();
+          gpuBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.base.v1beta3.GPU gpu = 4 [json_name = "gpu", (.gogoproto.nullable) = true, (.gogoproto.customname) = "GPU", (.gogoproto.jsontag) = "gpu,omitempty", (.gogoproto.moretags) = "yaml:&#92;"gpu,omitempty&#92;""];</code>
+       */
+      public com.akash.base.v1beta3.GpuProto.GPU.Builder getGpuBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getGpuFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.base.v1beta3.GPU gpu = 4 [json_name = "gpu", (.gogoproto.nullable) = true, (.gogoproto.customname) = "GPU", (.gogoproto.jsontag) = "gpu,omitempty", (.gogoproto.moretags) = "yaml:&#92;"gpu,omitempty&#92;""];</code>
+       */
+      public com.akash.base.v1beta3.GpuProto.GPUOrBuilder getGpuOrBuilder() {
+        if (gpuBuilder_ != null) {
+          return gpuBuilder_.getMessageOrBuilder();
+        } else {
+          return gpu_ == null ?
+              com.akash.base.v1beta3.GpuProto.GPU.getDefaultInstance() : gpu_;
+        }
+      }
+      /**
+       * <code>.akash.base.v1beta3.GPU gpu = 4 [json_name = "gpu", (.gogoproto.nullable) = true, (.gogoproto.customname) = "GPU", (.gogoproto.jsontag) = "gpu,omitempty", (.gogoproto.moretags) = "yaml:&#92;"gpu,omitempty&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.base.v1beta3.GpuProto.GPU, com.akash.base.v1beta3.GpuProto.GPU.Builder, com.akash.base.v1beta3.GpuProto.GPUOrBuilder> 
+          getGpuFieldBuilder() {
+        if (gpuBuilder_ == null) {
+          gpuBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.base.v1beta3.GpuProto.GPU, com.akash.base.v1beta3.GpuProto.GPU.Builder, com.akash.base.v1beta3.GpuProto.GPUOrBuilder>(
+                  getGpu(),
+                  getParentForChildren(),
+                  isClean());
+          gpu_ = null;
+        }
+        return gpuBuilder_;
+      }
+
+      private java.util.List<com.akash.base.v1beta3.EndpointProto.Endpoint> endpoints_ =
+        java.util.Collections.emptyList();
+      private void ensureEndpointsIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          endpoints_ = new java.util.ArrayList<com.akash.base.v1beta3.EndpointProto.Endpoint>(endpoints_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.akash.base.v1beta3.EndpointProto.Endpoint, com.akash.base.v1beta3.EndpointProto.Endpoint.Builder, com.akash.base.v1beta3.EndpointProto.EndpointOrBuilder> endpointsBuilder_;
+
+      /**
+       * <code>repeated .akash.base.v1beta3.Endpoint endpoints = 5 [json_name = "endpoints", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "endpoints", (.gogoproto.moretags) = "yaml:&#92;"endpoints&#92;"", (.gogoproto.castrepeated) = "Endpoints"];</code>
+       */
+      public java.util.List<com.akash.base.v1beta3.EndpointProto.Endpoint> getEndpointsList() {
+        if (endpointsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(endpoints_);
+        } else {
+          return endpointsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Endpoint endpoints = 5 [json_name = "endpoints", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "endpoints", (.gogoproto.moretags) = "yaml:&#92;"endpoints&#92;"", (.gogoproto.castrepeated) = "Endpoints"];</code>
+       */
+      public int getEndpointsCount() {
+        if (endpointsBuilder_ == null) {
+          return endpoints_.size();
+        } else {
+          return endpointsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Endpoint endpoints = 5 [json_name = "endpoints", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "endpoints", (.gogoproto.moretags) = "yaml:&#92;"endpoints&#92;"", (.gogoproto.castrepeated) = "Endpoints"];</code>
+       */
+      public com.akash.base.v1beta3.EndpointProto.Endpoint getEndpoints(int index) {
+        if (endpointsBuilder_ == null) {
+          return endpoints_.get(index);
+        } else {
+          return endpointsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Endpoint endpoints = 5 [json_name = "endpoints", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "endpoints", (.gogoproto.moretags) = "yaml:&#92;"endpoints&#92;"", (.gogoproto.castrepeated) = "Endpoints"];</code>
+       */
+      public Builder setEndpoints(
+          int index, com.akash.base.v1beta3.EndpointProto.Endpoint value) {
+        if (endpointsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEndpointsIsMutable();
+          endpoints_.set(index, value);
+          onChanged();
+        } else {
+          endpointsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Endpoint endpoints = 5 [json_name = "endpoints", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "endpoints", (.gogoproto.moretags) = "yaml:&#92;"endpoints&#92;"", (.gogoproto.castrepeated) = "Endpoints"];</code>
+       */
+      public Builder setEndpoints(
+          int index, com.akash.base.v1beta3.EndpointProto.Endpoint.Builder builderForValue) {
+        if (endpointsBuilder_ == null) {
+          ensureEndpointsIsMutable();
+          endpoints_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          endpointsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Endpoint endpoints = 5 [json_name = "endpoints", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "endpoints", (.gogoproto.moretags) = "yaml:&#92;"endpoints&#92;"", (.gogoproto.castrepeated) = "Endpoints"];</code>
+       */
+      public Builder addEndpoints(com.akash.base.v1beta3.EndpointProto.Endpoint value) {
+        if (endpointsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEndpointsIsMutable();
+          endpoints_.add(value);
+          onChanged();
+        } else {
+          endpointsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Endpoint endpoints = 5 [json_name = "endpoints", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "endpoints", (.gogoproto.moretags) = "yaml:&#92;"endpoints&#92;"", (.gogoproto.castrepeated) = "Endpoints"];</code>
+       */
+      public Builder addEndpoints(
+          int index, com.akash.base.v1beta3.EndpointProto.Endpoint value) {
+        if (endpointsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEndpointsIsMutable();
+          endpoints_.add(index, value);
+          onChanged();
+        } else {
+          endpointsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Endpoint endpoints = 5 [json_name = "endpoints", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "endpoints", (.gogoproto.moretags) = "yaml:&#92;"endpoints&#92;"", (.gogoproto.castrepeated) = "Endpoints"];</code>
+       */
+      public Builder addEndpoints(
+          com.akash.base.v1beta3.EndpointProto.Endpoint.Builder builderForValue) {
+        if (endpointsBuilder_ == null) {
+          ensureEndpointsIsMutable();
+          endpoints_.add(builderForValue.build());
+          onChanged();
+        } else {
+          endpointsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Endpoint endpoints = 5 [json_name = "endpoints", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "endpoints", (.gogoproto.moretags) = "yaml:&#92;"endpoints&#92;"", (.gogoproto.castrepeated) = "Endpoints"];</code>
+       */
+      public Builder addEndpoints(
+          int index, com.akash.base.v1beta3.EndpointProto.Endpoint.Builder builderForValue) {
+        if (endpointsBuilder_ == null) {
+          ensureEndpointsIsMutable();
+          endpoints_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          endpointsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Endpoint endpoints = 5 [json_name = "endpoints", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "endpoints", (.gogoproto.moretags) = "yaml:&#92;"endpoints&#92;"", (.gogoproto.castrepeated) = "Endpoints"];</code>
+       */
+      public Builder addAllEndpoints(
+          java.lang.Iterable<? extends com.akash.base.v1beta3.EndpointProto.Endpoint> values) {
+        if (endpointsBuilder_ == null) {
+          ensureEndpointsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, endpoints_);
+          onChanged();
+        } else {
+          endpointsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Endpoint endpoints = 5 [json_name = "endpoints", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "endpoints", (.gogoproto.moretags) = "yaml:&#92;"endpoints&#92;"", (.gogoproto.castrepeated) = "Endpoints"];</code>
+       */
+      public Builder clearEndpoints() {
+        if (endpointsBuilder_ == null) {
+          endpoints_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          endpointsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Endpoint endpoints = 5 [json_name = "endpoints", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "endpoints", (.gogoproto.moretags) = "yaml:&#92;"endpoints&#92;"", (.gogoproto.castrepeated) = "Endpoints"];</code>
+       */
+      public Builder removeEndpoints(int index) {
+        if (endpointsBuilder_ == null) {
+          ensureEndpointsIsMutable();
+          endpoints_.remove(index);
+          onChanged();
+        } else {
+          endpointsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Endpoint endpoints = 5 [json_name = "endpoints", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "endpoints", (.gogoproto.moretags) = "yaml:&#92;"endpoints&#92;"", (.gogoproto.castrepeated) = "Endpoints"];</code>
+       */
+      public com.akash.base.v1beta3.EndpointProto.Endpoint.Builder getEndpointsBuilder(
+          int index) {
+        return getEndpointsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Endpoint endpoints = 5 [json_name = "endpoints", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "endpoints", (.gogoproto.moretags) = "yaml:&#92;"endpoints&#92;"", (.gogoproto.castrepeated) = "Endpoints"];</code>
+       */
+      public com.akash.base.v1beta3.EndpointProto.EndpointOrBuilder getEndpointsOrBuilder(
+          int index) {
+        if (endpointsBuilder_ == null) {
+          return endpoints_.get(index);  } else {
+          return endpointsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Endpoint endpoints = 5 [json_name = "endpoints", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "endpoints", (.gogoproto.moretags) = "yaml:&#92;"endpoints&#92;"", (.gogoproto.castrepeated) = "Endpoints"];</code>
+       */
+      public java.util.List<? extends com.akash.base.v1beta3.EndpointProto.EndpointOrBuilder> 
+           getEndpointsOrBuilderList() {
+        if (endpointsBuilder_ != null) {
+          return endpointsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(endpoints_);
+        }
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Endpoint endpoints = 5 [json_name = "endpoints", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "endpoints", (.gogoproto.moretags) = "yaml:&#92;"endpoints&#92;"", (.gogoproto.castrepeated) = "Endpoints"];</code>
+       */
+      public com.akash.base.v1beta3.EndpointProto.Endpoint.Builder addEndpointsBuilder() {
+        return getEndpointsFieldBuilder().addBuilder(
+            com.akash.base.v1beta3.EndpointProto.Endpoint.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Endpoint endpoints = 5 [json_name = "endpoints", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "endpoints", (.gogoproto.moretags) = "yaml:&#92;"endpoints&#92;"", (.gogoproto.castrepeated) = "Endpoints"];</code>
+       */
+      public com.akash.base.v1beta3.EndpointProto.Endpoint.Builder addEndpointsBuilder(
+          int index) {
+        return getEndpointsFieldBuilder().addBuilder(
+            index, com.akash.base.v1beta3.EndpointProto.Endpoint.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .akash.base.v1beta3.Endpoint endpoints = 5 [json_name = "endpoints", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "endpoints", (.gogoproto.moretags) = "yaml:&#92;"endpoints&#92;"", (.gogoproto.castrepeated) = "Endpoints"];</code>
+       */
+      public java.util.List<com.akash.base.v1beta3.EndpointProto.Endpoint.Builder> 
+           getEndpointsBuilderList() {
+        return getEndpointsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.akash.base.v1beta3.EndpointProto.Endpoint, com.akash.base.v1beta3.EndpointProto.Endpoint.Builder, com.akash.base.v1beta3.EndpointProto.EndpointOrBuilder> 
+          getEndpointsFieldBuilder() {
+        if (endpointsBuilder_ == null) {
+          endpointsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.akash.base.v1beta3.EndpointProto.Endpoint, com.akash.base.v1beta3.EndpointProto.Endpoint.Builder, com.akash.base.v1beta3.EndpointProto.EndpointOrBuilder>(
+                  endpoints_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          endpoints_ = null;
+        }
+        return endpointsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.base.v1beta3.ResourceUnits)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.base.v1beta3.ResourceUnits)
+    private static final com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits();
+    }
+
+    public static com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ResourceUnits>
+        PARSER = new com.google.protobuf.AbstractParser<ResourceUnits>() {
+      @java.lang.Override
+      public ResourceUnits parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ResourceUnits> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ResourceUnits> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.base.v1beta3.ResourceunitsProto.ResourceUnits getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_base_v1beta3_ResourceUnits_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_base_v1beta3_ResourceUnits_fieldAccessorTable;
 
@@ -48,12 +1802,12 @@ public final class ResourceunitsProto {
       "pu\022n\n\tendpoints\030\005 \003(\0132\034.akash.base.v1bet" +
       "a3.EndpointB2\310\336\037\000\352\336\037\tendpoints\362\336\037\020yaml:\"" +
       "endpoints\"\252\337\037\tEndpointsR\tendpoints:\004\350\240\037\001" +
-      "B\320\001\n\026com.akash.base.v1beta3B\022Resourceuni" +
-      "tsProtoP\001Z8github.com/akash-network/akas" +
-      "h-api/go/node/types/v1beta3\242\002\003ABX\252\002\022Akas" +
-      "h.Base.V1beta3\312\002\022Akash\\Base\\V1beta3\342\002\036Ak" +
-      "ash\\Base\\V1beta3\\GPBMetadata\352\002\024Akash::Ba" +
-      "se::V1beta3b\006proto3"
+      "B\316\001\n\026com.akash.base.v1beta3B\022Resourceuni" +
+      "tsProtoZ8github.com/akash-network/akash-" +
+      "api/go/node/types/v1beta3\242\002\003ABX\252\002\022Akash." +
+      "Base.V1beta3\312\002\022Akash\\Base\\V1beta3\342\002\036Akas" +
+      "h\\Base\\V1beta3\\GPBMetadata\352\002\024Akash::Base" +
+      "::V1beta3b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

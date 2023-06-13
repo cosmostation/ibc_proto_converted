@@ -14,44 +14,5286 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgAggregateExchangeRatePrevoteOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:persistence.oracle.v1beta1.MsgAggregateExchangeRatePrevote)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string hash = 1 [json_name = "hash", (.gogoproto.moretags) = "yaml:&#92;"hash&#92;""];</code>
+     * @return The hash.
+     */
+    java.lang.String getHash();
+    /**
+     * <code>string hash = 1 [json_name = "hash", (.gogoproto.moretags) = "yaml:&#92;"hash&#92;""];</code>
+     * @return The bytes for hash.
+     */
+    com.google.protobuf.ByteString
+        getHashBytes();
+
+    /**
+     * <code>string feeder = 2 [json_name = "feeder", (.gogoproto.moretags) = "yaml:&#92;"feeder&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The feeder.
+     */
+    java.lang.String getFeeder();
+    /**
+     * <code>string feeder = 2 [json_name = "feeder", (.gogoproto.moretags) = "yaml:&#92;"feeder&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for feeder.
+     */
+    com.google.protobuf.ByteString
+        getFeederBytes();
+
+    /**
+     * <code>string validator = 3 [json_name = "validator", (.gogoproto.moretags) = "yaml:&#92;"validator&#92;""];</code>
+     * @return The validator.
+     */
+    java.lang.String getValidator();
+    /**
+     * <code>string validator = 3 [json_name = "validator", (.gogoproto.moretags) = "yaml:&#92;"validator&#92;""];</code>
+     * @return The bytes for validator.
+     */
+    com.google.protobuf.ByteString
+        getValidatorBytes();
+  }
+  /**
+   * <pre>
+   * MsgAggregateExchangeRatePrevote represents a message to submit an aggregate
+   * exchange rate prevote.
+   * </pre>
+   *
+   * Protobuf type {@code persistence.oracle.v1beta1.MsgAggregateExchangeRatePrevote}
+   */
+  public static final class MsgAggregateExchangeRatePrevote extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:persistence.oracle.v1beta1.MsgAggregateExchangeRatePrevote)
+      MsgAggregateExchangeRatePrevoteOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgAggregateExchangeRatePrevote.newBuilder() to construct.
+    private MsgAggregateExchangeRatePrevote(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgAggregateExchangeRatePrevote() {
+      hash_ = "";
+      feeder_ = "";
+      validator_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgAggregateExchangeRatePrevote();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgAggregateExchangeRatePrevote_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgAggregateExchangeRatePrevote_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote.class, com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote.Builder.class);
+    }
+
+    public static final int HASH_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object hash_ = "";
+    /**
+     * <code>string hash = 1 [json_name = "hash", (.gogoproto.moretags) = "yaml:&#92;"hash&#92;""];</code>
+     * @return The hash.
+     */
+    @java.lang.Override
+    public java.lang.String getHash() {
+      java.lang.Object ref = hash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string hash = 1 [json_name = "hash", (.gogoproto.moretags) = "yaml:&#92;"hash&#92;""];</code>
+     * @return The bytes for hash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHashBytes() {
+      java.lang.Object ref = hash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        hash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FEEDER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object feeder_ = "";
+    /**
+     * <code>string feeder = 2 [json_name = "feeder", (.gogoproto.moretags) = "yaml:&#92;"feeder&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The feeder.
+     */
+    @java.lang.Override
+    public java.lang.String getFeeder() {
+      java.lang.Object ref = feeder_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        feeder_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string feeder = 2 [json_name = "feeder", (.gogoproto.moretags) = "yaml:&#92;"feeder&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for feeder.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFeederBytes() {
+      java.lang.Object ref = feeder_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        feeder_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALIDATOR_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object validator_ = "";
+    /**
+     * <code>string validator = 3 [json_name = "validator", (.gogoproto.moretags) = "yaml:&#92;"validator&#92;""];</code>
+     * @return The validator.
+     */
+    @java.lang.Override
+    public java.lang.String getValidator() {
+      java.lang.Object ref = validator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        validator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string validator = 3 [json_name = "validator", (.gogoproto.moretags) = "yaml:&#92;"validator&#92;""];</code>
+     * @return The bytes for validator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValidatorBytes() {
+      java.lang.Object ref = validator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        validator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hash_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feeder_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, feeder_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, validator_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hash_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, hash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feeder_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, feeder_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, validator_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote)) {
+        return super.equals(obj);
+      }
+      com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote other = (com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote) obj;
+
+      if (!getHash()
+          .equals(other.getHash())) return false;
+      if (!getFeeder()
+          .equals(other.getFeeder())) return false;
+      if (!getValidator()
+          .equals(other.getValidator())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getHash().hashCode();
+      hash = (37 * hash) + FEEDER_FIELD_NUMBER;
+      hash = (53 * hash) + getFeeder().hashCode();
+      hash = (37 * hash) + VALIDATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getValidator().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgAggregateExchangeRatePrevote represents a message to submit an aggregate
+     * exchange rate prevote.
+     * </pre>
+     *
+     * Protobuf type {@code persistence.oracle.v1beta1.MsgAggregateExchangeRatePrevote}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:persistence.oracle.v1beta1.MsgAggregateExchangeRatePrevote)
+        com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgAggregateExchangeRatePrevote_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgAggregateExchangeRatePrevote_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote.class, com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote.Builder.class);
+      }
+
+      // Construct using com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        hash_ = "";
+        feeder_ = "";
+        validator_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgAggregateExchangeRatePrevote_descriptor;
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote getDefaultInstanceForType() {
+        return com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote build() {
+        com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote buildPartial() {
+        com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote result = new com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.hash_ = hash_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.feeder_ = feeder_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.validator_ = validator_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote) {
+          return mergeFrom((com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote other) {
+        if (other == com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote.getDefaultInstance()) return this;
+        if (!other.getHash().isEmpty()) {
+          hash_ = other.hash_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getFeeder().isEmpty()) {
+          feeder_ = other.feeder_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getValidator().isEmpty()) {
+          validator_ = other.validator_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                hash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                feeder_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                validator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object hash_ = "";
+      /**
+       * <code>string hash = 1 [json_name = "hash", (.gogoproto.moretags) = "yaml:&#92;"hash&#92;""];</code>
+       * @return The hash.
+       */
+      public java.lang.String getHash() {
+        java.lang.Object ref = hash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string hash = 1 [json_name = "hash", (.gogoproto.moretags) = "yaml:&#92;"hash&#92;""];</code>
+       * @return The bytes for hash.
+       */
+      public com.google.protobuf.ByteString
+          getHashBytes() {
+        java.lang.Object ref = hash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          hash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string hash = 1 [json_name = "hash", (.gogoproto.moretags) = "yaml:&#92;"hash&#92;""];</code>
+       * @param value The hash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        hash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hash = 1 [json_name = "hash", (.gogoproto.moretags) = "yaml:&#92;"hash&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHash() {
+        hash_ = getDefaultInstance().getHash();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hash = 1 [json_name = "hash", (.gogoproto.moretags) = "yaml:&#92;"hash&#92;""];</code>
+       * @param value The bytes for hash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        hash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object feeder_ = "";
+      /**
+       * <code>string feeder = 2 [json_name = "feeder", (.gogoproto.moretags) = "yaml:&#92;"feeder&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The feeder.
+       */
+      public java.lang.String getFeeder() {
+        java.lang.Object ref = feeder_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          feeder_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string feeder = 2 [json_name = "feeder", (.gogoproto.moretags) = "yaml:&#92;"feeder&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for feeder.
+       */
+      public com.google.protobuf.ByteString
+          getFeederBytes() {
+        java.lang.Object ref = feeder_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          feeder_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string feeder = 2 [json_name = "feeder", (.gogoproto.moretags) = "yaml:&#92;"feeder&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The feeder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeeder(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        feeder_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string feeder = 2 [json_name = "feeder", (.gogoproto.moretags) = "yaml:&#92;"feeder&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeeder() {
+        feeder_ = getDefaultInstance().getFeeder();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string feeder = 2 [json_name = "feeder", (.gogoproto.moretags) = "yaml:&#92;"feeder&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for feeder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeederBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        feeder_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object validator_ = "";
+      /**
+       * <code>string validator = 3 [json_name = "validator", (.gogoproto.moretags) = "yaml:&#92;"validator&#92;""];</code>
+       * @return The validator.
+       */
+      public java.lang.String getValidator() {
+        java.lang.Object ref = validator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          validator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string validator = 3 [json_name = "validator", (.gogoproto.moretags) = "yaml:&#92;"validator&#92;""];</code>
+       * @return The bytes for validator.
+       */
+      public com.google.protobuf.ByteString
+          getValidatorBytes() {
+        java.lang.Object ref = validator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          validator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string validator = 3 [json_name = "validator", (.gogoproto.moretags) = "yaml:&#92;"validator&#92;""];</code>
+       * @param value The validator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        validator_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string validator = 3 [json_name = "validator", (.gogoproto.moretags) = "yaml:&#92;"validator&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidator() {
+        validator_ = getDefaultInstance().getValidator();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string validator = 3 [json_name = "validator", (.gogoproto.moretags) = "yaml:&#92;"validator&#92;""];</code>
+       * @param value The bytes for validator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        validator_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:persistence.oracle.v1beta1.MsgAggregateExchangeRatePrevote)
+    }
+
+    // @@protoc_insertion_point(class_scope:persistence.oracle.v1beta1.MsgAggregateExchangeRatePrevote)
+    private static final com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote();
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgAggregateExchangeRatePrevote>
+        PARSER = new com.google.protobuf.AbstractParser<MsgAggregateExchangeRatePrevote>() {
+      @java.lang.Override
+      public MsgAggregateExchangeRatePrevote parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgAggregateExchangeRatePrevote> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgAggregateExchangeRatePrevote> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevote getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgAggregateExchangeRatePrevoteResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:persistence.oracle.v1beta1.MsgAggregateExchangeRatePrevoteResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgAggregateExchangeRatePrevoteResponse defines the
+   * Msg/AggregateExchangeRatePrevote response type.
+   * </pre>
+   *
+   * Protobuf type {@code persistence.oracle.v1beta1.MsgAggregateExchangeRatePrevoteResponse}
+   */
+  public static final class MsgAggregateExchangeRatePrevoteResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:persistence.oracle.v1beta1.MsgAggregateExchangeRatePrevoteResponse)
+      MsgAggregateExchangeRatePrevoteResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgAggregateExchangeRatePrevoteResponse.newBuilder() to construct.
+    private MsgAggregateExchangeRatePrevoteResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgAggregateExchangeRatePrevoteResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgAggregateExchangeRatePrevoteResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgAggregateExchangeRatePrevoteResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgAggregateExchangeRatePrevoteResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse.class, com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse)) {
+        return super.equals(obj);
+      }
+      com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse other = (com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgAggregateExchangeRatePrevoteResponse defines the
+     * Msg/AggregateExchangeRatePrevote response type.
+     * </pre>
+     *
+     * Protobuf type {@code persistence.oracle.v1beta1.MsgAggregateExchangeRatePrevoteResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:persistence.oracle.v1beta1.MsgAggregateExchangeRatePrevoteResponse)
+        com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgAggregateExchangeRatePrevoteResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgAggregateExchangeRatePrevoteResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse.class, com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse.Builder.class);
+      }
+
+      // Construct using com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgAggregateExchangeRatePrevoteResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse getDefaultInstanceForType() {
+        return com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse build() {
+        com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse buildPartial() {
+        com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse result = new com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse) {
+          return mergeFrom((com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse other) {
+        if (other == com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:persistence.oracle.v1beta1.MsgAggregateExchangeRatePrevoteResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:persistence.oracle.v1beta1.MsgAggregateExchangeRatePrevoteResponse)
+    private static final com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse();
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgAggregateExchangeRatePrevoteResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgAggregateExchangeRatePrevoteResponse>() {
+      @java.lang.Override
+      public MsgAggregateExchangeRatePrevoteResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgAggregateExchangeRatePrevoteResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgAggregateExchangeRatePrevoteResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRatePrevoteResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgAggregateExchangeRateVoteOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:persistence.oracle.v1beta1.MsgAggregateExchangeRateVote)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string salt = 1 [json_name = "salt", (.gogoproto.moretags) = "yaml:&#92;"salt&#92;""];</code>
+     * @return The salt.
+     */
+    java.lang.String getSalt();
+    /**
+     * <code>string salt = 1 [json_name = "salt", (.gogoproto.moretags) = "yaml:&#92;"salt&#92;""];</code>
+     * @return The bytes for salt.
+     */
+    com.google.protobuf.ByteString
+        getSaltBytes();
+
+    /**
+     * <code>string exchange_rates = 2 [json_name = "exchangeRates", (.gogoproto.moretags) = "yaml:&#92;"exchange_rates&#92;""];</code>
+     * @return The exchangeRates.
+     */
+    java.lang.String getExchangeRates();
+    /**
+     * <code>string exchange_rates = 2 [json_name = "exchangeRates", (.gogoproto.moretags) = "yaml:&#92;"exchange_rates&#92;""];</code>
+     * @return The bytes for exchangeRates.
+     */
+    com.google.protobuf.ByteString
+        getExchangeRatesBytes();
+
+    /**
+     * <code>string feeder = 3 [json_name = "feeder", (.gogoproto.moretags) = "yaml:&#92;"feeder&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The feeder.
+     */
+    java.lang.String getFeeder();
+    /**
+     * <code>string feeder = 3 [json_name = "feeder", (.gogoproto.moretags) = "yaml:&#92;"feeder&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for feeder.
+     */
+    com.google.protobuf.ByteString
+        getFeederBytes();
+
+    /**
+     * <code>string validator = 4 [json_name = "validator", (.gogoproto.moretags) = "yaml:&#92;"validator&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The validator.
+     */
+    java.lang.String getValidator();
+    /**
+     * <code>string validator = 4 [json_name = "validator", (.gogoproto.moretags) = "yaml:&#92;"validator&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for validator.
+     */
+    com.google.protobuf.ByteString
+        getValidatorBytes();
+  }
+  /**
+   * <pre>
+   * MsgAggregateExchangeRateVote represents a message to submit anaggregate
+   * exchange rate vote.
+   * </pre>
+   *
+   * Protobuf type {@code persistence.oracle.v1beta1.MsgAggregateExchangeRateVote}
+   */
+  public static final class MsgAggregateExchangeRateVote extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:persistence.oracle.v1beta1.MsgAggregateExchangeRateVote)
+      MsgAggregateExchangeRateVoteOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgAggregateExchangeRateVote.newBuilder() to construct.
+    private MsgAggregateExchangeRateVote(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgAggregateExchangeRateVote() {
+      salt_ = "";
+      exchangeRates_ = "";
+      feeder_ = "";
+      validator_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgAggregateExchangeRateVote();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgAggregateExchangeRateVote_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgAggregateExchangeRateVote_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote.class, com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote.Builder.class);
+    }
+
+    public static final int SALT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object salt_ = "";
+    /**
+     * <code>string salt = 1 [json_name = "salt", (.gogoproto.moretags) = "yaml:&#92;"salt&#92;""];</code>
+     * @return The salt.
+     */
+    @java.lang.Override
+    public java.lang.String getSalt() {
+      java.lang.Object ref = salt_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        salt_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string salt = 1 [json_name = "salt", (.gogoproto.moretags) = "yaml:&#92;"salt&#92;""];</code>
+     * @return The bytes for salt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSaltBytes() {
+      java.lang.Object ref = salt_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        salt_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EXCHANGE_RATES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object exchangeRates_ = "";
+    /**
+     * <code>string exchange_rates = 2 [json_name = "exchangeRates", (.gogoproto.moretags) = "yaml:&#92;"exchange_rates&#92;""];</code>
+     * @return The exchangeRates.
+     */
+    @java.lang.Override
+    public java.lang.String getExchangeRates() {
+      java.lang.Object ref = exchangeRates_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        exchangeRates_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string exchange_rates = 2 [json_name = "exchangeRates", (.gogoproto.moretags) = "yaml:&#92;"exchange_rates&#92;""];</code>
+     * @return The bytes for exchangeRates.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExchangeRatesBytes() {
+      java.lang.Object ref = exchangeRates_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        exchangeRates_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FEEDER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object feeder_ = "";
+    /**
+     * <code>string feeder = 3 [json_name = "feeder", (.gogoproto.moretags) = "yaml:&#92;"feeder&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The feeder.
+     */
+    @java.lang.Override
+    public java.lang.String getFeeder() {
+      java.lang.Object ref = feeder_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        feeder_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string feeder = 3 [json_name = "feeder", (.gogoproto.moretags) = "yaml:&#92;"feeder&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for feeder.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFeederBytes() {
+      java.lang.Object ref = feeder_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        feeder_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALIDATOR_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object validator_ = "";
+    /**
+     * <code>string validator = 4 [json_name = "validator", (.gogoproto.moretags) = "yaml:&#92;"validator&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The validator.
+     */
+    @java.lang.Override
+    public java.lang.String getValidator() {
+      java.lang.Object ref = validator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        validator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string validator = 4 [json_name = "validator", (.gogoproto.moretags) = "yaml:&#92;"validator&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for validator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValidatorBytes() {
+      java.lang.Object ref = validator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        validator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(salt_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, salt_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exchangeRates_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, exchangeRates_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feeder_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, feeder_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, validator_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(salt_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, salt_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exchangeRates_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, exchangeRates_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feeder_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, feeder_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, validator_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote)) {
+        return super.equals(obj);
+      }
+      com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote other = (com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote) obj;
+
+      if (!getSalt()
+          .equals(other.getSalt())) return false;
+      if (!getExchangeRates()
+          .equals(other.getExchangeRates())) return false;
+      if (!getFeeder()
+          .equals(other.getFeeder())) return false;
+      if (!getValidator()
+          .equals(other.getValidator())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SALT_FIELD_NUMBER;
+      hash = (53 * hash) + getSalt().hashCode();
+      hash = (37 * hash) + EXCHANGE_RATES_FIELD_NUMBER;
+      hash = (53 * hash) + getExchangeRates().hashCode();
+      hash = (37 * hash) + FEEDER_FIELD_NUMBER;
+      hash = (53 * hash) + getFeeder().hashCode();
+      hash = (37 * hash) + VALIDATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getValidator().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgAggregateExchangeRateVote represents a message to submit anaggregate
+     * exchange rate vote.
+     * </pre>
+     *
+     * Protobuf type {@code persistence.oracle.v1beta1.MsgAggregateExchangeRateVote}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:persistence.oracle.v1beta1.MsgAggregateExchangeRateVote)
+        com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgAggregateExchangeRateVote_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgAggregateExchangeRateVote_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote.class, com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote.Builder.class);
+      }
+
+      // Construct using com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        salt_ = "";
+        exchangeRates_ = "";
+        feeder_ = "";
+        validator_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgAggregateExchangeRateVote_descriptor;
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote getDefaultInstanceForType() {
+        return com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote build() {
+        com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote buildPartial() {
+        com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote result = new com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.salt_ = salt_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.exchangeRates_ = exchangeRates_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.feeder_ = feeder_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.validator_ = validator_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote) {
+          return mergeFrom((com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote other) {
+        if (other == com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote.getDefaultInstance()) return this;
+        if (!other.getSalt().isEmpty()) {
+          salt_ = other.salt_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getExchangeRates().isEmpty()) {
+          exchangeRates_ = other.exchangeRates_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getFeeder().isEmpty()) {
+          feeder_ = other.feeder_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getValidator().isEmpty()) {
+          validator_ = other.validator_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                salt_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                exchangeRates_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                feeder_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                validator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object salt_ = "";
+      /**
+       * <code>string salt = 1 [json_name = "salt", (.gogoproto.moretags) = "yaml:&#92;"salt&#92;""];</code>
+       * @return The salt.
+       */
+      public java.lang.String getSalt() {
+        java.lang.Object ref = salt_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          salt_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string salt = 1 [json_name = "salt", (.gogoproto.moretags) = "yaml:&#92;"salt&#92;""];</code>
+       * @return The bytes for salt.
+       */
+      public com.google.protobuf.ByteString
+          getSaltBytes() {
+        java.lang.Object ref = salt_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          salt_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string salt = 1 [json_name = "salt", (.gogoproto.moretags) = "yaml:&#92;"salt&#92;""];</code>
+       * @param value The salt to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSalt(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        salt_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string salt = 1 [json_name = "salt", (.gogoproto.moretags) = "yaml:&#92;"salt&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSalt() {
+        salt_ = getDefaultInstance().getSalt();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string salt = 1 [json_name = "salt", (.gogoproto.moretags) = "yaml:&#92;"salt&#92;""];</code>
+       * @param value The bytes for salt to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSaltBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        salt_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object exchangeRates_ = "";
+      /**
+       * <code>string exchange_rates = 2 [json_name = "exchangeRates", (.gogoproto.moretags) = "yaml:&#92;"exchange_rates&#92;""];</code>
+       * @return The exchangeRates.
+       */
+      public java.lang.String getExchangeRates() {
+        java.lang.Object ref = exchangeRates_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          exchangeRates_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string exchange_rates = 2 [json_name = "exchangeRates", (.gogoproto.moretags) = "yaml:&#92;"exchange_rates&#92;""];</code>
+       * @return The bytes for exchangeRates.
+       */
+      public com.google.protobuf.ByteString
+          getExchangeRatesBytes() {
+        java.lang.Object ref = exchangeRates_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          exchangeRates_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string exchange_rates = 2 [json_name = "exchangeRates", (.gogoproto.moretags) = "yaml:&#92;"exchange_rates&#92;""];</code>
+       * @param value The exchangeRates to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExchangeRates(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        exchangeRates_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string exchange_rates = 2 [json_name = "exchangeRates", (.gogoproto.moretags) = "yaml:&#92;"exchange_rates&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExchangeRates() {
+        exchangeRates_ = getDefaultInstance().getExchangeRates();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string exchange_rates = 2 [json_name = "exchangeRates", (.gogoproto.moretags) = "yaml:&#92;"exchange_rates&#92;""];</code>
+       * @param value The bytes for exchangeRates to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExchangeRatesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        exchangeRates_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object feeder_ = "";
+      /**
+       * <code>string feeder = 3 [json_name = "feeder", (.gogoproto.moretags) = "yaml:&#92;"feeder&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The feeder.
+       */
+      public java.lang.String getFeeder() {
+        java.lang.Object ref = feeder_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          feeder_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string feeder = 3 [json_name = "feeder", (.gogoproto.moretags) = "yaml:&#92;"feeder&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for feeder.
+       */
+      public com.google.protobuf.ByteString
+          getFeederBytes() {
+        java.lang.Object ref = feeder_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          feeder_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string feeder = 3 [json_name = "feeder", (.gogoproto.moretags) = "yaml:&#92;"feeder&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The feeder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeeder(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        feeder_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string feeder = 3 [json_name = "feeder", (.gogoproto.moretags) = "yaml:&#92;"feeder&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeeder() {
+        feeder_ = getDefaultInstance().getFeeder();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string feeder = 3 [json_name = "feeder", (.gogoproto.moretags) = "yaml:&#92;"feeder&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for feeder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeederBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        feeder_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object validator_ = "";
+      /**
+       * <code>string validator = 4 [json_name = "validator", (.gogoproto.moretags) = "yaml:&#92;"validator&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The validator.
+       */
+      public java.lang.String getValidator() {
+        java.lang.Object ref = validator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          validator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string validator = 4 [json_name = "validator", (.gogoproto.moretags) = "yaml:&#92;"validator&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for validator.
+       */
+      public com.google.protobuf.ByteString
+          getValidatorBytes() {
+        java.lang.Object ref = validator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          validator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string validator = 4 [json_name = "validator", (.gogoproto.moretags) = "yaml:&#92;"validator&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The validator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        validator_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string validator = 4 [json_name = "validator", (.gogoproto.moretags) = "yaml:&#92;"validator&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidator() {
+        validator_ = getDefaultInstance().getValidator();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string validator = 4 [json_name = "validator", (.gogoproto.moretags) = "yaml:&#92;"validator&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for validator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        validator_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:persistence.oracle.v1beta1.MsgAggregateExchangeRateVote)
+    }
+
+    // @@protoc_insertion_point(class_scope:persistence.oracle.v1beta1.MsgAggregateExchangeRateVote)
+    private static final com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote();
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgAggregateExchangeRateVote>
+        PARSER = new com.google.protobuf.AbstractParser<MsgAggregateExchangeRateVote>() {
+      @java.lang.Override
+      public MsgAggregateExchangeRateVote parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgAggregateExchangeRateVote> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgAggregateExchangeRateVote> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVote getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgAggregateExchangeRateVoteResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:persistence.oracle.v1beta1.MsgAggregateExchangeRateVoteResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgAggregateExchangeRateVoteResponse defines the
+   * Msg/AggregateExchangeRateVote response type.
+   * </pre>
+   *
+   * Protobuf type {@code persistence.oracle.v1beta1.MsgAggregateExchangeRateVoteResponse}
+   */
+  public static final class MsgAggregateExchangeRateVoteResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:persistence.oracle.v1beta1.MsgAggregateExchangeRateVoteResponse)
+      MsgAggregateExchangeRateVoteResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgAggregateExchangeRateVoteResponse.newBuilder() to construct.
+    private MsgAggregateExchangeRateVoteResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgAggregateExchangeRateVoteResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgAggregateExchangeRateVoteResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgAggregateExchangeRateVoteResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgAggregateExchangeRateVoteResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse.class, com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse)) {
+        return super.equals(obj);
+      }
+      com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse other = (com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgAggregateExchangeRateVoteResponse defines the
+     * Msg/AggregateExchangeRateVote response type.
+     * </pre>
+     *
+     * Protobuf type {@code persistence.oracle.v1beta1.MsgAggregateExchangeRateVoteResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:persistence.oracle.v1beta1.MsgAggregateExchangeRateVoteResponse)
+        com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgAggregateExchangeRateVoteResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgAggregateExchangeRateVoteResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse.class, com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse.Builder.class);
+      }
+
+      // Construct using com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgAggregateExchangeRateVoteResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse getDefaultInstanceForType() {
+        return com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse build() {
+        com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse buildPartial() {
+        com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse result = new com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse) {
+          return mergeFrom((com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse other) {
+        if (other == com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:persistence.oracle.v1beta1.MsgAggregateExchangeRateVoteResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:persistence.oracle.v1beta1.MsgAggregateExchangeRateVoteResponse)
+    private static final com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse();
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgAggregateExchangeRateVoteResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgAggregateExchangeRateVoteResponse>() {
+      @java.lang.Override
+      public MsgAggregateExchangeRateVoteResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgAggregateExchangeRateVoteResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgAggregateExchangeRateVoteResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.persistence.oracle.v1beta1.TxProto.MsgAggregateExchangeRateVoteResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDelegateFeedConsentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:persistence.oracle.v1beta1.MsgDelegateFeedConsent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string operator = 1 [json_name = "operator", (.gogoproto.moretags) = "yaml:&#92;"operator&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The operator.
+     */
+    java.lang.String getOperator();
+    /**
+     * <code>string operator = 1 [json_name = "operator", (.gogoproto.moretags) = "yaml:&#92;"operator&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for operator.
+     */
+    com.google.protobuf.ByteString
+        getOperatorBytes();
+
+    /**
+     * <code>string delegate = 2 [json_name = "delegate", (.gogoproto.moretags) = "yaml:&#92;"delegate&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The delegate.
+     */
+    java.lang.String getDelegate();
+    /**
+     * <code>string delegate = 2 [json_name = "delegate", (.gogoproto.moretags) = "yaml:&#92;"delegate&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for delegate.
+     */
+    com.google.protobuf.ByteString
+        getDelegateBytes();
+  }
+  /**
+   * <pre>
+   * MsgDelegateFeedConsent represents a message to delegate oracle voting rights
+   * to another address.
+   * </pre>
+   *
+   * Protobuf type {@code persistence.oracle.v1beta1.MsgDelegateFeedConsent}
+   */
+  public static final class MsgDelegateFeedConsent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:persistence.oracle.v1beta1.MsgDelegateFeedConsent)
+      MsgDelegateFeedConsentOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDelegateFeedConsent.newBuilder() to construct.
+    private MsgDelegateFeedConsent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDelegateFeedConsent() {
+      operator_ = "";
+      delegate_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDelegateFeedConsent();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgDelegateFeedConsent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgDelegateFeedConsent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent.class, com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent.Builder.class);
+    }
+
+    public static final int OPERATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object operator_ = "";
+    /**
+     * <code>string operator = 1 [json_name = "operator", (.gogoproto.moretags) = "yaml:&#92;"operator&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The operator.
+     */
+    @java.lang.Override
+    public java.lang.String getOperator() {
+      java.lang.Object ref = operator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        operator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string operator = 1 [json_name = "operator", (.gogoproto.moretags) = "yaml:&#92;"operator&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for operator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOperatorBytes() {
+      java.lang.Object ref = operator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        operator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DELEGATE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object delegate_ = "";
+    /**
+     * <code>string delegate = 2 [json_name = "delegate", (.gogoproto.moretags) = "yaml:&#92;"delegate&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The delegate.
+     */
+    @java.lang.Override
+    public java.lang.String getDelegate() {
+      java.lang.Object ref = delegate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        delegate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string delegate = 2 [json_name = "delegate", (.gogoproto.moretags) = "yaml:&#92;"delegate&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for delegate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDelegateBytes() {
+      java.lang.Object ref = delegate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        delegate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, operator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, delegate_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, operator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, delegate_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent)) {
+        return super.equals(obj);
+      }
+      com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent other = (com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent) obj;
+
+      if (!getOperator()
+          .equals(other.getOperator())) return false;
+      if (!getDelegate()
+          .equals(other.getDelegate())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OPERATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getOperator().hashCode();
+      hash = (37 * hash) + DELEGATE_FIELD_NUMBER;
+      hash = (53 * hash) + getDelegate().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgDelegateFeedConsent represents a message to delegate oracle voting rights
+     * to another address.
+     * </pre>
+     *
+     * Protobuf type {@code persistence.oracle.v1beta1.MsgDelegateFeedConsent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:persistence.oracle.v1beta1.MsgDelegateFeedConsent)
+        com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgDelegateFeedConsent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgDelegateFeedConsent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent.class, com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent.Builder.class);
+      }
+
+      // Construct using com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        operator_ = "";
+        delegate_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgDelegateFeedConsent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent getDefaultInstanceForType() {
+        return com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent build() {
+        com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent buildPartial() {
+        com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent result = new com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.operator_ = operator_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.delegate_ = delegate_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent) {
+          return mergeFrom((com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent other) {
+        if (other == com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent.getDefaultInstance()) return this;
+        if (!other.getOperator().isEmpty()) {
+          operator_ = other.operator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDelegate().isEmpty()) {
+          delegate_ = other.delegate_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                operator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                delegate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object operator_ = "";
+      /**
+       * <code>string operator = 1 [json_name = "operator", (.gogoproto.moretags) = "yaml:&#92;"operator&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The operator.
+       */
+      public java.lang.String getOperator() {
+        java.lang.Object ref = operator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          operator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string operator = 1 [json_name = "operator", (.gogoproto.moretags) = "yaml:&#92;"operator&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for operator.
+       */
+      public com.google.protobuf.ByteString
+          getOperatorBytes() {
+        java.lang.Object ref = operator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          operator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string operator = 1 [json_name = "operator", (.gogoproto.moretags) = "yaml:&#92;"operator&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The operator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        operator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string operator = 1 [json_name = "operator", (.gogoproto.moretags) = "yaml:&#92;"operator&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOperator() {
+        operator_ = getDefaultInstance().getOperator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string operator = 1 [json_name = "operator", (.gogoproto.moretags) = "yaml:&#92;"operator&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for operator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        operator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object delegate_ = "";
+      /**
+       * <code>string delegate = 2 [json_name = "delegate", (.gogoproto.moretags) = "yaml:&#92;"delegate&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The delegate.
+       */
+      public java.lang.String getDelegate() {
+        java.lang.Object ref = delegate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          delegate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string delegate = 2 [json_name = "delegate", (.gogoproto.moretags) = "yaml:&#92;"delegate&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for delegate.
+       */
+      public com.google.protobuf.ByteString
+          getDelegateBytes() {
+        java.lang.Object ref = delegate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          delegate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string delegate = 2 [json_name = "delegate", (.gogoproto.moretags) = "yaml:&#92;"delegate&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The delegate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        delegate_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string delegate = 2 [json_name = "delegate", (.gogoproto.moretags) = "yaml:&#92;"delegate&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelegate() {
+        delegate_ = getDefaultInstance().getDelegate();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string delegate = 2 [json_name = "delegate", (.gogoproto.moretags) = "yaml:&#92;"delegate&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for delegate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        delegate_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:persistence.oracle.v1beta1.MsgDelegateFeedConsent)
+    }
+
+    // @@protoc_insertion_point(class_scope:persistence.oracle.v1beta1.MsgDelegateFeedConsent)
+    private static final com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent();
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDelegateFeedConsent>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDelegateFeedConsent>() {
+      @java.lang.Override
+      public MsgDelegateFeedConsent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDelegateFeedConsent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDelegateFeedConsent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDelegateFeedConsentResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:persistence.oracle.v1beta1.MsgDelegateFeedConsentResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgDelegateFeedConsentResponse defines the Msg/DelegateFeedConsent response
+   * type.
+   * </pre>
+   *
+   * Protobuf type {@code persistence.oracle.v1beta1.MsgDelegateFeedConsentResponse}
+   */
+  public static final class MsgDelegateFeedConsentResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:persistence.oracle.v1beta1.MsgDelegateFeedConsentResponse)
+      MsgDelegateFeedConsentResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDelegateFeedConsentResponse.newBuilder() to construct.
+    private MsgDelegateFeedConsentResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDelegateFeedConsentResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDelegateFeedConsentResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgDelegateFeedConsentResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgDelegateFeedConsentResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse.class, com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse)) {
+        return super.equals(obj);
+      }
+      com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse other = (com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgDelegateFeedConsentResponse defines the Msg/DelegateFeedConsent response
+     * type.
+     * </pre>
+     *
+     * Protobuf type {@code persistence.oracle.v1beta1.MsgDelegateFeedConsentResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:persistence.oracle.v1beta1.MsgDelegateFeedConsentResponse)
+        com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgDelegateFeedConsentResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgDelegateFeedConsentResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse.class, com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse.Builder.class);
+      }
+
+      // Construct using com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgDelegateFeedConsentResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse getDefaultInstanceForType() {
+        return com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse build() {
+        com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse buildPartial() {
+        com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse result = new com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse) {
+          return mergeFrom((com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse other) {
+        if (other == com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:persistence.oracle.v1beta1.MsgDelegateFeedConsentResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:persistence.oracle.v1beta1.MsgDelegateFeedConsentResponse)
+    private static final com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse();
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDelegateFeedConsentResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDelegateFeedConsentResponse>() {
+      @java.lang.Override
+      public MsgDelegateFeedConsentResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDelegateFeedConsentResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDelegateFeedConsentResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.persistence.oracle.v1beta1.TxProto.MsgDelegateFeedConsentResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgAddFundsToRewardPoolOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:persistence.oracle.v1beta1.MsgAddFundsToRewardPool)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The from.
+     */
+    java.lang.String getFrom();
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for from.
+     */
+    com.google.protobuf.ByteString
+        getFromBytes();
+
+    /**
+     * <pre>
+     * rewards are the coin(s) to add to reward pool
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin funds = 2 [json_name = "funds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getFundsList();
+    /**
+     * <pre>
+     * rewards are the coin(s) to add to reward pool
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin funds = 2 [json_name = "funds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getFunds(int index);
+    /**
+     * <pre>
+     * rewards are the coin(s) to add to reward pool
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin funds = 2 [json_name = "funds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getFundsCount();
+    /**
+     * <pre>
+     * rewards are the coin(s) to add to reward pool
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin funds = 2 [json_name = "funds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getFundsOrBuilderList();
+    /**
+     * <pre>
+     * rewards are the coin(s) to add to reward pool
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin funds = 2 [json_name = "funds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFundsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code persistence.oracle.v1beta1.MsgAddFundsToRewardPool}
+   */
+  public static final class MsgAddFundsToRewardPool extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:persistence.oracle.v1beta1.MsgAddFundsToRewardPool)
+      MsgAddFundsToRewardPoolOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgAddFundsToRewardPool.newBuilder() to construct.
+    private MsgAddFundsToRewardPool(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgAddFundsToRewardPool() {
+      from_ = "";
+      funds_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgAddFundsToRewardPool();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgAddFundsToRewardPool_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgAddFundsToRewardPool_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool.class, com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool.Builder.class);
+    }
+
+    public static final int FROM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object from_ = "";
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The from.
+     */
+    @java.lang.Override
+    public java.lang.String getFrom() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        from_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for from.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFromBytes() {
+      java.lang.Object ref = from_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        from_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FUNDS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> funds_;
+    /**
+     * <pre>
+     * rewards are the coin(s) to add to reward pool
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin funds = 2 [json_name = "funds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getFundsList() {
+      return funds_;
+    }
+    /**
+     * <pre>
+     * rewards are the coin(s) to add to reward pool
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin funds = 2 [json_name = "funds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getFundsOrBuilderList() {
+      return funds_;
+    }
+    /**
+     * <pre>
+     * rewards are the coin(s) to add to reward pool
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin funds = 2 [json_name = "funds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getFundsCount() {
+      return funds_.size();
+    }
+    /**
+     * <pre>
+     * rewards are the coin(s) to add to reward pool
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin funds = 2 [json_name = "funds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getFunds(int index) {
+      return funds_.get(index);
+    }
+    /**
+     * <pre>
+     * rewards are the coin(s) to add to reward pool
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin funds = 2 [json_name = "funds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFundsOrBuilder(
+        int index) {
+      return funds_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, from_);
+      }
+      for (int i = 0; i < funds_.size(); i++) {
+        output.writeMessage(2, funds_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(from_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, from_);
+      }
+      for (int i = 0; i < funds_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, funds_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool)) {
+        return super.equals(obj);
+      }
+      com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool other = (com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool) obj;
+
+      if (!getFrom()
+          .equals(other.getFrom())) return false;
+      if (!getFundsList()
+          .equals(other.getFundsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FROM_FIELD_NUMBER;
+      hash = (53 * hash) + getFrom().hashCode();
+      if (getFundsCount() > 0) {
+        hash = (37 * hash) + FUNDS_FIELD_NUMBER;
+        hash = (53 * hash) + getFundsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code persistence.oracle.v1beta1.MsgAddFundsToRewardPool}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:persistence.oracle.v1beta1.MsgAddFundsToRewardPool)
+        com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgAddFundsToRewardPool_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgAddFundsToRewardPool_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool.class, com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool.Builder.class);
+      }
+
+      // Construct using com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        from_ = "";
+        if (fundsBuilder_ == null) {
+          funds_ = java.util.Collections.emptyList();
+        } else {
+          funds_ = null;
+          fundsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgAddFundsToRewardPool_descriptor;
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool getDefaultInstanceForType() {
+        return com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool build() {
+        com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool buildPartial() {
+        com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool result = new com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool result) {
+        if (fundsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            funds_ = java.util.Collections.unmodifiableList(funds_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.funds_ = funds_;
+        } else {
+          result.funds_ = fundsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.from_ = from_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool) {
+          return mergeFrom((com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool other) {
+        if (other == com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool.getDefaultInstance()) return this;
+        if (!other.getFrom().isEmpty()) {
+          from_ = other.from_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (fundsBuilder_ == null) {
+          if (!other.funds_.isEmpty()) {
+            if (funds_.isEmpty()) {
+              funds_ = other.funds_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureFundsIsMutable();
+              funds_.addAll(other.funds_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.funds_.isEmpty()) {
+            if (fundsBuilder_.isEmpty()) {
+              fundsBuilder_.dispose();
+              fundsBuilder_ = null;
+              funds_ = other.funds_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              fundsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFundsFieldBuilder() : null;
+            } else {
+              fundsBuilder_.addAllMessages(other.funds_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                from_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (fundsBuilder_ == null) {
+                  ensureFundsIsMutable();
+                  funds_.add(m);
+                } else {
+                  fundsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object from_ = "";
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The from.
+       */
+      public java.lang.String getFrom() {
+        java.lang.Object ref = from_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          from_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for from.
+       */
+      public com.google.protobuf.ByteString
+          getFromBytes() {
+        java.lang.Object ref = from_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          from_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFrom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFrom() {
+        from_ = getDefaultInstance().getFrom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from = 1 [json_name = "from", (.gogoproto.moretags) = "yaml:&#92;"from&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for from to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        from_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> funds_ =
+        java.util.Collections.emptyList();
+      private void ensureFundsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          funds_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(funds_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> fundsBuilder_;
+
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to reward pool
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin funds = 2 [json_name = "funds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getFundsList() {
+        if (fundsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(funds_);
+        } else {
+          return fundsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to reward pool
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin funds = 2 [json_name = "funds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getFundsCount() {
+        if (fundsBuilder_ == null) {
+          return funds_.size();
+        } else {
+          return fundsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to reward pool
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin funds = 2 [json_name = "funds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getFunds(int index) {
+        if (fundsBuilder_ == null) {
+          return funds_.get(index);
+        } else {
+          return fundsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to reward pool
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin funds = 2 [json_name = "funds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setFunds(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (fundsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFundsIsMutable();
+          funds_.set(index, value);
+          onChanged();
+        } else {
+          fundsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to reward pool
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin funds = 2 [json_name = "funds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setFunds(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (fundsBuilder_ == null) {
+          ensureFundsIsMutable();
+          funds_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          fundsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to reward pool
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin funds = 2 [json_name = "funds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFunds(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (fundsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFundsIsMutable();
+          funds_.add(value);
+          onChanged();
+        } else {
+          fundsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to reward pool
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin funds = 2 [json_name = "funds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFunds(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (fundsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFundsIsMutable();
+          funds_.add(index, value);
+          onChanged();
+        } else {
+          fundsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to reward pool
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin funds = 2 [json_name = "funds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFunds(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (fundsBuilder_ == null) {
+          ensureFundsIsMutable();
+          funds_.add(builderForValue.build());
+          onChanged();
+        } else {
+          fundsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to reward pool
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin funds = 2 [json_name = "funds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFunds(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (fundsBuilder_ == null) {
+          ensureFundsIsMutable();
+          funds_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          fundsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to reward pool
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin funds = 2 [json_name = "funds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllFunds(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (fundsBuilder_ == null) {
+          ensureFundsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, funds_);
+          onChanged();
+        } else {
+          fundsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to reward pool
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin funds = 2 [json_name = "funds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearFunds() {
+        if (fundsBuilder_ == null) {
+          funds_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          fundsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to reward pool
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin funds = 2 [json_name = "funds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeFunds(int index) {
+        if (fundsBuilder_ == null) {
+          ensureFundsIsMutable();
+          funds_.remove(index);
+          onChanged();
+        } else {
+          fundsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to reward pool
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin funds = 2 [json_name = "funds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getFundsBuilder(
+          int index) {
+        return getFundsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to reward pool
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin funds = 2 [json_name = "funds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFundsOrBuilder(
+          int index) {
+        if (fundsBuilder_ == null) {
+          return funds_.get(index);  } else {
+          return fundsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to reward pool
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin funds = 2 [json_name = "funds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getFundsOrBuilderList() {
+        if (fundsBuilder_ != null) {
+          return fundsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(funds_);
+        }
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to reward pool
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin funds = 2 [json_name = "funds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addFundsBuilder() {
+        return getFundsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to reward pool
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin funds = 2 [json_name = "funds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addFundsBuilder(
+          int index) {
+        return getFundsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to reward pool
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin funds = 2 [json_name = "funds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getFundsBuilderList() {
+        return getFundsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getFundsFieldBuilder() {
+        if (fundsBuilder_ == null) {
+          fundsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  funds_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          funds_ = null;
+        }
+        return fundsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:persistence.oracle.v1beta1.MsgAddFundsToRewardPool)
+    }
+
+    // @@protoc_insertion_point(class_scope:persistence.oracle.v1beta1.MsgAddFundsToRewardPool)
+    private static final com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool();
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgAddFundsToRewardPool>
+        PARSER = new com.google.protobuf.AbstractParser<MsgAddFundsToRewardPool>() {
+      @java.lang.Override
+      public MsgAddFundsToRewardPool parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgAddFundsToRewardPool> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgAddFundsToRewardPool> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPool getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgAddFundsToRewardPoolResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:persistence.oracle.v1beta1.MsgAddFundsToRewardPoolResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgAddFundsToRewardPoolResponse
+   * </pre>
+   *
+   * Protobuf type {@code persistence.oracle.v1beta1.MsgAddFundsToRewardPoolResponse}
+   */
+  public static final class MsgAddFundsToRewardPoolResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:persistence.oracle.v1beta1.MsgAddFundsToRewardPoolResponse)
+      MsgAddFundsToRewardPoolResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgAddFundsToRewardPoolResponse.newBuilder() to construct.
+    private MsgAddFundsToRewardPoolResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgAddFundsToRewardPoolResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgAddFundsToRewardPoolResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgAddFundsToRewardPoolResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgAddFundsToRewardPoolResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse.class, com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse)) {
+        return super.equals(obj);
+      }
+      com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse other = (com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgAddFundsToRewardPoolResponse
+     * </pre>
+     *
+     * Protobuf type {@code persistence.oracle.v1beta1.MsgAddFundsToRewardPoolResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:persistence.oracle.v1beta1.MsgAddFundsToRewardPoolResponse)
+        com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgAddFundsToRewardPoolResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgAddFundsToRewardPoolResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse.class, com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse.Builder.class);
+      }
+
+      // Construct using com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.persistence.oracle.v1beta1.TxProto.internal_static_persistence_oracle_v1beta1_MsgAddFundsToRewardPoolResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse getDefaultInstanceForType() {
+        return com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse build() {
+        com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse buildPartial() {
+        com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse result = new com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse) {
+          return mergeFrom((com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse other) {
+        if (other == com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:persistence.oracle.v1beta1.MsgAddFundsToRewardPoolResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:persistence.oracle.v1beta1.MsgAddFundsToRewardPoolResponse)
+    private static final com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse();
+    }
+
+    public static com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgAddFundsToRewardPoolResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgAddFundsToRewardPoolResponse>() {
+      @java.lang.Override
+      public MsgAddFundsToRewardPoolResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgAddFundsToRewardPoolResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgAddFundsToRewardPoolResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.persistence.oracle.v1beta1.TxProto.MsgAddFundsToRewardPoolResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_persistence_oracle_v1beta1_MsgAggregateExchangeRatePrevote_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_persistence_oracle_v1beta1_MsgAggregateExchangeRatePrevote_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_persistence_oracle_v1beta1_MsgAggregateExchangeRatePrevoteResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_persistence_oracle_v1beta1_MsgAggregateExchangeRatePrevoteResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_persistence_oracle_v1beta1_MsgAggregateExchangeRateVote_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_persistence_oracle_v1beta1_MsgAggregateExchangeRateVote_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_persistence_oracle_v1beta1_MsgAggregateExchangeRateVoteResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_persistence_oracle_v1beta1_MsgAggregateExchangeRateVoteResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_persistence_oracle_v1beta1_MsgDelegateFeedConsent_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_persistence_oracle_v1beta1_MsgDelegateFeedConsent_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_persistence_oracle_v1beta1_MsgDelegateFeedConsentResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_persistence_oracle_v1beta1_MsgDelegateFeedConsentResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_persistence_oracle_v1beta1_MsgAddFundsToRewardPool_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_persistence_oracle_v1beta1_MsgAddFundsToRewardPool_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_persistence_oracle_v1beta1_MsgAddFundsToRewardPoolResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_persistence_oracle_v1beta1_MsgAddFundsToRewardPoolResponse_fieldAccessorTable;
 
@@ -107,13 +5349,13 @@ public final class TxProto {
       "undsToRewardPool\0223.persistence.oracle.v1" +
       "beta1.MsgAddFundsToRewardPool\032;.persiste" +
       "nce.oracle.v1beta1.MsgAddFundsToRewardPo" +
-      "olResponseB\360\001\n\036com.persistence.oracle.v1" +
-      "beta1B\007TxProtoP\001Z;github.com/persistence" +
-      "One/persistence-sdk/v2/x/oracle/types\242\002\003" +
-      "POX\252\002\032Persistence.Oracle.V1beta1\312\002\032Persi" +
-      "stence\\Oracle\\V1beta1\342\002&Persistence\\Orac" +
-      "le\\V1beta1\\GPBMetadata\352\002\034Persistence::Or" +
-      "acle::V1beta1b\006proto3"
+      "olResponseB\356\001\n\036com.persistence.oracle.v1" +
+      "beta1B\007TxProtoZ;github.com/persistenceOn" +
+      "e/persistence-sdk/v2/x/oracle/types\242\002\003PO" +
+      "X\252\002\032Persistence.Oracle.V1beta1\312\002\032Persist" +
+      "ence\\Oracle\\V1beta1\342\002&Persistence\\Oracle" +
+      "\\V1beta1\\GPBMetadata\352\002\034Persistence::Orac" +
+      "le::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,14 +14,1887 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.oracle.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .irismod.oracle.FeedEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.irismod.oracle.GenesisProto.FeedEntry> 
+        getEntriesList();
+    /**
+     * <code>repeated .irismod.oracle.FeedEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+     */
+    com.irismod.oracle.GenesisProto.FeedEntry getEntries(int index);
+    /**
+     * <code>repeated .irismod.oracle.FeedEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+     */
+    int getEntriesCount();
+    /**
+     * <code>repeated .irismod.oracle.FeedEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.irismod.oracle.GenesisProto.FeedEntryOrBuilder> 
+        getEntriesOrBuilderList();
+    /**
+     * <code>repeated .irismod.oracle.FeedEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+     */
+    com.irismod.oracle.GenesisProto.FeedEntryOrBuilder getEntriesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the oracle module's genesis state
+   * </pre>
+   *
+   * Protobuf type {@code irismod.oracle.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.oracle.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      entries_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.oracle.GenesisProto.internal_static_irismod_oracle_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.oracle.GenesisProto.internal_static_irismod_oracle_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.oracle.GenesisProto.GenesisState.class, com.irismod.oracle.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int ENTRIES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.irismod.oracle.GenesisProto.FeedEntry> entries_;
+    /**
+     * <code>repeated .irismod.oracle.FeedEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.irismod.oracle.GenesisProto.FeedEntry> getEntriesList() {
+      return entries_;
+    }
+    /**
+     * <code>repeated .irismod.oracle.FeedEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.irismod.oracle.GenesisProto.FeedEntryOrBuilder> 
+        getEntriesOrBuilderList() {
+      return entries_;
+    }
+    /**
+     * <code>repeated .irismod.oracle.FeedEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getEntriesCount() {
+      return entries_.size();
+    }
+    /**
+     * <code>repeated .irismod.oracle.FeedEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.irismod.oracle.GenesisProto.FeedEntry getEntries(int index) {
+      return entries_.get(index);
+    }
+    /**
+     * <code>repeated .irismod.oracle.FeedEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.irismod.oracle.GenesisProto.FeedEntryOrBuilder getEntriesOrBuilder(
+        int index) {
+      return entries_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < entries_.size(); i++) {
+        output.writeMessage(1, entries_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < entries_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, entries_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.oracle.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.irismod.oracle.GenesisProto.GenesisState other = (com.irismod.oracle.GenesisProto.GenesisState) obj;
+
+      if (!getEntriesList()
+          .equals(other.getEntriesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getEntriesCount() > 0) {
+        hash = (37 * hash) + ENTRIES_FIELD_NUMBER;
+        hash = (53 * hash) + getEntriesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.oracle.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.oracle.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.oracle.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.oracle.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.oracle.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.oracle.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.oracle.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.oracle.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.oracle.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.oracle.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.oracle.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.oracle.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.oracle.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the oracle module's genesis state
+     * </pre>
+     *
+     * Protobuf type {@code irismod.oracle.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.oracle.GenesisState)
+        com.irismod.oracle.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.oracle.GenesisProto.internal_static_irismod_oracle_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.oracle.GenesisProto.internal_static_irismod_oracle_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.oracle.GenesisProto.GenesisState.class, com.irismod.oracle.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.irismod.oracle.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (entriesBuilder_ == null) {
+          entries_ = java.util.Collections.emptyList();
+        } else {
+          entries_ = null;
+          entriesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.oracle.GenesisProto.internal_static_irismod_oracle_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.oracle.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.irismod.oracle.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.oracle.GenesisProto.GenesisState build() {
+        com.irismod.oracle.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.oracle.GenesisProto.GenesisState buildPartial() {
+        com.irismod.oracle.GenesisProto.GenesisState result = new com.irismod.oracle.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.irismod.oracle.GenesisProto.GenesisState result) {
+        if (entriesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            entries_ = java.util.Collections.unmodifiableList(entries_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.entries_ = entries_;
+        } else {
+          result.entries_ = entriesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.irismod.oracle.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.oracle.GenesisProto.GenesisState) {
+          return mergeFrom((com.irismod.oracle.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.oracle.GenesisProto.GenesisState other) {
+        if (other == com.irismod.oracle.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (entriesBuilder_ == null) {
+          if (!other.entries_.isEmpty()) {
+            if (entries_.isEmpty()) {
+              entries_ = other.entries_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureEntriesIsMutable();
+              entries_.addAll(other.entries_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.entries_.isEmpty()) {
+            if (entriesBuilder_.isEmpty()) {
+              entriesBuilder_.dispose();
+              entriesBuilder_ = null;
+              entries_ = other.entries_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              entriesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEntriesFieldBuilder() : null;
+            } else {
+              entriesBuilder_.addAllMessages(other.entries_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.irismod.oracle.GenesisProto.FeedEntry m =
+                    input.readMessage(
+                        com.irismod.oracle.GenesisProto.FeedEntry.parser(),
+                        extensionRegistry);
+                if (entriesBuilder_ == null) {
+                  ensureEntriesIsMutable();
+                  entries_.add(m);
+                } else {
+                  entriesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.irismod.oracle.GenesisProto.FeedEntry> entries_ =
+        java.util.Collections.emptyList();
+      private void ensureEntriesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          entries_ = new java.util.ArrayList<com.irismod.oracle.GenesisProto.FeedEntry>(entries_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.irismod.oracle.GenesisProto.FeedEntry, com.irismod.oracle.GenesisProto.FeedEntry.Builder, com.irismod.oracle.GenesisProto.FeedEntryOrBuilder> entriesBuilder_;
+
+      /**
+       * <code>repeated .irismod.oracle.FeedEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.irismod.oracle.GenesisProto.FeedEntry> getEntriesList() {
+        if (entriesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(entries_);
+        } else {
+          return entriesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public int getEntriesCount() {
+        if (entriesBuilder_ == null) {
+          return entries_.size();
+        } else {
+          return entriesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.oracle.GenesisProto.FeedEntry getEntries(int index) {
+        if (entriesBuilder_ == null) {
+          return entries_.get(index);
+        } else {
+          return entriesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setEntries(
+          int index, com.irismod.oracle.GenesisProto.FeedEntry value) {
+        if (entriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntriesIsMutable();
+          entries_.set(index, value);
+          onChanged();
+        } else {
+          entriesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setEntries(
+          int index, com.irismod.oracle.GenesisProto.FeedEntry.Builder builderForValue) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          entriesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addEntries(com.irismod.oracle.GenesisProto.FeedEntry value) {
+        if (entriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntriesIsMutable();
+          entries_.add(value);
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addEntries(
+          int index, com.irismod.oracle.GenesisProto.FeedEntry value) {
+        if (entriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntriesIsMutable();
+          entries_.add(index, value);
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addEntries(
+          com.irismod.oracle.GenesisProto.FeedEntry.Builder builderForValue) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.add(builderForValue.build());
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addEntries(
+          int index, com.irismod.oracle.GenesisProto.FeedEntry.Builder builderForValue) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllEntries(
+          java.lang.Iterable<? extends com.irismod.oracle.GenesisProto.FeedEntry> values) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, entries_);
+          onChanged();
+        } else {
+          entriesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearEntries() {
+        if (entriesBuilder_ == null) {
+          entries_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          entriesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeEntries(int index) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.remove(index);
+          onChanged();
+        } else {
+          entriesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.oracle.GenesisProto.FeedEntry.Builder getEntriesBuilder(
+          int index) {
+        return getEntriesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.oracle.GenesisProto.FeedEntryOrBuilder getEntriesOrBuilder(
+          int index) {
+        if (entriesBuilder_ == null) {
+          return entries_.get(index);  } else {
+          return entriesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.irismod.oracle.GenesisProto.FeedEntryOrBuilder> 
+           getEntriesOrBuilderList() {
+        if (entriesBuilder_ != null) {
+          return entriesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(entries_);
+        }
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.oracle.GenesisProto.FeedEntry.Builder addEntriesBuilder() {
+        return getEntriesFieldBuilder().addBuilder(
+            com.irismod.oracle.GenesisProto.FeedEntry.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.oracle.GenesisProto.FeedEntry.Builder addEntriesBuilder(
+          int index) {
+        return getEntriesFieldBuilder().addBuilder(
+            index, com.irismod.oracle.GenesisProto.FeedEntry.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedEntry entries = 1 [json_name = "entries", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.irismod.oracle.GenesisProto.FeedEntry.Builder> 
+           getEntriesBuilderList() {
+        return getEntriesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.irismod.oracle.GenesisProto.FeedEntry, com.irismod.oracle.GenesisProto.FeedEntry.Builder, com.irismod.oracle.GenesisProto.FeedEntryOrBuilder> 
+          getEntriesFieldBuilder() {
+        if (entriesBuilder_ == null) {
+          entriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.irismod.oracle.GenesisProto.FeedEntry, com.irismod.oracle.GenesisProto.FeedEntry.Builder, com.irismod.oracle.GenesisProto.FeedEntryOrBuilder>(
+                  entries_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          entries_ = null;
+        }
+        return entriesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.oracle.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.oracle.GenesisState)
+    private static final com.irismod.oracle.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.oracle.GenesisProto.GenesisState();
+    }
+
+    public static com.irismod.oracle.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.oracle.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FeedEntryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.oracle.FeedEntry)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.irismod.oracle.Feed feed = 1 [json_name = "feed", (.gogoproto.nullable) = false];</code>
+     * @return Whether the feed field is set.
+     */
+    boolean hasFeed();
+    /**
+     * <code>.irismod.oracle.Feed feed = 1 [json_name = "feed", (.gogoproto.nullable) = false];</code>
+     * @return The feed.
+     */
+    com.irismod.oracle.OracleProto.Feed getFeed();
+    /**
+     * <code>.irismod.oracle.Feed feed = 1 [json_name = "feed", (.gogoproto.nullable) = false];</code>
+     */
+    com.irismod.oracle.OracleProto.FeedOrBuilder getFeedOrBuilder();
+
+    /**
+     * <code>.irismod.service.RequestContextState state = 2 [json_name = "state"];</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    int getStateValue();
+    /**
+     * <code>.irismod.service.RequestContextState state = 2 [json_name = "state"];</code>
+     * @return The state.
+     */
+    com.irismod.service.ServiceProto.RequestContextState getState();
+
+    /**
+     * <code>repeated .irismod.oracle.FeedValue values = 3 [json_name = "values", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.irismod.oracle.OracleProto.FeedValue> 
+        getValuesList();
+    /**
+     * <code>repeated .irismod.oracle.FeedValue values = 3 [json_name = "values", (.gogoproto.nullable) = false];</code>
+     */
+    com.irismod.oracle.OracleProto.FeedValue getValues(int index);
+    /**
+     * <code>repeated .irismod.oracle.FeedValue values = 3 [json_name = "values", (.gogoproto.nullable) = false];</code>
+     */
+    int getValuesCount();
+    /**
+     * <code>repeated .irismod.oracle.FeedValue values = 3 [json_name = "values", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.irismod.oracle.OracleProto.FeedValueOrBuilder> 
+        getValuesOrBuilderList();
+    /**
+     * <code>repeated .irismod.oracle.FeedValue values = 3 [json_name = "values", (.gogoproto.nullable) = false];</code>
+     */
+    com.irismod.oracle.OracleProto.FeedValueOrBuilder getValuesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code irismod.oracle.FeedEntry}
+   */
+  public static final class FeedEntry extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.oracle.FeedEntry)
+      FeedEntryOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FeedEntry.newBuilder() to construct.
+    private FeedEntry(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FeedEntry() {
+      state_ = 0;
+      values_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FeedEntry();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.oracle.GenesisProto.internal_static_irismod_oracle_FeedEntry_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.oracle.GenesisProto.internal_static_irismod_oracle_FeedEntry_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.oracle.GenesisProto.FeedEntry.class, com.irismod.oracle.GenesisProto.FeedEntry.Builder.class);
+    }
+
+    public static final int FEED_FIELD_NUMBER = 1;
+    private com.irismod.oracle.OracleProto.Feed feed_;
+    /**
+     * <code>.irismod.oracle.Feed feed = 1 [json_name = "feed", (.gogoproto.nullable) = false];</code>
+     * @return Whether the feed field is set.
+     */
+    @java.lang.Override
+    public boolean hasFeed() {
+      return feed_ != null;
+    }
+    /**
+     * <code>.irismod.oracle.Feed feed = 1 [json_name = "feed", (.gogoproto.nullable) = false];</code>
+     * @return The feed.
+     */
+    @java.lang.Override
+    public com.irismod.oracle.OracleProto.Feed getFeed() {
+      return feed_ == null ? com.irismod.oracle.OracleProto.Feed.getDefaultInstance() : feed_;
+    }
+    /**
+     * <code>.irismod.oracle.Feed feed = 1 [json_name = "feed", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.irismod.oracle.OracleProto.FeedOrBuilder getFeedOrBuilder() {
+      return feed_ == null ? com.irismod.oracle.OracleProto.Feed.getDefaultInstance() : feed_;
+    }
+
+    public static final int STATE_FIELD_NUMBER = 2;
+    private int state_ = 0;
+    /**
+     * <code>.irismod.service.RequestContextState state = 2 [json_name = "state"];</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    @java.lang.Override public int getStateValue() {
+      return state_;
+    }
+    /**
+     * <code>.irismod.service.RequestContextState state = 2 [json_name = "state"];</code>
+     * @return The state.
+     */
+    @java.lang.Override public com.irismod.service.ServiceProto.RequestContextState getState() {
+      com.irismod.service.ServiceProto.RequestContextState result = com.irismod.service.ServiceProto.RequestContextState.forNumber(state_);
+      return result == null ? com.irismod.service.ServiceProto.RequestContextState.UNRECOGNIZED : result;
+    }
+
+    public static final int VALUES_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.irismod.oracle.OracleProto.FeedValue> values_;
+    /**
+     * <code>repeated .irismod.oracle.FeedValue values = 3 [json_name = "values", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.irismod.oracle.OracleProto.FeedValue> getValuesList() {
+      return values_;
+    }
+    /**
+     * <code>repeated .irismod.oracle.FeedValue values = 3 [json_name = "values", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.irismod.oracle.OracleProto.FeedValueOrBuilder> 
+        getValuesOrBuilderList() {
+      return values_;
+    }
+    /**
+     * <code>repeated .irismod.oracle.FeedValue values = 3 [json_name = "values", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getValuesCount() {
+      return values_.size();
+    }
+    /**
+     * <code>repeated .irismod.oracle.FeedValue values = 3 [json_name = "values", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.irismod.oracle.OracleProto.FeedValue getValues(int index) {
+      return values_.get(index);
+    }
+    /**
+     * <code>repeated .irismod.oracle.FeedValue values = 3 [json_name = "values", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.irismod.oracle.OracleProto.FeedValueOrBuilder getValuesOrBuilder(
+        int index) {
+      return values_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (feed_ != null) {
+        output.writeMessage(1, getFeed());
+      }
+      if (state_ != com.irismod.service.ServiceProto.RequestContextState.RUNNING.getNumber()) {
+        output.writeEnum(2, state_);
+      }
+      for (int i = 0; i < values_.size(); i++) {
+        output.writeMessage(3, values_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (feed_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getFeed());
+      }
+      if (state_ != com.irismod.service.ServiceProto.RequestContextState.RUNNING.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, state_);
+      }
+      for (int i = 0; i < values_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, values_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.oracle.GenesisProto.FeedEntry)) {
+        return super.equals(obj);
+      }
+      com.irismod.oracle.GenesisProto.FeedEntry other = (com.irismod.oracle.GenesisProto.FeedEntry) obj;
+
+      if (hasFeed() != other.hasFeed()) return false;
+      if (hasFeed()) {
+        if (!getFeed()
+            .equals(other.getFeed())) return false;
+      }
+      if (state_ != other.state_) return false;
+      if (!getValuesList()
+          .equals(other.getValuesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasFeed()) {
+        hash = (37 * hash) + FEED_FIELD_NUMBER;
+        hash = (53 * hash) + getFeed().hashCode();
+      }
+      hash = (37 * hash) + STATE_FIELD_NUMBER;
+      hash = (53 * hash) + state_;
+      if (getValuesCount() > 0) {
+        hash = (37 * hash) + VALUES_FIELD_NUMBER;
+        hash = (53 * hash) + getValuesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.oracle.GenesisProto.FeedEntry parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.oracle.GenesisProto.FeedEntry parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.oracle.GenesisProto.FeedEntry parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.oracle.GenesisProto.FeedEntry parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.oracle.GenesisProto.FeedEntry parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.oracle.GenesisProto.FeedEntry parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.oracle.GenesisProto.FeedEntry parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.oracle.GenesisProto.FeedEntry parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.oracle.GenesisProto.FeedEntry parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.oracle.GenesisProto.FeedEntry parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.oracle.GenesisProto.FeedEntry parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.oracle.GenesisProto.FeedEntry parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.oracle.GenesisProto.FeedEntry prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code irismod.oracle.FeedEntry}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.oracle.FeedEntry)
+        com.irismod.oracle.GenesisProto.FeedEntryOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.oracle.GenesisProto.internal_static_irismod_oracle_FeedEntry_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.oracle.GenesisProto.internal_static_irismod_oracle_FeedEntry_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.oracle.GenesisProto.FeedEntry.class, com.irismod.oracle.GenesisProto.FeedEntry.Builder.class);
+      }
+
+      // Construct using com.irismod.oracle.GenesisProto.FeedEntry.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        feed_ = null;
+        if (feedBuilder_ != null) {
+          feedBuilder_.dispose();
+          feedBuilder_ = null;
+        }
+        state_ = 0;
+        if (valuesBuilder_ == null) {
+          values_ = java.util.Collections.emptyList();
+        } else {
+          values_ = null;
+          valuesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.oracle.GenesisProto.internal_static_irismod_oracle_FeedEntry_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.oracle.GenesisProto.FeedEntry getDefaultInstanceForType() {
+        return com.irismod.oracle.GenesisProto.FeedEntry.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.oracle.GenesisProto.FeedEntry build() {
+        com.irismod.oracle.GenesisProto.FeedEntry result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.oracle.GenesisProto.FeedEntry buildPartial() {
+        com.irismod.oracle.GenesisProto.FeedEntry result = new com.irismod.oracle.GenesisProto.FeedEntry(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.irismod.oracle.GenesisProto.FeedEntry result) {
+        if (valuesBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            values_ = java.util.Collections.unmodifiableList(values_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.values_ = values_;
+        } else {
+          result.values_ = valuesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.irismod.oracle.GenesisProto.FeedEntry result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.feed_ = feedBuilder_ == null
+              ? feed_
+              : feedBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.state_ = state_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.oracle.GenesisProto.FeedEntry) {
+          return mergeFrom((com.irismod.oracle.GenesisProto.FeedEntry)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.oracle.GenesisProto.FeedEntry other) {
+        if (other == com.irismod.oracle.GenesisProto.FeedEntry.getDefaultInstance()) return this;
+        if (other.hasFeed()) {
+          mergeFeed(other.getFeed());
+        }
+        if (other.state_ != 0) {
+          setStateValue(other.getStateValue());
+        }
+        if (valuesBuilder_ == null) {
+          if (!other.values_.isEmpty()) {
+            if (values_.isEmpty()) {
+              values_ = other.values_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureValuesIsMutable();
+              values_.addAll(other.values_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.values_.isEmpty()) {
+            if (valuesBuilder_.isEmpty()) {
+              valuesBuilder_.dispose();
+              valuesBuilder_ = null;
+              values_ = other.values_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              valuesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getValuesFieldBuilder() : null;
+            } else {
+              valuesBuilder_.addAllMessages(other.values_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getFeedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                state_ = input.readEnum();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                com.irismod.oracle.OracleProto.FeedValue m =
+                    input.readMessage(
+                        com.irismod.oracle.OracleProto.FeedValue.parser(),
+                        extensionRegistry);
+                if (valuesBuilder_ == null) {
+                  ensureValuesIsMutable();
+                  values_.add(m);
+                } else {
+                  valuesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.irismod.oracle.OracleProto.Feed feed_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.irismod.oracle.OracleProto.Feed, com.irismod.oracle.OracleProto.Feed.Builder, com.irismod.oracle.OracleProto.FeedOrBuilder> feedBuilder_;
+      /**
+       * <code>.irismod.oracle.Feed feed = 1 [json_name = "feed", (.gogoproto.nullable) = false];</code>
+       * @return Whether the feed field is set.
+       */
+      public boolean hasFeed() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.irismod.oracle.Feed feed = 1 [json_name = "feed", (.gogoproto.nullable) = false];</code>
+       * @return The feed.
+       */
+      public com.irismod.oracle.OracleProto.Feed getFeed() {
+        if (feedBuilder_ == null) {
+          return feed_ == null ? com.irismod.oracle.OracleProto.Feed.getDefaultInstance() : feed_;
+        } else {
+          return feedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.irismod.oracle.Feed feed = 1 [json_name = "feed", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFeed(com.irismod.oracle.OracleProto.Feed value) {
+        if (feedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          feed_ = value;
+        } else {
+          feedBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.oracle.Feed feed = 1 [json_name = "feed", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFeed(
+          com.irismod.oracle.OracleProto.Feed.Builder builderForValue) {
+        if (feedBuilder_ == null) {
+          feed_ = builderForValue.build();
+        } else {
+          feedBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.oracle.Feed feed = 1 [json_name = "feed", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeFeed(com.irismod.oracle.OracleProto.Feed value) {
+        if (feedBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            feed_ != null &&
+            feed_ != com.irismod.oracle.OracleProto.Feed.getDefaultInstance()) {
+            getFeedBuilder().mergeFrom(value);
+          } else {
+            feed_ = value;
+          }
+        } else {
+          feedBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.oracle.Feed feed = 1 [json_name = "feed", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearFeed() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        feed_ = null;
+        if (feedBuilder_ != null) {
+          feedBuilder_.dispose();
+          feedBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.oracle.Feed feed = 1 [json_name = "feed", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.oracle.OracleProto.Feed.Builder getFeedBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getFeedFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.irismod.oracle.Feed feed = 1 [json_name = "feed", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.oracle.OracleProto.FeedOrBuilder getFeedOrBuilder() {
+        if (feedBuilder_ != null) {
+          return feedBuilder_.getMessageOrBuilder();
+        } else {
+          return feed_ == null ?
+              com.irismod.oracle.OracleProto.Feed.getDefaultInstance() : feed_;
+        }
+      }
+      /**
+       * <code>.irismod.oracle.Feed feed = 1 [json_name = "feed", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.irismod.oracle.OracleProto.Feed, com.irismod.oracle.OracleProto.Feed.Builder, com.irismod.oracle.OracleProto.FeedOrBuilder> 
+          getFeedFieldBuilder() {
+        if (feedBuilder_ == null) {
+          feedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.irismod.oracle.OracleProto.Feed, com.irismod.oracle.OracleProto.Feed.Builder, com.irismod.oracle.OracleProto.FeedOrBuilder>(
+                  getFeed(),
+                  getParentForChildren(),
+                  isClean());
+          feed_ = null;
+        }
+        return feedBuilder_;
+      }
+
+      private int state_ = 0;
+      /**
+       * <code>.irismod.service.RequestContextState state = 2 [json_name = "state"];</code>
+       * @return The enum numeric value on the wire for state.
+       */
+      @java.lang.Override public int getStateValue() {
+        return state_;
+      }
+      /**
+       * <code>.irismod.service.RequestContextState state = 2 [json_name = "state"];</code>
+       * @param value The enum numeric value on the wire for state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStateValue(int value) {
+        state_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.service.RequestContextState state = 2 [json_name = "state"];</code>
+       * @return The state.
+       */
+      @java.lang.Override
+      public com.irismod.service.ServiceProto.RequestContextState getState() {
+        com.irismod.service.ServiceProto.RequestContextState result = com.irismod.service.ServiceProto.RequestContextState.forNumber(state_);
+        return result == null ? com.irismod.service.ServiceProto.RequestContextState.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.irismod.service.RequestContextState state = 2 [json_name = "state"];</code>
+       * @param value The state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setState(com.irismod.service.ServiceProto.RequestContextState value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        state_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.service.RequestContextState state = 2 [json_name = "state"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearState() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        state_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.irismod.oracle.OracleProto.FeedValue> values_ =
+        java.util.Collections.emptyList();
+      private void ensureValuesIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          values_ = new java.util.ArrayList<com.irismod.oracle.OracleProto.FeedValue>(values_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.irismod.oracle.OracleProto.FeedValue, com.irismod.oracle.OracleProto.FeedValue.Builder, com.irismod.oracle.OracleProto.FeedValueOrBuilder> valuesBuilder_;
+
+      /**
+       * <code>repeated .irismod.oracle.FeedValue values = 3 [json_name = "values", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.irismod.oracle.OracleProto.FeedValue> getValuesList() {
+        if (valuesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(values_);
+        } else {
+          return valuesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedValue values = 3 [json_name = "values", (.gogoproto.nullable) = false];</code>
+       */
+      public int getValuesCount() {
+        if (valuesBuilder_ == null) {
+          return values_.size();
+        } else {
+          return valuesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedValue values = 3 [json_name = "values", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.oracle.OracleProto.FeedValue getValues(int index) {
+        if (valuesBuilder_ == null) {
+          return values_.get(index);
+        } else {
+          return valuesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedValue values = 3 [json_name = "values", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setValues(
+          int index, com.irismod.oracle.OracleProto.FeedValue value) {
+        if (valuesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValuesIsMutable();
+          values_.set(index, value);
+          onChanged();
+        } else {
+          valuesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedValue values = 3 [json_name = "values", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setValues(
+          int index, com.irismod.oracle.OracleProto.FeedValue.Builder builderForValue) {
+        if (valuesBuilder_ == null) {
+          ensureValuesIsMutable();
+          values_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          valuesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedValue values = 3 [json_name = "values", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addValues(com.irismod.oracle.OracleProto.FeedValue value) {
+        if (valuesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValuesIsMutable();
+          values_.add(value);
+          onChanged();
+        } else {
+          valuesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedValue values = 3 [json_name = "values", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addValues(
+          int index, com.irismod.oracle.OracleProto.FeedValue value) {
+        if (valuesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValuesIsMutable();
+          values_.add(index, value);
+          onChanged();
+        } else {
+          valuesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedValue values = 3 [json_name = "values", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addValues(
+          com.irismod.oracle.OracleProto.FeedValue.Builder builderForValue) {
+        if (valuesBuilder_ == null) {
+          ensureValuesIsMutable();
+          values_.add(builderForValue.build());
+          onChanged();
+        } else {
+          valuesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedValue values = 3 [json_name = "values", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addValues(
+          int index, com.irismod.oracle.OracleProto.FeedValue.Builder builderForValue) {
+        if (valuesBuilder_ == null) {
+          ensureValuesIsMutable();
+          values_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          valuesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedValue values = 3 [json_name = "values", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllValues(
+          java.lang.Iterable<? extends com.irismod.oracle.OracleProto.FeedValue> values) {
+        if (valuesBuilder_ == null) {
+          ensureValuesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, values_);
+          onChanged();
+        } else {
+          valuesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedValue values = 3 [json_name = "values", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearValues() {
+        if (valuesBuilder_ == null) {
+          values_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          valuesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedValue values = 3 [json_name = "values", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeValues(int index) {
+        if (valuesBuilder_ == null) {
+          ensureValuesIsMutable();
+          values_.remove(index);
+          onChanged();
+        } else {
+          valuesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedValue values = 3 [json_name = "values", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.oracle.OracleProto.FeedValue.Builder getValuesBuilder(
+          int index) {
+        return getValuesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedValue values = 3 [json_name = "values", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.oracle.OracleProto.FeedValueOrBuilder getValuesOrBuilder(
+          int index) {
+        if (valuesBuilder_ == null) {
+          return values_.get(index);  } else {
+          return valuesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedValue values = 3 [json_name = "values", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.irismod.oracle.OracleProto.FeedValueOrBuilder> 
+           getValuesOrBuilderList() {
+        if (valuesBuilder_ != null) {
+          return valuesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(values_);
+        }
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedValue values = 3 [json_name = "values", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.oracle.OracleProto.FeedValue.Builder addValuesBuilder() {
+        return getValuesFieldBuilder().addBuilder(
+            com.irismod.oracle.OracleProto.FeedValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedValue values = 3 [json_name = "values", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.oracle.OracleProto.FeedValue.Builder addValuesBuilder(
+          int index) {
+        return getValuesFieldBuilder().addBuilder(
+            index, com.irismod.oracle.OracleProto.FeedValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .irismod.oracle.FeedValue values = 3 [json_name = "values", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.irismod.oracle.OracleProto.FeedValue.Builder> 
+           getValuesBuilderList() {
+        return getValuesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.irismod.oracle.OracleProto.FeedValue, com.irismod.oracle.OracleProto.FeedValue.Builder, com.irismod.oracle.OracleProto.FeedValueOrBuilder> 
+          getValuesFieldBuilder() {
+        if (valuesBuilder_ == null) {
+          valuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.irismod.oracle.OracleProto.FeedValue, com.irismod.oracle.OracleProto.FeedValue.Builder, com.irismod.oracle.OracleProto.FeedValueOrBuilder>(
+                  values_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          values_ = null;
+        }
+        return valuesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.oracle.FeedEntry)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.oracle.FeedEntry)
+    private static final com.irismod.oracle.GenesisProto.FeedEntry DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.oracle.GenesisProto.FeedEntry();
+    }
+
+    public static com.irismod.oracle.GenesisProto.FeedEntry getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FeedEntry>
+        PARSER = new com.google.protobuf.AbstractParser<FeedEntry>() {
+      @java.lang.Override
+      public FeedEntry parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<FeedEntry> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FeedEntry> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.oracle.GenesisProto.FeedEntry getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_oracle_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_oracle_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_oracle_FeedEntry_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_oracle_FeedEntry_fieldAccessorTable;
 
@@ -42,12 +1915,12 @@ public final class GenesisProto {
       "d.oracle.FeedB\004\310\336\037\000R\004feed\022:\n\005state\030\002 \001(\016" +
       "2$.irismod.service.RequestContextStateR\005" +
       "state\0227\n\006values\030\003 \003(\0132\031.irismod.oracle.F" +
-      "eedValueB\004\310\336\037\000R\006valuesB\254\001\n\022com.irismod.o" +
-      "racleB\014GenesisProtoP\001Z/github.com/irisne" +
-      "t/irismod/modules/oracle/types\242\002\003IOX\252\002\016I" +
-      "rismod.Oracle\312\002\016Irismod\\Oracle\342\002\032Irismod" +
-      "\\Oracle\\GPBMetadata\352\002\017Irismod::Oracleb\006p" +
-      "roto3"
+      "eedValueB\004\310\336\037\000R\006valuesB\252\001\n\022com.irismod.o" +
+      "racleB\014GenesisProtoZ/github.com/irisnet/" +
+      "irismod/modules/oracle/types\242\002\003IOX\252\002\016Iri" +
+      "smod.Oracle\312\002\016Irismod\\Oracle\342\002\032Irismod\\O" +
+      "racle\\GPBMetadata\352\002\017Irismod::Oracleb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,44 +14,6792 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryByAccountRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.market.v1.QueryByAccountRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+  }
+  /**
+   * Protobuf type {@code em.market.v1.QueryByAccountRequest}
+   */
+  public static final class QueryByAccountRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.market.v1.QueryByAccountRequest)
+      QueryByAccountRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryByAccountRequest.newBuilder() to construct.
+    private QueryByAccountRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryByAccountRequest() {
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryByAccountRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryByAccountRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryByAccountRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.market.v1.QueryProto.QueryByAccountRequest.class, com.em.market.v1.QueryProto.QueryByAccountRequest.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.market.v1.QueryProto.QueryByAccountRequest)) {
+        return super.equals(obj);
+      }
+      com.em.market.v1.QueryProto.QueryByAccountRequest other = (com.em.market.v1.QueryProto.QueryByAccountRequest) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.market.v1.QueryProto.QueryByAccountRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.QueryProto.QueryByAccountRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.QueryProto.QueryByAccountRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.QueryProto.QueryByAccountRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.QueryProto.QueryByAccountRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.QueryProto.QueryByAccountRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.QueryProto.QueryByAccountRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.QueryProto.QueryByAccountRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.market.v1.QueryProto.QueryByAccountRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.market.v1.QueryProto.QueryByAccountRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.market.v1.QueryProto.QueryByAccountRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.QueryProto.QueryByAccountRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.market.v1.QueryProto.QueryByAccountRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.market.v1.QueryByAccountRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.market.v1.QueryByAccountRequest)
+        com.em.market.v1.QueryProto.QueryByAccountRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryByAccountRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryByAccountRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.market.v1.QueryProto.QueryByAccountRequest.class, com.em.market.v1.QueryProto.QueryByAccountRequest.Builder.class);
+      }
+
+      // Construct using com.em.market.v1.QueryProto.QueryByAccountRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryByAccountRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.QueryProto.QueryByAccountRequest getDefaultInstanceForType() {
+        return com.em.market.v1.QueryProto.QueryByAccountRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.QueryProto.QueryByAccountRequest build() {
+        com.em.market.v1.QueryProto.QueryByAccountRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.QueryProto.QueryByAccountRequest buildPartial() {
+        com.em.market.v1.QueryProto.QueryByAccountRequest result = new com.em.market.v1.QueryProto.QueryByAccountRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.em.market.v1.QueryProto.QueryByAccountRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.market.v1.QueryProto.QueryByAccountRequest) {
+          return mergeFrom((com.em.market.v1.QueryProto.QueryByAccountRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.market.v1.QueryProto.QueryByAccountRequest other) {
+        if (other == com.em.market.v1.QueryProto.QueryByAccountRequest.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.market.v1.QueryByAccountRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.market.v1.QueryByAccountRequest)
+    private static final com.em.market.v1.QueryProto.QueryByAccountRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.market.v1.QueryProto.QueryByAccountRequest();
+    }
+
+    public static com.em.market.v1.QueryProto.QueryByAccountRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryByAccountRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryByAccountRequest>() {
+      @java.lang.Override
+      public QueryByAccountRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryByAccountRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryByAccountRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.market.v1.QueryProto.QueryByAccountRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryByAccountResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.market.v1.QueryByAccountResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .em.market.v1.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+     */
+    java.util.List<com.em.market.v1.MarketProto.Order> 
+        getOrdersList();
+    /**
+     * <code>repeated .em.market.v1.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+     */
+    com.em.market.v1.MarketProto.Order getOrders(int index);
+    /**
+     * <code>repeated .em.market.v1.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+     */
+    int getOrdersCount();
+    /**
+     * <code>repeated .em.market.v1.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+     */
+    java.util.List<? extends com.em.market.v1.MarketProto.OrderOrBuilder> 
+        getOrdersOrBuilderList();
+    /**
+     * <code>repeated .em.market.v1.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+     */
+    com.em.market.v1.MarketProto.OrderOrBuilder getOrdersOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code em.market.v1.QueryByAccountResponse}
+   */
+  public static final class QueryByAccountResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.market.v1.QueryByAccountResponse)
+      QueryByAccountResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryByAccountResponse.newBuilder() to construct.
+    private QueryByAccountResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryByAccountResponse() {
+      orders_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryByAccountResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryByAccountResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryByAccountResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.market.v1.QueryProto.QueryByAccountResponse.class, com.em.market.v1.QueryProto.QueryByAccountResponse.Builder.class);
+    }
+
+    public static final int ORDERS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.em.market.v1.MarketProto.Order> orders_;
+    /**
+     * <code>repeated .em.market.v1.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.em.market.v1.MarketProto.Order> getOrdersList() {
+      return orders_;
+    }
+    /**
+     * <code>repeated .em.market.v1.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.em.market.v1.MarketProto.OrderOrBuilder> 
+        getOrdersOrBuilderList() {
+      return orders_;
+    }
+    /**
+     * <code>repeated .em.market.v1.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getOrdersCount() {
+      return orders_.size();
+    }
+    /**
+     * <code>repeated .em.market.v1.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.em.market.v1.MarketProto.Order getOrders(int index) {
+      return orders_.get(index);
+    }
+    /**
+     * <code>repeated .em.market.v1.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.em.market.v1.MarketProto.OrderOrBuilder getOrdersOrBuilder(
+        int index) {
+      return orders_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < orders_.size(); i++) {
+        output.writeMessage(1, orders_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < orders_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, orders_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.market.v1.QueryProto.QueryByAccountResponse)) {
+        return super.equals(obj);
+      }
+      com.em.market.v1.QueryProto.QueryByAccountResponse other = (com.em.market.v1.QueryProto.QueryByAccountResponse) obj;
+
+      if (!getOrdersList()
+          .equals(other.getOrdersList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getOrdersCount() > 0) {
+        hash = (37 * hash) + ORDERS_FIELD_NUMBER;
+        hash = (53 * hash) + getOrdersList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.market.v1.QueryProto.QueryByAccountResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.QueryProto.QueryByAccountResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.QueryProto.QueryByAccountResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.QueryProto.QueryByAccountResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.QueryProto.QueryByAccountResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.QueryProto.QueryByAccountResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.QueryProto.QueryByAccountResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.QueryProto.QueryByAccountResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.market.v1.QueryProto.QueryByAccountResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.market.v1.QueryProto.QueryByAccountResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.market.v1.QueryProto.QueryByAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.QueryProto.QueryByAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.market.v1.QueryProto.QueryByAccountResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.market.v1.QueryByAccountResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.market.v1.QueryByAccountResponse)
+        com.em.market.v1.QueryProto.QueryByAccountResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryByAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryByAccountResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.market.v1.QueryProto.QueryByAccountResponse.class, com.em.market.v1.QueryProto.QueryByAccountResponse.Builder.class);
+      }
+
+      // Construct using com.em.market.v1.QueryProto.QueryByAccountResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (ordersBuilder_ == null) {
+          orders_ = java.util.Collections.emptyList();
+        } else {
+          orders_ = null;
+          ordersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryByAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.QueryProto.QueryByAccountResponse getDefaultInstanceForType() {
+        return com.em.market.v1.QueryProto.QueryByAccountResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.QueryProto.QueryByAccountResponse build() {
+        com.em.market.v1.QueryProto.QueryByAccountResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.QueryProto.QueryByAccountResponse buildPartial() {
+        com.em.market.v1.QueryProto.QueryByAccountResponse result = new com.em.market.v1.QueryProto.QueryByAccountResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.em.market.v1.QueryProto.QueryByAccountResponse result) {
+        if (ordersBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            orders_ = java.util.Collections.unmodifiableList(orders_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.orders_ = orders_;
+        } else {
+          result.orders_ = ordersBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.em.market.v1.QueryProto.QueryByAccountResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.market.v1.QueryProto.QueryByAccountResponse) {
+          return mergeFrom((com.em.market.v1.QueryProto.QueryByAccountResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.market.v1.QueryProto.QueryByAccountResponse other) {
+        if (other == com.em.market.v1.QueryProto.QueryByAccountResponse.getDefaultInstance()) return this;
+        if (ordersBuilder_ == null) {
+          if (!other.orders_.isEmpty()) {
+            if (orders_.isEmpty()) {
+              orders_ = other.orders_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureOrdersIsMutable();
+              orders_.addAll(other.orders_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.orders_.isEmpty()) {
+            if (ordersBuilder_.isEmpty()) {
+              ordersBuilder_.dispose();
+              ordersBuilder_ = null;
+              orders_ = other.orders_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              ordersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOrdersFieldBuilder() : null;
+            } else {
+              ordersBuilder_.addAllMessages(other.orders_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.em.market.v1.MarketProto.Order m =
+                    input.readMessage(
+                        com.em.market.v1.MarketProto.Order.parser(),
+                        extensionRegistry);
+                if (ordersBuilder_ == null) {
+                  ensureOrdersIsMutable();
+                  orders_.add(m);
+                } else {
+                  ordersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.em.market.v1.MarketProto.Order> orders_ =
+        java.util.Collections.emptyList();
+      private void ensureOrdersIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          orders_ = new java.util.ArrayList<com.em.market.v1.MarketProto.Order>(orders_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.em.market.v1.MarketProto.Order, com.em.market.v1.MarketProto.Order.Builder, com.em.market.v1.MarketProto.OrderOrBuilder> ordersBuilder_;
+
+      /**
+       * <code>repeated .em.market.v1.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public java.util.List<com.em.market.v1.MarketProto.Order> getOrdersList() {
+        if (ordersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(orders_);
+        } else {
+          return ordersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .em.market.v1.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public int getOrdersCount() {
+        if (ordersBuilder_ == null) {
+          return orders_.size();
+        } else {
+          return ordersBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .em.market.v1.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public com.em.market.v1.MarketProto.Order getOrders(int index) {
+        if (ordersBuilder_ == null) {
+          return orders_.get(index);
+        } else {
+          return ordersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .em.market.v1.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public Builder setOrders(
+          int index, com.em.market.v1.MarketProto.Order value) {
+        if (ordersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrdersIsMutable();
+          orders_.set(index, value);
+          onChanged();
+        } else {
+          ordersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.market.v1.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public Builder setOrders(
+          int index, com.em.market.v1.MarketProto.Order.Builder builderForValue) {
+        if (ordersBuilder_ == null) {
+          ensureOrdersIsMutable();
+          orders_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          ordersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.market.v1.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public Builder addOrders(com.em.market.v1.MarketProto.Order value) {
+        if (ordersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrdersIsMutable();
+          orders_.add(value);
+          onChanged();
+        } else {
+          ordersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.market.v1.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public Builder addOrders(
+          int index, com.em.market.v1.MarketProto.Order value) {
+        if (ordersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrdersIsMutable();
+          orders_.add(index, value);
+          onChanged();
+        } else {
+          ordersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.market.v1.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public Builder addOrders(
+          com.em.market.v1.MarketProto.Order.Builder builderForValue) {
+        if (ordersBuilder_ == null) {
+          ensureOrdersIsMutable();
+          orders_.add(builderForValue.build());
+          onChanged();
+        } else {
+          ordersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.market.v1.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public Builder addOrders(
+          int index, com.em.market.v1.MarketProto.Order.Builder builderForValue) {
+        if (ordersBuilder_ == null) {
+          ensureOrdersIsMutable();
+          orders_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          ordersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.market.v1.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public Builder addAllOrders(
+          java.lang.Iterable<? extends com.em.market.v1.MarketProto.Order> values) {
+        if (ordersBuilder_ == null) {
+          ensureOrdersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, orders_);
+          onChanged();
+        } else {
+          ordersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.market.v1.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public Builder clearOrders() {
+        if (ordersBuilder_ == null) {
+          orders_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          ordersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.market.v1.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public Builder removeOrders(int index) {
+        if (ordersBuilder_ == null) {
+          ensureOrdersIsMutable();
+          orders_.remove(index);
+          onChanged();
+        } else {
+          ordersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.market.v1.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public com.em.market.v1.MarketProto.Order.Builder getOrdersBuilder(
+          int index) {
+        return getOrdersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .em.market.v1.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public com.em.market.v1.MarketProto.OrderOrBuilder getOrdersOrBuilder(
+          int index) {
+        if (ordersBuilder_ == null) {
+          return orders_.get(index);  } else {
+          return ordersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .em.market.v1.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public java.util.List<? extends com.em.market.v1.MarketProto.OrderOrBuilder> 
+           getOrdersOrBuilderList() {
+        if (ordersBuilder_ != null) {
+          return ordersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(orders_);
+        }
+      }
+      /**
+       * <code>repeated .em.market.v1.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public com.em.market.v1.MarketProto.Order.Builder addOrdersBuilder() {
+        return getOrdersFieldBuilder().addBuilder(
+            com.em.market.v1.MarketProto.Order.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .em.market.v1.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public com.em.market.v1.MarketProto.Order.Builder addOrdersBuilder(
+          int index) {
+        return getOrdersFieldBuilder().addBuilder(
+            index, com.em.market.v1.MarketProto.Order.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .em.market.v1.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public java.util.List<com.em.market.v1.MarketProto.Order.Builder> 
+           getOrdersBuilderList() {
+        return getOrdersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.em.market.v1.MarketProto.Order, com.em.market.v1.MarketProto.Order.Builder, com.em.market.v1.MarketProto.OrderOrBuilder> 
+          getOrdersFieldBuilder() {
+        if (ordersBuilder_ == null) {
+          ordersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.em.market.v1.MarketProto.Order, com.em.market.v1.MarketProto.Order.Builder, com.em.market.v1.MarketProto.OrderOrBuilder>(
+                  orders_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          orders_ = null;
+        }
+        return ordersBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.market.v1.QueryByAccountResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.market.v1.QueryByAccountResponse)
+    private static final com.em.market.v1.QueryProto.QueryByAccountResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.market.v1.QueryProto.QueryByAccountResponse();
+    }
+
+    public static com.em.market.v1.QueryProto.QueryByAccountResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryByAccountResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryByAccountResponse>() {
+      @java.lang.Override
+      public QueryByAccountResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryByAccountResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryByAccountResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.market.v1.QueryProto.QueryByAccountResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryInstrumentsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.market.v1.QueryInstrumentsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code em.market.v1.QueryInstrumentsRequest}
+   */
+  public static final class QueryInstrumentsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.market.v1.QueryInstrumentsRequest)
+      QueryInstrumentsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryInstrumentsRequest.newBuilder() to construct.
+    private QueryInstrumentsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryInstrumentsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryInstrumentsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryInstrumentsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryInstrumentsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.market.v1.QueryProto.QueryInstrumentsRequest.class, com.em.market.v1.QueryProto.QueryInstrumentsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.market.v1.QueryProto.QueryInstrumentsRequest)) {
+        return super.equals(obj);
+      }
+      com.em.market.v1.QueryProto.QueryInstrumentsRequest other = (com.em.market.v1.QueryProto.QueryInstrumentsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.market.v1.QueryProto.QueryInstrumentsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.market.v1.QueryProto.QueryInstrumentsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.market.v1.QueryProto.QueryInstrumentsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.market.v1.QueryProto.QueryInstrumentsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.market.v1.QueryInstrumentsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.market.v1.QueryInstrumentsRequest)
+        com.em.market.v1.QueryProto.QueryInstrumentsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryInstrumentsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryInstrumentsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.market.v1.QueryProto.QueryInstrumentsRequest.class, com.em.market.v1.QueryProto.QueryInstrumentsRequest.Builder.class);
+      }
+
+      // Construct using com.em.market.v1.QueryProto.QueryInstrumentsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryInstrumentsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.QueryProto.QueryInstrumentsRequest getDefaultInstanceForType() {
+        return com.em.market.v1.QueryProto.QueryInstrumentsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.QueryProto.QueryInstrumentsRequest build() {
+        com.em.market.v1.QueryProto.QueryInstrumentsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.QueryProto.QueryInstrumentsRequest buildPartial() {
+        com.em.market.v1.QueryProto.QueryInstrumentsRequest result = new com.em.market.v1.QueryProto.QueryInstrumentsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.market.v1.QueryProto.QueryInstrumentsRequest) {
+          return mergeFrom((com.em.market.v1.QueryProto.QueryInstrumentsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.market.v1.QueryProto.QueryInstrumentsRequest other) {
+        if (other == com.em.market.v1.QueryProto.QueryInstrumentsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.market.v1.QueryInstrumentsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.market.v1.QueryInstrumentsRequest)
+    private static final com.em.market.v1.QueryProto.QueryInstrumentsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.market.v1.QueryProto.QueryInstrumentsRequest();
+    }
+
+    public static com.em.market.v1.QueryProto.QueryInstrumentsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryInstrumentsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryInstrumentsRequest>() {
+      @java.lang.Override
+      public QueryInstrumentsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryInstrumentsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryInstrumentsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.market.v1.QueryProto.QueryInstrumentsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryInstrumentsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.market.v1.QueryInstrumentsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .em.market.v1.QueryInstrumentsResponse.Element instruments = 1 [json_name = "instruments", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"instruments&#92;""];</code>
+     */
+    java.util.List<com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element> 
+        getInstrumentsList();
+    /**
+     * <code>repeated .em.market.v1.QueryInstrumentsResponse.Element instruments = 1 [json_name = "instruments", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"instruments&#92;""];</code>
+     */
+    com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element getInstruments(int index);
+    /**
+     * <code>repeated .em.market.v1.QueryInstrumentsResponse.Element instruments = 1 [json_name = "instruments", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"instruments&#92;""];</code>
+     */
+    int getInstrumentsCount();
+    /**
+     * <code>repeated .em.market.v1.QueryInstrumentsResponse.Element instruments = 1 [json_name = "instruments", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"instruments&#92;""];</code>
+     */
+    java.util.List<? extends com.em.market.v1.QueryProto.QueryInstrumentsResponse.ElementOrBuilder> 
+        getInstrumentsOrBuilderList();
+    /**
+     * <code>repeated .em.market.v1.QueryInstrumentsResponse.Element instruments = 1 [json_name = "instruments", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"instruments&#92;""];</code>
+     */
+    com.em.market.v1.QueryProto.QueryInstrumentsResponse.ElementOrBuilder getInstrumentsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code em.market.v1.QueryInstrumentsResponse}
+   */
+  public static final class QueryInstrumentsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.market.v1.QueryInstrumentsResponse)
+      QueryInstrumentsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryInstrumentsResponse.newBuilder() to construct.
+    private QueryInstrumentsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryInstrumentsResponse() {
+      instruments_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryInstrumentsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryInstrumentsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryInstrumentsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.market.v1.QueryProto.QueryInstrumentsResponse.class, com.em.market.v1.QueryProto.QueryInstrumentsResponse.Builder.class);
+    }
+
+    public interface ElementOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:em.market.v1.QueryInstrumentsResponse.Element)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>string source = 1 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       * @return The source.
+       */
+      java.lang.String getSource();
+      /**
+       * <code>string source = 1 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       * @return The bytes for source.
+       */
+      com.google.protobuf.ByteString
+          getSourceBytes();
+
+      /**
+       * <code>string destination = 2 [json_name = "destination", (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       * @return The destination.
+       */
+      java.lang.String getDestination();
+      /**
+       * <code>string destination = 2 [json_name = "destination", (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       * @return The bytes for destination.
+       */
+      com.google.protobuf.ByteString
+          getDestinationBytes();
+
+      /**
+       * <code>string last_price = 3 [json_name = "lastPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"last_price&#92;""];</code>
+       * @return The lastPrice.
+       */
+      java.lang.String getLastPrice();
+      /**
+       * <code>string last_price = 3 [json_name = "lastPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"last_price&#92;""];</code>
+       * @return The bytes for lastPrice.
+       */
+      com.google.protobuf.ByteString
+          getLastPriceBytes();
+
+      /**
+       * <code>string best_price = 4 [json_name = "bestPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"best_price&#92;""];</code>
+       * @return The bestPrice.
+       */
+      java.lang.String getBestPrice();
+      /**
+       * <code>string best_price = 4 [json_name = "bestPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"best_price&#92;""];</code>
+       * @return The bytes for bestPrice.
+       */
+      com.google.protobuf.ByteString
+          getBestPriceBytes();
+
+      /**
+       * <code>.google.protobuf.Timestamp last_traded = 5 [json_name = "lastTraded", (.gogoproto.moretags) = "yaml:&#92;"last_traded&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the lastTraded field is set.
+       */
+      boolean hasLastTraded();
+      /**
+       * <code>.google.protobuf.Timestamp last_traded = 5 [json_name = "lastTraded", (.gogoproto.moretags) = "yaml:&#92;"last_traded&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The lastTraded.
+       */
+      com.google.protobuf.Timestamp getLastTraded();
+      /**
+       * <code>.google.protobuf.Timestamp last_traded = 5 [json_name = "lastTraded", (.gogoproto.moretags) = "yaml:&#92;"last_traded&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      com.google.protobuf.TimestampOrBuilder getLastTradedOrBuilder();
+    }
+    /**
+     * Protobuf type {@code em.market.v1.QueryInstrumentsResponse.Element}
+     */
+    public static final class Element extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:em.market.v1.QueryInstrumentsResponse.Element)
+        ElementOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Element.newBuilder() to construct.
+      private Element(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Element() {
+        source_ = "";
+        destination_ = "";
+        lastPrice_ = "";
+        bestPrice_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Element();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryInstrumentsResponse_Element_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryInstrumentsResponse_Element_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element.class, com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element.Builder.class);
+      }
+
+      public static final int SOURCE_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object source_ = "";
+      /**
+       * <code>string source = 1 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       * @return The source.
+       */
+      @java.lang.Override
+      public java.lang.String getSource() {
+        java.lang.Object ref = source_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          source_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string source = 1 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       * @return The bytes for source.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSourceBytes() {
+        java.lang.Object ref = source_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          source_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int DESTINATION_FIELD_NUMBER = 2;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object destination_ = "";
+      /**
+       * <code>string destination = 2 [json_name = "destination", (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       * @return The destination.
+       */
+      @java.lang.Override
+      public java.lang.String getDestination() {
+        java.lang.Object ref = destination_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          destination_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string destination = 2 [json_name = "destination", (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       * @return The bytes for destination.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDestinationBytes() {
+        java.lang.Object ref = destination_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          destination_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int LAST_PRICE_FIELD_NUMBER = 3;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object lastPrice_ = "";
+      /**
+       * <code>string last_price = 3 [json_name = "lastPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"last_price&#92;""];</code>
+       * @return The lastPrice.
+       */
+      @java.lang.Override
+      public java.lang.String getLastPrice() {
+        java.lang.Object ref = lastPrice_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          lastPrice_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string last_price = 3 [json_name = "lastPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"last_price&#92;""];</code>
+       * @return The bytes for lastPrice.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getLastPriceBytes() {
+        java.lang.Object ref = lastPrice_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          lastPrice_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int BEST_PRICE_FIELD_NUMBER = 4;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object bestPrice_ = "";
+      /**
+       * <code>string best_price = 4 [json_name = "bestPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"best_price&#92;""];</code>
+       * @return The bestPrice.
+       */
+      @java.lang.Override
+      public java.lang.String getBestPrice() {
+        java.lang.Object ref = bestPrice_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bestPrice_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string best_price = 4 [json_name = "bestPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"best_price&#92;""];</code>
+       * @return The bytes for bestPrice.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBestPriceBytes() {
+        java.lang.Object ref = bestPrice_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bestPrice_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int LAST_TRADED_FIELD_NUMBER = 5;
+      private com.google.protobuf.Timestamp lastTraded_;
+      /**
+       * <code>.google.protobuf.Timestamp last_traded = 5 [json_name = "lastTraded", (.gogoproto.moretags) = "yaml:&#92;"last_traded&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the lastTraded field is set.
+       */
+      @java.lang.Override
+      public boolean hasLastTraded() {
+        return lastTraded_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_traded = 5 [json_name = "lastTraded", (.gogoproto.moretags) = "yaml:&#92;"last_traded&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The lastTraded.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getLastTraded() {
+        return lastTraded_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastTraded_;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_traded = 5 [json_name = "lastTraded", (.gogoproto.moretags) = "yaml:&#92;"last_traded&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.TimestampOrBuilder getLastTradedOrBuilder() {
+        return lastTraded_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastTraded_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(source_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, source_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destination_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, destination_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastPrice_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 3, lastPrice_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bestPrice_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 4, bestPrice_);
+        }
+        if (lastTraded_ != null) {
+          output.writeMessage(5, getLastTraded());
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(source_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, source_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destination_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, destination_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastPrice_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, lastPrice_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bestPrice_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, bestPrice_);
+        }
+        if (lastTraded_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(5, getLastTraded());
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element)) {
+          return super.equals(obj);
+        }
+        com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element other = (com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element) obj;
+
+        if (!getSource()
+            .equals(other.getSource())) return false;
+        if (!getDestination()
+            .equals(other.getDestination())) return false;
+        if (!getLastPrice()
+            .equals(other.getLastPrice())) return false;
+        if (!getBestPrice()
+            .equals(other.getBestPrice())) return false;
+        if (hasLastTraded() != other.hasLastTraded()) return false;
+        if (hasLastTraded()) {
+          if (!getLastTraded()
+              .equals(other.getLastTraded())) return false;
+        }
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + SOURCE_FIELD_NUMBER;
+        hash = (53 * hash) + getSource().hashCode();
+        hash = (37 * hash) + DESTINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getDestination().hashCode();
+        hash = (37 * hash) + LAST_PRICE_FIELD_NUMBER;
+        hash = (53 * hash) + getLastPrice().hashCode();
+        hash = (37 * hash) + BEST_PRICE_FIELD_NUMBER;
+        hash = (53 * hash) + getBestPrice().hashCode();
+        if (hasLastTraded()) {
+          hash = (37 * hash) + LAST_TRADED_FIELD_NUMBER;
+          hash = (53 * hash) + getLastTraded().hashCode();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code em.market.v1.QueryInstrumentsResponse.Element}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:em.market.v1.QueryInstrumentsResponse.Element)
+          com.em.market.v1.QueryProto.QueryInstrumentsResponse.ElementOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryInstrumentsResponse_Element_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryInstrumentsResponse_Element_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element.class, com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element.Builder.class);
+        }
+
+        // Construct using com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          source_ = "";
+          destination_ = "";
+          lastPrice_ = "";
+          bestPrice_ = "";
+          lastTraded_ = null;
+          if (lastTradedBuilder_ != null) {
+            lastTradedBuilder_.dispose();
+            lastTradedBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryInstrumentsResponse_Element_descriptor;
+        }
+
+        @java.lang.Override
+        public com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element getDefaultInstanceForType() {
+          return com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element build() {
+          com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element buildPartial() {
+          com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element result = new com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.source_ = source_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.destination_ = destination_;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.lastPrice_ = lastPrice_;
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.bestPrice_ = bestPrice_;
+          }
+          if (((from_bitField0_ & 0x00000010) != 0)) {
+            result.lastTraded_ = lastTradedBuilder_ == null
+                ? lastTraded_
+                : lastTradedBuilder_.build();
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element) {
+            return mergeFrom((com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element other) {
+          if (other == com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element.getDefaultInstance()) return this;
+          if (!other.getSource().isEmpty()) {
+            source_ = other.source_;
+            bitField0_ |= 0x00000001;
+            onChanged();
+          }
+          if (!other.getDestination().isEmpty()) {
+            destination_ = other.destination_;
+            bitField0_ |= 0x00000002;
+            onChanged();
+          }
+          if (!other.getLastPrice().isEmpty()) {
+            lastPrice_ = other.lastPrice_;
+            bitField0_ |= 0x00000004;
+            onChanged();
+          }
+          if (!other.getBestPrice().isEmpty()) {
+            bestPrice_ = other.bestPrice_;
+            bitField0_ |= 0x00000008;
+            onChanged();
+          }
+          if (other.hasLastTraded()) {
+            mergeLastTraded(other.getLastTraded());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  source_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+                case 18: {
+                  destination_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+                case 26: {
+                  lastPrice_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 26
+                case 34: {
+                  bestPrice_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000008;
+                  break;
+                } // case 34
+                case 42: {
+                  input.readMessage(
+                      getLastTradedFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000010;
+                  break;
+                } // case 42
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object source_ = "";
+        /**
+         * <code>string source = 1 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+         * @return The source.
+         */
+        public java.lang.String getSource() {
+          java.lang.Object ref = source_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            source_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string source = 1 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+         * @return The bytes for source.
+         */
+        public com.google.protobuf.ByteString
+            getSourceBytes() {
+          java.lang.Object ref = source_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            source_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string source = 1 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+         * @param value The source to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSource(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          source_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string source = 1 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSource() {
+          source_ = getDefaultInstance().getSource();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string source = 1 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+         * @param value The bytes for source to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSourceBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          source_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object destination_ = "";
+        /**
+         * <code>string destination = 2 [json_name = "destination", (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+         * @return The destination.
+         */
+        public java.lang.String getDestination() {
+          java.lang.Object ref = destination_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            destination_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string destination = 2 [json_name = "destination", (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+         * @return The bytes for destination.
+         */
+        public com.google.protobuf.ByteString
+            getDestinationBytes() {
+          java.lang.Object ref = destination_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            destination_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string destination = 2 [json_name = "destination", (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+         * @param value The destination to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDestination(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          destination_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string destination = 2 [json_name = "destination", (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearDestination() {
+          destination_ = getDefaultInstance().getDestination();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string destination = 2 [json_name = "destination", (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+         * @param value The bytes for destination to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDestinationBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          destination_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object lastPrice_ = "";
+        /**
+         * <code>string last_price = 3 [json_name = "lastPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"last_price&#92;""];</code>
+         * @return The lastPrice.
+         */
+        public java.lang.String getLastPrice() {
+          java.lang.Object ref = lastPrice_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            lastPrice_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string last_price = 3 [json_name = "lastPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"last_price&#92;""];</code>
+         * @return The bytes for lastPrice.
+         */
+        public com.google.protobuf.ByteString
+            getLastPriceBytes() {
+          java.lang.Object ref = lastPrice_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            lastPrice_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string last_price = 3 [json_name = "lastPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"last_price&#92;""];</code>
+         * @param value The lastPrice to set.
+         * @return This builder for chaining.
+         */
+        public Builder setLastPrice(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          lastPrice_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string last_price = 3 [json_name = "lastPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"last_price&#92;""];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearLastPrice() {
+          lastPrice_ = getDefaultInstance().getLastPrice();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string last_price = 3 [json_name = "lastPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"last_price&#92;""];</code>
+         * @param value The bytes for lastPrice to set.
+         * @return This builder for chaining.
+         */
+        public Builder setLastPriceBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          lastPrice_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object bestPrice_ = "";
+        /**
+         * <code>string best_price = 4 [json_name = "bestPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"best_price&#92;""];</code>
+         * @return The bestPrice.
+         */
+        public java.lang.String getBestPrice() {
+          java.lang.Object ref = bestPrice_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            bestPrice_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string best_price = 4 [json_name = "bestPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"best_price&#92;""];</code>
+         * @return The bytes for bestPrice.
+         */
+        public com.google.protobuf.ByteString
+            getBestPriceBytes() {
+          java.lang.Object ref = bestPrice_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            bestPrice_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string best_price = 4 [json_name = "bestPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"best_price&#92;""];</code>
+         * @param value The bestPrice to set.
+         * @return This builder for chaining.
+         */
+        public Builder setBestPrice(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          bestPrice_ = value;
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string best_price = 4 [json_name = "bestPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"best_price&#92;""];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearBestPrice() {
+          bestPrice_ = getDefaultInstance().getBestPrice();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string best_price = 4 [json_name = "bestPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"best_price&#92;""];</code>
+         * @param value The bytes for bestPrice to set.
+         * @return This builder for chaining.
+         */
+        public Builder setBestPriceBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          bestPrice_ = value;
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.Timestamp lastTraded_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastTradedBuilder_;
+        /**
+         * <code>.google.protobuf.Timestamp last_traded = 5 [json_name = "lastTraded", (.gogoproto.moretags) = "yaml:&#92;"last_traded&#92;"", (.gogoproto.stdtime) = true];</code>
+         * @return Whether the lastTraded field is set.
+         */
+        public boolean hasLastTraded() {
+          return ((bitField0_ & 0x00000010) != 0);
+        }
+        /**
+         * <code>.google.protobuf.Timestamp last_traded = 5 [json_name = "lastTraded", (.gogoproto.moretags) = "yaml:&#92;"last_traded&#92;"", (.gogoproto.stdtime) = true];</code>
+         * @return The lastTraded.
+         */
+        public com.google.protobuf.Timestamp getLastTraded() {
+          if (lastTradedBuilder_ == null) {
+            return lastTraded_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastTraded_;
+          } else {
+            return lastTradedBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.google.protobuf.Timestamp last_traded = 5 [json_name = "lastTraded", (.gogoproto.moretags) = "yaml:&#92;"last_traded&#92;"", (.gogoproto.stdtime) = true];</code>
+         */
+        public Builder setLastTraded(com.google.protobuf.Timestamp value) {
+          if (lastTradedBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            lastTraded_ = value;
+          } else {
+            lastTradedBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000010;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp last_traded = 5 [json_name = "lastTraded", (.gogoproto.moretags) = "yaml:&#92;"last_traded&#92;"", (.gogoproto.stdtime) = true];</code>
+         */
+        public Builder setLastTraded(
+            com.google.protobuf.Timestamp.Builder builderForValue) {
+          if (lastTradedBuilder_ == null) {
+            lastTraded_ = builderForValue.build();
+          } else {
+            lastTradedBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000010;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp last_traded = 5 [json_name = "lastTraded", (.gogoproto.moretags) = "yaml:&#92;"last_traded&#92;"", (.gogoproto.stdtime) = true];</code>
+         */
+        public Builder mergeLastTraded(com.google.protobuf.Timestamp value) {
+          if (lastTradedBuilder_ == null) {
+            if (((bitField0_ & 0x00000010) != 0) &&
+              lastTraded_ != null &&
+              lastTraded_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+              getLastTradedBuilder().mergeFrom(value);
+            } else {
+              lastTraded_ = value;
+            }
+          } else {
+            lastTradedBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000010;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp last_traded = 5 [json_name = "lastTraded", (.gogoproto.moretags) = "yaml:&#92;"last_traded&#92;"", (.gogoproto.stdtime) = true];</code>
+         */
+        public Builder clearLastTraded() {
+          bitField0_ = (bitField0_ & ~0x00000010);
+          lastTraded_ = null;
+          if (lastTradedBuilder_ != null) {
+            lastTradedBuilder_.dispose();
+            lastTradedBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp last_traded = 5 [json_name = "lastTraded", (.gogoproto.moretags) = "yaml:&#92;"last_traded&#92;"", (.gogoproto.stdtime) = true];</code>
+         */
+        public com.google.protobuf.Timestamp.Builder getLastTradedBuilder() {
+          bitField0_ |= 0x00000010;
+          onChanged();
+          return getLastTradedFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.google.protobuf.Timestamp last_traded = 5 [json_name = "lastTraded", (.gogoproto.moretags) = "yaml:&#92;"last_traded&#92;"", (.gogoproto.stdtime) = true];</code>
+         */
+        public com.google.protobuf.TimestampOrBuilder getLastTradedOrBuilder() {
+          if (lastTradedBuilder_ != null) {
+            return lastTradedBuilder_.getMessageOrBuilder();
+          } else {
+            return lastTraded_ == null ?
+                com.google.protobuf.Timestamp.getDefaultInstance() : lastTraded_;
+          }
+        }
+        /**
+         * <code>.google.protobuf.Timestamp last_traded = 5 [json_name = "lastTraded", (.gogoproto.moretags) = "yaml:&#92;"last_traded&#92;"", (.gogoproto.stdtime) = true];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+            getLastTradedFieldBuilder() {
+          if (lastTradedBuilder_ == null) {
+            lastTradedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                    getLastTraded(),
+                    getParentForChildren(),
+                    isClean());
+            lastTraded_ = null;
+          }
+          return lastTradedBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:em.market.v1.QueryInstrumentsResponse.Element)
+      }
+
+      // @@protoc_insertion_point(class_scope:em.market.v1.QueryInstrumentsResponse.Element)
+      private static final com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element();
+      }
+
+      public static com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Element>
+          PARSER = new com.google.protobuf.AbstractParser<Element>() {
+        @java.lang.Override
+        public Element parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<Element> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Element> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int INSTRUMENTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element> instruments_;
+    /**
+     * <code>repeated .em.market.v1.QueryInstrumentsResponse.Element instruments = 1 [json_name = "instruments", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"instruments&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element> getInstrumentsList() {
+      return instruments_;
+    }
+    /**
+     * <code>repeated .em.market.v1.QueryInstrumentsResponse.Element instruments = 1 [json_name = "instruments", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"instruments&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.em.market.v1.QueryProto.QueryInstrumentsResponse.ElementOrBuilder> 
+        getInstrumentsOrBuilderList() {
+      return instruments_;
+    }
+    /**
+     * <code>repeated .em.market.v1.QueryInstrumentsResponse.Element instruments = 1 [json_name = "instruments", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"instruments&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getInstrumentsCount() {
+      return instruments_.size();
+    }
+    /**
+     * <code>repeated .em.market.v1.QueryInstrumentsResponse.Element instruments = 1 [json_name = "instruments", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"instruments&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element getInstruments(int index) {
+      return instruments_.get(index);
+    }
+    /**
+     * <code>repeated .em.market.v1.QueryInstrumentsResponse.Element instruments = 1 [json_name = "instruments", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"instruments&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.em.market.v1.QueryProto.QueryInstrumentsResponse.ElementOrBuilder getInstrumentsOrBuilder(
+        int index) {
+      return instruments_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < instruments_.size(); i++) {
+        output.writeMessage(1, instruments_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < instruments_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, instruments_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.market.v1.QueryProto.QueryInstrumentsResponse)) {
+        return super.equals(obj);
+      }
+      com.em.market.v1.QueryProto.QueryInstrumentsResponse other = (com.em.market.v1.QueryProto.QueryInstrumentsResponse) obj;
+
+      if (!getInstrumentsList()
+          .equals(other.getInstrumentsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getInstrumentsCount() > 0) {
+        hash = (37 * hash) + INSTRUMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getInstrumentsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.market.v1.QueryProto.QueryInstrumentsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.market.v1.QueryProto.QueryInstrumentsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.market.v1.QueryProto.QueryInstrumentsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.market.v1.QueryProto.QueryInstrumentsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.market.v1.QueryInstrumentsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.market.v1.QueryInstrumentsResponse)
+        com.em.market.v1.QueryProto.QueryInstrumentsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryInstrumentsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryInstrumentsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.market.v1.QueryProto.QueryInstrumentsResponse.class, com.em.market.v1.QueryProto.QueryInstrumentsResponse.Builder.class);
+      }
+
+      // Construct using com.em.market.v1.QueryProto.QueryInstrumentsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (instrumentsBuilder_ == null) {
+          instruments_ = java.util.Collections.emptyList();
+        } else {
+          instruments_ = null;
+          instrumentsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryInstrumentsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.QueryProto.QueryInstrumentsResponse getDefaultInstanceForType() {
+        return com.em.market.v1.QueryProto.QueryInstrumentsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.QueryProto.QueryInstrumentsResponse build() {
+        com.em.market.v1.QueryProto.QueryInstrumentsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.QueryProto.QueryInstrumentsResponse buildPartial() {
+        com.em.market.v1.QueryProto.QueryInstrumentsResponse result = new com.em.market.v1.QueryProto.QueryInstrumentsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.em.market.v1.QueryProto.QueryInstrumentsResponse result) {
+        if (instrumentsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            instruments_ = java.util.Collections.unmodifiableList(instruments_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.instruments_ = instruments_;
+        } else {
+          result.instruments_ = instrumentsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.em.market.v1.QueryProto.QueryInstrumentsResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.market.v1.QueryProto.QueryInstrumentsResponse) {
+          return mergeFrom((com.em.market.v1.QueryProto.QueryInstrumentsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.market.v1.QueryProto.QueryInstrumentsResponse other) {
+        if (other == com.em.market.v1.QueryProto.QueryInstrumentsResponse.getDefaultInstance()) return this;
+        if (instrumentsBuilder_ == null) {
+          if (!other.instruments_.isEmpty()) {
+            if (instruments_.isEmpty()) {
+              instruments_ = other.instruments_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureInstrumentsIsMutable();
+              instruments_.addAll(other.instruments_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.instruments_.isEmpty()) {
+            if (instrumentsBuilder_.isEmpty()) {
+              instrumentsBuilder_.dispose();
+              instrumentsBuilder_ = null;
+              instruments_ = other.instruments_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              instrumentsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getInstrumentsFieldBuilder() : null;
+            } else {
+              instrumentsBuilder_.addAllMessages(other.instruments_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element m =
+                    input.readMessage(
+                        com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element.parser(),
+                        extensionRegistry);
+                if (instrumentsBuilder_ == null) {
+                  ensureInstrumentsIsMutable();
+                  instruments_.add(m);
+                } else {
+                  instrumentsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element> instruments_ =
+        java.util.Collections.emptyList();
+      private void ensureInstrumentsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          instruments_ = new java.util.ArrayList<com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element>(instruments_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element, com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element.Builder, com.em.market.v1.QueryProto.QueryInstrumentsResponse.ElementOrBuilder> instrumentsBuilder_;
+
+      /**
+       * <code>repeated .em.market.v1.QueryInstrumentsResponse.Element instruments = 1 [json_name = "instruments", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"instruments&#92;""];</code>
+       */
+      public java.util.List<com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element> getInstrumentsList() {
+        if (instrumentsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(instruments_);
+        } else {
+          return instrumentsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryInstrumentsResponse.Element instruments = 1 [json_name = "instruments", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"instruments&#92;""];</code>
+       */
+      public int getInstrumentsCount() {
+        if (instrumentsBuilder_ == null) {
+          return instruments_.size();
+        } else {
+          return instrumentsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryInstrumentsResponse.Element instruments = 1 [json_name = "instruments", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"instruments&#92;""];</code>
+       */
+      public com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element getInstruments(int index) {
+        if (instrumentsBuilder_ == null) {
+          return instruments_.get(index);
+        } else {
+          return instrumentsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryInstrumentsResponse.Element instruments = 1 [json_name = "instruments", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"instruments&#92;""];</code>
+       */
+      public Builder setInstruments(
+          int index, com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element value) {
+        if (instrumentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInstrumentsIsMutable();
+          instruments_.set(index, value);
+          onChanged();
+        } else {
+          instrumentsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryInstrumentsResponse.Element instruments = 1 [json_name = "instruments", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"instruments&#92;""];</code>
+       */
+      public Builder setInstruments(
+          int index, com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element.Builder builderForValue) {
+        if (instrumentsBuilder_ == null) {
+          ensureInstrumentsIsMutable();
+          instruments_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          instrumentsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryInstrumentsResponse.Element instruments = 1 [json_name = "instruments", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"instruments&#92;""];</code>
+       */
+      public Builder addInstruments(com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element value) {
+        if (instrumentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInstrumentsIsMutable();
+          instruments_.add(value);
+          onChanged();
+        } else {
+          instrumentsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryInstrumentsResponse.Element instruments = 1 [json_name = "instruments", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"instruments&#92;""];</code>
+       */
+      public Builder addInstruments(
+          int index, com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element value) {
+        if (instrumentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInstrumentsIsMutable();
+          instruments_.add(index, value);
+          onChanged();
+        } else {
+          instrumentsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryInstrumentsResponse.Element instruments = 1 [json_name = "instruments", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"instruments&#92;""];</code>
+       */
+      public Builder addInstruments(
+          com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element.Builder builderForValue) {
+        if (instrumentsBuilder_ == null) {
+          ensureInstrumentsIsMutable();
+          instruments_.add(builderForValue.build());
+          onChanged();
+        } else {
+          instrumentsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryInstrumentsResponse.Element instruments = 1 [json_name = "instruments", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"instruments&#92;""];</code>
+       */
+      public Builder addInstruments(
+          int index, com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element.Builder builderForValue) {
+        if (instrumentsBuilder_ == null) {
+          ensureInstrumentsIsMutable();
+          instruments_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          instrumentsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryInstrumentsResponse.Element instruments = 1 [json_name = "instruments", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"instruments&#92;""];</code>
+       */
+      public Builder addAllInstruments(
+          java.lang.Iterable<? extends com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element> values) {
+        if (instrumentsBuilder_ == null) {
+          ensureInstrumentsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, instruments_);
+          onChanged();
+        } else {
+          instrumentsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryInstrumentsResponse.Element instruments = 1 [json_name = "instruments", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"instruments&#92;""];</code>
+       */
+      public Builder clearInstruments() {
+        if (instrumentsBuilder_ == null) {
+          instruments_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          instrumentsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryInstrumentsResponse.Element instruments = 1 [json_name = "instruments", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"instruments&#92;""];</code>
+       */
+      public Builder removeInstruments(int index) {
+        if (instrumentsBuilder_ == null) {
+          ensureInstrumentsIsMutable();
+          instruments_.remove(index);
+          onChanged();
+        } else {
+          instrumentsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryInstrumentsResponse.Element instruments = 1 [json_name = "instruments", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"instruments&#92;""];</code>
+       */
+      public com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element.Builder getInstrumentsBuilder(
+          int index) {
+        return getInstrumentsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryInstrumentsResponse.Element instruments = 1 [json_name = "instruments", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"instruments&#92;""];</code>
+       */
+      public com.em.market.v1.QueryProto.QueryInstrumentsResponse.ElementOrBuilder getInstrumentsOrBuilder(
+          int index) {
+        if (instrumentsBuilder_ == null) {
+          return instruments_.get(index);  } else {
+          return instrumentsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryInstrumentsResponse.Element instruments = 1 [json_name = "instruments", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"instruments&#92;""];</code>
+       */
+      public java.util.List<? extends com.em.market.v1.QueryProto.QueryInstrumentsResponse.ElementOrBuilder> 
+           getInstrumentsOrBuilderList() {
+        if (instrumentsBuilder_ != null) {
+          return instrumentsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(instruments_);
+        }
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryInstrumentsResponse.Element instruments = 1 [json_name = "instruments", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"instruments&#92;""];</code>
+       */
+      public com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element.Builder addInstrumentsBuilder() {
+        return getInstrumentsFieldBuilder().addBuilder(
+            com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryInstrumentsResponse.Element instruments = 1 [json_name = "instruments", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"instruments&#92;""];</code>
+       */
+      public com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element.Builder addInstrumentsBuilder(
+          int index) {
+        return getInstrumentsFieldBuilder().addBuilder(
+            index, com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryInstrumentsResponse.Element instruments = 1 [json_name = "instruments", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"instruments&#92;""];</code>
+       */
+      public java.util.List<com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element.Builder> 
+           getInstrumentsBuilderList() {
+        return getInstrumentsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element, com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element.Builder, com.em.market.v1.QueryProto.QueryInstrumentsResponse.ElementOrBuilder> 
+          getInstrumentsFieldBuilder() {
+        if (instrumentsBuilder_ == null) {
+          instrumentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element, com.em.market.v1.QueryProto.QueryInstrumentsResponse.Element.Builder, com.em.market.v1.QueryProto.QueryInstrumentsResponse.ElementOrBuilder>(
+                  instruments_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          instruments_ = null;
+        }
+        return instrumentsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.market.v1.QueryInstrumentsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.market.v1.QueryInstrumentsResponse)
+    private static final com.em.market.v1.QueryProto.QueryInstrumentsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.market.v1.QueryProto.QueryInstrumentsResponse();
+    }
+
+    public static com.em.market.v1.QueryProto.QueryInstrumentsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryInstrumentsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryInstrumentsResponse>() {
+      @java.lang.Override
+      public QueryInstrumentsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryInstrumentsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryInstrumentsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.market.v1.QueryProto.QueryInstrumentsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryInstrumentRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.market.v1.QueryInstrumentRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string source = 1 [json_name = "source"];</code>
+     * @return The source.
+     */
+    java.lang.String getSource();
+    /**
+     * <code>string source = 1 [json_name = "source"];</code>
+     * @return The bytes for source.
+     */
+    com.google.protobuf.ByteString
+        getSourceBytes();
+
+    /**
+     * <code>string destination = 2 [json_name = "destination"];</code>
+     * @return The destination.
+     */
+    java.lang.String getDestination();
+    /**
+     * <code>string destination = 2 [json_name = "destination"];</code>
+     * @return The bytes for destination.
+     */
+    com.google.protobuf.ByteString
+        getDestinationBytes();
+  }
+  /**
+   * Protobuf type {@code em.market.v1.QueryInstrumentRequest}
+   */
+  public static final class QueryInstrumentRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.market.v1.QueryInstrumentRequest)
+      QueryInstrumentRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryInstrumentRequest.newBuilder() to construct.
+    private QueryInstrumentRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryInstrumentRequest() {
+      source_ = "";
+      destination_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryInstrumentRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryInstrumentRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryInstrumentRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.market.v1.QueryProto.QueryInstrumentRequest.class, com.em.market.v1.QueryProto.QueryInstrumentRequest.Builder.class);
+    }
+
+    public static final int SOURCE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object source_ = "";
+    /**
+     * <code>string source = 1 [json_name = "source"];</code>
+     * @return The source.
+     */
+    @java.lang.Override
+    public java.lang.String getSource() {
+      java.lang.Object ref = source_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        source_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string source = 1 [json_name = "source"];</code>
+     * @return The bytes for source.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSourceBytes() {
+      java.lang.Object ref = source_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        source_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESTINATION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object destination_ = "";
+    /**
+     * <code>string destination = 2 [json_name = "destination"];</code>
+     * @return The destination.
+     */
+    @java.lang.Override
+    public java.lang.String getDestination() {
+      java.lang.Object ref = destination_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        destination_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string destination = 2 [json_name = "destination"];</code>
+     * @return The bytes for destination.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDestinationBytes() {
+      java.lang.Object ref = destination_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        destination_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(source_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, source_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destination_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, destination_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(source_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, source_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destination_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, destination_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.market.v1.QueryProto.QueryInstrumentRequest)) {
+        return super.equals(obj);
+      }
+      com.em.market.v1.QueryProto.QueryInstrumentRequest other = (com.em.market.v1.QueryProto.QueryInstrumentRequest) obj;
+
+      if (!getSource()
+          .equals(other.getSource())) return false;
+      if (!getDestination()
+          .equals(other.getDestination())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SOURCE_FIELD_NUMBER;
+      hash = (53 * hash) + getSource().hashCode();
+      hash = (37 * hash) + DESTINATION_FIELD_NUMBER;
+      hash = (53 * hash) + getDestination().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.market.v1.QueryProto.QueryInstrumentRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.market.v1.QueryProto.QueryInstrumentRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.market.v1.QueryProto.QueryInstrumentRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.market.v1.QueryProto.QueryInstrumentRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.market.v1.QueryInstrumentRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.market.v1.QueryInstrumentRequest)
+        com.em.market.v1.QueryProto.QueryInstrumentRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryInstrumentRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryInstrumentRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.market.v1.QueryProto.QueryInstrumentRequest.class, com.em.market.v1.QueryProto.QueryInstrumentRequest.Builder.class);
+      }
+
+      // Construct using com.em.market.v1.QueryProto.QueryInstrumentRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        source_ = "";
+        destination_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryInstrumentRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.QueryProto.QueryInstrumentRequest getDefaultInstanceForType() {
+        return com.em.market.v1.QueryProto.QueryInstrumentRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.QueryProto.QueryInstrumentRequest build() {
+        com.em.market.v1.QueryProto.QueryInstrumentRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.QueryProto.QueryInstrumentRequest buildPartial() {
+        com.em.market.v1.QueryProto.QueryInstrumentRequest result = new com.em.market.v1.QueryProto.QueryInstrumentRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.em.market.v1.QueryProto.QueryInstrumentRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.source_ = source_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.destination_ = destination_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.market.v1.QueryProto.QueryInstrumentRequest) {
+          return mergeFrom((com.em.market.v1.QueryProto.QueryInstrumentRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.market.v1.QueryProto.QueryInstrumentRequest other) {
+        if (other == com.em.market.v1.QueryProto.QueryInstrumentRequest.getDefaultInstance()) return this;
+        if (!other.getSource().isEmpty()) {
+          source_ = other.source_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDestination().isEmpty()) {
+          destination_ = other.destination_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                source_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                destination_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object source_ = "";
+      /**
+       * <code>string source = 1 [json_name = "source"];</code>
+       * @return The source.
+       */
+      public java.lang.String getSource() {
+        java.lang.Object ref = source_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          source_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string source = 1 [json_name = "source"];</code>
+       * @return The bytes for source.
+       */
+      public com.google.protobuf.ByteString
+          getSourceBytes() {
+        java.lang.Object ref = source_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          source_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string source = 1 [json_name = "source"];</code>
+       * @param value The source to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSource(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        source_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string source = 1 [json_name = "source"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSource() {
+        source_ = getDefaultInstance().getSource();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string source = 1 [json_name = "source"];</code>
+       * @param value The bytes for source to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        source_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object destination_ = "";
+      /**
+       * <code>string destination = 2 [json_name = "destination"];</code>
+       * @return The destination.
+       */
+      public java.lang.String getDestination() {
+        java.lang.Object ref = destination_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          destination_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string destination = 2 [json_name = "destination"];</code>
+       * @return The bytes for destination.
+       */
+      public com.google.protobuf.ByteString
+          getDestinationBytes() {
+        java.lang.Object ref = destination_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          destination_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string destination = 2 [json_name = "destination"];</code>
+       * @param value The destination to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestination(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        destination_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string destination = 2 [json_name = "destination"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDestination() {
+        destination_ = getDefaultInstance().getDestination();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string destination = 2 [json_name = "destination"];</code>
+       * @param value The bytes for destination to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestinationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        destination_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.market.v1.QueryInstrumentRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.market.v1.QueryInstrumentRequest)
+    private static final com.em.market.v1.QueryProto.QueryInstrumentRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.market.v1.QueryProto.QueryInstrumentRequest();
+    }
+
+    public static com.em.market.v1.QueryProto.QueryInstrumentRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryInstrumentRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryInstrumentRequest>() {
+      @java.lang.Override
+      public QueryInstrumentRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryInstrumentRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryInstrumentRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.market.v1.QueryProto.QueryInstrumentRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryInstrumentResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.market.v1.QueryInstrumentResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string source = 1 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+     * @return The source.
+     */
+    java.lang.String getSource();
+    /**
+     * <code>string source = 1 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+     * @return The bytes for source.
+     */
+    com.google.protobuf.ByteString
+        getSourceBytes();
+
+    /**
+     * <code>string destination = 2 [json_name = "destination", (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+     * @return The destination.
+     */
+    java.lang.String getDestination();
+    /**
+     * <code>string destination = 2 [json_name = "destination", (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+     * @return The bytes for destination.
+     */
+    com.google.protobuf.ByteString
+        getDestinationBytes();
+
+    /**
+     * <code>repeated .em.market.v1.QueryOrderResponse orders = 3 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+     */
+    java.util.List<com.em.market.v1.QueryProto.QueryOrderResponse> 
+        getOrdersList();
+    /**
+     * <code>repeated .em.market.v1.QueryOrderResponse orders = 3 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+     */
+    com.em.market.v1.QueryProto.QueryOrderResponse getOrders(int index);
+    /**
+     * <code>repeated .em.market.v1.QueryOrderResponse orders = 3 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+     */
+    int getOrdersCount();
+    /**
+     * <code>repeated .em.market.v1.QueryOrderResponse orders = 3 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+     */
+    java.util.List<? extends com.em.market.v1.QueryProto.QueryOrderResponseOrBuilder> 
+        getOrdersOrBuilderList();
+    /**
+     * <code>repeated .em.market.v1.QueryOrderResponse orders = 3 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+     */
+    com.em.market.v1.QueryProto.QueryOrderResponseOrBuilder getOrdersOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code em.market.v1.QueryInstrumentResponse}
+   */
+  public static final class QueryInstrumentResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.market.v1.QueryInstrumentResponse)
+      QueryInstrumentResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryInstrumentResponse.newBuilder() to construct.
+    private QueryInstrumentResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryInstrumentResponse() {
+      source_ = "";
+      destination_ = "";
+      orders_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryInstrumentResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryInstrumentResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryInstrumentResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.market.v1.QueryProto.QueryInstrumentResponse.class, com.em.market.v1.QueryProto.QueryInstrumentResponse.Builder.class);
+    }
+
+    public static final int SOURCE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object source_ = "";
+    /**
+     * <code>string source = 1 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+     * @return The source.
+     */
+    @java.lang.Override
+    public java.lang.String getSource() {
+      java.lang.Object ref = source_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        source_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string source = 1 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+     * @return The bytes for source.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSourceBytes() {
+      java.lang.Object ref = source_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        source_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESTINATION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object destination_ = "";
+    /**
+     * <code>string destination = 2 [json_name = "destination", (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+     * @return The destination.
+     */
+    @java.lang.Override
+    public java.lang.String getDestination() {
+      java.lang.Object ref = destination_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        destination_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string destination = 2 [json_name = "destination", (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+     * @return The bytes for destination.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDestinationBytes() {
+      java.lang.Object ref = destination_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        destination_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ORDERS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.em.market.v1.QueryProto.QueryOrderResponse> orders_;
+    /**
+     * <code>repeated .em.market.v1.QueryOrderResponse orders = 3 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.em.market.v1.QueryProto.QueryOrderResponse> getOrdersList() {
+      return orders_;
+    }
+    /**
+     * <code>repeated .em.market.v1.QueryOrderResponse orders = 3 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.em.market.v1.QueryProto.QueryOrderResponseOrBuilder> 
+        getOrdersOrBuilderList() {
+      return orders_;
+    }
+    /**
+     * <code>repeated .em.market.v1.QueryOrderResponse orders = 3 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getOrdersCount() {
+      return orders_.size();
+    }
+    /**
+     * <code>repeated .em.market.v1.QueryOrderResponse orders = 3 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.em.market.v1.QueryProto.QueryOrderResponse getOrders(int index) {
+      return orders_.get(index);
+    }
+    /**
+     * <code>repeated .em.market.v1.QueryOrderResponse orders = 3 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.em.market.v1.QueryProto.QueryOrderResponseOrBuilder getOrdersOrBuilder(
+        int index) {
+      return orders_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(source_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, source_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destination_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, destination_);
+      }
+      for (int i = 0; i < orders_.size(); i++) {
+        output.writeMessage(3, orders_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(source_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, source_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destination_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, destination_);
+      }
+      for (int i = 0; i < orders_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, orders_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.market.v1.QueryProto.QueryInstrumentResponse)) {
+        return super.equals(obj);
+      }
+      com.em.market.v1.QueryProto.QueryInstrumentResponse other = (com.em.market.v1.QueryProto.QueryInstrumentResponse) obj;
+
+      if (!getSource()
+          .equals(other.getSource())) return false;
+      if (!getDestination()
+          .equals(other.getDestination())) return false;
+      if (!getOrdersList()
+          .equals(other.getOrdersList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SOURCE_FIELD_NUMBER;
+      hash = (53 * hash) + getSource().hashCode();
+      hash = (37 * hash) + DESTINATION_FIELD_NUMBER;
+      hash = (53 * hash) + getDestination().hashCode();
+      if (getOrdersCount() > 0) {
+        hash = (37 * hash) + ORDERS_FIELD_NUMBER;
+        hash = (53 * hash) + getOrdersList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.market.v1.QueryProto.QueryInstrumentResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.market.v1.QueryProto.QueryInstrumentResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.market.v1.QueryProto.QueryInstrumentResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.QueryProto.QueryInstrumentResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.market.v1.QueryProto.QueryInstrumentResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.market.v1.QueryInstrumentResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.market.v1.QueryInstrumentResponse)
+        com.em.market.v1.QueryProto.QueryInstrumentResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryInstrumentResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryInstrumentResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.market.v1.QueryProto.QueryInstrumentResponse.class, com.em.market.v1.QueryProto.QueryInstrumentResponse.Builder.class);
+      }
+
+      // Construct using com.em.market.v1.QueryProto.QueryInstrumentResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        source_ = "";
+        destination_ = "";
+        if (ordersBuilder_ == null) {
+          orders_ = java.util.Collections.emptyList();
+        } else {
+          orders_ = null;
+          ordersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryInstrumentResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.QueryProto.QueryInstrumentResponse getDefaultInstanceForType() {
+        return com.em.market.v1.QueryProto.QueryInstrumentResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.QueryProto.QueryInstrumentResponse build() {
+        com.em.market.v1.QueryProto.QueryInstrumentResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.QueryProto.QueryInstrumentResponse buildPartial() {
+        com.em.market.v1.QueryProto.QueryInstrumentResponse result = new com.em.market.v1.QueryProto.QueryInstrumentResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.em.market.v1.QueryProto.QueryInstrumentResponse result) {
+        if (ordersBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            orders_ = java.util.Collections.unmodifiableList(orders_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.orders_ = orders_;
+        } else {
+          result.orders_ = ordersBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.em.market.v1.QueryProto.QueryInstrumentResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.source_ = source_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.destination_ = destination_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.market.v1.QueryProto.QueryInstrumentResponse) {
+          return mergeFrom((com.em.market.v1.QueryProto.QueryInstrumentResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.market.v1.QueryProto.QueryInstrumentResponse other) {
+        if (other == com.em.market.v1.QueryProto.QueryInstrumentResponse.getDefaultInstance()) return this;
+        if (!other.getSource().isEmpty()) {
+          source_ = other.source_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDestination().isEmpty()) {
+          destination_ = other.destination_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (ordersBuilder_ == null) {
+          if (!other.orders_.isEmpty()) {
+            if (orders_.isEmpty()) {
+              orders_ = other.orders_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureOrdersIsMutable();
+              orders_.addAll(other.orders_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.orders_.isEmpty()) {
+            if (ordersBuilder_.isEmpty()) {
+              ordersBuilder_.dispose();
+              ordersBuilder_ = null;
+              orders_ = other.orders_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              ordersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOrdersFieldBuilder() : null;
+            } else {
+              ordersBuilder_.addAllMessages(other.orders_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                source_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                destination_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.em.market.v1.QueryProto.QueryOrderResponse m =
+                    input.readMessage(
+                        com.em.market.v1.QueryProto.QueryOrderResponse.parser(),
+                        extensionRegistry);
+                if (ordersBuilder_ == null) {
+                  ensureOrdersIsMutable();
+                  orders_.add(m);
+                } else {
+                  ordersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object source_ = "";
+      /**
+       * <code>string source = 1 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       * @return The source.
+       */
+      public java.lang.String getSource() {
+        java.lang.Object ref = source_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          source_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string source = 1 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       * @return The bytes for source.
+       */
+      public com.google.protobuf.ByteString
+          getSourceBytes() {
+        java.lang.Object ref = source_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          source_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string source = 1 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       * @param value The source to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSource(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        source_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string source = 1 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSource() {
+        source_ = getDefaultInstance().getSource();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string source = 1 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       * @param value The bytes for source to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        source_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object destination_ = "";
+      /**
+       * <code>string destination = 2 [json_name = "destination", (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       * @return The destination.
+       */
+      public java.lang.String getDestination() {
+        java.lang.Object ref = destination_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          destination_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string destination = 2 [json_name = "destination", (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       * @return The bytes for destination.
+       */
+      public com.google.protobuf.ByteString
+          getDestinationBytes() {
+        java.lang.Object ref = destination_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          destination_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string destination = 2 [json_name = "destination", (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       * @param value The destination to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestination(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        destination_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string destination = 2 [json_name = "destination", (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDestination() {
+        destination_ = getDefaultInstance().getDestination();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string destination = 2 [json_name = "destination", (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       * @param value The bytes for destination to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestinationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        destination_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.em.market.v1.QueryProto.QueryOrderResponse> orders_ =
+        java.util.Collections.emptyList();
+      private void ensureOrdersIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          orders_ = new java.util.ArrayList<com.em.market.v1.QueryProto.QueryOrderResponse>(orders_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.em.market.v1.QueryProto.QueryOrderResponse, com.em.market.v1.QueryProto.QueryOrderResponse.Builder, com.em.market.v1.QueryProto.QueryOrderResponseOrBuilder> ordersBuilder_;
+
+      /**
+       * <code>repeated .em.market.v1.QueryOrderResponse orders = 3 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public java.util.List<com.em.market.v1.QueryProto.QueryOrderResponse> getOrdersList() {
+        if (ordersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(orders_);
+        } else {
+          return ordersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryOrderResponse orders = 3 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public int getOrdersCount() {
+        if (ordersBuilder_ == null) {
+          return orders_.size();
+        } else {
+          return ordersBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryOrderResponse orders = 3 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public com.em.market.v1.QueryProto.QueryOrderResponse getOrders(int index) {
+        if (ordersBuilder_ == null) {
+          return orders_.get(index);
+        } else {
+          return ordersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryOrderResponse orders = 3 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public Builder setOrders(
+          int index, com.em.market.v1.QueryProto.QueryOrderResponse value) {
+        if (ordersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrdersIsMutable();
+          orders_.set(index, value);
+          onChanged();
+        } else {
+          ordersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryOrderResponse orders = 3 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public Builder setOrders(
+          int index, com.em.market.v1.QueryProto.QueryOrderResponse.Builder builderForValue) {
+        if (ordersBuilder_ == null) {
+          ensureOrdersIsMutable();
+          orders_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          ordersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryOrderResponse orders = 3 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public Builder addOrders(com.em.market.v1.QueryProto.QueryOrderResponse value) {
+        if (ordersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrdersIsMutable();
+          orders_.add(value);
+          onChanged();
+        } else {
+          ordersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryOrderResponse orders = 3 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public Builder addOrders(
+          int index, com.em.market.v1.QueryProto.QueryOrderResponse value) {
+        if (ordersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrdersIsMutable();
+          orders_.add(index, value);
+          onChanged();
+        } else {
+          ordersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryOrderResponse orders = 3 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public Builder addOrders(
+          com.em.market.v1.QueryProto.QueryOrderResponse.Builder builderForValue) {
+        if (ordersBuilder_ == null) {
+          ensureOrdersIsMutable();
+          orders_.add(builderForValue.build());
+          onChanged();
+        } else {
+          ordersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryOrderResponse orders = 3 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public Builder addOrders(
+          int index, com.em.market.v1.QueryProto.QueryOrderResponse.Builder builderForValue) {
+        if (ordersBuilder_ == null) {
+          ensureOrdersIsMutable();
+          orders_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          ordersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryOrderResponse orders = 3 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public Builder addAllOrders(
+          java.lang.Iterable<? extends com.em.market.v1.QueryProto.QueryOrderResponse> values) {
+        if (ordersBuilder_ == null) {
+          ensureOrdersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, orders_);
+          onChanged();
+        } else {
+          ordersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryOrderResponse orders = 3 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public Builder clearOrders() {
+        if (ordersBuilder_ == null) {
+          orders_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          ordersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryOrderResponse orders = 3 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public Builder removeOrders(int index) {
+        if (ordersBuilder_ == null) {
+          ensureOrdersIsMutable();
+          orders_.remove(index);
+          onChanged();
+        } else {
+          ordersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryOrderResponse orders = 3 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public com.em.market.v1.QueryProto.QueryOrderResponse.Builder getOrdersBuilder(
+          int index) {
+        return getOrdersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryOrderResponse orders = 3 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public com.em.market.v1.QueryProto.QueryOrderResponseOrBuilder getOrdersOrBuilder(
+          int index) {
+        if (ordersBuilder_ == null) {
+          return orders_.get(index);  } else {
+          return ordersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryOrderResponse orders = 3 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public java.util.List<? extends com.em.market.v1.QueryProto.QueryOrderResponseOrBuilder> 
+           getOrdersOrBuilderList() {
+        if (ordersBuilder_ != null) {
+          return ordersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(orders_);
+        }
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryOrderResponse orders = 3 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public com.em.market.v1.QueryProto.QueryOrderResponse.Builder addOrdersBuilder() {
+        return getOrdersFieldBuilder().addBuilder(
+            com.em.market.v1.QueryProto.QueryOrderResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryOrderResponse orders = 3 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public com.em.market.v1.QueryProto.QueryOrderResponse.Builder addOrdersBuilder(
+          int index) {
+        return getOrdersFieldBuilder().addBuilder(
+            index, com.em.market.v1.QueryProto.QueryOrderResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .em.market.v1.QueryOrderResponse orders = 3 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"orders&#92;""];</code>
+       */
+      public java.util.List<com.em.market.v1.QueryProto.QueryOrderResponse.Builder> 
+           getOrdersBuilderList() {
+        return getOrdersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.em.market.v1.QueryProto.QueryOrderResponse, com.em.market.v1.QueryProto.QueryOrderResponse.Builder, com.em.market.v1.QueryProto.QueryOrderResponseOrBuilder> 
+          getOrdersFieldBuilder() {
+        if (ordersBuilder_ == null) {
+          ordersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.em.market.v1.QueryProto.QueryOrderResponse, com.em.market.v1.QueryProto.QueryOrderResponse.Builder, com.em.market.v1.QueryProto.QueryOrderResponseOrBuilder>(
+                  orders_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          orders_ = null;
+        }
+        return ordersBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.market.v1.QueryInstrumentResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.market.v1.QueryInstrumentResponse)
+    private static final com.em.market.v1.QueryProto.QueryInstrumentResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.market.v1.QueryProto.QueryInstrumentResponse();
+    }
+
+    public static com.em.market.v1.QueryProto.QueryInstrumentResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryInstrumentResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryInstrumentResponse>() {
+      @java.lang.Override
+      public QueryInstrumentResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryInstrumentResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryInstrumentResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.market.v1.QueryProto.QueryInstrumentResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryOrderResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.market.v1.QueryOrderResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 id = 1 [json_name = "id", (.gogoproto.customname) = "ID", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <code>string source_remaining = 3 [json_name = "sourceRemaining", (.gogoproto.moretags) = "yaml:&#92;"source_remaining&#92;""];</code>
+     * @return The sourceRemaining.
+     */
+    java.lang.String getSourceRemaining();
+    /**
+     * <code>string source_remaining = 3 [json_name = "sourceRemaining", (.gogoproto.moretags) = "yaml:&#92;"source_remaining&#92;""];</code>
+     * @return The bytes for sourceRemaining.
+     */
+    com.google.protobuf.ByteString
+        getSourceRemainingBytes();
+
+    /**
+     * <code>string client_order_id = 4 [json_name = "clientOrderId", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+     * @return The clientOrderId.
+     */
+    java.lang.String getClientOrderId();
+    /**
+     * <code>string client_order_id = 4 [json_name = "clientOrderId", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+     * @return The bytes for clientOrderId.
+     */
+    com.google.protobuf.ByteString
+        getClientOrderIdBytes();
+
+    /**
+     * <code>string price = 5 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"price&#92;""];</code>
+     * @return The price.
+     */
+    java.lang.String getPrice();
+    /**
+     * <code>string price = 5 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"price&#92;""];</code>
+     * @return The bytes for price.
+     */
+    com.google.protobuf.ByteString
+        getPriceBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp created = 6 [json_name = "created", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the created field is set.
+     */
+    boolean hasCreated();
+    /**
+     * <code>.google.protobuf.Timestamp created = 6 [json_name = "created", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The created.
+     */
+    com.google.protobuf.Timestamp getCreated();
+    /**
+     * <code>.google.protobuf.Timestamp created = 6 [json_name = "created", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder();
+  }
+  /**
+   * Protobuf type {@code em.market.v1.QueryOrderResponse}
+   */
+  public static final class QueryOrderResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.market.v1.QueryOrderResponse)
+      QueryOrderResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryOrderResponse.newBuilder() to construct.
+    private QueryOrderResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryOrderResponse() {
+      owner_ = "";
+      sourceRemaining_ = "";
+      clientOrderId_ = "";
+      price_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryOrderResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryOrderResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryOrderResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.market.v1.QueryProto.QueryOrderResponse.class, com.em.market.v1.QueryProto.QueryOrderResponse.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 1 [json_name = "id", (.gogoproto.customname) = "ID", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SOURCE_REMAINING_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sourceRemaining_ = "";
+    /**
+     * <code>string source_remaining = 3 [json_name = "sourceRemaining", (.gogoproto.moretags) = "yaml:&#92;"source_remaining&#92;""];</code>
+     * @return The sourceRemaining.
+     */
+    @java.lang.Override
+    public java.lang.String getSourceRemaining() {
+      java.lang.Object ref = sourceRemaining_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sourceRemaining_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string source_remaining = 3 [json_name = "sourceRemaining", (.gogoproto.moretags) = "yaml:&#92;"source_remaining&#92;""];</code>
+     * @return The bytes for sourceRemaining.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSourceRemainingBytes() {
+      java.lang.Object ref = sourceRemaining_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sourceRemaining_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLIENT_ORDER_ID_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object clientOrderId_ = "";
+    /**
+     * <code>string client_order_id = 4 [json_name = "clientOrderId", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+     * @return The clientOrderId.
+     */
+    @java.lang.Override
+    public java.lang.String getClientOrderId() {
+      java.lang.Object ref = clientOrderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clientOrderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string client_order_id = 4 [json_name = "clientOrderId", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+     * @return The bytes for clientOrderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClientOrderIdBytes() {
+      java.lang.Object ref = clientOrderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clientOrderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PRICE_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object price_ = "";
+    /**
+     * <code>string price = 5 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"price&#92;""];</code>
+     * @return The price.
+     */
+    @java.lang.Override
+    public java.lang.String getPrice() {
+      java.lang.Object ref = price_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        price_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string price = 5 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"price&#92;""];</code>
+     * @return The bytes for price.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPriceBytes() {
+      java.lang.Object ref = price_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        price_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CREATED_FIELD_NUMBER = 6;
+    private com.google.protobuf.Timestamp created_;
+    /**
+     * <code>.google.protobuf.Timestamp created = 6 [json_name = "created", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the created field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreated() {
+      return created_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created = 6 [json_name = "created", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The created.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreated() {
+      return created_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : created_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created = 6 [json_name = "created", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
+      return created_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : created_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceRemaining_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, sourceRemaining_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientOrderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, clientOrderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(price_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, price_);
+      }
+      if (created_ != null) {
+        output.writeMessage(6, getCreated());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceRemaining_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, sourceRemaining_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientOrderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, clientOrderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(price_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, price_);
+      }
+      if (created_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getCreated());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.market.v1.QueryProto.QueryOrderResponse)) {
+        return super.equals(obj);
+      }
+      com.em.market.v1.QueryProto.QueryOrderResponse other = (com.em.market.v1.QueryProto.QueryOrderResponse) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getSourceRemaining()
+          .equals(other.getSourceRemaining())) return false;
+      if (!getClientOrderId()
+          .equals(other.getClientOrderId())) return false;
+      if (!getPrice()
+          .equals(other.getPrice())) return false;
+      if (hasCreated() != other.hasCreated()) return false;
+      if (hasCreated()) {
+        if (!getCreated()
+            .equals(other.getCreated())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + SOURCE_REMAINING_FIELD_NUMBER;
+      hash = (53 * hash) + getSourceRemaining().hashCode();
+      hash = (37 * hash) + CLIENT_ORDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClientOrderId().hashCode();
+      hash = (37 * hash) + PRICE_FIELD_NUMBER;
+      hash = (53 * hash) + getPrice().hashCode();
+      if (hasCreated()) {
+        hash = (37 * hash) + CREATED_FIELD_NUMBER;
+        hash = (53 * hash) + getCreated().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.market.v1.QueryProto.QueryOrderResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.QueryProto.QueryOrderResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.QueryProto.QueryOrderResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.QueryProto.QueryOrderResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.QueryProto.QueryOrderResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.QueryProto.QueryOrderResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.QueryProto.QueryOrderResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.QueryProto.QueryOrderResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.market.v1.QueryProto.QueryOrderResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.market.v1.QueryProto.QueryOrderResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.market.v1.QueryProto.QueryOrderResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.QueryProto.QueryOrderResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.market.v1.QueryProto.QueryOrderResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.market.v1.QueryOrderResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.market.v1.QueryOrderResponse)
+        com.em.market.v1.QueryProto.QueryOrderResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryOrderResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryOrderResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.market.v1.QueryProto.QueryOrderResponse.class, com.em.market.v1.QueryProto.QueryOrderResponse.Builder.class);
+      }
+
+      // Construct using com.em.market.v1.QueryProto.QueryOrderResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        owner_ = "";
+        sourceRemaining_ = "";
+        clientOrderId_ = "";
+        price_ = "";
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
+          createdBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.market.v1.QueryProto.internal_static_em_market_v1_QueryOrderResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.QueryProto.QueryOrderResponse getDefaultInstanceForType() {
+        return com.em.market.v1.QueryProto.QueryOrderResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.QueryProto.QueryOrderResponse build() {
+        com.em.market.v1.QueryProto.QueryOrderResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.QueryProto.QueryOrderResponse buildPartial() {
+        com.em.market.v1.QueryProto.QueryOrderResponse result = new com.em.market.v1.QueryProto.QueryOrderResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.em.market.v1.QueryProto.QueryOrderResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.sourceRemaining_ = sourceRemaining_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.clientOrderId_ = clientOrderId_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.price_ = price_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.created_ = createdBuilder_ == null
+              ? created_
+              : createdBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.market.v1.QueryProto.QueryOrderResponse) {
+          return mergeFrom((com.em.market.v1.QueryProto.QueryOrderResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.market.v1.QueryProto.QueryOrderResponse other) {
+        if (other == com.em.market.v1.QueryProto.QueryOrderResponse.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getSourceRemaining().isEmpty()) {
+          sourceRemaining_ = other.sourceRemaining_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getClientOrderId().isEmpty()) {
+          clientOrderId_ = other.clientOrderId_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getPrice().isEmpty()) {
+          price_ = other.price_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (other.hasCreated()) {
+          mergeCreated(other.getCreated());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                sourceRemaining_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                clientOrderId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                price_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getCreatedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 1 [json_name = "id", (.gogoproto.customname) = "ID", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id", (.gogoproto.customname) = "ID", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id", (.gogoproto.customname) = "ID", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sourceRemaining_ = "";
+      /**
+       * <code>string source_remaining = 3 [json_name = "sourceRemaining", (.gogoproto.moretags) = "yaml:&#92;"source_remaining&#92;""];</code>
+       * @return The sourceRemaining.
+       */
+      public java.lang.String getSourceRemaining() {
+        java.lang.Object ref = sourceRemaining_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sourceRemaining_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string source_remaining = 3 [json_name = "sourceRemaining", (.gogoproto.moretags) = "yaml:&#92;"source_remaining&#92;""];</code>
+       * @return The bytes for sourceRemaining.
+       */
+      public com.google.protobuf.ByteString
+          getSourceRemainingBytes() {
+        java.lang.Object ref = sourceRemaining_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sourceRemaining_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string source_remaining = 3 [json_name = "sourceRemaining", (.gogoproto.moretags) = "yaml:&#92;"source_remaining&#92;""];</code>
+       * @param value The sourceRemaining to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceRemaining(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sourceRemaining_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string source_remaining = 3 [json_name = "sourceRemaining", (.gogoproto.moretags) = "yaml:&#92;"source_remaining&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSourceRemaining() {
+        sourceRemaining_ = getDefaultInstance().getSourceRemaining();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string source_remaining = 3 [json_name = "sourceRemaining", (.gogoproto.moretags) = "yaml:&#92;"source_remaining&#92;""];</code>
+       * @param value The bytes for sourceRemaining to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceRemainingBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sourceRemaining_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object clientOrderId_ = "";
+      /**
+       * <code>string client_order_id = 4 [json_name = "clientOrderId", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+       * @return The clientOrderId.
+       */
+      public java.lang.String getClientOrderId() {
+        java.lang.Object ref = clientOrderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clientOrderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string client_order_id = 4 [json_name = "clientOrderId", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+       * @return The bytes for clientOrderId.
+       */
+      public com.google.protobuf.ByteString
+          getClientOrderIdBytes() {
+        java.lang.Object ref = clientOrderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clientOrderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string client_order_id = 4 [json_name = "clientOrderId", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+       * @param value The clientOrderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientOrderId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        clientOrderId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string client_order_id = 4 [json_name = "clientOrderId", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClientOrderId() {
+        clientOrderId_ = getDefaultInstance().getClientOrderId();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string client_order_id = 4 [json_name = "clientOrderId", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+       * @param value The bytes for clientOrderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientOrderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        clientOrderId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object price_ = "";
+      /**
+       * <code>string price = 5 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"price&#92;""];</code>
+       * @return The price.
+       */
+      public java.lang.String getPrice() {
+        java.lang.Object ref = price_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          price_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string price = 5 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"price&#92;""];</code>
+       * @return The bytes for price.
+       */
+      public com.google.protobuf.ByteString
+          getPriceBytes() {
+        java.lang.Object ref = price_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          price_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string price = 5 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"price&#92;""];</code>
+       * @param value The price to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrice(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        price_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string price = 5 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"price&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrice() {
+        price_ = getDefaultInstance().getPrice();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string price = 5 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"price&#92;""];</code>
+       * @param value The bytes for price to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPriceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        price_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp created_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp created = 6 [json_name = "created", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the created field is set.
+       */
+      public boolean hasCreated() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created = 6 [json_name = "created", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The created.
+       */
+      public com.google.protobuf.Timestamp getCreated() {
+        if (createdBuilder_ == null) {
+          return created_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : created_;
+        } else {
+          return createdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created = 6 [json_name = "created", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setCreated(com.google.protobuf.Timestamp value) {
+        if (createdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          created_ = value;
+        } else {
+          createdBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created = 6 [json_name = "created", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setCreated(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (createdBuilder_ == null) {
+          created_ = builderForValue.build();
+        } else {
+          createdBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created = 6 [json_name = "created", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeCreated(com.google.protobuf.Timestamp value) {
+        if (createdBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            created_ != null &&
+            created_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCreatedBuilder().mergeFrom(value);
+          } else {
+            created_ = value;
+          }
+        } else {
+          createdBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created = 6 [json_name = "created", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearCreated() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
+          createdBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created = 6 [json_name = "created", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCreatedBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getCreatedFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created = 6 [json_name = "created", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
+        if (createdBuilder_ != null) {
+          return createdBuilder_.getMessageOrBuilder();
+        } else {
+          return created_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : created_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created = 6 [json_name = "created", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCreatedFieldBuilder() {
+        if (createdBuilder_ == null) {
+          createdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCreated(),
+                  getParentForChildren(),
+                  isClean());
+          created_ = null;
+        }
+        return createdBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.market.v1.QueryOrderResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.market.v1.QueryOrderResponse)
+    private static final com.em.market.v1.QueryProto.QueryOrderResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.market.v1.QueryProto.QueryOrderResponse();
+    }
+
+    public static com.em.market.v1.QueryProto.QueryOrderResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryOrderResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryOrderResponse>() {
+      @java.lang.Override
+      public QueryOrderResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryOrderResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryOrderResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.market.v1.QueryProto.QueryOrderResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_market_v1_QueryByAccountRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_market_v1_QueryByAccountRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_market_v1_QueryByAccountResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_market_v1_QueryByAccountResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_market_v1_QueryInstrumentsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_market_v1_QueryInstrumentsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_market_v1_QueryInstrumentsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_market_v1_QueryInstrumentsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_market_v1_QueryInstrumentsResponse_Element_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_market_v1_QueryInstrumentsResponse_Element_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_market_v1_QueryInstrumentRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_market_v1_QueryInstrumentRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_market_v1_QueryInstrumentResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_market_v1_QueryInstrumentResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_market_v1_QueryOrderResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_market_v1_QueryOrderResponse_fieldAccessorTable;
 
@@ -115,11 +6863,11 @@ public final class QueryProto {
       "yInstrumentRequest\032%.em.market.v1.QueryI" +
       "nstrumentResponse\"<\202\323\344\223\0026\0224/e-money/mark" +
       "et/v1/instrument/{source}/{destination}B" +
-      "\235\001\n\020com.em.market.v1B\nQueryProtoP\001Z+gith" +
-      "ub.com/e-money/em-ledger/x/market/types\242" +
-      "\002\003EMX\252\002\014Em.Market.V1\312\002\014Em\\Market\\V1\342\002\030Em" +
-      "\\Market\\V1\\GPBMetadata\352\002\016Em::Market::V1b" +
-      "\006proto3"
+      "\233\001\n\020com.em.market.v1B\nQueryProtoZ+github" +
+      ".com/e-money/em-ledger/x/market/types\242\002\003" +
+      "EMX\252\002\014Em.Market.V1\312\002\014Em\\Market\\V1\342\002\030Em\\M" +
+      "arket\\V1\\GPBMetadata\352\002\016Em::Market::V1b\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

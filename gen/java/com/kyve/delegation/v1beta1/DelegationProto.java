@@ -14,39 +14,6342 @@ public final class DelegationProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * <pre>
+   * SlashType ...
+   * </pre>
+   *
+   * Protobuf enum {@code kyve.delegation.v1beta1.SlashType}
+   */
+  public enum SlashType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * SLASH_TYPE_UNSPECIFIED ...
+     * </pre>
+     *
+     * <code>SLASH_TYPE_UNSPECIFIED = 0;</code>
+     */
+    SLASH_TYPE_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * SLASH_TYPE_TIMEOUT ...
+     * </pre>
+     *
+     * <code>SLASH_TYPE_TIMEOUT = 1;</code>
+     */
+    SLASH_TYPE_TIMEOUT(1),
+    /**
+     * <pre>
+     * SLASH_TYPE_VOTE ...
+     * </pre>
+     *
+     * <code>SLASH_TYPE_VOTE = 2;</code>
+     */
+    SLASH_TYPE_VOTE(2),
+    /**
+     * <pre>
+     * SLASH_TYPE_UPLOAD ...
+     * </pre>
+     *
+     * <code>SLASH_TYPE_UPLOAD = 3;</code>
+     */
+    SLASH_TYPE_UPLOAD(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * SLASH_TYPE_UNSPECIFIED ...
+     * </pre>
+     *
+     * <code>SLASH_TYPE_UNSPECIFIED = 0;</code>
+     */
+    public static final int SLASH_TYPE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * SLASH_TYPE_TIMEOUT ...
+     * </pre>
+     *
+     * <code>SLASH_TYPE_TIMEOUT = 1;</code>
+     */
+    public static final int SLASH_TYPE_TIMEOUT_VALUE = 1;
+    /**
+     * <pre>
+     * SLASH_TYPE_VOTE ...
+     * </pre>
+     *
+     * <code>SLASH_TYPE_VOTE = 2;</code>
+     */
+    public static final int SLASH_TYPE_VOTE_VALUE = 2;
+    /**
+     * <pre>
+     * SLASH_TYPE_UPLOAD ...
+     * </pre>
+     *
+     * <code>SLASH_TYPE_UPLOAD = 3;</code>
+     */
+    public static final int SLASH_TYPE_UPLOAD_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static SlashType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static SlashType forNumber(int value) {
+      switch (value) {
+        case 0: return SLASH_TYPE_UNSPECIFIED;
+        case 1: return SLASH_TYPE_TIMEOUT;
+        case 2: return SLASH_TYPE_VOTE;
+        case 3: return SLASH_TYPE_UPLOAD;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<SlashType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        SlashType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<SlashType>() {
+            public SlashType findValueByNumber(int number) {
+              return SlashType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.kyve.delegation.v1beta1.DelegationProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final SlashType[] VALUES = values();
+
+    public static SlashType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private SlashType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:kyve.delegation.v1beta1.SlashType)
+  }
+
+  public interface DelegatorOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.delegation.v1beta1.Delegator)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * staker corresponds to a KYVE-staker on the protocol-side
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The staker.
+     */
+    java.lang.String getStaker();
+    /**
+     * <pre>
+     * staker corresponds to a KYVE-staker on the protocol-side
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The bytes for staker.
+     */
+    com.google.protobuf.ByteString
+        getStakerBytes();
+
+    /**
+     * <pre>
+     * delegator the user who delegate to the staker.
+     * If staker and delegator are the same we call it: self-delegation
+     * </pre>
+     *
+     * <code>string delegator = 2 [json_name = "delegator"];</code>
+     * @return The delegator.
+     */
+    java.lang.String getDelegator();
+    /**
+     * <pre>
+     * delegator the user who delegate to the staker.
+     * If staker and delegator are the same we call it: self-delegation
+     * </pre>
+     *
+     * <code>string delegator = 2 [json_name = "delegator"];</code>
+     * @return The bytes for delegator.
+     */
+    com.google.protobuf.ByteString
+        getDelegatorBytes();
+
+    /**
+     * <pre>
+     * k_index is an internal index for the f1-distribution algorithm
+     * </pre>
+     *
+     * <code>uint64 k_index = 3 [json_name = "kIndex"];</code>
+     * @return The kIndex.
+     */
+    long getKIndex();
+
+    /**
+     * <pre>
+     * initial_amount of stake the user had when it delegated.
+     * slashes can cause that the actual stake is lower.
+     * </pre>
+     *
+     * <code>uint64 initial_amount = 4 [json_name = "initialAmount"];</code>
+     * @return The initialAmount.
+     */
+    long getInitialAmount();
+  }
+  /**
+   * <pre>
+   * Delegator stores the information that one address has delegated to another address
+   * It stores important information for the F1-Fee distribution algorithm
+   * </pre>
+   *
+   * Protobuf type {@code kyve.delegation.v1beta1.Delegator}
+   */
+  public static final class Delegator extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.delegation.v1beta1.Delegator)
+      DelegatorOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Delegator.newBuilder() to construct.
+    private Delegator(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Delegator() {
+      staker_ = "";
+      delegator_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Delegator();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_Delegator_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_Delegator_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.delegation.v1beta1.DelegationProto.Delegator.class, com.kyve.delegation.v1beta1.DelegationProto.Delegator.Builder.class);
+    }
+
+    public static final int STAKER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object staker_ = "";
+    /**
+     * <pre>
+     * staker corresponds to a KYVE-staker on the protocol-side
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The staker.
+     */
+    @java.lang.Override
+    public java.lang.String getStaker() {
+      java.lang.Object ref = staker_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        staker_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staker corresponds to a KYVE-staker on the protocol-side
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The bytes for staker.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakerBytes() {
+      java.lang.Object ref = staker_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        staker_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DELEGATOR_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object delegator_ = "";
+    /**
+     * <pre>
+     * delegator the user who delegate to the staker.
+     * If staker and delegator are the same we call it: self-delegation
+     * </pre>
+     *
+     * <code>string delegator = 2 [json_name = "delegator"];</code>
+     * @return The delegator.
+     */
+    @java.lang.Override
+    public java.lang.String getDelegator() {
+      java.lang.Object ref = delegator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        delegator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * delegator the user who delegate to the staker.
+     * If staker and delegator are the same we call it: self-delegation
+     * </pre>
+     *
+     * <code>string delegator = 2 [json_name = "delegator"];</code>
+     * @return The bytes for delegator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDelegatorBytes() {
+      java.lang.Object ref = delegator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        delegator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int K_INDEX_FIELD_NUMBER = 3;
+    private long kIndex_ = 0L;
+    /**
+     * <pre>
+     * k_index is an internal index for the f1-distribution algorithm
+     * </pre>
+     *
+     * <code>uint64 k_index = 3 [json_name = "kIndex"];</code>
+     * @return The kIndex.
+     */
+    @java.lang.Override
+    public long getKIndex() {
+      return kIndex_;
+    }
+
+    public static final int INITIAL_AMOUNT_FIELD_NUMBER = 4;
+    private long initialAmount_ = 0L;
+    /**
+     * <pre>
+     * initial_amount of stake the user had when it delegated.
+     * slashes can cause that the actual stake is lower.
+     * </pre>
+     *
+     * <code>uint64 initial_amount = 4 [json_name = "initialAmount"];</code>
+     * @return The initialAmount.
+     */
+    @java.lang.Override
+    public long getInitialAmount() {
+      return initialAmount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staker_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, staker_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, delegator_);
+      }
+      if (kIndex_ != 0L) {
+        output.writeUInt64(3, kIndex_);
+      }
+      if (initialAmount_ != 0L) {
+        output.writeUInt64(4, initialAmount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staker_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, staker_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, delegator_);
+      }
+      if (kIndex_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, kIndex_);
+      }
+      if (initialAmount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, initialAmount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.delegation.v1beta1.DelegationProto.Delegator)) {
+        return super.equals(obj);
+      }
+      com.kyve.delegation.v1beta1.DelegationProto.Delegator other = (com.kyve.delegation.v1beta1.DelegationProto.Delegator) obj;
+
+      if (!getStaker()
+          .equals(other.getStaker())) return false;
+      if (!getDelegator()
+          .equals(other.getDelegator())) return false;
+      if (getKIndex()
+          != other.getKIndex()) return false;
+      if (getInitialAmount()
+          != other.getInitialAmount()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STAKER_FIELD_NUMBER;
+      hash = (53 * hash) + getStaker().hashCode();
+      hash = (37 * hash) + DELEGATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getDelegator().hashCode();
+      hash = (37 * hash) + K_INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getKIndex());
+      hash = (37 * hash) + INITIAL_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getInitialAmount());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.delegation.v1beta1.DelegationProto.Delegator parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.Delegator parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.Delegator parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.Delegator parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.Delegator parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.Delegator parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.Delegator parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.Delegator parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.delegation.v1beta1.DelegationProto.Delegator parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.delegation.v1beta1.DelegationProto.Delegator parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.Delegator parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.Delegator parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.delegation.v1beta1.DelegationProto.Delegator prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Delegator stores the information that one address has delegated to another address
+     * It stores important information for the F1-Fee distribution algorithm
+     * </pre>
+     *
+     * Protobuf type {@code kyve.delegation.v1beta1.Delegator}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.delegation.v1beta1.Delegator)
+        com.kyve.delegation.v1beta1.DelegationProto.DelegatorOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_Delegator_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_Delegator_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.delegation.v1beta1.DelegationProto.Delegator.class, com.kyve.delegation.v1beta1.DelegationProto.Delegator.Builder.class);
+      }
+
+      // Construct using com.kyve.delegation.v1beta1.DelegationProto.Delegator.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        staker_ = "";
+        delegator_ = "";
+        kIndex_ = 0L;
+        initialAmount_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_Delegator_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.delegation.v1beta1.DelegationProto.Delegator getDefaultInstanceForType() {
+        return com.kyve.delegation.v1beta1.DelegationProto.Delegator.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.delegation.v1beta1.DelegationProto.Delegator build() {
+        com.kyve.delegation.v1beta1.DelegationProto.Delegator result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.delegation.v1beta1.DelegationProto.Delegator buildPartial() {
+        com.kyve.delegation.v1beta1.DelegationProto.Delegator result = new com.kyve.delegation.v1beta1.DelegationProto.Delegator(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.delegation.v1beta1.DelegationProto.Delegator result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.staker_ = staker_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.delegator_ = delegator_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.kIndex_ = kIndex_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.initialAmount_ = initialAmount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.delegation.v1beta1.DelegationProto.Delegator) {
+          return mergeFrom((com.kyve.delegation.v1beta1.DelegationProto.Delegator)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.delegation.v1beta1.DelegationProto.Delegator other) {
+        if (other == com.kyve.delegation.v1beta1.DelegationProto.Delegator.getDefaultInstance()) return this;
+        if (!other.getStaker().isEmpty()) {
+          staker_ = other.staker_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDelegator().isEmpty()) {
+          delegator_ = other.delegator_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getKIndex() != 0L) {
+          setKIndex(other.getKIndex());
+        }
+        if (other.getInitialAmount() != 0L) {
+          setInitialAmount(other.getInitialAmount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                staker_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                delegator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                kIndex_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                initialAmount_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object staker_ = "";
+      /**
+       * <pre>
+       * staker corresponds to a KYVE-staker on the protocol-side
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @return The staker.
+       */
+      public java.lang.String getStaker() {
+        java.lang.Object ref = staker_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          staker_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staker corresponds to a KYVE-staker on the protocol-side
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @return The bytes for staker.
+       */
+      public com.google.protobuf.ByteString
+          getStakerBytes() {
+        java.lang.Object ref = staker_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          staker_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staker corresponds to a KYVE-staker on the protocol-side
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @param value The staker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStaker(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        staker_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staker corresponds to a KYVE-staker on the protocol-side
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStaker() {
+        staker_ = getDefaultInstance().getStaker();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staker corresponds to a KYVE-staker on the protocol-side
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @param value The bytes for staker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        staker_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object delegator_ = "";
+      /**
+       * <pre>
+       * delegator the user who delegate to the staker.
+       * If staker and delegator are the same we call it: self-delegation
+       * </pre>
+       *
+       * <code>string delegator = 2 [json_name = "delegator"];</code>
+       * @return The delegator.
+       */
+      public java.lang.String getDelegator() {
+        java.lang.Object ref = delegator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          delegator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * delegator the user who delegate to the staker.
+       * If staker and delegator are the same we call it: self-delegation
+       * </pre>
+       *
+       * <code>string delegator = 2 [json_name = "delegator"];</code>
+       * @return The bytes for delegator.
+       */
+      public com.google.protobuf.ByteString
+          getDelegatorBytes() {
+        java.lang.Object ref = delegator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          delegator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * delegator the user who delegate to the staker.
+       * If staker and delegator are the same we call it: self-delegation
+       * </pre>
+       *
+       * <code>string delegator = 2 [json_name = "delegator"];</code>
+       * @param value The delegator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        delegator_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * delegator the user who delegate to the staker.
+       * If staker and delegator are the same we call it: self-delegation
+       * </pre>
+       *
+       * <code>string delegator = 2 [json_name = "delegator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelegator() {
+        delegator_ = getDefaultInstance().getDelegator();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * delegator the user who delegate to the staker.
+       * If staker and delegator are the same we call it: self-delegation
+       * </pre>
+       *
+       * <code>string delegator = 2 [json_name = "delegator"];</code>
+       * @param value The bytes for delegator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        delegator_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long kIndex_ ;
+      /**
+       * <pre>
+       * k_index is an internal index for the f1-distribution algorithm
+       * </pre>
+       *
+       * <code>uint64 k_index = 3 [json_name = "kIndex"];</code>
+       * @return The kIndex.
+       */
+      @java.lang.Override
+      public long getKIndex() {
+        return kIndex_;
+      }
+      /**
+       * <pre>
+       * k_index is an internal index for the f1-distribution algorithm
+       * </pre>
+       *
+       * <code>uint64 k_index = 3 [json_name = "kIndex"];</code>
+       * @param value The kIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKIndex(long value) {
+
+        kIndex_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * k_index is an internal index for the f1-distribution algorithm
+       * </pre>
+       *
+       * <code>uint64 k_index = 3 [json_name = "kIndex"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKIndex() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        kIndex_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long initialAmount_ ;
+      /**
+       * <pre>
+       * initial_amount of stake the user had when it delegated.
+       * slashes can cause that the actual stake is lower.
+       * </pre>
+       *
+       * <code>uint64 initial_amount = 4 [json_name = "initialAmount"];</code>
+       * @return The initialAmount.
+       */
+      @java.lang.Override
+      public long getInitialAmount() {
+        return initialAmount_;
+      }
+      /**
+       * <pre>
+       * initial_amount of stake the user had when it delegated.
+       * slashes can cause that the actual stake is lower.
+       * </pre>
+       *
+       * <code>uint64 initial_amount = 4 [json_name = "initialAmount"];</code>
+       * @param value The initialAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInitialAmount(long value) {
+
+        initialAmount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * initial_amount of stake the user had when it delegated.
+       * slashes can cause that the actual stake is lower.
+       * </pre>
+       *
+       * <code>uint64 initial_amount = 4 [json_name = "initialAmount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInitialAmount() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        initialAmount_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.delegation.v1beta1.Delegator)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.delegation.v1beta1.Delegator)
+    private static final com.kyve.delegation.v1beta1.DelegationProto.Delegator DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.delegation.v1beta1.DelegationProto.Delegator();
+    }
+
+    public static com.kyve.delegation.v1beta1.DelegationProto.Delegator getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Delegator>
+        PARSER = new com.google.protobuf.AbstractParser<Delegator>() {
+      @java.lang.Override
+      public Delegator parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Delegator> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Delegator> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.delegation.v1beta1.DelegationProto.Delegator getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DelegationEntryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.delegation.v1beta1.DelegationEntry)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * staker on protocol level
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The staker.
+     */
+    java.lang.String getStaker();
+    /**
+     * <pre>
+     * staker on protocol level
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The bytes for staker.
+     */
+    com.google.protobuf.ByteString
+        getStakerBytes();
+
+    /**
+     * <pre>
+     * k_index is the of the period this entry ends
+     * </pre>
+     *
+     * <code>uint64 k_index = 2 [json_name = "kIndex"];</code>
+     * @return The kIndex.
+     */
+    long getKIndex();
+
+    /**
+     * <pre>
+     * value is the quotient of collected rewards and total stake according to F1-distribution
+     * </pre>
+     *
+     * <code>string value = 3 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The value.
+     */
+    java.lang.String getValue();
+    /**
+     * <pre>
+     * value is the quotient of collected rewards and total stake according to F1-distribution
+     * </pre>
+     *
+     * <code>string value = 3 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for value.
+     */
+    com.google.protobuf.ByteString
+        getValueBytes();
+  }
+  /**
+   * <pre>
+   * DelegationEntry represents an entry according to the F1-Fee-Distribution algorithm.
+   * Take a look at x/delegation/keeper/logic_f1distribution.go for more details
+   * </pre>
+   *
+   * Protobuf type {@code kyve.delegation.v1beta1.DelegationEntry}
+   */
+  public static final class DelegationEntry extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.delegation.v1beta1.DelegationEntry)
+      DelegationEntryOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DelegationEntry.newBuilder() to construct.
+    private DelegationEntry(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DelegationEntry() {
+      staker_ = "";
+      value_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DelegationEntry();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_DelegationEntry_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_DelegationEntry_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry.class, com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry.Builder.class);
+    }
+
+    public static final int STAKER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object staker_ = "";
+    /**
+     * <pre>
+     * staker on protocol level
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The staker.
+     */
+    @java.lang.Override
+    public java.lang.String getStaker() {
+      java.lang.Object ref = staker_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        staker_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staker on protocol level
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The bytes for staker.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakerBytes() {
+      java.lang.Object ref = staker_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        staker_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int K_INDEX_FIELD_NUMBER = 2;
+    private long kIndex_ = 0L;
+    /**
+     * <pre>
+     * k_index is the of the period this entry ends
+     * </pre>
+     *
+     * <code>uint64 k_index = 2 [json_name = "kIndex"];</code>
+     * @return The kIndex.
+     */
+    @java.lang.Override
+    public long getKIndex() {
+      return kIndex_;
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object value_ = "";
+    /**
+     * <pre>
+     * value is the quotient of collected rewards and total stake according to F1-distribution
+     * </pre>
+     *
+     * <code>string value = 3 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        value_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * value is the quotient of collected rewards and total stake according to F1-distribution
+     * </pre>
+     *
+     * <code>string value = 3 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for value.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValueBytes() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        value_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staker_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, staker_);
+      }
+      if (kIndex_ != 0L) {
+        output.writeUInt64(2, kIndex_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, value_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staker_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, staker_);
+      }
+      if (kIndex_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, kIndex_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, value_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry)) {
+        return super.equals(obj);
+      }
+      com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry other = (com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry) obj;
+
+      if (!getStaker()
+          .equals(other.getStaker())) return false;
+      if (getKIndex()
+          != other.getKIndex()) return false;
+      if (!getValue()
+          .equals(other.getValue())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STAKER_FIELD_NUMBER;
+      hash = (53 * hash) + getStaker().hashCode();
+      hash = (37 * hash) + K_INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getKIndex());
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getValue().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * DelegationEntry represents an entry according to the F1-Fee-Distribution algorithm.
+     * Take a look at x/delegation/keeper/logic_f1distribution.go for more details
+     * </pre>
+     *
+     * Protobuf type {@code kyve.delegation.v1beta1.DelegationEntry}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.delegation.v1beta1.DelegationEntry)
+        com.kyve.delegation.v1beta1.DelegationProto.DelegationEntryOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_DelegationEntry_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_DelegationEntry_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry.class, com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry.Builder.class);
+      }
+
+      // Construct using com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        staker_ = "";
+        kIndex_ = 0L;
+        value_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_DelegationEntry_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry getDefaultInstanceForType() {
+        return com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry build() {
+        com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry buildPartial() {
+        com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry result = new com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.staker_ = staker_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.kIndex_ = kIndex_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.value_ = value_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry) {
+          return mergeFrom((com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry other) {
+        if (other == com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry.getDefaultInstance()) return this;
+        if (!other.getStaker().isEmpty()) {
+          staker_ = other.staker_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getKIndex() != 0L) {
+          setKIndex(other.getKIndex());
+        }
+        if (!other.getValue().isEmpty()) {
+          value_ = other.value_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                staker_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                kIndex_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                value_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object staker_ = "";
+      /**
+       * <pre>
+       * staker on protocol level
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @return The staker.
+       */
+      public java.lang.String getStaker() {
+        java.lang.Object ref = staker_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          staker_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staker on protocol level
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @return The bytes for staker.
+       */
+      public com.google.protobuf.ByteString
+          getStakerBytes() {
+        java.lang.Object ref = staker_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          staker_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staker on protocol level
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @param value The staker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStaker(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        staker_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staker on protocol level
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStaker() {
+        staker_ = getDefaultInstance().getStaker();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staker on protocol level
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @param value The bytes for staker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        staker_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long kIndex_ ;
+      /**
+       * <pre>
+       * k_index is the of the period this entry ends
+       * </pre>
+       *
+       * <code>uint64 k_index = 2 [json_name = "kIndex"];</code>
+       * @return The kIndex.
+       */
+      @java.lang.Override
+      public long getKIndex() {
+        return kIndex_;
+      }
+      /**
+       * <pre>
+       * k_index is the of the period this entry ends
+       * </pre>
+       *
+       * <code>uint64 k_index = 2 [json_name = "kIndex"];</code>
+       * @param value The kIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKIndex(long value) {
+
+        kIndex_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * k_index is the of the period this entry ends
+       * </pre>
+       *
+       * <code>uint64 k_index = 2 [json_name = "kIndex"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKIndex() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        kIndex_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object value_ = "";
+      /**
+       * <pre>
+       * value is the quotient of collected rewards and total stake according to F1-distribution
+       * </pre>
+       *
+       * <code>string value = 3 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The value.
+       */
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          value_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * value is the quotient of collected rewards and total stake according to F1-distribution
+       * </pre>
+       *
+       * <code>string value = 3 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for value.
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * value is the quotient of collected rewards and total stake according to F1-distribution
+       * </pre>
+       *
+       * <code>string value = 3 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        value_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * value is the quotient of collected rewards and total stake according to F1-distribution
+       * </pre>
+       *
+       * <code>string value = 3 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        value_ = getDefaultInstance().getValue();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * value is the quotient of collected rewards and total stake according to F1-distribution
+       * </pre>
+       *
+       * <code>string value = 3 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        value_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.delegation.v1beta1.DelegationEntry)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.delegation.v1beta1.DelegationEntry)
+    private static final com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry();
+    }
+
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DelegationEntry>
+        PARSER = new com.google.protobuf.AbstractParser<DelegationEntry>() {
+      @java.lang.Override
+      public DelegationEntry parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DelegationEntry> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DelegationEntry> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.delegation.v1beta1.DelegationProto.DelegationEntry getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DelegationDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.delegation.v1beta1.DelegationData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Every staker has one DelegationData
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The staker.
+     */
+    java.lang.String getStaker();
+    /**
+     * <pre>
+     * Every staker has one DelegationData
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The bytes for staker.
+     */
+    com.google.protobuf.ByteString
+        getStakerBytes();
+
+    /**
+     * <pre>
+     * current_rewards ...
+     * </pre>
+     *
+     * <code>uint64 current_rewards = 2 [json_name = "currentRewards"];</code>
+     * @return The currentRewards.
+     */
+    long getCurrentRewards();
+
+    /**
+     * <pre>
+     * total_delegation ...
+     * </pre>
+     *
+     * <code>uint64 total_delegation = 3 [json_name = "totalDelegation"];</code>
+     * @return The totalDelegation.
+     */
+    long getTotalDelegation();
+
+    /**
+     * <pre>
+     * latest_index_k ...
+     * </pre>
+     *
+     * <code>uint64 latest_index_k = 4 [json_name = "latestIndexK"];</code>
+     * @return The latestIndexK.
+     */
+    long getLatestIndexK();
+
+    /**
+     * <pre>
+     * delegator_count the amount of different addresses delegating to the staker
+     * </pre>
+     *
+     * <code>uint64 delegator_count = 5 [json_name = "delegatorCount"];</code>
+     * @return The delegatorCount.
+     */
+    long getDelegatorCount();
+
+    /**
+     * <pre>
+     * latest_index_was_undelegation helps indicates when an entry can be deleted
+     * </pre>
+     *
+     * <code>bool latest_index_was_undelegation = 6 [json_name = "latestIndexWasUndelegation"];</code>
+     * @return The latestIndexWasUndelegation.
+     */
+    boolean getLatestIndexWasUndelegation();
+  }
+  /**
+   * <pre>
+   * DelegationPoolData stores general delegation information for every staker
+   * </pre>
+   *
+   * Protobuf type {@code kyve.delegation.v1beta1.DelegationData}
+   */
+  public static final class DelegationData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.delegation.v1beta1.DelegationData)
+      DelegationDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DelegationData.newBuilder() to construct.
+    private DelegationData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DelegationData() {
+      staker_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DelegationData();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_DelegationData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_DelegationData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.delegation.v1beta1.DelegationProto.DelegationData.class, com.kyve.delegation.v1beta1.DelegationProto.DelegationData.Builder.class);
+    }
+
+    public static final int STAKER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object staker_ = "";
+    /**
+     * <pre>
+     * Every staker has one DelegationData
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The staker.
+     */
+    @java.lang.Override
+    public java.lang.String getStaker() {
+      java.lang.Object ref = staker_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        staker_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Every staker has one DelegationData
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The bytes for staker.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakerBytes() {
+      java.lang.Object ref = staker_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        staker_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CURRENT_REWARDS_FIELD_NUMBER = 2;
+    private long currentRewards_ = 0L;
+    /**
+     * <pre>
+     * current_rewards ...
+     * </pre>
+     *
+     * <code>uint64 current_rewards = 2 [json_name = "currentRewards"];</code>
+     * @return The currentRewards.
+     */
+    @java.lang.Override
+    public long getCurrentRewards() {
+      return currentRewards_;
+    }
+
+    public static final int TOTAL_DELEGATION_FIELD_NUMBER = 3;
+    private long totalDelegation_ = 0L;
+    /**
+     * <pre>
+     * total_delegation ...
+     * </pre>
+     *
+     * <code>uint64 total_delegation = 3 [json_name = "totalDelegation"];</code>
+     * @return The totalDelegation.
+     */
+    @java.lang.Override
+    public long getTotalDelegation() {
+      return totalDelegation_;
+    }
+
+    public static final int LATEST_INDEX_K_FIELD_NUMBER = 4;
+    private long latestIndexK_ = 0L;
+    /**
+     * <pre>
+     * latest_index_k ...
+     * </pre>
+     *
+     * <code>uint64 latest_index_k = 4 [json_name = "latestIndexK"];</code>
+     * @return The latestIndexK.
+     */
+    @java.lang.Override
+    public long getLatestIndexK() {
+      return latestIndexK_;
+    }
+
+    public static final int DELEGATOR_COUNT_FIELD_NUMBER = 5;
+    private long delegatorCount_ = 0L;
+    /**
+     * <pre>
+     * delegator_count the amount of different addresses delegating to the staker
+     * </pre>
+     *
+     * <code>uint64 delegator_count = 5 [json_name = "delegatorCount"];</code>
+     * @return The delegatorCount.
+     */
+    @java.lang.Override
+    public long getDelegatorCount() {
+      return delegatorCount_;
+    }
+
+    public static final int LATEST_INDEX_WAS_UNDELEGATION_FIELD_NUMBER = 6;
+    private boolean latestIndexWasUndelegation_ = false;
+    /**
+     * <pre>
+     * latest_index_was_undelegation helps indicates when an entry can be deleted
+     * </pre>
+     *
+     * <code>bool latest_index_was_undelegation = 6 [json_name = "latestIndexWasUndelegation"];</code>
+     * @return The latestIndexWasUndelegation.
+     */
+    @java.lang.Override
+    public boolean getLatestIndexWasUndelegation() {
+      return latestIndexWasUndelegation_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staker_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, staker_);
+      }
+      if (currentRewards_ != 0L) {
+        output.writeUInt64(2, currentRewards_);
+      }
+      if (totalDelegation_ != 0L) {
+        output.writeUInt64(3, totalDelegation_);
+      }
+      if (latestIndexK_ != 0L) {
+        output.writeUInt64(4, latestIndexK_);
+      }
+      if (delegatorCount_ != 0L) {
+        output.writeUInt64(5, delegatorCount_);
+      }
+      if (latestIndexWasUndelegation_ != false) {
+        output.writeBool(6, latestIndexWasUndelegation_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staker_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, staker_);
+      }
+      if (currentRewards_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, currentRewards_);
+      }
+      if (totalDelegation_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, totalDelegation_);
+      }
+      if (latestIndexK_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, latestIndexK_);
+      }
+      if (delegatorCount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, delegatorCount_);
+      }
+      if (latestIndexWasUndelegation_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, latestIndexWasUndelegation_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.delegation.v1beta1.DelegationProto.DelegationData)) {
+        return super.equals(obj);
+      }
+      com.kyve.delegation.v1beta1.DelegationProto.DelegationData other = (com.kyve.delegation.v1beta1.DelegationProto.DelegationData) obj;
+
+      if (!getStaker()
+          .equals(other.getStaker())) return false;
+      if (getCurrentRewards()
+          != other.getCurrentRewards()) return false;
+      if (getTotalDelegation()
+          != other.getTotalDelegation()) return false;
+      if (getLatestIndexK()
+          != other.getLatestIndexK()) return false;
+      if (getDelegatorCount()
+          != other.getDelegatorCount()) return false;
+      if (getLatestIndexWasUndelegation()
+          != other.getLatestIndexWasUndelegation()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STAKER_FIELD_NUMBER;
+      hash = (53 * hash) + getStaker().hashCode();
+      hash = (37 * hash) + CURRENT_REWARDS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCurrentRewards());
+      hash = (37 * hash) + TOTAL_DELEGATION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTotalDelegation());
+      hash = (37 * hash) + LATEST_INDEX_K_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLatestIndexK());
+      hash = (37 * hash) + DELEGATOR_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDelegatorCount());
+      hash = (37 * hash) + LATEST_INDEX_WAS_UNDELEGATION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getLatestIndexWasUndelegation());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.delegation.v1beta1.DelegationProto.DelegationData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * DelegationPoolData stores general delegation information for every staker
+     * </pre>
+     *
+     * Protobuf type {@code kyve.delegation.v1beta1.DelegationData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.delegation.v1beta1.DelegationData)
+        com.kyve.delegation.v1beta1.DelegationProto.DelegationDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_DelegationData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_DelegationData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.delegation.v1beta1.DelegationProto.DelegationData.class, com.kyve.delegation.v1beta1.DelegationProto.DelegationData.Builder.class);
+      }
+
+      // Construct using com.kyve.delegation.v1beta1.DelegationProto.DelegationData.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        staker_ = "";
+        currentRewards_ = 0L;
+        totalDelegation_ = 0L;
+        latestIndexK_ = 0L;
+        delegatorCount_ = 0L;
+        latestIndexWasUndelegation_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_DelegationData_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.delegation.v1beta1.DelegationProto.DelegationData getDefaultInstanceForType() {
+        return com.kyve.delegation.v1beta1.DelegationProto.DelegationData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.delegation.v1beta1.DelegationProto.DelegationData build() {
+        com.kyve.delegation.v1beta1.DelegationProto.DelegationData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.delegation.v1beta1.DelegationProto.DelegationData buildPartial() {
+        com.kyve.delegation.v1beta1.DelegationProto.DelegationData result = new com.kyve.delegation.v1beta1.DelegationProto.DelegationData(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.delegation.v1beta1.DelegationProto.DelegationData result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.staker_ = staker_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.currentRewards_ = currentRewards_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.totalDelegation_ = totalDelegation_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.latestIndexK_ = latestIndexK_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.delegatorCount_ = delegatorCount_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.latestIndexWasUndelegation_ = latestIndexWasUndelegation_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.delegation.v1beta1.DelegationProto.DelegationData) {
+          return mergeFrom((com.kyve.delegation.v1beta1.DelegationProto.DelegationData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.delegation.v1beta1.DelegationProto.DelegationData other) {
+        if (other == com.kyve.delegation.v1beta1.DelegationProto.DelegationData.getDefaultInstance()) return this;
+        if (!other.getStaker().isEmpty()) {
+          staker_ = other.staker_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getCurrentRewards() != 0L) {
+          setCurrentRewards(other.getCurrentRewards());
+        }
+        if (other.getTotalDelegation() != 0L) {
+          setTotalDelegation(other.getTotalDelegation());
+        }
+        if (other.getLatestIndexK() != 0L) {
+          setLatestIndexK(other.getLatestIndexK());
+        }
+        if (other.getDelegatorCount() != 0L) {
+          setDelegatorCount(other.getDelegatorCount());
+        }
+        if (other.getLatestIndexWasUndelegation() != false) {
+          setLatestIndexWasUndelegation(other.getLatestIndexWasUndelegation());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                staker_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                currentRewards_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                totalDelegation_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                latestIndexK_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 40: {
+                delegatorCount_ = input.readUInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 48: {
+                latestIndexWasUndelegation_ = input.readBool();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object staker_ = "";
+      /**
+       * <pre>
+       * Every staker has one DelegationData
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @return The staker.
+       */
+      public java.lang.String getStaker() {
+        java.lang.Object ref = staker_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          staker_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Every staker has one DelegationData
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @return The bytes for staker.
+       */
+      public com.google.protobuf.ByteString
+          getStakerBytes() {
+        java.lang.Object ref = staker_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          staker_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Every staker has one DelegationData
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @param value The staker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStaker(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        staker_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Every staker has one DelegationData
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStaker() {
+        staker_ = getDefaultInstance().getStaker();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Every staker has one DelegationData
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @param value The bytes for staker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        staker_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long currentRewards_ ;
+      /**
+       * <pre>
+       * current_rewards ...
+       * </pre>
+       *
+       * <code>uint64 current_rewards = 2 [json_name = "currentRewards"];</code>
+       * @return The currentRewards.
+       */
+      @java.lang.Override
+      public long getCurrentRewards() {
+        return currentRewards_;
+      }
+      /**
+       * <pre>
+       * current_rewards ...
+       * </pre>
+       *
+       * <code>uint64 current_rewards = 2 [json_name = "currentRewards"];</code>
+       * @param value The currentRewards to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurrentRewards(long value) {
+
+        currentRewards_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * current_rewards ...
+       * </pre>
+       *
+       * <code>uint64 current_rewards = 2 [json_name = "currentRewards"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurrentRewards() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        currentRewards_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long totalDelegation_ ;
+      /**
+       * <pre>
+       * total_delegation ...
+       * </pre>
+       *
+       * <code>uint64 total_delegation = 3 [json_name = "totalDelegation"];</code>
+       * @return The totalDelegation.
+       */
+      @java.lang.Override
+      public long getTotalDelegation() {
+        return totalDelegation_;
+      }
+      /**
+       * <pre>
+       * total_delegation ...
+       * </pre>
+       *
+       * <code>uint64 total_delegation = 3 [json_name = "totalDelegation"];</code>
+       * @param value The totalDelegation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalDelegation(long value) {
+
+        totalDelegation_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_delegation ...
+       * </pre>
+       *
+       * <code>uint64 total_delegation = 3 [json_name = "totalDelegation"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalDelegation() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        totalDelegation_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long latestIndexK_ ;
+      /**
+       * <pre>
+       * latest_index_k ...
+       * </pre>
+       *
+       * <code>uint64 latest_index_k = 4 [json_name = "latestIndexK"];</code>
+       * @return The latestIndexK.
+       */
+      @java.lang.Override
+      public long getLatestIndexK() {
+        return latestIndexK_;
+      }
+      /**
+       * <pre>
+       * latest_index_k ...
+       * </pre>
+       *
+       * <code>uint64 latest_index_k = 4 [json_name = "latestIndexK"];</code>
+       * @param value The latestIndexK to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLatestIndexK(long value) {
+
+        latestIndexK_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * latest_index_k ...
+       * </pre>
+       *
+       * <code>uint64 latest_index_k = 4 [json_name = "latestIndexK"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLatestIndexK() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        latestIndexK_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long delegatorCount_ ;
+      /**
+       * <pre>
+       * delegator_count the amount of different addresses delegating to the staker
+       * </pre>
+       *
+       * <code>uint64 delegator_count = 5 [json_name = "delegatorCount"];</code>
+       * @return The delegatorCount.
+       */
+      @java.lang.Override
+      public long getDelegatorCount() {
+        return delegatorCount_;
+      }
+      /**
+       * <pre>
+       * delegator_count the amount of different addresses delegating to the staker
+       * </pre>
+       *
+       * <code>uint64 delegator_count = 5 [json_name = "delegatorCount"];</code>
+       * @param value The delegatorCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegatorCount(long value) {
+
+        delegatorCount_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * delegator_count the amount of different addresses delegating to the staker
+       * </pre>
+       *
+       * <code>uint64 delegator_count = 5 [json_name = "delegatorCount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelegatorCount() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        delegatorCount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private boolean latestIndexWasUndelegation_ ;
+      /**
+       * <pre>
+       * latest_index_was_undelegation helps indicates when an entry can be deleted
+       * </pre>
+       *
+       * <code>bool latest_index_was_undelegation = 6 [json_name = "latestIndexWasUndelegation"];</code>
+       * @return The latestIndexWasUndelegation.
+       */
+      @java.lang.Override
+      public boolean getLatestIndexWasUndelegation() {
+        return latestIndexWasUndelegation_;
+      }
+      /**
+       * <pre>
+       * latest_index_was_undelegation helps indicates when an entry can be deleted
+       * </pre>
+       *
+       * <code>bool latest_index_was_undelegation = 6 [json_name = "latestIndexWasUndelegation"];</code>
+       * @param value The latestIndexWasUndelegation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLatestIndexWasUndelegation(boolean value) {
+
+        latestIndexWasUndelegation_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * latest_index_was_undelegation helps indicates when an entry can be deleted
+       * </pre>
+       *
+       * <code>bool latest_index_was_undelegation = 6 [json_name = "latestIndexWasUndelegation"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLatestIndexWasUndelegation() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        latestIndexWasUndelegation_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.delegation.v1beta1.DelegationData)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.delegation.v1beta1.DelegationData)
+    private static final com.kyve.delegation.v1beta1.DelegationProto.DelegationData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.delegation.v1beta1.DelegationProto.DelegationData();
+    }
+
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DelegationData>
+        PARSER = new com.google.protobuf.AbstractParser<DelegationData>() {
+      @java.lang.Override
+      public DelegationData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DelegationData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DelegationData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.delegation.v1beta1.DelegationProto.DelegationData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DelegationSlashOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.delegation.v1beta1.DelegationSlash)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * staker who got slashed
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The staker.
+     */
+    java.lang.String getStaker();
+    /**
+     * <pre>
+     * staker who got slashed
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The bytes for staker.
+     */
+    com.google.protobuf.ByteString
+        getStakerBytes();
+
+    /**
+     * <pre>
+     * k_index for f1-algorithm
+     * </pre>
+     *
+     * <code>uint64 k_index = 2 [json_name = "kIndex"];</code>
+     * @return The kIndex.
+     */
+    long getKIndex();
+
+    /**
+     * <pre>
+     * fraction that got slashed
+     * </pre>
+     *
+     * <code>string fraction = 3 [json_name = "fraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The fraction.
+     */
+    java.lang.String getFraction();
+    /**
+     * <pre>
+     * fraction that got slashed
+     * </pre>
+     *
+     * <code>string fraction = 3 [json_name = "fraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for fraction.
+     */
+    com.google.protobuf.ByteString
+        getFractionBytes();
+  }
+  /**
+   * <pre>
+   * DelegationSlash represents an f1-slash
+   * these entries needs to be iterated to obtain the current amount of the actual stake
+   * Every staker can have n slash-entries
+   * </pre>
+   *
+   * Protobuf type {@code kyve.delegation.v1beta1.DelegationSlash}
+   */
+  public static final class DelegationSlash extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.delegation.v1beta1.DelegationSlash)
+      DelegationSlashOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DelegationSlash.newBuilder() to construct.
+    private DelegationSlash(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DelegationSlash() {
+      staker_ = "";
+      fraction_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DelegationSlash();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_DelegationSlash_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_DelegationSlash_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash.class, com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash.Builder.class);
+    }
+
+    public static final int STAKER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object staker_ = "";
+    /**
+     * <pre>
+     * staker who got slashed
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The staker.
+     */
+    @java.lang.Override
+    public java.lang.String getStaker() {
+      java.lang.Object ref = staker_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        staker_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staker who got slashed
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The bytes for staker.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakerBytes() {
+      java.lang.Object ref = staker_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        staker_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int K_INDEX_FIELD_NUMBER = 2;
+    private long kIndex_ = 0L;
+    /**
+     * <pre>
+     * k_index for f1-algorithm
+     * </pre>
+     *
+     * <code>uint64 k_index = 2 [json_name = "kIndex"];</code>
+     * @return The kIndex.
+     */
+    @java.lang.Override
+    public long getKIndex() {
+      return kIndex_;
+    }
+
+    public static final int FRACTION_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object fraction_ = "";
+    /**
+     * <pre>
+     * fraction that got slashed
+     * </pre>
+     *
+     * <code>string fraction = 3 [json_name = "fraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The fraction.
+     */
+    @java.lang.Override
+    public java.lang.String getFraction() {
+      java.lang.Object ref = fraction_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fraction_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * fraction that got slashed
+     * </pre>
+     *
+     * <code>string fraction = 3 [json_name = "fraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for fraction.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFractionBytes() {
+      java.lang.Object ref = fraction_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fraction_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staker_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, staker_);
+      }
+      if (kIndex_ != 0L) {
+        output.writeUInt64(2, kIndex_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fraction_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, fraction_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staker_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, staker_);
+      }
+      if (kIndex_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, kIndex_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fraction_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, fraction_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash)) {
+        return super.equals(obj);
+      }
+      com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash other = (com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash) obj;
+
+      if (!getStaker()
+          .equals(other.getStaker())) return false;
+      if (getKIndex()
+          != other.getKIndex()) return false;
+      if (!getFraction()
+          .equals(other.getFraction())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STAKER_FIELD_NUMBER;
+      hash = (53 * hash) + getStaker().hashCode();
+      hash = (37 * hash) + K_INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getKIndex());
+      hash = (37 * hash) + FRACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getFraction().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * DelegationSlash represents an f1-slash
+     * these entries needs to be iterated to obtain the current amount of the actual stake
+     * Every staker can have n slash-entries
+     * </pre>
+     *
+     * Protobuf type {@code kyve.delegation.v1beta1.DelegationSlash}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.delegation.v1beta1.DelegationSlash)
+        com.kyve.delegation.v1beta1.DelegationProto.DelegationSlashOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_DelegationSlash_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_DelegationSlash_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash.class, com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash.Builder.class);
+      }
+
+      // Construct using com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        staker_ = "";
+        kIndex_ = 0L;
+        fraction_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_DelegationSlash_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash getDefaultInstanceForType() {
+        return com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash build() {
+        com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash buildPartial() {
+        com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash result = new com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.staker_ = staker_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.kIndex_ = kIndex_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.fraction_ = fraction_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash) {
+          return mergeFrom((com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash other) {
+        if (other == com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash.getDefaultInstance()) return this;
+        if (!other.getStaker().isEmpty()) {
+          staker_ = other.staker_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getKIndex() != 0L) {
+          setKIndex(other.getKIndex());
+        }
+        if (!other.getFraction().isEmpty()) {
+          fraction_ = other.fraction_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                staker_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                kIndex_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                fraction_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object staker_ = "";
+      /**
+       * <pre>
+       * staker who got slashed
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @return The staker.
+       */
+      public java.lang.String getStaker() {
+        java.lang.Object ref = staker_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          staker_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staker who got slashed
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @return The bytes for staker.
+       */
+      public com.google.protobuf.ByteString
+          getStakerBytes() {
+        java.lang.Object ref = staker_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          staker_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staker who got slashed
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @param value The staker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStaker(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        staker_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staker who got slashed
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStaker() {
+        staker_ = getDefaultInstance().getStaker();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staker who got slashed
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @param value The bytes for staker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        staker_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long kIndex_ ;
+      /**
+       * <pre>
+       * k_index for f1-algorithm
+       * </pre>
+       *
+       * <code>uint64 k_index = 2 [json_name = "kIndex"];</code>
+       * @return The kIndex.
+       */
+      @java.lang.Override
+      public long getKIndex() {
+        return kIndex_;
+      }
+      /**
+       * <pre>
+       * k_index for f1-algorithm
+       * </pre>
+       *
+       * <code>uint64 k_index = 2 [json_name = "kIndex"];</code>
+       * @param value The kIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKIndex(long value) {
+
+        kIndex_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * k_index for f1-algorithm
+       * </pre>
+       *
+       * <code>uint64 k_index = 2 [json_name = "kIndex"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKIndex() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        kIndex_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object fraction_ = "";
+      /**
+       * <pre>
+       * fraction that got slashed
+       * </pre>
+       *
+       * <code>string fraction = 3 [json_name = "fraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The fraction.
+       */
+      public java.lang.String getFraction() {
+        java.lang.Object ref = fraction_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          fraction_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * fraction that got slashed
+       * </pre>
+       *
+       * <code>string fraction = 3 [json_name = "fraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for fraction.
+       */
+      public com.google.protobuf.ByteString
+          getFractionBytes() {
+        java.lang.Object ref = fraction_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fraction_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * fraction that got slashed
+       * </pre>
+       *
+       * <code>string fraction = 3 [json_name = "fraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The fraction to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFraction(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        fraction_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * fraction that got slashed
+       * </pre>
+       *
+       * <code>string fraction = 3 [json_name = "fraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFraction() {
+        fraction_ = getDefaultInstance().getFraction();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * fraction that got slashed
+       * </pre>
+       *
+       * <code>string fraction = 3 [json_name = "fraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for fraction to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFractionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        fraction_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.delegation.v1beta1.DelegationSlash)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.delegation.v1beta1.DelegationSlash)
+    private static final com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash();
+    }
+
+    public static com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DelegationSlash>
+        PARSER = new com.google.protobuf.AbstractParser<DelegationSlash>() {
+      @java.lang.Override
+      public DelegationSlash parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DelegationSlash> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DelegationSlash> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.delegation.v1beta1.DelegationProto.DelegationSlash getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UndelegationQueueEntryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.delegation.v1beta1.UndelegationQueueEntry)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * index ...
+     * </pre>
+     *
+     * <code>uint64 index = 1 [json_name = "index"];</code>
+     * @return The index.
+     */
+    long getIndex();
+
+    /**
+     * <pre>
+     * staker ...
+     * </pre>
+     *
+     * <code>string staker = 2 [json_name = "staker"];</code>
+     * @return The staker.
+     */
+    java.lang.String getStaker();
+    /**
+     * <pre>
+     * staker ...
+     * </pre>
+     *
+     * <code>string staker = 2 [json_name = "staker"];</code>
+     * @return The bytes for staker.
+     */
+    com.google.protobuf.ByteString
+        getStakerBytes();
+
+    /**
+     * <pre>
+     * delegator ...
+     * </pre>
+     *
+     * <code>string delegator = 3 [json_name = "delegator"];</code>
+     * @return The delegator.
+     */
+    java.lang.String getDelegator();
+    /**
+     * <pre>
+     * delegator ...
+     * </pre>
+     *
+     * <code>string delegator = 3 [json_name = "delegator"];</code>
+     * @return The bytes for delegator.
+     */
+    com.google.protobuf.ByteString
+        getDelegatorBytes();
+
+    /**
+     * <pre>
+     * amount ...
+     * </pre>
+     *
+     * <code>uint64 amount = 4 [json_name = "amount"];</code>
+     * @return The amount.
+     */
+    long getAmount();
+
+    /**
+     * <pre>
+     * creation_time ...
+     * </pre>
+     *
+     * <code>uint64 creation_time = 5 [json_name = "creationTime"];</code>
+     * @return The creationTime.
+     */
+    long getCreationTime();
+  }
+  /**
+   * <pre>
+   * UndelegationQueueEntry ...
+   * </pre>
+   *
+   * Protobuf type {@code kyve.delegation.v1beta1.UndelegationQueueEntry}
+   */
+  public static final class UndelegationQueueEntry extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.delegation.v1beta1.UndelegationQueueEntry)
+      UndelegationQueueEntryOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UndelegationQueueEntry.newBuilder() to construct.
+    private UndelegationQueueEntry(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UndelegationQueueEntry() {
+      staker_ = "";
+      delegator_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UndelegationQueueEntry();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_UndelegationQueueEntry_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_UndelegationQueueEntry_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry.class, com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry.Builder.class);
+    }
+
+    public static final int INDEX_FIELD_NUMBER = 1;
+    private long index_ = 0L;
+    /**
+     * <pre>
+     * index ...
+     * </pre>
+     *
+     * <code>uint64 index = 1 [json_name = "index"];</code>
+     * @return The index.
+     */
+    @java.lang.Override
+    public long getIndex() {
+      return index_;
+    }
+
+    public static final int STAKER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object staker_ = "";
+    /**
+     * <pre>
+     * staker ...
+     * </pre>
+     *
+     * <code>string staker = 2 [json_name = "staker"];</code>
+     * @return The staker.
+     */
+    @java.lang.Override
+    public java.lang.String getStaker() {
+      java.lang.Object ref = staker_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        staker_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staker ...
+     * </pre>
+     *
+     * <code>string staker = 2 [json_name = "staker"];</code>
+     * @return The bytes for staker.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakerBytes() {
+      java.lang.Object ref = staker_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        staker_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DELEGATOR_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object delegator_ = "";
+    /**
+     * <pre>
+     * delegator ...
+     * </pre>
+     *
+     * <code>string delegator = 3 [json_name = "delegator"];</code>
+     * @return The delegator.
+     */
+    @java.lang.Override
+    public java.lang.String getDelegator() {
+      java.lang.Object ref = delegator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        delegator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * delegator ...
+     * </pre>
+     *
+     * <code>string delegator = 3 [json_name = "delegator"];</code>
+     * @return The bytes for delegator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDelegatorBytes() {
+      java.lang.Object ref = delegator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        delegator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 4;
+    private long amount_ = 0L;
+    /**
+     * <pre>
+     * amount ...
+     * </pre>
+     *
+     * <code>uint64 amount = 4 [json_name = "amount"];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public long getAmount() {
+      return amount_;
+    }
+
+    public static final int CREATION_TIME_FIELD_NUMBER = 5;
+    private long creationTime_ = 0L;
+    /**
+     * <pre>
+     * creation_time ...
+     * </pre>
+     *
+     * <code>uint64 creation_time = 5 [json_name = "creationTime"];</code>
+     * @return The creationTime.
+     */
+    @java.lang.Override
+    public long getCreationTime() {
+      return creationTime_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (index_ != 0L) {
+        output.writeUInt64(1, index_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staker_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, staker_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, delegator_);
+      }
+      if (amount_ != 0L) {
+        output.writeUInt64(4, amount_);
+      }
+      if (creationTime_ != 0L) {
+        output.writeUInt64(5, creationTime_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (index_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, index_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staker_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, staker_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, delegator_);
+      }
+      if (amount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, amount_);
+      }
+      if (creationTime_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, creationTime_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry)) {
+        return super.equals(obj);
+      }
+      com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry other = (com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry) obj;
+
+      if (getIndex()
+          != other.getIndex()) return false;
+      if (!getStaker()
+          .equals(other.getStaker())) return false;
+      if (!getDelegator()
+          .equals(other.getDelegator())) return false;
+      if (getAmount()
+          != other.getAmount()) return false;
+      if (getCreationTime()
+          != other.getCreationTime()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getIndex());
+      hash = (37 * hash) + STAKER_FIELD_NUMBER;
+      hash = (53 * hash) + getStaker().hashCode();
+      hash = (37 * hash) + DELEGATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getDelegator().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAmount());
+      hash = (37 * hash) + CREATION_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCreationTime());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * UndelegationQueueEntry ...
+     * </pre>
+     *
+     * Protobuf type {@code kyve.delegation.v1beta1.UndelegationQueueEntry}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.delegation.v1beta1.UndelegationQueueEntry)
+        com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntryOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_UndelegationQueueEntry_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_UndelegationQueueEntry_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry.class, com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry.Builder.class);
+      }
+
+      // Construct using com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        index_ = 0L;
+        staker_ = "";
+        delegator_ = "";
+        amount_ = 0L;
+        creationTime_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_UndelegationQueueEntry_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry getDefaultInstanceForType() {
+        return com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry build() {
+        com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry buildPartial() {
+        com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry result = new com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.index_ = index_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.staker_ = staker_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.delegator_ = delegator_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.amount_ = amount_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.creationTime_ = creationTime_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry) {
+          return mergeFrom((com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry other) {
+        if (other == com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry.getDefaultInstance()) return this;
+        if (other.getIndex() != 0L) {
+          setIndex(other.getIndex());
+        }
+        if (!other.getStaker().isEmpty()) {
+          staker_ = other.staker_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getDelegator().isEmpty()) {
+          delegator_ = other.delegator_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.getAmount() != 0L) {
+          setAmount(other.getAmount());
+        }
+        if (other.getCreationTime() != 0L) {
+          setCreationTime(other.getCreationTime());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                index_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                staker_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                delegator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                amount_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 40: {
+                creationTime_ = input.readUInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long index_ ;
+      /**
+       * <pre>
+       * index ...
+       * </pre>
+       *
+       * <code>uint64 index = 1 [json_name = "index"];</code>
+       * @return The index.
+       */
+      @java.lang.Override
+      public long getIndex() {
+        return index_;
+      }
+      /**
+       * <pre>
+       * index ...
+       * </pre>
+       *
+       * <code>uint64 index = 1 [json_name = "index"];</code>
+       * @param value The index to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndex(long value) {
+
+        index_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * index ...
+       * </pre>
+       *
+       * <code>uint64 index = 1 [json_name = "index"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIndex() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        index_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object staker_ = "";
+      /**
+       * <pre>
+       * staker ...
+       * </pre>
+       *
+       * <code>string staker = 2 [json_name = "staker"];</code>
+       * @return The staker.
+       */
+      public java.lang.String getStaker() {
+        java.lang.Object ref = staker_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          staker_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staker ...
+       * </pre>
+       *
+       * <code>string staker = 2 [json_name = "staker"];</code>
+       * @return The bytes for staker.
+       */
+      public com.google.protobuf.ByteString
+          getStakerBytes() {
+        java.lang.Object ref = staker_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          staker_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staker ...
+       * </pre>
+       *
+       * <code>string staker = 2 [json_name = "staker"];</code>
+       * @param value The staker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStaker(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        staker_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staker ...
+       * </pre>
+       *
+       * <code>string staker = 2 [json_name = "staker"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStaker() {
+        staker_ = getDefaultInstance().getStaker();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staker ...
+       * </pre>
+       *
+       * <code>string staker = 2 [json_name = "staker"];</code>
+       * @param value The bytes for staker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        staker_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object delegator_ = "";
+      /**
+       * <pre>
+       * delegator ...
+       * </pre>
+       *
+       * <code>string delegator = 3 [json_name = "delegator"];</code>
+       * @return The delegator.
+       */
+      public java.lang.String getDelegator() {
+        java.lang.Object ref = delegator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          delegator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * delegator ...
+       * </pre>
+       *
+       * <code>string delegator = 3 [json_name = "delegator"];</code>
+       * @return The bytes for delegator.
+       */
+      public com.google.protobuf.ByteString
+          getDelegatorBytes() {
+        java.lang.Object ref = delegator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          delegator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * delegator ...
+       * </pre>
+       *
+       * <code>string delegator = 3 [json_name = "delegator"];</code>
+       * @param value The delegator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        delegator_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * delegator ...
+       * </pre>
+       *
+       * <code>string delegator = 3 [json_name = "delegator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelegator() {
+        delegator_ = getDefaultInstance().getDelegator();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * delegator ...
+       * </pre>
+       *
+       * <code>string delegator = 3 [json_name = "delegator"];</code>
+       * @param value The bytes for delegator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        delegator_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private long amount_ ;
+      /**
+       * <pre>
+       * amount ...
+       * </pre>
+       *
+       * <code>uint64 amount = 4 [json_name = "amount"];</code>
+       * @return The amount.
+       */
+      @java.lang.Override
+      public long getAmount() {
+        return amount_;
+      }
+      /**
+       * <pre>
+       * amount ...
+       * </pre>
+       *
+       * <code>uint64 amount = 4 [json_name = "amount"];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(long value) {
+
+        amount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount ...
+       * </pre>
+       *
+       * <code>uint64 amount = 4 [json_name = "amount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        amount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long creationTime_ ;
+      /**
+       * <pre>
+       * creation_time ...
+       * </pre>
+       *
+       * <code>uint64 creation_time = 5 [json_name = "creationTime"];</code>
+       * @return The creationTime.
+       */
+      @java.lang.Override
+      public long getCreationTime() {
+        return creationTime_;
+      }
+      /**
+       * <pre>
+       * creation_time ...
+       * </pre>
+       *
+       * <code>uint64 creation_time = 5 [json_name = "creationTime"];</code>
+       * @param value The creationTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreationTime(long value) {
+
+        creationTime_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * creation_time ...
+       * </pre>
+       *
+       * <code>uint64 creation_time = 5 [json_name = "creationTime"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreationTime() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        creationTime_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.delegation.v1beta1.UndelegationQueueEntry)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.delegation.v1beta1.UndelegationQueueEntry)
+    private static final com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry();
+    }
+
+    public static com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UndelegationQueueEntry>
+        PARSER = new com.google.protobuf.AbstractParser<UndelegationQueueEntry>() {
+      @java.lang.Override
+      public UndelegationQueueEntry parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UndelegationQueueEntry> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UndelegationQueueEntry> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.delegation.v1beta1.DelegationProto.UndelegationQueueEntry getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueueStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.delegation.v1beta1.QueueState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * low_index ...
+     * </pre>
+     *
+     * <code>uint64 low_index = 1 [json_name = "lowIndex"];</code>
+     * @return The lowIndex.
+     */
+    long getLowIndex();
+
+    /**
+     * <pre>
+     * high_index ...
+     * </pre>
+     *
+     * <code>uint64 high_index = 2 [json_name = "highIndex"];</code>
+     * @return The highIndex.
+     */
+    long getHighIndex();
+  }
+  /**
+   * <pre>
+   * QueueState ...
+   * </pre>
+   *
+   * Protobuf type {@code kyve.delegation.v1beta1.QueueState}
+   */
+  public static final class QueueState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.delegation.v1beta1.QueueState)
+      QueueStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueueState.newBuilder() to construct.
+    private QueueState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueueState() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueueState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_QueueState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_QueueState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.delegation.v1beta1.DelegationProto.QueueState.class, com.kyve.delegation.v1beta1.DelegationProto.QueueState.Builder.class);
+    }
+
+    public static final int LOW_INDEX_FIELD_NUMBER = 1;
+    private long lowIndex_ = 0L;
+    /**
+     * <pre>
+     * low_index ...
+     * </pre>
+     *
+     * <code>uint64 low_index = 1 [json_name = "lowIndex"];</code>
+     * @return The lowIndex.
+     */
+    @java.lang.Override
+    public long getLowIndex() {
+      return lowIndex_;
+    }
+
+    public static final int HIGH_INDEX_FIELD_NUMBER = 2;
+    private long highIndex_ = 0L;
+    /**
+     * <pre>
+     * high_index ...
+     * </pre>
+     *
+     * <code>uint64 high_index = 2 [json_name = "highIndex"];</code>
+     * @return The highIndex.
+     */
+    @java.lang.Override
+    public long getHighIndex() {
+      return highIndex_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (lowIndex_ != 0L) {
+        output.writeUInt64(1, lowIndex_);
+      }
+      if (highIndex_ != 0L) {
+        output.writeUInt64(2, highIndex_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (lowIndex_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, lowIndex_);
+      }
+      if (highIndex_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, highIndex_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.delegation.v1beta1.DelegationProto.QueueState)) {
+        return super.equals(obj);
+      }
+      com.kyve.delegation.v1beta1.DelegationProto.QueueState other = (com.kyve.delegation.v1beta1.DelegationProto.QueueState) obj;
+
+      if (getLowIndex()
+          != other.getLowIndex()) return false;
+      if (getHighIndex()
+          != other.getHighIndex()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LOW_INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLowIndex());
+      hash = (37 * hash) + HIGH_INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getHighIndex());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.delegation.v1beta1.DelegationProto.QueueState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.QueueState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.QueueState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.QueueState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.QueueState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.QueueState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.QueueState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.QueueState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.delegation.v1beta1.DelegationProto.QueueState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.delegation.v1beta1.DelegationProto.QueueState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.QueueState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.QueueState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.delegation.v1beta1.DelegationProto.QueueState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueueState ...
+     * </pre>
+     *
+     * Protobuf type {@code kyve.delegation.v1beta1.QueueState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.delegation.v1beta1.QueueState)
+        com.kyve.delegation.v1beta1.DelegationProto.QueueStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_QueueState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_QueueState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.delegation.v1beta1.DelegationProto.QueueState.class, com.kyve.delegation.v1beta1.DelegationProto.QueueState.Builder.class);
+      }
+
+      // Construct using com.kyve.delegation.v1beta1.DelegationProto.QueueState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        lowIndex_ = 0L;
+        highIndex_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_QueueState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.delegation.v1beta1.DelegationProto.QueueState getDefaultInstanceForType() {
+        return com.kyve.delegation.v1beta1.DelegationProto.QueueState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.delegation.v1beta1.DelegationProto.QueueState build() {
+        com.kyve.delegation.v1beta1.DelegationProto.QueueState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.delegation.v1beta1.DelegationProto.QueueState buildPartial() {
+        com.kyve.delegation.v1beta1.DelegationProto.QueueState result = new com.kyve.delegation.v1beta1.DelegationProto.QueueState(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.delegation.v1beta1.DelegationProto.QueueState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.lowIndex_ = lowIndex_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.highIndex_ = highIndex_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.delegation.v1beta1.DelegationProto.QueueState) {
+          return mergeFrom((com.kyve.delegation.v1beta1.DelegationProto.QueueState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.delegation.v1beta1.DelegationProto.QueueState other) {
+        if (other == com.kyve.delegation.v1beta1.DelegationProto.QueueState.getDefaultInstance()) return this;
+        if (other.getLowIndex() != 0L) {
+          setLowIndex(other.getLowIndex());
+        }
+        if (other.getHighIndex() != 0L) {
+          setHighIndex(other.getHighIndex());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                lowIndex_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                highIndex_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long lowIndex_ ;
+      /**
+       * <pre>
+       * low_index ...
+       * </pre>
+       *
+       * <code>uint64 low_index = 1 [json_name = "lowIndex"];</code>
+       * @return The lowIndex.
+       */
+      @java.lang.Override
+      public long getLowIndex() {
+        return lowIndex_;
+      }
+      /**
+       * <pre>
+       * low_index ...
+       * </pre>
+       *
+       * <code>uint64 low_index = 1 [json_name = "lowIndex"];</code>
+       * @param value The lowIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLowIndex(long value) {
+
+        lowIndex_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * low_index ...
+       * </pre>
+       *
+       * <code>uint64 low_index = 1 [json_name = "lowIndex"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLowIndex() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        lowIndex_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long highIndex_ ;
+      /**
+       * <pre>
+       * high_index ...
+       * </pre>
+       *
+       * <code>uint64 high_index = 2 [json_name = "highIndex"];</code>
+       * @return The highIndex.
+       */
+      @java.lang.Override
+      public long getHighIndex() {
+        return highIndex_;
+      }
+      /**
+       * <pre>
+       * high_index ...
+       * </pre>
+       *
+       * <code>uint64 high_index = 2 [json_name = "highIndex"];</code>
+       * @param value The highIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHighIndex(long value) {
+
+        highIndex_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * high_index ...
+       * </pre>
+       *
+       * <code>uint64 high_index = 2 [json_name = "highIndex"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHighIndex() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        highIndex_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.delegation.v1beta1.QueueState)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.delegation.v1beta1.QueueState)
+    private static final com.kyve.delegation.v1beta1.DelegationProto.QueueState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.delegation.v1beta1.DelegationProto.QueueState();
+    }
+
+    public static com.kyve.delegation.v1beta1.DelegationProto.QueueState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueueState>
+        PARSER = new com.google.protobuf.AbstractParser<QueueState>() {
+      @java.lang.Override
+      public QueueState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueueState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueueState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.delegation.v1beta1.DelegationProto.QueueState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RedelegationCooldownOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.delegation.v1beta1.RedelegationCooldown)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * low_index ...
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <pre>
+     * low_index ...
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <pre>
+     * high_index ...
+     * </pre>
+     *
+     * <code>uint64 creation_date = 2 [json_name = "creationDate"];</code>
+     * @return The creationDate.
+     */
+    long getCreationDate();
+  }
+  /**
+   * <pre>
+   * RedelegationCooldown ...
+   * </pre>
+   *
+   * Protobuf type {@code kyve.delegation.v1beta1.RedelegationCooldown}
+   */
+  public static final class RedelegationCooldown extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.delegation.v1beta1.RedelegationCooldown)
+      RedelegationCooldownOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RedelegationCooldown.newBuilder() to construct.
+    private RedelegationCooldown(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RedelegationCooldown() {
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RedelegationCooldown();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_RedelegationCooldown_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_RedelegationCooldown_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown.class, com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <pre>
+     * low_index ...
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * low_index ...
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CREATION_DATE_FIELD_NUMBER = 2;
+    private long creationDate_ = 0L;
+    /**
+     * <pre>
+     * high_index ...
+     * </pre>
+     *
+     * <code>uint64 creation_date = 2 [json_name = "creationDate"];</code>
+     * @return The creationDate.
+     */
+    @java.lang.Override
+    public long getCreationDate() {
+      return creationDate_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      if (creationDate_ != 0L) {
+        output.writeUInt64(2, creationDate_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      if (creationDate_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, creationDate_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown)) {
+        return super.equals(obj);
+      }
+      com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown other = (com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (getCreationDate()
+          != other.getCreationDate()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + CREATION_DATE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCreationDate());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * RedelegationCooldown ...
+     * </pre>
+     *
+     * Protobuf type {@code kyve.delegation.v1beta1.RedelegationCooldown}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.delegation.v1beta1.RedelegationCooldown)
+        com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldownOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_RedelegationCooldown_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_RedelegationCooldown_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown.class, com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown.Builder.class);
+      }
+
+      // Construct using com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        creationDate_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.delegation.v1beta1.DelegationProto.internal_static_kyve_delegation_v1beta1_RedelegationCooldown_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown getDefaultInstanceForType() {
+        return com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown build() {
+        com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown buildPartial() {
+        com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown result = new com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.creationDate_ = creationDate_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown) {
+          return mergeFrom((com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown other) {
+        if (other == com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getCreationDate() != 0L) {
+          setCreationDate(other.getCreationDate());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                creationDate_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <pre>
+       * low_index ...
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * low_index ...
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * low_index ...
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * low_index ...
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * low_index ...
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long creationDate_ ;
+      /**
+       * <pre>
+       * high_index ...
+       * </pre>
+       *
+       * <code>uint64 creation_date = 2 [json_name = "creationDate"];</code>
+       * @return The creationDate.
+       */
+      @java.lang.Override
+      public long getCreationDate() {
+        return creationDate_;
+      }
+      /**
+       * <pre>
+       * high_index ...
+       * </pre>
+       *
+       * <code>uint64 creation_date = 2 [json_name = "creationDate"];</code>
+       * @param value The creationDate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreationDate(long value) {
+
+        creationDate_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * high_index ...
+       * </pre>
+       *
+       * <code>uint64 creation_date = 2 [json_name = "creationDate"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreationDate() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        creationDate_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.delegation.v1beta1.RedelegationCooldown)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.delegation.v1beta1.RedelegationCooldown)
+    private static final com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown();
+    }
+
+    public static com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RedelegationCooldown>
+        PARSER = new com.google.protobuf.AbstractParser<RedelegationCooldown>() {
+      @java.lang.Override
+      public RedelegationCooldown parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RedelegationCooldown> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RedelegationCooldown> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.delegation.v1beta1.DelegationProto.RedelegationCooldown getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_delegation_v1beta1_Delegator_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_delegation_v1beta1_Delegator_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_delegation_v1beta1_DelegationEntry_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_delegation_v1beta1_DelegationEntry_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_delegation_v1beta1_DelegationData_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_delegation_v1beta1_DelegationData_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_delegation_v1beta1_DelegationSlash_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_delegation_v1beta1_DelegationSlash_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_delegation_v1beta1_UndelegationQueueEntry_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_delegation_v1beta1_UndelegationQueueEntry_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_delegation_v1beta1_QueueState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_delegation_v1beta1_QueueState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_delegation_v1beta1_RedelegationCooldown_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_delegation_v1beta1_RedelegationCooldown_fieldAccessorTable;
 
@@ -88,13 +6391,13 @@ public final class DelegationProto {
       "ate\030\002 \001(\004R\014creationDate*q\n\tSlashType\022\032\n\026" +
       "SLASH_TYPE_UNSPECIFIED\020\000\022\026\n\022SLASH_TYPE_T" +
       "IMEOUT\020\001\022\023\n\017SLASH_TYPE_VOTE\020\002\022\025\n\021SLASH_T" +
-      "YPE_UPLOAD\020\003\032\004\210\243\036\000B\335\001\n\033com.kyve.delegati" +
-      "on.v1beta1B\017DelegationProtoP\001Z/github.co" +
-      "m/KYVENetwork/chain/x/delegation/types\242\002" +
-      "\003KDX\252\002\027Kyve.Delegation.V1beta1\312\002\027Kyve\\De" +
-      "legation\\V1beta1\342\002#Kyve\\Delegation\\V1bet" +
-      "a1\\GPBMetadata\352\002\031Kyve::Delegation::V1bet" +
-      "a1b\006proto3"
+      "YPE_UPLOAD\020\003\032\004\210\243\036\000B\333\001\n\033com.kyve.delegati" +
+      "on.v1beta1B\017DelegationProtoZ/github.com/" +
+      "KYVENetwork/chain/x/delegation/types\242\002\003K" +
+      "DX\252\002\027Kyve.Delegation.V1beta1\312\002\027Kyve\\Dele" +
+      "gation\\V1beta1\342\002#Kyve\\Delegation\\V1beta1" +
+      "\\GPBMetadata\352\002\031Kyve::Delegation::V1beta1" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -33,14 +33,14 @@ public final class ServiceProto {
       "le.modules.orders.transactions.make.Mess" +
       "age\032A.assetmantle.modules.orders.transac" +
       "tions.make.TransactionResponse\"\033\202\323\344\223\002\025\"\023" +
-      "/mantle/orders/makeB\226\002\n0com.assetmantle." +
+      "/mantle/orders/makeB\224\002\n0com.assetmantle." +
       "modules.orders.transactions.makeB\014Servic" +
-      "eProtoP\001\242\002\005AMOTM\252\002,Assetmantle.Modules.O" +
-      "rders.Transactions.Make\312\002,Assetmantle\\Mo" +
-      "dules\\Orders\\Transactions\\Make\342\0028Assetma" +
-      "ntle\\Modules\\Orders\\Transactions\\Make\\GP" +
-      "BMetadata\352\0020Assetmantle::Modules::Orders" +
-      "::Transactions::Makeb\006proto3"
+      "eProto\242\002\005AMOTM\252\002,Assetmantle.Modules.Ord" +
+      "ers.Transactions.Make\312\002,Assetmantle\\Modu" +
+      "les\\Orders\\Transactions\\Make\342\0028Assetmant" +
+      "le\\Modules\\Orders\\Transactions\\Make\\GPBM" +
+      "etadata\352\0020Assetmantle::Modules::Orders::" +
+      "Transactions::Makeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

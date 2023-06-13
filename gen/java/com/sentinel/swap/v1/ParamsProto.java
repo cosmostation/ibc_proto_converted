@@ -14,9 +14,782 @@ public final class ParamsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.swap.v1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bool swap_enabled = 1 [json_name = "swapEnabled"];</code>
+     * @return The swapEnabled.
+     */
+    boolean getSwapEnabled();
+
+    /**
+     * <code>string swap_denom = 2 [json_name = "swapDenom"];</code>
+     * @return The swapDenom.
+     */
+    java.lang.String getSwapDenom();
+    /**
+     * <code>string swap_denom = 2 [json_name = "swapDenom"];</code>
+     * @return The bytes for swapDenom.
+     */
+    com.google.protobuf.ByteString
+        getSwapDenomBytes();
+
+    /**
+     * <code>string approve_by = 3 [json_name = "approveBy"];</code>
+     * @return The approveBy.
+     */
+    java.lang.String getApproveBy();
+    /**
+     * <code>string approve_by = 3 [json_name = "approveBy"];</code>
+     * @return The bytes for approveBy.
+     */
+    com.google.protobuf.ByteString
+        getApproveByBytes();
+  }
+  /**
+   * Protobuf type {@code sentinel.swap.v1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.swap.v1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      swapDenom_ = "";
+      approveBy_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.swap.v1.ParamsProto.internal_static_sentinel_swap_v1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.swap.v1.ParamsProto.internal_static_sentinel_swap_v1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.swap.v1.ParamsProto.Params.class, com.sentinel.swap.v1.ParamsProto.Params.Builder.class);
+    }
+
+    public static final int SWAP_ENABLED_FIELD_NUMBER = 1;
+    private boolean swapEnabled_ = false;
+    /**
+     * <code>bool swap_enabled = 1 [json_name = "swapEnabled"];</code>
+     * @return The swapEnabled.
+     */
+    @java.lang.Override
+    public boolean getSwapEnabled() {
+      return swapEnabled_;
+    }
+
+    public static final int SWAP_DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object swapDenom_ = "";
+    /**
+     * <code>string swap_denom = 2 [json_name = "swapDenom"];</code>
+     * @return The swapDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getSwapDenom() {
+      java.lang.Object ref = swapDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        swapDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string swap_denom = 2 [json_name = "swapDenom"];</code>
+     * @return The bytes for swapDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSwapDenomBytes() {
+      java.lang.Object ref = swapDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        swapDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int APPROVE_BY_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object approveBy_ = "";
+    /**
+     * <code>string approve_by = 3 [json_name = "approveBy"];</code>
+     * @return The approveBy.
+     */
+    @java.lang.Override
+    public java.lang.String getApproveBy() {
+      java.lang.Object ref = approveBy_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        approveBy_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string approve_by = 3 [json_name = "approveBy"];</code>
+     * @return The bytes for approveBy.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getApproveByBytes() {
+      java.lang.Object ref = approveBy_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        approveBy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (swapEnabled_ != false) {
+        output.writeBool(1, swapEnabled_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(swapDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, swapDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(approveBy_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, approveBy_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (swapEnabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, swapEnabled_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(swapDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, swapDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(approveBy_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, approveBy_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.swap.v1.ParamsProto.Params)) {
+        return super.equals(obj);
+      }
+      com.sentinel.swap.v1.ParamsProto.Params other = (com.sentinel.swap.v1.ParamsProto.Params) obj;
+
+      if (getSwapEnabled()
+          != other.getSwapEnabled()) return false;
+      if (!getSwapDenom()
+          .equals(other.getSwapDenom())) return false;
+      if (!getApproveBy()
+          .equals(other.getApproveBy())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SWAP_ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSwapEnabled());
+      hash = (37 * hash) + SWAP_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getSwapDenom().hashCode();
+      hash = (37 * hash) + APPROVE_BY_FIELD_NUMBER;
+      hash = (53 * hash) + getApproveBy().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.swap.v1.ParamsProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.swap.v1.ParamsProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.swap.v1.ParamsProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.swap.v1.ParamsProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.swap.v1.ParamsProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.swap.v1.ParamsProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.swap.v1.ParamsProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.swap.v1.ParamsProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.swap.v1.ParamsProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.swap.v1.ParamsProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.swap.v1.ParamsProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.swap.v1.ParamsProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.swap.v1.ParamsProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.swap.v1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.swap.v1.Params)
+        com.sentinel.swap.v1.ParamsProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.swap.v1.ParamsProto.internal_static_sentinel_swap_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.swap.v1.ParamsProto.internal_static_sentinel_swap_v1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.swap.v1.ParamsProto.Params.class, com.sentinel.swap.v1.ParamsProto.Params.Builder.class);
+      }
+
+      // Construct using com.sentinel.swap.v1.ParamsProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        swapEnabled_ = false;
+        swapDenom_ = "";
+        approveBy_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.swap.v1.ParamsProto.internal_static_sentinel_swap_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.swap.v1.ParamsProto.Params getDefaultInstanceForType() {
+        return com.sentinel.swap.v1.ParamsProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.swap.v1.ParamsProto.Params build() {
+        com.sentinel.swap.v1.ParamsProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.swap.v1.ParamsProto.Params buildPartial() {
+        com.sentinel.swap.v1.ParamsProto.Params result = new com.sentinel.swap.v1.ParamsProto.Params(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.sentinel.swap.v1.ParamsProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.swapEnabled_ = swapEnabled_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.swapDenom_ = swapDenom_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.approveBy_ = approveBy_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.swap.v1.ParamsProto.Params) {
+          return mergeFrom((com.sentinel.swap.v1.ParamsProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.swap.v1.ParamsProto.Params other) {
+        if (other == com.sentinel.swap.v1.ParamsProto.Params.getDefaultInstance()) return this;
+        if (other.getSwapEnabled() != false) {
+          setSwapEnabled(other.getSwapEnabled());
+        }
+        if (!other.getSwapDenom().isEmpty()) {
+          swapDenom_ = other.swapDenom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getApproveBy().isEmpty()) {
+          approveBy_ = other.approveBy_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                swapEnabled_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                swapDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                approveBy_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean swapEnabled_ ;
+      /**
+       * <code>bool swap_enabled = 1 [json_name = "swapEnabled"];</code>
+       * @return The swapEnabled.
+       */
+      @java.lang.Override
+      public boolean getSwapEnabled() {
+        return swapEnabled_;
+      }
+      /**
+       * <code>bool swap_enabled = 1 [json_name = "swapEnabled"];</code>
+       * @param value The swapEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSwapEnabled(boolean value) {
+
+        swapEnabled_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool swap_enabled = 1 [json_name = "swapEnabled"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSwapEnabled() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        swapEnabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object swapDenom_ = "";
+      /**
+       * <code>string swap_denom = 2 [json_name = "swapDenom"];</code>
+       * @return The swapDenom.
+       */
+      public java.lang.String getSwapDenom() {
+        java.lang.Object ref = swapDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          swapDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string swap_denom = 2 [json_name = "swapDenom"];</code>
+       * @return The bytes for swapDenom.
+       */
+      public com.google.protobuf.ByteString
+          getSwapDenomBytes() {
+        java.lang.Object ref = swapDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          swapDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string swap_denom = 2 [json_name = "swapDenom"];</code>
+       * @param value The swapDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSwapDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        swapDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string swap_denom = 2 [json_name = "swapDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSwapDenom() {
+        swapDenom_ = getDefaultInstance().getSwapDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string swap_denom = 2 [json_name = "swapDenom"];</code>
+       * @param value The bytes for swapDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSwapDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        swapDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object approveBy_ = "";
+      /**
+       * <code>string approve_by = 3 [json_name = "approveBy"];</code>
+       * @return The approveBy.
+       */
+      public java.lang.String getApproveBy() {
+        java.lang.Object ref = approveBy_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          approveBy_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string approve_by = 3 [json_name = "approveBy"];</code>
+       * @return The bytes for approveBy.
+       */
+      public com.google.protobuf.ByteString
+          getApproveByBytes() {
+        java.lang.Object ref = approveBy_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          approveBy_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string approve_by = 3 [json_name = "approveBy"];</code>
+       * @param value The approveBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApproveBy(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        approveBy_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string approve_by = 3 [json_name = "approveBy"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearApproveBy() {
+        approveBy_ = getDefaultInstance().getApproveBy();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string approve_by = 3 [json_name = "approveBy"];</code>
+       * @param value The bytes for approveBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApproveByBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        approveBy_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.swap.v1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.swap.v1.Params)
+    private static final com.sentinel.swap.v1.ParamsProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.swap.v1.ParamsProto.Params();
+    }
+
+    public static com.sentinel.swap.v1.ParamsProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.swap.v1.ParamsProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_swap_v1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_swap_v1_Params_fieldAccessorTable;
 
@@ -32,12 +805,12 @@ public final class ParamsProto {
       "l.swap.v1\032\024gogoproto/gogo.proto\"i\n\006Param" +
       "s\022!\n\014swap_enabled\030\001 \001(\010R\013swapEnabled\022\035\n\n" +
       "swap_denom\030\002 \001(\tR\tswapDenom\022\035\n\napprove_b" +
-      "y\030\003 \001(\tR\tapproveByB\274\001\n\024com.sentinel.swap" +
-      ".v1B\013ParamsProtoP\001Z-github.com/sentinel-" +
-      "official/hub/x/swap/types\242\002\003SSX\252\002\020Sentin" +
-      "el.Swap.V1\312\002\020Sentinel\\Swap\\V1\342\002\034Sentinel" +
-      "\\Swap\\V1\\GPBMetadata\352\002\022Sentinel::Swap::V" +
-      "1\310\341\036\000\250\342\036\000b\006proto3"
+      "y\030\003 \001(\tR\tapproveByB\272\001\n\024com.sentinel.swap" +
+      ".v1B\013ParamsProtoZ-github.com/sentinel-of" +
+      "ficial/hub/x/swap/types\242\002\003SSX\252\002\020Sentinel" +
+      ".Swap.V1\312\002\020Sentinel\\Swap\\V1\342\002\034Sentinel\\S" +
+      "wap\\V1\\GPBMetadata\352\002\022Sentinel::Swap::V1\310" +
+      "\341\036\000\250\342\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

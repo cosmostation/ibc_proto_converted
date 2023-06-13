@@ -14,14 +14,2287 @@ public final class FantokenProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bitsong.fantoken.v1beta1.Metadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * name defines the name of the fantoken (eg: Kitty Punk)
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * name defines the name of the fantoken (eg: Kitty Punk)
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * symbol is the token symbol usually shown on exchanges (eg: KITTY)
+     * </pre>
+     *
+     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * @return The symbol.
+     */
+    java.lang.String getSymbol();
+    /**
+     * <pre>
+     * symbol is the token symbol usually shown on exchanges (eg: KITTY)
+     * </pre>
+     *
+     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * @return The bytes for symbol.
+     */
+    com.google.protobuf.ByteString
+        getSymbolBytes();
+
+    /**
+     * <pre>
+     * URI to a document (on or off-chain) that contains additional
+     * information.Optional.
+     * </pre>
+     *
+     * <code>string uri = 3 [json_name = "uri", (.gogoproto.customname) = "URI"];</code>
+     * @return The uri.
+     */
+    java.lang.String getUri();
+    /**
+     * <pre>
+     * URI to a document (on or off-chain) that contains additional
+     * information.Optional.
+     * </pre>
+     *
+     * <code>string uri = 3 [json_name = "uri", (.gogoproto.customname) = "URI"];</code>
+     * @return The bytes for uri.
+     */
+    com.google.protobuf.ByteString
+        getUriBytes();
+
+    /**
+     * <pre>
+     * sdk.AccAddress allowed to set a new uri
+     * </pre>
+     *
+     * <code>string authority = 4 [json_name = "authority"];</code>
+     * @return The authority.
+     */
+    java.lang.String getAuthority();
+    /**
+     * <pre>
+     * sdk.AccAddress allowed to set a new uri
+     * </pre>
+     *
+     * <code>string authority = 4 [json_name = "authority"];</code>
+     * @return The bytes for authority.
+     */
+    com.google.protobuf.ByteString
+        getAuthorityBytes();
+  }
+  /**
+   * Protobuf type {@code bitsong.fantoken.v1beta1.Metadata}
+   */
+  public static final class Metadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bitsong.fantoken.v1beta1.Metadata)
+      MetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Metadata.newBuilder() to construct.
+    private Metadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Metadata() {
+      name_ = "";
+      symbol_ = "";
+      uri_ = "";
+      authority_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Metadata();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bitsong.fantoken.v1beta1.FantokenProto.internal_static_bitsong_fantoken_v1beta1_Metadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bitsong.fantoken.v1beta1.FantokenProto.internal_static_bitsong_fantoken_v1beta1_Metadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bitsong.fantoken.v1beta1.FantokenProto.Metadata.class, com.bitsong.fantoken.v1beta1.FantokenProto.Metadata.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * name defines the name of the fantoken (eg: Kitty Punk)
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * name defines the name of the fantoken (eg: Kitty Punk)
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SYMBOL_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object symbol_ = "";
+    /**
+     * <pre>
+     * symbol is the token symbol usually shown on exchanges (eg: KITTY)
+     * </pre>
+     *
+     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * @return The symbol.
+     */
+    @java.lang.Override
+    public java.lang.String getSymbol() {
+      java.lang.Object ref = symbol_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        symbol_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * symbol is the token symbol usually shown on exchanges (eg: KITTY)
+     * </pre>
+     *
+     * <code>string symbol = 2 [json_name = "symbol"];</code>
+     * @return The bytes for symbol.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSymbolBytes() {
+      java.lang.Object ref = symbol_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        symbol_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int URI_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object uri_ = "";
+    /**
+     * <pre>
+     * URI to a document (on or off-chain) that contains additional
+     * information.Optional.
+     * </pre>
+     *
+     * <code>string uri = 3 [json_name = "uri", (.gogoproto.customname) = "URI"];</code>
+     * @return The uri.
+     */
+    @java.lang.Override
+    public java.lang.String getUri() {
+      java.lang.Object ref = uri_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uri_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * URI to a document (on or off-chain) that contains additional
+     * information.Optional.
+     * </pre>
+     *
+     * <code>string uri = 3 [json_name = "uri", (.gogoproto.customname) = "URI"];</code>
+     * @return The bytes for uri.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUriBytes() {
+      java.lang.Object ref = uri_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uri_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AUTHORITY_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object authority_ = "";
+    /**
+     * <pre>
+     * sdk.AccAddress allowed to set a new uri
+     * </pre>
+     *
+     * <code>string authority = 4 [json_name = "authority"];</code>
+     * @return The authority.
+     */
+    @java.lang.Override
+    public java.lang.String getAuthority() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        authority_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * sdk.AccAddress allowed to set a new uri
+     * </pre>
+     *
+     * <code>string authority = 4 [json_name = "authority"];</code>
+     * @return The bytes for authority.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAuthorityBytes() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authority_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symbol_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, symbol_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uri_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, uri_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, authority_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symbol_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, symbol_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uri_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, uri_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, authority_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bitsong.fantoken.v1beta1.FantokenProto.Metadata)) {
+        return super.equals(obj);
+      }
+      com.bitsong.fantoken.v1beta1.FantokenProto.Metadata other = (com.bitsong.fantoken.v1beta1.FantokenProto.Metadata) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getSymbol()
+          .equals(other.getSymbol())) return false;
+      if (!getUri()
+          .equals(other.getUri())) return false;
+      if (!getAuthority()
+          .equals(other.getAuthority())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + SYMBOL_FIELD_NUMBER;
+      hash = (53 * hash) + getSymbol().hashCode();
+      hash = (37 * hash) + URI_FIELD_NUMBER;
+      hash = (53 * hash) + getUri().hashCode();
+      hash = (37 * hash) + AUTHORITY_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthority().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bitsong.fantoken.v1beta1.FantokenProto.Metadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.fantoken.v1beta1.FantokenProto.Metadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.fantoken.v1beta1.FantokenProto.Metadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.fantoken.v1beta1.FantokenProto.Metadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.fantoken.v1beta1.FantokenProto.Metadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.fantoken.v1beta1.FantokenProto.Metadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.fantoken.v1beta1.FantokenProto.Metadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitsong.fantoken.v1beta1.FantokenProto.Metadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bitsong.fantoken.v1beta1.FantokenProto.Metadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bitsong.fantoken.v1beta1.FantokenProto.Metadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bitsong.fantoken.v1beta1.FantokenProto.Metadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitsong.fantoken.v1beta1.FantokenProto.Metadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bitsong.fantoken.v1beta1.FantokenProto.Metadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bitsong.fantoken.v1beta1.Metadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bitsong.fantoken.v1beta1.Metadata)
+        com.bitsong.fantoken.v1beta1.FantokenProto.MetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bitsong.fantoken.v1beta1.FantokenProto.internal_static_bitsong_fantoken_v1beta1_Metadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bitsong.fantoken.v1beta1.FantokenProto.internal_static_bitsong_fantoken_v1beta1_Metadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bitsong.fantoken.v1beta1.FantokenProto.Metadata.class, com.bitsong.fantoken.v1beta1.FantokenProto.Metadata.Builder.class);
+      }
+
+      // Construct using com.bitsong.fantoken.v1beta1.FantokenProto.Metadata.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        name_ = "";
+        symbol_ = "";
+        uri_ = "";
+        authority_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bitsong.fantoken.v1beta1.FantokenProto.internal_static_bitsong_fantoken_v1beta1_Metadata_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bitsong.fantoken.v1beta1.FantokenProto.Metadata getDefaultInstanceForType() {
+        return com.bitsong.fantoken.v1beta1.FantokenProto.Metadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bitsong.fantoken.v1beta1.FantokenProto.Metadata build() {
+        com.bitsong.fantoken.v1beta1.FantokenProto.Metadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bitsong.fantoken.v1beta1.FantokenProto.Metadata buildPartial() {
+        com.bitsong.fantoken.v1beta1.FantokenProto.Metadata result = new com.bitsong.fantoken.v1beta1.FantokenProto.Metadata(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bitsong.fantoken.v1beta1.FantokenProto.Metadata result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.symbol_ = symbol_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.uri_ = uri_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.authority_ = authority_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bitsong.fantoken.v1beta1.FantokenProto.Metadata) {
+          return mergeFrom((com.bitsong.fantoken.v1beta1.FantokenProto.Metadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bitsong.fantoken.v1beta1.FantokenProto.Metadata other) {
+        if (other == com.bitsong.fantoken.v1beta1.FantokenProto.Metadata.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getSymbol().isEmpty()) {
+          symbol_ = other.symbol_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getUri().isEmpty()) {
+          uri_ = other.uri_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getAuthority().isEmpty()) {
+          authority_ = other.authority_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                symbol_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                uri_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                authority_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * name defines the name of the fantoken (eg: Kitty Punk)
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * name defines the name of the fantoken (eg: Kitty Punk)
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * name defines the name of the fantoken (eg: Kitty Punk)
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * name defines the name of the fantoken (eg: Kitty Punk)
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * name defines the name of the fantoken (eg: Kitty Punk)
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object symbol_ = "";
+      /**
+       * <pre>
+       * symbol is the token symbol usually shown on exchanges (eg: KITTY)
+       * </pre>
+       *
+       * <code>string symbol = 2 [json_name = "symbol"];</code>
+       * @return The symbol.
+       */
+      public java.lang.String getSymbol() {
+        java.lang.Object ref = symbol_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          symbol_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * symbol is the token symbol usually shown on exchanges (eg: KITTY)
+       * </pre>
+       *
+       * <code>string symbol = 2 [json_name = "symbol"];</code>
+       * @return The bytes for symbol.
+       */
+      public com.google.protobuf.ByteString
+          getSymbolBytes() {
+        java.lang.Object ref = symbol_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          symbol_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * symbol is the token symbol usually shown on exchanges (eg: KITTY)
+       * </pre>
+       *
+       * <code>string symbol = 2 [json_name = "symbol"];</code>
+       * @param value The symbol to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSymbol(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        symbol_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * symbol is the token symbol usually shown on exchanges (eg: KITTY)
+       * </pre>
+       *
+       * <code>string symbol = 2 [json_name = "symbol"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSymbol() {
+        symbol_ = getDefaultInstance().getSymbol();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * symbol is the token symbol usually shown on exchanges (eg: KITTY)
+       * </pre>
+       *
+       * <code>string symbol = 2 [json_name = "symbol"];</code>
+       * @param value The bytes for symbol to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSymbolBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        symbol_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object uri_ = "";
+      /**
+       * <pre>
+       * URI to a document (on or off-chain) that contains additional
+       * information.Optional.
+       * </pre>
+       *
+       * <code>string uri = 3 [json_name = "uri", (.gogoproto.customname) = "URI"];</code>
+       * @return The uri.
+       */
+      public java.lang.String getUri() {
+        java.lang.Object ref = uri_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uri_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * URI to a document (on or off-chain) that contains additional
+       * information.Optional.
+       * </pre>
+       *
+       * <code>string uri = 3 [json_name = "uri", (.gogoproto.customname) = "URI"];</code>
+       * @return The bytes for uri.
+       */
+      public com.google.protobuf.ByteString
+          getUriBytes() {
+        java.lang.Object ref = uri_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uri_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * URI to a document (on or off-chain) that contains additional
+       * information.Optional.
+       * </pre>
+       *
+       * <code>string uri = 3 [json_name = "uri", (.gogoproto.customname) = "URI"];</code>
+       * @param value The uri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUri(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        uri_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * URI to a document (on or off-chain) that contains additional
+       * information.Optional.
+       * </pre>
+       *
+       * <code>string uri = 3 [json_name = "uri", (.gogoproto.customname) = "URI"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUri() {
+        uri_ = getDefaultInstance().getUri();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * URI to a document (on or off-chain) that contains additional
+       * information.Optional.
+       * </pre>
+       *
+       * <code>string uri = 3 [json_name = "uri", (.gogoproto.customname) = "URI"];</code>
+       * @param value The bytes for uri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUriBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        uri_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object authority_ = "";
+      /**
+       * <pre>
+       * sdk.AccAddress allowed to set a new uri
+       * </pre>
+       *
+       * <code>string authority = 4 [json_name = "authority"];</code>
+       * @return The authority.
+       */
+      public java.lang.String getAuthority() {
+        java.lang.Object ref = authority_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          authority_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * sdk.AccAddress allowed to set a new uri
+       * </pre>
+       *
+       * <code>string authority = 4 [json_name = "authority"];</code>
+       * @return The bytes for authority.
+       */
+      public com.google.protobuf.ByteString
+          getAuthorityBytes() {
+        java.lang.Object ref = authority_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authority_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * sdk.AccAddress allowed to set a new uri
+       * </pre>
+       *
+       * <code>string authority = 4 [json_name = "authority"];</code>
+       * @param value The authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthority(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        authority_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * sdk.AccAddress allowed to set a new uri
+       * </pre>
+       *
+       * <code>string authority = 4 [json_name = "authority"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthority() {
+        authority_ = getDefaultInstance().getAuthority();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * sdk.AccAddress allowed to set a new uri
+       * </pre>
+       *
+       * <code>string authority = 4 [json_name = "authority"];</code>
+       * @param value The bytes for authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthorityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        authority_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bitsong.fantoken.v1beta1.Metadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:bitsong.fantoken.v1beta1.Metadata)
+    private static final com.bitsong.fantoken.v1beta1.FantokenProto.Metadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bitsong.fantoken.v1beta1.FantokenProto.Metadata();
+    }
+
+    public static com.bitsong.fantoken.v1beta1.FantokenProto.Metadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Metadata>
+        PARSER = new com.google.protobuf.AbstractParser<Metadata>() {
+      @java.lang.Override
+      public Metadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Metadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Metadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bitsong.fantoken.v1beta1.FantokenProto.Metadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FanTokenOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bitsong.fantoken.v1beta1.FanToken)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * denom represents the string name of the given denom unit (e.g ft&lt;hash&gt;).
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <pre>
+     * denom represents the string name of the given denom unit (e.g ft&lt;hash&gt;).
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>string max_supply = 2 [json_name = "maxSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"max_supply&#92;""];</code>
+     * @return The maxSupply.
+     */
+    java.lang.String getMaxSupply();
+    /**
+     * <code>string max_supply = 2 [json_name = "maxSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"max_supply&#92;""];</code>
+     * @return The bytes for maxSupply.
+     */
+    com.google.protobuf.ByteString
+        getMaxSupplyBytes();
+
+    /**
+     * <pre>
+     * sdk.AccAddress allowed to mint new fantoken
+     * </pre>
+     *
+     * <code>string minter = 3 [json_name = "minter"];</code>
+     * @return The minter.
+     */
+    java.lang.String getMinter();
+    /**
+     * <pre>
+     * sdk.AccAddress allowed to mint new fantoken
+     * </pre>
+     *
+     * <code>string minter = 3 [json_name = "minter"];</code>
+     * @return The bytes for minter.
+     */
+    com.google.protobuf.ByteString
+        getMinterBytes();
+
+    /**
+     * <code>.bitsong.fantoken.v1beta1.Metadata meta_data = 4 [json_name = "metaData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"meta_data&#92;""];</code>
+     * @return Whether the metaData field is set.
+     */
+    boolean hasMetaData();
+    /**
+     * <code>.bitsong.fantoken.v1beta1.Metadata meta_data = 4 [json_name = "metaData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"meta_data&#92;""];</code>
+     * @return The metaData.
+     */
+    com.bitsong.fantoken.v1beta1.FantokenProto.Metadata getMetaData();
+    /**
+     * <code>.bitsong.fantoken.v1beta1.Metadata meta_data = 4 [json_name = "metaData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"meta_data&#92;""];</code>
+     */
+    com.bitsong.fantoken.v1beta1.FantokenProto.MetadataOrBuilder getMetaDataOrBuilder();
+  }
+  /**
+   * <pre>
+   * FanToken defines a standard for the fungible token
+   * </pre>
+   *
+   * Protobuf type {@code bitsong.fantoken.v1beta1.FanToken}
+   */
+  public static final class FanToken extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bitsong.fantoken.v1beta1.FanToken)
+      FanTokenOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FanToken.newBuilder() to construct.
+    private FanToken(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FanToken() {
+      denom_ = "";
+      maxSupply_ = "";
+      minter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FanToken();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bitsong.fantoken.v1beta1.FantokenProto.internal_static_bitsong_fantoken_v1beta1_FanToken_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bitsong.fantoken.v1beta1.FantokenProto.internal_static_bitsong_fantoken_v1beta1_FanToken_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bitsong.fantoken.v1beta1.FantokenProto.FanToken.class, com.bitsong.fantoken.v1beta1.FantokenProto.FanToken.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <pre>
+     * denom represents the string name of the given denom unit (e.g ft&lt;hash&gt;).
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * denom represents the string name of the given denom unit (e.g ft&lt;hash&gt;).
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MAX_SUPPLY_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object maxSupply_ = "";
+    /**
+     * <code>string max_supply = 2 [json_name = "maxSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"max_supply&#92;""];</code>
+     * @return The maxSupply.
+     */
+    @java.lang.Override
+    public java.lang.String getMaxSupply() {
+      java.lang.Object ref = maxSupply_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        maxSupply_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string max_supply = 2 [json_name = "maxSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"max_supply&#92;""];</code>
+     * @return The bytes for maxSupply.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMaxSupplyBytes() {
+      java.lang.Object ref = maxSupply_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        maxSupply_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MINTER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object minter_ = "";
+    /**
+     * <pre>
+     * sdk.AccAddress allowed to mint new fantoken
+     * </pre>
+     *
+     * <code>string minter = 3 [json_name = "minter"];</code>
+     * @return The minter.
+     */
+    @java.lang.Override
+    public java.lang.String getMinter() {
+      java.lang.Object ref = minter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        minter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * sdk.AccAddress allowed to mint new fantoken
+     * </pre>
+     *
+     * <code>string minter = 3 [json_name = "minter"];</code>
+     * @return The bytes for minter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMinterBytes() {
+      java.lang.Object ref = minter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        minter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int META_DATA_FIELD_NUMBER = 4;
+    private com.bitsong.fantoken.v1beta1.FantokenProto.Metadata metaData_;
+    /**
+     * <code>.bitsong.fantoken.v1beta1.Metadata meta_data = 4 [json_name = "metaData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"meta_data&#92;""];</code>
+     * @return Whether the metaData field is set.
+     */
+    @java.lang.Override
+    public boolean hasMetaData() {
+      return metaData_ != null;
+    }
+    /**
+     * <code>.bitsong.fantoken.v1beta1.Metadata meta_data = 4 [json_name = "metaData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"meta_data&#92;""];</code>
+     * @return The metaData.
+     */
+    @java.lang.Override
+    public com.bitsong.fantoken.v1beta1.FantokenProto.Metadata getMetaData() {
+      return metaData_ == null ? com.bitsong.fantoken.v1beta1.FantokenProto.Metadata.getDefaultInstance() : metaData_;
+    }
+    /**
+     * <code>.bitsong.fantoken.v1beta1.Metadata meta_data = 4 [json_name = "metaData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"meta_data&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.bitsong.fantoken.v1beta1.FantokenProto.MetadataOrBuilder getMetaDataOrBuilder() {
+      return metaData_ == null ? com.bitsong.fantoken.v1beta1.FantokenProto.Metadata.getDefaultInstance() : metaData_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxSupply_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, maxSupply_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minter_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, minter_);
+      }
+      if (metaData_ != null) {
+        output.writeMessage(4, getMetaData());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxSupply_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, maxSupply_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minter_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, minter_);
+      }
+      if (metaData_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getMetaData());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bitsong.fantoken.v1beta1.FantokenProto.FanToken)) {
+        return super.equals(obj);
+      }
+      com.bitsong.fantoken.v1beta1.FantokenProto.FanToken other = (com.bitsong.fantoken.v1beta1.FantokenProto.FanToken) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getMaxSupply()
+          .equals(other.getMaxSupply())) return false;
+      if (!getMinter()
+          .equals(other.getMinter())) return false;
+      if (hasMetaData() != other.hasMetaData()) return false;
+      if (hasMetaData()) {
+        if (!getMetaData()
+            .equals(other.getMetaData())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + MAX_SUPPLY_FIELD_NUMBER;
+      hash = (53 * hash) + getMaxSupply().hashCode();
+      hash = (37 * hash) + MINTER_FIELD_NUMBER;
+      hash = (53 * hash) + getMinter().hashCode();
+      if (hasMetaData()) {
+        hash = (37 * hash) + META_DATA_FIELD_NUMBER;
+        hash = (53 * hash) + getMetaData().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bitsong.fantoken.v1beta1.FantokenProto.FanToken parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.fantoken.v1beta1.FantokenProto.FanToken parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.fantoken.v1beta1.FantokenProto.FanToken parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.fantoken.v1beta1.FantokenProto.FanToken parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.fantoken.v1beta1.FantokenProto.FanToken parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.fantoken.v1beta1.FantokenProto.FanToken parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.fantoken.v1beta1.FantokenProto.FanToken parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitsong.fantoken.v1beta1.FantokenProto.FanToken parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bitsong.fantoken.v1beta1.FantokenProto.FanToken parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bitsong.fantoken.v1beta1.FantokenProto.FanToken parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bitsong.fantoken.v1beta1.FantokenProto.FanToken parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitsong.fantoken.v1beta1.FantokenProto.FanToken parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bitsong.fantoken.v1beta1.FantokenProto.FanToken prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * FanToken defines a standard for the fungible token
+     * </pre>
+     *
+     * Protobuf type {@code bitsong.fantoken.v1beta1.FanToken}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bitsong.fantoken.v1beta1.FanToken)
+        com.bitsong.fantoken.v1beta1.FantokenProto.FanTokenOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bitsong.fantoken.v1beta1.FantokenProto.internal_static_bitsong_fantoken_v1beta1_FanToken_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bitsong.fantoken.v1beta1.FantokenProto.internal_static_bitsong_fantoken_v1beta1_FanToken_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bitsong.fantoken.v1beta1.FantokenProto.FanToken.class, com.bitsong.fantoken.v1beta1.FantokenProto.FanToken.Builder.class);
+      }
+
+      // Construct using com.bitsong.fantoken.v1beta1.FantokenProto.FanToken.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        maxSupply_ = "";
+        minter_ = "";
+        metaData_ = null;
+        if (metaDataBuilder_ != null) {
+          metaDataBuilder_.dispose();
+          metaDataBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bitsong.fantoken.v1beta1.FantokenProto.internal_static_bitsong_fantoken_v1beta1_FanToken_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bitsong.fantoken.v1beta1.FantokenProto.FanToken getDefaultInstanceForType() {
+        return com.bitsong.fantoken.v1beta1.FantokenProto.FanToken.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bitsong.fantoken.v1beta1.FantokenProto.FanToken build() {
+        com.bitsong.fantoken.v1beta1.FantokenProto.FanToken result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bitsong.fantoken.v1beta1.FantokenProto.FanToken buildPartial() {
+        com.bitsong.fantoken.v1beta1.FantokenProto.FanToken result = new com.bitsong.fantoken.v1beta1.FantokenProto.FanToken(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bitsong.fantoken.v1beta1.FantokenProto.FanToken result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.maxSupply_ = maxSupply_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.minter_ = minter_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.metaData_ = metaDataBuilder_ == null
+              ? metaData_
+              : metaDataBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bitsong.fantoken.v1beta1.FantokenProto.FanToken) {
+          return mergeFrom((com.bitsong.fantoken.v1beta1.FantokenProto.FanToken)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bitsong.fantoken.v1beta1.FantokenProto.FanToken other) {
+        if (other == com.bitsong.fantoken.v1beta1.FantokenProto.FanToken.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getMaxSupply().isEmpty()) {
+          maxSupply_ = other.maxSupply_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getMinter().isEmpty()) {
+          minter_ = other.minter_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.hasMetaData()) {
+          mergeMetaData(other.getMetaData());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                maxSupply_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                minter_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getMetaDataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <pre>
+       * denom represents the string name of the given denom unit (e.g ft&lt;hash&gt;).
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * denom represents the string name of the given denom unit (e.g ft&lt;hash&gt;).
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * denom represents the string name of the given denom unit (e.g ft&lt;hash&gt;).
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * denom represents the string name of the given denom unit (e.g ft&lt;hash&gt;).
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * denom represents the string name of the given denom unit (e.g ft&lt;hash&gt;).
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object maxSupply_ = "";
+      /**
+       * <code>string max_supply = 2 [json_name = "maxSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"max_supply&#92;""];</code>
+       * @return The maxSupply.
+       */
+      public java.lang.String getMaxSupply() {
+        java.lang.Object ref = maxSupply_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          maxSupply_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string max_supply = 2 [json_name = "maxSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"max_supply&#92;""];</code>
+       * @return The bytes for maxSupply.
+       */
+      public com.google.protobuf.ByteString
+          getMaxSupplyBytes() {
+        java.lang.Object ref = maxSupply_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          maxSupply_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string max_supply = 2 [json_name = "maxSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"max_supply&#92;""];</code>
+       * @param value The maxSupply to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxSupply(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        maxSupply_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string max_supply = 2 [json_name = "maxSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"max_supply&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxSupply() {
+        maxSupply_ = getDefaultInstance().getMaxSupply();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string max_supply = 2 [json_name = "maxSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"max_supply&#92;""];</code>
+       * @param value The bytes for maxSupply to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxSupplyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        maxSupply_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object minter_ = "";
+      /**
+       * <pre>
+       * sdk.AccAddress allowed to mint new fantoken
+       * </pre>
+       *
+       * <code>string minter = 3 [json_name = "minter"];</code>
+       * @return The minter.
+       */
+      public java.lang.String getMinter() {
+        java.lang.Object ref = minter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          minter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * sdk.AccAddress allowed to mint new fantoken
+       * </pre>
+       *
+       * <code>string minter = 3 [json_name = "minter"];</code>
+       * @return The bytes for minter.
+       */
+      public com.google.protobuf.ByteString
+          getMinterBytes() {
+        java.lang.Object ref = minter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          minter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * sdk.AccAddress allowed to mint new fantoken
+       * </pre>
+       *
+       * <code>string minter = 3 [json_name = "minter"];</code>
+       * @param value The minter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinter(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        minter_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * sdk.AccAddress allowed to mint new fantoken
+       * </pre>
+       *
+       * <code>string minter = 3 [json_name = "minter"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinter() {
+        minter_ = getDefaultInstance().getMinter();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * sdk.AccAddress allowed to mint new fantoken
+       * </pre>
+       *
+       * <code>string minter = 3 [json_name = "minter"];</code>
+       * @param value The bytes for minter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        minter_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.bitsong.fantoken.v1beta1.FantokenProto.Metadata metaData_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bitsong.fantoken.v1beta1.FantokenProto.Metadata, com.bitsong.fantoken.v1beta1.FantokenProto.Metadata.Builder, com.bitsong.fantoken.v1beta1.FantokenProto.MetadataOrBuilder> metaDataBuilder_;
+      /**
+       * <code>.bitsong.fantoken.v1beta1.Metadata meta_data = 4 [json_name = "metaData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"meta_data&#92;""];</code>
+       * @return Whether the metaData field is set.
+       */
+      public boolean hasMetaData() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.bitsong.fantoken.v1beta1.Metadata meta_data = 4 [json_name = "metaData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"meta_data&#92;""];</code>
+       * @return The metaData.
+       */
+      public com.bitsong.fantoken.v1beta1.FantokenProto.Metadata getMetaData() {
+        if (metaDataBuilder_ == null) {
+          return metaData_ == null ? com.bitsong.fantoken.v1beta1.FantokenProto.Metadata.getDefaultInstance() : metaData_;
+        } else {
+          return metaDataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.bitsong.fantoken.v1beta1.Metadata meta_data = 4 [json_name = "metaData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"meta_data&#92;""];</code>
+       */
+      public Builder setMetaData(com.bitsong.fantoken.v1beta1.FantokenProto.Metadata value) {
+        if (metaDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metaData_ = value;
+        } else {
+          metaDataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bitsong.fantoken.v1beta1.Metadata meta_data = 4 [json_name = "metaData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"meta_data&#92;""];</code>
+       */
+      public Builder setMetaData(
+          com.bitsong.fantoken.v1beta1.FantokenProto.Metadata.Builder builderForValue) {
+        if (metaDataBuilder_ == null) {
+          metaData_ = builderForValue.build();
+        } else {
+          metaDataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bitsong.fantoken.v1beta1.Metadata meta_data = 4 [json_name = "metaData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"meta_data&#92;""];</code>
+       */
+      public Builder mergeMetaData(com.bitsong.fantoken.v1beta1.FantokenProto.Metadata value) {
+        if (metaDataBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            metaData_ != null &&
+            metaData_ != com.bitsong.fantoken.v1beta1.FantokenProto.Metadata.getDefaultInstance()) {
+            getMetaDataBuilder().mergeFrom(value);
+          } else {
+            metaData_ = value;
+          }
+        } else {
+          metaDataBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bitsong.fantoken.v1beta1.Metadata meta_data = 4 [json_name = "metaData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"meta_data&#92;""];</code>
+       */
+      public Builder clearMetaData() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        metaData_ = null;
+        if (metaDataBuilder_ != null) {
+          metaDataBuilder_.dispose();
+          metaDataBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bitsong.fantoken.v1beta1.Metadata meta_data = 4 [json_name = "metaData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"meta_data&#92;""];</code>
+       */
+      public com.bitsong.fantoken.v1beta1.FantokenProto.Metadata.Builder getMetaDataBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getMetaDataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.bitsong.fantoken.v1beta1.Metadata meta_data = 4 [json_name = "metaData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"meta_data&#92;""];</code>
+       */
+      public com.bitsong.fantoken.v1beta1.FantokenProto.MetadataOrBuilder getMetaDataOrBuilder() {
+        if (metaDataBuilder_ != null) {
+          return metaDataBuilder_.getMessageOrBuilder();
+        } else {
+          return metaData_ == null ?
+              com.bitsong.fantoken.v1beta1.FantokenProto.Metadata.getDefaultInstance() : metaData_;
+        }
+      }
+      /**
+       * <code>.bitsong.fantoken.v1beta1.Metadata meta_data = 4 [json_name = "metaData", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"meta_data&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bitsong.fantoken.v1beta1.FantokenProto.Metadata, com.bitsong.fantoken.v1beta1.FantokenProto.Metadata.Builder, com.bitsong.fantoken.v1beta1.FantokenProto.MetadataOrBuilder> 
+          getMetaDataFieldBuilder() {
+        if (metaDataBuilder_ == null) {
+          metaDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.bitsong.fantoken.v1beta1.FantokenProto.Metadata, com.bitsong.fantoken.v1beta1.FantokenProto.Metadata.Builder, com.bitsong.fantoken.v1beta1.FantokenProto.MetadataOrBuilder>(
+                  getMetaData(),
+                  getParentForChildren(),
+                  isClean());
+          metaData_ = null;
+        }
+        return metaDataBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bitsong.fantoken.v1beta1.FanToken)
+    }
+
+    // @@protoc_insertion_point(class_scope:bitsong.fantoken.v1beta1.FanToken)
+    private static final com.bitsong.fantoken.v1beta1.FantokenProto.FanToken DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bitsong.fantoken.v1beta1.FantokenProto.FanToken();
+    }
+
+    public static com.bitsong.fantoken.v1beta1.FantokenProto.FanToken getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FanToken>
+        PARSER = new com.google.protobuf.AbstractParser<FanToken>() {
+      @java.lang.Override
+      public FanToken parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<FanToken> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FanToken> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bitsong.fantoken.v1beta1.FantokenProto.FanToken getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bitsong_fantoken_v1beta1_Metadata_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bitsong_fantoken_v1beta1_Metadata_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bitsong_fantoken_v1beta1_FanToken_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bitsong_fantoken_v1beta1_FanToken_fieldAccessorTable;
 
@@ -45,13 +2318,13 @@ public final class FantokenProto {
       "maxSupply\022\026\n\006minter\030\003 \001(\tR\006minter\022Y\n\tmet" +
       "a_data\030\004 \001(\0132\".bitsong.fantoken.v1beta1." +
       "MetadataB\030\310\336\037\000\362\336\037\020yaml:\"meta_data\"R\010meta" +
-      "Data:\010\210\240\037\000\230\240\037\000B\353\001\n\034com.bitsong.fantoken." +
-      "v1beta1B\rFantokenProtoP\001Z6github.com/bit" +
-      "songofficial/go-bitsong/x/fantoken/types" +
-      "\242\002\003BFX\252\002\030Bitsong.Fantoken.V1beta1\312\002\030Bits" +
-      "ong\\Fantoken\\V1beta1\342\002$Bitsong\\Fantoken\\" +
-      "V1beta1\\GPBMetadata\352\002\032Bitsong::Fantoken:" +
-      ":V1beta1\310\341\036\000b\006proto3"
+      "Data:\010\210\240\037\000\230\240\037\000B\351\001\n\034com.bitsong.fantoken." +
+      "v1beta1B\rFantokenProtoZ6github.com/bitso" +
+      "ngofficial/go-bitsong/x/fantoken/types\242\002" +
+      "\003BFX\252\002\030Bitsong.Fantoken.V1beta1\312\002\030Bitson" +
+      "g\\Fantoken\\V1beta1\342\002$Bitsong\\Fantoken\\V1" +
+      "beta1\\GPBMetadata\352\002\032Bitsong::Fantoken::V" +
+      "1beta1\310\341\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

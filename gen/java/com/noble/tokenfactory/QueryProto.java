@@ -14,134 +14,15379 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:noble.tokenfactory.QueryParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryParamsRequest is request type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code noble.tokenfactory.QueryParamsRequest}
+   */
+  public static final class QueryParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:noble.tokenfactory.QueryParamsRequest)
+      QueryParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsRequest.newBuilder() to construct.
+    private QueryParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.noble.tokenfactory.QueryProto.QueryParamsRequest.class, com.noble.tokenfactory.QueryProto.QueryParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.noble.tokenfactory.QueryProto.QueryParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.noble.tokenfactory.QueryProto.QueryParamsRequest other = (com.noble.tokenfactory.QueryProto.QueryParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.noble.tokenfactory.QueryProto.QueryParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsRequest is request type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code noble.tokenfactory.QueryParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:noble.tokenfactory.QueryParamsRequest)
+        com.noble.tokenfactory.QueryProto.QueryParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.noble.tokenfactory.QueryProto.QueryParamsRequest.class, com.noble.tokenfactory.QueryProto.QueryParamsRequest.Builder.class);
+      }
+
+      // Construct using com.noble.tokenfactory.QueryProto.QueryParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+        return com.noble.tokenfactory.QueryProto.QueryParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryParamsRequest build() {
+        com.noble.tokenfactory.QueryProto.QueryParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryParamsRequest buildPartial() {
+        com.noble.tokenfactory.QueryProto.QueryParamsRequest result = new com.noble.tokenfactory.QueryProto.QueryParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.noble.tokenfactory.QueryProto.QueryParamsRequest) {
+          return mergeFrom((com.noble.tokenfactory.QueryProto.QueryParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.noble.tokenfactory.QueryProto.QueryParamsRequest other) {
+        if (other == com.noble.tokenfactory.QueryProto.QueryParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:noble.tokenfactory.QueryParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:noble.tokenfactory.QueryParamsRequest)
+    private static final com.noble.tokenfactory.QueryProto.QueryParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.noble.tokenfactory.QueryProto.QueryParamsRequest();
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsRequest>() {
+      @java.lang.Override
+      public QueryParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.noble.tokenfactory.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:noble.tokenfactory.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.noble.tokenfactory.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.noble.tokenfactory.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.noble.tokenfactory.ParamsProto.Params getParams();
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.noble.tokenfactory.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.noble.tokenfactory.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryParamsResponse is response type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code noble.tokenfactory.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:noble.tokenfactory.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.noble.tokenfactory.QueryProto.QueryParamsResponse.class, com.noble.tokenfactory.QueryProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.noble.tokenfactory.ParamsProto.Params params_;
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.noble.tokenfactory.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.noble.tokenfactory.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.noble.tokenfactory.ParamsProto.Params getParams() {
+      return params_ == null ? com.noble.tokenfactory.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.noble.tokenfactory.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.noble.tokenfactory.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.noble.tokenfactory.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.noble.tokenfactory.QueryProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.noble.tokenfactory.QueryProto.QueryParamsResponse other = (com.noble.tokenfactory.QueryProto.QueryParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.noble.tokenfactory.QueryProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsResponse is response type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code noble.tokenfactory.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:noble.tokenfactory.QueryParamsResponse)
+        com.noble.tokenfactory.QueryProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.noble.tokenfactory.QueryProto.QueryParamsResponse.class, com.noble.tokenfactory.QueryProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.noble.tokenfactory.QueryProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.noble.tokenfactory.QueryProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryParamsResponse build() {
+        com.noble.tokenfactory.QueryProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryParamsResponse buildPartial() {
+        com.noble.tokenfactory.QueryProto.QueryParamsResponse result = new com.noble.tokenfactory.QueryProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.noble.tokenfactory.QueryProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.noble.tokenfactory.QueryProto.QueryParamsResponse) {
+          return mergeFrom((com.noble.tokenfactory.QueryProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.noble.tokenfactory.QueryProto.QueryParamsResponse other) {
+        if (other == com.noble.tokenfactory.QueryProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.noble.tokenfactory.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.noble.tokenfactory.ParamsProto.Params, com.noble.tokenfactory.ParamsProto.Params.Builder, com.noble.tokenfactory.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.noble.tokenfactory.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.noble.tokenfactory.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.noble.tokenfactory.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.noble.tokenfactory.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.noble.tokenfactory.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.noble.tokenfactory.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.noble.tokenfactory.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.noble.tokenfactory.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.noble.tokenfactory.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.noble.tokenfactory.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.noble.tokenfactory.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.noble.tokenfactory.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.noble.tokenfactory.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.noble.tokenfactory.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.noble.tokenfactory.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.noble.tokenfactory.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.noble.tokenfactory.ParamsProto.Params, com.noble.tokenfactory.ParamsProto.Params.Builder, com.noble.tokenfactory.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.noble.tokenfactory.ParamsProto.Params, com.noble.tokenfactory.ParamsProto.Params.Builder, com.noble.tokenfactory.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:noble.tokenfactory.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:noble.tokenfactory.QueryParamsResponse)
+    private static final com.noble.tokenfactory.QueryProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.noble.tokenfactory.QueryProto.QueryParamsResponse();
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.noble.tokenfactory.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGetBlacklistedRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:noble.tokenfactory.QueryGetBlacklistedRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+  }
+  /**
+   * Protobuf type {@code noble.tokenfactory.QueryGetBlacklistedRequest}
+   */
+  public static final class QueryGetBlacklistedRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:noble.tokenfactory.QueryGetBlacklistedRequest)
+      QueryGetBlacklistedRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGetBlacklistedRequest.newBuilder() to construct.
+    private QueryGetBlacklistedRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGetBlacklistedRequest() {
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGetBlacklistedRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetBlacklistedRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetBlacklistedRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest.class, com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest)) {
+        return super.equals(obj);
+      }
+      com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest other = (com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code noble.tokenfactory.QueryGetBlacklistedRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:noble.tokenfactory.QueryGetBlacklistedRequest)
+        com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetBlacklistedRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetBlacklistedRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest.class, com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest.Builder.class);
+      }
+
+      // Construct using com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetBlacklistedRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest getDefaultInstanceForType() {
+        return com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest build() {
+        com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest buildPartial() {
+        com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest result = new com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest) {
+          return mergeFrom((com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest other) {
+        if (other == com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:noble.tokenfactory.QueryGetBlacklistedRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:noble.tokenfactory.QueryGetBlacklistedRequest)
+    private static final com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest();
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGetBlacklistedRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGetBlacklistedRequest>() {
+      @java.lang.Override
+      public QueryGetBlacklistedRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGetBlacklistedRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGetBlacklistedRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.noble.tokenfactory.QueryProto.QueryGetBlacklistedRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGetBlacklistedResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:noble.tokenfactory.QueryGetBlacklistedResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+     * @return Whether the blacklisted field is set.
+     */
+    boolean hasBlacklisted();
+    /**
+     * <code>.noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+     * @return The blacklisted.
+     */
+    com.noble.tokenfactory.BlacklistedProto.Blacklisted getBlacklisted();
+    /**
+     * <code>.noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+     */
+    com.noble.tokenfactory.BlacklistedProto.BlacklistedOrBuilder getBlacklistedOrBuilder();
+  }
+  /**
+   * Protobuf type {@code noble.tokenfactory.QueryGetBlacklistedResponse}
+   */
+  public static final class QueryGetBlacklistedResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:noble.tokenfactory.QueryGetBlacklistedResponse)
+      QueryGetBlacklistedResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGetBlacklistedResponse.newBuilder() to construct.
+    private QueryGetBlacklistedResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGetBlacklistedResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGetBlacklistedResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetBlacklistedResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetBlacklistedResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse.class, com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse.Builder.class);
+    }
+
+    public static final int BLACKLISTED_FIELD_NUMBER = 1;
+    private com.noble.tokenfactory.BlacklistedProto.Blacklisted blacklisted_;
+    /**
+     * <code>.noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+     * @return Whether the blacklisted field is set.
+     */
+    @java.lang.Override
+    public boolean hasBlacklisted() {
+      return blacklisted_ != null;
+    }
+    /**
+     * <code>.noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+     * @return The blacklisted.
+     */
+    @java.lang.Override
+    public com.noble.tokenfactory.BlacklistedProto.Blacklisted getBlacklisted() {
+      return blacklisted_ == null ? com.noble.tokenfactory.BlacklistedProto.Blacklisted.getDefaultInstance() : blacklisted_;
+    }
+    /**
+     * <code>.noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.noble.tokenfactory.BlacklistedProto.BlacklistedOrBuilder getBlacklistedOrBuilder() {
+      return blacklisted_ == null ? com.noble.tokenfactory.BlacklistedProto.Blacklisted.getDefaultInstance() : blacklisted_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (blacklisted_ != null) {
+        output.writeMessage(1, getBlacklisted());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (blacklisted_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getBlacklisted());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse)) {
+        return super.equals(obj);
+      }
+      com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse other = (com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse) obj;
+
+      if (hasBlacklisted() != other.hasBlacklisted()) return false;
+      if (hasBlacklisted()) {
+        if (!getBlacklisted()
+            .equals(other.getBlacklisted())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasBlacklisted()) {
+        hash = (37 * hash) + BLACKLISTED_FIELD_NUMBER;
+        hash = (53 * hash) + getBlacklisted().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code noble.tokenfactory.QueryGetBlacklistedResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:noble.tokenfactory.QueryGetBlacklistedResponse)
+        com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetBlacklistedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetBlacklistedResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse.class, com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse.Builder.class);
+      }
+
+      // Construct using com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        blacklisted_ = null;
+        if (blacklistedBuilder_ != null) {
+          blacklistedBuilder_.dispose();
+          blacklistedBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetBlacklistedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse getDefaultInstanceForType() {
+        return com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse build() {
+        com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse buildPartial() {
+        com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse result = new com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.blacklisted_ = blacklistedBuilder_ == null
+              ? blacklisted_
+              : blacklistedBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse) {
+          return mergeFrom((com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse other) {
+        if (other == com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse.getDefaultInstance()) return this;
+        if (other.hasBlacklisted()) {
+          mergeBlacklisted(other.getBlacklisted());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getBlacklistedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.noble.tokenfactory.BlacklistedProto.Blacklisted blacklisted_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.noble.tokenfactory.BlacklistedProto.Blacklisted, com.noble.tokenfactory.BlacklistedProto.Blacklisted.Builder, com.noble.tokenfactory.BlacklistedProto.BlacklistedOrBuilder> blacklistedBuilder_;
+      /**
+       * <code>.noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+       * @return Whether the blacklisted field is set.
+       */
+      public boolean hasBlacklisted() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+       * @return The blacklisted.
+       */
+      public com.noble.tokenfactory.BlacklistedProto.Blacklisted getBlacklisted() {
+        if (blacklistedBuilder_ == null) {
+          return blacklisted_ == null ? com.noble.tokenfactory.BlacklistedProto.Blacklisted.getDefaultInstance() : blacklisted_;
+        } else {
+          return blacklistedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBlacklisted(com.noble.tokenfactory.BlacklistedProto.Blacklisted value) {
+        if (blacklistedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          blacklisted_ = value;
+        } else {
+          blacklistedBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBlacklisted(
+          com.noble.tokenfactory.BlacklistedProto.Blacklisted.Builder builderForValue) {
+        if (blacklistedBuilder_ == null) {
+          blacklisted_ = builderForValue.build();
+        } else {
+          blacklistedBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeBlacklisted(com.noble.tokenfactory.BlacklistedProto.Blacklisted value) {
+        if (blacklistedBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            blacklisted_ != null &&
+            blacklisted_ != com.noble.tokenfactory.BlacklistedProto.Blacklisted.getDefaultInstance()) {
+            getBlacklistedBuilder().mergeFrom(value);
+          } else {
+            blacklisted_ = value;
+          }
+        } else {
+          blacklistedBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearBlacklisted() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        blacklisted_ = null;
+        if (blacklistedBuilder_ != null) {
+          blacklistedBuilder_.dispose();
+          blacklistedBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.BlacklistedProto.Blacklisted.Builder getBlacklistedBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getBlacklistedFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.BlacklistedProto.BlacklistedOrBuilder getBlacklistedOrBuilder() {
+        if (blacklistedBuilder_ != null) {
+          return blacklistedBuilder_.getMessageOrBuilder();
+        } else {
+          return blacklisted_ == null ?
+              com.noble.tokenfactory.BlacklistedProto.Blacklisted.getDefaultInstance() : blacklisted_;
+        }
+      }
+      /**
+       * <code>.noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.noble.tokenfactory.BlacklistedProto.Blacklisted, com.noble.tokenfactory.BlacklistedProto.Blacklisted.Builder, com.noble.tokenfactory.BlacklistedProto.BlacklistedOrBuilder> 
+          getBlacklistedFieldBuilder() {
+        if (blacklistedBuilder_ == null) {
+          blacklistedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.noble.tokenfactory.BlacklistedProto.Blacklisted, com.noble.tokenfactory.BlacklistedProto.Blacklisted.Builder, com.noble.tokenfactory.BlacklistedProto.BlacklistedOrBuilder>(
+                  getBlacklisted(),
+                  getParentForChildren(),
+                  isClean());
+          blacklisted_ = null;
+        }
+        return blacklistedBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:noble.tokenfactory.QueryGetBlacklistedResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:noble.tokenfactory.QueryGetBlacklistedResponse)
+    private static final com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse();
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGetBlacklistedResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGetBlacklistedResponse>() {
+      @java.lang.Override
+      public QueryGetBlacklistedResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGetBlacklistedResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGetBlacklistedResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.noble.tokenfactory.QueryProto.QueryGetBlacklistedResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAllBlacklistedRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:noble.tokenfactory.QueryAllBlacklistedRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code noble.tokenfactory.QueryAllBlacklistedRequest}
+   */
+  public static final class QueryAllBlacklistedRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:noble.tokenfactory.QueryAllBlacklistedRequest)
+      QueryAllBlacklistedRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAllBlacklistedRequest.newBuilder() to construct.
+    private QueryAllBlacklistedRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAllBlacklistedRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAllBlacklistedRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryAllBlacklistedRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryAllBlacklistedRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest.class, com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 1;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(1, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest)) {
+        return super.equals(obj);
+      }
+      com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest other = (com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code noble.tokenfactory.QueryAllBlacklistedRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:noble.tokenfactory.QueryAllBlacklistedRequest)
+        com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryAllBlacklistedRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryAllBlacklistedRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest.class, com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest.Builder.class);
+      }
+
+      // Construct using com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryAllBlacklistedRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest getDefaultInstanceForType() {
+        return com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest build() {
+        com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest buildPartial() {
+        com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest result = new com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest) {
+          return mergeFrom((com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest other) {
+        if (other == com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:noble.tokenfactory.QueryAllBlacklistedRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:noble.tokenfactory.QueryAllBlacklistedRequest)
+    private static final com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest();
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAllBlacklistedRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAllBlacklistedRequest>() {
+      @java.lang.Override
+      public QueryAllBlacklistedRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAllBlacklistedRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAllBlacklistedRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.noble.tokenfactory.QueryProto.QueryAllBlacklistedRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAllBlacklistedResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:noble.tokenfactory.QueryAllBlacklistedResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.noble.tokenfactory.BlacklistedProto.Blacklisted> 
+        getBlacklistedList();
+    /**
+     * <code>repeated .noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+     */
+    com.noble.tokenfactory.BlacklistedProto.Blacklisted getBlacklisted(int index);
+    /**
+     * <code>repeated .noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+     */
+    int getBlacklistedCount();
+    /**
+     * <code>repeated .noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.noble.tokenfactory.BlacklistedProto.BlacklistedOrBuilder> 
+        getBlacklistedOrBuilderList();
+    /**
+     * <code>repeated .noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+     */
+    com.noble.tokenfactory.BlacklistedProto.BlacklistedOrBuilder getBlacklistedOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code noble.tokenfactory.QueryAllBlacklistedResponse}
+   */
+  public static final class QueryAllBlacklistedResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:noble.tokenfactory.QueryAllBlacklistedResponse)
+      QueryAllBlacklistedResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAllBlacklistedResponse.newBuilder() to construct.
+    private QueryAllBlacklistedResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAllBlacklistedResponse() {
+      blacklisted_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAllBlacklistedResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryAllBlacklistedResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryAllBlacklistedResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse.class, com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse.Builder.class);
+    }
+
+    public static final int BLACKLISTED_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.noble.tokenfactory.BlacklistedProto.Blacklisted> blacklisted_;
+    /**
+     * <code>repeated .noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.noble.tokenfactory.BlacklistedProto.Blacklisted> getBlacklistedList() {
+      return blacklisted_;
+    }
+    /**
+     * <code>repeated .noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.noble.tokenfactory.BlacklistedProto.BlacklistedOrBuilder> 
+        getBlacklistedOrBuilderList() {
+      return blacklisted_;
+    }
+    /**
+     * <code>repeated .noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getBlacklistedCount() {
+      return blacklisted_.size();
+    }
+    /**
+     * <code>repeated .noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.noble.tokenfactory.BlacklistedProto.Blacklisted getBlacklisted(int index) {
+      return blacklisted_.get(index);
+    }
+    /**
+     * <code>repeated .noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.noble.tokenfactory.BlacklistedProto.BlacklistedOrBuilder getBlacklistedOrBuilder(
+        int index) {
+      return blacklisted_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < blacklisted_.size(); i++) {
+        output.writeMessage(1, blacklisted_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < blacklisted_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, blacklisted_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse)) {
+        return super.equals(obj);
+      }
+      com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse other = (com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse) obj;
+
+      if (!getBlacklistedList()
+          .equals(other.getBlacklistedList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getBlacklistedCount() > 0) {
+        hash = (37 * hash) + BLACKLISTED_FIELD_NUMBER;
+        hash = (53 * hash) + getBlacklistedList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code noble.tokenfactory.QueryAllBlacklistedResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:noble.tokenfactory.QueryAllBlacklistedResponse)
+        com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryAllBlacklistedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryAllBlacklistedResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse.class, com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse.Builder.class);
+      }
+
+      // Construct using com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (blacklistedBuilder_ == null) {
+          blacklisted_ = java.util.Collections.emptyList();
+        } else {
+          blacklisted_ = null;
+          blacklistedBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryAllBlacklistedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse getDefaultInstanceForType() {
+        return com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse build() {
+        com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse buildPartial() {
+        com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse result = new com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse result) {
+        if (blacklistedBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            blacklisted_ = java.util.Collections.unmodifiableList(blacklisted_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.blacklisted_ = blacklisted_;
+        } else {
+          result.blacklisted_ = blacklistedBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse) {
+          return mergeFrom((com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse other) {
+        if (other == com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse.getDefaultInstance()) return this;
+        if (blacklistedBuilder_ == null) {
+          if (!other.blacklisted_.isEmpty()) {
+            if (blacklisted_.isEmpty()) {
+              blacklisted_ = other.blacklisted_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureBlacklistedIsMutable();
+              blacklisted_.addAll(other.blacklisted_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.blacklisted_.isEmpty()) {
+            if (blacklistedBuilder_.isEmpty()) {
+              blacklistedBuilder_.dispose();
+              blacklistedBuilder_ = null;
+              blacklisted_ = other.blacklisted_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              blacklistedBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBlacklistedFieldBuilder() : null;
+            } else {
+              blacklistedBuilder_.addAllMessages(other.blacklisted_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.noble.tokenfactory.BlacklistedProto.Blacklisted m =
+                    input.readMessage(
+                        com.noble.tokenfactory.BlacklistedProto.Blacklisted.parser(),
+                        extensionRegistry);
+                if (blacklistedBuilder_ == null) {
+                  ensureBlacklistedIsMutable();
+                  blacklisted_.add(m);
+                } else {
+                  blacklistedBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.noble.tokenfactory.BlacklistedProto.Blacklisted> blacklisted_ =
+        java.util.Collections.emptyList();
+      private void ensureBlacklistedIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          blacklisted_ = new java.util.ArrayList<com.noble.tokenfactory.BlacklistedProto.Blacklisted>(blacklisted_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.noble.tokenfactory.BlacklistedProto.Blacklisted, com.noble.tokenfactory.BlacklistedProto.Blacklisted.Builder, com.noble.tokenfactory.BlacklistedProto.BlacklistedOrBuilder> blacklistedBuilder_;
+
+      /**
+       * <code>repeated .noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.noble.tokenfactory.BlacklistedProto.Blacklisted> getBlacklistedList() {
+        if (blacklistedBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(blacklisted_);
+        } else {
+          return blacklistedBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+       */
+      public int getBlacklistedCount() {
+        if (blacklistedBuilder_ == null) {
+          return blacklisted_.size();
+        } else {
+          return blacklistedBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.BlacklistedProto.Blacklisted getBlacklisted(int index) {
+        if (blacklistedBuilder_ == null) {
+          return blacklisted_.get(index);
+        } else {
+          return blacklistedBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBlacklisted(
+          int index, com.noble.tokenfactory.BlacklistedProto.Blacklisted value) {
+        if (blacklistedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBlacklistedIsMutable();
+          blacklisted_.set(index, value);
+          onChanged();
+        } else {
+          blacklistedBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBlacklisted(
+          int index, com.noble.tokenfactory.BlacklistedProto.Blacklisted.Builder builderForValue) {
+        if (blacklistedBuilder_ == null) {
+          ensureBlacklistedIsMutable();
+          blacklisted_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          blacklistedBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBlacklisted(com.noble.tokenfactory.BlacklistedProto.Blacklisted value) {
+        if (blacklistedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBlacklistedIsMutable();
+          blacklisted_.add(value);
+          onChanged();
+        } else {
+          blacklistedBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBlacklisted(
+          int index, com.noble.tokenfactory.BlacklistedProto.Blacklisted value) {
+        if (blacklistedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBlacklistedIsMutable();
+          blacklisted_.add(index, value);
+          onChanged();
+        } else {
+          blacklistedBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBlacklisted(
+          com.noble.tokenfactory.BlacklistedProto.Blacklisted.Builder builderForValue) {
+        if (blacklistedBuilder_ == null) {
+          ensureBlacklistedIsMutable();
+          blacklisted_.add(builderForValue.build());
+          onChanged();
+        } else {
+          blacklistedBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBlacklisted(
+          int index, com.noble.tokenfactory.BlacklistedProto.Blacklisted.Builder builderForValue) {
+        if (blacklistedBuilder_ == null) {
+          ensureBlacklistedIsMutable();
+          blacklisted_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          blacklistedBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllBlacklisted(
+          java.lang.Iterable<? extends com.noble.tokenfactory.BlacklistedProto.Blacklisted> values) {
+        if (blacklistedBuilder_ == null) {
+          ensureBlacklistedIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, blacklisted_);
+          onChanged();
+        } else {
+          blacklistedBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearBlacklisted() {
+        if (blacklistedBuilder_ == null) {
+          blacklisted_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          blacklistedBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeBlacklisted(int index) {
+        if (blacklistedBuilder_ == null) {
+          ensureBlacklistedIsMutable();
+          blacklisted_.remove(index);
+          onChanged();
+        } else {
+          blacklistedBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.BlacklistedProto.Blacklisted.Builder getBlacklistedBuilder(
+          int index) {
+        return getBlacklistedFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.BlacklistedProto.BlacklistedOrBuilder getBlacklistedOrBuilder(
+          int index) {
+        if (blacklistedBuilder_ == null) {
+          return blacklisted_.get(index);  } else {
+          return blacklistedBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.noble.tokenfactory.BlacklistedProto.BlacklistedOrBuilder> 
+           getBlacklistedOrBuilderList() {
+        if (blacklistedBuilder_ != null) {
+          return blacklistedBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(blacklisted_);
+        }
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.BlacklistedProto.Blacklisted.Builder addBlacklistedBuilder() {
+        return getBlacklistedFieldBuilder().addBuilder(
+            com.noble.tokenfactory.BlacklistedProto.Blacklisted.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.BlacklistedProto.Blacklisted.Builder addBlacklistedBuilder(
+          int index) {
+        return getBlacklistedFieldBuilder().addBuilder(
+            index, com.noble.tokenfactory.BlacklistedProto.Blacklisted.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Blacklisted blacklisted = 1 [json_name = "blacklisted", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.noble.tokenfactory.BlacklistedProto.Blacklisted.Builder> 
+           getBlacklistedBuilderList() {
+        return getBlacklistedFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.noble.tokenfactory.BlacklistedProto.Blacklisted, com.noble.tokenfactory.BlacklistedProto.Blacklisted.Builder, com.noble.tokenfactory.BlacklistedProto.BlacklistedOrBuilder> 
+          getBlacklistedFieldBuilder() {
+        if (blacklistedBuilder_ == null) {
+          blacklistedBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.noble.tokenfactory.BlacklistedProto.Blacklisted, com.noble.tokenfactory.BlacklistedProto.Blacklisted.Builder, com.noble.tokenfactory.BlacklistedProto.BlacklistedOrBuilder>(
+                  blacklisted_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          blacklisted_ = null;
+        }
+        return blacklistedBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:noble.tokenfactory.QueryAllBlacklistedResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:noble.tokenfactory.QueryAllBlacklistedResponse)
+    private static final com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse();
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAllBlacklistedResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAllBlacklistedResponse>() {
+      @java.lang.Override
+      public QueryAllBlacklistedResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAllBlacklistedResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAllBlacklistedResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.noble.tokenfactory.QueryProto.QueryAllBlacklistedResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGetPausedRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:noble.tokenfactory.QueryGetPausedRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code noble.tokenfactory.QueryGetPausedRequest}
+   */
+  public static final class QueryGetPausedRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:noble.tokenfactory.QueryGetPausedRequest)
+      QueryGetPausedRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGetPausedRequest.newBuilder() to construct.
+    private QueryGetPausedRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGetPausedRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGetPausedRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetPausedRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetPausedRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.noble.tokenfactory.QueryProto.QueryGetPausedRequest.class, com.noble.tokenfactory.QueryProto.QueryGetPausedRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.noble.tokenfactory.QueryProto.QueryGetPausedRequest)) {
+        return super.equals(obj);
+      }
+      com.noble.tokenfactory.QueryProto.QueryGetPausedRequest other = (com.noble.tokenfactory.QueryProto.QueryGetPausedRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetPausedRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPausedRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPausedRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPausedRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPausedRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPausedRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPausedRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPausedRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetPausedRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetPausedRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPausedRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPausedRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.noble.tokenfactory.QueryProto.QueryGetPausedRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code noble.tokenfactory.QueryGetPausedRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:noble.tokenfactory.QueryGetPausedRequest)
+        com.noble.tokenfactory.QueryProto.QueryGetPausedRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetPausedRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetPausedRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.noble.tokenfactory.QueryProto.QueryGetPausedRequest.class, com.noble.tokenfactory.QueryProto.QueryGetPausedRequest.Builder.class);
+      }
+
+      // Construct using com.noble.tokenfactory.QueryProto.QueryGetPausedRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetPausedRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetPausedRequest getDefaultInstanceForType() {
+        return com.noble.tokenfactory.QueryProto.QueryGetPausedRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetPausedRequest build() {
+        com.noble.tokenfactory.QueryProto.QueryGetPausedRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetPausedRequest buildPartial() {
+        com.noble.tokenfactory.QueryProto.QueryGetPausedRequest result = new com.noble.tokenfactory.QueryProto.QueryGetPausedRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.noble.tokenfactory.QueryProto.QueryGetPausedRequest) {
+          return mergeFrom((com.noble.tokenfactory.QueryProto.QueryGetPausedRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.noble.tokenfactory.QueryProto.QueryGetPausedRequest other) {
+        if (other == com.noble.tokenfactory.QueryProto.QueryGetPausedRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:noble.tokenfactory.QueryGetPausedRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:noble.tokenfactory.QueryGetPausedRequest)
+    private static final com.noble.tokenfactory.QueryProto.QueryGetPausedRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.noble.tokenfactory.QueryProto.QueryGetPausedRequest();
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetPausedRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGetPausedRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGetPausedRequest>() {
+      @java.lang.Override
+      public QueryGetPausedRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGetPausedRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGetPausedRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.noble.tokenfactory.QueryProto.QueryGetPausedRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGetPausedResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:noble.tokenfactory.QueryGetPausedResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.noble.tokenfactory.Paused paused = 1 [json_name = "paused", (.gogoproto.nullable) = false];</code>
+     * @return Whether the paused field is set.
+     */
+    boolean hasPaused();
+    /**
+     * <code>.noble.tokenfactory.Paused paused = 1 [json_name = "paused", (.gogoproto.nullable) = false];</code>
+     * @return The paused.
+     */
+    com.noble.tokenfactory.PausedProto.Paused getPaused();
+    /**
+     * <code>.noble.tokenfactory.Paused paused = 1 [json_name = "paused", (.gogoproto.nullable) = false];</code>
+     */
+    com.noble.tokenfactory.PausedProto.PausedOrBuilder getPausedOrBuilder();
+  }
+  /**
+   * Protobuf type {@code noble.tokenfactory.QueryGetPausedResponse}
+   */
+  public static final class QueryGetPausedResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:noble.tokenfactory.QueryGetPausedResponse)
+      QueryGetPausedResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGetPausedResponse.newBuilder() to construct.
+    private QueryGetPausedResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGetPausedResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGetPausedResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetPausedResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetPausedResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.noble.tokenfactory.QueryProto.QueryGetPausedResponse.class, com.noble.tokenfactory.QueryProto.QueryGetPausedResponse.Builder.class);
+    }
+
+    public static final int PAUSED_FIELD_NUMBER = 1;
+    private com.noble.tokenfactory.PausedProto.Paused paused_;
+    /**
+     * <code>.noble.tokenfactory.Paused paused = 1 [json_name = "paused", (.gogoproto.nullable) = false];</code>
+     * @return Whether the paused field is set.
+     */
+    @java.lang.Override
+    public boolean hasPaused() {
+      return paused_ != null;
+    }
+    /**
+     * <code>.noble.tokenfactory.Paused paused = 1 [json_name = "paused", (.gogoproto.nullable) = false];</code>
+     * @return The paused.
+     */
+    @java.lang.Override
+    public com.noble.tokenfactory.PausedProto.Paused getPaused() {
+      return paused_ == null ? com.noble.tokenfactory.PausedProto.Paused.getDefaultInstance() : paused_;
+    }
+    /**
+     * <code>.noble.tokenfactory.Paused paused = 1 [json_name = "paused", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.noble.tokenfactory.PausedProto.PausedOrBuilder getPausedOrBuilder() {
+      return paused_ == null ? com.noble.tokenfactory.PausedProto.Paused.getDefaultInstance() : paused_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (paused_ != null) {
+        output.writeMessage(1, getPaused());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (paused_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPaused());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.noble.tokenfactory.QueryProto.QueryGetPausedResponse)) {
+        return super.equals(obj);
+      }
+      com.noble.tokenfactory.QueryProto.QueryGetPausedResponse other = (com.noble.tokenfactory.QueryProto.QueryGetPausedResponse) obj;
+
+      if (hasPaused() != other.hasPaused()) return false;
+      if (hasPaused()) {
+        if (!getPaused()
+            .equals(other.getPaused())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPaused()) {
+        hash = (37 * hash) + PAUSED_FIELD_NUMBER;
+        hash = (53 * hash) + getPaused().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetPausedResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPausedResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPausedResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPausedResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPausedResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPausedResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPausedResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPausedResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetPausedResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetPausedResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPausedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPausedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.noble.tokenfactory.QueryProto.QueryGetPausedResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code noble.tokenfactory.QueryGetPausedResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:noble.tokenfactory.QueryGetPausedResponse)
+        com.noble.tokenfactory.QueryProto.QueryGetPausedResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetPausedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetPausedResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.noble.tokenfactory.QueryProto.QueryGetPausedResponse.class, com.noble.tokenfactory.QueryProto.QueryGetPausedResponse.Builder.class);
+      }
+
+      // Construct using com.noble.tokenfactory.QueryProto.QueryGetPausedResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        paused_ = null;
+        if (pausedBuilder_ != null) {
+          pausedBuilder_.dispose();
+          pausedBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetPausedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetPausedResponse getDefaultInstanceForType() {
+        return com.noble.tokenfactory.QueryProto.QueryGetPausedResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetPausedResponse build() {
+        com.noble.tokenfactory.QueryProto.QueryGetPausedResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetPausedResponse buildPartial() {
+        com.noble.tokenfactory.QueryProto.QueryGetPausedResponse result = new com.noble.tokenfactory.QueryProto.QueryGetPausedResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.noble.tokenfactory.QueryProto.QueryGetPausedResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.paused_ = pausedBuilder_ == null
+              ? paused_
+              : pausedBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.noble.tokenfactory.QueryProto.QueryGetPausedResponse) {
+          return mergeFrom((com.noble.tokenfactory.QueryProto.QueryGetPausedResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.noble.tokenfactory.QueryProto.QueryGetPausedResponse other) {
+        if (other == com.noble.tokenfactory.QueryProto.QueryGetPausedResponse.getDefaultInstance()) return this;
+        if (other.hasPaused()) {
+          mergePaused(other.getPaused());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPausedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.noble.tokenfactory.PausedProto.Paused paused_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.noble.tokenfactory.PausedProto.Paused, com.noble.tokenfactory.PausedProto.Paused.Builder, com.noble.tokenfactory.PausedProto.PausedOrBuilder> pausedBuilder_;
+      /**
+       * <code>.noble.tokenfactory.Paused paused = 1 [json_name = "paused", (.gogoproto.nullable) = false];</code>
+       * @return Whether the paused field is set.
+       */
+      public boolean hasPaused() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.noble.tokenfactory.Paused paused = 1 [json_name = "paused", (.gogoproto.nullable) = false];</code>
+       * @return The paused.
+       */
+      public com.noble.tokenfactory.PausedProto.Paused getPaused() {
+        if (pausedBuilder_ == null) {
+          return paused_ == null ? com.noble.tokenfactory.PausedProto.Paused.getDefaultInstance() : paused_;
+        } else {
+          return pausedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.noble.tokenfactory.Paused paused = 1 [json_name = "paused", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPaused(com.noble.tokenfactory.PausedProto.Paused value) {
+        if (pausedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          paused_ = value;
+        } else {
+          pausedBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.Paused paused = 1 [json_name = "paused", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPaused(
+          com.noble.tokenfactory.PausedProto.Paused.Builder builderForValue) {
+        if (pausedBuilder_ == null) {
+          paused_ = builderForValue.build();
+        } else {
+          pausedBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.Paused paused = 1 [json_name = "paused", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergePaused(com.noble.tokenfactory.PausedProto.Paused value) {
+        if (pausedBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            paused_ != null &&
+            paused_ != com.noble.tokenfactory.PausedProto.Paused.getDefaultInstance()) {
+            getPausedBuilder().mergeFrom(value);
+          } else {
+            paused_ = value;
+          }
+        } else {
+          pausedBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.Paused paused = 1 [json_name = "paused", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPaused() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        paused_ = null;
+        if (pausedBuilder_ != null) {
+          pausedBuilder_.dispose();
+          pausedBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.Paused paused = 1 [json_name = "paused", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.PausedProto.Paused.Builder getPausedBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPausedFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.noble.tokenfactory.Paused paused = 1 [json_name = "paused", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.PausedProto.PausedOrBuilder getPausedOrBuilder() {
+        if (pausedBuilder_ != null) {
+          return pausedBuilder_.getMessageOrBuilder();
+        } else {
+          return paused_ == null ?
+              com.noble.tokenfactory.PausedProto.Paused.getDefaultInstance() : paused_;
+        }
+      }
+      /**
+       * <code>.noble.tokenfactory.Paused paused = 1 [json_name = "paused", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.noble.tokenfactory.PausedProto.Paused, com.noble.tokenfactory.PausedProto.Paused.Builder, com.noble.tokenfactory.PausedProto.PausedOrBuilder> 
+          getPausedFieldBuilder() {
+        if (pausedBuilder_ == null) {
+          pausedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.noble.tokenfactory.PausedProto.Paused, com.noble.tokenfactory.PausedProto.Paused.Builder, com.noble.tokenfactory.PausedProto.PausedOrBuilder>(
+                  getPaused(),
+                  getParentForChildren(),
+                  isClean());
+          paused_ = null;
+        }
+        return pausedBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:noble.tokenfactory.QueryGetPausedResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:noble.tokenfactory.QueryGetPausedResponse)
+    private static final com.noble.tokenfactory.QueryProto.QueryGetPausedResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.noble.tokenfactory.QueryProto.QueryGetPausedResponse();
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetPausedResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGetPausedResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGetPausedResponse>() {
+      @java.lang.Override
+      public QueryGetPausedResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGetPausedResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGetPausedResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.noble.tokenfactory.QueryProto.QueryGetPausedResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGetMasterMinterRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:noble.tokenfactory.QueryGetMasterMinterRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code noble.tokenfactory.QueryGetMasterMinterRequest}
+   */
+  public static final class QueryGetMasterMinterRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:noble.tokenfactory.QueryGetMasterMinterRequest)
+      QueryGetMasterMinterRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGetMasterMinterRequest.newBuilder() to construct.
+    private QueryGetMasterMinterRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGetMasterMinterRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGetMasterMinterRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMasterMinterRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMasterMinterRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest.class, com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest)) {
+        return super.equals(obj);
+      }
+      com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest other = (com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code noble.tokenfactory.QueryGetMasterMinterRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:noble.tokenfactory.QueryGetMasterMinterRequest)
+        com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMasterMinterRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMasterMinterRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest.class, com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest.Builder.class);
+      }
+
+      // Construct using com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMasterMinterRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest getDefaultInstanceForType() {
+        return com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest build() {
+        com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest buildPartial() {
+        com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest result = new com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest) {
+          return mergeFrom((com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest other) {
+        if (other == com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:noble.tokenfactory.QueryGetMasterMinterRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:noble.tokenfactory.QueryGetMasterMinterRequest)
+    private static final com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest();
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGetMasterMinterRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGetMasterMinterRequest>() {
+      @java.lang.Override
+      public QueryGetMasterMinterRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGetMasterMinterRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGetMasterMinterRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.noble.tokenfactory.QueryProto.QueryGetMasterMinterRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGetMasterMinterResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:noble.tokenfactory.QueryGetMasterMinterResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.noble.tokenfactory.MasterMinter masterMinter = 1 [json_name = "masterMinter", (.gogoproto.nullable) = false];</code>
+     * @return Whether the masterMinter field is set.
+     */
+    boolean hasMasterMinter();
+    /**
+     * <code>.noble.tokenfactory.MasterMinter masterMinter = 1 [json_name = "masterMinter", (.gogoproto.nullable) = false];</code>
+     * @return The masterMinter.
+     */
+    com.noble.tokenfactory.MasterMinterProto.MasterMinter getMasterMinter();
+    /**
+     * <code>.noble.tokenfactory.MasterMinter masterMinter = 1 [json_name = "masterMinter", (.gogoproto.nullable) = false];</code>
+     */
+    com.noble.tokenfactory.MasterMinterProto.MasterMinterOrBuilder getMasterMinterOrBuilder();
+  }
+  /**
+   * Protobuf type {@code noble.tokenfactory.QueryGetMasterMinterResponse}
+   */
+  public static final class QueryGetMasterMinterResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:noble.tokenfactory.QueryGetMasterMinterResponse)
+      QueryGetMasterMinterResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGetMasterMinterResponse.newBuilder() to construct.
+    private QueryGetMasterMinterResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGetMasterMinterResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGetMasterMinterResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMasterMinterResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMasterMinterResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse.class, com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse.Builder.class);
+    }
+
+    public static final int MASTERMINTER_FIELD_NUMBER = 1;
+    private com.noble.tokenfactory.MasterMinterProto.MasterMinter masterMinter_;
+    /**
+     * <code>.noble.tokenfactory.MasterMinter masterMinter = 1 [json_name = "masterMinter", (.gogoproto.nullable) = false];</code>
+     * @return Whether the masterMinter field is set.
+     */
+    @java.lang.Override
+    public boolean hasMasterMinter() {
+      return masterMinter_ != null;
+    }
+    /**
+     * <code>.noble.tokenfactory.MasterMinter masterMinter = 1 [json_name = "masterMinter", (.gogoproto.nullable) = false];</code>
+     * @return The masterMinter.
+     */
+    @java.lang.Override
+    public com.noble.tokenfactory.MasterMinterProto.MasterMinter getMasterMinter() {
+      return masterMinter_ == null ? com.noble.tokenfactory.MasterMinterProto.MasterMinter.getDefaultInstance() : masterMinter_;
+    }
+    /**
+     * <code>.noble.tokenfactory.MasterMinter masterMinter = 1 [json_name = "masterMinter", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.noble.tokenfactory.MasterMinterProto.MasterMinterOrBuilder getMasterMinterOrBuilder() {
+      return masterMinter_ == null ? com.noble.tokenfactory.MasterMinterProto.MasterMinter.getDefaultInstance() : masterMinter_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (masterMinter_ != null) {
+        output.writeMessage(1, getMasterMinter());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (masterMinter_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMasterMinter());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse)) {
+        return super.equals(obj);
+      }
+      com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse other = (com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse) obj;
+
+      if (hasMasterMinter() != other.hasMasterMinter()) return false;
+      if (hasMasterMinter()) {
+        if (!getMasterMinter()
+            .equals(other.getMasterMinter())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMasterMinter()) {
+        hash = (37 * hash) + MASTERMINTER_FIELD_NUMBER;
+        hash = (53 * hash) + getMasterMinter().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code noble.tokenfactory.QueryGetMasterMinterResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:noble.tokenfactory.QueryGetMasterMinterResponse)
+        com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMasterMinterResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMasterMinterResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse.class, com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse.Builder.class);
+      }
+
+      // Construct using com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        masterMinter_ = null;
+        if (masterMinterBuilder_ != null) {
+          masterMinterBuilder_.dispose();
+          masterMinterBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMasterMinterResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse getDefaultInstanceForType() {
+        return com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse build() {
+        com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse buildPartial() {
+        com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse result = new com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.masterMinter_ = masterMinterBuilder_ == null
+              ? masterMinter_
+              : masterMinterBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse) {
+          return mergeFrom((com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse other) {
+        if (other == com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse.getDefaultInstance()) return this;
+        if (other.hasMasterMinter()) {
+          mergeMasterMinter(other.getMasterMinter());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getMasterMinterFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.noble.tokenfactory.MasterMinterProto.MasterMinter masterMinter_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.noble.tokenfactory.MasterMinterProto.MasterMinter, com.noble.tokenfactory.MasterMinterProto.MasterMinter.Builder, com.noble.tokenfactory.MasterMinterProto.MasterMinterOrBuilder> masterMinterBuilder_;
+      /**
+       * <code>.noble.tokenfactory.MasterMinter masterMinter = 1 [json_name = "masterMinter", (.gogoproto.nullable) = false];</code>
+       * @return Whether the masterMinter field is set.
+       */
+      public boolean hasMasterMinter() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.noble.tokenfactory.MasterMinter masterMinter = 1 [json_name = "masterMinter", (.gogoproto.nullable) = false];</code>
+       * @return The masterMinter.
+       */
+      public com.noble.tokenfactory.MasterMinterProto.MasterMinter getMasterMinter() {
+        if (masterMinterBuilder_ == null) {
+          return masterMinter_ == null ? com.noble.tokenfactory.MasterMinterProto.MasterMinter.getDefaultInstance() : masterMinter_;
+        } else {
+          return masterMinterBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.noble.tokenfactory.MasterMinter masterMinter = 1 [json_name = "masterMinter", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMasterMinter(com.noble.tokenfactory.MasterMinterProto.MasterMinter value) {
+        if (masterMinterBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          masterMinter_ = value;
+        } else {
+          masterMinterBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.MasterMinter masterMinter = 1 [json_name = "masterMinter", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMasterMinter(
+          com.noble.tokenfactory.MasterMinterProto.MasterMinter.Builder builderForValue) {
+        if (masterMinterBuilder_ == null) {
+          masterMinter_ = builderForValue.build();
+        } else {
+          masterMinterBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.MasterMinter masterMinter = 1 [json_name = "masterMinter", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeMasterMinter(com.noble.tokenfactory.MasterMinterProto.MasterMinter value) {
+        if (masterMinterBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            masterMinter_ != null &&
+            masterMinter_ != com.noble.tokenfactory.MasterMinterProto.MasterMinter.getDefaultInstance()) {
+            getMasterMinterBuilder().mergeFrom(value);
+          } else {
+            masterMinter_ = value;
+          }
+        } else {
+          masterMinterBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.MasterMinter masterMinter = 1 [json_name = "masterMinter", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMasterMinter() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        masterMinter_ = null;
+        if (masterMinterBuilder_ != null) {
+          masterMinterBuilder_.dispose();
+          masterMinterBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.MasterMinter masterMinter = 1 [json_name = "masterMinter", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.MasterMinterProto.MasterMinter.Builder getMasterMinterBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getMasterMinterFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.noble.tokenfactory.MasterMinter masterMinter = 1 [json_name = "masterMinter", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.MasterMinterProto.MasterMinterOrBuilder getMasterMinterOrBuilder() {
+        if (masterMinterBuilder_ != null) {
+          return masterMinterBuilder_.getMessageOrBuilder();
+        } else {
+          return masterMinter_ == null ?
+              com.noble.tokenfactory.MasterMinterProto.MasterMinter.getDefaultInstance() : masterMinter_;
+        }
+      }
+      /**
+       * <code>.noble.tokenfactory.MasterMinter masterMinter = 1 [json_name = "masterMinter", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.noble.tokenfactory.MasterMinterProto.MasterMinter, com.noble.tokenfactory.MasterMinterProto.MasterMinter.Builder, com.noble.tokenfactory.MasterMinterProto.MasterMinterOrBuilder> 
+          getMasterMinterFieldBuilder() {
+        if (masterMinterBuilder_ == null) {
+          masterMinterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.noble.tokenfactory.MasterMinterProto.MasterMinter, com.noble.tokenfactory.MasterMinterProto.MasterMinter.Builder, com.noble.tokenfactory.MasterMinterProto.MasterMinterOrBuilder>(
+                  getMasterMinter(),
+                  getParentForChildren(),
+                  isClean());
+          masterMinter_ = null;
+        }
+        return masterMinterBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:noble.tokenfactory.QueryGetMasterMinterResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:noble.tokenfactory.QueryGetMasterMinterResponse)
+    private static final com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse();
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGetMasterMinterResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGetMasterMinterResponse>() {
+      @java.lang.Override
+      public QueryGetMasterMinterResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGetMasterMinterResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGetMasterMinterResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.noble.tokenfactory.QueryProto.QueryGetMasterMinterResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGetMintersRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:noble.tokenfactory.QueryGetMintersRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+  }
+  /**
+   * Protobuf type {@code noble.tokenfactory.QueryGetMintersRequest}
+   */
+  public static final class QueryGetMintersRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:noble.tokenfactory.QueryGetMintersRequest)
+      QueryGetMintersRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGetMintersRequest.newBuilder() to construct.
+    private QueryGetMintersRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGetMintersRequest() {
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGetMintersRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMintersRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMintersRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.noble.tokenfactory.QueryProto.QueryGetMintersRequest.class, com.noble.tokenfactory.QueryProto.QueryGetMintersRequest.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.noble.tokenfactory.QueryProto.QueryGetMintersRequest)) {
+        return super.equals(obj);
+      }
+      com.noble.tokenfactory.QueryProto.QueryGetMintersRequest other = (com.noble.tokenfactory.QueryProto.QueryGetMintersRequest) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintersRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintersRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintersRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintersRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintersRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintersRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintersRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintersRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintersRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintersRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.noble.tokenfactory.QueryProto.QueryGetMintersRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code noble.tokenfactory.QueryGetMintersRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:noble.tokenfactory.QueryGetMintersRequest)
+        com.noble.tokenfactory.QueryProto.QueryGetMintersRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMintersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMintersRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.noble.tokenfactory.QueryProto.QueryGetMintersRequest.class, com.noble.tokenfactory.QueryProto.QueryGetMintersRequest.Builder.class);
+      }
+
+      // Construct using com.noble.tokenfactory.QueryProto.QueryGetMintersRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMintersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetMintersRequest getDefaultInstanceForType() {
+        return com.noble.tokenfactory.QueryProto.QueryGetMintersRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetMintersRequest build() {
+        com.noble.tokenfactory.QueryProto.QueryGetMintersRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetMintersRequest buildPartial() {
+        com.noble.tokenfactory.QueryProto.QueryGetMintersRequest result = new com.noble.tokenfactory.QueryProto.QueryGetMintersRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.noble.tokenfactory.QueryProto.QueryGetMintersRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.noble.tokenfactory.QueryProto.QueryGetMintersRequest) {
+          return mergeFrom((com.noble.tokenfactory.QueryProto.QueryGetMintersRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.noble.tokenfactory.QueryProto.QueryGetMintersRequest other) {
+        if (other == com.noble.tokenfactory.QueryProto.QueryGetMintersRequest.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:noble.tokenfactory.QueryGetMintersRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:noble.tokenfactory.QueryGetMintersRequest)
+    private static final com.noble.tokenfactory.QueryProto.QueryGetMintersRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.noble.tokenfactory.QueryProto.QueryGetMintersRequest();
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintersRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGetMintersRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGetMintersRequest>() {
+      @java.lang.Override
+      public QueryGetMintersRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGetMintersRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGetMintersRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.noble.tokenfactory.QueryProto.QueryGetMintersRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGetMintersResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:noble.tokenfactory.QueryGetMintersResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+     * @return Whether the minters field is set.
+     */
+    boolean hasMinters();
+    /**
+     * <code>.noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+     * @return The minters.
+     */
+    com.noble.tokenfactory.MintersProto.Minters getMinters();
+    /**
+     * <code>.noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+     */
+    com.noble.tokenfactory.MintersProto.MintersOrBuilder getMintersOrBuilder();
+  }
+  /**
+   * Protobuf type {@code noble.tokenfactory.QueryGetMintersResponse}
+   */
+  public static final class QueryGetMintersResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:noble.tokenfactory.QueryGetMintersResponse)
+      QueryGetMintersResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGetMintersResponse.newBuilder() to construct.
+    private QueryGetMintersResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGetMintersResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGetMintersResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMintersResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMintersResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.noble.tokenfactory.QueryProto.QueryGetMintersResponse.class, com.noble.tokenfactory.QueryProto.QueryGetMintersResponse.Builder.class);
+    }
+
+    public static final int MINTERS_FIELD_NUMBER = 1;
+    private com.noble.tokenfactory.MintersProto.Minters minters_;
+    /**
+     * <code>.noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+     * @return Whether the minters field is set.
+     */
+    @java.lang.Override
+    public boolean hasMinters() {
+      return minters_ != null;
+    }
+    /**
+     * <code>.noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+     * @return The minters.
+     */
+    @java.lang.Override
+    public com.noble.tokenfactory.MintersProto.Minters getMinters() {
+      return minters_ == null ? com.noble.tokenfactory.MintersProto.Minters.getDefaultInstance() : minters_;
+    }
+    /**
+     * <code>.noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.noble.tokenfactory.MintersProto.MintersOrBuilder getMintersOrBuilder() {
+      return minters_ == null ? com.noble.tokenfactory.MintersProto.Minters.getDefaultInstance() : minters_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (minters_ != null) {
+        output.writeMessage(1, getMinters());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (minters_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMinters());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.noble.tokenfactory.QueryProto.QueryGetMintersResponse)) {
+        return super.equals(obj);
+      }
+      com.noble.tokenfactory.QueryProto.QueryGetMintersResponse other = (com.noble.tokenfactory.QueryProto.QueryGetMintersResponse) obj;
+
+      if (hasMinters() != other.hasMinters()) return false;
+      if (hasMinters()) {
+        if (!getMinters()
+            .equals(other.getMinters())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMinters()) {
+        hash = (37 * hash) + MINTERS_FIELD_NUMBER;
+        hash = (53 * hash) + getMinters().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintersResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintersResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintersResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintersResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintersResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintersResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintersResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintersResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintersResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintersResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.noble.tokenfactory.QueryProto.QueryGetMintersResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code noble.tokenfactory.QueryGetMintersResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:noble.tokenfactory.QueryGetMintersResponse)
+        com.noble.tokenfactory.QueryProto.QueryGetMintersResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMintersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMintersResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.noble.tokenfactory.QueryProto.QueryGetMintersResponse.class, com.noble.tokenfactory.QueryProto.QueryGetMintersResponse.Builder.class);
+      }
+
+      // Construct using com.noble.tokenfactory.QueryProto.QueryGetMintersResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        minters_ = null;
+        if (mintersBuilder_ != null) {
+          mintersBuilder_.dispose();
+          mintersBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMintersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetMintersResponse getDefaultInstanceForType() {
+        return com.noble.tokenfactory.QueryProto.QueryGetMintersResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetMintersResponse build() {
+        com.noble.tokenfactory.QueryProto.QueryGetMintersResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetMintersResponse buildPartial() {
+        com.noble.tokenfactory.QueryProto.QueryGetMintersResponse result = new com.noble.tokenfactory.QueryProto.QueryGetMintersResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.noble.tokenfactory.QueryProto.QueryGetMintersResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.minters_ = mintersBuilder_ == null
+              ? minters_
+              : mintersBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.noble.tokenfactory.QueryProto.QueryGetMintersResponse) {
+          return mergeFrom((com.noble.tokenfactory.QueryProto.QueryGetMintersResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.noble.tokenfactory.QueryProto.QueryGetMintersResponse other) {
+        if (other == com.noble.tokenfactory.QueryProto.QueryGetMintersResponse.getDefaultInstance()) return this;
+        if (other.hasMinters()) {
+          mergeMinters(other.getMinters());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getMintersFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.noble.tokenfactory.MintersProto.Minters minters_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.noble.tokenfactory.MintersProto.Minters, com.noble.tokenfactory.MintersProto.Minters.Builder, com.noble.tokenfactory.MintersProto.MintersOrBuilder> mintersBuilder_;
+      /**
+       * <code>.noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+       * @return Whether the minters field is set.
+       */
+      public boolean hasMinters() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+       * @return The minters.
+       */
+      public com.noble.tokenfactory.MintersProto.Minters getMinters() {
+        if (mintersBuilder_ == null) {
+          return minters_ == null ? com.noble.tokenfactory.MintersProto.Minters.getDefaultInstance() : minters_;
+        } else {
+          return mintersBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMinters(com.noble.tokenfactory.MintersProto.Minters value) {
+        if (mintersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          minters_ = value;
+        } else {
+          mintersBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMinters(
+          com.noble.tokenfactory.MintersProto.Minters.Builder builderForValue) {
+        if (mintersBuilder_ == null) {
+          minters_ = builderForValue.build();
+        } else {
+          mintersBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeMinters(com.noble.tokenfactory.MintersProto.Minters value) {
+        if (mintersBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            minters_ != null &&
+            minters_ != com.noble.tokenfactory.MintersProto.Minters.getDefaultInstance()) {
+            getMintersBuilder().mergeFrom(value);
+          } else {
+            minters_ = value;
+          }
+        } else {
+          mintersBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMinters() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        minters_ = null;
+        if (mintersBuilder_ != null) {
+          mintersBuilder_.dispose();
+          mintersBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.MintersProto.Minters.Builder getMintersBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getMintersFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.MintersProto.MintersOrBuilder getMintersOrBuilder() {
+        if (mintersBuilder_ != null) {
+          return mintersBuilder_.getMessageOrBuilder();
+        } else {
+          return minters_ == null ?
+              com.noble.tokenfactory.MintersProto.Minters.getDefaultInstance() : minters_;
+        }
+      }
+      /**
+       * <code>.noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.noble.tokenfactory.MintersProto.Minters, com.noble.tokenfactory.MintersProto.Minters.Builder, com.noble.tokenfactory.MintersProto.MintersOrBuilder> 
+          getMintersFieldBuilder() {
+        if (mintersBuilder_ == null) {
+          mintersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.noble.tokenfactory.MintersProto.Minters, com.noble.tokenfactory.MintersProto.Minters.Builder, com.noble.tokenfactory.MintersProto.MintersOrBuilder>(
+                  getMinters(),
+                  getParentForChildren(),
+                  isClean());
+          minters_ = null;
+        }
+        return mintersBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:noble.tokenfactory.QueryGetMintersResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:noble.tokenfactory.QueryGetMintersResponse)
+    private static final com.noble.tokenfactory.QueryProto.QueryGetMintersResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.noble.tokenfactory.QueryProto.QueryGetMintersResponse();
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintersResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGetMintersResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGetMintersResponse>() {
+      @java.lang.Override
+      public QueryGetMintersResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGetMintersResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGetMintersResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.noble.tokenfactory.QueryProto.QueryGetMintersResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAllMintersRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:noble.tokenfactory.QueryAllMintersRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code noble.tokenfactory.QueryAllMintersRequest}
+   */
+  public static final class QueryAllMintersRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:noble.tokenfactory.QueryAllMintersRequest)
+      QueryAllMintersRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAllMintersRequest.newBuilder() to construct.
+    private QueryAllMintersRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAllMintersRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAllMintersRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryAllMintersRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryAllMintersRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.noble.tokenfactory.QueryProto.QueryAllMintersRequest.class, com.noble.tokenfactory.QueryProto.QueryAllMintersRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 1;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(1, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.noble.tokenfactory.QueryProto.QueryAllMintersRequest)) {
+        return super.equals(obj);
+      }
+      com.noble.tokenfactory.QueryProto.QueryAllMintersRequest other = (com.noble.tokenfactory.QueryProto.QueryAllMintersRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryAllMintersRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMintersRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMintersRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMintersRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMintersRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMintersRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMintersRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMintersRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryAllMintersRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryAllMintersRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMintersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMintersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.noble.tokenfactory.QueryProto.QueryAllMintersRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code noble.tokenfactory.QueryAllMintersRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:noble.tokenfactory.QueryAllMintersRequest)
+        com.noble.tokenfactory.QueryProto.QueryAllMintersRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryAllMintersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryAllMintersRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.noble.tokenfactory.QueryProto.QueryAllMintersRequest.class, com.noble.tokenfactory.QueryProto.QueryAllMintersRequest.Builder.class);
+      }
+
+      // Construct using com.noble.tokenfactory.QueryProto.QueryAllMintersRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryAllMintersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryAllMintersRequest getDefaultInstanceForType() {
+        return com.noble.tokenfactory.QueryProto.QueryAllMintersRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryAllMintersRequest build() {
+        com.noble.tokenfactory.QueryProto.QueryAllMintersRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryAllMintersRequest buildPartial() {
+        com.noble.tokenfactory.QueryProto.QueryAllMintersRequest result = new com.noble.tokenfactory.QueryProto.QueryAllMintersRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.noble.tokenfactory.QueryProto.QueryAllMintersRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.noble.tokenfactory.QueryProto.QueryAllMintersRequest) {
+          return mergeFrom((com.noble.tokenfactory.QueryProto.QueryAllMintersRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.noble.tokenfactory.QueryProto.QueryAllMintersRequest other) {
+        if (other == com.noble.tokenfactory.QueryProto.QueryAllMintersRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:noble.tokenfactory.QueryAllMintersRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:noble.tokenfactory.QueryAllMintersRequest)
+    private static final com.noble.tokenfactory.QueryProto.QueryAllMintersRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.noble.tokenfactory.QueryProto.QueryAllMintersRequest();
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryAllMintersRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAllMintersRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAllMintersRequest>() {
+      @java.lang.Override
+      public QueryAllMintersRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAllMintersRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAllMintersRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.noble.tokenfactory.QueryProto.QueryAllMintersRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAllMintersResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:noble.tokenfactory.QueryAllMintersResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.noble.tokenfactory.MintersProto.Minters> 
+        getMintersList();
+    /**
+     * <code>repeated .noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+     */
+    com.noble.tokenfactory.MintersProto.Minters getMinters(int index);
+    /**
+     * <code>repeated .noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+     */
+    int getMintersCount();
+    /**
+     * <code>repeated .noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.noble.tokenfactory.MintersProto.MintersOrBuilder> 
+        getMintersOrBuilderList();
+    /**
+     * <code>repeated .noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+     */
+    com.noble.tokenfactory.MintersProto.MintersOrBuilder getMintersOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code noble.tokenfactory.QueryAllMintersResponse}
+   */
+  public static final class QueryAllMintersResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:noble.tokenfactory.QueryAllMintersResponse)
+      QueryAllMintersResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAllMintersResponse.newBuilder() to construct.
+    private QueryAllMintersResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAllMintersResponse() {
+      minters_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAllMintersResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryAllMintersResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryAllMintersResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.noble.tokenfactory.QueryProto.QueryAllMintersResponse.class, com.noble.tokenfactory.QueryProto.QueryAllMintersResponse.Builder.class);
+    }
+
+    public static final int MINTERS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.noble.tokenfactory.MintersProto.Minters> minters_;
+    /**
+     * <code>repeated .noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.noble.tokenfactory.MintersProto.Minters> getMintersList() {
+      return minters_;
+    }
+    /**
+     * <code>repeated .noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.noble.tokenfactory.MintersProto.MintersOrBuilder> 
+        getMintersOrBuilderList() {
+      return minters_;
+    }
+    /**
+     * <code>repeated .noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getMintersCount() {
+      return minters_.size();
+    }
+    /**
+     * <code>repeated .noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.noble.tokenfactory.MintersProto.Minters getMinters(int index) {
+      return minters_.get(index);
+    }
+    /**
+     * <code>repeated .noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.noble.tokenfactory.MintersProto.MintersOrBuilder getMintersOrBuilder(
+        int index) {
+      return minters_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < minters_.size(); i++) {
+        output.writeMessage(1, minters_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < minters_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, minters_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.noble.tokenfactory.QueryProto.QueryAllMintersResponse)) {
+        return super.equals(obj);
+      }
+      com.noble.tokenfactory.QueryProto.QueryAllMintersResponse other = (com.noble.tokenfactory.QueryProto.QueryAllMintersResponse) obj;
+
+      if (!getMintersList()
+          .equals(other.getMintersList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getMintersCount() > 0) {
+        hash = (37 * hash) + MINTERS_FIELD_NUMBER;
+        hash = (53 * hash) + getMintersList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryAllMintersResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMintersResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMintersResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMintersResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMintersResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMintersResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMintersResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMintersResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryAllMintersResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryAllMintersResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMintersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMintersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.noble.tokenfactory.QueryProto.QueryAllMintersResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code noble.tokenfactory.QueryAllMintersResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:noble.tokenfactory.QueryAllMintersResponse)
+        com.noble.tokenfactory.QueryProto.QueryAllMintersResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryAllMintersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryAllMintersResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.noble.tokenfactory.QueryProto.QueryAllMintersResponse.class, com.noble.tokenfactory.QueryProto.QueryAllMintersResponse.Builder.class);
+      }
+
+      // Construct using com.noble.tokenfactory.QueryProto.QueryAllMintersResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (mintersBuilder_ == null) {
+          minters_ = java.util.Collections.emptyList();
+        } else {
+          minters_ = null;
+          mintersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryAllMintersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryAllMintersResponse getDefaultInstanceForType() {
+        return com.noble.tokenfactory.QueryProto.QueryAllMintersResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryAllMintersResponse build() {
+        com.noble.tokenfactory.QueryProto.QueryAllMintersResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryAllMintersResponse buildPartial() {
+        com.noble.tokenfactory.QueryProto.QueryAllMintersResponse result = new com.noble.tokenfactory.QueryProto.QueryAllMintersResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.noble.tokenfactory.QueryProto.QueryAllMintersResponse result) {
+        if (mintersBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            minters_ = java.util.Collections.unmodifiableList(minters_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.minters_ = minters_;
+        } else {
+          result.minters_ = mintersBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.noble.tokenfactory.QueryProto.QueryAllMintersResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.noble.tokenfactory.QueryProto.QueryAllMintersResponse) {
+          return mergeFrom((com.noble.tokenfactory.QueryProto.QueryAllMintersResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.noble.tokenfactory.QueryProto.QueryAllMintersResponse other) {
+        if (other == com.noble.tokenfactory.QueryProto.QueryAllMintersResponse.getDefaultInstance()) return this;
+        if (mintersBuilder_ == null) {
+          if (!other.minters_.isEmpty()) {
+            if (minters_.isEmpty()) {
+              minters_ = other.minters_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureMintersIsMutable();
+              minters_.addAll(other.minters_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.minters_.isEmpty()) {
+            if (mintersBuilder_.isEmpty()) {
+              mintersBuilder_.dispose();
+              mintersBuilder_ = null;
+              minters_ = other.minters_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              mintersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMintersFieldBuilder() : null;
+            } else {
+              mintersBuilder_.addAllMessages(other.minters_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.noble.tokenfactory.MintersProto.Minters m =
+                    input.readMessage(
+                        com.noble.tokenfactory.MintersProto.Minters.parser(),
+                        extensionRegistry);
+                if (mintersBuilder_ == null) {
+                  ensureMintersIsMutable();
+                  minters_.add(m);
+                } else {
+                  mintersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.noble.tokenfactory.MintersProto.Minters> minters_ =
+        java.util.Collections.emptyList();
+      private void ensureMintersIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          minters_ = new java.util.ArrayList<com.noble.tokenfactory.MintersProto.Minters>(minters_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.noble.tokenfactory.MintersProto.Minters, com.noble.tokenfactory.MintersProto.Minters.Builder, com.noble.tokenfactory.MintersProto.MintersOrBuilder> mintersBuilder_;
+
+      /**
+       * <code>repeated .noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.noble.tokenfactory.MintersProto.Minters> getMintersList() {
+        if (mintersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(minters_);
+        } else {
+          return mintersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+       */
+      public int getMintersCount() {
+        if (mintersBuilder_ == null) {
+          return minters_.size();
+        } else {
+          return mintersBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.MintersProto.Minters getMinters(int index) {
+        if (mintersBuilder_ == null) {
+          return minters_.get(index);
+        } else {
+          return mintersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMinters(
+          int index, com.noble.tokenfactory.MintersProto.Minters value) {
+        if (mintersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMintersIsMutable();
+          minters_.set(index, value);
+          onChanged();
+        } else {
+          mintersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMinters(
+          int index, com.noble.tokenfactory.MintersProto.Minters.Builder builderForValue) {
+        if (mintersBuilder_ == null) {
+          ensureMintersIsMutable();
+          minters_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          mintersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMinters(com.noble.tokenfactory.MintersProto.Minters value) {
+        if (mintersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMintersIsMutable();
+          minters_.add(value);
+          onChanged();
+        } else {
+          mintersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMinters(
+          int index, com.noble.tokenfactory.MintersProto.Minters value) {
+        if (mintersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMintersIsMutable();
+          minters_.add(index, value);
+          onChanged();
+        } else {
+          mintersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMinters(
+          com.noble.tokenfactory.MintersProto.Minters.Builder builderForValue) {
+        if (mintersBuilder_ == null) {
+          ensureMintersIsMutable();
+          minters_.add(builderForValue.build());
+          onChanged();
+        } else {
+          mintersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMinters(
+          int index, com.noble.tokenfactory.MintersProto.Minters.Builder builderForValue) {
+        if (mintersBuilder_ == null) {
+          ensureMintersIsMutable();
+          minters_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          mintersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllMinters(
+          java.lang.Iterable<? extends com.noble.tokenfactory.MintersProto.Minters> values) {
+        if (mintersBuilder_ == null) {
+          ensureMintersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, minters_);
+          onChanged();
+        } else {
+          mintersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMinters() {
+        if (mintersBuilder_ == null) {
+          minters_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          mintersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeMinters(int index) {
+        if (mintersBuilder_ == null) {
+          ensureMintersIsMutable();
+          minters_.remove(index);
+          onChanged();
+        } else {
+          mintersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.MintersProto.Minters.Builder getMintersBuilder(
+          int index) {
+        return getMintersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.MintersProto.MintersOrBuilder getMintersOrBuilder(
+          int index) {
+        if (mintersBuilder_ == null) {
+          return minters_.get(index);  } else {
+          return mintersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.noble.tokenfactory.MintersProto.MintersOrBuilder> 
+           getMintersOrBuilderList() {
+        if (mintersBuilder_ != null) {
+          return mintersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(minters_);
+        }
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.MintersProto.Minters.Builder addMintersBuilder() {
+        return getMintersFieldBuilder().addBuilder(
+            com.noble.tokenfactory.MintersProto.Minters.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.MintersProto.Minters.Builder addMintersBuilder(
+          int index) {
+        return getMintersFieldBuilder().addBuilder(
+            index, com.noble.tokenfactory.MintersProto.Minters.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.Minters minters = 1 [json_name = "minters", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.noble.tokenfactory.MintersProto.Minters.Builder> 
+           getMintersBuilderList() {
+        return getMintersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.noble.tokenfactory.MintersProto.Minters, com.noble.tokenfactory.MintersProto.Minters.Builder, com.noble.tokenfactory.MintersProto.MintersOrBuilder> 
+          getMintersFieldBuilder() {
+        if (mintersBuilder_ == null) {
+          mintersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.noble.tokenfactory.MintersProto.Minters, com.noble.tokenfactory.MintersProto.Minters.Builder, com.noble.tokenfactory.MintersProto.MintersOrBuilder>(
+                  minters_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          minters_ = null;
+        }
+        return mintersBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:noble.tokenfactory.QueryAllMintersResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:noble.tokenfactory.QueryAllMintersResponse)
+    private static final com.noble.tokenfactory.QueryProto.QueryAllMintersResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.noble.tokenfactory.QueryProto.QueryAllMintersResponse();
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryAllMintersResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAllMintersResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAllMintersResponse>() {
+      @java.lang.Override
+      public QueryAllMintersResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAllMintersResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAllMintersResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.noble.tokenfactory.QueryProto.QueryAllMintersResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGetPauserRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:noble.tokenfactory.QueryGetPauserRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code noble.tokenfactory.QueryGetPauserRequest}
+   */
+  public static final class QueryGetPauserRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:noble.tokenfactory.QueryGetPauserRequest)
+      QueryGetPauserRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGetPauserRequest.newBuilder() to construct.
+    private QueryGetPauserRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGetPauserRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGetPauserRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetPauserRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetPauserRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.noble.tokenfactory.QueryProto.QueryGetPauserRequest.class, com.noble.tokenfactory.QueryProto.QueryGetPauserRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.noble.tokenfactory.QueryProto.QueryGetPauserRequest)) {
+        return super.equals(obj);
+      }
+      com.noble.tokenfactory.QueryProto.QueryGetPauserRequest other = (com.noble.tokenfactory.QueryProto.QueryGetPauserRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetPauserRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPauserRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPauserRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPauserRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPauserRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPauserRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPauserRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPauserRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetPauserRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetPauserRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPauserRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPauserRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.noble.tokenfactory.QueryProto.QueryGetPauserRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code noble.tokenfactory.QueryGetPauserRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:noble.tokenfactory.QueryGetPauserRequest)
+        com.noble.tokenfactory.QueryProto.QueryGetPauserRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetPauserRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetPauserRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.noble.tokenfactory.QueryProto.QueryGetPauserRequest.class, com.noble.tokenfactory.QueryProto.QueryGetPauserRequest.Builder.class);
+      }
+
+      // Construct using com.noble.tokenfactory.QueryProto.QueryGetPauserRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetPauserRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetPauserRequest getDefaultInstanceForType() {
+        return com.noble.tokenfactory.QueryProto.QueryGetPauserRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetPauserRequest build() {
+        com.noble.tokenfactory.QueryProto.QueryGetPauserRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetPauserRequest buildPartial() {
+        com.noble.tokenfactory.QueryProto.QueryGetPauserRequest result = new com.noble.tokenfactory.QueryProto.QueryGetPauserRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.noble.tokenfactory.QueryProto.QueryGetPauserRequest) {
+          return mergeFrom((com.noble.tokenfactory.QueryProto.QueryGetPauserRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.noble.tokenfactory.QueryProto.QueryGetPauserRequest other) {
+        if (other == com.noble.tokenfactory.QueryProto.QueryGetPauserRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:noble.tokenfactory.QueryGetPauserRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:noble.tokenfactory.QueryGetPauserRequest)
+    private static final com.noble.tokenfactory.QueryProto.QueryGetPauserRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.noble.tokenfactory.QueryProto.QueryGetPauserRequest();
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetPauserRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGetPauserRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGetPauserRequest>() {
+      @java.lang.Override
+      public QueryGetPauserRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGetPauserRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGetPauserRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.noble.tokenfactory.QueryProto.QueryGetPauserRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGetPauserResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:noble.tokenfactory.QueryGetPauserResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.noble.tokenfactory.Pauser pauser = 1 [json_name = "pauser", (.gogoproto.nullable) = false];</code>
+     * @return Whether the pauser field is set.
+     */
+    boolean hasPauser();
+    /**
+     * <code>.noble.tokenfactory.Pauser pauser = 1 [json_name = "pauser", (.gogoproto.nullable) = false];</code>
+     * @return The pauser.
+     */
+    com.noble.tokenfactory.PauserProto.Pauser getPauser();
+    /**
+     * <code>.noble.tokenfactory.Pauser pauser = 1 [json_name = "pauser", (.gogoproto.nullable) = false];</code>
+     */
+    com.noble.tokenfactory.PauserProto.PauserOrBuilder getPauserOrBuilder();
+  }
+  /**
+   * Protobuf type {@code noble.tokenfactory.QueryGetPauserResponse}
+   */
+  public static final class QueryGetPauserResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:noble.tokenfactory.QueryGetPauserResponse)
+      QueryGetPauserResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGetPauserResponse.newBuilder() to construct.
+    private QueryGetPauserResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGetPauserResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGetPauserResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetPauserResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetPauserResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.noble.tokenfactory.QueryProto.QueryGetPauserResponse.class, com.noble.tokenfactory.QueryProto.QueryGetPauserResponse.Builder.class);
+    }
+
+    public static final int PAUSER_FIELD_NUMBER = 1;
+    private com.noble.tokenfactory.PauserProto.Pauser pauser_;
+    /**
+     * <code>.noble.tokenfactory.Pauser pauser = 1 [json_name = "pauser", (.gogoproto.nullable) = false];</code>
+     * @return Whether the pauser field is set.
+     */
+    @java.lang.Override
+    public boolean hasPauser() {
+      return pauser_ != null;
+    }
+    /**
+     * <code>.noble.tokenfactory.Pauser pauser = 1 [json_name = "pauser", (.gogoproto.nullable) = false];</code>
+     * @return The pauser.
+     */
+    @java.lang.Override
+    public com.noble.tokenfactory.PauserProto.Pauser getPauser() {
+      return pauser_ == null ? com.noble.tokenfactory.PauserProto.Pauser.getDefaultInstance() : pauser_;
+    }
+    /**
+     * <code>.noble.tokenfactory.Pauser pauser = 1 [json_name = "pauser", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.noble.tokenfactory.PauserProto.PauserOrBuilder getPauserOrBuilder() {
+      return pauser_ == null ? com.noble.tokenfactory.PauserProto.Pauser.getDefaultInstance() : pauser_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pauser_ != null) {
+        output.writeMessage(1, getPauser());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pauser_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPauser());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.noble.tokenfactory.QueryProto.QueryGetPauserResponse)) {
+        return super.equals(obj);
+      }
+      com.noble.tokenfactory.QueryProto.QueryGetPauserResponse other = (com.noble.tokenfactory.QueryProto.QueryGetPauserResponse) obj;
+
+      if (hasPauser() != other.hasPauser()) return false;
+      if (hasPauser()) {
+        if (!getPauser()
+            .equals(other.getPauser())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPauser()) {
+        hash = (37 * hash) + PAUSER_FIELD_NUMBER;
+        hash = (53 * hash) + getPauser().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetPauserResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPauserResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPauserResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPauserResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPauserResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPauserResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPauserResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPauserResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetPauserResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetPauserResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPauserResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetPauserResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.noble.tokenfactory.QueryProto.QueryGetPauserResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code noble.tokenfactory.QueryGetPauserResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:noble.tokenfactory.QueryGetPauserResponse)
+        com.noble.tokenfactory.QueryProto.QueryGetPauserResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetPauserResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetPauserResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.noble.tokenfactory.QueryProto.QueryGetPauserResponse.class, com.noble.tokenfactory.QueryProto.QueryGetPauserResponse.Builder.class);
+      }
+
+      // Construct using com.noble.tokenfactory.QueryProto.QueryGetPauserResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pauser_ = null;
+        if (pauserBuilder_ != null) {
+          pauserBuilder_.dispose();
+          pauserBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetPauserResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetPauserResponse getDefaultInstanceForType() {
+        return com.noble.tokenfactory.QueryProto.QueryGetPauserResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetPauserResponse build() {
+        com.noble.tokenfactory.QueryProto.QueryGetPauserResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetPauserResponse buildPartial() {
+        com.noble.tokenfactory.QueryProto.QueryGetPauserResponse result = new com.noble.tokenfactory.QueryProto.QueryGetPauserResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.noble.tokenfactory.QueryProto.QueryGetPauserResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pauser_ = pauserBuilder_ == null
+              ? pauser_
+              : pauserBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.noble.tokenfactory.QueryProto.QueryGetPauserResponse) {
+          return mergeFrom((com.noble.tokenfactory.QueryProto.QueryGetPauserResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.noble.tokenfactory.QueryProto.QueryGetPauserResponse other) {
+        if (other == com.noble.tokenfactory.QueryProto.QueryGetPauserResponse.getDefaultInstance()) return this;
+        if (other.hasPauser()) {
+          mergePauser(other.getPauser());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPauserFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.noble.tokenfactory.PauserProto.Pauser pauser_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.noble.tokenfactory.PauserProto.Pauser, com.noble.tokenfactory.PauserProto.Pauser.Builder, com.noble.tokenfactory.PauserProto.PauserOrBuilder> pauserBuilder_;
+      /**
+       * <code>.noble.tokenfactory.Pauser pauser = 1 [json_name = "pauser", (.gogoproto.nullable) = false];</code>
+       * @return Whether the pauser field is set.
+       */
+      public boolean hasPauser() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.noble.tokenfactory.Pauser pauser = 1 [json_name = "pauser", (.gogoproto.nullable) = false];</code>
+       * @return The pauser.
+       */
+      public com.noble.tokenfactory.PauserProto.Pauser getPauser() {
+        if (pauserBuilder_ == null) {
+          return pauser_ == null ? com.noble.tokenfactory.PauserProto.Pauser.getDefaultInstance() : pauser_;
+        } else {
+          return pauserBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.noble.tokenfactory.Pauser pauser = 1 [json_name = "pauser", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPauser(com.noble.tokenfactory.PauserProto.Pauser value) {
+        if (pauserBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pauser_ = value;
+        } else {
+          pauserBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.Pauser pauser = 1 [json_name = "pauser", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPauser(
+          com.noble.tokenfactory.PauserProto.Pauser.Builder builderForValue) {
+        if (pauserBuilder_ == null) {
+          pauser_ = builderForValue.build();
+        } else {
+          pauserBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.Pauser pauser = 1 [json_name = "pauser", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergePauser(com.noble.tokenfactory.PauserProto.Pauser value) {
+        if (pauserBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pauser_ != null &&
+            pauser_ != com.noble.tokenfactory.PauserProto.Pauser.getDefaultInstance()) {
+            getPauserBuilder().mergeFrom(value);
+          } else {
+            pauser_ = value;
+          }
+        } else {
+          pauserBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.Pauser pauser = 1 [json_name = "pauser", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPauser() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pauser_ = null;
+        if (pauserBuilder_ != null) {
+          pauserBuilder_.dispose();
+          pauserBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.Pauser pauser = 1 [json_name = "pauser", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.PauserProto.Pauser.Builder getPauserBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPauserFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.noble.tokenfactory.Pauser pauser = 1 [json_name = "pauser", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.PauserProto.PauserOrBuilder getPauserOrBuilder() {
+        if (pauserBuilder_ != null) {
+          return pauserBuilder_.getMessageOrBuilder();
+        } else {
+          return pauser_ == null ?
+              com.noble.tokenfactory.PauserProto.Pauser.getDefaultInstance() : pauser_;
+        }
+      }
+      /**
+       * <code>.noble.tokenfactory.Pauser pauser = 1 [json_name = "pauser", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.noble.tokenfactory.PauserProto.Pauser, com.noble.tokenfactory.PauserProto.Pauser.Builder, com.noble.tokenfactory.PauserProto.PauserOrBuilder> 
+          getPauserFieldBuilder() {
+        if (pauserBuilder_ == null) {
+          pauserBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.noble.tokenfactory.PauserProto.Pauser, com.noble.tokenfactory.PauserProto.Pauser.Builder, com.noble.tokenfactory.PauserProto.PauserOrBuilder>(
+                  getPauser(),
+                  getParentForChildren(),
+                  isClean());
+          pauser_ = null;
+        }
+        return pauserBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:noble.tokenfactory.QueryGetPauserResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:noble.tokenfactory.QueryGetPauserResponse)
+    private static final com.noble.tokenfactory.QueryProto.QueryGetPauserResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.noble.tokenfactory.QueryProto.QueryGetPauserResponse();
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetPauserResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGetPauserResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGetPauserResponse>() {
+      @java.lang.Override
+      public QueryGetPauserResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGetPauserResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGetPauserResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.noble.tokenfactory.QueryProto.QueryGetPauserResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGetBlacklisterRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:noble.tokenfactory.QueryGetBlacklisterRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code noble.tokenfactory.QueryGetBlacklisterRequest}
+   */
+  public static final class QueryGetBlacklisterRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:noble.tokenfactory.QueryGetBlacklisterRequest)
+      QueryGetBlacklisterRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGetBlacklisterRequest.newBuilder() to construct.
+    private QueryGetBlacklisterRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGetBlacklisterRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGetBlacklisterRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetBlacklisterRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetBlacklisterRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest.class, com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest)) {
+        return super.equals(obj);
+      }
+      com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest other = (com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code noble.tokenfactory.QueryGetBlacklisterRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:noble.tokenfactory.QueryGetBlacklisterRequest)
+        com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetBlacklisterRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetBlacklisterRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest.class, com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest.Builder.class);
+      }
+
+      // Construct using com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetBlacklisterRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest getDefaultInstanceForType() {
+        return com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest build() {
+        com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest buildPartial() {
+        com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest result = new com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest) {
+          return mergeFrom((com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest other) {
+        if (other == com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:noble.tokenfactory.QueryGetBlacklisterRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:noble.tokenfactory.QueryGetBlacklisterRequest)
+    private static final com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest();
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGetBlacklisterRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGetBlacklisterRequest>() {
+      @java.lang.Override
+      public QueryGetBlacklisterRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGetBlacklisterRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGetBlacklisterRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.noble.tokenfactory.QueryProto.QueryGetBlacklisterRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGetBlacklisterResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:noble.tokenfactory.QueryGetBlacklisterResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.noble.tokenfactory.Blacklister blacklister = 1 [json_name = "blacklister", (.gogoproto.nullable) = false];</code>
+     * @return Whether the blacklister field is set.
+     */
+    boolean hasBlacklister();
+    /**
+     * <code>.noble.tokenfactory.Blacklister blacklister = 1 [json_name = "blacklister", (.gogoproto.nullable) = false];</code>
+     * @return The blacklister.
+     */
+    com.noble.tokenfactory.BlacklisterProto.Blacklister getBlacklister();
+    /**
+     * <code>.noble.tokenfactory.Blacklister blacklister = 1 [json_name = "blacklister", (.gogoproto.nullable) = false];</code>
+     */
+    com.noble.tokenfactory.BlacklisterProto.BlacklisterOrBuilder getBlacklisterOrBuilder();
+  }
+  /**
+   * Protobuf type {@code noble.tokenfactory.QueryGetBlacklisterResponse}
+   */
+  public static final class QueryGetBlacklisterResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:noble.tokenfactory.QueryGetBlacklisterResponse)
+      QueryGetBlacklisterResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGetBlacklisterResponse.newBuilder() to construct.
+    private QueryGetBlacklisterResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGetBlacklisterResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGetBlacklisterResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetBlacklisterResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetBlacklisterResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse.class, com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse.Builder.class);
+    }
+
+    public static final int BLACKLISTER_FIELD_NUMBER = 1;
+    private com.noble.tokenfactory.BlacklisterProto.Blacklister blacklister_;
+    /**
+     * <code>.noble.tokenfactory.Blacklister blacklister = 1 [json_name = "blacklister", (.gogoproto.nullable) = false];</code>
+     * @return Whether the blacklister field is set.
+     */
+    @java.lang.Override
+    public boolean hasBlacklister() {
+      return blacklister_ != null;
+    }
+    /**
+     * <code>.noble.tokenfactory.Blacklister blacklister = 1 [json_name = "blacklister", (.gogoproto.nullable) = false];</code>
+     * @return The blacklister.
+     */
+    @java.lang.Override
+    public com.noble.tokenfactory.BlacklisterProto.Blacklister getBlacklister() {
+      return blacklister_ == null ? com.noble.tokenfactory.BlacklisterProto.Blacklister.getDefaultInstance() : blacklister_;
+    }
+    /**
+     * <code>.noble.tokenfactory.Blacklister blacklister = 1 [json_name = "blacklister", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.noble.tokenfactory.BlacklisterProto.BlacklisterOrBuilder getBlacklisterOrBuilder() {
+      return blacklister_ == null ? com.noble.tokenfactory.BlacklisterProto.Blacklister.getDefaultInstance() : blacklister_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (blacklister_ != null) {
+        output.writeMessage(1, getBlacklister());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (blacklister_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getBlacklister());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse)) {
+        return super.equals(obj);
+      }
+      com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse other = (com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse) obj;
+
+      if (hasBlacklister() != other.hasBlacklister()) return false;
+      if (hasBlacklister()) {
+        if (!getBlacklister()
+            .equals(other.getBlacklister())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasBlacklister()) {
+        hash = (37 * hash) + BLACKLISTER_FIELD_NUMBER;
+        hash = (53 * hash) + getBlacklister().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code noble.tokenfactory.QueryGetBlacklisterResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:noble.tokenfactory.QueryGetBlacklisterResponse)
+        com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetBlacklisterResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetBlacklisterResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse.class, com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse.Builder.class);
+      }
+
+      // Construct using com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        blacklister_ = null;
+        if (blacklisterBuilder_ != null) {
+          blacklisterBuilder_.dispose();
+          blacklisterBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetBlacklisterResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse getDefaultInstanceForType() {
+        return com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse build() {
+        com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse buildPartial() {
+        com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse result = new com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.blacklister_ = blacklisterBuilder_ == null
+              ? blacklister_
+              : blacklisterBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse) {
+          return mergeFrom((com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse other) {
+        if (other == com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse.getDefaultInstance()) return this;
+        if (other.hasBlacklister()) {
+          mergeBlacklister(other.getBlacklister());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getBlacklisterFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.noble.tokenfactory.BlacklisterProto.Blacklister blacklister_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.noble.tokenfactory.BlacklisterProto.Blacklister, com.noble.tokenfactory.BlacklisterProto.Blacklister.Builder, com.noble.tokenfactory.BlacklisterProto.BlacklisterOrBuilder> blacklisterBuilder_;
+      /**
+       * <code>.noble.tokenfactory.Blacklister blacklister = 1 [json_name = "blacklister", (.gogoproto.nullable) = false];</code>
+       * @return Whether the blacklister field is set.
+       */
+      public boolean hasBlacklister() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.noble.tokenfactory.Blacklister blacklister = 1 [json_name = "blacklister", (.gogoproto.nullable) = false];</code>
+       * @return The blacklister.
+       */
+      public com.noble.tokenfactory.BlacklisterProto.Blacklister getBlacklister() {
+        if (blacklisterBuilder_ == null) {
+          return blacklister_ == null ? com.noble.tokenfactory.BlacklisterProto.Blacklister.getDefaultInstance() : blacklister_;
+        } else {
+          return blacklisterBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.noble.tokenfactory.Blacklister blacklister = 1 [json_name = "blacklister", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBlacklister(com.noble.tokenfactory.BlacklisterProto.Blacklister value) {
+        if (blacklisterBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          blacklister_ = value;
+        } else {
+          blacklisterBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.Blacklister blacklister = 1 [json_name = "blacklister", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBlacklister(
+          com.noble.tokenfactory.BlacklisterProto.Blacklister.Builder builderForValue) {
+        if (blacklisterBuilder_ == null) {
+          blacklister_ = builderForValue.build();
+        } else {
+          blacklisterBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.Blacklister blacklister = 1 [json_name = "blacklister", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeBlacklister(com.noble.tokenfactory.BlacklisterProto.Blacklister value) {
+        if (blacklisterBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            blacklister_ != null &&
+            blacklister_ != com.noble.tokenfactory.BlacklisterProto.Blacklister.getDefaultInstance()) {
+            getBlacklisterBuilder().mergeFrom(value);
+          } else {
+            blacklister_ = value;
+          }
+        } else {
+          blacklisterBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.Blacklister blacklister = 1 [json_name = "blacklister", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearBlacklister() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        blacklister_ = null;
+        if (blacklisterBuilder_ != null) {
+          blacklisterBuilder_.dispose();
+          blacklisterBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.Blacklister blacklister = 1 [json_name = "blacklister", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.BlacklisterProto.Blacklister.Builder getBlacklisterBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getBlacklisterFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.noble.tokenfactory.Blacklister blacklister = 1 [json_name = "blacklister", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.BlacklisterProto.BlacklisterOrBuilder getBlacklisterOrBuilder() {
+        if (blacklisterBuilder_ != null) {
+          return blacklisterBuilder_.getMessageOrBuilder();
+        } else {
+          return blacklister_ == null ?
+              com.noble.tokenfactory.BlacklisterProto.Blacklister.getDefaultInstance() : blacklister_;
+        }
+      }
+      /**
+       * <code>.noble.tokenfactory.Blacklister blacklister = 1 [json_name = "blacklister", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.noble.tokenfactory.BlacklisterProto.Blacklister, com.noble.tokenfactory.BlacklisterProto.Blacklister.Builder, com.noble.tokenfactory.BlacklisterProto.BlacklisterOrBuilder> 
+          getBlacklisterFieldBuilder() {
+        if (blacklisterBuilder_ == null) {
+          blacklisterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.noble.tokenfactory.BlacklisterProto.Blacklister, com.noble.tokenfactory.BlacklisterProto.Blacklister.Builder, com.noble.tokenfactory.BlacklisterProto.BlacklisterOrBuilder>(
+                  getBlacklister(),
+                  getParentForChildren(),
+                  isClean());
+          blacklister_ = null;
+        }
+        return blacklisterBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:noble.tokenfactory.QueryGetBlacklisterResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:noble.tokenfactory.QueryGetBlacklisterResponse)
+    private static final com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse();
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGetBlacklisterResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGetBlacklisterResponse>() {
+      @java.lang.Override
+      public QueryGetBlacklisterResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGetBlacklisterResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGetBlacklisterResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.noble.tokenfactory.QueryProto.QueryGetBlacklisterResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGetOwnerRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:noble.tokenfactory.QueryGetOwnerRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code noble.tokenfactory.QueryGetOwnerRequest}
+   */
+  public static final class QueryGetOwnerRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:noble.tokenfactory.QueryGetOwnerRequest)
+      QueryGetOwnerRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGetOwnerRequest.newBuilder() to construct.
+    private QueryGetOwnerRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGetOwnerRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGetOwnerRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetOwnerRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetOwnerRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest.class, com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest)) {
+        return super.equals(obj);
+      }
+      com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest other = (com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code noble.tokenfactory.QueryGetOwnerRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:noble.tokenfactory.QueryGetOwnerRequest)
+        com.noble.tokenfactory.QueryProto.QueryGetOwnerRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetOwnerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetOwnerRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest.class, com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest.Builder.class);
+      }
+
+      // Construct using com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetOwnerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest getDefaultInstanceForType() {
+        return com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest build() {
+        com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest buildPartial() {
+        com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest result = new com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest) {
+          return mergeFrom((com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest other) {
+        if (other == com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:noble.tokenfactory.QueryGetOwnerRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:noble.tokenfactory.QueryGetOwnerRequest)
+    private static final com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest();
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGetOwnerRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGetOwnerRequest>() {
+      @java.lang.Override
+      public QueryGetOwnerRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGetOwnerRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGetOwnerRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.noble.tokenfactory.QueryProto.QueryGetOwnerRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGetOwnerResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:noble.tokenfactory.QueryGetOwnerResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.noble.tokenfactory.Owner owner = 1 [json_name = "owner", (.gogoproto.nullable) = false];</code>
+     * @return Whether the owner field is set.
+     */
+    boolean hasOwner();
+    /**
+     * <code>.noble.tokenfactory.Owner owner = 1 [json_name = "owner", (.gogoproto.nullable) = false];</code>
+     * @return The owner.
+     */
+    com.noble.tokenfactory.OwnerProto.Owner getOwner();
+    /**
+     * <code>.noble.tokenfactory.Owner owner = 1 [json_name = "owner", (.gogoproto.nullable) = false];</code>
+     */
+    com.noble.tokenfactory.OwnerProto.OwnerOrBuilder getOwnerOrBuilder();
+  }
+  /**
+   * Protobuf type {@code noble.tokenfactory.QueryGetOwnerResponse}
+   */
+  public static final class QueryGetOwnerResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:noble.tokenfactory.QueryGetOwnerResponse)
+      QueryGetOwnerResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGetOwnerResponse.newBuilder() to construct.
+    private QueryGetOwnerResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGetOwnerResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGetOwnerResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetOwnerResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetOwnerResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse.class, com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse.Builder.class);
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 1;
+    private com.noble.tokenfactory.OwnerProto.Owner owner_;
+    /**
+     * <code>.noble.tokenfactory.Owner owner = 1 [json_name = "owner", (.gogoproto.nullable) = false];</code>
+     * @return Whether the owner field is set.
+     */
+    @java.lang.Override
+    public boolean hasOwner() {
+      return owner_ != null;
+    }
+    /**
+     * <code>.noble.tokenfactory.Owner owner = 1 [json_name = "owner", (.gogoproto.nullable) = false];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public com.noble.tokenfactory.OwnerProto.Owner getOwner() {
+      return owner_ == null ? com.noble.tokenfactory.OwnerProto.Owner.getDefaultInstance() : owner_;
+    }
+    /**
+     * <code>.noble.tokenfactory.Owner owner = 1 [json_name = "owner", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.noble.tokenfactory.OwnerProto.OwnerOrBuilder getOwnerOrBuilder() {
+      return owner_ == null ? com.noble.tokenfactory.OwnerProto.Owner.getDefaultInstance() : owner_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (owner_ != null) {
+        output.writeMessage(1, getOwner());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (owner_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getOwner());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse)) {
+        return super.equals(obj);
+      }
+      com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse other = (com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse) obj;
+
+      if (hasOwner() != other.hasOwner()) return false;
+      if (hasOwner()) {
+        if (!getOwner()
+            .equals(other.getOwner())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasOwner()) {
+        hash = (37 * hash) + OWNER_FIELD_NUMBER;
+        hash = (53 * hash) + getOwner().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code noble.tokenfactory.QueryGetOwnerResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:noble.tokenfactory.QueryGetOwnerResponse)
+        com.noble.tokenfactory.QueryProto.QueryGetOwnerResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetOwnerResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetOwnerResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse.class, com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse.Builder.class);
+      }
+
+      // Construct using com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        owner_ = null;
+        if (ownerBuilder_ != null) {
+          ownerBuilder_.dispose();
+          ownerBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetOwnerResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse getDefaultInstanceForType() {
+        return com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse build() {
+        com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse buildPartial() {
+        com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse result = new com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.owner_ = ownerBuilder_ == null
+              ? owner_
+              : ownerBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse) {
+          return mergeFrom((com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse other) {
+        if (other == com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse.getDefaultInstance()) return this;
+        if (other.hasOwner()) {
+          mergeOwner(other.getOwner());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getOwnerFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.noble.tokenfactory.OwnerProto.Owner owner_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.noble.tokenfactory.OwnerProto.Owner, com.noble.tokenfactory.OwnerProto.Owner.Builder, com.noble.tokenfactory.OwnerProto.OwnerOrBuilder> ownerBuilder_;
+      /**
+       * <code>.noble.tokenfactory.Owner owner = 1 [json_name = "owner", (.gogoproto.nullable) = false];</code>
+       * @return Whether the owner field is set.
+       */
+      public boolean hasOwner() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.noble.tokenfactory.Owner owner = 1 [json_name = "owner", (.gogoproto.nullable) = false];</code>
+       * @return The owner.
+       */
+      public com.noble.tokenfactory.OwnerProto.Owner getOwner() {
+        if (ownerBuilder_ == null) {
+          return owner_ == null ? com.noble.tokenfactory.OwnerProto.Owner.getDefaultInstance() : owner_;
+        } else {
+          return ownerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.noble.tokenfactory.Owner owner = 1 [json_name = "owner", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOwner(com.noble.tokenfactory.OwnerProto.Owner value) {
+        if (ownerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          owner_ = value;
+        } else {
+          ownerBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.Owner owner = 1 [json_name = "owner", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOwner(
+          com.noble.tokenfactory.OwnerProto.Owner.Builder builderForValue) {
+        if (ownerBuilder_ == null) {
+          owner_ = builderForValue.build();
+        } else {
+          ownerBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.Owner owner = 1 [json_name = "owner", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeOwner(com.noble.tokenfactory.OwnerProto.Owner value) {
+        if (ownerBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            owner_ != null &&
+            owner_ != com.noble.tokenfactory.OwnerProto.Owner.getDefaultInstance()) {
+            getOwnerBuilder().mergeFrom(value);
+          } else {
+            owner_ = value;
+          }
+        } else {
+          ownerBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.Owner owner = 1 [json_name = "owner", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearOwner() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        owner_ = null;
+        if (ownerBuilder_ != null) {
+          ownerBuilder_.dispose();
+          ownerBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.Owner owner = 1 [json_name = "owner", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.OwnerProto.Owner.Builder getOwnerBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getOwnerFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.noble.tokenfactory.Owner owner = 1 [json_name = "owner", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.OwnerProto.OwnerOrBuilder getOwnerOrBuilder() {
+        if (ownerBuilder_ != null) {
+          return ownerBuilder_.getMessageOrBuilder();
+        } else {
+          return owner_ == null ?
+              com.noble.tokenfactory.OwnerProto.Owner.getDefaultInstance() : owner_;
+        }
+      }
+      /**
+       * <code>.noble.tokenfactory.Owner owner = 1 [json_name = "owner", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.noble.tokenfactory.OwnerProto.Owner, com.noble.tokenfactory.OwnerProto.Owner.Builder, com.noble.tokenfactory.OwnerProto.OwnerOrBuilder> 
+          getOwnerFieldBuilder() {
+        if (ownerBuilder_ == null) {
+          ownerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.noble.tokenfactory.OwnerProto.Owner, com.noble.tokenfactory.OwnerProto.Owner.Builder, com.noble.tokenfactory.OwnerProto.OwnerOrBuilder>(
+                  getOwner(),
+                  getParentForChildren(),
+                  isClean());
+          owner_ = null;
+        }
+        return ownerBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:noble.tokenfactory.QueryGetOwnerResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:noble.tokenfactory.QueryGetOwnerResponse)
+    private static final com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse();
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGetOwnerResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGetOwnerResponse>() {
+      @java.lang.Override
+      public QueryGetOwnerResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGetOwnerResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGetOwnerResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.noble.tokenfactory.QueryProto.QueryGetOwnerResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGetMinterControllerRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:noble.tokenfactory.QueryGetMinterControllerRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string controllerAddress = 1 [json_name = "controllerAddress"];</code>
+     * @return The controllerAddress.
+     */
+    java.lang.String getControllerAddress();
+    /**
+     * <code>string controllerAddress = 1 [json_name = "controllerAddress"];</code>
+     * @return The bytes for controllerAddress.
+     */
+    com.google.protobuf.ByteString
+        getControllerAddressBytes();
+  }
+  /**
+   * Protobuf type {@code noble.tokenfactory.QueryGetMinterControllerRequest}
+   */
+  public static final class QueryGetMinterControllerRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:noble.tokenfactory.QueryGetMinterControllerRequest)
+      QueryGetMinterControllerRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGetMinterControllerRequest.newBuilder() to construct.
+    private QueryGetMinterControllerRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGetMinterControllerRequest() {
+      controllerAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGetMinterControllerRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMinterControllerRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMinterControllerRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest.class, com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest.Builder.class);
+    }
+
+    public static final int CONTROLLERADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object controllerAddress_ = "";
+    /**
+     * <code>string controllerAddress = 1 [json_name = "controllerAddress"];</code>
+     * @return The controllerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getControllerAddress() {
+      java.lang.Object ref = controllerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        controllerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string controllerAddress = 1 [json_name = "controllerAddress"];</code>
+     * @return The bytes for controllerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getControllerAddressBytes() {
+      java.lang.Object ref = controllerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        controllerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(controllerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, controllerAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(controllerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, controllerAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest)) {
+        return super.equals(obj);
+      }
+      com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest other = (com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest) obj;
+
+      if (!getControllerAddress()
+          .equals(other.getControllerAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTROLLERADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getControllerAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code noble.tokenfactory.QueryGetMinterControllerRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:noble.tokenfactory.QueryGetMinterControllerRequest)
+        com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMinterControllerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMinterControllerRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest.class, com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest.Builder.class);
+      }
+
+      // Construct using com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        controllerAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMinterControllerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest getDefaultInstanceForType() {
+        return com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest build() {
+        com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest buildPartial() {
+        com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest result = new com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.controllerAddress_ = controllerAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest) {
+          return mergeFrom((com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest other) {
+        if (other == com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest.getDefaultInstance()) return this;
+        if (!other.getControllerAddress().isEmpty()) {
+          controllerAddress_ = other.controllerAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                controllerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object controllerAddress_ = "";
+      /**
+       * <code>string controllerAddress = 1 [json_name = "controllerAddress"];</code>
+       * @return The controllerAddress.
+       */
+      public java.lang.String getControllerAddress() {
+        java.lang.Object ref = controllerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          controllerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string controllerAddress = 1 [json_name = "controllerAddress"];</code>
+       * @return The bytes for controllerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getControllerAddressBytes() {
+        java.lang.Object ref = controllerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          controllerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string controllerAddress = 1 [json_name = "controllerAddress"];</code>
+       * @param value The controllerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setControllerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        controllerAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string controllerAddress = 1 [json_name = "controllerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearControllerAddress() {
+        controllerAddress_ = getDefaultInstance().getControllerAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string controllerAddress = 1 [json_name = "controllerAddress"];</code>
+       * @param value The bytes for controllerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setControllerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        controllerAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:noble.tokenfactory.QueryGetMinterControllerRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:noble.tokenfactory.QueryGetMinterControllerRequest)
+    private static final com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest();
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGetMinterControllerRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGetMinterControllerRequest>() {
+      @java.lang.Override
+      public QueryGetMinterControllerRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGetMinterControllerRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGetMinterControllerRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.noble.tokenfactory.QueryProto.QueryGetMinterControllerRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGetMinterControllerResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:noble.tokenfactory.QueryGetMinterControllerResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+     * @return Whether the minterController field is set.
+     */
+    boolean hasMinterController();
+    /**
+     * <code>.noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+     * @return The minterController.
+     */
+    com.noble.tokenfactory.MinterControllerProto.MinterController getMinterController();
+    /**
+     * <code>.noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+     */
+    com.noble.tokenfactory.MinterControllerProto.MinterControllerOrBuilder getMinterControllerOrBuilder();
+  }
+  /**
+   * Protobuf type {@code noble.tokenfactory.QueryGetMinterControllerResponse}
+   */
+  public static final class QueryGetMinterControllerResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:noble.tokenfactory.QueryGetMinterControllerResponse)
+      QueryGetMinterControllerResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGetMinterControllerResponse.newBuilder() to construct.
+    private QueryGetMinterControllerResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGetMinterControllerResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGetMinterControllerResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMinterControllerResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMinterControllerResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse.class, com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse.Builder.class);
+    }
+
+    public static final int MINTERCONTROLLER_FIELD_NUMBER = 1;
+    private com.noble.tokenfactory.MinterControllerProto.MinterController minterController_;
+    /**
+     * <code>.noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+     * @return Whether the minterController field is set.
+     */
+    @java.lang.Override
+    public boolean hasMinterController() {
+      return minterController_ != null;
+    }
+    /**
+     * <code>.noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+     * @return The minterController.
+     */
+    @java.lang.Override
+    public com.noble.tokenfactory.MinterControllerProto.MinterController getMinterController() {
+      return minterController_ == null ? com.noble.tokenfactory.MinterControllerProto.MinterController.getDefaultInstance() : minterController_;
+    }
+    /**
+     * <code>.noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.noble.tokenfactory.MinterControllerProto.MinterControllerOrBuilder getMinterControllerOrBuilder() {
+      return minterController_ == null ? com.noble.tokenfactory.MinterControllerProto.MinterController.getDefaultInstance() : minterController_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (minterController_ != null) {
+        output.writeMessage(1, getMinterController());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (minterController_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMinterController());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse)) {
+        return super.equals(obj);
+      }
+      com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse other = (com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse) obj;
+
+      if (hasMinterController() != other.hasMinterController()) return false;
+      if (hasMinterController()) {
+        if (!getMinterController()
+            .equals(other.getMinterController())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMinterController()) {
+        hash = (37 * hash) + MINTERCONTROLLER_FIELD_NUMBER;
+        hash = (53 * hash) + getMinterController().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code noble.tokenfactory.QueryGetMinterControllerResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:noble.tokenfactory.QueryGetMinterControllerResponse)
+        com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMinterControllerResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMinterControllerResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse.class, com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse.Builder.class);
+      }
+
+      // Construct using com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        minterController_ = null;
+        if (minterControllerBuilder_ != null) {
+          minterControllerBuilder_.dispose();
+          minterControllerBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMinterControllerResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse getDefaultInstanceForType() {
+        return com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse build() {
+        com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse buildPartial() {
+        com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse result = new com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.minterController_ = minterControllerBuilder_ == null
+              ? minterController_
+              : minterControllerBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse) {
+          return mergeFrom((com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse other) {
+        if (other == com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse.getDefaultInstance()) return this;
+        if (other.hasMinterController()) {
+          mergeMinterController(other.getMinterController());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getMinterControllerFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.noble.tokenfactory.MinterControllerProto.MinterController minterController_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.noble.tokenfactory.MinterControllerProto.MinterController, com.noble.tokenfactory.MinterControllerProto.MinterController.Builder, com.noble.tokenfactory.MinterControllerProto.MinterControllerOrBuilder> minterControllerBuilder_;
+      /**
+       * <code>.noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+       * @return Whether the minterController field is set.
+       */
+      public boolean hasMinterController() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+       * @return The minterController.
+       */
+      public com.noble.tokenfactory.MinterControllerProto.MinterController getMinterController() {
+        if (minterControllerBuilder_ == null) {
+          return minterController_ == null ? com.noble.tokenfactory.MinterControllerProto.MinterController.getDefaultInstance() : minterController_;
+        } else {
+          return minterControllerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMinterController(com.noble.tokenfactory.MinterControllerProto.MinterController value) {
+        if (minterControllerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          minterController_ = value;
+        } else {
+          minterControllerBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMinterController(
+          com.noble.tokenfactory.MinterControllerProto.MinterController.Builder builderForValue) {
+        if (minterControllerBuilder_ == null) {
+          minterController_ = builderForValue.build();
+        } else {
+          minterControllerBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeMinterController(com.noble.tokenfactory.MinterControllerProto.MinterController value) {
+        if (minterControllerBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            minterController_ != null &&
+            minterController_ != com.noble.tokenfactory.MinterControllerProto.MinterController.getDefaultInstance()) {
+            getMinterControllerBuilder().mergeFrom(value);
+          } else {
+            minterController_ = value;
+          }
+        } else {
+          minterControllerBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMinterController() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        minterController_ = null;
+        if (minterControllerBuilder_ != null) {
+          minterControllerBuilder_.dispose();
+          minterControllerBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.MinterControllerProto.MinterController.Builder getMinterControllerBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getMinterControllerFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.MinterControllerProto.MinterControllerOrBuilder getMinterControllerOrBuilder() {
+        if (minterControllerBuilder_ != null) {
+          return minterControllerBuilder_.getMessageOrBuilder();
+        } else {
+          return minterController_ == null ?
+              com.noble.tokenfactory.MinterControllerProto.MinterController.getDefaultInstance() : minterController_;
+        }
+      }
+      /**
+       * <code>.noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.noble.tokenfactory.MinterControllerProto.MinterController, com.noble.tokenfactory.MinterControllerProto.MinterController.Builder, com.noble.tokenfactory.MinterControllerProto.MinterControllerOrBuilder> 
+          getMinterControllerFieldBuilder() {
+        if (minterControllerBuilder_ == null) {
+          minterControllerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.noble.tokenfactory.MinterControllerProto.MinterController, com.noble.tokenfactory.MinterControllerProto.MinterController.Builder, com.noble.tokenfactory.MinterControllerProto.MinterControllerOrBuilder>(
+                  getMinterController(),
+                  getParentForChildren(),
+                  isClean());
+          minterController_ = null;
+        }
+        return minterControllerBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:noble.tokenfactory.QueryGetMinterControllerResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:noble.tokenfactory.QueryGetMinterControllerResponse)
+    private static final com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse();
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGetMinterControllerResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGetMinterControllerResponse>() {
+      @java.lang.Override
+      public QueryGetMinterControllerResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGetMinterControllerResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGetMinterControllerResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.noble.tokenfactory.QueryProto.QueryGetMinterControllerResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAllMinterControllerRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:noble.tokenfactory.QueryAllMinterControllerRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code noble.tokenfactory.QueryAllMinterControllerRequest}
+   */
+  public static final class QueryAllMinterControllerRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:noble.tokenfactory.QueryAllMinterControllerRequest)
+      QueryAllMinterControllerRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAllMinterControllerRequest.newBuilder() to construct.
+    private QueryAllMinterControllerRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAllMinterControllerRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAllMinterControllerRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryAllMinterControllerRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryAllMinterControllerRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest.class, com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 1;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(1, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest)) {
+        return super.equals(obj);
+      }
+      com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest other = (com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code noble.tokenfactory.QueryAllMinterControllerRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:noble.tokenfactory.QueryAllMinterControllerRequest)
+        com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryAllMinterControllerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryAllMinterControllerRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest.class, com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest.Builder.class);
+      }
+
+      // Construct using com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryAllMinterControllerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest getDefaultInstanceForType() {
+        return com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest build() {
+        com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest buildPartial() {
+        com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest result = new com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest) {
+          return mergeFrom((com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest other) {
+        if (other == com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:noble.tokenfactory.QueryAllMinterControllerRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:noble.tokenfactory.QueryAllMinterControllerRequest)
+    private static final com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest();
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAllMinterControllerRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAllMinterControllerRequest>() {
+      @java.lang.Override
+      public QueryAllMinterControllerRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAllMinterControllerRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAllMinterControllerRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.noble.tokenfactory.QueryProto.QueryAllMinterControllerRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAllMinterControllerResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:noble.tokenfactory.QueryAllMinterControllerResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.noble.tokenfactory.MinterControllerProto.MinterController> 
+        getMinterControllerList();
+    /**
+     * <code>repeated .noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+     */
+    com.noble.tokenfactory.MinterControllerProto.MinterController getMinterController(int index);
+    /**
+     * <code>repeated .noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+     */
+    int getMinterControllerCount();
+    /**
+     * <code>repeated .noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.noble.tokenfactory.MinterControllerProto.MinterControllerOrBuilder> 
+        getMinterControllerOrBuilderList();
+    /**
+     * <code>repeated .noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+     */
+    com.noble.tokenfactory.MinterControllerProto.MinterControllerOrBuilder getMinterControllerOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code noble.tokenfactory.QueryAllMinterControllerResponse}
+   */
+  public static final class QueryAllMinterControllerResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:noble.tokenfactory.QueryAllMinterControllerResponse)
+      QueryAllMinterControllerResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAllMinterControllerResponse.newBuilder() to construct.
+    private QueryAllMinterControllerResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAllMinterControllerResponse() {
+      minterController_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAllMinterControllerResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryAllMinterControllerResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryAllMinterControllerResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse.class, com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse.Builder.class);
+    }
+
+    public static final int MINTERCONTROLLER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.noble.tokenfactory.MinterControllerProto.MinterController> minterController_;
+    /**
+     * <code>repeated .noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.noble.tokenfactory.MinterControllerProto.MinterController> getMinterControllerList() {
+      return minterController_;
+    }
+    /**
+     * <code>repeated .noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.noble.tokenfactory.MinterControllerProto.MinterControllerOrBuilder> 
+        getMinterControllerOrBuilderList() {
+      return minterController_;
+    }
+    /**
+     * <code>repeated .noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getMinterControllerCount() {
+      return minterController_.size();
+    }
+    /**
+     * <code>repeated .noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.noble.tokenfactory.MinterControllerProto.MinterController getMinterController(int index) {
+      return minterController_.get(index);
+    }
+    /**
+     * <code>repeated .noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.noble.tokenfactory.MinterControllerProto.MinterControllerOrBuilder getMinterControllerOrBuilder(
+        int index) {
+      return minterController_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < minterController_.size(); i++) {
+        output.writeMessage(1, minterController_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < minterController_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, minterController_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse)) {
+        return super.equals(obj);
+      }
+      com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse other = (com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse) obj;
+
+      if (!getMinterControllerList()
+          .equals(other.getMinterControllerList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getMinterControllerCount() > 0) {
+        hash = (37 * hash) + MINTERCONTROLLER_FIELD_NUMBER;
+        hash = (53 * hash) + getMinterControllerList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code noble.tokenfactory.QueryAllMinterControllerResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:noble.tokenfactory.QueryAllMinterControllerResponse)
+        com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryAllMinterControllerResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryAllMinterControllerResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse.class, com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse.Builder.class);
+      }
+
+      // Construct using com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (minterControllerBuilder_ == null) {
+          minterController_ = java.util.Collections.emptyList();
+        } else {
+          minterController_ = null;
+          minterControllerBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryAllMinterControllerResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse getDefaultInstanceForType() {
+        return com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse build() {
+        com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse buildPartial() {
+        com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse result = new com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse result) {
+        if (minterControllerBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            minterController_ = java.util.Collections.unmodifiableList(minterController_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.minterController_ = minterController_;
+        } else {
+          result.minterController_ = minterControllerBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse) {
+          return mergeFrom((com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse other) {
+        if (other == com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse.getDefaultInstance()) return this;
+        if (minterControllerBuilder_ == null) {
+          if (!other.minterController_.isEmpty()) {
+            if (minterController_.isEmpty()) {
+              minterController_ = other.minterController_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureMinterControllerIsMutable();
+              minterController_.addAll(other.minterController_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.minterController_.isEmpty()) {
+            if (minterControllerBuilder_.isEmpty()) {
+              minterControllerBuilder_.dispose();
+              minterControllerBuilder_ = null;
+              minterController_ = other.minterController_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              minterControllerBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMinterControllerFieldBuilder() : null;
+            } else {
+              minterControllerBuilder_.addAllMessages(other.minterController_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.noble.tokenfactory.MinterControllerProto.MinterController m =
+                    input.readMessage(
+                        com.noble.tokenfactory.MinterControllerProto.MinterController.parser(),
+                        extensionRegistry);
+                if (minterControllerBuilder_ == null) {
+                  ensureMinterControllerIsMutable();
+                  minterController_.add(m);
+                } else {
+                  minterControllerBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.noble.tokenfactory.MinterControllerProto.MinterController> minterController_ =
+        java.util.Collections.emptyList();
+      private void ensureMinterControllerIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          minterController_ = new java.util.ArrayList<com.noble.tokenfactory.MinterControllerProto.MinterController>(minterController_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.noble.tokenfactory.MinterControllerProto.MinterController, com.noble.tokenfactory.MinterControllerProto.MinterController.Builder, com.noble.tokenfactory.MinterControllerProto.MinterControllerOrBuilder> minterControllerBuilder_;
+
+      /**
+       * <code>repeated .noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.noble.tokenfactory.MinterControllerProto.MinterController> getMinterControllerList() {
+        if (minterControllerBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(minterController_);
+        } else {
+          return minterControllerBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+       */
+      public int getMinterControllerCount() {
+        if (minterControllerBuilder_ == null) {
+          return minterController_.size();
+        } else {
+          return minterControllerBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.MinterControllerProto.MinterController getMinterController(int index) {
+        if (minterControllerBuilder_ == null) {
+          return minterController_.get(index);
+        } else {
+          return minterControllerBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMinterController(
+          int index, com.noble.tokenfactory.MinterControllerProto.MinterController value) {
+        if (minterControllerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMinterControllerIsMutable();
+          minterController_.set(index, value);
+          onChanged();
+        } else {
+          minterControllerBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMinterController(
+          int index, com.noble.tokenfactory.MinterControllerProto.MinterController.Builder builderForValue) {
+        if (minterControllerBuilder_ == null) {
+          ensureMinterControllerIsMutable();
+          minterController_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          minterControllerBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMinterController(com.noble.tokenfactory.MinterControllerProto.MinterController value) {
+        if (minterControllerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMinterControllerIsMutable();
+          minterController_.add(value);
+          onChanged();
+        } else {
+          minterControllerBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMinterController(
+          int index, com.noble.tokenfactory.MinterControllerProto.MinterController value) {
+        if (minterControllerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMinterControllerIsMutable();
+          minterController_.add(index, value);
+          onChanged();
+        } else {
+          minterControllerBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMinterController(
+          com.noble.tokenfactory.MinterControllerProto.MinterController.Builder builderForValue) {
+        if (minterControllerBuilder_ == null) {
+          ensureMinterControllerIsMutable();
+          minterController_.add(builderForValue.build());
+          onChanged();
+        } else {
+          minterControllerBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMinterController(
+          int index, com.noble.tokenfactory.MinterControllerProto.MinterController.Builder builderForValue) {
+        if (minterControllerBuilder_ == null) {
+          ensureMinterControllerIsMutable();
+          minterController_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          minterControllerBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllMinterController(
+          java.lang.Iterable<? extends com.noble.tokenfactory.MinterControllerProto.MinterController> values) {
+        if (minterControllerBuilder_ == null) {
+          ensureMinterControllerIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, minterController_);
+          onChanged();
+        } else {
+          minterControllerBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMinterController() {
+        if (minterControllerBuilder_ == null) {
+          minterController_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          minterControllerBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeMinterController(int index) {
+        if (minterControllerBuilder_ == null) {
+          ensureMinterControllerIsMutable();
+          minterController_.remove(index);
+          onChanged();
+        } else {
+          minterControllerBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.MinterControllerProto.MinterController.Builder getMinterControllerBuilder(
+          int index) {
+        return getMinterControllerFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.MinterControllerProto.MinterControllerOrBuilder getMinterControllerOrBuilder(
+          int index) {
+        if (minterControllerBuilder_ == null) {
+          return minterController_.get(index);  } else {
+          return minterControllerBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.noble.tokenfactory.MinterControllerProto.MinterControllerOrBuilder> 
+           getMinterControllerOrBuilderList() {
+        if (minterControllerBuilder_ != null) {
+          return minterControllerBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(minterController_);
+        }
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.MinterControllerProto.MinterController.Builder addMinterControllerBuilder() {
+        return getMinterControllerFieldBuilder().addBuilder(
+            com.noble.tokenfactory.MinterControllerProto.MinterController.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.MinterControllerProto.MinterController.Builder addMinterControllerBuilder(
+          int index) {
+        return getMinterControllerFieldBuilder().addBuilder(
+            index, com.noble.tokenfactory.MinterControllerProto.MinterController.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .noble.tokenfactory.MinterController minterController = 1 [json_name = "minterController", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.noble.tokenfactory.MinterControllerProto.MinterController.Builder> 
+           getMinterControllerBuilderList() {
+        return getMinterControllerFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.noble.tokenfactory.MinterControllerProto.MinterController, com.noble.tokenfactory.MinterControllerProto.MinterController.Builder, com.noble.tokenfactory.MinterControllerProto.MinterControllerOrBuilder> 
+          getMinterControllerFieldBuilder() {
+        if (minterControllerBuilder_ == null) {
+          minterControllerBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.noble.tokenfactory.MinterControllerProto.MinterController, com.noble.tokenfactory.MinterControllerProto.MinterController.Builder, com.noble.tokenfactory.MinterControllerProto.MinterControllerOrBuilder>(
+                  minterController_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          minterController_ = null;
+        }
+        return minterControllerBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:noble.tokenfactory.QueryAllMinterControllerResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:noble.tokenfactory.QueryAllMinterControllerResponse)
+    private static final com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse();
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAllMinterControllerResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAllMinterControllerResponse>() {
+      @java.lang.Override
+      public QueryAllMinterControllerResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAllMinterControllerResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAllMinterControllerResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.noble.tokenfactory.QueryProto.QueryAllMinterControllerResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGetMintingDenomRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:noble.tokenfactory.QueryGetMintingDenomRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code noble.tokenfactory.QueryGetMintingDenomRequest}
+   */
+  public static final class QueryGetMintingDenomRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:noble.tokenfactory.QueryGetMintingDenomRequest)
+      QueryGetMintingDenomRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGetMintingDenomRequest.newBuilder() to construct.
+    private QueryGetMintingDenomRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGetMintingDenomRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGetMintingDenomRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMintingDenomRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMintingDenomRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest.class, com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest)) {
+        return super.equals(obj);
+      }
+      com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest other = (com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code noble.tokenfactory.QueryGetMintingDenomRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:noble.tokenfactory.QueryGetMintingDenomRequest)
+        com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMintingDenomRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMintingDenomRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest.class, com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest.Builder.class);
+      }
+
+      // Construct using com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMintingDenomRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest getDefaultInstanceForType() {
+        return com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest build() {
+        com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest buildPartial() {
+        com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest result = new com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest) {
+          return mergeFrom((com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest other) {
+        if (other == com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:noble.tokenfactory.QueryGetMintingDenomRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:noble.tokenfactory.QueryGetMintingDenomRequest)
+    private static final com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest();
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGetMintingDenomRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGetMintingDenomRequest>() {
+      @java.lang.Override
+      public QueryGetMintingDenomRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGetMintingDenomRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGetMintingDenomRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.noble.tokenfactory.QueryProto.QueryGetMintingDenomRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGetMintingDenomResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:noble.tokenfactory.QueryGetMintingDenomResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.noble.tokenfactory.MintingDenom mintingDenom = 1 [json_name = "mintingDenom", (.gogoproto.nullable) = false];</code>
+     * @return Whether the mintingDenom field is set.
+     */
+    boolean hasMintingDenom();
+    /**
+     * <code>.noble.tokenfactory.MintingDenom mintingDenom = 1 [json_name = "mintingDenom", (.gogoproto.nullable) = false];</code>
+     * @return The mintingDenom.
+     */
+    com.noble.tokenfactory.MintingDenomProto.MintingDenom getMintingDenom();
+    /**
+     * <code>.noble.tokenfactory.MintingDenom mintingDenom = 1 [json_name = "mintingDenom", (.gogoproto.nullable) = false];</code>
+     */
+    com.noble.tokenfactory.MintingDenomProto.MintingDenomOrBuilder getMintingDenomOrBuilder();
+  }
+  /**
+   * Protobuf type {@code noble.tokenfactory.QueryGetMintingDenomResponse}
+   */
+  public static final class QueryGetMintingDenomResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:noble.tokenfactory.QueryGetMintingDenomResponse)
+      QueryGetMintingDenomResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGetMintingDenomResponse.newBuilder() to construct.
+    private QueryGetMintingDenomResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGetMintingDenomResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGetMintingDenomResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMintingDenomResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMintingDenomResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse.class, com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse.Builder.class);
+    }
+
+    public static final int MINTINGDENOM_FIELD_NUMBER = 1;
+    private com.noble.tokenfactory.MintingDenomProto.MintingDenom mintingDenom_;
+    /**
+     * <code>.noble.tokenfactory.MintingDenom mintingDenom = 1 [json_name = "mintingDenom", (.gogoproto.nullable) = false];</code>
+     * @return Whether the mintingDenom field is set.
+     */
+    @java.lang.Override
+    public boolean hasMintingDenom() {
+      return mintingDenom_ != null;
+    }
+    /**
+     * <code>.noble.tokenfactory.MintingDenom mintingDenom = 1 [json_name = "mintingDenom", (.gogoproto.nullable) = false];</code>
+     * @return The mintingDenom.
+     */
+    @java.lang.Override
+    public com.noble.tokenfactory.MintingDenomProto.MintingDenom getMintingDenom() {
+      return mintingDenom_ == null ? com.noble.tokenfactory.MintingDenomProto.MintingDenom.getDefaultInstance() : mintingDenom_;
+    }
+    /**
+     * <code>.noble.tokenfactory.MintingDenom mintingDenom = 1 [json_name = "mintingDenom", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.noble.tokenfactory.MintingDenomProto.MintingDenomOrBuilder getMintingDenomOrBuilder() {
+      return mintingDenom_ == null ? com.noble.tokenfactory.MintingDenomProto.MintingDenom.getDefaultInstance() : mintingDenom_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (mintingDenom_ != null) {
+        output.writeMessage(1, getMintingDenom());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (mintingDenom_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMintingDenom());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse)) {
+        return super.equals(obj);
+      }
+      com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse other = (com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse) obj;
+
+      if (hasMintingDenom() != other.hasMintingDenom()) return false;
+      if (hasMintingDenom()) {
+        if (!getMintingDenom()
+            .equals(other.getMintingDenom())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMintingDenom()) {
+        hash = (37 * hash) + MINTINGDENOM_FIELD_NUMBER;
+        hash = (53 * hash) + getMintingDenom().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code noble.tokenfactory.QueryGetMintingDenomResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:noble.tokenfactory.QueryGetMintingDenomResponse)
+        com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMintingDenomResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMintingDenomResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse.class, com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse.Builder.class);
+      }
+
+      // Construct using com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        mintingDenom_ = null;
+        if (mintingDenomBuilder_ != null) {
+          mintingDenomBuilder_.dispose();
+          mintingDenomBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.noble.tokenfactory.QueryProto.internal_static_noble_tokenfactory_QueryGetMintingDenomResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse getDefaultInstanceForType() {
+        return com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse build() {
+        com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse buildPartial() {
+        com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse result = new com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.mintingDenom_ = mintingDenomBuilder_ == null
+              ? mintingDenom_
+              : mintingDenomBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse) {
+          return mergeFrom((com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse other) {
+        if (other == com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse.getDefaultInstance()) return this;
+        if (other.hasMintingDenom()) {
+          mergeMintingDenom(other.getMintingDenom());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getMintingDenomFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.noble.tokenfactory.MintingDenomProto.MintingDenom mintingDenom_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.noble.tokenfactory.MintingDenomProto.MintingDenom, com.noble.tokenfactory.MintingDenomProto.MintingDenom.Builder, com.noble.tokenfactory.MintingDenomProto.MintingDenomOrBuilder> mintingDenomBuilder_;
+      /**
+       * <code>.noble.tokenfactory.MintingDenom mintingDenom = 1 [json_name = "mintingDenom", (.gogoproto.nullable) = false];</code>
+       * @return Whether the mintingDenom field is set.
+       */
+      public boolean hasMintingDenom() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.noble.tokenfactory.MintingDenom mintingDenom = 1 [json_name = "mintingDenom", (.gogoproto.nullable) = false];</code>
+       * @return The mintingDenom.
+       */
+      public com.noble.tokenfactory.MintingDenomProto.MintingDenom getMintingDenom() {
+        if (mintingDenomBuilder_ == null) {
+          return mintingDenom_ == null ? com.noble.tokenfactory.MintingDenomProto.MintingDenom.getDefaultInstance() : mintingDenom_;
+        } else {
+          return mintingDenomBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.noble.tokenfactory.MintingDenom mintingDenom = 1 [json_name = "mintingDenom", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMintingDenom(com.noble.tokenfactory.MintingDenomProto.MintingDenom value) {
+        if (mintingDenomBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mintingDenom_ = value;
+        } else {
+          mintingDenomBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.MintingDenom mintingDenom = 1 [json_name = "mintingDenom", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMintingDenom(
+          com.noble.tokenfactory.MintingDenomProto.MintingDenom.Builder builderForValue) {
+        if (mintingDenomBuilder_ == null) {
+          mintingDenom_ = builderForValue.build();
+        } else {
+          mintingDenomBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.MintingDenom mintingDenom = 1 [json_name = "mintingDenom", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeMintingDenom(com.noble.tokenfactory.MintingDenomProto.MintingDenom value) {
+        if (mintingDenomBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            mintingDenom_ != null &&
+            mintingDenom_ != com.noble.tokenfactory.MintingDenomProto.MintingDenom.getDefaultInstance()) {
+            getMintingDenomBuilder().mergeFrom(value);
+          } else {
+            mintingDenom_ = value;
+          }
+        } else {
+          mintingDenomBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.MintingDenom mintingDenom = 1 [json_name = "mintingDenom", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMintingDenom() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        mintingDenom_ = null;
+        if (mintingDenomBuilder_ != null) {
+          mintingDenomBuilder_.dispose();
+          mintingDenomBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.noble.tokenfactory.MintingDenom mintingDenom = 1 [json_name = "mintingDenom", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.MintingDenomProto.MintingDenom.Builder getMintingDenomBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getMintingDenomFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.noble.tokenfactory.MintingDenom mintingDenom = 1 [json_name = "mintingDenom", (.gogoproto.nullable) = false];</code>
+       */
+      public com.noble.tokenfactory.MintingDenomProto.MintingDenomOrBuilder getMintingDenomOrBuilder() {
+        if (mintingDenomBuilder_ != null) {
+          return mintingDenomBuilder_.getMessageOrBuilder();
+        } else {
+          return mintingDenom_ == null ?
+              com.noble.tokenfactory.MintingDenomProto.MintingDenom.getDefaultInstance() : mintingDenom_;
+        }
+      }
+      /**
+       * <code>.noble.tokenfactory.MintingDenom mintingDenom = 1 [json_name = "mintingDenom", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.noble.tokenfactory.MintingDenomProto.MintingDenom, com.noble.tokenfactory.MintingDenomProto.MintingDenom.Builder, com.noble.tokenfactory.MintingDenomProto.MintingDenomOrBuilder> 
+          getMintingDenomFieldBuilder() {
+        if (mintingDenomBuilder_ == null) {
+          mintingDenomBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.noble.tokenfactory.MintingDenomProto.MintingDenom, com.noble.tokenfactory.MintingDenomProto.MintingDenom.Builder, com.noble.tokenfactory.MintingDenomProto.MintingDenomOrBuilder>(
+                  getMintingDenom(),
+                  getParentForChildren(),
+                  isClean());
+          mintingDenom_ = null;
+        }
+        return mintingDenomBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:noble.tokenfactory.QueryGetMintingDenomResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:noble.tokenfactory.QueryGetMintingDenomResponse)
+    private static final com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse();
+    }
+
+    public static com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGetMintingDenomResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGetMintingDenomResponse>() {
+      @java.lang.Override
+      public QueryGetMintingDenomResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGetMintingDenomResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGetMintingDenomResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.noble.tokenfactory.QueryProto.QueryGetMintingDenomResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_noble_tokenfactory_QueryParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_noble_tokenfactory_QueryParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_noble_tokenfactory_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_noble_tokenfactory_QueryParamsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_noble_tokenfactory_QueryGetBlacklistedRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_noble_tokenfactory_QueryGetBlacklistedRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_noble_tokenfactory_QueryGetBlacklistedResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_noble_tokenfactory_QueryGetBlacklistedResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_noble_tokenfactory_QueryAllBlacklistedRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_noble_tokenfactory_QueryAllBlacklistedRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_noble_tokenfactory_QueryAllBlacklistedResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_noble_tokenfactory_QueryAllBlacklistedResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_noble_tokenfactory_QueryGetPausedRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_noble_tokenfactory_QueryGetPausedRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_noble_tokenfactory_QueryGetPausedResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_noble_tokenfactory_QueryGetPausedResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_noble_tokenfactory_QueryGetMasterMinterRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_noble_tokenfactory_QueryGetMasterMinterRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_noble_tokenfactory_QueryGetMasterMinterResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_noble_tokenfactory_QueryGetMasterMinterResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_noble_tokenfactory_QueryGetMintersRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_noble_tokenfactory_QueryGetMintersRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_noble_tokenfactory_QueryGetMintersResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_noble_tokenfactory_QueryGetMintersResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_noble_tokenfactory_QueryAllMintersRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_noble_tokenfactory_QueryAllMintersRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_noble_tokenfactory_QueryAllMintersResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_noble_tokenfactory_QueryAllMintersResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_noble_tokenfactory_QueryGetPauserRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_noble_tokenfactory_QueryGetPauserRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_noble_tokenfactory_QueryGetPauserResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_noble_tokenfactory_QueryGetPauserResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_noble_tokenfactory_QueryGetBlacklisterRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_noble_tokenfactory_QueryGetBlacklisterRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_noble_tokenfactory_QueryGetBlacklisterResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_noble_tokenfactory_QueryGetBlacklisterResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_noble_tokenfactory_QueryGetOwnerRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_noble_tokenfactory_QueryGetOwnerRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_noble_tokenfactory_QueryGetOwnerResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_noble_tokenfactory_QueryGetOwnerResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_noble_tokenfactory_QueryGetMinterControllerRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_noble_tokenfactory_QueryGetMinterControllerRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_noble_tokenfactory_QueryGetMinterControllerResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_noble_tokenfactory_QueryGetMinterControllerResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_noble_tokenfactory_QueryAllMinterControllerRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_noble_tokenfactory_QueryAllMinterControllerRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_noble_tokenfactory_QueryAllMinterControllerResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_noble_tokenfactory_QueryAllMinterControllerResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_noble_tokenfactory_QueryGetMintingDenomRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_noble_tokenfactory_QueryGetMintingDenomRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_noble_tokenfactory_QueryGetMintingDenomResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_noble_tokenfactory_QueryGetMintingDenomResponse_fieldAccessorTable;
 
@@ -271,12 +15516,12 @@ public final class QueryProto {
       ".QueryGetMintingDenomRequest\0320.noble.tok" +
       "enfactory.QueryGetMintingDenomResponse\")" +
       "\202\323\344\223\002#\022!/noble/tokenfactory/minting_deno" +
-      "mB\311\001\n\026com.noble.tokenfactoryB\nQueryProto" +
-      "P\001Z:github.com/strangelove-ventures/nobl" +
-      "e/x/tokenfactory/types\242\002\003NTX\252\002\022Noble.Tok" +
-      "enfactory\312\002\022Noble\\Tokenfactory\342\002\036Noble\\T" +
-      "okenfactory\\GPBMetadata\352\002\023Noble::Tokenfa" +
-      "ctoryb\006proto3"
+      "mB\307\001\n\026com.noble.tokenfactoryB\nQueryProto" +
+      "Z:github.com/strangelove-ventures/noble/" +
+      "x/tokenfactory/types\242\002\003NTX\252\002\022Noble.Token" +
+      "factory\312\002\022Noble\\Tokenfactory\342\002\036Noble\\Tok" +
+      "enfactory\\GPBMetadata\352\002\023Noble::Tokenfact" +
+      "oryb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

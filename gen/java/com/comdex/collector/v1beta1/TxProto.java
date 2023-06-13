@@ -24,13 +24,13 @@ public final class TxProto {
   static {
     java.lang.String[] descriptorData = {
       "\n!comdex/collector/v1beta1/tx.proto\022\030com" +
-      "dex.collector.v1beta12\005\n\003MsgB\336\001\n\034com.com" +
-      "dex.collector.v1beta1B\007TxProtoP\001Z3github" +
-      ".com/comdex-official/comdex/x/collector/" +
-      "types\242\002\003CCX\252\002\030Comdex.Collector.V1beta1\312\002" +
-      "\030Comdex\\Collector\\V1beta1\342\002$Comdex\\Colle" +
-      "ctor\\V1beta1\\GPBMetadata\352\002\032Comdex::Colle" +
-      "ctor::V1beta1b\006proto3"
+      "dex.collector.v1beta12\005\n\003MsgB\334\001\n\034com.com" +
+      "dex.collector.v1beta1B\007TxProtoZ3github.c" +
+      "om/comdex-official/comdex/x/collector/ty" +
+      "pes\242\002\003CCX\252\002\030Comdex.Collector.V1beta1\312\002\030C" +
+      "omdex\\Collector\\V1beta1\342\002$Comdex\\Collect" +
+      "or\\V1beta1\\GPBMetadata\352\002\032Comdex::Collect" +
+      "or::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

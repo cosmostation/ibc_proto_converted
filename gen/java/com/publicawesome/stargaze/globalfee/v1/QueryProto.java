@@ -14,44 +14,4859 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryCodeAuthorizationRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:publicawesome.stargaze.globalfee.v1.QueryCodeAuthorizationRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 code_id = 1 [json_name = "codeId"];</code>
+     * @return The codeId.
+     */
+    long getCodeId();
+  }
+  /**
+   * Protobuf type {@code publicawesome.stargaze.globalfee.v1.QueryCodeAuthorizationRequest}
+   */
+  public static final class QueryCodeAuthorizationRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:publicawesome.stargaze.globalfee.v1.QueryCodeAuthorizationRequest)
+      QueryCodeAuthorizationRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCodeAuthorizationRequest.newBuilder() to construct.
+    private QueryCodeAuthorizationRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCodeAuthorizationRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCodeAuthorizationRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryCodeAuthorizationRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryCodeAuthorizationRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest.class, com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest.Builder.class);
+    }
+
+    public static final int CODE_ID_FIELD_NUMBER = 1;
+    private long codeId_ = 0L;
+    /**
+     * <code>uint64 code_id = 1 [json_name = "codeId"];</code>
+     * @return The codeId.
+     */
+    @java.lang.Override
+    public long getCodeId() {
+      return codeId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (codeId_ != 0L) {
+        output.writeUInt64(1, codeId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (codeId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, codeId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest)) {
+        return super.equals(obj);
+      }
+      com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest other = (com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest) obj;
+
+      if (getCodeId()
+          != other.getCodeId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CODE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCodeId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code publicawesome.stargaze.globalfee.v1.QueryCodeAuthorizationRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:publicawesome.stargaze.globalfee.v1.QueryCodeAuthorizationRequest)
+        com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryCodeAuthorizationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryCodeAuthorizationRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest.class, com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest.Builder.class);
+      }
+
+      // Construct using com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        codeId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryCodeAuthorizationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest getDefaultInstanceForType() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest build() {
+        com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest buildPartial() {
+        com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest result = new com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.codeId_ = codeId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest) {
+          return mergeFrom((com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest other) {
+        if (other == com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest.getDefaultInstance()) return this;
+        if (other.getCodeId() != 0L) {
+          setCodeId(other.getCodeId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                codeId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long codeId_ ;
+      /**
+       * <code>uint64 code_id = 1 [json_name = "codeId"];</code>
+       * @return The codeId.
+       */
+      @java.lang.Override
+      public long getCodeId() {
+        return codeId_;
+      }
+      /**
+       * <code>uint64 code_id = 1 [json_name = "codeId"];</code>
+       * @param value The codeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCodeId(long value) {
+
+        codeId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 code_id = 1 [json_name = "codeId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCodeId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        codeId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:publicawesome.stargaze.globalfee.v1.QueryCodeAuthorizationRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:publicawesome.stargaze.globalfee.v1.QueryCodeAuthorizationRequest)
+    private static final com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest();
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCodeAuthorizationRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCodeAuthorizationRequest>() {
+      @java.lang.Override
+      public QueryCodeAuthorizationRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCodeAuthorizationRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCodeAuthorizationRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryCodeAuthorizationResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:publicawesome.stargaze.globalfee.v1.QueryCodeAuthorizationResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string methods = 1 [json_name = "methods"];</code>
+     * @return A list containing the methods.
+     */
+    java.util.List<java.lang.String>
+        getMethodsList();
+    /**
+     * <code>repeated string methods = 1 [json_name = "methods"];</code>
+     * @return The count of methods.
+     */
+    int getMethodsCount();
+    /**
+     * <code>repeated string methods = 1 [json_name = "methods"];</code>
+     * @param index The index of the element to return.
+     * @return The methods at the given index.
+     */
+    java.lang.String getMethods(int index);
+    /**
+     * <code>repeated string methods = 1 [json_name = "methods"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the methods at the given index.
+     */
+    com.google.protobuf.ByteString
+        getMethodsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code publicawesome.stargaze.globalfee.v1.QueryCodeAuthorizationResponse}
+   */
+  public static final class QueryCodeAuthorizationResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:publicawesome.stargaze.globalfee.v1.QueryCodeAuthorizationResponse)
+      QueryCodeAuthorizationResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCodeAuthorizationResponse.newBuilder() to construct.
+    private QueryCodeAuthorizationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCodeAuthorizationResponse() {
+      methods_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCodeAuthorizationResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryCodeAuthorizationResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryCodeAuthorizationResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse.class, com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse.Builder.class);
+    }
+
+    public static final int METHODS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList methods_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string methods = 1 [json_name = "methods"];</code>
+     * @return A list containing the methods.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getMethodsList() {
+      return methods_;
+    }
+    /**
+     * <code>repeated string methods = 1 [json_name = "methods"];</code>
+     * @return The count of methods.
+     */
+    public int getMethodsCount() {
+      return methods_.size();
+    }
+    /**
+     * <code>repeated string methods = 1 [json_name = "methods"];</code>
+     * @param index The index of the element to return.
+     * @return The methods at the given index.
+     */
+    public java.lang.String getMethods(int index) {
+      return methods_.get(index);
+    }
+    /**
+     * <code>repeated string methods = 1 [json_name = "methods"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the methods at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getMethodsBytes(int index) {
+      return methods_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < methods_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, methods_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < methods_.size(); i++) {
+          dataSize += computeStringSizeNoTag(methods_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getMethodsList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse)) {
+        return super.equals(obj);
+      }
+      com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse other = (com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse) obj;
+
+      if (!getMethodsList()
+          .equals(other.getMethodsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getMethodsCount() > 0) {
+        hash = (37 * hash) + METHODS_FIELD_NUMBER;
+        hash = (53 * hash) + getMethodsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code publicawesome.stargaze.globalfee.v1.QueryCodeAuthorizationResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:publicawesome.stargaze.globalfee.v1.QueryCodeAuthorizationResponse)
+        com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryCodeAuthorizationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryCodeAuthorizationResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse.class, com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse.Builder.class);
+      }
+
+      // Construct using com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        methods_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryCodeAuthorizationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse getDefaultInstanceForType() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse build() {
+        com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse buildPartial() {
+        com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse result = new com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          methods_.makeImmutable();
+          result.methods_ = methods_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse) {
+          return mergeFrom((com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse other) {
+        if (other == com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse.getDefaultInstance()) return this;
+        if (!other.methods_.isEmpty()) {
+          if (methods_.isEmpty()) {
+            methods_ = other.methods_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureMethodsIsMutable();
+            methods_.addAll(other.methods_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureMethodsIsMutable();
+                methods_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList methods_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureMethodsIsMutable() {
+        if (!methods_.isModifiable()) {
+          methods_ = new com.google.protobuf.LazyStringArrayList(methods_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <code>repeated string methods = 1 [json_name = "methods"];</code>
+       * @return A list containing the methods.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getMethodsList() {
+        methods_.makeImmutable();
+        return methods_;
+      }
+      /**
+       * <code>repeated string methods = 1 [json_name = "methods"];</code>
+       * @return The count of methods.
+       */
+      public int getMethodsCount() {
+        return methods_.size();
+      }
+      /**
+       * <code>repeated string methods = 1 [json_name = "methods"];</code>
+       * @param index The index of the element to return.
+       * @return The methods at the given index.
+       */
+      public java.lang.String getMethods(int index) {
+        return methods_.get(index);
+      }
+      /**
+       * <code>repeated string methods = 1 [json_name = "methods"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the methods at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getMethodsBytes(int index) {
+        return methods_.getByteString(index);
+      }
+      /**
+       * <code>repeated string methods = 1 [json_name = "methods"];</code>
+       * @param index The index to set the value at.
+       * @param value The methods to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethods(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureMethodsIsMutable();
+        methods_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string methods = 1 [json_name = "methods"];</code>
+       * @param value The methods to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMethods(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureMethodsIsMutable();
+        methods_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string methods = 1 [json_name = "methods"];</code>
+       * @param values The methods to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllMethods(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureMethodsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, methods_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string methods = 1 [json_name = "methods"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMethods() {
+        methods_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string methods = 1 [json_name = "methods"];</code>
+       * @param value The bytes of the methods to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMethodsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureMethodsIsMutable();
+        methods_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:publicawesome.stargaze.globalfee.v1.QueryCodeAuthorizationResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:publicawesome.stargaze.globalfee.v1.QueryCodeAuthorizationResponse)
+    private static final com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse();
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCodeAuthorizationResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCodeAuthorizationResponse>() {
+      @java.lang.Override
+      public QueryCodeAuthorizationResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCodeAuthorizationResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCodeAuthorizationResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryCodeAuthorizationResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryContractAuthorizationRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:publicawesome.stargaze.globalfee.v1.QueryContractAuthorizationRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The contractAddress.
+     */
+    java.lang.String getContractAddress();
+    /**
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The bytes for contractAddress.
+     */
+    com.google.protobuf.ByteString
+        getContractAddressBytes();
+  }
+  /**
+   * Protobuf type {@code publicawesome.stargaze.globalfee.v1.QueryContractAuthorizationRequest}
+   */
+  public static final class QueryContractAuthorizationRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:publicawesome.stargaze.globalfee.v1.QueryContractAuthorizationRequest)
+      QueryContractAuthorizationRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryContractAuthorizationRequest.newBuilder() to construct.
+    private QueryContractAuthorizationRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryContractAuthorizationRequest() {
+      contractAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryContractAuthorizationRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryContractAuthorizationRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryContractAuthorizationRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest.class, com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest.Builder.class);
+    }
+
+    public static final int CONTRACT_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contractAddress_ = "";
+    /**
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The contractAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getContractAddress() {
+      java.lang.Object ref = contractAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contractAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The bytes for contractAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractAddressBytes() {
+      java.lang.Object ref = contractAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contractAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contractAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contractAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest)) {
+        return super.equals(obj);
+      }
+      com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest other = (com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest) obj;
+
+      if (!getContractAddress()
+          .equals(other.getContractAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTRACT_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getContractAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code publicawesome.stargaze.globalfee.v1.QueryContractAuthorizationRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:publicawesome.stargaze.globalfee.v1.QueryContractAuthorizationRequest)
+        com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryContractAuthorizationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryContractAuthorizationRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest.class, com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest.Builder.class);
+      }
+
+      // Construct using com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contractAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryContractAuthorizationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest getDefaultInstanceForType() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest build() {
+        com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest buildPartial() {
+        com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest result = new com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.contractAddress_ = contractAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest) {
+          return mergeFrom((com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest other) {
+        if (other == com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest.getDefaultInstance()) return this;
+        if (!other.getContractAddress().isEmpty()) {
+          contractAddress_ = other.contractAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                contractAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object contractAddress_ = "";
+      /**
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @return The contractAddress.
+       */
+      public java.lang.String getContractAddress() {
+        java.lang.Object ref = contractAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contractAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @return The bytes for contractAddress.
+       */
+      public com.google.protobuf.ByteString
+          getContractAddressBytes() {
+        java.lang.Object ref = contractAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contractAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @param value The contractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contractAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractAddress() {
+        contractAddress_ = getDefaultInstance().getContractAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @param value The bytes for contractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contractAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:publicawesome.stargaze.globalfee.v1.QueryContractAuthorizationRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:publicawesome.stargaze.globalfee.v1.QueryContractAuthorizationRequest)
+    private static final com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest();
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryContractAuthorizationRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryContractAuthorizationRequest>() {
+      @java.lang.Override
+      public QueryContractAuthorizationRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryContractAuthorizationRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryContractAuthorizationRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryContractAuthorizationResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:publicawesome.stargaze.globalfee.v1.QueryContractAuthorizationResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string methods = 1 [json_name = "methods"];</code>
+     * @return A list containing the methods.
+     */
+    java.util.List<java.lang.String>
+        getMethodsList();
+    /**
+     * <code>repeated string methods = 1 [json_name = "methods"];</code>
+     * @return The count of methods.
+     */
+    int getMethodsCount();
+    /**
+     * <code>repeated string methods = 1 [json_name = "methods"];</code>
+     * @param index The index of the element to return.
+     * @return The methods at the given index.
+     */
+    java.lang.String getMethods(int index);
+    /**
+     * <code>repeated string methods = 1 [json_name = "methods"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the methods at the given index.
+     */
+    com.google.protobuf.ByteString
+        getMethodsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code publicawesome.stargaze.globalfee.v1.QueryContractAuthorizationResponse}
+   */
+  public static final class QueryContractAuthorizationResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:publicawesome.stargaze.globalfee.v1.QueryContractAuthorizationResponse)
+      QueryContractAuthorizationResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryContractAuthorizationResponse.newBuilder() to construct.
+    private QueryContractAuthorizationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryContractAuthorizationResponse() {
+      methods_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryContractAuthorizationResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryContractAuthorizationResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryContractAuthorizationResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse.class, com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse.Builder.class);
+    }
+
+    public static final int METHODS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList methods_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string methods = 1 [json_name = "methods"];</code>
+     * @return A list containing the methods.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getMethodsList() {
+      return methods_;
+    }
+    /**
+     * <code>repeated string methods = 1 [json_name = "methods"];</code>
+     * @return The count of methods.
+     */
+    public int getMethodsCount() {
+      return methods_.size();
+    }
+    /**
+     * <code>repeated string methods = 1 [json_name = "methods"];</code>
+     * @param index The index of the element to return.
+     * @return The methods at the given index.
+     */
+    public java.lang.String getMethods(int index) {
+      return methods_.get(index);
+    }
+    /**
+     * <code>repeated string methods = 1 [json_name = "methods"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the methods at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getMethodsBytes(int index) {
+      return methods_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < methods_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, methods_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < methods_.size(); i++) {
+          dataSize += computeStringSizeNoTag(methods_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getMethodsList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse)) {
+        return super.equals(obj);
+      }
+      com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse other = (com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse) obj;
+
+      if (!getMethodsList()
+          .equals(other.getMethodsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getMethodsCount() > 0) {
+        hash = (37 * hash) + METHODS_FIELD_NUMBER;
+        hash = (53 * hash) + getMethodsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code publicawesome.stargaze.globalfee.v1.QueryContractAuthorizationResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:publicawesome.stargaze.globalfee.v1.QueryContractAuthorizationResponse)
+        com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryContractAuthorizationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryContractAuthorizationResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse.class, com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse.Builder.class);
+      }
+
+      // Construct using com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        methods_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryContractAuthorizationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse getDefaultInstanceForType() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse build() {
+        com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse buildPartial() {
+        com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse result = new com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          methods_.makeImmutable();
+          result.methods_ = methods_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse) {
+          return mergeFrom((com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse other) {
+        if (other == com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse.getDefaultInstance()) return this;
+        if (!other.methods_.isEmpty()) {
+          if (methods_.isEmpty()) {
+            methods_ = other.methods_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureMethodsIsMutable();
+            methods_.addAll(other.methods_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureMethodsIsMutable();
+                methods_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList methods_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureMethodsIsMutable() {
+        if (!methods_.isModifiable()) {
+          methods_ = new com.google.protobuf.LazyStringArrayList(methods_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <code>repeated string methods = 1 [json_name = "methods"];</code>
+       * @return A list containing the methods.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getMethodsList() {
+        methods_.makeImmutable();
+        return methods_;
+      }
+      /**
+       * <code>repeated string methods = 1 [json_name = "methods"];</code>
+       * @return The count of methods.
+       */
+      public int getMethodsCount() {
+        return methods_.size();
+      }
+      /**
+       * <code>repeated string methods = 1 [json_name = "methods"];</code>
+       * @param index The index of the element to return.
+       * @return The methods at the given index.
+       */
+      public java.lang.String getMethods(int index) {
+        return methods_.get(index);
+      }
+      /**
+       * <code>repeated string methods = 1 [json_name = "methods"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the methods at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getMethodsBytes(int index) {
+        return methods_.getByteString(index);
+      }
+      /**
+       * <code>repeated string methods = 1 [json_name = "methods"];</code>
+       * @param index The index to set the value at.
+       * @param value The methods to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethods(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureMethodsIsMutable();
+        methods_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string methods = 1 [json_name = "methods"];</code>
+       * @param value The methods to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMethods(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureMethodsIsMutable();
+        methods_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string methods = 1 [json_name = "methods"];</code>
+       * @param values The methods to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllMethods(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureMethodsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, methods_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string methods = 1 [json_name = "methods"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMethods() {
+        methods_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string methods = 1 [json_name = "methods"];</code>
+       * @param value The bytes of the methods to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMethodsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureMethodsIsMutable();
+        methods_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:publicawesome.stargaze.globalfee.v1.QueryContractAuthorizationResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:publicawesome.stargaze.globalfee.v1.QueryContractAuthorizationResponse)
+    private static final com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse();
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryContractAuthorizationResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryContractAuthorizationResponse>() {
+      @java.lang.Override
+      public QueryContractAuthorizationResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryContractAuthorizationResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryContractAuthorizationResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryContractAuthorizationResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:publicawesome.stargaze.globalfee.v1.QueryParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code publicawesome.stargaze.globalfee.v1.QueryParamsRequest}
+   */
+  public static final class QueryParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:publicawesome.stargaze.globalfee.v1.QueryParamsRequest)
+      QueryParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsRequest.newBuilder() to construct.
+    private QueryParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest.class, com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest other = (com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code publicawesome.stargaze.globalfee.v1.QueryParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:publicawesome.stargaze.globalfee.v1.QueryParamsRequest)
+        com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest.class, com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest.Builder.class);
+      }
+
+      // Construct using com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest build() {
+        com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest buildPartial() {
+        com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest result = new com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest) {
+          return mergeFrom((com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest other) {
+        if (other == com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:publicawesome.stargaze.globalfee.v1.QueryParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:publicawesome.stargaze.globalfee.v1.QueryParamsRequest)
+    private static final com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest();
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsRequest>() {
+      @java.lang.Override
+      public QueryParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:publicawesome.stargaze.globalfee.v1.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.publicawesome.stargaze.globalfee.v1.Params params = 1 [json_name = "params"];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.publicawesome.stargaze.globalfee.v1.Params params = 1 [json_name = "params"];</code>
+     * @return The params.
+     */
+    com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params getParams();
+    /**
+     * <code>.publicawesome.stargaze.globalfee.v1.Params params = 1 [json_name = "params"];</code>
+     */
+    com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code publicawesome.stargaze.globalfee.v1.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:publicawesome.stargaze.globalfee.v1.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse.class, com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params params_;
+    /**
+     * <code>.publicawesome.stargaze.globalfee.v1.Params params = 1 [json_name = "params"];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.publicawesome.stargaze.globalfee.v1.Params params = 1 [json_name = "params"];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params getParams() {
+      return params_ == null ? com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.publicawesome.stargaze.globalfee.v1.Params params = 1 [json_name = "params"];</code>
+     */
+    @java.lang.Override
+    public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse other = (com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code publicawesome.stargaze.globalfee.v1.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:publicawesome.stargaze.globalfee.v1.QueryParamsResponse)
+        com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse.class, com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse build() {
+        com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse buildPartial() {
+        com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse result = new com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse) {
+          return mergeFrom((com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse other) {
+        if (other == com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params.Builder, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.publicawesome.stargaze.globalfee.v1.Params params = 1 [json_name = "params"];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.publicawesome.stargaze.globalfee.v1.Params params = 1 [json_name = "params"];</code>
+       * @return The params.
+       */
+      public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.publicawesome.stargaze.globalfee.v1.Params params = 1 [json_name = "params"];</code>
+       */
+      public Builder setParams(com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.publicawesome.stargaze.globalfee.v1.Params params = 1 [json_name = "params"];</code>
+       */
+      public Builder setParams(
+          com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.publicawesome.stargaze.globalfee.v1.Params params = 1 [json_name = "params"];</code>
+       */
+      public Builder mergeParams(com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.publicawesome.stargaze.globalfee.v1.Params params = 1 [json_name = "params"];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.publicawesome.stargaze.globalfee.v1.Params params = 1 [json_name = "params"];</code>
+       */
+      public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.publicawesome.stargaze.globalfee.v1.Params params = 1 [json_name = "params"];</code>
+       */
+      public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.publicawesome.stargaze.globalfee.v1.Params params = 1 [json_name = "params"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params.Builder, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params.Builder, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:publicawesome.stargaze.globalfee.v1.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:publicawesome.stargaze.globalfee.v1.QueryParamsResponse)
+    private static final com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse();
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAuthorizationsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:publicawesome.stargaze.globalfee.v1.QueryAuthorizationsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code publicawesome.stargaze.globalfee.v1.QueryAuthorizationsRequest}
+   */
+  public static final class QueryAuthorizationsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:publicawesome.stargaze.globalfee.v1.QueryAuthorizationsRequest)
+      QueryAuthorizationsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAuthorizationsRequest.newBuilder() to construct.
+    private QueryAuthorizationsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAuthorizationsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAuthorizationsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryAuthorizationsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryAuthorizationsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest.class, com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest)) {
+        return super.equals(obj);
+      }
+      com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest other = (com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code publicawesome.stargaze.globalfee.v1.QueryAuthorizationsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:publicawesome.stargaze.globalfee.v1.QueryAuthorizationsRequest)
+        com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryAuthorizationsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryAuthorizationsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest.class, com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest.Builder.class);
+      }
+
+      // Construct using com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryAuthorizationsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest getDefaultInstanceForType() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest build() {
+        com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest buildPartial() {
+        com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest result = new com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest) {
+          return mergeFrom((com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest other) {
+        if (other == com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:publicawesome.stargaze.globalfee.v1.QueryAuthorizationsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:publicawesome.stargaze.globalfee.v1.QueryAuthorizationsRequest)
+    private static final com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest();
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAuthorizationsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAuthorizationsRequest>() {
+      @java.lang.Override
+      public QueryAuthorizationsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAuthorizationsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAuthorizationsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAuthorizationsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:publicawesome.stargaze.globalfee.v1.QueryAuthorizationsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorizations = 1 [json_name = "codeAuthorizations"];</code>
+     */
+    java.util.List<com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization> 
+        getCodeAuthorizationsList();
+    /**
+     * <code>repeated .publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorizations = 1 [json_name = "codeAuthorizations"];</code>
+     */
+    com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization getCodeAuthorizations(int index);
+    /**
+     * <code>repeated .publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorizations = 1 [json_name = "codeAuthorizations"];</code>
+     */
+    int getCodeAuthorizationsCount();
+    /**
+     * <code>repeated .publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorizations = 1 [json_name = "codeAuthorizations"];</code>
+     */
+    java.util.List<? extends com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorizationOrBuilder> 
+        getCodeAuthorizationsOrBuilderList();
+    /**
+     * <code>repeated .publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorizations = 1 [json_name = "codeAuthorizations"];</code>
+     */
+    com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorizationOrBuilder getCodeAuthorizationsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorizations = 2 [json_name = "contractAuthorizations"];</code>
+     */
+    java.util.List<com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization> 
+        getContractAuthorizationsList();
+    /**
+     * <code>repeated .publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorizations = 2 [json_name = "contractAuthorizations"];</code>
+     */
+    com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization getContractAuthorizations(int index);
+    /**
+     * <code>repeated .publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorizations = 2 [json_name = "contractAuthorizations"];</code>
+     */
+    int getContractAuthorizationsCount();
+    /**
+     * <code>repeated .publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorizations = 2 [json_name = "contractAuthorizations"];</code>
+     */
+    java.util.List<? extends com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorizationOrBuilder> 
+        getContractAuthorizationsOrBuilderList();
+    /**
+     * <code>repeated .publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorizations = 2 [json_name = "contractAuthorizations"];</code>
+     */
+    com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorizationOrBuilder getContractAuthorizationsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code publicawesome.stargaze.globalfee.v1.QueryAuthorizationsResponse}
+   */
+  public static final class QueryAuthorizationsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:publicawesome.stargaze.globalfee.v1.QueryAuthorizationsResponse)
+      QueryAuthorizationsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAuthorizationsResponse.newBuilder() to construct.
+    private QueryAuthorizationsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAuthorizationsResponse() {
+      codeAuthorizations_ = java.util.Collections.emptyList();
+      contractAuthorizations_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAuthorizationsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryAuthorizationsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryAuthorizationsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse.class, com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse.Builder.class);
+    }
+
+    public static final int CODE_AUTHORIZATIONS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization> codeAuthorizations_;
+    /**
+     * <code>repeated .publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorizations = 1 [json_name = "codeAuthorizations"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization> getCodeAuthorizationsList() {
+      return codeAuthorizations_;
+    }
+    /**
+     * <code>repeated .publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorizations = 1 [json_name = "codeAuthorizations"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorizationOrBuilder> 
+        getCodeAuthorizationsOrBuilderList() {
+      return codeAuthorizations_;
+    }
+    /**
+     * <code>repeated .publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorizations = 1 [json_name = "codeAuthorizations"];</code>
+     */
+    @java.lang.Override
+    public int getCodeAuthorizationsCount() {
+      return codeAuthorizations_.size();
+    }
+    /**
+     * <code>repeated .publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorizations = 1 [json_name = "codeAuthorizations"];</code>
+     */
+    @java.lang.Override
+    public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization getCodeAuthorizations(int index) {
+      return codeAuthorizations_.get(index);
+    }
+    /**
+     * <code>repeated .publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorizations = 1 [json_name = "codeAuthorizations"];</code>
+     */
+    @java.lang.Override
+    public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorizationOrBuilder getCodeAuthorizationsOrBuilder(
+        int index) {
+      return codeAuthorizations_.get(index);
+    }
+
+    public static final int CONTRACT_AUTHORIZATIONS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization> contractAuthorizations_;
+    /**
+     * <code>repeated .publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorizations = 2 [json_name = "contractAuthorizations"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization> getContractAuthorizationsList() {
+      return contractAuthorizations_;
+    }
+    /**
+     * <code>repeated .publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorizations = 2 [json_name = "contractAuthorizations"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorizationOrBuilder> 
+        getContractAuthorizationsOrBuilderList() {
+      return contractAuthorizations_;
+    }
+    /**
+     * <code>repeated .publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorizations = 2 [json_name = "contractAuthorizations"];</code>
+     */
+    @java.lang.Override
+    public int getContractAuthorizationsCount() {
+      return contractAuthorizations_.size();
+    }
+    /**
+     * <code>repeated .publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorizations = 2 [json_name = "contractAuthorizations"];</code>
+     */
+    @java.lang.Override
+    public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization getContractAuthorizations(int index) {
+      return contractAuthorizations_.get(index);
+    }
+    /**
+     * <code>repeated .publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorizations = 2 [json_name = "contractAuthorizations"];</code>
+     */
+    @java.lang.Override
+    public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorizationOrBuilder getContractAuthorizationsOrBuilder(
+        int index) {
+      return contractAuthorizations_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < codeAuthorizations_.size(); i++) {
+        output.writeMessage(1, codeAuthorizations_.get(i));
+      }
+      for (int i = 0; i < contractAuthorizations_.size(); i++) {
+        output.writeMessage(2, contractAuthorizations_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < codeAuthorizations_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, codeAuthorizations_.get(i));
+      }
+      for (int i = 0; i < contractAuthorizations_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, contractAuthorizations_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse)) {
+        return super.equals(obj);
+      }
+      com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse other = (com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse) obj;
+
+      if (!getCodeAuthorizationsList()
+          .equals(other.getCodeAuthorizationsList())) return false;
+      if (!getContractAuthorizationsList()
+          .equals(other.getContractAuthorizationsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getCodeAuthorizationsCount() > 0) {
+        hash = (37 * hash) + CODE_AUTHORIZATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getCodeAuthorizationsList().hashCode();
+      }
+      if (getContractAuthorizationsCount() > 0) {
+        hash = (37 * hash) + CONTRACT_AUTHORIZATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getContractAuthorizationsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code publicawesome.stargaze.globalfee.v1.QueryAuthorizationsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:publicawesome.stargaze.globalfee.v1.QueryAuthorizationsResponse)
+        com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryAuthorizationsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryAuthorizationsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse.class, com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse.Builder.class);
+      }
+
+      // Construct using com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (codeAuthorizationsBuilder_ == null) {
+          codeAuthorizations_ = java.util.Collections.emptyList();
+        } else {
+          codeAuthorizations_ = null;
+          codeAuthorizationsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (contractAuthorizationsBuilder_ == null) {
+          contractAuthorizations_ = java.util.Collections.emptyList();
+        } else {
+          contractAuthorizations_ = null;
+          contractAuthorizationsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.internal_static_publicawesome_stargaze_globalfee_v1_QueryAuthorizationsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse getDefaultInstanceForType() {
+        return com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse build() {
+        com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse buildPartial() {
+        com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse result = new com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse result) {
+        if (codeAuthorizationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            codeAuthorizations_ = java.util.Collections.unmodifiableList(codeAuthorizations_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.codeAuthorizations_ = codeAuthorizations_;
+        } else {
+          result.codeAuthorizations_ = codeAuthorizationsBuilder_.build();
+        }
+        if (contractAuthorizationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            contractAuthorizations_ = java.util.Collections.unmodifiableList(contractAuthorizations_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.contractAuthorizations_ = contractAuthorizations_;
+        } else {
+          result.contractAuthorizations_ = contractAuthorizationsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse) {
+          return mergeFrom((com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse other) {
+        if (other == com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse.getDefaultInstance()) return this;
+        if (codeAuthorizationsBuilder_ == null) {
+          if (!other.codeAuthorizations_.isEmpty()) {
+            if (codeAuthorizations_.isEmpty()) {
+              codeAuthorizations_ = other.codeAuthorizations_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureCodeAuthorizationsIsMutable();
+              codeAuthorizations_.addAll(other.codeAuthorizations_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.codeAuthorizations_.isEmpty()) {
+            if (codeAuthorizationsBuilder_.isEmpty()) {
+              codeAuthorizationsBuilder_.dispose();
+              codeAuthorizationsBuilder_ = null;
+              codeAuthorizations_ = other.codeAuthorizations_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              codeAuthorizationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCodeAuthorizationsFieldBuilder() : null;
+            } else {
+              codeAuthorizationsBuilder_.addAllMessages(other.codeAuthorizations_);
+            }
+          }
+        }
+        if (contractAuthorizationsBuilder_ == null) {
+          if (!other.contractAuthorizations_.isEmpty()) {
+            if (contractAuthorizations_.isEmpty()) {
+              contractAuthorizations_ = other.contractAuthorizations_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureContractAuthorizationsIsMutable();
+              contractAuthorizations_.addAll(other.contractAuthorizations_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.contractAuthorizations_.isEmpty()) {
+            if (contractAuthorizationsBuilder_.isEmpty()) {
+              contractAuthorizationsBuilder_.dispose();
+              contractAuthorizationsBuilder_ = null;
+              contractAuthorizations_ = other.contractAuthorizations_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              contractAuthorizationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getContractAuthorizationsFieldBuilder() : null;
+            } else {
+              contractAuthorizationsBuilder_.addAllMessages(other.contractAuthorizations_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization m =
+                    input.readMessage(
+                        com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization.parser(),
+                        extensionRegistry);
+                if (codeAuthorizationsBuilder_ == null) {
+                  ensureCodeAuthorizationsIsMutable();
+                  codeAuthorizations_.add(m);
+                } else {
+                  codeAuthorizationsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization m =
+                    input.readMessage(
+                        com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization.parser(),
+                        extensionRegistry);
+                if (contractAuthorizationsBuilder_ == null) {
+                  ensureContractAuthorizationsIsMutable();
+                  contractAuthorizations_.add(m);
+                } else {
+                  contractAuthorizationsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization> codeAuthorizations_ =
+        java.util.Collections.emptyList();
+      private void ensureCodeAuthorizationsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          codeAuthorizations_ = new java.util.ArrayList<com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization>(codeAuthorizations_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization.Builder, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorizationOrBuilder> codeAuthorizationsBuilder_;
+
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorizations = 1 [json_name = "codeAuthorizations"];</code>
+       */
+      public java.util.List<com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization> getCodeAuthorizationsList() {
+        if (codeAuthorizationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(codeAuthorizations_);
+        } else {
+          return codeAuthorizationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorizations = 1 [json_name = "codeAuthorizations"];</code>
+       */
+      public int getCodeAuthorizationsCount() {
+        if (codeAuthorizationsBuilder_ == null) {
+          return codeAuthorizations_.size();
+        } else {
+          return codeAuthorizationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorizations = 1 [json_name = "codeAuthorizations"];</code>
+       */
+      public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization getCodeAuthorizations(int index) {
+        if (codeAuthorizationsBuilder_ == null) {
+          return codeAuthorizations_.get(index);
+        } else {
+          return codeAuthorizationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorizations = 1 [json_name = "codeAuthorizations"];</code>
+       */
+      public Builder setCodeAuthorizations(
+          int index, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization value) {
+        if (codeAuthorizationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCodeAuthorizationsIsMutable();
+          codeAuthorizations_.set(index, value);
+          onChanged();
+        } else {
+          codeAuthorizationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorizations = 1 [json_name = "codeAuthorizations"];</code>
+       */
+      public Builder setCodeAuthorizations(
+          int index, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization.Builder builderForValue) {
+        if (codeAuthorizationsBuilder_ == null) {
+          ensureCodeAuthorizationsIsMutable();
+          codeAuthorizations_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          codeAuthorizationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorizations = 1 [json_name = "codeAuthorizations"];</code>
+       */
+      public Builder addCodeAuthorizations(com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization value) {
+        if (codeAuthorizationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCodeAuthorizationsIsMutable();
+          codeAuthorizations_.add(value);
+          onChanged();
+        } else {
+          codeAuthorizationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorizations = 1 [json_name = "codeAuthorizations"];</code>
+       */
+      public Builder addCodeAuthorizations(
+          int index, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization value) {
+        if (codeAuthorizationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCodeAuthorizationsIsMutable();
+          codeAuthorizations_.add(index, value);
+          onChanged();
+        } else {
+          codeAuthorizationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorizations = 1 [json_name = "codeAuthorizations"];</code>
+       */
+      public Builder addCodeAuthorizations(
+          com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization.Builder builderForValue) {
+        if (codeAuthorizationsBuilder_ == null) {
+          ensureCodeAuthorizationsIsMutable();
+          codeAuthorizations_.add(builderForValue.build());
+          onChanged();
+        } else {
+          codeAuthorizationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorizations = 1 [json_name = "codeAuthorizations"];</code>
+       */
+      public Builder addCodeAuthorizations(
+          int index, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization.Builder builderForValue) {
+        if (codeAuthorizationsBuilder_ == null) {
+          ensureCodeAuthorizationsIsMutable();
+          codeAuthorizations_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          codeAuthorizationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorizations = 1 [json_name = "codeAuthorizations"];</code>
+       */
+      public Builder addAllCodeAuthorizations(
+          java.lang.Iterable<? extends com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization> values) {
+        if (codeAuthorizationsBuilder_ == null) {
+          ensureCodeAuthorizationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, codeAuthorizations_);
+          onChanged();
+        } else {
+          codeAuthorizationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorizations = 1 [json_name = "codeAuthorizations"];</code>
+       */
+      public Builder clearCodeAuthorizations() {
+        if (codeAuthorizationsBuilder_ == null) {
+          codeAuthorizations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          codeAuthorizationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorizations = 1 [json_name = "codeAuthorizations"];</code>
+       */
+      public Builder removeCodeAuthorizations(int index) {
+        if (codeAuthorizationsBuilder_ == null) {
+          ensureCodeAuthorizationsIsMutable();
+          codeAuthorizations_.remove(index);
+          onChanged();
+        } else {
+          codeAuthorizationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorizations = 1 [json_name = "codeAuthorizations"];</code>
+       */
+      public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization.Builder getCodeAuthorizationsBuilder(
+          int index) {
+        return getCodeAuthorizationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorizations = 1 [json_name = "codeAuthorizations"];</code>
+       */
+      public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorizationOrBuilder getCodeAuthorizationsOrBuilder(
+          int index) {
+        if (codeAuthorizationsBuilder_ == null) {
+          return codeAuthorizations_.get(index);  } else {
+          return codeAuthorizationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorizations = 1 [json_name = "codeAuthorizations"];</code>
+       */
+      public java.util.List<? extends com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorizationOrBuilder> 
+           getCodeAuthorizationsOrBuilderList() {
+        if (codeAuthorizationsBuilder_ != null) {
+          return codeAuthorizationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(codeAuthorizations_);
+        }
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorizations = 1 [json_name = "codeAuthorizations"];</code>
+       */
+      public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization.Builder addCodeAuthorizationsBuilder() {
+        return getCodeAuthorizationsFieldBuilder().addBuilder(
+            com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorizations = 1 [json_name = "codeAuthorizations"];</code>
+       */
+      public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization.Builder addCodeAuthorizationsBuilder(
+          int index) {
+        return getCodeAuthorizationsFieldBuilder().addBuilder(
+            index, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorizations = 1 [json_name = "codeAuthorizations"];</code>
+       */
+      public java.util.List<com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization.Builder> 
+           getCodeAuthorizationsBuilderList() {
+        return getCodeAuthorizationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization.Builder, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorizationOrBuilder> 
+          getCodeAuthorizationsFieldBuilder() {
+        if (codeAuthorizationsBuilder_ == null) {
+          codeAuthorizationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization.Builder, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorizationOrBuilder>(
+                  codeAuthorizations_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          codeAuthorizations_ = null;
+        }
+        return codeAuthorizationsBuilder_;
+      }
+
+      private java.util.List<com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization> contractAuthorizations_ =
+        java.util.Collections.emptyList();
+      private void ensureContractAuthorizationsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          contractAuthorizations_ = new java.util.ArrayList<com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization>(contractAuthorizations_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization.Builder, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorizationOrBuilder> contractAuthorizationsBuilder_;
+
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorizations = 2 [json_name = "contractAuthorizations"];</code>
+       */
+      public java.util.List<com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization> getContractAuthorizationsList() {
+        if (contractAuthorizationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(contractAuthorizations_);
+        } else {
+          return contractAuthorizationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorizations = 2 [json_name = "contractAuthorizations"];</code>
+       */
+      public int getContractAuthorizationsCount() {
+        if (contractAuthorizationsBuilder_ == null) {
+          return contractAuthorizations_.size();
+        } else {
+          return contractAuthorizationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorizations = 2 [json_name = "contractAuthorizations"];</code>
+       */
+      public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization getContractAuthorizations(int index) {
+        if (contractAuthorizationsBuilder_ == null) {
+          return contractAuthorizations_.get(index);
+        } else {
+          return contractAuthorizationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorizations = 2 [json_name = "contractAuthorizations"];</code>
+       */
+      public Builder setContractAuthorizations(
+          int index, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization value) {
+        if (contractAuthorizationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContractAuthorizationsIsMutable();
+          contractAuthorizations_.set(index, value);
+          onChanged();
+        } else {
+          contractAuthorizationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorizations = 2 [json_name = "contractAuthorizations"];</code>
+       */
+      public Builder setContractAuthorizations(
+          int index, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization.Builder builderForValue) {
+        if (contractAuthorizationsBuilder_ == null) {
+          ensureContractAuthorizationsIsMutable();
+          contractAuthorizations_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          contractAuthorizationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorizations = 2 [json_name = "contractAuthorizations"];</code>
+       */
+      public Builder addContractAuthorizations(com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization value) {
+        if (contractAuthorizationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContractAuthorizationsIsMutable();
+          contractAuthorizations_.add(value);
+          onChanged();
+        } else {
+          contractAuthorizationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorizations = 2 [json_name = "contractAuthorizations"];</code>
+       */
+      public Builder addContractAuthorizations(
+          int index, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization value) {
+        if (contractAuthorizationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContractAuthorizationsIsMutable();
+          contractAuthorizations_.add(index, value);
+          onChanged();
+        } else {
+          contractAuthorizationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorizations = 2 [json_name = "contractAuthorizations"];</code>
+       */
+      public Builder addContractAuthorizations(
+          com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization.Builder builderForValue) {
+        if (contractAuthorizationsBuilder_ == null) {
+          ensureContractAuthorizationsIsMutable();
+          contractAuthorizations_.add(builderForValue.build());
+          onChanged();
+        } else {
+          contractAuthorizationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorizations = 2 [json_name = "contractAuthorizations"];</code>
+       */
+      public Builder addContractAuthorizations(
+          int index, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization.Builder builderForValue) {
+        if (contractAuthorizationsBuilder_ == null) {
+          ensureContractAuthorizationsIsMutable();
+          contractAuthorizations_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          contractAuthorizationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorizations = 2 [json_name = "contractAuthorizations"];</code>
+       */
+      public Builder addAllContractAuthorizations(
+          java.lang.Iterable<? extends com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization> values) {
+        if (contractAuthorizationsBuilder_ == null) {
+          ensureContractAuthorizationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, contractAuthorizations_);
+          onChanged();
+        } else {
+          contractAuthorizationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorizations = 2 [json_name = "contractAuthorizations"];</code>
+       */
+      public Builder clearContractAuthorizations() {
+        if (contractAuthorizationsBuilder_ == null) {
+          contractAuthorizations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          contractAuthorizationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorizations = 2 [json_name = "contractAuthorizations"];</code>
+       */
+      public Builder removeContractAuthorizations(int index) {
+        if (contractAuthorizationsBuilder_ == null) {
+          ensureContractAuthorizationsIsMutable();
+          contractAuthorizations_.remove(index);
+          onChanged();
+        } else {
+          contractAuthorizationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorizations = 2 [json_name = "contractAuthorizations"];</code>
+       */
+      public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization.Builder getContractAuthorizationsBuilder(
+          int index) {
+        return getContractAuthorizationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorizations = 2 [json_name = "contractAuthorizations"];</code>
+       */
+      public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorizationOrBuilder getContractAuthorizationsOrBuilder(
+          int index) {
+        if (contractAuthorizationsBuilder_ == null) {
+          return contractAuthorizations_.get(index);  } else {
+          return contractAuthorizationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorizations = 2 [json_name = "contractAuthorizations"];</code>
+       */
+      public java.util.List<? extends com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorizationOrBuilder> 
+           getContractAuthorizationsOrBuilderList() {
+        if (contractAuthorizationsBuilder_ != null) {
+          return contractAuthorizationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(contractAuthorizations_);
+        }
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorizations = 2 [json_name = "contractAuthorizations"];</code>
+       */
+      public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization.Builder addContractAuthorizationsBuilder() {
+        return getContractAuthorizationsFieldBuilder().addBuilder(
+            com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorizations = 2 [json_name = "contractAuthorizations"];</code>
+       */
+      public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization.Builder addContractAuthorizationsBuilder(
+          int index) {
+        return getContractAuthorizationsFieldBuilder().addBuilder(
+            index, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorizations = 2 [json_name = "contractAuthorizations"];</code>
+       */
+      public java.util.List<com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization.Builder> 
+           getContractAuthorizationsBuilderList() {
+        return getContractAuthorizationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization.Builder, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorizationOrBuilder> 
+          getContractAuthorizationsFieldBuilder() {
+        if (contractAuthorizationsBuilder_ == null) {
+          contractAuthorizationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization.Builder, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorizationOrBuilder>(
+                  contractAuthorizations_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          contractAuthorizations_ = null;
+        }
+        return contractAuthorizationsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:publicawesome.stargaze.globalfee.v1.QueryAuthorizationsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:publicawesome.stargaze.globalfee.v1.QueryAuthorizationsResponse)
+    private static final com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse();
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAuthorizationsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAuthorizationsResponse>() {
+      @java.lang.Override
+      public QueryAuthorizationsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAuthorizationsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAuthorizationsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.publicawesome.stargaze.globalfee.v1.QueryProto.QueryAuthorizationsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_publicawesome_stargaze_globalfee_v1_QueryCodeAuthorizationRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_publicawesome_stargaze_globalfee_v1_QueryCodeAuthorizationRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_publicawesome_stargaze_globalfee_v1_QueryCodeAuthorizationResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_publicawesome_stargaze_globalfee_v1_QueryCodeAuthorizationResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_publicawesome_stargaze_globalfee_v1_QueryContractAuthorizationRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_publicawesome_stargaze_globalfee_v1_QueryContractAuthorizationRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_publicawesome_stargaze_globalfee_v1_QueryContractAuthorizationResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_publicawesome_stargaze_globalfee_v1_QueryContractAuthorizationResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_publicawesome_stargaze_globalfee_v1_QueryParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_publicawesome_stargaze_globalfee_v1_QueryParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_publicawesome_stargaze_globalfee_v1_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_publicawesome_stargaze_globalfee_v1_QueryParamsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_publicawesome_stargaze_globalfee_v1_QueryAuthorizationsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_publicawesome_stargaze_globalfee_v1_QueryAuthorizationsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_publicawesome_stargaze_globalfee_v1_QueryAuthorizationsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_publicawesome_stargaze_globalfee_v1_QueryAuthorizationsResponse_fieldAccessorTable;
 
@@ -103,15 +4918,15 @@ public final class QueryProto {
       "rgaze.globalfee.v1.QueryAuthorizationsRe" +
       "quest\032@.publicawesome.stargaze.globalfee" +
       ".v1.QueryAuthorizationsResponse\"-\202\323\344\223\002\'\022" +
-      "%/stargaze/globalfee/v1/authorizationsB\236" +
+      "%/stargaze/globalfee/v1/authorizationsB\234" +
       "\002\n\'com.publicawesome.stargaze.globalfee." +
-      "v1B\nQueryProtoP\001Z8github.com/public-awes" +
-      "ome/stargaze/v11/x/globalfee/types\242\002\003PSG" +
-      "\252\002#Publicawesome.Stargaze.Globalfee.V1\312\002" +
-      "#Publicawesome\\Stargaze\\Globalfee\\V1\342\002/P" +
-      "ublicawesome\\Stargaze\\Globalfee\\V1\\GPBMe" +
-      "tadata\352\002&Publicawesome::Stargaze::Global" +
-      "fee::V1b\006proto3"
+      "v1B\nQueryProtoZ8github.com/public-awesom" +
+      "e/stargaze/v11/x/globalfee/types\242\002\003PSG\252\002" +
+      "#Publicawesome.Stargaze.Globalfee.V1\312\002#P" +
+      "ublicawesome\\Stargaze\\Globalfee\\V1\342\002/Pub" +
+      "licawesome\\Stargaze\\Globalfee\\V1\\GPBMeta" +
+      "data\352\002&Publicawesome::Stargaze::Globalfe" +
+      "e::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

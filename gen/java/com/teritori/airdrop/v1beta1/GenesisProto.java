@@ -14,9 +14,995 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:teritori.airdrop.v1beta1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.teritori.airdrop.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.teritori.airdrop.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.teritori.airdrop.v1beta1.ParamsProto.Params getParams();
+    /**
+     * <code>.teritori.airdrop.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.teritori.airdrop.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <code>repeated .teritori.airdrop.v1beta1.AirdropAllocation allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation> 
+        getAllocationsList();
+    /**
+     * <code>repeated .teritori.airdrop.v1beta1.AirdropAllocation allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false];</code>
+     */
+    com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation getAllocations(int index);
+    /**
+     * <code>repeated .teritori.airdrop.v1beta1.AirdropAllocation allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false];</code>
+     */
+    int getAllocationsCount();
+    /**
+     * <code>repeated .teritori.airdrop.v1beta1.AirdropAllocation allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocationOrBuilder> 
+        getAllocationsOrBuilderList();
+    /**
+     * <code>repeated .teritori.airdrop.v1beta1.AirdropAllocation allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false];</code>
+     */
+    com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocationOrBuilder getAllocationsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code teritori.airdrop.v1beta1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:teritori.airdrop.v1beta1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      allocations_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.teritori.airdrop.v1beta1.GenesisProto.internal_static_teritori_airdrop_v1beta1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.teritori.airdrop.v1beta1.GenesisProto.internal_static_teritori_airdrop_v1beta1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.teritori.airdrop.v1beta1.GenesisProto.GenesisState.class, com.teritori.airdrop.v1beta1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.teritori.airdrop.v1beta1.ParamsProto.Params params_;
+    /**
+     * <code>.teritori.airdrop.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.teritori.airdrop.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.teritori.airdrop.v1beta1.ParamsProto.Params getParams() {
+      return params_ == null ? com.teritori.airdrop.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.teritori.airdrop.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.teritori.airdrop.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.teritori.airdrop.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int ALLOCATIONS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation> allocations_;
+    /**
+     * <code>repeated .teritori.airdrop.v1beta1.AirdropAllocation allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation> getAllocationsList() {
+      return allocations_;
+    }
+    /**
+     * <code>repeated .teritori.airdrop.v1beta1.AirdropAllocation allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocationOrBuilder> 
+        getAllocationsOrBuilderList() {
+      return allocations_;
+    }
+    /**
+     * <code>repeated .teritori.airdrop.v1beta1.AirdropAllocation allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getAllocationsCount() {
+      return allocations_.size();
+    }
+    /**
+     * <code>repeated .teritori.airdrop.v1beta1.AirdropAllocation allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation getAllocations(int index) {
+      return allocations_.get(index);
+    }
+    /**
+     * <code>repeated .teritori.airdrop.v1beta1.AirdropAllocation allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocationOrBuilder getAllocationsOrBuilder(
+        int index) {
+      return allocations_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      for (int i = 0; i < allocations_.size(); i++) {
+        output.writeMessage(2, allocations_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      for (int i = 0; i < allocations_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, allocations_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.teritori.airdrop.v1beta1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.teritori.airdrop.v1beta1.GenesisProto.GenesisState other = (com.teritori.airdrop.v1beta1.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getAllocationsList()
+          .equals(other.getAllocationsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (getAllocationsCount() > 0) {
+        hash = (37 * hash) + ALLOCATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getAllocationsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.teritori.airdrop.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.airdrop.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.airdrop.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.airdrop.v1beta1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.airdrop.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.teritori.airdrop.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.teritori.airdrop.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.airdrop.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.teritori.airdrop.v1beta1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code teritori.airdrop.v1beta1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:teritori.airdrop.v1beta1.GenesisState)
+        com.teritori.airdrop.v1beta1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.teritori.airdrop.v1beta1.GenesisProto.internal_static_teritori_airdrop_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.teritori.airdrop.v1beta1.GenesisProto.internal_static_teritori_airdrop_v1beta1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.teritori.airdrop.v1beta1.GenesisProto.GenesisState.class, com.teritori.airdrop.v1beta1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.teritori.airdrop.v1beta1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        if (allocationsBuilder_ == null) {
+          allocations_ = java.util.Collections.emptyList();
+        } else {
+          allocations_ = null;
+          allocationsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.teritori.airdrop.v1beta1.GenesisProto.internal_static_teritori_airdrop_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.teritori.airdrop.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.teritori.airdrop.v1beta1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.teritori.airdrop.v1beta1.GenesisProto.GenesisState build() {
+        com.teritori.airdrop.v1beta1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.teritori.airdrop.v1beta1.GenesisProto.GenesisState buildPartial() {
+        com.teritori.airdrop.v1beta1.GenesisProto.GenesisState result = new com.teritori.airdrop.v1beta1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.teritori.airdrop.v1beta1.GenesisProto.GenesisState result) {
+        if (allocationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            allocations_ = java.util.Collections.unmodifiableList(allocations_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.allocations_ = allocations_;
+        } else {
+          result.allocations_ = allocationsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.teritori.airdrop.v1beta1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.teritori.airdrop.v1beta1.GenesisProto.GenesisState) {
+          return mergeFrom((com.teritori.airdrop.v1beta1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.teritori.airdrop.v1beta1.GenesisProto.GenesisState other) {
+        if (other == com.teritori.airdrop.v1beta1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (allocationsBuilder_ == null) {
+          if (!other.allocations_.isEmpty()) {
+            if (allocations_.isEmpty()) {
+              allocations_ = other.allocations_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureAllocationsIsMutable();
+              allocations_.addAll(other.allocations_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.allocations_.isEmpty()) {
+            if (allocationsBuilder_.isEmpty()) {
+              allocationsBuilder_.dispose();
+              allocationsBuilder_ = null;
+              allocations_ = other.allocations_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              allocationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAllocationsFieldBuilder() : null;
+            } else {
+              allocationsBuilder_.addAllMessages(other.allocations_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation m =
+                    input.readMessage(
+                        com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation.parser(),
+                        extensionRegistry);
+                if (allocationsBuilder_ == null) {
+                  ensureAllocationsIsMutable();
+                  allocations_.add(m);
+                } else {
+                  allocationsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.teritori.airdrop.v1beta1.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teritori.airdrop.v1beta1.ParamsProto.Params, com.teritori.airdrop.v1beta1.ParamsProto.Params.Builder, com.teritori.airdrop.v1beta1.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.teritori.airdrop.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.teritori.airdrop.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.teritori.airdrop.v1beta1.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.teritori.airdrop.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.teritori.airdrop.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.teritori.airdrop.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.teritori.airdrop.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.teritori.airdrop.v1beta1.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.teritori.airdrop.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.teritori.airdrop.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.teritori.airdrop.v1beta1.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.teritori.airdrop.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.teritori.airdrop.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.teritori.airdrop.v1beta1.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.teritori.airdrop.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.teritori.airdrop.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.teritori.airdrop.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.teritori.airdrop.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teritori.airdrop.v1beta1.ParamsProto.Params, com.teritori.airdrop.v1beta1.ParamsProto.Params.Builder, com.teritori.airdrop.v1beta1.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.teritori.airdrop.v1beta1.ParamsProto.Params, com.teritori.airdrop.v1beta1.ParamsProto.Params.Builder, com.teritori.airdrop.v1beta1.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private java.util.List<com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation> allocations_ =
+        java.util.Collections.emptyList();
+      private void ensureAllocationsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          allocations_ = new java.util.ArrayList<com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation>(allocations_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation, com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation.Builder, com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocationOrBuilder> allocationsBuilder_;
+
+      /**
+       * <code>repeated .teritori.airdrop.v1beta1.AirdropAllocation allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation> getAllocationsList() {
+        if (allocationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(allocations_);
+        } else {
+          return allocationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .teritori.airdrop.v1beta1.AirdropAllocation allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false];</code>
+       */
+      public int getAllocationsCount() {
+        if (allocationsBuilder_ == null) {
+          return allocations_.size();
+        } else {
+          return allocationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .teritori.airdrop.v1beta1.AirdropAllocation allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false];</code>
+       */
+      public com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation getAllocations(int index) {
+        if (allocationsBuilder_ == null) {
+          return allocations_.get(index);
+        } else {
+          return allocationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .teritori.airdrop.v1beta1.AirdropAllocation allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAllocations(
+          int index, com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation value) {
+        if (allocationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAllocationsIsMutable();
+          allocations_.set(index, value);
+          onChanged();
+        } else {
+          allocationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .teritori.airdrop.v1beta1.AirdropAllocation allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAllocations(
+          int index, com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation.Builder builderForValue) {
+        if (allocationsBuilder_ == null) {
+          ensureAllocationsIsMutable();
+          allocations_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          allocationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .teritori.airdrop.v1beta1.AirdropAllocation allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllocations(com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation value) {
+        if (allocationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAllocationsIsMutable();
+          allocations_.add(value);
+          onChanged();
+        } else {
+          allocationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .teritori.airdrop.v1beta1.AirdropAllocation allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllocations(
+          int index, com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation value) {
+        if (allocationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAllocationsIsMutable();
+          allocations_.add(index, value);
+          onChanged();
+        } else {
+          allocationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .teritori.airdrop.v1beta1.AirdropAllocation allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllocations(
+          com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation.Builder builderForValue) {
+        if (allocationsBuilder_ == null) {
+          ensureAllocationsIsMutable();
+          allocations_.add(builderForValue.build());
+          onChanged();
+        } else {
+          allocationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .teritori.airdrop.v1beta1.AirdropAllocation allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllocations(
+          int index, com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation.Builder builderForValue) {
+        if (allocationsBuilder_ == null) {
+          ensureAllocationsIsMutable();
+          allocations_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          allocationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .teritori.airdrop.v1beta1.AirdropAllocation allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllAllocations(
+          java.lang.Iterable<? extends com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation> values) {
+        if (allocationsBuilder_ == null) {
+          ensureAllocationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, allocations_);
+          onChanged();
+        } else {
+          allocationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .teritori.airdrop.v1beta1.AirdropAllocation allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAllocations() {
+        if (allocationsBuilder_ == null) {
+          allocations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          allocationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .teritori.airdrop.v1beta1.AirdropAllocation allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeAllocations(int index) {
+        if (allocationsBuilder_ == null) {
+          ensureAllocationsIsMutable();
+          allocations_.remove(index);
+          onChanged();
+        } else {
+          allocationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .teritori.airdrop.v1beta1.AirdropAllocation allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false];</code>
+       */
+      public com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation.Builder getAllocationsBuilder(
+          int index) {
+        return getAllocationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .teritori.airdrop.v1beta1.AirdropAllocation allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false];</code>
+       */
+      public com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocationOrBuilder getAllocationsOrBuilder(
+          int index) {
+        if (allocationsBuilder_ == null) {
+          return allocations_.get(index);  } else {
+          return allocationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .teritori.airdrop.v1beta1.AirdropAllocation allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocationOrBuilder> 
+           getAllocationsOrBuilderList() {
+        if (allocationsBuilder_ != null) {
+          return allocationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(allocations_);
+        }
+      }
+      /**
+       * <code>repeated .teritori.airdrop.v1beta1.AirdropAllocation allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false];</code>
+       */
+      public com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation.Builder addAllocationsBuilder() {
+        return getAllocationsFieldBuilder().addBuilder(
+            com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .teritori.airdrop.v1beta1.AirdropAllocation allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false];</code>
+       */
+      public com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation.Builder addAllocationsBuilder(
+          int index) {
+        return getAllocationsFieldBuilder().addBuilder(
+            index, com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .teritori.airdrop.v1beta1.AirdropAllocation allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation.Builder> 
+           getAllocationsBuilderList() {
+        return getAllocationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation, com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation.Builder, com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocationOrBuilder> 
+          getAllocationsFieldBuilder() {
+        if (allocationsBuilder_ == null) {
+          allocationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation, com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation.Builder, com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocationOrBuilder>(
+                  allocations_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          allocations_ = null;
+        }
+        return allocationsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:teritori.airdrop.v1beta1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:teritori.airdrop.v1beta1.GenesisState)
+    private static final com.teritori.airdrop.v1beta1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.teritori.airdrop.v1beta1.GenesisProto.GenesisState();
+    }
+
+    public static com.teritori.airdrop.v1beta1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.teritori.airdrop.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_teritori_airdrop_v1beta1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_teritori_airdrop_v1beta1_GenesisState_fieldAccessorTable;
 
@@ -39,13 +1025,13 @@ public final class GenesisProto {
       ">\n\006params\030\001 \001(\0132 .teritori.airdrop.v1bet" +
       "a1.ParamsB\004\310\336\037\000R\006params\022S\n\013allocations\030\002" +
       " \003(\0132+.teritori.airdrop.v1beta1.AirdropA" +
-      "llocationB\004\310\336\037\000R\013allocationsB\342\001\n\034com.ter" +
-      "itori.airdrop.v1beta1B\014GenesisProtoP\001Z2g" +
-      "ithub.com/TERITORI/teritori-chain/x/aird" +
-      "rop/types\242\002\003TAX\252\002\030Teritori.Airdrop.V1bet" +
-      "a1\312\002\030Teritori\\Airdrop\\V1beta1\342\002$Teritori" +
-      "\\Airdrop\\V1beta1\\GPBMetadata\352\002\032Teritori:" +
-      ":Airdrop::V1beta1b\006proto3"
+      "llocationB\004\310\336\037\000R\013allocationsB\340\001\n\034com.ter" +
+      "itori.airdrop.v1beta1B\014GenesisProtoZ2git" +
+      "hub.com/TERITORI/teritori-chain/x/airdro" +
+      "p/types\242\002\003TAX\252\002\030Teritori.Airdrop.V1beta1" +
+      "\312\002\030Teritori\\Airdrop\\V1beta1\342\002$Teritori\\A" +
+      "irdrop\\V1beta1\\GPBMetadata\352\002\032Teritori::A" +
+      "irdrop::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

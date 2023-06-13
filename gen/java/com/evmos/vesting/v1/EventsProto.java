@@ -14,19 +14,3281 @@ public final class EventsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface EventCreateClawbackVestingAccountOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.vesting.v1.EventCreateClawbackVestingAccount)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * sender is the address of the sender
+     * </pre>
+     *
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <pre>
+     * sender is the address of the sender
+     * </pre>
+     *
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+
+    /**
+     * <pre>
+     * coins to be vested
+     * </pre>
+     *
+     * <code>string coins = 2 [json_name = "coins"];</code>
+     * @return The coins.
+     */
+    java.lang.String getCoins();
+    /**
+     * <pre>
+     * coins to be vested
+     * </pre>
+     *
+     * <code>string coins = 2 [json_name = "coins"];</code>
+     * @return The bytes for coins.
+     */
+    com.google.protobuf.ByteString
+        getCoinsBytes();
+
+    /**
+     * <pre>
+     * start_time is the time when the coins start to vest
+     * </pre>
+     *
+     * <code>string start_time = 3 [json_name = "startTime"];</code>
+     * @return The startTime.
+     */
+    java.lang.String getStartTime();
+    /**
+     * <pre>
+     * start_time is the time when the coins start to vest
+     * </pre>
+     *
+     * <code>string start_time = 3 [json_name = "startTime"];</code>
+     * @return The bytes for startTime.
+     */
+    com.google.protobuf.ByteString
+        getStartTimeBytes();
+
+    /**
+     * <pre>
+     * merge
+     * </pre>
+     *
+     * <code>string merge = 4 [json_name = "merge"];</code>
+     * @return The merge.
+     */
+    java.lang.String getMerge();
+    /**
+     * <pre>
+     * merge
+     * </pre>
+     *
+     * <code>string merge = 4 [json_name = "merge"];</code>
+     * @return The bytes for merge.
+     */
+    com.google.protobuf.ByteString
+        getMergeBytes();
+
+    /**
+     * <pre>
+     * account address of recipient
+     * </pre>
+     *
+     * <code>string account = 5 [json_name = "account"];</code>
+     * @return The account.
+     */
+    java.lang.String getAccount();
+    /**
+     * <pre>
+     * account address of recipient
+     * </pre>
+     *
+     * <code>string account = 5 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    com.google.protobuf.ByteString
+        getAccountBytes();
+  }
+  /**
+   * <pre>
+   * EventCreateClawbackVestingAccount defines the event type
+   * for creating a clawback vesting account
+   * </pre>
+   *
+   * Protobuf type {@code evmos.vesting.v1.EventCreateClawbackVestingAccount}
+   */
+  public static final class EventCreateClawbackVestingAccount extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.vesting.v1.EventCreateClawbackVestingAccount)
+      EventCreateClawbackVestingAccountOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventCreateClawbackVestingAccount.newBuilder() to construct.
+    private EventCreateClawbackVestingAccount(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventCreateClawbackVestingAccount() {
+      sender_ = "";
+      coins_ = "";
+      startTime_ = "";
+      merge_ = "";
+      account_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventCreateClawbackVestingAccount();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.vesting.v1.EventsProto.internal_static_evmos_vesting_v1_EventCreateClawbackVestingAccount_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.vesting.v1.EventsProto.internal_static_evmos_vesting_v1_EventCreateClawbackVestingAccount_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount.class, com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <pre>
+     * sender is the address of the sender
+     * </pre>
+     *
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * sender is the address of the sender
+     * </pre>
+     *
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COINS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object coins_ = "";
+    /**
+     * <pre>
+     * coins to be vested
+     * </pre>
+     *
+     * <code>string coins = 2 [json_name = "coins"];</code>
+     * @return The coins.
+     */
+    @java.lang.Override
+    public java.lang.String getCoins() {
+      java.lang.Object ref = coins_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        coins_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * coins to be vested
+     * </pre>
+     *
+     * <code>string coins = 2 [json_name = "coins"];</code>
+     * @return The bytes for coins.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCoinsBytes() {
+      java.lang.Object ref = coins_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        coins_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int START_TIME_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object startTime_ = "";
+    /**
+     * <pre>
+     * start_time is the time when the coins start to vest
+     * </pre>
+     *
+     * <code>string start_time = 3 [json_name = "startTime"];</code>
+     * @return The startTime.
+     */
+    @java.lang.Override
+    public java.lang.String getStartTime() {
+      java.lang.Object ref = startTime_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        startTime_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * start_time is the time when the coins start to vest
+     * </pre>
+     *
+     * <code>string start_time = 3 [json_name = "startTime"];</code>
+     * @return The bytes for startTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStartTimeBytes() {
+      java.lang.Object ref = startTime_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        startTime_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MERGE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object merge_ = "";
+    /**
+     * <pre>
+     * merge
+     * </pre>
+     *
+     * <code>string merge = 4 [json_name = "merge"];</code>
+     * @return The merge.
+     */
+    @java.lang.Override
+    public java.lang.String getMerge() {
+      java.lang.Object ref = merge_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        merge_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * merge
+     * </pre>
+     *
+     * <code>string merge = 4 [json_name = "merge"];</code>
+     * @return The bytes for merge.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMergeBytes() {
+      java.lang.Object ref = merge_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        merge_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACCOUNT_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object account_ = "";
+    /**
+     * <pre>
+     * account address of recipient
+     * </pre>
+     *
+     * <code>string account = 5 [json_name = "account"];</code>
+     * @return The account.
+     */
+    @java.lang.Override
+    public java.lang.String getAccount() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        account_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * account address of recipient
+     * </pre>
+     *
+     * <code>string account = 5 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccountBytes() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        account_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(coins_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, coins_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startTime_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, startTime_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(merge_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, merge_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, account_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(coins_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, coins_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startTime_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, startTime_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(merge_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, merge_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, account_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount)) {
+        return super.equals(obj);
+      }
+      com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount other = (com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getCoins()
+          .equals(other.getCoins())) return false;
+      if (!getStartTime()
+          .equals(other.getStartTime())) return false;
+      if (!getMerge()
+          .equals(other.getMerge())) return false;
+      if (!getAccount()
+          .equals(other.getAccount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (37 * hash) + COINS_FIELD_NUMBER;
+      hash = (53 * hash) + getCoins().hashCode();
+      hash = (37 * hash) + START_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getStartTime().hashCode();
+      hash = (37 * hash) + MERGE_FIELD_NUMBER;
+      hash = (53 * hash) + getMerge().hashCode();
+      hash = (37 * hash) + ACCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAccount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventCreateClawbackVestingAccount defines the event type
+     * for creating a clawback vesting account
+     * </pre>
+     *
+     * Protobuf type {@code evmos.vesting.v1.EventCreateClawbackVestingAccount}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.vesting.v1.EventCreateClawbackVestingAccount)
+        com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccountOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.vesting.v1.EventsProto.internal_static_evmos_vesting_v1_EventCreateClawbackVestingAccount_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.vesting.v1.EventsProto.internal_static_evmos_vesting_v1_EventCreateClawbackVestingAccount_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount.class, com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount.Builder.class);
+      }
+
+      // Construct using com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = "";
+        coins_ = "";
+        startTime_ = "";
+        merge_ = "";
+        account_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.vesting.v1.EventsProto.internal_static_evmos_vesting_v1_EventCreateClawbackVestingAccount_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount getDefaultInstanceForType() {
+        return com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount build() {
+        com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount buildPartial() {
+        com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount result = new com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.coins_ = coins_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.startTime_ = startTime_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.merge_ = merge_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.account_ = account_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount) {
+          return mergeFrom((com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount other) {
+        if (other == com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount.getDefaultInstance()) return this;
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getCoins().isEmpty()) {
+          coins_ = other.coins_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getStartTime().isEmpty()) {
+          startTime_ = other.startTime_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getMerge().isEmpty()) {
+          merge_ = other.merge_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getAccount().isEmpty()) {
+          account_ = other.account_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                coins_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                startTime_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                merge_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                account_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <pre>
+       * sender is the address of the sender
+       * </pre>
+       *
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * sender is the address of the sender
+       * </pre>
+       *
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * sender is the address of the sender
+       * </pre>
+       *
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * sender is the address of the sender
+       * </pre>
+       *
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * sender is the address of the sender
+       * </pre>
+       *
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object coins_ = "";
+      /**
+       * <pre>
+       * coins to be vested
+       * </pre>
+       *
+       * <code>string coins = 2 [json_name = "coins"];</code>
+       * @return The coins.
+       */
+      public java.lang.String getCoins() {
+        java.lang.Object ref = coins_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          coins_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * coins to be vested
+       * </pre>
+       *
+       * <code>string coins = 2 [json_name = "coins"];</code>
+       * @return The bytes for coins.
+       */
+      public com.google.protobuf.ByteString
+          getCoinsBytes() {
+        java.lang.Object ref = coins_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          coins_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * coins to be vested
+       * </pre>
+       *
+       * <code>string coins = 2 [json_name = "coins"];</code>
+       * @param value The coins to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCoins(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        coins_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * coins to be vested
+       * </pre>
+       *
+       * <code>string coins = 2 [json_name = "coins"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCoins() {
+        coins_ = getDefaultInstance().getCoins();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * coins to be vested
+       * </pre>
+       *
+       * <code>string coins = 2 [json_name = "coins"];</code>
+       * @param value The bytes for coins to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCoinsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        coins_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object startTime_ = "";
+      /**
+       * <pre>
+       * start_time is the time when the coins start to vest
+       * </pre>
+       *
+       * <code>string start_time = 3 [json_name = "startTime"];</code>
+       * @return The startTime.
+       */
+      public java.lang.String getStartTime() {
+        java.lang.Object ref = startTime_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          startTime_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * start_time is the time when the coins start to vest
+       * </pre>
+       *
+       * <code>string start_time = 3 [json_name = "startTime"];</code>
+       * @return The bytes for startTime.
+       */
+      public com.google.protobuf.ByteString
+          getStartTimeBytes() {
+        java.lang.Object ref = startTime_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          startTime_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * start_time is the time when the coins start to vest
+       * </pre>
+       *
+       * <code>string start_time = 3 [json_name = "startTime"];</code>
+       * @param value The startTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartTime(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        startTime_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time is the time when the coins start to vest
+       * </pre>
+       *
+       * <code>string start_time = 3 [json_name = "startTime"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStartTime() {
+        startTime_ = getDefaultInstance().getStartTime();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time is the time when the coins start to vest
+       * </pre>
+       *
+       * <code>string start_time = 3 [json_name = "startTime"];</code>
+       * @param value The bytes for startTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartTimeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        startTime_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object merge_ = "";
+      /**
+       * <pre>
+       * merge
+       * </pre>
+       *
+       * <code>string merge = 4 [json_name = "merge"];</code>
+       * @return The merge.
+       */
+      public java.lang.String getMerge() {
+        java.lang.Object ref = merge_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          merge_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * merge
+       * </pre>
+       *
+       * <code>string merge = 4 [json_name = "merge"];</code>
+       * @return The bytes for merge.
+       */
+      public com.google.protobuf.ByteString
+          getMergeBytes() {
+        java.lang.Object ref = merge_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          merge_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * merge
+       * </pre>
+       *
+       * <code>string merge = 4 [json_name = "merge"];</code>
+       * @param value The merge to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMerge(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        merge_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * merge
+       * </pre>
+       *
+       * <code>string merge = 4 [json_name = "merge"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMerge() {
+        merge_ = getDefaultInstance().getMerge();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * merge
+       * </pre>
+       *
+       * <code>string merge = 4 [json_name = "merge"];</code>
+       * @param value The bytes for merge to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMergeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        merge_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object account_ = "";
+      /**
+       * <pre>
+       * account address of recipient
+       * </pre>
+       *
+       * <code>string account = 5 [json_name = "account"];</code>
+       * @return The account.
+       */
+      public java.lang.String getAccount() {
+        java.lang.Object ref = account_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          account_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * account address of recipient
+       * </pre>
+       *
+       * <code>string account = 5 [json_name = "account"];</code>
+       * @return The bytes for account.
+       */
+      public com.google.protobuf.ByteString
+          getAccountBytes() {
+        java.lang.Object ref = account_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          account_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * account address of recipient
+       * </pre>
+       *
+       * <code>string account = 5 [json_name = "account"];</code>
+       * @param value The account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        account_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * account address of recipient
+       * </pre>
+       *
+       * <code>string account = 5 [json_name = "account"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccount() {
+        account_ = getDefaultInstance().getAccount();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * account address of recipient
+       * </pre>
+       *
+       * <code>string account = 5 [json_name = "account"];</code>
+       * @param value The bytes for account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        account_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.vesting.v1.EventCreateClawbackVestingAccount)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.vesting.v1.EventCreateClawbackVestingAccount)
+    private static final com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount();
+    }
+
+    public static com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventCreateClawbackVestingAccount>
+        PARSER = new com.google.protobuf.AbstractParser<EventCreateClawbackVestingAccount>() {
+      @java.lang.Override
+      public EventCreateClawbackVestingAccount parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventCreateClawbackVestingAccount> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventCreateClawbackVestingAccount> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.vesting.v1.EventsProto.EventCreateClawbackVestingAccount getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventClawbackOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.vesting.v1.EventClawback)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * funder is the address of the funder
+     * </pre>
+     *
+     * <code>string funder = 1 [json_name = "funder"];</code>
+     * @return The funder.
+     */
+    java.lang.String getFunder();
+    /**
+     * <pre>
+     * funder is the address of the funder
+     * </pre>
+     *
+     * <code>string funder = 1 [json_name = "funder"];</code>
+     * @return The bytes for funder.
+     */
+    com.google.protobuf.ByteString
+        getFunderBytes();
+
+    /**
+     * <pre>
+     * account is the address of the account
+     * </pre>
+     *
+     * <code>string account = 2 [json_name = "account"];</code>
+     * @return The account.
+     */
+    java.lang.String getAccount();
+    /**
+     * <pre>
+     * account is the address of the account
+     * </pre>
+     *
+     * <code>string account = 2 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    com.google.protobuf.ByteString
+        getAccountBytes();
+
+    /**
+     * <pre>
+     * destination is the address of the destination
+     * </pre>
+     *
+     * <code>string destination = 3 [json_name = "destination"];</code>
+     * @return The destination.
+     */
+    java.lang.String getDestination();
+    /**
+     * <pre>
+     * destination is the address of the destination
+     * </pre>
+     *
+     * <code>string destination = 3 [json_name = "destination"];</code>
+     * @return The bytes for destination.
+     */
+    com.google.protobuf.ByteString
+        getDestinationBytes();
+  }
+  /**
+   * <pre>
+   * EventClawback defines the event type for clawback
+   * </pre>
+   *
+   * Protobuf type {@code evmos.vesting.v1.EventClawback}
+   */
+  public static final class EventClawback extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.vesting.v1.EventClawback)
+      EventClawbackOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventClawback.newBuilder() to construct.
+    private EventClawback(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventClawback() {
+      funder_ = "";
+      account_ = "";
+      destination_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventClawback();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.vesting.v1.EventsProto.internal_static_evmos_vesting_v1_EventClawback_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.vesting.v1.EventsProto.internal_static_evmos_vesting_v1_EventClawback_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.vesting.v1.EventsProto.EventClawback.class, com.evmos.vesting.v1.EventsProto.EventClawback.Builder.class);
+    }
+
+    public static final int FUNDER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object funder_ = "";
+    /**
+     * <pre>
+     * funder is the address of the funder
+     * </pre>
+     *
+     * <code>string funder = 1 [json_name = "funder"];</code>
+     * @return The funder.
+     */
+    @java.lang.Override
+    public java.lang.String getFunder() {
+      java.lang.Object ref = funder_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        funder_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * funder is the address of the funder
+     * </pre>
+     *
+     * <code>string funder = 1 [json_name = "funder"];</code>
+     * @return The bytes for funder.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFunderBytes() {
+      java.lang.Object ref = funder_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        funder_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACCOUNT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object account_ = "";
+    /**
+     * <pre>
+     * account is the address of the account
+     * </pre>
+     *
+     * <code>string account = 2 [json_name = "account"];</code>
+     * @return The account.
+     */
+    @java.lang.Override
+    public java.lang.String getAccount() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        account_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * account is the address of the account
+     * </pre>
+     *
+     * <code>string account = 2 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccountBytes() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        account_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESTINATION_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object destination_ = "";
+    /**
+     * <pre>
+     * destination is the address of the destination
+     * </pre>
+     *
+     * <code>string destination = 3 [json_name = "destination"];</code>
+     * @return The destination.
+     */
+    @java.lang.Override
+    public java.lang.String getDestination() {
+      java.lang.Object ref = destination_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        destination_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * destination is the address of the destination
+     * </pre>
+     *
+     * <code>string destination = 3 [json_name = "destination"];</code>
+     * @return The bytes for destination.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDestinationBytes() {
+      java.lang.Object ref = destination_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        destination_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(funder_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, funder_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, account_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destination_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, destination_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(funder_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, funder_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, account_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destination_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, destination_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.vesting.v1.EventsProto.EventClawback)) {
+        return super.equals(obj);
+      }
+      com.evmos.vesting.v1.EventsProto.EventClawback other = (com.evmos.vesting.v1.EventsProto.EventClawback) obj;
+
+      if (!getFunder()
+          .equals(other.getFunder())) return false;
+      if (!getAccount()
+          .equals(other.getAccount())) return false;
+      if (!getDestination()
+          .equals(other.getDestination())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FUNDER_FIELD_NUMBER;
+      hash = (53 * hash) + getFunder().hashCode();
+      hash = (37 * hash) + ACCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAccount().hashCode();
+      hash = (37 * hash) + DESTINATION_FIELD_NUMBER;
+      hash = (53 * hash) + getDestination().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.vesting.v1.EventsProto.EventClawback parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.EventsProto.EventClawback parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.EventsProto.EventClawback parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.EventsProto.EventClawback parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.EventsProto.EventClawback parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.EventsProto.EventClawback parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.EventsProto.EventClawback parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.vesting.v1.EventsProto.EventClawback parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.vesting.v1.EventsProto.EventClawback parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.vesting.v1.EventsProto.EventClawback parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.EventsProto.EventClawback parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.vesting.v1.EventsProto.EventClawback parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.vesting.v1.EventsProto.EventClawback prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventClawback defines the event type for clawback
+     * </pre>
+     *
+     * Protobuf type {@code evmos.vesting.v1.EventClawback}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.vesting.v1.EventClawback)
+        com.evmos.vesting.v1.EventsProto.EventClawbackOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.vesting.v1.EventsProto.internal_static_evmos_vesting_v1_EventClawback_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.vesting.v1.EventsProto.internal_static_evmos_vesting_v1_EventClawback_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.vesting.v1.EventsProto.EventClawback.class, com.evmos.vesting.v1.EventsProto.EventClawback.Builder.class);
+      }
+
+      // Construct using com.evmos.vesting.v1.EventsProto.EventClawback.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        funder_ = "";
+        account_ = "";
+        destination_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.vesting.v1.EventsProto.internal_static_evmos_vesting_v1_EventClawback_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.EventsProto.EventClawback getDefaultInstanceForType() {
+        return com.evmos.vesting.v1.EventsProto.EventClawback.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.EventsProto.EventClawback build() {
+        com.evmos.vesting.v1.EventsProto.EventClawback result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.EventsProto.EventClawback buildPartial() {
+        com.evmos.vesting.v1.EventsProto.EventClawback result = new com.evmos.vesting.v1.EventsProto.EventClawback(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.vesting.v1.EventsProto.EventClawback result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.funder_ = funder_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.account_ = account_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.destination_ = destination_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.vesting.v1.EventsProto.EventClawback) {
+          return mergeFrom((com.evmos.vesting.v1.EventsProto.EventClawback)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.vesting.v1.EventsProto.EventClawback other) {
+        if (other == com.evmos.vesting.v1.EventsProto.EventClawback.getDefaultInstance()) return this;
+        if (!other.getFunder().isEmpty()) {
+          funder_ = other.funder_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getAccount().isEmpty()) {
+          account_ = other.account_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getDestination().isEmpty()) {
+          destination_ = other.destination_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                funder_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                account_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                destination_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object funder_ = "";
+      /**
+       * <pre>
+       * funder is the address of the funder
+       * </pre>
+       *
+       * <code>string funder = 1 [json_name = "funder"];</code>
+       * @return The funder.
+       */
+      public java.lang.String getFunder() {
+        java.lang.Object ref = funder_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          funder_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * funder is the address of the funder
+       * </pre>
+       *
+       * <code>string funder = 1 [json_name = "funder"];</code>
+       * @return The bytes for funder.
+       */
+      public com.google.protobuf.ByteString
+          getFunderBytes() {
+        java.lang.Object ref = funder_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          funder_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * funder is the address of the funder
+       * </pre>
+       *
+       * <code>string funder = 1 [json_name = "funder"];</code>
+       * @param value The funder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFunder(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        funder_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * funder is the address of the funder
+       * </pre>
+       *
+       * <code>string funder = 1 [json_name = "funder"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFunder() {
+        funder_ = getDefaultInstance().getFunder();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * funder is the address of the funder
+       * </pre>
+       *
+       * <code>string funder = 1 [json_name = "funder"];</code>
+       * @param value The bytes for funder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFunderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        funder_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object account_ = "";
+      /**
+       * <pre>
+       * account is the address of the account
+       * </pre>
+       *
+       * <code>string account = 2 [json_name = "account"];</code>
+       * @return The account.
+       */
+      public java.lang.String getAccount() {
+        java.lang.Object ref = account_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          account_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * account is the address of the account
+       * </pre>
+       *
+       * <code>string account = 2 [json_name = "account"];</code>
+       * @return The bytes for account.
+       */
+      public com.google.protobuf.ByteString
+          getAccountBytes() {
+        java.lang.Object ref = account_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          account_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * account is the address of the account
+       * </pre>
+       *
+       * <code>string account = 2 [json_name = "account"];</code>
+       * @param value The account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        account_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * account is the address of the account
+       * </pre>
+       *
+       * <code>string account = 2 [json_name = "account"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccount() {
+        account_ = getDefaultInstance().getAccount();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * account is the address of the account
+       * </pre>
+       *
+       * <code>string account = 2 [json_name = "account"];</code>
+       * @param value The bytes for account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        account_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object destination_ = "";
+      /**
+       * <pre>
+       * destination is the address of the destination
+       * </pre>
+       *
+       * <code>string destination = 3 [json_name = "destination"];</code>
+       * @return The destination.
+       */
+      public java.lang.String getDestination() {
+        java.lang.Object ref = destination_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          destination_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * destination is the address of the destination
+       * </pre>
+       *
+       * <code>string destination = 3 [json_name = "destination"];</code>
+       * @return The bytes for destination.
+       */
+      public com.google.protobuf.ByteString
+          getDestinationBytes() {
+        java.lang.Object ref = destination_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          destination_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * destination is the address of the destination
+       * </pre>
+       *
+       * <code>string destination = 3 [json_name = "destination"];</code>
+       * @param value The destination to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestination(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        destination_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * destination is the address of the destination
+       * </pre>
+       *
+       * <code>string destination = 3 [json_name = "destination"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDestination() {
+        destination_ = getDefaultInstance().getDestination();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * destination is the address of the destination
+       * </pre>
+       *
+       * <code>string destination = 3 [json_name = "destination"];</code>
+       * @param value The bytes for destination to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestinationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        destination_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.vesting.v1.EventClawback)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.vesting.v1.EventClawback)
+    private static final com.evmos.vesting.v1.EventsProto.EventClawback DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.vesting.v1.EventsProto.EventClawback();
+    }
+
+    public static com.evmos.vesting.v1.EventsProto.EventClawback getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventClawback>
+        PARSER = new com.google.protobuf.AbstractParser<EventClawback>() {
+      @java.lang.Override
+      public EventClawback parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventClawback> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventClawback> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.vesting.v1.EventsProto.EventClawback getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventUpdateVestingFunderOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.vesting.v1.EventUpdateVestingFunder)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * funder is the address of the funder
+     * </pre>
+     *
+     * <code>string funder = 1 [json_name = "funder"];</code>
+     * @return The funder.
+     */
+    java.lang.String getFunder();
+    /**
+     * <pre>
+     * funder is the address of the funder
+     * </pre>
+     *
+     * <code>string funder = 1 [json_name = "funder"];</code>
+     * @return The bytes for funder.
+     */
+    com.google.protobuf.ByteString
+        getFunderBytes();
+
+    /**
+     * <pre>
+     * account is the address of the account
+     * </pre>
+     *
+     * <code>string account = 2 [json_name = "account"];</code>
+     * @return The account.
+     */
+    java.lang.String getAccount();
+    /**
+     * <pre>
+     * account is the address of the account
+     * </pre>
+     *
+     * <code>string account = 2 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    com.google.protobuf.ByteString
+        getAccountBytes();
+
+    /**
+     * <pre>
+     * new_funder is the address of the new funder
+     * </pre>
+     *
+     * <code>string new_funder = 3 [json_name = "newFunder"];</code>
+     * @return The newFunder.
+     */
+    java.lang.String getNewFunder();
+    /**
+     * <pre>
+     * new_funder is the address of the new funder
+     * </pre>
+     *
+     * <code>string new_funder = 3 [json_name = "newFunder"];</code>
+     * @return The bytes for newFunder.
+     */
+    com.google.protobuf.ByteString
+        getNewFunderBytes();
+  }
+  /**
+   * <pre>
+   * EventUpdateVestingFunder defines the event type for updating the vesting funder
+   * </pre>
+   *
+   * Protobuf type {@code evmos.vesting.v1.EventUpdateVestingFunder}
+   */
+  public static final class EventUpdateVestingFunder extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.vesting.v1.EventUpdateVestingFunder)
+      EventUpdateVestingFunderOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventUpdateVestingFunder.newBuilder() to construct.
+    private EventUpdateVestingFunder(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventUpdateVestingFunder() {
+      funder_ = "";
+      account_ = "";
+      newFunder_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventUpdateVestingFunder();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.vesting.v1.EventsProto.internal_static_evmos_vesting_v1_EventUpdateVestingFunder_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.vesting.v1.EventsProto.internal_static_evmos_vesting_v1_EventUpdateVestingFunder_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder.class, com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder.Builder.class);
+    }
+
+    public static final int FUNDER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object funder_ = "";
+    /**
+     * <pre>
+     * funder is the address of the funder
+     * </pre>
+     *
+     * <code>string funder = 1 [json_name = "funder"];</code>
+     * @return The funder.
+     */
+    @java.lang.Override
+    public java.lang.String getFunder() {
+      java.lang.Object ref = funder_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        funder_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * funder is the address of the funder
+     * </pre>
+     *
+     * <code>string funder = 1 [json_name = "funder"];</code>
+     * @return The bytes for funder.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFunderBytes() {
+      java.lang.Object ref = funder_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        funder_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACCOUNT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object account_ = "";
+    /**
+     * <pre>
+     * account is the address of the account
+     * </pre>
+     *
+     * <code>string account = 2 [json_name = "account"];</code>
+     * @return The account.
+     */
+    @java.lang.Override
+    public java.lang.String getAccount() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        account_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * account is the address of the account
+     * </pre>
+     *
+     * <code>string account = 2 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccountBytes() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        account_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NEW_FUNDER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object newFunder_ = "";
+    /**
+     * <pre>
+     * new_funder is the address of the new funder
+     * </pre>
+     *
+     * <code>string new_funder = 3 [json_name = "newFunder"];</code>
+     * @return The newFunder.
+     */
+    @java.lang.Override
+    public java.lang.String getNewFunder() {
+      java.lang.Object ref = newFunder_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        newFunder_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * new_funder is the address of the new funder
+     * </pre>
+     *
+     * <code>string new_funder = 3 [json_name = "newFunder"];</code>
+     * @return The bytes for newFunder.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNewFunderBytes() {
+      java.lang.Object ref = newFunder_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        newFunder_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(funder_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, funder_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, account_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newFunder_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, newFunder_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(funder_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, funder_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, account_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newFunder_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, newFunder_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder)) {
+        return super.equals(obj);
+      }
+      com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder other = (com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder) obj;
+
+      if (!getFunder()
+          .equals(other.getFunder())) return false;
+      if (!getAccount()
+          .equals(other.getAccount())) return false;
+      if (!getNewFunder()
+          .equals(other.getNewFunder())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FUNDER_FIELD_NUMBER;
+      hash = (53 * hash) + getFunder().hashCode();
+      hash = (37 * hash) + ACCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAccount().hashCode();
+      hash = (37 * hash) + NEW_FUNDER_FIELD_NUMBER;
+      hash = (53 * hash) + getNewFunder().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventUpdateVestingFunder defines the event type for updating the vesting funder
+     * </pre>
+     *
+     * Protobuf type {@code evmos.vesting.v1.EventUpdateVestingFunder}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.vesting.v1.EventUpdateVestingFunder)
+        com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunderOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.vesting.v1.EventsProto.internal_static_evmos_vesting_v1_EventUpdateVestingFunder_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.vesting.v1.EventsProto.internal_static_evmos_vesting_v1_EventUpdateVestingFunder_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder.class, com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder.Builder.class);
+      }
+
+      // Construct using com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        funder_ = "";
+        account_ = "";
+        newFunder_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.vesting.v1.EventsProto.internal_static_evmos_vesting_v1_EventUpdateVestingFunder_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder getDefaultInstanceForType() {
+        return com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder build() {
+        com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder buildPartial() {
+        com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder result = new com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.funder_ = funder_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.account_ = account_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.newFunder_ = newFunder_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder) {
+          return mergeFrom((com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder other) {
+        if (other == com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder.getDefaultInstance()) return this;
+        if (!other.getFunder().isEmpty()) {
+          funder_ = other.funder_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getAccount().isEmpty()) {
+          account_ = other.account_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getNewFunder().isEmpty()) {
+          newFunder_ = other.newFunder_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                funder_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                account_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                newFunder_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object funder_ = "";
+      /**
+       * <pre>
+       * funder is the address of the funder
+       * </pre>
+       *
+       * <code>string funder = 1 [json_name = "funder"];</code>
+       * @return The funder.
+       */
+      public java.lang.String getFunder() {
+        java.lang.Object ref = funder_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          funder_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * funder is the address of the funder
+       * </pre>
+       *
+       * <code>string funder = 1 [json_name = "funder"];</code>
+       * @return The bytes for funder.
+       */
+      public com.google.protobuf.ByteString
+          getFunderBytes() {
+        java.lang.Object ref = funder_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          funder_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * funder is the address of the funder
+       * </pre>
+       *
+       * <code>string funder = 1 [json_name = "funder"];</code>
+       * @param value The funder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFunder(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        funder_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * funder is the address of the funder
+       * </pre>
+       *
+       * <code>string funder = 1 [json_name = "funder"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFunder() {
+        funder_ = getDefaultInstance().getFunder();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * funder is the address of the funder
+       * </pre>
+       *
+       * <code>string funder = 1 [json_name = "funder"];</code>
+       * @param value The bytes for funder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFunderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        funder_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object account_ = "";
+      /**
+       * <pre>
+       * account is the address of the account
+       * </pre>
+       *
+       * <code>string account = 2 [json_name = "account"];</code>
+       * @return The account.
+       */
+      public java.lang.String getAccount() {
+        java.lang.Object ref = account_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          account_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * account is the address of the account
+       * </pre>
+       *
+       * <code>string account = 2 [json_name = "account"];</code>
+       * @return The bytes for account.
+       */
+      public com.google.protobuf.ByteString
+          getAccountBytes() {
+        java.lang.Object ref = account_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          account_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * account is the address of the account
+       * </pre>
+       *
+       * <code>string account = 2 [json_name = "account"];</code>
+       * @param value The account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        account_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * account is the address of the account
+       * </pre>
+       *
+       * <code>string account = 2 [json_name = "account"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccount() {
+        account_ = getDefaultInstance().getAccount();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * account is the address of the account
+       * </pre>
+       *
+       * <code>string account = 2 [json_name = "account"];</code>
+       * @param value The bytes for account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        account_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object newFunder_ = "";
+      /**
+       * <pre>
+       * new_funder is the address of the new funder
+       * </pre>
+       *
+       * <code>string new_funder = 3 [json_name = "newFunder"];</code>
+       * @return The newFunder.
+       */
+      public java.lang.String getNewFunder() {
+        java.lang.Object ref = newFunder_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          newFunder_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * new_funder is the address of the new funder
+       * </pre>
+       *
+       * <code>string new_funder = 3 [json_name = "newFunder"];</code>
+       * @return The bytes for newFunder.
+       */
+      public com.google.protobuf.ByteString
+          getNewFunderBytes() {
+        java.lang.Object ref = newFunder_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          newFunder_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * new_funder is the address of the new funder
+       * </pre>
+       *
+       * <code>string new_funder = 3 [json_name = "newFunder"];</code>
+       * @param value The newFunder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewFunder(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        newFunder_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * new_funder is the address of the new funder
+       * </pre>
+       *
+       * <code>string new_funder = 3 [json_name = "newFunder"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewFunder() {
+        newFunder_ = getDefaultInstance().getNewFunder();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * new_funder is the address of the new funder
+       * </pre>
+       *
+       * <code>string new_funder = 3 [json_name = "newFunder"];</code>
+       * @param value The bytes for newFunder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewFunderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        newFunder_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.vesting.v1.EventUpdateVestingFunder)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.vesting.v1.EventUpdateVestingFunder)
+    private static final com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder();
+    }
+
+    public static com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventUpdateVestingFunder>
+        PARSER = new com.google.protobuf.AbstractParser<EventUpdateVestingFunder>() {
+      @java.lang.Override
+      public EventUpdateVestingFunder parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventUpdateVestingFunder> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventUpdateVestingFunder> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.vesting.v1.EventsProto.EventUpdateVestingFunder getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_vesting_v1_EventCreateClawbackVestingAccount_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_vesting_v1_EventCreateClawbackVestingAccount_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_vesting_v1_EventClawback_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_vesting_v1_EventClawback_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_vesting_v1_EventUpdateVestingFunder_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_vesting_v1_EventUpdateVestingFunder_fieldAccessorTable;
 
@@ -48,12 +3310,12 @@ public final class EventsProto {
       " \n\013destination\030\003 \001(\tR\013destination\"k\n\030Eve" +
       "ntUpdateVestingFunder\022\026\n\006funder\030\001 \001(\tR\006f" +
       "under\022\030\n\007account\030\002 \001(\tR\007account\022\035\n\nnew_f" +
-      "under\030\003 \001(\tR\tnewFunderB\261\001\n\024com.evmos.ves" +
-      "ting.v1B\013EventsProtoP\001Z*github.com/evmos" +
-      "/evmos/v13/x/vesting/types\242\002\003EVX\252\002\020Evmos" +
-      ".Vesting.V1\312\002\020Evmos\\Vesting\\V1\342\002\034Evmos\\V" +
-      "esting\\V1\\GPBMetadata\352\002\022Evmos::Vesting::" +
-      "V1b\006proto3"
+      "under\030\003 \001(\tR\tnewFunderB\257\001\n\024com.evmos.ves" +
+      "ting.v1B\013EventsProtoZ*github.com/evmos/e" +
+      "vmos/v13/x/vesting/types\242\002\003EVX\252\002\020Evmos.V" +
+      "esting.V1\312\002\020Evmos\\Vesting\\V1\342\002\034Evmos\\Ves" +
+      "ting\\V1\\GPBMetadata\352\002\022Evmos::Vesting::V1" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

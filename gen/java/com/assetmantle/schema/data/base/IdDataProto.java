@@ -14,9 +14,609 @@ public final class IdDataProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface IDDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:assetmantle.schema.data.base.IDData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.assetmantle.schema.ids.base.AnyID value = 1 [json_name = "value"];</code>
+     * @return Whether the value field is set.
+     */
+    boolean hasValue();
+    /**
+     * <code>.assetmantle.schema.ids.base.AnyID value = 1 [json_name = "value"];</code>
+     * @return The value.
+     */
+    com.assetmantle.schema.ids.base.AnyIdProto.AnyID getValue();
+    /**
+     * <code>.assetmantle.schema.ids.base.AnyID value = 1 [json_name = "value"];</code>
+     */
+    com.assetmantle.schema.ids.base.AnyIdProto.AnyIDOrBuilder getValueOrBuilder();
+  }
+  /**
+   * Protobuf type {@code assetmantle.schema.data.base.IDData}
+   */
+  public static final class IDData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:assetmantle.schema.data.base.IDData)
+      IDDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IDData.newBuilder() to construct.
+    private IDData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IDData() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IDData();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.assetmantle.schema.data.base.IdDataProto.internal_static_assetmantle_schema_data_base_IDData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.assetmantle.schema.data.base.IdDataProto.internal_static_assetmantle_schema_data_base_IDData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.assetmantle.schema.data.base.IdDataProto.IDData.class, com.assetmantle.schema.data.base.IdDataProto.IDData.Builder.class);
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 1;
+    private com.assetmantle.schema.ids.base.AnyIdProto.AnyID value_;
+    /**
+     * <code>.assetmantle.schema.ids.base.AnyID value = 1 [json_name = "value"];</code>
+     * @return Whether the value field is set.
+     */
+    @java.lang.Override
+    public boolean hasValue() {
+      return value_ != null;
+    }
+    /**
+     * <code>.assetmantle.schema.ids.base.AnyID value = 1 [json_name = "value"];</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public com.assetmantle.schema.ids.base.AnyIdProto.AnyID getValue() {
+      return value_ == null ? com.assetmantle.schema.ids.base.AnyIdProto.AnyID.getDefaultInstance() : value_;
+    }
+    /**
+     * <code>.assetmantle.schema.ids.base.AnyID value = 1 [json_name = "value"];</code>
+     */
+    @java.lang.Override
+    public com.assetmantle.schema.ids.base.AnyIdProto.AnyIDOrBuilder getValueOrBuilder() {
+      return value_ == null ? com.assetmantle.schema.ids.base.AnyIdProto.AnyID.getDefaultInstance() : value_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (value_ != null) {
+        output.writeMessage(1, getValue());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (value_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getValue());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.assetmantle.schema.data.base.IdDataProto.IDData)) {
+        return super.equals(obj);
+      }
+      com.assetmantle.schema.data.base.IdDataProto.IDData other = (com.assetmantle.schema.data.base.IdDataProto.IDData) obj;
+
+      if (hasValue() != other.hasValue()) return false;
+      if (hasValue()) {
+        if (!getValue()
+            .equals(other.getValue())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasValue()) {
+        hash = (37 * hash) + VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getValue().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.assetmantle.schema.data.base.IdDataProto.IDData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.assetmantle.schema.data.base.IdDataProto.IDData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.assetmantle.schema.data.base.IdDataProto.IDData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.assetmantle.schema.data.base.IdDataProto.IDData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.assetmantle.schema.data.base.IdDataProto.IDData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.assetmantle.schema.data.base.IdDataProto.IDData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.assetmantle.schema.data.base.IdDataProto.IDData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.assetmantle.schema.data.base.IdDataProto.IDData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.assetmantle.schema.data.base.IdDataProto.IDData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.assetmantle.schema.data.base.IdDataProto.IDData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.assetmantle.schema.data.base.IdDataProto.IDData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.assetmantle.schema.data.base.IdDataProto.IDData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.assetmantle.schema.data.base.IdDataProto.IDData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code assetmantle.schema.data.base.IDData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:assetmantle.schema.data.base.IDData)
+        com.assetmantle.schema.data.base.IdDataProto.IDDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.assetmantle.schema.data.base.IdDataProto.internal_static_assetmantle_schema_data_base_IDData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.assetmantle.schema.data.base.IdDataProto.internal_static_assetmantle_schema_data_base_IDData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.assetmantle.schema.data.base.IdDataProto.IDData.class, com.assetmantle.schema.data.base.IdDataProto.IDData.Builder.class);
+      }
+
+      // Construct using com.assetmantle.schema.data.base.IdDataProto.IDData.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        value_ = null;
+        if (valueBuilder_ != null) {
+          valueBuilder_.dispose();
+          valueBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.assetmantle.schema.data.base.IdDataProto.internal_static_assetmantle_schema_data_base_IDData_descriptor;
+      }
+
+      @java.lang.Override
+      public com.assetmantle.schema.data.base.IdDataProto.IDData getDefaultInstanceForType() {
+        return com.assetmantle.schema.data.base.IdDataProto.IDData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.assetmantle.schema.data.base.IdDataProto.IDData build() {
+        com.assetmantle.schema.data.base.IdDataProto.IDData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.assetmantle.schema.data.base.IdDataProto.IDData buildPartial() {
+        com.assetmantle.schema.data.base.IdDataProto.IDData result = new com.assetmantle.schema.data.base.IdDataProto.IDData(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.assetmantle.schema.data.base.IdDataProto.IDData result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.value_ = valueBuilder_ == null
+              ? value_
+              : valueBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.assetmantle.schema.data.base.IdDataProto.IDData) {
+          return mergeFrom((com.assetmantle.schema.data.base.IdDataProto.IDData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.assetmantle.schema.data.base.IdDataProto.IDData other) {
+        if (other == com.assetmantle.schema.data.base.IdDataProto.IDData.getDefaultInstance()) return this;
+        if (other.hasValue()) {
+          mergeValue(other.getValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getValueFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.assetmantle.schema.ids.base.AnyIdProto.AnyID value_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.assetmantle.schema.ids.base.AnyIdProto.AnyID, com.assetmantle.schema.ids.base.AnyIdProto.AnyID.Builder, com.assetmantle.schema.ids.base.AnyIdProto.AnyIDOrBuilder> valueBuilder_;
+      /**
+       * <code>.assetmantle.schema.ids.base.AnyID value = 1 [json_name = "value"];</code>
+       * @return Whether the value field is set.
+       */
+      public boolean hasValue() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.assetmantle.schema.ids.base.AnyID value = 1 [json_name = "value"];</code>
+       * @return The value.
+       */
+      public com.assetmantle.schema.ids.base.AnyIdProto.AnyID getValue() {
+        if (valueBuilder_ == null) {
+          return value_ == null ? com.assetmantle.schema.ids.base.AnyIdProto.AnyID.getDefaultInstance() : value_;
+        } else {
+          return valueBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.assetmantle.schema.ids.base.AnyID value = 1 [json_name = "value"];</code>
+       */
+      public Builder setValue(com.assetmantle.schema.ids.base.AnyIdProto.AnyID value) {
+        if (valueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          value_ = value;
+        } else {
+          valueBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.assetmantle.schema.ids.base.AnyID value = 1 [json_name = "value"];</code>
+       */
+      public Builder setValue(
+          com.assetmantle.schema.ids.base.AnyIdProto.AnyID.Builder builderForValue) {
+        if (valueBuilder_ == null) {
+          value_ = builderForValue.build();
+        } else {
+          valueBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.assetmantle.schema.ids.base.AnyID value = 1 [json_name = "value"];</code>
+       */
+      public Builder mergeValue(com.assetmantle.schema.ids.base.AnyIdProto.AnyID value) {
+        if (valueBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            value_ != null &&
+            value_ != com.assetmantle.schema.ids.base.AnyIdProto.AnyID.getDefaultInstance()) {
+            getValueBuilder().mergeFrom(value);
+          } else {
+            value_ = value;
+          }
+        } else {
+          valueBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.assetmantle.schema.ids.base.AnyID value = 1 [json_name = "value"];</code>
+       */
+      public Builder clearValue() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        value_ = null;
+        if (valueBuilder_ != null) {
+          valueBuilder_.dispose();
+          valueBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.assetmantle.schema.ids.base.AnyID value = 1 [json_name = "value"];</code>
+       */
+      public com.assetmantle.schema.ids.base.AnyIdProto.AnyID.Builder getValueBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getValueFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.assetmantle.schema.ids.base.AnyID value = 1 [json_name = "value"];</code>
+       */
+      public com.assetmantle.schema.ids.base.AnyIdProto.AnyIDOrBuilder getValueOrBuilder() {
+        if (valueBuilder_ != null) {
+          return valueBuilder_.getMessageOrBuilder();
+        } else {
+          return value_ == null ?
+              com.assetmantle.schema.ids.base.AnyIdProto.AnyID.getDefaultInstance() : value_;
+        }
+      }
+      /**
+       * <code>.assetmantle.schema.ids.base.AnyID value = 1 [json_name = "value"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.assetmantle.schema.ids.base.AnyIdProto.AnyID, com.assetmantle.schema.ids.base.AnyIdProto.AnyID.Builder, com.assetmantle.schema.ids.base.AnyIdProto.AnyIDOrBuilder> 
+          getValueFieldBuilder() {
+        if (valueBuilder_ == null) {
+          valueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.assetmantle.schema.ids.base.AnyIdProto.AnyID, com.assetmantle.schema.ids.base.AnyIdProto.AnyID.Builder, com.assetmantle.schema.ids.base.AnyIdProto.AnyIDOrBuilder>(
+                  getValue(),
+                  getParentForChildren(),
+                  isClean());
+          value_ = null;
+        }
+        return valueBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:assetmantle.schema.data.base.IDData)
+    }
+
+    // @@protoc_insertion_point(class_scope:assetmantle.schema.data.base.IDData)
+    private static final com.assetmantle.schema.data.base.IdDataProto.IDData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.assetmantle.schema.data.base.IdDataProto.IDData();
+    }
+
+    public static com.assetmantle.schema.data.base.IdDataProto.IDData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<IDData>
+        PARSER = new com.google.protobuf.AbstractParser<IDData>() {
+      @java.lang.Override
+      public IDData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<IDData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IDData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.assetmantle.schema.data.base.IdDataProto.IDData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_assetmantle_schema_data_base_IDData_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_assetmantle_schema_data_base_IDData_fieldAccessorTable;
 
@@ -32,13 +632,13 @@ public final class IdDataProto {
       "ssetmantle.schema.data.base\032!assetmantle" +
       "/ids/base/any_id.proto\032\024gogoproto/gogo.p" +
       "roto\"H\n\006IDData\0228\n\005value\030\001 \001(\0132\".assetman" +
-      "tle.schema.ids.base.AnyIDR\005value:\004\210\240\037\000B\303" +
+      "tle.schema.ids.base.AnyIDR\005value:\004\210\240\037\000B\301" +
       "\001\n com.assetmantle.schema.data.baseB\013IdD" +
-      "ataProtoP\001\242\002\004ASDB\252\002\034Assetmantle.Schema.D" +
-      "ata.Base\312\002\034Assetmantle\\Schema\\Data\\Base\342" +
-      "\002(Assetmantle\\Schema\\Data\\Base\\GPBMetada" +
-      "ta\352\002\037Assetmantle::Schema::Data::Baseb\006pr" +
-      "oto3"
+      "ataProto\242\002\004ASDB\252\002\034Assetmantle.Schema.Dat" +
+      "a.Base\312\002\034Assetmantle\\Schema\\Data\\Base\342\002(" +
+      "Assetmantle\\Schema\\Data\\Base\\GPBMetadata" +
+      "\352\002\037Assetmantle::Schema::Data::Baseb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

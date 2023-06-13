@@ -32,14 +32,14 @@ public final class ServiceProto {
       "ndle\0224.assetmantle.modules.metas.queries" +
       ".meta.QueryRequest\0325.assetmantle.modules" +
       ".metas.queries.meta.QueryResponse\"\"\202\323\344\223\002" +
-      "\034\022\032/mantle/metas/v1beta1/metaB\370\001\n*com.as" +
+      "\034\022\032/mantle/metas/v1beta1/metaB\366\001\n*com.as" +
       "setmantle.modules.metas.queries.metaB\014Se" +
-      "rviceProtoP\001\242\002\005AMMQM\252\002&Assetmantle.Modul" +
-      "es.Metas.Queries.Meta\312\002&Assetmantle\\Modu" +
-      "les\\Metas\\Queries\\Meta\342\0022Assetmantle\\Mod" +
-      "ules\\Metas\\Queries\\Meta\\GPBMetadata\352\002*As" +
-      "setmantle::Modules::Metas::Queries::Meta" +
-      "b\006proto3"
+      "rviceProto\242\002\005AMMQM\252\002&Assetmantle.Modules" +
+      ".Metas.Queries.Meta\312\002&Assetmantle\\Module" +
+      "s\\Metas\\Queries\\Meta\342\0022Assetmantle\\Modul" +
+      "es\\Metas\\Queries\\Meta\\GPBMetadata\352\002*Asse" +
+      "tmantle::Modules::Metas::Queries::Metab\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

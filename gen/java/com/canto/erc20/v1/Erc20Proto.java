@@ -14,24 +14,4164 @@ public final class Erc20Proto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * <pre>
+   * Owner enumerates the ownership of a ERC20 contract.
+   * </pre>
+   *
+   * Protobuf enum {@code canto.erc20.v1.Owner}
+   */
+  public enum Owner
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * OWNER_UNSPECIFIED defines an invalid/undefined owner.
+     * </pre>
+     *
+     * <code>OWNER_UNSPECIFIED = 0;</code>
+     */
+    OWNER_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * OWNER_MODULE erc20 is owned by the erc20 module account.
+     * </pre>
+     *
+     * <code>OWNER_MODULE = 1;</code>
+     */
+    OWNER_MODULE(1),
+    /**
+     * <pre>
+     * EXTERNAL erc20 is owned by an external account.
+     * </pre>
+     *
+     * <code>OWNER_EXTERNAL = 2;</code>
+     */
+    OWNER_EXTERNAL(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * OWNER_UNSPECIFIED defines an invalid/undefined owner.
+     * </pre>
+     *
+     * <code>OWNER_UNSPECIFIED = 0;</code>
+     */
+    public static final int OWNER_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * OWNER_MODULE erc20 is owned by the erc20 module account.
+     * </pre>
+     *
+     * <code>OWNER_MODULE = 1;</code>
+     */
+    public static final int OWNER_MODULE_VALUE = 1;
+    /**
+     * <pre>
+     * EXTERNAL erc20 is owned by an external account.
+     * </pre>
+     *
+     * <code>OWNER_EXTERNAL = 2;</code>
+     */
+    public static final int OWNER_EXTERNAL_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static Owner valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static Owner forNumber(int value) {
+      switch (value) {
+        case 0: return OWNER_UNSPECIFIED;
+        case 1: return OWNER_MODULE;
+        case 2: return OWNER_EXTERNAL;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<Owner>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        Owner> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Owner>() {
+            public Owner findValueByNumber(int number) {
+              return Owner.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.canto.erc20.v1.Erc20Proto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final Owner[] VALUES = values();
+
+    public static Owner valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private Owner(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:canto.erc20.v1.Owner)
+  }
+
+  public interface TokenPairOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.erc20.v1.TokenPair)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * address of ERC20 contract token
+     * </pre>
+     *
+     * <code>string erc20_address = 1 [json_name = "erc20Address"];</code>
+     * @return The erc20Address.
+     */
+    java.lang.String getErc20Address();
+    /**
+     * <pre>
+     * address of ERC20 contract token
+     * </pre>
+     *
+     * <code>string erc20_address = 1 [json_name = "erc20Address"];</code>
+     * @return The bytes for erc20Address.
+     */
+    com.google.protobuf.ByteString
+        getErc20AddressBytes();
+
+    /**
+     * <pre>
+     * cosmos base denomination to be mapped to
+     * </pre>
+     *
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <pre>
+     * cosmos base denomination to be mapped to
+     * </pre>
+     *
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <pre>
+     * shows token mapping enable status
+     * </pre>
+     *
+     * <code>bool enabled = 3 [json_name = "enabled"];</code>
+     * @return The enabled.
+     */
+    boolean getEnabled();
+
+    /**
+     * <pre>
+     * ERC20 owner address ENUM (0 invalid, 1 ModuleAccount, 2 external address)
+     * </pre>
+     *
+     * <code>.canto.erc20.v1.Owner contract_owner = 4 [json_name = "contractOwner"];</code>
+     * @return The enum numeric value on the wire for contractOwner.
+     */
+    int getContractOwnerValue();
+    /**
+     * <pre>
+     * ERC20 owner address ENUM (0 invalid, 1 ModuleAccount, 2 external address)
+     * </pre>
+     *
+     * <code>.canto.erc20.v1.Owner contract_owner = 4 [json_name = "contractOwner"];</code>
+     * @return The contractOwner.
+     */
+    com.canto.erc20.v1.Erc20Proto.Owner getContractOwner();
+  }
+  /**
+   * <pre>
+   * TokenPair defines an instance that records a pairing consisting of a native
+   *  Cosmos Coin and an ERC20 token address.
+   * </pre>
+   *
+   * Protobuf type {@code canto.erc20.v1.TokenPair}
+   */
+  public static final class TokenPair extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.erc20.v1.TokenPair)
+      TokenPairOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TokenPair.newBuilder() to construct.
+    private TokenPair(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TokenPair() {
+      erc20Address_ = "";
+      denom_ = "";
+      contractOwner_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TokenPair();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.erc20.v1.Erc20Proto.internal_static_canto_erc20_v1_TokenPair_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.erc20.v1.Erc20Proto.internal_static_canto_erc20_v1_TokenPair_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.erc20.v1.Erc20Proto.TokenPair.class, com.canto.erc20.v1.Erc20Proto.TokenPair.Builder.class);
+    }
+
+    public static final int ERC20_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object erc20Address_ = "";
+    /**
+     * <pre>
+     * address of ERC20 contract token
+     * </pre>
+     *
+     * <code>string erc20_address = 1 [json_name = "erc20Address"];</code>
+     * @return The erc20Address.
+     */
+    @java.lang.Override
+    public java.lang.String getErc20Address() {
+      java.lang.Object ref = erc20Address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        erc20Address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * address of ERC20 contract token
+     * </pre>
+     *
+     * <code>string erc20_address = 1 [json_name = "erc20Address"];</code>
+     * @return The bytes for erc20Address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getErc20AddressBytes() {
+      java.lang.Object ref = erc20Address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        erc20Address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <pre>
+     * cosmos base denomination to be mapped to
+     * </pre>
+     *
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * cosmos base denomination to be mapped to
+     * </pre>
+     *
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENABLED_FIELD_NUMBER = 3;
+    private boolean enabled_ = false;
+    /**
+     * <pre>
+     * shows token mapping enable status
+     * </pre>
+     *
+     * <code>bool enabled = 3 [json_name = "enabled"];</code>
+     * @return The enabled.
+     */
+    @java.lang.Override
+    public boolean getEnabled() {
+      return enabled_;
+    }
+
+    public static final int CONTRACT_OWNER_FIELD_NUMBER = 4;
+    private int contractOwner_ = 0;
+    /**
+     * <pre>
+     * ERC20 owner address ENUM (0 invalid, 1 ModuleAccount, 2 external address)
+     * </pre>
+     *
+     * <code>.canto.erc20.v1.Owner contract_owner = 4 [json_name = "contractOwner"];</code>
+     * @return The enum numeric value on the wire for contractOwner.
+     */
+    @java.lang.Override public int getContractOwnerValue() {
+      return contractOwner_;
+    }
+    /**
+     * <pre>
+     * ERC20 owner address ENUM (0 invalid, 1 ModuleAccount, 2 external address)
+     * </pre>
+     *
+     * <code>.canto.erc20.v1.Owner contract_owner = 4 [json_name = "contractOwner"];</code>
+     * @return The contractOwner.
+     */
+    @java.lang.Override public com.canto.erc20.v1.Erc20Proto.Owner getContractOwner() {
+      com.canto.erc20.v1.Erc20Proto.Owner result = com.canto.erc20.v1.Erc20Proto.Owner.forNumber(contractOwner_);
+      return result == null ? com.canto.erc20.v1.Erc20Proto.Owner.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(erc20Address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, erc20Address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, denom_);
+      }
+      if (enabled_ != false) {
+        output.writeBool(3, enabled_);
+      }
+      if (contractOwner_ != com.canto.erc20.v1.Erc20Proto.Owner.OWNER_UNSPECIFIED.getNumber()) {
+        output.writeEnum(4, contractOwner_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(erc20Address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, erc20Address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, denom_);
+      }
+      if (enabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, enabled_);
+      }
+      if (contractOwner_ != com.canto.erc20.v1.Erc20Proto.Owner.OWNER_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, contractOwner_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.erc20.v1.Erc20Proto.TokenPair)) {
+        return super.equals(obj);
+      }
+      com.canto.erc20.v1.Erc20Proto.TokenPair other = (com.canto.erc20.v1.Erc20Proto.TokenPair) obj;
+
+      if (!getErc20Address()
+          .equals(other.getErc20Address())) return false;
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (getEnabled()
+          != other.getEnabled()) return false;
+      if (contractOwner_ != other.contractOwner_) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ERC20_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getErc20Address().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnabled());
+      hash = (37 * hash) + CONTRACT_OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + contractOwner_;
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.erc20.v1.Erc20Proto.TokenPair parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.TokenPair parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.TokenPair parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.TokenPair parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.TokenPair parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.TokenPair parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.TokenPair parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.TokenPair parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.erc20.v1.Erc20Proto.TokenPair parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.erc20.v1.Erc20Proto.TokenPair parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.TokenPair parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.TokenPair parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.erc20.v1.Erc20Proto.TokenPair prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * TokenPair defines an instance that records a pairing consisting of a native
+     *  Cosmos Coin and an ERC20 token address.
+     * </pre>
+     *
+     * Protobuf type {@code canto.erc20.v1.TokenPair}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.erc20.v1.TokenPair)
+        com.canto.erc20.v1.Erc20Proto.TokenPairOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.erc20.v1.Erc20Proto.internal_static_canto_erc20_v1_TokenPair_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.erc20.v1.Erc20Proto.internal_static_canto_erc20_v1_TokenPair_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.erc20.v1.Erc20Proto.TokenPair.class, com.canto.erc20.v1.Erc20Proto.TokenPair.Builder.class);
+      }
+
+      // Construct using com.canto.erc20.v1.Erc20Proto.TokenPair.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        erc20Address_ = "";
+        denom_ = "";
+        enabled_ = false;
+        contractOwner_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.erc20.v1.Erc20Proto.internal_static_canto_erc20_v1_TokenPair_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.Erc20Proto.TokenPair getDefaultInstanceForType() {
+        return com.canto.erc20.v1.Erc20Proto.TokenPair.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.Erc20Proto.TokenPair build() {
+        com.canto.erc20.v1.Erc20Proto.TokenPair result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.Erc20Proto.TokenPair buildPartial() {
+        com.canto.erc20.v1.Erc20Proto.TokenPair result = new com.canto.erc20.v1.Erc20Proto.TokenPair(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.canto.erc20.v1.Erc20Proto.TokenPair result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.erc20Address_ = erc20Address_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.enabled_ = enabled_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.contractOwner_ = contractOwner_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.erc20.v1.Erc20Proto.TokenPair) {
+          return mergeFrom((com.canto.erc20.v1.Erc20Proto.TokenPair)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.erc20.v1.Erc20Proto.TokenPair other) {
+        if (other == com.canto.erc20.v1.Erc20Proto.TokenPair.getDefaultInstance()) return this;
+        if (!other.getErc20Address().isEmpty()) {
+          erc20Address_ = other.erc20Address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getEnabled() != false) {
+          setEnabled(other.getEnabled());
+        }
+        if (other.contractOwner_ != 0) {
+          setContractOwnerValue(other.getContractOwnerValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                erc20Address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                enabled_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                contractOwner_ = input.readEnum();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object erc20Address_ = "";
+      /**
+       * <pre>
+       * address of ERC20 contract token
+       * </pre>
+       *
+       * <code>string erc20_address = 1 [json_name = "erc20Address"];</code>
+       * @return The erc20Address.
+       */
+      public java.lang.String getErc20Address() {
+        java.lang.Object ref = erc20Address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          erc20Address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address of ERC20 contract token
+       * </pre>
+       *
+       * <code>string erc20_address = 1 [json_name = "erc20Address"];</code>
+       * @return The bytes for erc20Address.
+       */
+      public com.google.protobuf.ByteString
+          getErc20AddressBytes() {
+        java.lang.Object ref = erc20Address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          erc20Address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address of ERC20 contract token
+       * </pre>
+       *
+       * <code>string erc20_address = 1 [json_name = "erc20Address"];</code>
+       * @param value The erc20Address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErc20Address(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        erc20Address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address of ERC20 contract token
+       * </pre>
+       *
+       * <code>string erc20_address = 1 [json_name = "erc20Address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearErc20Address() {
+        erc20Address_ = getDefaultInstance().getErc20Address();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address of ERC20 contract token
+       * </pre>
+       *
+       * <code>string erc20_address = 1 [json_name = "erc20Address"];</code>
+       * @param value The bytes for erc20Address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErc20AddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        erc20Address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <pre>
+       * cosmos base denomination to be mapped to
+       * </pre>
+       *
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * cosmos base denomination to be mapped to
+       * </pre>
+       *
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * cosmos base denomination to be mapped to
+       * </pre>
+       *
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * cosmos base denomination to be mapped to
+       * </pre>
+       *
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * cosmos base denomination to be mapped to
+       * </pre>
+       *
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private boolean enabled_ ;
+      /**
+       * <pre>
+       * shows token mapping enable status
+       * </pre>
+       *
+       * <code>bool enabled = 3 [json_name = "enabled"];</code>
+       * @return The enabled.
+       */
+      @java.lang.Override
+      public boolean getEnabled() {
+        return enabled_;
+      }
+      /**
+       * <pre>
+       * shows token mapping enable status
+       * </pre>
+       *
+       * <code>bool enabled = 3 [json_name = "enabled"];</code>
+       * @param value The enabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnabled(boolean value) {
+
+        enabled_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * shows token mapping enable status
+       * </pre>
+       *
+       * <code>bool enabled = 3 [json_name = "enabled"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnabled() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        enabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int contractOwner_ = 0;
+      /**
+       * <pre>
+       * ERC20 owner address ENUM (0 invalid, 1 ModuleAccount, 2 external address)
+       * </pre>
+       *
+       * <code>.canto.erc20.v1.Owner contract_owner = 4 [json_name = "contractOwner"];</code>
+       * @return The enum numeric value on the wire for contractOwner.
+       */
+      @java.lang.Override public int getContractOwnerValue() {
+        return contractOwner_;
+      }
+      /**
+       * <pre>
+       * ERC20 owner address ENUM (0 invalid, 1 ModuleAccount, 2 external address)
+       * </pre>
+       *
+       * <code>.canto.erc20.v1.Owner contract_owner = 4 [json_name = "contractOwner"];</code>
+       * @param value The enum numeric value on the wire for contractOwner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractOwnerValue(int value) {
+        contractOwner_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ERC20 owner address ENUM (0 invalid, 1 ModuleAccount, 2 external address)
+       * </pre>
+       *
+       * <code>.canto.erc20.v1.Owner contract_owner = 4 [json_name = "contractOwner"];</code>
+       * @return The contractOwner.
+       */
+      @java.lang.Override
+      public com.canto.erc20.v1.Erc20Proto.Owner getContractOwner() {
+        com.canto.erc20.v1.Erc20Proto.Owner result = com.canto.erc20.v1.Erc20Proto.Owner.forNumber(contractOwner_);
+        return result == null ? com.canto.erc20.v1.Erc20Proto.Owner.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * ERC20 owner address ENUM (0 invalid, 1 ModuleAccount, 2 external address)
+       * </pre>
+       *
+       * <code>.canto.erc20.v1.Owner contract_owner = 4 [json_name = "contractOwner"];</code>
+       * @param value The contractOwner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractOwner(com.canto.erc20.v1.Erc20Proto.Owner value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000008;
+        contractOwner_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ERC20 owner address ENUM (0 invalid, 1 ModuleAccount, 2 external address)
+       * </pre>
+       *
+       * <code>.canto.erc20.v1.Owner contract_owner = 4 [json_name = "contractOwner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractOwner() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        contractOwner_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.erc20.v1.TokenPair)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.erc20.v1.TokenPair)
+    private static final com.canto.erc20.v1.Erc20Proto.TokenPair DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.erc20.v1.Erc20Proto.TokenPair();
+    }
+
+    public static com.canto.erc20.v1.Erc20Proto.TokenPair getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TokenPair>
+        PARSER = new com.google.protobuf.AbstractParser<TokenPair>() {
+      @java.lang.Override
+      public TokenPair parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TokenPair> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TokenPair> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.erc20.v1.Erc20Proto.TokenPair getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RegisterCoinProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.erc20.v1.RegisterCoinProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * title of the proposal
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <pre>
+     * title of the proposal
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <pre>
+     * proposal description
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * proposal description
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * metadata of the native Cosmos coin
+     * </pre>
+     *
+     * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
+     * @return Whether the metadata field is set.
+     */
+    boolean hasMetadata();
+    /**
+     * <pre>
+     * metadata of the native Cosmos coin
+     * </pre>
+     *
+     * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
+     * @return The metadata.
+     */
+    com.cosmos.bank.v1beta1.BankProto.Metadata getMetadata();
+    /**
+     * <pre>
+     * metadata of the native Cosmos coin
+     * </pre>
+     *
+     * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.bank.v1beta1.BankProto.MetadataOrBuilder getMetadataOrBuilder();
+  }
+  /**
+   * <pre>
+   * RegisterCoinProposal is a gov Content type to register a token pair for a
+   * native Cosmos coin.
+   * </pre>
+   *
+   * Protobuf type {@code canto.erc20.v1.RegisterCoinProposal}
+   */
+  public static final class RegisterCoinProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.erc20.v1.RegisterCoinProposal)
+      RegisterCoinProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RegisterCoinProposal.newBuilder() to construct.
+    private RegisterCoinProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RegisterCoinProposal() {
+      title_ = "";
+      description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RegisterCoinProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.erc20.v1.Erc20Proto.internal_static_canto_erc20_v1_RegisterCoinProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.erc20.v1.Erc20Proto.internal_static_canto_erc20_v1_RegisterCoinProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal.class, com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <pre>
+     * title of the proposal
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * title of the proposal
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <pre>
+     * proposal description
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * proposal description
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int METADATA_FIELD_NUMBER = 3;
+    private com.cosmos.bank.v1beta1.BankProto.Metadata metadata_;
+    /**
+     * <pre>
+     * metadata of the native Cosmos coin
+     * </pre>
+     *
+     * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
+     * @return Whether the metadata field is set.
+     */
+    @java.lang.Override
+    public boolean hasMetadata() {
+      return metadata_ != null;
+    }
+    /**
+     * <pre>
+     * metadata of the native Cosmos coin
+     * </pre>
+     *
+     * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
+     * @return The metadata.
+     */
+    @java.lang.Override
+    public com.cosmos.bank.v1beta1.BankProto.Metadata getMetadata() {
+      return metadata_ == null ? com.cosmos.bank.v1beta1.BankProto.Metadata.getDefaultInstance() : metadata_;
+    }
+    /**
+     * <pre>
+     * metadata of the native Cosmos coin
+     * </pre>
+     *
+     * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.bank.v1beta1.BankProto.MetadataOrBuilder getMetadataOrBuilder() {
+      return metadata_ == null ? com.cosmos.bank.v1beta1.BankProto.Metadata.getDefaultInstance() : metadata_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (metadata_ != null) {
+        output.writeMessage(3, getMetadata());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (metadata_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getMetadata());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal)) {
+        return super.equals(obj);
+      }
+      com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal other = (com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (hasMetadata() != other.hasMetadata()) return false;
+      if (hasMetadata()) {
+        if (!getMetadata()
+            .equals(other.getMetadata())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (hasMetadata()) {
+        hash = (37 * hash) + METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getMetadata().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * RegisterCoinProposal is a gov Content type to register a token pair for a
+     * native Cosmos coin.
+     * </pre>
+     *
+     * Protobuf type {@code canto.erc20.v1.RegisterCoinProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.erc20.v1.RegisterCoinProposal)
+        com.canto.erc20.v1.Erc20Proto.RegisterCoinProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.erc20.v1.Erc20Proto.internal_static_canto_erc20_v1_RegisterCoinProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.erc20.v1.Erc20Proto.internal_static_canto_erc20_v1_RegisterCoinProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal.class, com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal.Builder.class);
+      }
+
+      // Construct using com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        metadata_ = null;
+        if (metadataBuilder_ != null) {
+          metadataBuilder_.dispose();
+          metadataBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.erc20.v1.Erc20Proto.internal_static_canto_erc20_v1_RegisterCoinProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal getDefaultInstanceForType() {
+        return com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal build() {
+        com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal buildPartial() {
+        com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal result = new com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.metadata_ = metadataBuilder_ == null
+              ? metadata_
+              : metadataBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal) {
+          return mergeFrom((com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal other) {
+        if (other == com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasMetadata()) {
+          mergeMetadata(other.getMetadata());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getMetadataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <pre>
+       * title of the proposal
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * title of the proposal
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * title of the proposal
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * title of the proposal
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * title of the proposal
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * proposal description
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * proposal description
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * proposal description
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * proposal description
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * proposal description
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.bank.v1beta1.BankProto.Metadata metadata_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.bank.v1beta1.BankProto.Metadata, com.cosmos.bank.v1beta1.BankProto.Metadata.Builder, com.cosmos.bank.v1beta1.BankProto.MetadataOrBuilder> metadataBuilder_;
+      /**
+       * <pre>
+       * metadata of the native Cosmos coin
+       * </pre>
+       *
+       * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
+       * @return Whether the metadata field is set.
+       */
+      public boolean hasMetadata() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * metadata of the native Cosmos coin
+       * </pre>
+       *
+       * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
+       * @return The metadata.
+       */
+      public com.cosmos.bank.v1beta1.BankProto.Metadata getMetadata() {
+        if (metadataBuilder_ == null) {
+          return metadata_ == null ? com.cosmos.bank.v1beta1.BankProto.Metadata.getDefaultInstance() : metadata_;
+        } else {
+          return metadataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * metadata of the native Cosmos coin
+       * </pre>
+       *
+       * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMetadata(com.cosmos.bank.v1beta1.BankProto.Metadata value) {
+        if (metadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metadata_ = value;
+        } else {
+          metadataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * metadata of the native Cosmos coin
+       * </pre>
+       *
+       * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMetadata(
+          com.cosmos.bank.v1beta1.BankProto.Metadata.Builder builderForValue) {
+        if (metadataBuilder_ == null) {
+          metadata_ = builderForValue.build();
+        } else {
+          metadataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * metadata of the native Cosmos coin
+       * </pre>
+       *
+       * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeMetadata(com.cosmos.bank.v1beta1.BankProto.Metadata value) {
+        if (metadataBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            metadata_ != null &&
+            metadata_ != com.cosmos.bank.v1beta1.BankProto.Metadata.getDefaultInstance()) {
+            getMetadataBuilder().mergeFrom(value);
+          } else {
+            metadata_ = value;
+          }
+        } else {
+          metadataBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * metadata of the native Cosmos coin
+       * </pre>
+       *
+       * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMetadata() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        metadata_ = null;
+        if (metadataBuilder_ != null) {
+          metadataBuilder_.dispose();
+          metadataBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * metadata of the native Cosmos coin
+       * </pre>
+       *
+       * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.bank.v1beta1.BankProto.Metadata.Builder getMetadataBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getMetadataFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * metadata of the native Cosmos coin
+       * </pre>
+       *
+       * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.bank.v1beta1.BankProto.MetadataOrBuilder getMetadataOrBuilder() {
+        if (metadataBuilder_ != null) {
+          return metadataBuilder_.getMessageOrBuilder();
+        } else {
+          return metadata_ == null ?
+              com.cosmos.bank.v1beta1.BankProto.Metadata.getDefaultInstance() : metadata_;
+        }
+      }
+      /**
+       * <pre>
+       * metadata of the native Cosmos coin
+       * </pre>
+       *
+       * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.bank.v1beta1.BankProto.Metadata, com.cosmos.bank.v1beta1.BankProto.Metadata.Builder, com.cosmos.bank.v1beta1.BankProto.MetadataOrBuilder> 
+          getMetadataFieldBuilder() {
+        if (metadataBuilder_ == null) {
+          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.bank.v1beta1.BankProto.Metadata, com.cosmos.bank.v1beta1.BankProto.Metadata.Builder, com.cosmos.bank.v1beta1.BankProto.MetadataOrBuilder>(
+                  getMetadata(),
+                  getParentForChildren(),
+                  isClean());
+          metadata_ = null;
+        }
+        return metadataBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.erc20.v1.RegisterCoinProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.erc20.v1.RegisterCoinProposal)
+    private static final com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal();
+    }
+
+    public static com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RegisterCoinProposal>
+        PARSER = new com.google.protobuf.AbstractParser<RegisterCoinProposal>() {
+      @java.lang.Override
+      public RegisterCoinProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RegisterCoinProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RegisterCoinProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.erc20.v1.Erc20Proto.RegisterCoinProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RegisterERC20ProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.erc20.v1.RegisterERC20Proposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * title of the proposa  string title = 1;
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <pre>
+     * title of the proposa  string title = 1;
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <pre>
+     * proposal description
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * proposal description
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * contract address of ERC20 token
+     * </pre>
+     *
+     * <code>string erc20address = 3 [json_name = "erc20address"];</code>
+     * @return The erc20address.
+     */
+    java.lang.String getErc20Address();
+    /**
+     * <pre>
+     * contract address of ERC20 token
+     * </pre>
+     *
+     * <code>string erc20address = 3 [json_name = "erc20address"];</code>
+     * @return The bytes for erc20address.
+     */
+    com.google.protobuf.ByteString
+        getErc20AddressBytes();
+  }
+  /**
+   * <pre>
+   * RegisterERC20Proposal is a gov Content type to register a token pair for an
+   * ERC20 token
+   * </pre>
+   *
+   * Protobuf type {@code canto.erc20.v1.RegisterERC20Proposal}
+   */
+  public static final class RegisterERC20Proposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.erc20.v1.RegisterERC20Proposal)
+      RegisterERC20ProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RegisterERC20Proposal.newBuilder() to construct.
+    private RegisterERC20Proposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RegisterERC20Proposal() {
+      title_ = "";
+      description_ = "";
+      erc20Address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RegisterERC20Proposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.erc20.v1.Erc20Proto.internal_static_canto_erc20_v1_RegisterERC20Proposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.erc20.v1.Erc20Proto.internal_static_canto_erc20_v1_RegisterERC20Proposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal.class, com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <pre>
+     * title of the proposa  string title = 1;
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * title of the proposa  string title = 1;
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <pre>
+     * proposal description
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * proposal description
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ERC20ADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object erc20Address_ = "";
+    /**
+     * <pre>
+     * contract address of ERC20 token
+     * </pre>
+     *
+     * <code>string erc20address = 3 [json_name = "erc20address"];</code>
+     * @return The erc20address.
+     */
+    @java.lang.Override
+    public java.lang.String getErc20Address() {
+      java.lang.Object ref = erc20Address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        erc20Address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * contract address of ERC20 token
+     * </pre>
+     *
+     * <code>string erc20address = 3 [json_name = "erc20address"];</code>
+     * @return The bytes for erc20address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getErc20AddressBytes() {
+      java.lang.Object ref = erc20Address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        erc20Address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(erc20Address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, erc20Address_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(erc20Address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, erc20Address_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal)) {
+        return super.equals(obj);
+      }
+      com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal other = (com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getErc20Address()
+          .equals(other.getErc20Address())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + ERC20ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getErc20Address().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * RegisterERC20Proposal is a gov Content type to register a token pair for an
+     * ERC20 token
+     * </pre>
+     *
+     * Protobuf type {@code canto.erc20.v1.RegisterERC20Proposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.erc20.v1.RegisterERC20Proposal)
+        com.canto.erc20.v1.Erc20Proto.RegisterERC20ProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.erc20.v1.Erc20Proto.internal_static_canto_erc20_v1_RegisterERC20Proposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.erc20.v1.Erc20Proto.internal_static_canto_erc20_v1_RegisterERC20Proposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal.class, com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal.Builder.class);
+      }
+
+      // Construct using com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        erc20Address_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.erc20.v1.Erc20Proto.internal_static_canto_erc20_v1_RegisterERC20Proposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal getDefaultInstanceForType() {
+        return com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal build() {
+        com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal buildPartial() {
+        com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal result = new com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.erc20Address_ = erc20Address_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal) {
+          return mergeFrom((com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal other) {
+        if (other == com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getErc20Address().isEmpty()) {
+          erc20Address_ = other.erc20Address_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                erc20Address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <pre>
+       * title of the proposa  string title = 1;
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * title of the proposa  string title = 1;
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * title of the proposa  string title = 1;
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * title of the proposa  string title = 1;
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * title of the proposa  string title = 1;
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * proposal description
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * proposal description
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * proposal description
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * proposal description
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * proposal description
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object erc20Address_ = "";
+      /**
+       * <pre>
+       * contract address of ERC20 token
+       * </pre>
+       *
+       * <code>string erc20address = 3 [json_name = "erc20address"];</code>
+       * @return The erc20address.
+       */
+      public java.lang.String getErc20Address() {
+        java.lang.Object ref = erc20Address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          erc20Address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract address of ERC20 token
+       * </pre>
+       *
+       * <code>string erc20address = 3 [json_name = "erc20address"];</code>
+       * @return The bytes for erc20address.
+       */
+      public com.google.protobuf.ByteString
+          getErc20AddressBytes() {
+        java.lang.Object ref = erc20Address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          erc20Address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract address of ERC20 token
+       * </pre>
+       *
+       * <code>string erc20address = 3 [json_name = "erc20address"];</code>
+       * @param value The erc20address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErc20Address(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        erc20Address_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract address of ERC20 token
+       * </pre>
+       *
+       * <code>string erc20address = 3 [json_name = "erc20address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearErc20Address() {
+        erc20Address_ = getDefaultInstance().getErc20Address();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract address of ERC20 token
+       * </pre>
+       *
+       * <code>string erc20address = 3 [json_name = "erc20address"];</code>
+       * @param value The bytes for erc20address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErc20AddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        erc20Address_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.erc20.v1.RegisterERC20Proposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.erc20.v1.RegisterERC20Proposal)
+    private static final com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal();
+    }
+
+    public static com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RegisterERC20Proposal>
+        PARSER = new com.google.protobuf.AbstractParser<RegisterERC20Proposal>() {
+      @java.lang.Override
+      public RegisterERC20Proposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RegisterERC20Proposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RegisterERC20Proposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.erc20.v1.Erc20Proto.RegisterERC20Proposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ToggleTokenConversionProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.erc20.v1.ToggleTokenConversionProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * title of the proposal
+     * </pre>
+     *
+     * <code>string Title = 1 [json_name = "Title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <pre>
+     * title of the proposal
+     * </pre>
+     *
+     * <code>string Title = 1 [json_name = "Title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <pre>
+     * proposal description
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * proposal description
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * token identifier can be either the hex contract address of the ERC20 or the
+     * Cosmos base denomination
+     * </pre>
+     *
+     * <code>string token = 3 [json_name = "token"];</code>
+     * @return The token.
+     */
+    java.lang.String getToken();
+    /**
+     * <pre>
+     * token identifier can be either the hex contract address of the ERC20 or the
+     * Cosmos base denomination
+     * </pre>
+     *
+     * <code>string token = 3 [json_name = "token"];</code>
+     * @return The bytes for token.
+     */
+    com.google.protobuf.ByteString
+        getTokenBytes();
+  }
+  /**
+   * <pre>
+   * ToggleTokenConversionProposal is a gov Content type to toggle the conversion
+   * of a token pair.
+   * </pre>
+   *
+   * Protobuf type {@code canto.erc20.v1.ToggleTokenConversionProposal}
+   */
+  public static final class ToggleTokenConversionProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.erc20.v1.ToggleTokenConversionProposal)
+      ToggleTokenConversionProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ToggleTokenConversionProposal.newBuilder() to construct.
+    private ToggleTokenConversionProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ToggleTokenConversionProposal() {
+      title_ = "";
+      description_ = "";
+      token_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ToggleTokenConversionProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.erc20.v1.Erc20Proto.internal_static_canto_erc20_v1_ToggleTokenConversionProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.erc20.v1.Erc20Proto.internal_static_canto_erc20_v1_ToggleTokenConversionProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal.class, com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <pre>
+     * title of the proposal
+     * </pre>
+     *
+     * <code>string Title = 1 [json_name = "Title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * title of the proposal
+     * </pre>
+     *
+     * <code>string Title = 1 [json_name = "Title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <pre>
+     * proposal description
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * proposal description
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOKEN_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object token_ = "";
+    /**
+     * <pre>
+     * token identifier can be either the hex contract address of the ERC20 or the
+     * Cosmos base denomination
+     * </pre>
+     *
+     * <code>string token = 3 [json_name = "token"];</code>
+     * @return The token.
+     */
+    @java.lang.Override
+    public java.lang.String getToken() {
+      java.lang.Object ref = token_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        token_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * token identifier can be either the hex contract address of the ERC20 or the
+     * Cosmos base denomination
+     * </pre>
+     *
+     * <code>string token = 3 [json_name = "token"];</code>
+     * @return The bytes for token.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTokenBytes() {
+      java.lang.Object ref = token_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        token_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, token_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, token_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal)) {
+        return super.equals(obj);
+      }
+      com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal other = (com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getToken()
+          .equals(other.getToken())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getToken().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ToggleTokenConversionProposal is a gov Content type to toggle the conversion
+     * of a token pair.
+     * </pre>
+     *
+     * Protobuf type {@code canto.erc20.v1.ToggleTokenConversionProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.erc20.v1.ToggleTokenConversionProposal)
+        com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.erc20.v1.Erc20Proto.internal_static_canto_erc20_v1_ToggleTokenConversionProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.erc20.v1.Erc20Proto.internal_static_canto_erc20_v1_ToggleTokenConversionProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal.class, com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal.Builder.class);
+      }
+
+      // Construct using com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        token_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.erc20.v1.Erc20Proto.internal_static_canto_erc20_v1_ToggleTokenConversionProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal getDefaultInstanceForType() {
+        return com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal build() {
+        com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal buildPartial() {
+        com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal result = new com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.token_ = token_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal) {
+          return mergeFrom((com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal other) {
+        if (other == com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getToken().isEmpty()) {
+          token_ = other.token_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                token_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <pre>
+       * title of the proposal
+       * </pre>
+       *
+       * <code>string Title = 1 [json_name = "Title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * title of the proposal
+       * </pre>
+       *
+       * <code>string Title = 1 [json_name = "Title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * title of the proposal
+       * </pre>
+       *
+       * <code>string Title = 1 [json_name = "Title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * title of the proposal
+       * </pre>
+       *
+       * <code>string Title = 1 [json_name = "Title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * title of the proposal
+       * </pre>
+       *
+       * <code>string Title = 1 [json_name = "Title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * proposal description
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * proposal description
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * proposal description
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * proposal description
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * proposal description
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object token_ = "";
+      /**
+       * <pre>
+       * token identifier can be either the hex contract address of the ERC20 or the
+       * Cosmos base denomination
+       * </pre>
+       *
+       * <code>string token = 3 [json_name = "token"];</code>
+       * @return The token.
+       */
+      public java.lang.String getToken() {
+        java.lang.Object ref = token_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          token_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * token identifier can be either the hex contract address of the ERC20 or the
+       * Cosmos base denomination
+       * </pre>
+       *
+       * <code>string token = 3 [json_name = "token"];</code>
+       * @return The bytes for token.
+       */
+      public com.google.protobuf.ByteString
+          getTokenBytes() {
+        java.lang.Object ref = token_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          token_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * token identifier can be either the hex contract address of the ERC20 or the
+       * Cosmos base denomination
+       * </pre>
+       *
+       * <code>string token = 3 [json_name = "token"];</code>
+       * @param value The token to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToken(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        token_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token identifier can be either the hex contract address of the ERC20 or the
+       * Cosmos base denomination
+       * </pre>
+       *
+       * <code>string token = 3 [json_name = "token"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearToken() {
+        token_ = getDefaultInstance().getToken();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token identifier can be either the hex contract address of the ERC20 or the
+       * Cosmos base denomination
+       * </pre>
+       *
+       * <code>string token = 3 [json_name = "token"];</code>
+       * @param value The bytes for token to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        token_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.erc20.v1.ToggleTokenConversionProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.erc20.v1.ToggleTokenConversionProposal)
+    private static final com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal();
+    }
+
+    public static com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ToggleTokenConversionProposal>
+        PARSER = new com.google.protobuf.AbstractParser<ToggleTokenConversionProposal>() {
+      @java.lang.Override
+      public ToggleTokenConversionProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ToggleTokenConversionProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ToggleTokenConversionProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.erc20.v1.Erc20Proto.ToggleTokenConversionProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_erc20_v1_TokenPair_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_erc20_v1_TokenPair_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_erc20_v1_RegisterCoinProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_erc20_v1_RegisterCoinProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_erc20_v1_RegisterERC20Proposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_erc20_v1_RegisterERC20Proposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_erc20_v1_ToggleTokenConversionProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_erc20_v1_ToggleTokenConversionProposal_fieldAccessorTable;
 
@@ -61,11 +4201,11 @@ public final class Erc20Proto {
       "escription\030\002 \001(\tR\013description\022\024\n\005token\030\003" +
       " \001(\tR\005token:\004\350\240\037\001*J\n\005Owner\022\025\n\021OWNER_UNSP" +
       "ECIFIED\020\000\022\020\n\014OWNER_MODULE\020\001\022\022\n\016OWNER_EXT" +
-      "ERNAL\020\002\032\004\210\243\036\000B\253\001\n\022com.canto.erc20.v1B\nEr" +
-      "c20ProtoP\001Z/github.com/Canto-Network/Can" +
-      "to/v6/x/erc20/types\242\002\003CEX\252\002\016Canto.Erc20." +
-      "V1\312\002\016Canto\\Erc20\\V1\342\002\032Canto\\Erc20\\V1\\GPB" +
-      "Metadata\352\002\020Canto::Erc20::V1b\006proto3"
+      "ERNAL\020\002\032\004\210\243\036\000B\251\001\n\022com.canto.erc20.v1B\nEr" +
+      "c20ProtoZ/github.com/Canto-Network/Canto" +
+      "/v6/x/erc20/types\242\002\003CEX\252\002\016Canto.Erc20.V1" +
+      "\312\002\016Canto\\Erc20\\V1\342\002\032Canto\\Erc20\\V1\\GPBMe" +
+      "tadata\352\002\020Canto::Erc20::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,154 +14,20989 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.QueryParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * PARAMS
+   * </pre>
+   *
+   * Protobuf type {@code comdex.rewards.v1beta1.QueryParamsRequest}
+   */
+  public static final class QueryParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.QueryParamsRequest)
+      QueryParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsRequest.newBuilder() to construct.
+    private QueryParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest.class, com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest other = (com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * PARAMS
+     * </pre>
+     *
+     * Protobuf type {@code comdex.rewards.v1beta1.QueryParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.QueryParamsRequest)
+        com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest.class, com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest build() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest buildPartial() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest result = new com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest) {
+          return mergeFrom((com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest other) {
+        if (other == com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.QueryParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.QueryParamsRequest)
+    private static final com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest();
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsRequest>() {
+      @java.lang.Override
+      public QueryParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.comdex.rewards.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.comdex.rewards.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.comdex.rewards.v1beta1.ParamsProto.Params getParams();
+    /**
+     * <code>.comdex.rewards.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.comdex.rewards.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.rewards.v1beta1.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse.class, com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.comdex.rewards.v1beta1.ParamsProto.Params params_;
+    /**
+     * <code>.comdex.rewards.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.comdex.rewards.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.ParamsProto.Params getParams() {
+      return params_ == null ? com.comdex.rewards.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.comdex.rewards.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.comdex.rewards.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse other = (com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.rewards.v1beta1.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.QueryParamsResponse)
+        com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse.class, com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse build() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse buildPartial() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse result = new com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse) {
+          return mergeFrom((com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse other) {
+        if (other == com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.comdex.rewards.v1beta1.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.rewards.v1beta1.ParamsProto.Params, com.comdex.rewards.v1beta1.ParamsProto.Params.Builder, com.comdex.rewards.v1beta1.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.comdex.rewards.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.comdex.rewards.v1beta1.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.comdex.rewards.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.comdex.rewards.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.comdex.rewards.v1beta1.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.comdex.rewards.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.comdex.rewards.v1beta1.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.rewards.v1beta1.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.rewards.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.comdex.rewards.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.rewards.v1beta1.ParamsProto.Params, com.comdex.rewards.v1beta1.ParamsProto.Params.Builder, com.comdex.rewards.v1beta1.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.comdex.rewards.v1beta1.ParamsProto.Params, com.comdex.rewards.v1beta1.ParamsProto.Params.Builder, com.comdex.rewards.v1beta1.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.QueryParamsResponse)
+    private static final com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse();
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAllEpochsInfoRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.QueryAllEpochsInfoRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * ALL EPOCHES
+   * </pre>
+   *
+   * Protobuf type {@code comdex.rewards.v1beta1.QueryAllEpochsInfoRequest}
+   */
+  public static final class QueryAllEpochsInfoRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.QueryAllEpochsInfoRequest)
+      QueryAllEpochsInfoRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAllEpochsInfoRequest.newBuilder() to construct.
+    private QueryAllEpochsInfoRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAllEpochsInfoRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAllEpochsInfoRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryAllEpochsInfoRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryAllEpochsInfoRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest.class, com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 1;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(1, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest other = (com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ALL EPOCHES
+     * </pre>
+     *
+     * Protobuf type {@code comdex.rewards.v1beta1.QueryAllEpochsInfoRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.QueryAllEpochsInfoRequest)
+        com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryAllEpochsInfoRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryAllEpochsInfoRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest.class, com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryAllEpochsInfoRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest build() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest buildPartial() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest result = new com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest) {
+          return mergeFrom((com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest other) {
+        if (other == com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.QueryAllEpochsInfoRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.QueryAllEpochsInfoRequest)
+    private static final com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest();
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAllEpochsInfoRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAllEpochsInfoRequest>() {
+      @java.lang.Override
+      public QueryAllEpochsInfoRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAllEpochsInfoRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAllEpochsInfoRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAllEpochsInfoResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.QueryAllEpochsInfoResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochs&#92;""];</code>
+     */
+    java.util.List<com.comdex.rewards.v1beta1.EpochsProto.EpochInfo> 
+        getEpochsList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochs&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.EpochsProto.EpochInfo getEpochs(int index);
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochs&#92;""];</code>
+     */
+    int getEpochsCount();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochs&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.rewards.v1beta1.EpochsProto.EpochInfoOrBuilder> 
+        getEpochsOrBuilderList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochs&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.EpochsProto.EpochInfoOrBuilder getEpochsOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.rewards.v1beta1.QueryAllEpochsInfoResponse}
+   */
+  public static final class QueryAllEpochsInfoResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.QueryAllEpochsInfoResponse)
+      QueryAllEpochsInfoResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAllEpochsInfoResponse.newBuilder() to construct.
+    private QueryAllEpochsInfoResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAllEpochsInfoResponse() {
+      epochs_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAllEpochsInfoResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryAllEpochsInfoResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryAllEpochsInfoResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse.class, com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse.Builder.class);
+    }
+
+    public static final int EPOCHS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.rewards.v1beta1.EpochsProto.EpochInfo> epochs_;
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochs&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.rewards.v1beta1.EpochsProto.EpochInfo> getEpochsList() {
+      return epochs_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochs&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.rewards.v1beta1.EpochsProto.EpochInfoOrBuilder> 
+        getEpochsOrBuilderList() {
+      return epochs_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochs&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getEpochsCount() {
+      return epochs_.size();
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochs&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.EpochsProto.EpochInfo getEpochs(int index) {
+      return epochs_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochs&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.EpochsProto.EpochInfoOrBuilder getEpochsOrBuilder(
+        int index) {
+      return epochs_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < epochs_.size(); i++) {
+        output.writeMessage(1, epochs_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < epochs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, epochs_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse other = (com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse) obj;
+
+      if (!getEpochsList()
+          .equals(other.getEpochsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getEpochsCount() > 0) {
+        hash = (37 * hash) + EPOCHS_FIELD_NUMBER;
+        hash = (53 * hash) + getEpochsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.rewards.v1beta1.QueryAllEpochsInfoResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.QueryAllEpochsInfoResponse)
+        com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryAllEpochsInfoResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryAllEpochsInfoResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse.class, com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (epochsBuilder_ == null) {
+          epochs_ = java.util.Collections.emptyList();
+        } else {
+          epochs_ = null;
+          epochsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryAllEpochsInfoResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse build() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse buildPartial() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse result = new com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse result) {
+        if (epochsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            epochs_ = java.util.Collections.unmodifiableList(epochs_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.epochs_ = epochs_;
+        } else {
+          result.epochs_ = epochsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse) {
+          return mergeFrom((com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse other) {
+        if (other == com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse.getDefaultInstance()) return this;
+        if (epochsBuilder_ == null) {
+          if (!other.epochs_.isEmpty()) {
+            if (epochs_.isEmpty()) {
+              epochs_ = other.epochs_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureEpochsIsMutable();
+              epochs_.addAll(other.epochs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.epochs_.isEmpty()) {
+            if (epochsBuilder_.isEmpty()) {
+              epochsBuilder_.dispose();
+              epochsBuilder_ = null;
+              epochs_ = other.epochs_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              epochsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEpochsFieldBuilder() : null;
+            } else {
+              epochsBuilder_.addAllMessages(other.epochs_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.comdex.rewards.v1beta1.EpochsProto.EpochInfo m =
+                    input.readMessage(
+                        com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.parser(),
+                        extensionRegistry);
+                if (epochsBuilder_ == null) {
+                  ensureEpochsIsMutable();
+                  epochs_.add(m);
+                } else {
+                  epochsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.comdex.rewards.v1beta1.EpochsProto.EpochInfo> epochs_ =
+        java.util.Collections.emptyList();
+      private void ensureEpochsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          epochs_ = new java.util.ArrayList<com.comdex.rewards.v1beta1.EpochsProto.EpochInfo>(epochs_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.EpochsProto.EpochInfo, com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.Builder, com.comdex.rewards.v1beta1.EpochsProto.EpochInfoOrBuilder> epochsBuilder_;
+
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochs&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.EpochsProto.EpochInfo> getEpochsList() {
+        if (epochsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(epochs_);
+        } else {
+          return epochsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochs&#92;""];</code>
+       */
+      public int getEpochsCount() {
+        if (epochsBuilder_ == null) {
+          return epochs_.size();
+        } else {
+          return epochsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochs&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.EpochsProto.EpochInfo getEpochs(int index) {
+        if (epochsBuilder_ == null) {
+          return epochs_.get(index);
+        } else {
+          return epochsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochs&#92;""];</code>
+       */
+      public Builder setEpochs(
+          int index, com.comdex.rewards.v1beta1.EpochsProto.EpochInfo value) {
+        if (epochsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEpochsIsMutable();
+          epochs_.set(index, value);
+          onChanged();
+        } else {
+          epochsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochs&#92;""];</code>
+       */
+      public Builder setEpochs(
+          int index, com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.Builder builderForValue) {
+        if (epochsBuilder_ == null) {
+          ensureEpochsIsMutable();
+          epochs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          epochsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochs&#92;""];</code>
+       */
+      public Builder addEpochs(com.comdex.rewards.v1beta1.EpochsProto.EpochInfo value) {
+        if (epochsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEpochsIsMutable();
+          epochs_.add(value);
+          onChanged();
+        } else {
+          epochsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochs&#92;""];</code>
+       */
+      public Builder addEpochs(
+          int index, com.comdex.rewards.v1beta1.EpochsProto.EpochInfo value) {
+        if (epochsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEpochsIsMutable();
+          epochs_.add(index, value);
+          onChanged();
+        } else {
+          epochsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochs&#92;""];</code>
+       */
+      public Builder addEpochs(
+          com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.Builder builderForValue) {
+        if (epochsBuilder_ == null) {
+          ensureEpochsIsMutable();
+          epochs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          epochsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochs&#92;""];</code>
+       */
+      public Builder addEpochs(
+          int index, com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.Builder builderForValue) {
+        if (epochsBuilder_ == null) {
+          ensureEpochsIsMutable();
+          epochs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          epochsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochs&#92;""];</code>
+       */
+      public Builder addAllEpochs(
+          java.lang.Iterable<? extends com.comdex.rewards.v1beta1.EpochsProto.EpochInfo> values) {
+        if (epochsBuilder_ == null) {
+          ensureEpochsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, epochs_);
+          onChanged();
+        } else {
+          epochsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochs&#92;""];</code>
+       */
+      public Builder clearEpochs() {
+        if (epochsBuilder_ == null) {
+          epochs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          epochsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochs&#92;""];</code>
+       */
+      public Builder removeEpochs(int index) {
+        if (epochsBuilder_ == null) {
+          ensureEpochsIsMutable();
+          epochs_.remove(index);
+          onChanged();
+        } else {
+          epochsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochs&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.Builder getEpochsBuilder(
+          int index) {
+        return getEpochsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochs&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.EpochsProto.EpochInfoOrBuilder getEpochsOrBuilder(
+          int index) {
+        if (epochsBuilder_ == null) {
+          return epochs_.get(index);  } else {
+          return epochsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochs&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.rewards.v1beta1.EpochsProto.EpochInfoOrBuilder> 
+           getEpochsOrBuilderList() {
+        if (epochsBuilder_ != null) {
+          return epochsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(epochs_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochs&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.Builder addEpochsBuilder() {
+        return getEpochsFieldBuilder().addBuilder(
+            com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochs&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.Builder addEpochsBuilder(
+          int index) {
+        return getEpochsFieldBuilder().addBuilder(
+            index, com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochs&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.Builder> 
+           getEpochsBuilderList() {
+        return getEpochsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.EpochsProto.EpochInfo, com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.Builder, com.comdex.rewards.v1beta1.EpochsProto.EpochInfoOrBuilder> 
+          getEpochsFieldBuilder() {
+        if (epochsBuilder_ == null) {
+          epochsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.rewards.v1beta1.EpochsProto.EpochInfo, com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.Builder, com.comdex.rewards.v1beta1.EpochsProto.EpochInfoOrBuilder>(
+                  epochs_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          epochs_ = null;
+        }
+        return epochsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.QueryAllEpochsInfoResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.QueryAllEpochsInfoResponse)
+    private static final com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse();
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAllEpochsInfoResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAllEpochsInfoResponse>() {
+      @java.lang.Override
+      public QueryAllEpochsInfoResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAllEpochsInfoResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAllEpochsInfoResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.QueryProto.QueryAllEpochsInfoResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryEpochInfoByDurationRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.QueryEpochInfoByDurationRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 duration_seconds = 1 [json_name = "durationSeconds"];</code>
+     * @return The durationSeconds.
+     */
+    long getDurationSeconds();
+  }
+  /**
+   * <pre>
+   * EPOCH BY DURATION
+   * </pre>
+   *
+   * Protobuf type {@code comdex.rewards.v1beta1.QueryEpochInfoByDurationRequest}
+   */
+  public static final class QueryEpochInfoByDurationRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.QueryEpochInfoByDurationRequest)
+      QueryEpochInfoByDurationRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryEpochInfoByDurationRequest.newBuilder() to construct.
+    private QueryEpochInfoByDurationRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryEpochInfoByDurationRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryEpochInfoByDurationRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryEpochInfoByDurationRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryEpochInfoByDurationRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest.class, com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest.Builder.class);
+    }
+
+    public static final int DURATION_SECONDS_FIELD_NUMBER = 1;
+    private long durationSeconds_ = 0L;
+    /**
+     * <code>uint64 duration_seconds = 1 [json_name = "durationSeconds"];</code>
+     * @return The durationSeconds.
+     */
+    @java.lang.Override
+    public long getDurationSeconds() {
+      return durationSeconds_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (durationSeconds_ != 0L) {
+        output.writeUInt64(1, durationSeconds_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (durationSeconds_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, durationSeconds_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest other = (com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest) obj;
+
+      if (getDurationSeconds()
+          != other.getDurationSeconds()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DURATION_SECONDS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDurationSeconds());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EPOCH BY DURATION
+     * </pre>
+     *
+     * Protobuf type {@code comdex.rewards.v1beta1.QueryEpochInfoByDurationRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.QueryEpochInfoByDurationRequest)
+        com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryEpochInfoByDurationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryEpochInfoByDurationRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest.class, com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        durationSeconds_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryEpochInfoByDurationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest build() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest buildPartial() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest result = new com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.durationSeconds_ = durationSeconds_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest) {
+          return mergeFrom((com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest other) {
+        if (other == com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest.getDefaultInstance()) return this;
+        if (other.getDurationSeconds() != 0L) {
+          setDurationSeconds(other.getDurationSeconds());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                durationSeconds_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long durationSeconds_ ;
+      /**
+       * <code>uint64 duration_seconds = 1 [json_name = "durationSeconds"];</code>
+       * @return The durationSeconds.
+       */
+      @java.lang.Override
+      public long getDurationSeconds() {
+        return durationSeconds_;
+      }
+      /**
+       * <code>uint64 duration_seconds = 1 [json_name = "durationSeconds"];</code>
+       * @param value The durationSeconds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDurationSeconds(long value) {
+
+        durationSeconds_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 duration_seconds = 1 [json_name = "durationSeconds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDurationSeconds() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        durationSeconds_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.QueryEpochInfoByDurationRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.QueryEpochInfoByDurationRequest)
+    private static final com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest();
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryEpochInfoByDurationRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryEpochInfoByDurationRequest>() {
+      @java.lang.Override
+      public QueryEpochInfoByDurationRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryEpochInfoByDurationRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryEpochInfoByDurationRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryEpochInfoByDurationResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.QueryEpochInfoByDurationResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.comdex.rewards.v1beta1.EpochInfo epoch = 1 [json_name = "epoch", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch&#92;""];</code>
+     * @return Whether the epoch field is set.
+     */
+    boolean hasEpoch();
+    /**
+     * <code>.comdex.rewards.v1beta1.EpochInfo epoch = 1 [json_name = "epoch", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch&#92;""];</code>
+     * @return The epoch.
+     */
+    com.comdex.rewards.v1beta1.EpochsProto.EpochInfo getEpoch();
+    /**
+     * <code>.comdex.rewards.v1beta1.EpochInfo epoch = 1 [json_name = "epoch", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.EpochsProto.EpochInfoOrBuilder getEpochOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.rewards.v1beta1.QueryEpochInfoByDurationResponse}
+   */
+  public static final class QueryEpochInfoByDurationResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.QueryEpochInfoByDurationResponse)
+      QueryEpochInfoByDurationResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryEpochInfoByDurationResponse.newBuilder() to construct.
+    private QueryEpochInfoByDurationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryEpochInfoByDurationResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryEpochInfoByDurationResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryEpochInfoByDurationResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryEpochInfoByDurationResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse.class, com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse.Builder.class);
+    }
+
+    public static final int EPOCH_FIELD_NUMBER = 1;
+    private com.comdex.rewards.v1beta1.EpochsProto.EpochInfo epoch_;
+    /**
+     * <code>.comdex.rewards.v1beta1.EpochInfo epoch = 1 [json_name = "epoch", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch&#92;""];</code>
+     * @return Whether the epoch field is set.
+     */
+    @java.lang.Override
+    public boolean hasEpoch() {
+      return epoch_ != null;
+    }
+    /**
+     * <code>.comdex.rewards.v1beta1.EpochInfo epoch = 1 [json_name = "epoch", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch&#92;""];</code>
+     * @return The epoch.
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.EpochsProto.EpochInfo getEpoch() {
+      return epoch_ == null ? com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.getDefaultInstance() : epoch_;
+    }
+    /**
+     * <code>.comdex.rewards.v1beta1.EpochInfo epoch = 1 [json_name = "epoch", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.EpochsProto.EpochInfoOrBuilder getEpochOrBuilder() {
+      return epoch_ == null ? com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.getDefaultInstance() : epoch_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (epoch_ != null) {
+        output.writeMessage(1, getEpoch());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (epoch_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getEpoch());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse other = (com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse) obj;
+
+      if (hasEpoch() != other.hasEpoch()) return false;
+      if (hasEpoch()) {
+        if (!getEpoch()
+            .equals(other.getEpoch())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasEpoch()) {
+        hash = (37 * hash) + EPOCH_FIELD_NUMBER;
+        hash = (53 * hash) + getEpoch().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.rewards.v1beta1.QueryEpochInfoByDurationResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.QueryEpochInfoByDurationResponse)
+        com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryEpochInfoByDurationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryEpochInfoByDurationResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse.class, com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        epoch_ = null;
+        if (epochBuilder_ != null) {
+          epochBuilder_.dispose();
+          epochBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryEpochInfoByDurationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse build() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse buildPartial() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse result = new com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.epoch_ = epochBuilder_ == null
+              ? epoch_
+              : epochBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse) {
+          return mergeFrom((com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse other) {
+        if (other == com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse.getDefaultInstance()) return this;
+        if (other.hasEpoch()) {
+          mergeEpoch(other.getEpoch());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getEpochFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.comdex.rewards.v1beta1.EpochsProto.EpochInfo epoch_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.rewards.v1beta1.EpochsProto.EpochInfo, com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.Builder, com.comdex.rewards.v1beta1.EpochsProto.EpochInfoOrBuilder> epochBuilder_;
+      /**
+       * <code>.comdex.rewards.v1beta1.EpochInfo epoch = 1 [json_name = "epoch", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch&#92;""];</code>
+       * @return Whether the epoch field is set.
+       */
+      public boolean hasEpoch() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.EpochInfo epoch = 1 [json_name = "epoch", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch&#92;""];</code>
+       * @return The epoch.
+       */
+      public com.comdex.rewards.v1beta1.EpochsProto.EpochInfo getEpoch() {
+        if (epochBuilder_ == null) {
+          return epoch_ == null ? com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.getDefaultInstance() : epoch_;
+        } else {
+          return epochBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.EpochInfo epoch = 1 [json_name = "epoch", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch&#92;""];</code>
+       */
+      public Builder setEpoch(com.comdex.rewards.v1beta1.EpochsProto.EpochInfo value) {
+        if (epochBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          epoch_ = value;
+        } else {
+          epochBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.EpochInfo epoch = 1 [json_name = "epoch", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch&#92;""];</code>
+       */
+      public Builder setEpoch(
+          com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.Builder builderForValue) {
+        if (epochBuilder_ == null) {
+          epoch_ = builderForValue.build();
+        } else {
+          epochBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.EpochInfo epoch = 1 [json_name = "epoch", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch&#92;""];</code>
+       */
+      public Builder mergeEpoch(com.comdex.rewards.v1beta1.EpochsProto.EpochInfo value) {
+        if (epochBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            epoch_ != null &&
+            epoch_ != com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.getDefaultInstance()) {
+            getEpochBuilder().mergeFrom(value);
+          } else {
+            epoch_ = value;
+          }
+        } else {
+          epochBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.EpochInfo epoch = 1 [json_name = "epoch", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch&#92;""];</code>
+       */
+      public Builder clearEpoch() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        epoch_ = null;
+        if (epochBuilder_ != null) {
+          epochBuilder_.dispose();
+          epochBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.EpochInfo epoch = 1 [json_name = "epoch", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.Builder getEpochBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getEpochFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.EpochInfo epoch = 1 [json_name = "epoch", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.EpochsProto.EpochInfoOrBuilder getEpochOrBuilder() {
+        if (epochBuilder_ != null) {
+          return epochBuilder_.getMessageOrBuilder();
+        } else {
+          return epoch_ == null ?
+              com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.getDefaultInstance() : epoch_;
+        }
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.EpochInfo epoch = 1 [json_name = "epoch", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.rewards.v1beta1.EpochsProto.EpochInfo, com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.Builder, com.comdex.rewards.v1beta1.EpochsProto.EpochInfoOrBuilder> 
+          getEpochFieldBuilder() {
+        if (epochBuilder_ == null) {
+          epochBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.comdex.rewards.v1beta1.EpochsProto.EpochInfo, com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.Builder, com.comdex.rewards.v1beta1.EpochsProto.EpochInfoOrBuilder>(
+                  getEpoch(),
+                  getParentForChildren(),
+                  isClean());
+          epoch_ = null;
+        }
+        return epochBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.QueryEpochInfoByDurationResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.QueryEpochInfoByDurationResponse)
+    private static final com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse();
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryEpochInfoByDurationResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryEpochInfoByDurationResponse>() {
+      @java.lang.Override
+      public QueryEpochInfoByDurationResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryEpochInfoByDurationResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryEpochInfoByDurationResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.QueryProto.QueryEpochInfoByDurationResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAllGaugesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.QueryAllGaugesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * ALL GAUGES
+   * </pre>
+   *
+   * Protobuf type {@code comdex.rewards.v1beta1.QueryAllGaugesRequest}
+   */
+  public static final class QueryAllGaugesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.QueryAllGaugesRequest)
+      QueryAllGaugesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAllGaugesRequest.newBuilder() to construct.
+    private QueryAllGaugesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAllGaugesRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAllGaugesRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryAllGaugesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryAllGaugesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest.class, com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 1;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(1, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest other = (com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ALL GAUGES
+     * </pre>
+     *
+     * Protobuf type {@code comdex.rewards.v1beta1.QueryAllGaugesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.QueryAllGaugesRequest)
+        com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryAllGaugesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryAllGaugesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest.class, com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryAllGaugesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest build() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest buildPartial() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest result = new com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest) {
+          return mergeFrom((com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest other) {
+        if (other == com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.QueryAllGaugesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.QueryAllGaugesRequest)
+    private static final com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest();
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAllGaugesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAllGaugesRequest>() {
+      @java.lang.Override
+      public QueryAllGaugesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAllGaugesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAllGaugesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAllGaugesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.QueryAllGaugesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+     */
+    java.util.List<com.comdex.rewards.v1beta1.GaugeProto.Gauge> 
+        getGaugesList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.GaugeProto.Gauge getGauges(int index);
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+     */
+    int getGaugesCount();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder> 
+        getGaugesOrBuilderList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder getGaugesOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.rewards.v1beta1.QueryAllGaugesResponse}
+   */
+  public static final class QueryAllGaugesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.QueryAllGaugesResponse)
+      QueryAllGaugesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAllGaugesResponse.newBuilder() to construct.
+    private QueryAllGaugesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAllGaugesResponse() {
+      gauges_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAllGaugesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryAllGaugesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryAllGaugesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse.class, com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse.Builder.class);
+    }
+
+    public static final int GAUGES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.rewards.v1beta1.GaugeProto.Gauge> gauges_;
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.rewards.v1beta1.GaugeProto.Gauge> getGaugesList() {
+      return gauges_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder> 
+        getGaugesOrBuilderList() {
+      return gauges_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getGaugesCount() {
+      return gauges_.size();
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.GaugeProto.Gauge getGauges(int index) {
+      return gauges_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder getGaugesOrBuilder(
+        int index) {
+      return gauges_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < gauges_.size(); i++) {
+        output.writeMessage(1, gauges_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < gauges_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, gauges_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse other = (com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse) obj;
+
+      if (!getGaugesList()
+          .equals(other.getGaugesList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getGaugesCount() > 0) {
+        hash = (37 * hash) + GAUGES_FIELD_NUMBER;
+        hash = (53 * hash) + getGaugesList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.rewards.v1beta1.QueryAllGaugesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.QueryAllGaugesResponse)
+        com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryAllGaugesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryAllGaugesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse.class, com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (gaugesBuilder_ == null) {
+          gauges_ = java.util.Collections.emptyList();
+        } else {
+          gauges_ = null;
+          gaugesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryAllGaugesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse build() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse buildPartial() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse result = new com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse result) {
+        if (gaugesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            gauges_ = java.util.Collections.unmodifiableList(gauges_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.gauges_ = gauges_;
+        } else {
+          result.gauges_ = gaugesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse) {
+          return mergeFrom((com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse other) {
+        if (other == com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse.getDefaultInstance()) return this;
+        if (gaugesBuilder_ == null) {
+          if (!other.gauges_.isEmpty()) {
+            if (gauges_.isEmpty()) {
+              gauges_ = other.gauges_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureGaugesIsMutable();
+              gauges_.addAll(other.gauges_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.gauges_.isEmpty()) {
+            if (gaugesBuilder_.isEmpty()) {
+              gaugesBuilder_.dispose();
+              gaugesBuilder_ = null;
+              gauges_ = other.gauges_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              gaugesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getGaugesFieldBuilder() : null;
+            } else {
+              gaugesBuilder_.addAllMessages(other.gauges_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.comdex.rewards.v1beta1.GaugeProto.Gauge m =
+                    input.readMessage(
+                        com.comdex.rewards.v1beta1.GaugeProto.Gauge.parser(),
+                        extensionRegistry);
+                if (gaugesBuilder_ == null) {
+                  ensureGaugesIsMutable();
+                  gauges_.add(m);
+                } else {
+                  gaugesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.comdex.rewards.v1beta1.GaugeProto.Gauge> gauges_ =
+        java.util.Collections.emptyList();
+      private void ensureGaugesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          gauges_ = new java.util.ArrayList<com.comdex.rewards.v1beta1.GaugeProto.Gauge>(gauges_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.GaugeProto.Gauge, com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder, com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder> gaugesBuilder_;
+
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.GaugeProto.Gauge> getGaugesList() {
+        if (gaugesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(gauges_);
+        } else {
+          return gaugesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public int getGaugesCount() {
+        if (gaugesBuilder_ == null) {
+          return gauges_.size();
+        } else {
+          return gaugesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.GaugeProto.Gauge getGauges(int index) {
+        if (gaugesBuilder_ == null) {
+          return gauges_.get(index);
+        } else {
+          return gaugesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public Builder setGauges(
+          int index, com.comdex.rewards.v1beta1.GaugeProto.Gauge value) {
+        if (gaugesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGaugesIsMutable();
+          gauges_.set(index, value);
+          onChanged();
+        } else {
+          gaugesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public Builder setGauges(
+          int index, com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder builderForValue) {
+        if (gaugesBuilder_ == null) {
+          ensureGaugesIsMutable();
+          gauges_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          gaugesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public Builder addGauges(com.comdex.rewards.v1beta1.GaugeProto.Gauge value) {
+        if (gaugesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGaugesIsMutable();
+          gauges_.add(value);
+          onChanged();
+        } else {
+          gaugesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public Builder addGauges(
+          int index, com.comdex.rewards.v1beta1.GaugeProto.Gauge value) {
+        if (gaugesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGaugesIsMutable();
+          gauges_.add(index, value);
+          onChanged();
+        } else {
+          gaugesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public Builder addGauges(
+          com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder builderForValue) {
+        if (gaugesBuilder_ == null) {
+          ensureGaugesIsMutable();
+          gauges_.add(builderForValue.build());
+          onChanged();
+        } else {
+          gaugesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public Builder addGauges(
+          int index, com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder builderForValue) {
+        if (gaugesBuilder_ == null) {
+          ensureGaugesIsMutable();
+          gauges_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          gaugesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public Builder addAllGauges(
+          java.lang.Iterable<? extends com.comdex.rewards.v1beta1.GaugeProto.Gauge> values) {
+        if (gaugesBuilder_ == null) {
+          ensureGaugesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, gauges_);
+          onChanged();
+        } else {
+          gaugesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public Builder clearGauges() {
+        if (gaugesBuilder_ == null) {
+          gauges_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          gaugesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public Builder removeGauges(int index) {
+        if (gaugesBuilder_ == null) {
+          ensureGaugesIsMutable();
+          gauges_.remove(index);
+          onChanged();
+        } else {
+          gaugesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder getGaugesBuilder(
+          int index) {
+        return getGaugesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder getGaugesOrBuilder(
+          int index) {
+        if (gaugesBuilder_ == null) {
+          return gauges_.get(index);  } else {
+          return gaugesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder> 
+           getGaugesOrBuilderList() {
+        if (gaugesBuilder_ != null) {
+          return gaugesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(gauges_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder addGaugesBuilder() {
+        return getGaugesFieldBuilder().addBuilder(
+            com.comdex.rewards.v1beta1.GaugeProto.Gauge.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder addGaugesBuilder(
+          int index) {
+        return getGaugesFieldBuilder().addBuilder(
+            index, com.comdex.rewards.v1beta1.GaugeProto.Gauge.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder> 
+           getGaugesBuilderList() {
+        return getGaugesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.GaugeProto.Gauge, com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder, com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder> 
+          getGaugesFieldBuilder() {
+        if (gaugesBuilder_ == null) {
+          gaugesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.rewards.v1beta1.GaugeProto.Gauge, com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder, com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder>(
+                  gauges_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          gauges_ = null;
+        }
+        return gaugesBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.QueryAllGaugesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.QueryAllGaugesResponse)
+    private static final com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse();
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAllGaugesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAllGaugesResponse>() {
+      @java.lang.Override
+      public QueryAllGaugesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAllGaugesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAllGaugesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.QueryProto.QueryAllGaugesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGaugeByIdRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.QueryGaugeByIdRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 gauge_id = 1 [json_name = "gaugeId"];</code>
+     * @return The gaugeId.
+     */
+    long getGaugeId();
+  }
+  /**
+   * <pre>
+   * GAUGE BY ID
+   * </pre>
+   *
+   * Protobuf type {@code comdex.rewards.v1beta1.QueryGaugeByIdRequest}
+   */
+  public static final class QueryGaugeByIdRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.QueryGaugeByIdRequest)
+      QueryGaugeByIdRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGaugeByIdRequest.newBuilder() to construct.
+    private QueryGaugeByIdRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGaugeByIdRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGaugeByIdRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryGaugeByIdRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryGaugeByIdRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest.class, com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest.Builder.class);
+    }
+
+    public static final int GAUGE_ID_FIELD_NUMBER = 1;
+    private long gaugeId_ = 0L;
+    /**
+     * <code>uint64 gauge_id = 1 [json_name = "gaugeId"];</code>
+     * @return The gaugeId.
+     */
+    @java.lang.Override
+    public long getGaugeId() {
+      return gaugeId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (gaugeId_ != 0L) {
+        output.writeUInt64(1, gaugeId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (gaugeId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, gaugeId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest other = (com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest) obj;
+
+      if (getGaugeId()
+          != other.getGaugeId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + GAUGE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getGaugeId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GAUGE BY ID
+     * </pre>
+     *
+     * Protobuf type {@code comdex.rewards.v1beta1.QueryGaugeByIdRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.QueryGaugeByIdRequest)
+        com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryGaugeByIdRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryGaugeByIdRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest.class, com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        gaugeId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryGaugeByIdRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest build() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest buildPartial() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest result = new com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.gaugeId_ = gaugeId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest) {
+          return mergeFrom((com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest other) {
+        if (other == com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest.getDefaultInstance()) return this;
+        if (other.getGaugeId() != 0L) {
+          setGaugeId(other.getGaugeId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                gaugeId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long gaugeId_ ;
+      /**
+       * <code>uint64 gauge_id = 1 [json_name = "gaugeId"];</code>
+       * @return The gaugeId.
+       */
+      @java.lang.Override
+      public long getGaugeId() {
+        return gaugeId_;
+      }
+      /**
+       * <code>uint64 gauge_id = 1 [json_name = "gaugeId"];</code>
+       * @param value The gaugeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGaugeId(long value) {
+
+        gaugeId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 gauge_id = 1 [json_name = "gaugeId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGaugeId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        gaugeId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.QueryGaugeByIdRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.QueryGaugeByIdRequest)
+    private static final com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest();
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGaugeByIdRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGaugeByIdRequest>() {
+      @java.lang.Override
+      public QueryGaugeByIdRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGaugeByIdRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGaugeByIdRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGaugeByIdResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.QueryGaugeByIdResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.comdex.rewards.v1beta1.Gauge gauge = 1 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+     * @return Whether the gauge field is set.
+     */
+    boolean hasGauge();
+    /**
+     * <code>.comdex.rewards.v1beta1.Gauge gauge = 1 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+     * @return The gauge.
+     */
+    com.comdex.rewards.v1beta1.GaugeProto.Gauge getGauge();
+    /**
+     * <code>.comdex.rewards.v1beta1.Gauge gauge = 1 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder getGaugeOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.rewards.v1beta1.QueryGaugeByIdResponse}
+   */
+  public static final class QueryGaugeByIdResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.QueryGaugeByIdResponse)
+      QueryGaugeByIdResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGaugeByIdResponse.newBuilder() to construct.
+    private QueryGaugeByIdResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGaugeByIdResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGaugeByIdResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryGaugeByIdResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryGaugeByIdResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse.class, com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse.Builder.class);
+    }
+
+    public static final int GAUGE_FIELD_NUMBER = 1;
+    private com.comdex.rewards.v1beta1.GaugeProto.Gauge gauge_;
+    /**
+     * <code>.comdex.rewards.v1beta1.Gauge gauge = 1 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+     * @return Whether the gauge field is set.
+     */
+    @java.lang.Override
+    public boolean hasGauge() {
+      return gauge_ != null;
+    }
+    /**
+     * <code>.comdex.rewards.v1beta1.Gauge gauge = 1 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+     * @return The gauge.
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.GaugeProto.Gauge getGauge() {
+      return gauge_ == null ? com.comdex.rewards.v1beta1.GaugeProto.Gauge.getDefaultInstance() : gauge_;
+    }
+    /**
+     * <code>.comdex.rewards.v1beta1.Gauge gauge = 1 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder getGaugeOrBuilder() {
+      return gauge_ == null ? com.comdex.rewards.v1beta1.GaugeProto.Gauge.getDefaultInstance() : gauge_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (gauge_ != null) {
+        output.writeMessage(1, getGauge());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (gauge_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getGauge());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse other = (com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse) obj;
+
+      if (hasGauge() != other.hasGauge()) return false;
+      if (hasGauge()) {
+        if (!getGauge()
+            .equals(other.getGauge())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasGauge()) {
+        hash = (37 * hash) + GAUGE_FIELD_NUMBER;
+        hash = (53 * hash) + getGauge().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.rewards.v1beta1.QueryGaugeByIdResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.QueryGaugeByIdResponse)
+        com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryGaugeByIdResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryGaugeByIdResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse.class, com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        gauge_ = null;
+        if (gaugeBuilder_ != null) {
+          gaugeBuilder_.dispose();
+          gaugeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryGaugeByIdResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse build() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse buildPartial() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse result = new com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.gauge_ = gaugeBuilder_ == null
+              ? gauge_
+              : gaugeBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse) {
+          return mergeFrom((com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse other) {
+        if (other == com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse.getDefaultInstance()) return this;
+        if (other.hasGauge()) {
+          mergeGauge(other.getGauge());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getGaugeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.comdex.rewards.v1beta1.GaugeProto.Gauge gauge_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.rewards.v1beta1.GaugeProto.Gauge, com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder, com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder> gaugeBuilder_;
+      /**
+       * <code>.comdex.rewards.v1beta1.Gauge gauge = 1 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+       * @return Whether the gauge field is set.
+       */
+      public boolean hasGauge() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.Gauge gauge = 1 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+       * @return The gauge.
+       */
+      public com.comdex.rewards.v1beta1.GaugeProto.Gauge getGauge() {
+        if (gaugeBuilder_ == null) {
+          return gauge_ == null ? com.comdex.rewards.v1beta1.GaugeProto.Gauge.getDefaultInstance() : gauge_;
+        } else {
+          return gaugeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.Gauge gauge = 1 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+       */
+      public Builder setGauge(com.comdex.rewards.v1beta1.GaugeProto.Gauge value) {
+        if (gaugeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          gauge_ = value;
+        } else {
+          gaugeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.Gauge gauge = 1 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+       */
+      public Builder setGauge(
+          com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder builderForValue) {
+        if (gaugeBuilder_ == null) {
+          gauge_ = builderForValue.build();
+        } else {
+          gaugeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.Gauge gauge = 1 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+       */
+      public Builder mergeGauge(com.comdex.rewards.v1beta1.GaugeProto.Gauge value) {
+        if (gaugeBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            gauge_ != null &&
+            gauge_ != com.comdex.rewards.v1beta1.GaugeProto.Gauge.getDefaultInstance()) {
+            getGaugeBuilder().mergeFrom(value);
+          } else {
+            gauge_ = value;
+          }
+        } else {
+          gaugeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.Gauge gauge = 1 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+       */
+      public Builder clearGauge() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        gauge_ = null;
+        if (gaugeBuilder_ != null) {
+          gaugeBuilder_.dispose();
+          gaugeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.Gauge gauge = 1 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder getGaugeBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getGaugeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.Gauge gauge = 1 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder getGaugeOrBuilder() {
+        if (gaugeBuilder_ != null) {
+          return gaugeBuilder_.getMessageOrBuilder();
+        } else {
+          return gauge_ == null ?
+              com.comdex.rewards.v1beta1.GaugeProto.Gauge.getDefaultInstance() : gauge_;
+        }
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.Gauge gauge = 1 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.rewards.v1beta1.GaugeProto.Gauge, com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder, com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder> 
+          getGaugeFieldBuilder() {
+        if (gaugeBuilder_ == null) {
+          gaugeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.comdex.rewards.v1beta1.GaugeProto.Gauge, com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder, com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder>(
+                  getGauge(),
+                  getParentForChildren(),
+                  isClean());
+          gauge_ = null;
+        }
+        return gaugeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.QueryGaugeByIdResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.QueryGaugeByIdResponse)
+    private static final com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse();
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGaugeByIdResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGaugeByIdResponse>() {
+      @java.lang.Override
+      public QueryGaugeByIdResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGaugeByIdResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGaugeByIdResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByIdResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGaugesByDurationRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.QueryGaugesByDurationRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 duration_seconds = 1 [json_name = "durationSeconds"];</code>
+     * @return The durationSeconds.
+     */
+    long getDurationSeconds();
+  }
+  /**
+   * <pre>
+   * GAUGE BY TRIIGER DURATION
+   * </pre>
+   *
+   * Protobuf type {@code comdex.rewards.v1beta1.QueryGaugesByDurationRequest}
+   */
+  public static final class QueryGaugesByDurationRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.QueryGaugesByDurationRequest)
+      QueryGaugesByDurationRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGaugesByDurationRequest.newBuilder() to construct.
+    private QueryGaugesByDurationRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGaugesByDurationRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGaugesByDurationRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryGaugesByDurationRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryGaugesByDurationRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest.class, com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest.Builder.class);
+    }
+
+    public static final int DURATION_SECONDS_FIELD_NUMBER = 1;
+    private long durationSeconds_ = 0L;
+    /**
+     * <code>uint64 duration_seconds = 1 [json_name = "durationSeconds"];</code>
+     * @return The durationSeconds.
+     */
+    @java.lang.Override
+    public long getDurationSeconds() {
+      return durationSeconds_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (durationSeconds_ != 0L) {
+        output.writeUInt64(1, durationSeconds_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (durationSeconds_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, durationSeconds_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest other = (com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest) obj;
+
+      if (getDurationSeconds()
+          != other.getDurationSeconds()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DURATION_SECONDS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDurationSeconds());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GAUGE BY TRIIGER DURATION
+     * </pre>
+     *
+     * Protobuf type {@code comdex.rewards.v1beta1.QueryGaugesByDurationRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.QueryGaugesByDurationRequest)
+        com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryGaugesByDurationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryGaugesByDurationRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest.class, com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        durationSeconds_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryGaugesByDurationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest build() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest buildPartial() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest result = new com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.durationSeconds_ = durationSeconds_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest) {
+          return mergeFrom((com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest other) {
+        if (other == com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest.getDefaultInstance()) return this;
+        if (other.getDurationSeconds() != 0L) {
+          setDurationSeconds(other.getDurationSeconds());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                durationSeconds_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long durationSeconds_ ;
+      /**
+       * <code>uint64 duration_seconds = 1 [json_name = "durationSeconds"];</code>
+       * @return The durationSeconds.
+       */
+      @java.lang.Override
+      public long getDurationSeconds() {
+        return durationSeconds_;
+      }
+      /**
+       * <code>uint64 duration_seconds = 1 [json_name = "durationSeconds"];</code>
+       * @param value The durationSeconds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDurationSeconds(long value) {
+
+        durationSeconds_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 duration_seconds = 1 [json_name = "durationSeconds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDurationSeconds() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        durationSeconds_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.QueryGaugesByDurationRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.QueryGaugesByDurationRequest)
+    private static final com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest();
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGaugesByDurationRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGaugesByDurationRequest>() {
+      @java.lang.Override
+      public QueryGaugesByDurationRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGaugesByDurationRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGaugesByDurationRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.QueryProto.QueryGaugesByDurationRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGaugeByDurationResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.QueryGaugeByDurationResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+     */
+    java.util.List<com.comdex.rewards.v1beta1.GaugeProto.Gauge> 
+        getGaugesList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.GaugeProto.Gauge getGauges(int index);
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+     */
+    int getGaugesCount();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder> 
+        getGaugesOrBuilderList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder getGaugesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code comdex.rewards.v1beta1.QueryGaugeByDurationResponse}
+   */
+  public static final class QueryGaugeByDurationResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.QueryGaugeByDurationResponse)
+      QueryGaugeByDurationResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGaugeByDurationResponse.newBuilder() to construct.
+    private QueryGaugeByDurationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGaugeByDurationResponse() {
+      gauges_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGaugeByDurationResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryGaugeByDurationResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryGaugeByDurationResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse.class, com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse.Builder.class);
+    }
+
+    public static final int GAUGES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.rewards.v1beta1.GaugeProto.Gauge> gauges_;
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.rewards.v1beta1.GaugeProto.Gauge> getGaugesList() {
+      return gauges_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder> 
+        getGaugesOrBuilderList() {
+      return gauges_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getGaugesCount() {
+      return gauges_.size();
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.GaugeProto.Gauge getGauges(int index) {
+      return gauges_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder getGaugesOrBuilder(
+        int index) {
+      return gauges_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < gauges_.size(); i++) {
+        output.writeMessage(1, gauges_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < gauges_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, gauges_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse other = (com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse) obj;
+
+      if (!getGaugesList()
+          .equals(other.getGaugesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getGaugesCount() > 0) {
+        hash = (37 * hash) + GAUGES_FIELD_NUMBER;
+        hash = (53 * hash) + getGaugesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.rewards.v1beta1.QueryGaugeByDurationResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.QueryGaugeByDurationResponse)
+        com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryGaugeByDurationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryGaugeByDurationResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse.class, com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (gaugesBuilder_ == null) {
+          gauges_ = java.util.Collections.emptyList();
+        } else {
+          gauges_ = null;
+          gaugesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryGaugeByDurationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse build() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse buildPartial() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse result = new com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse result) {
+        if (gaugesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            gauges_ = java.util.Collections.unmodifiableList(gauges_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.gauges_ = gauges_;
+        } else {
+          result.gauges_ = gaugesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse) {
+          return mergeFrom((com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse other) {
+        if (other == com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse.getDefaultInstance()) return this;
+        if (gaugesBuilder_ == null) {
+          if (!other.gauges_.isEmpty()) {
+            if (gauges_.isEmpty()) {
+              gauges_ = other.gauges_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureGaugesIsMutable();
+              gauges_.addAll(other.gauges_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.gauges_.isEmpty()) {
+            if (gaugesBuilder_.isEmpty()) {
+              gaugesBuilder_.dispose();
+              gaugesBuilder_ = null;
+              gauges_ = other.gauges_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              gaugesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getGaugesFieldBuilder() : null;
+            } else {
+              gaugesBuilder_.addAllMessages(other.gauges_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.comdex.rewards.v1beta1.GaugeProto.Gauge m =
+                    input.readMessage(
+                        com.comdex.rewards.v1beta1.GaugeProto.Gauge.parser(),
+                        extensionRegistry);
+                if (gaugesBuilder_ == null) {
+                  ensureGaugesIsMutable();
+                  gauges_.add(m);
+                } else {
+                  gaugesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.comdex.rewards.v1beta1.GaugeProto.Gauge> gauges_ =
+        java.util.Collections.emptyList();
+      private void ensureGaugesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          gauges_ = new java.util.ArrayList<com.comdex.rewards.v1beta1.GaugeProto.Gauge>(gauges_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.GaugeProto.Gauge, com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder, com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder> gaugesBuilder_;
+
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.GaugeProto.Gauge> getGaugesList() {
+        if (gaugesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(gauges_);
+        } else {
+          return gaugesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public int getGaugesCount() {
+        if (gaugesBuilder_ == null) {
+          return gauges_.size();
+        } else {
+          return gaugesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.GaugeProto.Gauge getGauges(int index) {
+        if (gaugesBuilder_ == null) {
+          return gauges_.get(index);
+        } else {
+          return gaugesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public Builder setGauges(
+          int index, com.comdex.rewards.v1beta1.GaugeProto.Gauge value) {
+        if (gaugesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGaugesIsMutable();
+          gauges_.set(index, value);
+          onChanged();
+        } else {
+          gaugesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public Builder setGauges(
+          int index, com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder builderForValue) {
+        if (gaugesBuilder_ == null) {
+          ensureGaugesIsMutable();
+          gauges_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          gaugesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public Builder addGauges(com.comdex.rewards.v1beta1.GaugeProto.Gauge value) {
+        if (gaugesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGaugesIsMutable();
+          gauges_.add(value);
+          onChanged();
+        } else {
+          gaugesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public Builder addGauges(
+          int index, com.comdex.rewards.v1beta1.GaugeProto.Gauge value) {
+        if (gaugesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGaugesIsMutable();
+          gauges_.add(index, value);
+          onChanged();
+        } else {
+          gaugesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public Builder addGauges(
+          com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder builderForValue) {
+        if (gaugesBuilder_ == null) {
+          ensureGaugesIsMutable();
+          gauges_.add(builderForValue.build());
+          onChanged();
+        } else {
+          gaugesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public Builder addGauges(
+          int index, com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder builderForValue) {
+        if (gaugesBuilder_ == null) {
+          ensureGaugesIsMutable();
+          gauges_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          gaugesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public Builder addAllGauges(
+          java.lang.Iterable<? extends com.comdex.rewards.v1beta1.GaugeProto.Gauge> values) {
+        if (gaugesBuilder_ == null) {
+          ensureGaugesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, gauges_);
+          onChanged();
+        } else {
+          gaugesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public Builder clearGauges() {
+        if (gaugesBuilder_ == null) {
+          gauges_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          gaugesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public Builder removeGauges(int index) {
+        if (gaugesBuilder_ == null) {
+          ensureGaugesIsMutable();
+          gauges_.remove(index);
+          onChanged();
+        } else {
+          gaugesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder getGaugesBuilder(
+          int index) {
+        return getGaugesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder getGaugesOrBuilder(
+          int index) {
+        if (gaugesBuilder_ == null) {
+          return gauges_.get(index);  } else {
+          return gaugesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder> 
+           getGaugesOrBuilderList() {
+        if (gaugesBuilder_ != null) {
+          return gaugesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(gauges_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder addGaugesBuilder() {
+        return getGaugesFieldBuilder().addBuilder(
+            com.comdex.rewards.v1beta1.GaugeProto.Gauge.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder addGaugesBuilder(
+          int index) {
+        return getGaugesFieldBuilder().addBuilder(
+            index, com.comdex.rewards.v1beta1.GaugeProto.Gauge.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauges = 1 [json_name = "gauges", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauges&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder> 
+           getGaugesBuilderList() {
+        return getGaugesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.GaugeProto.Gauge, com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder, com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder> 
+          getGaugesFieldBuilder() {
+        if (gaugesBuilder_ == null) {
+          gaugesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.rewards.v1beta1.GaugeProto.Gauge, com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder, com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder>(
+                  gauges_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          gauges_ = null;
+        }
+        return gaugesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.QueryGaugeByDurationResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.QueryGaugeByDurationResponse)
+    private static final com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse();
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGaugeByDurationResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGaugeByDurationResponse>() {
+      @java.lang.Override
+      public QueryGaugeByDurationResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGaugeByDurationResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGaugeByDurationResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.QueryProto.QueryGaugeByDurationResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRewardsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.QueryRewardsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.rewards.v1beta1.QueryRewardsRequest}
+   */
+  public static final class QueryRewardsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.QueryRewardsRequest)
+      QueryRewardsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRewardsRequest.newBuilder() to construct.
+    private QueryRewardsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRewardsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRewardsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryRewardsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryRewardsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest.class, com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 1;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(1, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest other = (com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.rewards.v1beta1.QueryRewardsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.QueryRewardsRequest)
+        com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryRewardsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryRewardsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest.class, com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryRewardsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest build() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest buildPartial() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest result = new com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest) {
+          return mergeFrom((com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest other) {
+        if (other == com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.QueryRewardsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.QueryRewardsRequest)
+    private static final com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest();
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRewardsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRewardsRequest>() {
+      @java.lang.Override
+      public QueryRewardsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRewardsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRewardsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.QueryProto.QueryRewardsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRewardsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.QueryRewardsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.InternalRewards rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"rewards&#92;""];</code>
+     */
+    java.util.List<com.comdex.rewards.v1beta1.RewardsProto.InternalRewards> 
+        getRewardsList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.InternalRewards rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"rewards&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.RewardsProto.InternalRewards getRewards(int index);
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.InternalRewards rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"rewards&#92;""];</code>
+     */
+    int getRewardsCount();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.InternalRewards rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"rewards&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.InternalRewardsOrBuilder> 
+        getRewardsOrBuilderList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.InternalRewards rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"rewards&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.RewardsProto.InternalRewardsOrBuilder getRewardsOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.rewards.v1beta1.QueryRewardsResponse}
+   */
+  public static final class QueryRewardsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.QueryRewardsResponse)
+      QueryRewardsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRewardsResponse.newBuilder() to construct.
+    private QueryRewardsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRewardsResponse() {
+      rewards_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRewardsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryRewardsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryRewardsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse.class, com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse.Builder.class);
+    }
+
+    public static final int REWARDS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.rewards.v1beta1.RewardsProto.InternalRewards> rewards_;
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.InternalRewards rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.InternalRewards> getRewardsList() {
+      return rewards_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.InternalRewards rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.InternalRewardsOrBuilder> 
+        getRewardsOrBuilderList() {
+      return rewards_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.InternalRewards rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getRewardsCount() {
+      return rewards_.size();
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.InternalRewards rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.RewardsProto.InternalRewards getRewards(int index) {
+      return rewards_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.InternalRewards rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.RewardsProto.InternalRewardsOrBuilder getRewardsOrBuilder(
+        int index) {
+      return rewards_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < rewards_.size(); i++) {
+        output.writeMessage(1, rewards_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < rewards_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, rewards_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse other = (com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse) obj;
+
+      if (!getRewardsList()
+          .equals(other.getRewardsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getRewardsCount() > 0) {
+        hash = (37 * hash) + REWARDS_FIELD_NUMBER;
+        hash = (53 * hash) + getRewardsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.rewards.v1beta1.QueryRewardsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.QueryRewardsResponse)
+        com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryRewardsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryRewardsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse.class, com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (rewardsBuilder_ == null) {
+          rewards_ = java.util.Collections.emptyList();
+        } else {
+          rewards_ = null;
+          rewardsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryRewardsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse build() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse buildPartial() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse result = new com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse result) {
+        if (rewardsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            rewards_ = java.util.Collections.unmodifiableList(rewards_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.rewards_ = rewards_;
+        } else {
+          result.rewards_ = rewardsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse) {
+          return mergeFrom((com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse other) {
+        if (other == com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse.getDefaultInstance()) return this;
+        if (rewardsBuilder_ == null) {
+          if (!other.rewards_.isEmpty()) {
+            if (rewards_.isEmpty()) {
+              rewards_ = other.rewards_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRewardsIsMutable();
+              rewards_.addAll(other.rewards_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.rewards_.isEmpty()) {
+            if (rewardsBuilder_.isEmpty()) {
+              rewardsBuilder_.dispose();
+              rewardsBuilder_ = null;
+              rewards_ = other.rewards_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              rewardsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRewardsFieldBuilder() : null;
+            } else {
+              rewardsBuilder_.addAllMessages(other.rewards_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.comdex.rewards.v1beta1.RewardsProto.InternalRewards m =
+                    input.readMessage(
+                        com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.parser(),
+                        extensionRegistry);
+                if (rewardsBuilder_ == null) {
+                  ensureRewardsIsMutable();
+                  rewards_.add(m);
+                } else {
+                  rewardsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.comdex.rewards.v1beta1.RewardsProto.InternalRewards> rewards_ =
+        java.util.Collections.emptyList();
+      private void ensureRewardsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          rewards_ = new java.util.ArrayList<com.comdex.rewards.v1beta1.RewardsProto.InternalRewards>(rewards_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.RewardsProto.InternalRewards, com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.Builder, com.comdex.rewards.v1beta1.RewardsProto.InternalRewardsOrBuilder> rewardsBuilder_;
+
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"rewards&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.InternalRewards> getRewardsList() {
+        if (rewardsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(rewards_);
+        } else {
+          return rewardsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"rewards&#92;""];</code>
+       */
+      public int getRewardsCount() {
+        if (rewardsBuilder_ == null) {
+          return rewards_.size();
+        } else {
+          return rewardsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.InternalRewards getRewards(int index) {
+        if (rewardsBuilder_ == null) {
+          return rewards_.get(index);
+        } else {
+          return rewardsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"rewards&#92;""];</code>
+       */
+      public Builder setRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.InternalRewards value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.set(index, value);
+          onChanged();
+        } else {
+          rewardsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"rewards&#92;""];</code>
+       */
+      public Builder setRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"rewards&#92;""];</code>
+       */
+      public Builder addRewards(com.comdex.rewards.v1beta1.RewardsProto.InternalRewards value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.add(value);
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"rewards&#92;""];</code>
+       */
+      public Builder addRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.InternalRewards value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.add(index, value);
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"rewards&#92;""];</code>
+       */
+      public Builder addRewards(
+          com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.add(builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"rewards&#92;""];</code>
+       */
+      public Builder addRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"rewards&#92;""];</code>
+       */
+      public Builder addAllRewards(
+          java.lang.Iterable<? extends com.comdex.rewards.v1beta1.RewardsProto.InternalRewards> values) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, rewards_);
+          onChanged();
+        } else {
+          rewardsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"rewards&#92;""];</code>
+       */
+      public Builder clearRewards() {
+        if (rewardsBuilder_ == null) {
+          rewards_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          rewardsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"rewards&#92;""];</code>
+       */
+      public Builder removeRewards(int index) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.remove(index);
+          onChanged();
+        } else {
+          rewardsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.Builder getRewardsBuilder(
+          int index) {
+        return getRewardsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.InternalRewardsOrBuilder getRewardsOrBuilder(
+          int index) {
+        if (rewardsBuilder_ == null) {
+          return rewards_.get(index);  } else {
+          return rewardsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"rewards&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.InternalRewardsOrBuilder> 
+           getRewardsOrBuilderList() {
+        if (rewardsBuilder_ != null) {
+          return rewardsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(rewards_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.Builder addRewardsBuilder() {
+        return getRewardsFieldBuilder().addBuilder(
+            com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.Builder addRewardsBuilder(
+          int index) {
+        return getRewardsFieldBuilder().addBuilder(
+            index, com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"rewards&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.Builder> 
+           getRewardsBuilderList() {
+        return getRewardsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.RewardsProto.InternalRewards, com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.Builder, com.comdex.rewards.v1beta1.RewardsProto.InternalRewardsOrBuilder> 
+          getRewardsFieldBuilder() {
+        if (rewardsBuilder_ == null) {
+          rewardsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.rewards.v1beta1.RewardsProto.InternalRewards, com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.Builder, com.comdex.rewards.v1beta1.RewardsProto.InternalRewardsOrBuilder>(
+                  rewards_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          rewards_ = null;
+        }
+        return rewardsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.QueryRewardsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.QueryRewardsResponse)
+    private static final com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse();
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRewardsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRewardsResponse>() {
+      @java.lang.Override
+      public QueryRewardsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRewardsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRewardsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.QueryProto.QueryRewardsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRewardRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.QueryRewardRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+  }
+  /**
+   * Protobuf type {@code comdex.rewards.v1beta1.QueryRewardRequest}
+   */
+  public static final class QueryRewardRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.QueryRewardRequest)
+      QueryRewardRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRewardRequest.newBuilder() to construct.
+    private QueryRewardRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRewardRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRewardRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryRewardRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryRewardRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest.class, com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest other = (com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.rewards.v1beta1.QueryRewardRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.QueryRewardRequest)
+        com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryRewardRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryRewardRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest.class, com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryRewardRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest build() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest buildPartial() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest result = new com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest) {
+          return mergeFrom((com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest other) {
+        if (other == com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.QueryRewardRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.QueryRewardRequest)
+    private static final com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest();
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRewardRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRewardRequest>() {
+      @java.lang.Override
+      public QueryRewardRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRewardRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRewardRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.QueryProto.QueryRewardRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRewardResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.QueryRewardResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.InternalRewards reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;""];</code>
+     */
+    java.util.List<com.comdex.rewards.v1beta1.RewardsProto.InternalRewards> 
+        getRewardList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.InternalRewards reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.RewardsProto.InternalRewards getReward(int index);
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.InternalRewards reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;""];</code>
+     */
+    int getRewardCount();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.InternalRewards reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.InternalRewardsOrBuilder> 
+        getRewardOrBuilderList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.InternalRewards reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.RewardsProto.InternalRewardsOrBuilder getRewardOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code comdex.rewards.v1beta1.QueryRewardResponse}
+   */
+  public static final class QueryRewardResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.QueryRewardResponse)
+      QueryRewardResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRewardResponse.newBuilder() to construct.
+    private QueryRewardResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRewardResponse() {
+      reward_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRewardResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryRewardResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryRewardResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse.class, com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse.Builder.class);
+    }
+
+    public static final int REWARD_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.rewards.v1beta1.RewardsProto.InternalRewards> reward_;
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.InternalRewards reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.InternalRewards> getRewardList() {
+      return reward_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.InternalRewards reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.InternalRewardsOrBuilder> 
+        getRewardOrBuilderList() {
+      return reward_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.InternalRewards reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getRewardCount() {
+      return reward_.size();
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.InternalRewards reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.RewardsProto.InternalRewards getReward(int index) {
+      return reward_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.InternalRewards reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.RewardsProto.InternalRewardsOrBuilder getRewardOrBuilder(
+        int index) {
+      return reward_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < reward_.size(); i++) {
+        output.writeMessage(1, reward_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < reward_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, reward_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse other = (com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse) obj;
+
+      if (!getRewardList()
+          .equals(other.getRewardList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getRewardCount() > 0) {
+        hash = (37 * hash) + REWARD_FIELD_NUMBER;
+        hash = (53 * hash) + getRewardList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.rewards.v1beta1.QueryRewardResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.QueryRewardResponse)
+        com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryRewardResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryRewardResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse.class, com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (rewardBuilder_ == null) {
+          reward_ = java.util.Collections.emptyList();
+        } else {
+          reward_ = null;
+          rewardBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryRewardResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse build() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse buildPartial() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse result = new com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse result) {
+        if (rewardBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            reward_ = java.util.Collections.unmodifiableList(reward_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.reward_ = reward_;
+        } else {
+          result.reward_ = rewardBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse) {
+          return mergeFrom((com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse other) {
+        if (other == com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse.getDefaultInstance()) return this;
+        if (rewardBuilder_ == null) {
+          if (!other.reward_.isEmpty()) {
+            if (reward_.isEmpty()) {
+              reward_ = other.reward_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRewardIsMutable();
+              reward_.addAll(other.reward_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.reward_.isEmpty()) {
+            if (rewardBuilder_.isEmpty()) {
+              rewardBuilder_.dispose();
+              rewardBuilder_ = null;
+              reward_ = other.reward_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              rewardBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRewardFieldBuilder() : null;
+            } else {
+              rewardBuilder_.addAllMessages(other.reward_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.comdex.rewards.v1beta1.RewardsProto.InternalRewards m =
+                    input.readMessage(
+                        com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.parser(),
+                        extensionRegistry);
+                if (rewardBuilder_ == null) {
+                  ensureRewardIsMutable();
+                  reward_.add(m);
+                } else {
+                  rewardBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.comdex.rewards.v1beta1.RewardsProto.InternalRewards> reward_ =
+        java.util.Collections.emptyList();
+      private void ensureRewardIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          reward_ = new java.util.ArrayList<com.comdex.rewards.v1beta1.RewardsProto.InternalRewards>(reward_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.RewardsProto.InternalRewards, com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.Builder, com.comdex.rewards.v1beta1.RewardsProto.InternalRewardsOrBuilder> rewardBuilder_;
+
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.InternalRewards> getRewardList() {
+        if (rewardBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(reward_);
+        } else {
+          return rewardBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;""];</code>
+       */
+      public int getRewardCount() {
+        if (rewardBuilder_ == null) {
+          return reward_.size();
+        } else {
+          return rewardBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.InternalRewards getReward(int index) {
+        if (rewardBuilder_ == null) {
+          return reward_.get(index);
+        } else {
+          return rewardBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;""];</code>
+       */
+      public Builder setReward(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.InternalRewards value) {
+        if (rewardBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardIsMutable();
+          reward_.set(index, value);
+          onChanged();
+        } else {
+          rewardBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;""];</code>
+       */
+      public Builder setReward(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.Builder builderForValue) {
+        if (rewardBuilder_ == null) {
+          ensureRewardIsMutable();
+          reward_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;""];</code>
+       */
+      public Builder addReward(com.comdex.rewards.v1beta1.RewardsProto.InternalRewards value) {
+        if (rewardBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardIsMutable();
+          reward_.add(value);
+          onChanged();
+        } else {
+          rewardBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;""];</code>
+       */
+      public Builder addReward(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.InternalRewards value) {
+        if (rewardBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardIsMutable();
+          reward_.add(index, value);
+          onChanged();
+        } else {
+          rewardBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;""];</code>
+       */
+      public Builder addReward(
+          com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.Builder builderForValue) {
+        if (rewardBuilder_ == null) {
+          ensureRewardIsMutable();
+          reward_.add(builderForValue.build());
+          onChanged();
+        } else {
+          rewardBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;""];</code>
+       */
+      public Builder addReward(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.Builder builderForValue) {
+        if (rewardBuilder_ == null) {
+          ensureRewardIsMutable();
+          reward_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;""];</code>
+       */
+      public Builder addAllReward(
+          java.lang.Iterable<? extends com.comdex.rewards.v1beta1.RewardsProto.InternalRewards> values) {
+        if (rewardBuilder_ == null) {
+          ensureRewardIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, reward_);
+          onChanged();
+        } else {
+          rewardBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;""];</code>
+       */
+      public Builder clearReward() {
+        if (rewardBuilder_ == null) {
+          reward_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          rewardBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;""];</code>
+       */
+      public Builder removeReward(int index) {
+        if (rewardBuilder_ == null) {
+          ensureRewardIsMutable();
+          reward_.remove(index);
+          onChanged();
+        } else {
+          rewardBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.Builder getRewardBuilder(
+          int index) {
+        return getRewardFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.InternalRewardsOrBuilder getRewardOrBuilder(
+          int index) {
+        if (rewardBuilder_ == null) {
+          return reward_.get(index);  } else {
+          return rewardBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.InternalRewardsOrBuilder> 
+           getRewardOrBuilderList() {
+        if (rewardBuilder_ != null) {
+          return rewardBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(reward_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.Builder addRewardBuilder() {
+        return getRewardFieldBuilder().addBuilder(
+            com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.Builder addRewardBuilder(
+          int index) {
+        return getRewardFieldBuilder().addBuilder(
+            index, com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards reward = 1 [json_name = "reward", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"reward&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.Builder> 
+           getRewardBuilderList() {
+        return getRewardFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.RewardsProto.InternalRewards, com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.Builder, com.comdex.rewards.v1beta1.RewardsProto.InternalRewardsOrBuilder> 
+          getRewardFieldBuilder() {
+        if (rewardBuilder_ == null) {
+          rewardBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.rewards.v1beta1.RewardsProto.InternalRewards, com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.Builder, com.comdex.rewards.v1beta1.RewardsProto.InternalRewardsOrBuilder>(
+                  reward_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          reward_ = null;
+        }
+        return rewardBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.QueryRewardResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.QueryRewardResponse)
+    private static final com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse();
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRewardResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRewardResponse>() {
+      @java.lang.Override
+      public QueryRewardResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRewardResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRewardResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.QueryProto.QueryRewardResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryExternalRewardsLockersRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.QueryExternalRewardsLockersRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.rewards.v1beta1.QueryExternalRewardsLockersRequest}
+   */
+  public static final class QueryExternalRewardsLockersRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.QueryExternalRewardsLockersRequest)
+      QueryExternalRewardsLockersRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryExternalRewardsLockersRequest.newBuilder() to construct.
+    private QueryExternalRewardsLockersRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryExternalRewardsLockersRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryExternalRewardsLockersRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardsLockersRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardsLockersRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest.class, com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 1;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(1, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest other = (com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.rewards.v1beta1.QueryExternalRewardsLockersRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.QueryExternalRewardsLockersRequest)
+        com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardsLockersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardsLockersRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest.class, com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardsLockersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest build() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest buildPartial() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest result = new com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest) {
+          return mergeFrom((com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest other) {
+        if (other == com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.QueryExternalRewardsLockersRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.QueryExternalRewardsLockersRequest)
+    private static final com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest();
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryExternalRewardsLockersRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryExternalRewardsLockersRequest>() {
+      @java.lang.Override
+      public QueryExternalRewardsLockersRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryExternalRewardsLockersRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryExternalRewardsLockersRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryExternalRewardsLockersResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.QueryExternalRewardsLockersResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 1 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+     */
+    java.util.List<com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards> 
+        getLockerExternalRewardsList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 1 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards getLockerExternalRewards(int index);
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 1 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+     */
+    int getLockerExternalRewardsCount();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 1 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewardsOrBuilder> 
+        getLockerExternalRewardsOrBuilderList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 1 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewardsOrBuilder getLockerExternalRewardsOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.rewards.v1beta1.QueryExternalRewardsLockersResponse}
+   */
+  public static final class QueryExternalRewardsLockersResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.QueryExternalRewardsLockersResponse)
+      QueryExternalRewardsLockersResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryExternalRewardsLockersResponse.newBuilder() to construct.
+    private QueryExternalRewardsLockersResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryExternalRewardsLockersResponse() {
+      lockerExternalRewards_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryExternalRewardsLockersResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardsLockersResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardsLockersResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse.class, com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse.Builder.class);
+    }
+
+    public static final int LOCKER_EXTERNAL_REWARDS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards> lockerExternalRewards_;
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 1 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards> getLockerExternalRewardsList() {
+      return lockerExternalRewards_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 1 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewardsOrBuilder> 
+        getLockerExternalRewardsOrBuilderList() {
+      return lockerExternalRewards_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 1 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getLockerExternalRewardsCount() {
+      return lockerExternalRewards_.size();
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 1 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards getLockerExternalRewards(int index) {
+      return lockerExternalRewards_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 1 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewardsOrBuilder getLockerExternalRewardsOrBuilder(
+        int index) {
+      return lockerExternalRewards_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < lockerExternalRewards_.size(); i++) {
+        output.writeMessage(1, lockerExternalRewards_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < lockerExternalRewards_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, lockerExternalRewards_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse other = (com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse) obj;
+
+      if (!getLockerExternalRewardsList()
+          .equals(other.getLockerExternalRewardsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getLockerExternalRewardsCount() > 0) {
+        hash = (37 * hash) + LOCKER_EXTERNAL_REWARDS_FIELD_NUMBER;
+        hash = (53 * hash) + getLockerExternalRewardsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.rewards.v1beta1.QueryExternalRewardsLockersResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.QueryExternalRewardsLockersResponse)
+        com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardsLockersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardsLockersResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse.class, com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (lockerExternalRewardsBuilder_ == null) {
+          lockerExternalRewards_ = java.util.Collections.emptyList();
+        } else {
+          lockerExternalRewards_ = null;
+          lockerExternalRewardsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardsLockersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse build() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse buildPartial() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse result = new com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse result) {
+        if (lockerExternalRewardsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            lockerExternalRewards_ = java.util.Collections.unmodifiableList(lockerExternalRewards_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.lockerExternalRewards_ = lockerExternalRewards_;
+        } else {
+          result.lockerExternalRewards_ = lockerExternalRewardsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse) {
+          return mergeFrom((com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse other) {
+        if (other == com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse.getDefaultInstance()) return this;
+        if (lockerExternalRewardsBuilder_ == null) {
+          if (!other.lockerExternalRewards_.isEmpty()) {
+            if (lockerExternalRewards_.isEmpty()) {
+              lockerExternalRewards_ = other.lockerExternalRewards_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureLockerExternalRewardsIsMutable();
+              lockerExternalRewards_.addAll(other.lockerExternalRewards_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.lockerExternalRewards_.isEmpty()) {
+            if (lockerExternalRewardsBuilder_.isEmpty()) {
+              lockerExternalRewardsBuilder_.dispose();
+              lockerExternalRewardsBuilder_ = null;
+              lockerExternalRewards_ = other.lockerExternalRewards_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              lockerExternalRewardsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLockerExternalRewardsFieldBuilder() : null;
+            } else {
+              lockerExternalRewardsBuilder_.addAllMessages(other.lockerExternalRewards_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards m =
+                    input.readMessage(
+                        com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards.parser(),
+                        extensionRegistry);
+                if (lockerExternalRewardsBuilder_ == null) {
+                  ensureLockerExternalRewardsIsMutable();
+                  lockerExternalRewards_.add(m);
+                } else {
+                  lockerExternalRewardsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards> lockerExternalRewards_ =
+        java.util.Collections.emptyList();
+      private void ensureLockerExternalRewardsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          lockerExternalRewards_ = new java.util.ArrayList<com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards>(lockerExternalRewards_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards, com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards.Builder, com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewardsOrBuilder> lockerExternalRewardsBuilder_;
+
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 1 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards> getLockerExternalRewardsList() {
+        if (lockerExternalRewardsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(lockerExternalRewards_);
+        } else {
+          return lockerExternalRewardsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 1 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public int getLockerExternalRewardsCount() {
+        if (lockerExternalRewardsBuilder_ == null) {
+          return lockerExternalRewards_.size();
+        } else {
+          return lockerExternalRewardsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 1 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards getLockerExternalRewards(int index) {
+        if (lockerExternalRewardsBuilder_ == null) {
+          return lockerExternalRewards_.get(index);
+        } else {
+          return lockerExternalRewardsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 1 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public Builder setLockerExternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards value) {
+        if (lockerExternalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLockerExternalRewardsIsMutable();
+          lockerExternalRewards_.set(index, value);
+          onChanged();
+        } else {
+          lockerExternalRewardsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 1 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public Builder setLockerExternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards.Builder builderForValue) {
+        if (lockerExternalRewardsBuilder_ == null) {
+          ensureLockerExternalRewardsIsMutable();
+          lockerExternalRewards_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          lockerExternalRewardsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 1 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public Builder addLockerExternalRewards(com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards value) {
+        if (lockerExternalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLockerExternalRewardsIsMutable();
+          lockerExternalRewards_.add(value);
+          onChanged();
+        } else {
+          lockerExternalRewardsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 1 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public Builder addLockerExternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards value) {
+        if (lockerExternalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLockerExternalRewardsIsMutable();
+          lockerExternalRewards_.add(index, value);
+          onChanged();
+        } else {
+          lockerExternalRewardsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 1 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public Builder addLockerExternalRewards(
+          com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards.Builder builderForValue) {
+        if (lockerExternalRewardsBuilder_ == null) {
+          ensureLockerExternalRewardsIsMutable();
+          lockerExternalRewards_.add(builderForValue.build());
+          onChanged();
+        } else {
+          lockerExternalRewardsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 1 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public Builder addLockerExternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards.Builder builderForValue) {
+        if (lockerExternalRewardsBuilder_ == null) {
+          ensureLockerExternalRewardsIsMutable();
+          lockerExternalRewards_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          lockerExternalRewardsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 1 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public Builder addAllLockerExternalRewards(
+          java.lang.Iterable<? extends com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards> values) {
+        if (lockerExternalRewardsBuilder_ == null) {
+          ensureLockerExternalRewardsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, lockerExternalRewards_);
+          onChanged();
+        } else {
+          lockerExternalRewardsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 1 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public Builder clearLockerExternalRewards() {
+        if (lockerExternalRewardsBuilder_ == null) {
+          lockerExternalRewards_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          lockerExternalRewardsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 1 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public Builder removeLockerExternalRewards(int index) {
+        if (lockerExternalRewardsBuilder_ == null) {
+          ensureLockerExternalRewardsIsMutable();
+          lockerExternalRewards_.remove(index);
+          onChanged();
+        } else {
+          lockerExternalRewardsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 1 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards.Builder getLockerExternalRewardsBuilder(
+          int index) {
+        return getLockerExternalRewardsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 1 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewardsOrBuilder getLockerExternalRewardsOrBuilder(
+          int index) {
+        if (lockerExternalRewardsBuilder_ == null) {
+          return lockerExternalRewards_.get(index);  } else {
+          return lockerExternalRewardsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 1 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewardsOrBuilder> 
+           getLockerExternalRewardsOrBuilderList() {
+        if (lockerExternalRewardsBuilder_ != null) {
+          return lockerExternalRewardsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(lockerExternalRewards_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 1 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards.Builder addLockerExternalRewardsBuilder() {
+        return getLockerExternalRewardsFieldBuilder().addBuilder(
+            com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 1 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards.Builder addLockerExternalRewardsBuilder(
+          int index) {
+        return getLockerExternalRewardsFieldBuilder().addBuilder(
+            index, com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 1 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards.Builder> 
+           getLockerExternalRewardsBuilderList() {
+        return getLockerExternalRewardsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards, com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards.Builder, com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewardsOrBuilder> 
+          getLockerExternalRewardsFieldBuilder() {
+        if (lockerExternalRewardsBuilder_ == null) {
+          lockerExternalRewardsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards, com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards.Builder, com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewardsOrBuilder>(
+                  lockerExternalRewards_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          lockerExternalRewards_ = null;
+        }
+        return lockerExternalRewardsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.QueryExternalRewardsLockersResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.QueryExternalRewardsLockersResponse)
+    private static final com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse();
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryExternalRewardsLockersResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryExternalRewardsLockersResponse>() {
+      @java.lang.Override
+      public QueryExternalRewardsLockersResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryExternalRewardsLockersResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryExternalRewardsLockersResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardsLockersResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryExternalRewardVaultsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.QueryExternalRewardVaultsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.rewards.v1beta1.QueryExternalRewardVaultsRequest}
+   */
+  public static final class QueryExternalRewardVaultsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.QueryExternalRewardVaultsRequest)
+      QueryExternalRewardVaultsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryExternalRewardVaultsRequest.newBuilder() to construct.
+    private QueryExternalRewardVaultsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryExternalRewardVaultsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryExternalRewardVaultsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardVaultsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardVaultsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest.class, com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 1;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(1, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest other = (com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.rewards.v1beta1.QueryExternalRewardVaultsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.QueryExternalRewardVaultsRequest)
+        com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardVaultsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardVaultsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest.class, com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardVaultsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest build() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest buildPartial() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest result = new com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest) {
+          return mergeFrom((com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest other) {
+        if (other == com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.QueryExternalRewardVaultsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.QueryExternalRewardVaultsRequest)
+    private static final com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest();
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryExternalRewardVaultsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryExternalRewardVaultsRequest>() {
+      @java.lang.Override
+      public QueryExternalRewardVaultsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryExternalRewardVaultsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryExternalRewardVaultsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryExternalRewardVaultsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.QueryExternalRewardVaultsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 1 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+     */
+    java.util.List<com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards> 
+        getVaultExternalRewardsList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 1 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards getVaultExternalRewards(int index);
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 1 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+     */
+    int getVaultExternalRewardsCount();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 1 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewardsOrBuilder> 
+        getVaultExternalRewardsOrBuilderList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 1 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewardsOrBuilder getVaultExternalRewardsOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.rewards.v1beta1.QueryExternalRewardVaultsResponse}
+   */
+  public static final class QueryExternalRewardVaultsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.QueryExternalRewardVaultsResponse)
+      QueryExternalRewardVaultsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryExternalRewardVaultsResponse.newBuilder() to construct.
+    private QueryExternalRewardVaultsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryExternalRewardVaultsResponse() {
+      vaultExternalRewards_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryExternalRewardVaultsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardVaultsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardVaultsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse.class, com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse.Builder.class);
+    }
+
+    public static final int VAULT_EXTERNAL_REWARDS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards> vaultExternalRewards_;
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 1 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards> getVaultExternalRewardsList() {
+      return vaultExternalRewards_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 1 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewardsOrBuilder> 
+        getVaultExternalRewardsOrBuilderList() {
+      return vaultExternalRewards_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 1 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getVaultExternalRewardsCount() {
+      return vaultExternalRewards_.size();
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 1 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards getVaultExternalRewards(int index) {
+      return vaultExternalRewards_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 1 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewardsOrBuilder getVaultExternalRewardsOrBuilder(
+        int index) {
+      return vaultExternalRewards_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < vaultExternalRewards_.size(); i++) {
+        output.writeMessage(1, vaultExternalRewards_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < vaultExternalRewards_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, vaultExternalRewards_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse other = (com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse) obj;
+
+      if (!getVaultExternalRewardsList()
+          .equals(other.getVaultExternalRewardsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getVaultExternalRewardsCount() > 0) {
+        hash = (37 * hash) + VAULT_EXTERNAL_REWARDS_FIELD_NUMBER;
+        hash = (53 * hash) + getVaultExternalRewardsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.rewards.v1beta1.QueryExternalRewardVaultsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.QueryExternalRewardVaultsResponse)
+        com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardVaultsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardVaultsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse.class, com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (vaultExternalRewardsBuilder_ == null) {
+          vaultExternalRewards_ = java.util.Collections.emptyList();
+        } else {
+          vaultExternalRewards_ = null;
+          vaultExternalRewardsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardVaultsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse build() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse buildPartial() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse result = new com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse result) {
+        if (vaultExternalRewardsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            vaultExternalRewards_ = java.util.Collections.unmodifiableList(vaultExternalRewards_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.vaultExternalRewards_ = vaultExternalRewards_;
+        } else {
+          result.vaultExternalRewards_ = vaultExternalRewardsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse) {
+          return mergeFrom((com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse other) {
+        if (other == com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse.getDefaultInstance()) return this;
+        if (vaultExternalRewardsBuilder_ == null) {
+          if (!other.vaultExternalRewards_.isEmpty()) {
+            if (vaultExternalRewards_.isEmpty()) {
+              vaultExternalRewards_ = other.vaultExternalRewards_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureVaultExternalRewardsIsMutable();
+              vaultExternalRewards_.addAll(other.vaultExternalRewards_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.vaultExternalRewards_.isEmpty()) {
+            if (vaultExternalRewardsBuilder_.isEmpty()) {
+              vaultExternalRewardsBuilder_.dispose();
+              vaultExternalRewardsBuilder_ = null;
+              vaultExternalRewards_ = other.vaultExternalRewards_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              vaultExternalRewardsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getVaultExternalRewardsFieldBuilder() : null;
+            } else {
+              vaultExternalRewardsBuilder_.addAllMessages(other.vaultExternalRewards_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards m =
+                    input.readMessage(
+                        com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards.parser(),
+                        extensionRegistry);
+                if (vaultExternalRewardsBuilder_ == null) {
+                  ensureVaultExternalRewardsIsMutable();
+                  vaultExternalRewards_.add(m);
+                } else {
+                  vaultExternalRewardsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards> vaultExternalRewards_ =
+        java.util.Collections.emptyList();
+      private void ensureVaultExternalRewardsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          vaultExternalRewards_ = new java.util.ArrayList<com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards>(vaultExternalRewards_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards, com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards.Builder, com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewardsOrBuilder> vaultExternalRewardsBuilder_;
+
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 1 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards> getVaultExternalRewardsList() {
+        if (vaultExternalRewardsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(vaultExternalRewards_);
+        } else {
+          return vaultExternalRewardsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 1 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public int getVaultExternalRewardsCount() {
+        if (vaultExternalRewardsBuilder_ == null) {
+          return vaultExternalRewards_.size();
+        } else {
+          return vaultExternalRewardsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 1 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards getVaultExternalRewards(int index) {
+        if (vaultExternalRewardsBuilder_ == null) {
+          return vaultExternalRewards_.get(index);
+        } else {
+          return vaultExternalRewardsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 1 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public Builder setVaultExternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards value) {
+        if (vaultExternalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVaultExternalRewardsIsMutable();
+          vaultExternalRewards_.set(index, value);
+          onChanged();
+        } else {
+          vaultExternalRewardsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 1 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public Builder setVaultExternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards.Builder builderForValue) {
+        if (vaultExternalRewardsBuilder_ == null) {
+          ensureVaultExternalRewardsIsMutable();
+          vaultExternalRewards_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          vaultExternalRewardsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 1 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public Builder addVaultExternalRewards(com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards value) {
+        if (vaultExternalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVaultExternalRewardsIsMutable();
+          vaultExternalRewards_.add(value);
+          onChanged();
+        } else {
+          vaultExternalRewardsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 1 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public Builder addVaultExternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards value) {
+        if (vaultExternalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVaultExternalRewardsIsMutable();
+          vaultExternalRewards_.add(index, value);
+          onChanged();
+        } else {
+          vaultExternalRewardsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 1 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public Builder addVaultExternalRewards(
+          com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards.Builder builderForValue) {
+        if (vaultExternalRewardsBuilder_ == null) {
+          ensureVaultExternalRewardsIsMutable();
+          vaultExternalRewards_.add(builderForValue.build());
+          onChanged();
+        } else {
+          vaultExternalRewardsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 1 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public Builder addVaultExternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards.Builder builderForValue) {
+        if (vaultExternalRewardsBuilder_ == null) {
+          ensureVaultExternalRewardsIsMutable();
+          vaultExternalRewards_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          vaultExternalRewardsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 1 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public Builder addAllVaultExternalRewards(
+          java.lang.Iterable<? extends com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards> values) {
+        if (vaultExternalRewardsBuilder_ == null) {
+          ensureVaultExternalRewardsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, vaultExternalRewards_);
+          onChanged();
+        } else {
+          vaultExternalRewardsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 1 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public Builder clearVaultExternalRewards() {
+        if (vaultExternalRewardsBuilder_ == null) {
+          vaultExternalRewards_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          vaultExternalRewardsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 1 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public Builder removeVaultExternalRewards(int index) {
+        if (vaultExternalRewardsBuilder_ == null) {
+          ensureVaultExternalRewardsIsMutable();
+          vaultExternalRewards_.remove(index);
+          onChanged();
+        } else {
+          vaultExternalRewardsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 1 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards.Builder getVaultExternalRewardsBuilder(
+          int index) {
+        return getVaultExternalRewardsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 1 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewardsOrBuilder getVaultExternalRewardsOrBuilder(
+          int index) {
+        if (vaultExternalRewardsBuilder_ == null) {
+          return vaultExternalRewards_.get(index);  } else {
+          return vaultExternalRewardsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 1 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewardsOrBuilder> 
+           getVaultExternalRewardsOrBuilderList() {
+        if (vaultExternalRewardsBuilder_ != null) {
+          return vaultExternalRewardsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(vaultExternalRewards_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 1 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards.Builder addVaultExternalRewardsBuilder() {
+        return getVaultExternalRewardsFieldBuilder().addBuilder(
+            com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 1 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards.Builder addVaultExternalRewardsBuilder(
+          int index) {
+        return getVaultExternalRewardsFieldBuilder().addBuilder(
+            index, com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 1 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards.Builder> 
+           getVaultExternalRewardsBuilderList() {
+        return getVaultExternalRewardsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards, com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards.Builder, com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewardsOrBuilder> 
+          getVaultExternalRewardsFieldBuilder() {
+        if (vaultExternalRewardsBuilder_ == null) {
+          vaultExternalRewardsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards, com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards.Builder, com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewardsOrBuilder>(
+                  vaultExternalRewards_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          vaultExternalRewards_ = null;
+        }
+        return vaultExternalRewardsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.QueryExternalRewardVaultsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.QueryExternalRewardVaultsResponse)
+    private static final com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse();
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryExternalRewardVaultsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryExternalRewardVaultsResponse>() {
+      @java.lang.Override
+      public QueryExternalRewardVaultsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryExternalRewardVaultsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryExternalRewardVaultsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardVaultsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryWhitelistedAppIdsVaultRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.QueryWhitelistedAppIdsVaultRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.rewards.v1beta1.QueryWhitelistedAppIdsVaultRequest}
+   */
+  public static final class QueryWhitelistedAppIdsVaultRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.QueryWhitelistedAppIdsVaultRequest)
+      QueryWhitelistedAppIdsVaultRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryWhitelistedAppIdsVaultRequest.newBuilder() to construct.
+    private QueryWhitelistedAppIdsVaultRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryWhitelistedAppIdsVaultRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryWhitelistedAppIdsVaultRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryWhitelistedAppIdsVaultRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryWhitelistedAppIdsVaultRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest.class, com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 1;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(1, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest other = (com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.rewards.v1beta1.QueryWhitelistedAppIdsVaultRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.QueryWhitelistedAppIdsVaultRequest)
+        com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryWhitelistedAppIdsVaultRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryWhitelistedAppIdsVaultRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest.class, com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryWhitelistedAppIdsVaultRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest build() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest buildPartial() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest result = new com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest) {
+          return mergeFrom((com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest other) {
+        if (other == com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.QueryWhitelistedAppIdsVaultRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.QueryWhitelistedAppIdsVaultRequest)
+    private static final com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest();
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryWhitelistedAppIdsVaultRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryWhitelistedAppIdsVaultRequest>() {
+      @java.lang.Override
+      public QueryWhitelistedAppIdsVaultRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryWhitelistedAppIdsVaultRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryWhitelistedAppIdsVaultRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryWhitelistedAppIdsVaultResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.QueryWhitelistedAppIdsVaultResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated uint64 whitelistedAppIdsVault = 1 [json_name = "whitelistedAppIdsVault", (.gogoproto.moretags) = "yaml:&#92;"whitelistedAppIdsVault&#92;""];</code>
+     * @return A list containing the whitelistedAppIdsVault.
+     */
+    java.util.List<java.lang.Long> getWhitelistedAppIdsVaultList();
+    /**
+     * <code>repeated uint64 whitelistedAppIdsVault = 1 [json_name = "whitelistedAppIdsVault", (.gogoproto.moretags) = "yaml:&#92;"whitelistedAppIdsVault&#92;""];</code>
+     * @return The count of whitelistedAppIdsVault.
+     */
+    int getWhitelistedAppIdsVaultCount();
+    /**
+     * <code>repeated uint64 whitelistedAppIdsVault = 1 [json_name = "whitelistedAppIdsVault", (.gogoproto.moretags) = "yaml:&#92;"whitelistedAppIdsVault&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The whitelistedAppIdsVault at the given index.
+     */
+    long getWhitelistedAppIdsVault(int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.rewards.v1beta1.QueryWhitelistedAppIdsVaultResponse}
+   */
+  public static final class QueryWhitelistedAppIdsVaultResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.QueryWhitelistedAppIdsVaultResponse)
+      QueryWhitelistedAppIdsVaultResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryWhitelistedAppIdsVaultResponse.newBuilder() to construct.
+    private QueryWhitelistedAppIdsVaultResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryWhitelistedAppIdsVaultResponse() {
+      whitelistedAppIdsVault_ = emptyLongList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryWhitelistedAppIdsVaultResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryWhitelistedAppIdsVaultResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryWhitelistedAppIdsVaultResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse.class, com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse.Builder.class);
+    }
+
+    public static final int WHITELISTEDAPPIDSVAULT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.LongList whitelistedAppIdsVault_;
+    /**
+     * <code>repeated uint64 whitelistedAppIdsVault = 1 [json_name = "whitelistedAppIdsVault", (.gogoproto.moretags) = "yaml:&#92;"whitelistedAppIdsVault&#92;""];</code>
+     * @return A list containing the whitelistedAppIdsVault.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Long>
+        getWhitelistedAppIdsVaultList() {
+      return whitelistedAppIdsVault_;
+    }
+    /**
+     * <code>repeated uint64 whitelistedAppIdsVault = 1 [json_name = "whitelistedAppIdsVault", (.gogoproto.moretags) = "yaml:&#92;"whitelistedAppIdsVault&#92;""];</code>
+     * @return The count of whitelistedAppIdsVault.
+     */
+    public int getWhitelistedAppIdsVaultCount() {
+      return whitelistedAppIdsVault_.size();
+    }
+    /**
+     * <code>repeated uint64 whitelistedAppIdsVault = 1 [json_name = "whitelistedAppIdsVault", (.gogoproto.moretags) = "yaml:&#92;"whitelistedAppIdsVault&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The whitelistedAppIdsVault at the given index.
+     */
+    public long getWhitelistedAppIdsVault(int index) {
+      return whitelistedAppIdsVault_.getLong(index);
+    }
+    private int whitelistedAppIdsVaultMemoizedSerializedSize = -1;
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (getWhitelistedAppIdsVaultList().size() > 0) {
+        output.writeUInt32NoTag(10);
+        output.writeUInt32NoTag(whitelistedAppIdsVaultMemoizedSerializedSize);
+      }
+      for (int i = 0; i < whitelistedAppIdsVault_.size(); i++) {
+        output.writeUInt64NoTag(whitelistedAppIdsVault_.getLong(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < whitelistedAppIdsVault_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt64SizeNoTag(whitelistedAppIdsVault_.getLong(i));
+        }
+        size += dataSize;
+        if (!getWhitelistedAppIdsVaultList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        whitelistedAppIdsVaultMemoizedSerializedSize = dataSize;
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse other = (com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse) obj;
+
+      if (!getWhitelistedAppIdsVaultList()
+          .equals(other.getWhitelistedAppIdsVaultList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getWhitelistedAppIdsVaultCount() > 0) {
+        hash = (37 * hash) + WHITELISTEDAPPIDSVAULT_FIELD_NUMBER;
+        hash = (53 * hash) + getWhitelistedAppIdsVaultList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.rewards.v1beta1.QueryWhitelistedAppIdsVaultResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.QueryWhitelistedAppIdsVaultResponse)
+        com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryWhitelistedAppIdsVaultResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryWhitelistedAppIdsVaultResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse.class, com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        whitelistedAppIdsVault_ = emptyLongList();
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryWhitelistedAppIdsVaultResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse build() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse buildPartial() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse result = new com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          whitelistedAppIdsVault_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.whitelistedAppIdsVault_ = whitelistedAppIdsVault_;
+      }
+
+      private void buildPartial0(com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse) {
+          return mergeFrom((com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse other) {
+        if (other == com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse.getDefaultInstance()) return this;
+        if (!other.whitelistedAppIdsVault_.isEmpty()) {
+          if (whitelistedAppIdsVault_.isEmpty()) {
+            whitelistedAppIdsVault_ = other.whitelistedAppIdsVault_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureWhitelistedAppIdsVaultIsMutable();
+            whitelistedAppIdsVault_.addAll(other.whitelistedAppIdsVault_);
+          }
+          onChanged();
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                long v = input.readUInt64();
+                ensureWhitelistedAppIdsVaultIsMutable();
+                whitelistedAppIdsVault_.addLong(v);
+                break;
+              } // case 8
+              case 10: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureWhitelistedAppIdsVaultIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  whitelistedAppIdsVault_.addLong(input.readUInt64());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Internal.LongList whitelistedAppIdsVault_ = emptyLongList();
+      private void ensureWhitelistedAppIdsVaultIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          whitelistedAppIdsVault_ = mutableCopy(whitelistedAppIdsVault_);
+          bitField0_ |= 0x00000001;
+        }
+      }
+      /**
+       * <code>repeated uint64 whitelistedAppIdsVault = 1 [json_name = "whitelistedAppIdsVault", (.gogoproto.moretags) = "yaml:&#92;"whitelistedAppIdsVault&#92;""];</code>
+       * @return A list containing the whitelistedAppIdsVault.
+       */
+      public java.util.List<java.lang.Long>
+          getWhitelistedAppIdsVaultList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(whitelistedAppIdsVault_) : whitelistedAppIdsVault_;
+      }
+      /**
+       * <code>repeated uint64 whitelistedAppIdsVault = 1 [json_name = "whitelistedAppIdsVault", (.gogoproto.moretags) = "yaml:&#92;"whitelistedAppIdsVault&#92;""];</code>
+       * @return The count of whitelistedAppIdsVault.
+       */
+      public int getWhitelistedAppIdsVaultCount() {
+        return whitelistedAppIdsVault_.size();
+      }
+      /**
+       * <code>repeated uint64 whitelistedAppIdsVault = 1 [json_name = "whitelistedAppIdsVault", (.gogoproto.moretags) = "yaml:&#92;"whitelistedAppIdsVault&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The whitelistedAppIdsVault at the given index.
+       */
+      public long getWhitelistedAppIdsVault(int index) {
+        return whitelistedAppIdsVault_.getLong(index);
+      }
+      /**
+       * <code>repeated uint64 whitelistedAppIdsVault = 1 [json_name = "whitelistedAppIdsVault", (.gogoproto.moretags) = "yaml:&#92;"whitelistedAppIdsVault&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The whitelistedAppIdsVault to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWhitelistedAppIdsVault(
+          int index, long value) {
+
+        ensureWhitelistedAppIdsVaultIsMutable();
+        whitelistedAppIdsVault_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 whitelistedAppIdsVault = 1 [json_name = "whitelistedAppIdsVault", (.gogoproto.moretags) = "yaml:&#92;"whitelistedAppIdsVault&#92;""];</code>
+       * @param value The whitelistedAppIdsVault to add.
+       * @return This builder for chaining.
+       */
+      public Builder addWhitelistedAppIdsVault(long value) {
+
+        ensureWhitelistedAppIdsVaultIsMutable();
+        whitelistedAppIdsVault_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 whitelistedAppIdsVault = 1 [json_name = "whitelistedAppIdsVault", (.gogoproto.moretags) = "yaml:&#92;"whitelistedAppIdsVault&#92;""];</code>
+       * @param values The whitelistedAppIdsVault to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllWhitelistedAppIdsVault(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureWhitelistedAppIdsVaultIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, whitelistedAppIdsVault_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 whitelistedAppIdsVault = 1 [json_name = "whitelistedAppIdsVault", (.gogoproto.moretags) = "yaml:&#92;"whitelistedAppIdsVault&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWhitelistedAppIdsVault() {
+        whitelistedAppIdsVault_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.QueryWhitelistedAppIdsVaultResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.QueryWhitelistedAppIdsVaultResponse)
+    private static final com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse();
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryWhitelistedAppIdsVaultResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryWhitelistedAppIdsVaultResponse>() {
+      @java.lang.Override
+      public QueryWhitelistedAppIdsVaultResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryWhitelistedAppIdsVaultResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryWhitelistedAppIdsVaultResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.QueryProto.QueryWhitelistedAppIdsVaultResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryExternalRewardLendsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.QueryExternalRewardLendsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.rewards.v1beta1.QueryExternalRewardLendsRequest}
+   */
+  public static final class QueryExternalRewardLendsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.QueryExternalRewardLendsRequest)
+      QueryExternalRewardLendsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryExternalRewardLendsRequest.newBuilder() to construct.
+    private QueryExternalRewardLendsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryExternalRewardLendsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryExternalRewardLendsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardLendsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardLendsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest.class, com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 1;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(1, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest other = (com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.rewards.v1beta1.QueryExternalRewardLendsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.QueryExternalRewardLendsRequest)
+        com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardLendsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardLendsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest.class, com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardLendsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest build() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest buildPartial() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest result = new com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest) {
+          return mergeFrom((com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest other) {
+        if (other == com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.QueryExternalRewardLendsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.QueryExternalRewardLendsRequest)
+    private static final com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest();
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryExternalRewardLendsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryExternalRewardLendsRequest>() {
+      @java.lang.Override
+      public QueryExternalRewardLendsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryExternalRewardLendsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryExternalRewardLendsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryExternalRewardLendsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.QueryExternalRewardLendsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lend_external_rewards = 1 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lend_external_rewards&#92;""];</code>
+     */
+    java.util.List<com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards> 
+        getLendExternalRewardsList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lend_external_rewards = 1 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lend_external_rewards&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards getLendExternalRewards(int index);
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lend_external_rewards = 1 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lend_external_rewards&#92;""];</code>
+     */
+    int getLendExternalRewardsCount();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lend_external_rewards = 1 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lend_external_rewards&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewardsOrBuilder> 
+        getLendExternalRewardsOrBuilderList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lend_external_rewards = 1 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lend_external_rewards&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewardsOrBuilder getLendExternalRewardsOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.rewards.v1beta1.QueryExternalRewardLendsResponse}
+   */
+  public static final class QueryExternalRewardLendsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.QueryExternalRewardLendsResponse)
+      QueryExternalRewardLendsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryExternalRewardLendsResponse.newBuilder() to construct.
+    private QueryExternalRewardLendsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryExternalRewardLendsResponse() {
+      lendExternalRewards_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryExternalRewardLendsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardLendsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardLendsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse.class, com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse.Builder.class);
+    }
+
+    public static final int LEND_EXTERNAL_REWARDS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards> lendExternalRewards_;
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lend_external_rewards = 1 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lend_external_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards> getLendExternalRewardsList() {
+      return lendExternalRewards_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lend_external_rewards = 1 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lend_external_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewardsOrBuilder> 
+        getLendExternalRewardsOrBuilderList() {
+      return lendExternalRewards_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lend_external_rewards = 1 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lend_external_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getLendExternalRewardsCount() {
+      return lendExternalRewards_.size();
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lend_external_rewards = 1 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lend_external_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards getLendExternalRewards(int index) {
+      return lendExternalRewards_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lend_external_rewards = 1 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lend_external_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewardsOrBuilder getLendExternalRewardsOrBuilder(
+        int index) {
+      return lendExternalRewards_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < lendExternalRewards_.size(); i++) {
+        output.writeMessage(1, lendExternalRewards_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < lendExternalRewards_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, lendExternalRewards_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse other = (com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse) obj;
+
+      if (!getLendExternalRewardsList()
+          .equals(other.getLendExternalRewardsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getLendExternalRewardsCount() > 0) {
+        hash = (37 * hash) + LEND_EXTERNAL_REWARDS_FIELD_NUMBER;
+        hash = (53 * hash) + getLendExternalRewardsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.rewards.v1beta1.QueryExternalRewardLendsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.QueryExternalRewardLendsResponse)
+        com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardLendsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardLendsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse.class, com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (lendExternalRewardsBuilder_ == null) {
+          lendExternalRewards_ = java.util.Collections.emptyList();
+        } else {
+          lendExternalRewards_ = null;
+          lendExternalRewardsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardLendsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse build() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse buildPartial() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse result = new com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse result) {
+        if (lendExternalRewardsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            lendExternalRewards_ = java.util.Collections.unmodifiableList(lendExternalRewards_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.lendExternalRewards_ = lendExternalRewards_;
+        } else {
+          result.lendExternalRewards_ = lendExternalRewardsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse) {
+          return mergeFrom((com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse other) {
+        if (other == com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse.getDefaultInstance()) return this;
+        if (lendExternalRewardsBuilder_ == null) {
+          if (!other.lendExternalRewards_.isEmpty()) {
+            if (lendExternalRewards_.isEmpty()) {
+              lendExternalRewards_ = other.lendExternalRewards_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureLendExternalRewardsIsMutable();
+              lendExternalRewards_.addAll(other.lendExternalRewards_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.lendExternalRewards_.isEmpty()) {
+            if (lendExternalRewardsBuilder_.isEmpty()) {
+              lendExternalRewardsBuilder_.dispose();
+              lendExternalRewardsBuilder_ = null;
+              lendExternalRewards_ = other.lendExternalRewards_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              lendExternalRewardsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLendExternalRewardsFieldBuilder() : null;
+            } else {
+              lendExternalRewardsBuilder_.addAllMessages(other.lendExternalRewards_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards m =
+                    input.readMessage(
+                        com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards.parser(),
+                        extensionRegistry);
+                if (lendExternalRewardsBuilder_ == null) {
+                  ensureLendExternalRewardsIsMutable();
+                  lendExternalRewards_.add(m);
+                } else {
+                  lendExternalRewardsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards> lendExternalRewards_ =
+        java.util.Collections.emptyList();
+      private void ensureLendExternalRewardsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          lendExternalRewards_ = new java.util.ArrayList<com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards>(lendExternalRewards_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards, com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards.Builder, com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewardsOrBuilder> lendExternalRewardsBuilder_;
+
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lend_external_rewards = 1 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lend_external_rewards&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards> getLendExternalRewardsList() {
+        if (lendExternalRewardsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(lendExternalRewards_);
+        } else {
+          return lendExternalRewardsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lend_external_rewards = 1 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lend_external_rewards&#92;""];</code>
+       */
+      public int getLendExternalRewardsCount() {
+        if (lendExternalRewardsBuilder_ == null) {
+          return lendExternalRewards_.size();
+        } else {
+          return lendExternalRewardsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lend_external_rewards = 1 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lend_external_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards getLendExternalRewards(int index) {
+        if (lendExternalRewardsBuilder_ == null) {
+          return lendExternalRewards_.get(index);
+        } else {
+          return lendExternalRewardsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lend_external_rewards = 1 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lend_external_rewards&#92;""];</code>
+       */
+      public Builder setLendExternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards value) {
+        if (lendExternalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLendExternalRewardsIsMutable();
+          lendExternalRewards_.set(index, value);
+          onChanged();
+        } else {
+          lendExternalRewardsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lend_external_rewards = 1 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lend_external_rewards&#92;""];</code>
+       */
+      public Builder setLendExternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards.Builder builderForValue) {
+        if (lendExternalRewardsBuilder_ == null) {
+          ensureLendExternalRewardsIsMutable();
+          lendExternalRewards_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          lendExternalRewardsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lend_external_rewards = 1 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lend_external_rewards&#92;""];</code>
+       */
+      public Builder addLendExternalRewards(com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards value) {
+        if (lendExternalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLendExternalRewardsIsMutable();
+          lendExternalRewards_.add(value);
+          onChanged();
+        } else {
+          lendExternalRewardsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lend_external_rewards = 1 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lend_external_rewards&#92;""];</code>
+       */
+      public Builder addLendExternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards value) {
+        if (lendExternalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLendExternalRewardsIsMutable();
+          lendExternalRewards_.add(index, value);
+          onChanged();
+        } else {
+          lendExternalRewardsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lend_external_rewards = 1 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lend_external_rewards&#92;""];</code>
+       */
+      public Builder addLendExternalRewards(
+          com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards.Builder builderForValue) {
+        if (lendExternalRewardsBuilder_ == null) {
+          ensureLendExternalRewardsIsMutable();
+          lendExternalRewards_.add(builderForValue.build());
+          onChanged();
+        } else {
+          lendExternalRewardsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lend_external_rewards = 1 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lend_external_rewards&#92;""];</code>
+       */
+      public Builder addLendExternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards.Builder builderForValue) {
+        if (lendExternalRewardsBuilder_ == null) {
+          ensureLendExternalRewardsIsMutable();
+          lendExternalRewards_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          lendExternalRewardsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lend_external_rewards = 1 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lend_external_rewards&#92;""];</code>
+       */
+      public Builder addAllLendExternalRewards(
+          java.lang.Iterable<? extends com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards> values) {
+        if (lendExternalRewardsBuilder_ == null) {
+          ensureLendExternalRewardsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, lendExternalRewards_);
+          onChanged();
+        } else {
+          lendExternalRewardsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lend_external_rewards = 1 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lend_external_rewards&#92;""];</code>
+       */
+      public Builder clearLendExternalRewards() {
+        if (lendExternalRewardsBuilder_ == null) {
+          lendExternalRewards_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          lendExternalRewardsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lend_external_rewards = 1 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lend_external_rewards&#92;""];</code>
+       */
+      public Builder removeLendExternalRewards(int index) {
+        if (lendExternalRewardsBuilder_ == null) {
+          ensureLendExternalRewardsIsMutable();
+          lendExternalRewards_.remove(index);
+          onChanged();
+        } else {
+          lendExternalRewardsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lend_external_rewards = 1 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lend_external_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards.Builder getLendExternalRewardsBuilder(
+          int index) {
+        return getLendExternalRewardsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lend_external_rewards = 1 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lend_external_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewardsOrBuilder getLendExternalRewardsOrBuilder(
+          int index) {
+        if (lendExternalRewardsBuilder_ == null) {
+          return lendExternalRewards_.get(index);  } else {
+          return lendExternalRewardsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lend_external_rewards = 1 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lend_external_rewards&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewardsOrBuilder> 
+           getLendExternalRewardsOrBuilderList() {
+        if (lendExternalRewardsBuilder_ != null) {
+          return lendExternalRewardsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(lendExternalRewards_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lend_external_rewards = 1 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lend_external_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards.Builder addLendExternalRewardsBuilder() {
+        return getLendExternalRewardsFieldBuilder().addBuilder(
+            com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lend_external_rewards = 1 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lend_external_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards.Builder addLendExternalRewardsBuilder(
+          int index) {
+        return getLendExternalRewardsFieldBuilder().addBuilder(
+            index, com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lend_external_rewards = 1 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lend_external_rewards&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards.Builder> 
+           getLendExternalRewardsBuilderList() {
+        return getLendExternalRewardsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards, com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards.Builder, com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewardsOrBuilder> 
+          getLendExternalRewardsFieldBuilder() {
+        if (lendExternalRewardsBuilder_ == null) {
+          lendExternalRewardsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards, com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards.Builder, com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewardsOrBuilder>(
+                  lendExternalRewards_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          lendExternalRewards_ = null;
+        }
+        return lendExternalRewardsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.QueryExternalRewardLendsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.QueryExternalRewardLendsResponse)
+    private static final com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse();
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryExternalRewardLendsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryExternalRewardLendsResponse>() {
+      @java.lang.Override
+      public QueryExternalRewardLendsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryExternalRewardLendsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryExternalRewardLendsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardLendsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryExternalRewardStableMintRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.QueryExternalRewardStableMintRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.rewards.v1beta1.QueryExternalRewardStableMintRequest}
+   */
+  public static final class QueryExternalRewardStableMintRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.QueryExternalRewardStableMintRequest)
+      QueryExternalRewardStableMintRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryExternalRewardStableMintRequest.newBuilder() to construct.
+    private QueryExternalRewardStableMintRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryExternalRewardStableMintRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryExternalRewardStableMintRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardStableMintRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardStableMintRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest.class, com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 1;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(1, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest other = (com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.rewards.v1beta1.QueryExternalRewardStableMintRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.QueryExternalRewardStableMintRequest)
+        com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardStableMintRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardStableMintRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest.class, com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardStableMintRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest build() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest buildPartial() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest result = new com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest) {
+          return mergeFrom((com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest other) {
+        if (other == com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.QueryExternalRewardStableMintRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.QueryExternalRewardStableMintRequest)
+    private static final com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest();
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryExternalRewardStableMintRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryExternalRewardStableMintRequest>() {
+      @java.lang.Override
+      public QueryExternalRewardStableMintRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryExternalRewardStableMintRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryExternalRewardStableMintRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryExternalRewardStableMintResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.QueryExternalRewardStableMintResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.StableVaultExternalRewards stable_mint_external_rewards = 1 [json_name = "stableMintExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"stable_mint_external_rewards&#92;""];</code>
+     */
+    java.util.List<com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards> 
+        getStableMintExternalRewardsList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.StableVaultExternalRewards stable_mint_external_rewards = 1 [json_name = "stableMintExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"stable_mint_external_rewards&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards getStableMintExternalRewards(int index);
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.StableVaultExternalRewards stable_mint_external_rewards = 1 [json_name = "stableMintExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"stable_mint_external_rewards&#92;""];</code>
+     */
+    int getStableMintExternalRewardsCount();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.StableVaultExternalRewards stable_mint_external_rewards = 1 [json_name = "stableMintExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"stable_mint_external_rewards&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewardsOrBuilder> 
+        getStableMintExternalRewardsOrBuilderList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.StableVaultExternalRewards stable_mint_external_rewards = 1 [json_name = "stableMintExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"stable_mint_external_rewards&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewardsOrBuilder getStableMintExternalRewardsOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.rewards.v1beta1.QueryExternalRewardStableMintResponse}
+   */
+  public static final class QueryExternalRewardStableMintResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.QueryExternalRewardStableMintResponse)
+      QueryExternalRewardStableMintResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryExternalRewardStableMintResponse.newBuilder() to construct.
+    private QueryExternalRewardStableMintResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryExternalRewardStableMintResponse() {
+      stableMintExternalRewards_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryExternalRewardStableMintResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardStableMintResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardStableMintResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse.class, com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse.Builder.class);
+    }
+
+    public static final int STABLE_MINT_EXTERNAL_REWARDS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards> stableMintExternalRewards_;
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.StableVaultExternalRewards stable_mint_external_rewards = 1 [json_name = "stableMintExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"stable_mint_external_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards> getStableMintExternalRewardsList() {
+      return stableMintExternalRewards_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.StableVaultExternalRewards stable_mint_external_rewards = 1 [json_name = "stableMintExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"stable_mint_external_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewardsOrBuilder> 
+        getStableMintExternalRewardsOrBuilderList() {
+      return stableMintExternalRewards_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.StableVaultExternalRewards stable_mint_external_rewards = 1 [json_name = "stableMintExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"stable_mint_external_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getStableMintExternalRewardsCount() {
+      return stableMintExternalRewards_.size();
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.StableVaultExternalRewards stable_mint_external_rewards = 1 [json_name = "stableMintExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"stable_mint_external_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards getStableMintExternalRewards(int index) {
+      return stableMintExternalRewards_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.StableVaultExternalRewards stable_mint_external_rewards = 1 [json_name = "stableMintExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"stable_mint_external_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewardsOrBuilder getStableMintExternalRewardsOrBuilder(
+        int index) {
+      return stableMintExternalRewards_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < stableMintExternalRewards_.size(); i++) {
+        output.writeMessage(1, stableMintExternalRewards_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < stableMintExternalRewards_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, stableMintExternalRewards_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse other = (com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse) obj;
+
+      if (!getStableMintExternalRewardsList()
+          .equals(other.getStableMintExternalRewardsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getStableMintExternalRewardsCount() > 0) {
+        hash = (37 * hash) + STABLE_MINT_EXTERNAL_REWARDS_FIELD_NUMBER;
+        hash = (53 * hash) + getStableMintExternalRewardsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.rewards.v1beta1.QueryExternalRewardStableMintResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.QueryExternalRewardStableMintResponse)
+        com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardStableMintResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardStableMintResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse.class, com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (stableMintExternalRewardsBuilder_ == null) {
+          stableMintExternalRewards_ = java.util.Collections.emptyList();
+        } else {
+          stableMintExternalRewards_ = null;
+          stableMintExternalRewardsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExternalRewardStableMintResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse build() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse buildPartial() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse result = new com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse result) {
+        if (stableMintExternalRewardsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            stableMintExternalRewards_ = java.util.Collections.unmodifiableList(stableMintExternalRewards_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.stableMintExternalRewards_ = stableMintExternalRewards_;
+        } else {
+          result.stableMintExternalRewards_ = stableMintExternalRewardsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse) {
+          return mergeFrom((com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse other) {
+        if (other == com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse.getDefaultInstance()) return this;
+        if (stableMintExternalRewardsBuilder_ == null) {
+          if (!other.stableMintExternalRewards_.isEmpty()) {
+            if (stableMintExternalRewards_.isEmpty()) {
+              stableMintExternalRewards_ = other.stableMintExternalRewards_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureStableMintExternalRewardsIsMutable();
+              stableMintExternalRewards_.addAll(other.stableMintExternalRewards_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.stableMintExternalRewards_.isEmpty()) {
+            if (stableMintExternalRewardsBuilder_.isEmpty()) {
+              stableMintExternalRewardsBuilder_.dispose();
+              stableMintExternalRewardsBuilder_ = null;
+              stableMintExternalRewards_ = other.stableMintExternalRewards_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              stableMintExternalRewardsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getStableMintExternalRewardsFieldBuilder() : null;
+            } else {
+              stableMintExternalRewardsBuilder_.addAllMessages(other.stableMintExternalRewards_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards m =
+                    input.readMessage(
+                        com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards.parser(),
+                        extensionRegistry);
+                if (stableMintExternalRewardsBuilder_ == null) {
+                  ensureStableMintExternalRewardsIsMutable();
+                  stableMintExternalRewards_.add(m);
+                } else {
+                  stableMintExternalRewardsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards> stableMintExternalRewards_ =
+        java.util.Collections.emptyList();
+      private void ensureStableMintExternalRewardsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          stableMintExternalRewards_ = new java.util.ArrayList<com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards>(stableMintExternalRewards_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards, com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards.Builder, com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewardsOrBuilder> stableMintExternalRewardsBuilder_;
+
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.StableVaultExternalRewards stable_mint_external_rewards = 1 [json_name = "stableMintExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"stable_mint_external_rewards&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards> getStableMintExternalRewardsList() {
+        if (stableMintExternalRewardsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(stableMintExternalRewards_);
+        } else {
+          return stableMintExternalRewardsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.StableVaultExternalRewards stable_mint_external_rewards = 1 [json_name = "stableMintExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"stable_mint_external_rewards&#92;""];</code>
+       */
+      public int getStableMintExternalRewardsCount() {
+        if (stableMintExternalRewardsBuilder_ == null) {
+          return stableMintExternalRewards_.size();
+        } else {
+          return stableMintExternalRewardsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.StableVaultExternalRewards stable_mint_external_rewards = 1 [json_name = "stableMintExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"stable_mint_external_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards getStableMintExternalRewards(int index) {
+        if (stableMintExternalRewardsBuilder_ == null) {
+          return stableMintExternalRewards_.get(index);
+        } else {
+          return stableMintExternalRewardsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.StableVaultExternalRewards stable_mint_external_rewards = 1 [json_name = "stableMintExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"stable_mint_external_rewards&#92;""];</code>
+       */
+      public Builder setStableMintExternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards value) {
+        if (stableMintExternalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStableMintExternalRewardsIsMutable();
+          stableMintExternalRewards_.set(index, value);
+          onChanged();
+        } else {
+          stableMintExternalRewardsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.StableVaultExternalRewards stable_mint_external_rewards = 1 [json_name = "stableMintExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"stable_mint_external_rewards&#92;""];</code>
+       */
+      public Builder setStableMintExternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards.Builder builderForValue) {
+        if (stableMintExternalRewardsBuilder_ == null) {
+          ensureStableMintExternalRewardsIsMutable();
+          stableMintExternalRewards_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          stableMintExternalRewardsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.StableVaultExternalRewards stable_mint_external_rewards = 1 [json_name = "stableMintExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"stable_mint_external_rewards&#92;""];</code>
+       */
+      public Builder addStableMintExternalRewards(com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards value) {
+        if (stableMintExternalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStableMintExternalRewardsIsMutable();
+          stableMintExternalRewards_.add(value);
+          onChanged();
+        } else {
+          stableMintExternalRewardsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.StableVaultExternalRewards stable_mint_external_rewards = 1 [json_name = "stableMintExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"stable_mint_external_rewards&#92;""];</code>
+       */
+      public Builder addStableMintExternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards value) {
+        if (stableMintExternalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStableMintExternalRewardsIsMutable();
+          stableMintExternalRewards_.add(index, value);
+          onChanged();
+        } else {
+          stableMintExternalRewardsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.StableVaultExternalRewards stable_mint_external_rewards = 1 [json_name = "stableMintExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"stable_mint_external_rewards&#92;""];</code>
+       */
+      public Builder addStableMintExternalRewards(
+          com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards.Builder builderForValue) {
+        if (stableMintExternalRewardsBuilder_ == null) {
+          ensureStableMintExternalRewardsIsMutable();
+          stableMintExternalRewards_.add(builderForValue.build());
+          onChanged();
+        } else {
+          stableMintExternalRewardsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.StableVaultExternalRewards stable_mint_external_rewards = 1 [json_name = "stableMintExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"stable_mint_external_rewards&#92;""];</code>
+       */
+      public Builder addStableMintExternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards.Builder builderForValue) {
+        if (stableMintExternalRewardsBuilder_ == null) {
+          ensureStableMintExternalRewardsIsMutable();
+          stableMintExternalRewards_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          stableMintExternalRewardsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.StableVaultExternalRewards stable_mint_external_rewards = 1 [json_name = "stableMintExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"stable_mint_external_rewards&#92;""];</code>
+       */
+      public Builder addAllStableMintExternalRewards(
+          java.lang.Iterable<? extends com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards> values) {
+        if (stableMintExternalRewardsBuilder_ == null) {
+          ensureStableMintExternalRewardsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, stableMintExternalRewards_);
+          onChanged();
+        } else {
+          stableMintExternalRewardsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.StableVaultExternalRewards stable_mint_external_rewards = 1 [json_name = "stableMintExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"stable_mint_external_rewards&#92;""];</code>
+       */
+      public Builder clearStableMintExternalRewards() {
+        if (stableMintExternalRewardsBuilder_ == null) {
+          stableMintExternalRewards_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          stableMintExternalRewardsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.StableVaultExternalRewards stable_mint_external_rewards = 1 [json_name = "stableMintExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"stable_mint_external_rewards&#92;""];</code>
+       */
+      public Builder removeStableMintExternalRewards(int index) {
+        if (stableMintExternalRewardsBuilder_ == null) {
+          ensureStableMintExternalRewardsIsMutable();
+          stableMintExternalRewards_.remove(index);
+          onChanged();
+        } else {
+          stableMintExternalRewardsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.StableVaultExternalRewards stable_mint_external_rewards = 1 [json_name = "stableMintExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"stable_mint_external_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards.Builder getStableMintExternalRewardsBuilder(
+          int index) {
+        return getStableMintExternalRewardsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.StableVaultExternalRewards stable_mint_external_rewards = 1 [json_name = "stableMintExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"stable_mint_external_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewardsOrBuilder getStableMintExternalRewardsOrBuilder(
+          int index) {
+        if (stableMintExternalRewardsBuilder_ == null) {
+          return stableMintExternalRewards_.get(index);  } else {
+          return stableMintExternalRewardsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.StableVaultExternalRewards stable_mint_external_rewards = 1 [json_name = "stableMintExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"stable_mint_external_rewards&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewardsOrBuilder> 
+           getStableMintExternalRewardsOrBuilderList() {
+        if (stableMintExternalRewardsBuilder_ != null) {
+          return stableMintExternalRewardsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(stableMintExternalRewards_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.StableVaultExternalRewards stable_mint_external_rewards = 1 [json_name = "stableMintExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"stable_mint_external_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards.Builder addStableMintExternalRewardsBuilder() {
+        return getStableMintExternalRewardsFieldBuilder().addBuilder(
+            com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.StableVaultExternalRewards stable_mint_external_rewards = 1 [json_name = "stableMintExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"stable_mint_external_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards.Builder addStableMintExternalRewardsBuilder(
+          int index) {
+        return getStableMintExternalRewardsFieldBuilder().addBuilder(
+            index, com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.StableVaultExternalRewards stable_mint_external_rewards = 1 [json_name = "stableMintExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"stable_mint_external_rewards&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards.Builder> 
+           getStableMintExternalRewardsBuilderList() {
+        return getStableMintExternalRewardsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards, com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards.Builder, com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewardsOrBuilder> 
+          getStableMintExternalRewardsFieldBuilder() {
+        if (stableMintExternalRewardsBuilder_ == null) {
+          stableMintExternalRewardsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards, com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewards.Builder, com.comdex.rewards.v1beta1.RewardsProto.StableVaultExternalRewardsOrBuilder>(
+                  stableMintExternalRewards_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          stableMintExternalRewards_ = null;
+        }
+        return stableMintExternalRewardsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.QueryExternalRewardStableMintResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.QueryExternalRewardStableMintResponse)
+    private static final com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse();
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryExternalRewardStableMintResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryExternalRewardStableMintResponse>() {
+      @java.lang.Override
+      public QueryExternalRewardStableMintResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryExternalRewardStableMintResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryExternalRewardStableMintResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.QueryProto.QueryExternalRewardStableMintResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryEpochTimeRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.QueryEpochTimeRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.rewards.v1beta1.QueryEpochTimeRequest}
+   */
+  public static final class QueryEpochTimeRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.QueryEpochTimeRequest)
+      QueryEpochTimeRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryEpochTimeRequest.newBuilder() to construct.
+    private QueryEpochTimeRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryEpochTimeRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryEpochTimeRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryEpochTimeRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryEpochTimeRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest.class, com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 1;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(1, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest other = (com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.rewards.v1beta1.QueryEpochTimeRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.QueryEpochTimeRequest)
+        com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryEpochTimeRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryEpochTimeRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest.class, com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryEpochTimeRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest build() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest buildPartial() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest result = new com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest) {
+          return mergeFrom((com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest other) {
+        if (other == com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.QueryEpochTimeRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.QueryEpochTimeRequest)
+    private static final com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest();
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryEpochTimeRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryEpochTimeRequest>() {
+      @java.lang.Override
+      public QueryEpochTimeRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryEpochTimeRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryEpochTimeRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryEpochTimeResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.QueryEpochTimeResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.EpochTime epoch_time = 1 [json_name = "epochTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_time&#92;""];</code>
+     */
+    java.util.List<com.comdex.rewards.v1beta1.RewardsProto.EpochTime> 
+        getEpochTimeList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.EpochTime epoch_time = 1 [json_name = "epochTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_time&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.RewardsProto.EpochTime getEpochTime(int index);
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.EpochTime epoch_time = 1 [json_name = "epochTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_time&#92;""];</code>
+     */
+    int getEpochTimeCount();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.EpochTime epoch_time = 1 [json_name = "epochTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_time&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.EpochTimeOrBuilder> 
+        getEpochTimeOrBuilderList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.EpochTime epoch_time = 1 [json_name = "epochTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_time&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.RewardsProto.EpochTimeOrBuilder getEpochTimeOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.rewards.v1beta1.QueryEpochTimeResponse}
+   */
+  public static final class QueryEpochTimeResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.QueryEpochTimeResponse)
+      QueryEpochTimeResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryEpochTimeResponse.newBuilder() to construct.
+    private QueryEpochTimeResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryEpochTimeResponse() {
+      epochTime_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryEpochTimeResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryEpochTimeResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryEpochTimeResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse.class, com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse.Builder.class);
+    }
+
+    public static final int EPOCH_TIME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.rewards.v1beta1.RewardsProto.EpochTime> epochTime_;
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.EpochTime epoch_time = 1 [json_name = "epochTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_time&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.EpochTime> getEpochTimeList() {
+      return epochTime_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.EpochTime epoch_time = 1 [json_name = "epochTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_time&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.EpochTimeOrBuilder> 
+        getEpochTimeOrBuilderList() {
+      return epochTime_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.EpochTime epoch_time = 1 [json_name = "epochTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_time&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getEpochTimeCount() {
+      return epochTime_.size();
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.EpochTime epoch_time = 1 [json_name = "epochTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_time&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.RewardsProto.EpochTime getEpochTime(int index) {
+      return epochTime_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.EpochTime epoch_time = 1 [json_name = "epochTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_time&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.RewardsProto.EpochTimeOrBuilder getEpochTimeOrBuilder(
+        int index) {
+      return epochTime_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < epochTime_.size(); i++) {
+        output.writeMessage(1, epochTime_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < epochTime_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, epochTime_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse other = (com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse) obj;
+
+      if (!getEpochTimeList()
+          .equals(other.getEpochTimeList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getEpochTimeCount() > 0) {
+        hash = (37 * hash) + EPOCH_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getEpochTimeList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.rewards.v1beta1.QueryEpochTimeResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.QueryEpochTimeResponse)
+        com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryEpochTimeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryEpochTimeResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse.class, com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (epochTimeBuilder_ == null) {
+          epochTime_ = java.util.Collections.emptyList();
+        } else {
+          epochTime_ = null;
+          epochTimeBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryEpochTimeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse build() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse buildPartial() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse result = new com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse result) {
+        if (epochTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            epochTime_ = java.util.Collections.unmodifiableList(epochTime_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.epochTime_ = epochTime_;
+        } else {
+          result.epochTime_ = epochTimeBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse) {
+          return mergeFrom((com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse other) {
+        if (other == com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse.getDefaultInstance()) return this;
+        if (epochTimeBuilder_ == null) {
+          if (!other.epochTime_.isEmpty()) {
+            if (epochTime_.isEmpty()) {
+              epochTime_ = other.epochTime_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureEpochTimeIsMutable();
+              epochTime_.addAll(other.epochTime_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.epochTime_.isEmpty()) {
+            if (epochTimeBuilder_.isEmpty()) {
+              epochTimeBuilder_.dispose();
+              epochTimeBuilder_ = null;
+              epochTime_ = other.epochTime_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              epochTimeBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEpochTimeFieldBuilder() : null;
+            } else {
+              epochTimeBuilder_.addAllMessages(other.epochTime_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.comdex.rewards.v1beta1.RewardsProto.EpochTime m =
+                    input.readMessage(
+                        com.comdex.rewards.v1beta1.RewardsProto.EpochTime.parser(),
+                        extensionRegistry);
+                if (epochTimeBuilder_ == null) {
+                  ensureEpochTimeIsMutable();
+                  epochTime_.add(m);
+                } else {
+                  epochTimeBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.comdex.rewards.v1beta1.RewardsProto.EpochTime> epochTime_ =
+        java.util.Collections.emptyList();
+      private void ensureEpochTimeIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          epochTime_ = new java.util.ArrayList<com.comdex.rewards.v1beta1.RewardsProto.EpochTime>(epochTime_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.RewardsProto.EpochTime, com.comdex.rewards.v1beta1.RewardsProto.EpochTime.Builder, com.comdex.rewards.v1beta1.RewardsProto.EpochTimeOrBuilder> epochTimeBuilder_;
+
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochTime epoch_time = 1 [json_name = "epochTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_time&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.EpochTime> getEpochTimeList() {
+        if (epochTimeBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(epochTime_);
+        } else {
+          return epochTimeBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochTime epoch_time = 1 [json_name = "epochTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_time&#92;""];</code>
+       */
+      public int getEpochTimeCount() {
+        if (epochTimeBuilder_ == null) {
+          return epochTime_.size();
+        } else {
+          return epochTimeBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochTime epoch_time = 1 [json_name = "epochTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_time&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.EpochTime getEpochTime(int index) {
+        if (epochTimeBuilder_ == null) {
+          return epochTime_.get(index);
+        } else {
+          return epochTimeBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochTime epoch_time = 1 [json_name = "epochTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_time&#92;""];</code>
+       */
+      public Builder setEpochTime(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.EpochTime value) {
+        if (epochTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEpochTimeIsMutable();
+          epochTime_.set(index, value);
+          onChanged();
+        } else {
+          epochTimeBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochTime epoch_time = 1 [json_name = "epochTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_time&#92;""];</code>
+       */
+      public Builder setEpochTime(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.EpochTime.Builder builderForValue) {
+        if (epochTimeBuilder_ == null) {
+          ensureEpochTimeIsMutable();
+          epochTime_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          epochTimeBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochTime epoch_time = 1 [json_name = "epochTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_time&#92;""];</code>
+       */
+      public Builder addEpochTime(com.comdex.rewards.v1beta1.RewardsProto.EpochTime value) {
+        if (epochTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEpochTimeIsMutable();
+          epochTime_.add(value);
+          onChanged();
+        } else {
+          epochTimeBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochTime epoch_time = 1 [json_name = "epochTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_time&#92;""];</code>
+       */
+      public Builder addEpochTime(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.EpochTime value) {
+        if (epochTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEpochTimeIsMutable();
+          epochTime_.add(index, value);
+          onChanged();
+        } else {
+          epochTimeBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochTime epoch_time = 1 [json_name = "epochTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_time&#92;""];</code>
+       */
+      public Builder addEpochTime(
+          com.comdex.rewards.v1beta1.RewardsProto.EpochTime.Builder builderForValue) {
+        if (epochTimeBuilder_ == null) {
+          ensureEpochTimeIsMutable();
+          epochTime_.add(builderForValue.build());
+          onChanged();
+        } else {
+          epochTimeBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochTime epoch_time = 1 [json_name = "epochTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_time&#92;""];</code>
+       */
+      public Builder addEpochTime(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.EpochTime.Builder builderForValue) {
+        if (epochTimeBuilder_ == null) {
+          ensureEpochTimeIsMutable();
+          epochTime_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          epochTimeBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochTime epoch_time = 1 [json_name = "epochTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_time&#92;""];</code>
+       */
+      public Builder addAllEpochTime(
+          java.lang.Iterable<? extends com.comdex.rewards.v1beta1.RewardsProto.EpochTime> values) {
+        if (epochTimeBuilder_ == null) {
+          ensureEpochTimeIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, epochTime_);
+          onChanged();
+        } else {
+          epochTimeBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochTime epoch_time = 1 [json_name = "epochTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_time&#92;""];</code>
+       */
+      public Builder clearEpochTime() {
+        if (epochTimeBuilder_ == null) {
+          epochTime_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          epochTimeBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochTime epoch_time = 1 [json_name = "epochTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_time&#92;""];</code>
+       */
+      public Builder removeEpochTime(int index) {
+        if (epochTimeBuilder_ == null) {
+          ensureEpochTimeIsMutable();
+          epochTime_.remove(index);
+          onChanged();
+        } else {
+          epochTimeBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochTime epoch_time = 1 [json_name = "epochTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_time&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.EpochTime.Builder getEpochTimeBuilder(
+          int index) {
+        return getEpochTimeFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochTime epoch_time = 1 [json_name = "epochTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_time&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.EpochTimeOrBuilder getEpochTimeOrBuilder(
+          int index) {
+        if (epochTimeBuilder_ == null) {
+          return epochTime_.get(index);  } else {
+          return epochTimeBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochTime epoch_time = 1 [json_name = "epochTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_time&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.EpochTimeOrBuilder> 
+           getEpochTimeOrBuilderList() {
+        if (epochTimeBuilder_ != null) {
+          return epochTimeBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(epochTime_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochTime epoch_time = 1 [json_name = "epochTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_time&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.EpochTime.Builder addEpochTimeBuilder() {
+        return getEpochTimeFieldBuilder().addBuilder(
+            com.comdex.rewards.v1beta1.RewardsProto.EpochTime.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochTime epoch_time = 1 [json_name = "epochTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_time&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.EpochTime.Builder addEpochTimeBuilder(
+          int index) {
+        return getEpochTimeFieldBuilder().addBuilder(
+            index, com.comdex.rewards.v1beta1.RewardsProto.EpochTime.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochTime epoch_time = 1 [json_name = "epochTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_time&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.EpochTime.Builder> 
+           getEpochTimeBuilderList() {
+        return getEpochTimeFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.RewardsProto.EpochTime, com.comdex.rewards.v1beta1.RewardsProto.EpochTime.Builder, com.comdex.rewards.v1beta1.RewardsProto.EpochTimeOrBuilder> 
+          getEpochTimeFieldBuilder() {
+        if (epochTimeBuilder_ == null) {
+          epochTimeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.rewards.v1beta1.RewardsProto.EpochTime, com.comdex.rewards.v1beta1.RewardsProto.EpochTime.Builder, com.comdex.rewards.v1beta1.RewardsProto.EpochTimeOrBuilder>(
+                  epochTime_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          epochTime_ = null;
+        }
+        return epochTimeBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.QueryEpochTimeResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.QueryEpochTimeResponse)
+    private static final com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse();
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryEpochTimeResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryEpochTimeResponse>() {
+      @java.lang.Override
+      public QueryEpochTimeResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryEpochTimeResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryEpochTimeResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.QueryProto.QueryEpochTimeResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryExtLendRewardsAPRRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.QueryExtLendRewardsAPRRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 asset_id = 1 [json_name = "assetId"];</code>
+     * @return The assetId.
+     */
+    long getAssetId();
+
+    /**
+     * <code>uint64 c_pool_id = 2 [json_name = "cPoolId"];</code>
+     * @return The cPoolId.
+     */
+    long getCPoolId();
+  }
+  /**
+   * Protobuf type {@code comdex.rewards.v1beta1.QueryExtLendRewardsAPRRequest}
+   */
+  public static final class QueryExtLendRewardsAPRRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.QueryExtLendRewardsAPRRequest)
+      QueryExtLendRewardsAPRRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryExtLendRewardsAPRRequest.newBuilder() to construct.
+    private QueryExtLendRewardsAPRRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryExtLendRewardsAPRRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryExtLendRewardsAPRRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExtLendRewardsAPRRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExtLendRewardsAPRRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest.class, com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest.Builder.class);
+    }
+
+    public static final int ASSET_ID_FIELD_NUMBER = 1;
+    private long assetId_ = 0L;
+    /**
+     * <code>uint64 asset_id = 1 [json_name = "assetId"];</code>
+     * @return The assetId.
+     */
+    @java.lang.Override
+    public long getAssetId() {
+      return assetId_;
+    }
+
+    public static final int C_POOL_ID_FIELD_NUMBER = 2;
+    private long cPoolId_ = 0L;
+    /**
+     * <code>uint64 c_pool_id = 2 [json_name = "cPoolId"];</code>
+     * @return The cPoolId.
+     */
+    @java.lang.Override
+    public long getCPoolId() {
+      return cPoolId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (assetId_ != 0L) {
+        output.writeUInt64(1, assetId_);
+      }
+      if (cPoolId_ != 0L) {
+        output.writeUInt64(2, cPoolId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (assetId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, assetId_);
+      }
+      if (cPoolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, cPoolId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest other = (com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest) obj;
+
+      if (getAssetId()
+          != other.getAssetId()) return false;
+      if (getCPoolId()
+          != other.getCPoolId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ASSET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAssetId());
+      hash = (37 * hash) + C_POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCPoolId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.rewards.v1beta1.QueryExtLendRewardsAPRRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.QueryExtLendRewardsAPRRequest)
+        com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExtLendRewardsAPRRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExtLendRewardsAPRRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest.class, com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        assetId_ = 0L;
+        cPoolId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExtLendRewardsAPRRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest build() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest buildPartial() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest result = new com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.assetId_ = assetId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.cPoolId_ = cPoolId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest) {
+          return mergeFrom((com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest other) {
+        if (other == com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest.getDefaultInstance()) return this;
+        if (other.getAssetId() != 0L) {
+          setAssetId(other.getAssetId());
+        }
+        if (other.getCPoolId() != 0L) {
+          setCPoolId(other.getCPoolId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                assetId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                cPoolId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long assetId_ ;
+      /**
+       * <code>uint64 asset_id = 1 [json_name = "assetId"];</code>
+       * @return The assetId.
+       */
+      @java.lang.Override
+      public long getAssetId() {
+        return assetId_;
+      }
+      /**
+       * <code>uint64 asset_id = 1 [json_name = "assetId"];</code>
+       * @param value The assetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssetId(long value) {
+
+        assetId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 asset_id = 1 [json_name = "assetId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAssetId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        assetId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long cPoolId_ ;
+      /**
+       * <code>uint64 c_pool_id = 2 [json_name = "cPoolId"];</code>
+       * @return The cPoolId.
+       */
+      @java.lang.Override
+      public long getCPoolId() {
+        return cPoolId_;
+      }
+      /**
+       * <code>uint64 c_pool_id = 2 [json_name = "cPoolId"];</code>
+       * @param value The cPoolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCPoolId(long value) {
+
+        cPoolId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 c_pool_id = 2 [json_name = "cPoolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        cPoolId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.QueryExtLendRewardsAPRRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.QueryExtLendRewardsAPRRequest)
+    private static final com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest();
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryExtLendRewardsAPRRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryExtLendRewardsAPRRequest>() {
+      @java.lang.Override
+      public QueryExtLendRewardsAPRRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryExtLendRewardsAPRRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryExtLendRewardsAPRRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryExtLendRewardsAPRResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.QueryExtLendRewardsAPRResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string apr = 1 [json_name = "apr", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"ext_rewards_lend_apr&#92;""];</code>
+     * @return The apr.
+     */
+    java.lang.String getApr();
+    /**
+     * <code>string apr = 1 [json_name = "apr", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"ext_rewards_lend_apr&#92;""];</code>
+     * @return The bytes for apr.
+     */
+    com.google.protobuf.ByteString
+        getAprBytes();
+  }
+  /**
+   * Protobuf type {@code comdex.rewards.v1beta1.QueryExtLendRewardsAPRResponse}
+   */
+  public static final class QueryExtLendRewardsAPRResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.QueryExtLendRewardsAPRResponse)
+      QueryExtLendRewardsAPRResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryExtLendRewardsAPRResponse.newBuilder() to construct.
+    private QueryExtLendRewardsAPRResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryExtLendRewardsAPRResponse() {
+      apr_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryExtLendRewardsAPRResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExtLendRewardsAPRResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExtLendRewardsAPRResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse.class, com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse.Builder.class);
+    }
+
+    public static final int APR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object apr_ = "";
+    /**
+     * <code>string apr = 1 [json_name = "apr", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"ext_rewards_lend_apr&#92;""];</code>
+     * @return The apr.
+     */
+    @java.lang.Override
+    public java.lang.String getApr() {
+      java.lang.Object ref = apr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        apr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string apr = 1 [json_name = "apr", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"ext_rewards_lend_apr&#92;""];</code>
+     * @return The bytes for apr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAprBytes() {
+      java.lang.Object ref = apr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        apr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, apr_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, apr_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse other = (com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse) obj;
+
+      if (!getApr()
+          .equals(other.getApr())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + APR_FIELD_NUMBER;
+      hash = (53 * hash) + getApr().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.rewards.v1beta1.QueryExtLendRewardsAPRResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.QueryExtLendRewardsAPRResponse)
+        com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExtLendRewardsAPRResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExtLendRewardsAPRResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse.class, com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        apr_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.internal_static_comdex_rewards_v1beta1_QueryExtLendRewardsAPRResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse build() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse buildPartial() {
+        com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse result = new com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.apr_ = apr_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse) {
+          return mergeFrom((com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse other) {
+        if (other == com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse.getDefaultInstance()) return this;
+        if (!other.getApr().isEmpty()) {
+          apr_ = other.apr_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                apr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object apr_ = "";
+      /**
+       * <code>string apr = 1 [json_name = "apr", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"ext_rewards_lend_apr&#92;""];</code>
+       * @return The apr.
+       */
+      public java.lang.String getApr() {
+        java.lang.Object ref = apr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          apr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string apr = 1 [json_name = "apr", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"ext_rewards_lend_apr&#92;""];</code>
+       * @return The bytes for apr.
+       */
+      public com.google.protobuf.ByteString
+          getAprBytes() {
+        java.lang.Object ref = apr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          apr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string apr = 1 [json_name = "apr", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"ext_rewards_lend_apr&#92;""];</code>
+       * @param value The apr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        apr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string apr = 1 [json_name = "apr", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"ext_rewards_lend_apr&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearApr() {
+        apr_ = getDefaultInstance().getApr();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string apr = 1 [json_name = "apr", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"ext_rewards_lend_apr&#92;""];</code>
+       * @param value The bytes for apr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAprBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        apr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.QueryExtLendRewardsAPRResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.QueryExtLendRewardsAPRResponse)
+    private static final com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse();
+    }
+
+    public static com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryExtLendRewardsAPRResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryExtLendRewardsAPRResponse>() {
+      @java.lang.Override
+      public QueryExtLendRewardsAPRResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryExtLendRewardsAPRResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryExtLendRewardsAPRResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.QueryProto.QueryExtLendRewardsAPRResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_QueryParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_QueryParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_QueryParamsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_QueryAllEpochsInfoRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_QueryAllEpochsInfoRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_QueryAllEpochsInfoResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_QueryAllEpochsInfoResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_QueryEpochInfoByDurationRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_QueryEpochInfoByDurationRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_QueryEpochInfoByDurationResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_QueryEpochInfoByDurationResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_QueryAllGaugesRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_QueryAllGaugesRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_QueryAllGaugesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_QueryAllGaugesResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_QueryGaugeByIdRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_QueryGaugeByIdRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_QueryGaugeByIdResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_QueryGaugeByIdResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_QueryGaugesByDurationRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_QueryGaugesByDurationRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_QueryGaugeByDurationResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_QueryGaugeByDurationResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_QueryRewardsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_QueryRewardsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_QueryRewardsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_QueryRewardsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_QueryRewardRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_QueryRewardRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_QueryRewardResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_QueryRewardResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_QueryExternalRewardsLockersRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_QueryExternalRewardsLockersRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_QueryExternalRewardsLockersResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_QueryExternalRewardsLockersResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_QueryExternalRewardVaultsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_QueryExternalRewardVaultsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_QueryExternalRewardVaultsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_QueryExternalRewardVaultsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_QueryWhitelistedAppIdsVaultRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_QueryWhitelistedAppIdsVaultRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_QueryWhitelistedAppIdsVaultResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_QueryWhitelistedAppIdsVaultResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_QueryExternalRewardLendsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_QueryExternalRewardLendsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_QueryExternalRewardLendsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_QueryExternalRewardLendsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_QueryExternalRewardStableMintRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_QueryExternalRewardStableMintRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_QueryExternalRewardStableMintResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_QueryExternalRewardStableMintResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_QueryEpochTimeRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_QueryEpochTimeRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_QueryEpochTimeResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_QueryEpochTimeResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_QueryExtLendRewardsAPRRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_QueryExtLendRewardsAPRRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_QueryExtLendRewardsAPRResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_QueryExtLendRewardsAPRResponse_fieldAccessorTable;
 
@@ -357,13 +21192,13 @@ public final class QueryProto {
       "v1beta1.QueryExtLendRewardsAPRRequest\0326." +
       "comdex.rewards.v1beta1.QueryExtLendRewar" +
       "dsAPRResponse\"4\202\323\344\223\002.\022,/comdex/rewards/v" +
-      "1beta1/ext_rewards_lend_aprB\325\001\n\032com.comd" +
-      "ex.rewards.v1beta1B\nQueryProtoP\001Z1github" +
-      ".com/comdex-official/comdex/x/rewards/ty" +
-      "pes\242\002\003CRX\252\002\026Comdex.Rewards.V1beta1\312\002\026Com" +
-      "dex\\Rewards\\V1beta1\342\002\"Comdex\\Rewards\\V1b" +
-      "eta1\\GPBMetadata\352\002\030Comdex::Rewards::V1be" +
-      "ta1b\006proto3"
+      "1beta1/ext_rewards_lend_aprB\323\001\n\032com.comd" +
+      "ex.rewards.v1beta1B\nQueryProtoZ1github.c" +
+      "om/comdex-official/comdex/x/rewards/type" +
+      "s\242\002\003CRX\252\002\026Comdex.Rewards.V1beta1\312\002\026Comde" +
+      "x\\Rewards\\V1beta1\342\002\"Comdex\\Rewards\\V1bet" +
+      "a1\\GPBMetadata\352\002\030Comdex::Rewards::V1beta" +
+      "1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

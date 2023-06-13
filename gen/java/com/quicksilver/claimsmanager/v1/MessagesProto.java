@@ -29,13 +29,13 @@ public final class MessagesProto {
       "roto\032\034google/api/annotations.proto\032\035tend" +
       "ermint/crypto/proof.proto\0320quicksilver/c" +
       "laimsmanager/v1/claimsmanager.proto2\005\n\003M" +
-      "sgB\201\002\n com.quicksilver.claimsmanager.v1B" +
-      "\rMessagesProtoP\001Z<github.com/ingenuity-b" +
-      "uild/quicksilver/x/claimsmanager/types\242\002" +
-      "\003QCX\252\002\034Quicksilver.Claimsmanager.V1\312\002\034Qu" +
-      "icksilver\\Claimsmanager\\V1\342\002(Quicksilver" +
-      "\\Claimsmanager\\V1\\GPBMetadata\352\002\036Quicksil" +
-      "ver::Claimsmanager::V1b\006proto3"
+      "sgB\377\001\n com.quicksilver.claimsmanager.v1B" +
+      "\rMessagesProtoZ<github.com/ingenuity-bui" +
+      "ld/quicksilver/x/claimsmanager/types\242\002\003Q" +
+      "CX\252\002\034Quicksilver.Claimsmanager.V1\312\002\034Quic" +
+      "ksilver\\Claimsmanager\\V1\342\002(Quicksilver\\C" +
+      "laimsmanager\\V1\\GPBMetadata\352\002\036Quicksilve" +
+      "r::Claimsmanager::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

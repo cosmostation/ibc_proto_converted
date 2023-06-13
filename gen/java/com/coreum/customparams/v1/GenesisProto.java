@@ -14,9 +14,677 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:coreum.customparams.v1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * staking_params defines staking parameters of the module.
+     * </pre>
+     *
+     * <code>.coreum.customparams.v1.StakingParams staking_params = 1 [json_name = "stakingParams", (.gogoproto.nullable) = false];</code>
+     * @return Whether the stakingParams field is set.
+     */
+    boolean hasStakingParams();
+    /**
+     * <pre>
+     * staking_params defines staking parameters of the module.
+     * </pre>
+     *
+     * <code>.coreum.customparams.v1.StakingParams staking_params = 1 [json_name = "stakingParams", (.gogoproto.nullable) = false];</code>
+     * @return The stakingParams.
+     */
+    com.coreum.customparams.v1.ParamsProto.StakingParams getStakingParams();
+    /**
+     * <pre>
+     * staking_params defines staking parameters of the module.
+     * </pre>
+     *
+     * <code>.coreum.customparams.v1.StakingParams staking_params = 1 [json_name = "stakingParams", (.gogoproto.nullable) = false];</code>
+     */
+    com.coreum.customparams.v1.ParamsProto.StakingParamsOrBuilder getStakingParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * GenesisState defines the module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code coreum.customparams.v1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:coreum.customparams.v1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.coreum.customparams.v1.GenesisProto.internal_static_coreum_customparams_v1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.coreum.customparams.v1.GenesisProto.internal_static_coreum_customparams_v1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.coreum.customparams.v1.GenesisProto.GenesisState.class, com.coreum.customparams.v1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int STAKING_PARAMS_FIELD_NUMBER = 1;
+    private com.coreum.customparams.v1.ParamsProto.StakingParams stakingParams_;
+    /**
+     * <pre>
+     * staking_params defines staking parameters of the module.
+     * </pre>
+     *
+     * <code>.coreum.customparams.v1.StakingParams staking_params = 1 [json_name = "stakingParams", (.gogoproto.nullable) = false];</code>
+     * @return Whether the stakingParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasStakingParams() {
+      return stakingParams_ != null;
+    }
+    /**
+     * <pre>
+     * staking_params defines staking parameters of the module.
+     * </pre>
+     *
+     * <code>.coreum.customparams.v1.StakingParams staking_params = 1 [json_name = "stakingParams", (.gogoproto.nullable) = false];</code>
+     * @return The stakingParams.
+     */
+    @java.lang.Override
+    public com.coreum.customparams.v1.ParamsProto.StakingParams getStakingParams() {
+      return stakingParams_ == null ? com.coreum.customparams.v1.ParamsProto.StakingParams.getDefaultInstance() : stakingParams_;
+    }
+    /**
+     * <pre>
+     * staking_params defines staking parameters of the module.
+     * </pre>
+     *
+     * <code>.coreum.customparams.v1.StakingParams staking_params = 1 [json_name = "stakingParams", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.coreum.customparams.v1.ParamsProto.StakingParamsOrBuilder getStakingParamsOrBuilder() {
+      return stakingParams_ == null ? com.coreum.customparams.v1.ParamsProto.StakingParams.getDefaultInstance() : stakingParams_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (stakingParams_ != null) {
+        output.writeMessage(1, getStakingParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (stakingParams_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getStakingParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.coreum.customparams.v1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.coreum.customparams.v1.GenesisProto.GenesisState other = (com.coreum.customparams.v1.GenesisProto.GenesisState) obj;
+
+      if (hasStakingParams() != other.hasStakingParams()) return false;
+      if (hasStakingParams()) {
+        if (!getStakingParams()
+            .equals(other.getStakingParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasStakingParams()) {
+        hash = (37 * hash) + STAKING_PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getStakingParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.coreum.customparams.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.customparams.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.customparams.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.customparams.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.customparams.v1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.customparams.v1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.customparams.v1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.customparams.v1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.coreum.customparams.v1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.coreum.customparams.v1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.coreum.customparams.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.customparams.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.coreum.customparams.v1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code coreum.customparams.v1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:coreum.customparams.v1.GenesisState)
+        com.coreum.customparams.v1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.coreum.customparams.v1.GenesisProto.internal_static_coreum_customparams_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.coreum.customparams.v1.GenesisProto.internal_static_coreum_customparams_v1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.coreum.customparams.v1.GenesisProto.GenesisState.class, com.coreum.customparams.v1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.coreum.customparams.v1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        stakingParams_ = null;
+        if (stakingParamsBuilder_ != null) {
+          stakingParamsBuilder_.dispose();
+          stakingParamsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.coreum.customparams.v1.GenesisProto.internal_static_coreum_customparams_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.coreum.customparams.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.coreum.customparams.v1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.coreum.customparams.v1.GenesisProto.GenesisState build() {
+        com.coreum.customparams.v1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.coreum.customparams.v1.GenesisProto.GenesisState buildPartial() {
+        com.coreum.customparams.v1.GenesisProto.GenesisState result = new com.coreum.customparams.v1.GenesisProto.GenesisState(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.coreum.customparams.v1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.stakingParams_ = stakingParamsBuilder_ == null
+              ? stakingParams_
+              : stakingParamsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.coreum.customparams.v1.GenesisProto.GenesisState) {
+          return mergeFrom((com.coreum.customparams.v1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.coreum.customparams.v1.GenesisProto.GenesisState other) {
+        if (other == com.coreum.customparams.v1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasStakingParams()) {
+          mergeStakingParams(other.getStakingParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getStakingParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.coreum.customparams.v1.ParamsProto.StakingParams stakingParams_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.coreum.customparams.v1.ParamsProto.StakingParams, com.coreum.customparams.v1.ParamsProto.StakingParams.Builder, com.coreum.customparams.v1.ParamsProto.StakingParamsOrBuilder> stakingParamsBuilder_;
+      /**
+       * <pre>
+       * staking_params defines staking parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.customparams.v1.StakingParams staking_params = 1 [json_name = "stakingParams", (.gogoproto.nullable) = false];</code>
+       * @return Whether the stakingParams field is set.
+       */
+      public boolean hasStakingParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * staking_params defines staking parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.customparams.v1.StakingParams staking_params = 1 [json_name = "stakingParams", (.gogoproto.nullable) = false];</code>
+       * @return The stakingParams.
+       */
+      public com.coreum.customparams.v1.ParamsProto.StakingParams getStakingParams() {
+        if (stakingParamsBuilder_ == null) {
+          return stakingParams_ == null ? com.coreum.customparams.v1.ParamsProto.StakingParams.getDefaultInstance() : stakingParams_;
+        } else {
+          return stakingParamsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * staking_params defines staking parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.customparams.v1.StakingParams staking_params = 1 [json_name = "stakingParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setStakingParams(com.coreum.customparams.v1.ParamsProto.StakingParams value) {
+        if (stakingParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          stakingParams_ = value;
+        } else {
+          stakingParamsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_params defines staking parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.customparams.v1.StakingParams staking_params = 1 [json_name = "stakingParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setStakingParams(
+          com.coreum.customparams.v1.ParamsProto.StakingParams.Builder builderForValue) {
+        if (stakingParamsBuilder_ == null) {
+          stakingParams_ = builderForValue.build();
+        } else {
+          stakingParamsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_params defines staking parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.customparams.v1.StakingParams staking_params = 1 [json_name = "stakingParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeStakingParams(com.coreum.customparams.v1.ParamsProto.StakingParams value) {
+        if (stakingParamsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            stakingParams_ != null &&
+            stakingParams_ != com.coreum.customparams.v1.ParamsProto.StakingParams.getDefaultInstance()) {
+            getStakingParamsBuilder().mergeFrom(value);
+          } else {
+            stakingParams_ = value;
+          }
+        } else {
+          stakingParamsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_params defines staking parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.customparams.v1.StakingParams staking_params = 1 [json_name = "stakingParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearStakingParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        stakingParams_ = null;
+        if (stakingParamsBuilder_ != null) {
+          stakingParamsBuilder_.dispose();
+          stakingParamsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_params defines staking parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.customparams.v1.StakingParams staking_params = 1 [json_name = "stakingParams", (.gogoproto.nullable) = false];</code>
+       */
+      public com.coreum.customparams.v1.ParamsProto.StakingParams.Builder getStakingParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getStakingParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * staking_params defines staking parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.customparams.v1.StakingParams staking_params = 1 [json_name = "stakingParams", (.gogoproto.nullable) = false];</code>
+       */
+      public com.coreum.customparams.v1.ParamsProto.StakingParamsOrBuilder getStakingParamsOrBuilder() {
+        if (stakingParamsBuilder_ != null) {
+          return stakingParamsBuilder_.getMessageOrBuilder();
+        } else {
+          return stakingParams_ == null ?
+              com.coreum.customparams.v1.ParamsProto.StakingParams.getDefaultInstance() : stakingParams_;
+        }
+      }
+      /**
+       * <pre>
+       * staking_params defines staking parameters of the module.
+       * </pre>
+       *
+       * <code>.coreum.customparams.v1.StakingParams staking_params = 1 [json_name = "stakingParams", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.coreum.customparams.v1.ParamsProto.StakingParams, com.coreum.customparams.v1.ParamsProto.StakingParams.Builder, com.coreum.customparams.v1.ParamsProto.StakingParamsOrBuilder> 
+          getStakingParamsFieldBuilder() {
+        if (stakingParamsBuilder_ == null) {
+          stakingParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.coreum.customparams.v1.ParamsProto.StakingParams, com.coreum.customparams.v1.ParamsProto.StakingParams.Builder, com.coreum.customparams.v1.ParamsProto.StakingParamsOrBuilder>(
+                  getStakingParams(),
+                  getParentForChildren(),
+                  isClean());
+          stakingParams_ = null;
+        }
+        return stakingParamsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:coreum.customparams.v1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:coreum.customparams.v1.GenesisState)
+    private static final com.coreum.customparams.v1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.coreum.customparams.v1.GenesisProto.GenesisState();
+    }
+
+    public static com.coreum.customparams.v1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.coreum.customparams.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_coreum_customparams_v1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_coreum_customparams_v1_GenesisState_fieldAccessorTable;
 
@@ -34,13 +702,13 @@ public final class GenesisProto {
       "reum/customparams/v1/params.proto\"b\n\014Gen" +
       "esisState\022R\n\016staking_params\030\001 \001(\0132%.core" +
       "um.customparams.v1.StakingParamsB\004\310\336\037\000R\r" +
-      "stakingParamsB\335\001\n\032com.coreum.customparam" +
-      "s.v1B\014GenesisProtoP\001Z7github.com/CoreumF" +
-      "oundation/coreum/x/customparams/types\242\002\003" +
-      "CCX\252\002\026Coreum.Customparams.V1\312\002\026Coreum\\Cu" +
-      "stomparams\\V1\342\002\"Coreum\\Customparams\\V1\\G" +
-      "PBMetadata\352\002\030Coreum::Customparams::V1b\006p" +
-      "roto3"
+      "stakingParamsB\333\001\n\032com.coreum.customparam" +
+      "s.v1B\014GenesisProtoZ7github.com/CoreumFou" +
+      "ndation/coreum/x/customparams/types\242\002\003CC" +
+      "X\252\002\026Coreum.Customparams.V1\312\002\026Coreum\\Cust" +
+      "omparams\\V1\342\002\"Coreum\\Customparams\\V1\\GPB" +
+      "Metadata\352\002\030Coreum::Customparams::V1b\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

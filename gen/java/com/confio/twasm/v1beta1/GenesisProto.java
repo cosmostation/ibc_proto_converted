@@ -14,24 +14,5747 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.twasm.v1beta1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Params sdk type Params for wasmd
+     * </pre>
+     *
+     * <code>.cosmwasm.wasm.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * Params sdk type Params for wasmd
+     * </pre>
+     *
+     * <code>.cosmwasm.wasm.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.cosmwasm.wasm.v1.TypesProto.Params getParams();
+    /**
+     * <pre>
+     * Params sdk type Params for wasmd
+     * </pre>
+     *
+     * <code>.cosmwasm.wasm.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmwasm.wasm.v1.TypesProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <pre>
+     * Codes has all stored wasm codes and metadata
+     * </pre>
+     *
+     * <code>repeated .cosmwasm.wasm.v1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+     */
+    java.util.List<com.cosmwasm.wasm.v1.GenesisProto.Code> 
+        getCodesList();
+    /**
+     * <pre>
+     * Codes has all stored wasm codes and metadata
+     * </pre>
+     *
+     * <code>repeated .cosmwasm.wasm.v1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+     */
+    com.cosmwasm.wasm.v1.GenesisProto.Code getCodes(int index);
+    /**
+     * <pre>
+     * Codes has all stored wasm codes and metadata
+     * </pre>
+     *
+     * <code>repeated .cosmwasm.wasm.v1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+     */
+    int getCodesCount();
+    /**
+     * <pre>
+     * Codes has all stored wasm codes and metadata
+     * </pre>
+     *
+     * <code>repeated .cosmwasm.wasm.v1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+     */
+    java.util.List<? extends com.cosmwasm.wasm.v1.GenesisProto.CodeOrBuilder> 
+        getCodesOrBuilderList();
+    /**
+     * <pre>
+     * Codes has all stored wasm codes and metadata
+     * </pre>
+     *
+     * <code>repeated .cosmwasm.wasm.v1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+     */
+    com.cosmwasm.wasm.v1.GenesisProto.CodeOrBuilder getCodesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Contracts contains all instantiated contracts, state and metadata
+     * </pre>
+     *
+     * <code>repeated .confio.twasm.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+     */
+    java.util.List<com.confio.twasm.v1beta1.GenesisProto.Contract> 
+        getContractsList();
+    /**
+     * <pre>
+     * Contracts contains all instantiated contracts, state and metadata
+     * </pre>
+     *
+     * <code>repeated .confio.twasm.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+     */
+    com.confio.twasm.v1beta1.GenesisProto.Contract getContracts(int index);
+    /**
+     * <pre>
+     * Contracts contains all instantiated contracts, state and metadata
+     * </pre>
+     *
+     * <code>repeated .confio.twasm.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+     */
+    int getContractsCount();
+    /**
+     * <pre>
+     * Contracts contains all instantiated contracts, state and metadata
+     * </pre>
+     *
+     * <code>repeated .confio.twasm.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+     */
+    java.util.List<? extends com.confio.twasm.v1beta1.GenesisProto.ContractOrBuilder> 
+        getContractsOrBuilderList();
+    /**
+     * <pre>
+     * Contracts contains all instantiated contracts, state and metadata
+     * </pre>
+     *
+     * <code>repeated .confio.twasm.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+     */
+    com.confio.twasm.v1beta1.GenesisProto.ContractOrBuilder getContractsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Sequences names and values
+     * </pre>
+     *
+     * <code>repeated .cosmwasm.wasm.v1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+     */
+    java.util.List<com.cosmwasm.wasm.v1.GenesisProto.Sequence> 
+        getSequencesList();
+    /**
+     * <pre>
+     * Sequences names and values
+     * </pre>
+     *
+     * <code>repeated .cosmwasm.wasm.v1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+     */
+    com.cosmwasm.wasm.v1.GenesisProto.Sequence getSequences(int index);
+    /**
+     * <pre>
+     * Sequences names and values
+     * </pre>
+     *
+     * <code>repeated .cosmwasm.wasm.v1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+     */
+    int getSequencesCount();
+    /**
+     * <pre>
+     * Sequences names and values
+     * </pre>
+     *
+     * <code>repeated .cosmwasm.wasm.v1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+     */
+    java.util.List<? extends com.cosmwasm.wasm.v1.GenesisProto.SequenceOrBuilder> 
+        getSequencesOrBuilderList();
+    /**
+     * <pre>
+     * Sequences names and values
+     * </pre>
+     *
+     * <code>repeated .cosmwasm.wasm.v1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+     */
+    com.cosmwasm.wasm.v1.GenesisProto.SequenceOrBuilder getSequencesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * GenMsgs has wasmd sdk type messages to execute in the genesis phase
+     * </pre>
+     *
+     * <code>repeated .cosmwasm.wasm.v1.GenesisState.GenMsgs gen_msgs = 5 [json_name = "genMsgs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "gen_msgs,omitempty"];</code>
+     */
+    java.util.List<com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgs> 
+        getGenMsgsList();
+    /**
+     * <pre>
+     * GenMsgs has wasmd sdk type messages to execute in the genesis phase
+     * </pre>
+     *
+     * <code>repeated .cosmwasm.wasm.v1.GenesisState.GenMsgs gen_msgs = 5 [json_name = "genMsgs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "gen_msgs,omitempty"];</code>
+     */
+    com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgs getGenMsgs(int index);
+    /**
+     * <pre>
+     * GenMsgs has wasmd sdk type messages to execute in the genesis phase
+     * </pre>
+     *
+     * <code>repeated .cosmwasm.wasm.v1.GenesisState.GenMsgs gen_msgs = 5 [json_name = "genMsgs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "gen_msgs,omitempty"];</code>
+     */
+    int getGenMsgsCount();
+    /**
+     * <pre>
+     * GenMsgs has wasmd sdk type messages to execute in the genesis phase
+     * </pre>
+     *
+     * <code>repeated .cosmwasm.wasm.v1.GenesisState.GenMsgs gen_msgs = 5 [json_name = "genMsgs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "gen_msgs,omitempty"];</code>
+     */
+    java.util.List<? extends com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgsOrBuilder> 
+        getGenMsgsOrBuilderList();
+    /**
+     * <pre>
+     * GenMsgs has wasmd sdk type messages to execute in the genesis phase
+     * </pre>
+     *
+     * <code>repeated .cosmwasm.wasm.v1.GenesisState.GenMsgs gen_msgs = 5 [json_name = "genMsgs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "gen_msgs,omitempty"];</code>
+     */
+    com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgsOrBuilder getGenMsgsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * PrivilegedContractAddresses is a list of contract addresses that can have
+     * special permissions
+     * </pre>
+     *
+     * <code>repeated string privileged_contract_addresses = 6 [json_name = "privilegedContractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+     * @return A list containing the privilegedContractAddresses.
+     */
+    java.util.List<java.lang.String>
+        getPrivilegedContractAddressesList();
+    /**
+     * <pre>
+     * PrivilegedContractAddresses is a list of contract addresses that can have
+     * special permissions
+     * </pre>
+     *
+     * <code>repeated string privileged_contract_addresses = 6 [json_name = "privilegedContractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+     * @return The count of privilegedContractAddresses.
+     */
+    int getPrivilegedContractAddressesCount();
+    /**
+     * <pre>
+     * PrivilegedContractAddresses is a list of contract addresses that can have
+     * special permissions
+     * </pre>
+     *
+     * <code>repeated string privileged_contract_addresses = 6 [json_name = "privilegedContractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+     * @param index The index of the element to return.
+     * @return The privilegedContractAddresses at the given index.
+     */
+    java.lang.String getPrivilegedContractAddresses(int index);
+    /**
+     * <pre>
+     * PrivilegedContractAddresses is a list of contract addresses that can have
+     * special permissions
+     * </pre>
+     *
+     * <code>repeated string privileged_contract_addresses = 6 [json_name = "privilegedContractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the privilegedContractAddresses at the given index.
+     */
+    com.google.protobuf.ByteString
+        getPrivilegedContractAddressesBytes(int index);
+
+    /**
+     * <pre>
+     * PinnedCodeIDs has codeInfo ids for wasm codes that are pinned in cache
+     * </pre>
+     *
+     * <code>repeated uint64 pinned_code_ids = 7 [json_name = "pinnedCodeIds", (.gogoproto.customname) = "PinnedCodeIDs", (.gogoproto.jsontag) = "pinned_code_ids,omitempty"];</code>
+     * @return A list containing the pinnedCodeIds.
+     */
+    java.util.List<java.lang.Long> getPinnedCodeIdsList();
+    /**
+     * <pre>
+     * PinnedCodeIDs has codeInfo ids for wasm codes that are pinned in cache
+     * </pre>
+     *
+     * <code>repeated uint64 pinned_code_ids = 7 [json_name = "pinnedCodeIds", (.gogoproto.customname) = "PinnedCodeIDs", (.gogoproto.jsontag) = "pinned_code_ids,omitempty"];</code>
+     * @return The count of pinnedCodeIds.
+     */
+    int getPinnedCodeIdsCount();
+    /**
+     * <pre>
+     * PinnedCodeIDs has codeInfo ids for wasm codes that are pinned in cache
+     * </pre>
+     *
+     * <code>repeated uint64 pinned_code_ids = 7 [json_name = "pinnedCodeIds", (.gogoproto.customname) = "PinnedCodeIDs", (.gogoproto.jsontag) = "pinned_code_ids,omitempty"];</code>
+     * @param index The index of the element to return.
+     * @return The pinnedCodeIds at the given index.
+     */
+    long getPinnedCodeIds(int index);
+  }
+  /**
+   * Protobuf type {@code confio.twasm.v1beta1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.twasm.v1beta1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      codes_ = java.util.Collections.emptyList();
+      contracts_ = java.util.Collections.emptyList();
+      sequences_ = java.util.Collections.emptyList();
+      genMsgs_ = java.util.Collections.emptyList();
+      privilegedContractAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      pinnedCodeIds_ = emptyLongList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.twasm.v1beta1.GenesisProto.internal_static_confio_twasm_v1beta1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.twasm.v1beta1.GenesisProto.internal_static_confio_twasm_v1beta1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.twasm.v1beta1.GenesisProto.GenesisState.class, com.confio.twasm.v1beta1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.cosmwasm.wasm.v1.TypesProto.Params params_;
+    /**
+     * <pre>
+     * Params sdk type Params for wasmd
+     * </pre>
+     *
+     * <code>.cosmwasm.wasm.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * Params sdk type Params for wasmd
+     * </pre>
+     *
+     * <code>.cosmwasm.wasm.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.cosmwasm.wasm.v1.TypesProto.Params getParams() {
+      return params_ == null ? com.cosmwasm.wasm.v1.TypesProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * Params sdk type Params for wasmd
+     * </pre>
+     *
+     * <code>.cosmwasm.wasm.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmwasm.wasm.v1.TypesProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.cosmwasm.wasm.v1.TypesProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int CODES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmwasm.wasm.v1.GenesisProto.Code> codes_;
+    /**
+     * <pre>
+     * Codes has all stored wasm codes and metadata
+     * </pre>
+     *
+     * <code>repeated .cosmwasm.wasm.v1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmwasm.wasm.v1.GenesisProto.Code> getCodesList() {
+      return codes_;
+    }
+    /**
+     * <pre>
+     * Codes has all stored wasm codes and metadata
+     * </pre>
+     *
+     * <code>repeated .cosmwasm.wasm.v1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmwasm.wasm.v1.GenesisProto.CodeOrBuilder> 
+        getCodesOrBuilderList() {
+      return codes_;
+    }
+    /**
+     * <pre>
+     * Codes has all stored wasm codes and metadata
+     * </pre>
+     *
+     * <code>repeated .cosmwasm.wasm.v1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+     */
+    @java.lang.Override
+    public int getCodesCount() {
+      return codes_.size();
+    }
+    /**
+     * <pre>
+     * Codes has all stored wasm codes and metadata
+     * </pre>
+     *
+     * <code>repeated .cosmwasm.wasm.v1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+     */
+    @java.lang.Override
+    public com.cosmwasm.wasm.v1.GenesisProto.Code getCodes(int index) {
+      return codes_.get(index);
+    }
+    /**
+     * <pre>
+     * Codes has all stored wasm codes and metadata
+     * </pre>
+     *
+     * <code>repeated .cosmwasm.wasm.v1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+     */
+    @java.lang.Override
+    public com.cosmwasm.wasm.v1.GenesisProto.CodeOrBuilder getCodesOrBuilder(
+        int index) {
+      return codes_.get(index);
+    }
+
+    public static final int CONTRACTS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.confio.twasm.v1beta1.GenesisProto.Contract> contracts_;
+    /**
+     * <pre>
+     * Contracts contains all instantiated contracts, state and metadata
+     * </pre>
+     *
+     * <code>repeated .confio.twasm.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.confio.twasm.v1beta1.GenesisProto.Contract> getContractsList() {
+      return contracts_;
+    }
+    /**
+     * <pre>
+     * Contracts contains all instantiated contracts, state and metadata
+     * </pre>
+     *
+     * <code>repeated .confio.twasm.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.confio.twasm.v1beta1.GenesisProto.ContractOrBuilder> 
+        getContractsOrBuilderList() {
+      return contracts_;
+    }
+    /**
+     * <pre>
+     * Contracts contains all instantiated contracts, state and metadata
+     * </pre>
+     *
+     * <code>repeated .confio.twasm.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+     */
+    @java.lang.Override
+    public int getContractsCount() {
+      return contracts_.size();
+    }
+    /**
+     * <pre>
+     * Contracts contains all instantiated contracts, state and metadata
+     * </pre>
+     *
+     * <code>repeated .confio.twasm.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+     */
+    @java.lang.Override
+    public com.confio.twasm.v1beta1.GenesisProto.Contract getContracts(int index) {
+      return contracts_.get(index);
+    }
+    /**
+     * <pre>
+     * Contracts contains all instantiated contracts, state and metadata
+     * </pre>
+     *
+     * <code>repeated .confio.twasm.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+     */
+    @java.lang.Override
+    public com.confio.twasm.v1beta1.GenesisProto.ContractOrBuilder getContractsOrBuilder(
+        int index) {
+      return contracts_.get(index);
+    }
+
+    public static final int SEQUENCES_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmwasm.wasm.v1.GenesisProto.Sequence> sequences_;
+    /**
+     * <pre>
+     * Sequences names and values
+     * </pre>
+     *
+     * <code>repeated .cosmwasm.wasm.v1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmwasm.wasm.v1.GenesisProto.Sequence> getSequencesList() {
+      return sequences_;
+    }
+    /**
+     * <pre>
+     * Sequences names and values
+     * </pre>
+     *
+     * <code>repeated .cosmwasm.wasm.v1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmwasm.wasm.v1.GenesisProto.SequenceOrBuilder> 
+        getSequencesOrBuilderList() {
+      return sequences_;
+    }
+    /**
+     * <pre>
+     * Sequences names and values
+     * </pre>
+     *
+     * <code>repeated .cosmwasm.wasm.v1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+     */
+    @java.lang.Override
+    public int getSequencesCount() {
+      return sequences_.size();
+    }
+    /**
+     * <pre>
+     * Sequences names and values
+     * </pre>
+     *
+     * <code>repeated .cosmwasm.wasm.v1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+     */
+    @java.lang.Override
+    public com.cosmwasm.wasm.v1.GenesisProto.Sequence getSequences(int index) {
+      return sequences_.get(index);
+    }
+    /**
+     * <pre>
+     * Sequences names and values
+     * </pre>
+     *
+     * <code>repeated .cosmwasm.wasm.v1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+     */
+    @java.lang.Override
+    public com.cosmwasm.wasm.v1.GenesisProto.SequenceOrBuilder getSequencesOrBuilder(
+        int index) {
+      return sequences_.get(index);
+    }
+
+    public static final int GEN_MSGS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgs> genMsgs_;
+    /**
+     * <pre>
+     * GenMsgs has wasmd sdk type messages to execute in the genesis phase
+     * </pre>
+     *
+     * <code>repeated .cosmwasm.wasm.v1.GenesisState.GenMsgs gen_msgs = 5 [json_name = "genMsgs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "gen_msgs,omitempty"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgs> getGenMsgsList() {
+      return genMsgs_;
+    }
+    /**
+     * <pre>
+     * GenMsgs has wasmd sdk type messages to execute in the genesis phase
+     * </pre>
+     *
+     * <code>repeated .cosmwasm.wasm.v1.GenesisState.GenMsgs gen_msgs = 5 [json_name = "genMsgs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "gen_msgs,omitempty"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgsOrBuilder> 
+        getGenMsgsOrBuilderList() {
+      return genMsgs_;
+    }
+    /**
+     * <pre>
+     * GenMsgs has wasmd sdk type messages to execute in the genesis phase
+     * </pre>
+     *
+     * <code>repeated .cosmwasm.wasm.v1.GenesisState.GenMsgs gen_msgs = 5 [json_name = "genMsgs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "gen_msgs,omitempty"];</code>
+     */
+    @java.lang.Override
+    public int getGenMsgsCount() {
+      return genMsgs_.size();
+    }
+    /**
+     * <pre>
+     * GenMsgs has wasmd sdk type messages to execute in the genesis phase
+     * </pre>
+     *
+     * <code>repeated .cosmwasm.wasm.v1.GenesisState.GenMsgs gen_msgs = 5 [json_name = "genMsgs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "gen_msgs,omitempty"];</code>
+     */
+    @java.lang.Override
+    public com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgs getGenMsgs(int index) {
+      return genMsgs_.get(index);
+    }
+    /**
+     * <pre>
+     * GenMsgs has wasmd sdk type messages to execute in the genesis phase
+     * </pre>
+     *
+     * <code>repeated .cosmwasm.wasm.v1.GenesisState.GenMsgs gen_msgs = 5 [json_name = "genMsgs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "gen_msgs,omitempty"];</code>
+     */
+    @java.lang.Override
+    public com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgsOrBuilder getGenMsgsOrBuilder(
+        int index) {
+      return genMsgs_.get(index);
+    }
+
+    public static final int PRIVILEGED_CONTRACT_ADDRESSES_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList privilegedContractAddresses_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * PrivilegedContractAddresses is a list of contract addresses that can have
+     * special permissions
+     * </pre>
+     *
+     * <code>repeated string privileged_contract_addresses = 6 [json_name = "privilegedContractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+     * @return A list containing the privilegedContractAddresses.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getPrivilegedContractAddressesList() {
+      return privilegedContractAddresses_;
+    }
+    /**
+     * <pre>
+     * PrivilegedContractAddresses is a list of contract addresses that can have
+     * special permissions
+     * </pre>
+     *
+     * <code>repeated string privileged_contract_addresses = 6 [json_name = "privilegedContractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+     * @return The count of privilegedContractAddresses.
+     */
+    public int getPrivilegedContractAddressesCount() {
+      return privilegedContractAddresses_.size();
+    }
+    /**
+     * <pre>
+     * PrivilegedContractAddresses is a list of contract addresses that can have
+     * special permissions
+     * </pre>
+     *
+     * <code>repeated string privileged_contract_addresses = 6 [json_name = "privilegedContractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+     * @param index The index of the element to return.
+     * @return The privilegedContractAddresses at the given index.
+     */
+    public java.lang.String getPrivilegedContractAddresses(int index) {
+      return privilegedContractAddresses_.get(index);
+    }
+    /**
+     * <pre>
+     * PrivilegedContractAddresses is a list of contract addresses that can have
+     * special permissions
+     * </pre>
+     *
+     * <code>repeated string privileged_contract_addresses = 6 [json_name = "privilegedContractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the privilegedContractAddresses at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getPrivilegedContractAddressesBytes(int index) {
+      return privilegedContractAddresses_.getByteString(index);
+    }
+
+    public static final int PINNED_CODE_IDS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.LongList pinnedCodeIds_;
+    /**
+     * <pre>
+     * PinnedCodeIDs has codeInfo ids for wasm codes that are pinned in cache
+     * </pre>
+     *
+     * <code>repeated uint64 pinned_code_ids = 7 [json_name = "pinnedCodeIds", (.gogoproto.customname) = "PinnedCodeIDs", (.gogoproto.jsontag) = "pinned_code_ids,omitempty"];</code>
+     * @return A list containing the pinnedCodeIds.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Long>
+        getPinnedCodeIdsList() {
+      return pinnedCodeIds_;
+    }
+    /**
+     * <pre>
+     * PinnedCodeIDs has codeInfo ids for wasm codes that are pinned in cache
+     * </pre>
+     *
+     * <code>repeated uint64 pinned_code_ids = 7 [json_name = "pinnedCodeIds", (.gogoproto.customname) = "PinnedCodeIDs", (.gogoproto.jsontag) = "pinned_code_ids,omitempty"];</code>
+     * @return The count of pinnedCodeIds.
+     */
+    public int getPinnedCodeIdsCount() {
+      return pinnedCodeIds_.size();
+    }
+    /**
+     * <pre>
+     * PinnedCodeIDs has codeInfo ids for wasm codes that are pinned in cache
+     * </pre>
+     *
+     * <code>repeated uint64 pinned_code_ids = 7 [json_name = "pinnedCodeIds", (.gogoproto.customname) = "PinnedCodeIDs", (.gogoproto.jsontag) = "pinned_code_ids,omitempty"];</code>
+     * @param index The index of the element to return.
+     * @return The pinnedCodeIds at the given index.
+     */
+    public long getPinnedCodeIds(int index) {
+      return pinnedCodeIds_.getLong(index);
+    }
+    private int pinnedCodeIdsMemoizedSerializedSize = -1;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      for (int i = 0; i < codes_.size(); i++) {
+        output.writeMessage(2, codes_.get(i));
+      }
+      for (int i = 0; i < contracts_.size(); i++) {
+        output.writeMessage(3, contracts_.get(i));
+      }
+      for (int i = 0; i < sequences_.size(); i++) {
+        output.writeMessage(4, sequences_.get(i));
+      }
+      for (int i = 0; i < genMsgs_.size(); i++) {
+        output.writeMessage(5, genMsgs_.get(i));
+      }
+      for (int i = 0; i < privilegedContractAddresses_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, privilegedContractAddresses_.getRaw(i));
+      }
+      if (getPinnedCodeIdsList().size() > 0) {
+        output.writeUInt32NoTag(58);
+        output.writeUInt32NoTag(pinnedCodeIdsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < pinnedCodeIds_.size(); i++) {
+        output.writeUInt64NoTag(pinnedCodeIds_.getLong(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      for (int i = 0; i < codes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, codes_.get(i));
+      }
+      for (int i = 0; i < contracts_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, contracts_.get(i));
+      }
+      for (int i = 0; i < sequences_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, sequences_.get(i));
+      }
+      for (int i = 0; i < genMsgs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, genMsgs_.get(i));
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < privilegedContractAddresses_.size(); i++) {
+          dataSize += computeStringSizeNoTag(privilegedContractAddresses_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getPrivilegedContractAddressesList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < pinnedCodeIds_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt64SizeNoTag(pinnedCodeIds_.getLong(i));
+        }
+        size += dataSize;
+        if (!getPinnedCodeIdsList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        pinnedCodeIdsMemoizedSerializedSize = dataSize;
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.twasm.v1beta1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.confio.twasm.v1beta1.GenesisProto.GenesisState other = (com.confio.twasm.v1beta1.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getCodesList()
+          .equals(other.getCodesList())) return false;
+      if (!getContractsList()
+          .equals(other.getContractsList())) return false;
+      if (!getSequencesList()
+          .equals(other.getSequencesList())) return false;
+      if (!getGenMsgsList()
+          .equals(other.getGenMsgsList())) return false;
+      if (!getPrivilegedContractAddressesList()
+          .equals(other.getPrivilegedContractAddressesList())) return false;
+      if (!getPinnedCodeIdsList()
+          .equals(other.getPinnedCodeIdsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (getCodesCount() > 0) {
+        hash = (37 * hash) + CODES_FIELD_NUMBER;
+        hash = (53 * hash) + getCodesList().hashCode();
+      }
+      if (getContractsCount() > 0) {
+        hash = (37 * hash) + CONTRACTS_FIELD_NUMBER;
+        hash = (53 * hash) + getContractsList().hashCode();
+      }
+      if (getSequencesCount() > 0) {
+        hash = (37 * hash) + SEQUENCES_FIELD_NUMBER;
+        hash = (53 * hash) + getSequencesList().hashCode();
+      }
+      if (getGenMsgsCount() > 0) {
+        hash = (37 * hash) + GEN_MSGS_FIELD_NUMBER;
+        hash = (53 * hash) + getGenMsgsList().hashCode();
+      }
+      if (getPrivilegedContractAddressesCount() > 0) {
+        hash = (37 * hash) + PRIVILEGED_CONTRACT_ADDRESSES_FIELD_NUMBER;
+        hash = (53 * hash) + getPrivilegedContractAddressesList().hashCode();
+      }
+      if (getPinnedCodeIdsCount() > 0) {
+        hash = (37 * hash) + PINNED_CODE_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getPinnedCodeIdsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.twasm.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.twasm.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.twasm.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.twasm.v1beta1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code confio.twasm.v1beta1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.twasm.v1beta1.GenesisState)
+        com.confio.twasm.v1beta1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.twasm.v1beta1.GenesisProto.internal_static_confio_twasm_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.twasm.v1beta1.GenesisProto.internal_static_confio_twasm_v1beta1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.twasm.v1beta1.GenesisProto.GenesisState.class, com.confio.twasm.v1beta1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.confio.twasm.v1beta1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        if (codesBuilder_ == null) {
+          codes_ = java.util.Collections.emptyList();
+        } else {
+          codes_ = null;
+          codesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (contractsBuilder_ == null) {
+          contracts_ = java.util.Collections.emptyList();
+        } else {
+          contracts_ = null;
+          contractsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (sequencesBuilder_ == null) {
+          sequences_ = java.util.Collections.emptyList();
+        } else {
+          sequences_ = null;
+          sequencesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (genMsgsBuilder_ == null) {
+          genMsgs_ = java.util.Collections.emptyList();
+        } else {
+          genMsgs_ = null;
+          genMsgsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        privilegedContractAddresses_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        pinnedCodeIds_ = emptyLongList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.twasm.v1beta1.GenesisProto.internal_static_confio_twasm_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.confio.twasm.v1beta1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.GenesisProto.GenesisState build() {
+        com.confio.twasm.v1beta1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.GenesisProto.GenesisState buildPartial() {
+        com.confio.twasm.v1beta1.GenesisProto.GenesisState result = new com.confio.twasm.v1beta1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.confio.twasm.v1beta1.GenesisProto.GenesisState result) {
+        if (codesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            codes_ = java.util.Collections.unmodifiableList(codes_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.codes_ = codes_;
+        } else {
+          result.codes_ = codesBuilder_.build();
+        }
+        if (contractsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            contracts_ = java.util.Collections.unmodifiableList(contracts_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.contracts_ = contracts_;
+        } else {
+          result.contracts_ = contractsBuilder_.build();
+        }
+        if (sequencesBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            sequences_ = java.util.Collections.unmodifiableList(sequences_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.sequences_ = sequences_;
+        } else {
+          result.sequences_ = sequencesBuilder_.build();
+        }
+        if (genMsgsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            genMsgs_ = java.util.Collections.unmodifiableList(genMsgs_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.genMsgs_ = genMsgs_;
+        } else {
+          result.genMsgs_ = genMsgsBuilder_.build();
+        }
+        if (((bitField0_ & 0x00000040) != 0)) {
+          pinnedCodeIds_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000040);
+        }
+        result.pinnedCodeIds_ = pinnedCodeIds_;
+      }
+
+      private void buildPartial0(com.confio.twasm.v1beta1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          privilegedContractAddresses_.makeImmutable();
+          result.privilegedContractAddresses_ = privilegedContractAddresses_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.twasm.v1beta1.GenesisProto.GenesisState) {
+          return mergeFrom((com.confio.twasm.v1beta1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.twasm.v1beta1.GenesisProto.GenesisState other) {
+        if (other == com.confio.twasm.v1beta1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (codesBuilder_ == null) {
+          if (!other.codes_.isEmpty()) {
+            if (codes_.isEmpty()) {
+              codes_ = other.codes_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureCodesIsMutable();
+              codes_.addAll(other.codes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.codes_.isEmpty()) {
+            if (codesBuilder_.isEmpty()) {
+              codesBuilder_.dispose();
+              codesBuilder_ = null;
+              codes_ = other.codes_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              codesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCodesFieldBuilder() : null;
+            } else {
+              codesBuilder_.addAllMessages(other.codes_);
+            }
+          }
+        }
+        if (contractsBuilder_ == null) {
+          if (!other.contracts_.isEmpty()) {
+            if (contracts_.isEmpty()) {
+              contracts_ = other.contracts_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureContractsIsMutable();
+              contracts_.addAll(other.contracts_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.contracts_.isEmpty()) {
+            if (contractsBuilder_.isEmpty()) {
+              contractsBuilder_.dispose();
+              contractsBuilder_ = null;
+              contracts_ = other.contracts_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              contractsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getContractsFieldBuilder() : null;
+            } else {
+              contractsBuilder_.addAllMessages(other.contracts_);
+            }
+          }
+        }
+        if (sequencesBuilder_ == null) {
+          if (!other.sequences_.isEmpty()) {
+            if (sequences_.isEmpty()) {
+              sequences_ = other.sequences_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureSequencesIsMutable();
+              sequences_.addAll(other.sequences_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.sequences_.isEmpty()) {
+            if (sequencesBuilder_.isEmpty()) {
+              sequencesBuilder_.dispose();
+              sequencesBuilder_ = null;
+              sequences_ = other.sequences_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              sequencesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSequencesFieldBuilder() : null;
+            } else {
+              sequencesBuilder_.addAllMessages(other.sequences_);
+            }
+          }
+        }
+        if (genMsgsBuilder_ == null) {
+          if (!other.genMsgs_.isEmpty()) {
+            if (genMsgs_.isEmpty()) {
+              genMsgs_ = other.genMsgs_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureGenMsgsIsMutable();
+              genMsgs_.addAll(other.genMsgs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.genMsgs_.isEmpty()) {
+            if (genMsgsBuilder_.isEmpty()) {
+              genMsgsBuilder_.dispose();
+              genMsgsBuilder_ = null;
+              genMsgs_ = other.genMsgs_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              genMsgsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getGenMsgsFieldBuilder() : null;
+            } else {
+              genMsgsBuilder_.addAllMessages(other.genMsgs_);
+            }
+          }
+        }
+        if (!other.privilegedContractAddresses_.isEmpty()) {
+          if (privilegedContractAddresses_.isEmpty()) {
+            privilegedContractAddresses_ = other.privilegedContractAddresses_;
+            bitField0_ |= 0x00000020;
+          } else {
+            ensurePrivilegedContractAddressesIsMutable();
+            privilegedContractAddresses_.addAll(other.privilegedContractAddresses_);
+          }
+          onChanged();
+        }
+        if (!other.pinnedCodeIds_.isEmpty()) {
+          if (pinnedCodeIds_.isEmpty()) {
+            pinnedCodeIds_ = other.pinnedCodeIds_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+          } else {
+            ensurePinnedCodeIdsIsMutable();
+            pinnedCodeIds_.addAll(other.pinnedCodeIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.cosmwasm.wasm.v1.GenesisProto.Code m =
+                    input.readMessage(
+                        com.cosmwasm.wasm.v1.GenesisProto.Code.parser(),
+                        extensionRegistry);
+                if (codesBuilder_ == null) {
+                  ensureCodesIsMutable();
+                  codes_.add(m);
+                } else {
+                  codesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                com.confio.twasm.v1beta1.GenesisProto.Contract m =
+                    input.readMessage(
+                        com.confio.twasm.v1beta1.GenesisProto.Contract.parser(),
+                        extensionRegistry);
+                if (contractsBuilder_ == null) {
+                  ensureContractsIsMutable();
+                  contracts_.add(m);
+                } else {
+                  contractsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                com.cosmwasm.wasm.v1.GenesisProto.Sequence m =
+                    input.readMessage(
+                        com.cosmwasm.wasm.v1.GenesisProto.Sequence.parser(),
+                        extensionRegistry);
+                if (sequencesBuilder_ == null) {
+                  ensureSequencesIsMutable();
+                  sequences_.add(m);
+                } else {
+                  sequencesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgs m =
+                    input.readMessage(
+                        com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgs.parser(),
+                        extensionRegistry);
+                if (genMsgsBuilder_ == null) {
+                  ensureGenMsgsIsMutable();
+                  genMsgs_.add(m);
+                } else {
+                  genMsgsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensurePrivilegedContractAddressesIsMutable();
+                privilegedContractAddresses_.add(s);
+                break;
+              } // case 50
+              case 56: {
+                long v = input.readUInt64();
+                ensurePinnedCodeIdsIsMutable();
+                pinnedCodeIds_.addLong(v);
+                break;
+              } // case 56
+              case 58: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensurePinnedCodeIdsIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  pinnedCodeIds_.addLong(input.readUInt64());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmwasm.wasm.v1.TypesProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmwasm.wasm.v1.TypesProto.Params, com.cosmwasm.wasm.v1.TypesProto.Params.Builder, com.cosmwasm.wasm.v1.TypesProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * Params sdk type Params for wasmd
+       * </pre>
+       *
+       * <code>.cosmwasm.wasm.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Params sdk type Params for wasmd
+       * </pre>
+       *
+       * <code>.cosmwasm.wasm.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.cosmwasm.wasm.v1.TypesProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.cosmwasm.wasm.v1.TypesProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Params sdk type Params for wasmd
+       * </pre>
+       *
+       * <code>.cosmwasm.wasm.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.cosmwasm.wasm.v1.TypesProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Params sdk type Params for wasmd
+       * </pre>
+       *
+       * <code>.cosmwasm.wasm.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.cosmwasm.wasm.v1.TypesProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Params sdk type Params for wasmd
+       * </pre>
+       *
+       * <code>.cosmwasm.wasm.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.cosmwasm.wasm.v1.TypesProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.cosmwasm.wasm.v1.TypesProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Params sdk type Params for wasmd
+       * </pre>
+       *
+       * <code>.cosmwasm.wasm.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Params sdk type Params for wasmd
+       * </pre>
+       *
+       * <code>.cosmwasm.wasm.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmwasm.wasm.v1.TypesProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Params sdk type Params for wasmd
+       * </pre>
+       *
+       * <code>.cosmwasm.wasm.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmwasm.wasm.v1.TypesProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.cosmwasm.wasm.v1.TypesProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * Params sdk type Params for wasmd
+       * </pre>
+       *
+       * <code>.cosmwasm.wasm.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmwasm.wasm.v1.TypesProto.Params, com.cosmwasm.wasm.v1.TypesProto.Params.Builder, com.cosmwasm.wasm.v1.TypesProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmwasm.wasm.v1.TypesProto.Params, com.cosmwasm.wasm.v1.TypesProto.Params.Builder, com.cosmwasm.wasm.v1.TypesProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private java.util.List<com.cosmwasm.wasm.v1.GenesisProto.Code> codes_ =
+        java.util.Collections.emptyList();
+      private void ensureCodesIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          codes_ = new java.util.ArrayList<com.cosmwasm.wasm.v1.GenesisProto.Code>(codes_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmwasm.wasm.v1.GenesisProto.Code, com.cosmwasm.wasm.v1.GenesisProto.Code.Builder, com.cosmwasm.wasm.v1.GenesisProto.CodeOrBuilder> codesBuilder_;
+
+      /**
+       * <pre>
+       * Codes has all stored wasm codes and metadata
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public java.util.List<com.cosmwasm.wasm.v1.GenesisProto.Code> getCodesList() {
+        if (codesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(codes_);
+        } else {
+          return codesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Codes has all stored wasm codes and metadata
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public int getCodesCount() {
+        if (codesBuilder_ == null) {
+          return codes_.size();
+        } else {
+          return codesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Codes has all stored wasm codes and metadata
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public com.cosmwasm.wasm.v1.GenesisProto.Code getCodes(int index) {
+        if (codesBuilder_ == null) {
+          return codes_.get(index);
+        } else {
+          return codesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Codes has all stored wasm codes and metadata
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public Builder setCodes(
+          int index, com.cosmwasm.wasm.v1.GenesisProto.Code value) {
+        if (codesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCodesIsMutable();
+          codes_.set(index, value);
+          onChanged();
+        } else {
+          codesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Codes has all stored wasm codes and metadata
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public Builder setCodes(
+          int index, com.cosmwasm.wasm.v1.GenesisProto.Code.Builder builderForValue) {
+        if (codesBuilder_ == null) {
+          ensureCodesIsMutable();
+          codes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          codesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Codes has all stored wasm codes and metadata
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public Builder addCodes(com.cosmwasm.wasm.v1.GenesisProto.Code value) {
+        if (codesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCodesIsMutable();
+          codes_.add(value);
+          onChanged();
+        } else {
+          codesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Codes has all stored wasm codes and metadata
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public Builder addCodes(
+          int index, com.cosmwasm.wasm.v1.GenesisProto.Code value) {
+        if (codesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCodesIsMutable();
+          codes_.add(index, value);
+          onChanged();
+        } else {
+          codesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Codes has all stored wasm codes and metadata
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public Builder addCodes(
+          com.cosmwasm.wasm.v1.GenesisProto.Code.Builder builderForValue) {
+        if (codesBuilder_ == null) {
+          ensureCodesIsMutable();
+          codes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          codesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Codes has all stored wasm codes and metadata
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public Builder addCodes(
+          int index, com.cosmwasm.wasm.v1.GenesisProto.Code.Builder builderForValue) {
+        if (codesBuilder_ == null) {
+          ensureCodesIsMutable();
+          codes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          codesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Codes has all stored wasm codes and metadata
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public Builder addAllCodes(
+          java.lang.Iterable<? extends com.cosmwasm.wasm.v1.GenesisProto.Code> values) {
+        if (codesBuilder_ == null) {
+          ensureCodesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, codes_);
+          onChanged();
+        } else {
+          codesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Codes has all stored wasm codes and metadata
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public Builder clearCodes() {
+        if (codesBuilder_ == null) {
+          codes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          codesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Codes has all stored wasm codes and metadata
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public Builder removeCodes(int index) {
+        if (codesBuilder_ == null) {
+          ensureCodesIsMutable();
+          codes_.remove(index);
+          onChanged();
+        } else {
+          codesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Codes has all stored wasm codes and metadata
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public com.cosmwasm.wasm.v1.GenesisProto.Code.Builder getCodesBuilder(
+          int index) {
+        return getCodesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Codes has all stored wasm codes and metadata
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public com.cosmwasm.wasm.v1.GenesisProto.CodeOrBuilder getCodesOrBuilder(
+          int index) {
+        if (codesBuilder_ == null) {
+          return codes_.get(index);  } else {
+          return codesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Codes has all stored wasm codes and metadata
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public java.util.List<? extends com.cosmwasm.wasm.v1.GenesisProto.CodeOrBuilder> 
+           getCodesOrBuilderList() {
+        if (codesBuilder_ != null) {
+          return codesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(codes_);
+        }
+      }
+      /**
+       * <pre>
+       * Codes has all stored wasm codes and metadata
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public com.cosmwasm.wasm.v1.GenesisProto.Code.Builder addCodesBuilder() {
+        return getCodesFieldBuilder().addBuilder(
+            com.cosmwasm.wasm.v1.GenesisProto.Code.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Codes has all stored wasm codes and metadata
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public com.cosmwasm.wasm.v1.GenesisProto.Code.Builder addCodesBuilder(
+          int index) {
+        return getCodesFieldBuilder().addBuilder(
+            index, com.cosmwasm.wasm.v1.GenesisProto.Code.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Codes has all stored wasm codes and metadata
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public java.util.List<com.cosmwasm.wasm.v1.GenesisProto.Code.Builder> 
+           getCodesBuilderList() {
+        return getCodesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmwasm.wasm.v1.GenesisProto.Code, com.cosmwasm.wasm.v1.GenesisProto.Code.Builder, com.cosmwasm.wasm.v1.GenesisProto.CodeOrBuilder> 
+          getCodesFieldBuilder() {
+        if (codesBuilder_ == null) {
+          codesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmwasm.wasm.v1.GenesisProto.Code, com.cosmwasm.wasm.v1.GenesisProto.Code.Builder, com.cosmwasm.wasm.v1.GenesisProto.CodeOrBuilder>(
+                  codes_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          codes_ = null;
+        }
+        return codesBuilder_;
+      }
+
+      private java.util.List<com.confio.twasm.v1beta1.GenesisProto.Contract> contracts_ =
+        java.util.Collections.emptyList();
+      private void ensureContractsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          contracts_ = new java.util.ArrayList<com.confio.twasm.v1beta1.GenesisProto.Contract>(contracts_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.confio.twasm.v1beta1.GenesisProto.Contract, com.confio.twasm.v1beta1.GenesisProto.Contract.Builder, com.confio.twasm.v1beta1.GenesisProto.ContractOrBuilder> contractsBuilder_;
+
+      /**
+       * <pre>
+       * Contracts contains all instantiated contracts, state and metadata
+       * </pre>
+       *
+       * <code>repeated .confio.twasm.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public java.util.List<com.confio.twasm.v1beta1.GenesisProto.Contract> getContractsList() {
+        if (contractsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(contracts_);
+        } else {
+          return contractsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Contracts contains all instantiated contracts, state and metadata
+       * </pre>
+       *
+       * <code>repeated .confio.twasm.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public int getContractsCount() {
+        if (contractsBuilder_ == null) {
+          return contracts_.size();
+        } else {
+          return contractsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Contracts contains all instantiated contracts, state and metadata
+       * </pre>
+       *
+       * <code>repeated .confio.twasm.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public com.confio.twasm.v1beta1.GenesisProto.Contract getContracts(int index) {
+        if (contractsBuilder_ == null) {
+          return contracts_.get(index);
+        } else {
+          return contractsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Contracts contains all instantiated contracts, state and metadata
+       * </pre>
+       *
+       * <code>repeated .confio.twasm.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public Builder setContracts(
+          int index, com.confio.twasm.v1beta1.GenesisProto.Contract value) {
+        if (contractsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContractsIsMutable();
+          contracts_.set(index, value);
+          onChanged();
+        } else {
+          contractsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Contracts contains all instantiated contracts, state and metadata
+       * </pre>
+       *
+       * <code>repeated .confio.twasm.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public Builder setContracts(
+          int index, com.confio.twasm.v1beta1.GenesisProto.Contract.Builder builderForValue) {
+        if (contractsBuilder_ == null) {
+          ensureContractsIsMutable();
+          contracts_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          contractsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Contracts contains all instantiated contracts, state and metadata
+       * </pre>
+       *
+       * <code>repeated .confio.twasm.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public Builder addContracts(com.confio.twasm.v1beta1.GenesisProto.Contract value) {
+        if (contractsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContractsIsMutable();
+          contracts_.add(value);
+          onChanged();
+        } else {
+          contractsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Contracts contains all instantiated contracts, state and metadata
+       * </pre>
+       *
+       * <code>repeated .confio.twasm.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public Builder addContracts(
+          int index, com.confio.twasm.v1beta1.GenesisProto.Contract value) {
+        if (contractsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContractsIsMutable();
+          contracts_.add(index, value);
+          onChanged();
+        } else {
+          contractsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Contracts contains all instantiated contracts, state and metadata
+       * </pre>
+       *
+       * <code>repeated .confio.twasm.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public Builder addContracts(
+          com.confio.twasm.v1beta1.GenesisProto.Contract.Builder builderForValue) {
+        if (contractsBuilder_ == null) {
+          ensureContractsIsMutable();
+          contracts_.add(builderForValue.build());
+          onChanged();
+        } else {
+          contractsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Contracts contains all instantiated contracts, state and metadata
+       * </pre>
+       *
+       * <code>repeated .confio.twasm.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public Builder addContracts(
+          int index, com.confio.twasm.v1beta1.GenesisProto.Contract.Builder builderForValue) {
+        if (contractsBuilder_ == null) {
+          ensureContractsIsMutable();
+          contracts_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          contractsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Contracts contains all instantiated contracts, state and metadata
+       * </pre>
+       *
+       * <code>repeated .confio.twasm.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public Builder addAllContracts(
+          java.lang.Iterable<? extends com.confio.twasm.v1beta1.GenesisProto.Contract> values) {
+        if (contractsBuilder_ == null) {
+          ensureContractsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, contracts_);
+          onChanged();
+        } else {
+          contractsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Contracts contains all instantiated contracts, state and metadata
+       * </pre>
+       *
+       * <code>repeated .confio.twasm.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public Builder clearContracts() {
+        if (contractsBuilder_ == null) {
+          contracts_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          contractsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Contracts contains all instantiated contracts, state and metadata
+       * </pre>
+       *
+       * <code>repeated .confio.twasm.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public Builder removeContracts(int index) {
+        if (contractsBuilder_ == null) {
+          ensureContractsIsMutable();
+          contracts_.remove(index);
+          onChanged();
+        } else {
+          contractsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Contracts contains all instantiated contracts, state and metadata
+       * </pre>
+       *
+       * <code>repeated .confio.twasm.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public com.confio.twasm.v1beta1.GenesisProto.Contract.Builder getContractsBuilder(
+          int index) {
+        return getContractsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Contracts contains all instantiated contracts, state and metadata
+       * </pre>
+       *
+       * <code>repeated .confio.twasm.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public com.confio.twasm.v1beta1.GenesisProto.ContractOrBuilder getContractsOrBuilder(
+          int index) {
+        if (contractsBuilder_ == null) {
+          return contracts_.get(index);  } else {
+          return contractsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Contracts contains all instantiated contracts, state and metadata
+       * </pre>
+       *
+       * <code>repeated .confio.twasm.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public java.util.List<? extends com.confio.twasm.v1beta1.GenesisProto.ContractOrBuilder> 
+           getContractsOrBuilderList() {
+        if (contractsBuilder_ != null) {
+          return contractsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(contracts_);
+        }
+      }
+      /**
+       * <pre>
+       * Contracts contains all instantiated contracts, state and metadata
+       * </pre>
+       *
+       * <code>repeated .confio.twasm.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public com.confio.twasm.v1beta1.GenesisProto.Contract.Builder addContractsBuilder() {
+        return getContractsFieldBuilder().addBuilder(
+            com.confio.twasm.v1beta1.GenesisProto.Contract.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Contracts contains all instantiated contracts, state and metadata
+       * </pre>
+       *
+       * <code>repeated .confio.twasm.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public com.confio.twasm.v1beta1.GenesisProto.Contract.Builder addContractsBuilder(
+          int index) {
+        return getContractsFieldBuilder().addBuilder(
+            index, com.confio.twasm.v1beta1.GenesisProto.Contract.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Contracts contains all instantiated contracts, state and metadata
+       * </pre>
+       *
+       * <code>repeated .confio.twasm.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public java.util.List<com.confio.twasm.v1beta1.GenesisProto.Contract.Builder> 
+           getContractsBuilderList() {
+        return getContractsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.confio.twasm.v1beta1.GenesisProto.Contract, com.confio.twasm.v1beta1.GenesisProto.Contract.Builder, com.confio.twasm.v1beta1.GenesisProto.ContractOrBuilder> 
+          getContractsFieldBuilder() {
+        if (contractsBuilder_ == null) {
+          contractsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.confio.twasm.v1beta1.GenesisProto.Contract, com.confio.twasm.v1beta1.GenesisProto.Contract.Builder, com.confio.twasm.v1beta1.GenesisProto.ContractOrBuilder>(
+                  contracts_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          contracts_ = null;
+        }
+        return contractsBuilder_;
+      }
+
+      private java.util.List<com.cosmwasm.wasm.v1.GenesisProto.Sequence> sequences_ =
+        java.util.Collections.emptyList();
+      private void ensureSequencesIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          sequences_ = new java.util.ArrayList<com.cosmwasm.wasm.v1.GenesisProto.Sequence>(sequences_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmwasm.wasm.v1.GenesisProto.Sequence, com.cosmwasm.wasm.v1.GenesisProto.Sequence.Builder, com.cosmwasm.wasm.v1.GenesisProto.SequenceOrBuilder> sequencesBuilder_;
+
+      /**
+       * <pre>
+       * Sequences names and values
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public java.util.List<com.cosmwasm.wasm.v1.GenesisProto.Sequence> getSequencesList() {
+        if (sequencesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(sequences_);
+        } else {
+          return sequencesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Sequences names and values
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public int getSequencesCount() {
+        if (sequencesBuilder_ == null) {
+          return sequences_.size();
+        } else {
+          return sequencesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Sequences names and values
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public com.cosmwasm.wasm.v1.GenesisProto.Sequence getSequences(int index) {
+        if (sequencesBuilder_ == null) {
+          return sequences_.get(index);
+        } else {
+          return sequencesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Sequences names and values
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public Builder setSequences(
+          int index, com.cosmwasm.wasm.v1.GenesisProto.Sequence value) {
+        if (sequencesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSequencesIsMutable();
+          sequences_.set(index, value);
+          onChanged();
+        } else {
+          sequencesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Sequences names and values
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public Builder setSequences(
+          int index, com.cosmwasm.wasm.v1.GenesisProto.Sequence.Builder builderForValue) {
+        if (sequencesBuilder_ == null) {
+          ensureSequencesIsMutable();
+          sequences_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          sequencesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Sequences names and values
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public Builder addSequences(com.cosmwasm.wasm.v1.GenesisProto.Sequence value) {
+        if (sequencesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSequencesIsMutable();
+          sequences_.add(value);
+          onChanged();
+        } else {
+          sequencesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Sequences names and values
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public Builder addSequences(
+          int index, com.cosmwasm.wasm.v1.GenesisProto.Sequence value) {
+        if (sequencesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSequencesIsMutable();
+          sequences_.add(index, value);
+          onChanged();
+        } else {
+          sequencesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Sequences names and values
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public Builder addSequences(
+          com.cosmwasm.wasm.v1.GenesisProto.Sequence.Builder builderForValue) {
+        if (sequencesBuilder_ == null) {
+          ensureSequencesIsMutable();
+          sequences_.add(builderForValue.build());
+          onChanged();
+        } else {
+          sequencesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Sequences names and values
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public Builder addSequences(
+          int index, com.cosmwasm.wasm.v1.GenesisProto.Sequence.Builder builderForValue) {
+        if (sequencesBuilder_ == null) {
+          ensureSequencesIsMutable();
+          sequences_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          sequencesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Sequences names and values
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public Builder addAllSequences(
+          java.lang.Iterable<? extends com.cosmwasm.wasm.v1.GenesisProto.Sequence> values) {
+        if (sequencesBuilder_ == null) {
+          ensureSequencesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, sequences_);
+          onChanged();
+        } else {
+          sequencesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Sequences names and values
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public Builder clearSequences() {
+        if (sequencesBuilder_ == null) {
+          sequences_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          sequencesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Sequences names and values
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public Builder removeSequences(int index) {
+        if (sequencesBuilder_ == null) {
+          ensureSequencesIsMutable();
+          sequences_.remove(index);
+          onChanged();
+        } else {
+          sequencesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Sequences names and values
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public com.cosmwasm.wasm.v1.GenesisProto.Sequence.Builder getSequencesBuilder(
+          int index) {
+        return getSequencesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Sequences names and values
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public com.cosmwasm.wasm.v1.GenesisProto.SequenceOrBuilder getSequencesOrBuilder(
+          int index) {
+        if (sequencesBuilder_ == null) {
+          return sequences_.get(index);  } else {
+          return sequencesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Sequences names and values
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public java.util.List<? extends com.cosmwasm.wasm.v1.GenesisProto.SequenceOrBuilder> 
+           getSequencesOrBuilderList() {
+        if (sequencesBuilder_ != null) {
+          return sequencesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(sequences_);
+        }
+      }
+      /**
+       * <pre>
+       * Sequences names and values
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public com.cosmwasm.wasm.v1.GenesisProto.Sequence.Builder addSequencesBuilder() {
+        return getSequencesFieldBuilder().addBuilder(
+            com.cosmwasm.wasm.v1.GenesisProto.Sequence.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Sequences names and values
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public com.cosmwasm.wasm.v1.GenesisProto.Sequence.Builder addSequencesBuilder(
+          int index) {
+        return getSequencesFieldBuilder().addBuilder(
+            index, com.cosmwasm.wasm.v1.GenesisProto.Sequence.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Sequences names and values
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public java.util.List<com.cosmwasm.wasm.v1.GenesisProto.Sequence.Builder> 
+           getSequencesBuilderList() {
+        return getSequencesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmwasm.wasm.v1.GenesisProto.Sequence, com.cosmwasm.wasm.v1.GenesisProto.Sequence.Builder, com.cosmwasm.wasm.v1.GenesisProto.SequenceOrBuilder> 
+          getSequencesFieldBuilder() {
+        if (sequencesBuilder_ == null) {
+          sequencesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmwasm.wasm.v1.GenesisProto.Sequence, com.cosmwasm.wasm.v1.GenesisProto.Sequence.Builder, com.cosmwasm.wasm.v1.GenesisProto.SequenceOrBuilder>(
+                  sequences_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          sequences_ = null;
+        }
+        return sequencesBuilder_;
+      }
+
+      private java.util.List<com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgs> genMsgs_ =
+        java.util.Collections.emptyList();
+      private void ensureGenMsgsIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          genMsgs_ = new java.util.ArrayList<com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgs>(genMsgs_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgs, com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgs.Builder, com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgsOrBuilder> genMsgsBuilder_;
+
+      /**
+       * <pre>
+       * GenMsgs has wasmd sdk type messages to execute in the genesis phase
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.GenesisState.GenMsgs gen_msgs = 5 [json_name = "genMsgs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "gen_msgs,omitempty"];</code>
+       */
+      public java.util.List<com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgs> getGenMsgsList() {
+        if (genMsgsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(genMsgs_);
+        } else {
+          return genMsgsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * GenMsgs has wasmd sdk type messages to execute in the genesis phase
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.GenesisState.GenMsgs gen_msgs = 5 [json_name = "genMsgs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "gen_msgs,omitempty"];</code>
+       */
+      public int getGenMsgsCount() {
+        if (genMsgsBuilder_ == null) {
+          return genMsgs_.size();
+        } else {
+          return genMsgsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * GenMsgs has wasmd sdk type messages to execute in the genesis phase
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.GenesisState.GenMsgs gen_msgs = 5 [json_name = "genMsgs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "gen_msgs,omitempty"];</code>
+       */
+      public com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgs getGenMsgs(int index) {
+        if (genMsgsBuilder_ == null) {
+          return genMsgs_.get(index);
+        } else {
+          return genMsgsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * GenMsgs has wasmd sdk type messages to execute in the genesis phase
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.GenesisState.GenMsgs gen_msgs = 5 [json_name = "genMsgs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "gen_msgs,omitempty"];</code>
+       */
+      public Builder setGenMsgs(
+          int index, com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgs value) {
+        if (genMsgsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGenMsgsIsMutable();
+          genMsgs_.set(index, value);
+          onChanged();
+        } else {
+          genMsgsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * GenMsgs has wasmd sdk type messages to execute in the genesis phase
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.GenesisState.GenMsgs gen_msgs = 5 [json_name = "genMsgs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "gen_msgs,omitempty"];</code>
+       */
+      public Builder setGenMsgs(
+          int index, com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgs.Builder builderForValue) {
+        if (genMsgsBuilder_ == null) {
+          ensureGenMsgsIsMutable();
+          genMsgs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          genMsgsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * GenMsgs has wasmd sdk type messages to execute in the genesis phase
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.GenesisState.GenMsgs gen_msgs = 5 [json_name = "genMsgs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "gen_msgs,omitempty"];</code>
+       */
+      public Builder addGenMsgs(com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgs value) {
+        if (genMsgsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGenMsgsIsMutable();
+          genMsgs_.add(value);
+          onChanged();
+        } else {
+          genMsgsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * GenMsgs has wasmd sdk type messages to execute in the genesis phase
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.GenesisState.GenMsgs gen_msgs = 5 [json_name = "genMsgs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "gen_msgs,omitempty"];</code>
+       */
+      public Builder addGenMsgs(
+          int index, com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgs value) {
+        if (genMsgsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGenMsgsIsMutable();
+          genMsgs_.add(index, value);
+          onChanged();
+        } else {
+          genMsgsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * GenMsgs has wasmd sdk type messages to execute in the genesis phase
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.GenesisState.GenMsgs gen_msgs = 5 [json_name = "genMsgs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "gen_msgs,omitempty"];</code>
+       */
+      public Builder addGenMsgs(
+          com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgs.Builder builderForValue) {
+        if (genMsgsBuilder_ == null) {
+          ensureGenMsgsIsMutable();
+          genMsgs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          genMsgsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * GenMsgs has wasmd sdk type messages to execute in the genesis phase
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.GenesisState.GenMsgs gen_msgs = 5 [json_name = "genMsgs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "gen_msgs,omitempty"];</code>
+       */
+      public Builder addGenMsgs(
+          int index, com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgs.Builder builderForValue) {
+        if (genMsgsBuilder_ == null) {
+          ensureGenMsgsIsMutable();
+          genMsgs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          genMsgsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * GenMsgs has wasmd sdk type messages to execute in the genesis phase
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.GenesisState.GenMsgs gen_msgs = 5 [json_name = "genMsgs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "gen_msgs,omitempty"];</code>
+       */
+      public Builder addAllGenMsgs(
+          java.lang.Iterable<? extends com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgs> values) {
+        if (genMsgsBuilder_ == null) {
+          ensureGenMsgsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, genMsgs_);
+          onChanged();
+        } else {
+          genMsgsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * GenMsgs has wasmd sdk type messages to execute in the genesis phase
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.GenesisState.GenMsgs gen_msgs = 5 [json_name = "genMsgs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "gen_msgs,omitempty"];</code>
+       */
+      public Builder clearGenMsgs() {
+        if (genMsgsBuilder_ == null) {
+          genMsgs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          genMsgsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * GenMsgs has wasmd sdk type messages to execute in the genesis phase
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.GenesisState.GenMsgs gen_msgs = 5 [json_name = "genMsgs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "gen_msgs,omitempty"];</code>
+       */
+      public Builder removeGenMsgs(int index) {
+        if (genMsgsBuilder_ == null) {
+          ensureGenMsgsIsMutable();
+          genMsgs_.remove(index);
+          onChanged();
+        } else {
+          genMsgsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * GenMsgs has wasmd sdk type messages to execute in the genesis phase
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.GenesisState.GenMsgs gen_msgs = 5 [json_name = "genMsgs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "gen_msgs,omitempty"];</code>
+       */
+      public com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgs.Builder getGenMsgsBuilder(
+          int index) {
+        return getGenMsgsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * GenMsgs has wasmd sdk type messages to execute in the genesis phase
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.GenesisState.GenMsgs gen_msgs = 5 [json_name = "genMsgs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "gen_msgs,omitempty"];</code>
+       */
+      public com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgsOrBuilder getGenMsgsOrBuilder(
+          int index) {
+        if (genMsgsBuilder_ == null) {
+          return genMsgs_.get(index);  } else {
+          return genMsgsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * GenMsgs has wasmd sdk type messages to execute in the genesis phase
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.GenesisState.GenMsgs gen_msgs = 5 [json_name = "genMsgs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "gen_msgs,omitempty"];</code>
+       */
+      public java.util.List<? extends com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgsOrBuilder> 
+           getGenMsgsOrBuilderList() {
+        if (genMsgsBuilder_ != null) {
+          return genMsgsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(genMsgs_);
+        }
+      }
+      /**
+       * <pre>
+       * GenMsgs has wasmd sdk type messages to execute in the genesis phase
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.GenesisState.GenMsgs gen_msgs = 5 [json_name = "genMsgs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "gen_msgs,omitempty"];</code>
+       */
+      public com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgs.Builder addGenMsgsBuilder() {
+        return getGenMsgsFieldBuilder().addBuilder(
+            com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgs.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * GenMsgs has wasmd sdk type messages to execute in the genesis phase
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.GenesisState.GenMsgs gen_msgs = 5 [json_name = "genMsgs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "gen_msgs,omitempty"];</code>
+       */
+      public com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgs.Builder addGenMsgsBuilder(
+          int index) {
+        return getGenMsgsFieldBuilder().addBuilder(
+            index, com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgs.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * GenMsgs has wasmd sdk type messages to execute in the genesis phase
+       * </pre>
+       *
+       * <code>repeated .cosmwasm.wasm.v1.GenesisState.GenMsgs gen_msgs = 5 [json_name = "genMsgs", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "gen_msgs,omitempty"];</code>
+       */
+      public java.util.List<com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgs.Builder> 
+           getGenMsgsBuilderList() {
+        return getGenMsgsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgs, com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgs.Builder, com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgsOrBuilder> 
+          getGenMsgsFieldBuilder() {
+        if (genMsgsBuilder_ == null) {
+          genMsgsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgs, com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgs.Builder, com.cosmwasm.wasm.v1.GenesisProto.GenesisState.GenMsgsOrBuilder>(
+                  genMsgs_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          genMsgs_ = null;
+        }
+        return genMsgsBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringArrayList privilegedContractAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensurePrivilegedContractAddressesIsMutable() {
+        if (!privilegedContractAddresses_.isModifiable()) {
+          privilegedContractAddresses_ = new com.google.protobuf.LazyStringArrayList(privilegedContractAddresses_);
+        }
+        bitField0_ |= 0x00000020;
+      }
+      /**
+       * <pre>
+       * PrivilegedContractAddresses is a list of contract addresses that can have
+       * special permissions
+       * </pre>
+       *
+       * <code>repeated string privileged_contract_addresses = 6 [json_name = "privilegedContractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+       * @return A list containing the privilegedContractAddresses.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getPrivilegedContractAddressesList() {
+        privilegedContractAddresses_.makeImmutable();
+        return privilegedContractAddresses_;
+      }
+      /**
+       * <pre>
+       * PrivilegedContractAddresses is a list of contract addresses that can have
+       * special permissions
+       * </pre>
+       *
+       * <code>repeated string privileged_contract_addresses = 6 [json_name = "privilegedContractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+       * @return The count of privilegedContractAddresses.
+       */
+      public int getPrivilegedContractAddressesCount() {
+        return privilegedContractAddresses_.size();
+      }
+      /**
+       * <pre>
+       * PrivilegedContractAddresses is a list of contract addresses that can have
+       * special permissions
+       * </pre>
+       *
+       * <code>repeated string privileged_contract_addresses = 6 [json_name = "privilegedContractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+       * @param index The index of the element to return.
+       * @return The privilegedContractAddresses at the given index.
+       */
+      public java.lang.String getPrivilegedContractAddresses(int index) {
+        return privilegedContractAddresses_.get(index);
+      }
+      /**
+       * <pre>
+       * PrivilegedContractAddresses is a list of contract addresses that can have
+       * special permissions
+       * </pre>
+       *
+       * <code>repeated string privileged_contract_addresses = 6 [json_name = "privilegedContractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the privilegedContractAddresses at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getPrivilegedContractAddressesBytes(int index) {
+        return privilegedContractAddresses_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * PrivilegedContractAddresses is a list of contract addresses that can have
+       * special permissions
+       * </pre>
+       *
+       * <code>repeated string privileged_contract_addresses = 6 [json_name = "privilegedContractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+       * @param index The index to set the value at.
+       * @param value The privilegedContractAddresses to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivilegedContractAddresses(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensurePrivilegedContractAddressesIsMutable();
+        privilegedContractAddresses_.set(index, value);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * PrivilegedContractAddresses is a list of contract addresses that can have
+       * special permissions
+       * </pre>
+       *
+       * <code>repeated string privileged_contract_addresses = 6 [json_name = "privilegedContractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+       * @param value The privilegedContractAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPrivilegedContractAddresses(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensurePrivilegedContractAddressesIsMutable();
+        privilegedContractAddresses_.add(value);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * PrivilegedContractAddresses is a list of contract addresses that can have
+       * special permissions
+       * </pre>
+       *
+       * <code>repeated string privileged_contract_addresses = 6 [json_name = "privilegedContractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+       * @param values The privilegedContractAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPrivilegedContractAddresses(
+          java.lang.Iterable<java.lang.String> values) {
+        ensurePrivilegedContractAddressesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, privilegedContractAddresses_);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * PrivilegedContractAddresses is a list of contract addresses that can have
+       * special permissions
+       * </pre>
+       *
+       * <code>repeated string privileged_contract_addresses = 6 [json_name = "privilegedContractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrivilegedContractAddresses() {
+        privilegedContractAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * PrivilegedContractAddresses is a list of contract addresses that can have
+       * special permissions
+       * </pre>
+       *
+       * <code>repeated string privileged_contract_addresses = 6 [json_name = "privilegedContractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+       * @param value The bytes of the privilegedContractAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPrivilegedContractAddressesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensurePrivilegedContractAddressesIsMutable();
+        privilegedContractAddresses_.add(value);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.LongList pinnedCodeIds_ = emptyLongList();
+      private void ensurePinnedCodeIdsIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          pinnedCodeIds_ = mutableCopy(pinnedCodeIds_);
+          bitField0_ |= 0x00000040;
+        }
+      }
+      /**
+       * <pre>
+       * PinnedCodeIDs has codeInfo ids for wasm codes that are pinned in cache
+       * </pre>
+       *
+       * <code>repeated uint64 pinned_code_ids = 7 [json_name = "pinnedCodeIds", (.gogoproto.customname) = "PinnedCodeIDs", (.gogoproto.jsontag) = "pinned_code_ids,omitempty"];</code>
+       * @return A list containing the pinnedCodeIds.
+       */
+      public java.util.List<java.lang.Long>
+          getPinnedCodeIdsList() {
+        return ((bitField0_ & 0x00000040) != 0) ?
+                 java.util.Collections.unmodifiableList(pinnedCodeIds_) : pinnedCodeIds_;
+      }
+      /**
+       * <pre>
+       * PinnedCodeIDs has codeInfo ids for wasm codes that are pinned in cache
+       * </pre>
+       *
+       * <code>repeated uint64 pinned_code_ids = 7 [json_name = "pinnedCodeIds", (.gogoproto.customname) = "PinnedCodeIDs", (.gogoproto.jsontag) = "pinned_code_ids,omitempty"];</code>
+       * @return The count of pinnedCodeIds.
+       */
+      public int getPinnedCodeIdsCount() {
+        return pinnedCodeIds_.size();
+      }
+      /**
+       * <pre>
+       * PinnedCodeIDs has codeInfo ids for wasm codes that are pinned in cache
+       * </pre>
+       *
+       * <code>repeated uint64 pinned_code_ids = 7 [json_name = "pinnedCodeIds", (.gogoproto.customname) = "PinnedCodeIDs", (.gogoproto.jsontag) = "pinned_code_ids,omitempty"];</code>
+       * @param index The index of the element to return.
+       * @return The pinnedCodeIds at the given index.
+       */
+      public long getPinnedCodeIds(int index) {
+        return pinnedCodeIds_.getLong(index);
+      }
+      /**
+       * <pre>
+       * PinnedCodeIDs has codeInfo ids for wasm codes that are pinned in cache
+       * </pre>
+       *
+       * <code>repeated uint64 pinned_code_ids = 7 [json_name = "pinnedCodeIds", (.gogoproto.customname) = "PinnedCodeIDs", (.gogoproto.jsontag) = "pinned_code_ids,omitempty"];</code>
+       * @param index The index to set the value at.
+       * @param value The pinnedCodeIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPinnedCodeIds(
+          int index, long value) {
+
+        ensurePinnedCodeIdsIsMutable();
+        pinnedCodeIds_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * PinnedCodeIDs has codeInfo ids for wasm codes that are pinned in cache
+       * </pre>
+       *
+       * <code>repeated uint64 pinned_code_ids = 7 [json_name = "pinnedCodeIds", (.gogoproto.customname) = "PinnedCodeIDs", (.gogoproto.jsontag) = "pinned_code_ids,omitempty"];</code>
+       * @param value The pinnedCodeIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPinnedCodeIds(long value) {
+
+        ensurePinnedCodeIdsIsMutable();
+        pinnedCodeIds_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * PinnedCodeIDs has codeInfo ids for wasm codes that are pinned in cache
+       * </pre>
+       *
+       * <code>repeated uint64 pinned_code_ids = 7 [json_name = "pinnedCodeIds", (.gogoproto.customname) = "PinnedCodeIDs", (.gogoproto.jsontag) = "pinned_code_ids,omitempty"];</code>
+       * @param values The pinnedCodeIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPinnedCodeIds(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensurePinnedCodeIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, pinnedCodeIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * PinnedCodeIDs has codeInfo ids for wasm codes that are pinned in cache
+       * </pre>
+       *
+       * <code>repeated uint64 pinned_code_ids = 7 [json_name = "pinnedCodeIds", (.gogoproto.customname) = "PinnedCodeIDs", (.gogoproto.jsontag) = "pinned_code_ids,omitempty"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPinnedCodeIds() {
+        pinnedCodeIds_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.twasm.v1beta1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.twasm.v1beta1.GenesisState)
+    private static final com.confio.twasm.v1beta1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.twasm.v1beta1.GenesisProto.GenesisState();
+    }
+
+    public static com.confio.twasm.v1beta1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.twasm.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ContractOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.twasm.v1beta1.Contract)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The contractAddress.
+     */
+    java.lang.String getContractAddress();
+    /**
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The bytes for contractAddress.
+     */
+    com.google.protobuf.ByteString
+        getContractAddressBytes();
+
+    /**
+     * <code>.cosmwasm.wasm.v1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
+     * @return Whether the contractInfo field is set.
+     */
+    boolean hasContractInfo();
+    /**
+     * <code>.cosmwasm.wasm.v1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
+     * @return The contractInfo.
+     */
+    com.cosmwasm.wasm.v1.TypesProto.ContractInfo getContractInfo();
+    /**
+     * <code>.cosmwasm.wasm.v1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmwasm.wasm.v1.TypesProto.ContractInfoOrBuilder getContractInfoOrBuilder();
+
+    /**
+     * <code>.confio.twasm.v1beta1.KVModel kv_model = 3 [json_name = "kvModel"];</code>
+     * @return Whether the kvModel field is set.
+     */
+    boolean hasKvModel();
+    /**
+     * <code>.confio.twasm.v1beta1.KVModel kv_model = 3 [json_name = "kvModel"];</code>
+     * @return The kvModel.
+     */
+    com.confio.twasm.v1beta1.GenesisProto.KVModel getKvModel();
+    /**
+     * <code>.confio.twasm.v1beta1.KVModel kv_model = 3 [json_name = "kvModel"];</code>
+     */
+    com.confio.twasm.v1beta1.GenesisProto.KVModelOrBuilder getKvModelOrBuilder();
+
+    /**
+     * <code>.confio.twasm.v1beta1.CustomModel custom_model = 4 [json_name = "customModel"];</code>
+     * @return Whether the customModel field is set.
+     */
+    boolean hasCustomModel();
+    /**
+     * <code>.confio.twasm.v1beta1.CustomModel custom_model = 4 [json_name = "customModel"];</code>
+     * @return The customModel.
+     */
+    com.confio.twasm.v1beta1.GenesisProto.CustomModel getCustomModel();
+    /**
+     * <code>.confio.twasm.v1beta1.CustomModel custom_model = 4 [json_name = "customModel"];</code>
+     */
+    com.confio.twasm.v1beta1.GenesisProto.CustomModelOrBuilder getCustomModelOrBuilder();
+
+    com.confio.twasm.v1beta1.GenesisProto.Contract.ContractStateCase getContractStateCase();
+  }
+  /**
+   * <pre>
+   * Contract struct encompasses ContractAddress, ContractInfo, and ContractState
+   * </pre>
+   *
+   * Protobuf type {@code confio.twasm.v1beta1.Contract}
+   */
+  public static final class Contract extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.twasm.v1beta1.Contract)
+      ContractOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Contract.newBuilder() to construct.
+    private Contract(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Contract() {
+      contractAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Contract();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.twasm.v1beta1.GenesisProto.internal_static_confio_twasm_v1beta1_Contract_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.twasm.v1beta1.GenesisProto.internal_static_confio_twasm_v1beta1_Contract_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.twasm.v1beta1.GenesisProto.Contract.class, com.confio.twasm.v1beta1.GenesisProto.Contract.Builder.class);
+    }
+
+    private int contractStateCase_ = 0;
+    @SuppressWarnings("serial")
+    private java.lang.Object contractState_;
+    public enum ContractStateCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      KV_MODEL(3),
+      CUSTOM_MODEL(4),
+      CONTRACTSTATE_NOT_SET(0);
+      private final int value;
+      private ContractStateCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ContractStateCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ContractStateCase forNumber(int value) {
+        switch (value) {
+          case 3: return KV_MODEL;
+          case 4: return CUSTOM_MODEL;
+          case 0: return CONTRACTSTATE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ContractStateCase
+    getContractStateCase() {
+      return ContractStateCase.forNumber(
+          contractStateCase_);
+    }
+
+    public static final int CONTRACT_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contractAddress_ = "";
+    /**
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The contractAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getContractAddress() {
+      java.lang.Object ref = contractAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contractAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The bytes for contractAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractAddressBytes() {
+      java.lang.Object ref = contractAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contractAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTRACT_INFO_FIELD_NUMBER = 2;
+    private com.cosmwasm.wasm.v1.TypesProto.ContractInfo contractInfo_;
+    /**
+     * <code>.cosmwasm.wasm.v1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
+     * @return Whether the contractInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasContractInfo() {
+      return contractInfo_ != null;
+    }
+    /**
+     * <code>.cosmwasm.wasm.v1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
+     * @return The contractInfo.
+     */
+    @java.lang.Override
+    public com.cosmwasm.wasm.v1.TypesProto.ContractInfo getContractInfo() {
+      return contractInfo_ == null ? com.cosmwasm.wasm.v1.TypesProto.ContractInfo.getDefaultInstance() : contractInfo_;
+    }
+    /**
+     * <code>.cosmwasm.wasm.v1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmwasm.wasm.v1.TypesProto.ContractInfoOrBuilder getContractInfoOrBuilder() {
+      return contractInfo_ == null ? com.cosmwasm.wasm.v1.TypesProto.ContractInfo.getDefaultInstance() : contractInfo_;
+    }
+
+    public static final int KV_MODEL_FIELD_NUMBER = 3;
+    /**
+     * <code>.confio.twasm.v1beta1.KVModel kv_model = 3 [json_name = "kvModel"];</code>
+     * @return Whether the kvModel field is set.
+     */
+    @java.lang.Override
+    public boolean hasKvModel() {
+      return contractStateCase_ == 3;
+    }
+    /**
+     * <code>.confio.twasm.v1beta1.KVModel kv_model = 3 [json_name = "kvModel"];</code>
+     * @return The kvModel.
+     */
+    @java.lang.Override
+    public com.confio.twasm.v1beta1.GenesisProto.KVModel getKvModel() {
+      if (contractStateCase_ == 3) {
+         return (com.confio.twasm.v1beta1.GenesisProto.KVModel) contractState_;
+      }
+      return com.confio.twasm.v1beta1.GenesisProto.KVModel.getDefaultInstance();
+    }
+    /**
+     * <code>.confio.twasm.v1beta1.KVModel kv_model = 3 [json_name = "kvModel"];</code>
+     */
+    @java.lang.Override
+    public com.confio.twasm.v1beta1.GenesisProto.KVModelOrBuilder getKvModelOrBuilder() {
+      if (contractStateCase_ == 3) {
+         return (com.confio.twasm.v1beta1.GenesisProto.KVModel) contractState_;
+      }
+      return com.confio.twasm.v1beta1.GenesisProto.KVModel.getDefaultInstance();
+    }
+
+    public static final int CUSTOM_MODEL_FIELD_NUMBER = 4;
+    /**
+     * <code>.confio.twasm.v1beta1.CustomModel custom_model = 4 [json_name = "customModel"];</code>
+     * @return Whether the customModel field is set.
+     */
+    @java.lang.Override
+    public boolean hasCustomModel() {
+      return contractStateCase_ == 4;
+    }
+    /**
+     * <code>.confio.twasm.v1beta1.CustomModel custom_model = 4 [json_name = "customModel"];</code>
+     * @return The customModel.
+     */
+    @java.lang.Override
+    public com.confio.twasm.v1beta1.GenesisProto.CustomModel getCustomModel() {
+      if (contractStateCase_ == 4) {
+         return (com.confio.twasm.v1beta1.GenesisProto.CustomModel) contractState_;
+      }
+      return com.confio.twasm.v1beta1.GenesisProto.CustomModel.getDefaultInstance();
+    }
+    /**
+     * <code>.confio.twasm.v1beta1.CustomModel custom_model = 4 [json_name = "customModel"];</code>
+     */
+    @java.lang.Override
+    public com.confio.twasm.v1beta1.GenesisProto.CustomModelOrBuilder getCustomModelOrBuilder() {
+      if (contractStateCase_ == 4) {
+         return (com.confio.twasm.v1beta1.GenesisProto.CustomModel) contractState_;
+      }
+      return com.confio.twasm.v1beta1.GenesisProto.CustomModel.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contractAddress_);
+      }
+      if (contractInfo_ != null) {
+        output.writeMessage(2, getContractInfo());
+      }
+      if (contractStateCase_ == 3) {
+        output.writeMessage(3, (com.confio.twasm.v1beta1.GenesisProto.KVModel) contractState_);
+      }
+      if (contractStateCase_ == 4) {
+        output.writeMessage(4, (com.confio.twasm.v1beta1.GenesisProto.CustomModel) contractState_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contractAddress_);
+      }
+      if (contractInfo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getContractInfo());
+      }
+      if (contractStateCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (com.confio.twasm.v1beta1.GenesisProto.KVModel) contractState_);
+      }
+      if (contractStateCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, (com.confio.twasm.v1beta1.GenesisProto.CustomModel) contractState_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.twasm.v1beta1.GenesisProto.Contract)) {
+        return super.equals(obj);
+      }
+      com.confio.twasm.v1beta1.GenesisProto.Contract other = (com.confio.twasm.v1beta1.GenesisProto.Contract) obj;
+
+      if (!getContractAddress()
+          .equals(other.getContractAddress())) return false;
+      if (hasContractInfo() != other.hasContractInfo()) return false;
+      if (hasContractInfo()) {
+        if (!getContractInfo()
+            .equals(other.getContractInfo())) return false;
+      }
+      if (!getContractStateCase().equals(other.getContractStateCase())) return false;
+      switch (contractStateCase_) {
+        case 3:
+          if (!getKvModel()
+              .equals(other.getKvModel())) return false;
+          break;
+        case 4:
+          if (!getCustomModel()
+              .equals(other.getCustomModel())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTRACT_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getContractAddress().hashCode();
+      if (hasContractInfo()) {
+        hash = (37 * hash) + CONTRACT_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getContractInfo().hashCode();
+      }
+      switch (contractStateCase_) {
+        case 3:
+          hash = (37 * hash) + KV_MODEL_FIELD_NUMBER;
+          hash = (53 * hash) + getKvModel().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + CUSTOM_MODEL_FIELD_NUMBER;
+          hash = (53 * hash) + getCustomModel().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.twasm.v1beta1.GenesisProto.Contract parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.Contract parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.Contract parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.Contract parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.Contract parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.Contract parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.Contract parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.Contract parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.twasm.v1beta1.GenesisProto.Contract parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.twasm.v1beta1.GenesisProto.Contract parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.Contract parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.Contract parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.twasm.v1beta1.GenesisProto.Contract prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Contract struct encompasses ContractAddress, ContractInfo, and ContractState
+     * </pre>
+     *
+     * Protobuf type {@code confio.twasm.v1beta1.Contract}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.twasm.v1beta1.Contract)
+        com.confio.twasm.v1beta1.GenesisProto.ContractOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.twasm.v1beta1.GenesisProto.internal_static_confio_twasm_v1beta1_Contract_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.twasm.v1beta1.GenesisProto.internal_static_confio_twasm_v1beta1_Contract_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.twasm.v1beta1.GenesisProto.Contract.class, com.confio.twasm.v1beta1.GenesisProto.Contract.Builder.class);
+      }
+
+      // Construct using com.confio.twasm.v1beta1.GenesisProto.Contract.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contractAddress_ = "";
+        contractInfo_ = null;
+        if (contractInfoBuilder_ != null) {
+          contractInfoBuilder_.dispose();
+          contractInfoBuilder_ = null;
+        }
+        if (kvModelBuilder_ != null) {
+          kvModelBuilder_.clear();
+        }
+        if (customModelBuilder_ != null) {
+          customModelBuilder_.clear();
+        }
+        contractStateCase_ = 0;
+        contractState_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.twasm.v1beta1.GenesisProto.internal_static_confio_twasm_v1beta1_Contract_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.GenesisProto.Contract getDefaultInstanceForType() {
+        return com.confio.twasm.v1beta1.GenesisProto.Contract.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.GenesisProto.Contract build() {
+        com.confio.twasm.v1beta1.GenesisProto.Contract result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.GenesisProto.Contract buildPartial() {
+        com.confio.twasm.v1beta1.GenesisProto.Contract result = new com.confio.twasm.v1beta1.GenesisProto.Contract(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.twasm.v1beta1.GenesisProto.Contract result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.contractAddress_ = contractAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.contractInfo_ = contractInfoBuilder_ == null
+              ? contractInfo_
+              : contractInfoBuilder_.build();
+        }
+      }
+
+      private void buildPartialOneofs(com.confio.twasm.v1beta1.GenesisProto.Contract result) {
+        result.contractStateCase_ = contractStateCase_;
+        result.contractState_ = this.contractState_;
+        if (contractStateCase_ == 3 &&
+            kvModelBuilder_ != null) {
+          result.contractState_ = kvModelBuilder_.build();
+        }
+        if (contractStateCase_ == 4 &&
+            customModelBuilder_ != null) {
+          result.contractState_ = customModelBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.twasm.v1beta1.GenesisProto.Contract) {
+          return mergeFrom((com.confio.twasm.v1beta1.GenesisProto.Contract)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.twasm.v1beta1.GenesisProto.Contract other) {
+        if (other == com.confio.twasm.v1beta1.GenesisProto.Contract.getDefaultInstance()) return this;
+        if (!other.getContractAddress().isEmpty()) {
+          contractAddress_ = other.contractAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasContractInfo()) {
+          mergeContractInfo(other.getContractInfo());
+        }
+        switch (other.getContractStateCase()) {
+          case KV_MODEL: {
+            mergeKvModel(other.getKvModel());
+            break;
+          }
+          case CUSTOM_MODEL: {
+            mergeCustomModel(other.getCustomModel());
+            break;
+          }
+          case CONTRACTSTATE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                contractAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getContractInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getKvModelFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                contractStateCase_ = 3;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getCustomModelFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                contractStateCase_ = 4;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int contractStateCase_ = 0;
+      private java.lang.Object contractState_;
+      public ContractStateCase
+          getContractStateCase() {
+        return ContractStateCase.forNumber(
+            contractStateCase_);
+      }
+
+      public Builder clearContractState() {
+        contractStateCase_ = 0;
+        contractState_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private java.lang.Object contractAddress_ = "";
+      /**
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @return The contractAddress.
+       */
+      public java.lang.String getContractAddress() {
+        java.lang.Object ref = contractAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contractAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @return The bytes for contractAddress.
+       */
+      public com.google.protobuf.ByteString
+          getContractAddressBytes() {
+        java.lang.Object ref = contractAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contractAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @param value The contractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contractAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractAddress() {
+        contractAddress_ = getDefaultInstance().getContractAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @param value The bytes for contractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contractAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmwasm.wasm.v1.TypesProto.ContractInfo contractInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmwasm.wasm.v1.TypesProto.ContractInfo, com.cosmwasm.wasm.v1.TypesProto.ContractInfo.Builder, com.cosmwasm.wasm.v1.TypesProto.ContractInfoOrBuilder> contractInfoBuilder_;
+      /**
+       * <code>.cosmwasm.wasm.v1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
+       * @return Whether the contractInfo field is set.
+       */
+      public boolean hasContractInfo() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmwasm.wasm.v1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
+       * @return The contractInfo.
+       */
+      public com.cosmwasm.wasm.v1.TypesProto.ContractInfo getContractInfo() {
+        if (contractInfoBuilder_ == null) {
+          return contractInfo_ == null ? com.cosmwasm.wasm.v1.TypesProto.ContractInfo.getDefaultInstance() : contractInfo_;
+        } else {
+          return contractInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmwasm.wasm.v1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setContractInfo(com.cosmwasm.wasm.v1.TypesProto.ContractInfo value) {
+        if (contractInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          contractInfo_ = value;
+        } else {
+          contractInfoBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmwasm.wasm.v1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setContractInfo(
+          com.cosmwasm.wasm.v1.TypesProto.ContractInfo.Builder builderForValue) {
+        if (contractInfoBuilder_ == null) {
+          contractInfo_ = builderForValue.build();
+        } else {
+          contractInfoBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmwasm.wasm.v1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeContractInfo(com.cosmwasm.wasm.v1.TypesProto.ContractInfo value) {
+        if (contractInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            contractInfo_ != null &&
+            contractInfo_ != com.cosmwasm.wasm.v1.TypesProto.ContractInfo.getDefaultInstance()) {
+            getContractInfoBuilder().mergeFrom(value);
+          } else {
+            contractInfo_ = value;
+          }
+        } else {
+          contractInfoBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmwasm.wasm.v1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearContractInfo() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        contractInfo_ = null;
+        if (contractInfoBuilder_ != null) {
+          contractInfoBuilder_.dispose();
+          contractInfoBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmwasm.wasm.v1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmwasm.wasm.v1.TypesProto.ContractInfo.Builder getContractInfoBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getContractInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmwasm.wasm.v1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmwasm.wasm.v1.TypesProto.ContractInfoOrBuilder getContractInfoOrBuilder() {
+        if (contractInfoBuilder_ != null) {
+          return contractInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return contractInfo_ == null ?
+              com.cosmwasm.wasm.v1.TypesProto.ContractInfo.getDefaultInstance() : contractInfo_;
+        }
+      }
+      /**
+       * <code>.cosmwasm.wasm.v1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmwasm.wasm.v1.TypesProto.ContractInfo, com.cosmwasm.wasm.v1.TypesProto.ContractInfo.Builder, com.cosmwasm.wasm.v1.TypesProto.ContractInfoOrBuilder> 
+          getContractInfoFieldBuilder() {
+        if (contractInfoBuilder_ == null) {
+          contractInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmwasm.wasm.v1.TypesProto.ContractInfo, com.cosmwasm.wasm.v1.TypesProto.ContractInfo.Builder, com.cosmwasm.wasm.v1.TypesProto.ContractInfoOrBuilder>(
+                  getContractInfo(),
+                  getParentForChildren(),
+                  isClean());
+          contractInfo_ = null;
+        }
+        return contractInfoBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.twasm.v1beta1.GenesisProto.KVModel, com.confio.twasm.v1beta1.GenesisProto.KVModel.Builder, com.confio.twasm.v1beta1.GenesisProto.KVModelOrBuilder> kvModelBuilder_;
+      /**
+       * <code>.confio.twasm.v1beta1.KVModel kv_model = 3 [json_name = "kvModel"];</code>
+       * @return Whether the kvModel field is set.
+       */
+      @java.lang.Override
+      public boolean hasKvModel() {
+        return contractStateCase_ == 3;
+      }
+      /**
+       * <code>.confio.twasm.v1beta1.KVModel kv_model = 3 [json_name = "kvModel"];</code>
+       * @return The kvModel.
+       */
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.GenesisProto.KVModel getKvModel() {
+        if (kvModelBuilder_ == null) {
+          if (contractStateCase_ == 3) {
+            return (com.confio.twasm.v1beta1.GenesisProto.KVModel) contractState_;
+          }
+          return com.confio.twasm.v1beta1.GenesisProto.KVModel.getDefaultInstance();
+        } else {
+          if (contractStateCase_ == 3) {
+            return kvModelBuilder_.getMessage();
+          }
+          return com.confio.twasm.v1beta1.GenesisProto.KVModel.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.confio.twasm.v1beta1.KVModel kv_model = 3 [json_name = "kvModel"];</code>
+       */
+      public Builder setKvModel(com.confio.twasm.v1beta1.GenesisProto.KVModel value) {
+        if (kvModelBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          contractState_ = value;
+          onChanged();
+        } else {
+          kvModelBuilder_.setMessage(value);
+        }
+        contractStateCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.confio.twasm.v1beta1.KVModel kv_model = 3 [json_name = "kvModel"];</code>
+       */
+      public Builder setKvModel(
+          com.confio.twasm.v1beta1.GenesisProto.KVModel.Builder builderForValue) {
+        if (kvModelBuilder_ == null) {
+          contractState_ = builderForValue.build();
+          onChanged();
+        } else {
+          kvModelBuilder_.setMessage(builderForValue.build());
+        }
+        contractStateCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.confio.twasm.v1beta1.KVModel kv_model = 3 [json_name = "kvModel"];</code>
+       */
+      public Builder mergeKvModel(com.confio.twasm.v1beta1.GenesisProto.KVModel value) {
+        if (kvModelBuilder_ == null) {
+          if (contractStateCase_ == 3 &&
+              contractState_ != com.confio.twasm.v1beta1.GenesisProto.KVModel.getDefaultInstance()) {
+            contractState_ = com.confio.twasm.v1beta1.GenesisProto.KVModel.newBuilder((com.confio.twasm.v1beta1.GenesisProto.KVModel) contractState_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            contractState_ = value;
+          }
+          onChanged();
+        } else {
+          if (contractStateCase_ == 3) {
+            kvModelBuilder_.mergeFrom(value);
+          } else {
+            kvModelBuilder_.setMessage(value);
+          }
+        }
+        contractStateCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.confio.twasm.v1beta1.KVModel kv_model = 3 [json_name = "kvModel"];</code>
+       */
+      public Builder clearKvModel() {
+        if (kvModelBuilder_ == null) {
+          if (contractStateCase_ == 3) {
+            contractStateCase_ = 0;
+            contractState_ = null;
+            onChanged();
+          }
+        } else {
+          if (contractStateCase_ == 3) {
+            contractStateCase_ = 0;
+            contractState_ = null;
+          }
+          kvModelBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.confio.twasm.v1beta1.KVModel kv_model = 3 [json_name = "kvModel"];</code>
+       */
+      public com.confio.twasm.v1beta1.GenesisProto.KVModel.Builder getKvModelBuilder() {
+        return getKvModelFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.confio.twasm.v1beta1.KVModel kv_model = 3 [json_name = "kvModel"];</code>
+       */
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.GenesisProto.KVModelOrBuilder getKvModelOrBuilder() {
+        if ((contractStateCase_ == 3) && (kvModelBuilder_ != null)) {
+          return kvModelBuilder_.getMessageOrBuilder();
+        } else {
+          if (contractStateCase_ == 3) {
+            return (com.confio.twasm.v1beta1.GenesisProto.KVModel) contractState_;
+          }
+          return com.confio.twasm.v1beta1.GenesisProto.KVModel.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.confio.twasm.v1beta1.KVModel kv_model = 3 [json_name = "kvModel"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.twasm.v1beta1.GenesisProto.KVModel, com.confio.twasm.v1beta1.GenesisProto.KVModel.Builder, com.confio.twasm.v1beta1.GenesisProto.KVModelOrBuilder> 
+          getKvModelFieldBuilder() {
+        if (kvModelBuilder_ == null) {
+          if (!(contractStateCase_ == 3)) {
+            contractState_ = com.confio.twasm.v1beta1.GenesisProto.KVModel.getDefaultInstance();
+          }
+          kvModelBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.confio.twasm.v1beta1.GenesisProto.KVModel, com.confio.twasm.v1beta1.GenesisProto.KVModel.Builder, com.confio.twasm.v1beta1.GenesisProto.KVModelOrBuilder>(
+                  (com.confio.twasm.v1beta1.GenesisProto.KVModel) contractState_,
+                  getParentForChildren(),
+                  isClean());
+          contractState_ = null;
+        }
+        contractStateCase_ = 3;
+        onChanged();
+        return kvModelBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.twasm.v1beta1.GenesisProto.CustomModel, com.confio.twasm.v1beta1.GenesisProto.CustomModel.Builder, com.confio.twasm.v1beta1.GenesisProto.CustomModelOrBuilder> customModelBuilder_;
+      /**
+       * <code>.confio.twasm.v1beta1.CustomModel custom_model = 4 [json_name = "customModel"];</code>
+       * @return Whether the customModel field is set.
+       */
+      @java.lang.Override
+      public boolean hasCustomModel() {
+        return contractStateCase_ == 4;
+      }
+      /**
+       * <code>.confio.twasm.v1beta1.CustomModel custom_model = 4 [json_name = "customModel"];</code>
+       * @return The customModel.
+       */
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.GenesisProto.CustomModel getCustomModel() {
+        if (customModelBuilder_ == null) {
+          if (contractStateCase_ == 4) {
+            return (com.confio.twasm.v1beta1.GenesisProto.CustomModel) contractState_;
+          }
+          return com.confio.twasm.v1beta1.GenesisProto.CustomModel.getDefaultInstance();
+        } else {
+          if (contractStateCase_ == 4) {
+            return customModelBuilder_.getMessage();
+          }
+          return com.confio.twasm.v1beta1.GenesisProto.CustomModel.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.confio.twasm.v1beta1.CustomModel custom_model = 4 [json_name = "customModel"];</code>
+       */
+      public Builder setCustomModel(com.confio.twasm.v1beta1.GenesisProto.CustomModel value) {
+        if (customModelBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          contractState_ = value;
+          onChanged();
+        } else {
+          customModelBuilder_.setMessage(value);
+        }
+        contractStateCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.confio.twasm.v1beta1.CustomModel custom_model = 4 [json_name = "customModel"];</code>
+       */
+      public Builder setCustomModel(
+          com.confio.twasm.v1beta1.GenesisProto.CustomModel.Builder builderForValue) {
+        if (customModelBuilder_ == null) {
+          contractState_ = builderForValue.build();
+          onChanged();
+        } else {
+          customModelBuilder_.setMessage(builderForValue.build());
+        }
+        contractStateCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.confio.twasm.v1beta1.CustomModel custom_model = 4 [json_name = "customModel"];</code>
+       */
+      public Builder mergeCustomModel(com.confio.twasm.v1beta1.GenesisProto.CustomModel value) {
+        if (customModelBuilder_ == null) {
+          if (contractStateCase_ == 4 &&
+              contractState_ != com.confio.twasm.v1beta1.GenesisProto.CustomModel.getDefaultInstance()) {
+            contractState_ = com.confio.twasm.v1beta1.GenesisProto.CustomModel.newBuilder((com.confio.twasm.v1beta1.GenesisProto.CustomModel) contractState_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            contractState_ = value;
+          }
+          onChanged();
+        } else {
+          if (contractStateCase_ == 4) {
+            customModelBuilder_.mergeFrom(value);
+          } else {
+            customModelBuilder_.setMessage(value);
+          }
+        }
+        contractStateCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.confio.twasm.v1beta1.CustomModel custom_model = 4 [json_name = "customModel"];</code>
+       */
+      public Builder clearCustomModel() {
+        if (customModelBuilder_ == null) {
+          if (contractStateCase_ == 4) {
+            contractStateCase_ = 0;
+            contractState_ = null;
+            onChanged();
+          }
+        } else {
+          if (contractStateCase_ == 4) {
+            contractStateCase_ = 0;
+            contractState_ = null;
+          }
+          customModelBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.confio.twasm.v1beta1.CustomModel custom_model = 4 [json_name = "customModel"];</code>
+       */
+      public com.confio.twasm.v1beta1.GenesisProto.CustomModel.Builder getCustomModelBuilder() {
+        return getCustomModelFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.confio.twasm.v1beta1.CustomModel custom_model = 4 [json_name = "customModel"];</code>
+       */
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.GenesisProto.CustomModelOrBuilder getCustomModelOrBuilder() {
+        if ((contractStateCase_ == 4) && (customModelBuilder_ != null)) {
+          return customModelBuilder_.getMessageOrBuilder();
+        } else {
+          if (contractStateCase_ == 4) {
+            return (com.confio.twasm.v1beta1.GenesisProto.CustomModel) contractState_;
+          }
+          return com.confio.twasm.v1beta1.GenesisProto.CustomModel.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.confio.twasm.v1beta1.CustomModel custom_model = 4 [json_name = "customModel"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.twasm.v1beta1.GenesisProto.CustomModel, com.confio.twasm.v1beta1.GenesisProto.CustomModel.Builder, com.confio.twasm.v1beta1.GenesisProto.CustomModelOrBuilder> 
+          getCustomModelFieldBuilder() {
+        if (customModelBuilder_ == null) {
+          if (!(contractStateCase_ == 4)) {
+            contractState_ = com.confio.twasm.v1beta1.GenesisProto.CustomModel.getDefaultInstance();
+          }
+          customModelBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.confio.twasm.v1beta1.GenesisProto.CustomModel, com.confio.twasm.v1beta1.GenesisProto.CustomModel.Builder, com.confio.twasm.v1beta1.GenesisProto.CustomModelOrBuilder>(
+                  (com.confio.twasm.v1beta1.GenesisProto.CustomModel) contractState_,
+                  getParentForChildren(),
+                  isClean());
+          contractState_ = null;
+        }
+        contractStateCase_ = 4;
+        onChanged();
+        return customModelBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.twasm.v1beta1.Contract)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.twasm.v1beta1.Contract)
+    private static final com.confio.twasm.v1beta1.GenesisProto.Contract DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.twasm.v1beta1.GenesisProto.Contract();
+    }
+
+    public static com.confio.twasm.v1beta1.GenesisProto.Contract getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Contract>
+        PARSER = new com.google.protobuf.AbstractParser<Contract>() {
+      @java.lang.Override
+      public Contract parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Contract> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Contract> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.twasm.v1beta1.GenesisProto.Contract getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface KVModelOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.twasm.v1beta1.KVModel)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .cosmwasm.wasm.v1.Model models = 1 [json_name = "models", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.cosmwasm.wasm.v1.TypesProto.Model> 
+        getModelsList();
+    /**
+     * <code>repeated .cosmwasm.wasm.v1.Model models = 1 [json_name = "models", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmwasm.wasm.v1.TypesProto.Model getModels(int index);
+    /**
+     * <code>repeated .cosmwasm.wasm.v1.Model models = 1 [json_name = "models", (.gogoproto.nullable) = false];</code>
+     */
+    int getModelsCount();
+    /**
+     * <code>repeated .cosmwasm.wasm.v1.Model models = 1 [json_name = "models", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.cosmwasm.wasm.v1.TypesProto.ModelOrBuilder> 
+        getModelsOrBuilderList();
+    /**
+     * <code>repeated .cosmwasm.wasm.v1.Model models = 1 [json_name = "models", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmwasm.wasm.v1.TypesProto.ModelOrBuilder getModelsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * KVModel is a wrapper around the wasmd default key value model.
+   * </pre>
+   *
+   * Protobuf type {@code confio.twasm.v1beta1.KVModel}
+   */
+  public static final class KVModel extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.twasm.v1beta1.KVModel)
+      KVModelOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use KVModel.newBuilder() to construct.
+    private KVModel(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private KVModel() {
+      models_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new KVModel();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.twasm.v1beta1.GenesisProto.internal_static_confio_twasm_v1beta1_KVModel_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.twasm.v1beta1.GenesisProto.internal_static_confio_twasm_v1beta1_KVModel_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.twasm.v1beta1.GenesisProto.KVModel.class, com.confio.twasm.v1beta1.GenesisProto.KVModel.Builder.class);
+    }
+
+    public static final int MODELS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmwasm.wasm.v1.TypesProto.Model> models_;
+    /**
+     * <code>repeated .cosmwasm.wasm.v1.Model models = 1 [json_name = "models", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmwasm.wasm.v1.TypesProto.Model> getModelsList() {
+      return models_;
+    }
+    /**
+     * <code>repeated .cosmwasm.wasm.v1.Model models = 1 [json_name = "models", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmwasm.wasm.v1.TypesProto.ModelOrBuilder> 
+        getModelsOrBuilderList() {
+      return models_;
+    }
+    /**
+     * <code>repeated .cosmwasm.wasm.v1.Model models = 1 [json_name = "models", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getModelsCount() {
+      return models_.size();
+    }
+    /**
+     * <code>repeated .cosmwasm.wasm.v1.Model models = 1 [json_name = "models", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmwasm.wasm.v1.TypesProto.Model getModels(int index) {
+      return models_.get(index);
+    }
+    /**
+     * <code>repeated .cosmwasm.wasm.v1.Model models = 1 [json_name = "models", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmwasm.wasm.v1.TypesProto.ModelOrBuilder getModelsOrBuilder(
+        int index) {
+      return models_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < models_.size(); i++) {
+        output.writeMessage(1, models_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < models_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, models_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.twasm.v1beta1.GenesisProto.KVModel)) {
+        return super.equals(obj);
+      }
+      com.confio.twasm.v1beta1.GenesisProto.KVModel other = (com.confio.twasm.v1beta1.GenesisProto.KVModel) obj;
+
+      if (!getModelsList()
+          .equals(other.getModelsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getModelsCount() > 0) {
+        hash = (37 * hash) + MODELS_FIELD_NUMBER;
+        hash = (53 * hash) + getModelsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.twasm.v1beta1.GenesisProto.KVModel parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.KVModel parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.KVModel parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.KVModel parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.KVModel parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.KVModel parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.KVModel parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.KVModel parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.twasm.v1beta1.GenesisProto.KVModel parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.twasm.v1beta1.GenesisProto.KVModel parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.KVModel parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.KVModel parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.twasm.v1beta1.GenesisProto.KVModel prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * KVModel is a wrapper around the wasmd default key value model.
+     * </pre>
+     *
+     * Protobuf type {@code confio.twasm.v1beta1.KVModel}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.twasm.v1beta1.KVModel)
+        com.confio.twasm.v1beta1.GenesisProto.KVModelOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.twasm.v1beta1.GenesisProto.internal_static_confio_twasm_v1beta1_KVModel_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.twasm.v1beta1.GenesisProto.internal_static_confio_twasm_v1beta1_KVModel_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.twasm.v1beta1.GenesisProto.KVModel.class, com.confio.twasm.v1beta1.GenesisProto.KVModel.Builder.class);
+      }
+
+      // Construct using com.confio.twasm.v1beta1.GenesisProto.KVModel.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (modelsBuilder_ == null) {
+          models_ = java.util.Collections.emptyList();
+        } else {
+          models_ = null;
+          modelsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.twasm.v1beta1.GenesisProto.internal_static_confio_twasm_v1beta1_KVModel_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.GenesisProto.KVModel getDefaultInstanceForType() {
+        return com.confio.twasm.v1beta1.GenesisProto.KVModel.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.GenesisProto.KVModel build() {
+        com.confio.twasm.v1beta1.GenesisProto.KVModel result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.GenesisProto.KVModel buildPartial() {
+        com.confio.twasm.v1beta1.GenesisProto.KVModel result = new com.confio.twasm.v1beta1.GenesisProto.KVModel(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.confio.twasm.v1beta1.GenesisProto.KVModel result) {
+        if (modelsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            models_ = java.util.Collections.unmodifiableList(models_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.models_ = models_;
+        } else {
+          result.models_ = modelsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.confio.twasm.v1beta1.GenesisProto.KVModel result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.twasm.v1beta1.GenesisProto.KVModel) {
+          return mergeFrom((com.confio.twasm.v1beta1.GenesisProto.KVModel)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.twasm.v1beta1.GenesisProto.KVModel other) {
+        if (other == com.confio.twasm.v1beta1.GenesisProto.KVModel.getDefaultInstance()) return this;
+        if (modelsBuilder_ == null) {
+          if (!other.models_.isEmpty()) {
+            if (models_.isEmpty()) {
+              models_ = other.models_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureModelsIsMutable();
+              models_.addAll(other.models_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.models_.isEmpty()) {
+            if (modelsBuilder_.isEmpty()) {
+              modelsBuilder_.dispose();
+              modelsBuilder_ = null;
+              models_ = other.models_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              modelsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getModelsFieldBuilder() : null;
+            } else {
+              modelsBuilder_.addAllMessages(other.models_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmwasm.wasm.v1.TypesProto.Model m =
+                    input.readMessage(
+                        com.cosmwasm.wasm.v1.TypesProto.Model.parser(),
+                        extensionRegistry);
+                if (modelsBuilder_ == null) {
+                  ensureModelsIsMutable();
+                  models_.add(m);
+                } else {
+                  modelsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmwasm.wasm.v1.TypesProto.Model> models_ =
+        java.util.Collections.emptyList();
+      private void ensureModelsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          models_ = new java.util.ArrayList<com.cosmwasm.wasm.v1.TypesProto.Model>(models_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmwasm.wasm.v1.TypesProto.Model, com.cosmwasm.wasm.v1.TypesProto.Model.Builder, com.cosmwasm.wasm.v1.TypesProto.ModelOrBuilder> modelsBuilder_;
+
+      /**
+       * <code>repeated .cosmwasm.wasm.v1.Model models = 1 [json_name = "models", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmwasm.wasm.v1.TypesProto.Model> getModelsList() {
+        if (modelsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(models_);
+        } else {
+          return modelsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmwasm.wasm.v1.Model models = 1 [json_name = "models", (.gogoproto.nullable) = false];</code>
+       */
+      public int getModelsCount() {
+        if (modelsBuilder_ == null) {
+          return models_.size();
+        } else {
+          return modelsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmwasm.wasm.v1.Model models = 1 [json_name = "models", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmwasm.wasm.v1.TypesProto.Model getModels(int index) {
+        if (modelsBuilder_ == null) {
+          return models_.get(index);
+        } else {
+          return modelsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmwasm.wasm.v1.Model models = 1 [json_name = "models", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setModels(
+          int index, com.cosmwasm.wasm.v1.TypesProto.Model value) {
+        if (modelsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureModelsIsMutable();
+          models_.set(index, value);
+          onChanged();
+        } else {
+          modelsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmwasm.wasm.v1.Model models = 1 [json_name = "models", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setModels(
+          int index, com.cosmwasm.wasm.v1.TypesProto.Model.Builder builderForValue) {
+        if (modelsBuilder_ == null) {
+          ensureModelsIsMutable();
+          models_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          modelsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmwasm.wasm.v1.Model models = 1 [json_name = "models", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addModels(com.cosmwasm.wasm.v1.TypesProto.Model value) {
+        if (modelsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureModelsIsMutable();
+          models_.add(value);
+          onChanged();
+        } else {
+          modelsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmwasm.wasm.v1.Model models = 1 [json_name = "models", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addModels(
+          int index, com.cosmwasm.wasm.v1.TypesProto.Model value) {
+        if (modelsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureModelsIsMutable();
+          models_.add(index, value);
+          onChanged();
+        } else {
+          modelsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmwasm.wasm.v1.Model models = 1 [json_name = "models", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addModels(
+          com.cosmwasm.wasm.v1.TypesProto.Model.Builder builderForValue) {
+        if (modelsBuilder_ == null) {
+          ensureModelsIsMutable();
+          models_.add(builderForValue.build());
+          onChanged();
+        } else {
+          modelsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmwasm.wasm.v1.Model models = 1 [json_name = "models", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addModels(
+          int index, com.cosmwasm.wasm.v1.TypesProto.Model.Builder builderForValue) {
+        if (modelsBuilder_ == null) {
+          ensureModelsIsMutable();
+          models_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          modelsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmwasm.wasm.v1.Model models = 1 [json_name = "models", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllModels(
+          java.lang.Iterable<? extends com.cosmwasm.wasm.v1.TypesProto.Model> values) {
+        if (modelsBuilder_ == null) {
+          ensureModelsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, models_);
+          onChanged();
+        } else {
+          modelsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmwasm.wasm.v1.Model models = 1 [json_name = "models", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearModels() {
+        if (modelsBuilder_ == null) {
+          models_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          modelsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmwasm.wasm.v1.Model models = 1 [json_name = "models", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeModels(int index) {
+        if (modelsBuilder_ == null) {
+          ensureModelsIsMutable();
+          models_.remove(index);
+          onChanged();
+        } else {
+          modelsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmwasm.wasm.v1.Model models = 1 [json_name = "models", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmwasm.wasm.v1.TypesProto.Model.Builder getModelsBuilder(
+          int index) {
+        return getModelsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmwasm.wasm.v1.Model models = 1 [json_name = "models", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmwasm.wasm.v1.TypesProto.ModelOrBuilder getModelsOrBuilder(
+          int index) {
+        if (modelsBuilder_ == null) {
+          return models_.get(index);  } else {
+          return modelsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmwasm.wasm.v1.Model models = 1 [json_name = "models", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.cosmwasm.wasm.v1.TypesProto.ModelOrBuilder> 
+           getModelsOrBuilderList() {
+        if (modelsBuilder_ != null) {
+          return modelsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(models_);
+        }
+      }
+      /**
+       * <code>repeated .cosmwasm.wasm.v1.Model models = 1 [json_name = "models", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmwasm.wasm.v1.TypesProto.Model.Builder addModelsBuilder() {
+        return getModelsFieldBuilder().addBuilder(
+            com.cosmwasm.wasm.v1.TypesProto.Model.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmwasm.wasm.v1.Model models = 1 [json_name = "models", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmwasm.wasm.v1.TypesProto.Model.Builder addModelsBuilder(
+          int index) {
+        return getModelsFieldBuilder().addBuilder(
+            index, com.cosmwasm.wasm.v1.TypesProto.Model.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmwasm.wasm.v1.Model models = 1 [json_name = "models", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmwasm.wasm.v1.TypesProto.Model.Builder> 
+           getModelsBuilderList() {
+        return getModelsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmwasm.wasm.v1.TypesProto.Model, com.cosmwasm.wasm.v1.TypesProto.Model.Builder, com.cosmwasm.wasm.v1.TypesProto.ModelOrBuilder> 
+          getModelsFieldBuilder() {
+        if (modelsBuilder_ == null) {
+          modelsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmwasm.wasm.v1.TypesProto.Model, com.cosmwasm.wasm.v1.TypesProto.Model.Builder, com.cosmwasm.wasm.v1.TypesProto.ModelOrBuilder>(
+                  models_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          models_ = null;
+        }
+        return modelsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.twasm.v1beta1.KVModel)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.twasm.v1beta1.KVModel)
+    private static final com.confio.twasm.v1beta1.GenesisProto.KVModel DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.twasm.v1beta1.GenesisProto.KVModel();
+    }
+
+    public static com.confio.twasm.v1beta1.GenesisProto.KVModel getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<KVModel>
+        PARSER = new com.google.protobuf.AbstractParser<KVModel>() {
+      @java.lang.Override
+      public KVModel parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<KVModel> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<KVModel> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.twasm.v1beta1.GenesisProto.KVModel getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CustomModelOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.twasm.v1beta1.CustomModel)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Msg json encoded message to be passed to the contract on import
+     * </pre>
+     *
+     * <code>bytes msg = 5 [json_name = "msg", (.gogoproto.casttype) = "github.com/CosmWasm/wasmd/x/wasm/types.RawContractMessage"];</code>
+     * @return The msg.
+     */
+    com.google.protobuf.ByteString getMsg();
+  }
+  /**
+   * <pre>
+   * CustomModel contains the raw json data for a contract to seed its state on
+   * import
+   * </pre>
+   *
+   * Protobuf type {@code confio.twasm.v1beta1.CustomModel}
+   */
+  public static final class CustomModel extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.twasm.v1beta1.CustomModel)
+      CustomModelOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CustomModel.newBuilder() to construct.
+    private CustomModel(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CustomModel() {
+      msg_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CustomModel();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.twasm.v1beta1.GenesisProto.internal_static_confio_twasm_v1beta1_CustomModel_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.twasm.v1beta1.GenesisProto.internal_static_confio_twasm_v1beta1_CustomModel_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.twasm.v1beta1.GenesisProto.CustomModel.class, com.confio.twasm.v1beta1.GenesisProto.CustomModel.Builder.class);
+    }
+
+    public static final int MSG_FIELD_NUMBER = 5;
+    private com.google.protobuf.ByteString msg_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * Msg json encoded message to be passed to the contract on import
+     * </pre>
+     *
+     * <code>bytes msg = 5 [json_name = "msg", (.gogoproto.casttype) = "github.com/CosmWasm/wasmd/x/wasm/types.RawContractMessage"];</code>
+     * @return The msg.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMsg() {
+      return msg_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!msg_.isEmpty()) {
+        output.writeBytes(5, msg_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!msg_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, msg_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.twasm.v1beta1.GenesisProto.CustomModel)) {
+        return super.equals(obj);
+      }
+      com.confio.twasm.v1beta1.GenesisProto.CustomModel other = (com.confio.twasm.v1beta1.GenesisProto.CustomModel) obj;
+
+      if (!getMsg()
+          .equals(other.getMsg())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MSG_FIELD_NUMBER;
+      hash = (53 * hash) + getMsg().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.twasm.v1beta1.GenesisProto.CustomModel parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.CustomModel parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.CustomModel parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.CustomModel parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.CustomModel parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.CustomModel parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.CustomModel parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.CustomModel parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.twasm.v1beta1.GenesisProto.CustomModel parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.twasm.v1beta1.GenesisProto.CustomModel parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.CustomModel parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.twasm.v1beta1.GenesisProto.CustomModel parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.twasm.v1beta1.GenesisProto.CustomModel prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * CustomModel contains the raw json data for a contract to seed its state on
+     * import
+     * </pre>
+     *
+     * Protobuf type {@code confio.twasm.v1beta1.CustomModel}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.twasm.v1beta1.CustomModel)
+        com.confio.twasm.v1beta1.GenesisProto.CustomModelOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.twasm.v1beta1.GenesisProto.internal_static_confio_twasm_v1beta1_CustomModel_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.twasm.v1beta1.GenesisProto.internal_static_confio_twasm_v1beta1_CustomModel_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.twasm.v1beta1.GenesisProto.CustomModel.class, com.confio.twasm.v1beta1.GenesisProto.CustomModel.Builder.class);
+      }
+
+      // Construct using com.confio.twasm.v1beta1.GenesisProto.CustomModel.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        msg_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.twasm.v1beta1.GenesisProto.internal_static_confio_twasm_v1beta1_CustomModel_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.GenesisProto.CustomModel getDefaultInstanceForType() {
+        return com.confio.twasm.v1beta1.GenesisProto.CustomModel.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.GenesisProto.CustomModel build() {
+        com.confio.twasm.v1beta1.GenesisProto.CustomModel result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.GenesisProto.CustomModel buildPartial() {
+        com.confio.twasm.v1beta1.GenesisProto.CustomModel result = new com.confio.twasm.v1beta1.GenesisProto.CustomModel(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.twasm.v1beta1.GenesisProto.CustomModel result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.msg_ = msg_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.twasm.v1beta1.GenesisProto.CustomModel) {
+          return mergeFrom((com.confio.twasm.v1beta1.GenesisProto.CustomModel)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.twasm.v1beta1.GenesisProto.CustomModel other) {
+        if (other == com.confio.twasm.v1beta1.GenesisProto.CustomModel.getDefaultInstance()) return this;
+        if (other.getMsg() != com.google.protobuf.ByteString.EMPTY) {
+          setMsg(other.getMsg());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 42: {
+                msg_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString msg_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * Msg json encoded message to be passed to the contract on import
+       * </pre>
+       *
+       * <code>bytes msg = 5 [json_name = "msg", (.gogoproto.casttype) = "github.com/CosmWasm/wasmd/x/wasm/types.RawContractMessage"];</code>
+       * @return The msg.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMsg() {
+        return msg_;
+      }
+      /**
+       * <pre>
+       * Msg json encoded message to be passed to the contract on import
+       * </pre>
+       *
+       * <code>bytes msg = 5 [json_name = "msg", (.gogoproto.casttype) = "github.com/CosmWasm/wasmd/x/wasm/types.RawContractMessage"];</code>
+       * @param value The msg to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMsg(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        msg_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Msg json encoded message to be passed to the contract on import
+       * </pre>
+       *
+       * <code>bytes msg = 5 [json_name = "msg", (.gogoproto.casttype) = "github.com/CosmWasm/wasmd/x/wasm/types.RawContractMessage"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMsg() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        msg_ = getDefaultInstance().getMsg();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.twasm.v1beta1.CustomModel)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.twasm.v1beta1.CustomModel)
+    private static final com.confio.twasm.v1beta1.GenesisProto.CustomModel DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.twasm.v1beta1.GenesisProto.CustomModel();
+    }
+
+    public static com.confio.twasm.v1beta1.GenesisProto.CustomModel getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CustomModel>
+        PARSER = new com.google.protobuf.AbstractParser<CustomModel>() {
+      @java.lang.Override
+      public CustomModel parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CustomModel> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CustomModel> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.twasm.v1beta1.GenesisProto.CustomModel getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_twasm_v1beta1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_twasm_v1beta1_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_twasm_v1beta1_Contract_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_twasm_v1beta1_Contract_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_twasm_v1beta1_KVModel_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_twasm_v1beta1_KVModel_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_twasm_v1beta1_CustomModel_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_twasm_v1beta1_CustomModel_fieldAccessorTable;
 
@@ -74,12 +5797,12 @@ public final class GenesisProto {
       "s\030\001 \003(\0132\027.cosmwasm.wasm.v1.ModelB\004\310\336\037\000R\006" +
       "models\"^\n\013CustomModel\022O\n\003msg\030\005 \001(\014B=\372\336\0379" +
       "github.com/CosmWasm/wasmd/x/wasm/types.R" +
-      "awContractMessageR\003msgB\302\001\n\030com.confio.tw" +
-      "asm.v1beta1B\014GenesisProtoP\001Z&github.com/" +
-      "confio/tgrade/x/twasm/types\242\002\003CTX\252\002\024Conf" +
-      "io.Twasm.V1beta1\312\002\024Confio\\Twasm\\V1beta1\342" +
-      "\002 Confio\\Twasm\\V1beta1\\GPBMetadata\352\002\026Con" +
-      "fio::Twasm::V1beta1b\006proto3"
+      "awContractMessageR\003msgB\300\001\n\030com.confio.tw" +
+      "asm.v1beta1B\014GenesisProtoZ&github.com/co" +
+      "nfio/tgrade/x/twasm/types\242\002\003CTX\252\002\024Confio" +
+      ".Twasm.V1beta1\312\002\024Confio\\Twasm\\V1beta1\342\002 " +
+      "Confio\\Twasm\\V1beta1\\GPBMetadata\352\002\026Confi" +
+      "o::Twasm::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

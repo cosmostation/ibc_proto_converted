@@ -14,89 +14,18181 @@ public final class PayloadProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface AnyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payload.Any)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.payload.CallTx CallTx = 1 [json_name = "CallTx"];</code>
+     * @return Whether the callTx field is set.
+     */
+    boolean hasCallTx();
+    /**
+     * <code>.payload.CallTx CallTx = 1 [json_name = "CallTx"];</code>
+     * @return The callTx.
+     */
+    com.payload.PayloadProto.CallTx getCallTx();
+    /**
+     * <code>.payload.CallTx CallTx = 1 [json_name = "CallTx"];</code>
+     */
+    com.payload.PayloadProto.CallTxOrBuilder getCallTxOrBuilder();
+
+    /**
+     * <code>.payload.SendTx SendTx = 2 [json_name = "SendTx"];</code>
+     * @return Whether the sendTx field is set.
+     */
+    boolean hasSendTx();
+    /**
+     * <code>.payload.SendTx SendTx = 2 [json_name = "SendTx"];</code>
+     * @return The sendTx.
+     */
+    com.payload.PayloadProto.SendTx getSendTx();
+    /**
+     * <code>.payload.SendTx SendTx = 2 [json_name = "SendTx"];</code>
+     */
+    com.payload.PayloadProto.SendTxOrBuilder getSendTxOrBuilder();
+
+    /**
+     * <code>.payload.NameTx NameTx = 3 [json_name = "NameTx"];</code>
+     * @return Whether the nameTx field is set.
+     */
+    boolean hasNameTx();
+    /**
+     * <code>.payload.NameTx NameTx = 3 [json_name = "NameTx"];</code>
+     * @return The nameTx.
+     */
+    com.payload.PayloadProto.NameTx getNameTx();
+    /**
+     * <code>.payload.NameTx NameTx = 3 [json_name = "NameTx"];</code>
+     */
+    com.payload.PayloadProto.NameTxOrBuilder getNameTxOrBuilder();
+
+    /**
+     * <code>.payload.PermsTx PermsTx = 4 [json_name = "PermsTx"];</code>
+     * @return Whether the permsTx field is set.
+     */
+    boolean hasPermsTx();
+    /**
+     * <code>.payload.PermsTx PermsTx = 4 [json_name = "PermsTx"];</code>
+     * @return The permsTx.
+     */
+    com.payload.PayloadProto.PermsTx getPermsTx();
+    /**
+     * <code>.payload.PermsTx PermsTx = 4 [json_name = "PermsTx"];</code>
+     */
+    com.payload.PayloadProto.PermsTxOrBuilder getPermsTxOrBuilder();
+
+    /**
+     * <code>.payload.GovTx GovTx = 5 [json_name = "GovTx"];</code>
+     * @return Whether the govTx field is set.
+     */
+    boolean hasGovTx();
+    /**
+     * <code>.payload.GovTx GovTx = 5 [json_name = "GovTx"];</code>
+     * @return The govTx.
+     */
+    com.payload.PayloadProto.GovTx getGovTx();
+    /**
+     * <code>.payload.GovTx GovTx = 5 [json_name = "GovTx"];</code>
+     */
+    com.payload.PayloadProto.GovTxOrBuilder getGovTxOrBuilder();
+
+    /**
+     * <code>.payload.BondTx BondTx = 6 [json_name = "BondTx"];</code>
+     * @return Whether the bondTx field is set.
+     */
+    boolean hasBondTx();
+    /**
+     * <code>.payload.BondTx BondTx = 6 [json_name = "BondTx"];</code>
+     * @return The bondTx.
+     */
+    com.payload.PayloadProto.BondTx getBondTx();
+    /**
+     * <code>.payload.BondTx BondTx = 6 [json_name = "BondTx"];</code>
+     */
+    com.payload.PayloadProto.BondTxOrBuilder getBondTxOrBuilder();
+
+    /**
+     * <code>.payload.UnbondTx UnbondTx = 7 [json_name = "UnbondTx"];</code>
+     * @return Whether the unbondTx field is set.
+     */
+    boolean hasUnbondTx();
+    /**
+     * <code>.payload.UnbondTx UnbondTx = 7 [json_name = "UnbondTx"];</code>
+     * @return The unbondTx.
+     */
+    com.payload.PayloadProto.UnbondTx getUnbondTx();
+    /**
+     * <code>.payload.UnbondTx UnbondTx = 7 [json_name = "UnbondTx"];</code>
+     */
+    com.payload.PayloadProto.UnbondTxOrBuilder getUnbondTxOrBuilder();
+
+    /**
+     * <code>.payload.BatchTx BatchTx = 8 [json_name = "BatchTx"];</code>
+     * @return Whether the batchTx field is set.
+     */
+    boolean hasBatchTx();
+    /**
+     * <code>.payload.BatchTx BatchTx = 8 [json_name = "BatchTx"];</code>
+     * @return The batchTx.
+     */
+    com.payload.PayloadProto.BatchTx getBatchTx();
+    /**
+     * <code>.payload.BatchTx BatchTx = 8 [json_name = "BatchTx"];</code>
+     */
+    com.payload.PayloadProto.BatchTxOrBuilder getBatchTxOrBuilder();
+
+    /**
+     * <code>.payload.ProposalTx ProposalTx = 9 [json_name = "ProposalTx"];</code>
+     * @return Whether the proposalTx field is set.
+     */
+    boolean hasProposalTx();
+    /**
+     * <code>.payload.ProposalTx ProposalTx = 9 [json_name = "ProposalTx"];</code>
+     * @return The proposalTx.
+     */
+    com.payload.PayloadProto.ProposalTx getProposalTx();
+    /**
+     * <code>.payload.ProposalTx ProposalTx = 9 [json_name = "ProposalTx"];</code>
+     */
+    com.payload.PayloadProto.ProposalTxOrBuilder getProposalTxOrBuilder();
+
+    /**
+     * <code>.payload.IdentifyTx IdentifyTx = 10 [json_name = "IdentifyTx"];</code>
+     * @return Whether the identifyTx field is set.
+     */
+    boolean hasIdentifyTx();
+    /**
+     * <code>.payload.IdentifyTx IdentifyTx = 10 [json_name = "IdentifyTx"];</code>
+     * @return The identifyTx.
+     */
+    com.payload.PayloadProto.IdentifyTx getIdentifyTx();
+    /**
+     * <code>.payload.IdentifyTx IdentifyTx = 10 [json_name = "IdentifyTx"];</code>
+     */
+    com.payload.PayloadProto.IdentifyTxOrBuilder getIdentifyTxOrBuilder();
+  }
+  /**
+   * <pre>
+   * Any encodes a sum type for which only one should be set
+   * </pre>
+   *
+   * Protobuf type {@code payload.Any}
+   */
+  public static final class Any extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:payload.Any)
+      AnyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Any.newBuilder() to construct.
+    private Any(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Any() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Any();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.payload.PayloadProto.internal_static_payload_Any_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.payload.PayloadProto.internal_static_payload_Any_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.payload.PayloadProto.Any.class, com.payload.PayloadProto.Any.Builder.class);
+    }
+
+    public static final int CALLTX_FIELD_NUMBER = 1;
+    private com.payload.PayloadProto.CallTx callTx_;
+    /**
+     * <code>.payload.CallTx CallTx = 1 [json_name = "CallTx"];</code>
+     * @return Whether the callTx field is set.
+     */
+    @java.lang.Override
+    public boolean hasCallTx() {
+      return callTx_ != null;
+    }
+    /**
+     * <code>.payload.CallTx CallTx = 1 [json_name = "CallTx"];</code>
+     * @return The callTx.
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.CallTx getCallTx() {
+      return callTx_ == null ? com.payload.PayloadProto.CallTx.getDefaultInstance() : callTx_;
+    }
+    /**
+     * <code>.payload.CallTx CallTx = 1 [json_name = "CallTx"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.CallTxOrBuilder getCallTxOrBuilder() {
+      return callTx_ == null ? com.payload.PayloadProto.CallTx.getDefaultInstance() : callTx_;
+    }
+
+    public static final int SENDTX_FIELD_NUMBER = 2;
+    private com.payload.PayloadProto.SendTx sendTx_;
+    /**
+     * <code>.payload.SendTx SendTx = 2 [json_name = "SendTx"];</code>
+     * @return Whether the sendTx field is set.
+     */
+    @java.lang.Override
+    public boolean hasSendTx() {
+      return sendTx_ != null;
+    }
+    /**
+     * <code>.payload.SendTx SendTx = 2 [json_name = "SendTx"];</code>
+     * @return The sendTx.
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.SendTx getSendTx() {
+      return sendTx_ == null ? com.payload.PayloadProto.SendTx.getDefaultInstance() : sendTx_;
+    }
+    /**
+     * <code>.payload.SendTx SendTx = 2 [json_name = "SendTx"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.SendTxOrBuilder getSendTxOrBuilder() {
+      return sendTx_ == null ? com.payload.PayloadProto.SendTx.getDefaultInstance() : sendTx_;
+    }
+
+    public static final int NAMETX_FIELD_NUMBER = 3;
+    private com.payload.PayloadProto.NameTx nameTx_;
+    /**
+     * <code>.payload.NameTx NameTx = 3 [json_name = "NameTx"];</code>
+     * @return Whether the nameTx field is set.
+     */
+    @java.lang.Override
+    public boolean hasNameTx() {
+      return nameTx_ != null;
+    }
+    /**
+     * <code>.payload.NameTx NameTx = 3 [json_name = "NameTx"];</code>
+     * @return The nameTx.
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.NameTx getNameTx() {
+      return nameTx_ == null ? com.payload.PayloadProto.NameTx.getDefaultInstance() : nameTx_;
+    }
+    /**
+     * <code>.payload.NameTx NameTx = 3 [json_name = "NameTx"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.NameTxOrBuilder getNameTxOrBuilder() {
+      return nameTx_ == null ? com.payload.PayloadProto.NameTx.getDefaultInstance() : nameTx_;
+    }
+
+    public static final int PERMSTX_FIELD_NUMBER = 4;
+    private com.payload.PayloadProto.PermsTx permsTx_;
+    /**
+     * <code>.payload.PermsTx PermsTx = 4 [json_name = "PermsTx"];</code>
+     * @return Whether the permsTx field is set.
+     */
+    @java.lang.Override
+    public boolean hasPermsTx() {
+      return permsTx_ != null;
+    }
+    /**
+     * <code>.payload.PermsTx PermsTx = 4 [json_name = "PermsTx"];</code>
+     * @return The permsTx.
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.PermsTx getPermsTx() {
+      return permsTx_ == null ? com.payload.PayloadProto.PermsTx.getDefaultInstance() : permsTx_;
+    }
+    /**
+     * <code>.payload.PermsTx PermsTx = 4 [json_name = "PermsTx"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.PermsTxOrBuilder getPermsTxOrBuilder() {
+      return permsTx_ == null ? com.payload.PayloadProto.PermsTx.getDefaultInstance() : permsTx_;
+    }
+
+    public static final int GOVTX_FIELD_NUMBER = 5;
+    private com.payload.PayloadProto.GovTx govTx_;
+    /**
+     * <code>.payload.GovTx GovTx = 5 [json_name = "GovTx"];</code>
+     * @return Whether the govTx field is set.
+     */
+    @java.lang.Override
+    public boolean hasGovTx() {
+      return govTx_ != null;
+    }
+    /**
+     * <code>.payload.GovTx GovTx = 5 [json_name = "GovTx"];</code>
+     * @return The govTx.
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.GovTx getGovTx() {
+      return govTx_ == null ? com.payload.PayloadProto.GovTx.getDefaultInstance() : govTx_;
+    }
+    /**
+     * <code>.payload.GovTx GovTx = 5 [json_name = "GovTx"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.GovTxOrBuilder getGovTxOrBuilder() {
+      return govTx_ == null ? com.payload.PayloadProto.GovTx.getDefaultInstance() : govTx_;
+    }
+
+    public static final int BONDTX_FIELD_NUMBER = 6;
+    private com.payload.PayloadProto.BondTx bondTx_;
+    /**
+     * <code>.payload.BondTx BondTx = 6 [json_name = "BondTx"];</code>
+     * @return Whether the bondTx field is set.
+     */
+    @java.lang.Override
+    public boolean hasBondTx() {
+      return bondTx_ != null;
+    }
+    /**
+     * <code>.payload.BondTx BondTx = 6 [json_name = "BondTx"];</code>
+     * @return The bondTx.
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.BondTx getBondTx() {
+      return bondTx_ == null ? com.payload.PayloadProto.BondTx.getDefaultInstance() : bondTx_;
+    }
+    /**
+     * <code>.payload.BondTx BondTx = 6 [json_name = "BondTx"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.BondTxOrBuilder getBondTxOrBuilder() {
+      return bondTx_ == null ? com.payload.PayloadProto.BondTx.getDefaultInstance() : bondTx_;
+    }
+
+    public static final int UNBONDTX_FIELD_NUMBER = 7;
+    private com.payload.PayloadProto.UnbondTx unbondTx_;
+    /**
+     * <code>.payload.UnbondTx UnbondTx = 7 [json_name = "UnbondTx"];</code>
+     * @return Whether the unbondTx field is set.
+     */
+    @java.lang.Override
+    public boolean hasUnbondTx() {
+      return unbondTx_ != null;
+    }
+    /**
+     * <code>.payload.UnbondTx UnbondTx = 7 [json_name = "UnbondTx"];</code>
+     * @return The unbondTx.
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.UnbondTx getUnbondTx() {
+      return unbondTx_ == null ? com.payload.PayloadProto.UnbondTx.getDefaultInstance() : unbondTx_;
+    }
+    /**
+     * <code>.payload.UnbondTx UnbondTx = 7 [json_name = "UnbondTx"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.UnbondTxOrBuilder getUnbondTxOrBuilder() {
+      return unbondTx_ == null ? com.payload.PayloadProto.UnbondTx.getDefaultInstance() : unbondTx_;
+    }
+
+    public static final int BATCHTX_FIELD_NUMBER = 8;
+    private com.payload.PayloadProto.BatchTx batchTx_;
+    /**
+     * <code>.payload.BatchTx BatchTx = 8 [json_name = "BatchTx"];</code>
+     * @return Whether the batchTx field is set.
+     */
+    @java.lang.Override
+    public boolean hasBatchTx() {
+      return batchTx_ != null;
+    }
+    /**
+     * <code>.payload.BatchTx BatchTx = 8 [json_name = "BatchTx"];</code>
+     * @return The batchTx.
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.BatchTx getBatchTx() {
+      return batchTx_ == null ? com.payload.PayloadProto.BatchTx.getDefaultInstance() : batchTx_;
+    }
+    /**
+     * <code>.payload.BatchTx BatchTx = 8 [json_name = "BatchTx"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.BatchTxOrBuilder getBatchTxOrBuilder() {
+      return batchTx_ == null ? com.payload.PayloadProto.BatchTx.getDefaultInstance() : batchTx_;
+    }
+
+    public static final int PROPOSALTX_FIELD_NUMBER = 9;
+    private com.payload.PayloadProto.ProposalTx proposalTx_;
+    /**
+     * <code>.payload.ProposalTx ProposalTx = 9 [json_name = "ProposalTx"];</code>
+     * @return Whether the proposalTx field is set.
+     */
+    @java.lang.Override
+    public boolean hasProposalTx() {
+      return proposalTx_ != null;
+    }
+    /**
+     * <code>.payload.ProposalTx ProposalTx = 9 [json_name = "ProposalTx"];</code>
+     * @return The proposalTx.
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.ProposalTx getProposalTx() {
+      return proposalTx_ == null ? com.payload.PayloadProto.ProposalTx.getDefaultInstance() : proposalTx_;
+    }
+    /**
+     * <code>.payload.ProposalTx ProposalTx = 9 [json_name = "ProposalTx"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.ProposalTxOrBuilder getProposalTxOrBuilder() {
+      return proposalTx_ == null ? com.payload.PayloadProto.ProposalTx.getDefaultInstance() : proposalTx_;
+    }
+
+    public static final int IDENTIFYTX_FIELD_NUMBER = 10;
+    private com.payload.PayloadProto.IdentifyTx identifyTx_;
+    /**
+     * <code>.payload.IdentifyTx IdentifyTx = 10 [json_name = "IdentifyTx"];</code>
+     * @return Whether the identifyTx field is set.
+     */
+    @java.lang.Override
+    public boolean hasIdentifyTx() {
+      return identifyTx_ != null;
+    }
+    /**
+     * <code>.payload.IdentifyTx IdentifyTx = 10 [json_name = "IdentifyTx"];</code>
+     * @return The identifyTx.
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.IdentifyTx getIdentifyTx() {
+      return identifyTx_ == null ? com.payload.PayloadProto.IdentifyTx.getDefaultInstance() : identifyTx_;
+    }
+    /**
+     * <code>.payload.IdentifyTx IdentifyTx = 10 [json_name = "IdentifyTx"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.IdentifyTxOrBuilder getIdentifyTxOrBuilder() {
+      return identifyTx_ == null ? com.payload.PayloadProto.IdentifyTx.getDefaultInstance() : identifyTx_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (callTx_ != null) {
+        output.writeMessage(1, getCallTx());
+      }
+      if (sendTx_ != null) {
+        output.writeMessage(2, getSendTx());
+      }
+      if (nameTx_ != null) {
+        output.writeMessage(3, getNameTx());
+      }
+      if (permsTx_ != null) {
+        output.writeMessage(4, getPermsTx());
+      }
+      if (govTx_ != null) {
+        output.writeMessage(5, getGovTx());
+      }
+      if (bondTx_ != null) {
+        output.writeMessage(6, getBondTx());
+      }
+      if (unbondTx_ != null) {
+        output.writeMessage(7, getUnbondTx());
+      }
+      if (batchTx_ != null) {
+        output.writeMessage(8, getBatchTx());
+      }
+      if (proposalTx_ != null) {
+        output.writeMessage(9, getProposalTx());
+      }
+      if (identifyTx_ != null) {
+        output.writeMessage(10, getIdentifyTx());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (callTx_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCallTx());
+      }
+      if (sendTx_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getSendTx());
+      }
+      if (nameTx_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getNameTx());
+      }
+      if (permsTx_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getPermsTx());
+      }
+      if (govTx_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getGovTx());
+      }
+      if (bondTx_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getBondTx());
+      }
+      if (unbondTx_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getUnbondTx());
+      }
+      if (batchTx_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getBatchTx());
+      }
+      if (proposalTx_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getProposalTx());
+      }
+      if (identifyTx_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getIdentifyTx());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.payload.PayloadProto.Any)) {
+        return super.equals(obj);
+      }
+      com.payload.PayloadProto.Any other = (com.payload.PayloadProto.Any) obj;
+
+      if (hasCallTx() != other.hasCallTx()) return false;
+      if (hasCallTx()) {
+        if (!getCallTx()
+            .equals(other.getCallTx())) return false;
+      }
+      if (hasSendTx() != other.hasSendTx()) return false;
+      if (hasSendTx()) {
+        if (!getSendTx()
+            .equals(other.getSendTx())) return false;
+      }
+      if (hasNameTx() != other.hasNameTx()) return false;
+      if (hasNameTx()) {
+        if (!getNameTx()
+            .equals(other.getNameTx())) return false;
+      }
+      if (hasPermsTx() != other.hasPermsTx()) return false;
+      if (hasPermsTx()) {
+        if (!getPermsTx()
+            .equals(other.getPermsTx())) return false;
+      }
+      if (hasGovTx() != other.hasGovTx()) return false;
+      if (hasGovTx()) {
+        if (!getGovTx()
+            .equals(other.getGovTx())) return false;
+      }
+      if (hasBondTx() != other.hasBondTx()) return false;
+      if (hasBondTx()) {
+        if (!getBondTx()
+            .equals(other.getBondTx())) return false;
+      }
+      if (hasUnbondTx() != other.hasUnbondTx()) return false;
+      if (hasUnbondTx()) {
+        if (!getUnbondTx()
+            .equals(other.getUnbondTx())) return false;
+      }
+      if (hasBatchTx() != other.hasBatchTx()) return false;
+      if (hasBatchTx()) {
+        if (!getBatchTx()
+            .equals(other.getBatchTx())) return false;
+      }
+      if (hasProposalTx() != other.hasProposalTx()) return false;
+      if (hasProposalTx()) {
+        if (!getProposalTx()
+            .equals(other.getProposalTx())) return false;
+      }
+      if (hasIdentifyTx() != other.hasIdentifyTx()) return false;
+      if (hasIdentifyTx()) {
+        if (!getIdentifyTx()
+            .equals(other.getIdentifyTx())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasCallTx()) {
+        hash = (37 * hash) + CALLTX_FIELD_NUMBER;
+        hash = (53 * hash) + getCallTx().hashCode();
+      }
+      if (hasSendTx()) {
+        hash = (37 * hash) + SENDTX_FIELD_NUMBER;
+        hash = (53 * hash) + getSendTx().hashCode();
+      }
+      if (hasNameTx()) {
+        hash = (37 * hash) + NAMETX_FIELD_NUMBER;
+        hash = (53 * hash) + getNameTx().hashCode();
+      }
+      if (hasPermsTx()) {
+        hash = (37 * hash) + PERMSTX_FIELD_NUMBER;
+        hash = (53 * hash) + getPermsTx().hashCode();
+      }
+      if (hasGovTx()) {
+        hash = (37 * hash) + GOVTX_FIELD_NUMBER;
+        hash = (53 * hash) + getGovTx().hashCode();
+      }
+      if (hasBondTx()) {
+        hash = (37 * hash) + BONDTX_FIELD_NUMBER;
+        hash = (53 * hash) + getBondTx().hashCode();
+      }
+      if (hasUnbondTx()) {
+        hash = (37 * hash) + UNBONDTX_FIELD_NUMBER;
+        hash = (53 * hash) + getUnbondTx().hashCode();
+      }
+      if (hasBatchTx()) {
+        hash = (37 * hash) + BATCHTX_FIELD_NUMBER;
+        hash = (53 * hash) + getBatchTx().hashCode();
+      }
+      if (hasProposalTx()) {
+        hash = (37 * hash) + PROPOSALTX_FIELD_NUMBER;
+        hash = (53 * hash) + getProposalTx().hashCode();
+      }
+      if (hasIdentifyTx()) {
+        hash = (37 * hash) + IDENTIFYTX_FIELD_NUMBER;
+        hash = (53 * hash) + getIdentifyTx().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.payload.PayloadProto.Any parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.Any parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.Any parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.Any parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.Any parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.Any parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.Any parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.Any parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.payload.PayloadProto.Any parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.payload.PayloadProto.Any parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.Any parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.Any parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.payload.PayloadProto.Any prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Any encodes a sum type for which only one should be set
+     * </pre>
+     *
+     * Protobuf type {@code payload.Any}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:payload.Any)
+        com.payload.PayloadProto.AnyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.payload.PayloadProto.internal_static_payload_Any_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.payload.PayloadProto.internal_static_payload_Any_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.payload.PayloadProto.Any.class, com.payload.PayloadProto.Any.Builder.class);
+      }
+
+      // Construct using com.payload.PayloadProto.Any.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        callTx_ = null;
+        if (callTxBuilder_ != null) {
+          callTxBuilder_.dispose();
+          callTxBuilder_ = null;
+        }
+        sendTx_ = null;
+        if (sendTxBuilder_ != null) {
+          sendTxBuilder_.dispose();
+          sendTxBuilder_ = null;
+        }
+        nameTx_ = null;
+        if (nameTxBuilder_ != null) {
+          nameTxBuilder_.dispose();
+          nameTxBuilder_ = null;
+        }
+        permsTx_ = null;
+        if (permsTxBuilder_ != null) {
+          permsTxBuilder_.dispose();
+          permsTxBuilder_ = null;
+        }
+        govTx_ = null;
+        if (govTxBuilder_ != null) {
+          govTxBuilder_.dispose();
+          govTxBuilder_ = null;
+        }
+        bondTx_ = null;
+        if (bondTxBuilder_ != null) {
+          bondTxBuilder_.dispose();
+          bondTxBuilder_ = null;
+        }
+        unbondTx_ = null;
+        if (unbondTxBuilder_ != null) {
+          unbondTxBuilder_.dispose();
+          unbondTxBuilder_ = null;
+        }
+        batchTx_ = null;
+        if (batchTxBuilder_ != null) {
+          batchTxBuilder_.dispose();
+          batchTxBuilder_ = null;
+        }
+        proposalTx_ = null;
+        if (proposalTxBuilder_ != null) {
+          proposalTxBuilder_.dispose();
+          proposalTxBuilder_ = null;
+        }
+        identifyTx_ = null;
+        if (identifyTxBuilder_ != null) {
+          identifyTxBuilder_.dispose();
+          identifyTxBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.payload.PayloadProto.internal_static_payload_Any_descriptor;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.Any getDefaultInstanceForType() {
+        return com.payload.PayloadProto.Any.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.Any build() {
+        com.payload.PayloadProto.Any result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.Any buildPartial() {
+        com.payload.PayloadProto.Any result = new com.payload.PayloadProto.Any(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.payload.PayloadProto.Any result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.callTx_ = callTxBuilder_ == null
+              ? callTx_
+              : callTxBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.sendTx_ = sendTxBuilder_ == null
+              ? sendTx_
+              : sendTxBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.nameTx_ = nameTxBuilder_ == null
+              ? nameTx_
+              : nameTxBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.permsTx_ = permsTxBuilder_ == null
+              ? permsTx_
+              : permsTxBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.govTx_ = govTxBuilder_ == null
+              ? govTx_
+              : govTxBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.bondTx_ = bondTxBuilder_ == null
+              ? bondTx_
+              : bondTxBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.unbondTx_ = unbondTxBuilder_ == null
+              ? unbondTx_
+              : unbondTxBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.batchTx_ = batchTxBuilder_ == null
+              ? batchTx_
+              : batchTxBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.proposalTx_ = proposalTxBuilder_ == null
+              ? proposalTx_
+              : proposalTxBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.identifyTx_ = identifyTxBuilder_ == null
+              ? identifyTx_
+              : identifyTxBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.payload.PayloadProto.Any) {
+          return mergeFrom((com.payload.PayloadProto.Any)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.payload.PayloadProto.Any other) {
+        if (other == com.payload.PayloadProto.Any.getDefaultInstance()) return this;
+        if (other.hasCallTx()) {
+          mergeCallTx(other.getCallTx());
+        }
+        if (other.hasSendTx()) {
+          mergeSendTx(other.getSendTx());
+        }
+        if (other.hasNameTx()) {
+          mergeNameTx(other.getNameTx());
+        }
+        if (other.hasPermsTx()) {
+          mergePermsTx(other.getPermsTx());
+        }
+        if (other.hasGovTx()) {
+          mergeGovTx(other.getGovTx());
+        }
+        if (other.hasBondTx()) {
+          mergeBondTx(other.getBondTx());
+        }
+        if (other.hasUnbondTx()) {
+          mergeUnbondTx(other.getUnbondTx());
+        }
+        if (other.hasBatchTx()) {
+          mergeBatchTx(other.getBatchTx());
+        }
+        if (other.hasProposalTx()) {
+          mergeProposalTx(other.getProposalTx());
+        }
+        if (other.hasIdentifyTx()) {
+          mergeIdentifyTx(other.getIdentifyTx());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getCallTxFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getSendTxFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getNameTxFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getPermsTxFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getGovTxFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getBondTxFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                input.readMessage(
+                    getUnbondTxFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                input.readMessage(
+                    getBatchTxFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                input.readMessage(
+                    getProposalTxFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              case 82: {
+                input.readMessage(
+                    getIdentifyTxFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.payload.PayloadProto.CallTx callTx_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.CallTx, com.payload.PayloadProto.CallTx.Builder, com.payload.PayloadProto.CallTxOrBuilder> callTxBuilder_;
+      /**
+       * <code>.payload.CallTx CallTx = 1 [json_name = "CallTx"];</code>
+       * @return Whether the callTx field is set.
+       */
+      public boolean hasCallTx() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.payload.CallTx CallTx = 1 [json_name = "CallTx"];</code>
+       * @return The callTx.
+       */
+      public com.payload.PayloadProto.CallTx getCallTx() {
+        if (callTxBuilder_ == null) {
+          return callTx_ == null ? com.payload.PayloadProto.CallTx.getDefaultInstance() : callTx_;
+        } else {
+          return callTxBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.payload.CallTx CallTx = 1 [json_name = "CallTx"];</code>
+       */
+      public Builder setCallTx(com.payload.PayloadProto.CallTx value) {
+        if (callTxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          callTx_ = value;
+        } else {
+          callTxBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.CallTx CallTx = 1 [json_name = "CallTx"];</code>
+       */
+      public Builder setCallTx(
+          com.payload.PayloadProto.CallTx.Builder builderForValue) {
+        if (callTxBuilder_ == null) {
+          callTx_ = builderForValue.build();
+        } else {
+          callTxBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.CallTx CallTx = 1 [json_name = "CallTx"];</code>
+       */
+      public Builder mergeCallTx(com.payload.PayloadProto.CallTx value) {
+        if (callTxBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            callTx_ != null &&
+            callTx_ != com.payload.PayloadProto.CallTx.getDefaultInstance()) {
+            getCallTxBuilder().mergeFrom(value);
+          } else {
+            callTx_ = value;
+          }
+        } else {
+          callTxBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.CallTx CallTx = 1 [json_name = "CallTx"];</code>
+       */
+      public Builder clearCallTx() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        callTx_ = null;
+        if (callTxBuilder_ != null) {
+          callTxBuilder_.dispose();
+          callTxBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.CallTx CallTx = 1 [json_name = "CallTx"];</code>
+       */
+      public com.payload.PayloadProto.CallTx.Builder getCallTxBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getCallTxFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.payload.CallTx CallTx = 1 [json_name = "CallTx"];</code>
+       */
+      public com.payload.PayloadProto.CallTxOrBuilder getCallTxOrBuilder() {
+        if (callTxBuilder_ != null) {
+          return callTxBuilder_.getMessageOrBuilder();
+        } else {
+          return callTx_ == null ?
+              com.payload.PayloadProto.CallTx.getDefaultInstance() : callTx_;
+        }
+      }
+      /**
+       * <code>.payload.CallTx CallTx = 1 [json_name = "CallTx"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.CallTx, com.payload.PayloadProto.CallTx.Builder, com.payload.PayloadProto.CallTxOrBuilder> 
+          getCallTxFieldBuilder() {
+        if (callTxBuilder_ == null) {
+          callTxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.payload.PayloadProto.CallTx, com.payload.PayloadProto.CallTx.Builder, com.payload.PayloadProto.CallTxOrBuilder>(
+                  getCallTx(),
+                  getParentForChildren(),
+                  isClean());
+          callTx_ = null;
+        }
+        return callTxBuilder_;
+      }
+
+      private com.payload.PayloadProto.SendTx sendTx_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.SendTx, com.payload.PayloadProto.SendTx.Builder, com.payload.PayloadProto.SendTxOrBuilder> sendTxBuilder_;
+      /**
+       * <code>.payload.SendTx SendTx = 2 [json_name = "SendTx"];</code>
+       * @return Whether the sendTx field is set.
+       */
+      public boolean hasSendTx() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.payload.SendTx SendTx = 2 [json_name = "SendTx"];</code>
+       * @return The sendTx.
+       */
+      public com.payload.PayloadProto.SendTx getSendTx() {
+        if (sendTxBuilder_ == null) {
+          return sendTx_ == null ? com.payload.PayloadProto.SendTx.getDefaultInstance() : sendTx_;
+        } else {
+          return sendTxBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.payload.SendTx SendTx = 2 [json_name = "SendTx"];</code>
+       */
+      public Builder setSendTx(com.payload.PayloadProto.SendTx value) {
+        if (sendTxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sendTx_ = value;
+        } else {
+          sendTxBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.SendTx SendTx = 2 [json_name = "SendTx"];</code>
+       */
+      public Builder setSendTx(
+          com.payload.PayloadProto.SendTx.Builder builderForValue) {
+        if (sendTxBuilder_ == null) {
+          sendTx_ = builderForValue.build();
+        } else {
+          sendTxBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.SendTx SendTx = 2 [json_name = "SendTx"];</code>
+       */
+      public Builder mergeSendTx(com.payload.PayloadProto.SendTx value) {
+        if (sendTxBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            sendTx_ != null &&
+            sendTx_ != com.payload.PayloadProto.SendTx.getDefaultInstance()) {
+            getSendTxBuilder().mergeFrom(value);
+          } else {
+            sendTx_ = value;
+          }
+        } else {
+          sendTxBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.SendTx SendTx = 2 [json_name = "SendTx"];</code>
+       */
+      public Builder clearSendTx() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        sendTx_ = null;
+        if (sendTxBuilder_ != null) {
+          sendTxBuilder_.dispose();
+          sendTxBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.SendTx SendTx = 2 [json_name = "SendTx"];</code>
+       */
+      public com.payload.PayloadProto.SendTx.Builder getSendTxBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getSendTxFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.payload.SendTx SendTx = 2 [json_name = "SendTx"];</code>
+       */
+      public com.payload.PayloadProto.SendTxOrBuilder getSendTxOrBuilder() {
+        if (sendTxBuilder_ != null) {
+          return sendTxBuilder_.getMessageOrBuilder();
+        } else {
+          return sendTx_ == null ?
+              com.payload.PayloadProto.SendTx.getDefaultInstance() : sendTx_;
+        }
+      }
+      /**
+       * <code>.payload.SendTx SendTx = 2 [json_name = "SendTx"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.SendTx, com.payload.PayloadProto.SendTx.Builder, com.payload.PayloadProto.SendTxOrBuilder> 
+          getSendTxFieldBuilder() {
+        if (sendTxBuilder_ == null) {
+          sendTxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.payload.PayloadProto.SendTx, com.payload.PayloadProto.SendTx.Builder, com.payload.PayloadProto.SendTxOrBuilder>(
+                  getSendTx(),
+                  getParentForChildren(),
+                  isClean());
+          sendTx_ = null;
+        }
+        return sendTxBuilder_;
+      }
+
+      private com.payload.PayloadProto.NameTx nameTx_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.NameTx, com.payload.PayloadProto.NameTx.Builder, com.payload.PayloadProto.NameTxOrBuilder> nameTxBuilder_;
+      /**
+       * <code>.payload.NameTx NameTx = 3 [json_name = "NameTx"];</code>
+       * @return Whether the nameTx field is set.
+       */
+      public boolean hasNameTx() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.payload.NameTx NameTx = 3 [json_name = "NameTx"];</code>
+       * @return The nameTx.
+       */
+      public com.payload.PayloadProto.NameTx getNameTx() {
+        if (nameTxBuilder_ == null) {
+          return nameTx_ == null ? com.payload.PayloadProto.NameTx.getDefaultInstance() : nameTx_;
+        } else {
+          return nameTxBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.payload.NameTx NameTx = 3 [json_name = "NameTx"];</code>
+       */
+      public Builder setNameTx(com.payload.PayloadProto.NameTx value) {
+        if (nameTxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          nameTx_ = value;
+        } else {
+          nameTxBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.NameTx NameTx = 3 [json_name = "NameTx"];</code>
+       */
+      public Builder setNameTx(
+          com.payload.PayloadProto.NameTx.Builder builderForValue) {
+        if (nameTxBuilder_ == null) {
+          nameTx_ = builderForValue.build();
+        } else {
+          nameTxBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.NameTx NameTx = 3 [json_name = "NameTx"];</code>
+       */
+      public Builder mergeNameTx(com.payload.PayloadProto.NameTx value) {
+        if (nameTxBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            nameTx_ != null &&
+            nameTx_ != com.payload.PayloadProto.NameTx.getDefaultInstance()) {
+            getNameTxBuilder().mergeFrom(value);
+          } else {
+            nameTx_ = value;
+          }
+        } else {
+          nameTxBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.NameTx NameTx = 3 [json_name = "NameTx"];</code>
+       */
+      public Builder clearNameTx() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        nameTx_ = null;
+        if (nameTxBuilder_ != null) {
+          nameTxBuilder_.dispose();
+          nameTxBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.NameTx NameTx = 3 [json_name = "NameTx"];</code>
+       */
+      public com.payload.PayloadProto.NameTx.Builder getNameTxBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getNameTxFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.payload.NameTx NameTx = 3 [json_name = "NameTx"];</code>
+       */
+      public com.payload.PayloadProto.NameTxOrBuilder getNameTxOrBuilder() {
+        if (nameTxBuilder_ != null) {
+          return nameTxBuilder_.getMessageOrBuilder();
+        } else {
+          return nameTx_ == null ?
+              com.payload.PayloadProto.NameTx.getDefaultInstance() : nameTx_;
+        }
+      }
+      /**
+       * <code>.payload.NameTx NameTx = 3 [json_name = "NameTx"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.NameTx, com.payload.PayloadProto.NameTx.Builder, com.payload.PayloadProto.NameTxOrBuilder> 
+          getNameTxFieldBuilder() {
+        if (nameTxBuilder_ == null) {
+          nameTxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.payload.PayloadProto.NameTx, com.payload.PayloadProto.NameTx.Builder, com.payload.PayloadProto.NameTxOrBuilder>(
+                  getNameTx(),
+                  getParentForChildren(),
+                  isClean());
+          nameTx_ = null;
+        }
+        return nameTxBuilder_;
+      }
+
+      private com.payload.PayloadProto.PermsTx permsTx_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.PermsTx, com.payload.PayloadProto.PermsTx.Builder, com.payload.PayloadProto.PermsTxOrBuilder> permsTxBuilder_;
+      /**
+       * <code>.payload.PermsTx PermsTx = 4 [json_name = "PermsTx"];</code>
+       * @return Whether the permsTx field is set.
+       */
+      public boolean hasPermsTx() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.payload.PermsTx PermsTx = 4 [json_name = "PermsTx"];</code>
+       * @return The permsTx.
+       */
+      public com.payload.PayloadProto.PermsTx getPermsTx() {
+        if (permsTxBuilder_ == null) {
+          return permsTx_ == null ? com.payload.PayloadProto.PermsTx.getDefaultInstance() : permsTx_;
+        } else {
+          return permsTxBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.payload.PermsTx PermsTx = 4 [json_name = "PermsTx"];</code>
+       */
+      public Builder setPermsTx(com.payload.PayloadProto.PermsTx value) {
+        if (permsTxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          permsTx_ = value;
+        } else {
+          permsTxBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.PermsTx PermsTx = 4 [json_name = "PermsTx"];</code>
+       */
+      public Builder setPermsTx(
+          com.payload.PayloadProto.PermsTx.Builder builderForValue) {
+        if (permsTxBuilder_ == null) {
+          permsTx_ = builderForValue.build();
+        } else {
+          permsTxBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.PermsTx PermsTx = 4 [json_name = "PermsTx"];</code>
+       */
+      public Builder mergePermsTx(com.payload.PayloadProto.PermsTx value) {
+        if (permsTxBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            permsTx_ != null &&
+            permsTx_ != com.payload.PayloadProto.PermsTx.getDefaultInstance()) {
+            getPermsTxBuilder().mergeFrom(value);
+          } else {
+            permsTx_ = value;
+          }
+        } else {
+          permsTxBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.PermsTx PermsTx = 4 [json_name = "PermsTx"];</code>
+       */
+      public Builder clearPermsTx() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        permsTx_ = null;
+        if (permsTxBuilder_ != null) {
+          permsTxBuilder_.dispose();
+          permsTxBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.PermsTx PermsTx = 4 [json_name = "PermsTx"];</code>
+       */
+      public com.payload.PayloadProto.PermsTx.Builder getPermsTxBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getPermsTxFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.payload.PermsTx PermsTx = 4 [json_name = "PermsTx"];</code>
+       */
+      public com.payload.PayloadProto.PermsTxOrBuilder getPermsTxOrBuilder() {
+        if (permsTxBuilder_ != null) {
+          return permsTxBuilder_.getMessageOrBuilder();
+        } else {
+          return permsTx_ == null ?
+              com.payload.PayloadProto.PermsTx.getDefaultInstance() : permsTx_;
+        }
+      }
+      /**
+       * <code>.payload.PermsTx PermsTx = 4 [json_name = "PermsTx"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.PermsTx, com.payload.PayloadProto.PermsTx.Builder, com.payload.PayloadProto.PermsTxOrBuilder> 
+          getPermsTxFieldBuilder() {
+        if (permsTxBuilder_ == null) {
+          permsTxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.payload.PayloadProto.PermsTx, com.payload.PayloadProto.PermsTx.Builder, com.payload.PayloadProto.PermsTxOrBuilder>(
+                  getPermsTx(),
+                  getParentForChildren(),
+                  isClean());
+          permsTx_ = null;
+        }
+        return permsTxBuilder_;
+      }
+
+      private com.payload.PayloadProto.GovTx govTx_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.GovTx, com.payload.PayloadProto.GovTx.Builder, com.payload.PayloadProto.GovTxOrBuilder> govTxBuilder_;
+      /**
+       * <code>.payload.GovTx GovTx = 5 [json_name = "GovTx"];</code>
+       * @return Whether the govTx field is set.
+       */
+      public boolean hasGovTx() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>.payload.GovTx GovTx = 5 [json_name = "GovTx"];</code>
+       * @return The govTx.
+       */
+      public com.payload.PayloadProto.GovTx getGovTx() {
+        if (govTxBuilder_ == null) {
+          return govTx_ == null ? com.payload.PayloadProto.GovTx.getDefaultInstance() : govTx_;
+        } else {
+          return govTxBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.payload.GovTx GovTx = 5 [json_name = "GovTx"];</code>
+       */
+      public Builder setGovTx(com.payload.PayloadProto.GovTx value) {
+        if (govTxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          govTx_ = value;
+        } else {
+          govTxBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.GovTx GovTx = 5 [json_name = "GovTx"];</code>
+       */
+      public Builder setGovTx(
+          com.payload.PayloadProto.GovTx.Builder builderForValue) {
+        if (govTxBuilder_ == null) {
+          govTx_ = builderForValue.build();
+        } else {
+          govTxBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.GovTx GovTx = 5 [json_name = "GovTx"];</code>
+       */
+      public Builder mergeGovTx(com.payload.PayloadProto.GovTx value) {
+        if (govTxBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            govTx_ != null &&
+            govTx_ != com.payload.PayloadProto.GovTx.getDefaultInstance()) {
+            getGovTxBuilder().mergeFrom(value);
+          } else {
+            govTx_ = value;
+          }
+        } else {
+          govTxBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.GovTx GovTx = 5 [json_name = "GovTx"];</code>
+       */
+      public Builder clearGovTx() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        govTx_ = null;
+        if (govTxBuilder_ != null) {
+          govTxBuilder_.dispose();
+          govTxBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.GovTx GovTx = 5 [json_name = "GovTx"];</code>
+       */
+      public com.payload.PayloadProto.GovTx.Builder getGovTxBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getGovTxFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.payload.GovTx GovTx = 5 [json_name = "GovTx"];</code>
+       */
+      public com.payload.PayloadProto.GovTxOrBuilder getGovTxOrBuilder() {
+        if (govTxBuilder_ != null) {
+          return govTxBuilder_.getMessageOrBuilder();
+        } else {
+          return govTx_ == null ?
+              com.payload.PayloadProto.GovTx.getDefaultInstance() : govTx_;
+        }
+      }
+      /**
+       * <code>.payload.GovTx GovTx = 5 [json_name = "GovTx"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.GovTx, com.payload.PayloadProto.GovTx.Builder, com.payload.PayloadProto.GovTxOrBuilder> 
+          getGovTxFieldBuilder() {
+        if (govTxBuilder_ == null) {
+          govTxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.payload.PayloadProto.GovTx, com.payload.PayloadProto.GovTx.Builder, com.payload.PayloadProto.GovTxOrBuilder>(
+                  getGovTx(),
+                  getParentForChildren(),
+                  isClean());
+          govTx_ = null;
+        }
+        return govTxBuilder_;
+      }
+
+      private com.payload.PayloadProto.BondTx bondTx_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.BondTx, com.payload.PayloadProto.BondTx.Builder, com.payload.PayloadProto.BondTxOrBuilder> bondTxBuilder_;
+      /**
+       * <code>.payload.BondTx BondTx = 6 [json_name = "BondTx"];</code>
+       * @return Whether the bondTx field is set.
+       */
+      public boolean hasBondTx() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>.payload.BondTx BondTx = 6 [json_name = "BondTx"];</code>
+       * @return The bondTx.
+       */
+      public com.payload.PayloadProto.BondTx getBondTx() {
+        if (bondTxBuilder_ == null) {
+          return bondTx_ == null ? com.payload.PayloadProto.BondTx.getDefaultInstance() : bondTx_;
+        } else {
+          return bondTxBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.payload.BondTx BondTx = 6 [json_name = "BondTx"];</code>
+       */
+      public Builder setBondTx(com.payload.PayloadProto.BondTx value) {
+        if (bondTxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bondTx_ = value;
+        } else {
+          bondTxBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.BondTx BondTx = 6 [json_name = "BondTx"];</code>
+       */
+      public Builder setBondTx(
+          com.payload.PayloadProto.BondTx.Builder builderForValue) {
+        if (bondTxBuilder_ == null) {
+          bondTx_ = builderForValue.build();
+        } else {
+          bondTxBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.BondTx BondTx = 6 [json_name = "BondTx"];</code>
+       */
+      public Builder mergeBondTx(com.payload.PayloadProto.BondTx value) {
+        if (bondTxBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            bondTx_ != null &&
+            bondTx_ != com.payload.PayloadProto.BondTx.getDefaultInstance()) {
+            getBondTxBuilder().mergeFrom(value);
+          } else {
+            bondTx_ = value;
+          }
+        } else {
+          bondTxBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.BondTx BondTx = 6 [json_name = "BondTx"];</code>
+       */
+      public Builder clearBondTx() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        bondTx_ = null;
+        if (bondTxBuilder_ != null) {
+          bondTxBuilder_.dispose();
+          bondTxBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.BondTx BondTx = 6 [json_name = "BondTx"];</code>
+       */
+      public com.payload.PayloadProto.BondTx.Builder getBondTxBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getBondTxFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.payload.BondTx BondTx = 6 [json_name = "BondTx"];</code>
+       */
+      public com.payload.PayloadProto.BondTxOrBuilder getBondTxOrBuilder() {
+        if (bondTxBuilder_ != null) {
+          return bondTxBuilder_.getMessageOrBuilder();
+        } else {
+          return bondTx_ == null ?
+              com.payload.PayloadProto.BondTx.getDefaultInstance() : bondTx_;
+        }
+      }
+      /**
+       * <code>.payload.BondTx BondTx = 6 [json_name = "BondTx"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.BondTx, com.payload.PayloadProto.BondTx.Builder, com.payload.PayloadProto.BondTxOrBuilder> 
+          getBondTxFieldBuilder() {
+        if (bondTxBuilder_ == null) {
+          bondTxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.payload.PayloadProto.BondTx, com.payload.PayloadProto.BondTx.Builder, com.payload.PayloadProto.BondTxOrBuilder>(
+                  getBondTx(),
+                  getParentForChildren(),
+                  isClean());
+          bondTx_ = null;
+        }
+        return bondTxBuilder_;
+      }
+
+      private com.payload.PayloadProto.UnbondTx unbondTx_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.UnbondTx, com.payload.PayloadProto.UnbondTx.Builder, com.payload.PayloadProto.UnbondTxOrBuilder> unbondTxBuilder_;
+      /**
+       * <code>.payload.UnbondTx UnbondTx = 7 [json_name = "UnbondTx"];</code>
+       * @return Whether the unbondTx field is set.
+       */
+      public boolean hasUnbondTx() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>.payload.UnbondTx UnbondTx = 7 [json_name = "UnbondTx"];</code>
+       * @return The unbondTx.
+       */
+      public com.payload.PayloadProto.UnbondTx getUnbondTx() {
+        if (unbondTxBuilder_ == null) {
+          return unbondTx_ == null ? com.payload.PayloadProto.UnbondTx.getDefaultInstance() : unbondTx_;
+        } else {
+          return unbondTxBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.payload.UnbondTx UnbondTx = 7 [json_name = "UnbondTx"];</code>
+       */
+      public Builder setUnbondTx(com.payload.PayloadProto.UnbondTx value) {
+        if (unbondTxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          unbondTx_ = value;
+        } else {
+          unbondTxBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.UnbondTx UnbondTx = 7 [json_name = "UnbondTx"];</code>
+       */
+      public Builder setUnbondTx(
+          com.payload.PayloadProto.UnbondTx.Builder builderForValue) {
+        if (unbondTxBuilder_ == null) {
+          unbondTx_ = builderForValue.build();
+        } else {
+          unbondTxBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.UnbondTx UnbondTx = 7 [json_name = "UnbondTx"];</code>
+       */
+      public Builder mergeUnbondTx(com.payload.PayloadProto.UnbondTx value) {
+        if (unbondTxBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0) &&
+            unbondTx_ != null &&
+            unbondTx_ != com.payload.PayloadProto.UnbondTx.getDefaultInstance()) {
+            getUnbondTxBuilder().mergeFrom(value);
+          } else {
+            unbondTx_ = value;
+          }
+        } else {
+          unbondTxBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.UnbondTx UnbondTx = 7 [json_name = "UnbondTx"];</code>
+       */
+      public Builder clearUnbondTx() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        unbondTx_ = null;
+        if (unbondTxBuilder_ != null) {
+          unbondTxBuilder_.dispose();
+          unbondTxBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.UnbondTx UnbondTx = 7 [json_name = "UnbondTx"];</code>
+       */
+      public com.payload.PayloadProto.UnbondTx.Builder getUnbondTxBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return getUnbondTxFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.payload.UnbondTx UnbondTx = 7 [json_name = "UnbondTx"];</code>
+       */
+      public com.payload.PayloadProto.UnbondTxOrBuilder getUnbondTxOrBuilder() {
+        if (unbondTxBuilder_ != null) {
+          return unbondTxBuilder_.getMessageOrBuilder();
+        } else {
+          return unbondTx_ == null ?
+              com.payload.PayloadProto.UnbondTx.getDefaultInstance() : unbondTx_;
+        }
+      }
+      /**
+       * <code>.payload.UnbondTx UnbondTx = 7 [json_name = "UnbondTx"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.UnbondTx, com.payload.PayloadProto.UnbondTx.Builder, com.payload.PayloadProto.UnbondTxOrBuilder> 
+          getUnbondTxFieldBuilder() {
+        if (unbondTxBuilder_ == null) {
+          unbondTxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.payload.PayloadProto.UnbondTx, com.payload.PayloadProto.UnbondTx.Builder, com.payload.PayloadProto.UnbondTxOrBuilder>(
+                  getUnbondTx(),
+                  getParentForChildren(),
+                  isClean());
+          unbondTx_ = null;
+        }
+        return unbondTxBuilder_;
+      }
+
+      private com.payload.PayloadProto.BatchTx batchTx_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.BatchTx, com.payload.PayloadProto.BatchTx.Builder, com.payload.PayloadProto.BatchTxOrBuilder> batchTxBuilder_;
+      /**
+       * <code>.payload.BatchTx BatchTx = 8 [json_name = "BatchTx"];</code>
+       * @return Whether the batchTx field is set.
+       */
+      public boolean hasBatchTx() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>.payload.BatchTx BatchTx = 8 [json_name = "BatchTx"];</code>
+       * @return The batchTx.
+       */
+      public com.payload.PayloadProto.BatchTx getBatchTx() {
+        if (batchTxBuilder_ == null) {
+          return batchTx_ == null ? com.payload.PayloadProto.BatchTx.getDefaultInstance() : batchTx_;
+        } else {
+          return batchTxBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.payload.BatchTx BatchTx = 8 [json_name = "BatchTx"];</code>
+       */
+      public Builder setBatchTx(com.payload.PayloadProto.BatchTx value) {
+        if (batchTxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          batchTx_ = value;
+        } else {
+          batchTxBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.BatchTx BatchTx = 8 [json_name = "BatchTx"];</code>
+       */
+      public Builder setBatchTx(
+          com.payload.PayloadProto.BatchTx.Builder builderForValue) {
+        if (batchTxBuilder_ == null) {
+          batchTx_ = builderForValue.build();
+        } else {
+          batchTxBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.BatchTx BatchTx = 8 [json_name = "BatchTx"];</code>
+       */
+      public Builder mergeBatchTx(com.payload.PayloadProto.BatchTx value) {
+        if (batchTxBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0) &&
+            batchTx_ != null &&
+            batchTx_ != com.payload.PayloadProto.BatchTx.getDefaultInstance()) {
+            getBatchTxBuilder().mergeFrom(value);
+          } else {
+            batchTx_ = value;
+          }
+        } else {
+          batchTxBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.BatchTx BatchTx = 8 [json_name = "BatchTx"];</code>
+       */
+      public Builder clearBatchTx() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        batchTx_ = null;
+        if (batchTxBuilder_ != null) {
+          batchTxBuilder_.dispose();
+          batchTxBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.BatchTx BatchTx = 8 [json_name = "BatchTx"];</code>
+       */
+      public com.payload.PayloadProto.BatchTx.Builder getBatchTxBuilder() {
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return getBatchTxFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.payload.BatchTx BatchTx = 8 [json_name = "BatchTx"];</code>
+       */
+      public com.payload.PayloadProto.BatchTxOrBuilder getBatchTxOrBuilder() {
+        if (batchTxBuilder_ != null) {
+          return batchTxBuilder_.getMessageOrBuilder();
+        } else {
+          return batchTx_ == null ?
+              com.payload.PayloadProto.BatchTx.getDefaultInstance() : batchTx_;
+        }
+      }
+      /**
+       * <code>.payload.BatchTx BatchTx = 8 [json_name = "BatchTx"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.BatchTx, com.payload.PayloadProto.BatchTx.Builder, com.payload.PayloadProto.BatchTxOrBuilder> 
+          getBatchTxFieldBuilder() {
+        if (batchTxBuilder_ == null) {
+          batchTxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.payload.PayloadProto.BatchTx, com.payload.PayloadProto.BatchTx.Builder, com.payload.PayloadProto.BatchTxOrBuilder>(
+                  getBatchTx(),
+                  getParentForChildren(),
+                  isClean());
+          batchTx_ = null;
+        }
+        return batchTxBuilder_;
+      }
+
+      private com.payload.PayloadProto.ProposalTx proposalTx_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.ProposalTx, com.payload.PayloadProto.ProposalTx.Builder, com.payload.PayloadProto.ProposalTxOrBuilder> proposalTxBuilder_;
+      /**
+       * <code>.payload.ProposalTx ProposalTx = 9 [json_name = "ProposalTx"];</code>
+       * @return Whether the proposalTx field is set.
+       */
+      public boolean hasProposalTx() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>.payload.ProposalTx ProposalTx = 9 [json_name = "ProposalTx"];</code>
+       * @return The proposalTx.
+       */
+      public com.payload.PayloadProto.ProposalTx getProposalTx() {
+        if (proposalTxBuilder_ == null) {
+          return proposalTx_ == null ? com.payload.PayloadProto.ProposalTx.getDefaultInstance() : proposalTx_;
+        } else {
+          return proposalTxBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.payload.ProposalTx ProposalTx = 9 [json_name = "ProposalTx"];</code>
+       */
+      public Builder setProposalTx(com.payload.PayloadProto.ProposalTx value) {
+        if (proposalTxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          proposalTx_ = value;
+        } else {
+          proposalTxBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.ProposalTx ProposalTx = 9 [json_name = "ProposalTx"];</code>
+       */
+      public Builder setProposalTx(
+          com.payload.PayloadProto.ProposalTx.Builder builderForValue) {
+        if (proposalTxBuilder_ == null) {
+          proposalTx_ = builderForValue.build();
+        } else {
+          proposalTxBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.ProposalTx ProposalTx = 9 [json_name = "ProposalTx"];</code>
+       */
+      public Builder mergeProposalTx(com.payload.PayloadProto.ProposalTx value) {
+        if (proposalTxBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0) &&
+            proposalTx_ != null &&
+            proposalTx_ != com.payload.PayloadProto.ProposalTx.getDefaultInstance()) {
+            getProposalTxBuilder().mergeFrom(value);
+          } else {
+            proposalTx_ = value;
+          }
+        } else {
+          proposalTxBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.ProposalTx ProposalTx = 9 [json_name = "ProposalTx"];</code>
+       */
+      public Builder clearProposalTx() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        proposalTx_ = null;
+        if (proposalTxBuilder_ != null) {
+          proposalTxBuilder_.dispose();
+          proposalTxBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.ProposalTx ProposalTx = 9 [json_name = "ProposalTx"];</code>
+       */
+      public com.payload.PayloadProto.ProposalTx.Builder getProposalTxBuilder() {
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return getProposalTxFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.payload.ProposalTx ProposalTx = 9 [json_name = "ProposalTx"];</code>
+       */
+      public com.payload.PayloadProto.ProposalTxOrBuilder getProposalTxOrBuilder() {
+        if (proposalTxBuilder_ != null) {
+          return proposalTxBuilder_.getMessageOrBuilder();
+        } else {
+          return proposalTx_ == null ?
+              com.payload.PayloadProto.ProposalTx.getDefaultInstance() : proposalTx_;
+        }
+      }
+      /**
+       * <code>.payload.ProposalTx ProposalTx = 9 [json_name = "ProposalTx"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.ProposalTx, com.payload.PayloadProto.ProposalTx.Builder, com.payload.PayloadProto.ProposalTxOrBuilder> 
+          getProposalTxFieldBuilder() {
+        if (proposalTxBuilder_ == null) {
+          proposalTxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.payload.PayloadProto.ProposalTx, com.payload.PayloadProto.ProposalTx.Builder, com.payload.PayloadProto.ProposalTxOrBuilder>(
+                  getProposalTx(),
+                  getParentForChildren(),
+                  isClean());
+          proposalTx_ = null;
+        }
+        return proposalTxBuilder_;
+      }
+
+      private com.payload.PayloadProto.IdentifyTx identifyTx_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.IdentifyTx, com.payload.PayloadProto.IdentifyTx.Builder, com.payload.PayloadProto.IdentifyTxOrBuilder> identifyTxBuilder_;
+      /**
+       * <code>.payload.IdentifyTx IdentifyTx = 10 [json_name = "IdentifyTx"];</code>
+       * @return Whether the identifyTx field is set.
+       */
+      public boolean hasIdentifyTx() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <code>.payload.IdentifyTx IdentifyTx = 10 [json_name = "IdentifyTx"];</code>
+       * @return The identifyTx.
+       */
+      public com.payload.PayloadProto.IdentifyTx getIdentifyTx() {
+        if (identifyTxBuilder_ == null) {
+          return identifyTx_ == null ? com.payload.PayloadProto.IdentifyTx.getDefaultInstance() : identifyTx_;
+        } else {
+          return identifyTxBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.payload.IdentifyTx IdentifyTx = 10 [json_name = "IdentifyTx"];</code>
+       */
+      public Builder setIdentifyTx(com.payload.PayloadProto.IdentifyTx value) {
+        if (identifyTxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          identifyTx_ = value;
+        } else {
+          identifyTxBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.IdentifyTx IdentifyTx = 10 [json_name = "IdentifyTx"];</code>
+       */
+      public Builder setIdentifyTx(
+          com.payload.PayloadProto.IdentifyTx.Builder builderForValue) {
+        if (identifyTxBuilder_ == null) {
+          identifyTx_ = builderForValue.build();
+        } else {
+          identifyTxBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.IdentifyTx IdentifyTx = 10 [json_name = "IdentifyTx"];</code>
+       */
+      public Builder mergeIdentifyTx(com.payload.PayloadProto.IdentifyTx value) {
+        if (identifyTxBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) != 0) &&
+            identifyTx_ != null &&
+            identifyTx_ != com.payload.PayloadProto.IdentifyTx.getDefaultInstance()) {
+            getIdentifyTxBuilder().mergeFrom(value);
+          } else {
+            identifyTx_ = value;
+          }
+        } else {
+          identifyTxBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.IdentifyTx IdentifyTx = 10 [json_name = "IdentifyTx"];</code>
+       */
+      public Builder clearIdentifyTx() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        identifyTx_ = null;
+        if (identifyTxBuilder_ != null) {
+          identifyTxBuilder_.dispose();
+          identifyTxBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.IdentifyTx IdentifyTx = 10 [json_name = "IdentifyTx"];</code>
+       */
+      public com.payload.PayloadProto.IdentifyTx.Builder getIdentifyTxBuilder() {
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return getIdentifyTxFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.payload.IdentifyTx IdentifyTx = 10 [json_name = "IdentifyTx"];</code>
+       */
+      public com.payload.PayloadProto.IdentifyTxOrBuilder getIdentifyTxOrBuilder() {
+        if (identifyTxBuilder_ != null) {
+          return identifyTxBuilder_.getMessageOrBuilder();
+        } else {
+          return identifyTx_ == null ?
+              com.payload.PayloadProto.IdentifyTx.getDefaultInstance() : identifyTx_;
+        }
+      }
+      /**
+       * <code>.payload.IdentifyTx IdentifyTx = 10 [json_name = "IdentifyTx"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.IdentifyTx, com.payload.PayloadProto.IdentifyTx.Builder, com.payload.PayloadProto.IdentifyTxOrBuilder> 
+          getIdentifyTxFieldBuilder() {
+        if (identifyTxBuilder_ == null) {
+          identifyTxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.payload.PayloadProto.IdentifyTx, com.payload.PayloadProto.IdentifyTx.Builder, com.payload.PayloadProto.IdentifyTxOrBuilder>(
+                  getIdentifyTx(),
+                  getParentForChildren(),
+                  isClean());
+          identifyTx_ = null;
+        }
+        return identifyTxBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:payload.Any)
+    }
+
+    // @@protoc_insertion_point(class_scope:payload.Any)
+    private static final com.payload.PayloadProto.Any DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.payload.PayloadProto.Any();
+    }
+
+    public static com.payload.PayloadProto.Any getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Any>
+        PARSER = new com.google.protobuf.AbstractParser<Any>() {
+      @java.lang.Override
+      public Any parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Any> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Any> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.payload.PayloadProto.Any getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TxInputOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payload.TxInput)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The address from which this input flows
+     * </pre>
+     *
+     * <code>bytes Address = 1 [json_name = "Address", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address"];</code>
+     * @return The address.
+     */
+    com.google.protobuf.ByteString getAddress();
+
+    /**
+     * <pre>
+     * The amount of native token to transfer from the input address
+     * </pre>
+     *
+     * <code>uint64 Amount = 2 [json_name = "Amount"];</code>
+     * @return The amount.
+     */
+    long getAmount();
+
+    /**
+     * <pre>
+     * The sequence number that this transaction will induce (i.e. one greater than the input account's current sequence)
+     * </pre>
+     *
+     * <code>uint64 Sequence = 3 [json_name = "Sequence"];</code>
+     * @return The sequence.
+     */
+    long getSequence();
+  }
+  /**
+   * <pre>
+   * An input to a transaction that may carry an Amount as a charge and whose sequence number must be one greater than
+   * that associated with the account at Address at the time of being received
+   * </pre>
+   *
+   * Protobuf type {@code payload.TxInput}
+   */
+  public static final class TxInput extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:payload.TxInput)
+      TxInputOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TxInput.newBuilder() to construct.
+    private TxInput(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TxInput() {
+      address_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TxInput();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.payload.PayloadProto.internal_static_payload_TxInput_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.payload.PayloadProto.internal_static_payload_TxInput_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.payload.PayloadProto.TxInput.class, com.payload.PayloadProto.TxInput.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString address_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * The address from which this input flows
+     * </pre>
+     *
+     * <code>bytes Address = 1 [json_name = "Address", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getAddress() {
+      return address_;
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 2;
+    private long amount_ = 0L;
+    /**
+     * <pre>
+     * The amount of native token to transfer from the input address
+     * </pre>
+     *
+     * <code>uint64 Amount = 2 [json_name = "Amount"];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public long getAmount() {
+      return amount_;
+    }
+
+    public static final int SEQUENCE_FIELD_NUMBER = 3;
+    private long sequence_ = 0L;
+    /**
+     * <pre>
+     * The sequence number that this transaction will induce (i.e. one greater than the input account's current sequence)
+     * </pre>
+     *
+     * <code>uint64 Sequence = 3 [json_name = "Sequence"];</code>
+     * @return The sequence.
+     */
+    @java.lang.Override
+    public long getSequence() {
+      return sequence_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!address_.isEmpty()) {
+        output.writeBytes(1, address_);
+      }
+      if (amount_ != 0L) {
+        output.writeUInt64(2, amount_);
+      }
+      if (sequence_ != 0L) {
+        output.writeUInt64(3, sequence_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!address_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, address_);
+      }
+      if (amount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, amount_);
+      }
+      if (sequence_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, sequence_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.payload.PayloadProto.TxInput)) {
+        return super.equals(obj);
+      }
+      com.payload.PayloadProto.TxInput other = (com.payload.PayloadProto.TxInput) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (getAmount()
+          != other.getAmount()) return false;
+      if (getSequence()
+          != other.getSequence()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAmount());
+      hash = (37 * hash) + SEQUENCE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSequence());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.payload.PayloadProto.TxInput parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.TxInput parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.TxInput parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.TxInput parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.TxInput parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.TxInput parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.TxInput parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.TxInput parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.payload.PayloadProto.TxInput parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.payload.PayloadProto.TxInput parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.TxInput parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.TxInput parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.payload.PayloadProto.TxInput prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * An input to a transaction that may carry an Amount as a charge and whose sequence number must be one greater than
+     * that associated with the account at Address at the time of being received
+     * </pre>
+     *
+     * Protobuf type {@code payload.TxInput}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:payload.TxInput)
+        com.payload.PayloadProto.TxInputOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.payload.PayloadProto.internal_static_payload_TxInput_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.payload.PayloadProto.internal_static_payload_TxInput_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.payload.PayloadProto.TxInput.class, com.payload.PayloadProto.TxInput.Builder.class);
+      }
+
+      // Construct using com.payload.PayloadProto.TxInput.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = com.google.protobuf.ByteString.EMPTY;
+        amount_ = 0L;
+        sequence_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.payload.PayloadProto.internal_static_payload_TxInput_descriptor;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.TxInput getDefaultInstanceForType() {
+        return com.payload.PayloadProto.TxInput.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.TxInput build() {
+        com.payload.PayloadProto.TxInput result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.TxInput buildPartial() {
+        com.payload.PayloadProto.TxInput result = new com.payload.PayloadProto.TxInput(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.payload.PayloadProto.TxInput result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.amount_ = amount_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.sequence_ = sequence_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.payload.PayloadProto.TxInput) {
+          return mergeFrom((com.payload.PayloadProto.TxInput)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.payload.PayloadProto.TxInput other) {
+        if (other == com.payload.PayloadProto.TxInput.getDefaultInstance()) return this;
+        if (other.getAddress() != com.google.protobuf.ByteString.EMPTY) {
+          setAddress(other.getAddress());
+        }
+        if (other.getAmount() != 0L) {
+          setAmount(other.getAmount());
+        }
+        if (other.getSequence() != 0L) {
+          setSequence(other.getSequence());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                amount_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                sequence_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString address_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * The address from which this input flows
+       * </pre>
+       *
+       * <code>bytes Address = 1 [json_name = "Address", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address"];</code>
+       * @return The address.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getAddress() {
+        return address_;
+      }
+      /**
+       * <pre>
+       * The address from which this input flows
+       * </pre>
+       *
+       * <code>bytes Address = 1 [json_name = "Address", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The address from which this input flows
+       * </pre>
+       *
+       * <code>bytes Address = 1 [json_name = "Address", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        address_ = getDefaultInstance().getAddress();
+        onChanged();
+        return this;
+      }
+
+      private long amount_ ;
+      /**
+       * <pre>
+       * The amount of native token to transfer from the input address
+       * </pre>
+       *
+       * <code>uint64 Amount = 2 [json_name = "Amount"];</code>
+       * @return The amount.
+       */
+      @java.lang.Override
+      public long getAmount() {
+        return amount_;
+      }
+      /**
+       * <pre>
+       * The amount of native token to transfer from the input address
+       * </pre>
+       *
+       * <code>uint64 Amount = 2 [json_name = "Amount"];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(long value) {
+
+        amount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The amount of native token to transfer from the input address
+       * </pre>
+       *
+       * <code>uint64 Amount = 2 [json_name = "Amount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        amount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long sequence_ ;
+      /**
+       * <pre>
+       * The sequence number that this transaction will induce (i.e. one greater than the input account's current sequence)
+       * </pre>
+       *
+       * <code>uint64 Sequence = 3 [json_name = "Sequence"];</code>
+       * @return The sequence.
+       */
+      @java.lang.Override
+      public long getSequence() {
+        return sequence_;
+      }
+      /**
+       * <pre>
+       * The sequence number that this transaction will induce (i.e. one greater than the input account's current sequence)
+       * </pre>
+       *
+       * <code>uint64 Sequence = 3 [json_name = "Sequence"];</code>
+       * @param value The sequence to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSequence(long value) {
+
+        sequence_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The sequence number that this transaction will induce (i.e. one greater than the input account's current sequence)
+       * </pre>
+       *
+       * <code>uint64 Sequence = 3 [json_name = "Sequence"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSequence() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        sequence_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:payload.TxInput)
+    }
+
+    // @@protoc_insertion_point(class_scope:payload.TxInput)
+    private static final com.payload.PayloadProto.TxInput DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.payload.PayloadProto.TxInput();
+    }
+
+    public static com.payload.PayloadProto.TxInput getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TxInput>
+        PARSER = new com.google.protobuf.AbstractParser<TxInput>() {
+      @java.lang.Override
+      public TxInput parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TxInput> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TxInput> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.payload.PayloadProto.TxInput getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TxOutputOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payload.TxOutput)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The address to which this output flows
+     * </pre>
+     *
+     * <code>bytes Address = 1 [json_name = "Address", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address"];</code>
+     * @return The address.
+     */
+    com.google.protobuf.ByteString getAddress();
+
+    /**
+     * <pre>
+     * The amount of native token to transfer to the output address
+     * </pre>
+     *
+     * <code>uint64 Amount = 2 [json_name = "Amount"];</code>
+     * @return The amount.
+     */
+    long getAmount();
+  }
+  /**
+   * <pre>
+   * An output from a transaction that may carry an amount as a charge
+   * </pre>
+   *
+   * Protobuf type {@code payload.TxOutput}
+   */
+  public static final class TxOutput extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:payload.TxOutput)
+      TxOutputOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TxOutput.newBuilder() to construct.
+    private TxOutput(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TxOutput() {
+      address_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TxOutput();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.payload.PayloadProto.internal_static_payload_TxOutput_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.payload.PayloadProto.internal_static_payload_TxOutput_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.payload.PayloadProto.TxOutput.class, com.payload.PayloadProto.TxOutput.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString address_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * The address to which this output flows
+     * </pre>
+     *
+     * <code>bytes Address = 1 [json_name = "Address", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getAddress() {
+      return address_;
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 2;
+    private long amount_ = 0L;
+    /**
+     * <pre>
+     * The amount of native token to transfer to the output address
+     * </pre>
+     *
+     * <code>uint64 Amount = 2 [json_name = "Amount"];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public long getAmount() {
+      return amount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!address_.isEmpty()) {
+        output.writeBytes(1, address_);
+      }
+      if (amount_ != 0L) {
+        output.writeUInt64(2, amount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!address_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, address_);
+      }
+      if (amount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, amount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.payload.PayloadProto.TxOutput)) {
+        return super.equals(obj);
+      }
+      com.payload.PayloadProto.TxOutput other = (com.payload.PayloadProto.TxOutput) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (getAmount()
+          != other.getAmount()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAmount());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.payload.PayloadProto.TxOutput parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.TxOutput parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.TxOutput parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.TxOutput parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.TxOutput parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.TxOutput parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.TxOutput parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.TxOutput parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.payload.PayloadProto.TxOutput parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.payload.PayloadProto.TxOutput parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.TxOutput parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.TxOutput parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.payload.PayloadProto.TxOutput prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * An output from a transaction that may carry an amount as a charge
+     * </pre>
+     *
+     * Protobuf type {@code payload.TxOutput}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:payload.TxOutput)
+        com.payload.PayloadProto.TxOutputOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.payload.PayloadProto.internal_static_payload_TxOutput_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.payload.PayloadProto.internal_static_payload_TxOutput_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.payload.PayloadProto.TxOutput.class, com.payload.PayloadProto.TxOutput.Builder.class);
+      }
+
+      // Construct using com.payload.PayloadProto.TxOutput.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = com.google.protobuf.ByteString.EMPTY;
+        amount_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.payload.PayloadProto.internal_static_payload_TxOutput_descriptor;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.TxOutput getDefaultInstanceForType() {
+        return com.payload.PayloadProto.TxOutput.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.TxOutput build() {
+        com.payload.PayloadProto.TxOutput result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.TxOutput buildPartial() {
+        com.payload.PayloadProto.TxOutput result = new com.payload.PayloadProto.TxOutput(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.payload.PayloadProto.TxOutput result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.amount_ = amount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.payload.PayloadProto.TxOutput) {
+          return mergeFrom((com.payload.PayloadProto.TxOutput)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.payload.PayloadProto.TxOutput other) {
+        if (other == com.payload.PayloadProto.TxOutput.getDefaultInstance()) return this;
+        if (other.getAddress() != com.google.protobuf.ByteString.EMPTY) {
+          setAddress(other.getAddress());
+        }
+        if (other.getAmount() != 0L) {
+          setAmount(other.getAmount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                amount_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString address_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * The address to which this output flows
+       * </pre>
+       *
+       * <code>bytes Address = 1 [json_name = "Address", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address"];</code>
+       * @return The address.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getAddress() {
+        return address_;
+      }
+      /**
+       * <pre>
+       * The address to which this output flows
+       * </pre>
+       *
+       * <code>bytes Address = 1 [json_name = "Address", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The address to which this output flows
+       * </pre>
+       *
+       * <code>bytes Address = 1 [json_name = "Address", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        address_ = getDefaultInstance().getAddress();
+        onChanged();
+        return this;
+      }
+
+      private long amount_ ;
+      /**
+       * <pre>
+       * The amount of native token to transfer to the output address
+       * </pre>
+       *
+       * <code>uint64 Amount = 2 [json_name = "Amount"];</code>
+       * @return The amount.
+       */
+      @java.lang.Override
+      public long getAmount() {
+        return amount_;
+      }
+      /**
+       * <pre>
+       * The amount of native token to transfer to the output address
+       * </pre>
+       *
+       * <code>uint64 Amount = 2 [json_name = "Amount"];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(long value) {
+
+        amount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The amount of native token to transfer to the output address
+       * </pre>
+       *
+       * <code>uint64 Amount = 2 [json_name = "Amount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        amount_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:payload.TxOutput)
+    }
+
+    // @@protoc_insertion_point(class_scope:payload.TxOutput)
+    private static final com.payload.PayloadProto.TxOutput DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.payload.PayloadProto.TxOutput();
+    }
+
+    public static com.payload.PayloadProto.TxOutput getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TxOutput>
+        PARSER = new com.google.protobuf.AbstractParser<TxOutput>() {
+      @java.lang.Override
+      public TxOutput parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TxOutput> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TxOutput> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.payload.PayloadProto.TxOutput getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CallTxOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payload.CallTx)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The caller's input
+     * </pre>
+     *
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     * @return Whether the input field is set.
+     */
+    boolean hasInput();
+    /**
+     * <pre>
+     * The caller's input
+     * </pre>
+     *
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     * @return The input.
+     */
+    com.payload.PayloadProto.TxInput getInput();
+    /**
+     * <pre>
+     * The caller's input
+     * </pre>
+     *
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     */
+    com.payload.PayloadProto.TxInputOrBuilder getInputOrBuilder();
+
+    /**
+     * <pre>
+     * The contract address to call or nil if we are creating a contract
+     * </pre>
+     *
+     * <code>bytes Address = 2 [json_name = "Address", (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address"];</code>
+     * @return The address.
+     */
+    com.google.protobuf.ByteString getAddress();
+
+    /**
+     * <pre>
+     * The upper bound on the amount of gas (and therefore EVM execution steps) this CallTx may generate
+     * </pre>
+     *
+     * <code>uint64 GasLimit = 3 [json_name = "GasLimit"];</code>
+     * @return The gasLimit.
+     */
+    long getGasLimit();
+
+    /**
+     * <pre>
+     * Fee to offer validators for processing transaction
+     * </pre>
+     *
+     * <code>uint64 Fee = 4 [json_name = "Fee"];</code>
+     * @return The fee.
+     */
+    long getFee();
+
+    /**
+     * <pre>
+     * EVM bytecode
+     * </pre>
+     *
+     * <code>bytes Data = 5 [json_name = "Data", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes"];</code>
+     * @return The data.
+     */
+    com.google.protobuf.ByteString getData();
+
+    /**
+     * <pre>
+     * WASM bytecode
+     * </pre>
+     *
+     * <code>bytes WASM = 6 [json_name = "WASM", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes", (.gogoproto.jsontag) = "tags,omitempty"];</code>
+     * @return The wASM.
+     */
+    com.google.protobuf.ByteString getWASM();
+
+    /**
+     * <pre>
+     * Set of contracts this code will deploy
+     * </pre>
+     *
+     * <code>repeated .payload.ContractMeta ContractMeta = 7 [json_name = "ContractMeta"];</code>
+     */
+    java.util.List<com.payload.PayloadProto.ContractMeta> 
+        getContractMetaList();
+    /**
+     * <pre>
+     * Set of contracts this code will deploy
+     * </pre>
+     *
+     * <code>repeated .payload.ContractMeta ContractMeta = 7 [json_name = "ContractMeta"];</code>
+     */
+    com.payload.PayloadProto.ContractMeta getContractMeta(int index);
+    /**
+     * <pre>
+     * Set of contracts this code will deploy
+     * </pre>
+     *
+     * <code>repeated .payload.ContractMeta ContractMeta = 7 [json_name = "ContractMeta"];</code>
+     */
+    int getContractMetaCount();
+    /**
+     * <pre>
+     * Set of contracts this code will deploy
+     * </pre>
+     *
+     * <code>repeated .payload.ContractMeta ContractMeta = 7 [json_name = "ContractMeta"];</code>
+     */
+    java.util.List<? extends com.payload.PayloadProto.ContractMetaOrBuilder> 
+        getContractMetaOrBuilderList();
+    /**
+     * <pre>
+     * Set of contracts this code will deploy
+     * </pre>
+     *
+     * <code>repeated .payload.ContractMeta ContractMeta = 7 [json_name = "ContractMeta"];</code>
+     */
+    com.payload.PayloadProto.ContractMetaOrBuilder getContractMetaOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * The upper bound on the price per unit of gas
+     * </pre>
+     *
+     * <code>uint64 GasPrice = 8 [json_name = "GasPrice"];</code>
+     * @return The gasPrice.
+     */
+    long getGasPrice();
+  }
+  /**
+   * <pre>
+   * A instruction to run smart contract code in the EVM
+   * </pre>
+   *
+   * Protobuf type {@code payload.CallTx}
+   */
+  public static final class CallTx extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:payload.CallTx)
+      CallTxOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CallTx.newBuilder() to construct.
+    private CallTx(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CallTx() {
+      address_ = com.google.protobuf.ByteString.EMPTY;
+      data_ = com.google.protobuf.ByteString.EMPTY;
+      wASM_ = com.google.protobuf.ByteString.EMPTY;
+      contractMeta_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CallTx();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.payload.PayloadProto.internal_static_payload_CallTx_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.payload.PayloadProto.internal_static_payload_CallTx_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.payload.PayloadProto.CallTx.class, com.payload.PayloadProto.CallTx.Builder.class);
+    }
+
+    public static final int INPUT_FIELD_NUMBER = 1;
+    private com.payload.PayloadProto.TxInput input_;
+    /**
+     * <pre>
+     * The caller's input
+     * </pre>
+     *
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     * @return Whether the input field is set.
+     */
+    @java.lang.Override
+    public boolean hasInput() {
+      return input_ != null;
+    }
+    /**
+     * <pre>
+     * The caller's input
+     * </pre>
+     *
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     * @return The input.
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.TxInput getInput() {
+      return input_ == null ? com.payload.PayloadProto.TxInput.getDefaultInstance() : input_;
+    }
+    /**
+     * <pre>
+     * The caller's input
+     * </pre>
+     *
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.TxInputOrBuilder getInputOrBuilder() {
+      return input_ == null ? com.payload.PayloadProto.TxInput.getDefaultInstance() : input_;
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString address_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * The contract address to call or nil if we are creating a contract
+     * </pre>
+     *
+     * <code>bytes Address = 2 [json_name = "Address", (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getAddress() {
+      return address_;
+    }
+
+    public static final int GASLIMIT_FIELD_NUMBER = 3;
+    private long gasLimit_ = 0L;
+    /**
+     * <pre>
+     * The upper bound on the amount of gas (and therefore EVM execution steps) this CallTx may generate
+     * </pre>
+     *
+     * <code>uint64 GasLimit = 3 [json_name = "GasLimit"];</code>
+     * @return The gasLimit.
+     */
+    @java.lang.Override
+    public long getGasLimit() {
+      return gasLimit_;
+    }
+
+    public static final int FEE_FIELD_NUMBER = 4;
+    private long fee_ = 0L;
+    /**
+     * <pre>
+     * Fee to offer validators for processing transaction
+     * </pre>
+     *
+     * <code>uint64 Fee = 4 [json_name = "Fee"];</code>
+     * @return The fee.
+     */
+    @java.lang.Override
+    public long getFee() {
+      return fee_;
+    }
+
+    public static final int DATA_FIELD_NUMBER = 5;
+    private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * EVM bytecode
+     * </pre>
+     *
+     * <code>bytes Data = 5 [json_name = "Data", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes"];</code>
+     * @return The data.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getData() {
+      return data_;
+    }
+
+    public static final int WASM_FIELD_NUMBER = 6;
+    private com.google.protobuf.ByteString wASM_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * WASM bytecode
+     * </pre>
+     *
+     * <code>bytes WASM = 6 [json_name = "WASM", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes", (.gogoproto.jsontag) = "tags,omitempty"];</code>
+     * @return The wASM.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getWASM() {
+      return wASM_;
+    }
+
+    public static final int CONTRACTMETA_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private java.util.List<com.payload.PayloadProto.ContractMeta> contractMeta_;
+    /**
+     * <pre>
+     * Set of contracts this code will deploy
+     * </pre>
+     *
+     * <code>repeated .payload.ContractMeta ContractMeta = 7 [json_name = "ContractMeta"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.payload.PayloadProto.ContractMeta> getContractMetaList() {
+      return contractMeta_;
+    }
+    /**
+     * <pre>
+     * Set of contracts this code will deploy
+     * </pre>
+     *
+     * <code>repeated .payload.ContractMeta ContractMeta = 7 [json_name = "ContractMeta"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.payload.PayloadProto.ContractMetaOrBuilder> 
+        getContractMetaOrBuilderList() {
+      return contractMeta_;
+    }
+    /**
+     * <pre>
+     * Set of contracts this code will deploy
+     * </pre>
+     *
+     * <code>repeated .payload.ContractMeta ContractMeta = 7 [json_name = "ContractMeta"];</code>
+     */
+    @java.lang.Override
+    public int getContractMetaCount() {
+      return contractMeta_.size();
+    }
+    /**
+     * <pre>
+     * Set of contracts this code will deploy
+     * </pre>
+     *
+     * <code>repeated .payload.ContractMeta ContractMeta = 7 [json_name = "ContractMeta"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.ContractMeta getContractMeta(int index) {
+      return contractMeta_.get(index);
+    }
+    /**
+     * <pre>
+     * Set of contracts this code will deploy
+     * </pre>
+     *
+     * <code>repeated .payload.ContractMeta ContractMeta = 7 [json_name = "ContractMeta"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.ContractMetaOrBuilder getContractMetaOrBuilder(
+        int index) {
+      return contractMeta_.get(index);
+    }
+
+    public static final int GASPRICE_FIELD_NUMBER = 8;
+    private long gasPrice_ = 0L;
+    /**
+     * <pre>
+     * The upper bound on the price per unit of gas
+     * </pre>
+     *
+     * <code>uint64 GasPrice = 8 [json_name = "GasPrice"];</code>
+     * @return The gasPrice.
+     */
+    @java.lang.Override
+    public long getGasPrice() {
+      return gasPrice_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (input_ != null) {
+        output.writeMessage(1, getInput());
+      }
+      if (!address_.isEmpty()) {
+        output.writeBytes(2, address_);
+      }
+      if (gasLimit_ != 0L) {
+        output.writeUInt64(3, gasLimit_);
+      }
+      if (fee_ != 0L) {
+        output.writeUInt64(4, fee_);
+      }
+      if (!data_.isEmpty()) {
+        output.writeBytes(5, data_);
+      }
+      if (!wASM_.isEmpty()) {
+        output.writeBytes(6, wASM_);
+      }
+      for (int i = 0; i < contractMeta_.size(); i++) {
+        output.writeMessage(7, contractMeta_.get(i));
+      }
+      if (gasPrice_ != 0L) {
+        output.writeUInt64(8, gasPrice_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (input_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getInput());
+      }
+      if (!address_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, address_);
+      }
+      if (gasLimit_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, gasLimit_);
+      }
+      if (fee_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, fee_);
+      }
+      if (!data_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, data_);
+      }
+      if (!wASM_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(6, wASM_);
+      }
+      for (int i = 0; i < contractMeta_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, contractMeta_.get(i));
+      }
+      if (gasPrice_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(8, gasPrice_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.payload.PayloadProto.CallTx)) {
+        return super.equals(obj);
+      }
+      com.payload.PayloadProto.CallTx other = (com.payload.PayloadProto.CallTx) obj;
+
+      if (hasInput() != other.hasInput()) return false;
+      if (hasInput()) {
+        if (!getInput()
+            .equals(other.getInput())) return false;
+      }
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (getGasLimit()
+          != other.getGasLimit()) return false;
+      if (getFee()
+          != other.getFee()) return false;
+      if (!getData()
+          .equals(other.getData())) return false;
+      if (!getWASM()
+          .equals(other.getWASM())) return false;
+      if (!getContractMetaList()
+          .equals(other.getContractMetaList())) return false;
+      if (getGasPrice()
+          != other.getGasPrice()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasInput()) {
+        hash = (37 * hash) + INPUT_FIELD_NUMBER;
+        hash = (53 * hash) + getInput().hashCode();
+      }
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + GASLIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getGasLimit());
+      hash = (37 * hash) + FEE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getFee());
+      hash = (37 * hash) + DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getData().hashCode();
+      hash = (37 * hash) + WASM_FIELD_NUMBER;
+      hash = (53 * hash) + getWASM().hashCode();
+      if (getContractMetaCount() > 0) {
+        hash = (37 * hash) + CONTRACTMETA_FIELD_NUMBER;
+        hash = (53 * hash) + getContractMetaList().hashCode();
+      }
+      hash = (37 * hash) + GASPRICE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getGasPrice());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.payload.PayloadProto.CallTx parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.CallTx parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.CallTx parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.CallTx parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.CallTx parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.CallTx parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.CallTx parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.CallTx parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.payload.PayloadProto.CallTx parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.payload.PayloadProto.CallTx parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.CallTx parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.CallTx parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.payload.PayloadProto.CallTx prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * A instruction to run smart contract code in the EVM
+     * </pre>
+     *
+     * Protobuf type {@code payload.CallTx}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:payload.CallTx)
+        com.payload.PayloadProto.CallTxOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.payload.PayloadProto.internal_static_payload_CallTx_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.payload.PayloadProto.internal_static_payload_CallTx_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.payload.PayloadProto.CallTx.class, com.payload.PayloadProto.CallTx.Builder.class);
+      }
+
+      // Construct using com.payload.PayloadProto.CallTx.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        input_ = null;
+        if (inputBuilder_ != null) {
+          inputBuilder_.dispose();
+          inputBuilder_ = null;
+        }
+        address_ = com.google.protobuf.ByteString.EMPTY;
+        gasLimit_ = 0L;
+        fee_ = 0L;
+        data_ = com.google.protobuf.ByteString.EMPTY;
+        wASM_ = com.google.protobuf.ByteString.EMPTY;
+        if (contractMetaBuilder_ == null) {
+          contractMeta_ = java.util.Collections.emptyList();
+        } else {
+          contractMeta_ = null;
+          contractMetaBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        gasPrice_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.payload.PayloadProto.internal_static_payload_CallTx_descriptor;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.CallTx getDefaultInstanceForType() {
+        return com.payload.PayloadProto.CallTx.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.CallTx build() {
+        com.payload.PayloadProto.CallTx result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.CallTx buildPartial() {
+        com.payload.PayloadProto.CallTx result = new com.payload.PayloadProto.CallTx(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.payload.PayloadProto.CallTx result) {
+        if (contractMetaBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0)) {
+            contractMeta_ = java.util.Collections.unmodifiableList(contractMeta_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.contractMeta_ = contractMeta_;
+        } else {
+          result.contractMeta_ = contractMetaBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.payload.PayloadProto.CallTx result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.input_ = inputBuilder_ == null
+              ? input_
+              : inputBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.gasLimit_ = gasLimit_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.fee_ = fee_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.data_ = data_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.wASM_ = wASM_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.gasPrice_ = gasPrice_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.payload.PayloadProto.CallTx) {
+          return mergeFrom((com.payload.PayloadProto.CallTx)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.payload.PayloadProto.CallTx other) {
+        if (other == com.payload.PayloadProto.CallTx.getDefaultInstance()) return this;
+        if (other.hasInput()) {
+          mergeInput(other.getInput());
+        }
+        if (other.getAddress() != com.google.protobuf.ByteString.EMPTY) {
+          setAddress(other.getAddress());
+        }
+        if (other.getGasLimit() != 0L) {
+          setGasLimit(other.getGasLimit());
+        }
+        if (other.getFee() != 0L) {
+          setFee(other.getFee());
+        }
+        if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
+          setData(other.getData());
+        }
+        if (other.getWASM() != com.google.protobuf.ByteString.EMPTY) {
+          setWASM(other.getWASM());
+        }
+        if (contractMetaBuilder_ == null) {
+          if (!other.contractMeta_.isEmpty()) {
+            if (contractMeta_.isEmpty()) {
+              contractMeta_ = other.contractMeta_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureContractMetaIsMutable();
+              contractMeta_.addAll(other.contractMeta_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.contractMeta_.isEmpty()) {
+            if (contractMetaBuilder_.isEmpty()) {
+              contractMetaBuilder_.dispose();
+              contractMetaBuilder_ = null;
+              contractMeta_ = other.contractMeta_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              contractMetaBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getContractMetaFieldBuilder() : null;
+            } else {
+              contractMetaBuilder_.addAllMessages(other.contractMeta_);
+            }
+          }
+        }
+        if (other.getGasPrice() != 0L) {
+          setGasPrice(other.getGasPrice());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getInputFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                address_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                gasLimit_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                fee_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                data_ = input.readBytes();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                wASM_ = input.readBytes();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                com.payload.PayloadProto.ContractMeta m =
+                    input.readMessage(
+                        com.payload.PayloadProto.ContractMeta.parser(),
+                        extensionRegistry);
+                if (contractMetaBuilder_ == null) {
+                  ensureContractMetaIsMutable();
+                  contractMeta_.add(m);
+                } else {
+                  contractMetaBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              case 64: {
+                gasPrice_ = input.readUInt64();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.payload.PayloadProto.TxInput input_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.TxInput, com.payload.PayloadProto.TxInput.Builder, com.payload.PayloadProto.TxInputOrBuilder> inputBuilder_;
+      /**
+       * <pre>
+       * The caller's input
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       * @return Whether the input field is set.
+       */
+      public boolean hasInput() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The caller's input
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       * @return The input.
+       */
+      public com.payload.PayloadProto.TxInput getInput() {
+        if (inputBuilder_ == null) {
+          return input_ == null ? com.payload.PayloadProto.TxInput.getDefaultInstance() : input_;
+        } else {
+          return inputBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The caller's input
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public Builder setInput(com.payload.PayloadProto.TxInput value) {
+        if (inputBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          input_ = value;
+        } else {
+          inputBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The caller's input
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public Builder setInput(
+          com.payload.PayloadProto.TxInput.Builder builderForValue) {
+        if (inputBuilder_ == null) {
+          input_ = builderForValue.build();
+        } else {
+          inputBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The caller's input
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public Builder mergeInput(com.payload.PayloadProto.TxInput value) {
+        if (inputBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            input_ != null &&
+            input_ != com.payload.PayloadProto.TxInput.getDefaultInstance()) {
+            getInputBuilder().mergeFrom(value);
+          } else {
+            input_ = value;
+          }
+        } else {
+          inputBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The caller's input
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public Builder clearInput() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        input_ = null;
+        if (inputBuilder_ != null) {
+          inputBuilder_.dispose();
+          inputBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The caller's input
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public com.payload.PayloadProto.TxInput.Builder getInputBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getInputFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The caller's input
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public com.payload.PayloadProto.TxInputOrBuilder getInputOrBuilder() {
+        if (inputBuilder_ != null) {
+          return inputBuilder_.getMessageOrBuilder();
+        } else {
+          return input_ == null ?
+              com.payload.PayloadProto.TxInput.getDefaultInstance() : input_;
+        }
+      }
+      /**
+       * <pre>
+       * The caller's input
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.TxInput, com.payload.PayloadProto.TxInput.Builder, com.payload.PayloadProto.TxInputOrBuilder> 
+          getInputFieldBuilder() {
+        if (inputBuilder_ == null) {
+          inputBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.payload.PayloadProto.TxInput, com.payload.PayloadProto.TxInput.Builder, com.payload.PayloadProto.TxInputOrBuilder>(
+                  getInput(),
+                  getParentForChildren(),
+                  isClean());
+          input_ = null;
+        }
+        return inputBuilder_;
+      }
+
+      private com.google.protobuf.ByteString address_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * The contract address to call or nil if we are creating a contract
+       * </pre>
+       *
+       * <code>bytes Address = 2 [json_name = "Address", (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address"];</code>
+       * @return The address.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getAddress() {
+        return address_;
+      }
+      /**
+       * <pre>
+       * The contract address to call or nil if we are creating a contract
+       * </pre>
+       *
+       * <code>bytes Address = 2 [json_name = "Address", (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The contract address to call or nil if we are creating a contract
+       * </pre>
+       *
+       * <code>bytes Address = 2 [json_name = "Address", (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        address_ = getDefaultInstance().getAddress();
+        onChanged();
+        return this;
+      }
+
+      private long gasLimit_ ;
+      /**
+       * <pre>
+       * The upper bound on the amount of gas (and therefore EVM execution steps) this CallTx may generate
+       * </pre>
+       *
+       * <code>uint64 GasLimit = 3 [json_name = "GasLimit"];</code>
+       * @return The gasLimit.
+       */
+      @java.lang.Override
+      public long getGasLimit() {
+        return gasLimit_;
+      }
+      /**
+       * <pre>
+       * The upper bound on the amount of gas (and therefore EVM execution steps) this CallTx may generate
+       * </pre>
+       *
+       * <code>uint64 GasLimit = 3 [json_name = "GasLimit"];</code>
+       * @param value The gasLimit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGasLimit(long value) {
+
+        gasLimit_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The upper bound on the amount of gas (and therefore EVM execution steps) this CallTx may generate
+       * </pre>
+       *
+       * <code>uint64 GasLimit = 3 [json_name = "GasLimit"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGasLimit() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        gasLimit_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long fee_ ;
+      /**
+       * <pre>
+       * Fee to offer validators for processing transaction
+       * </pre>
+       *
+       * <code>uint64 Fee = 4 [json_name = "Fee"];</code>
+       * @return The fee.
+       */
+      @java.lang.Override
+      public long getFee() {
+        return fee_;
+      }
+      /**
+       * <pre>
+       * Fee to offer validators for processing transaction
+       * </pre>
+       *
+       * <code>uint64 Fee = 4 [json_name = "Fee"];</code>
+       * @param value The fee to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFee(long value) {
+
+        fee_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Fee to offer validators for processing transaction
+       * </pre>
+       *
+       * <code>uint64 Fee = 4 [json_name = "Fee"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFee() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        fee_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * EVM bytecode
+       * </pre>
+       *
+       * <code>bytes Data = 5 [json_name = "Data", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes"];</code>
+       * @return The data.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getData() {
+        return data_;
+      }
+      /**
+       * <pre>
+       * EVM bytecode
+       * </pre>
+       *
+       * <code>bytes Data = 5 [json_name = "Data", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes"];</code>
+       * @param value The data to set.
+       * @return This builder for chaining.
+       */
+      public Builder setData(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        data_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EVM bytecode
+       * </pre>
+       *
+       * <code>bytes Data = 5 [json_name = "Data", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearData() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        data_ = getDefaultInstance().getData();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString wASM_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * WASM bytecode
+       * </pre>
+       *
+       * <code>bytes WASM = 6 [json_name = "WASM", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes", (.gogoproto.jsontag) = "tags,omitempty"];</code>
+       * @return The wASM.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getWASM() {
+        return wASM_;
+      }
+      /**
+       * <pre>
+       * WASM bytecode
+       * </pre>
+       *
+       * <code>bytes WASM = 6 [json_name = "WASM", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes", (.gogoproto.jsontag) = "tags,omitempty"];</code>
+       * @param value The wASM to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWASM(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        wASM_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * WASM bytecode
+       * </pre>
+       *
+       * <code>bytes WASM = 6 [json_name = "WASM", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes", (.gogoproto.jsontag) = "tags,omitempty"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWASM() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        wASM_ = getDefaultInstance().getWASM();
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.payload.PayloadProto.ContractMeta> contractMeta_ =
+        java.util.Collections.emptyList();
+      private void ensureContractMetaIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          contractMeta_ = new java.util.ArrayList<com.payload.PayloadProto.ContractMeta>(contractMeta_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.payload.PayloadProto.ContractMeta, com.payload.PayloadProto.ContractMeta.Builder, com.payload.PayloadProto.ContractMetaOrBuilder> contractMetaBuilder_;
+
+      /**
+       * <pre>
+       * Set of contracts this code will deploy
+       * </pre>
+       *
+       * <code>repeated .payload.ContractMeta ContractMeta = 7 [json_name = "ContractMeta"];</code>
+       */
+      public java.util.List<com.payload.PayloadProto.ContractMeta> getContractMetaList() {
+        if (contractMetaBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(contractMeta_);
+        } else {
+          return contractMetaBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Set of contracts this code will deploy
+       * </pre>
+       *
+       * <code>repeated .payload.ContractMeta ContractMeta = 7 [json_name = "ContractMeta"];</code>
+       */
+      public int getContractMetaCount() {
+        if (contractMetaBuilder_ == null) {
+          return contractMeta_.size();
+        } else {
+          return contractMetaBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Set of contracts this code will deploy
+       * </pre>
+       *
+       * <code>repeated .payload.ContractMeta ContractMeta = 7 [json_name = "ContractMeta"];</code>
+       */
+      public com.payload.PayloadProto.ContractMeta getContractMeta(int index) {
+        if (contractMetaBuilder_ == null) {
+          return contractMeta_.get(index);
+        } else {
+          return contractMetaBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Set of contracts this code will deploy
+       * </pre>
+       *
+       * <code>repeated .payload.ContractMeta ContractMeta = 7 [json_name = "ContractMeta"];</code>
+       */
+      public Builder setContractMeta(
+          int index, com.payload.PayloadProto.ContractMeta value) {
+        if (contractMetaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContractMetaIsMutable();
+          contractMeta_.set(index, value);
+          onChanged();
+        } else {
+          contractMetaBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of contracts this code will deploy
+       * </pre>
+       *
+       * <code>repeated .payload.ContractMeta ContractMeta = 7 [json_name = "ContractMeta"];</code>
+       */
+      public Builder setContractMeta(
+          int index, com.payload.PayloadProto.ContractMeta.Builder builderForValue) {
+        if (contractMetaBuilder_ == null) {
+          ensureContractMetaIsMutable();
+          contractMeta_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          contractMetaBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of contracts this code will deploy
+       * </pre>
+       *
+       * <code>repeated .payload.ContractMeta ContractMeta = 7 [json_name = "ContractMeta"];</code>
+       */
+      public Builder addContractMeta(com.payload.PayloadProto.ContractMeta value) {
+        if (contractMetaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContractMetaIsMutable();
+          contractMeta_.add(value);
+          onChanged();
+        } else {
+          contractMetaBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of contracts this code will deploy
+       * </pre>
+       *
+       * <code>repeated .payload.ContractMeta ContractMeta = 7 [json_name = "ContractMeta"];</code>
+       */
+      public Builder addContractMeta(
+          int index, com.payload.PayloadProto.ContractMeta value) {
+        if (contractMetaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContractMetaIsMutable();
+          contractMeta_.add(index, value);
+          onChanged();
+        } else {
+          contractMetaBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of contracts this code will deploy
+       * </pre>
+       *
+       * <code>repeated .payload.ContractMeta ContractMeta = 7 [json_name = "ContractMeta"];</code>
+       */
+      public Builder addContractMeta(
+          com.payload.PayloadProto.ContractMeta.Builder builderForValue) {
+        if (contractMetaBuilder_ == null) {
+          ensureContractMetaIsMutable();
+          contractMeta_.add(builderForValue.build());
+          onChanged();
+        } else {
+          contractMetaBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of contracts this code will deploy
+       * </pre>
+       *
+       * <code>repeated .payload.ContractMeta ContractMeta = 7 [json_name = "ContractMeta"];</code>
+       */
+      public Builder addContractMeta(
+          int index, com.payload.PayloadProto.ContractMeta.Builder builderForValue) {
+        if (contractMetaBuilder_ == null) {
+          ensureContractMetaIsMutable();
+          contractMeta_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          contractMetaBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of contracts this code will deploy
+       * </pre>
+       *
+       * <code>repeated .payload.ContractMeta ContractMeta = 7 [json_name = "ContractMeta"];</code>
+       */
+      public Builder addAllContractMeta(
+          java.lang.Iterable<? extends com.payload.PayloadProto.ContractMeta> values) {
+        if (contractMetaBuilder_ == null) {
+          ensureContractMetaIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, contractMeta_);
+          onChanged();
+        } else {
+          contractMetaBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of contracts this code will deploy
+       * </pre>
+       *
+       * <code>repeated .payload.ContractMeta ContractMeta = 7 [json_name = "ContractMeta"];</code>
+       */
+      public Builder clearContractMeta() {
+        if (contractMetaBuilder_ == null) {
+          contractMeta_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          contractMetaBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of contracts this code will deploy
+       * </pre>
+       *
+       * <code>repeated .payload.ContractMeta ContractMeta = 7 [json_name = "ContractMeta"];</code>
+       */
+      public Builder removeContractMeta(int index) {
+        if (contractMetaBuilder_ == null) {
+          ensureContractMetaIsMutable();
+          contractMeta_.remove(index);
+          onChanged();
+        } else {
+          contractMetaBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of contracts this code will deploy
+       * </pre>
+       *
+       * <code>repeated .payload.ContractMeta ContractMeta = 7 [json_name = "ContractMeta"];</code>
+       */
+      public com.payload.PayloadProto.ContractMeta.Builder getContractMetaBuilder(
+          int index) {
+        return getContractMetaFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Set of contracts this code will deploy
+       * </pre>
+       *
+       * <code>repeated .payload.ContractMeta ContractMeta = 7 [json_name = "ContractMeta"];</code>
+       */
+      public com.payload.PayloadProto.ContractMetaOrBuilder getContractMetaOrBuilder(
+          int index) {
+        if (contractMetaBuilder_ == null) {
+          return contractMeta_.get(index);  } else {
+          return contractMetaBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Set of contracts this code will deploy
+       * </pre>
+       *
+       * <code>repeated .payload.ContractMeta ContractMeta = 7 [json_name = "ContractMeta"];</code>
+       */
+      public java.util.List<? extends com.payload.PayloadProto.ContractMetaOrBuilder> 
+           getContractMetaOrBuilderList() {
+        if (contractMetaBuilder_ != null) {
+          return contractMetaBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(contractMeta_);
+        }
+      }
+      /**
+       * <pre>
+       * Set of contracts this code will deploy
+       * </pre>
+       *
+       * <code>repeated .payload.ContractMeta ContractMeta = 7 [json_name = "ContractMeta"];</code>
+       */
+      public com.payload.PayloadProto.ContractMeta.Builder addContractMetaBuilder() {
+        return getContractMetaFieldBuilder().addBuilder(
+            com.payload.PayloadProto.ContractMeta.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Set of contracts this code will deploy
+       * </pre>
+       *
+       * <code>repeated .payload.ContractMeta ContractMeta = 7 [json_name = "ContractMeta"];</code>
+       */
+      public com.payload.PayloadProto.ContractMeta.Builder addContractMetaBuilder(
+          int index) {
+        return getContractMetaFieldBuilder().addBuilder(
+            index, com.payload.PayloadProto.ContractMeta.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Set of contracts this code will deploy
+       * </pre>
+       *
+       * <code>repeated .payload.ContractMeta ContractMeta = 7 [json_name = "ContractMeta"];</code>
+       */
+      public java.util.List<com.payload.PayloadProto.ContractMeta.Builder> 
+           getContractMetaBuilderList() {
+        return getContractMetaFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.payload.PayloadProto.ContractMeta, com.payload.PayloadProto.ContractMeta.Builder, com.payload.PayloadProto.ContractMetaOrBuilder> 
+          getContractMetaFieldBuilder() {
+        if (contractMetaBuilder_ == null) {
+          contractMetaBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.payload.PayloadProto.ContractMeta, com.payload.PayloadProto.ContractMeta.Builder, com.payload.PayloadProto.ContractMetaOrBuilder>(
+                  contractMeta_,
+                  ((bitField0_ & 0x00000040) != 0),
+                  getParentForChildren(),
+                  isClean());
+          contractMeta_ = null;
+        }
+        return contractMetaBuilder_;
+      }
+
+      private long gasPrice_ ;
+      /**
+       * <pre>
+       * The upper bound on the price per unit of gas
+       * </pre>
+       *
+       * <code>uint64 GasPrice = 8 [json_name = "GasPrice"];</code>
+       * @return The gasPrice.
+       */
+      @java.lang.Override
+      public long getGasPrice() {
+        return gasPrice_;
+      }
+      /**
+       * <pre>
+       * The upper bound on the price per unit of gas
+       * </pre>
+       *
+       * <code>uint64 GasPrice = 8 [json_name = "GasPrice"];</code>
+       * @param value The gasPrice to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGasPrice(long value) {
+
+        gasPrice_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The upper bound on the price per unit of gas
+       * </pre>
+       *
+       * <code>uint64 GasPrice = 8 [json_name = "GasPrice"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGasPrice() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        gasPrice_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:payload.CallTx)
+    }
+
+    // @@protoc_insertion_point(class_scope:payload.CallTx)
+    private static final com.payload.PayloadProto.CallTx DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.payload.PayloadProto.CallTx();
+    }
+
+    public static com.payload.PayloadProto.CallTx getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CallTx>
+        PARSER = new com.google.protobuf.AbstractParser<CallTx>() {
+      @java.lang.Override
+      public CallTx parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CallTx> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CallTx> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.payload.PayloadProto.CallTx getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ContractMetaOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payload.ContractMeta)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes CodeHash = 1 [json_name = "CodeHash", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes"];</code>
+     * @return The codeHash.
+     */
+    com.google.protobuf.ByteString getCodeHash();
+
+    /**
+     * <code>string Meta = 2 [json_name = "Meta"];</code>
+     * @return The meta.
+     */
+    java.lang.String getMeta();
+    /**
+     * <code>string Meta = 2 [json_name = "Meta"];</code>
+     * @return The bytes for meta.
+     */
+    com.google.protobuf.ByteString
+        getMetaBytes();
+  }
+  /**
+   * Protobuf type {@code payload.ContractMeta}
+   */
+  public static final class ContractMeta extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:payload.ContractMeta)
+      ContractMetaOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ContractMeta.newBuilder() to construct.
+    private ContractMeta(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ContractMeta() {
+      codeHash_ = com.google.protobuf.ByteString.EMPTY;
+      meta_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ContractMeta();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.payload.PayloadProto.internal_static_payload_ContractMeta_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.payload.PayloadProto.internal_static_payload_ContractMeta_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.payload.PayloadProto.ContractMeta.class, com.payload.PayloadProto.ContractMeta.Builder.class);
+    }
+
+    public static final int CODEHASH_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString codeHash_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes CodeHash = 1 [json_name = "CodeHash", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes"];</code>
+     * @return The codeHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getCodeHash() {
+      return codeHash_;
+    }
+
+    public static final int META_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object meta_ = "";
+    /**
+     * <code>string Meta = 2 [json_name = "Meta"];</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public java.lang.String getMeta() {
+      java.lang.Object ref = meta_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        meta_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string Meta = 2 [json_name = "Meta"];</code>
+     * @return The bytes for meta.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMetaBytes() {
+      java.lang.Object ref = meta_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        meta_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!codeHash_.isEmpty()) {
+        output.writeBytes(1, codeHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(meta_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, meta_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!codeHash_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, codeHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(meta_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, meta_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.payload.PayloadProto.ContractMeta)) {
+        return super.equals(obj);
+      }
+      com.payload.PayloadProto.ContractMeta other = (com.payload.PayloadProto.ContractMeta) obj;
+
+      if (!getCodeHash()
+          .equals(other.getCodeHash())) return false;
+      if (!getMeta()
+          .equals(other.getMeta())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CODEHASH_FIELD_NUMBER;
+      hash = (53 * hash) + getCodeHash().hashCode();
+      hash = (37 * hash) + META_FIELD_NUMBER;
+      hash = (53 * hash) + getMeta().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.payload.PayloadProto.ContractMeta parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.ContractMeta parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.ContractMeta parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.ContractMeta parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.ContractMeta parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.ContractMeta parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.ContractMeta parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.ContractMeta parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.payload.PayloadProto.ContractMeta parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.payload.PayloadProto.ContractMeta parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.ContractMeta parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.ContractMeta parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.payload.PayloadProto.ContractMeta prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code payload.ContractMeta}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:payload.ContractMeta)
+        com.payload.PayloadProto.ContractMetaOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.payload.PayloadProto.internal_static_payload_ContractMeta_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.payload.PayloadProto.internal_static_payload_ContractMeta_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.payload.PayloadProto.ContractMeta.class, com.payload.PayloadProto.ContractMeta.Builder.class);
+      }
+
+      // Construct using com.payload.PayloadProto.ContractMeta.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        codeHash_ = com.google.protobuf.ByteString.EMPTY;
+        meta_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.payload.PayloadProto.internal_static_payload_ContractMeta_descriptor;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.ContractMeta getDefaultInstanceForType() {
+        return com.payload.PayloadProto.ContractMeta.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.ContractMeta build() {
+        com.payload.PayloadProto.ContractMeta result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.ContractMeta buildPartial() {
+        com.payload.PayloadProto.ContractMeta result = new com.payload.PayloadProto.ContractMeta(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.payload.PayloadProto.ContractMeta result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.codeHash_ = codeHash_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.meta_ = meta_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.payload.PayloadProto.ContractMeta) {
+          return mergeFrom((com.payload.PayloadProto.ContractMeta)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.payload.PayloadProto.ContractMeta other) {
+        if (other == com.payload.PayloadProto.ContractMeta.getDefaultInstance()) return this;
+        if (other.getCodeHash() != com.google.protobuf.ByteString.EMPTY) {
+          setCodeHash(other.getCodeHash());
+        }
+        if (!other.getMeta().isEmpty()) {
+          meta_ = other.meta_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                codeHash_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                meta_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString codeHash_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes CodeHash = 1 [json_name = "CodeHash", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes"];</code>
+       * @return The codeHash.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getCodeHash() {
+        return codeHash_;
+      }
+      /**
+       * <code>bytes CodeHash = 1 [json_name = "CodeHash", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes"];</code>
+       * @param value The codeHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCodeHash(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        codeHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes CodeHash = 1 [json_name = "CodeHash", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCodeHash() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        codeHash_ = getDefaultInstance().getCodeHash();
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object meta_ = "";
+      /**
+       * <code>string Meta = 2 [json_name = "Meta"];</code>
+       * @return The meta.
+       */
+      public java.lang.String getMeta() {
+        java.lang.Object ref = meta_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          meta_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string Meta = 2 [json_name = "Meta"];</code>
+       * @return The bytes for meta.
+       */
+      public com.google.protobuf.ByteString
+          getMetaBytes() {
+        java.lang.Object ref = meta_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          meta_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string Meta = 2 [json_name = "Meta"];</code>
+       * @param value The meta to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMeta(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        meta_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string Meta = 2 [json_name = "Meta"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMeta() {
+        meta_ = getDefaultInstance().getMeta();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string Meta = 2 [json_name = "Meta"];</code>
+       * @param value The bytes for meta to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetaBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        meta_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:payload.ContractMeta)
+    }
+
+    // @@protoc_insertion_point(class_scope:payload.ContractMeta)
+    private static final com.payload.PayloadProto.ContractMeta DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.payload.PayloadProto.ContractMeta();
+    }
+
+    public static com.payload.PayloadProto.ContractMeta getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ContractMeta>
+        PARSER = new com.google.protobuf.AbstractParser<ContractMeta>() {
+      @java.lang.Override
+      public ContractMeta parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ContractMeta> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ContractMeta> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.payload.PayloadProto.ContractMeta getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SendTxOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payload.SendTx)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The payers
+     * </pre>
+     *
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    java.util.List<com.payload.PayloadProto.TxInput> 
+        getInputsList();
+    /**
+     * <pre>
+     * The payers
+     * </pre>
+     *
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    com.payload.PayloadProto.TxInput getInputs(int index);
+    /**
+     * <pre>
+     * The payers
+     * </pre>
+     *
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    int getInputsCount();
+    /**
+     * <pre>
+     * The payers
+     * </pre>
+     *
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    java.util.List<? extends com.payload.PayloadProto.TxInputOrBuilder> 
+        getInputsOrBuilderList();
+    /**
+     * <pre>
+     * The payers
+     * </pre>
+     *
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    com.payload.PayloadProto.TxInputOrBuilder getInputsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * The payees
+     * </pre>
+     *
+     * <code>repeated .payload.TxOutput Outputs = 2 [json_name = "Outputs"];</code>
+     */
+    java.util.List<com.payload.PayloadProto.TxOutput> 
+        getOutputsList();
+    /**
+     * <pre>
+     * The payees
+     * </pre>
+     *
+     * <code>repeated .payload.TxOutput Outputs = 2 [json_name = "Outputs"];</code>
+     */
+    com.payload.PayloadProto.TxOutput getOutputs(int index);
+    /**
+     * <pre>
+     * The payees
+     * </pre>
+     *
+     * <code>repeated .payload.TxOutput Outputs = 2 [json_name = "Outputs"];</code>
+     */
+    int getOutputsCount();
+    /**
+     * <pre>
+     * The payees
+     * </pre>
+     *
+     * <code>repeated .payload.TxOutput Outputs = 2 [json_name = "Outputs"];</code>
+     */
+    java.util.List<? extends com.payload.PayloadProto.TxOutputOrBuilder> 
+        getOutputsOrBuilderList();
+    /**
+     * <pre>
+     * The payees
+     * </pre>
+     *
+     * <code>repeated .payload.TxOutput Outputs = 2 [json_name = "Outputs"];</code>
+     */
+    com.payload.PayloadProto.TxOutputOrBuilder getOutputsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * A payment between two sets of parties
+   * </pre>
+   *
+   * Protobuf type {@code payload.SendTx}
+   */
+  public static final class SendTx extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:payload.SendTx)
+      SendTxOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SendTx.newBuilder() to construct.
+    private SendTx(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SendTx() {
+      inputs_ = java.util.Collections.emptyList();
+      outputs_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SendTx();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.payload.PayloadProto.internal_static_payload_SendTx_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.payload.PayloadProto.internal_static_payload_SendTx_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.payload.PayloadProto.SendTx.class, com.payload.PayloadProto.SendTx.Builder.class);
+    }
+
+    public static final int INPUTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.payload.PayloadProto.TxInput> inputs_;
+    /**
+     * <pre>
+     * The payers
+     * </pre>
+     *
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.payload.PayloadProto.TxInput> getInputsList() {
+      return inputs_;
+    }
+    /**
+     * <pre>
+     * The payers
+     * </pre>
+     *
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.payload.PayloadProto.TxInputOrBuilder> 
+        getInputsOrBuilderList() {
+      return inputs_;
+    }
+    /**
+     * <pre>
+     * The payers
+     * </pre>
+     *
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    @java.lang.Override
+    public int getInputsCount() {
+      return inputs_.size();
+    }
+    /**
+     * <pre>
+     * The payers
+     * </pre>
+     *
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.TxInput getInputs(int index) {
+      return inputs_.get(index);
+    }
+    /**
+     * <pre>
+     * The payers
+     * </pre>
+     *
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.TxInputOrBuilder getInputsOrBuilder(
+        int index) {
+      return inputs_.get(index);
+    }
+
+    public static final int OUTPUTS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.payload.PayloadProto.TxOutput> outputs_;
+    /**
+     * <pre>
+     * The payees
+     * </pre>
+     *
+     * <code>repeated .payload.TxOutput Outputs = 2 [json_name = "Outputs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.payload.PayloadProto.TxOutput> getOutputsList() {
+      return outputs_;
+    }
+    /**
+     * <pre>
+     * The payees
+     * </pre>
+     *
+     * <code>repeated .payload.TxOutput Outputs = 2 [json_name = "Outputs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.payload.PayloadProto.TxOutputOrBuilder> 
+        getOutputsOrBuilderList() {
+      return outputs_;
+    }
+    /**
+     * <pre>
+     * The payees
+     * </pre>
+     *
+     * <code>repeated .payload.TxOutput Outputs = 2 [json_name = "Outputs"];</code>
+     */
+    @java.lang.Override
+    public int getOutputsCount() {
+      return outputs_.size();
+    }
+    /**
+     * <pre>
+     * The payees
+     * </pre>
+     *
+     * <code>repeated .payload.TxOutput Outputs = 2 [json_name = "Outputs"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.TxOutput getOutputs(int index) {
+      return outputs_.get(index);
+    }
+    /**
+     * <pre>
+     * The payees
+     * </pre>
+     *
+     * <code>repeated .payload.TxOutput Outputs = 2 [json_name = "Outputs"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.TxOutputOrBuilder getOutputsOrBuilder(
+        int index) {
+      return outputs_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < inputs_.size(); i++) {
+        output.writeMessage(1, inputs_.get(i));
+      }
+      for (int i = 0; i < outputs_.size(); i++) {
+        output.writeMessage(2, outputs_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < inputs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, inputs_.get(i));
+      }
+      for (int i = 0; i < outputs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, outputs_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.payload.PayloadProto.SendTx)) {
+        return super.equals(obj);
+      }
+      com.payload.PayloadProto.SendTx other = (com.payload.PayloadProto.SendTx) obj;
+
+      if (!getInputsList()
+          .equals(other.getInputsList())) return false;
+      if (!getOutputsList()
+          .equals(other.getOutputsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getInputsCount() > 0) {
+        hash = (37 * hash) + INPUTS_FIELD_NUMBER;
+        hash = (53 * hash) + getInputsList().hashCode();
+      }
+      if (getOutputsCount() > 0) {
+        hash = (37 * hash) + OUTPUTS_FIELD_NUMBER;
+        hash = (53 * hash) + getOutputsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.payload.PayloadProto.SendTx parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.SendTx parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.SendTx parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.SendTx parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.SendTx parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.SendTx parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.SendTx parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.SendTx parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.payload.PayloadProto.SendTx parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.payload.PayloadProto.SendTx parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.SendTx parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.SendTx parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.payload.PayloadProto.SendTx prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * A payment between two sets of parties
+     * </pre>
+     *
+     * Protobuf type {@code payload.SendTx}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:payload.SendTx)
+        com.payload.PayloadProto.SendTxOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.payload.PayloadProto.internal_static_payload_SendTx_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.payload.PayloadProto.internal_static_payload_SendTx_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.payload.PayloadProto.SendTx.class, com.payload.PayloadProto.SendTx.Builder.class);
+      }
+
+      // Construct using com.payload.PayloadProto.SendTx.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (inputsBuilder_ == null) {
+          inputs_ = java.util.Collections.emptyList();
+        } else {
+          inputs_ = null;
+          inputsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (outputsBuilder_ == null) {
+          outputs_ = java.util.Collections.emptyList();
+        } else {
+          outputs_ = null;
+          outputsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.payload.PayloadProto.internal_static_payload_SendTx_descriptor;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.SendTx getDefaultInstanceForType() {
+        return com.payload.PayloadProto.SendTx.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.SendTx build() {
+        com.payload.PayloadProto.SendTx result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.SendTx buildPartial() {
+        com.payload.PayloadProto.SendTx result = new com.payload.PayloadProto.SendTx(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.payload.PayloadProto.SendTx result) {
+        if (inputsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            inputs_ = java.util.Collections.unmodifiableList(inputs_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.inputs_ = inputs_;
+        } else {
+          result.inputs_ = inputsBuilder_.build();
+        }
+        if (outputsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            outputs_ = java.util.Collections.unmodifiableList(outputs_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.outputs_ = outputs_;
+        } else {
+          result.outputs_ = outputsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.payload.PayloadProto.SendTx result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.payload.PayloadProto.SendTx) {
+          return mergeFrom((com.payload.PayloadProto.SendTx)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.payload.PayloadProto.SendTx other) {
+        if (other == com.payload.PayloadProto.SendTx.getDefaultInstance()) return this;
+        if (inputsBuilder_ == null) {
+          if (!other.inputs_.isEmpty()) {
+            if (inputs_.isEmpty()) {
+              inputs_ = other.inputs_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureInputsIsMutable();
+              inputs_.addAll(other.inputs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.inputs_.isEmpty()) {
+            if (inputsBuilder_.isEmpty()) {
+              inputsBuilder_.dispose();
+              inputsBuilder_ = null;
+              inputs_ = other.inputs_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              inputsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getInputsFieldBuilder() : null;
+            } else {
+              inputsBuilder_.addAllMessages(other.inputs_);
+            }
+          }
+        }
+        if (outputsBuilder_ == null) {
+          if (!other.outputs_.isEmpty()) {
+            if (outputs_.isEmpty()) {
+              outputs_ = other.outputs_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureOutputsIsMutable();
+              outputs_.addAll(other.outputs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.outputs_.isEmpty()) {
+            if (outputsBuilder_.isEmpty()) {
+              outputsBuilder_.dispose();
+              outputsBuilder_ = null;
+              outputs_ = other.outputs_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              outputsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOutputsFieldBuilder() : null;
+            } else {
+              outputsBuilder_.addAllMessages(other.outputs_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.payload.PayloadProto.TxInput m =
+                    input.readMessage(
+                        com.payload.PayloadProto.TxInput.parser(),
+                        extensionRegistry);
+                if (inputsBuilder_ == null) {
+                  ensureInputsIsMutable();
+                  inputs_.add(m);
+                } else {
+                  inputsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                com.payload.PayloadProto.TxOutput m =
+                    input.readMessage(
+                        com.payload.PayloadProto.TxOutput.parser(),
+                        extensionRegistry);
+                if (outputsBuilder_ == null) {
+                  ensureOutputsIsMutable();
+                  outputs_.add(m);
+                } else {
+                  outputsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.payload.PayloadProto.TxInput> inputs_ =
+        java.util.Collections.emptyList();
+      private void ensureInputsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          inputs_ = new java.util.ArrayList<com.payload.PayloadProto.TxInput>(inputs_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.payload.PayloadProto.TxInput, com.payload.PayloadProto.TxInput.Builder, com.payload.PayloadProto.TxInputOrBuilder> inputsBuilder_;
+
+      /**
+       * <pre>
+       * The payers
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public java.util.List<com.payload.PayloadProto.TxInput> getInputsList() {
+        if (inputsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(inputs_);
+        } else {
+          return inputsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * The payers
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public int getInputsCount() {
+        if (inputsBuilder_ == null) {
+          return inputs_.size();
+        } else {
+          return inputsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * The payers
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public com.payload.PayloadProto.TxInput getInputs(int index) {
+        if (inputsBuilder_ == null) {
+          return inputs_.get(index);
+        } else {
+          return inputsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * The payers
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder setInputs(
+          int index, com.payload.PayloadProto.TxInput value) {
+        if (inputsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputsIsMutable();
+          inputs_.set(index, value);
+          onChanged();
+        } else {
+          inputsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The payers
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder setInputs(
+          int index, com.payload.PayloadProto.TxInput.Builder builderForValue) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          inputsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The payers
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder addInputs(com.payload.PayloadProto.TxInput value) {
+        if (inputsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputsIsMutable();
+          inputs_.add(value);
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The payers
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder addInputs(
+          int index, com.payload.PayloadProto.TxInput value) {
+        if (inputsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputsIsMutable();
+          inputs_.add(index, value);
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The payers
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder addInputs(
+          com.payload.PayloadProto.TxInput.Builder builderForValue) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The payers
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder addInputs(
+          int index, com.payload.PayloadProto.TxInput.Builder builderForValue) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The payers
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder addAllInputs(
+          java.lang.Iterable<? extends com.payload.PayloadProto.TxInput> values) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, inputs_);
+          onChanged();
+        } else {
+          inputsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The payers
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder clearInputs() {
+        if (inputsBuilder_ == null) {
+          inputs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          inputsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The payers
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder removeInputs(int index) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.remove(index);
+          onChanged();
+        } else {
+          inputsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The payers
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public com.payload.PayloadProto.TxInput.Builder getInputsBuilder(
+          int index) {
+        return getInputsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * The payers
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public com.payload.PayloadProto.TxInputOrBuilder getInputsOrBuilder(
+          int index) {
+        if (inputsBuilder_ == null) {
+          return inputs_.get(index);  } else {
+          return inputsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * The payers
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public java.util.List<? extends com.payload.PayloadProto.TxInputOrBuilder> 
+           getInputsOrBuilderList() {
+        if (inputsBuilder_ != null) {
+          return inputsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(inputs_);
+        }
+      }
+      /**
+       * <pre>
+       * The payers
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public com.payload.PayloadProto.TxInput.Builder addInputsBuilder() {
+        return getInputsFieldBuilder().addBuilder(
+            com.payload.PayloadProto.TxInput.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * The payers
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public com.payload.PayloadProto.TxInput.Builder addInputsBuilder(
+          int index) {
+        return getInputsFieldBuilder().addBuilder(
+            index, com.payload.PayloadProto.TxInput.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * The payers
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public java.util.List<com.payload.PayloadProto.TxInput.Builder> 
+           getInputsBuilderList() {
+        return getInputsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.payload.PayloadProto.TxInput, com.payload.PayloadProto.TxInput.Builder, com.payload.PayloadProto.TxInputOrBuilder> 
+          getInputsFieldBuilder() {
+        if (inputsBuilder_ == null) {
+          inputsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.payload.PayloadProto.TxInput, com.payload.PayloadProto.TxInput.Builder, com.payload.PayloadProto.TxInputOrBuilder>(
+                  inputs_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          inputs_ = null;
+        }
+        return inputsBuilder_;
+      }
+
+      private java.util.List<com.payload.PayloadProto.TxOutput> outputs_ =
+        java.util.Collections.emptyList();
+      private void ensureOutputsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          outputs_ = new java.util.ArrayList<com.payload.PayloadProto.TxOutput>(outputs_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.payload.PayloadProto.TxOutput, com.payload.PayloadProto.TxOutput.Builder, com.payload.PayloadProto.TxOutputOrBuilder> outputsBuilder_;
+
+      /**
+       * <pre>
+       * The payees
+       * </pre>
+       *
+       * <code>repeated .payload.TxOutput Outputs = 2 [json_name = "Outputs"];</code>
+       */
+      public java.util.List<com.payload.PayloadProto.TxOutput> getOutputsList() {
+        if (outputsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(outputs_);
+        } else {
+          return outputsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * The payees
+       * </pre>
+       *
+       * <code>repeated .payload.TxOutput Outputs = 2 [json_name = "Outputs"];</code>
+       */
+      public int getOutputsCount() {
+        if (outputsBuilder_ == null) {
+          return outputs_.size();
+        } else {
+          return outputsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * The payees
+       * </pre>
+       *
+       * <code>repeated .payload.TxOutput Outputs = 2 [json_name = "Outputs"];</code>
+       */
+      public com.payload.PayloadProto.TxOutput getOutputs(int index) {
+        if (outputsBuilder_ == null) {
+          return outputs_.get(index);
+        } else {
+          return outputsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * The payees
+       * </pre>
+       *
+       * <code>repeated .payload.TxOutput Outputs = 2 [json_name = "Outputs"];</code>
+       */
+      public Builder setOutputs(
+          int index, com.payload.PayloadProto.TxOutput value) {
+        if (outputsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOutputsIsMutable();
+          outputs_.set(index, value);
+          onChanged();
+        } else {
+          outputsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The payees
+       * </pre>
+       *
+       * <code>repeated .payload.TxOutput Outputs = 2 [json_name = "Outputs"];</code>
+       */
+      public Builder setOutputs(
+          int index, com.payload.PayloadProto.TxOutput.Builder builderForValue) {
+        if (outputsBuilder_ == null) {
+          ensureOutputsIsMutable();
+          outputs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          outputsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The payees
+       * </pre>
+       *
+       * <code>repeated .payload.TxOutput Outputs = 2 [json_name = "Outputs"];</code>
+       */
+      public Builder addOutputs(com.payload.PayloadProto.TxOutput value) {
+        if (outputsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOutputsIsMutable();
+          outputs_.add(value);
+          onChanged();
+        } else {
+          outputsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The payees
+       * </pre>
+       *
+       * <code>repeated .payload.TxOutput Outputs = 2 [json_name = "Outputs"];</code>
+       */
+      public Builder addOutputs(
+          int index, com.payload.PayloadProto.TxOutput value) {
+        if (outputsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOutputsIsMutable();
+          outputs_.add(index, value);
+          onChanged();
+        } else {
+          outputsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The payees
+       * </pre>
+       *
+       * <code>repeated .payload.TxOutput Outputs = 2 [json_name = "Outputs"];</code>
+       */
+      public Builder addOutputs(
+          com.payload.PayloadProto.TxOutput.Builder builderForValue) {
+        if (outputsBuilder_ == null) {
+          ensureOutputsIsMutable();
+          outputs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          outputsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The payees
+       * </pre>
+       *
+       * <code>repeated .payload.TxOutput Outputs = 2 [json_name = "Outputs"];</code>
+       */
+      public Builder addOutputs(
+          int index, com.payload.PayloadProto.TxOutput.Builder builderForValue) {
+        if (outputsBuilder_ == null) {
+          ensureOutputsIsMutable();
+          outputs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          outputsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The payees
+       * </pre>
+       *
+       * <code>repeated .payload.TxOutput Outputs = 2 [json_name = "Outputs"];</code>
+       */
+      public Builder addAllOutputs(
+          java.lang.Iterable<? extends com.payload.PayloadProto.TxOutput> values) {
+        if (outputsBuilder_ == null) {
+          ensureOutputsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, outputs_);
+          onChanged();
+        } else {
+          outputsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The payees
+       * </pre>
+       *
+       * <code>repeated .payload.TxOutput Outputs = 2 [json_name = "Outputs"];</code>
+       */
+      public Builder clearOutputs() {
+        if (outputsBuilder_ == null) {
+          outputs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          outputsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The payees
+       * </pre>
+       *
+       * <code>repeated .payload.TxOutput Outputs = 2 [json_name = "Outputs"];</code>
+       */
+      public Builder removeOutputs(int index) {
+        if (outputsBuilder_ == null) {
+          ensureOutputsIsMutable();
+          outputs_.remove(index);
+          onChanged();
+        } else {
+          outputsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The payees
+       * </pre>
+       *
+       * <code>repeated .payload.TxOutput Outputs = 2 [json_name = "Outputs"];</code>
+       */
+      public com.payload.PayloadProto.TxOutput.Builder getOutputsBuilder(
+          int index) {
+        return getOutputsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * The payees
+       * </pre>
+       *
+       * <code>repeated .payload.TxOutput Outputs = 2 [json_name = "Outputs"];</code>
+       */
+      public com.payload.PayloadProto.TxOutputOrBuilder getOutputsOrBuilder(
+          int index) {
+        if (outputsBuilder_ == null) {
+          return outputs_.get(index);  } else {
+          return outputsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * The payees
+       * </pre>
+       *
+       * <code>repeated .payload.TxOutput Outputs = 2 [json_name = "Outputs"];</code>
+       */
+      public java.util.List<? extends com.payload.PayloadProto.TxOutputOrBuilder> 
+           getOutputsOrBuilderList() {
+        if (outputsBuilder_ != null) {
+          return outputsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(outputs_);
+        }
+      }
+      /**
+       * <pre>
+       * The payees
+       * </pre>
+       *
+       * <code>repeated .payload.TxOutput Outputs = 2 [json_name = "Outputs"];</code>
+       */
+      public com.payload.PayloadProto.TxOutput.Builder addOutputsBuilder() {
+        return getOutputsFieldBuilder().addBuilder(
+            com.payload.PayloadProto.TxOutput.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * The payees
+       * </pre>
+       *
+       * <code>repeated .payload.TxOutput Outputs = 2 [json_name = "Outputs"];</code>
+       */
+      public com.payload.PayloadProto.TxOutput.Builder addOutputsBuilder(
+          int index) {
+        return getOutputsFieldBuilder().addBuilder(
+            index, com.payload.PayloadProto.TxOutput.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * The payees
+       * </pre>
+       *
+       * <code>repeated .payload.TxOutput Outputs = 2 [json_name = "Outputs"];</code>
+       */
+      public java.util.List<com.payload.PayloadProto.TxOutput.Builder> 
+           getOutputsBuilderList() {
+        return getOutputsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.payload.PayloadProto.TxOutput, com.payload.PayloadProto.TxOutput.Builder, com.payload.PayloadProto.TxOutputOrBuilder> 
+          getOutputsFieldBuilder() {
+        if (outputsBuilder_ == null) {
+          outputsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.payload.PayloadProto.TxOutput, com.payload.PayloadProto.TxOutput.Builder, com.payload.PayloadProto.TxOutputOrBuilder>(
+                  outputs_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          outputs_ = null;
+        }
+        return outputsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:payload.SendTx)
+    }
+
+    // @@protoc_insertion_point(class_scope:payload.SendTx)
+    private static final com.payload.PayloadProto.SendTx DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.payload.PayloadProto.SendTx();
+    }
+
+    public static com.payload.PayloadProto.SendTx getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SendTx>
+        PARSER = new com.google.protobuf.AbstractParser<SendTx>() {
+      @java.lang.Override
+      public SendTx parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SendTx> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SendTx> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.payload.PayloadProto.SendTx getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PermsTxOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payload.PermsTx)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The permission moderator
+     * </pre>
+     *
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     * @return Whether the input field is set.
+     */
+    boolean hasInput();
+    /**
+     * <pre>
+     * The permission moderator
+     * </pre>
+     *
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     * @return The input.
+     */
+    com.payload.PayloadProto.TxInput getInput();
+    /**
+     * <pre>
+     * The permission moderator
+     * </pre>
+     *
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     */
+    com.payload.PayloadProto.TxInputOrBuilder getInputOrBuilder();
+
+    /**
+     * <pre>
+     * The modified permissions
+     * </pre>
+     *
+     * <code>.permission.PermArgs PermArgs = 2 [json_name = "PermArgs", (.gogoproto.nullable) = false];</code>
+     * @return Whether the permArgs field is set.
+     */
+    boolean hasPermArgs();
+    /**
+     * <pre>
+     * The modified permissions
+     * </pre>
+     *
+     * <code>.permission.PermArgs PermArgs = 2 [json_name = "PermArgs", (.gogoproto.nullable) = false];</code>
+     * @return The permArgs.
+     */
+    com.permission.PermissionProto.PermArgs getPermArgs();
+    /**
+     * <pre>
+     * The modified permissions
+     * </pre>
+     *
+     * <code>.permission.PermArgs PermArgs = 2 [json_name = "PermArgs", (.gogoproto.nullable) = false];</code>
+     */
+    com.permission.PermissionProto.PermArgsOrBuilder getPermArgsOrBuilder();
+  }
+  /**
+   * <pre>
+   * An update to the on-chain permissions
+   * </pre>
+   *
+   * Protobuf type {@code payload.PermsTx}
+   */
+  public static final class PermsTx extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:payload.PermsTx)
+      PermsTxOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PermsTx.newBuilder() to construct.
+    private PermsTx(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PermsTx() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PermsTx();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.payload.PayloadProto.internal_static_payload_PermsTx_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.payload.PayloadProto.internal_static_payload_PermsTx_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.payload.PayloadProto.PermsTx.class, com.payload.PayloadProto.PermsTx.Builder.class);
+    }
+
+    public static final int INPUT_FIELD_NUMBER = 1;
+    private com.payload.PayloadProto.TxInput input_;
+    /**
+     * <pre>
+     * The permission moderator
+     * </pre>
+     *
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     * @return Whether the input field is set.
+     */
+    @java.lang.Override
+    public boolean hasInput() {
+      return input_ != null;
+    }
+    /**
+     * <pre>
+     * The permission moderator
+     * </pre>
+     *
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     * @return The input.
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.TxInput getInput() {
+      return input_ == null ? com.payload.PayloadProto.TxInput.getDefaultInstance() : input_;
+    }
+    /**
+     * <pre>
+     * The permission moderator
+     * </pre>
+     *
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.TxInputOrBuilder getInputOrBuilder() {
+      return input_ == null ? com.payload.PayloadProto.TxInput.getDefaultInstance() : input_;
+    }
+
+    public static final int PERMARGS_FIELD_NUMBER = 2;
+    private com.permission.PermissionProto.PermArgs permArgs_;
+    /**
+     * <pre>
+     * The modified permissions
+     * </pre>
+     *
+     * <code>.permission.PermArgs PermArgs = 2 [json_name = "PermArgs", (.gogoproto.nullable) = false];</code>
+     * @return Whether the permArgs field is set.
+     */
+    @java.lang.Override
+    public boolean hasPermArgs() {
+      return permArgs_ != null;
+    }
+    /**
+     * <pre>
+     * The modified permissions
+     * </pre>
+     *
+     * <code>.permission.PermArgs PermArgs = 2 [json_name = "PermArgs", (.gogoproto.nullable) = false];</code>
+     * @return The permArgs.
+     */
+    @java.lang.Override
+    public com.permission.PermissionProto.PermArgs getPermArgs() {
+      return permArgs_ == null ? com.permission.PermissionProto.PermArgs.getDefaultInstance() : permArgs_;
+    }
+    /**
+     * <pre>
+     * The modified permissions
+     * </pre>
+     *
+     * <code>.permission.PermArgs PermArgs = 2 [json_name = "PermArgs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.permission.PermissionProto.PermArgsOrBuilder getPermArgsOrBuilder() {
+      return permArgs_ == null ? com.permission.PermissionProto.PermArgs.getDefaultInstance() : permArgs_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (input_ != null) {
+        output.writeMessage(1, getInput());
+      }
+      if (permArgs_ != null) {
+        output.writeMessage(2, getPermArgs());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (input_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getInput());
+      }
+      if (permArgs_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPermArgs());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.payload.PayloadProto.PermsTx)) {
+        return super.equals(obj);
+      }
+      com.payload.PayloadProto.PermsTx other = (com.payload.PayloadProto.PermsTx) obj;
+
+      if (hasInput() != other.hasInput()) return false;
+      if (hasInput()) {
+        if (!getInput()
+            .equals(other.getInput())) return false;
+      }
+      if (hasPermArgs() != other.hasPermArgs()) return false;
+      if (hasPermArgs()) {
+        if (!getPermArgs()
+            .equals(other.getPermArgs())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasInput()) {
+        hash = (37 * hash) + INPUT_FIELD_NUMBER;
+        hash = (53 * hash) + getInput().hashCode();
+      }
+      if (hasPermArgs()) {
+        hash = (37 * hash) + PERMARGS_FIELD_NUMBER;
+        hash = (53 * hash) + getPermArgs().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.payload.PayloadProto.PermsTx parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.PermsTx parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.PermsTx parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.PermsTx parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.PermsTx parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.PermsTx parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.PermsTx parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.PermsTx parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.payload.PayloadProto.PermsTx parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.payload.PayloadProto.PermsTx parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.PermsTx parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.PermsTx parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.payload.PayloadProto.PermsTx prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * An update to the on-chain permissions
+     * </pre>
+     *
+     * Protobuf type {@code payload.PermsTx}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:payload.PermsTx)
+        com.payload.PayloadProto.PermsTxOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.payload.PayloadProto.internal_static_payload_PermsTx_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.payload.PayloadProto.internal_static_payload_PermsTx_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.payload.PayloadProto.PermsTx.class, com.payload.PayloadProto.PermsTx.Builder.class);
+      }
+
+      // Construct using com.payload.PayloadProto.PermsTx.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        input_ = null;
+        if (inputBuilder_ != null) {
+          inputBuilder_.dispose();
+          inputBuilder_ = null;
+        }
+        permArgs_ = null;
+        if (permArgsBuilder_ != null) {
+          permArgsBuilder_.dispose();
+          permArgsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.payload.PayloadProto.internal_static_payload_PermsTx_descriptor;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.PermsTx getDefaultInstanceForType() {
+        return com.payload.PayloadProto.PermsTx.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.PermsTx build() {
+        com.payload.PayloadProto.PermsTx result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.PermsTx buildPartial() {
+        com.payload.PayloadProto.PermsTx result = new com.payload.PayloadProto.PermsTx(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.payload.PayloadProto.PermsTx result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.input_ = inputBuilder_ == null
+              ? input_
+              : inputBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.permArgs_ = permArgsBuilder_ == null
+              ? permArgs_
+              : permArgsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.payload.PayloadProto.PermsTx) {
+          return mergeFrom((com.payload.PayloadProto.PermsTx)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.payload.PayloadProto.PermsTx other) {
+        if (other == com.payload.PayloadProto.PermsTx.getDefaultInstance()) return this;
+        if (other.hasInput()) {
+          mergeInput(other.getInput());
+        }
+        if (other.hasPermArgs()) {
+          mergePermArgs(other.getPermArgs());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getInputFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPermArgsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.payload.PayloadProto.TxInput input_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.TxInput, com.payload.PayloadProto.TxInput.Builder, com.payload.PayloadProto.TxInputOrBuilder> inputBuilder_;
+      /**
+       * <pre>
+       * The permission moderator
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       * @return Whether the input field is set.
+       */
+      public boolean hasInput() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The permission moderator
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       * @return The input.
+       */
+      public com.payload.PayloadProto.TxInput getInput() {
+        if (inputBuilder_ == null) {
+          return input_ == null ? com.payload.PayloadProto.TxInput.getDefaultInstance() : input_;
+        } else {
+          return inputBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The permission moderator
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public Builder setInput(com.payload.PayloadProto.TxInput value) {
+        if (inputBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          input_ = value;
+        } else {
+          inputBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The permission moderator
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public Builder setInput(
+          com.payload.PayloadProto.TxInput.Builder builderForValue) {
+        if (inputBuilder_ == null) {
+          input_ = builderForValue.build();
+        } else {
+          inputBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The permission moderator
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public Builder mergeInput(com.payload.PayloadProto.TxInput value) {
+        if (inputBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            input_ != null &&
+            input_ != com.payload.PayloadProto.TxInput.getDefaultInstance()) {
+            getInputBuilder().mergeFrom(value);
+          } else {
+            input_ = value;
+          }
+        } else {
+          inputBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The permission moderator
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public Builder clearInput() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        input_ = null;
+        if (inputBuilder_ != null) {
+          inputBuilder_.dispose();
+          inputBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The permission moderator
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public com.payload.PayloadProto.TxInput.Builder getInputBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getInputFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The permission moderator
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public com.payload.PayloadProto.TxInputOrBuilder getInputOrBuilder() {
+        if (inputBuilder_ != null) {
+          return inputBuilder_.getMessageOrBuilder();
+        } else {
+          return input_ == null ?
+              com.payload.PayloadProto.TxInput.getDefaultInstance() : input_;
+        }
+      }
+      /**
+       * <pre>
+       * The permission moderator
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.TxInput, com.payload.PayloadProto.TxInput.Builder, com.payload.PayloadProto.TxInputOrBuilder> 
+          getInputFieldBuilder() {
+        if (inputBuilder_ == null) {
+          inputBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.payload.PayloadProto.TxInput, com.payload.PayloadProto.TxInput.Builder, com.payload.PayloadProto.TxInputOrBuilder>(
+                  getInput(),
+                  getParentForChildren(),
+                  isClean());
+          input_ = null;
+        }
+        return inputBuilder_;
+      }
+
+      private com.permission.PermissionProto.PermArgs permArgs_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.permission.PermissionProto.PermArgs, com.permission.PermissionProto.PermArgs.Builder, com.permission.PermissionProto.PermArgsOrBuilder> permArgsBuilder_;
+      /**
+       * <pre>
+       * The modified permissions
+       * </pre>
+       *
+       * <code>.permission.PermArgs PermArgs = 2 [json_name = "PermArgs", (.gogoproto.nullable) = false];</code>
+       * @return Whether the permArgs field is set.
+       */
+      public boolean hasPermArgs() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * The modified permissions
+       * </pre>
+       *
+       * <code>.permission.PermArgs PermArgs = 2 [json_name = "PermArgs", (.gogoproto.nullable) = false];</code>
+       * @return The permArgs.
+       */
+      public com.permission.PermissionProto.PermArgs getPermArgs() {
+        if (permArgsBuilder_ == null) {
+          return permArgs_ == null ? com.permission.PermissionProto.PermArgs.getDefaultInstance() : permArgs_;
+        } else {
+          return permArgsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The modified permissions
+       * </pre>
+       *
+       * <code>.permission.PermArgs PermArgs = 2 [json_name = "PermArgs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPermArgs(com.permission.PermissionProto.PermArgs value) {
+        if (permArgsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          permArgs_ = value;
+        } else {
+          permArgsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The modified permissions
+       * </pre>
+       *
+       * <code>.permission.PermArgs PermArgs = 2 [json_name = "PermArgs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPermArgs(
+          com.permission.PermissionProto.PermArgs.Builder builderForValue) {
+        if (permArgsBuilder_ == null) {
+          permArgs_ = builderForValue.build();
+        } else {
+          permArgsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The modified permissions
+       * </pre>
+       *
+       * <code>.permission.PermArgs PermArgs = 2 [json_name = "PermArgs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergePermArgs(com.permission.PermissionProto.PermArgs value) {
+        if (permArgsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            permArgs_ != null &&
+            permArgs_ != com.permission.PermissionProto.PermArgs.getDefaultInstance()) {
+            getPermArgsBuilder().mergeFrom(value);
+          } else {
+            permArgs_ = value;
+          }
+        } else {
+          permArgsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The modified permissions
+       * </pre>
+       *
+       * <code>.permission.PermArgs PermArgs = 2 [json_name = "PermArgs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPermArgs() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        permArgs_ = null;
+        if (permArgsBuilder_ != null) {
+          permArgsBuilder_.dispose();
+          permArgsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The modified permissions
+       * </pre>
+       *
+       * <code>.permission.PermArgs PermArgs = 2 [json_name = "PermArgs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.permission.PermissionProto.PermArgs.Builder getPermArgsBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPermArgsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The modified permissions
+       * </pre>
+       *
+       * <code>.permission.PermArgs PermArgs = 2 [json_name = "PermArgs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.permission.PermissionProto.PermArgsOrBuilder getPermArgsOrBuilder() {
+        if (permArgsBuilder_ != null) {
+          return permArgsBuilder_.getMessageOrBuilder();
+        } else {
+          return permArgs_ == null ?
+              com.permission.PermissionProto.PermArgs.getDefaultInstance() : permArgs_;
+        }
+      }
+      /**
+       * <pre>
+       * The modified permissions
+       * </pre>
+       *
+       * <code>.permission.PermArgs PermArgs = 2 [json_name = "PermArgs", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.permission.PermissionProto.PermArgs, com.permission.PermissionProto.PermArgs.Builder, com.permission.PermissionProto.PermArgsOrBuilder> 
+          getPermArgsFieldBuilder() {
+        if (permArgsBuilder_ == null) {
+          permArgsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.permission.PermissionProto.PermArgs, com.permission.PermissionProto.PermArgs.Builder, com.permission.PermissionProto.PermArgsOrBuilder>(
+                  getPermArgs(),
+                  getParentForChildren(),
+                  isClean());
+          permArgs_ = null;
+        }
+        return permArgsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:payload.PermsTx)
+    }
+
+    // @@protoc_insertion_point(class_scope:payload.PermsTx)
+    private static final com.payload.PayloadProto.PermsTx DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.payload.PayloadProto.PermsTx();
+    }
+
+    public static com.payload.PayloadProto.PermsTx getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PermsTx>
+        PARSER = new com.google.protobuf.AbstractParser<PermsTx>() {
+      @java.lang.Override
+      public PermsTx parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PermsTx> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PermsTx> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.payload.PayloadProto.PermsTx getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface NameTxOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payload.NameTx)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The name updater
+     * </pre>
+     *
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     * @return Whether the input field is set.
+     */
+    boolean hasInput();
+    /**
+     * <pre>
+     * The name updater
+     * </pre>
+     *
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     * @return The input.
+     */
+    com.payload.PayloadProto.TxInput getInput();
+    /**
+     * <pre>
+     * The name updater
+     * </pre>
+     *
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     */
+    com.payload.PayloadProto.TxInputOrBuilder getInputOrBuilder();
+
+    /**
+     * <pre>
+     * The name to update or create
+     * </pre>
+     *
+     * <code>string Name = 2 [json_name = "Name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * The name to update or create
+     * </pre>
+     *
+     * <code>string Name = 2 [json_name = "Name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * The data to store against the name
+     * </pre>
+     *
+     * <code>string Data = 3 [json_name = "Data"];</code>
+     * @return The data.
+     */
+    java.lang.String getData();
+    /**
+     * <pre>
+     * The data to store against the name
+     * </pre>
+     *
+     * <code>string Data = 3 [json_name = "Data"];</code>
+     * @return The bytes for data.
+     */
+    com.google.protobuf.ByteString
+        getDataBytes();
+
+    /**
+     * <pre>
+     * The fee to provide that will determine the length of the name lease
+     * </pre>
+     *
+     * <code>uint64 Fee = 4 [json_name = "Fee"];</code>
+     * @return The fee.
+     */
+    long getFee();
+  }
+  /**
+   * <pre>
+   * A request to claim a globally unique name across the entire chain with some optional data storage leased for a fee
+   * </pre>
+   *
+   * Protobuf type {@code payload.NameTx}
+   */
+  public static final class NameTx extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:payload.NameTx)
+      NameTxOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use NameTx.newBuilder() to construct.
+    private NameTx(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private NameTx() {
+      name_ = "";
+      data_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new NameTx();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.payload.PayloadProto.internal_static_payload_NameTx_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.payload.PayloadProto.internal_static_payload_NameTx_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.payload.PayloadProto.NameTx.class, com.payload.PayloadProto.NameTx.Builder.class);
+    }
+
+    public static final int INPUT_FIELD_NUMBER = 1;
+    private com.payload.PayloadProto.TxInput input_;
+    /**
+     * <pre>
+     * The name updater
+     * </pre>
+     *
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     * @return Whether the input field is set.
+     */
+    @java.lang.Override
+    public boolean hasInput() {
+      return input_ != null;
+    }
+    /**
+     * <pre>
+     * The name updater
+     * </pre>
+     *
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     * @return The input.
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.TxInput getInput() {
+      return input_ == null ? com.payload.PayloadProto.TxInput.getDefaultInstance() : input_;
+    }
+    /**
+     * <pre>
+     * The name updater
+     * </pre>
+     *
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.TxInputOrBuilder getInputOrBuilder() {
+      return input_ == null ? com.payload.PayloadProto.TxInput.getDefaultInstance() : input_;
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * The name to update or create
+     * </pre>
+     *
+     * <code>string Name = 2 [json_name = "Name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The name to update or create
+     * </pre>
+     *
+     * <code>string Name = 2 [json_name = "Name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATA_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object data_ = "";
+    /**
+     * <pre>
+     * The data to store against the name
+     * </pre>
+     *
+     * <code>string Data = 3 [json_name = "Data"];</code>
+     * @return The data.
+     */
+    @java.lang.Override
+    public java.lang.String getData() {
+      java.lang.Object ref = data_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        data_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The data to store against the name
+     * </pre>
+     *
+     * <code>string Data = 3 [json_name = "Data"];</code>
+     * @return The bytes for data.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDataBytes() {
+      java.lang.Object ref = data_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        data_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FEE_FIELD_NUMBER = 4;
+    private long fee_ = 0L;
+    /**
+     * <pre>
+     * The fee to provide that will determine the length of the name lease
+     * </pre>
+     *
+     * <code>uint64 Fee = 4 [json_name = "Fee"];</code>
+     * @return The fee.
+     */
+    @java.lang.Override
+    public long getFee() {
+      return fee_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (input_ != null) {
+        output.writeMessage(1, getInput());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(data_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, data_);
+      }
+      if (fee_ != 0L) {
+        output.writeUInt64(4, fee_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (input_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getInput());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(data_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, data_);
+      }
+      if (fee_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, fee_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.payload.PayloadProto.NameTx)) {
+        return super.equals(obj);
+      }
+      com.payload.PayloadProto.NameTx other = (com.payload.PayloadProto.NameTx) obj;
+
+      if (hasInput() != other.hasInput()) return false;
+      if (hasInput()) {
+        if (!getInput()
+            .equals(other.getInput())) return false;
+      }
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getData()
+          .equals(other.getData())) return false;
+      if (getFee()
+          != other.getFee()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasInput()) {
+        hash = (37 * hash) + INPUT_FIELD_NUMBER;
+        hash = (53 * hash) + getInput().hashCode();
+      }
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getData().hashCode();
+      hash = (37 * hash) + FEE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getFee());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.payload.PayloadProto.NameTx parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.NameTx parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.NameTx parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.NameTx parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.NameTx parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.NameTx parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.NameTx parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.NameTx parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.payload.PayloadProto.NameTx parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.payload.PayloadProto.NameTx parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.NameTx parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.NameTx parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.payload.PayloadProto.NameTx prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * A request to claim a globally unique name across the entire chain with some optional data storage leased for a fee
+     * </pre>
+     *
+     * Protobuf type {@code payload.NameTx}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:payload.NameTx)
+        com.payload.PayloadProto.NameTxOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.payload.PayloadProto.internal_static_payload_NameTx_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.payload.PayloadProto.internal_static_payload_NameTx_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.payload.PayloadProto.NameTx.class, com.payload.PayloadProto.NameTx.Builder.class);
+      }
+
+      // Construct using com.payload.PayloadProto.NameTx.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        input_ = null;
+        if (inputBuilder_ != null) {
+          inputBuilder_.dispose();
+          inputBuilder_ = null;
+        }
+        name_ = "";
+        data_ = "";
+        fee_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.payload.PayloadProto.internal_static_payload_NameTx_descriptor;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.NameTx getDefaultInstanceForType() {
+        return com.payload.PayloadProto.NameTx.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.NameTx build() {
+        com.payload.PayloadProto.NameTx result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.NameTx buildPartial() {
+        com.payload.PayloadProto.NameTx result = new com.payload.PayloadProto.NameTx(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.payload.PayloadProto.NameTx result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.input_ = inputBuilder_ == null
+              ? input_
+              : inputBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.data_ = data_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.fee_ = fee_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.payload.PayloadProto.NameTx) {
+          return mergeFrom((com.payload.PayloadProto.NameTx)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.payload.PayloadProto.NameTx other) {
+        if (other == com.payload.PayloadProto.NameTx.getDefaultInstance()) return this;
+        if (other.hasInput()) {
+          mergeInput(other.getInput());
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getData().isEmpty()) {
+          data_ = other.data_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.getFee() != 0L) {
+          setFee(other.getFee());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getInputFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                data_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                fee_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.payload.PayloadProto.TxInput input_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.TxInput, com.payload.PayloadProto.TxInput.Builder, com.payload.PayloadProto.TxInputOrBuilder> inputBuilder_;
+      /**
+       * <pre>
+       * The name updater
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       * @return Whether the input field is set.
+       */
+      public boolean hasInput() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The name updater
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       * @return The input.
+       */
+      public com.payload.PayloadProto.TxInput getInput() {
+        if (inputBuilder_ == null) {
+          return input_ == null ? com.payload.PayloadProto.TxInput.getDefaultInstance() : input_;
+        } else {
+          return inputBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The name updater
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public Builder setInput(com.payload.PayloadProto.TxInput value) {
+        if (inputBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          input_ = value;
+        } else {
+          inputBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name updater
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public Builder setInput(
+          com.payload.PayloadProto.TxInput.Builder builderForValue) {
+        if (inputBuilder_ == null) {
+          input_ = builderForValue.build();
+        } else {
+          inputBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name updater
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public Builder mergeInput(com.payload.PayloadProto.TxInput value) {
+        if (inputBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            input_ != null &&
+            input_ != com.payload.PayloadProto.TxInput.getDefaultInstance()) {
+            getInputBuilder().mergeFrom(value);
+          } else {
+            input_ = value;
+          }
+        } else {
+          inputBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name updater
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public Builder clearInput() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        input_ = null;
+        if (inputBuilder_ != null) {
+          inputBuilder_.dispose();
+          inputBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name updater
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public com.payload.PayloadProto.TxInput.Builder getInputBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getInputFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The name updater
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public com.payload.PayloadProto.TxInputOrBuilder getInputOrBuilder() {
+        if (inputBuilder_ != null) {
+          return inputBuilder_.getMessageOrBuilder();
+        } else {
+          return input_ == null ?
+              com.payload.PayloadProto.TxInput.getDefaultInstance() : input_;
+        }
+      }
+      /**
+       * <pre>
+       * The name updater
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.TxInput, com.payload.PayloadProto.TxInput.Builder, com.payload.PayloadProto.TxInputOrBuilder> 
+          getInputFieldBuilder() {
+        if (inputBuilder_ == null) {
+          inputBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.payload.PayloadProto.TxInput, com.payload.PayloadProto.TxInput.Builder, com.payload.PayloadProto.TxInputOrBuilder>(
+                  getInput(),
+                  getParentForChildren(),
+                  isClean());
+          input_ = null;
+        }
+        return inputBuilder_;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * The name to update or create
+       * </pre>
+       *
+       * <code>string Name = 2 [json_name = "Name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name to update or create
+       * </pre>
+       *
+       * <code>string Name = 2 [json_name = "Name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name to update or create
+       * </pre>
+       *
+       * <code>string Name = 2 [json_name = "Name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name to update or create
+       * </pre>
+       *
+       * <code>string Name = 2 [json_name = "Name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name to update or create
+       * </pre>
+       *
+       * <code>string Name = 2 [json_name = "Name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object data_ = "";
+      /**
+       * <pre>
+       * The data to store against the name
+       * </pre>
+       *
+       * <code>string Data = 3 [json_name = "Data"];</code>
+       * @return The data.
+       */
+      public java.lang.String getData() {
+        java.lang.Object ref = data_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          data_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The data to store against the name
+       * </pre>
+       *
+       * <code>string Data = 3 [json_name = "Data"];</code>
+       * @return The bytes for data.
+       */
+      public com.google.protobuf.ByteString
+          getDataBytes() {
+        java.lang.Object ref = data_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          data_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The data to store against the name
+       * </pre>
+       *
+       * <code>string Data = 3 [json_name = "Data"];</code>
+       * @param value The data to set.
+       * @return This builder for chaining.
+       */
+      public Builder setData(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        data_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The data to store against the name
+       * </pre>
+       *
+       * <code>string Data = 3 [json_name = "Data"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearData() {
+        data_ = getDefaultInstance().getData();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The data to store against the name
+       * </pre>
+       *
+       * <code>string Data = 3 [json_name = "Data"];</code>
+       * @param value The bytes for data to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        data_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private long fee_ ;
+      /**
+       * <pre>
+       * The fee to provide that will determine the length of the name lease
+       * </pre>
+       *
+       * <code>uint64 Fee = 4 [json_name = "Fee"];</code>
+       * @return The fee.
+       */
+      @java.lang.Override
+      public long getFee() {
+        return fee_;
+      }
+      /**
+       * <pre>
+       * The fee to provide that will determine the length of the name lease
+       * </pre>
+       *
+       * <code>uint64 Fee = 4 [json_name = "Fee"];</code>
+       * @param value The fee to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFee(long value) {
+
+        fee_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The fee to provide that will determine the length of the name lease
+       * </pre>
+       *
+       * <code>uint64 Fee = 4 [json_name = "Fee"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFee() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        fee_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:payload.NameTx)
+    }
+
+    // @@protoc_insertion_point(class_scope:payload.NameTx)
+    private static final com.payload.PayloadProto.NameTx DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.payload.PayloadProto.NameTx();
+    }
+
+    public static com.payload.PayloadProto.NameTx getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<NameTx>
+        PARSER = new com.google.protobuf.AbstractParser<NameTx>() {
+      @java.lang.Override
+      public NameTx parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<NameTx> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<NameTx> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.payload.PayloadProto.NameTx getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BondTxOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payload.BondTx)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Input must be the validator that desires to bond
+     * </pre>
+     *
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     * @return Whether the input field is set.
+     */
+    boolean hasInput();
+    /**
+     * <pre>
+     * Input must be the validator that desires to bond
+     * </pre>
+     *
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     * @return The input.
+     */
+    com.payload.PayloadProto.TxInput getInput();
+    /**
+     * <pre>
+     * Input must be the validator that desires to bond
+     * </pre>
+     *
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     */
+    com.payload.PayloadProto.TxInputOrBuilder getInputOrBuilder();
+  }
+  /**
+   * Protobuf type {@code payload.BondTx}
+   */
+  public static final class BondTx extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:payload.BondTx)
+      BondTxOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BondTx.newBuilder() to construct.
+    private BondTx(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BondTx() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BondTx();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.payload.PayloadProto.internal_static_payload_BondTx_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.payload.PayloadProto.internal_static_payload_BondTx_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.payload.PayloadProto.BondTx.class, com.payload.PayloadProto.BondTx.Builder.class);
+    }
+
+    public static final int INPUT_FIELD_NUMBER = 1;
+    private com.payload.PayloadProto.TxInput input_;
+    /**
+     * <pre>
+     * Input must be the validator that desires to bond
+     * </pre>
+     *
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     * @return Whether the input field is set.
+     */
+    @java.lang.Override
+    public boolean hasInput() {
+      return input_ != null;
+    }
+    /**
+     * <pre>
+     * Input must be the validator that desires to bond
+     * </pre>
+     *
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     * @return The input.
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.TxInput getInput() {
+      return input_ == null ? com.payload.PayloadProto.TxInput.getDefaultInstance() : input_;
+    }
+    /**
+     * <pre>
+     * Input must be the validator that desires to bond
+     * </pre>
+     *
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.TxInputOrBuilder getInputOrBuilder() {
+      return input_ == null ? com.payload.PayloadProto.TxInput.getDefaultInstance() : input_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (input_ != null) {
+        output.writeMessage(1, getInput());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (input_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getInput());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.payload.PayloadProto.BondTx)) {
+        return super.equals(obj);
+      }
+      com.payload.PayloadProto.BondTx other = (com.payload.PayloadProto.BondTx) obj;
+
+      if (hasInput() != other.hasInput()) return false;
+      if (hasInput()) {
+        if (!getInput()
+            .equals(other.getInput())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasInput()) {
+        hash = (37 * hash) + INPUT_FIELD_NUMBER;
+        hash = (53 * hash) + getInput().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.payload.PayloadProto.BondTx parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.BondTx parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.BondTx parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.BondTx parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.BondTx parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.BondTx parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.BondTx parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.BondTx parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.payload.PayloadProto.BondTx parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.payload.PayloadProto.BondTx parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.BondTx parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.BondTx parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.payload.PayloadProto.BondTx prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code payload.BondTx}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:payload.BondTx)
+        com.payload.PayloadProto.BondTxOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.payload.PayloadProto.internal_static_payload_BondTx_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.payload.PayloadProto.internal_static_payload_BondTx_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.payload.PayloadProto.BondTx.class, com.payload.PayloadProto.BondTx.Builder.class);
+      }
+
+      // Construct using com.payload.PayloadProto.BondTx.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        input_ = null;
+        if (inputBuilder_ != null) {
+          inputBuilder_.dispose();
+          inputBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.payload.PayloadProto.internal_static_payload_BondTx_descriptor;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.BondTx getDefaultInstanceForType() {
+        return com.payload.PayloadProto.BondTx.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.BondTx build() {
+        com.payload.PayloadProto.BondTx result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.BondTx buildPartial() {
+        com.payload.PayloadProto.BondTx result = new com.payload.PayloadProto.BondTx(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.payload.PayloadProto.BondTx result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.input_ = inputBuilder_ == null
+              ? input_
+              : inputBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.payload.PayloadProto.BondTx) {
+          return mergeFrom((com.payload.PayloadProto.BondTx)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.payload.PayloadProto.BondTx other) {
+        if (other == com.payload.PayloadProto.BondTx.getDefaultInstance()) return this;
+        if (other.hasInput()) {
+          mergeInput(other.getInput());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getInputFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.payload.PayloadProto.TxInput input_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.TxInput, com.payload.PayloadProto.TxInput.Builder, com.payload.PayloadProto.TxInputOrBuilder> inputBuilder_;
+      /**
+       * <pre>
+       * Input must be the validator that desires to bond
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       * @return Whether the input field is set.
+       */
+      public boolean hasInput() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Input must be the validator that desires to bond
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       * @return The input.
+       */
+      public com.payload.PayloadProto.TxInput getInput() {
+        if (inputBuilder_ == null) {
+          return input_ == null ? com.payload.PayloadProto.TxInput.getDefaultInstance() : input_;
+        } else {
+          return inputBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Input must be the validator that desires to bond
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public Builder setInput(com.payload.PayloadProto.TxInput value) {
+        if (inputBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          input_ = value;
+        } else {
+          inputBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Input must be the validator that desires to bond
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public Builder setInput(
+          com.payload.PayloadProto.TxInput.Builder builderForValue) {
+        if (inputBuilder_ == null) {
+          input_ = builderForValue.build();
+        } else {
+          inputBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Input must be the validator that desires to bond
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public Builder mergeInput(com.payload.PayloadProto.TxInput value) {
+        if (inputBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            input_ != null &&
+            input_ != com.payload.PayloadProto.TxInput.getDefaultInstance()) {
+            getInputBuilder().mergeFrom(value);
+          } else {
+            input_ = value;
+          }
+        } else {
+          inputBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Input must be the validator that desires to bond
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public Builder clearInput() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        input_ = null;
+        if (inputBuilder_ != null) {
+          inputBuilder_.dispose();
+          inputBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Input must be the validator that desires to bond
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public com.payload.PayloadProto.TxInput.Builder getInputBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getInputFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Input must be the validator that desires to bond
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public com.payload.PayloadProto.TxInputOrBuilder getInputOrBuilder() {
+        if (inputBuilder_ != null) {
+          return inputBuilder_.getMessageOrBuilder();
+        } else {
+          return input_ == null ?
+              com.payload.PayloadProto.TxInput.getDefaultInstance() : input_;
+        }
+      }
+      /**
+       * <pre>
+       * Input must be the validator that desires to bond
+       * </pre>
+       *
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.TxInput, com.payload.PayloadProto.TxInput.Builder, com.payload.PayloadProto.TxInputOrBuilder> 
+          getInputFieldBuilder() {
+        if (inputBuilder_ == null) {
+          inputBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.payload.PayloadProto.TxInput, com.payload.PayloadProto.TxInput.Builder, com.payload.PayloadProto.TxInputOrBuilder>(
+                  getInput(),
+                  getParentForChildren(),
+                  isClean());
+          input_ = null;
+        }
+        return inputBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:payload.BondTx)
+    }
+
+    // @@protoc_insertion_point(class_scope:payload.BondTx)
+    private static final com.payload.PayloadProto.BondTx DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.payload.PayloadProto.BondTx();
+    }
+
+    public static com.payload.PayloadProto.BondTx getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BondTx>
+        PARSER = new com.google.protobuf.AbstractParser<BondTx>() {
+      @java.lang.Override
+      public BondTx parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<BondTx> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BondTx> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.payload.PayloadProto.BondTx getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UnbondTxOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payload.UnbondTx)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     * @return Whether the input field is set.
+     */
+    boolean hasInput();
+    /**
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     * @return The input.
+     */
+    com.payload.PayloadProto.TxInput getInput();
+    /**
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     */
+    com.payload.PayloadProto.TxInputOrBuilder getInputOrBuilder();
+
+    /**
+     * <pre>
+     * Account to unbond
+     * </pre>
+     *
+     * <code>.payload.TxOutput Output = 2 [json_name = "Output"];</code>
+     * @return Whether the output field is set.
+     */
+    boolean hasOutput();
+    /**
+     * <pre>
+     * Account to unbond
+     * </pre>
+     *
+     * <code>.payload.TxOutput Output = 2 [json_name = "Output"];</code>
+     * @return The output.
+     */
+    com.payload.PayloadProto.TxOutput getOutput();
+    /**
+     * <pre>
+     * Account to unbond
+     * </pre>
+     *
+     * <code>.payload.TxOutput Output = 2 [json_name = "Output"];</code>
+     */
+    com.payload.PayloadProto.TxOutputOrBuilder getOutputOrBuilder();
+  }
+  /**
+   * Protobuf type {@code payload.UnbondTx}
+   */
+  public static final class UnbondTx extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:payload.UnbondTx)
+      UnbondTxOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UnbondTx.newBuilder() to construct.
+    private UnbondTx(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UnbondTx() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UnbondTx();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.payload.PayloadProto.internal_static_payload_UnbondTx_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.payload.PayloadProto.internal_static_payload_UnbondTx_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.payload.PayloadProto.UnbondTx.class, com.payload.PayloadProto.UnbondTx.Builder.class);
+    }
+
+    public static final int INPUT_FIELD_NUMBER = 1;
+    private com.payload.PayloadProto.TxInput input_;
+    /**
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     * @return Whether the input field is set.
+     */
+    @java.lang.Override
+    public boolean hasInput() {
+      return input_ != null;
+    }
+    /**
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     * @return The input.
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.TxInput getInput() {
+      return input_ == null ? com.payload.PayloadProto.TxInput.getDefaultInstance() : input_;
+    }
+    /**
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.TxInputOrBuilder getInputOrBuilder() {
+      return input_ == null ? com.payload.PayloadProto.TxInput.getDefaultInstance() : input_;
+    }
+
+    public static final int OUTPUT_FIELD_NUMBER = 2;
+    private com.payload.PayloadProto.TxOutput output_;
+    /**
+     * <pre>
+     * Account to unbond
+     * </pre>
+     *
+     * <code>.payload.TxOutput Output = 2 [json_name = "Output"];</code>
+     * @return Whether the output field is set.
+     */
+    @java.lang.Override
+    public boolean hasOutput() {
+      return output_ != null;
+    }
+    /**
+     * <pre>
+     * Account to unbond
+     * </pre>
+     *
+     * <code>.payload.TxOutput Output = 2 [json_name = "Output"];</code>
+     * @return The output.
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.TxOutput getOutput() {
+      return output_ == null ? com.payload.PayloadProto.TxOutput.getDefaultInstance() : output_;
+    }
+    /**
+     * <pre>
+     * Account to unbond
+     * </pre>
+     *
+     * <code>.payload.TxOutput Output = 2 [json_name = "Output"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.TxOutputOrBuilder getOutputOrBuilder() {
+      return output_ == null ? com.payload.PayloadProto.TxOutput.getDefaultInstance() : output_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (input_ != null) {
+        output.writeMessage(1, getInput());
+      }
+      if (output_ != null) {
+        output.writeMessage(2, getOutput());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (input_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getInput());
+      }
+      if (output_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getOutput());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.payload.PayloadProto.UnbondTx)) {
+        return super.equals(obj);
+      }
+      com.payload.PayloadProto.UnbondTx other = (com.payload.PayloadProto.UnbondTx) obj;
+
+      if (hasInput() != other.hasInput()) return false;
+      if (hasInput()) {
+        if (!getInput()
+            .equals(other.getInput())) return false;
+      }
+      if (hasOutput() != other.hasOutput()) return false;
+      if (hasOutput()) {
+        if (!getOutput()
+            .equals(other.getOutput())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasInput()) {
+        hash = (37 * hash) + INPUT_FIELD_NUMBER;
+        hash = (53 * hash) + getInput().hashCode();
+      }
+      if (hasOutput()) {
+        hash = (37 * hash) + OUTPUT_FIELD_NUMBER;
+        hash = (53 * hash) + getOutput().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.payload.PayloadProto.UnbondTx parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.UnbondTx parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.UnbondTx parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.UnbondTx parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.UnbondTx parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.UnbondTx parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.UnbondTx parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.UnbondTx parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.payload.PayloadProto.UnbondTx parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.payload.PayloadProto.UnbondTx parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.UnbondTx parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.UnbondTx parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.payload.PayloadProto.UnbondTx prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code payload.UnbondTx}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:payload.UnbondTx)
+        com.payload.PayloadProto.UnbondTxOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.payload.PayloadProto.internal_static_payload_UnbondTx_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.payload.PayloadProto.internal_static_payload_UnbondTx_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.payload.PayloadProto.UnbondTx.class, com.payload.PayloadProto.UnbondTx.Builder.class);
+      }
+
+      // Construct using com.payload.PayloadProto.UnbondTx.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        input_ = null;
+        if (inputBuilder_ != null) {
+          inputBuilder_.dispose();
+          inputBuilder_ = null;
+        }
+        output_ = null;
+        if (outputBuilder_ != null) {
+          outputBuilder_.dispose();
+          outputBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.payload.PayloadProto.internal_static_payload_UnbondTx_descriptor;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.UnbondTx getDefaultInstanceForType() {
+        return com.payload.PayloadProto.UnbondTx.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.UnbondTx build() {
+        com.payload.PayloadProto.UnbondTx result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.UnbondTx buildPartial() {
+        com.payload.PayloadProto.UnbondTx result = new com.payload.PayloadProto.UnbondTx(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.payload.PayloadProto.UnbondTx result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.input_ = inputBuilder_ == null
+              ? input_
+              : inputBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.output_ = outputBuilder_ == null
+              ? output_
+              : outputBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.payload.PayloadProto.UnbondTx) {
+          return mergeFrom((com.payload.PayloadProto.UnbondTx)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.payload.PayloadProto.UnbondTx other) {
+        if (other == com.payload.PayloadProto.UnbondTx.getDefaultInstance()) return this;
+        if (other.hasInput()) {
+          mergeInput(other.getInput());
+        }
+        if (other.hasOutput()) {
+          mergeOutput(other.getOutput());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getInputFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getOutputFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.payload.PayloadProto.TxInput input_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.TxInput, com.payload.PayloadProto.TxInput.Builder, com.payload.PayloadProto.TxInputOrBuilder> inputBuilder_;
+      /**
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       * @return Whether the input field is set.
+       */
+      public boolean hasInput() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       * @return The input.
+       */
+      public com.payload.PayloadProto.TxInput getInput() {
+        if (inputBuilder_ == null) {
+          return input_ == null ? com.payload.PayloadProto.TxInput.getDefaultInstance() : input_;
+        } else {
+          return inputBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public Builder setInput(com.payload.PayloadProto.TxInput value) {
+        if (inputBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          input_ = value;
+        } else {
+          inputBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public Builder setInput(
+          com.payload.PayloadProto.TxInput.Builder builderForValue) {
+        if (inputBuilder_ == null) {
+          input_ = builderForValue.build();
+        } else {
+          inputBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public Builder mergeInput(com.payload.PayloadProto.TxInput value) {
+        if (inputBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            input_ != null &&
+            input_ != com.payload.PayloadProto.TxInput.getDefaultInstance()) {
+            getInputBuilder().mergeFrom(value);
+          } else {
+            input_ = value;
+          }
+        } else {
+          inputBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public Builder clearInput() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        input_ = null;
+        if (inputBuilder_ != null) {
+          inputBuilder_.dispose();
+          inputBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public com.payload.PayloadProto.TxInput.Builder getInputBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getInputFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public com.payload.PayloadProto.TxInputOrBuilder getInputOrBuilder() {
+        if (inputBuilder_ != null) {
+          return inputBuilder_.getMessageOrBuilder();
+        } else {
+          return input_ == null ?
+              com.payload.PayloadProto.TxInput.getDefaultInstance() : input_;
+        }
+      }
+      /**
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.TxInput, com.payload.PayloadProto.TxInput.Builder, com.payload.PayloadProto.TxInputOrBuilder> 
+          getInputFieldBuilder() {
+        if (inputBuilder_ == null) {
+          inputBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.payload.PayloadProto.TxInput, com.payload.PayloadProto.TxInput.Builder, com.payload.PayloadProto.TxInputOrBuilder>(
+                  getInput(),
+                  getParentForChildren(),
+                  isClean());
+          input_ = null;
+        }
+        return inputBuilder_;
+      }
+
+      private com.payload.PayloadProto.TxOutput output_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.TxOutput, com.payload.PayloadProto.TxOutput.Builder, com.payload.PayloadProto.TxOutputOrBuilder> outputBuilder_;
+      /**
+       * <pre>
+       * Account to unbond
+       * </pre>
+       *
+       * <code>.payload.TxOutput Output = 2 [json_name = "Output"];</code>
+       * @return Whether the output field is set.
+       */
+      public boolean hasOutput() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Account to unbond
+       * </pre>
+       *
+       * <code>.payload.TxOutput Output = 2 [json_name = "Output"];</code>
+       * @return The output.
+       */
+      public com.payload.PayloadProto.TxOutput getOutput() {
+        if (outputBuilder_ == null) {
+          return output_ == null ? com.payload.PayloadProto.TxOutput.getDefaultInstance() : output_;
+        } else {
+          return outputBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Account to unbond
+       * </pre>
+       *
+       * <code>.payload.TxOutput Output = 2 [json_name = "Output"];</code>
+       */
+      public Builder setOutput(com.payload.PayloadProto.TxOutput value) {
+        if (outputBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          output_ = value;
+        } else {
+          outputBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Account to unbond
+       * </pre>
+       *
+       * <code>.payload.TxOutput Output = 2 [json_name = "Output"];</code>
+       */
+      public Builder setOutput(
+          com.payload.PayloadProto.TxOutput.Builder builderForValue) {
+        if (outputBuilder_ == null) {
+          output_ = builderForValue.build();
+        } else {
+          outputBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Account to unbond
+       * </pre>
+       *
+       * <code>.payload.TxOutput Output = 2 [json_name = "Output"];</code>
+       */
+      public Builder mergeOutput(com.payload.PayloadProto.TxOutput value) {
+        if (outputBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            output_ != null &&
+            output_ != com.payload.PayloadProto.TxOutput.getDefaultInstance()) {
+            getOutputBuilder().mergeFrom(value);
+          } else {
+            output_ = value;
+          }
+        } else {
+          outputBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Account to unbond
+       * </pre>
+       *
+       * <code>.payload.TxOutput Output = 2 [json_name = "Output"];</code>
+       */
+      public Builder clearOutput() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        output_ = null;
+        if (outputBuilder_ != null) {
+          outputBuilder_.dispose();
+          outputBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Account to unbond
+       * </pre>
+       *
+       * <code>.payload.TxOutput Output = 2 [json_name = "Output"];</code>
+       */
+      public com.payload.PayloadProto.TxOutput.Builder getOutputBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getOutputFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Account to unbond
+       * </pre>
+       *
+       * <code>.payload.TxOutput Output = 2 [json_name = "Output"];</code>
+       */
+      public com.payload.PayloadProto.TxOutputOrBuilder getOutputOrBuilder() {
+        if (outputBuilder_ != null) {
+          return outputBuilder_.getMessageOrBuilder();
+        } else {
+          return output_ == null ?
+              com.payload.PayloadProto.TxOutput.getDefaultInstance() : output_;
+        }
+      }
+      /**
+       * <pre>
+       * Account to unbond
+       * </pre>
+       *
+       * <code>.payload.TxOutput Output = 2 [json_name = "Output"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.TxOutput, com.payload.PayloadProto.TxOutput.Builder, com.payload.PayloadProto.TxOutputOrBuilder> 
+          getOutputFieldBuilder() {
+        if (outputBuilder_ == null) {
+          outputBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.payload.PayloadProto.TxOutput, com.payload.PayloadProto.TxOutput.Builder, com.payload.PayloadProto.TxOutputOrBuilder>(
+                  getOutput(),
+                  getParentForChildren(),
+                  isClean());
+          output_ = null;
+        }
+        return outputBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:payload.UnbondTx)
+    }
+
+    // @@protoc_insertion_point(class_scope:payload.UnbondTx)
+    private static final com.payload.PayloadProto.UnbondTx DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.payload.PayloadProto.UnbondTx();
+    }
+
+    public static com.payload.PayloadProto.UnbondTx getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UnbondTx>
+        PARSER = new com.google.protobuf.AbstractParser<UnbondTx>() {
+      @java.lang.Override
+      public UnbondTx parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UnbondTx> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UnbondTx> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.payload.PayloadProto.UnbondTx getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GovTxOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payload.GovTx)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    java.util.List<com.payload.PayloadProto.TxInput> 
+        getInputsList();
+    /**
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    com.payload.PayloadProto.TxInput getInputs(int index);
+    /**
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    int getInputsCount();
+    /**
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    java.util.List<? extends com.payload.PayloadProto.TxInputOrBuilder> 
+        getInputsOrBuilderList();
+    /**
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    com.payload.PayloadProto.TxInputOrBuilder getInputsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .spec.TemplateAccount AccountUpdates = 2 [json_name = "AccountUpdates", (.gogoproto.nullable) = true];</code>
+     */
+    java.util.List<com.spec.SpecProto.TemplateAccount> 
+        getAccountUpdatesList();
+    /**
+     * <code>repeated .spec.TemplateAccount AccountUpdates = 2 [json_name = "AccountUpdates", (.gogoproto.nullable) = true];</code>
+     */
+    com.spec.SpecProto.TemplateAccount getAccountUpdates(int index);
+    /**
+     * <code>repeated .spec.TemplateAccount AccountUpdates = 2 [json_name = "AccountUpdates", (.gogoproto.nullable) = true];</code>
+     */
+    int getAccountUpdatesCount();
+    /**
+     * <code>repeated .spec.TemplateAccount AccountUpdates = 2 [json_name = "AccountUpdates", (.gogoproto.nullable) = true];</code>
+     */
+    java.util.List<? extends com.spec.SpecProto.TemplateAccountOrBuilder> 
+        getAccountUpdatesOrBuilderList();
+    /**
+     * <code>repeated .spec.TemplateAccount AccountUpdates = 2 [json_name = "AccountUpdates", (.gogoproto.nullable) = true];</code>
+     */
+    com.spec.SpecProto.TemplateAccountOrBuilder getAccountUpdatesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code payload.GovTx}
+   */
+  public static final class GovTx extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:payload.GovTx)
+      GovTxOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GovTx.newBuilder() to construct.
+    private GovTx(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GovTx() {
+      inputs_ = java.util.Collections.emptyList();
+      accountUpdates_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GovTx();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.payload.PayloadProto.internal_static_payload_GovTx_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.payload.PayloadProto.internal_static_payload_GovTx_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.payload.PayloadProto.GovTx.class, com.payload.PayloadProto.GovTx.Builder.class);
+    }
+
+    public static final int INPUTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.payload.PayloadProto.TxInput> inputs_;
+    /**
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.payload.PayloadProto.TxInput> getInputsList() {
+      return inputs_;
+    }
+    /**
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.payload.PayloadProto.TxInputOrBuilder> 
+        getInputsOrBuilderList() {
+      return inputs_;
+    }
+    /**
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    @java.lang.Override
+    public int getInputsCount() {
+      return inputs_.size();
+    }
+    /**
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.TxInput getInputs(int index) {
+      return inputs_.get(index);
+    }
+    /**
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.TxInputOrBuilder getInputsOrBuilder(
+        int index) {
+      return inputs_.get(index);
+    }
+
+    public static final int ACCOUNTUPDATES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.spec.SpecProto.TemplateAccount> accountUpdates_;
+    /**
+     * <code>repeated .spec.TemplateAccount AccountUpdates = 2 [json_name = "AccountUpdates", (.gogoproto.nullable) = true];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.spec.SpecProto.TemplateAccount> getAccountUpdatesList() {
+      return accountUpdates_;
+    }
+    /**
+     * <code>repeated .spec.TemplateAccount AccountUpdates = 2 [json_name = "AccountUpdates", (.gogoproto.nullable) = true];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.spec.SpecProto.TemplateAccountOrBuilder> 
+        getAccountUpdatesOrBuilderList() {
+      return accountUpdates_;
+    }
+    /**
+     * <code>repeated .spec.TemplateAccount AccountUpdates = 2 [json_name = "AccountUpdates", (.gogoproto.nullable) = true];</code>
+     */
+    @java.lang.Override
+    public int getAccountUpdatesCount() {
+      return accountUpdates_.size();
+    }
+    /**
+     * <code>repeated .spec.TemplateAccount AccountUpdates = 2 [json_name = "AccountUpdates", (.gogoproto.nullable) = true];</code>
+     */
+    @java.lang.Override
+    public com.spec.SpecProto.TemplateAccount getAccountUpdates(int index) {
+      return accountUpdates_.get(index);
+    }
+    /**
+     * <code>repeated .spec.TemplateAccount AccountUpdates = 2 [json_name = "AccountUpdates", (.gogoproto.nullable) = true];</code>
+     */
+    @java.lang.Override
+    public com.spec.SpecProto.TemplateAccountOrBuilder getAccountUpdatesOrBuilder(
+        int index) {
+      return accountUpdates_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < inputs_.size(); i++) {
+        output.writeMessage(1, inputs_.get(i));
+      }
+      for (int i = 0; i < accountUpdates_.size(); i++) {
+        output.writeMessage(2, accountUpdates_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < inputs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, inputs_.get(i));
+      }
+      for (int i = 0; i < accountUpdates_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, accountUpdates_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.payload.PayloadProto.GovTx)) {
+        return super.equals(obj);
+      }
+      com.payload.PayloadProto.GovTx other = (com.payload.PayloadProto.GovTx) obj;
+
+      if (!getInputsList()
+          .equals(other.getInputsList())) return false;
+      if (!getAccountUpdatesList()
+          .equals(other.getAccountUpdatesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getInputsCount() > 0) {
+        hash = (37 * hash) + INPUTS_FIELD_NUMBER;
+        hash = (53 * hash) + getInputsList().hashCode();
+      }
+      if (getAccountUpdatesCount() > 0) {
+        hash = (37 * hash) + ACCOUNTUPDATES_FIELD_NUMBER;
+        hash = (53 * hash) + getAccountUpdatesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.payload.PayloadProto.GovTx parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.GovTx parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.GovTx parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.GovTx parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.GovTx parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.GovTx parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.GovTx parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.GovTx parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.payload.PayloadProto.GovTx parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.payload.PayloadProto.GovTx parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.GovTx parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.GovTx parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.payload.PayloadProto.GovTx prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code payload.GovTx}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:payload.GovTx)
+        com.payload.PayloadProto.GovTxOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.payload.PayloadProto.internal_static_payload_GovTx_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.payload.PayloadProto.internal_static_payload_GovTx_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.payload.PayloadProto.GovTx.class, com.payload.PayloadProto.GovTx.Builder.class);
+      }
+
+      // Construct using com.payload.PayloadProto.GovTx.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (inputsBuilder_ == null) {
+          inputs_ = java.util.Collections.emptyList();
+        } else {
+          inputs_ = null;
+          inputsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (accountUpdatesBuilder_ == null) {
+          accountUpdates_ = java.util.Collections.emptyList();
+        } else {
+          accountUpdates_ = null;
+          accountUpdatesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.payload.PayloadProto.internal_static_payload_GovTx_descriptor;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.GovTx getDefaultInstanceForType() {
+        return com.payload.PayloadProto.GovTx.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.GovTx build() {
+        com.payload.PayloadProto.GovTx result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.GovTx buildPartial() {
+        com.payload.PayloadProto.GovTx result = new com.payload.PayloadProto.GovTx(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.payload.PayloadProto.GovTx result) {
+        if (inputsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            inputs_ = java.util.Collections.unmodifiableList(inputs_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.inputs_ = inputs_;
+        } else {
+          result.inputs_ = inputsBuilder_.build();
+        }
+        if (accountUpdatesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            accountUpdates_ = java.util.Collections.unmodifiableList(accountUpdates_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.accountUpdates_ = accountUpdates_;
+        } else {
+          result.accountUpdates_ = accountUpdatesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.payload.PayloadProto.GovTx result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.payload.PayloadProto.GovTx) {
+          return mergeFrom((com.payload.PayloadProto.GovTx)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.payload.PayloadProto.GovTx other) {
+        if (other == com.payload.PayloadProto.GovTx.getDefaultInstance()) return this;
+        if (inputsBuilder_ == null) {
+          if (!other.inputs_.isEmpty()) {
+            if (inputs_.isEmpty()) {
+              inputs_ = other.inputs_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureInputsIsMutable();
+              inputs_.addAll(other.inputs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.inputs_.isEmpty()) {
+            if (inputsBuilder_.isEmpty()) {
+              inputsBuilder_.dispose();
+              inputsBuilder_ = null;
+              inputs_ = other.inputs_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              inputsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getInputsFieldBuilder() : null;
+            } else {
+              inputsBuilder_.addAllMessages(other.inputs_);
+            }
+          }
+        }
+        if (accountUpdatesBuilder_ == null) {
+          if (!other.accountUpdates_.isEmpty()) {
+            if (accountUpdates_.isEmpty()) {
+              accountUpdates_ = other.accountUpdates_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureAccountUpdatesIsMutable();
+              accountUpdates_.addAll(other.accountUpdates_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.accountUpdates_.isEmpty()) {
+            if (accountUpdatesBuilder_.isEmpty()) {
+              accountUpdatesBuilder_.dispose();
+              accountUpdatesBuilder_ = null;
+              accountUpdates_ = other.accountUpdates_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              accountUpdatesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAccountUpdatesFieldBuilder() : null;
+            } else {
+              accountUpdatesBuilder_.addAllMessages(other.accountUpdates_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.payload.PayloadProto.TxInput m =
+                    input.readMessage(
+                        com.payload.PayloadProto.TxInput.parser(),
+                        extensionRegistry);
+                if (inputsBuilder_ == null) {
+                  ensureInputsIsMutable();
+                  inputs_.add(m);
+                } else {
+                  inputsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                com.spec.SpecProto.TemplateAccount m =
+                    input.readMessage(
+                        com.spec.SpecProto.TemplateAccount.parser(),
+                        extensionRegistry);
+                if (accountUpdatesBuilder_ == null) {
+                  ensureAccountUpdatesIsMutable();
+                  accountUpdates_.add(m);
+                } else {
+                  accountUpdatesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.payload.PayloadProto.TxInput> inputs_ =
+        java.util.Collections.emptyList();
+      private void ensureInputsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          inputs_ = new java.util.ArrayList<com.payload.PayloadProto.TxInput>(inputs_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.payload.PayloadProto.TxInput, com.payload.PayloadProto.TxInput.Builder, com.payload.PayloadProto.TxInputOrBuilder> inputsBuilder_;
+
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public java.util.List<com.payload.PayloadProto.TxInput> getInputsList() {
+        if (inputsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(inputs_);
+        } else {
+          return inputsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public int getInputsCount() {
+        if (inputsBuilder_ == null) {
+          return inputs_.size();
+        } else {
+          return inputsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public com.payload.PayloadProto.TxInput getInputs(int index) {
+        if (inputsBuilder_ == null) {
+          return inputs_.get(index);
+        } else {
+          return inputsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder setInputs(
+          int index, com.payload.PayloadProto.TxInput value) {
+        if (inputsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputsIsMutable();
+          inputs_.set(index, value);
+          onChanged();
+        } else {
+          inputsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder setInputs(
+          int index, com.payload.PayloadProto.TxInput.Builder builderForValue) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          inputsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder addInputs(com.payload.PayloadProto.TxInput value) {
+        if (inputsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputsIsMutable();
+          inputs_.add(value);
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder addInputs(
+          int index, com.payload.PayloadProto.TxInput value) {
+        if (inputsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputsIsMutable();
+          inputs_.add(index, value);
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder addInputs(
+          com.payload.PayloadProto.TxInput.Builder builderForValue) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder addInputs(
+          int index, com.payload.PayloadProto.TxInput.Builder builderForValue) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder addAllInputs(
+          java.lang.Iterable<? extends com.payload.PayloadProto.TxInput> values) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, inputs_);
+          onChanged();
+        } else {
+          inputsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder clearInputs() {
+        if (inputsBuilder_ == null) {
+          inputs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          inputsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder removeInputs(int index) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.remove(index);
+          onChanged();
+        } else {
+          inputsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public com.payload.PayloadProto.TxInput.Builder getInputsBuilder(
+          int index) {
+        return getInputsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public com.payload.PayloadProto.TxInputOrBuilder getInputsOrBuilder(
+          int index) {
+        if (inputsBuilder_ == null) {
+          return inputs_.get(index);  } else {
+          return inputsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public java.util.List<? extends com.payload.PayloadProto.TxInputOrBuilder> 
+           getInputsOrBuilderList() {
+        if (inputsBuilder_ != null) {
+          return inputsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(inputs_);
+        }
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public com.payload.PayloadProto.TxInput.Builder addInputsBuilder() {
+        return getInputsFieldBuilder().addBuilder(
+            com.payload.PayloadProto.TxInput.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public com.payload.PayloadProto.TxInput.Builder addInputsBuilder(
+          int index) {
+        return getInputsFieldBuilder().addBuilder(
+            index, com.payload.PayloadProto.TxInput.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public java.util.List<com.payload.PayloadProto.TxInput.Builder> 
+           getInputsBuilderList() {
+        return getInputsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.payload.PayloadProto.TxInput, com.payload.PayloadProto.TxInput.Builder, com.payload.PayloadProto.TxInputOrBuilder> 
+          getInputsFieldBuilder() {
+        if (inputsBuilder_ == null) {
+          inputsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.payload.PayloadProto.TxInput, com.payload.PayloadProto.TxInput.Builder, com.payload.PayloadProto.TxInputOrBuilder>(
+                  inputs_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          inputs_ = null;
+        }
+        return inputsBuilder_;
+      }
+
+      private java.util.List<com.spec.SpecProto.TemplateAccount> accountUpdates_ =
+        java.util.Collections.emptyList();
+      private void ensureAccountUpdatesIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          accountUpdates_ = new java.util.ArrayList<com.spec.SpecProto.TemplateAccount>(accountUpdates_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.spec.SpecProto.TemplateAccount, com.spec.SpecProto.TemplateAccount.Builder, com.spec.SpecProto.TemplateAccountOrBuilder> accountUpdatesBuilder_;
+
+      /**
+       * <code>repeated .spec.TemplateAccount AccountUpdates = 2 [json_name = "AccountUpdates", (.gogoproto.nullable) = true];</code>
+       */
+      public java.util.List<com.spec.SpecProto.TemplateAccount> getAccountUpdatesList() {
+        if (accountUpdatesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(accountUpdates_);
+        } else {
+          return accountUpdatesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .spec.TemplateAccount AccountUpdates = 2 [json_name = "AccountUpdates", (.gogoproto.nullable) = true];</code>
+       */
+      public int getAccountUpdatesCount() {
+        if (accountUpdatesBuilder_ == null) {
+          return accountUpdates_.size();
+        } else {
+          return accountUpdatesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .spec.TemplateAccount AccountUpdates = 2 [json_name = "AccountUpdates", (.gogoproto.nullable) = true];</code>
+       */
+      public com.spec.SpecProto.TemplateAccount getAccountUpdates(int index) {
+        if (accountUpdatesBuilder_ == null) {
+          return accountUpdates_.get(index);
+        } else {
+          return accountUpdatesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .spec.TemplateAccount AccountUpdates = 2 [json_name = "AccountUpdates", (.gogoproto.nullable) = true];</code>
+       */
+      public Builder setAccountUpdates(
+          int index, com.spec.SpecProto.TemplateAccount value) {
+        if (accountUpdatesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccountUpdatesIsMutable();
+          accountUpdates_.set(index, value);
+          onChanged();
+        } else {
+          accountUpdatesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .spec.TemplateAccount AccountUpdates = 2 [json_name = "AccountUpdates", (.gogoproto.nullable) = true];</code>
+       */
+      public Builder setAccountUpdates(
+          int index, com.spec.SpecProto.TemplateAccount.Builder builderForValue) {
+        if (accountUpdatesBuilder_ == null) {
+          ensureAccountUpdatesIsMutable();
+          accountUpdates_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          accountUpdatesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .spec.TemplateAccount AccountUpdates = 2 [json_name = "AccountUpdates", (.gogoproto.nullable) = true];</code>
+       */
+      public Builder addAccountUpdates(com.spec.SpecProto.TemplateAccount value) {
+        if (accountUpdatesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccountUpdatesIsMutable();
+          accountUpdates_.add(value);
+          onChanged();
+        } else {
+          accountUpdatesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .spec.TemplateAccount AccountUpdates = 2 [json_name = "AccountUpdates", (.gogoproto.nullable) = true];</code>
+       */
+      public Builder addAccountUpdates(
+          int index, com.spec.SpecProto.TemplateAccount value) {
+        if (accountUpdatesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccountUpdatesIsMutable();
+          accountUpdates_.add(index, value);
+          onChanged();
+        } else {
+          accountUpdatesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .spec.TemplateAccount AccountUpdates = 2 [json_name = "AccountUpdates", (.gogoproto.nullable) = true];</code>
+       */
+      public Builder addAccountUpdates(
+          com.spec.SpecProto.TemplateAccount.Builder builderForValue) {
+        if (accountUpdatesBuilder_ == null) {
+          ensureAccountUpdatesIsMutable();
+          accountUpdates_.add(builderForValue.build());
+          onChanged();
+        } else {
+          accountUpdatesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .spec.TemplateAccount AccountUpdates = 2 [json_name = "AccountUpdates", (.gogoproto.nullable) = true];</code>
+       */
+      public Builder addAccountUpdates(
+          int index, com.spec.SpecProto.TemplateAccount.Builder builderForValue) {
+        if (accountUpdatesBuilder_ == null) {
+          ensureAccountUpdatesIsMutable();
+          accountUpdates_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          accountUpdatesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .spec.TemplateAccount AccountUpdates = 2 [json_name = "AccountUpdates", (.gogoproto.nullable) = true];</code>
+       */
+      public Builder addAllAccountUpdates(
+          java.lang.Iterable<? extends com.spec.SpecProto.TemplateAccount> values) {
+        if (accountUpdatesBuilder_ == null) {
+          ensureAccountUpdatesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, accountUpdates_);
+          onChanged();
+        } else {
+          accountUpdatesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .spec.TemplateAccount AccountUpdates = 2 [json_name = "AccountUpdates", (.gogoproto.nullable) = true];</code>
+       */
+      public Builder clearAccountUpdates() {
+        if (accountUpdatesBuilder_ == null) {
+          accountUpdates_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          accountUpdatesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .spec.TemplateAccount AccountUpdates = 2 [json_name = "AccountUpdates", (.gogoproto.nullable) = true];</code>
+       */
+      public Builder removeAccountUpdates(int index) {
+        if (accountUpdatesBuilder_ == null) {
+          ensureAccountUpdatesIsMutable();
+          accountUpdates_.remove(index);
+          onChanged();
+        } else {
+          accountUpdatesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .spec.TemplateAccount AccountUpdates = 2 [json_name = "AccountUpdates", (.gogoproto.nullable) = true];</code>
+       */
+      public com.spec.SpecProto.TemplateAccount.Builder getAccountUpdatesBuilder(
+          int index) {
+        return getAccountUpdatesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .spec.TemplateAccount AccountUpdates = 2 [json_name = "AccountUpdates", (.gogoproto.nullable) = true];</code>
+       */
+      public com.spec.SpecProto.TemplateAccountOrBuilder getAccountUpdatesOrBuilder(
+          int index) {
+        if (accountUpdatesBuilder_ == null) {
+          return accountUpdates_.get(index);  } else {
+          return accountUpdatesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .spec.TemplateAccount AccountUpdates = 2 [json_name = "AccountUpdates", (.gogoproto.nullable) = true];</code>
+       */
+      public java.util.List<? extends com.spec.SpecProto.TemplateAccountOrBuilder> 
+           getAccountUpdatesOrBuilderList() {
+        if (accountUpdatesBuilder_ != null) {
+          return accountUpdatesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(accountUpdates_);
+        }
+      }
+      /**
+       * <code>repeated .spec.TemplateAccount AccountUpdates = 2 [json_name = "AccountUpdates", (.gogoproto.nullable) = true];</code>
+       */
+      public com.spec.SpecProto.TemplateAccount.Builder addAccountUpdatesBuilder() {
+        return getAccountUpdatesFieldBuilder().addBuilder(
+            com.spec.SpecProto.TemplateAccount.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .spec.TemplateAccount AccountUpdates = 2 [json_name = "AccountUpdates", (.gogoproto.nullable) = true];</code>
+       */
+      public com.spec.SpecProto.TemplateAccount.Builder addAccountUpdatesBuilder(
+          int index) {
+        return getAccountUpdatesFieldBuilder().addBuilder(
+            index, com.spec.SpecProto.TemplateAccount.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .spec.TemplateAccount AccountUpdates = 2 [json_name = "AccountUpdates", (.gogoproto.nullable) = true];</code>
+       */
+      public java.util.List<com.spec.SpecProto.TemplateAccount.Builder> 
+           getAccountUpdatesBuilderList() {
+        return getAccountUpdatesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.spec.SpecProto.TemplateAccount, com.spec.SpecProto.TemplateAccount.Builder, com.spec.SpecProto.TemplateAccountOrBuilder> 
+          getAccountUpdatesFieldBuilder() {
+        if (accountUpdatesBuilder_ == null) {
+          accountUpdatesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.spec.SpecProto.TemplateAccount, com.spec.SpecProto.TemplateAccount.Builder, com.spec.SpecProto.TemplateAccountOrBuilder>(
+                  accountUpdates_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          accountUpdates_ = null;
+        }
+        return accountUpdatesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:payload.GovTx)
+    }
+
+    // @@protoc_insertion_point(class_scope:payload.GovTx)
+    private static final com.payload.PayloadProto.GovTx DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.payload.PayloadProto.GovTx();
+    }
+
+    public static com.payload.PayloadProto.GovTx getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GovTx>
+        PARSER = new com.google.protobuf.AbstractParser<GovTx>() {
+      @java.lang.Override
+      public GovTx parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GovTx> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GovTx> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.payload.PayloadProto.GovTx getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ProposalTxOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payload.ProposalTx)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     * @return Whether the input field is set.
+     */
+    boolean hasInput();
+    /**
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     * @return The input.
+     */
+    com.payload.PayloadProto.TxInput getInput();
+    /**
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     */
+    com.payload.PayloadProto.TxInputOrBuilder getInputOrBuilder();
+
+    /**
+     * <code>int64 VotingWeight = 2 [json_name = "VotingWeight"];</code>
+     * @return The votingWeight.
+     */
+    long getVotingWeight();
+
+    /**
+     * <code>bytes ProposalHash = 3 [json_name = "ProposalHash", (.gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes"];</code>
+     * @return The proposalHash.
+     */
+    com.google.protobuf.ByteString getProposalHash();
+
+    /**
+     * <code>.payload.Proposal Proposal = 4 [json_name = "Proposal"];</code>
+     * @return Whether the proposal field is set.
+     */
+    boolean hasProposal();
+    /**
+     * <code>.payload.Proposal Proposal = 4 [json_name = "Proposal"];</code>
+     * @return The proposal.
+     */
+    com.payload.PayloadProto.Proposal getProposal();
+    /**
+     * <code>.payload.Proposal Proposal = 4 [json_name = "Proposal"];</code>
+     */
+    com.payload.PayloadProto.ProposalOrBuilder getProposalOrBuilder();
+  }
+  /**
+   * Protobuf type {@code payload.ProposalTx}
+   */
+  public static final class ProposalTx extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:payload.ProposalTx)
+      ProposalTxOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ProposalTx.newBuilder() to construct.
+    private ProposalTx(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ProposalTx() {
+      proposalHash_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ProposalTx();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.payload.PayloadProto.internal_static_payload_ProposalTx_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.payload.PayloadProto.internal_static_payload_ProposalTx_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.payload.PayloadProto.ProposalTx.class, com.payload.PayloadProto.ProposalTx.Builder.class);
+    }
+
+    public static final int INPUT_FIELD_NUMBER = 1;
+    private com.payload.PayloadProto.TxInput input_;
+    /**
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     * @return Whether the input field is set.
+     */
+    @java.lang.Override
+    public boolean hasInput() {
+      return input_ != null;
+    }
+    /**
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     * @return The input.
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.TxInput getInput() {
+      return input_ == null ? com.payload.PayloadProto.TxInput.getDefaultInstance() : input_;
+    }
+    /**
+     * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.TxInputOrBuilder getInputOrBuilder() {
+      return input_ == null ? com.payload.PayloadProto.TxInput.getDefaultInstance() : input_;
+    }
+
+    public static final int VOTINGWEIGHT_FIELD_NUMBER = 2;
+    private long votingWeight_ = 0L;
+    /**
+     * <code>int64 VotingWeight = 2 [json_name = "VotingWeight"];</code>
+     * @return The votingWeight.
+     */
+    @java.lang.Override
+    public long getVotingWeight() {
+      return votingWeight_;
+    }
+
+    public static final int PROPOSALHASH_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString proposalHash_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes ProposalHash = 3 [json_name = "ProposalHash", (.gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes"];</code>
+     * @return The proposalHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getProposalHash() {
+      return proposalHash_;
+    }
+
+    public static final int PROPOSAL_FIELD_NUMBER = 4;
+    private com.payload.PayloadProto.Proposal proposal_;
+    /**
+     * <code>.payload.Proposal Proposal = 4 [json_name = "Proposal"];</code>
+     * @return Whether the proposal field is set.
+     */
+    @java.lang.Override
+    public boolean hasProposal() {
+      return proposal_ != null;
+    }
+    /**
+     * <code>.payload.Proposal Proposal = 4 [json_name = "Proposal"];</code>
+     * @return The proposal.
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.Proposal getProposal() {
+      return proposal_ == null ? com.payload.PayloadProto.Proposal.getDefaultInstance() : proposal_;
+    }
+    /**
+     * <code>.payload.Proposal Proposal = 4 [json_name = "Proposal"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.ProposalOrBuilder getProposalOrBuilder() {
+      return proposal_ == null ? com.payload.PayloadProto.Proposal.getDefaultInstance() : proposal_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (input_ != null) {
+        output.writeMessage(1, getInput());
+      }
+      if (votingWeight_ != 0L) {
+        output.writeInt64(2, votingWeight_);
+      }
+      if (!proposalHash_.isEmpty()) {
+        output.writeBytes(3, proposalHash_);
+      }
+      if (proposal_ != null) {
+        output.writeMessage(4, getProposal());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (input_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getInput());
+      }
+      if (votingWeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, votingWeight_);
+      }
+      if (!proposalHash_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, proposalHash_);
+      }
+      if (proposal_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getProposal());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.payload.PayloadProto.ProposalTx)) {
+        return super.equals(obj);
+      }
+      com.payload.PayloadProto.ProposalTx other = (com.payload.PayloadProto.ProposalTx) obj;
+
+      if (hasInput() != other.hasInput()) return false;
+      if (hasInput()) {
+        if (!getInput()
+            .equals(other.getInput())) return false;
+      }
+      if (getVotingWeight()
+          != other.getVotingWeight()) return false;
+      if (!getProposalHash()
+          .equals(other.getProposalHash())) return false;
+      if (hasProposal() != other.hasProposal()) return false;
+      if (hasProposal()) {
+        if (!getProposal()
+            .equals(other.getProposal())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasInput()) {
+        hash = (37 * hash) + INPUT_FIELD_NUMBER;
+        hash = (53 * hash) + getInput().hashCode();
+      }
+      hash = (37 * hash) + VOTINGWEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getVotingWeight());
+      hash = (37 * hash) + PROPOSALHASH_FIELD_NUMBER;
+      hash = (53 * hash) + getProposalHash().hashCode();
+      if (hasProposal()) {
+        hash = (37 * hash) + PROPOSAL_FIELD_NUMBER;
+        hash = (53 * hash) + getProposal().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.payload.PayloadProto.ProposalTx parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.ProposalTx parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.ProposalTx parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.ProposalTx parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.ProposalTx parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.ProposalTx parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.ProposalTx parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.ProposalTx parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.payload.PayloadProto.ProposalTx parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.payload.PayloadProto.ProposalTx parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.ProposalTx parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.ProposalTx parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.payload.PayloadProto.ProposalTx prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code payload.ProposalTx}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:payload.ProposalTx)
+        com.payload.PayloadProto.ProposalTxOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.payload.PayloadProto.internal_static_payload_ProposalTx_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.payload.PayloadProto.internal_static_payload_ProposalTx_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.payload.PayloadProto.ProposalTx.class, com.payload.PayloadProto.ProposalTx.Builder.class);
+      }
+
+      // Construct using com.payload.PayloadProto.ProposalTx.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        input_ = null;
+        if (inputBuilder_ != null) {
+          inputBuilder_.dispose();
+          inputBuilder_ = null;
+        }
+        votingWeight_ = 0L;
+        proposalHash_ = com.google.protobuf.ByteString.EMPTY;
+        proposal_ = null;
+        if (proposalBuilder_ != null) {
+          proposalBuilder_.dispose();
+          proposalBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.payload.PayloadProto.internal_static_payload_ProposalTx_descriptor;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.ProposalTx getDefaultInstanceForType() {
+        return com.payload.PayloadProto.ProposalTx.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.ProposalTx build() {
+        com.payload.PayloadProto.ProposalTx result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.ProposalTx buildPartial() {
+        com.payload.PayloadProto.ProposalTx result = new com.payload.PayloadProto.ProposalTx(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.payload.PayloadProto.ProposalTx result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.input_ = inputBuilder_ == null
+              ? input_
+              : inputBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.votingWeight_ = votingWeight_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.proposalHash_ = proposalHash_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.proposal_ = proposalBuilder_ == null
+              ? proposal_
+              : proposalBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.payload.PayloadProto.ProposalTx) {
+          return mergeFrom((com.payload.PayloadProto.ProposalTx)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.payload.PayloadProto.ProposalTx other) {
+        if (other == com.payload.PayloadProto.ProposalTx.getDefaultInstance()) return this;
+        if (other.hasInput()) {
+          mergeInput(other.getInput());
+        }
+        if (other.getVotingWeight() != 0L) {
+          setVotingWeight(other.getVotingWeight());
+        }
+        if (other.getProposalHash() != com.google.protobuf.ByteString.EMPTY) {
+          setProposalHash(other.getProposalHash());
+        }
+        if (other.hasProposal()) {
+          mergeProposal(other.getProposal());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getInputFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                votingWeight_ = input.readInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                proposalHash_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getProposalFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.payload.PayloadProto.TxInput input_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.TxInput, com.payload.PayloadProto.TxInput.Builder, com.payload.PayloadProto.TxInputOrBuilder> inputBuilder_;
+      /**
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       * @return Whether the input field is set.
+       */
+      public boolean hasInput() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       * @return The input.
+       */
+      public com.payload.PayloadProto.TxInput getInput() {
+        if (inputBuilder_ == null) {
+          return input_ == null ? com.payload.PayloadProto.TxInput.getDefaultInstance() : input_;
+        } else {
+          return inputBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public Builder setInput(com.payload.PayloadProto.TxInput value) {
+        if (inputBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          input_ = value;
+        } else {
+          inputBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public Builder setInput(
+          com.payload.PayloadProto.TxInput.Builder builderForValue) {
+        if (inputBuilder_ == null) {
+          input_ = builderForValue.build();
+        } else {
+          inputBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public Builder mergeInput(com.payload.PayloadProto.TxInput value) {
+        if (inputBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            input_ != null &&
+            input_ != com.payload.PayloadProto.TxInput.getDefaultInstance()) {
+            getInputBuilder().mergeFrom(value);
+          } else {
+            input_ = value;
+          }
+        } else {
+          inputBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public Builder clearInput() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        input_ = null;
+        if (inputBuilder_ != null) {
+          inputBuilder_.dispose();
+          inputBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public com.payload.PayloadProto.TxInput.Builder getInputBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getInputFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      public com.payload.PayloadProto.TxInputOrBuilder getInputOrBuilder() {
+        if (inputBuilder_ != null) {
+          return inputBuilder_.getMessageOrBuilder();
+        } else {
+          return input_ == null ?
+              com.payload.PayloadProto.TxInput.getDefaultInstance() : input_;
+        }
+      }
+      /**
+       * <code>.payload.TxInput Input = 1 [json_name = "Input"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.TxInput, com.payload.PayloadProto.TxInput.Builder, com.payload.PayloadProto.TxInputOrBuilder> 
+          getInputFieldBuilder() {
+        if (inputBuilder_ == null) {
+          inputBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.payload.PayloadProto.TxInput, com.payload.PayloadProto.TxInput.Builder, com.payload.PayloadProto.TxInputOrBuilder>(
+                  getInput(),
+                  getParentForChildren(),
+                  isClean());
+          input_ = null;
+        }
+        return inputBuilder_;
+      }
+
+      private long votingWeight_ ;
+      /**
+       * <code>int64 VotingWeight = 2 [json_name = "VotingWeight"];</code>
+       * @return The votingWeight.
+       */
+      @java.lang.Override
+      public long getVotingWeight() {
+        return votingWeight_;
+      }
+      /**
+       * <code>int64 VotingWeight = 2 [json_name = "VotingWeight"];</code>
+       * @param value The votingWeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVotingWeight(long value) {
+
+        votingWeight_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 VotingWeight = 2 [json_name = "VotingWeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVotingWeight() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        votingWeight_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString proposalHash_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes ProposalHash = 3 [json_name = "ProposalHash", (.gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes"];</code>
+       * @return The proposalHash.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getProposalHash() {
+        return proposalHash_;
+      }
+      /**
+       * <code>bytes ProposalHash = 3 [json_name = "ProposalHash", (.gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes"];</code>
+       * @param value The proposalHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProposalHash(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        proposalHash_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes ProposalHash = 3 [json_name = "ProposalHash", (.gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProposalHash() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        proposalHash_ = getDefaultInstance().getProposalHash();
+        onChanged();
+        return this;
+      }
+
+      private com.payload.PayloadProto.Proposal proposal_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.Proposal, com.payload.PayloadProto.Proposal.Builder, com.payload.PayloadProto.ProposalOrBuilder> proposalBuilder_;
+      /**
+       * <code>.payload.Proposal Proposal = 4 [json_name = "Proposal"];</code>
+       * @return Whether the proposal field is set.
+       */
+      public boolean hasProposal() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.payload.Proposal Proposal = 4 [json_name = "Proposal"];</code>
+       * @return The proposal.
+       */
+      public com.payload.PayloadProto.Proposal getProposal() {
+        if (proposalBuilder_ == null) {
+          return proposal_ == null ? com.payload.PayloadProto.Proposal.getDefaultInstance() : proposal_;
+        } else {
+          return proposalBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.payload.Proposal Proposal = 4 [json_name = "Proposal"];</code>
+       */
+      public Builder setProposal(com.payload.PayloadProto.Proposal value) {
+        if (proposalBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          proposal_ = value;
+        } else {
+          proposalBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.Proposal Proposal = 4 [json_name = "Proposal"];</code>
+       */
+      public Builder setProposal(
+          com.payload.PayloadProto.Proposal.Builder builderForValue) {
+        if (proposalBuilder_ == null) {
+          proposal_ = builderForValue.build();
+        } else {
+          proposalBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.Proposal Proposal = 4 [json_name = "Proposal"];</code>
+       */
+      public Builder mergeProposal(com.payload.PayloadProto.Proposal value) {
+        if (proposalBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            proposal_ != null &&
+            proposal_ != com.payload.PayloadProto.Proposal.getDefaultInstance()) {
+            getProposalBuilder().mergeFrom(value);
+          } else {
+            proposal_ = value;
+          }
+        } else {
+          proposalBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.Proposal Proposal = 4 [json_name = "Proposal"];</code>
+       */
+      public Builder clearProposal() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        proposal_ = null;
+        if (proposalBuilder_ != null) {
+          proposalBuilder_.dispose();
+          proposalBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.Proposal Proposal = 4 [json_name = "Proposal"];</code>
+       */
+      public com.payload.PayloadProto.Proposal.Builder getProposalBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getProposalFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.payload.Proposal Proposal = 4 [json_name = "Proposal"];</code>
+       */
+      public com.payload.PayloadProto.ProposalOrBuilder getProposalOrBuilder() {
+        if (proposalBuilder_ != null) {
+          return proposalBuilder_.getMessageOrBuilder();
+        } else {
+          return proposal_ == null ?
+              com.payload.PayloadProto.Proposal.getDefaultInstance() : proposal_;
+        }
+      }
+      /**
+       * <code>.payload.Proposal Proposal = 4 [json_name = "Proposal"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.Proposal, com.payload.PayloadProto.Proposal.Builder, com.payload.PayloadProto.ProposalOrBuilder> 
+          getProposalFieldBuilder() {
+        if (proposalBuilder_ == null) {
+          proposalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.payload.PayloadProto.Proposal, com.payload.PayloadProto.Proposal.Builder, com.payload.PayloadProto.ProposalOrBuilder>(
+                  getProposal(),
+                  getParentForChildren(),
+                  isClean());
+          proposal_ = null;
+        }
+        return proposalBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:payload.ProposalTx)
+    }
+
+    // @@protoc_insertion_point(class_scope:payload.ProposalTx)
+    private static final com.payload.PayloadProto.ProposalTx DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.payload.PayloadProto.ProposalTx();
+    }
+
+    public static com.payload.PayloadProto.ProposalTx getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ProposalTx>
+        PARSER = new com.google.protobuf.AbstractParser<ProposalTx>() {
+      @java.lang.Override
+      public ProposalTx parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ProposalTx> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ProposalTx> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.payload.PayloadProto.ProposalTx getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface IdentifyTxOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payload.IdentifyTx)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Senders
+     * </pre>
+     *
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    java.util.List<com.payload.PayloadProto.TxInput> 
+        getInputsList();
+    /**
+     * <pre>
+     * Senders
+     * </pre>
+     *
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    com.payload.PayloadProto.TxInput getInputs(int index);
+    /**
+     * <pre>
+     * Senders
+     * </pre>
+     *
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    int getInputsCount();
+    /**
+     * <pre>
+     * Senders
+     * </pre>
+     *
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    java.util.List<? extends com.payload.PayloadProto.TxInputOrBuilder> 
+        getInputsOrBuilderList();
+    /**
+     * <pre>
+     * Senders
+     * </pre>
+     *
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    com.payload.PayloadProto.TxInputOrBuilder getInputsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Node to register
+     * </pre>
+     *
+     * <code>.registry.NodeIdentity Node = 2 [json_name = "Node"];</code>
+     * @return Whether the node field is set.
+     */
+    boolean hasNode();
+    /**
+     * <pre>
+     * Node to register
+     * </pre>
+     *
+     * <code>.registry.NodeIdentity Node = 2 [json_name = "Node"];</code>
+     * @return The node.
+     */
+    com.registry.RegistryProto.NodeIdentity getNode();
+    /**
+     * <pre>
+     * Node to register
+     * </pre>
+     *
+     * <code>.registry.NodeIdentity Node = 2 [json_name = "Node"];</code>
+     */
+    com.registry.RegistryProto.NodeIdentityOrBuilder getNodeOrBuilder();
+  }
+  /**
+   * Protobuf type {@code payload.IdentifyTx}
+   */
+  public static final class IdentifyTx extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:payload.IdentifyTx)
+      IdentifyTxOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IdentifyTx.newBuilder() to construct.
+    private IdentifyTx(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IdentifyTx() {
+      inputs_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IdentifyTx();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.payload.PayloadProto.internal_static_payload_IdentifyTx_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.payload.PayloadProto.internal_static_payload_IdentifyTx_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.payload.PayloadProto.IdentifyTx.class, com.payload.PayloadProto.IdentifyTx.Builder.class);
+    }
+
+    public static final int INPUTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.payload.PayloadProto.TxInput> inputs_;
+    /**
+     * <pre>
+     * Senders
+     * </pre>
+     *
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.payload.PayloadProto.TxInput> getInputsList() {
+      return inputs_;
+    }
+    /**
+     * <pre>
+     * Senders
+     * </pre>
+     *
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.payload.PayloadProto.TxInputOrBuilder> 
+        getInputsOrBuilderList() {
+      return inputs_;
+    }
+    /**
+     * <pre>
+     * Senders
+     * </pre>
+     *
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    @java.lang.Override
+    public int getInputsCount() {
+      return inputs_.size();
+    }
+    /**
+     * <pre>
+     * Senders
+     * </pre>
+     *
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.TxInput getInputs(int index) {
+      return inputs_.get(index);
+    }
+    /**
+     * <pre>
+     * Senders
+     * </pre>
+     *
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.TxInputOrBuilder getInputsOrBuilder(
+        int index) {
+      return inputs_.get(index);
+    }
+
+    public static final int NODE_FIELD_NUMBER = 2;
+    private com.registry.RegistryProto.NodeIdentity node_;
+    /**
+     * <pre>
+     * Node to register
+     * </pre>
+     *
+     * <code>.registry.NodeIdentity Node = 2 [json_name = "Node"];</code>
+     * @return Whether the node field is set.
+     */
+    @java.lang.Override
+    public boolean hasNode() {
+      return node_ != null;
+    }
+    /**
+     * <pre>
+     * Node to register
+     * </pre>
+     *
+     * <code>.registry.NodeIdentity Node = 2 [json_name = "Node"];</code>
+     * @return The node.
+     */
+    @java.lang.Override
+    public com.registry.RegistryProto.NodeIdentity getNode() {
+      return node_ == null ? com.registry.RegistryProto.NodeIdentity.getDefaultInstance() : node_;
+    }
+    /**
+     * <pre>
+     * Node to register
+     * </pre>
+     *
+     * <code>.registry.NodeIdentity Node = 2 [json_name = "Node"];</code>
+     */
+    @java.lang.Override
+    public com.registry.RegistryProto.NodeIdentityOrBuilder getNodeOrBuilder() {
+      return node_ == null ? com.registry.RegistryProto.NodeIdentity.getDefaultInstance() : node_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < inputs_.size(); i++) {
+        output.writeMessage(1, inputs_.get(i));
+      }
+      if (node_ != null) {
+        output.writeMessage(2, getNode());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < inputs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, inputs_.get(i));
+      }
+      if (node_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getNode());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.payload.PayloadProto.IdentifyTx)) {
+        return super.equals(obj);
+      }
+      com.payload.PayloadProto.IdentifyTx other = (com.payload.PayloadProto.IdentifyTx) obj;
+
+      if (!getInputsList()
+          .equals(other.getInputsList())) return false;
+      if (hasNode() != other.hasNode()) return false;
+      if (hasNode()) {
+        if (!getNode()
+            .equals(other.getNode())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getInputsCount() > 0) {
+        hash = (37 * hash) + INPUTS_FIELD_NUMBER;
+        hash = (53 * hash) + getInputsList().hashCode();
+      }
+      if (hasNode()) {
+        hash = (37 * hash) + NODE_FIELD_NUMBER;
+        hash = (53 * hash) + getNode().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.payload.PayloadProto.IdentifyTx parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.IdentifyTx parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.IdentifyTx parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.IdentifyTx parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.IdentifyTx parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.IdentifyTx parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.IdentifyTx parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.IdentifyTx parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.payload.PayloadProto.IdentifyTx parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.payload.PayloadProto.IdentifyTx parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.IdentifyTx parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.IdentifyTx parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.payload.PayloadProto.IdentifyTx prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code payload.IdentifyTx}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:payload.IdentifyTx)
+        com.payload.PayloadProto.IdentifyTxOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.payload.PayloadProto.internal_static_payload_IdentifyTx_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.payload.PayloadProto.internal_static_payload_IdentifyTx_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.payload.PayloadProto.IdentifyTx.class, com.payload.PayloadProto.IdentifyTx.Builder.class);
+      }
+
+      // Construct using com.payload.PayloadProto.IdentifyTx.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (inputsBuilder_ == null) {
+          inputs_ = java.util.Collections.emptyList();
+        } else {
+          inputs_ = null;
+          inputsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        node_ = null;
+        if (nodeBuilder_ != null) {
+          nodeBuilder_.dispose();
+          nodeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.payload.PayloadProto.internal_static_payload_IdentifyTx_descriptor;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.IdentifyTx getDefaultInstanceForType() {
+        return com.payload.PayloadProto.IdentifyTx.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.IdentifyTx build() {
+        com.payload.PayloadProto.IdentifyTx result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.IdentifyTx buildPartial() {
+        com.payload.PayloadProto.IdentifyTx result = new com.payload.PayloadProto.IdentifyTx(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.payload.PayloadProto.IdentifyTx result) {
+        if (inputsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            inputs_ = java.util.Collections.unmodifiableList(inputs_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.inputs_ = inputs_;
+        } else {
+          result.inputs_ = inputsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.payload.PayloadProto.IdentifyTx result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.node_ = nodeBuilder_ == null
+              ? node_
+              : nodeBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.payload.PayloadProto.IdentifyTx) {
+          return mergeFrom((com.payload.PayloadProto.IdentifyTx)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.payload.PayloadProto.IdentifyTx other) {
+        if (other == com.payload.PayloadProto.IdentifyTx.getDefaultInstance()) return this;
+        if (inputsBuilder_ == null) {
+          if (!other.inputs_.isEmpty()) {
+            if (inputs_.isEmpty()) {
+              inputs_ = other.inputs_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureInputsIsMutable();
+              inputs_.addAll(other.inputs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.inputs_.isEmpty()) {
+            if (inputsBuilder_.isEmpty()) {
+              inputsBuilder_.dispose();
+              inputsBuilder_ = null;
+              inputs_ = other.inputs_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              inputsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getInputsFieldBuilder() : null;
+            } else {
+              inputsBuilder_.addAllMessages(other.inputs_);
+            }
+          }
+        }
+        if (other.hasNode()) {
+          mergeNode(other.getNode());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.payload.PayloadProto.TxInput m =
+                    input.readMessage(
+                        com.payload.PayloadProto.TxInput.parser(),
+                        extensionRegistry);
+                if (inputsBuilder_ == null) {
+                  ensureInputsIsMutable();
+                  inputs_.add(m);
+                } else {
+                  inputsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getNodeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.payload.PayloadProto.TxInput> inputs_ =
+        java.util.Collections.emptyList();
+      private void ensureInputsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          inputs_ = new java.util.ArrayList<com.payload.PayloadProto.TxInput>(inputs_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.payload.PayloadProto.TxInput, com.payload.PayloadProto.TxInput.Builder, com.payload.PayloadProto.TxInputOrBuilder> inputsBuilder_;
+
+      /**
+       * <pre>
+       * Senders
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public java.util.List<com.payload.PayloadProto.TxInput> getInputsList() {
+        if (inputsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(inputs_);
+        } else {
+          return inputsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Senders
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public int getInputsCount() {
+        if (inputsBuilder_ == null) {
+          return inputs_.size();
+        } else {
+          return inputsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Senders
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public com.payload.PayloadProto.TxInput getInputs(int index) {
+        if (inputsBuilder_ == null) {
+          return inputs_.get(index);
+        } else {
+          return inputsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Senders
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder setInputs(
+          int index, com.payload.PayloadProto.TxInput value) {
+        if (inputsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputsIsMutable();
+          inputs_.set(index, value);
+          onChanged();
+        } else {
+          inputsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Senders
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder setInputs(
+          int index, com.payload.PayloadProto.TxInput.Builder builderForValue) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          inputsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Senders
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder addInputs(com.payload.PayloadProto.TxInput value) {
+        if (inputsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputsIsMutable();
+          inputs_.add(value);
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Senders
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder addInputs(
+          int index, com.payload.PayloadProto.TxInput value) {
+        if (inputsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputsIsMutable();
+          inputs_.add(index, value);
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Senders
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder addInputs(
+          com.payload.PayloadProto.TxInput.Builder builderForValue) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Senders
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder addInputs(
+          int index, com.payload.PayloadProto.TxInput.Builder builderForValue) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Senders
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder addAllInputs(
+          java.lang.Iterable<? extends com.payload.PayloadProto.TxInput> values) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, inputs_);
+          onChanged();
+        } else {
+          inputsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Senders
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder clearInputs() {
+        if (inputsBuilder_ == null) {
+          inputs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          inputsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Senders
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder removeInputs(int index) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.remove(index);
+          onChanged();
+        } else {
+          inputsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Senders
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public com.payload.PayloadProto.TxInput.Builder getInputsBuilder(
+          int index) {
+        return getInputsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Senders
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public com.payload.PayloadProto.TxInputOrBuilder getInputsOrBuilder(
+          int index) {
+        if (inputsBuilder_ == null) {
+          return inputs_.get(index);  } else {
+          return inputsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Senders
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public java.util.List<? extends com.payload.PayloadProto.TxInputOrBuilder> 
+           getInputsOrBuilderList() {
+        if (inputsBuilder_ != null) {
+          return inputsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(inputs_);
+        }
+      }
+      /**
+       * <pre>
+       * Senders
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public com.payload.PayloadProto.TxInput.Builder addInputsBuilder() {
+        return getInputsFieldBuilder().addBuilder(
+            com.payload.PayloadProto.TxInput.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Senders
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public com.payload.PayloadProto.TxInput.Builder addInputsBuilder(
+          int index) {
+        return getInputsFieldBuilder().addBuilder(
+            index, com.payload.PayloadProto.TxInput.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Senders
+       * </pre>
+       *
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public java.util.List<com.payload.PayloadProto.TxInput.Builder> 
+           getInputsBuilderList() {
+        return getInputsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.payload.PayloadProto.TxInput, com.payload.PayloadProto.TxInput.Builder, com.payload.PayloadProto.TxInputOrBuilder> 
+          getInputsFieldBuilder() {
+        if (inputsBuilder_ == null) {
+          inputsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.payload.PayloadProto.TxInput, com.payload.PayloadProto.TxInput.Builder, com.payload.PayloadProto.TxInputOrBuilder>(
+                  inputs_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          inputs_ = null;
+        }
+        return inputsBuilder_;
+      }
+
+      private com.registry.RegistryProto.NodeIdentity node_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.registry.RegistryProto.NodeIdentity, com.registry.RegistryProto.NodeIdentity.Builder, com.registry.RegistryProto.NodeIdentityOrBuilder> nodeBuilder_;
+      /**
+       * <pre>
+       * Node to register
+       * </pre>
+       *
+       * <code>.registry.NodeIdentity Node = 2 [json_name = "Node"];</code>
+       * @return Whether the node field is set.
+       */
+      public boolean hasNode() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Node to register
+       * </pre>
+       *
+       * <code>.registry.NodeIdentity Node = 2 [json_name = "Node"];</code>
+       * @return The node.
+       */
+      public com.registry.RegistryProto.NodeIdentity getNode() {
+        if (nodeBuilder_ == null) {
+          return node_ == null ? com.registry.RegistryProto.NodeIdentity.getDefaultInstance() : node_;
+        } else {
+          return nodeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Node to register
+       * </pre>
+       *
+       * <code>.registry.NodeIdentity Node = 2 [json_name = "Node"];</code>
+       */
+      public Builder setNode(com.registry.RegistryProto.NodeIdentity value) {
+        if (nodeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          node_ = value;
+        } else {
+          nodeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Node to register
+       * </pre>
+       *
+       * <code>.registry.NodeIdentity Node = 2 [json_name = "Node"];</code>
+       */
+      public Builder setNode(
+          com.registry.RegistryProto.NodeIdentity.Builder builderForValue) {
+        if (nodeBuilder_ == null) {
+          node_ = builderForValue.build();
+        } else {
+          nodeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Node to register
+       * </pre>
+       *
+       * <code>.registry.NodeIdentity Node = 2 [json_name = "Node"];</code>
+       */
+      public Builder mergeNode(com.registry.RegistryProto.NodeIdentity value) {
+        if (nodeBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            node_ != null &&
+            node_ != com.registry.RegistryProto.NodeIdentity.getDefaultInstance()) {
+            getNodeBuilder().mergeFrom(value);
+          } else {
+            node_ = value;
+          }
+        } else {
+          nodeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Node to register
+       * </pre>
+       *
+       * <code>.registry.NodeIdentity Node = 2 [json_name = "Node"];</code>
+       */
+      public Builder clearNode() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        node_ = null;
+        if (nodeBuilder_ != null) {
+          nodeBuilder_.dispose();
+          nodeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Node to register
+       * </pre>
+       *
+       * <code>.registry.NodeIdentity Node = 2 [json_name = "Node"];</code>
+       */
+      public com.registry.RegistryProto.NodeIdentity.Builder getNodeBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getNodeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Node to register
+       * </pre>
+       *
+       * <code>.registry.NodeIdentity Node = 2 [json_name = "Node"];</code>
+       */
+      public com.registry.RegistryProto.NodeIdentityOrBuilder getNodeOrBuilder() {
+        if (nodeBuilder_ != null) {
+          return nodeBuilder_.getMessageOrBuilder();
+        } else {
+          return node_ == null ?
+              com.registry.RegistryProto.NodeIdentity.getDefaultInstance() : node_;
+        }
+      }
+      /**
+       * <pre>
+       * Node to register
+       * </pre>
+       *
+       * <code>.registry.NodeIdentity Node = 2 [json_name = "Node"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.registry.RegistryProto.NodeIdentity, com.registry.RegistryProto.NodeIdentity.Builder, com.registry.RegistryProto.NodeIdentityOrBuilder> 
+          getNodeFieldBuilder() {
+        if (nodeBuilder_ == null) {
+          nodeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.registry.RegistryProto.NodeIdentity, com.registry.RegistryProto.NodeIdentity.Builder, com.registry.RegistryProto.NodeIdentityOrBuilder>(
+                  getNode(),
+                  getParentForChildren(),
+                  isClean());
+          node_ = null;
+        }
+        return nodeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:payload.IdentifyTx)
+    }
+
+    // @@protoc_insertion_point(class_scope:payload.IdentifyTx)
+    private static final com.payload.PayloadProto.IdentifyTx DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.payload.PayloadProto.IdentifyTx();
+    }
+
+    public static com.payload.PayloadProto.IdentifyTx getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<IdentifyTx>
+        PARSER = new com.google.protobuf.AbstractParser<IdentifyTx>() {
+      @java.lang.Override
+      public IdentifyTx parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<IdentifyTx> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IdentifyTx> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.payload.PayloadProto.IdentifyTx getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BatchTxOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payload.BatchTx)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    java.util.List<com.payload.PayloadProto.TxInput> 
+        getInputsList();
+    /**
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    com.payload.PayloadProto.TxInput getInputs(int index);
+    /**
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    int getInputsCount();
+    /**
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    java.util.List<? extends com.payload.PayloadProto.TxInputOrBuilder> 
+        getInputsOrBuilderList();
+    /**
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    com.payload.PayloadProto.TxInputOrBuilder getInputsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .payload.Any Txs = 2 [json_name = "Txs"];</code>
+     */
+    java.util.List<com.payload.PayloadProto.Any> 
+        getTxsList();
+    /**
+     * <code>repeated .payload.Any Txs = 2 [json_name = "Txs"];</code>
+     */
+    com.payload.PayloadProto.Any getTxs(int index);
+    /**
+     * <code>repeated .payload.Any Txs = 2 [json_name = "Txs"];</code>
+     */
+    int getTxsCount();
+    /**
+     * <code>repeated .payload.Any Txs = 2 [json_name = "Txs"];</code>
+     */
+    java.util.List<? extends com.payload.PayloadProto.AnyOrBuilder> 
+        getTxsOrBuilderList();
+    /**
+     * <code>repeated .payload.Any Txs = 2 [json_name = "Txs"];</code>
+     */
+    com.payload.PayloadProto.AnyOrBuilder getTxsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code payload.BatchTx}
+   */
+  public static final class BatchTx extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:payload.BatchTx)
+      BatchTxOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BatchTx.newBuilder() to construct.
+    private BatchTx(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BatchTx() {
+      inputs_ = java.util.Collections.emptyList();
+      txs_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BatchTx();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.payload.PayloadProto.internal_static_payload_BatchTx_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.payload.PayloadProto.internal_static_payload_BatchTx_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.payload.PayloadProto.BatchTx.class, com.payload.PayloadProto.BatchTx.Builder.class);
+    }
+
+    public static final int INPUTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.payload.PayloadProto.TxInput> inputs_;
+    /**
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.payload.PayloadProto.TxInput> getInputsList() {
+      return inputs_;
+    }
+    /**
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.payload.PayloadProto.TxInputOrBuilder> 
+        getInputsOrBuilderList() {
+      return inputs_;
+    }
+    /**
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    @java.lang.Override
+    public int getInputsCount() {
+      return inputs_.size();
+    }
+    /**
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.TxInput getInputs(int index) {
+      return inputs_.get(index);
+    }
+    /**
+     * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.TxInputOrBuilder getInputsOrBuilder(
+        int index) {
+      return inputs_.get(index);
+    }
+
+    public static final int TXS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.payload.PayloadProto.Any> txs_;
+    /**
+     * <code>repeated .payload.Any Txs = 2 [json_name = "Txs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.payload.PayloadProto.Any> getTxsList() {
+      return txs_;
+    }
+    /**
+     * <code>repeated .payload.Any Txs = 2 [json_name = "Txs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.payload.PayloadProto.AnyOrBuilder> 
+        getTxsOrBuilderList() {
+      return txs_;
+    }
+    /**
+     * <code>repeated .payload.Any Txs = 2 [json_name = "Txs"];</code>
+     */
+    @java.lang.Override
+    public int getTxsCount() {
+      return txs_.size();
+    }
+    /**
+     * <code>repeated .payload.Any Txs = 2 [json_name = "Txs"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.Any getTxs(int index) {
+      return txs_.get(index);
+    }
+    /**
+     * <code>repeated .payload.Any Txs = 2 [json_name = "Txs"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.AnyOrBuilder getTxsOrBuilder(
+        int index) {
+      return txs_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < inputs_.size(); i++) {
+        output.writeMessage(1, inputs_.get(i));
+      }
+      for (int i = 0; i < txs_.size(); i++) {
+        output.writeMessage(2, txs_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < inputs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, inputs_.get(i));
+      }
+      for (int i = 0; i < txs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, txs_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.payload.PayloadProto.BatchTx)) {
+        return super.equals(obj);
+      }
+      com.payload.PayloadProto.BatchTx other = (com.payload.PayloadProto.BatchTx) obj;
+
+      if (!getInputsList()
+          .equals(other.getInputsList())) return false;
+      if (!getTxsList()
+          .equals(other.getTxsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getInputsCount() > 0) {
+        hash = (37 * hash) + INPUTS_FIELD_NUMBER;
+        hash = (53 * hash) + getInputsList().hashCode();
+      }
+      if (getTxsCount() > 0) {
+        hash = (37 * hash) + TXS_FIELD_NUMBER;
+        hash = (53 * hash) + getTxsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.payload.PayloadProto.BatchTx parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.BatchTx parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.BatchTx parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.BatchTx parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.BatchTx parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.BatchTx parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.BatchTx parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.BatchTx parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.payload.PayloadProto.BatchTx parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.payload.PayloadProto.BatchTx parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.BatchTx parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.BatchTx parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.payload.PayloadProto.BatchTx prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code payload.BatchTx}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:payload.BatchTx)
+        com.payload.PayloadProto.BatchTxOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.payload.PayloadProto.internal_static_payload_BatchTx_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.payload.PayloadProto.internal_static_payload_BatchTx_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.payload.PayloadProto.BatchTx.class, com.payload.PayloadProto.BatchTx.Builder.class);
+      }
+
+      // Construct using com.payload.PayloadProto.BatchTx.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (inputsBuilder_ == null) {
+          inputs_ = java.util.Collections.emptyList();
+        } else {
+          inputs_ = null;
+          inputsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (txsBuilder_ == null) {
+          txs_ = java.util.Collections.emptyList();
+        } else {
+          txs_ = null;
+          txsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.payload.PayloadProto.internal_static_payload_BatchTx_descriptor;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.BatchTx getDefaultInstanceForType() {
+        return com.payload.PayloadProto.BatchTx.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.BatchTx build() {
+        com.payload.PayloadProto.BatchTx result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.BatchTx buildPartial() {
+        com.payload.PayloadProto.BatchTx result = new com.payload.PayloadProto.BatchTx(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.payload.PayloadProto.BatchTx result) {
+        if (inputsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            inputs_ = java.util.Collections.unmodifiableList(inputs_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.inputs_ = inputs_;
+        } else {
+          result.inputs_ = inputsBuilder_.build();
+        }
+        if (txsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            txs_ = java.util.Collections.unmodifiableList(txs_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.txs_ = txs_;
+        } else {
+          result.txs_ = txsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.payload.PayloadProto.BatchTx result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.payload.PayloadProto.BatchTx) {
+          return mergeFrom((com.payload.PayloadProto.BatchTx)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.payload.PayloadProto.BatchTx other) {
+        if (other == com.payload.PayloadProto.BatchTx.getDefaultInstance()) return this;
+        if (inputsBuilder_ == null) {
+          if (!other.inputs_.isEmpty()) {
+            if (inputs_.isEmpty()) {
+              inputs_ = other.inputs_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureInputsIsMutable();
+              inputs_.addAll(other.inputs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.inputs_.isEmpty()) {
+            if (inputsBuilder_.isEmpty()) {
+              inputsBuilder_.dispose();
+              inputsBuilder_ = null;
+              inputs_ = other.inputs_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              inputsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getInputsFieldBuilder() : null;
+            } else {
+              inputsBuilder_.addAllMessages(other.inputs_);
+            }
+          }
+        }
+        if (txsBuilder_ == null) {
+          if (!other.txs_.isEmpty()) {
+            if (txs_.isEmpty()) {
+              txs_ = other.txs_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureTxsIsMutable();
+              txs_.addAll(other.txs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.txs_.isEmpty()) {
+            if (txsBuilder_.isEmpty()) {
+              txsBuilder_.dispose();
+              txsBuilder_ = null;
+              txs_ = other.txs_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              txsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTxsFieldBuilder() : null;
+            } else {
+              txsBuilder_.addAllMessages(other.txs_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.payload.PayloadProto.TxInput m =
+                    input.readMessage(
+                        com.payload.PayloadProto.TxInput.parser(),
+                        extensionRegistry);
+                if (inputsBuilder_ == null) {
+                  ensureInputsIsMutable();
+                  inputs_.add(m);
+                } else {
+                  inputsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                com.payload.PayloadProto.Any m =
+                    input.readMessage(
+                        com.payload.PayloadProto.Any.parser(),
+                        extensionRegistry);
+                if (txsBuilder_ == null) {
+                  ensureTxsIsMutable();
+                  txs_.add(m);
+                } else {
+                  txsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.payload.PayloadProto.TxInput> inputs_ =
+        java.util.Collections.emptyList();
+      private void ensureInputsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          inputs_ = new java.util.ArrayList<com.payload.PayloadProto.TxInput>(inputs_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.payload.PayloadProto.TxInput, com.payload.PayloadProto.TxInput.Builder, com.payload.PayloadProto.TxInputOrBuilder> inputsBuilder_;
+
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public java.util.List<com.payload.PayloadProto.TxInput> getInputsList() {
+        if (inputsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(inputs_);
+        } else {
+          return inputsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public int getInputsCount() {
+        if (inputsBuilder_ == null) {
+          return inputs_.size();
+        } else {
+          return inputsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public com.payload.PayloadProto.TxInput getInputs(int index) {
+        if (inputsBuilder_ == null) {
+          return inputs_.get(index);
+        } else {
+          return inputsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder setInputs(
+          int index, com.payload.PayloadProto.TxInput value) {
+        if (inputsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputsIsMutable();
+          inputs_.set(index, value);
+          onChanged();
+        } else {
+          inputsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder setInputs(
+          int index, com.payload.PayloadProto.TxInput.Builder builderForValue) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          inputsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder addInputs(com.payload.PayloadProto.TxInput value) {
+        if (inputsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputsIsMutable();
+          inputs_.add(value);
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder addInputs(
+          int index, com.payload.PayloadProto.TxInput value) {
+        if (inputsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputsIsMutable();
+          inputs_.add(index, value);
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder addInputs(
+          com.payload.PayloadProto.TxInput.Builder builderForValue) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder addInputs(
+          int index, com.payload.PayloadProto.TxInput.Builder builderForValue) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder addAllInputs(
+          java.lang.Iterable<? extends com.payload.PayloadProto.TxInput> values) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, inputs_);
+          onChanged();
+        } else {
+          inputsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder clearInputs() {
+        if (inputsBuilder_ == null) {
+          inputs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          inputsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public Builder removeInputs(int index) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.remove(index);
+          onChanged();
+        } else {
+          inputsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public com.payload.PayloadProto.TxInput.Builder getInputsBuilder(
+          int index) {
+        return getInputsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public com.payload.PayloadProto.TxInputOrBuilder getInputsOrBuilder(
+          int index) {
+        if (inputsBuilder_ == null) {
+          return inputs_.get(index);  } else {
+          return inputsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public java.util.List<? extends com.payload.PayloadProto.TxInputOrBuilder> 
+           getInputsOrBuilderList() {
+        if (inputsBuilder_ != null) {
+          return inputsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(inputs_);
+        }
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public com.payload.PayloadProto.TxInput.Builder addInputsBuilder() {
+        return getInputsFieldBuilder().addBuilder(
+            com.payload.PayloadProto.TxInput.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public com.payload.PayloadProto.TxInput.Builder addInputsBuilder(
+          int index) {
+        return getInputsFieldBuilder().addBuilder(
+            index, com.payload.PayloadProto.TxInput.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .payload.TxInput Inputs = 1 [json_name = "Inputs"];</code>
+       */
+      public java.util.List<com.payload.PayloadProto.TxInput.Builder> 
+           getInputsBuilderList() {
+        return getInputsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.payload.PayloadProto.TxInput, com.payload.PayloadProto.TxInput.Builder, com.payload.PayloadProto.TxInputOrBuilder> 
+          getInputsFieldBuilder() {
+        if (inputsBuilder_ == null) {
+          inputsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.payload.PayloadProto.TxInput, com.payload.PayloadProto.TxInput.Builder, com.payload.PayloadProto.TxInputOrBuilder>(
+                  inputs_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          inputs_ = null;
+        }
+        return inputsBuilder_;
+      }
+
+      private java.util.List<com.payload.PayloadProto.Any> txs_ =
+        java.util.Collections.emptyList();
+      private void ensureTxsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          txs_ = new java.util.ArrayList<com.payload.PayloadProto.Any>(txs_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.payload.PayloadProto.Any, com.payload.PayloadProto.Any.Builder, com.payload.PayloadProto.AnyOrBuilder> txsBuilder_;
+
+      /**
+       * <code>repeated .payload.Any Txs = 2 [json_name = "Txs"];</code>
+       */
+      public java.util.List<com.payload.PayloadProto.Any> getTxsList() {
+        if (txsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(txs_);
+        } else {
+          return txsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .payload.Any Txs = 2 [json_name = "Txs"];</code>
+       */
+      public int getTxsCount() {
+        if (txsBuilder_ == null) {
+          return txs_.size();
+        } else {
+          return txsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .payload.Any Txs = 2 [json_name = "Txs"];</code>
+       */
+      public com.payload.PayloadProto.Any getTxs(int index) {
+        if (txsBuilder_ == null) {
+          return txs_.get(index);
+        } else {
+          return txsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .payload.Any Txs = 2 [json_name = "Txs"];</code>
+       */
+      public Builder setTxs(
+          int index, com.payload.PayloadProto.Any value) {
+        if (txsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTxsIsMutable();
+          txs_.set(index, value);
+          onChanged();
+        } else {
+          txsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.Any Txs = 2 [json_name = "Txs"];</code>
+       */
+      public Builder setTxs(
+          int index, com.payload.PayloadProto.Any.Builder builderForValue) {
+        if (txsBuilder_ == null) {
+          ensureTxsIsMutable();
+          txs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          txsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.Any Txs = 2 [json_name = "Txs"];</code>
+       */
+      public Builder addTxs(com.payload.PayloadProto.Any value) {
+        if (txsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTxsIsMutable();
+          txs_.add(value);
+          onChanged();
+        } else {
+          txsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.Any Txs = 2 [json_name = "Txs"];</code>
+       */
+      public Builder addTxs(
+          int index, com.payload.PayloadProto.Any value) {
+        if (txsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTxsIsMutable();
+          txs_.add(index, value);
+          onChanged();
+        } else {
+          txsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.Any Txs = 2 [json_name = "Txs"];</code>
+       */
+      public Builder addTxs(
+          com.payload.PayloadProto.Any.Builder builderForValue) {
+        if (txsBuilder_ == null) {
+          ensureTxsIsMutable();
+          txs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          txsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.Any Txs = 2 [json_name = "Txs"];</code>
+       */
+      public Builder addTxs(
+          int index, com.payload.PayloadProto.Any.Builder builderForValue) {
+        if (txsBuilder_ == null) {
+          ensureTxsIsMutable();
+          txs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          txsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.Any Txs = 2 [json_name = "Txs"];</code>
+       */
+      public Builder addAllTxs(
+          java.lang.Iterable<? extends com.payload.PayloadProto.Any> values) {
+        if (txsBuilder_ == null) {
+          ensureTxsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, txs_);
+          onChanged();
+        } else {
+          txsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.Any Txs = 2 [json_name = "Txs"];</code>
+       */
+      public Builder clearTxs() {
+        if (txsBuilder_ == null) {
+          txs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          txsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.Any Txs = 2 [json_name = "Txs"];</code>
+       */
+      public Builder removeTxs(int index) {
+        if (txsBuilder_ == null) {
+          ensureTxsIsMutable();
+          txs_.remove(index);
+          onChanged();
+        } else {
+          txsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.Any Txs = 2 [json_name = "Txs"];</code>
+       */
+      public com.payload.PayloadProto.Any.Builder getTxsBuilder(
+          int index) {
+        return getTxsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .payload.Any Txs = 2 [json_name = "Txs"];</code>
+       */
+      public com.payload.PayloadProto.AnyOrBuilder getTxsOrBuilder(
+          int index) {
+        if (txsBuilder_ == null) {
+          return txs_.get(index);  } else {
+          return txsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .payload.Any Txs = 2 [json_name = "Txs"];</code>
+       */
+      public java.util.List<? extends com.payload.PayloadProto.AnyOrBuilder> 
+           getTxsOrBuilderList() {
+        if (txsBuilder_ != null) {
+          return txsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(txs_);
+        }
+      }
+      /**
+       * <code>repeated .payload.Any Txs = 2 [json_name = "Txs"];</code>
+       */
+      public com.payload.PayloadProto.Any.Builder addTxsBuilder() {
+        return getTxsFieldBuilder().addBuilder(
+            com.payload.PayloadProto.Any.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .payload.Any Txs = 2 [json_name = "Txs"];</code>
+       */
+      public com.payload.PayloadProto.Any.Builder addTxsBuilder(
+          int index) {
+        return getTxsFieldBuilder().addBuilder(
+            index, com.payload.PayloadProto.Any.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .payload.Any Txs = 2 [json_name = "Txs"];</code>
+       */
+      public java.util.List<com.payload.PayloadProto.Any.Builder> 
+           getTxsBuilderList() {
+        return getTxsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.payload.PayloadProto.Any, com.payload.PayloadProto.Any.Builder, com.payload.PayloadProto.AnyOrBuilder> 
+          getTxsFieldBuilder() {
+        if (txsBuilder_ == null) {
+          txsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.payload.PayloadProto.Any, com.payload.PayloadProto.Any.Builder, com.payload.PayloadProto.AnyOrBuilder>(
+                  txs_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          txs_ = null;
+        }
+        return txsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:payload.BatchTx)
+    }
+
+    // @@protoc_insertion_point(class_scope:payload.BatchTx)
+    private static final com.payload.PayloadProto.BatchTx DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.payload.PayloadProto.BatchTx();
+    }
+
+    public static com.payload.PayloadProto.BatchTx getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BatchTx>
+        PARSER = new com.google.protobuf.AbstractParser<BatchTx>() {
+      @java.lang.Override
+      public BatchTx parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<BatchTx> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BatchTx> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.payload.PayloadProto.BatchTx getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface VoteOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payload.Vote)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes Address = 1 [json_name = "Address", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address"];</code>
+     * @return The address.
+     */
+    com.google.protobuf.ByteString getAddress();
+
+    /**
+     * <code>int64 VotingWeight = 2 [json_name = "VotingWeight"];</code>
+     * @return The votingWeight.
+     */
+    long getVotingWeight();
+  }
+  /**
+   * Protobuf type {@code payload.Vote}
+   */
+  public static final class Vote extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:payload.Vote)
+      VoteOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Vote.newBuilder() to construct.
+    private Vote(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Vote() {
+      address_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Vote();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.payload.PayloadProto.internal_static_payload_Vote_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.payload.PayloadProto.internal_static_payload_Vote_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.payload.PayloadProto.Vote.class, com.payload.PayloadProto.Vote.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString address_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes Address = 1 [json_name = "Address", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getAddress() {
+      return address_;
+    }
+
+    public static final int VOTINGWEIGHT_FIELD_NUMBER = 2;
+    private long votingWeight_ = 0L;
+    /**
+     * <code>int64 VotingWeight = 2 [json_name = "VotingWeight"];</code>
+     * @return The votingWeight.
+     */
+    @java.lang.Override
+    public long getVotingWeight() {
+      return votingWeight_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!address_.isEmpty()) {
+        output.writeBytes(1, address_);
+      }
+      if (votingWeight_ != 0L) {
+        output.writeInt64(2, votingWeight_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!address_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, address_);
+      }
+      if (votingWeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, votingWeight_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.payload.PayloadProto.Vote)) {
+        return super.equals(obj);
+      }
+      com.payload.PayloadProto.Vote other = (com.payload.PayloadProto.Vote) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (getVotingWeight()
+          != other.getVotingWeight()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + VOTINGWEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getVotingWeight());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.payload.PayloadProto.Vote parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.Vote parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.Vote parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.Vote parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.Vote parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.Vote parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.Vote parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.Vote parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.payload.PayloadProto.Vote parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.payload.PayloadProto.Vote parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.Vote parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.Vote parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.payload.PayloadProto.Vote prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code payload.Vote}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:payload.Vote)
+        com.payload.PayloadProto.VoteOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.payload.PayloadProto.internal_static_payload_Vote_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.payload.PayloadProto.internal_static_payload_Vote_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.payload.PayloadProto.Vote.class, com.payload.PayloadProto.Vote.Builder.class);
+      }
+
+      // Construct using com.payload.PayloadProto.Vote.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = com.google.protobuf.ByteString.EMPTY;
+        votingWeight_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.payload.PayloadProto.internal_static_payload_Vote_descriptor;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.Vote getDefaultInstanceForType() {
+        return com.payload.PayloadProto.Vote.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.Vote build() {
+        com.payload.PayloadProto.Vote result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.Vote buildPartial() {
+        com.payload.PayloadProto.Vote result = new com.payload.PayloadProto.Vote(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.payload.PayloadProto.Vote result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.votingWeight_ = votingWeight_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.payload.PayloadProto.Vote) {
+          return mergeFrom((com.payload.PayloadProto.Vote)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.payload.PayloadProto.Vote other) {
+        if (other == com.payload.PayloadProto.Vote.getDefaultInstance()) return this;
+        if (other.getAddress() != com.google.protobuf.ByteString.EMPTY) {
+          setAddress(other.getAddress());
+        }
+        if (other.getVotingWeight() != 0L) {
+          setVotingWeight(other.getVotingWeight());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                votingWeight_ = input.readInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString address_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes Address = 1 [json_name = "Address", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address"];</code>
+       * @return The address.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getAddress() {
+        return address_;
+      }
+      /**
+       * <code>bytes Address = 1 [json_name = "Address", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes Address = 1 [json_name = "Address", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        address_ = getDefaultInstance().getAddress();
+        onChanged();
+        return this;
+      }
+
+      private long votingWeight_ ;
+      /**
+       * <code>int64 VotingWeight = 2 [json_name = "VotingWeight"];</code>
+       * @return The votingWeight.
+       */
+      @java.lang.Override
+      public long getVotingWeight() {
+        return votingWeight_;
+      }
+      /**
+       * <code>int64 VotingWeight = 2 [json_name = "VotingWeight"];</code>
+       * @param value The votingWeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVotingWeight(long value) {
+
+        votingWeight_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 VotingWeight = 2 [json_name = "VotingWeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVotingWeight() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        votingWeight_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:payload.Vote)
+    }
+
+    // @@protoc_insertion_point(class_scope:payload.Vote)
+    private static final com.payload.PayloadProto.Vote DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.payload.PayloadProto.Vote();
+    }
+
+    public static com.payload.PayloadProto.Vote getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Vote>
+        PARSER = new com.google.protobuf.AbstractParser<Vote>() {
+      @java.lang.Override
+      public Vote parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Vote> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Vote> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.payload.PayloadProto.Vote getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payload.Proposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string Name = 1 [json_name = "Name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string Name = 1 [json_name = "Name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string Description = 2 [json_name = "Description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string Description = 2 [json_name = "Description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>.payload.BatchTx BatchTx = 3 [json_name = "BatchTx"];</code>
+     * @return Whether the batchTx field is set.
+     */
+    boolean hasBatchTx();
+    /**
+     * <code>.payload.BatchTx BatchTx = 3 [json_name = "BatchTx"];</code>
+     * @return The batchTx.
+     */
+    com.payload.PayloadProto.BatchTx getBatchTx();
+    /**
+     * <code>.payload.BatchTx BatchTx = 3 [json_name = "BatchTx"];</code>
+     */
+    com.payload.PayloadProto.BatchTxOrBuilder getBatchTxOrBuilder();
+  }
+  /**
+   * Protobuf type {@code payload.Proposal}
+   */
+  public static final class Proposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:payload.Proposal)
+      ProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Proposal.newBuilder() to construct.
+    private Proposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Proposal() {
+      name_ = "";
+      description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Proposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.payload.PayloadProto.internal_static_payload_Proposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.payload.PayloadProto.internal_static_payload_Proposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.payload.PayloadProto.Proposal.class, com.payload.PayloadProto.Proposal.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>string Name = 1 [json_name = "Name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string Name = 1 [json_name = "Name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string Description = 2 [json_name = "Description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string Description = 2 [json_name = "Description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BATCHTX_FIELD_NUMBER = 3;
+    private com.payload.PayloadProto.BatchTx batchTx_;
+    /**
+     * <code>.payload.BatchTx BatchTx = 3 [json_name = "BatchTx"];</code>
+     * @return Whether the batchTx field is set.
+     */
+    @java.lang.Override
+    public boolean hasBatchTx() {
+      return batchTx_ != null;
+    }
+    /**
+     * <code>.payload.BatchTx BatchTx = 3 [json_name = "BatchTx"];</code>
+     * @return The batchTx.
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.BatchTx getBatchTx() {
+      return batchTx_ == null ? com.payload.PayloadProto.BatchTx.getDefaultInstance() : batchTx_;
+    }
+    /**
+     * <code>.payload.BatchTx BatchTx = 3 [json_name = "BatchTx"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.BatchTxOrBuilder getBatchTxOrBuilder() {
+      return batchTx_ == null ? com.payload.PayloadProto.BatchTx.getDefaultInstance() : batchTx_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (batchTx_ != null) {
+        output.writeMessage(3, getBatchTx());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (batchTx_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getBatchTx());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.payload.PayloadProto.Proposal)) {
+        return super.equals(obj);
+      }
+      com.payload.PayloadProto.Proposal other = (com.payload.PayloadProto.Proposal) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (hasBatchTx() != other.hasBatchTx()) return false;
+      if (hasBatchTx()) {
+        if (!getBatchTx()
+            .equals(other.getBatchTx())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (hasBatchTx()) {
+        hash = (37 * hash) + BATCHTX_FIELD_NUMBER;
+        hash = (53 * hash) + getBatchTx().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.payload.PayloadProto.Proposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.Proposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.Proposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.Proposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.Proposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.Proposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.Proposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.Proposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.payload.PayloadProto.Proposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.payload.PayloadProto.Proposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.Proposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.Proposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.payload.PayloadProto.Proposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code payload.Proposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:payload.Proposal)
+        com.payload.PayloadProto.ProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.payload.PayloadProto.internal_static_payload_Proposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.payload.PayloadProto.internal_static_payload_Proposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.payload.PayloadProto.Proposal.class, com.payload.PayloadProto.Proposal.Builder.class);
+      }
+
+      // Construct using com.payload.PayloadProto.Proposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        name_ = "";
+        description_ = "";
+        batchTx_ = null;
+        if (batchTxBuilder_ != null) {
+          batchTxBuilder_.dispose();
+          batchTxBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.payload.PayloadProto.internal_static_payload_Proposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.Proposal getDefaultInstanceForType() {
+        return com.payload.PayloadProto.Proposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.Proposal build() {
+        com.payload.PayloadProto.Proposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.Proposal buildPartial() {
+        com.payload.PayloadProto.Proposal result = new com.payload.PayloadProto.Proposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.payload.PayloadProto.Proposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.batchTx_ = batchTxBuilder_ == null
+              ? batchTx_
+              : batchTxBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.payload.PayloadProto.Proposal) {
+          return mergeFrom((com.payload.PayloadProto.Proposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.payload.PayloadProto.Proposal other) {
+        if (other == com.payload.PayloadProto.Proposal.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasBatchTx()) {
+          mergeBatchTx(other.getBatchTx());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getBatchTxFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string Name = 1 [json_name = "Name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string Name = 1 [json_name = "Name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string Name = 1 [json_name = "Name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string Name = 1 [json_name = "Name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string Name = 1 [json_name = "Name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string Description = 2 [json_name = "Description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string Description = 2 [json_name = "Description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string Description = 2 [json_name = "Description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string Description = 2 [json_name = "Description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string Description = 2 [json_name = "Description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.payload.PayloadProto.BatchTx batchTx_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.BatchTx, com.payload.PayloadProto.BatchTx.Builder, com.payload.PayloadProto.BatchTxOrBuilder> batchTxBuilder_;
+      /**
+       * <code>.payload.BatchTx BatchTx = 3 [json_name = "BatchTx"];</code>
+       * @return Whether the batchTx field is set.
+       */
+      public boolean hasBatchTx() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.payload.BatchTx BatchTx = 3 [json_name = "BatchTx"];</code>
+       * @return The batchTx.
+       */
+      public com.payload.PayloadProto.BatchTx getBatchTx() {
+        if (batchTxBuilder_ == null) {
+          return batchTx_ == null ? com.payload.PayloadProto.BatchTx.getDefaultInstance() : batchTx_;
+        } else {
+          return batchTxBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.payload.BatchTx BatchTx = 3 [json_name = "BatchTx"];</code>
+       */
+      public Builder setBatchTx(com.payload.PayloadProto.BatchTx value) {
+        if (batchTxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          batchTx_ = value;
+        } else {
+          batchTxBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.BatchTx BatchTx = 3 [json_name = "BatchTx"];</code>
+       */
+      public Builder setBatchTx(
+          com.payload.PayloadProto.BatchTx.Builder builderForValue) {
+        if (batchTxBuilder_ == null) {
+          batchTx_ = builderForValue.build();
+        } else {
+          batchTxBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.BatchTx BatchTx = 3 [json_name = "BatchTx"];</code>
+       */
+      public Builder mergeBatchTx(com.payload.PayloadProto.BatchTx value) {
+        if (batchTxBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            batchTx_ != null &&
+            batchTx_ != com.payload.PayloadProto.BatchTx.getDefaultInstance()) {
+            getBatchTxBuilder().mergeFrom(value);
+          } else {
+            batchTx_ = value;
+          }
+        } else {
+          batchTxBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.BatchTx BatchTx = 3 [json_name = "BatchTx"];</code>
+       */
+      public Builder clearBatchTx() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        batchTx_ = null;
+        if (batchTxBuilder_ != null) {
+          batchTxBuilder_.dispose();
+          batchTxBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.BatchTx BatchTx = 3 [json_name = "BatchTx"];</code>
+       */
+      public com.payload.PayloadProto.BatchTx.Builder getBatchTxBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getBatchTxFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.payload.BatchTx BatchTx = 3 [json_name = "BatchTx"];</code>
+       */
+      public com.payload.PayloadProto.BatchTxOrBuilder getBatchTxOrBuilder() {
+        if (batchTxBuilder_ != null) {
+          return batchTxBuilder_.getMessageOrBuilder();
+        } else {
+          return batchTx_ == null ?
+              com.payload.PayloadProto.BatchTx.getDefaultInstance() : batchTx_;
+        }
+      }
+      /**
+       * <code>.payload.BatchTx BatchTx = 3 [json_name = "BatchTx"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.BatchTx, com.payload.PayloadProto.BatchTx.Builder, com.payload.PayloadProto.BatchTxOrBuilder> 
+          getBatchTxFieldBuilder() {
+        if (batchTxBuilder_ == null) {
+          batchTxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.payload.PayloadProto.BatchTx, com.payload.PayloadProto.BatchTx.Builder, com.payload.PayloadProto.BatchTxOrBuilder>(
+                  getBatchTx(),
+                  getParentForChildren(),
+                  isClean());
+          batchTx_ = null;
+        }
+        return batchTxBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:payload.Proposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:payload.Proposal)
+    private static final com.payload.PayloadProto.Proposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.payload.PayloadProto.Proposal();
+    }
+
+    public static com.payload.PayloadProto.Proposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Proposal>
+        PARSER = new com.google.protobuf.AbstractParser<Proposal>() {
+      @java.lang.Override
+      public Proposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Proposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Proposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.payload.PayloadProto.Proposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BallotOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payload.Ballot)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.payload.Proposal Proposal = 1 [json_name = "Proposal"];</code>
+     * @return Whether the proposal field is set.
+     */
+    boolean hasProposal();
+    /**
+     * <code>.payload.Proposal Proposal = 1 [json_name = "Proposal"];</code>
+     * @return The proposal.
+     */
+    com.payload.PayloadProto.Proposal getProposal();
+    /**
+     * <code>.payload.Proposal Proposal = 1 [json_name = "Proposal"];</code>
+     */
+    com.payload.PayloadProto.ProposalOrBuilder getProposalOrBuilder();
+
+    /**
+     * <code>bytes FinalizingTx = 2 [json_name = "FinalizingTx", (.gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes"];</code>
+     * @return The finalizingTx.
+     */
+    com.google.protobuf.ByteString getFinalizingTx();
+
+    /**
+     * <code>.payload.Ballot.ProposalState proposalState = 4 [json_name = "proposalState"];</code>
+     * @return The enum numeric value on the wire for proposalState.
+     */
+    int getProposalStateValue();
+    /**
+     * <code>.payload.Ballot.ProposalState proposalState = 4 [json_name = "proposalState"];</code>
+     * @return The proposalState.
+     */
+    com.payload.PayloadProto.Ballot.ProposalState getProposalState();
+
+    /**
+     * <code>repeated .payload.Vote Votes = 5 [json_name = "Votes"];</code>
+     */
+    java.util.List<com.payload.PayloadProto.Vote> 
+        getVotesList();
+    /**
+     * <code>repeated .payload.Vote Votes = 5 [json_name = "Votes"];</code>
+     */
+    com.payload.PayloadProto.Vote getVotes(int index);
+    /**
+     * <code>repeated .payload.Vote Votes = 5 [json_name = "Votes"];</code>
+     */
+    int getVotesCount();
+    /**
+     * <code>repeated .payload.Vote Votes = 5 [json_name = "Votes"];</code>
+     */
+    java.util.List<? extends com.payload.PayloadProto.VoteOrBuilder> 
+        getVotesOrBuilderList();
+    /**
+     * <code>repeated .payload.Vote Votes = 5 [json_name = "Votes"];</code>
+     */
+    com.payload.PayloadProto.VoteOrBuilder getVotesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code payload.Ballot}
+   */
+  public static final class Ballot extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:payload.Ballot)
+      BallotOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Ballot.newBuilder() to construct.
+    private Ballot(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Ballot() {
+      finalizingTx_ = com.google.protobuf.ByteString.EMPTY;
+      proposalState_ = 0;
+      votes_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Ballot();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.payload.PayloadProto.internal_static_payload_Ballot_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.payload.PayloadProto.internal_static_payload_Ballot_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.payload.PayloadProto.Ballot.class, com.payload.PayloadProto.Ballot.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code payload.Ballot.ProposalState}
+     */
+    public enum ProposalState
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <pre>
+       * PROPOSED might be expired, if sequence number of any of the input accounts are out of date
+       * </pre>
+       *
+       * <code>PROPOSED = 0;</code>
+       */
+      PROPOSED(0),
+      /**
+       * <code>EXECUTED = 1;</code>
+       */
+      EXECUTED(1),
+      /**
+       * <code>FAILED = 2;</code>
+       */
+      FAILED(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <pre>
+       * PROPOSED might be expired, if sequence number of any of the input accounts are out of date
+       * </pre>
+       *
+       * <code>PROPOSED = 0;</code>
+       */
+      public static final int PROPOSED_VALUE = 0;
+      /**
+       * <code>EXECUTED = 1;</code>
+       */
+      public static final int EXECUTED_VALUE = 1;
+      /**
+       * <code>FAILED = 2;</code>
+       */
+      public static final int FAILED_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ProposalState valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static ProposalState forNumber(int value) {
+        switch (value) {
+          case 0: return PROPOSED;
+          case 1: return EXECUTED;
+          case 2: return FAILED;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<ProposalState>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          ProposalState> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<ProposalState>() {
+              public ProposalState findValueByNumber(int number) {
+                return ProposalState.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.payload.PayloadProto.Ballot.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final ProposalState[] VALUES = values();
+
+      public static ProposalState valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private ProposalState(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:payload.Ballot.ProposalState)
+    }
+
+    public static final int PROPOSAL_FIELD_NUMBER = 1;
+    private com.payload.PayloadProto.Proposal proposal_;
+    /**
+     * <code>.payload.Proposal Proposal = 1 [json_name = "Proposal"];</code>
+     * @return Whether the proposal field is set.
+     */
+    @java.lang.Override
+    public boolean hasProposal() {
+      return proposal_ != null;
+    }
+    /**
+     * <code>.payload.Proposal Proposal = 1 [json_name = "Proposal"];</code>
+     * @return The proposal.
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.Proposal getProposal() {
+      return proposal_ == null ? com.payload.PayloadProto.Proposal.getDefaultInstance() : proposal_;
+    }
+    /**
+     * <code>.payload.Proposal Proposal = 1 [json_name = "Proposal"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.ProposalOrBuilder getProposalOrBuilder() {
+      return proposal_ == null ? com.payload.PayloadProto.Proposal.getDefaultInstance() : proposal_;
+    }
+
+    public static final int FINALIZINGTX_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString finalizingTx_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes FinalizingTx = 2 [json_name = "FinalizingTx", (.gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes"];</code>
+     * @return The finalizingTx.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getFinalizingTx() {
+      return finalizingTx_;
+    }
+
+    public static final int PROPOSALSTATE_FIELD_NUMBER = 4;
+    private int proposalState_ = 0;
+    /**
+     * <code>.payload.Ballot.ProposalState proposalState = 4 [json_name = "proposalState"];</code>
+     * @return The enum numeric value on the wire for proposalState.
+     */
+    @java.lang.Override public int getProposalStateValue() {
+      return proposalState_;
+    }
+    /**
+     * <code>.payload.Ballot.ProposalState proposalState = 4 [json_name = "proposalState"];</code>
+     * @return The proposalState.
+     */
+    @java.lang.Override public com.payload.PayloadProto.Ballot.ProposalState getProposalState() {
+      com.payload.PayloadProto.Ballot.ProposalState result = com.payload.PayloadProto.Ballot.ProposalState.forNumber(proposalState_);
+      return result == null ? com.payload.PayloadProto.Ballot.ProposalState.UNRECOGNIZED : result;
+    }
+
+    public static final int VOTES_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.payload.PayloadProto.Vote> votes_;
+    /**
+     * <code>repeated .payload.Vote Votes = 5 [json_name = "Votes"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.payload.PayloadProto.Vote> getVotesList() {
+      return votes_;
+    }
+    /**
+     * <code>repeated .payload.Vote Votes = 5 [json_name = "Votes"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.payload.PayloadProto.VoteOrBuilder> 
+        getVotesOrBuilderList() {
+      return votes_;
+    }
+    /**
+     * <code>repeated .payload.Vote Votes = 5 [json_name = "Votes"];</code>
+     */
+    @java.lang.Override
+    public int getVotesCount() {
+      return votes_.size();
+    }
+    /**
+     * <code>repeated .payload.Vote Votes = 5 [json_name = "Votes"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.Vote getVotes(int index) {
+      return votes_.get(index);
+    }
+    /**
+     * <code>repeated .payload.Vote Votes = 5 [json_name = "Votes"];</code>
+     */
+    @java.lang.Override
+    public com.payload.PayloadProto.VoteOrBuilder getVotesOrBuilder(
+        int index) {
+      return votes_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (proposal_ != null) {
+        output.writeMessage(1, getProposal());
+      }
+      if (!finalizingTx_.isEmpty()) {
+        output.writeBytes(2, finalizingTx_);
+      }
+      if (proposalState_ != com.payload.PayloadProto.Ballot.ProposalState.PROPOSED.getNumber()) {
+        output.writeEnum(4, proposalState_);
+      }
+      for (int i = 0; i < votes_.size(); i++) {
+        output.writeMessage(5, votes_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (proposal_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getProposal());
+      }
+      if (!finalizingTx_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, finalizingTx_);
+      }
+      if (proposalState_ != com.payload.PayloadProto.Ballot.ProposalState.PROPOSED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, proposalState_);
+      }
+      for (int i = 0; i < votes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, votes_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.payload.PayloadProto.Ballot)) {
+        return super.equals(obj);
+      }
+      com.payload.PayloadProto.Ballot other = (com.payload.PayloadProto.Ballot) obj;
+
+      if (hasProposal() != other.hasProposal()) return false;
+      if (hasProposal()) {
+        if (!getProposal()
+            .equals(other.getProposal())) return false;
+      }
+      if (!getFinalizingTx()
+          .equals(other.getFinalizingTx())) return false;
+      if (proposalState_ != other.proposalState_) return false;
+      if (!getVotesList()
+          .equals(other.getVotesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasProposal()) {
+        hash = (37 * hash) + PROPOSAL_FIELD_NUMBER;
+        hash = (53 * hash) + getProposal().hashCode();
+      }
+      hash = (37 * hash) + FINALIZINGTX_FIELD_NUMBER;
+      hash = (53 * hash) + getFinalizingTx().hashCode();
+      hash = (37 * hash) + PROPOSALSTATE_FIELD_NUMBER;
+      hash = (53 * hash) + proposalState_;
+      if (getVotesCount() > 0) {
+        hash = (37 * hash) + VOTES_FIELD_NUMBER;
+        hash = (53 * hash) + getVotesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.payload.PayloadProto.Ballot parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.Ballot parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.Ballot parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.Ballot parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.Ballot parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.payload.PayloadProto.Ballot parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.Ballot parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.Ballot parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.payload.PayloadProto.Ballot parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.payload.PayloadProto.Ballot parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.payload.PayloadProto.Ballot parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.payload.PayloadProto.Ballot parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.payload.PayloadProto.Ballot prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code payload.Ballot}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:payload.Ballot)
+        com.payload.PayloadProto.BallotOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.payload.PayloadProto.internal_static_payload_Ballot_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.payload.PayloadProto.internal_static_payload_Ballot_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.payload.PayloadProto.Ballot.class, com.payload.PayloadProto.Ballot.Builder.class);
+      }
+
+      // Construct using com.payload.PayloadProto.Ballot.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        proposal_ = null;
+        if (proposalBuilder_ != null) {
+          proposalBuilder_.dispose();
+          proposalBuilder_ = null;
+        }
+        finalizingTx_ = com.google.protobuf.ByteString.EMPTY;
+        proposalState_ = 0;
+        if (votesBuilder_ == null) {
+          votes_ = java.util.Collections.emptyList();
+        } else {
+          votes_ = null;
+          votesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.payload.PayloadProto.internal_static_payload_Ballot_descriptor;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.Ballot getDefaultInstanceForType() {
+        return com.payload.PayloadProto.Ballot.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.Ballot build() {
+        com.payload.PayloadProto.Ballot result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.payload.PayloadProto.Ballot buildPartial() {
+        com.payload.PayloadProto.Ballot result = new com.payload.PayloadProto.Ballot(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.payload.PayloadProto.Ballot result) {
+        if (votesBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            votes_ = java.util.Collections.unmodifiableList(votes_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.votes_ = votes_;
+        } else {
+          result.votes_ = votesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.payload.PayloadProto.Ballot result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.proposal_ = proposalBuilder_ == null
+              ? proposal_
+              : proposalBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.finalizingTx_ = finalizingTx_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.proposalState_ = proposalState_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.payload.PayloadProto.Ballot) {
+          return mergeFrom((com.payload.PayloadProto.Ballot)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.payload.PayloadProto.Ballot other) {
+        if (other == com.payload.PayloadProto.Ballot.getDefaultInstance()) return this;
+        if (other.hasProposal()) {
+          mergeProposal(other.getProposal());
+        }
+        if (other.getFinalizingTx() != com.google.protobuf.ByteString.EMPTY) {
+          setFinalizingTx(other.getFinalizingTx());
+        }
+        if (other.proposalState_ != 0) {
+          setProposalStateValue(other.getProposalStateValue());
+        }
+        if (votesBuilder_ == null) {
+          if (!other.votes_.isEmpty()) {
+            if (votes_.isEmpty()) {
+              votes_ = other.votes_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureVotesIsMutable();
+              votes_.addAll(other.votes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.votes_.isEmpty()) {
+            if (votesBuilder_.isEmpty()) {
+              votesBuilder_.dispose();
+              votesBuilder_ = null;
+              votes_ = other.votes_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              votesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getVotesFieldBuilder() : null;
+            } else {
+              votesBuilder_.addAllMessages(other.votes_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getProposalFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                finalizingTx_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 32: {
+                proposalState_ = input.readEnum();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 32
+              case 42: {
+                com.payload.PayloadProto.Vote m =
+                    input.readMessage(
+                        com.payload.PayloadProto.Vote.parser(),
+                        extensionRegistry);
+                if (votesBuilder_ == null) {
+                  ensureVotesIsMutable();
+                  votes_.add(m);
+                } else {
+                  votesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.payload.PayloadProto.Proposal proposal_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.Proposal, com.payload.PayloadProto.Proposal.Builder, com.payload.PayloadProto.ProposalOrBuilder> proposalBuilder_;
+      /**
+       * <code>.payload.Proposal Proposal = 1 [json_name = "Proposal"];</code>
+       * @return Whether the proposal field is set.
+       */
+      public boolean hasProposal() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.payload.Proposal Proposal = 1 [json_name = "Proposal"];</code>
+       * @return The proposal.
+       */
+      public com.payload.PayloadProto.Proposal getProposal() {
+        if (proposalBuilder_ == null) {
+          return proposal_ == null ? com.payload.PayloadProto.Proposal.getDefaultInstance() : proposal_;
+        } else {
+          return proposalBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.payload.Proposal Proposal = 1 [json_name = "Proposal"];</code>
+       */
+      public Builder setProposal(com.payload.PayloadProto.Proposal value) {
+        if (proposalBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          proposal_ = value;
+        } else {
+          proposalBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.Proposal Proposal = 1 [json_name = "Proposal"];</code>
+       */
+      public Builder setProposal(
+          com.payload.PayloadProto.Proposal.Builder builderForValue) {
+        if (proposalBuilder_ == null) {
+          proposal_ = builderForValue.build();
+        } else {
+          proposalBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.Proposal Proposal = 1 [json_name = "Proposal"];</code>
+       */
+      public Builder mergeProposal(com.payload.PayloadProto.Proposal value) {
+        if (proposalBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            proposal_ != null &&
+            proposal_ != com.payload.PayloadProto.Proposal.getDefaultInstance()) {
+            getProposalBuilder().mergeFrom(value);
+          } else {
+            proposal_ = value;
+          }
+        } else {
+          proposalBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.Proposal Proposal = 1 [json_name = "Proposal"];</code>
+       */
+      public Builder clearProposal() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        proposal_ = null;
+        if (proposalBuilder_ != null) {
+          proposalBuilder_.dispose();
+          proposalBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.Proposal Proposal = 1 [json_name = "Proposal"];</code>
+       */
+      public com.payload.PayloadProto.Proposal.Builder getProposalBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getProposalFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.payload.Proposal Proposal = 1 [json_name = "Proposal"];</code>
+       */
+      public com.payload.PayloadProto.ProposalOrBuilder getProposalOrBuilder() {
+        if (proposalBuilder_ != null) {
+          return proposalBuilder_.getMessageOrBuilder();
+        } else {
+          return proposal_ == null ?
+              com.payload.PayloadProto.Proposal.getDefaultInstance() : proposal_;
+        }
+      }
+      /**
+       * <code>.payload.Proposal Proposal = 1 [json_name = "Proposal"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.payload.PayloadProto.Proposal, com.payload.PayloadProto.Proposal.Builder, com.payload.PayloadProto.ProposalOrBuilder> 
+          getProposalFieldBuilder() {
+        if (proposalBuilder_ == null) {
+          proposalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.payload.PayloadProto.Proposal, com.payload.PayloadProto.Proposal.Builder, com.payload.PayloadProto.ProposalOrBuilder>(
+                  getProposal(),
+                  getParentForChildren(),
+                  isClean());
+          proposal_ = null;
+        }
+        return proposalBuilder_;
+      }
+
+      private com.google.protobuf.ByteString finalizingTx_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes FinalizingTx = 2 [json_name = "FinalizingTx", (.gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes"];</code>
+       * @return The finalizingTx.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getFinalizingTx() {
+        return finalizingTx_;
+      }
+      /**
+       * <code>bytes FinalizingTx = 2 [json_name = "FinalizingTx", (.gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes"];</code>
+       * @param value The finalizingTx to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFinalizingTx(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        finalizingTx_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes FinalizingTx = 2 [json_name = "FinalizingTx", (.gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFinalizingTx() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        finalizingTx_ = getDefaultInstance().getFinalizingTx();
+        onChanged();
+        return this;
+      }
+
+      private int proposalState_ = 0;
+      /**
+       * <code>.payload.Ballot.ProposalState proposalState = 4 [json_name = "proposalState"];</code>
+       * @return The enum numeric value on the wire for proposalState.
+       */
+      @java.lang.Override public int getProposalStateValue() {
+        return proposalState_;
+      }
+      /**
+       * <code>.payload.Ballot.ProposalState proposalState = 4 [json_name = "proposalState"];</code>
+       * @param value The enum numeric value on the wire for proposalState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProposalStateValue(int value) {
+        proposalState_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.Ballot.ProposalState proposalState = 4 [json_name = "proposalState"];</code>
+       * @return The proposalState.
+       */
+      @java.lang.Override
+      public com.payload.PayloadProto.Ballot.ProposalState getProposalState() {
+        com.payload.PayloadProto.Ballot.ProposalState result = com.payload.PayloadProto.Ballot.ProposalState.forNumber(proposalState_);
+        return result == null ? com.payload.PayloadProto.Ballot.ProposalState.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.payload.Ballot.ProposalState proposalState = 4 [json_name = "proposalState"];</code>
+       * @param value The proposalState to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProposalState(com.payload.PayloadProto.Ballot.ProposalState value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        proposalState_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.payload.Ballot.ProposalState proposalState = 4 [json_name = "proposalState"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProposalState() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        proposalState_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.payload.PayloadProto.Vote> votes_ =
+        java.util.Collections.emptyList();
+      private void ensureVotesIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          votes_ = new java.util.ArrayList<com.payload.PayloadProto.Vote>(votes_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.payload.PayloadProto.Vote, com.payload.PayloadProto.Vote.Builder, com.payload.PayloadProto.VoteOrBuilder> votesBuilder_;
+
+      /**
+       * <code>repeated .payload.Vote Votes = 5 [json_name = "Votes"];</code>
+       */
+      public java.util.List<com.payload.PayloadProto.Vote> getVotesList() {
+        if (votesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(votes_);
+        } else {
+          return votesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .payload.Vote Votes = 5 [json_name = "Votes"];</code>
+       */
+      public int getVotesCount() {
+        if (votesBuilder_ == null) {
+          return votes_.size();
+        } else {
+          return votesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .payload.Vote Votes = 5 [json_name = "Votes"];</code>
+       */
+      public com.payload.PayloadProto.Vote getVotes(int index) {
+        if (votesBuilder_ == null) {
+          return votes_.get(index);
+        } else {
+          return votesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .payload.Vote Votes = 5 [json_name = "Votes"];</code>
+       */
+      public Builder setVotes(
+          int index, com.payload.PayloadProto.Vote value) {
+        if (votesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVotesIsMutable();
+          votes_.set(index, value);
+          onChanged();
+        } else {
+          votesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.Vote Votes = 5 [json_name = "Votes"];</code>
+       */
+      public Builder setVotes(
+          int index, com.payload.PayloadProto.Vote.Builder builderForValue) {
+        if (votesBuilder_ == null) {
+          ensureVotesIsMutable();
+          votes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          votesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.Vote Votes = 5 [json_name = "Votes"];</code>
+       */
+      public Builder addVotes(com.payload.PayloadProto.Vote value) {
+        if (votesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVotesIsMutable();
+          votes_.add(value);
+          onChanged();
+        } else {
+          votesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.Vote Votes = 5 [json_name = "Votes"];</code>
+       */
+      public Builder addVotes(
+          int index, com.payload.PayloadProto.Vote value) {
+        if (votesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVotesIsMutable();
+          votes_.add(index, value);
+          onChanged();
+        } else {
+          votesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.Vote Votes = 5 [json_name = "Votes"];</code>
+       */
+      public Builder addVotes(
+          com.payload.PayloadProto.Vote.Builder builderForValue) {
+        if (votesBuilder_ == null) {
+          ensureVotesIsMutable();
+          votes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          votesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.Vote Votes = 5 [json_name = "Votes"];</code>
+       */
+      public Builder addVotes(
+          int index, com.payload.PayloadProto.Vote.Builder builderForValue) {
+        if (votesBuilder_ == null) {
+          ensureVotesIsMutable();
+          votes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          votesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.Vote Votes = 5 [json_name = "Votes"];</code>
+       */
+      public Builder addAllVotes(
+          java.lang.Iterable<? extends com.payload.PayloadProto.Vote> values) {
+        if (votesBuilder_ == null) {
+          ensureVotesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, votes_);
+          onChanged();
+        } else {
+          votesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.Vote Votes = 5 [json_name = "Votes"];</code>
+       */
+      public Builder clearVotes() {
+        if (votesBuilder_ == null) {
+          votes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          votesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.Vote Votes = 5 [json_name = "Votes"];</code>
+       */
+      public Builder removeVotes(int index) {
+        if (votesBuilder_ == null) {
+          ensureVotesIsMutable();
+          votes_.remove(index);
+          onChanged();
+        } else {
+          votesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.Vote Votes = 5 [json_name = "Votes"];</code>
+       */
+      public com.payload.PayloadProto.Vote.Builder getVotesBuilder(
+          int index) {
+        return getVotesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .payload.Vote Votes = 5 [json_name = "Votes"];</code>
+       */
+      public com.payload.PayloadProto.VoteOrBuilder getVotesOrBuilder(
+          int index) {
+        if (votesBuilder_ == null) {
+          return votes_.get(index);  } else {
+          return votesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .payload.Vote Votes = 5 [json_name = "Votes"];</code>
+       */
+      public java.util.List<? extends com.payload.PayloadProto.VoteOrBuilder> 
+           getVotesOrBuilderList() {
+        if (votesBuilder_ != null) {
+          return votesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(votes_);
+        }
+      }
+      /**
+       * <code>repeated .payload.Vote Votes = 5 [json_name = "Votes"];</code>
+       */
+      public com.payload.PayloadProto.Vote.Builder addVotesBuilder() {
+        return getVotesFieldBuilder().addBuilder(
+            com.payload.PayloadProto.Vote.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .payload.Vote Votes = 5 [json_name = "Votes"];</code>
+       */
+      public com.payload.PayloadProto.Vote.Builder addVotesBuilder(
+          int index) {
+        return getVotesFieldBuilder().addBuilder(
+            index, com.payload.PayloadProto.Vote.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .payload.Vote Votes = 5 [json_name = "Votes"];</code>
+       */
+      public java.util.List<com.payload.PayloadProto.Vote.Builder> 
+           getVotesBuilderList() {
+        return getVotesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.payload.PayloadProto.Vote, com.payload.PayloadProto.Vote.Builder, com.payload.PayloadProto.VoteOrBuilder> 
+          getVotesFieldBuilder() {
+        if (votesBuilder_ == null) {
+          votesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.payload.PayloadProto.Vote, com.payload.PayloadProto.Vote.Builder, com.payload.PayloadProto.VoteOrBuilder>(
+                  votes_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          votes_ = null;
+        }
+        return votesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:payload.Ballot)
+    }
+
+    // @@protoc_insertion_point(class_scope:payload.Ballot)
+    private static final com.payload.PayloadProto.Ballot DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.payload.PayloadProto.Ballot();
+    }
+
+    public static com.payload.PayloadProto.Ballot getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Ballot>
+        PARSER = new com.google.protobuf.AbstractParser<Ballot>() {
+      @java.lang.Override
+      public Ballot parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Ballot> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Ballot> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.payload.PayloadProto.Ballot getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_payload_Any_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_payload_Any_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_payload_TxInput_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_payload_TxInput_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_payload_TxOutput_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_payload_TxOutput_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_payload_CallTx_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_payload_CallTx_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_payload_ContractMeta_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_payload_ContractMeta_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_payload_SendTx_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_payload_SendTx_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_payload_PermsTx_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_payload_PermsTx_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_payload_NameTx_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_payload_NameTx_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_payload_BondTx_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_payload_BondTx_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_payload_UnbondTx_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_payload_UnbondTx_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_payload_GovTx_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_payload_GovTx_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_payload_ProposalTx_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_payload_ProposalTx_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_payload_IdentifyTx_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_payload_IdentifyTx_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_payload_BatchTx_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_payload_BatchTx_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_payload_Vote_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_payload_Vote_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_payload_Proposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_payload_Proposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_payload_Ballot_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_payload_Ballot_fieldAccessorTable;
 
@@ -184,11 +18276,11 @@ public final class PayloadProto {
       "\001(\0162\035.payload.Ballot.ProposalStateR\rprop" +
       "osalState\022#\n\005Votes\030\005 \003(\0132\r.payload.VoteR" +
       "\005Votes\"7\n\rProposalState\022\014\n\010PROPOSED\020\000\022\014\n" +
-      "\010EXECUTED\020\001\022\n\n\006FAILED\020\002B\226\001\n\013com.payloadB" +
-      "\014PayloadProtoP\001Z)github.com/hyperledger/" +
-      "burrow/txs/payload\242\002\003PXX\252\002\007Payload\312\002\007Pay" +
-      "load\342\002\023Payload\\GPBMetadata\352\002\007Payload\310\342\036\001" +
-      "\320\342\036\001\340\342\036\001\300\343\036\001\310\343\036\001b\006proto3"
+      "\010EXECUTED\020\001\022\n\n\006FAILED\020\002B\224\001\n\013com.payloadB" +
+      "\014PayloadProtoZ)github.com/hyperledger/bu" +
+      "rrow/txs/payload\242\002\003PXX\252\002\007Payload\312\002\007Paylo" +
+      "ad\342\002\023Payload\\GPBMetadata\352\002\007Payload\310\342\036\001\320\342" +
+      "\036\001\340\342\036\001\300\343\036\001\310\343\036\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

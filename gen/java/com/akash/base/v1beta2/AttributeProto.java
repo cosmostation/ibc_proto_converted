@@ -14,19 +14,2867 @@ public final class AttributeProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface AttributeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.base.v1beta2.Attribute)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string key = 1 [json_name = "key", (.gogoproto.moretags) = "yaml:&#92;"key&#92;""];</code>
+     * @return The key.
+     */
+    java.lang.String getKey();
+    /**
+     * <code>string key = 1 [json_name = "key", (.gogoproto.moretags) = "yaml:&#92;"key&#92;""];</code>
+     * @return The bytes for key.
+     */
+    com.google.protobuf.ByteString
+        getKeyBytes();
+
+    /**
+     * <code>string value = 2 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+     * @return The value.
+     */
+    java.lang.String getValue();
+    /**
+     * <code>string value = 2 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+     * @return The bytes for value.
+     */
+    com.google.protobuf.ByteString
+        getValueBytes();
+  }
+  /**
+   * <pre>
+   * Attribute represents key value pair
+   * </pre>
+   *
+   * Protobuf type {@code akash.base.v1beta2.Attribute}
+   */
+  public static final class Attribute extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.base.v1beta2.Attribute)
+      AttributeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Attribute.newBuilder() to construct.
+    private Attribute(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Attribute() {
+      key_ = "";
+      value_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Attribute();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.base.v1beta2.AttributeProto.internal_static_akash_base_v1beta2_Attribute_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.base.v1beta2.AttributeProto.internal_static_akash_base_v1beta2_Attribute_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.base.v1beta2.AttributeProto.Attribute.class, com.akash.base.v1beta2.AttributeProto.Attribute.Builder.class);
+    }
+
+    public static final int KEY_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object key_ = "";
+    /**
+     * <code>string key = 1 [json_name = "key", (.gogoproto.moretags) = "yaml:&#92;"key&#92;""];</code>
+     * @return The key.
+     */
+    @java.lang.Override
+    public java.lang.String getKey() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        key_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string key = 1 [json_name = "key", (.gogoproto.moretags) = "yaml:&#92;"key&#92;""];</code>
+     * @return The bytes for key.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKeyBytes() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        key_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object value_ = "";
+    /**
+     * <code>string value = 2 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        value_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string value = 2 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+     * @return The bytes for value.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValueBytes() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        value_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.base.v1beta2.AttributeProto.Attribute)) {
+        return super.equals(obj);
+      }
+      com.akash.base.v1beta2.AttributeProto.Attribute other = (com.akash.base.v1beta2.AttributeProto.Attribute) obj;
+
+      if (!getKey()
+          .equals(other.getKey())) return false;
+      if (!getValue()
+          .equals(other.getValue())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getKey().hashCode();
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getValue().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.base.v1beta2.AttributeProto.Attribute parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.base.v1beta2.AttributeProto.Attribute parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.base.v1beta2.AttributeProto.Attribute parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.base.v1beta2.AttributeProto.Attribute parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.base.v1beta2.AttributeProto.Attribute parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.base.v1beta2.AttributeProto.Attribute parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.base.v1beta2.AttributeProto.Attribute parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.base.v1beta2.AttributeProto.Attribute parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.base.v1beta2.AttributeProto.Attribute parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.base.v1beta2.AttributeProto.Attribute parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.base.v1beta2.AttributeProto.Attribute parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.base.v1beta2.AttributeProto.Attribute parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.base.v1beta2.AttributeProto.Attribute prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Attribute represents key value pair
+     * </pre>
+     *
+     * Protobuf type {@code akash.base.v1beta2.Attribute}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.base.v1beta2.Attribute)
+        com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.base.v1beta2.AttributeProto.internal_static_akash_base_v1beta2_Attribute_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.base.v1beta2.AttributeProto.internal_static_akash_base_v1beta2_Attribute_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.base.v1beta2.AttributeProto.Attribute.class, com.akash.base.v1beta2.AttributeProto.Attribute.Builder.class);
+      }
+
+      // Construct using com.akash.base.v1beta2.AttributeProto.Attribute.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        key_ = "";
+        value_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.base.v1beta2.AttributeProto.internal_static_akash_base_v1beta2_Attribute_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.base.v1beta2.AttributeProto.Attribute getDefaultInstanceForType() {
+        return com.akash.base.v1beta2.AttributeProto.Attribute.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.base.v1beta2.AttributeProto.Attribute build() {
+        com.akash.base.v1beta2.AttributeProto.Attribute result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.base.v1beta2.AttributeProto.Attribute buildPartial() {
+        com.akash.base.v1beta2.AttributeProto.Attribute result = new com.akash.base.v1beta2.AttributeProto.Attribute(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.base.v1beta2.AttributeProto.Attribute result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.key_ = key_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.value_ = value_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.base.v1beta2.AttributeProto.Attribute) {
+          return mergeFrom((com.akash.base.v1beta2.AttributeProto.Attribute)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.base.v1beta2.AttributeProto.Attribute other) {
+        if (other == com.akash.base.v1beta2.AttributeProto.Attribute.getDefaultInstance()) return this;
+        if (!other.getKey().isEmpty()) {
+          key_ = other.key_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getValue().isEmpty()) {
+          value_ = other.value_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                key_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                value_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object key_ = "";
+      /**
+       * <code>string key = 1 [json_name = "key", (.gogoproto.moretags) = "yaml:&#92;"key&#92;""];</code>
+       * @return The key.
+       */
+      public java.lang.String getKey() {
+        java.lang.Object ref = key_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          key_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string key = 1 [json_name = "key", (.gogoproto.moretags) = "yaml:&#92;"key&#92;""];</code>
+       * @return The bytes for key.
+       */
+      public com.google.protobuf.ByteString
+          getKeyBytes() {
+        java.lang.Object ref = key_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          key_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string key = 1 [json_name = "key", (.gogoproto.moretags) = "yaml:&#92;"key&#92;""];</code>
+       * @param value The key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKey(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        key_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key = 1 [json_name = "key", (.gogoproto.moretags) = "yaml:&#92;"key&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKey() {
+        key_ = getDefaultInstance().getKey();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key = 1 [json_name = "key", (.gogoproto.moretags) = "yaml:&#92;"key&#92;""];</code>
+       * @param value The bytes for key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        key_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object value_ = "";
+      /**
+       * <code>string value = 2 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+       * @return The value.
+       */
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          value_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string value = 2 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+       * @return The bytes for value.
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string value = 2 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        value_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 2 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        value_ = getDefaultInstance().getValue();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 2 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+       * @param value The bytes for value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        value_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.base.v1beta2.Attribute)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.base.v1beta2.Attribute)
+    private static final com.akash.base.v1beta2.AttributeProto.Attribute DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.base.v1beta2.AttributeProto.Attribute();
+    }
+
+    public static com.akash.base.v1beta2.AttributeProto.Attribute getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Attribute>
+        PARSER = new com.google.protobuf.AbstractParser<Attribute>() {
+      @java.lang.Override
+      public Attribute parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Attribute> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Attribute> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.base.v1beta2.AttributeProto.Attribute getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SignedByOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.base.v1beta2.SignedBy)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * all_of all keys in this list must have signed attributes
+     * </pre>
+     *
+     * <code>repeated string all_of = 1 [json_name = "allOf", (.gogoproto.jsontag) = "all_of", (.gogoproto.moretags) = "yaml:&#92;"allOf&#92;""];</code>
+     * @return A list containing the allOf.
+     */
+    java.util.List<java.lang.String>
+        getAllOfList();
+    /**
+     * <pre>
+     * all_of all keys in this list must have signed attributes
+     * </pre>
+     *
+     * <code>repeated string all_of = 1 [json_name = "allOf", (.gogoproto.jsontag) = "all_of", (.gogoproto.moretags) = "yaml:&#92;"allOf&#92;""];</code>
+     * @return The count of allOf.
+     */
+    int getAllOfCount();
+    /**
+     * <pre>
+     * all_of all keys in this list must have signed attributes
+     * </pre>
+     *
+     * <code>repeated string all_of = 1 [json_name = "allOf", (.gogoproto.jsontag) = "all_of", (.gogoproto.moretags) = "yaml:&#92;"allOf&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The allOf at the given index.
+     */
+    java.lang.String getAllOf(int index);
+    /**
+     * <pre>
+     * all_of all keys in this list must have signed attributes
+     * </pre>
+     *
+     * <code>repeated string all_of = 1 [json_name = "allOf", (.gogoproto.jsontag) = "all_of", (.gogoproto.moretags) = "yaml:&#92;"allOf&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the allOf at the given index.
+     */
+    com.google.protobuf.ByteString
+        getAllOfBytes(int index);
+
+    /**
+     * <pre>
+     * any_of at least of of the keys from the list must have signed attributes
+     * </pre>
+     *
+     * <code>repeated string any_of = 2 [json_name = "anyOf", (.gogoproto.jsontag) = "any_of", (.gogoproto.moretags) = "yaml:&#92;"anyOf&#92;""];</code>
+     * @return A list containing the anyOf.
+     */
+    java.util.List<java.lang.String>
+        getAnyOfList();
+    /**
+     * <pre>
+     * any_of at least of of the keys from the list must have signed attributes
+     * </pre>
+     *
+     * <code>repeated string any_of = 2 [json_name = "anyOf", (.gogoproto.jsontag) = "any_of", (.gogoproto.moretags) = "yaml:&#92;"anyOf&#92;""];</code>
+     * @return The count of anyOf.
+     */
+    int getAnyOfCount();
+    /**
+     * <pre>
+     * any_of at least of of the keys from the list must have signed attributes
+     * </pre>
+     *
+     * <code>repeated string any_of = 2 [json_name = "anyOf", (.gogoproto.jsontag) = "any_of", (.gogoproto.moretags) = "yaml:&#92;"anyOf&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The anyOf at the given index.
+     */
+    java.lang.String getAnyOf(int index);
+    /**
+     * <pre>
+     * any_of at least of of the keys from the list must have signed attributes
+     * </pre>
+     *
+     * <code>repeated string any_of = 2 [json_name = "anyOf", (.gogoproto.jsontag) = "any_of", (.gogoproto.moretags) = "yaml:&#92;"anyOf&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the anyOf at the given index.
+     */
+    com.google.protobuf.ByteString
+        getAnyOfBytes(int index);
+  }
+  /**
+   * <pre>
+   * SignedBy represents validation accounts that tenant expects signatures for provider attributes
+   * AllOf has precedence i.e. if there is at least one entry AnyOf is ignored regardless to how many
+   * entries there
+   * this behaviour to be discussed
+   * </pre>
+   *
+   * Protobuf type {@code akash.base.v1beta2.SignedBy}
+   */
+  public static final class SignedBy extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.base.v1beta2.SignedBy)
+      SignedByOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SignedBy.newBuilder() to construct.
+    private SignedBy(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SignedBy() {
+      allOf_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      anyOf_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SignedBy();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.base.v1beta2.AttributeProto.internal_static_akash_base_v1beta2_SignedBy_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.base.v1beta2.AttributeProto.internal_static_akash_base_v1beta2_SignedBy_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.base.v1beta2.AttributeProto.SignedBy.class, com.akash.base.v1beta2.AttributeProto.SignedBy.Builder.class);
+    }
+
+    public static final int ALL_OF_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList allOf_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * all_of all keys in this list must have signed attributes
+     * </pre>
+     *
+     * <code>repeated string all_of = 1 [json_name = "allOf", (.gogoproto.jsontag) = "all_of", (.gogoproto.moretags) = "yaml:&#92;"allOf&#92;""];</code>
+     * @return A list containing the allOf.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getAllOfList() {
+      return allOf_;
+    }
+    /**
+     * <pre>
+     * all_of all keys in this list must have signed attributes
+     * </pre>
+     *
+     * <code>repeated string all_of = 1 [json_name = "allOf", (.gogoproto.jsontag) = "all_of", (.gogoproto.moretags) = "yaml:&#92;"allOf&#92;""];</code>
+     * @return The count of allOf.
+     */
+    public int getAllOfCount() {
+      return allOf_.size();
+    }
+    /**
+     * <pre>
+     * all_of all keys in this list must have signed attributes
+     * </pre>
+     *
+     * <code>repeated string all_of = 1 [json_name = "allOf", (.gogoproto.jsontag) = "all_of", (.gogoproto.moretags) = "yaml:&#92;"allOf&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The allOf at the given index.
+     */
+    public java.lang.String getAllOf(int index) {
+      return allOf_.get(index);
+    }
+    /**
+     * <pre>
+     * all_of all keys in this list must have signed attributes
+     * </pre>
+     *
+     * <code>repeated string all_of = 1 [json_name = "allOf", (.gogoproto.jsontag) = "all_of", (.gogoproto.moretags) = "yaml:&#92;"allOf&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the allOf at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getAllOfBytes(int index) {
+      return allOf_.getByteString(index);
+    }
+
+    public static final int ANY_OF_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList anyOf_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * any_of at least of of the keys from the list must have signed attributes
+     * </pre>
+     *
+     * <code>repeated string any_of = 2 [json_name = "anyOf", (.gogoproto.jsontag) = "any_of", (.gogoproto.moretags) = "yaml:&#92;"anyOf&#92;""];</code>
+     * @return A list containing the anyOf.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getAnyOfList() {
+      return anyOf_;
+    }
+    /**
+     * <pre>
+     * any_of at least of of the keys from the list must have signed attributes
+     * </pre>
+     *
+     * <code>repeated string any_of = 2 [json_name = "anyOf", (.gogoproto.jsontag) = "any_of", (.gogoproto.moretags) = "yaml:&#92;"anyOf&#92;""];</code>
+     * @return The count of anyOf.
+     */
+    public int getAnyOfCount() {
+      return anyOf_.size();
+    }
+    /**
+     * <pre>
+     * any_of at least of of the keys from the list must have signed attributes
+     * </pre>
+     *
+     * <code>repeated string any_of = 2 [json_name = "anyOf", (.gogoproto.jsontag) = "any_of", (.gogoproto.moretags) = "yaml:&#92;"anyOf&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The anyOf at the given index.
+     */
+    public java.lang.String getAnyOf(int index) {
+      return anyOf_.get(index);
+    }
+    /**
+     * <pre>
+     * any_of at least of of the keys from the list must have signed attributes
+     * </pre>
+     *
+     * <code>repeated string any_of = 2 [json_name = "anyOf", (.gogoproto.jsontag) = "any_of", (.gogoproto.moretags) = "yaml:&#92;"anyOf&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the anyOf at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getAnyOfBytes(int index) {
+      return anyOf_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < allOf_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, allOf_.getRaw(i));
+      }
+      for (int i = 0; i < anyOf_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, anyOf_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < allOf_.size(); i++) {
+          dataSize += computeStringSizeNoTag(allOf_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getAllOfList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < anyOf_.size(); i++) {
+          dataSize += computeStringSizeNoTag(anyOf_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getAnyOfList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.base.v1beta2.AttributeProto.SignedBy)) {
+        return super.equals(obj);
+      }
+      com.akash.base.v1beta2.AttributeProto.SignedBy other = (com.akash.base.v1beta2.AttributeProto.SignedBy) obj;
+
+      if (!getAllOfList()
+          .equals(other.getAllOfList())) return false;
+      if (!getAnyOfList()
+          .equals(other.getAnyOfList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAllOfCount() > 0) {
+        hash = (37 * hash) + ALL_OF_FIELD_NUMBER;
+        hash = (53 * hash) + getAllOfList().hashCode();
+      }
+      if (getAnyOfCount() > 0) {
+        hash = (37 * hash) + ANY_OF_FIELD_NUMBER;
+        hash = (53 * hash) + getAnyOfList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.base.v1beta2.AttributeProto.SignedBy parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.base.v1beta2.AttributeProto.SignedBy parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.base.v1beta2.AttributeProto.SignedBy parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.base.v1beta2.AttributeProto.SignedBy parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.base.v1beta2.AttributeProto.SignedBy parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.base.v1beta2.AttributeProto.SignedBy parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.base.v1beta2.AttributeProto.SignedBy parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.base.v1beta2.AttributeProto.SignedBy parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.base.v1beta2.AttributeProto.SignedBy parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.base.v1beta2.AttributeProto.SignedBy parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.base.v1beta2.AttributeProto.SignedBy parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.base.v1beta2.AttributeProto.SignedBy parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.base.v1beta2.AttributeProto.SignedBy prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * SignedBy represents validation accounts that tenant expects signatures for provider attributes
+     * AllOf has precedence i.e. if there is at least one entry AnyOf is ignored regardless to how many
+     * entries there
+     * this behaviour to be discussed
+     * </pre>
+     *
+     * Protobuf type {@code akash.base.v1beta2.SignedBy}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.base.v1beta2.SignedBy)
+        com.akash.base.v1beta2.AttributeProto.SignedByOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.base.v1beta2.AttributeProto.internal_static_akash_base_v1beta2_SignedBy_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.base.v1beta2.AttributeProto.internal_static_akash_base_v1beta2_SignedBy_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.base.v1beta2.AttributeProto.SignedBy.class, com.akash.base.v1beta2.AttributeProto.SignedBy.Builder.class);
+      }
+
+      // Construct using com.akash.base.v1beta2.AttributeProto.SignedBy.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        allOf_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        anyOf_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.base.v1beta2.AttributeProto.internal_static_akash_base_v1beta2_SignedBy_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.base.v1beta2.AttributeProto.SignedBy getDefaultInstanceForType() {
+        return com.akash.base.v1beta2.AttributeProto.SignedBy.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.base.v1beta2.AttributeProto.SignedBy build() {
+        com.akash.base.v1beta2.AttributeProto.SignedBy result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.base.v1beta2.AttributeProto.SignedBy buildPartial() {
+        com.akash.base.v1beta2.AttributeProto.SignedBy result = new com.akash.base.v1beta2.AttributeProto.SignedBy(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.base.v1beta2.AttributeProto.SignedBy result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          allOf_.makeImmutable();
+          result.allOf_ = allOf_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          anyOf_.makeImmutable();
+          result.anyOf_ = anyOf_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.base.v1beta2.AttributeProto.SignedBy) {
+          return mergeFrom((com.akash.base.v1beta2.AttributeProto.SignedBy)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.base.v1beta2.AttributeProto.SignedBy other) {
+        if (other == com.akash.base.v1beta2.AttributeProto.SignedBy.getDefaultInstance()) return this;
+        if (!other.allOf_.isEmpty()) {
+          if (allOf_.isEmpty()) {
+            allOf_ = other.allOf_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureAllOfIsMutable();
+            allOf_.addAll(other.allOf_);
+          }
+          onChanged();
+        }
+        if (!other.anyOf_.isEmpty()) {
+          if (anyOf_.isEmpty()) {
+            anyOf_ = other.anyOf_;
+            bitField0_ |= 0x00000002;
+          } else {
+            ensureAnyOfIsMutable();
+            anyOf_.addAll(other.anyOf_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureAllOfIsMutable();
+                allOf_.add(s);
+                break;
+              } // case 10
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureAnyOfIsMutable();
+                anyOf_.add(s);
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList allOf_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureAllOfIsMutable() {
+        if (!allOf_.isModifiable()) {
+          allOf_ = new com.google.protobuf.LazyStringArrayList(allOf_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <pre>
+       * all_of all keys in this list must have signed attributes
+       * </pre>
+       *
+       * <code>repeated string all_of = 1 [json_name = "allOf", (.gogoproto.jsontag) = "all_of", (.gogoproto.moretags) = "yaml:&#92;"allOf&#92;""];</code>
+       * @return A list containing the allOf.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getAllOfList() {
+        allOf_.makeImmutable();
+        return allOf_;
+      }
+      /**
+       * <pre>
+       * all_of all keys in this list must have signed attributes
+       * </pre>
+       *
+       * <code>repeated string all_of = 1 [json_name = "allOf", (.gogoproto.jsontag) = "all_of", (.gogoproto.moretags) = "yaml:&#92;"allOf&#92;""];</code>
+       * @return The count of allOf.
+       */
+      public int getAllOfCount() {
+        return allOf_.size();
+      }
+      /**
+       * <pre>
+       * all_of all keys in this list must have signed attributes
+       * </pre>
+       *
+       * <code>repeated string all_of = 1 [json_name = "allOf", (.gogoproto.jsontag) = "all_of", (.gogoproto.moretags) = "yaml:&#92;"allOf&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The allOf at the given index.
+       */
+      public java.lang.String getAllOf(int index) {
+        return allOf_.get(index);
+      }
+      /**
+       * <pre>
+       * all_of all keys in this list must have signed attributes
+       * </pre>
+       *
+       * <code>repeated string all_of = 1 [json_name = "allOf", (.gogoproto.jsontag) = "all_of", (.gogoproto.moretags) = "yaml:&#92;"allOf&#92;""];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the allOf at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getAllOfBytes(int index) {
+        return allOf_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * all_of all keys in this list must have signed attributes
+       * </pre>
+       *
+       * <code>repeated string all_of = 1 [json_name = "allOf", (.gogoproto.jsontag) = "all_of", (.gogoproto.moretags) = "yaml:&#92;"allOf&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The allOf to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllOf(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureAllOfIsMutable();
+        allOf_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * all_of all keys in this list must have signed attributes
+       * </pre>
+       *
+       * <code>repeated string all_of = 1 [json_name = "allOf", (.gogoproto.jsontag) = "all_of", (.gogoproto.moretags) = "yaml:&#92;"allOf&#92;""];</code>
+       * @param value The allOf to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllOf(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureAllOfIsMutable();
+        allOf_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * all_of all keys in this list must have signed attributes
+       * </pre>
+       *
+       * <code>repeated string all_of = 1 [json_name = "allOf", (.gogoproto.jsontag) = "all_of", (.gogoproto.moretags) = "yaml:&#92;"allOf&#92;""];</code>
+       * @param values The allOf to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAllOf(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureAllOfIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, allOf_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * all_of all keys in this list must have signed attributes
+       * </pre>
+       *
+       * <code>repeated string all_of = 1 [json_name = "allOf", (.gogoproto.jsontag) = "all_of", (.gogoproto.moretags) = "yaml:&#92;"allOf&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllOf() {
+        allOf_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * all_of all keys in this list must have signed attributes
+       * </pre>
+       *
+       * <code>repeated string all_of = 1 [json_name = "allOf", (.gogoproto.jsontag) = "all_of", (.gogoproto.moretags) = "yaml:&#92;"allOf&#92;""];</code>
+       * @param value The bytes of the allOf to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllOfBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureAllOfIsMutable();
+        allOf_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList anyOf_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureAnyOfIsMutable() {
+        if (!anyOf_.isModifiable()) {
+          anyOf_ = new com.google.protobuf.LazyStringArrayList(anyOf_);
+        }
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <pre>
+       * any_of at least of of the keys from the list must have signed attributes
+       * </pre>
+       *
+       * <code>repeated string any_of = 2 [json_name = "anyOf", (.gogoproto.jsontag) = "any_of", (.gogoproto.moretags) = "yaml:&#92;"anyOf&#92;""];</code>
+       * @return A list containing the anyOf.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getAnyOfList() {
+        anyOf_.makeImmutable();
+        return anyOf_;
+      }
+      /**
+       * <pre>
+       * any_of at least of of the keys from the list must have signed attributes
+       * </pre>
+       *
+       * <code>repeated string any_of = 2 [json_name = "anyOf", (.gogoproto.jsontag) = "any_of", (.gogoproto.moretags) = "yaml:&#92;"anyOf&#92;""];</code>
+       * @return The count of anyOf.
+       */
+      public int getAnyOfCount() {
+        return anyOf_.size();
+      }
+      /**
+       * <pre>
+       * any_of at least of of the keys from the list must have signed attributes
+       * </pre>
+       *
+       * <code>repeated string any_of = 2 [json_name = "anyOf", (.gogoproto.jsontag) = "any_of", (.gogoproto.moretags) = "yaml:&#92;"anyOf&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The anyOf at the given index.
+       */
+      public java.lang.String getAnyOf(int index) {
+        return anyOf_.get(index);
+      }
+      /**
+       * <pre>
+       * any_of at least of of the keys from the list must have signed attributes
+       * </pre>
+       *
+       * <code>repeated string any_of = 2 [json_name = "anyOf", (.gogoproto.jsontag) = "any_of", (.gogoproto.moretags) = "yaml:&#92;"anyOf&#92;""];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the anyOf at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getAnyOfBytes(int index) {
+        return anyOf_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * any_of at least of of the keys from the list must have signed attributes
+       * </pre>
+       *
+       * <code>repeated string any_of = 2 [json_name = "anyOf", (.gogoproto.jsontag) = "any_of", (.gogoproto.moretags) = "yaml:&#92;"anyOf&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The anyOf to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAnyOf(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureAnyOfIsMutable();
+        anyOf_.set(index, value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * any_of at least of of the keys from the list must have signed attributes
+       * </pre>
+       *
+       * <code>repeated string any_of = 2 [json_name = "anyOf", (.gogoproto.jsontag) = "any_of", (.gogoproto.moretags) = "yaml:&#92;"anyOf&#92;""];</code>
+       * @param value The anyOf to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAnyOf(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureAnyOfIsMutable();
+        anyOf_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * any_of at least of of the keys from the list must have signed attributes
+       * </pre>
+       *
+       * <code>repeated string any_of = 2 [json_name = "anyOf", (.gogoproto.jsontag) = "any_of", (.gogoproto.moretags) = "yaml:&#92;"anyOf&#92;""];</code>
+       * @param values The anyOf to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAnyOf(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureAnyOfIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, anyOf_);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * any_of at least of of the keys from the list must have signed attributes
+       * </pre>
+       *
+       * <code>repeated string any_of = 2 [json_name = "anyOf", (.gogoproto.jsontag) = "any_of", (.gogoproto.moretags) = "yaml:&#92;"anyOf&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAnyOf() {
+        anyOf_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * any_of at least of of the keys from the list must have signed attributes
+       * </pre>
+       *
+       * <code>repeated string any_of = 2 [json_name = "anyOf", (.gogoproto.jsontag) = "any_of", (.gogoproto.moretags) = "yaml:&#92;"anyOf&#92;""];</code>
+       * @param value The bytes of the anyOf to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAnyOfBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureAnyOfIsMutable();
+        anyOf_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.base.v1beta2.SignedBy)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.base.v1beta2.SignedBy)
+    private static final com.akash.base.v1beta2.AttributeProto.SignedBy DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.base.v1beta2.AttributeProto.SignedBy();
+    }
+
+    public static com.akash.base.v1beta2.AttributeProto.SignedBy getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SignedBy>
+        PARSER = new com.google.protobuf.AbstractParser<SignedBy>() {
+      @java.lang.Override
+      public SignedBy parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SignedBy> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SignedBy> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.base.v1beta2.AttributeProto.SignedBy getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PlacementRequirementsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.base.v1beta2.PlacementRequirements)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * SignedBy list of keys that tenants expect to have signatures from
+     * </pre>
+     *
+     * <code>.akash.base.v1beta2.SignedBy signed_by = 1 [json_name = "signedBy", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "signed_by", (.gogoproto.moretags) = "yaml:&#92;"signed_by&#92;""];</code>
+     * @return Whether the signedBy field is set.
+     */
+    boolean hasSignedBy();
+    /**
+     * <pre>
+     * SignedBy list of keys that tenants expect to have signatures from
+     * </pre>
+     *
+     * <code>.akash.base.v1beta2.SignedBy signed_by = 1 [json_name = "signedBy", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "signed_by", (.gogoproto.moretags) = "yaml:&#92;"signed_by&#92;""];</code>
+     * @return The signedBy.
+     */
+    com.akash.base.v1beta2.AttributeProto.SignedBy getSignedBy();
+    /**
+     * <pre>
+     * SignedBy list of keys that tenants expect to have signatures from
+     * </pre>
+     *
+     * <code>.akash.base.v1beta2.SignedBy signed_by = 1 [json_name = "signedBy", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "signed_by", (.gogoproto.moretags) = "yaml:&#92;"signed_by&#92;""];</code>
+     */
+    com.akash.base.v1beta2.AttributeProto.SignedByOrBuilder getSignedByOrBuilder();
+
+    /**
+     * <pre>
+     * Attribute list of attributes tenant expects from the provider
+     * </pre>
+     *
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes", (.gogoproto.moretags) = "yaml:&#92;"attributes&#92;""];</code>
+     */
+    java.util.List<com.akash.base.v1beta2.AttributeProto.Attribute> 
+        getAttributesList();
+    /**
+     * <pre>
+     * Attribute list of attributes tenant expects from the provider
+     * </pre>
+     *
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes", (.gogoproto.moretags) = "yaml:&#92;"attributes&#92;""];</code>
+     */
+    com.akash.base.v1beta2.AttributeProto.Attribute getAttributes(int index);
+    /**
+     * <pre>
+     * Attribute list of attributes tenant expects from the provider
+     * </pre>
+     *
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes", (.gogoproto.moretags) = "yaml:&#92;"attributes&#92;""];</code>
+     */
+    int getAttributesCount();
+    /**
+     * <pre>
+     * Attribute list of attributes tenant expects from the provider
+     * </pre>
+     *
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes", (.gogoproto.moretags) = "yaml:&#92;"attributes&#92;""];</code>
+     */
+    java.util.List<? extends com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder> 
+        getAttributesOrBuilderList();
+    /**
+     * <pre>
+     * Attribute list of attributes tenant expects from the provider
+     * </pre>
+     *
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes", (.gogoproto.moretags) = "yaml:&#92;"attributes&#92;""];</code>
+     */
+    com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder getAttributesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * PlacementRequirements
+   * </pre>
+   *
+   * Protobuf type {@code akash.base.v1beta2.PlacementRequirements}
+   */
+  public static final class PlacementRequirements extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.base.v1beta2.PlacementRequirements)
+      PlacementRequirementsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PlacementRequirements.newBuilder() to construct.
+    private PlacementRequirements(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PlacementRequirements() {
+      attributes_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PlacementRequirements();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.base.v1beta2.AttributeProto.internal_static_akash_base_v1beta2_PlacementRequirements_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.base.v1beta2.AttributeProto.internal_static_akash_base_v1beta2_PlacementRequirements_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.base.v1beta2.AttributeProto.PlacementRequirements.class, com.akash.base.v1beta2.AttributeProto.PlacementRequirements.Builder.class);
+    }
+
+    public static final int SIGNED_BY_FIELD_NUMBER = 1;
+    private com.akash.base.v1beta2.AttributeProto.SignedBy signedBy_;
+    /**
+     * <pre>
+     * SignedBy list of keys that tenants expect to have signatures from
+     * </pre>
+     *
+     * <code>.akash.base.v1beta2.SignedBy signed_by = 1 [json_name = "signedBy", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "signed_by", (.gogoproto.moretags) = "yaml:&#92;"signed_by&#92;""];</code>
+     * @return Whether the signedBy field is set.
+     */
+    @java.lang.Override
+    public boolean hasSignedBy() {
+      return signedBy_ != null;
+    }
+    /**
+     * <pre>
+     * SignedBy list of keys that tenants expect to have signatures from
+     * </pre>
+     *
+     * <code>.akash.base.v1beta2.SignedBy signed_by = 1 [json_name = "signedBy", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "signed_by", (.gogoproto.moretags) = "yaml:&#92;"signed_by&#92;""];</code>
+     * @return The signedBy.
+     */
+    @java.lang.Override
+    public com.akash.base.v1beta2.AttributeProto.SignedBy getSignedBy() {
+      return signedBy_ == null ? com.akash.base.v1beta2.AttributeProto.SignedBy.getDefaultInstance() : signedBy_;
+    }
+    /**
+     * <pre>
+     * SignedBy list of keys that tenants expect to have signatures from
+     * </pre>
+     *
+     * <code>.akash.base.v1beta2.SignedBy signed_by = 1 [json_name = "signedBy", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "signed_by", (.gogoproto.moretags) = "yaml:&#92;"signed_by&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.akash.base.v1beta2.AttributeProto.SignedByOrBuilder getSignedByOrBuilder() {
+      return signedBy_ == null ? com.akash.base.v1beta2.AttributeProto.SignedBy.getDefaultInstance() : signedBy_;
+    }
+
+    public static final int ATTRIBUTES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.akash.base.v1beta2.AttributeProto.Attribute> attributes_;
+    /**
+     * <pre>
+     * Attribute list of attributes tenant expects from the provider
+     * </pre>
+     *
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes", (.gogoproto.moretags) = "yaml:&#92;"attributes&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.akash.base.v1beta2.AttributeProto.Attribute> getAttributesList() {
+      return attributes_;
+    }
+    /**
+     * <pre>
+     * Attribute list of attributes tenant expects from the provider
+     * </pre>
+     *
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes", (.gogoproto.moretags) = "yaml:&#92;"attributes&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder> 
+        getAttributesOrBuilderList() {
+      return attributes_;
+    }
+    /**
+     * <pre>
+     * Attribute list of attributes tenant expects from the provider
+     * </pre>
+     *
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes", (.gogoproto.moretags) = "yaml:&#92;"attributes&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getAttributesCount() {
+      return attributes_.size();
+    }
+    /**
+     * <pre>
+     * Attribute list of attributes tenant expects from the provider
+     * </pre>
+     *
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes", (.gogoproto.moretags) = "yaml:&#92;"attributes&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.akash.base.v1beta2.AttributeProto.Attribute getAttributes(int index) {
+      return attributes_.get(index);
+    }
+    /**
+     * <pre>
+     * Attribute list of attributes tenant expects from the provider
+     * </pre>
+     *
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes", (.gogoproto.moretags) = "yaml:&#92;"attributes&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder getAttributesOrBuilder(
+        int index) {
+      return attributes_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (signedBy_ != null) {
+        output.writeMessage(1, getSignedBy());
+      }
+      for (int i = 0; i < attributes_.size(); i++) {
+        output.writeMessage(2, attributes_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (signedBy_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getSignedBy());
+      }
+      for (int i = 0; i < attributes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, attributes_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.base.v1beta2.AttributeProto.PlacementRequirements)) {
+        return super.equals(obj);
+      }
+      com.akash.base.v1beta2.AttributeProto.PlacementRequirements other = (com.akash.base.v1beta2.AttributeProto.PlacementRequirements) obj;
+
+      if (hasSignedBy() != other.hasSignedBy()) return false;
+      if (hasSignedBy()) {
+        if (!getSignedBy()
+            .equals(other.getSignedBy())) return false;
+      }
+      if (!getAttributesList()
+          .equals(other.getAttributesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSignedBy()) {
+        hash = (37 * hash) + SIGNED_BY_FIELD_NUMBER;
+        hash = (53 * hash) + getSignedBy().hashCode();
+      }
+      if (getAttributesCount() > 0) {
+        hash = (37 * hash) + ATTRIBUTES_FIELD_NUMBER;
+        hash = (53 * hash) + getAttributesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.base.v1beta2.AttributeProto.PlacementRequirements parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.base.v1beta2.AttributeProto.PlacementRequirements parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.base.v1beta2.AttributeProto.PlacementRequirements parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.base.v1beta2.AttributeProto.PlacementRequirements parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.base.v1beta2.AttributeProto.PlacementRequirements parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.base.v1beta2.AttributeProto.PlacementRequirements parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.base.v1beta2.AttributeProto.PlacementRequirements parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.base.v1beta2.AttributeProto.PlacementRequirements parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.base.v1beta2.AttributeProto.PlacementRequirements parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.base.v1beta2.AttributeProto.PlacementRequirements parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.base.v1beta2.AttributeProto.PlacementRequirements parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.base.v1beta2.AttributeProto.PlacementRequirements parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.base.v1beta2.AttributeProto.PlacementRequirements prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * PlacementRequirements
+     * </pre>
+     *
+     * Protobuf type {@code akash.base.v1beta2.PlacementRequirements}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.base.v1beta2.PlacementRequirements)
+        com.akash.base.v1beta2.AttributeProto.PlacementRequirementsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.base.v1beta2.AttributeProto.internal_static_akash_base_v1beta2_PlacementRequirements_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.base.v1beta2.AttributeProto.internal_static_akash_base_v1beta2_PlacementRequirements_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.base.v1beta2.AttributeProto.PlacementRequirements.class, com.akash.base.v1beta2.AttributeProto.PlacementRequirements.Builder.class);
+      }
+
+      // Construct using com.akash.base.v1beta2.AttributeProto.PlacementRequirements.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        signedBy_ = null;
+        if (signedByBuilder_ != null) {
+          signedByBuilder_.dispose();
+          signedByBuilder_ = null;
+        }
+        if (attributesBuilder_ == null) {
+          attributes_ = java.util.Collections.emptyList();
+        } else {
+          attributes_ = null;
+          attributesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.base.v1beta2.AttributeProto.internal_static_akash_base_v1beta2_PlacementRequirements_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.base.v1beta2.AttributeProto.PlacementRequirements getDefaultInstanceForType() {
+        return com.akash.base.v1beta2.AttributeProto.PlacementRequirements.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.base.v1beta2.AttributeProto.PlacementRequirements build() {
+        com.akash.base.v1beta2.AttributeProto.PlacementRequirements result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.base.v1beta2.AttributeProto.PlacementRequirements buildPartial() {
+        com.akash.base.v1beta2.AttributeProto.PlacementRequirements result = new com.akash.base.v1beta2.AttributeProto.PlacementRequirements(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.akash.base.v1beta2.AttributeProto.PlacementRequirements result) {
+        if (attributesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            attributes_ = java.util.Collections.unmodifiableList(attributes_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.attributes_ = attributes_;
+        } else {
+          result.attributes_ = attributesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.akash.base.v1beta2.AttributeProto.PlacementRequirements result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.signedBy_ = signedByBuilder_ == null
+              ? signedBy_
+              : signedByBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.base.v1beta2.AttributeProto.PlacementRequirements) {
+          return mergeFrom((com.akash.base.v1beta2.AttributeProto.PlacementRequirements)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.base.v1beta2.AttributeProto.PlacementRequirements other) {
+        if (other == com.akash.base.v1beta2.AttributeProto.PlacementRequirements.getDefaultInstance()) return this;
+        if (other.hasSignedBy()) {
+          mergeSignedBy(other.getSignedBy());
+        }
+        if (attributesBuilder_ == null) {
+          if (!other.attributes_.isEmpty()) {
+            if (attributes_.isEmpty()) {
+              attributes_ = other.attributes_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureAttributesIsMutable();
+              attributes_.addAll(other.attributes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.attributes_.isEmpty()) {
+            if (attributesBuilder_.isEmpty()) {
+              attributesBuilder_.dispose();
+              attributesBuilder_ = null;
+              attributes_ = other.attributes_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              attributesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAttributesFieldBuilder() : null;
+            } else {
+              attributesBuilder_.addAllMessages(other.attributes_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getSignedByFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.akash.base.v1beta2.AttributeProto.Attribute m =
+                    input.readMessage(
+                        com.akash.base.v1beta2.AttributeProto.Attribute.parser(),
+                        extensionRegistry);
+                if (attributesBuilder_ == null) {
+                  ensureAttributesIsMutable();
+                  attributes_.add(m);
+                } else {
+                  attributesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.akash.base.v1beta2.AttributeProto.SignedBy signedBy_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.base.v1beta2.AttributeProto.SignedBy, com.akash.base.v1beta2.AttributeProto.SignedBy.Builder, com.akash.base.v1beta2.AttributeProto.SignedByOrBuilder> signedByBuilder_;
+      /**
+       * <pre>
+       * SignedBy list of keys that tenants expect to have signatures from
+       * </pre>
+       *
+       * <code>.akash.base.v1beta2.SignedBy signed_by = 1 [json_name = "signedBy", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "signed_by", (.gogoproto.moretags) = "yaml:&#92;"signed_by&#92;""];</code>
+       * @return Whether the signedBy field is set.
+       */
+      public boolean hasSignedBy() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * SignedBy list of keys that tenants expect to have signatures from
+       * </pre>
+       *
+       * <code>.akash.base.v1beta2.SignedBy signed_by = 1 [json_name = "signedBy", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "signed_by", (.gogoproto.moretags) = "yaml:&#92;"signed_by&#92;""];</code>
+       * @return The signedBy.
+       */
+      public com.akash.base.v1beta2.AttributeProto.SignedBy getSignedBy() {
+        if (signedByBuilder_ == null) {
+          return signedBy_ == null ? com.akash.base.v1beta2.AttributeProto.SignedBy.getDefaultInstance() : signedBy_;
+        } else {
+          return signedByBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * SignedBy list of keys that tenants expect to have signatures from
+       * </pre>
+       *
+       * <code>.akash.base.v1beta2.SignedBy signed_by = 1 [json_name = "signedBy", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "signed_by", (.gogoproto.moretags) = "yaml:&#92;"signed_by&#92;""];</code>
+       */
+      public Builder setSignedBy(com.akash.base.v1beta2.AttributeProto.SignedBy value) {
+        if (signedByBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          signedBy_ = value;
+        } else {
+          signedByBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * SignedBy list of keys that tenants expect to have signatures from
+       * </pre>
+       *
+       * <code>.akash.base.v1beta2.SignedBy signed_by = 1 [json_name = "signedBy", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "signed_by", (.gogoproto.moretags) = "yaml:&#92;"signed_by&#92;""];</code>
+       */
+      public Builder setSignedBy(
+          com.akash.base.v1beta2.AttributeProto.SignedBy.Builder builderForValue) {
+        if (signedByBuilder_ == null) {
+          signedBy_ = builderForValue.build();
+        } else {
+          signedByBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * SignedBy list of keys that tenants expect to have signatures from
+       * </pre>
+       *
+       * <code>.akash.base.v1beta2.SignedBy signed_by = 1 [json_name = "signedBy", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "signed_by", (.gogoproto.moretags) = "yaml:&#92;"signed_by&#92;""];</code>
+       */
+      public Builder mergeSignedBy(com.akash.base.v1beta2.AttributeProto.SignedBy value) {
+        if (signedByBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            signedBy_ != null &&
+            signedBy_ != com.akash.base.v1beta2.AttributeProto.SignedBy.getDefaultInstance()) {
+            getSignedByBuilder().mergeFrom(value);
+          } else {
+            signedBy_ = value;
+          }
+        } else {
+          signedByBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * SignedBy list of keys that tenants expect to have signatures from
+       * </pre>
+       *
+       * <code>.akash.base.v1beta2.SignedBy signed_by = 1 [json_name = "signedBy", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "signed_by", (.gogoproto.moretags) = "yaml:&#92;"signed_by&#92;""];</code>
+       */
+      public Builder clearSignedBy() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        signedBy_ = null;
+        if (signedByBuilder_ != null) {
+          signedByBuilder_.dispose();
+          signedByBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * SignedBy list of keys that tenants expect to have signatures from
+       * </pre>
+       *
+       * <code>.akash.base.v1beta2.SignedBy signed_by = 1 [json_name = "signedBy", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "signed_by", (.gogoproto.moretags) = "yaml:&#92;"signed_by&#92;""];</code>
+       */
+      public com.akash.base.v1beta2.AttributeProto.SignedBy.Builder getSignedByBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getSignedByFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * SignedBy list of keys that tenants expect to have signatures from
+       * </pre>
+       *
+       * <code>.akash.base.v1beta2.SignedBy signed_by = 1 [json_name = "signedBy", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "signed_by", (.gogoproto.moretags) = "yaml:&#92;"signed_by&#92;""];</code>
+       */
+      public com.akash.base.v1beta2.AttributeProto.SignedByOrBuilder getSignedByOrBuilder() {
+        if (signedByBuilder_ != null) {
+          return signedByBuilder_.getMessageOrBuilder();
+        } else {
+          return signedBy_ == null ?
+              com.akash.base.v1beta2.AttributeProto.SignedBy.getDefaultInstance() : signedBy_;
+        }
+      }
+      /**
+       * <pre>
+       * SignedBy list of keys that tenants expect to have signatures from
+       * </pre>
+       *
+       * <code>.akash.base.v1beta2.SignedBy signed_by = 1 [json_name = "signedBy", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "signed_by", (.gogoproto.moretags) = "yaml:&#92;"signed_by&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.base.v1beta2.AttributeProto.SignedBy, com.akash.base.v1beta2.AttributeProto.SignedBy.Builder, com.akash.base.v1beta2.AttributeProto.SignedByOrBuilder> 
+          getSignedByFieldBuilder() {
+        if (signedByBuilder_ == null) {
+          signedByBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.base.v1beta2.AttributeProto.SignedBy, com.akash.base.v1beta2.AttributeProto.SignedBy.Builder, com.akash.base.v1beta2.AttributeProto.SignedByOrBuilder>(
+                  getSignedBy(),
+                  getParentForChildren(),
+                  isClean());
+          signedBy_ = null;
+        }
+        return signedByBuilder_;
+      }
+
+      private java.util.List<com.akash.base.v1beta2.AttributeProto.Attribute> attributes_ =
+        java.util.Collections.emptyList();
+      private void ensureAttributesIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          attributes_ = new java.util.ArrayList<com.akash.base.v1beta2.AttributeProto.Attribute>(attributes_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.akash.base.v1beta2.AttributeProto.Attribute, com.akash.base.v1beta2.AttributeProto.Attribute.Builder, com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder> attributesBuilder_;
+
+      /**
+       * <pre>
+       * Attribute list of attributes tenant expects from the provider
+       * </pre>
+       *
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes", (.gogoproto.moretags) = "yaml:&#92;"attributes&#92;""];</code>
+       */
+      public java.util.List<com.akash.base.v1beta2.AttributeProto.Attribute> getAttributesList() {
+        if (attributesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(attributes_);
+        } else {
+          return attributesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Attribute list of attributes tenant expects from the provider
+       * </pre>
+       *
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes", (.gogoproto.moretags) = "yaml:&#92;"attributes&#92;""];</code>
+       */
+      public int getAttributesCount() {
+        if (attributesBuilder_ == null) {
+          return attributes_.size();
+        } else {
+          return attributesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Attribute list of attributes tenant expects from the provider
+       * </pre>
+       *
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes", (.gogoproto.moretags) = "yaml:&#92;"attributes&#92;""];</code>
+       */
+      public com.akash.base.v1beta2.AttributeProto.Attribute getAttributes(int index) {
+        if (attributesBuilder_ == null) {
+          return attributes_.get(index);
+        } else {
+          return attributesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Attribute list of attributes tenant expects from the provider
+       * </pre>
+       *
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes", (.gogoproto.moretags) = "yaml:&#92;"attributes&#92;""];</code>
+       */
+      public Builder setAttributes(
+          int index, com.akash.base.v1beta2.AttributeProto.Attribute value) {
+        if (attributesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttributesIsMutable();
+          attributes_.set(index, value);
+          onChanged();
+        } else {
+          attributesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Attribute list of attributes tenant expects from the provider
+       * </pre>
+       *
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes", (.gogoproto.moretags) = "yaml:&#92;"attributes&#92;""];</code>
+       */
+      public Builder setAttributes(
+          int index, com.akash.base.v1beta2.AttributeProto.Attribute.Builder builderForValue) {
+        if (attributesBuilder_ == null) {
+          ensureAttributesIsMutable();
+          attributes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          attributesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Attribute list of attributes tenant expects from the provider
+       * </pre>
+       *
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes", (.gogoproto.moretags) = "yaml:&#92;"attributes&#92;""];</code>
+       */
+      public Builder addAttributes(com.akash.base.v1beta2.AttributeProto.Attribute value) {
+        if (attributesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttributesIsMutable();
+          attributes_.add(value);
+          onChanged();
+        } else {
+          attributesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Attribute list of attributes tenant expects from the provider
+       * </pre>
+       *
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes", (.gogoproto.moretags) = "yaml:&#92;"attributes&#92;""];</code>
+       */
+      public Builder addAttributes(
+          int index, com.akash.base.v1beta2.AttributeProto.Attribute value) {
+        if (attributesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttributesIsMutable();
+          attributes_.add(index, value);
+          onChanged();
+        } else {
+          attributesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Attribute list of attributes tenant expects from the provider
+       * </pre>
+       *
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes", (.gogoproto.moretags) = "yaml:&#92;"attributes&#92;""];</code>
+       */
+      public Builder addAttributes(
+          com.akash.base.v1beta2.AttributeProto.Attribute.Builder builderForValue) {
+        if (attributesBuilder_ == null) {
+          ensureAttributesIsMutable();
+          attributes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          attributesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Attribute list of attributes tenant expects from the provider
+       * </pre>
+       *
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes", (.gogoproto.moretags) = "yaml:&#92;"attributes&#92;""];</code>
+       */
+      public Builder addAttributes(
+          int index, com.akash.base.v1beta2.AttributeProto.Attribute.Builder builderForValue) {
+        if (attributesBuilder_ == null) {
+          ensureAttributesIsMutable();
+          attributes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          attributesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Attribute list of attributes tenant expects from the provider
+       * </pre>
+       *
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes", (.gogoproto.moretags) = "yaml:&#92;"attributes&#92;""];</code>
+       */
+      public Builder addAllAttributes(
+          java.lang.Iterable<? extends com.akash.base.v1beta2.AttributeProto.Attribute> values) {
+        if (attributesBuilder_ == null) {
+          ensureAttributesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, attributes_);
+          onChanged();
+        } else {
+          attributesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Attribute list of attributes tenant expects from the provider
+       * </pre>
+       *
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes", (.gogoproto.moretags) = "yaml:&#92;"attributes&#92;""];</code>
+       */
+      public Builder clearAttributes() {
+        if (attributesBuilder_ == null) {
+          attributes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          attributesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Attribute list of attributes tenant expects from the provider
+       * </pre>
+       *
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes", (.gogoproto.moretags) = "yaml:&#92;"attributes&#92;""];</code>
+       */
+      public Builder removeAttributes(int index) {
+        if (attributesBuilder_ == null) {
+          ensureAttributesIsMutable();
+          attributes_.remove(index);
+          onChanged();
+        } else {
+          attributesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Attribute list of attributes tenant expects from the provider
+       * </pre>
+       *
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes", (.gogoproto.moretags) = "yaml:&#92;"attributes&#92;""];</code>
+       */
+      public com.akash.base.v1beta2.AttributeProto.Attribute.Builder getAttributesBuilder(
+          int index) {
+        return getAttributesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Attribute list of attributes tenant expects from the provider
+       * </pre>
+       *
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes", (.gogoproto.moretags) = "yaml:&#92;"attributes&#92;""];</code>
+       */
+      public com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder getAttributesOrBuilder(
+          int index) {
+        if (attributesBuilder_ == null) {
+          return attributes_.get(index);  } else {
+          return attributesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Attribute list of attributes tenant expects from the provider
+       * </pre>
+       *
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes", (.gogoproto.moretags) = "yaml:&#92;"attributes&#92;""];</code>
+       */
+      public java.util.List<? extends com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder> 
+           getAttributesOrBuilderList() {
+        if (attributesBuilder_ != null) {
+          return attributesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(attributes_);
+        }
+      }
+      /**
+       * <pre>
+       * Attribute list of attributes tenant expects from the provider
+       * </pre>
+       *
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes", (.gogoproto.moretags) = "yaml:&#92;"attributes&#92;""];</code>
+       */
+      public com.akash.base.v1beta2.AttributeProto.Attribute.Builder addAttributesBuilder() {
+        return getAttributesFieldBuilder().addBuilder(
+            com.akash.base.v1beta2.AttributeProto.Attribute.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Attribute list of attributes tenant expects from the provider
+       * </pre>
+       *
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes", (.gogoproto.moretags) = "yaml:&#92;"attributes&#92;""];</code>
+       */
+      public com.akash.base.v1beta2.AttributeProto.Attribute.Builder addAttributesBuilder(
+          int index) {
+        return getAttributesFieldBuilder().addBuilder(
+            index, com.akash.base.v1beta2.AttributeProto.Attribute.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Attribute list of attributes tenant expects from the provider
+       * </pre>
+       *
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes", (.gogoproto.moretags) = "yaml:&#92;"attributes&#92;""];</code>
+       */
+      public java.util.List<com.akash.base.v1beta2.AttributeProto.Attribute.Builder> 
+           getAttributesBuilderList() {
+        return getAttributesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.akash.base.v1beta2.AttributeProto.Attribute, com.akash.base.v1beta2.AttributeProto.Attribute.Builder, com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder> 
+          getAttributesFieldBuilder() {
+        if (attributesBuilder_ == null) {
+          attributesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.akash.base.v1beta2.AttributeProto.Attribute, com.akash.base.v1beta2.AttributeProto.Attribute.Builder, com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder>(
+                  attributes_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          attributes_ = null;
+        }
+        return attributesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.base.v1beta2.PlacementRequirements)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.base.v1beta2.PlacementRequirements)
+    private static final com.akash.base.v1beta2.AttributeProto.PlacementRequirements DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.base.v1beta2.AttributeProto.PlacementRequirements();
+    }
+
+    public static com.akash.base.v1beta2.AttributeProto.PlacementRequirements getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PlacementRequirements>
+        PARSER = new com.google.protobuf.AbstractParser<PlacementRequirements>() {
+      @java.lang.Override
+      public PlacementRequirements parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PlacementRequirements> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PlacementRequirements> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.base.v1beta2.AttributeProto.PlacementRequirements getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_base_v1beta2_Attribute_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_base_v1beta2_Attribute_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_base_v1beta2_SignedBy_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_base_v1beta2_SignedBy_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_base_v1beta2_PlacementRequirements_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_base_v1beta2_PlacementRequirements_fieldAccessorTable;
 
@@ -51,12 +2899,12 @@ public final class AttributeProto {
       "d_by\"R\010signedBy\022f\n\nattributes\030\002 \003(\0132\035.ak" +
       "ash.base.v1beta2.AttributeB\'\310\336\037\000\352\336\037\nattr" +
       "ibutes\362\336\037\021yaml:\"attributes\"R\nattributes:" +
-      "\004\210\240\037\000B\324\001\n\026com.akash.base.v1beta2B\016Attrib" +
-      "uteProtoP\001Z8github.com/akash-network/aka" +
-      "sh-api/go/node/types/v1beta2\242\002\003ABX\252\002\022Aka" +
-      "sh.Base.V1beta2\312\002\022Akash\\Base\\V1beta2\342\002\036A" +
-      "kash\\Base\\V1beta2\\GPBMetadata\352\002\024Akash::B" +
-      "ase::V1beta2\330\341\036\000\200\342\036\000b\006proto3"
+      "\004\210\240\037\000B\322\001\n\026com.akash.base.v1beta2B\016Attrib" +
+      "uteProtoZ8github.com/akash-network/akash" +
+      "-api/go/node/types/v1beta2\242\002\003ABX\252\002\022Akash" +
+      ".Base.V1beta2\312\002\022Akash\\Base\\V1beta2\342\002\036Aka" +
+      "sh\\Base\\V1beta2\\GPBMetadata\352\002\024Akash::Bas" +
+      "e::V1beta2\330\341\036\000\200\342\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

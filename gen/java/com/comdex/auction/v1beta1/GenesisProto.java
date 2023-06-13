@@ -14,9 +14,2930 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.auction.v1beta1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .comdex.auction.v1beta1.SurplusAuction surplusAuction = 1 [json_name = "surplusAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"surplusAuction&#92;""];</code>
+     */
+    java.util.List<com.comdex.auction.v1beta1.AuctionProto.SurplusAuction> 
+        getSurplusAuctionList();
+    /**
+     * <code>repeated .comdex.auction.v1beta1.SurplusAuction surplusAuction = 1 [json_name = "surplusAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"surplusAuction&#92;""];</code>
+     */
+    com.comdex.auction.v1beta1.AuctionProto.SurplusAuction getSurplusAuction(int index);
+    /**
+     * <code>repeated .comdex.auction.v1beta1.SurplusAuction surplusAuction = 1 [json_name = "surplusAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"surplusAuction&#92;""];</code>
+     */
+    int getSurplusAuctionCount();
+    /**
+     * <code>repeated .comdex.auction.v1beta1.SurplusAuction surplusAuction = 1 [json_name = "surplusAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"surplusAuction&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.auction.v1beta1.AuctionProto.SurplusAuctionOrBuilder> 
+        getSurplusAuctionOrBuilderList();
+    /**
+     * <code>repeated .comdex.auction.v1beta1.SurplusAuction surplusAuction = 1 [json_name = "surplusAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"surplusAuction&#92;""];</code>
+     */
+    com.comdex.auction.v1beta1.AuctionProto.SurplusAuctionOrBuilder getSurplusAuctionOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .comdex.auction.v1beta1.DebtAuction debtAuction = 2 [json_name = "debtAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"debtAuction&#92;""];</code>
+     */
+    java.util.List<com.comdex.auction.v1beta1.AuctionProto.DebtAuction> 
+        getDebtAuctionList();
+    /**
+     * <code>repeated .comdex.auction.v1beta1.DebtAuction debtAuction = 2 [json_name = "debtAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"debtAuction&#92;""];</code>
+     */
+    com.comdex.auction.v1beta1.AuctionProto.DebtAuction getDebtAuction(int index);
+    /**
+     * <code>repeated .comdex.auction.v1beta1.DebtAuction debtAuction = 2 [json_name = "debtAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"debtAuction&#92;""];</code>
+     */
+    int getDebtAuctionCount();
+    /**
+     * <code>repeated .comdex.auction.v1beta1.DebtAuction debtAuction = 2 [json_name = "debtAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"debtAuction&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.auction.v1beta1.AuctionProto.DebtAuctionOrBuilder> 
+        getDebtAuctionOrBuilderList();
+    /**
+     * <code>repeated .comdex.auction.v1beta1.DebtAuction debtAuction = 2 [json_name = "debtAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"debtAuction&#92;""];</code>
+     */
+    com.comdex.auction.v1beta1.AuctionProto.DebtAuctionOrBuilder getDebtAuctionOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchAuction = 3 [json_name = "dutchAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchAuction&#92;""];</code>
+     */
+    java.util.List<com.comdex.auction.v1beta1.AuctionProto.DutchAuction> 
+        getDutchAuctionList();
+    /**
+     * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchAuction = 3 [json_name = "dutchAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchAuction&#92;""];</code>
+     */
+    com.comdex.auction.v1beta1.AuctionProto.DutchAuction getDutchAuction(int index);
+    /**
+     * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchAuction = 3 [json_name = "dutchAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchAuction&#92;""];</code>
+     */
+    int getDutchAuctionCount();
+    /**
+     * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchAuction = 3 [json_name = "dutchAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchAuction&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.auction.v1beta1.AuctionProto.DutchAuctionOrBuilder> 
+        getDutchAuctionOrBuilderList();
+    /**
+     * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchAuction = 3 [json_name = "dutchAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchAuction&#92;""];</code>
+     */
+    com.comdex.auction.v1beta1.AuctionProto.DutchAuctionOrBuilder getDutchAuctionOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .comdex.auction.v1beta1.ProtocolStatistics protocolStatistics = 4 [json_name = "protocolStatistics", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"protocolStatistics&#92;""];</code>
+     */
+    java.util.List<com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics> 
+        getProtocolStatisticsList();
+    /**
+     * <code>repeated .comdex.auction.v1beta1.ProtocolStatistics protocolStatistics = 4 [json_name = "protocolStatistics", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"protocolStatistics&#92;""];</code>
+     */
+    com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics getProtocolStatistics(int index);
+    /**
+     * <code>repeated .comdex.auction.v1beta1.ProtocolStatistics protocolStatistics = 4 [json_name = "protocolStatistics", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"protocolStatistics&#92;""];</code>
+     */
+    int getProtocolStatisticsCount();
+    /**
+     * <code>repeated .comdex.auction.v1beta1.ProtocolStatistics protocolStatistics = 4 [json_name = "protocolStatistics", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"protocolStatistics&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.auction.v1beta1.AuctionProto.ProtocolStatisticsOrBuilder> 
+        getProtocolStatisticsOrBuilderList();
+    /**
+     * <code>repeated .comdex.auction.v1beta1.ProtocolStatistics protocolStatistics = 4 [json_name = "protocolStatistics", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"protocolStatistics&#92;""];</code>
+     */
+    com.comdex.auction.v1beta1.AuctionProto.ProtocolStatisticsOrBuilder getProtocolStatisticsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .comdex.auction.v1beta1.AuctionParams auctionParams = 5 [json_name = "auctionParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctionParams&#92;""];</code>
+     */
+    java.util.List<com.comdex.auction.v1beta1.AuctionProto.AuctionParams> 
+        getAuctionParamsList();
+    /**
+     * <code>repeated .comdex.auction.v1beta1.AuctionParams auctionParams = 5 [json_name = "auctionParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctionParams&#92;""];</code>
+     */
+    com.comdex.auction.v1beta1.AuctionProto.AuctionParams getAuctionParams(int index);
+    /**
+     * <code>repeated .comdex.auction.v1beta1.AuctionParams auctionParams = 5 [json_name = "auctionParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctionParams&#92;""];</code>
+     */
+    int getAuctionParamsCount();
+    /**
+     * <code>repeated .comdex.auction.v1beta1.AuctionParams auctionParams = 5 [json_name = "auctionParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctionParams&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.auction.v1beta1.AuctionProto.AuctionParamsOrBuilder> 
+        getAuctionParamsOrBuilderList();
+    /**
+     * <code>repeated .comdex.auction.v1beta1.AuctionParams auctionParams = 5 [json_name = "auctionParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctionParams&#92;""];</code>
+     */
+    com.comdex.auction.v1beta1.AuctionProto.AuctionParamsOrBuilder getAuctionParamsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchLendAuction = 6 [json_name = "dutchLendAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchLendAuction&#92;""];</code>
+     */
+    java.util.List<com.comdex.auction.v1beta1.AuctionProto.DutchAuction> 
+        getDutchLendAuctionList();
+    /**
+     * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchLendAuction = 6 [json_name = "dutchLendAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchLendAuction&#92;""];</code>
+     */
+    com.comdex.auction.v1beta1.AuctionProto.DutchAuction getDutchLendAuction(int index);
+    /**
+     * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchLendAuction = 6 [json_name = "dutchLendAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchLendAuction&#92;""];</code>
+     */
+    int getDutchLendAuctionCount();
+    /**
+     * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchLendAuction = 6 [json_name = "dutchLendAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchLendAuction&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.auction.v1beta1.AuctionProto.DutchAuctionOrBuilder> 
+        getDutchLendAuctionOrBuilderList();
+    /**
+     * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchLendAuction = 6 [json_name = "dutchLendAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchLendAuction&#92;""];</code>
+     */
+    com.comdex.auction.v1beta1.AuctionProto.DutchAuctionOrBuilder getDutchLendAuctionOrBuilder(
+        int index);
+
+    /**
+     * <code>.comdex.auction.v1beta1.Params params = 7 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.comdex.auction.v1beta1.Params params = 7 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.comdex.auction.v1beta1.ParamsProto.Params getParams();
+    /**
+     * <code>.comdex.auction.v1beta1.Params params = 7 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.comdex.auction.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <code>uint64 UserBiddingID = 8 [json_name = "UserBiddingID"];</code>
+     * @return The userBiddingID.
+     */
+    long getUserBiddingID();
+  }
+  /**
+   * Protobuf type {@code comdex.auction.v1beta1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.auction.v1beta1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      surplusAuction_ = java.util.Collections.emptyList();
+      debtAuction_ = java.util.Collections.emptyList();
+      dutchAuction_ = java.util.Collections.emptyList();
+      protocolStatistics_ = java.util.Collections.emptyList();
+      auctionParams_ = java.util.Collections.emptyList();
+      dutchLendAuction_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.auction.v1beta1.GenesisProto.internal_static_comdex_auction_v1beta1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.auction.v1beta1.GenesisProto.internal_static_comdex_auction_v1beta1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.auction.v1beta1.GenesisProto.GenesisState.class, com.comdex.auction.v1beta1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int SURPLUSAUCTION_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.auction.v1beta1.AuctionProto.SurplusAuction> surplusAuction_;
+    /**
+     * <code>repeated .comdex.auction.v1beta1.SurplusAuction surplusAuction = 1 [json_name = "surplusAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"surplusAuction&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.auction.v1beta1.AuctionProto.SurplusAuction> getSurplusAuctionList() {
+      return surplusAuction_;
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.SurplusAuction surplusAuction = 1 [json_name = "surplusAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"surplusAuction&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.auction.v1beta1.AuctionProto.SurplusAuctionOrBuilder> 
+        getSurplusAuctionOrBuilderList() {
+      return surplusAuction_;
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.SurplusAuction surplusAuction = 1 [json_name = "surplusAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"surplusAuction&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getSurplusAuctionCount() {
+      return surplusAuction_.size();
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.SurplusAuction surplusAuction = 1 [json_name = "surplusAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"surplusAuction&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.auction.v1beta1.AuctionProto.SurplusAuction getSurplusAuction(int index) {
+      return surplusAuction_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.SurplusAuction surplusAuction = 1 [json_name = "surplusAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"surplusAuction&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.auction.v1beta1.AuctionProto.SurplusAuctionOrBuilder getSurplusAuctionOrBuilder(
+        int index) {
+      return surplusAuction_.get(index);
+    }
+
+    public static final int DEBTAUCTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.auction.v1beta1.AuctionProto.DebtAuction> debtAuction_;
+    /**
+     * <code>repeated .comdex.auction.v1beta1.DebtAuction debtAuction = 2 [json_name = "debtAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"debtAuction&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.auction.v1beta1.AuctionProto.DebtAuction> getDebtAuctionList() {
+      return debtAuction_;
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.DebtAuction debtAuction = 2 [json_name = "debtAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"debtAuction&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.auction.v1beta1.AuctionProto.DebtAuctionOrBuilder> 
+        getDebtAuctionOrBuilderList() {
+      return debtAuction_;
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.DebtAuction debtAuction = 2 [json_name = "debtAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"debtAuction&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getDebtAuctionCount() {
+      return debtAuction_.size();
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.DebtAuction debtAuction = 2 [json_name = "debtAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"debtAuction&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.auction.v1beta1.AuctionProto.DebtAuction getDebtAuction(int index) {
+      return debtAuction_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.DebtAuction debtAuction = 2 [json_name = "debtAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"debtAuction&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.auction.v1beta1.AuctionProto.DebtAuctionOrBuilder getDebtAuctionOrBuilder(
+        int index) {
+      return debtAuction_.get(index);
+    }
+
+    public static final int DUTCHAUCTION_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.auction.v1beta1.AuctionProto.DutchAuction> dutchAuction_;
+    /**
+     * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchAuction = 3 [json_name = "dutchAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchAuction&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.auction.v1beta1.AuctionProto.DutchAuction> getDutchAuctionList() {
+      return dutchAuction_;
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchAuction = 3 [json_name = "dutchAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchAuction&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.auction.v1beta1.AuctionProto.DutchAuctionOrBuilder> 
+        getDutchAuctionOrBuilderList() {
+      return dutchAuction_;
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchAuction = 3 [json_name = "dutchAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchAuction&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getDutchAuctionCount() {
+      return dutchAuction_.size();
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchAuction = 3 [json_name = "dutchAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchAuction&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.auction.v1beta1.AuctionProto.DutchAuction getDutchAuction(int index) {
+      return dutchAuction_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchAuction = 3 [json_name = "dutchAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchAuction&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.auction.v1beta1.AuctionProto.DutchAuctionOrBuilder getDutchAuctionOrBuilder(
+        int index) {
+      return dutchAuction_.get(index);
+    }
+
+    public static final int PROTOCOLSTATISTICS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics> protocolStatistics_;
+    /**
+     * <code>repeated .comdex.auction.v1beta1.ProtocolStatistics protocolStatistics = 4 [json_name = "protocolStatistics", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"protocolStatistics&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics> getProtocolStatisticsList() {
+      return protocolStatistics_;
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.ProtocolStatistics protocolStatistics = 4 [json_name = "protocolStatistics", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"protocolStatistics&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.auction.v1beta1.AuctionProto.ProtocolStatisticsOrBuilder> 
+        getProtocolStatisticsOrBuilderList() {
+      return protocolStatistics_;
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.ProtocolStatistics protocolStatistics = 4 [json_name = "protocolStatistics", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"protocolStatistics&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getProtocolStatisticsCount() {
+      return protocolStatistics_.size();
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.ProtocolStatistics protocolStatistics = 4 [json_name = "protocolStatistics", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"protocolStatistics&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics getProtocolStatistics(int index) {
+      return protocolStatistics_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.ProtocolStatistics protocolStatistics = 4 [json_name = "protocolStatistics", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"protocolStatistics&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.auction.v1beta1.AuctionProto.ProtocolStatisticsOrBuilder getProtocolStatisticsOrBuilder(
+        int index) {
+      return protocolStatistics_.get(index);
+    }
+
+    public static final int AUCTIONPARAMS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.auction.v1beta1.AuctionProto.AuctionParams> auctionParams_;
+    /**
+     * <code>repeated .comdex.auction.v1beta1.AuctionParams auctionParams = 5 [json_name = "auctionParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctionParams&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.auction.v1beta1.AuctionProto.AuctionParams> getAuctionParamsList() {
+      return auctionParams_;
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.AuctionParams auctionParams = 5 [json_name = "auctionParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctionParams&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.auction.v1beta1.AuctionProto.AuctionParamsOrBuilder> 
+        getAuctionParamsOrBuilderList() {
+      return auctionParams_;
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.AuctionParams auctionParams = 5 [json_name = "auctionParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctionParams&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getAuctionParamsCount() {
+      return auctionParams_.size();
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.AuctionParams auctionParams = 5 [json_name = "auctionParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctionParams&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.auction.v1beta1.AuctionProto.AuctionParams getAuctionParams(int index) {
+      return auctionParams_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.AuctionParams auctionParams = 5 [json_name = "auctionParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctionParams&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.auction.v1beta1.AuctionProto.AuctionParamsOrBuilder getAuctionParamsOrBuilder(
+        int index) {
+      return auctionParams_.get(index);
+    }
+
+    public static final int DUTCHLENDAUCTION_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.auction.v1beta1.AuctionProto.DutchAuction> dutchLendAuction_;
+    /**
+     * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchLendAuction = 6 [json_name = "dutchLendAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchLendAuction&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.auction.v1beta1.AuctionProto.DutchAuction> getDutchLendAuctionList() {
+      return dutchLendAuction_;
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchLendAuction = 6 [json_name = "dutchLendAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchLendAuction&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.auction.v1beta1.AuctionProto.DutchAuctionOrBuilder> 
+        getDutchLendAuctionOrBuilderList() {
+      return dutchLendAuction_;
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchLendAuction = 6 [json_name = "dutchLendAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchLendAuction&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getDutchLendAuctionCount() {
+      return dutchLendAuction_.size();
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchLendAuction = 6 [json_name = "dutchLendAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchLendAuction&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.auction.v1beta1.AuctionProto.DutchAuction getDutchLendAuction(int index) {
+      return dutchLendAuction_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchLendAuction = 6 [json_name = "dutchLendAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchLendAuction&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.auction.v1beta1.AuctionProto.DutchAuctionOrBuilder getDutchLendAuctionOrBuilder(
+        int index) {
+      return dutchLendAuction_.get(index);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 7;
+    private com.comdex.auction.v1beta1.ParamsProto.Params params_;
+    /**
+     * <code>.comdex.auction.v1beta1.Params params = 7 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.comdex.auction.v1beta1.Params params = 7 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.comdex.auction.v1beta1.ParamsProto.Params getParams() {
+      return params_ == null ? com.comdex.auction.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.comdex.auction.v1beta1.Params params = 7 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.comdex.auction.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.comdex.auction.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int USERBIDDINGID_FIELD_NUMBER = 8;
+    private long userBiddingID_ = 0L;
+    /**
+     * <code>uint64 UserBiddingID = 8 [json_name = "UserBiddingID"];</code>
+     * @return The userBiddingID.
+     */
+    @java.lang.Override
+    public long getUserBiddingID() {
+      return userBiddingID_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < surplusAuction_.size(); i++) {
+        output.writeMessage(1, surplusAuction_.get(i));
+      }
+      for (int i = 0; i < debtAuction_.size(); i++) {
+        output.writeMessage(2, debtAuction_.get(i));
+      }
+      for (int i = 0; i < dutchAuction_.size(); i++) {
+        output.writeMessage(3, dutchAuction_.get(i));
+      }
+      for (int i = 0; i < protocolStatistics_.size(); i++) {
+        output.writeMessage(4, protocolStatistics_.get(i));
+      }
+      for (int i = 0; i < auctionParams_.size(); i++) {
+        output.writeMessage(5, auctionParams_.get(i));
+      }
+      for (int i = 0; i < dutchLendAuction_.size(); i++) {
+        output.writeMessage(6, dutchLendAuction_.get(i));
+      }
+      if (params_ != null) {
+        output.writeMessage(7, getParams());
+      }
+      if (userBiddingID_ != 0L) {
+        output.writeUInt64(8, userBiddingID_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < surplusAuction_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, surplusAuction_.get(i));
+      }
+      for (int i = 0; i < debtAuction_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, debtAuction_.get(i));
+      }
+      for (int i = 0; i < dutchAuction_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, dutchAuction_.get(i));
+      }
+      for (int i = 0; i < protocolStatistics_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, protocolStatistics_.get(i));
+      }
+      for (int i = 0; i < auctionParams_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, auctionParams_.get(i));
+      }
+      for (int i = 0; i < dutchLendAuction_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, dutchLendAuction_.get(i));
+      }
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getParams());
+      }
+      if (userBiddingID_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(8, userBiddingID_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.auction.v1beta1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.comdex.auction.v1beta1.GenesisProto.GenesisState other = (com.comdex.auction.v1beta1.GenesisProto.GenesisState) obj;
+
+      if (!getSurplusAuctionList()
+          .equals(other.getSurplusAuctionList())) return false;
+      if (!getDebtAuctionList()
+          .equals(other.getDebtAuctionList())) return false;
+      if (!getDutchAuctionList()
+          .equals(other.getDutchAuctionList())) return false;
+      if (!getProtocolStatisticsList()
+          .equals(other.getProtocolStatisticsList())) return false;
+      if (!getAuctionParamsList()
+          .equals(other.getAuctionParamsList())) return false;
+      if (!getDutchLendAuctionList()
+          .equals(other.getDutchLendAuctionList())) return false;
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (getUserBiddingID()
+          != other.getUserBiddingID()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getSurplusAuctionCount() > 0) {
+        hash = (37 * hash) + SURPLUSAUCTION_FIELD_NUMBER;
+        hash = (53 * hash) + getSurplusAuctionList().hashCode();
+      }
+      if (getDebtAuctionCount() > 0) {
+        hash = (37 * hash) + DEBTAUCTION_FIELD_NUMBER;
+        hash = (53 * hash) + getDebtAuctionList().hashCode();
+      }
+      if (getDutchAuctionCount() > 0) {
+        hash = (37 * hash) + DUTCHAUCTION_FIELD_NUMBER;
+        hash = (53 * hash) + getDutchAuctionList().hashCode();
+      }
+      if (getProtocolStatisticsCount() > 0) {
+        hash = (37 * hash) + PROTOCOLSTATISTICS_FIELD_NUMBER;
+        hash = (53 * hash) + getProtocolStatisticsList().hashCode();
+      }
+      if (getAuctionParamsCount() > 0) {
+        hash = (37 * hash) + AUCTIONPARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getAuctionParamsList().hashCode();
+      }
+      if (getDutchLendAuctionCount() > 0) {
+        hash = (37 * hash) + DUTCHLENDAUCTION_FIELD_NUMBER;
+        hash = (53 * hash) + getDutchLendAuctionList().hashCode();
+      }
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (37 * hash) + USERBIDDINGID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getUserBiddingID());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.auction.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.auction.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.auction.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.auction.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.auction.v1beta1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.auction.v1beta1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.auction.v1beta1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.auction.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.auction.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.auction.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.auction.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.auction.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.auction.v1beta1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.auction.v1beta1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.auction.v1beta1.GenesisState)
+        com.comdex.auction.v1beta1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.auction.v1beta1.GenesisProto.internal_static_comdex_auction_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.auction.v1beta1.GenesisProto.internal_static_comdex_auction_v1beta1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.auction.v1beta1.GenesisProto.GenesisState.class, com.comdex.auction.v1beta1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.comdex.auction.v1beta1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (surplusAuctionBuilder_ == null) {
+          surplusAuction_ = java.util.Collections.emptyList();
+        } else {
+          surplusAuction_ = null;
+          surplusAuctionBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (debtAuctionBuilder_ == null) {
+          debtAuction_ = java.util.Collections.emptyList();
+        } else {
+          debtAuction_ = null;
+          debtAuctionBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (dutchAuctionBuilder_ == null) {
+          dutchAuction_ = java.util.Collections.emptyList();
+        } else {
+          dutchAuction_ = null;
+          dutchAuctionBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (protocolStatisticsBuilder_ == null) {
+          protocolStatistics_ = java.util.Collections.emptyList();
+        } else {
+          protocolStatistics_ = null;
+          protocolStatisticsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (auctionParamsBuilder_ == null) {
+          auctionParams_ = java.util.Collections.emptyList();
+        } else {
+          auctionParams_ = null;
+          auctionParamsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (dutchLendAuctionBuilder_ == null) {
+          dutchLendAuction_ = java.util.Collections.emptyList();
+        } else {
+          dutchLendAuction_ = null;
+          dutchLendAuctionBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        userBiddingID_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.auction.v1beta1.GenesisProto.internal_static_comdex_auction_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.auction.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.comdex.auction.v1beta1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.auction.v1beta1.GenesisProto.GenesisState build() {
+        com.comdex.auction.v1beta1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.auction.v1beta1.GenesisProto.GenesisState buildPartial() {
+        com.comdex.auction.v1beta1.GenesisProto.GenesisState result = new com.comdex.auction.v1beta1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.auction.v1beta1.GenesisProto.GenesisState result) {
+        if (surplusAuctionBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            surplusAuction_ = java.util.Collections.unmodifiableList(surplusAuction_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.surplusAuction_ = surplusAuction_;
+        } else {
+          result.surplusAuction_ = surplusAuctionBuilder_.build();
+        }
+        if (debtAuctionBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            debtAuction_ = java.util.Collections.unmodifiableList(debtAuction_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.debtAuction_ = debtAuction_;
+        } else {
+          result.debtAuction_ = debtAuctionBuilder_.build();
+        }
+        if (dutchAuctionBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            dutchAuction_ = java.util.Collections.unmodifiableList(dutchAuction_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.dutchAuction_ = dutchAuction_;
+        } else {
+          result.dutchAuction_ = dutchAuctionBuilder_.build();
+        }
+        if (protocolStatisticsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            protocolStatistics_ = java.util.Collections.unmodifiableList(protocolStatistics_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.protocolStatistics_ = protocolStatistics_;
+        } else {
+          result.protocolStatistics_ = protocolStatisticsBuilder_.build();
+        }
+        if (auctionParamsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            auctionParams_ = java.util.Collections.unmodifiableList(auctionParams_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.auctionParams_ = auctionParams_;
+        } else {
+          result.auctionParams_ = auctionParamsBuilder_.build();
+        }
+        if (dutchLendAuctionBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            dutchLendAuction_ = java.util.Collections.unmodifiableList(dutchLendAuction_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.dutchLendAuction_ = dutchLendAuction_;
+        } else {
+          result.dutchLendAuction_ = dutchLendAuctionBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.comdex.auction.v1beta1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.userBiddingID_ = userBiddingID_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.auction.v1beta1.GenesisProto.GenesisState) {
+          return mergeFrom((com.comdex.auction.v1beta1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.auction.v1beta1.GenesisProto.GenesisState other) {
+        if (other == com.comdex.auction.v1beta1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (surplusAuctionBuilder_ == null) {
+          if (!other.surplusAuction_.isEmpty()) {
+            if (surplusAuction_.isEmpty()) {
+              surplusAuction_ = other.surplusAuction_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureSurplusAuctionIsMutable();
+              surplusAuction_.addAll(other.surplusAuction_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.surplusAuction_.isEmpty()) {
+            if (surplusAuctionBuilder_.isEmpty()) {
+              surplusAuctionBuilder_.dispose();
+              surplusAuctionBuilder_ = null;
+              surplusAuction_ = other.surplusAuction_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              surplusAuctionBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSurplusAuctionFieldBuilder() : null;
+            } else {
+              surplusAuctionBuilder_.addAllMessages(other.surplusAuction_);
+            }
+          }
+        }
+        if (debtAuctionBuilder_ == null) {
+          if (!other.debtAuction_.isEmpty()) {
+            if (debtAuction_.isEmpty()) {
+              debtAuction_ = other.debtAuction_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureDebtAuctionIsMutable();
+              debtAuction_.addAll(other.debtAuction_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.debtAuction_.isEmpty()) {
+            if (debtAuctionBuilder_.isEmpty()) {
+              debtAuctionBuilder_.dispose();
+              debtAuctionBuilder_ = null;
+              debtAuction_ = other.debtAuction_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              debtAuctionBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDebtAuctionFieldBuilder() : null;
+            } else {
+              debtAuctionBuilder_.addAllMessages(other.debtAuction_);
+            }
+          }
+        }
+        if (dutchAuctionBuilder_ == null) {
+          if (!other.dutchAuction_.isEmpty()) {
+            if (dutchAuction_.isEmpty()) {
+              dutchAuction_ = other.dutchAuction_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureDutchAuctionIsMutable();
+              dutchAuction_.addAll(other.dutchAuction_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.dutchAuction_.isEmpty()) {
+            if (dutchAuctionBuilder_.isEmpty()) {
+              dutchAuctionBuilder_.dispose();
+              dutchAuctionBuilder_ = null;
+              dutchAuction_ = other.dutchAuction_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              dutchAuctionBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDutchAuctionFieldBuilder() : null;
+            } else {
+              dutchAuctionBuilder_.addAllMessages(other.dutchAuction_);
+            }
+          }
+        }
+        if (protocolStatisticsBuilder_ == null) {
+          if (!other.protocolStatistics_.isEmpty()) {
+            if (protocolStatistics_.isEmpty()) {
+              protocolStatistics_ = other.protocolStatistics_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureProtocolStatisticsIsMutable();
+              protocolStatistics_.addAll(other.protocolStatistics_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.protocolStatistics_.isEmpty()) {
+            if (protocolStatisticsBuilder_.isEmpty()) {
+              protocolStatisticsBuilder_.dispose();
+              protocolStatisticsBuilder_ = null;
+              protocolStatistics_ = other.protocolStatistics_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              protocolStatisticsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getProtocolStatisticsFieldBuilder() : null;
+            } else {
+              protocolStatisticsBuilder_.addAllMessages(other.protocolStatistics_);
+            }
+          }
+        }
+        if (auctionParamsBuilder_ == null) {
+          if (!other.auctionParams_.isEmpty()) {
+            if (auctionParams_.isEmpty()) {
+              auctionParams_ = other.auctionParams_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureAuctionParamsIsMutable();
+              auctionParams_.addAll(other.auctionParams_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.auctionParams_.isEmpty()) {
+            if (auctionParamsBuilder_.isEmpty()) {
+              auctionParamsBuilder_.dispose();
+              auctionParamsBuilder_ = null;
+              auctionParams_ = other.auctionParams_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              auctionParamsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAuctionParamsFieldBuilder() : null;
+            } else {
+              auctionParamsBuilder_.addAllMessages(other.auctionParams_);
+            }
+          }
+        }
+        if (dutchLendAuctionBuilder_ == null) {
+          if (!other.dutchLendAuction_.isEmpty()) {
+            if (dutchLendAuction_.isEmpty()) {
+              dutchLendAuction_ = other.dutchLendAuction_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureDutchLendAuctionIsMutable();
+              dutchLendAuction_.addAll(other.dutchLendAuction_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.dutchLendAuction_.isEmpty()) {
+            if (dutchLendAuctionBuilder_.isEmpty()) {
+              dutchLendAuctionBuilder_.dispose();
+              dutchLendAuctionBuilder_ = null;
+              dutchLendAuction_ = other.dutchLendAuction_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              dutchLendAuctionBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDutchLendAuctionFieldBuilder() : null;
+            } else {
+              dutchLendAuctionBuilder_.addAllMessages(other.dutchLendAuction_);
+            }
+          }
+        }
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (other.getUserBiddingID() != 0L) {
+          setUserBiddingID(other.getUserBiddingID());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.comdex.auction.v1beta1.AuctionProto.SurplusAuction m =
+                    input.readMessage(
+                        com.comdex.auction.v1beta1.AuctionProto.SurplusAuction.parser(),
+                        extensionRegistry);
+                if (surplusAuctionBuilder_ == null) {
+                  ensureSurplusAuctionIsMutable();
+                  surplusAuction_.add(m);
+                } else {
+                  surplusAuctionBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                com.comdex.auction.v1beta1.AuctionProto.DebtAuction m =
+                    input.readMessage(
+                        com.comdex.auction.v1beta1.AuctionProto.DebtAuction.parser(),
+                        extensionRegistry);
+                if (debtAuctionBuilder_ == null) {
+                  ensureDebtAuctionIsMutable();
+                  debtAuction_.add(m);
+                } else {
+                  debtAuctionBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                com.comdex.auction.v1beta1.AuctionProto.DutchAuction m =
+                    input.readMessage(
+                        com.comdex.auction.v1beta1.AuctionProto.DutchAuction.parser(),
+                        extensionRegistry);
+                if (dutchAuctionBuilder_ == null) {
+                  ensureDutchAuctionIsMutable();
+                  dutchAuction_.add(m);
+                } else {
+                  dutchAuctionBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics m =
+                    input.readMessage(
+                        com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics.parser(),
+                        extensionRegistry);
+                if (protocolStatisticsBuilder_ == null) {
+                  ensureProtocolStatisticsIsMutable();
+                  protocolStatistics_.add(m);
+                } else {
+                  protocolStatisticsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                com.comdex.auction.v1beta1.AuctionProto.AuctionParams m =
+                    input.readMessage(
+                        com.comdex.auction.v1beta1.AuctionProto.AuctionParams.parser(),
+                        extensionRegistry);
+                if (auctionParamsBuilder_ == null) {
+                  ensureAuctionParamsIsMutable();
+                  auctionParams_.add(m);
+                } else {
+                  auctionParamsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                com.comdex.auction.v1beta1.AuctionProto.DutchAuction m =
+                    input.readMessage(
+                        com.comdex.auction.v1beta1.AuctionProto.DutchAuction.parser(),
+                        extensionRegistry);
+                if (dutchLendAuctionBuilder_ == null) {
+                  ensureDutchLendAuctionIsMutable();
+                  dutchLendAuction_.add(m);
+                } else {
+                  dutchLendAuctionBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 58: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 64: {
+                userBiddingID_ = input.readUInt64();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.comdex.auction.v1beta1.AuctionProto.SurplusAuction> surplusAuction_ =
+        java.util.Collections.emptyList();
+      private void ensureSurplusAuctionIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          surplusAuction_ = new java.util.ArrayList<com.comdex.auction.v1beta1.AuctionProto.SurplusAuction>(surplusAuction_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.auction.v1beta1.AuctionProto.SurplusAuction, com.comdex.auction.v1beta1.AuctionProto.SurplusAuction.Builder, com.comdex.auction.v1beta1.AuctionProto.SurplusAuctionOrBuilder> surplusAuctionBuilder_;
+
+      /**
+       * <code>repeated .comdex.auction.v1beta1.SurplusAuction surplusAuction = 1 [json_name = "surplusAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"surplusAuction&#92;""];</code>
+       */
+      public java.util.List<com.comdex.auction.v1beta1.AuctionProto.SurplusAuction> getSurplusAuctionList() {
+        if (surplusAuctionBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(surplusAuction_);
+        } else {
+          return surplusAuctionBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.SurplusAuction surplusAuction = 1 [json_name = "surplusAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"surplusAuction&#92;""];</code>
+       */
+      public int getSurplusAuctionCount() {
+        if (surplusAuctionBuilder_ == null) {
+          return surplusAuction_.size();
+        } else {
+          return surplusAuctionBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.SurplusAuction surplusAuction = 1 [json_name = "surplusAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"surplusAuction&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.SurplusAuction getSurplusAuction(int index) {
+        if (surplusAuctionBuilder_ == null) {
+          return surplusAuction_.get(index);
+        } else {
+          return surplusAuctionBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.SurplusAuction surplusAuction = 1 [json_name = "surplusAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"surplusAuction&#92;""];</code>
+       */
+      public Builder setSurplusAuction(
+          int index, com.comdex.auction.v1beta1.AuctionProto.SurplusAuction value) {
+        if (surplusAuctionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSurplusAuctionIsMutable();
+          surplusAuction_.set(index, value);
+          onChanged();
+        } else {
+          surplusAuctionBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.SurplusAuction surplusAuction = 1 [json_name = "surplusAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"surplusAuction&#92;""];</code>
+       */
+      public Builder setSurplusAuction(
+          int index, com.comdex.auction.v1beta1.AuctionProto.SurplusAuction.Builder builderForValue) {
+        if (surplusAuctionBuilder_ == null) {
+          ensureSurplusAuctionIsMutable();
+          surplusAuction_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          surplusAuctionBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.SurplusAuction surplusAuction = 1 [json_name = "surplusAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"surplusAuction&#92;""];</code>
+       */
+      public Builder addSurplusAuction(com.comdex.auction.v1beta1.AuctionProto.SurplusAuction value) {
+        if (surplusAuctionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSurplusAuctionIsMutable();
+          surplusAuction_.add(value);
+          onChanged();
+        } else {
+          surplusAuctionBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.SurplusAuction surplusAuction = 1 [json_name = "surplusAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"surplusAuction&#92;""];</code>
+       */
+      public Builder addSurplusAuction(
+          int index, com.comdex.auction.v1beta1.AuctionProto.SurplusAuction value) {
+        if (surplusAuctionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSurplusAuctionIsMutable();
+          surplusAuction_.add(index, value);
+          onChanged();
+        } else {
+          surplusAuctionBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.SurplusAuction surplusAuction = 1 [json_name = "surplusAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"surplusAuction&#92;""];</code>
+       */
+      public Builder addSurplusAuction(
+          com.comdex.auction.v1beta1.AuctionProto.SurplusAuction.Builder builderForValue) {
+        if (surplusAuctionBuilder_ == null) {
+          ensureSurplusAuctionIsMutable();
+          surplusAuction_.add(builderForValue.build());
+          onChanged();
+        } else {
+          surplusAuctionBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.SurplusAuction surplusAuction = 1 [json_name = "surplusAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"surplusAuction&#92;""];</code>
+       */
+      public Builder addSurplusAuction(
+          int index, com.comdex.auction.v1beta1.AuctionProto.SurplusAuction.Builder builderForValue) {
+        if (surplusAuctionBuilder_ == null) {
+          ensureSurplusAuctionIsMutable();
+          surplusAuction_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          surplusAuctionBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.SurplusAuction surplusAuction = 1 [json_name = "surplusAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"surplusAuction&#92;""];</code>
+       */
+      public Builder addAllSurplusAuction(
+          java.lang.Iterable<? extends com.comdex.auction.v1beta1.AuctionProto.SurplusAuction> values) {
+        if (surplusAuctionBuilder_ == null) {
+          ensureSurplusAuctionIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, surplusAuction_);
+          onChanged();
+        } else {
+          surplusAuctionBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.SurplusAuction surplusAuction = 1 [json_name = "surplusAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"surplusAuction&#92;""];</code>
+       */
+      public Builder clearSurplusAuction() {
+        if (surplusAuctionBuilder_ == null) {
+          surplusAuction_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          surplusAuctionBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.SurplusAuction surplusAuction = 1 [json_name = "surplusAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"surplusAuction&#92;""];</code>
+       */
+      public Builder removeSurplusAuction(int index) {
+        if (surplusAuctionBuilder_ == null) {
+          ensureSurplusAuctionIsMutable();
+          surplusAuction_.remove(index);
+          onChanged();
+        } else {
+          surplusAuctionBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.SurplusAuction surplusAuction = 1 [json_name = "surplusAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"surplusAuction&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.SurplusAuction.Builder getSurplusAuctionBuilder(
+          int index) {
+        return getSurplusAuctionFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.SurplusAuction surplusAuction = 1 [json_name = "surplusAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"surplusAuction&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.SurplusAuctionOrBuilder getSurplusAuctionOrBuilder(
+          int index) {
+        if (surplusAuctionBuilder_ == null) {
+          return surplusAuction_.get(index);  } else {
+          return surplusAuctionBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.SurplusAuction surplusAuction = 1 [json_name = "surplusAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"surplusAuction&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.auction.v1beta1.AuctionProto.SurplusAuctionOrBuilder> 
+           getSurplusAuctionOrBuilderList() {
+        if (surplusAuctionBuilder_ != null) {
+          return surplusAuctionBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(surplusAuction_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.SurplusAuction surplusAuction = 1 [json_name = "surplusAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"surplusAuction&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.SurplusAuction.Builder addSurplusAuctionBuilder() {
+        return getSurplusAuctionFieldBuilder().addBuilder(
+            com.comdex.auction.v1beta1.AuctionProto.SurplusAuction.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.SurplusAuction surplusAuction = 1 [json_name = "surplusAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"surplusAuction&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.SurplusAuction.Builder addSurplusAuctionBuilder(
+          int index) {
+        return getSurplusAuctionFieldBuilder().addBuilder(
+            index, com.comdex.auction.v1beta1.AuctionProto.SurplusAuction.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.SurplusAuction surplusAuction = 1 [json_name = "surplusAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"surplusAuction&#92;""];</code>
+       */
+      public java.util.List<com.comdex.auction.v1beta1.AuctionProto.SurplusAuction.Builder> 
+           getSurplusAuctionBuilderList() {
+        return getSurplusAuctionFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.auction.v1beta1.AuctionProto.SurplusAuction, com.comdex.auction.v1beta1.AuctionProto.SurplusAuction.Builder, com.comdex.auction.v1beta1.AuctionProto.SurplusAuctionOrBuilder> 
+          getSurplusAuctionFieldBuilder() {
+        if (surplusAuctionBuilder_ == null) {
+          surplusAuctionBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.auction.v1beta1.AuctionProto.SurplusAuction, com.comdex.auction.v1beta1.AuctionProto.SurplusAuction.Builder, com.comdex.auction.v1beta1.AuctionProto.SurplusAuctionOrBuilder>(
+                  surplusAuction_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          surplusAuction_ = null;
+        }
+        return surplusAuctionBuilder_;
+      }
+
+      private java.util.List<com.comdex.auction.v1beta1.AuctionProto.DebtAuction> debtAuction_ =
+        java.util.Collections.emptyList();
+      private void ensureDebtAuctionIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          debtAuction_ = new java.util.ArrayList<com.comdex.auction.v1beta1.AuctionProto.DebtAuction>(debtAuction_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.auction.v1beta1.AuctionProto.DebtAuction, com.comdex.auction.v1beta1.AuctionProto.DebtAuction.Builder, com.comdex.auction.v1beta1.AuctionProto.DebtAuctionOrBuilder> debtAuctionBuilder_;
+
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DebtAuction debtAuction = 2 [json_name = "debtAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"debtAuction&#92;""];</code>
+       */
+      public java.util.List<com.comdex.auction.v1beta1.AuctionProto.DebtAuction> getDebtAuctionList() {
+        if (debtAuctionBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(debtAuction_);
+        } else {
+          return debtAuctionBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DebtAuction debtAuction = 2 [json_name = "debtAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"debtAuction&#92;""];</code>
+       */
+      public int getDebtAuctionCount() {
+        if (debtAuctionBuilder_ == null) {
+          return debtAuction_.size();
+        } else {
+          return debtAuctionBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DebtAuction debtAuction = 2 [json_name = "debtAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"debtAuction&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.DebtAuction getDebtAuction(int index) {
+        if (debtAuctionBuilder_ == null) {
+          return debtAuction_.get(index);
+        } else {
+          return debtAuctionBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DebtAuction debtAuction = 2 [json_name = "debtAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"debtAuction&#92;""];</code>
+       */
+      public Builder setDebtAuction(
+          int index, com.comdex.auction.v1beta1.AuctionProto.DebtAuction value) {
+        if (debtAuctionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDebtAuctionIsMutable();
+          debtAuction_.set(index, value);
+          onChanged();
+        } else {
+          debtAuctionBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DebtAuction debtAuction = 2 [json_name = "debtAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"debtAuction&#92;""];</code>
+       */
+      public Builder setDebtAuction(
+          int index, com.comdex.auction.v1beta1.AuctionProto.DebtAuction.Builder builderForValue) {
+        if (debtAuctionBuilder_ == null) {
+          ensureDebtAuctionIsMutable();
+          debtAuction_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          debtAuctionBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DebtAuction debtAuction = 2 [json_name = "debtAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"debtAuction&#92;""];</code>
+       */
+      public Builder addDebtAuction(com.comdex.auction.v1beta1.AuctionProto.DebtAuction value) {
+        if (debtAuctionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDebtAuctionIsMutable();
+          debtAuction_.add(value);
+          onChanged();
+        } else {
+          debtAuctionBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DebtAuction debtAuction = 2 [json_name = "debtAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"debtAuction&#92;""];</code>
+       */
+      public Builder addDebtAuction(
+          int index, com.comdex.auction.v1beta1.AuctionProto.DebtAuction value) {
+        if (debtAuctionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDebtAuctionIsMutable();
+          debtAuction_.add(index, value);
+          onChanged();
+        } else {
+          debtAuctionBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DebtAuction debtAuction = 2 [json_name = "debtAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"debtAuction&#92;""];</code>
+       */
+      public Builder addDebtAuction(
+          com.comdex.auction.v1beta1.AuctionProto.DebtAuction.Builder builderForValue) {
+        if (debtAuctionBuilder_ == null) {
+          ensureDebtAuctionIsMutable();
+          debtAuction_.add(builderForValue.build());
+          onChanged();
+        } else {
+          debtAuctionBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DebtAuction debtAuction = 2 [json_name = "debtAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"debtAuction&#92;""];</code>
+       */
+      public Builder addDebtAuction(
+          int index, com.comdex.auction.v1beta1.AuctionProto.DebtAuction.Builder builderForValue) {
+        if (debtAuctionBuilder_ == null) {
+          ensureDebtAuctionIsMutable();
+          debtAuction_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          debtAuctionBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DebtAuction debtAuction = 2 [json_name = "debtAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"debtAuction&#92;""];</code>
+       */
+      public Builder addAllDebtAuction(
+          java.lang.Iterable<? extends com.comdex.auction.v1beta1.AuctionProto.DebtAuction> values) {
+        if (debtAuctionBuilder_ == null) {
+          ensureDebtAuctionIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, debtAuction_);
+          onChanged();
+        } else {
+          debtAuctionBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DebtAuction debtAuction = 2 [json_name = "debtAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"debtAuction&#92;""];</code>
+       */
+      public Builder clearDebtAuction() {
+        if (debtAuctionBuilder_ == null) {
+          debtAuction_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          debtAuctionBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DebtAuction debtAuction = 2 [json_name = "debtAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"debtAuction&#92;""];</code>
+       */
+      public Builder removeDebtAuction(int index) {
+        if (debtAuctionBuilder_ == null) {
+          ensureDebtAuctionIsMutable();
+          debtAuction_.remove(index);
+          onChanged();
+        } else {
+          debtAuctionBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DebtAuction debtAuction = 2 [json_name = "debtAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"debtAuction&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.DebtAuction.Builder getDebtAuctionBuilder(
+          int index) {
+        return getDebtAuctionFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DebtAuction debtAuction = 2 [json_name = "debtAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"debtAuction&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.DebtAuctionOrBuilder getDebtAuctionOrBuilder(
+          int index) {
+        if (debtAuctionBuilder_ == null) {
+          return debtAuction_.get(index);  } else {
+          return debtAuctionBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DebtAuction debtAuction = 2 [json_name = "debtAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"debtAuction&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.auction.v1beta1.AuctionProto.DebtAuctionOrBuilder> 
+           getDebtAuctionOrBuilderList() {
+        if (debtAuctionBuilder_ != null) {
+          return debtAuctionBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(debtAuction_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DebtAuction debtAuction = 2 [json_name = "debtAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"debtAuction&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.DebtAuction.Builder addDebtAuctionBuilder() {
+        return getDebtAuctionFieldBuilder().addBuilder(
+            com.comdex.auction.v1beta1.AuctionProto.DebtAuction.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DebtAuction debtAuction = 2 [json_name = "debtAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"debtAuction&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.DebtAuction.Builder addDebtAuctionBuilder(
+          int index) {
+        return getDebtAuctionFieldBuilder().addBuilder(
+            index, com.comdex.auction.v1beta1.AuctionProto.DebtAuction.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DebtAuction debtAuction = 2 [json_name = "debtAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"debtAuction&#92;""];</code>
+       */
+      public java.util.List<com.comdex.auction.v1beta1.AuctionProto.DebtAuction.Builder> 
+           getDebtAuctionBuilderList() {
+        return getDebtAuctionFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.auction.v1beta1.AuctionProto.DebtAuction, com.comdex.auction.v1beta1.AuctionProto.DebtAuction.Builder, com.comdex.auction.v1beta1.AuctionProto.DebtAuctionOrBuilder> 
+          getDebtAuctionFieldBuilder() {
+        if (debtAuctionBuilder_ == null) {
+          debtAuctionBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.auction.v1beta1.AuctionProto.DebtAuction, com.comdex.auction.v1beta1.AuctionProto.DebtAuction.Builder, com.comdex.auction.v1beta1.AuctionProto.DebtAuctionOrBuilder>(
+                  debtAuction_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          debtAuction_ = null;
+        }
+        return debtAuctionBuilder_;
+      }
+
+      private java.util.List<com.comdex.auction.v1beta1.AuctionProto.DutchAuction> dutchAuction_ =
+        java.util.Collections.emptyList();
+      private void ensureDutchAuctionIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          dutchAuction_ = new java.util.ArrayList<com.comdex.auction.v1beta1.AuctionProto.DutchAuction>(dutchAuction_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.auction.v1beta1.AuctionProto.DutchAuction, com.comdex.auction.v1beta1.AuctionProto.DutchAuction.Builder, com.comdex.auction.v1beta1.AuctionProto.DutchAuctionOrBuilder> dutchAuctionBuilder_;
+
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchAuction = 3 [json_name = "dutchAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchAuction&#92;""];</code>
+       */
+      public java.util.List<com.comdex.auction.v1beta1.AuctionProto.DutchAuction> getDutchAuctionList() {
+        if (dutchAuctionBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(dutchAuction_);
+        } else {
+          return dutchAuctionBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchAuction = 3 [json_name = "dutchAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchAuction&#92;""];</code>
+       */
+      public int getDutchAuctionCount() {
+        if (dutchAuctionBuilder_ == null) {
+          return dutchAuction_.size();
+        } else {
+          return dutchAuctionBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchAuction = 3 [json_name = "dutchAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchAuction&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.DutchAuction getDutchAuction(int index) {
+        if (dutchAuctionBuilder_ == null) {
+          return dutchAuction_.get(index);
+        } else {
+          return dutchAuctionBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchAuction = 3 [json_name = "dutchAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchAuction&#92;""];</code>
+       */
+      public Builder setDutchAuction(
+          int index, com.comdex.auction.v1beta1.AuctionProto.DutchAuction value) {
+        if (dutchAuctionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDutchAuctionIsMutable();
+          dutchAuction_.set(index, value);
+          onChanged();
+        } else {
+          dutchAuctionBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchAuction = 3 [json_name = "dutchAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchAuction&#92;""];</code>
+       */
+      public Builder setDutchAuction(
+          int index, com.comdex.auction.v1beta1.AuctionProto.DutchAuction.Builder builderForValue) {
+        if (dutchAuctionBuilder_ == null) {
+          ensureDutchAuctionIsMutable();
+          dutchAuction_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          dutchAuctionBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchAuction = 3 [json_name = "dutchAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchAuction&#92;""];</code>
+       */
+      public Builder addDutchAuction(com.comdex.auction.v1beta1.AuctionProto.DutchAuction value) {
+        if (dutchAuctionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDutchAuctionIsMutable();
+          dutchAuction_.add(value);
+          onChanged();
+        } else {
+          dutchAuctionBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchAuction = 3 [json_name = "dutchAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchAuction&#92;""];</code>
+       */
+      public Builder addDutchAuction(
+          int index, com.comdex.auction.v1beta1.AuctionProto.DutchAuction value) {
+        if (dutchAuctionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDutchAuctionIsMutable();
+          dutchAuction_.add(index, value);
+          onChanged();
+        } else {
+          dutchAuctionBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchAuction = 3 [json_name = "dutchAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchAuction&#92;""];</code>
+       */
+      public Builder addDutchAuction(
+          com.comdex.auction.v1beta1.AuctionProto.DutchAuction.Builder builderForValue) {
+        if (dutchAuctionBuilder_ == null) {
+          ensureDutchAuctionIsMutable();
+          dutchAuction_.add(builderForValue.build());
+          onChanged();
+        } else {
+          dutchAuctionBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchAuction = 3 [json_name = "dutchAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchAuction&#92;""];</code>
+       */
+      public Builder addDutchAuction(
+          int index, com.comdex.auction.v1beta1.AuctionProto.DutchAuction.Builder builderForValue) {
+        if (dutchAuctionBuilder_ == null) {
+          ensureDutchAuctionIsMutable();
+          dutchAuction_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          dutchAuctionBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchAuction = 3 [json_name = "dutchAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchAuction&#92;""];</code>
+       */
+      public Builder addAllDutchAuction(
+          java.lang.Iterable<? extends com.comdex.auction.v1beta1.AuctionProto.DutchAuction> values) {
+        if (dutchAuctionBuilder_ == null) {
+          ensureDutchAuctionIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, dutchAuction_);
+          onChanged();
+        } else {
+          dutchAuctionBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchAuction = 3 [json_name = "dutchAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchAuction&#92;""];</code>
+       */
+      public Builder clearDutchAuction() {
+        if (dutchAuctionBuilder_ == null) {
+          dutchAuction_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          dutchAuctionBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchAuction = 3 [json_name = "dutchAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchAuction&#92;""];</code>
+       */
+      public Builder removeDutchAuction(int index) {
+        if (dutchAuctionBuilder_ == null) {
+          ensureDutchAuctionIsMutable();
+          dutchAuction_.remove(index);
+          onChanged();
+        } else {
+          dutchAuctionBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchAuction = 3 [json_name = "dutchAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchAuction&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.DutchAuction.Builder getDutchAuctionBuilder(
+          int index) {
+        return getDutchAuctionFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchAuction = 3 [json_name = "dutchAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchAuction&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.DutchAuctionOrBuilder getDutchAuctionOrBuilder(
+          int index) {
+        if (dutchAuctionBuilder_ == null) {
+          return dutchAuction_.get(index);  } else {
+          return dutchAuctionBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchAuction = 3 [json_name = "dutchAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchAuction&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.auction.v1beta1.AuctionProto.DutchAuctionOrBuilder> 
+           getDutchAuctionOrBuilderList() {
+        if (dutchAuctionBuilder_ != null) {
+          return dutchAuctionBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(dutchAuction_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchAuction = 3 [json_name = "dutchAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchAuction&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.DutchAuction.Builder addDutchAuctionBuilder() {
+        return getDutchAuctionFieldBuilder().addBuilder(
+            com.comdex.auction.v1beta1.AuctionProto.DutchAuction.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchAuction = 3 [json_name = "dutchAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchAuction&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.DutchAuction.Builder addDutchAuctionBuilder(
+          int index) {
+        return getDutchAuctionFieldBuilder().addBuilder(
+            index, com.comdex.auction.v1beta1.AuctionProto.DutchAuction.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchAuction = 3 [json_name = "dutchAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchAuction&#92;""];</code>
+       */
+      public java.util.List<com.comdex.auction.v1beta1.AuctionProto.DutchAuction.Builder> 
+           getDutchAuctionBuilderList() {
+        return getDutchAuctionFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.auction.v1beta1.AuctionProto.DutchAuction, com.comdex.auction.v1beta1.AuctionProto.DutchAuction.Builder, com.comdex.auction.v1beta1.AuctionProto.DutchAuctionOrBuilder> 
+          getDutchAuctionFieldBuilder() {
+        if (dutchAuctionBuilder_ == null) {
+          dutchAuctionBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.auction.v1beta1.AuctionProto.DutchAuction, com.comdex.auction.v1beta1.AuctionProto.DutchAuction.Builder, com.comdex.auction.v1beta1.AuctionProto.DutchAuctionOrBuilder>(
+                  dutchAuction_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          dutchAuction_ = null;
+        }
+        return dutchAuctionBuilder_;
+      }
+
+      private java.util.List<com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics> protocolStatistics_ =
+        java.util.Collections.emptyList();
+      private void ensureProtocolStatisticsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          protocolStatistics_ = new java.util.ArrayList<com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics>(protocolStatistics_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics, com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics.Builder, com.comdex.auction.v1beta1.AuctionProto.ProtocolStatisticsOrBuilder> protocolStatisticsBuilder_;
+
+      /**
+       * <code>repeated .comdex.auction.v1beta1.ProtocolStatistics protocolStatistics = 4 [json_name = "protocolStatistics", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"protocolStatistics&#92;""];</code>
+       */
+      public java.util.List<com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics> getProtocolStatisticsList() {
+        if (protocolStatisticsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(protocolStatistics_);
+        } else {
+          return protocolStatisticsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.ProtocolStatistics protocolStatistics = 4 [json_name = "protocolStatistics", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"protocolStatistics&#92;""];</code>
+       */
+      public int getProtocolStatisticsCount() {
+        if (protocolStatisticsBuilder_ == null) {
+          return protocolStatistics_.size();
+        } else {
+          return protocolStatisticsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.ProtocolStatistics protocolStatistics = 4 [json_name = "protocolStatistics", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"protocolStatistics&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics getProtocolStatistics(int index) {
+        if (protocolStatisticsBuilder_ == null) {
+          return protocolStatistics_.get(index);
+        } else {
+          return protocolStatisticsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.ProtocolStatistics protocolStatistics = 4 [json_name = "protocolStatistics", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"protocolStatistics&#92;""];</code>
+       */
+      public Builder setProtocolStatistics(
+          int index, com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics value) {
+        if (protocolStatisticsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProtocolStatisticsIsMutable();
+          protocolStatistics_.set(index, value);
+          onChanged();
+        } else {
+          protocolStatisticsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.ProtocolStatistics protocolStatistics = 4 [json_name = "protocolStatistics", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"protocolStatistics&#92;""];</code>
+       */
+      public Builder setProtocolStatistics(
+          int index, com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics.Builder builderForValue) {
+        if (protocolStatisticsBuilder_ == null) {
+          ensureProtocolStatisticsIsMutable();
+          protocolStatistics_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          protocolStatisticsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.ProtocolStatistics protocolStatistics = 4 [json_name = "protocolStatistics", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"protocolStatistics&#92;""];</code>
+       */
+      public Builder addProtocolStatistics(com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics value) {
+        if (protocolStatisticsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProtocolStatisticsIsMutable();
+          protocolStatistics_.add(value);
+          onChanged();
+        } else {
+          protocolStatisticsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.ProtocolStatistics protocolStatistics = 4 [json_name = "protocolStatistics", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"protocolStatistics&#92;""];</code>
+       */
+      public Builder addProtocolStatistics(
+          int index, com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics value) {
+        if (protocolStatisticsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProtocolStatisticsIsMutable();
+          protocolStatistics_.add(index, value);
+          onChanged();
+        } else {
+          protocolStatisticsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.ProtocolStatistics protocolStatistics = 4 [json_name = "protocolStatistics", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"protocolStatistics&#92;""];</code>
+       */
+      public Builder addProtocolStatistics(
+          com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics.Builder builderForValue) {
+        if (protocolStatisticsBuilder_ == null) {
+          ensureProtocolStatisticsIsMutable();
+          protocolStatistics_.add(builderForValue.build());
+          onChanged();
+        } else {
+          protocolStatisticsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.ProtocolStatistics protocolStatistics = 4 [json_name = "protocolStatistics", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"protocolStatistics&#92;""];</code>
+       */
+      public Builder addProtocolStatistics(
+          int index, com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics.Builder builderForValue) {
+        if (protocolStatisticsBuilder_ == null) {
+          ensureProtocolStatisticsIsMutable();
+          protocolStatistics_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          protocolStatisticsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.ProtocolStatistics protocolStatistics = 4 [json_name = "protocolStatistics", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"protocolStatistics&#92;""];</code>
+       */
+      public Builder addAllProtocolStatistics(
+          java.lang.Iterable<? extends com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics> values) {
+        if (protocolStatisticsBuilder_ == null) {
+          ensureProtocolStatisticsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, protocolStatistics_);
+          onChanged();
+        } else {
+          protocolStatisticsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.ProtocolStatistics protocolStatistics = 4 [json_name = "protocolStatistics", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"protocolStatistics&#92;""];</code>
+       */
+      public Builder clearProtocolStatistics() {
+        if (protocolStatisticsBuilder_ == null) {
+          protocolStatistics_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          protocolStatisticsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.ProtocolStatistics protocolStatistics = 4 [json_name = "protocolStatistics", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"protocolStatistics&#92;""];</code>
+       */
+      public Builder removeProtocolStatistics(int index) {
+        if (protocolStatisticsBuilder_ == null) {
+          ensureProtocolStatisticsIsMutable();
+          protocolStatistics_.remove(index);
+          onChanged();
+        } else {
+          protocolStatisticsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.ProtocolStatistics protocolStatistics = 4 [json_name = "protocolStatistics", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"protocolStatistics&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics.Builder getProtocolStatisticsBuilder(
+          int index) {
+        return getProtocolStatisticsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.ProtocolStatistics protocolStatistics = 4 [json_name = "protocolStatistics", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"protocolStatistics&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.ProtocolStatisticsOrBuilder getProtocolStatisticsOrBuilder(
+          int index) {
+        if (protocolStatisticsBuilder_ == null) {
+          return protocolStatistics_.get(index);  } else {
+          return protocolStatisticsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.ProtocolStatistics protocolStatistics = 4 [json_name = "protocolStatistics", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"protocolStatistics&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.auction.v1beta1.AuctionProto.ProtocolStatisticsOrBuilder> 
+           getProtocolStatisticsOrBuilderList() {
+        if (protocolStatisticsBuilder_ != null) {
+          return protocolStatisticsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(protocolStatistics_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.ProtocolStatistics protocolStatistics = 4 [json_name = "protocolStatistics", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"protocolStatistics&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics.Builder addProtocolStatisticsBuilder() {
+        return getProtocolStatisticsFieldBuilder().addBuilder(
+            com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.ProtocolStatistics protocolStatistics = 4 [json_name = "protocolStatistics", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"protocolStatistics&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics.Builder addProtocolStatisticsBuilder(
+          int index) {
+        return getProtocolStatisticsFieldBuilder().addBuilder(
+            index, com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.ProtocolStatistics protocolStatistics = 4 [json_name = "protocolStatistics", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"protocolStatistics&#92;""];</code>
+       */
+      public java.util.List<com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics.Builder> 
+           getProtocolStatisticsBuilderList() {
+        return getProtocolStatisticsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics, com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics.Builder, com.comdex.auction.v1beta1.AuctionProto.ProtocolStatisticsOrBuilder> 
+          getProtocolStatisticsFieldBuilder() {
+        if (protocolStatisticsBuilder_ == null) {
+          protocolStatisticsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics, com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics.Builder, com.comdex.auction.v1beta1.AuctionProto.ProtocolStatisticsOrBuilder>(
+                  protocolStatistics_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          protocolStatistics_ = null;
+        }
+        return protocolStatisticsBuilder_;
+      }
+
+      private java.util.List<com.comdex.auction.v1beta1.AuctionProto.AuctionParams> auctionParams_ =
+        java.util.Collections.emptyList();
+      private void ensureAuctionParamsIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          auctionParams_ = new java.util.ArrayList<com.comdex.auction.v1beta1.AuctionProto.AuctionParams>(auctionParams_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.auction.v1beta1.AuctionProto.AuctionParams, com.comdex.auction.v1beta1.AuctionProto.AuctionParams.Builder, com.comdex.auction.v1beta1.AuctionProto.AuctionParamsOrBuilder> auctionParamsBuilder_;
+
+      /**
+       * <code>repeated .comdex.auction.v1beta1.AuctionParams auctionParams = 5 [json_name = "auctionParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctionParams&#92;""];</code>
+       */
+      public java.util.List<com.comdex.auction.v1beta1.AuctionProto.AuctionParams> getAuctionParamsList() {
+        if (auctionParamsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(auctionParams_);
+        } else {
+          return auctionParamsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.AuctionParams auctionParams = 5 [json_name = "auctionParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctionParams&#92;""];</code>
+       */
+      public int getAuctionParamsCount() {
+        if (auctionParamsBuilder_ == null) {
+          return auctionParams_.size();
+        } else {
+          return auctionParamsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.AuctionParams auctionParams = 5 [json_name = "auctionParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctionParams&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.AuctionParams getAuctionParams(int index) {
+        if (auctionParamsBuilder_ == null) {
+          return auctionParams_.get(index);
+        } else {
+          return auctionParamsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.AuctionParams auctionParams = 5 [json_name = "auctionParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctionParams&#92;""];</code>
+       */
+      public Builder setAuctionParams(
+          int index, com.comdex.auction.v1beta1.AuctionProto.AuctionParams value) {
+        if (auctionParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAuctionParamsIsMutable();
+          auctionParams_.set(index, value);
+          onChanged();
+        } else {
+          auctionParamsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.AuctionParams auctionParams = 5 [json_name = "auctionParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctionParams&#92;""];</code>
+       */
+      public Builder setAuctionParams(
+          int index, com.comdex.auction.v1beta1.AuctionProto.AuctionParams.Builder builderForValue) {
+        if (auctionParamsBuilder_ == null) {
+          ensureAuctionParamsIsMutable();
+          auctionParams_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          auctionParamsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.AuctionParams auctionParams = 5 [json_name = "auctionParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctionParams&#92;""];</code>
+       */
+      public Builder addAuctionParams(com.comdex.auction.v1beta1.AuctionProto.AuctionParams value) {
+        if (auctionParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAuctionParamsIsMutable();
+          auctionParams_.add(value);
+          onChanged();
+        } else {
+          auctionParamsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.AuctionParams auctionParams = 5 [json_name = "auctionParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctionParams&#92;""];</code>
+       */
+      public Builder addAuctionParams(
+          int index, com.comdex.auction.v1beta1.AuctionProto.AuctionParams value) {
+        if (auctionParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAuctionParamsIsMutable();
+          auctionParams_.add(index, value);
+          onChanged();
+        } else {
+          auctionParamsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.AuctionParams auctionParams = 5 [json_name = "auctionParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctionParams&#92;""];</code>
+       */
+      public Builder addAuctionParams(
+          com.comdex.auction.v1beta1.AuctionProto.AuctionParams.Builder builderForValue) {
+        if (auctionParamsBuilder_ == null) {
+          ensureAuctionParamsIsMutable();
+          auctionParams_.add(builderForValue.build());
+          onChanged();
+        } else {
+          auctionParamsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.AuctionParams auctionParams = 5 [json_name = "auctionParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctionParams&#92;""];</code>
+       */
+      public Builder addAuctionParams(
+          int index, com.comdex.auction.v1beta1.AuctionProto.AuctionParams.Builder builderForValue) {
+        if (auctionParamsBuilder_ == null) {
+          ensureAuctionParamsIsMutable();
+          auctionParams_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          auctionParamsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.AuctionParams auctionParams = 5 [json_name = "auctionParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctionParams&#92;""];</code>
+       */
+      public Builder addAllAuctionParams(
+          java.lang.Iterable<? extends com.comdex.auction.v1beta1.AuctionProto.AuctionParams> values) {
+        if (auctionParamsBuilder_ == null) {
+          ensureAuctionParamsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, auctionParams_);
+          onChanged();
+        } else {
+          auctionParamsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.AuctionParams auctionParams = 5 [json_name = "auctionParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctionParams&#92;""];</code>
+       */
+      public Builder clearAuctionParams() {
+        if (auctionParamsBuilder_ == null) {
+          auctionParams_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          auctionParamsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.AuctionParams auctionParams = 5 [json_name = "auctionParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctionParams&#92;""];</code>
+       */
+      public Builder removeAuctionParams(int index) {
+        if (auctionParamsBuilder_ == null) {
+          ensureAuctionParamsIsMutable();
+          auctionParams_.remove(index);
+          onChanged();
+        } else {
+          auctionParamsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.AuctionParams auctionParams = 5 [json_name = "auctionParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctionParams&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.AuctionParams.Builder getAuctionParamsBuilder(
+          int index) {
+        return getAuctionParamsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.AuctionParams auctionParams = 5 [json_name = "auctionParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctionParams&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.AuctionParamsOrBuilder getAuctionParamsOrBuilder(
+          int index) {
+        if (auctionParamsBuilder_ == null) {
+          return auctionParams_.get(index);  } else {
+          return auctionParamsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.AuctionParams auctionParams = 5 [json_name = "auctionParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctionParams&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.auction.v1beta1.AuctionProto.AuctionParamsOrBuilder> 
+           getAuctionParamsOrBuilderList() {
+        if (auctionParamsBuilder_ != null) {
+          return auctionParamsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(auctionParams_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.AuctionParams auctionParams = 5 [json_name = "auctionParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctionParams&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.AuctionParams.Builder addAuctionParamsBuilder() {
+        return getAuctionParamsFieldBuilder().addBuilder(
+            com.comdex.auction.v1beta1.AuctionProto.AuctionParams.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.AuctionParams auctionParams = 5 [json_name = "auctionParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctionParams&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.AuctionParams.Builder addAuctionParamsBuilder(
+          int index) {
+        return getAuctionParamsFieldBuilder().addBuilder(
+            index, com.comdex.auction.v1beta1.AuctionProto.AuctionParams.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.AuctionParams auctionParams = 5 [json_name = "auctionParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctionParams&#92;""];</code>
+       */
+      public java.util.List<com.comdex.auction.v1beta1.AuctionProto.AuctionParams.Builder> 
+           getAuctionParamsBuilderList() {
+        return getAuctionParamsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.auction.v1beta1.AuctionProto.AuctionParams, com.comdex.auction.v1beta1.AuctionProto.AuctionParams.Builder, com.comdex.auction.v1beta1.AuctionProto.AuctionParamsOrBuilder> 
+          getAuctionParamsFieldBuilder() {
+        if (auctionParamsBuilder_ == null) {
+          auctionParamsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.auction.v1beta1.AuctionProto.AuctionParams, com.comdex.auction.v1beta1.AuctionProto.AuctionParams.Builder, com.comdex.auction.v1beta1.AuctionProto.AuctionParamsOrBuilder>(
+                  auctionParams_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          auctionParams_ = null;
+        }
+        return auctionParamsBuilder_;
+      }
+
+      private java.util.List<com.comdex.auction.v1beta1.AuctionProto.DutchAuction> dutchLendAuction_ =
+        java.util.Collections.emptyList();
+      private void ensureDutchLendAuctionIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          dutchLendAuction_ = new java.util.ArrayList<com.comdex.auction.v1beta1.AuctionProto.DutchAuction>(dutchLendAuction_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.auction.v1beta1.AuctionProto.DutchAuction, com.comdex.auction.v1beta1.AuctionProto.DutchAuction.Builder, com.comdex.auction.v1beta1.AuctionProto.DutchAuctionOrBuilder> dutchLendAuctionBuilder_;
+
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchLendAuction = 6 [json_name = "dutchLendAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchLendAuction&#92;""];</code>
+       */
+      public java.util.List<com.comdex.auction.v1beta1.AuctionProto.DutchAuction> getDutchLendAuctionList() {
+        if (dutchLendAuctionBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(dutchLendAuction_);
+        } else {
+          return dutchLendAuctionBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchLendAuction = 6 [json_name = "dutchLendAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchLendAuction&#92;""];</code>
+       */
+      public int getDutchLendAuctionCount() {
+        if (dutchLendAuctionBuilder_ == null) {
+          return dutchLendAuction_.size();
+        } else {
+          return dutchLendAuctionBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchLendAuction = 6 [json_name = "dutchLendAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchLendAuction&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.DutchAuction getDutchLendAuction(int index) {
+        if (dutchLendAuctionBuilder_ == null) {
+          return dutchLendAuction_.get(index);
+        } else {
+          return dutchLendAuctionBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchLendAuction = 6 [json_name = "dutchLendAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchLendAuction&#92;""];</code>
+       */
+      public Builder setDutchLendAuction(
+          int index, com.comdex.auction.v1beta1.AuctionProto.DutchAuction value) {
+        if (dutchLendAuctionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDutchLendAuctionIsMutable();
+          dutchLendAuction_.set(index, value);
+          onChanged();
+        } else {
+          dutchLendAuctionBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchLendAuction = 6 [json_name = "dutchLendAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchLendAuction&#92;""];</code>
+       */
+      public Builder setDutchLendAuction(
+          int index, com.comdex.auction.v1beta1.AuctionProto.DutchAuction.Builder builderForValue) {
+        if (dutchLendAuctionBuilder_ == null) {
+          ensureDutchLendAuctionIsMutable();
+          dutchLendAuction_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          dutchLendAuctionBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchLendAuction = 6 [json_name = "dutchLendAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchLendAuction&#92;""];</code>
+       */
+      public Builder addDutchLendAuction(com.comdex.auction.v1beta1.AuctionProto.DutchAuction value) {
+        if (dutchLendAuctionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDutchLendAuctionIsMutable();
+          dutchLendAuction_.add(value);
+          onChanged();
+        } else {
+          dutchLendAuctionBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchLendAuction = 6 [json_name = "dutchLendAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchLendAuction&#92;""];</code>
+       */
+      public Builder addDutchLendAuction(
+          int index, com.comdex.auction.v1beta1.AuctionProto.DutchAuction value) {
+        if (dutchLendAuctionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDutchLendAuctionIsMutable();
+          dutchLendAuction_.add(index, value);
+          onChanged();
+        } else {
+          dutchLendAuctionBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchLendAuction = 6 [json_name = "dutchLendAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchLendAuction&#92;""];</code>
+       */
+      public Builder addDutchLendAuction(
+          com.comdex.auction.v1beta1.AuctionProto.DutchAuction.Builder builderForValue) {
+        if (dutchLendAuctionBuilder_ == null) {
+          ensureDutchLendAuctionIsMutable();
+          dutchLendAuction_.add(builderForValue.build());
+          onChanged();
+        } else {
+          dutchLendAuctionBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchLendAuction = 6 [json_name = "dutchLendAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchLendAuction&#92;""];</code>
+       */
+      public Builder addDutchLendAuction(
+          int index, com.comdex.auction.v1beta1.AuctionProto.DutchAuction.Builder builderForValue) {
+        if (dutchLendAuctionBuilder_ == null) {
+          ensureDutchLendAuctionIsMutable();
+          dutchLendAuction_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          dutchLendAuctionBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchLendAuction = 6 [json_name = "dutchLendAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchLendAuction&#92;""];</code>
+       */
+      public Builder addAllDutchLendAuction(
+          java.lang.Iterable<? extends com.comdex.auction.v1beta1.AuctionProto.DutchAuction> values) {
+        if (dutchLendAuctionBuilder_ == null) {
+          ensureDutchLendAuctionIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, dutchLendAuction_);
+          onChanged();
+        } else {
+          dutchLendAuctionBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchLendAuction = 6 [json_name = "dutchLendAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchLendAuction&#92;""];</code>
+       */
+      public Builder clearDutchLendAuction() {
+        if (dutchLendAuctionBuilder_ == null) {
+          dutchLendAuction_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          dutchLendAuctionBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchLendAuction = 6 [json_name = "dutchLendAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchLendAuction&#92;""];</code>
+       */
+      public Builder removeDutchLendAuction(int index) {
+        if (dutchLendAuctionBuilder_ == null) {
+          ensureDutchLendAuctionIsMutable();
+          dutchLendAuction_.remove(index);
+          onChanged();
+        } else {
+          dutchLendAuctionBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchLendAuction = 6 [json_name = "dutchLendAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchLendAuction&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.DutchAuction.Builder getDutchLendAuctionBuilder(
+          int index) {
+        return getDutchLendAuctionFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchLendAuction = 6 [json_name = "dutchLendAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchLendAuction&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.DutchAuctionOrBuilder getDutchLendAuctionOrBuilder(
+          int index) {
+        if (dutchLendAuctionBuilder_ == null) {
+          return dutchLendAuction_.get(index);  } else {
+          return dutchLendAuctionBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchLendAuction = 6 [json_name = "dutchLendAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchLendAuction&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.auction.v1beta1.AuctionProto.DutchAuctionOrBuilder> 
+           getDutchLendAuctionOrBuilderList() {
+        if (dutchLendAuctionBuilder_ != null) {
+          return dutchLendAuctionBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(dutchLendAuction_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchLendAuction = 6 [json_name = "dutchLendAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchLendAuction&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.DutchAuction.Builder addDutchLendAuctionBuilder() {
+        return getDutchLendAuctionFieldBuilder().addBuilder(
+            com.comdex.auction.v1beta1.AuctionProto.DutchAuction.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchLendAuction = 6 [json_name = "dutchLendAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchLendAuction&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.DutchAuction.Builder addDutchLendAuctionBuilder(
+          int index) {
+        return getDutchLendAuctionFieldBuilder().addBuilder(
+            index, com.comdex.auction.v1beta1.AuctionProto.DutchAuction.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.DutchAuction dutchLendAuction = 6 [json_name = "dutchLendAuction", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"dutchLendAuction&#92;""];</code>
+       */
+      public java.util.List<com.comdex.auction.v1beta1.AuctionProto.DutchAuction.Builder> 
+           getDutchLendAuctionBuilderList() {
+        return getDutchLendAuctionFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.auction.v1beta1.AuctionProto.DutchAuction, com.comdex.auction.v1beta1.AuctionProto.DutchAuction.Builder, com.comdex.auction.v1beta1.AuctionProto.DutchAuctionOrBuilder> 
+          getDutchLendAuctionFieldBuilder() {
+        if (dutchLendAuctionBuilder_ == null) {
+          dutchLendAuctionBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.auction.v1beta1.AuctionProto.DutchAuction, com.comdex.auction.v1beta1.AuctionProto.DutchAuction.Builder, com.comdex.auction.v1beta1.AuctionProto.DutchAuctionOrBuilder>(
+                  dutchLendAuction_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          dutchLendAuction_ = null;
+        }
+        return dutchLendAuctionBuilder_;
+      }
+
+      private com.comdex.auction.v1beta1.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.auction.v1beta1.ParamsProto.Params, com.comdex.auction.v1beta1.ParamsProto.Params.Builder, com.comdex.auction.v1beta1.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.comdex.auction.v1beta1.Params params = 7 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>.comdex.auction.v1beta1.Params params = 7 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.comdex.auction.v1beta1.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.comdex.auction.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.comdex.auction.v1beta1.Params params = 7 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.comdex.auction.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.auction.v1beta1.Params params = 7 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.comdex.auction.v1beta1.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.auction.v1beta1.Params params = 7 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.comdex.auction.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0) &&
+            params_ != null &&
+            params_ != com.comdex.auction.v1beta1.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.auction.v1beta1.Params params = 7 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.auction.v1beta1.Params params = 7 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.auction.v1beta1.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.comdex.auction.v1beta1.Params params = 7 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.auction.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.comdex.auction.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.comdex.auction.v1beta1.Params params = 7 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.auction.v1beta1.ParamsProto.Params, com.comdex.auction.v1beta1.ParamsProto.Params.Builder, com.comdex.auction.v1beta1.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.comdex.auction.v1beta1.ParamsProto.Params, com.comdex.auction.v1beta1.ParamsProto.Params.Builder, com.comdex.auction.v1beta1.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private long userBiddingID_ ;
+      /**
+       * <code>uint64 UserBiddingID = 8 [json_name = "UserBiddingID"];</code>
+       * @return The userBiddingID.
+       */
+      @java.lang.Override
+      public long getUserBiddingID() {
+        return userBiddingID_;
+      }
+      /**
+       * <code>uint64 UserBiddingID = 8 [json_name = "UserBiddingID"];</code>
+       * @param value The userBiddingID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserBiddingID(long value) {
+
+        userBiddingID_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 UserBiddingID = 8 [json_name = "UserBiddingID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserBiddingID() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        userBiddingID_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.auction.v1beta1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.auction.v1beta1.GenesisState)
+    private static final com.comdex.auction.v1beta1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.auction.v1beta1.GenesisProto.GenesisState();
+    }
+
+    public static com.comdex.auction.v1beta1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.auction.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_auction_v1beta1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_auction_v1beta1_GenesisState_fieldAccessorTable;
 
@@ -52,13 +2973,13 @@ public final class GenesisProto {
       ":\"dutchLendAuction\"R\020dutchLendAuction\022<\n" +
       "\006params\030\007 \001(\0132\036.comdex.auction.v1beta1.P" +
       "aramsB\004\310\336\037\000R\006params\022$\n\rUserBiddingID\030\010 \001" +
-      "(\004R\rUserBiddingIDB\327\001\n\032com.comdex.auction" +
-      ".v1beta1B\014GenesisProtoP\001Z1github.com/com" +
-      "dex-official/comdex/x/auction/types\242\002\003CA" +
-      "X\252\002\026Comdex.Auction.V1beta1\312\002\026Comdex\\Auct" +
-      "ion\\V1beta1\342\002\"Comdex\\Auction\\V1beta1\\GPB" +
-      "Metadata\352\002\030Comdex::Auction::V1beta1b\006pro" +
-      "to3"
+      "(\004R\rUserBiddingIDB\325\001\n\032com.comdex.auction" +
+      ".v1beta1B\014GenesisProtoZ1github.com/comde" +
+      "x-official/comdex/x/auction/types\242\002\003CAX\252" +
+      "\002\026Comdex.Auction.V1beta1\312\002\026Comdex\\Auctio" +
+      "n\\V1beta1\342\002\"Comdex\\Auction\\V1beta1\\GPBMe" +
+      "tadata\352\002\030Comdex::Auction::V1beta1b\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

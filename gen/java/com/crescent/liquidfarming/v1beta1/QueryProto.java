@@ -14,94 +14,12835 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryLiquidFarmsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.QueryLiquidFarmsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryLiquidFarmsRequest is the request type for the Query/LiquidFarms RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryLiquidFarmsRequest}
+   */
+  public static final class QueryLiquidFarmsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.QueryLiquidFarmsRequest)
+      QueryLiquidFarmsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryLiquidFarmsRequest.newBuilder() to construct.
+    private QueryLiquidFarmsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryLiquidFarmsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryLiquidFarmsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryLiquidFarmsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryLiquidFarmsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 1;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(1, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest other = (com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryLiquidFarmsRequest is the request type for the Query/LiquidFarms RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryLiquidFarmsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.QueryLiquidFarmsRequest)
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryLiquidFarmsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryLiquidFarmsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryLiquidFarmsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest build() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest buildPartial() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest result = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest other) {
+        if (other == com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.QueryLiquidFarmsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.QueryLiquidFarmsRequest)
+    private static final com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryLiquidFarmsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryLiquidFarmsRequest>() {
+      @java.lang.Override
+      public QueryLiquidFarmsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryLiquidFarmsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryLiquidFarmsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryLiquidFarmsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.QueryLiquidFarmsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farms = 1 [json_name = "liquidFarms", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse> 
+        getLiquidFarmsList();
+    /**
+     * <code>repeated .crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farms = 1 [json_name = "liquidFarms", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse getLiquidFarms(int index);
+    /**
+     * <code>repeated .crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farms = 1 [json_name = "liquidFarms", (.gogoproto.nullable) = false];</code>
+     */
+    int getLiquidFarmsCount();
+    /**
+     * <code>repeated .crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farms = 1 [json_name = "liquidFarms", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponseOrBuilder> 
+        getLiquidFarmsOrBuilderList();
+    /**
+     * <code>repeated .crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farms = 1 [json_name = "liquidFarms", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponseOrBuilder getLiquidFarmsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * QueryLiquidFarmsResponse is response type for the Query/LiquidFarms RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryLiquidFarmsResponse}
+   */
+  public static final class QueryLiquidFarmsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.QueryLiquidFarmsResponse)
+      QueryLiquidFarmsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryLiquidFarmsResponse.newBuilder() to construct.
+    private QueryLiquidFarmsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryLiquidFarmsResponse() {
+      liquidFarms_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryLiquidFarmsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryLiquidFarmsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryLiquidFarmsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse.Builder.class);
+    }
+
+    public static final int LIQUID_FARMS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse> liquidFarms_;
+    /**
+     * <code>repeated .crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farms = 1 [json_name = "liquidFarms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse> getLiquidFarmsList() {
+      return liquidFarms_;
+    }
+    /**
+     * <code>repeated .crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farms = 1 [json_name = "liquidFarms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponseOrBuilder> 
+        getLiquidFarmsOrBuilderList() {
+      return liquidFarms_;
+    }
+    /**
+     * <code>repeated .crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farms = 1 [json_name = "liquidFarms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getLiquidFarmsCount() {
+      return liquidFarms_.size();
+    }
+    /**
+     * <code>repeated .crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farms = 1 [json_name = "liquidFarms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse getLiquidFarms(int index) {
+      return liquidFarms_.get(index);
+    }
+    /**
+     * <code>repeated .crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farms = 1 [json_name = "liquidFarms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponseOrBuilder getLiquidFarmsOrBuilder(
+        int index) {
+      return liquidFarms_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < liquidFarms_.size(); i++) {
+        output.writeMessage(1, liquidFarms_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < liquidFarms_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, liquidFarms_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse other = (com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse) obj;
+
+      if (!getLiquidFarmsList()
+          .equals(other.getLiquidFarmsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getLiquidFarmsCount() > 0) {
+        hash = (37 * hash) + LIQUID_FARMS_FIELD_NUMBER;
+        hash = (53 * hash) + getLiquidFarmsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryLiquidFarmsResponse is response type for the Query/LiquidFarms RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryLiquidFarmsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.QueryLiquidFarmsResponse)
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryLiquidFarmsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryLiquidFarmsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (liquidFarmsBuilder_ == null) {
+          liquidFarms_ = java.util.Collections.emptyList();
+        } else {
+          liquidFarms_ = null;
+          liquidFarmsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryLiquidFarmsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse build() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse buildPartial() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse result = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse result) {
+        if (liquidFarmsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            liquidFarms_ = java.util.Collections.unmodifiableList(liquidFarms_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.liquidFarms_ = liquidFarms_;
+        } else {
+          result.liquidFarms_ = liquidFarmsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse other) {
+        if (other == com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse.getDefaultInstance()) return this;
+        if (liquidFarmsBuilder_ == null) {
+          if (!other.liquidFarms_.isEmpty()) {
+            if (liquidFarms_.isEmpty()) {
+              liquidFarms_ = other.liquidFarms_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureLiquidFarmsIsMutable();
+              liquidFarms_.addAll(other.liquidFarms_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.liquidFarms_.isEmpty()) {
+            if (liquidFarmsBuilder_.isEmpty()) {
+              liquidFarmsBuilder_.dispose();
+              liquidFarmsBuilder_ = null;
+              liquidFarms_ = other.liquidFarms_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              liquidFarmsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLiquidFarmsFieldBuilder() : null;
+            } else {
+              liquidFarmsBuilder_.addAllMessages(other.liquidFarms_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse m =
+                    input.readMessage(
+                        com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse.parser(),
+                        extensionRegistry);
+                if (liquidFarmsBuilder_ == null) {
+                  ensureLiquidFarmsIsMutable();
+                  liquidFarms_.add(m);
+                } else {
+                  liquidFarmsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse> liquidFarms_ =
+        java.util.Collections.emptyList();
+      private void ensureLiquidFarmsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          liquidFarms_ = new java.util.ArrayList<com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse>(liquidFarms_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse, com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse.Builder, com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponseOrBuilder> liquidFarmsBuilder_;
+
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farms = 1 [json_name = "liquidFarms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse> getLiquidFarmsList() {
+        if (liquidFarmsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(liquidFarms_);
+        } else {
+          return liquidFarmsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farms = 1 [json_name = "liquidFarms", (.gogoproto.nullable) = false];</code>
+       */
+      public int getLiquidFarmsCount() {
+        if (liquidFarmsBuilder_ == null) {
+          return liquidFarms_.size();
+        } else {
+          return liquidFarmsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farms = 1 [json_name = "liquidFarms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse getLiquidFarms(int index) {
+        if (liquidFarmsBuilder_ == null) {
+          return liquidFarms_.get(index);
+        } else {
+          return liquidFarmsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farms = 1 [json_name = "liquidFarms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setLiquidFarms(
+          int index, com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse value) {
+        if (liquidFarmsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLiquidFarmsIsMutable();
+          liquidFarms_.set(index, value);
+          onChanged();
+        } else {
+          liquidFarmsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farms = 1 [json_name = "liquidFarms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setLiquidFarms(
+          int index, com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse.Builder builderForValue) {
+        if (liquidFarmsBuilder_ == null) {
+          ensureLiquidFarmsIsMutable();
+          liquidFarms_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          liquidFarmsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farms = 1 [json_name = "liquidFarms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addLiquidFarms(com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse value) {
+        if (liquidFarmsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLiquidFarmsIsMutable();
+          liquidFarms_.add(value);
+          onChanged();
+        } else {
+          liquidFarmsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farms = 1 [json_name = "liquidFarms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addLiquidFarms(
+          int index, com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse value) {
+        if (liquidFarmsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLiquidFarmsIsMutable();
+          liquidFarms_.add(index, value);
+          onChanged();
+        } else {
+          liquidFarmsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farms = 1 [json_name = "liquidFarms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addLiquidFarms(
+          com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse.Builder builderForValue) {
+        if (liquidFarmsBuilder_ == null) {
+          ensureLiquidFarmsIsMutable();
+          liquidFarms_.add(builderForValue.build());
+          onChanged();
+        } else {
+          liquidFarmsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farms = 1 [json_name = "liquidFarms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addLiquidFarms(
+          int index, com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse.Builder builderForValue) {
+        if (liquidFarmsBuilder_ == null) {
+          ensureLiquidFarmsIsMutable();
+          liquidFarms_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          liquidFarmsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farms = 1 [json_name = "liquidFarms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllLiquidFarms(
+          java.lang.Iterable<? extends com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse> values) {
+        if (liquidFarmsBuilder_ == null) {
+          ensureLiquidFarmsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, liquidFarms_);
+          onChanged();
+        } else {
+          liquidFarmsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farms = 1 [json_name = "liquidFarms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearLiquidFarms() {
+        if (liquidFarmsBuilder_ == null) {
+          liquidFarms_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          liquidFarmsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farms = 1 [json_name = "liquidFarms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeLiquidFarms(int index) {
+        if (liquidFarmsBuilder_ == null) {
+          ensureLiquidFarmsIsMutable();
+          liquidFarms_.remove(index);
+          onChanged();
+        } else {
+          liquidFarmsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farms = 1 [json_name = "liquidFarms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse.Builder getLiquidFarmsBuilder(
+          int index) {
+        return getLiquidFarmsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farms = 1 [json_name = "liquidFarms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponseOrBuilder getLiquidFarmsOrBuilder(
+          int index) {
+        if (liquidFarmsBuilder_ == null) {
+          return liquidFarms_.get(index);  } else {
+          return liquidFarmsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farms = 1 [json_name = "liquidFarms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponseOrBuilder> 
+           getLiquidFarmsOrBuilderList() {
+        if (liquidFarmsBuilder_ != null) {
+          return liquidFarmsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(liquidFarms_);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farms = 1 [json_name = "liquidFarms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse.Builder addLiquidFarmsBuilder() {
+        return getLiquidFarmsFieldBuilder().addBuilder(
+            com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farms = 1 [json_name = "liquidFarms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse.Builder addLiquidFarmsBuilder(
+          int index) {
+        return getLiquidFarmsFieldBuilder().addBuilder(
+            index, com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farms = 1 [json_name = "liquidFarms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse.Builder> 
+           getLiquidFarmsBuilderList() {
+        return getLiquidFarmsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse, com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse.Builder, com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponseOrBuilder> 
+          getLiquidFarmsFieldBuilder() {
+        if (liquidFarmsBuilder_ == null) {
+          liquidFarmsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse, com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse.Builder, com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponseOrBuilder>(
+                  liquidFarms_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          liquidFarms_ = null;
+        }
+        return liquidFarmsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.QueryLiquidFarmsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.QueryLiquidFarmsResponse)
+    private static final com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryLiquidFarmsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryLiquidFarmsResponse>() {
+      @java.lang.Override
+      public QueryLiquidFarmsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryLiquidFarmsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryLiquidFarmsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryLiquidFarmRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.QueryLiquidFarmRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+  }
+  /**
+   * <pre>
+   * QueryLiquidFarmRequest is the request type for the Query/LiquidFarm RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryLiquidFarmRequest}
+   */
+  public static final class QueryLiquidFarmRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.QueryLiquidFarmRequest)
+      QueryLiquidFarmRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryLiquidFarmRequest.newBuilder() to construct.
+    private QueryLiquidFarmRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryLiquidFarmRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryLiquidFarmRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryLiquidFarmRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryLiquidFarmRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest other = (com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryLiquidFarmRequest is the request type for the Query/LiquidFarm RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryLiquidFarmRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.QueryLiquidFarmRequest)
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryLiquidFarmRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryLiquidFarmRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryLiquidFarmRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest build() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest buildPartial() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest result = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest other) {
+        if (other == com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.QueryLiquidFarmRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.QueryLiquidFarmRequest)
+    private static final com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryLiquidFarmRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryLiquidFarmRequest>() {
+      @java.lang.Override
+      public QueryLiquidFarmRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryLiquidFarmRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryLiquidFarmRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryLiquidFarmResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.QueryLiquidFarmResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farm = 1 [json_name = "liquidFarm", (.gogoproto.nullable) = false];</code>
+     * @return Whether the liquidFarm field is set.
+     */
+    boolean hasLiquidFarm();
+    /**
+     * <code>.crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farm = 1 [json_name = "liquidFarm", (.gogoproto.nullable) = false];</code>
+     * @return The liquidFarm.
+     */
+    com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse getLiquidFarm();
+    /**
+     * <code>.crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farm = 1 [json_name = "liquidFarm", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponseOrBuilder getLiquidFarmOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryLiquidFarmResponse is response type for the Query/LiquidFarm RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryLiquidFarmResponse}
+   */
+  public static final class QueryLiquidFarmResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.QueryLiquidFarmResponse)
+      QueryLiquidFarmResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryLiquidFarmResponse.newBuilder() to construct.
+    private QueryLiquidFarmResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryLiquidFarmResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryLiquidFarmResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryLiquidFarmResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryLiquidFarmResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse.Builder.class);
+    }
+
+    public static final int LIQUID_FARM_FIELD_NUMBER = 1;
+    private com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse liquidFarm_;
+    /**
+     * <code>.crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farm = 1 [json_name = "liquidFarm", (.gogoproto.nullable) = false];</code>
+     * @return Whether the liquidFarm field is set.
+     */
+    @java.lang.Override
+    public boolean hasLiquidFarm() {
+      return liquidFarm_ != null;
+    }
+    /**
+     * <code>.crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farm = 1 [json_name = "liquidFarm", (.gogoproto.nullable) = false];</code>
+     * @return The liquidFarm.
+     */
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse getLiquidFarm() {
+      return liquidFarm_ == null ? com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse.getDefaultInstance() : liquidFarm_;
+    }
+    /**
+     * <code>.crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farm = 1 [json_name = "liquidFarm", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponseOrBuilder getLiquidFarmOrBuilder() {
+      return liquidFarm_ == null ? com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse.getDefaultInstance() : liquidFarm_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (liquidFarm_ != null) {
+        output.writeMessage(1, getLiquidFarm());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (liquidFarm_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getLiquidFarm());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse other = (com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse) obj;
+
+      if (hasLiquidFarm() != other.hasLiquidFarm()) return false;
+      if (hasLiquidFarm()) {
+        if (!getLiquidFarm()
+            .equals(other.getLiquidFarm())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasLiquidFarm()) {
+        hash = (37 * hash) + LIQUID_FARM_FIELD_NUMBER;
+        hash = (53 * hash) + getLiquidFarm().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryLiquidFarmResponse is response type for the Query/LiquidFarm RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryLiquidFarmResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.QueryLiquidFarmResponse)
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryLiquidFarmResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryLiquidFarmResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        liquidFarm_ = null;
+        if (liquidFarmBuilder_ != null) {
+          liquidFarmBuilder_.dispose();
+          liquidFarmBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryLiquidFarmResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse build() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse buildPartial() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse result = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.liquidFarm_ = liquidFarmBuilder_ == null
+              ? liquidFarm_
+              : liquidFarmBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse other) {
+        if (other == com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse.getDefaultInstance()) return this;
+        if (other.hasLiquidFarm()) {
+          mergeLiquidFarm(other.getLiquidFarm());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getLiquidFarmFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse liquidFarm_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse, com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse.Builder, com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponseOrBuilder> liquidFarmBuilder_;
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farm = 1 [json_name = "liquidFarm", (.gogoproto.nullable) = false];</code>
+       * @return Whether the liquidFarm field is set.
+       */
+      public boolean hasLiquidFarm() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farm = 1 [json_name = "liquidFarm", (.gogoproto.nullable) = false];</code>
+       * @return The liquidFarm.
+       */
+      public com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse getLiquidFarm() {
+        if (liquidFarmBuilder_ == null) {
+          return liquidFarm_ == null ? com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse.getDefaultInstance() : liquidFarm_;
+        } else {
+          return liquidFarmBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farm = 1 [json_name = "liquidFarm", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setLiquidFarm(com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse value) {
+        if (liquidFarmBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          liquidFarm_ = value;
+        } else {
+          liquidFarmBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farm = 1 [json_name = "liquidFarm", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setLiquidFarm(
+          com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse.Builder builderForValue) {
+        if (liquidFarmBuilder_ == null) {
+          liquidFarm_ = builderForValue.build();
+        } else {
+          liquidFarmBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farm = 1 [json_name = "liquidFarm", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeLiquidFarm(com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse value) {
+        if (liquidFarmBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            liquidFarm_ != null &&
+            liquidFarm_ != com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse.getDefaultInstance()) {
+            getLiquidFarmBuilder().mergeFrom(value);
+          } else {
+            liquidFarm_ = value;
+          }
+        } else {
+          liquidFarmBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farm = 1 [json_name = "liquidFarm", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearLiquidFarm() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        liquidFarm_ = null;
+        if (liquidFarmBuilder_ != null) {
+          liquidFarmBuilder_.dispose();
+          liquidFarmBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farm = 1 [json_name = "liquidFarm", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse.Builder getLiquidFarmBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getLiquidFarmFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farm = 1 [json_name = "liquidFarm", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponseOrBuilder getLiquidFarmOrBuilder() {
+        if (liquidFarmBuilder_ != null) {
+          return liquidFarmBuilder_.getMessageOrBuilder();
+        } else {
+          return liquidFarm_ == null ?
+              com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse.getDefaultInstance() : liquidFarm_;
+        }
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.LiquidFarmResponse liquid_farm = 1 [json_name = "liquidFarm", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse, com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse.Builder, com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponseOrBuilder> 
+          getLiquidFarmFieldBuilder() {
+        if (liquidFarmBuilder_ == null) {
+          liquidFarmBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse, com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse.Builder, com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponseOrBuilder>(
+                  getLiquidFarm(),
+                  getParentForChildren(),
+                  isClean());
+          liquidFarm_ = null;
+        }
+        return liquidFarmBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.QueryLiquidFarmResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.QueryLiquidFarmResponse)
+    private static final com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryLiquidFarmResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryLiquidFarmResponse>() {
+      @java.lang.Override
+      public QueryLiquidFarmResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryLiquidFarmResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryLiquidFarmResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.QueryProto.QueryLiquidFarmResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.QueryParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryParamsRequest is request type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryParamsRequest}
+   */
+  public static final class QueryParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.QueryParamsRequest)
+      QueryParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsRequest.newBuilder() to construct.
+    private QueryParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest other = (com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsRequest is request type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.QueryParamsRequest)
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest build() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest buildPartial() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest result = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest other) {
+        if (other == com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.QueryParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.QueryParamsRequest)
+    private static final com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsRequest>() {
+      @java.lang.Override
+      public QueryParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.crescent.liquidfarming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.crescent.liquidfarming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.crescent.liquidfarming.v1beta1.ParamsProto.Params getParams();
+    /**
+     * <code>.crescent.liquidfarming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.liquidfarming.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryParamsResponse is response type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.crescent.liquidfarming.v1beta1.ParamsProto.Params params_;
+    /**
+     * <code>.crescent.liquidfarming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.crescent.liquidfarming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.ParamsProto.Params getParams() {
+      return params_ == null ? com.crescent.liquidfarming.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.crescent.liquidfarming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.crescent.liquidfarming.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse other = (com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsResponse is response type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.QueryParamsResponse)
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse build() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse buildPartial() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse result = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse other) {
+        if (other == com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.crescent.liquidfarming.v1beta1.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.liquidfarming.v1beta1.ParamsProto.Params, com.crescent.liquidfarming.v1beta1.ParamsProto.Params.Builder, com.crescent.liquidfarming.v1beta1.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.crescent.liquidfarming.v1beta1.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.crescent.liquidfarming.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.crescent.liquidfarming.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.crescent.liquidfarming.v1beta1.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.crescent.liquidfarming.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.crescent.liquidfarming.v1beta1.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidfarming.v1beta1.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidfarming.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.crescent.liquidfarming.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.liquidfarming.v1beta1.ParamsProto.Params, com.crescent.liquidfarming.v1beta1.ParamsProto.Params.Builder, com.crescent.liquidfarming.v1beta1.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.crescent.liquidfarming.v1beta1.ParamsProto.Params, com.crescent.liquidfarming.v1beta1.ParamsProto.Params.Builder, com.crescent.liquidfarming.v1beta1.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.QueryParamsResponse)
+    private static final com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRewardsAuctionsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.QueryRewardsAuctionsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <code>string status = 2 [json_name = "status"];</code>
+     * @return The status.
+     */
+    java.lang.String getStatus();
+    /**
+     * <code>string status = 2 [json_name = "status"];</code>
+     * @return The bytes for status.
+     */
+    com.google.protobuf.ByteString
+        getStatusBytes();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryRewardsAuctionsRequest is request type for the Query/RewardsAuctions RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryRewardsAuctionsRequest}
+   */
+  public static final class QueryRewardsAuctionsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.QueryRewardsAuctionsRequest)
+      QueryRewardsAuctionsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRewardsAuctionsRequest.newBuilder() to construct.
+    private QueryRewardsAuctionsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRewardsAuctionsRequest() {
+      status_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRewardsAuctionsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryRewardsAuctionsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryRewardsAuctionsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object status_ = "";
+    /**
+     * <code>string status = 2 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public java.lang.String getStatus() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        status_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string status = 2 [json_name = "status"];</code>
+     * @return The bytes for status.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStatusBytes() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        status_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 3;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, status_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(3, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, status_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest other = (com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getStatus()
+          .equals(other.getStatus())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + getStatus().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryRewardsAuctionsRequest is request type for the Query/RewardsAuctions RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryRewardsAuctionsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.QueryRewardsAuctionsRequest)
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryRewardsAuctionsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryRewardsAuctionsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        status_ = "";
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryRewardsAuctionsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest build() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest buildPartial() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest result = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.status_ = status_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest other) {
+        if (other == com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (!other.getStatus().isEmpty()) {
+          status_ = other.status_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                status_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object status_ = "";
+      /**
+       * <code>string status = 2 [json_name = "status"];</code>
+       * @return The status.
+       */
+      public java.lang.String getStatus() {
+        java.lang.Object ref = status_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          status_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string status = 2 [json_name = "status"];</code>
+       * @return The bytes for status.
+       */
+      public com.google.protobuf.ByteString
+          getStatusBytes() {
+        java.lang.Object ref = status_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          status_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string status = 2 [json_name = "status"];</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        status_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string status = 2 [json_name = "status"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        status_ = getDefaultInstance().getStatus();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string status = 2 [json_name = "status"];</code>
+       * @param value The bytes for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        status_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.QueryRewardsAuctionsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.QueryRewardsAuctionsRequest)
+    private static final com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRewardsAuctionsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRewardsAuctionsRequest>() {
+      @java.lang.Override
+      public QueryRewardsAuctionsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRewardsAuctionsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRewardsAuctionsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRewardsAuctionsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.QueryRewardsAuctionsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .crescent.liquidfarming.v1beta1.RewardsAuction rewards_auctions = 1 [json_name = "rewardsAuctions", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction> 
+        getRewardsAuctionsList();
+    /**
+     * <code>repeated .crescent.liquidfarming.v1beta1.RewardsAuction rewards_auctions = 1 [json_name = "rewardsAuctions", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction getRewardsAuctions(int index);
+    /**
+     * <code>repeated .crescent.liquidfarming.v1beta1.RewardsAuction rewards_auctions = 1 [json_name = "rewardsAuctions", (.gogoproto.nullable) = false];</code>
+     */
+    int getRewardsAuctionsCount();
+    /**
+     * <code>repeated .crescent.liquidfarming.v1beta1.RewardsAuction rewards_auctions = 1 [json_name = "rewardsAuctions", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuctionOrBuilder> 
+        getRewardsAuctionsOrBuilderList();
+    /**
+     * <code>repeated .crescent.liquidfarming.v1beta1.RewardsAuction rewards_auctions = 1 [json_name = "rewardsAuctions", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuctionOrBuilder getRewardsAuctionsOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryRewardsAuctionsResponse is response type for the Query/RewardsAuctions RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryRewardsAuctionsResponse}
+   */
+  public static final class QueryRewardsAuctionsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.QueryRewardsAuctionsResponse)
+      QueryRewardsAuctionsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRewardsAuctionsResponse.newBuilder() to construct.
+    private QueryRewardsAuctionsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRewardsAuctionsResponse() {
+      rewardsAuctions_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRewardsAuctionsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryRewardsAuctionsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryRewardsAuctionsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse.Builder.class);
+    }
+
+    public static final int REWARDS_AUCTIONS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction> rewardsAuctions_;
+    /**
+     * <code>repeated .crescent.liquidfarming.v1beta1.RewardsAuction rewards_auctions = 1 [json_name = "rewardsAuctions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction> getRewardsAuctionsList() {
+      return rewardsAuctions_;
+    }
+    /**
+     * <code>repeated .crescent.liquidfarming.v1beta1.RewardsAuction rewards_auctions = 1 [json_name = "rewardsAuctions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuctionOrBuilder> 
+        getRewardsAuctionsOrBuilderList() {
+      return rewardsAuctions_;
+    }
+    /**
+     * <code>repeated .crescent.liquidfarming.v1beta1.RewardsAuction rewards_auctions = 1 [json_name = "rewardsAuctions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getRewardsAuctionsCount() {
+      return rewardsAuctions_.size();
+    }
+    /**
+     * <code>repeated .crescent.liquidfarming.v1beta1.RewardsAuction rewards_auctions = 1 [json_name = "rewardsAuctions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction getRewardsAuctions(int index) {
+      return rewardsAuctions_.get(index);
+    }
+    /**
+     * <code>repeated .crescent.liquidfarming.v1beta1.RewardsAuction rewards_auctions = 1 [json_name = "rewardsAuctions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuctionOrBuilder getRewardsAuctionsOrBuilder(
+        int index) {
+      return rewardsAuctions_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < rewardsAuctions_.size(); i++) {
+        output.writeMessage(1, rewardsAuctions_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < rewardsAuctions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, rewardsAuctions_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse other = (com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse) obj;
+
+      if (!getRewardsAuctionsList()
+          .equals(other.getRewardsAuctionsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getRewardsAuctionsCount() > 0) {
+        hash = (37 * hash) + REWARDS_AUCTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getRewardsAuctionsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryRewardsAuctionsResponse is response type for the Query/RewardsAuctions RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryRewardsAuctionsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.QueryRewardsAuctionsResponse)
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryRewardsAuctionsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryRewardsAuctionsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (rewardsAuctionsBuilder_ == null) {
+          rewardsAuctions_ = java.util.Collections.emptyList();
+        } else {
+          rewardsAuctions_ = null;
+          rewardsAuctionsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryRewardsAuctionsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse build() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse buildPartial() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse result = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse result) {
+        if (rewardsAuctionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            rewardsAuctions_ = java.util.Collections.unmodifiableList(rewardsAuctions_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.rewardsAuctions_ = rewardsAuctions_;
+        } else {
+          result.rewardsAuctions_ = rewardsAuctionsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse other) {
+        if (other == com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse.getDefaultInstance()) return this;
+        if (rewardsAuctionsBuilder_ == null) {
+          if (!other.rewardsAuctions_.isEmpty()) {
+            if (rewardsAuctions_.isEmpty()) {
+              rewardsAuctions_ = other.rewardsAuctions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRewardsAuctionsIsMutable();
+              rewardsAuctions_.addAll(other.rewardsAuctions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.rewardsAuctions_.isEmpty()) {
+            if (rewardsAuctionsBuilder_.isEmpty()) {
+              rewardsAuctionsBuilder_.dispose();
+              rewardsAuctionsBuilder_ = null;
+              rewardsAuctions_ = other.rewardsAuctions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              rewardsAuctionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRewardsAuctionsFieldBuilder() : null;
+            } else {
+              rewardsAuctionsBuilder_.addAllMessages(other.rewardsAuctions_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction m =
+                    input.readMessage(
+                        com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.parser(),
+                        extensionRegistry);
+                if (rewardsAuctionsBuilder_ == null) {
+                  ensureRewardsAuctionsIsMutable();
+                  rewardsAuctions_.add(m);
+                } else {
+                  rewardsAuctionsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction> rewardsAuctions_ =
+        java.util.Collections.emptyList();
+      private void ensureRewardsAuctionsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          rewardsAuctions_ = new java.util.ArrayList<com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction>(rewardsAuctions_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.Builder, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuctionOrBuilder> rewardsAuctionsBuilder_;
+
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.RewardsAuction rewards_auctions = 1 [json_name = "rewardsAuctions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction> getRewardsAuctionsList() {
+        if (rewardsAuctionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(rewardsAuctions_);
+        } else {
+          return rewardsAuctionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.RewardsAuction rewards_auctions = 1 [json_name = "rewardsAuctions", (.gogoproto.nullable) = false];</code>
+       */
+      public int getRewardsAuctionsCount() {
+        if (rewardsAuctionsBuilder_ == null) {
+          return rewardsAuctions_.size();
+        } else {
+          return rewardsAuctionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.RewardsAuction rewards_auctions = 1 [json_name = "rewardsAuctions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction getRewardsAuctions(int index) {
+        if (rewardsAuctionsBuilder_ == null) {
+          return rewardsAuctions_.get(index);
+        } else {
+          return rewardsAuctionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.RewardsAuction rewards_auctions = 1 [json_name = "rewardsAuctions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRewardsAuctions(
+          int index, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction value) {
+        if (rewardsAuctionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsAuctionsIsMutable();
+          rewardsAuctions_.set(index, value);
+          onChanged();
+        } else {
+          rewardsAuctionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.RewardsAuction rewards_auctions = 1 [json_name = "rewardsAuctions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRewardsAuctions(
+          int index, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.Builder builderForValue) {
+        if (rewardsAuctionsBuilder_ == null) {
+          ensureRewardsAuctionsIsMutable();
+          rewardsAuctions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardsAuctionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.RewardsAuction rewards_auctions = 1 [json_name = "rewardsAuctions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRewardsAuctions(com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction value) {
+        if (rewardsAuctionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsAuctionsIsMutable();
+          rewardsAuctions_.add(value);
+          onChanged();
+        } else {
+          rewardsAuctionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.RewardsAuction rewards_auctions = 1 [json_name = "rewardsAuctions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRewardsAuctions(
+          int index, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction value) {
+        if (rewardsAuctionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsAuctionsIsMutable();
+          rewardsAuctions_.add(index, value);
+          onChanged();
+        } else {
+          rewardsAuctionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.RewardsAuction rewards_auctions = 1 [json_name = "rewardsAuctions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRewardsAuctions(
+          com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.Builder builderForValue) {
+        if (rewardsAuctionsBuilder_ == null) {
+          ensureRewardsAuctionsIsMutable();
+          rewardsAuctions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          rewardsAuctionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.RewardsAuction rewards_auctions = 1 [json_name = "rewardsAuctions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRewardsAuctions(
+          int index, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.Builder builderForValue) {
+        if (rewardsAuctionsBuilder_ == null) {
+          ensureRewardsAuctionsIsMutable();
+          rewardsAuctions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardsAuctionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.RewardsAuction rewards_auctions = 1 [json_name = "rewardsAuctions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllRewardsAuctions(
+          java.lang.Iterable<? extends com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction> values) {
+        if (rewardsAuctionsBuilder_ == null) {
+          ensureRewardsAuctionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, rewardsAuctions_);
+          onChanged();
+        } else {
+          rewardsAuctionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.RewardsAuction rewards_auctions = 1 [json_name = "rewardsAuctions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearRewardsAuctions() {
+        if (rewardsAuctionsBuilder_ == null) {
+          rewardsAuctions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          rewardsAuctionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.RewardsAuction rewards_auctions = 1 [json_name = "rewardsAuctions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeRewardsAuctions(int index) {
+        if (rewardsAuctionsBuilder_ == null) {
+          ensureRewardsAuctionsIsMutable();
+          rewardsAuctions_.remove(index);
+          onChanged();
+        } else {
+          rewardsAuctionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.RewardsAuction rewards_auctions = 1 [json_name = "rewardsAuctions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.Builder getRewardsAuctionsBuilder(
+          int index) {
+        return getRewardsAuctionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.RewardsAuction rewards_auctions = 1 [json_name = "rewardsAuctions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuctionOrBuilder getRewardsAuctionsOrBuilder(
+          int index) {
+        if (rewardsAuctionsBuilder_ == null) {
+          return rewardsAuctions_.get(index);  } else {
+          return rewardsAuctionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.RewardsAuction rewards_auctions = 1 [json_name = "rewardsAuctions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuctionOrBuilder> 
+           getRewardsAuctionsOrBuilderList() {
+        if (rewardsAuctionsBuilder_ != null) {
+          return rewardsAuctionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(rewardsAuctions_);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.RewardsAuction rewards_auctions = 1 [json_name = "rewardsAuctions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.Builder addRewardsAuctionsBuilder() {
+        return getRewardsAuctionsFieldBuilder().addBuilder(
+            com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.RewardsAuction rewards_auctions = 1 [json_name = "rewardsAuctions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.Builder addRewardsAuctionsBuilder(
+          int index) {
+        return getRewardsAuctionsFieldBuilder().addBuilder(
+            index, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.RewardsAuction rewards_auctions = 1 [json_name = "rewardsAuctions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.Builder> 
+           getRewardsAuctionsBuilderList() {
+        return getRewardsAuctionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.Builder, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuctionOrBuilder> 
+          getRewardsAuctionsFieldBuilder() {
+        if (rewardsAuctionsBuilder_ == null) {
+          rewardsAuctionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.Builder, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuctionOrBuilder>(
+                  rewardsAuctions_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          rewardsAuctions_ = null;
+        }
+        return rewardsAuctionsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.QueryRewardsAuctionsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.QueryRewardsAuctionsResponse)
+    private static final com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRewardsAuctionsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRewardsAuctionsResponse>() {
+      @java.lang.Override
+      public QueryRewardsAuctionsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRewardsAuctionsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRewardsAuctionsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRewardsAuctionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.QueryRewardsAuctionRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 auction_id = 1 [json_name = "auctionId"];</code>
+     * @return The auctionId.
+     */
+    long getAuctionId();
+
+    /**
+     * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+  }
+  /**
+   * <pre>
+   * QueryRewardsAuctionRequest is request type for the Query/RewardsAuction RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryRewardsAuctionRequest}
+   */
+  public static final class QueryRewardsAuctionRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.QueryRewardsAuctionRequest)
+      QueryRewardsAuctionRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRewardsAuctionRequest.newBuilder() to construct.
+    private QueryRewardsAuctionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRewardsAuctionRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRewardsAuctionRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryRewardsAuctionRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryRewardsAuctionRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest.Builder.class);
+    }
+
+    public static final int AUCTION_ID_FIELD_NUMBER = 1;
+    private long auctionId_ = 0L;
+    /**
+     * <code>uint64 auction_id = 1 [json_name = "auctionId"];</code>
+     * @return The auctionId.
+     */
+    @java.lang.Override
+    public long getAuctionId() {
+      return auctionId_;
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 2;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (auctionId_ != 0L) {
+        output.writeUInt64(1, auctionId_);
+      }
+      if (poolId_ != 0L) {
+        output.writeUInt64(2, poolId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (auctionId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, auctionId_);
+      }
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, poolId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest other = (com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest) obj;
+
+      if (getAuctionId()
+          != other.getAuctionId()) return false;
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AUCTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAuctionId());
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryRewardsAuctionRequest is request type for the Query/RewardsAuction RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryRewardsAuctionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.QueryRewardsAuctionRequest)
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryRewardsAuctionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryRewardsAuctionRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        auctionId_ = 0L;
+        poolId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryRewardsAuctionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest build() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest buildPartial() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest result = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.auctionId_ = auctionId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.poolId_ = poolId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest other) {
+        if (other == com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest.getDefaultInstance()) return this;
+        if (other.getAuctionId() != 0L) {
+          setAuctionId(other.getAuctionId());
+        }
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                auctionId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long auctionId_ ;
+      /**
+       * <code>uint64 auction_id = 1 [json_name = "auctionId"];</code>
+       * @return The auctionId.
+       */
+      @java.lang.Override
+      public long getAuctionId() {
+        return auctionId_;
+      }
+      /**
+       * <code>uint64 auction_id = 1 [json_name = "auctionId"];</code>
+       * @param value The auctionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuctionId(long value) {
+
+        auctionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 auction_id = 1 [json_name = "auctionId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuctionId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        auctionId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.QueryRewardsAuctionRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.QueryRewardsAuctionRequest)
+    private static final com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRewardsAuctionRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRewardsAuctionRequest>() {
+      @java.lang.Override
+      public QueryRewardsAuctionRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRewardsAuctionRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRewardsAuctionRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRewardsAuctionResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.QueryRewardsAuctionResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.crescent.liquidfarming.v1beta1.RewardsAuction rewards_auction = 1 [json_name = "rewardsAuction", (.gogoproto.nullable) = false];</code>
+     * @return Whether the rewardsAuction field is set.
+     */
+    boolean hasRewardsAuction();
+    /**
+     * <code>.crescent.liquidfarming.v1beta1.RewardsAuction rewards_auction = 1 [json_name = "rewardsAuction", (.gogoproto.nullable) = false];</code>
+     * @return The rewardsAuction.
+     */
+    com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction getRewardsAuction();
+    /**
+     * <code>.crescent.liquidfarming.v1beta1.RewardsAuction rewards_auction = 1 [json_name = "rewardsAuction", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuctionOrBuilder getRewardsAuctionOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryRewardsAuctionResponse is response type for the Query/RewardsAuction RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryRewardsAuctionResponse}
+   */
+  public static final class QueryRewardsAuctionResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.QueryRewardsAuctionResponse)
+      QueryRewardsAuctionResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRewardsAuctionResponse.newBuilder() to construct.
+    private QueryRewardsAuctionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRewardsAuctionResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRewardsAuctionResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryRewardsAuctionResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryRewardsAuctionResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse.Builder.class);
+    }
+
+    public static final int REWARDS_AUCTION_FIELD_NUMBER = 1;
+    private com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction rewardsAuction_;
+    /**
+     * <code>.crescent.liquidfarming.v1beta1.RewardsAuction rewards_auction = 1 [json_name = "rewardsAuction", (.gogoproto.nullable) = false];</code>
+     * @return Whether the rewardsAuction field is set.
+     */
+    @java.lang.Override
+    public boolean hasRewardsAuction() {
+      return rewardsAuction_ != null;
+    }
+    /**
+     * <code>.crescent.liquidfarming.v1beta1.RewardsAuction rewards_auction = 1 [json_name = "rewardsAuction", (.gogoproto.nullable) = false];</code>
+     * @return The rewardsAuction.
+     */
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction getRewardsAuction() {
+      return rewardsAuction_ == null ? com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.getDefaultInstance() : rewardsAuction_;
+    }
+    /**
+     * <code>.crescent.liquidfarming.v1beta1.RewardsAuction rewards_auction = 1 [json_name = "rewardsAuction", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuctionOrBuilder getRewardsAuctionOrBuilder() {
+      return rewardsAuction_ == null ? com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.getDefaultInstance() : rewardsAuction_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (rewardsAuction_ != null) {
+        output.writeMessage(1, getRewardsAuction());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (rewardsAuction_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getRewardsAuction());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse other = (com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse) obj;
+
+      if (hasRewardsAuction() != other.hasRewardsAuction()) return false;
+      if (hasRewardsAuction()) {
+        if (!getRewardsAuction()
+            .equals(other.getRewardsAuction())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasRewardsAuction()) {
+        hash = (37 * hash) + REWARDS_AUCTION_FIELD_NUMBER;
+        hash = (53 * hash) + getRewardsAuction().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryRewardsAuctionResponse is response type for the Query/RewardsAuction RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryRewardsAuctionResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.QueryRewardsAuctionResponse)
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryRewardsAuctionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryRewardsAuctionResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        rewardsAuction_ = null;
+        if (rewardsAuctionBuilder_ != null) {
+          rewardsAuctionBuilder_.dispose();
+          rewardsAuctionBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryRewardsAuctionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse build() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse buildPartial() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse result = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.rewardsAuction_ = rewardsAuctionBuilder_ == null
+              ? rewardsAuction_
+              : rewardsAuctionBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse other) {
+        if (other == com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse.getDefaultInstance()) return this;
+        if (other.hasRewardsAuction()) {
+          mergeRewardsAuction(other.getRewardsAuction());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getRewardsAuctionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction rewardsAuction_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.Builder, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuctionOrBuilder> rewardsAuctionBuilder_;
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.RewardsAuction rewards_auction = 1 [json_name = "rewardsAuction", (.gogoproto.nullable) = false];</code>
+       * @return Whether the rewardsAuction field is set.
+       */
+      public boolean hasRewardsAuction() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.RewardsAuction rewards_auction = 1 [json_name = "rewardsAuction", (.gogoproto.nullable) = false];</code>
+       * @return The rewardsAuction.
+       */
+      public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction getRewardsAuction() {
+        if (rewardsAuctionBuilder_ == null) {
+          return rewardsAuction_ == null ? com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.getDefaultInstance() : rewardsAuction_;
+        } else {
+          return rewardsAuctionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.RewardsAuction rewards_auction = 1 [json_name = "rewardsAuction", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRewardsAuction(com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction value) {
+        if (rewardsAuctionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rewardsAuction_ = value;
+        } else {
+          rewardsAuctionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.RewardsAuction rewards_auction = 1 [json_name = "rewardsAuction", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRewardsAuction(
+          com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.Builder builderForValue) {
+        if (rewardsAuctionBuilder_ == null) {
+          rewardsAuction_ = builderForValue.build();
+        } else {
+          rewardsAuctionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.RewardsAuction rewards_auction = 1 [json_name = "rewardsAuction", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeRewardsAuction(com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction value) {
+        if (rewardsAuctionBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            rewardsAuction_ != null &&
+            rewardsAuction_ != com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.getDefaultInstance()) {
+            getRewardsAuctionBuilder().mergeFrom(value);
+          } else {
+            rewardsAuction_ = value;
+          }
+        } else {
+          rewardsAuctionBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.RewardsAuction rewards_auction = 1 [json_name = "rewardsAuction", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearRewardsAuction() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        rewardsAuction_ = null;
+        if (rewardsAuctionBuilder_ != null) {
+          rewardsAuctionBuilder_.dispose();
+          rewardsAuctionBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.RewardsAuction rewards_auction = 1 [json_name = "rewardsAuction", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.Builder getRewardsAuctionBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getRewardsAuctionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.RewardsAuction rewards_auction = 1 [json_name = "rewardsAuction", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuctionOrBuilder getRewardsAuctionOrBuilder() {
+        if (rewardsAuctionBuilder_ != null) {
+          return rewardsAuctionBuilder_.getMessageOrBuilder();
+        } else {
+          return rewardsAuction_ == null ?
+              com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.getDefaultInstance() : rewardsAuction_;
+        }
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.RewardsAuction rewards_auction = 1 [json_name = "rewardsAuction", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.Builder, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuctionOrBuilder> 
+          getRewardsAuctionFieldBuilder() {
+        if (rewardsAuctionBuilder_ == null) {
+          rewardsAuctionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuction.Builder, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.RewardsAuctionOrBuilder>(
+                  getRewardsAuction(),
+                  getParentForChildren(),
+                  isClean());
+          rewardsAuction_ = null;
+        }
+        return rewardsAuctionBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.QueryRewardsAuctionResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.QueryRewardsAuctionResponse)
+    private static final com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRewardsAuctionResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRewardsAuctionResponse>() {
+      @java.lang.Override
+      public QueryRewardsAuctionResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRewardsAuctionResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRewardsAuctionResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsAuctionResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryBidsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.QueryBidsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryBidsRequest is request type for the Query/Bids RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryBidsRequest}
+   */
+  public static final class QueryBidsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.QueryBidsRequest)
+      QueryBidsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryBidsRequest.newBuilder() to construct.
+    private QueryBidsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryBidsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryBidsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryBidsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryBidsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest other = (com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryBidsRequest is request type for the Query/Bids RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryBidsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.QueryBidsRequest)
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryBidsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryBidsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryBidsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest build() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest buildPartial() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest result = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest other) {
+        if (other == com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.QueryBidsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.QueryBidsRequest)
+    private static final com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryBidsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryBidsRequest>() {
+      @java.lang.Override
+      public QueryBidsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryBidsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryBidsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryBidsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.QueryBidsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .crescent.liquidfarming.v1beta1.Bid bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid> 
+        getBidsList();
+    /**
+     * <code>repeated .crescent.liquidfarming.v1beta1.Bid bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid getBids(int index);
+    /**
+     * <code>repeated .crescent.liquidfarming.v1beta1.Bid bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+     */
+    int getBidsCount();
+    /**
+     * <code>repeated .crescent.liquidfarming.v1beta1.Bid bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.BidOrBuilder> 
+        getBidsOrBuilderList();
+    /**
+     * <code>repeated .crescent.liquidfarming.v1beta1.Bid bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.BidOrBuilder getBidsOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryBidsResponse is response type for the Query/Bids RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryBidsResponse}
+   */
+  public static final class QueryBidsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.QueryBidsResponse)
+      QueryBidsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryBidsResponse.newBuilder() to construct.
+    private QueryBidsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryBidsResponse() {
+      bids_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryBidsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryBidsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryBidsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse.Builder.class);
+    }
+
+    public static final int BIDS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid> bids_;
+    /**
+     * <code>repeated .crescent.liquidfarming.v1beta1.Bid bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid> getBidsList() {
+      return bids_;
+    }
+    /**
+     * <code>repeated .crescent.liquidfarming.v1beta1.Bid bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.BidOrBuilder> 
+        getBidsOrBuilderList() {
+      return bids_;
+    }
+    /**
+     * <code>repeated .crescent.liquidfarming.v1beta1.Bid bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getBidsCount() {
+      return bids_.size();
+    }
+    /**
+     * <code>repeated .crescent.liquidfarming.v1beta1.Bid bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid getBids(int index) {
+      return bids_.get(index);
+    }
+    /**
+     * <code>repeated .crescent.liquidfarming.v1beta1.Bid bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.BidOrBuilder getBidsOrBuilder(
+        int index) {
+      return bids_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < bids_.size(); i++) {
+        output.writeMessage(1, bids_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < bids_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, bids_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse other = (com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse) obj;
+
+      if (!getBidsList()
+          .equals(other.getBidsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getBidsCount() > 0) {
+        hash = (37 * hash) + BIDS_FIELD_NUMBER;
+        hash = (53 * hash) + getBidsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryBidsResponse is response type for the Query/Bids RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryBidsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.QueryBidsResponse)
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryBidsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryBidsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (bidsBuilder_ == null) {
+          bids_ = java.util.Collections.emptyList();
+        } else {
+          bids_ = null;
+          bidsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryBidsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse build() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse buildPartial() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse result = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse result) {
+        if (bidsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            bids_ = java.util.Collections.unmodifiableList(bids_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.bids_ = bids_;
+        } else {
+          result.bids_ = bidsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse other) {
+        if (other == com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse.getDefaultInstance()) return this;
+        if (bidsBuilder_ == null) {
+          if (!other.bids_.isEmpty()) {
+            if (bids_.isEmpty()) {
+              bids_ = other.bids_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureBidsIsMutable();
+              bids_.addAll(other.bids_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.bids_.isEmpty()) {
+            if (bidsBuilder_.isEmpty()) {
+              bidsBuilder_.dispose();
+              bidsBuilder_ = null;
+              bids_ = other.bids_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              bidsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBidsFieldBuilder() : null;
+            } else {
+              bidsBuilder_.addAllMessages(other.bids_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid m =
+                    input.readMessage(
+                        com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid.parser(),
+                        extensionRegistry);
+                if (bidsBuilder_ == null) {
+                  ensureBidsIsMutable();
+                  bids_.add(m);
+                } else {
+                  bidsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid> bids_ =
+        java.util.Collections.emptyList();
+      private void ensureBidsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          bids_ = new java.util.ArrayList<com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid>(bids_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid.Builder, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.BidOrBuilder> bidsBuilder_;
+
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.Bid bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid> getBidsList() {
+        if (bidsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(bids_);
+        } else {
+          return bidsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.Bid bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public int getBidsCount() {
+        if (bidsBuilder_ == null) {
+          return bids_.size();
+        } else {
+          return bidsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.Bid bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid getBids(int index) {
+        if (bidsBuilder_ == null) {
+          return bids_.get(index);
+        } else {
+          return bidsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.Bid bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBids(
+          int index, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid value) {
+        if (bidsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBidsIsMutable();
+          bids_.set(index, value);
+          onChanged();
+        } else {
+          bidsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.Bid bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBids(
+          int index, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid.Builder builderForValue) {
+        if (bidsBuilder_ == null) {
+          ensureBidsIsMutable();
+          bids_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          bidsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.Bid bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBids(com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid value) {
+        if (bidsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBidsIsMutable();
+          bids_.add(value);
+          onChanged();
+        } else {
+          bidsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.Bid bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBids(
+          int index, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid value) {
+        if (bidsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBidsIsMutable();
+          bids_.add(index, value);
+          onChanged();
+        } else {
+          bidsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.Bid bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBids(
+          com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid.Builder builderForValue) {
+        if (bidsBuilder_ == null) {
+          ensureBidsIsMutable();
+          bids_.add(builderForValue.build());
+          onChanged();
+        } else {
+          bidsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.Bid bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBids(
+          int index, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid.Builder builderForValue) {
+        if (bidsBuilder_ == null) {
+          ensureBidsIsMutable();
+          bids_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          bidsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.Bid bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllBids(
+          java.lang.Iterable<? extends com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid> values) {
+        if (bidsBuilder_ == null) {
+          ensureBidsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, bids_);
+          onChanged();
+        } else {
+          bidsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.Bid bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearBids() {
+        if (bidsBuilder_ == null) {
+          bids_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          bidsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.Bid bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeBids(int index) {
+        if (bidsBuilder_ == null) {
+          ensureBidsIsMutable();
+          bids_.remove(index);
+          onChanged();
+        } else {
+          bidsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.Bid bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid.Builder getBidsBuilder(
+          int index) {
+        return getBidsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.Bid bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.BidOrBuilder getBidsOrBuilder(
+          int index) {
+        if (bidsBuilder_ == null) {
+          return bids_.get(index);  } else {
+          return bidsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.Bid bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.BidOrBuilder> 
+           getBidsOrBuilderList() {
+        if (bidsBuilder_ != null) {
+          return bidsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(bids_);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.Bid bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid.Builder addBidsBuilder() {
+        return getBidsFieldBuilder().addBuilder(
+            com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.Bid bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid.Builder addBidsBuilder(
+          int index) {
+        return getBidsFieldBuilder().addBuilder(
+            index, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.liquidfarming.v1beta1.Bid bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid.Builder> 
+           getBidsBuilderList() {
+        return getBidsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid.Builder, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.BidOrBuilder> 
+          getBidsFieldBuilder() {
+        if (bidsBuilder_ == null) {
+          bidsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.Bid.Builder, com.crescent.liquidfarming.v1beta1.LiquidfarmingProto.BidOrBuilder>(
+                  bids_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          bids_ = null;
+        }
+        return bidsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.QueryBidsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.QueryBidsResponse)
+    private static final com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryBidsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryBidsResponse>() {
+      @java.lang.Override
+      public QueryBidsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryBidsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryBidsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.QueryProto.QueryBidsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRewardsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.QueryRewardsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+  }
+  /**
+   * <pre>
+   * QueryRewardsRequest is request type for the Query/Rewards RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryRewardsRequest}
+   */
+  public static final class QueryRewardsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.QueryRewardsRequest)
+      QueryRewardsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRewardsRequest.newBuilder() to construct.
+    private QueryRewardsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRewardsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRewardsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryRewardsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryRewardsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest other = (com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryRewardsRequest is request type for the Query/Rewards RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryRewardsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.QueryRewardsRequest)
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryRewardsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryRewardsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryRewardsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest build() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest buildPartial() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest result = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest other) {
+        if (other == com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.QueryRewardsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.QueryRewardsRequest)
+    private static final com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRewardsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRewardsRequest>() {
+      @java.lang.Override
+      public QueryRewardsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRewardsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRewardsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRewardsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.QueryRewardsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getRewardsList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getRewards(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getRewardsCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getRewardsOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRewardsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * QueryRewardsResponse is response type for the Query/Rewards RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryRewardsResponse}
+   */
+  public static final class QueryRewardsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.QueryRewardsResponse)
+      QueryRewardsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRewardsResponse.newBuilder() to construct.
+    private QueryRewardsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRewardsResponse() {
+      rewards_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRewardsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryRewardsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryRewardsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse.Builder.class);
+    }
+
+    public static final int REWARDS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> rewards_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getRewardsList() {
+      return rewards_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getRewardsOrBuilderList() {
+      return rewards_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getRewardsCount() {
+      return rewards_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getRewards(int index) {
+      return rewards_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRewardsOrBuilder(
+        int index) {
+      return rewards_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < rewards_.size(); i++) {
+        output.writeMessage(1, rewards_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < rewards_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, rewards_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse other = (com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse) obj;
+
+      if (!getRewardsList()
+          .equals(other.getRewardsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getRewardsCount() > 0) {
+        hash = (37 * hash) + REWARDS_FIELD_NUMBER;
+        hash = (53 * hash) + getRewardsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryRewardsResponse is response type for the Query/Rewards RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryRewardsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.QueryRewardsResponse)
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryRewardsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryRewardsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (rewardsBuilder_ == null) {
+          rewards_ = java.util.Collections.emptyList();
+        } else {
+          rewards_ = null;
+          rewardsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryRewardsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse build() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse buildPartial() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse result = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse result) {
+        if (rewardsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            rewards_ = java.util.Collections.unmodifiableList(rewards_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.rewards_ = rewards_;
+        } else {
+          result.rewards_ = rewardsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse other) {
+        if (other == com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse.getDefaultInstance()) return this;
+        if (rewardsBuilder_ == null) {
+          if (!other.rewards_.isEmpty()) {
+            if (rewards_.isEmpty()) {
+              rewards_ = other.rewards_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRewardsIsMutable();
+              rewards_.addAll(other.rewards_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.rewards_.isEmpty()) {
+            if (rewardsBuilder_.isEmpty()) {
+              rewardsBuilder_.dispose();
+              rewardsBuilder_ = null;
+              rewards_ = other.rewards_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              rewardsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRewardsFieldBuilder() : null;
+            } else {
+              rewardsBuilder_.addAllMessages(other.rewards_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (rewardsBuilder_ == null) {
+                  ensureRewardsIsMutable();
+                  rewards_.add(m);
+                } else {
+                  rewardsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> rewards_ =
+        java.util.Collections.emptyList();
+      private void ensureRewardsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          rewards_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(rewards_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> rewardsBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getRewardsList() {
+        if (rewardsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(rewards_);
+        } else {
+          return rewardsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getRewardsCount() {
+        if (rewardsBuilder_ == null) {
+          return rewards_.size();
+        } else {
+          return rewardsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getRewards(int index) {
+        if (rewardsBuilder_ == null) {
+          return rewards_.get(index);
+        } else {
+          return rewardsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.set(index, value);
+          onChanged();
+        } else {
+          rewardsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addRewards(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.add(value);
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.add(index, value);
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addRewards(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.add(builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllRewards(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, rewards_);
+          onChanged();
+        } else {
+          rewardsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearRewards() {
+        if (rewardsBuilder_ == null) {
+          rewards_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          rewardsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeRewards(int index) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.remove(index);
+          onChanged();
+        } else {
+          rewardsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getRewardsBuilder(
+          int index) {
+        return getRewardsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRewardsOrBuilder(
+          int index) {
+        if (rewardsBuilder_ == null) {
+          return rewards_.get(index);  } else {
+          return rewardsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getRewardsOrBuilderList() {
+        if (rewardsBuilder_ != null) {
+          return rewardsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(rewards_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addRewardsBuilder() {
+        return getRewardsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addRewardsBuilder(
+          int index) {
+        return getRewardsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getRewardsBuilderList() {
+        return getRewardsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getRewardsFieldBuilder() {
+        if (rewardsBuilder_ == null) {
+          rewardsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  rewards_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          rewards_ = null;
+        }
+        return rewardsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.QueryRewardsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.QueryRewardsResponse)
+    private static final com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRewardsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRewardsResponse>() {
+      @java.lang.Override
+      public QueryRewardsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRewardsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRewardsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.QueryProto.QueryRewardsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryExchangeRateRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.QueryExchangeRateRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+  }
+  /**
+   * <pre>
+   * QueryExchangeRateRequest is request type for the Query/ExchangeRate RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryExchangeRateRequest}
+   */
+  public static final class QueryExchangeRateRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.QueryExchangeRateRequest)
+      QueryExchangeRateRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryExchangeRateRequest.newBuilder() to construct.
+    private QueryExchangeRateRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryExchangeRateRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryExchangeRateRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryExchangeRateRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryExchangeRateRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest other = (com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryExchangeRateRequest is request type for the Query/ExchangeRate RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryExchangeRateRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.QueryExchangeRateRequest)
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryExchangeRateRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryExchangeRateRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryExchangeRateRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest build() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest buildPartial() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest result = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest other) {
+        if (other == com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.QueryExchangeRateRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.QueryExchangeRateRequest)
+    private static final com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryExchangeRateRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryExchangeRateRequest>() {
+      @java.lang.Override
+      public QueryExchangeRateRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryExchangeRateRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryExchangeRateRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryExchangeRateResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.QueryExchangeRateResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.crescent.liquidfarming.v1beta1.ExchangeRateResponse exchange_rate = 1 [json_name = "exchangeRate", (.gogoproto.nullable) = false];</code>
+     * @return Whether the exchangeRate field is set.
+     */
+    boolean hasExchangeRate();
+    /**
+     * <code>.crescent.liquidfarming.v1beta1.ExchangeRateResponse exchange_rate = 1 [json_name = "exchangeRate", (.gogoproto.nullable) = false];</code>
+     * @return The exchangeRate.
+     */
+    com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse getExchangeRate();
+    /**
+     * <code>.crescent.liquidfarming.v1beta1.ExchangeRateResponse exchange_rate = 1 [json_name = "exchangeRate", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponseOrBuilder getExchangeRateOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryExchangeRateResponse is response type for the Query/ExchangeRate RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryExchangeRateResponse}
+   */
+  public static final class QueryExchangeRateResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.QueryExchangeRateResponse)
+      QueryExchangeRateResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryExchangeRateResponse.newBuilder() to construct.
+    private QueryExchangeRateResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryExchangeRateResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryExchangeRateResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryExchangeRateResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryExchangeRateResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse.Builder.class);
+    }
+
+    public static final int EXCHANGE_RATE_FIELD_NUMBER = 1;
+    private com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse exchangeRate_;
+    /**
+     * <code>.crescent.liquidfarming.v1beta1.ExchangeRateResponse exchange_rate = 1 [json_name = "exchangeRate", (.gogoproto.nullable) = false];</code>
+     * @return Whether the exchangeRate field is set.
+     */
+    @java.lang.Override
+    public boolean hasExchangeRate() {
+      return exchangeRate_ != null;
+    }
+    /**
+     * <code>.crescent.liquidfarming.v1beta1.ExchangeRateResponse exchange_rate = 1 [json_name = "exchangeRate", (.gogoproto.nullable) = false];</code>
+     * @return The exchangeRate.
+     */
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse getExchangeRate() {
+      return exchangeRate_ == null ? com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse.getDefaultInstance() : exchangeRate_;
+    }
+    /**
+     * <code>.crescent.liquidfarming.v1beta1.ExchangeRateResponse exchange_rate = 1 [json_name = "exchangeRate", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponseOrBuilder getExchangeRateOrBuilder() {
+      return exchangeRate_ == null ? com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse.getDefaultInstance() : exchangeRate_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (exchangeRate_ != null) {
+        output.writeMessage(1, getExchangeRate());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (exchangeRate_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getExchangeRate());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse other = (com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse) obj;
+
+      if (hasExchangeRate() != other.hasExchangeRate()) return false;
+      if (hasExchangeRate()) {
+        if (!getExchangeRate()
+            .equals(other.getExchangeRate())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasExchangeRate()) {
+        hash = (37 * hash) + EXCHANGE_RATE_FIELD_NUMBER;
+        hash = (53 * hash) + getExchangeRate().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryExchangeRateResponse is response type for the Query/ExchangeRate RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.QueryExchangeRateResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.QueryExchangeRateResponse)
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryExchangeRateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryExchangeRateResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse.class, com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        exchangeRate_ = null;
+        if (exchangeRateBuilder_ != null) {
+          exchangeRateBuilder_.dispose();
+          exchangeRateBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_QueryExchangeRateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse build() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse buildPartial() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse result = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.exchangeRate_ = exchangeRateBuilder_ == null
+              ? exchangeRate_
+              : exchangeRateBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse other) {
+        if (other == com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse.getDefaultInstance()) return this;
+        if (other.hasExchangeRate()) {
+          mergeExchangeRate(other.getExchangeRate());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getExchangeRateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse exchangeRate_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse, com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse.Builder, com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponseOrBuilder> exchangeRateBuilder_;
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.ExchangeRateResponse exchange_rate = 1 [json_name = "exchangeRate", (.gogoproto.nullable) = false];</code>
+       * @return Whether the exchangeRate field is set.
+       */
+      public boolean hasExchangeRate() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.ExchangeRateResponse exchange_rate = 1 [json_name = "exchangeRate", (.gogoproto.nullable) = false];</code>
+       * @return The exchangeRate.
+       */
+      public com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse getExchangeRate() {
+        if (exchangeRateBuilder_ == null) {
+          return exchangeRate_ == null ? com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse.getDefaultInstance() : exchangeRate_;
+        } else {
+          return exchangeRateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.ExchangeRateResponse exchange_rate = 1 [json_name = "exchangeRate", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setExchangeRate(com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse value) {
+        if (exchangeRateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          exchangeRate_ = value;
+        } else {
+          exchangeRateBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.ExchangeRateResponse exchange_rate = 1 [json_name = "exchangeRate", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setExchangeRate(
+          com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse.Builder builderForValue) {
+        if (exchangeRateBuilder_ == null) {
+          exchangeRate_ = builderForValue.build();
+        } else {
+          exchangeRateBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.ExchangeRateResponse exchange_rate = 1 [json_name = "exchangeRate", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeExchangeRate(com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse value) {
+        if (exchangeRateBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            exchangeRate_ != null &&
+            exchangeRate_ != com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse.getDefaultInstance()) {
+            getExchangeRateBuilder().mergeFrom(value);
+          } else {
+            exchangeRate_ = value;
+          }
+        } else {
+          exchangeRateBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.ExchangeRateResponse exchange_rate = 1 [json_name = "exchangeRate", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearExchangeRate() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        exchangeRate_ = null;
+        if (exchangeRateBuilder_ != null) {
+          exchangeRateBuilder_.dispose();
+          exchangeRateBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.ExchangeRateResponse exchange_rate = 1 [json_name = "exchangeRate", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse.Builder getExchangeRateBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getExchangeRateFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.ExchangeRateResponse exchange_rate = 1 [json_name = "exchangeRate", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponseOrBuilder getExchangeRateOrBuilder() {
+        if (exchangeRateBuilder_ != null) {
+          return exchangeRateBuilder_.getMessageOrBuilder();
+        } else {
+          return exchangeRate_ == null ?
+              com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse.getDefaultInstance() : exchangeRate_;
+        }
+      }
+      /**
+       * <code>.crescent.liquidfarming.v1beta1.ExchangeRateResponse exchange_rate = 1 [json_name = "exchangeRate", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse, com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse.Builder, com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponseOrBuilder> 
+          getExchangeRateFieldBuilder() {
+        if (exchangeRateBuilder_ == null) {
+          exchangeRateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse, com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse.Builder, com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponseOrBuilder>(
+                  getExchangeRate(),
+                  getParentForChildren(),
+                  isClean());
+          exchangeRate_ = null;
+        }
+        return exchangeRateBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.QueryExchangeRateResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.QueryExchangeRateResponse)
+    private static final com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryExchangeRateResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryExchangeRateResponse>() {
+      @java.lang.Override
+      public QueryExchangeRateResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryExchangeRateResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryExchangeRateResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.QueryProto.QueryExchangeRateResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface LiquidFarmResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.LiquidFarmResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <code>string liquid_farm_reserve_address = 2 [json_name = "liquidFarmReserveAddress"];</code>
+     * @return The liquidFarmReserveAddress.
+     */
+    java.lang.String getLiquidFarmReserveAddress();
+    /**
+     * <code>string liquid_farm_reserve_address = 2 [json_name = "liquidFarmReserveAddress"];</code>
+     * @return The bytes for liquidFarmReserveAddress.
+     */
+    com.google.protobuf.ByteString
+        getLiquidFarmReserveAddressBytes();
+
+    /**
+     * <code>string lf_coin_denom = 3 [json_name = "lfCoinDenom", (.gogoproto.customname) = "LFCoinDenom"];</code>
+     * @return The lfCoinDenom.
+     */
+    java.lang.String getLfCoinDenom();
+    /**
+     * <code>string lf_coin_denom = 3 [json_name = "lfCoinDenom", (.gogoproto.customname) = "LFCoinDenom"];</code>
+     * @return The bytes for lfCoinDenom.
+     */
+    com.google.protobuf.ByteString
+        getLfCoinDenomBytes();
+
+    /**
+     * <code>string lf_coin_supply = 4 [json_name = "lfCoinSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.customname) = "LFCoinSupply"];</code>
+     * @return The lfCoinSupply.
+     */
+    java.lang.String getLfCoinSupply();
+    /**
+     * <code>string lf_coin_supply = 4 [json_name = "lfCoinSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.customname) = "LFCoinSupply"];</code>
+     * @return The bytes for lfCoinSupply.
+     */
+    com.google.protobuf.ByteString
+        getLfCoinSupplyBytes();
+
+    /**
+     * <code>string pool_coin_denom = 5 [json_name = "poolCoinDenom"];</code>
+     * @return The poolCoinDenom.
+     */
+    java.lang.String getPoolCoinDenom();
+    /**
+     * <code>string pool_coin_denom = 5 [json_name = "poolCoinDenom"];</code>
+     * @return The bytes for poolCoinDenom.
+     */
+    com.google.protobuf.ByteString
+        getPoolCoinDenomBytes();
+
+    /**
+     * <code>string pool_coin_farming_amount = 6 [json_name = "poolCoinFarmingAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The poolCoinFarmingAmount.
+     */
+    java.lang.String getPoolCoinFarmingAmount();
+    /**
+     * <code>string pool_coin_farming_amount = 6 [json_name = "poolCoinFarmingAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for poolCoinFarmingAmount.
+     */
+    com.google.protobuf.ByteString
+        getPoolCoinFarmingAmountBytes();
+
+    /**
+     * <code>string min_farm_amount = 7 [json_name = "minFarmAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The minFarmAmount.
+     */
+    java.lang.String getMinFarmAmount();
+    /**
+     * <code>string min_farm_amount = 7 [json_name = "minFarmAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for minFarmAmount.
+     */
+    com.google.protobuf.ByteString
+        getMinFarmAmountBytes();
+
+    /**
+     * <code>string min_bid_amount = 8 [json_name = "minBidAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The minBidAmount.
+     */
+    java.lang.String getMinBidAmount();
+    /**
+     * <code>string min_bid_amount = 8 [json_name = "minBidAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for minBidAmount.
+     */
+    com.google.protobuf.ByteString
+        getMinBidAmountBytes();
+  }
+  /**
+   * <pre>
+   * LiquidFarmResponse is response type for the Query/LiquidFarm RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.LiquidFarmResponse}
+   */
+  public static final class LiquidFarmResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.LiquidFarmResponse)
+      LiquidFarmResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LiquidFarmResponse.newBuilder() to construct.
+    private LiquidFarmResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LiquidFarmResponse() {
+      liquidFarmReserveAddress_ = "";
+      lfCoinDenom_ = "";
+      lfCoinSupply_ = "";
+      poolCoinDenom_ = "";
+      poolCoinFarmingAmount_ = "";
+      minFarmAmount_ = "";
+      minBidAmount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LiquidFarmResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_LiquidFarmResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_LiquidFarmResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse.class, com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int LIQUID_FARM_RESERVE_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object liquidFarmReserveAddress_ = "";
+    /**
+     * <code>string liquid_farm_reserve_address = 2 [json_name = "liquidFarmReserveAddress"];</code>
+     * @return The liquidFarmReserveAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getLiquidFarmReserveAddress() {
+      java.lang.Object ref = liquidFarmReserveAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        liquidFarmReserveAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string liquid_farm_reserve_address = 2 [json_name = "liquidFarmReserveAddress"];</code>
+     * @return The bytes for liquidFarmReserveAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLiquidFarmReserveAddressBytes() {
+      java.lang.Object ref = liquidFarmReserveAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        liquidFarmReserveAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LF_COIN_DENOM_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object lfCoinDenom_ = "";
+    /**
+     * <code>string lf_coin_denom = 3 [json_name = "lfCoinDenom", (.gogoproto.customname) = "LFCoinDenom"];</code>
+     * @return The lfCoinDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getLfCoinDenom() {
+      java.lang.Object ref = lfCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        lfCoinDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string lf_coin_denom = 3 [json_name = "lfCoinDenom", (.gogoproto.customname) = "LFCoinDenom"];</code>
+     * @return The bytes for lfCoinDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLfCoinDenomBytes() {
+      java.lang.Object ref = lfCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        lfCoinDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LF_COIN_SUPPLY_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object lfCoinSupply_ = "";
+    /**
+     * <code>string lf_coin_supply = 4 [json_name = "lfCoinSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.customname) = "LFCoinSupply"];</code>
+     * @return The lfCoinSupply.
+     */
+    @java.lang.Override
+    public java.lang.String getLfCoinSupply() {
+      java.lang.Object ref = lfCoinSupply_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        lfCoinSupply_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string lf_coin_supply = 4 [json_name = "lfCoinSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.customname) = "LFCoinSupply"];</code>
+     * @return The bytes for lfCoinSupply.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLfCoinSupplyBytes() {
+      java.lang.Object ref = lfCoinSupply_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        lfCoinSupply_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int POOL_COIN_DENOM_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object poolCoinDenom_ = "";
+    /**
+     * <code>string pool_coin_denom = 5 [json_name = "poolCoinDenom"];</code>
+     * @return The poolCoinDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getPoolCoinDenom() {
+      java.lang.Object ref = poolCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        poolCoinDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string pool_coin_denom = 5 [json_name = "poolCoinDenom"];</code>
+     * @return The bytes for poolCoinDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPoolCoinDenomBytes() {
+      java.lang.Object ref = poolCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        poolCoinDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int POOL_COIN_FARMING_AMOUNT_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object poolCoinFarmingAmount_ = "";
+    /**
+     * <code>string pool_coin_farming_amount = 6 [json_name = "poolCoinFarmingAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The poolCoinFarmingAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getPoolCoinFarmingAmount() {
+      java.lang.Object ref = poolCoinFarmingAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        poolCoinFarmingAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string pool_coin_farming_amount = 6 [json_name = "poolCoinFarmingAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for poolCoinFarmingAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPoolCoinFarmingAmountBytes() {
+      java.lang.Object ref = poolCoinFarmingAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        poolCoinFarmingAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MIN_FARM_AMOUNT_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object minFarmAmount_ = "";
+    /**
+     * <code>string min_farm_amount = 7 [json_name = "minFarmAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The minFarmAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getMinFarmAmount() {
+      java.lang.Object ref = minFarmAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        minFarmAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string min_farm_amount = 7 [json_name = "minFarmAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for minFarmAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMinFarmAmountBytes() {
+      java.lang.Object ref = minFarmAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        minFarmAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MIN_BID_AMOUNT_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object minBidAmount_ = "";
+    /**
+     * <code>string min_bid_amount = 8 [json_name = "minBidAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The minBidAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getMinBidAmount() {
+      java.lang.Object ref = minBidAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        minBidAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string min_bid_amount = 8 [json_name = "minBidAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for minBidAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMinBidAmountBytes() {
+      java.lang.Object ref = minBidAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        minBidAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidFarmReserveAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, liquidFarmReserveAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lfCoinDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, lfCoinDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lfCoinSupply_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, lfCoinSupply_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(poolCoinDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, poolCoinDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(poolCoinFarmingAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, poolCoinFarmingAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minFarmAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, minFarmAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minBidAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, minBidAmount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidFarmReserveAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, liquidFarmReserveAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lfCoinDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, lfCoinDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lfCoinSupply_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, lfCoinSupply_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(poolCoinDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, poolCoinDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(poolCoinFarmingAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, poolCoinFarmingAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minFarmAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, minFarmAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minBidAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, minBidAmount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse other = (com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getLiquidFarmReserveAddress()
+          .equals(other.getLiquidFarmReserveAddress())) return false;
+      if (!getLfCoinDenom()
+          .equals(other.getLfCoinDenom())) return false;
+      if (!getLfCoinSupply()
+          .equals(other.getLfCoinSupply())) return false;
+      if (!getPoolCoinDenom()
+          .equals(other.getPoolCoinDenom())) return false;
+      if (!getPoolCoinFarmingAmount()
+          .equals(other.getPoolCoinFarmingAmount())) return false;
+      if (!getMinFarmAmount()
+          .equals(other.getMinFarmAmount())) return false;
+      if (!getMinBidAmount()
+          .equals(other.getMinBidAmount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + LIQUID_FARM_RESERVE_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getLiquidFarmReserveAddress().hashCode();
+      hash = (37 * hash) + LF_COIN_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getLfCoinDenom().hashCode();
+      hash = (37 * hash) + LF_COIN_SUPPLY_FIELD_NUMBER;
+      hash = (53 * hash) + getLfCoinSupply().hashCode();
+      hash = (37 * hash) + POOL_COIN_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getPoolCoinDenom().hashCode();
+      hash = (37 * hash) + POOL_COIN_FARMING_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getPoolCoinFarmingAmount().hashCode();
+      hash = (37 * hash) + MIN_FARM_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getMinFarmAmount().hashCode();
+      hash = (37 * hash) + MIN_BID_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getMinBidAmount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * LiquidFarmResponse is response type for the Query/LiquidFarm RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.LiquidFarmResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.LiquidFarmResponse)
+        com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_LiquidFarmResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_LiquidFarmResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse.class, com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        liquidFarmReserveAddress_ = "";
+        lfCoinDenom_ = "";
+        lfCoinSupply_ = "";
+        poolCoinDenom_ = "";
+        poolCoinFarmingAmount_ = "";
+        minFarmAmount_ = "";
+        minBidAmount_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_LiquidFarmResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse build() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse buildPartial() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse result = new com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.liquidFarmReserveAddress_ = liquidFarmReserveAddress_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.lfCoinDenom_ = lfCoinDenom_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.lfCoinSupply_ = lfCoinSupply_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.poolCoinDenom_ = poolCoinDenom_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.poolCoinFarmingAmount_ = poolCoinFarmingAmount_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.minFarmAmount_ = minFarmAmount_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.minBidAmount_ = minBidAmount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse other) {
+        if (other == com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (!other.getLiquidFarmReserveAddress().isEmpty()) {
+          liquidFarmReserveAddress_ = other.liquidFarmReserveAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getLfCoinDenom().isEmpty()) {
+          lfCoinDenom_ = other.lfCoinDenom_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getLfCoinSupply().isEmpty()) {
+          lfCoinSupply_ = other.lfCoinSupply_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getPoolCoinDenom().isEmpty()) {
+          poolCoinDenom_ = other.poolCoinDenom_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getPoolCoinFarmingAmount().isEmpty()) {
+          poolCoinFarmingAmount_ = other.poolCoinFarmingAmount_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getMinFarmAmount().isEmpty()) {
+          minFarmAmount_ = other.minFarmAmount_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (!other.getMinBidAmount().isEmpty()) {
+          minBidAmount_ = other.minBidAmount_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                liquidFarmReserveAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                lfCoinDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                lfCoinSupply_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                poolCoinDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                poolCoinFarmingAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                minFarmAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                minBidAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object liquidFarmReserveAddress_ = "";
+      /**
+       * <code>string liquid_farm_reserve_address = 2 [json_name = "liquidFarmReserveAddress"];</code>
+       * @return The liquidFarmReserveAddress.
+       */
+      public java.lang.String getLiquidFarmReserveAddress() {
+        java.lang.Object ref = liquidFarmReserveAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          liquidFarmReserveAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string liquid_farm_reserve_address = 2 [json_name = "liquidFarmReserveAddress"];</code>
+       * @return The bytes for liquidFarmReserveAddress.
+       */
+      public com.google.protobuf.ByteString
+          getLiquidFarmReserveAddressBytes() {
+        java.lang.Object ref = liquidFarmReserveAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          liquidFarmReserveAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string liquid_farm_reserve_address = 2 [json_name = "liquidFarmReserveAddress"];</code>
+       * @param value The liquidFarmReserveAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLiquidFarmReserveAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        liquidFarmReserveAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string liquid_farm_reserve_address = 2 [json_name = "liquidFarmReserveAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLiquidFarmReserveAddress() {
+        liquidFarmReserveAddress_ = getDefaultInstance().getLiquidFarmReserveAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string liquid_farm_reserve_address = 2 [json_name = "liquidFarmReserveAddress"];</code>
+       * @param value The bytes for liquidFarmReserveAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLiquidFarmReserveAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        liquidFarmReserveAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object lfCoinDenom_ = "";
+      /**
+       * <code>string lf_coin_denom = 3 [json_name = "lfCoinDenom", (.gogoproto.customname) = "LFCoinDenom"];</code>
+       * @return The lfCoinDenom.
+       */
+      public java.lang.String getLfCoinDenom() {
+        java.lang.Object ref = lfCoinDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          lfCoinDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string lf_coin_denom = 3 [json_name = "lfCoinDenom", (.gogoproto.customname) = "LFCoinDenom"];</code>
+       * @return The bytes for lfCoinDenom.
+       */
+      public com.google.protobuf.ByteString
+          getLfCoinDenomBytes() {
+        java.lang.Object ref = lfCoinDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          lfCoinDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string lf_coin_denom = 3 [json_name = "lfCoinDenom", (.gogoproto.customname) = "LFCoinDenom"];</code>
+       * @param value The lfCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLfCoinDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        lfCoinDenom_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string lf_coin_denom = 3 [json_name = "lfCoinDenom", (.gogoproto.customname) = "LFCoinDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLfCoinDenom() {
+        lfCoinDenom_ = getDefaultInstance().getLfCoinDenom();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string lf_coin_denom = 3 [json_name = "lfCoinDenom", (.gogoproto.customname) = "LFCoinDenom"];</code>
+       * @param value The bytes for lfCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLfCoinDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        lfCoinDenom_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object lfCoinSupply_ = "";
+      /**
+       * <code>string lf_coin_supply = 4 [json_name = "lfCoinSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.customname) = "LFCoinSupply"];</code>
+       * @return The lfCoinSupply.
+       */
+      public java.lang.String getLfCoinSupply() {
+        java.lang.Object ref = lfCoinSupply_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          lfCoinSupply_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string lf_coin_supply = 4 [json_name = "lfCoinSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.customname) = "LFCoinSupply"];</code>
+       * @return The bytes for lfCoinSupply.
+       */
+      public com.google.protobuf.ByteString
+          getLfCoinSupplyBytes() {
+        java.lang.Object ref = lfCoinSupply_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          lfCoinSupply_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string lf_coin_supply = 4 [json_name = "lfCoinSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.customname) = "LFCoinSupply"];</code>
+       * @param value The lfCoinSupply to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLfCoinSupply(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        lfCoinSupply_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string lf_coin_supply = 4 [json_name = "lfCoinSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.customname) = "LFCoinSupply"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLfCoinSupply() {
+        lfCoinSupply_ = getDefaultInstance().getLfCoinSupply();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string lf_coin_supply = 4 [json_name = "lfCoinSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.customname) = "LFCoinSupply"];</code>
+       * @param value The bytes for lfCoinSupply to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLfCoinSupplyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        lfCoinSupply_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object poolCoinDenom_ = "";
+      /**
+       * <code>string pool_coin_denom = 5 [json_name = "poolCoinDenom"];</code>
+       * @return The poolCoinDenom.
+       */
+      public java.lang.String getPoolCoinDenom() {
+        java.lang.Object ref = poolCoinDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          poolCoinDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string pool_coin_denom = 5 [json_name = "poolCoinDenom"];</code>
+       * @return The bytes for poolCoinDenom.
+       */
+      public com.google.protobuf.ByteString
+          getPoolCoinDenomBytes() {
+        java.lang.Object ref = poolCoinDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          poolCoinDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string pool_coin_denom = 5 [json_name = "poolCoinDenom"];</code>
+       * @param value The poolCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolCoinDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        poolCoinDenom_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string pool_coin_denom = 5 [json_name = "poolCoinDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolCoinDenom() {
+        poolCoinDenom_ = getDefaultInstance().getPoolCoinDenom();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string pool_coin_denom = 5 [json_name = "poolCoinDenom"];</code>
+       * @param value The bytes for poolCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolCoinDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        poolCoinDenom_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object poolCoinFarmingAmount_ = "";
+      /**
+       * <code>string pool_coin_farming_amount = 6 [json_name = "poolCoinFarmingAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The poolCoinFarmingAmount.
+       */
+      public java.lang.String getPoolCoinFarmingAmount() {
+        java.lang.Object ref = poolCoinFarmingAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          poolCoinFarmingAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string pool_coin_farming_amount = 6 [json_name = "poolCoinFarmingAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for poolCoinFarmingAmount.
+       */
+      public com.google.protobuf.ByteString
+          getPoolCoinFarmingAmountBytes() {
+        java.lang.Object ref = poolCoinFarmingAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          poolCoinFarmingAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string pool_coin_farming_amount = 6 [json_name = "poolCoinFarmingAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The poolCoinFarmingAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolCoinFarmingAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        poolCoinFarmingAmount_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string pool_coin_farming_amount = 6 [json_name = "poolCoinFarmingAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolCoinFarmingAmount() {
+        poolCoinFarmingAmount_ = getDefaultInstance().getPoolCoinFarmingAmount();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string pool_coin_farming_amount = 6 [json_name = "poolCoinFarmingAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for poolCoinFarmingAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolCoinFarmingAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        poolCoinFarmingAmount_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object minFarmAmount_ = "";
+      /**
+       * <code>string min_farm_amount = 7 [json_name = "minFarmAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The minFarmAmount.
+       */
+      public java.lang.String getMinFarmAmount() {
+        java.lang.Object ref = minFarmAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          minFarmAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string min_farm_amount = 7 [json_name = "minFarmAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for minFarmAmount.
+       */
+      public com.google.protobuf.ByteString
+          getMinFarmAmountBytes() {
+        java.lang.Object ref = minFarmAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          minFarmAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string min_farm_amount = 7 [json_name = "minFarmAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The minFarmAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinFarmAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        minFarmAmount_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string min_farm_amount = 7 [json_name = "minFarmAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinFarmAmount() {
+        minFarmAmount_ = getDefaultInstance().getMinFarmAmount();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string min_farm_amount = 7 [json_name = "minFarmAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for minFarmAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinFarmAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        minFarmAmount_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object minBidAmount_ = "";
+      /**
+       * <code>string min_bid_amount = 8 [json_name = "minBidAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The minBidAmount.
+       */
+      public java.lang.String getMinBidAmount() {
+        java.lang.Object ref = minBidAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          minBidAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string min_bid_amount = 8 [json_name = "minBidAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for minBidAmount.
+       */
+      public com.google.protobuf.ByteString
+          getMinBidAmountBytes() {
+        java.lang.Object ref = minBidAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          minBidAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string min_bid_amount = 8 [json_name = "minBidAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The minBidAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinBidAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        minBidAmount_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string min_bid_amount = 8 [json_name = "minBidAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinBidAmount() {
+        minBidAmount_ = getDefaultInstance().getMinBidAmount();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string min_bid_amount = 8 [json_name = "minBidAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for minBidAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinBidAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        minBidAmount_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.LiquidFarmResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.LiquidFarmResponse)
+    private static final com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LiquidFarmResponse>
+        PARSER = new com.google.protobuf.AbstractParser<LiquidFarmResponse>() {
+      @java.lang.Override
+      public LiquidFarmResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<LiquidFarmResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LiquidFarmResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.QueryProto.LiquidFarmResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ExchangeRateResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidfarming.v1beta1.ExchangeRateResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string mint_rate = 1 [json_name = "mintRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The mintRate.
+     */
+    java.lang.String getMintRate();
+    /**
+     * <code>string mint_rate = 1 [json_name = "mintRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for mintRate.
+     */
+    com.google.protobuf.ByteString
+        getMintRateBytes();
+
+    /**
+     * <code>string burn_rate = 2 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The burnRate.
+     */
+    java.lang.String getBurnRate();
+    /**
+     * <code>string burn_rate = 2 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for burnRate.
+     */
+    com.google.protobuf.ByteString
+        getBurnRateBytes();
+  }
+  /**
+   * Protobuf type {@code crescent.liquidfarming.v1beta1.ExchangeRateResponse}
+   */
+  public static final class ExchangeRateResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidfarming.v1beta1.ExchangeRateResponse)
+      ExchangeRateResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ExchangeRateResponse.newBuilder() to construct.
+    private ExchangeRateResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ExchangeRateResponse() {
+      mintRate_ = "";
+      burnRate_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ExchangeRateResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_ExchangeRateResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_ExchangeRateResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse.class, com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse.Builder.class);
+    }
+
+    public static final int MINT_RATE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object mintRate_ = "";
+    /**
+     * <code>string mint_rate = 1 [json_name = "mintRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The mintRate.
+     */
+    @java.lang.Override
+    public java.lang.String getMintRate() {
+      java.lang.Object ref = mintRate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mintRate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string mint_rate = 1 [json_name = "mintRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for mintRate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMintRateBytes() {
+      java.lang.Object ref = mintRate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mintRate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BURN_RATE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object burnRate_ = "";
+    /**
+     * <code>string burn_rate = 2 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The burnRate.
+     */
+    @java.lang.Override
+    public java.lang.String getBurnRate() {
+      java.lang.Object ref = burnRate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        burnRate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string burn_rate = 2 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for burnRate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBurnRateBytes() {
+      java.lang.Object ref = burnRate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        burnRate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mintRate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, mintRate_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(burnRate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, burnRate_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mintRate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, mintRate_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(burnRate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, burnRate_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse other = (com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse) obj;
+
+      if (!getMintRate()
+          .equals(other.getMintRate())) return false;
+      if (!getBurnRate()
+          .equals(other.getBurnRate())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MINT_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getMintRate().hashCode();
+      hash = (37 * hash) + BURN_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getBurnRate().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code crescent.liquidfarming.v1beta1.ExchangeRateResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidfarming.v1beta1.ExchangeRateResponse)
+        com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_ExchangeRateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_ExchangeRateResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse.class, com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        mintRate_ = "";
+        burnRate_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.internal_static_crescent_liquidfarming_v1beta1_ExchangeRateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse getDefaultInstanceForType() {
+        return com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse build() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse buildPartial() {
+        com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse result = new com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.mintRate_ = mintRate_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.burnRate_ = burnRate_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse) {
+          return mergeFrom((com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse other) {
+        if (other == com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse.getDefaultInstance()) return this;
+        if (!other.getMintRate().isEmpty()) {
+          mintRate_ = other.mintRate_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getBurnRate().isEmpty()) {
+          burnRate_ = other.burnRate_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                mintRate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                burnRate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object mintRate_ = "";
+      /**
+       * <code>string mint_rate = 1 [json_name = "mintRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The mintRate.
+       */
+      public java.lang.String getMintRate() {
+        java.lang.Object ref = mintRate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          mintRate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string mint_rate = 1 [json_name = "mintRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for mintRate.
+       */
+      public com.google.protobuf.ByteString
+          getMintRateBytes() {
+        java.lang.Object ref = mintRate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mintRate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string mint_rate = 1 [json_name = "mintRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The mintRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMintRate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        mintRate_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string mint_rate = 1 [json_name = "mintRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMintRate() {
+        mintRate_ = getDefaultInstance().getMintRate();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string mint_rate = 1 [json_name = "mintRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for mintRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMintRateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        mintRate_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object burnRate_ = "";
+      /**
+       * <code>string burn_rate = 2 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The burnRate.
+       */
+      public java.lang.String getBurnRate() {
+        java.lang.Object ref = burnRate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          burnRate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string burn_rate = 2 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for burnRate.
+       */
+      public com.google.protobuf.ByteString
+          getBurnRateBytes() {
+        java.lang.Object ref = burnRate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          burnRate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string burn_rate = 2 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The burnRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBurnRate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        burnRate_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string burn_rate = 2 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBurnRate() {
+        burnRate_ = getDefaultInstance().getBurnRate();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string burn_rate = 2 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for burnRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBurnRateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        burnRate_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidfarming.v1beta1.ExchangeRateResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidfarming.v1beta1.ExchangeRateResponse)
+    private static final com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse();
+    }
+
+    public static com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ExchangeRateResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ExchangeRateResponse>() {
+      @java.lang.Override
+      public ExchangeRateResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ExchangeRateResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ExchangeRateResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidfarming.v1beta1.QueryProto.ExchangeRateResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_QueryLiquidFarmsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_QueryLiquidFarmsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_QueryLiquidFarmsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_QueryLiquidFarmsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_QueryLiquidFarmRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_QueryLiquidFarmRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_QueryLiquidFarmResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_QueryLiquidFarmResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_QueryParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_QueryParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_QueryParamsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_QueryRewardsAuctionsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_QueryRewardsAuctionsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_QueryRewardsAuctionsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_QueryRewardsAuctionsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_QueryRewardsAuctionRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_QueryRewardsAuctionRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_QueryRewardsAuctionResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_QueryRewardsAuctionResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_QueryBidsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_QueryBidsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_QueryBidsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_QueryBidsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_QueryRewardsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_QueryRewardsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_QueryRewardsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_QueryRewardsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_QueryExchangeRateRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_QueryExchangeRateRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_QueryExchangeRateResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_QueryExchangeRateResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_LiquidFarmResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_LiquidFarmResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidfarming_v1beta1_ExchangeRateResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidfarming_v1beta1_ExchangeRateResponse_fieldAccessorTable;
 
@@ -221,14 +12962,14 @@ public final class QueryProto {
       "ngeRateRequest\0329.crescent.liquidfarming." +
       "v1beta1.QueryExchangeRateResponse\"K\202\323\344\223\002" +
       "E\022C/crescent/liquidfarming/v1beta1/liqui" +
-      "dfarms/{pool_id}/exchange_rateB\211\002\n\"com.c" +
+      "dfarms/{pool_id}/exchange_rateB\207\002\n\"com.c" +
       "rescent.liquidfarming.v1beta1B\nQueryProt" +
-      "oP\001Z=github.com/crescent-network/crescen" +
-      "t/v5/x/liquidfarming/types\242\002\003CLX\252\002\036Cresc" +
-      "ent.Liquidfarming.V1beta1\312\002\036Crescent\\Liq" +
-      "uidfarming\\V1beta1\342\002*Crescent\\Liquidfarm" +
-      "ing\\V1beta1\\GPBMetadata\352\002 Crescent::Liqu" +
-      "idfarming::V1beta1b\006proto3"
+      "oZ=github.com/crescent-network/crescent/" +
+      "v5/x/liquidfarming/types\242\002\003CLX\252\002\036Crescen" +
+      "t.Liquidfarming.V1beta1\312\002\036Crescent\\Liqui" +
+      "dfarming\\V1beta1\342\002*Crescent\\Liquidfarmin" +
+      "g\\V1beta1\\GPBMetadata\352\002 Crescent::Liquid" +
+      "farming::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

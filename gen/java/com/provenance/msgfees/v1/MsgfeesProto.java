@@ -14,24 +14,3865 @@ public final class MsgfeesProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.msgfees.v1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * constant used to calculate fees when gas fees shares denom with msg fee
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin floor_gas_price = 2 [json_name = "floorGasPrice", (.gogoproto.nullable) = false];</code>
+     * @return Whether the floorGasPrice field is set.
+     */
+    boolean hasFloorGasPrice();
+    /**
+     * <pre>
+     * constant used to calculate fees when gas fees shares denom with msg fee
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin floor_gas_price = 2 [json_name = "floorGasPrice", (.gogoproto.nullable) = false];</code>
+     * @return The floorGasPrice.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getFloorGasPrice();
+    /**
+     * <pre>
+     * constant used to calculate fees when gas fees shares denom with msg fee
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin floor_gas_price = 2 [json_name = "floorGasPrice", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFloorGasPriceOrBuilder();
+
+    /**
+     * <pre>
+     * total nhash per usd mil for converting usd to nhash
+     * </pre>
+     *
+     * <code>uint64 nhash_per_usd_mil = 3 [json_name = "nhashPerUsdMil"];</code>
+     * @return The nhashPerUsdMil.
+     */
+    long getNhashPerUsdMil();
+
+    /**
+     * <pre>
+     * conversion fee denom is the denom usd is converted to
+     * </pre>
+     *
+     * <code>string conversion_fee_denom = 4 [json_name = "conversionFeeDenom"];</code>
+     * @return The conversionFeeDenom.
+     */
+    java.lang.String getConversionFeeDenom();
+    /**
+     * <pre>
+     * conversion fee denom is the denom usd is converted to
+     * </pre>
+     *
+     * <code>string conversion_fee_denom = 4 [json_name = "conversionFeeDenom"];</code>
+     * @return The bytes for conversionFeeDenom.
+     */
+    com.google.protobuf.ByteString
+        getConversionFeeDenomBytes();
+  }
+  /**
+   * <pre>
+   * Params defines the set of params for the msgfees module.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.msgfees.v1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.msgfees.v1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      conversionFeeDenom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.msgfees.v1.MsgfeesProto.internal_static_provenance_msgfees_v1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.msgfees.v1.MsgfeesProto.internal_static_provenance_msgfees_v1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.msgfees.v1.MsgfeesProto.Params.class, com.provenance.msgfees.v1.MsgfeesProto.Params.Builder.class);
+    }
+
+    public static final int FLOOR_GAS_PRICE_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin floorGasPrice_;
+    /**
+     * <pre>
+     * constant used to calculate fees when gas fees shares denom with msg fee
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin floor_gas_price = 2 [json_name = "floorGasPrice", (.gogoproto.nullable) = false];</code>
+     * @return Whether the floorGasPrice field is set.
+     */
+    @java.lang.Override
+    public boolean hasFloorGasPrice() {
+      return floorGasPrice_ != null;
+    }
+    /**
+     * <pre>
+     * constant used to calculate fees when gas fees shares denom with msg fee
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin floor_gas_price = 2 [json_name = "floorGasPrice", (.gogoproto.nullable) = false];</code>
+     * @return The floorGasPrice.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getFloorGasPrice() {
+      return floorGasPrice_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : floorGasPrice_;
+    }
+    /**
+     * <pre>
+     * constant used to calculate fees when gas fees shares denom with msg fee
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin floor_gas_price = 2 [json_name = "floorGasPrice", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFloorGasPriceOrBuilder() {
+      return floorGasPrice_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : floorGasPrice_;
+    }
+
+    public static final int NHASH_PER_USD_MIL_FIELD_NUMBER = 3;
+    private long nhashPerUsdMil_ = 0L;
+    /**
+     * <pre>
+     * total nhash per usd mil for converting usd to nhash
+     * </pre>
+     *
+     * <code>uint64 nhash_per_usd_mil = 3 [json_name = "nhashPerUsdMil"];</code>
+     * @return The nhashPerUsdMil.
+     */
+    @java.lang.Override
+    public long getNhashPerUsdMil() {
+      return nhashPerUsdMil_;
+    }
+
+    public static final int CONVERSION_FEE_DENOM_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object conversionFeeDenom_ = "";
+    /**
+     * <pre>
+     * conversion fee denom is the denom usd is converted to
+     * </pre>
+     *
+     * <code>string conversion_fee_denom = 4 [json_name = "conversionFeeDenom"];</code>
+     * @return The conversionFeeDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getConversionFeeDenom() {
+      java.lang.Object ref = conversionFeeDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        conversionFeeDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * conversion fee denom is the denom usd is converted to
+     * </pre>
+     *
+     * <code>string conversion_fee_denom = 4 [json_name = "conversionFeeDenom"];</code>
+     * @return The bytes for conversionFeeDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConversionFeeDenomBytes() {
+      java.lang.Object ref = conversionFeeDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        conversionFeeDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (floorGasPrice_ != null) {
+        output.writeMessage(2, getFloorGasPrice());
+      }
+      if (nhashPerUsdMil_ != 0L) {
+        output.writeUInt64(3, nhashPerUsdMil_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(conversionFeeDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, conversionFeeDenom_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (floorGasPrice_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getFloorGasPrice());
+      }
+      if (nhashPerUsdMil_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, nhashPerUsdMil_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(conversionFeeDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, conversionFeeDenom_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.msgfees.v1.MsgfeesProto.Params)) {
+        return super.equals(obj);
+      }
+      com.provenance.msgfees.v1.MsgfeesProto.Params other = (com.provenance.msgfees.v1.MsgfeesProto.Params) obj;
+
+      if (hasFloorGasPrice() != other.hasFloorGasPrice()) return false;
+      if (hasFloorGasPrice()) {
+        if (!getFloorGasPrice()
+            .equals(other.getFloorGasPrice())) return false;
+      }
+      if (getNhashPerUsdMil()
+          != other.getNhashPerUsdMil()) return false;
+      if (!getConversionFeeDenom()
+          .equals(other.getConversionFeeDenom())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasFloorGasPrice()) {
+        hash = (37 * hash) + FLOOR_GAS_PRICE_FIELD_NUMBER;
+        hash = (53 * hash) + getFloorGasPrice().hashCode();
+      }
+      hash = (37 * hash) + NHASH_PER_USD_MIL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getNhashPerUsdMil());
+      hash = (37 * hash) + CONVERSION_FEE_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getConversionFeeDenom().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.msgfees.v1.MsgfeesProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.msgfees.v1.MsgfeesProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.msgfees.v1.MsgfeesProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.msgfees.v1.MsgfeesProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params defines the set of params for the msgfees module.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.msgfees.v1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.msgfees.v1.Params)
+        com.provenance.msgfees.v1.MsgfeesProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.msgfees.v1.MsgfeesProto.internal_static_provenance_msgfees_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.msgfees.v1.MsgfeesProto.internal_static_provenance_msgfees_v1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.msgfees.v1.MsgfeesProto.Params.class, com.provenance.msgfees.v1.MsgfeesProto.Params.Builder.class);
+      }
+
+      // Construct using com.provenance.msgfees.v1.MsgfeesProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        floorGasPrice_ = null;
+        if (floorGasPriceBuilder_ != null) {
+          floorGasPriceBuilder_.dispose();
+          floorGasPriceBuilder_ = null;
+        }
+        nhashPerUsdMil_ = 0L;
+        conversionFeeDenom_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.msgfees.v1.MsgfeesProto.internal_static_provenance_msgfees_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.msgfees.v1.MsgfeesProto.Params getDefaultInstanceForType() {
+        return com.provenance.msgfees.v1.MsgfeesProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.msgfees.v1.MsgfeesProto.Params build() {
+        com.provenance.msgfees.v1.MsgfeesProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.msgfees.v1.MsgfeesProto.Params buildPartial() {
+        com.provenance.msgfees.v1.MsgfeesProto.Params result = new com.provenance.msgfees.v1.MsgfeesProto.Params(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.msgfees.v1.MsgfeesProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.floorGasPrice_ = floorGasPriceBuilder_ == null
+              ? floorGasPrice_
+              : floorGasPriceBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.nhashPerUsdMil_ = nhashPerUsdMil_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.conversionFeeDenom_ = conversionFeeDenom_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.msgfees.v1.MsgfeesProto.Params) {
+          return mergeFrom((com.provenance.msgfees.v1.MsgfeesProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.msgfees.v1.MsgfeesProto.Params other) {
+        if (other == com.provenance.msgfees.v1.MsgfeesProto.Params.getDefaultInstance()) return this;
+        if (other.hasFloorGasPrice()) {
+          mergeFloorGasPrice(other.getFloorGasPrice());
+        }
+        if (other.getNhashPerUsdMil() != 0L) {
+          setNhashPerUsdMil(other.getNhashPerUsdMil());
+        }
+        if (!other.getConversionFeeDenom().isEmpty()) {
+          conversionFeeDenom_ = other.conversionFeeDenom_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 18: {
+                input.readMessage(
+                    getFloorGasPriceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 18
+              case 24: {
+                nhashPerUsdMil_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 24
+              case 34: {
+                conversionFeeDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin floorGasPrice_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> floorGasPriceBuilder_;
+      /**
+       * <pre>
+       * constant used to calculate fees when gas fees shares denom with msg fee
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin floor_gas_price = 2 [json_name = "floorGasPrice", (.gogoproto.nullable) = false];</code>
+       * @return Whether the floorGasPrice field is set.
+       */
+      public boolean hasFloorGasPrice() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * constant used to calculate fees when gas fees shares denom with msg fee
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin floor_gas_price = 2 [json_name = "floorGasPrice", (.gogoproto.nullable) = false];</code>
+       * @return The floorGasPrice.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getFloorGasPrice() {
+        if (floorGasPriceBuilder_ == null) {
+          return floorGasPrice_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : floorGasPrice_;
+        } else {
+          return floorGasPriceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * constant used to calculate fees when gas fees shares denom with msg fee
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin floor_gas_price = 2 [json_name = "floorGasPrice", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFloorGasPrice(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (floorGasPriceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          floorGasPrice_ = value;
+        } else {
+          floorGasPriceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * constant used to calculate fees when gas fees shares denom with msg fee
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin floor_gas_price = 2 [json_name = "floorGasPrice", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFloorGasPrice(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (floorGasPriceBuilder_ == null) {
+          floorGasPrice_ = builderForValue.build();
+        } else {
+          floorGasPriceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * constant used to calculate fees when gas fees shares denom with msg fee
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin floor_gas_price = 2 [json_name = "floorGasPrice", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeFloorGasPrice(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (floorGasPriceBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            floorGasPrice_ != null &&
+            floorGasPrice_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getFloorGasPriceBuilder().mergeFrom(value);
+          } else {
+            floorGasPrice_ = value;
+          }
+        } else {
+          floorGasPriceBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * constant used to calculate fees when gas fees shares denom with msg fee
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin floor_gas_price = 2 [json_name = "floorGasPrice", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearFloorGasPrice() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        floorGasPrice_ = null;
+        if (floorGasPriceBuilder_ != null) {
+          floorGasPriceBuilder_.dispose();
+          floorGasPriceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * constant used to calculate fees when gas fees shares denom with msg fee
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin floor_gas_price = 2 [json_name = "floorGasPrice", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getFloorGasPriceBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getFloorGasPriceFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * constant used to calculate fees when gas fees shares denom with msg fee
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin floor_gas_price = 2 [json_name = "floorGasPrice", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFloorGasPriceOrBuilder() {
+        if (floorGasPriceBuilder_ != null) {
+          return floorGasPriceBuilder_.getMessageOrBuilder();
+        } else {
+          return floorGasPrice_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : floorGasPrice_;
+        }
+      }
+      /**
+       * <pre>
+       * constant used to calculate fees when gas fees shares denom with msg fee
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin floor_gas_price = 2 [json_name = "floorGasPrice", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getFloorGasPriceFieldBuilder() {
+        if (floorGasPriceBuilder_ == null) {
+          floorGasPriceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getFloorGasPrice(),
+                  getParentForChildren(),
+                  isClean());
+          floorGasPrice_ = null;
+        }
+        return floorGasPriceBuilder_;
+      }
+
+      private long nhashPerUsdMil_ ;
+      /**
+       * <pre>
+       * total nhash per usd mil for converting usd to nhash
+       * </pre>
+       *
+       * <code>uint64 nhash_per_usd_mil = 3 [json_name = "nhashPerUsdMil"];</code>
+       * @return The nhashPerUsdMil.
+       */
+      @java.lang.Override
+      public long getNhashPerUsdMil() {
+        return nhashPerUsdMil_;
+      }
+      /**
+       * <pre>
+       * total nhash per usd mil for converting usd to nhash
+       * </pre>
+       *
+       * <code>uint64 nhash_per_usd_mil = 3 [json_name = "nhashPerUsdMil"];</code>
+       * @param value The nhashPerUsdMil to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNhashPerUsdMil(long value) {
+
+        nhashPerUsdMil_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total nhash per usd mil for converting usd to nhash
+       * </pre>
+       *
+       * <code>uint64 nhash_per_usd_mil = 3 [json_name = "nhashPerUsdMil"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNhashPerUsdMil() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        nhashPerUsdMil_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object conversionFeeDenom_ = "";
+      /**
+       * <pre>
+       * conversion fee denom is the denom usd is converted to
+       * </pre>
+       *
+       * <code>string conversion_fee_denom = 4 [json_name = "conversionFeeDenom"];</code>
+       * @return The conversionFeeDenom.
+       */
+      public java.lang.String getConversionFeeDenom() {
+        java.lang.Object ref = conversionFeeDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          conversionFeeDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * conversion fee denom is the denom usd is converted to
+       * </pre>
+       *
+       * <code>string conversion_fee_denom = 4 [json_name = "conversionFeeDenom"];</code>
+       * @return The bytes for conversionFeeDenom.
+       */
+      public com.google.protobuf.ByteString
+          getConversionFeeDenomBytes() {
+        java.lang.Object ref = conversionFeeDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          conversionFeeDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * conversion fee denom is the denom usd is converted to
+       * </pre>
+       *
+       * <code>string conversion_fee_denom = 4 [json_name = "conversionFeeDenom"];</code>
+       * @param value The conversionFeeDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConversionFeeDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        conversionFeeDenom_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * conversion fee denom is the denom usd is converted to
+       * </pre>
+       *
+       * <code>string conversion_fee_denom = 4 [json_name = "conversionFeeDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConversionFeeDenom() {
+        conversionFeeDenom_ = getDefaultInstance().getConversionFeeDenom();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * conversion fee denom is the denom usd is converted to
+       * </pre>
+       *
+       * <code>string conversion_fee_denom = 4 [json_name = "conversionFeeDenom"];</code>
+       * @param value The bytes for conversionFeeDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConversionFeeDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        conversionFeeDenom_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.msgfees.v1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.msgfees.v1.Params)
+    private static final com.provenance.msgfees.v1.MsgfeesProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.msgfees.v1.MsgfeesProto.Params();
+    }
+
+    public static com.provenance.msgfees.v1.MsgfeesProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.msgfees.v1.MsgfeesProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgFeeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.msgfees.v1.MsgFee)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string msg_type_url = 1 [json_name = "msgTypeUrl"];</code>
+     * @return The msgTypeUrl.
+     */
+    java.lang.String getMsgTypeUrl();
+    /**
+     * <code>string msg_type_url = 1 [json_name = "msgTypeUrl"];</code>
+     * @return The bytes for msgTypeUrl.
+     */
+    com.google.protobuf.ByteString
+        getMsgTypeUrlBytes();
+
+    /**
+     * <pre>
+     * additional_fee can pay in any Coin( basically a Denom and Amount, Amount can be zero)
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin additional_fee = 2 [json_name = "additionalFee", (.gogoproto.nullable) = false];</code>
+     * @return Whether the additionalFee field is set.
+     */
+    boolean hasAdditionalFee();
+    /**
+     * <pre>
+     * additional_fee can pay in any Coin( basically a Denom and Amount, Amount can be zero)
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin additional_fee = 2 [json_name = "additionalFee", (.gogoproto.nullable) = false];</code>
+     * @return The additionalFee.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getAdditionalFee();
+    /**
+     * <pre>
+     * additional_fee can pay in any Coin( basically a Denom and Amount, Amount can be zero)
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin additional_fee = 2 [json_name = "additionalFee", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAdditionalFeeOrBuilder();
+
+    /**
+     * <pre>
+     * optional recipient address, the amount is split between recipient and fee module
+     * </pre>
+     *
+     * <code>string recipient = 3 [json_name = "recipient"];</code>
+     * @return The recipient.
+     */
+    java.lang.String getRecipient();
+    /**
+     * <pre>
+     * optional recipient address, the amount is split between recipient and fee module
+     * </pre>
+     *
+     * <code>string recipient = 3 [json_name = "recipient"];</code>
+     * @return The bytes for recipient.
+     */
+    com.google.protobuf.ByteString
+        getRecipientBytes();
+
+    /**
+     * <pre>
+     * optional split of funds between the recipient and fee module defaults to 50:50,
+     * </pre>
+     *
+     * <code>uint32 recipient_basis_points = 4 [json_name = "recipientBasisPoints"];</code>
+     * @return The recipientBasisPoints.
+     */
+    int getRecipientBasisPoints();
+  }
+  /**
+   * <pre>
+   * MsgFee is the core of what gets stored on the blockchain
+   * it consists of four parts
+   * 1. the msg type url, i.e. /cosmos.bank.v1beta1.MsgSend
+   * 2. minimum additional fees(can be of any denom)
+   * 3. optional recipient of fee based on `recipient_basis_points`
+   * 4. if recipient is declared they will recieve the basis points of the fee (0-10,000)
+   * </pre>
+   *
+   * Protobuf type {@code provenance.msgfees.v1.MsgFee}
+   */
+  public static final class MsgFee extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.msgfees.v1.MsgFee)
+      MsgFeeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgFee.newBuilder() to construct.
+    private MsgFee(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgFee() {
+      msgTypeUrl_ = "";
+      recipient_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgFee();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.msgfees.v1.MsgfeesProto.internal_static_provenance_msgfees_v1_MsgFee_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.msgfees.v1.MsgfeesProto.internal_static_provenance_msgfees_v1_MsgFee_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.msgfees.v1.MsgfeesProto.MsgFee.class, com.provenance.msgfees.v1.MsgfeesProto.MsgFee.Builder.class);
+    }
+
+    public static final int MSG_TYPE_URL_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object msgTypeUrl_ = "";
+    /**
+     * <code>string msg_type_url = 1 [json_name = "msgTypeUrl"];</code>
+     * @return The msgTypeUrl.
+     */
+    @java.lang.Override
+    public java.lang.String getMsgTypeUrl() {
+      java.lang.Object ref = msgTypeUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        msgTypeUrl_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string msg_type_url = 1 [json_name = "msgTypeUrl"];</code>
+     * @return The bytes for msgTypeUrl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMsgTypeUrlBytes() {
+      java.lang.Object ref = msgTypeUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        msgTypeUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADDITIONAL_FEE_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin additionalFee_;
+    /**
+     * <pre>
+     * additional_fee can pay in any Coin( basically a Denom and Amount, Amount can be zero)
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin additional_fee = 2 [json_name = "additionalFee", (.gogoproto.nullable) = false];</code>
+     * @return Whether the additionalFee field is set.
+     */
+    @java.lang.Override
+    public boolean hasAdditionalFee() {
+      return additionalFee_ != null;
+    }
+    /**
+     * <pre>
+     * additional_fee can pay in any Coin( basically a Denom and Amount, Amount can be zero)
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin additional_fee = 2 [json_name = "additionalFee", (.gogoproto.nullable) = false];</code>
+     * @return The additionalFee.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getAdditionalFee() {
+      return additionalFee_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : additionalFee_;
+    }
+    /**
+     * <pre>
+     * additional_fee can pay in any Coin( basically a Denom and Amount, Amount can be zero)
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin additional_fee = 2 [json_name = "additionalFee", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAdditionalFeeOrBuilder() {
+      return additionalFee_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : additionalFee_;
+    }
+
+    public static final int RECIPIENT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object recipient_ = "";
+    /**
+     * <pre>
+     * optional recipient address, the amount is split between recipient and fee module
+     * </pre>
+     *
+     * <code>string recipient = 3 [json_name = "recipient"];</code>
+     * @return The recipient.
+     */
+    @java.lang.Override
+    public java.lang.String getRecipient() {
+      java.lang.Object ref = recipient_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recipient_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * optional recipient address, the amount is split between recipient and fee module
+     * </pre>
+     *
+     * <code>string recipient = 3 [json_name = "recipient"];</code>
+     * @return The bytes for recipient.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRecipientBytes() {
+      java.lang.Object ref = recipient_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recipient_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RECIPIENT_BASIS_POINTS_FIELD_NUMBER = 4;
+    private int recipientBasisPoints_ = 0;
+    /**
+     * <pre>
+     * optional split of funds between the recipient and fee module defaults to 50:50,
+     * </pre>
+     *
+     * <code>uint32 recipient_basis_points = 4 [json_name = "recipientBasisPoints"];</code>
+     * @return The recipientBasisPoints.
+     */
+    @java.lang.Override
+    public int getRecipientBasisPoints() {
+      return recipientBasisPoints_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(msgTypeUrl_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, msgTypeUrl_);
+      }
+      if (additionalFee_ != null) {
+        output.writeMessage(2, getAdditionalFee());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, recipient_);
+      }
+      if (recipientBasisPoints_ != 0) {
+        output.writeUInt32(4, recipientBasisPoints_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(msgTypeUrl_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, msgTypeUrl_);
+      }
+      if (additionalFee_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getAdditionalFee());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, recipient_);
+      }
+      if (recipientBasisPoints_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, recipientBasisPoints_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.msgfees.v1.MsgfeesProto.MsgFee)) {
+        return super.equals(obj);
+      }
+      com.provenance.msgfees.v1.MsgfeesProto.MsgFee other = (com.provenance.msgfees.v1.MsgfeesProto.MsgFee) obj;
+
+      if (!getMsgTypeUrl()
+          .equals(other.getMsgTypeUrl())) return false;
+      if (hasAdditionalFee() != other.hasAdditionalFee()) return false;
+      if (hasAdditionalFee()) {
+        if (!getAdditionalFee()
+            .equals(other.getAdditionalFee())) return false;
+      }
+      if (!getRecipient()
+          .equals(other.getRecipient())) return false;
+      if (getRecipientBasisPoints()
+          != other.getRecipientBasisPoints()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MSG_TYPE_URL_FIELD_NUMBER;
+      hash = (53 * hash) + getMsgTypeUrl().hashCode();
+      if (hasAdditionalFee()) {
+        hash = (37 * hash) + ADDITIONAL_FEE_FIELD_NUMBER;
+        hash = (53 * hash) + getAdditionalFee().hashCode();
+      }
+      hash = (37 * hash) + RECIPIENT_FIELD_NUMBER;
+      hash = (53 * hash) + getRecipient().hashCode();
+      hash = (37 * hash) + RECIPIENT_BASIS_POINTS_FIELD_NUMBER;
+      hash = (53 * hash) + getRecipientBasisPoints();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.msgfees.v1.MsgfeesProto.MsgFee parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.MsgFee parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.MsgFee parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.MsgFee parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.MsgFee parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.MsgFee parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.MsgFee parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.MsgFee parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.msgfees.v1.MsgfeesProto.MsgFee parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.msgfees.v1.MsgfeesProto.MsgFee parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.MsgFee parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.MsgFee parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.msgfees.v1.MsgfeesProto.MsgFee prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgFee is the core of what gets stored on the blockchain
+     * it consists of four parts
+     * 1. the msg type url, i.e. /cosmos.bank.v1beta1.MsgSend
+     * 2. minimum additional fees(can be of any denom)
+     * 3. optional recipient of fee based on `recipient_basis_points`
+     * 4. if recipient is declared they will recieve the basis points of the fee (0-10,000)
+     * </pre>
+     *
+     * Protobuf type {@code provenance.msgfees.v1.MsgFee}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.msgfees.v1.MsgFee)
+        com.provenance.msgfees.v1.MsgfeesProto.MsgFeeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.msgfees.v1.MsgfeesProto.internal_static_provenance_msgfees_v1_MsgFee_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.msgfees.v1.MsgfeesProto.internal_static_provenance_msgfees_v1_MsgFee_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.msgfees.v1.MsgfeesProto.MsgFee.class, com.provenance.msgfees.v1.MsgfeesProto.MsgFee.Builder.class);
+      }
+
+      // Construct using com.provenance.msgfees.v1.MsgfeesProto.MsgFee.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        msgTypeUrl_ = "";
+        additionalFee_ = null;
+        if (additionalFeeBuilder_ != null) {
+          additionalFeeBuilder_.dispose();
+          additionalFeeBuilder_ = null;
+        }
+        recipient_ = "";
+        recipientBasisPoints_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.msgfees.v1.MsgfeesProto.internal_static_provenance_msgfees_v1_MsgFee_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.msgfees.v1.MsgfeesProto.MsgFee getDefaultInstanceForType() {
+        return com.provenance.msgfees.v1.MsgfeesProto.MsgFee.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.msgfees.v1.MsgfeesProto.MsgFee build() {
+        com.provenance.msgfees.v1.MsgfeesProto.MsgFee result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.msgfees.v1.MsgfeesProto.MsgFee buildPartial() {
+        com.provenance.msgfees.v1.MsgfeesProto.MsgFee result = new com.provenance.msgfees.v1.MsgfeesProto.MsgFee(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.msgfees.v1.MsgfeesProto.MsgFee result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.msgTypeUrl_ = msgTypeUrl_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.additionalFee_ = additionalFeeBuilder_ == null
+              ? additionalFee_
+              : additionalFeeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.recipient_ = recipient_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.recipientBasisPoints_ = recipientBasisPoints_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.msgfees.v1.MsgfeesProto.MsgFee) {
+          return mergeFrom((com.provenance.msgfees.v1.MsgfeesProto.MsgFee)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.msgfees.v1.MsgfeesProto.MsgFee other) {
+        if (other == com.provenance.msgfees.v1.MsgfeesProto.MsgFee.getDefaultInstance()) return this;
+        if (!other.getMsgTypeUrl().isEmpty()) {
+          msgTypeUrl_ = other.msgTypeUrl_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasAdditionalFee()) {
+          mergeAdditionalFee(other.getAdditionalFee());
+        }
+        if (!other.getRecipient().isEmpty()) {
+          recipient_ = other.recipient_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.getRecipientBasisPoints() != 0) {
+          setRecipientBasisPoints(other.getRecipientBasisPoints());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                msgTypeUrl_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getAdditionalFeeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                recipient_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                recipientBasisPoints_ = input.readUInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object msgTypeUrl_ = "";
+      /**
+       * <code>string msg_type_url = 1 [json_name = "msgTypeUrl"];</code>
+       * @return The msgTypeUrl.
+       */
+      public java.lang.String getMsgTypeUrl() {
+        java.lang.Object ref = msgTypeUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          msgTypeUrl_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string msg_type_url = 1 [json_name = "msgTypeUrl"];</code>
+       * @return The bytes for msgTypeUrl.
+       */
+      public com.google.protobuf.ByteString
+          getMsgTypeUrlBytes() {
+        java.lang.Object ref = msgTypeUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          msgTypeUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string msg_type_url = 1 [json_name = "msgTypeUrl"];</code>
+       * @param value The msgTypeUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMsgTypeUrl(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        msgTypeUrl_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string msg_type_url = 1 [json_name = "msgTypeUrl"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMsgTypeUrl() {
+        msgTypeUrl_ = getDefaultInstance().getMsgTypeUrl();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string msg_type_url = 1 [json_name = "msgTypeUrl"];</code>
+       * @param value The bytes for msgTypeUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMsgTypeUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        msgTypeUrl_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin additionalFee_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> additionalFeeBuilder_;
+      /**
+       * <pre>
+       * additional_fee can pay in any Coin( basically a Denom and Amount, Amount can be zero)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin additional_fee = 2 [json_name = "additionalFee", (.gogoproto.nullable) = false];</code>
+       * @return Whether the additionalFee field is set.
+       */
+      public boolean hasAdditionalFee() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * additional_fee can pay in any Coin( basically a Denom and Amount, Amount can be zero)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin additional_fee = 2 [json_name = "additionalFee", (.gogoproto.nullable) = false];</code>
+       * @return The additionalFee.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getAdditionalFee() {
+        if (additionalFeeBuilder_ == null) {
+          return additionalFee_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : additionalFee_;
+        } else {
+          return additionalFeeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * additional_fee can pay in any Coin( basically a Denom and Amount, Amount can be zero)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin additional_fee = 2 [json_name = "additionalFee", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAdditionalFee(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (additionalFeeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          additionalFee_ = value;
+        } else {
+          additionalFeeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * additional_fee can pay in any Coin( basically a Denom and Amount, Amount can be zero)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin additional_fee = 2 [json_name = "additionalFee", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAdditionalFee(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (additionalFeeBuilder_ == null) {
+          additionalFee_ = builderForValue.build();
+        } else {
+          additionalFeeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * additional_fee can pay in any Coin( basically a Denom and Amount, Amount can be zero)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin additional_fee = 2 [json_name = "additionalFee", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeAdditionalFee(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (additionalFeeBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            additionalFee_ != null &&
+            additionalFee_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getAdditionalFeeBuilder().mergeFrom(value);
+          } else {
+            additionalFee_ = value;
+          }
+        } else {
+          additionalFeeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * additional_fee can pay in any Coin( basically a Denom and Amount, Amount can be zero)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin additional_fee = 2 [json_name = "additionalFee", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAdditionalFee() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        additionalFee_ = null;
+        if (additionalFeeBuilder_ != null) {
+          additionalFeeBuilder_.dispose();
+          additionalFeeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * additional_fee can pay in any Coin( basically a Denom and Amount, Amount can be zero)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin additional_fee = 2 [json_name = "additionalFee", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getAdditionalFeeBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getAdditionalFeeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * additional_fee can pay in any Coin( basically a Denom and Amount, Amount can be zero)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin additional_fee = 2 [json_name = "additionalFee", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAdditionalFeeOrBuilder() {
+        if (additionalFeeBuilder_ != null) {
+          return additionalFeeBuilder_.getMessageOrBuilder();
+        } else {
+          return additionalFee_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : additionalFee_;
+        }
+      }
+      /**
+       * <pre>
+       * additional_fee can pay in any Coin( basically a Denom and Amount, Amount can be zero)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin additional_fee = 2 [json_name = "additionalFee", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getAdditionalFeeFieldBuilder() {
+        if (additionalFeeBuilder_ == null) {
+          additionalFeeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getAdditionalFee(),
+                  getParentForChildren(),
+                  isClean());
+          additionalFee_ = null;
+        }
+        return additionalFeeBuilder_;
+      }
+
+      private java.lang.Object recipient_ = "";
+      /**
+       * <pre>
+       * optional recipient address, the amount is split between recipient and fee module
+       * </pre>
+       *
+       * <code>string recipient = 3 [json_name = "recipient"];</code>
+       * @return The recipient.
+       */
+      public java.lang.String getRecipient() {
+        java.lang.Object ref = recipient_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          recipient_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * optional recipient address, the amount is split between recipient and fee module
+       * </pre>
+       *
+       * <code>string recipient = 3 [json_name = "recipient"];</code>
+       * @return The bytes for recipient.
+       */
+      public com.google.protobuf.ByteString
+          getRecipientBytes() {
+        java.lang.Object ref = recipient_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          recipient_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * optional recipient address, the amount is split between recipient and fee module
+       * </pre>
+       *
+       * <code>string recipient = 3 [json_name = "recipient"];</code>
+       * @param value The recipient to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipient(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        recipient_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * optional recipient address, the amount is split between recipient and fee module
+       * </pre>
+       *
+       * <code>string recipient = 3 [json_name = "recipient"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecipient() {
+        recipient_ = getDefaultInstance().getRecipient();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * optional recipient address, the amount is split between recipient and fee module
+       * </pre>
+       *
+       * <code>string recipient = 3 [json_name = "recipient"];</code>
+       * @param value The bytes for recipient to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipientBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        recipient_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private int recipientBasisPoints_ ;
+      /**
+       * <pre>
+       * optional split of funds between the recipient and fee module defaults to 50:50,
+       * </pre>
+       *
+       * <code>uint32 recipient_basis_points = 4 [json_name = "recipientBasisPoints"];</code>
+       * @return The recipientBasisPoints.
+       */
+      @java.lang.Override
+      public int getRecipientBasisPoints() {
+        return recipientBasisPoints_;
+      }
+      /**
+       * <pre>
+       * optional split of funds between the recipient and fee module defaults to 50:50,
+       * </pre>
+       *
+       * <code>uint32 recipient_basis_points = 4 [json_name = "recipientBasisPoints"];</code>
+       * @param value The recipientBasisPoints to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipientBasisPoints(int value) {
+
+        recipientBasisPoints_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * optional split of funds between the recipient and fee module defaults to 50:50,
+       * </pre>
+       *
+       * <code>uint32 recipient_basis_points = 4 [json_name = "recipientBasisPoints"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecipientBasisPoints() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        recipientBasisPoints_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.msgfees.v1.MsgFee)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.msgfees.v1.MsgFee)
+    private static final com.provenance.msgfees.v1.MsgfeesProto.MsgFee DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.msgfees.v1.MsgfeesProto.MsgFee();
+    }
+
+    public static com.provenance.msgfees.v1.MsgfeesProto.MsgFee getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgFee>
+        PARSER = new com.google.protobuf.AbstractParser<MsgFee>() {
+      @java.lang.Override
+      public MsgFee parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgFee> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgFee> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.msgfees.v1.MsgfeesProto.MsgFee getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventMsgFeeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.msgfees.v1.EventMsgFee)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string msg_type = 1 [json_name = "msgType"];</code>
+     * @return The msgType.
+     */
+    java.lang.String getMsgType();
+    /**
+     * <code>string msg_type = 1 [json_name = "msgType"];</code>
+     * @return The bytes for msgType.
+     */
+    com.google.protobuf.ByteString
+        getMsgTypeBytes();
+
+    /**
+     * <code>string count = 2 [json_name = "count"];</code>
+     * @return The count.
+     */
+    java.lang.String getCount();
+    /**
+     * <code>string count = 2 [json_name = "count"];</code>
+     * @return The bytes for count.
+     */
+    com.google.protobuf.ByteString
+        getCountBytes();
+
+    /**
+     * <code>string total = 3 [json_name = "total"];</code>
+     * @return The total.
+     */
+    java.lang.String getTotal();
+    /**
+     * <code>string total = 3 [json_name = "total"];</code>
+     * @return The bytes for total.
+     */
+    com.google.protobuf.ByteString
+        getTotalBytes();
+
+    /**
+     * <code>string recipient = 4 [json_name = "recipient"];</code>
+     * @return The recipient.
+     */
+    java.lang.String getRecipient();
+    /**
+     * <code>string recipient = 4 [json_name = "recipient"];</code>
+     * @return The bytes for recipient.
+     */
+    com.google.protobuf.ByteString
+        getRecipientBytes();
+  }
+  /**
+   * <pre>
+   * EventMsgFee final event property for msg fee on type
+   * </pre>
+   *
+   * Protobuf type {@code provenance.msgfees.v1.EventMsgFee}
+   */
+  public static final class EventMsgFee extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.msgfees.v1.EventMsgFee)
+      EventMsgFeeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventMsgFee.newBuilder() to construct.
+    private EventMsgFee(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventMsgFee() {
+      msgType_ = "";
+      count_ = "";
+      total_ = "";
+      recipient_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventMsgFee();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.msgfees.v1.MsgfeesProto.internal_static_provenance_msgfees_v1_EventMsgFee_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.msgfees.v1.MsgfeesProto.internal_static_provenance_msgfees_v1_EventMsgFee_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee.class, com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee.Builder.class);
+    }
+
+    public static final int MSG_TYPE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object msgType_ = "";
+    /**
+     * <code>string msg_type = 1 [json_name = "msgType"];</code>
+     * @return The msgType.
+     */
+    @java.lang.Override
+    public java.lang.String getMsgType() {
+      java.lang.Object ref = msgType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        msgType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string msg_type = 1 [json_name = "msgType"];</code>
+     * @return The bytes for msgType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMsgTypeBytes() {
+      java.lang.Object ref = msgType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        msgType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COUNT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object count_ = "";
+    /**
+     * <code>string count = 2 [json_name = "count"];</code>
+     * @return The count.
+     */
+    @java.lang.Override
+    public java.lang.String getCount() {
+      java.lang.Object ref = count_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        count_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string count = 2 [json_name = "count"];</code>
+     * @return The bytes for count.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCountBytes() {
+      java.lang.Object ref = count_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        count_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOTAL_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object total_ = "";
+    /**
+     * <code>string total = 3 [json_name = "total"];</code>
+     * @return The total.
+     */
+    @java.lang.Override
+    public java.lang.String getTotal() {
+      java.lang.Object ref = total_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        total_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string total = 3 [json_name = "total"];</code>
+     * @return The bytes for total.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTotalBytes() {
+      java.lang.Object ref = total_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        total_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RECIPIENT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object recipient_ = "";
+    /**
+     * <code>string recipient = 4 [json_name = "recipient"];</code>
+     * @return The recipient.
+     */
+    @java.lang.Override
+    public java.lang.String getRecipient() {
+      java.lang.Object ref = recipient_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recipient_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string recipient = 4 [json_name = "recipient"];</code>
+     * @return The bytes for recipient.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRecipientBytes() {
+      java.lang.Object ref = recipient_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recipient_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(msgType_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, msgType_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(count_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, count_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(total_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, total_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, recipient_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(msgType_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, msgType_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(count_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, count_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(total_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, total_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, recipient_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee)) {
+        return super.equals(obj);
+      }
+      com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee other = (com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee) obj;
+
+      if (!getMsgType()
+          .equals(other.getMsgType())) return false;
+      if (!getCount()
+          .equals(other.getCount())) return false;
+      if (!getTotal()
+          .equals(other.getTotal())) return false;
+      if (!getRecipient()
+          .equals(other.getRecipient())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MSG_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getMsgType().hashCode();
+      hash = (37 * hash) + COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getCount().hashCode();
+      hash = (37 * hash) + TOTAL_FIELD_NUMBER;
+      hash = (53 * hash) + getTotal().hashCode();
+      hash = (37 * hash) + RECIPIENT_FIELD_NUMBER;
+      hash = (53 * hash) + getRecipient().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventMsgFee final event property for msg fee on type
+     * </pre>
+     *
+     * Protobuf type {@code provenance.msgfees.v1.EventMsgFee}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.msgfees.v1.EventMsgFee)
+        com.provenance.msgfees.v1.MsgfeesProto.EventMsgFeeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.msgfees.v1.MsgfeesProto.internal_static_provenance_msgfees_v1_EventMsgFee_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.msgfees.v1.MsgfeesProto.internal_static_provenance_msgfees_v1_EventMsgFee_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee.class, com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee.Builder.class);
+      }
+
+      // Construct using com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        msgType_ = "";
+        count_ = "";
+        total_ = "";
+        recipient_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.msgfees.v1.MsgfeesProto.internal_static_provenance_msgfees_v1_EventMsgFee_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee getDefaultInstanceForType() {
+        return com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee build() {
+        com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee buildPartial() {
+        com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee result = new com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.msgType_ = msgType_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.count_ = count_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.total_ = total_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.recipient_ = recipient_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee) {
+          return mergeFrom((com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee other) {
+        if (other == com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee.getDefaultInstance()) return this;
+        if (!other.getMsgType().isEmpty()) {
+          msgType_ = other.msgType_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getCount().isEmpty()) {
+          count_ = other.count_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getTotal().isEmpty()) {
+          total_ = other.total_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getRecipient().isEmpty()) {
+          recipient_ = other.recipient_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                msgType_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                count_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                total_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                recipient_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object msgType_ = "";
+      /**
+       * <code>string msg_type = 1 [json_name = "msgType"];</code>
+       * @return The msgType.
+       */
+      public java.lang.String getMsgType() {
+        java.lang.Object ref = msgType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          msgType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string msg_type = 1 [json_name = "msgType"];</code>
+       * @return The bytes for msgType.
+       */
+      public com.google.protobuf.ByteString
+          getMsgTypeBytes() {
+        java.lang.Object ref = msgType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          msgType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string msg_type = 1 [json_name = "msgType"];</code>
+       * @param value The msgType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMsgType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        msgType_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string msg_type = 1 [json_name = "msgType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMsgType() {
+        msgType_ = getDefaultInstance().getMsgType();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string msg_type = 1 [json_name = "msgType"];</code>
+       * @param value The bytes for msgType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMsgTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        msgType_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object count_ = "";
+      /**
+       * <code>string count = 2 [json_name = "count"];</code>
+       * @return The count.
+       */
+      public java.lang.String getCount() {
+        java.lang.Object ref = count_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          count_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string count = 2 [json_name = "count"];</code>
+       * @return The bytes for count.
+       */
+      public com.google.protobuf.ByteString
+          getCountBytes() {
+        java.lang.Object ref = count_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          count_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string count = 2 [json_name = "count"];</code>
+       * @param value The count to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        count_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string count = 2 [json_name = "count"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCount() {
+        count_ = getDefaultInstance().getCount();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string count = 2 [json_name = "count"];</code>
+       * @param value The bytes for count to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        count_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object total_ = "";
+      /**
+       * <code>string total = 3 [json_name = "total"];</code>
+       * @return The total.
+       */
+      public java.lang.String getTotal() {
+        java.lang.Object ref = total_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          total_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string total = 3 [json_name = "total"];</code>
+       * @return The bytes for total.
+       */
+      public com.google.protobuf.ByteString
+          getTotalBytes() {
+        java.lang.Object ref = total_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          total_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string total = 3 [json_name = "total"];</code>
+       * @param value The total to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotal(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        total_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string total = 3 [json_name = "total"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotal() {
+        total_ = getDefaultInstance().getTotal();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string total = 3 [json_name = "total"];</code>
+       * @param value The bytes for total to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        total_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object recipient_ = "";
+      /**
+       * <code>string recipient = 4 [json_name = "recipient"];</code>
+       * @return The recipient.
+       */
+      public java.lang.String getRecipient() {
+        java.lang.Object ref = recipient_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          recipient_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string recipient = 4 [json_name = "recipient"];</code>
+       * @return The bytes for recipient.
+       */
+      public com.google.protobuf.ByteString
+          getRecipientBytes() {
+        java.lang.Object ref = recipient_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          recipient_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string recipient = 4 [json_name = "recipient"];</code>
+       * @param value The recipient to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipient(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        recipient_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string recipient = 4 [json_name = "recipient"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecipient() {
+        recipient_ = getDefaultInstance().getRecipient();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string recipient = 4 [json_name = "recipient"];</code>
+       * @param value The bytes for recipient to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipientBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        recipient_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.msgfees.v1.EventMsgFee)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.msgfees.v1.EventMsgFee)
+    private static final com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee();
+    }
+
+    public static com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventMsgFee>
+        PARSER = new com.google.protobuf.AbstractParser<EventMsgFee>() {
+      @java.lang.Override
+      public EventMsgFee parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventMsgFee> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventMsgFee> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventMsgFeesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.msgfees.v1.EventMsgFees)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .provenance.msgfees.v1.EventMsgFee msg_fees = 1 [json_name = "msgFees", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee> 
+        getMsgFeesList();
+    /**
+     * <code>repeated .provenance.msgfees.v1.EventMsgFee msg_fees = 1 [json_name = "msgFees", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee getMsgFees(int index);
+    /**
+     * <code>repeated .provenance.msgfees.v1.EventMsgFee msg_fees = 1 [json_name = "msgFees", (.gogoproto.nullable) = false];</code>
+     */
+    int getMsgFeesCount();
+    /**
+     * <code>repeated .provenance.msgfees.v1.EventMsgFee msg_fees = 1 [json_name = "msgFees", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.provenance.msgfees.v1.MsgfeesProto.EventMsgFeeOrBuilder> 
+        getMsgFeesOrBuilderList();
+    /**
+     * <code>repeated .provenance.msgfees.v1.EventMsgFee msg_fees = 1 [json_name = "msgFees", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.msgfees.v1.MsgfeesProto.EventMsgFeeOrBuilder getMsgFeesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * EventMsgFees event emitted with summary of msg fees
+   * </pre>
+   *
+   * Protobuf type {@code provenance.msgfees.v1.EventMsgFees}
+   */
+  public static final class EventMsgFees extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.msgfees.v1.EventMsgFees)
+      EventMsgFeesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventMsgFees.newBuilder() to construct.
+    private EventMsgFees(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventMsgFees() {
+      msgFees_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventMsgFees();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.msgfees.v1.MsgfeesProto.internal_static_provenance_msgfees_v1_EventMsgFees_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.msgfees.v1.MsgfeesProto.internal_static_provenance_msgfees_v1_EventMsgFees_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees.class, com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees.Builder.class);
+    }
+
+    public static final int MSG_FEES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee> msgFees_;
+    /**
+     * <code>repeated .provenance.msgfees.v1.EventMsgFee msg_fees = 1 [json_name = "msgFees", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee> getMsgFeesList() {
+      return msgFees_;
+    }
+    /**
+     * <code>repeated .provenance.msgfees.v1.EventMsgFee msg_fees = 1 [json_name = "msgFees", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.msgfees.v1.MsgfeesProto.EventMsgFeeOrBuilder> 
+        getMsgFeesOrBuilderList() {
+      return msgFees_;
+    }
+    /**
+     * <code>repeated .provenance.msgfees.v1.EventMsgFee msg_fees = 1 [json_name = "msgFees", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getMsgFeesCount() {
+      return msgFees_.size();
+    }
+    /**
+     * <code>repeated .provenance.msgfees.v1.EventMsgFee msg_fees = 1 [json_name = "msgFees", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee getMsgFees(int index) {
+      return msgFees_.get(index);
+    }
+    /**
+     * <code>repeated .provenance.msgfees.v1.EventMsgFee msg_fees = 1 [json_name = "msgFees", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.msgfees.v1.MsgfeesProto.EventMsgFeeOrBuilder getMsgFeesOrBuilder(
+        int index) {
+      return msgFees_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < msgFees_.size(); i++) {
+        output.writeMessage(1, msgFees_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < msgFees_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, msgFees_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees)) {
+        return super.equals(obj);
+      }
+      com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees other = (com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees) obj;
+
+      if (!getMsgFeesList()
+          .equals(other.getMsgFeesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getMsgFeesCount() > 0) {
+        hash = (37 * hash) + MSG_FEES_FIELD_NUMBER;
+        hash = (53 * hash) + getMsgFeesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventMsgFees event emitted with summary of msg fees
+     * </pre>
+     *
+     * Protobuf type {@code provenance.msgfees.v1.EventMsgFees}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.msgfees.v1.EventMsgFees)
+        com.provenance.msgfees.v1.MsgfeesProto.EventMsgFeesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.msgfees.v1.MsgfeesProto.internal_static_provenance_msgfees_v1_EventMsgFees_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.msgfees.v1.MsgfeesProto.internal_static_provenance_msgfees_v1_EventMsgFees_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees.class, com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees.Builder.class);
+      }
+
+      // Construct using com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (msgFeesBuilder_ == null) {
+          msgFees_ = java.util.Collections.emptyList();
+        } else {
+          msgFees_ = null;
+          msgFeesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.msgfees.v1.MsgfeesProto.internal_static_provenance_msgfees_v1_EventMsgFees_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees getDefaultInstanceForType() {
+        return com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees build() {
+        com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees buildPartial() {
+        com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees result = new com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees result) {
+        if (msgFeesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            msgFees_ = java.util.Collections.unmodifiableList(msgFees_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.msgFees_ = msgFees_;
+        } else {
+          result.msgFees_ = msgFeesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees) {
+          return mergeFrom((com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees other) {
+        if (other == com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees.getDefaultInstance()) return this;
+        if (msgFeesBuilder_ == null) {
+          if (!other.msgFees_.isEmpty()) {
+            if (msgFees_.isEmpty()) {
+              msgFees_ = other.msgFees_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureMsgFeesIsMutable();
+              msgFees_.addAll(other.msgFees_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.msgFees_.isEmpty()) {
+            if (msgFeesBuilder_.isEmpty()) {
+              msgFeesBuilder_.dispose();
+              msgFeesBuilder_ = null;
+              msgFees_ = other.msgFees_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              msgFeesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMsgFeesFieldBuilder() : null;
+            } else {
+              msgFeesBuilder_.addAllMessages(other.msgFees_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee m =
+                    input.readMessage(
+                        com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee.parser(),
+                        extensionRegistry);
+                if (msgFeesBuilder_ == null) {
+                  ensureMsgFeesIsMutable();
+                  msgFees_.add(m);
+                } else {
+                  msgFeesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee> msgFees_ =
+        java.util.Collections.emptyList();
+      private void ensureMsgFeesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          msgFees_ = new java.util.ArrayList<com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee>(msgFees_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee, com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee.Builder, com.provenance.msgfees.v1.MsgfeesProto.EventMsgFeeOrBuilder> msgFeesBuilder_;
+
+      /**
+       * <code>repeated .provenance.msgfees.v1.EventMsgFee msg_fees = 1 [json_name = "msgFees", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee> getMsgFeesList() {
+        if (msgFeesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(msgFees_);
+        } else {
+          return msgFeesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.EventMsgFee msg_fees = 1 [json_name = "msgFees", (.gogoproto.nullable) = false];</code>
+       */
+      public int getMsgFeesCount() {
+        if (msgFeesBuilder_ == null) {
+          return msgFees_.size();
+        } else {
+          return msgFeesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.EventMsgFee msg_fees = 1 [json_name = "msgFees", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee getMsgFees(int index) {
+        if (msgFeesBuilder_ == null) {
+          return msgFees_.get(index);
+        } else {
+          return msgFeesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.EventMsgFee msg_fees = 1 [json_name = "msgFees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMsgFees(
+          int index, com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee value) {
+        if (msgFeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMsgFeesIsMutable();
+          msgFees_.set(index, value);
+          onChanged();
+        } else {
+          msgFeesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.EventMsgFee msg_fees = 1 [json_name = "msgFees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMsgFees(
+          int index, com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee.Builder builderForValue) {
+        if (msgFeesBuilder_ == null) {
+          ensureMsgFeesIsMutable();
+          msgFees_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          msgFeesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.EventMsgFee msg_fees = 1 [json_name = "msgFees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMsgFees(com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee value) {
+        if (msgFeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMsgFeesIsMutable();
+          msgFees_.add(value);
+          onChanged();
+        } else {
+          msgFeesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.EventMsgFee msg_fees = 1 [json_name = "msgFees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMsgFees(
+          int index, com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee value) {
+        if (msgFeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMsgFeesIsMutable();
+          msgFees_.add(index, value);
+          onChanged();
+        } else {
+          msgFeesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.EventMsgFee msg_fees = 1 [json_name = "msgFees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMsgFees(
+          com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee.Builder builderForValue) {
+        if (msgFeesBuilder_ == null) {
+          ensureMsgFeesIsMutable();
+          msgFees_.add(builderForValue.build());
+          onChanged();
+        } else {
+          msgFeesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.EventMsgFee msg_fees = 1 [json_name = "msgFees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMsgFees(
+          int index, com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee.Builder builderForValue) {
+        if (msgFeesBuilder_ == null) {
+          ensureMsgFeesIsMutable();
+          msgFees_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          msgFeesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.EventMsgFee msg_fees = 1 [json_name = "msgFees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllMsgFees(
+          java.lang.Iterable<? extends com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee> values) {
+        if (msgFeesBuilder_ == null) {
+          ensureMsgFeesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, msgFees_);
+          onChanged();
+        } else {
+          msgFeesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.EventMsgFee msg_fees = 1 [json_name = "msgFees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMsgFees() {
+        if (msgFeesBuilder_ == null) {
+          msgFees_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          msgFeesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.EventMsgFee msg_fees = 1 [json_name = "msgFees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeMsgFees(int index) {
+        if (msgFeesBuilder_ == null) {
+          ensureMsgFeesIsMutable();
+          msgFees_.remove(index);
+          onChanged();
+        } else {
+          msgFeesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.EventMsgFee msg_fees = 1 [json_name = "msgFees", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee.Builder getMsgFeesBuilder(
+          int index) {
+        return getMsgFeesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.EventMsgFee msg_fees = 1 [json_name = "msgFees", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.msgfees.v1.MsgfeesProto.EventMsgFeeOrBuilder getMsgFeesOrBuilder(
+          int index) {
+        if (msgFeesBuilder_ == null) {
+          return msgFees_.get(index);  } else {
+          return msgFeesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.EventMsgFee msg_fees = 1 [json_name = "msgFees", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.provenance.msgfees.v1.MsgfeesProto.EventMsgFeeOrBuilder> 
+           getMsgFeesOrBuilderList() {
+        if (msgFeesBuilder_ != null) {
+          return msgFeesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(msgFees_);
+        }
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.EventMsgFee msg_fees = 1 [json_name = "msgFees", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee.Builder addMsgFeesBuilder() {
+        return getMsgFeesFieldBuilder().addBuilder(
+            com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.EventMsgFee msg_fees = 1 [json_name = "msgFees", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee.Builder addMsgFeesBuilder(
+          int index) {
+        return getMsgFeesFieldBuilder().addBuilder(
+            index, com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.EventMsgFee msg_fees = 1 [json_name = "msgFees", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee.Builder> 
+           getMsgFeesBuilderList() {
+        return getMsgFeesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee, com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee.Builder, com.provenance.msgfees.v1.MsgfeesProto.EventMsgFeeOrBuilder> 
+          getMsgFeesFieldBuilder() {
+        if (msgFeesBuilder_ == null) {
+          msgFeesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee, com.provenance.msgfees.v1.MsgfeesProto.EventMsgFee.Builder, com.provenance.msgfees.v1.MsgfeesProto.EventMsgFeeOrBuilder>(
+                  msgFees_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          msgFees_ = null;
+        }
+        return msgFeesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.msgfees.v1.EventMsgFees)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.msgfees.v1.EventMsgFees)
+    private static final com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees();
+    }
+
+    public static com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventMsgFees>
+        PARSER = new com.google.protobuf.AbstractParser<EventMsgFees>() {
+      @java.lang.Override
+      public EventMsgFees parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventMsgFees> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventMsgFees> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.msgfees.v1.MsgfeesProto.EventMsgFees getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_msgfees_v1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_msgfees_v1_Params_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_msgfees_v1_MsgFee_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_msgfees_v1_MsgFee_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_msgfees_v1_EventMsgFee_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_msgfees_v1_EventMsgFee_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_msgfees_v1_EventMsgFees_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_msgfees_v1_EventMsgFees_fieldAccessorTable;
 
@@ -61,7 +3902,7 @@ public final class MsgfeesProto {
       "t\030\004 \001(\tR\trecipient\"S\n\014EventMsgFees\022C\n\010ms" +
       "g_fees\030\001 \003(\0132\".provenance.msgfees.v1.Eve" +
       "ntMsgFeeB\004\310\336\037\000R\007msgFeesB\324\001\n\031com.provenan" +
-      "ce.msgfees.v1B\014MsgfeesProtoP\001Z3github.co" +
+      "ce.msgfees.v1B\014MsgfeesProtoP\000Z3github.co" +
       "m/provenance-io/provenance/x/msgfees/typ" +
       "es\242\002\003PMX\252\002\025Provenance.Msgfees.V1\312\002\025Prove" +
       "nance\\Msgfees\\V1\342\002!Provenance\\Msgfees\\V1" +

@@ -14,69 +14,12210 @@ public final class TofndProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface RecoverRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.tss.tofnd.v1beta1.RecoverRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.axelar.tss.tofnd.v1beta1.KeygenInit keygen_init = 1 [json_name = "keygenInit"];</code>
+     * @return Whether the keygenInit field is set.
+     */
+    boolean hasKeygenInit();
+    /**
+     * <code>.axelar.tss.tofnd.v1beta1.KeygenInit keygen_init = 1 [json_name = "keygenInit"];</code>
+     * @return The keygenInit.
+     */
+    com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit getKeygenInit();
+    /**
+     * <code>.axelar.tss.tofnd.v1beta1.KeygenInit keygen_init = 1 [json_name = "keygenInit"];</code>
+     */
+    com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInitOrBuilder getKeygenInitOrBuilder();
+
+    /**
+     * <code>.axelar.tss.tofnd.v1beta1.KeygenOutput keygen_output = 2 [json_name = "keygenOutput"];</code>
+     * @return Whether the keygenOutput field is set.
+     */
+    boolean hasKeygenOutput();
+    /**
+     * <code>.axelar.tss.tofnd.v1beta1.KeygenOutput keygen_output = 2 [json_name = "keygenOutput"];</code>
+     * @return The keygenOutput.
+     */
+    com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput getKeygenOutput();
+    /**
+     * <code>.axelar.tss.tofnd.v1beta1.KeygenOutput keygen_output = 2 [json_name = "keygenOutput"];</code>
+     */
+    com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutputOrBuilder getKeygenOutputOrBuilder();
+  }
+  /**
+   * Protobuf type {@code axelar.tss.tofnd.v1beta1.RecoverRequest}
+   */
+  public static final class RecoverRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.tss.tofnd.v1beta1.RecoverRequest)
+      RecoverRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RecoverRequest.newBuilder() to construct.
+    private RecoverRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RecoverRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RecoverRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_RecoverRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_RecoverRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest.class, com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest.Builder.class);
+    }
+
+    public static final int KEYGEN_INIT_FIELD_NUMBER = 1;
+    private com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit keygenInit_;
+    /**
+     * <code>.axelar.tss.tofnd.v1beta1.KeygenInit keygen_init = 1 [json_name = "keygenInit"];</code>
+     * @return Whether the keygenInit field is set.
+     */
+    @java.lang.Override
+    public boolean hasKeygenInit() {
+      return keygenInit_ != null;
+    }
+    /**
+     * <code>.axelar.tss.tofnd.v1beta1.KeygenInit keygen_init = 1 [json_name = "keygenInit"];</code>
+     * @return The keygenInit.
+     */
+    @java.lang.Override
+    public com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit getKeygenInit() {
+      return keygenInit_ == null ? com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit.getDefaultInstance() : keygenInit_;
+    }
+    /**
+     * <code>.axelar.tss.tofnd.v1beta1.KeygenInit keygen_init = 1 [json_name = "keygenInit"];</code>
+     */
+    @java.lang.Override
+    public com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInitOrBuilder getKeygenInitOrBuilder() {
+      return keygenInit_ == null ? com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit.getDefaultInstance() : keygenInit_;
+    }
+
+    public static final int KEYGEN_OUTPUT_FIELD_NUMBER = 2;
+    private com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput keygenOutput_;
+    /**
+     * <code>.axelar.tss.tofnd.v1beta1.KeygenOutput keygen_output = 2 [json_name = "keygenOutput"];</code>
+     * @return Whether the keygenOutput field is set.
+     */
+    @java.lang.Override
+    public boolean hasKeygenOutput() {
+      return keygenOutput_ != null;
+    }
+    /**
+     * <code>.axelar.tss.tofnd.v1beta1.KeygenOutput keygen_output = 2 [json_name = "keygenOutput"];</code>
+     * @return The keygenOutput.
+     */
+    @java.lang.Override
+    public com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput getKeygenOutput() {
+      return keygenOutput_ == null ? com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput.getDefaultInstance() : keygenOutput_;
+    }
+    /**
+     * <code>.axelar.tss.tofnd.v1beta1.KeygenOutput keygen_output = 2 [json_name = "keygenOutput"];</code>
+     */
+    @java.lang.Override
+    public com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutputOrBuilder getKeygenOutputOrBuilder() {
+      return keygenOutput_ == null ? com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput.getDefaultInstance() : keygenOutput_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (keygenInit_ != null) {
+        output.writeMessage(1, getKeygenInit());
+      }
+      if (keygenOutput_ != null) {
+        output.writeMessage(2, getKeygenOutput());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (keygenInit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getKeygenInit());
+      }
+      if (keygenOutput_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getKeygenOutput());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest)) {
+        return super.equals(obj);
+      }
+      com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest other = (com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest) obj;
+
+      if (hasKeygenInit() != other.hasKeygenInit()) return false;
+      if (hasKeygenInit()) {
+        if (!getKeygenInit()
+            .equals(other.getKeygenInit())) return false;
+      }
+      if (hasKeygenOutput() != other.hasKeygenOutput()) return false;
+      if (hasKeygenOutput()) {
+        if (!getKeygenOutput()
+            .equals(other.getKeygenOutput())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasKeygenInit()) {
+        hash = (37 * hash) + KEYGEN_INIT_FIELD_NUMBER;
+        hash = (53 * hash) + getKeygenInit().hashCode();
+      }
+      if (hasKeygenOutput()) {
+        hash = (37 * hash) + KEYGEN_OUTPUT_FIELD_NUMBER;
+        hash = (53 * hash) + getKeygenOutput().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.tss.tofnd.v1beta1.RecoverRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.tss.tofnd.v1beta1.RecoverRequest)
+        com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_RecoverRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_RecoverRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest.class, com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest.Builder.class);
+      }
+
+      // Construct using com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        keygenInit_ = null;
+        if (keygenInitBuilder_ != null) {
+          keygenInitBuilder_.dispose();
+          keygenInitBuilder_ = null;
+        }
+        keygenOutput_ = null;
+        if (keygenOutputBuilder_ != null) {
+          keygenOutputBuilder_.dispose();
+          keygenOutputBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_RecoverRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest getDefaultInstanceForType() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest build() {
+        com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest buildPartial() {
+        com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest result = new com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.keygenInit_ = keygenInitBuilder_ == null
+              ? keygenInit_
+              : keygenInitBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.keygenOutput_ = keygenOutputBuilder_ == null
+              ? keygenOutput_
+              : keygenOutputBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest) {
+          return mergeFrom((com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest other) {
+        if (other == com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest.getDefaultInstance()) return this;
+        if (other.hasKeygenInit()) {
+          mergeKeygenInit(other.getKeygenInit());
+        }
+        if (other.hasKeygenOutput()) {
+          mergeKeygenOutput(other.getKeygenOutput());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getKeygenInitFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getKeygenOutputFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit keygenInit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit, com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInitOrBuilder> keygenInitBuilder_;
+      /**
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenInit keygen_init = 1 [json_name = "keygenInit"];</code>
+       * @return Whether the keygenInit field is set.
+       */
+      public boolean hasKeygenInit() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenInit keygen_init = 1 [json_name = "keygenInit"];</code>
+       * @return The keygenInit.
+       */
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit getKeygenInit() {
+        if (keygenInitBuilder_ == null) {
+          return keygenInit_ == null ? com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit.getDefaultInstance() : keygenInit_;
+        } else {
+          return keygenInitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenInit keygen_init = 1 [json_name = "keygenInit"];</code>
+       */
+      public Builder setKeygenInit(com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit value) {
+        if (keygenInitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          keygenInit_ = value;
+        } else {
+          keygenInitBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenInit keygen_init = 1 [json_name = "keygenInit"];</code>
+       */
+      public Builder setKeygenInit(
+          com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit.Builder builderForValue) {
+        if (keygenInitBuilder_ == null) {
+          keygenInit_ = builderForValue.build();
+        } else {
+          keygenInitBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenInit keygen_init = 1 [json_name = "keygenInit"];</code>
+       */
+      public Builder mergeKeygenInit(com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit value) {
+        if (keygenInitBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            keygenInit_ != null &&
+            keygenInit_ != com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit.getDefaultInstance()) {
+            getKeygenInitBuilder().mergeFrom(value);
+          } else {
+            keygenInit_ = value;
+          }
+        } else {
+          keygenInitBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenInit keygen_init = 1 [json_name = "keygenInit"];</code>
+       */
+      public Builder clearKeygenInit() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        keygenInit_ = null;
+        if (keygenInitBuilder_ != null) {
+          keygenInitBuilder_.dispose();
+          keygenInitBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenInit keygen_init = 1 [json_name = "keygenInit"];</code>
+       */
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit.Builder getKeygenInitBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getKeygenInitFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenInit keygen_init = 1 [json_name = "keygenInit"];</code>
+       */
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInitOrBuilder getKeygenInitOrBuilder() {
+        if (keygenInitBuilder_ != null) {
+          return keygenInitBuilder_.getMessageOrBuilder();
+        } else {
+          return keygenInit_ == null ?
+              com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit.getDefaultInstance() : keygenInit_;
+        }
+      }
+      /**
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenInit keygen_init = 1 [json_name = "keygenInit"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit, com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInitOrBuilder> 
+          getKeygenInitFieldBuilder() {
+        if (keygenInitBuilder_ == null) {
+          keygenInitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit, com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInitOrBuilder>(
+                  getKeygenInit(),
+                  getParentForChildren(),
+                  isClean());
+          keygenInit_ = null;
+        }
+        return keygenInitBuilder_;
+      }
+
+      private com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput keygenOutput_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput, com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutputOrBuilder> keygenOutputBuilder_;
+      /**
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenOutput keygen_output = 2 [json_name = "keygenOutput"];</code>
+       * @return Whether the keygenOutput field is set.
+       */
+      public boolean hasKeygenOutput() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenOutput keygen_output = 2 [json_name = "keygenOutput"];</code>
+       * @return The keygenOutput.
+       */
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput getKeygenOutput() {
+        if (keygenOutputBuilder_ == null) {
+          return keygenOutput_ == null ? com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput.getDefaultInstance() : keygenOutput_;
+        } else {
+          return keygenOutputBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenOutput keygen_output = 2 [json_name = "keygenOutput"];</code>
+       */
+      public Builder setKeygenOutput(com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput value) {
+        if (keygenOutputBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          keygenOutput_ = value;
+        } else {
+          keygenOutputBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenOutput keygen_output = 2 [json_name = "keygenOutput"];</code>
+       */
+      public Builder setKeygenOutput(
+          com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput.Builder builderForValue) {
+        if (keygenOutputBuilder_ == null) {
+          keygenOutput_ = builderForValue.build();
+        } else {
+          keygenOutputBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenOutput keygen_output = 2 [json_name = "keygenOutput"];</code>
+       */
+      public Builder mergeKeygenOutput(com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput value) {
+        if (keygenOutputBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            keygenOutput_ != null &&
+            keygenOutput_ != com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput.getDefaultInstance()) {
+            getKeygenOutputBuilder().mergeFrom(value);
+          } else {
+            keygenOutput_ = value;
+          }
+        } else {
+          keygenOutputBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenOutput keygen_output = 2 [json_name = "keygenOutput"];</code>
+       */
+      public Builder clearKeygenOutput() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        keygenOutput_ = null;
+        if (keygenOutputBuilder_ != null) {
+          keygenOutputBuilder_.dispose();
+          keygenOutputBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenOutput keygen_output = 2 [json_name = "keygenOutput"];</code>
+       */
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput.Builder getKeygenOutputBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getKeygenOutputFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenOutput keygen_output = 2 [json_name = "keygenOutput"];</code>
+       */
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutputOrBuilder getKeygenOutputOrBuilder() {
+        if (keygenOutputBuilder_ != null) {
+          return keygenOutputBuilder_.getMessageOrBuilder();
+        } else {
+          return keygenOutput_ == null ?
+              com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput.getDefaultInstance() : keygenOutput_;
+        }
+      }
+      /**
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenOutput keygen_output = 2 [json_name = "keygenOutput"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput, com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutputOrBuilder> 
+          getKeygenOutputFieldBuilder() {
+        if (keygenOutputBuilder_ == null) {
+          keygenOutputBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput, com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutputOrBuilder>(
+                  getKeygenOutput(),
+                  getParentForChildren(),
+                  isClean());
+          keygenOutput_ = null;
+        }
+        return keygenOutputBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.tss.tofnd.v1beta1.RecoverRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.tss.tofnd.v1beta1.RecoverRequest)
+    private static final com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest();
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RecoverRequest>
+        PARSER = new com.google.protobuf.AbstractParser<RecoverRequest>() {
+      @java.lang.Override
+      public RecoverRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RecoverRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RecoverRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RecoverResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.tss.tofnd.v1beta1.RecoverResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.axelar.tss.tofnd.v1beta1.RecoverResponse.Response response = 1 [json_name = "response"];</code>
+     * @return The enum numeric value on the wire for response.
+     */
+    int getResponseValue();
+    /**
+     * <code>.axelar.tss.tofnd.v1beta1.RecoverResponse.Response response = 1 [json_name = "response"];</code>
+     * @return The response.
+     */
+    com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse.Response getResponse();
+  }
+  /**
+   * Protobuf type {@code axelar.tss.tofnd.v1beta1.RecoverResponse}
+   */
+  public static final class RecoverResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.tss.tofnd.v1beta1.RecoverResponse)
+      RecoverResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RecoverResponse.newBuilder() to construct.
+    private RecoverResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RecoverResponse() {
+      response_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RecoverResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_RecoverResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_RecoverResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse.class, com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code axelar.tss.tofnd.v1beta1.RecoverResponse.Response}
+     */
+    public enum Response
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>RESPONSE_UNSPECIFIED = 0;</code>
+       */
+      RESPONSE_UNSPECIFIED(0),
+      /**
+       * <code>RESPONSE_SUCCESS = 1;</code>
+       */
+      RESPONSE_SUCCESS(1),
+      /**
+       * <code>RESPONSE_FAIL = 2;</code>
+       */
+      RESPONSE_FAIL(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>RESPONSE_UNSPECIFIED = 0;</code>
+       */
+      public static final int RESPONSE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>RESPONSE_SUCCESS = 1;</code>
+       */
+      public static final int RESPONSE_SUCCESS_VALUE = 1;
+      /**
+       * <code>RESPONSE_FAIL = 2;</code>
+       */
+      public static final int RESPONSE_FAIL_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Response valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Response forNumber(int value) {
+        switch (value) {
+          case 0: return RESPONSE_UNSPECIFIED;
+          case 1: return RESPONSE_SUCCESS;
+          case 2: return RESPONSE_FAIL;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Response>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Response> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Response>() {
+              public Response findValueByNumber(int number) {
+                return Response.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Response[] VALUES = values();
+
+      public static Response valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Response(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:axelar.tss.tofnd.v1beta1.RecoverResponse.Response)
+    }
+
+    public static final int RESPONSE_FIELD_NUMBER = 1;
+    private int response_ = 0;
+    /**
+     * <code>.axelar.tss.tofnd.v1beta1.RecoverResponse.Response response = 1 [json_name = "response"];</code>
+     * @return The enum numeric value on the wire for response.
+     */
+    @java.lang.Override public int getResponseValue() {
+      return response_;
+    }
+    /**
+     * <code>.axelar.tss.tofnd.v1beta1.RecoverResponse.Response response = 1 [json_name = "response"];</code>
+     * @return The response.
+     */
+    @java.lang.Override public com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse.Response getResponse() {
+      com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse.Response result = com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse.Response.forNumber(response_);
+      return result == null ? com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse.Response.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (response_ != com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse.Response.RESPONSE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, response_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (response_ != com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse.Response.RESPONSE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, response_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse)) {
+        return super.equals(obj);
+      }
+      com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse other = (com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse) obj;
+
+      if (response_ != other.response_) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RESPONSE_FIELD_NUMBER;
+      hash = (53 * hash) + response_;
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.tss.tofnd.v1beta1.RecoverResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.tss.tofnd.v1beta1.RecoverResponse)
+        com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_RecoverResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_RecoverResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse.class, com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse.Builder.class);
+      }
+
+      // Construct using com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        response_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_RecoverResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse getDefaultInstanceForType() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse build() {
+        com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse buildPartial() {
+        com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse result = new com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.response_ = response_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse) {
+          return mergeFrom((com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse other) {
+        if (other == com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse.getDefaultInstance()) return this;
+        if (other.response_ != 0) {
+          setResponseValue(other.getResponseValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                response_ = input.readEnum();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int response_ = 0;
+      /**
+       * <code>.axelar.tss.tofnd.v1beta1.RecoverResponse.Response response = 1 [json_name = "response"];</code>
+       * @return The enum numeric value on the wire for response.
+       */
+      @java.lang.Override public int getResponseValue() {
+        return response_;
+      }
+      /**
+       * <code>.axelar.tss.tofnd.v1beta1.RecoverResponse.Response response = 1 [json_name = "response"];</code>
+       * @param value The enum numeric value on the wire for response to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResponseValue(int value) {
+        response_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.tss.tofnd.v1beta1.RecoverResponse.Response response = 1 [json_name = "response"];</code>
+       * @return The response.
+       */
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse.Response getResponse() {
+        com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse.Response result = com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse.Response.forNumber(response_);
+        return result == null ? com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse.Response.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.axelar.tss.tofnd.v1beta1.RecoverResponse.Response response = 1 [json_name = "response"];</code>
+       * @param value The response to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResponse(com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse.Response value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        response_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.tss.tofnd.v1beta1.RecoverResponse.Response response = 1 [json_name = "response"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResponse() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        response_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.tss.tofnd.v1beta1.RecoverResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.tss.tofnd.v1beta1.RecoverResponse)
+    private static final com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse();
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RecoverResponse>
+        PARSER = new com.google.protobuf.AbstractParser<RecoverResponse>() {
+      @java.lang.Override
+      public RecoverResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RecoverResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RecoverResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.tss.tofnd.v1beta1.TofndProto.RecoverResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface KeygenOutputOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.tss.tofnd.v1beta1.KeygenOutput)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * pub_key; common for all parties
+     * </pre>
+     *
+     * <code>bytes pub_key = 1 [json_name = "pubKey"];</code>
+     * @return The pubKey.
+     */
+    com.google.protobuf.ByteString getPubKey();
+
+    /**
+     * <pre>
+     * recover info of all parties' shares; common for all parties
+     * </pre>
+     *
+     * <code>bytes group_recover_info = 2 [json_name = "groupRecoverInfo"];</code>
+     * @return The groupRecoverInfo.
+     */
+    com.google.protobuf.ByteString getGroupRecoverInfo();
+
+    /**
+     * <pre>
+     * private recover info of this party's shares; unique for each party
+     * </pre>
+     *
+     * <code>bytes private_recover_info = 3 [json_name = "privateRecoverInfo"];</code>
+     * @return The privateRecoverInfo.
+     */
+    com.google.protobuf.ByteString getPrivateRecoverInfo();
+  }
+  /**
+   * <pre>
+   * Keygen's success response
+   * </pre>
+   *
+   * Protobuf type {@code axelar.tss.tofnd.v1beta1.KeygenOutput}
+   */
+  public static final class KeygenOutput extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.tss.tofnd.v1beta1.KeygenOutput)
+      KeygenOutputOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use KeygenOutput.newBuilder() to construct.
+    private KeygenOutput(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private KeygenOutput() {
+      pubKey_ = com.google.protobuf.ByteString.EMPTY;
+      groupRecoverInfo_ = com.google.protobuf.ByteString.EMPTY;
+      privateRecoverInfo_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new KeygenOutput();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_KeygenOutput_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_KeygenOutput_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput.class, com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput.Builder.class);
+    }
+
+    public static final int PUB_KEY_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString pubKey_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * pub_key; common for all parties
+     * </pre>
+     *
+     * <code>bytes pub_key = 1 [json_name = "pubKey"];</code>
+     * @return The pubKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getPubKey() {
+      return pubKey_;
+    }
+
+    public static final int GROUP_RECOVER_INFO_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString groupRecoverInfo_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * recover info of all parties' shares; common for all parties
+     * </pre>
+     *
+     * <code>bytes group_recover_info = 2 [json_name = "groupRecoverInfo"];</code>
+     * @return The groupRecoverInfo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getGroupRecoverInfo() {
+      return groupRecoverInfo_;
+    }
+
+    public static final int PRIVATE_RECOVER_INFO_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString privateRecoverInfo_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * private recover info of this party's shares; unique for each party
+     * </pre>
+     *
+     * <code>bytes private_recover_info = 3 [json_name = "privateRecoverInfo"];</code>
+     * @return The privateRecoverInfo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getPrivateRecoverInfo() {
+      return privateRecoverInfo_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!pubKey_.isEmpty()) {
+        output.writeBytes(1, pubKey_);
+      }
+      if (!groupRecoverInfo_.isEmpty()) {
+        output.writeBytes(2, groupRecoverInfo_);
+      }
+      if (!privateRecoverInfo_.isEmpty()) {
+        output.writeBytes(3, privateRecoverInfo_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!pubKey_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, pubKey_);
+      }
+      if (!groupRecoverInfo_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, groupRecoverInfo_);
+      }
+      if (!privateRecoverInfo_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, privateRecoverInfo_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput)) {
+        return super.equals(obj);
+      }
+      com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput other = (com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput) obj;
+
+      if (!getPubKey()
+          .equals(other.getPubKey())) return false;
+      if (!getGroupRecoverInfo()
+          .equals(other.getGroupRecoverInfo())) return false;
+      if (!getPrivateRecoverInfo()
+          .equals(other.getPrivateRecoverInfo())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PUB_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getPubKey().hashCode();
+      hash = (37 * hash) + GROUP_RECOVER_INFO_FIELD_NUMBER;
+      hash = (53 * hash) + getGroupRecoverInfo().hashCode();
+      hash = (37 * hash) + PRIVATE_RECOVER_INFO_FIELD_NUMBER;
+      hash = (53 * hash) + getPrivateRecoverInfo().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Keygen's success response
+     * </pre>
+     *
+     * Protobuf type {@code axelar.tss.tofnd.v1beta1.KeygenOutput}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.tss.tofnd.v1beta1.KeygenOutput)
+        com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutputOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_KeygenOutput_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_KeygenOutput_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput.class, com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput.Builder.class);
+      }
+
+      // Construct using com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pubKey_ = com.google.protobuf.ByteString.EMPTY;
+        groupRecoverInfo_ = com.google.protobuf.ByteString.EMPTY;
+        privateRecoverInfo_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_KeygenOutput_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput getDefaultInstanceForType() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput build() {
+        com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput buildPartial() {
+        com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput result = new com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pubKey_ = pubKey_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.groupRecoverInfo_ = groupRecoverInfo_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.privateRecoverInfo_ = privateRecoverInfo_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput) {
+          return mergeFrom((com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput other) {
+        if (other == com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput.getDefaultInstance()) return this;
+        if (other.getPubKey() != com.google.protobuf.ByteString.EMPTY) {
+          setPubKey(other.getPubKey());
+        }
+        if (other.getGroupRecoverInfo() != com.google.protobuf.ByteString.EMPTY) {
+          setGroupRecoverInfo(other.getGroupRecoverInfo());
+        }
+        if (other.getPrivateRecoverInfo() != com.google.protobuf.ByteString.EMPTY) {
+          setPrivateRecoverInfo(other.getPrivateRecoverInfo());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                pubKey_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                groupRecoverInfo_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                privateRecoverInfo_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString pubKey_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * pub_key; common for all parties
+       * </pre>
+       *
+       * <code>bytes pub_key = 1 [json_name = "pubKey"];</code>
+       * @return The pubKey.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getPubKey() {
+        return pubKey_;
+      }
+      /**
+       * <pre>
+       * pub_key; common for all parties
+       * </pre>
+       *
+       * <code>bytes pub_key = 1 [json_name = "pubKey"];</code>
+       * @param value The pubKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPubKey(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        pubKey_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pub_key; common for all parties
+       * </pre>
+       *
+       * <code>bytes pub_key = 1 [json_name = "pubKey"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPubKey() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pubKey_ = getDefaultInstance().getPubKey();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString groupRecoverInfo_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * recover info of all parties' shares; common for all parties
+       * </pre>
+       *
+       * <code>bytes group_recover_info = 2 [json_name = "groupRecoverInfo"];</code>
+       * @return The groupRecoverInfo.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getGroupRecoverInfo() {
+        return groupRecoverInfo_;
+      }
+      /**
+       * <pre>
+       * recover info of all parties' shares; common for all parties
+       * </pre>
+       *
+       * <code>bytes group_recover_info = 2 [json_name = "groupRecoverInfo"];</code>
+       * @param value The groupRecoverInfo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupRecoverInfo(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        groupRecoverInfo_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * recover info of all parties' shares; common for all parties
+       * </pre>
+       *
+       * <code>bytes group_recover_info = 2 [json_name = "groupRecoverInfo"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGroupRecoverInfo() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        groupRecoverInfo_ = getDefaultInstance().getGroupRecoverInfo();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString privateRecoverInfo_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * private recover info of this party's shares; unique for each party
+       * </pre>
+       *
+       * <code>bytes private_recover_info = 3 [json_name = "privateRecoverInfo"];</code>
+       * @return The privateRecoverInfo.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getPrivateRecoverInfo() {
+        return privateRecoverInfo_;
+      }
+      /**
+       * <pre>
+       * private recover info of this party's shares; unique for each party
+       * </pre>
+       *
+       * <code>bytes private_recover_info = 3 [json_name = "privateRecoverInfo"];</code>
+       * @param value The privateRecoverInfo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateRecoverInfo(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        privateRecoverInfo_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * private recover info of this party's shares; unique for each party
+       * </pre>
+       *
+       * <code>bytes private_recover_info = 3 [json_name = "privateRecoverInfo"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrivateRecoverInfo() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        privateRecoverInfo_ = getDefaultInstance().getPrivateRecoverInfo();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.tss.tofnd.v1beta1.KeygenOutput)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.tss.tofnd.v1beta1.KeygenOutput)
+    private static final com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput();
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<KeygenOutput>
+        PARSER = new com.google.protobuf.AbstractParser<KeygenOutput>() {
+      @java.lang.Override
+      public KeygenOutput parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<KeygenOutput> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<KeygenOutput> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MessageInOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.tss.tofnd.v1beta1.MessageIn)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * first message only, Keygen
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.KeygenInit keygen_init = 1 [json_name = "keygenInit"];</code>
+     * @return Whether the keygenInit field is set.
+     */
+    boolean hasKeygenInit();
+    /**
+     * <pre>
+     * first message only, Keygen
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.KeygenInit keygen_init = 1 [json_name = "keygenInit"];</code>
+     * @return The keygenInit.
+     */
+    com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit getKeygenInit();
+    /**
+     * <pre>
+     * first message only, Keygen
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.KeygenInit keygen_init = 1 [json_name = "keygenInit"];</code>
+     */
+    com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInitOrBuilder getKeygenInitOrBuilder();
+
+    /**
+     * <pre>
+     * first message only, Sign
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.SignInit sign_init = 2 [json_name = "signInit"];</code>
+     * @return Whether the signInit field is set.
+     */
+    boolean hasSignInit();
+    /**
+     * <pre>
+     * first message only, Sign
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.SignInit sign_init = 2 [json_name = "signInit"];</code>
+     * @return The signInit.
+     */
+    com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit getSignInit();
+    /**
+     * <pre>
+     * first message only, Sign
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.SignInit sign_init = 2 [json_name = "signInit"];</code>
+     */
+    com.axelar.tss.tofnd.v1beta1.TofndProto.SignInitOrBuilder getSignInitOrBuilder();
+
+    /**
+     * <pre>
+     * all subsequent messages
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.TrafficIn traffic = 3 [json_name = "traffic"];</code>
+     * @return Whether the traffic field is set.
+     */
+    boolean hasTraffic();
+    /**
+     * <pre>
+     * all subsequent messages
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.TrafficIn traffic = 3 [json_name = "traffic"];</code>
+     * @return The traffic.
+     */
+    com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn getTraffic();
+    /**
+     * <pre>
+     * all subsequent messages
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.TrafficIn traffic = 3 [json_name = "traffic"];</code>
+     */
+    com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficInOrBuilder getTrafficOrBuilder();
+
+    /**
+     * <pre>
+     * abort the protocol, ignore the bool value
+     * </pre>
+     *
+     * <code>bool abort = 4 [json_name = "abort"];</code>
+     * @return Whether the abort field is set.
+     */
+    boolean hasAbort();
+    /**
+     * <pre>
+     * abort the protocol, ignore the bool value
+     * </pre>
+     *
+     * <code>bool abort = 4 [json_name = "abort"];</code>
+     * @return The abort.
+     */
+    boolean getAbort();
+
+    com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn.DataCase getDataCase();
+  }
+  /**
+   * Protobuf type {@code axelar.tss.tofnd.v1beta1.MessageIn}
+   */
+  public static final class MessageIn extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.tss.tofnd.v1beta1.MessageIn)
+      MessageInOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MessageIn.newBuilder() to construct.
+    private MessageIn(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MessageIn() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MessageIn();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_MessageIn_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_MessageIn_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn.class, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn.Builder.class);
+    }
+
+    private int dataCase_ = 0;
+    @SuppressWarnings("serial")
+    private java.lang.Object data_;
+    public enum DataCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      KEYGEN_INIT(1),
+      SIGN_INIT(2),
+      TRAFFIC(3),
+      ABORT(4),
+      DATA_NOT_SET(0);
+      private final int value;
+      private DataCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static DataCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static DataCase forNumber(int value) {
+        switch (value) {
+          case 1: return KEYGEN_INIT;
+          case 2: return SIGN_INIT;
+          case 3: return TRAFFIC;
+          case 4: return ABORT;
+          case 0: return DATA_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public DataCase
+    getDataCase() {
+      return DataCase.forNumber(
+          dataCase_);
+    }
+
+    public static final int KEYGEN_INIT_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * first message only, Keygen
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.KeygenInit keygen_init = 1 [json_name = "keygenInit"];</code>
+     * @return Whether the keygenInit field is set.
+     */
+    @java.lang.Override
+    public boolean hasKeygenInit() {
+      return dataCase_ == 1;
+    }
+    /**
+     * <pre>
+     * first message only, Keygen
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.KeygenInit keygen_init = 1 [json_name = "keygenInit"];</code>
+     * @return The keygenInit.
+     */
+    @java.lang.Override
+    public com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit getKeygenInit() {
+      if (dataCase_ == 1) {
+         return (com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit) data_;
+      }
+      return com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * first message only, Keygen
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.KeygenInit keygen_init = 1 [json_name = "keygenInit"];</code>
+     */
+    @java.lang.Override
+    public com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInitOrBuilder getKeygenInitOrBuilder() {
+      if (dataCase_ == 1) {
+         return (com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit) data_;
+      }
+      return com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit.getDefaultInstance();
+    }
+
+    public static final int SIGN_INIT_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * first message only, Sign
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.SignInit sign_init = 2 [json_name = "signInit"];</code>
+     * @return Whether the signInit field is set.
+     */
+    @java.lang.Override
+    public boolean hasSignInit() {
+      return dataCase_ == 2;
+    }
+    /**
+     * <pre>
+     * first message only, Sign
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.SignInit sign_init = 2 [json_name = "signInit"];</code>
+     * @return The signInit.
+     */
+    @java.lang.Override
+    public com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit getSignInit() {
+      if (dataCase_ == 2) {
+         return (com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit) data_;
+      }
+      return com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * first message only, Sign
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.SignInit sign_init = 2 [json_name = "signInit"];</code>
+     */
+    @java.lang.Override
+    public com.axelar.tss.tofnd.v1beta1.TofndProto.SignInitOrBuilder getSignInitOrBuilder() {
+      if (dataCase_ == 2) {
+         return (com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit) data_;
+      }
+      return com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit.getDefaultInstance();
+    }
+
+    public static final int TRAFFIC_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * all subsequent messages
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.TrafficIn traffic = 3 [json_name = "traffic"];</code>
+     * @return Whether the traffic field is set.
+     */
+    @java.lang.Override
+    public boolean hasTraffic() {
+      return dataCase_ == 3;
+    }
+    /**
+     * <pre>
+     * all subsequent messages
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.TrafficIn traffic = 3 [json_name = "traffic"];</code>
+     * @return The traffic.
+     */
+    @java.lang.Override
+    public com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn getTraffic() {
+      if (dataCase_ == 3) {
+         return (com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn) data_;
+      }
+      return com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * all subsequent messages
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.TrafficIn traffic = 3 [json_name = "traffic"];</code>
+     */
+    @java.lang.Override
+    public com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficInOrBuilder getTrafficOrBuilder() {
+      if (dataCase_ == 3) {
+         return (com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn) data_;
+      }
+      return com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn.getDefaultInstance();
+    }
+
+    public static final int ABORT_FIELD_NUMBER = 4;
+    /**
+     * <pre>
+     * abort the protocol, ignore the bool value
+     * </pre>
+     *
+     * <code>bool abort = 4 [json_name = "abort"];</code>
+     * @return Whether the abort field is set.
+     */
+    @java.lang.Override
+    public boolean hasAbort() {
+      return dataCase_ == 4;
+    }
+    /**
+     * <pre>
+     * abort the protocol, ignore the bool value
+     * </pre>
+     *
+     * <code>bool abort = 4 [json_name = "abort"];</code>
+     * @return The abort.
+     */
+    @java.lang.Override
+    public boolean getAbort() {
+      if (dataCase_ == 4) {
+        return (java.lang.Boolean) data_;
+      }
+      return false;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (dataCase_ == 1) {
+        output.writeMessage(1, (com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit) data_);
+      }
+      if (dataCase_ == 2) {
+        output.writeMessage(2, (com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit) data_);
+      }
+      if (dataCase_ == 3) {
+        output.writeMessage(3, (com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn) data_);
+      }
+      if (dataCase_ == 4) {
+        output.writeBool(
+            4, (boolean)((java.lang.Boolean) data_));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (dataCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit) data_);
+      }
+      if (dataCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit) data_);
+      }
+      if (dataCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn) data_);
+      }
+      if (dataCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(
+              4, (boolean)((java.lang.Boolean) data_));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn)) {
+        return super.equals(obj);
+      }
+      com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn other = (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn) obj;
+
+      if (!getDataCase().equals(other.getDataCase())) return false;
+      switch (dataCase_) {
+        case 1:
+          if (!getKeygenInit()
+              .equals(other.getKeygenInit())) return false;
+          break;
+        case 2:
+          if (!getSignInit()
+              .equals(other.getSignInit())) return false;
+          break;
+        case 3:
+          if (!getTraffic()
+              .equals(other.getTraffic())) return false;
+          break;
+        case 4:
+          if (getAbort()
+              != other.getAbort()) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (dataCase_) {
+        case 1:
+          hash = (37 * hash) + KEYGEN_INIT_FIELD_NUMBER;
+          hash = (53 * hash) + getKeygenInit().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + SIGN_INIT_FIELD_NUMBER;
+          hash = (53 * hash) + getSignInit().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + TRAFFIC_FIELD_NUMBER;
+          hash = (53 * hash) + getTraffic().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + ABORT_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getAbort());
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.tss.tofnd.v1beta1.MessageIn}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.tss.tofnd.v1beta1.MessageIn)
+        com.axelar.tss.tofnd.v1beta1.TofndProto.MessageInOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_MessageIn_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_MessageIn_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn.class, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn.Builder.class);
+      }
+
+      // Construct using com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (keygenInitBuilder_ != null) {
+          keygenInitBuilder_.clear();
+        }
+        if (signInitBuilder_ != null) {
+          signInitBuilder_.clear();
+        }
+        if (trafficBuilder_ != null) {
+          trafficBuilder_.clear();
+        }
+        dataCase_ = 0;
+        data_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_MessageIn_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn getDefaultInstanceForType() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn build() {
+        com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn buildPartial() {
+        com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn result = new com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      private void buildPartialOneofs(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn result) {
+        result.dataCase_ = dataCase_;
+        result.data_ = this.data_;
+        if (dataCase_ == 1 &&
+            keygenInitBuilder_ != null) {
+          result.data_ = keygenInitBuilder_.build();
+        }
+        if (dataCase_ == 2 &&
+            signInitBuilder_ != null) {
+          result.data_ = signInitBuilder_.build();
+        }
+        if (dataCase_ == 3 &&
+            trafficBuilder_ != null) {
+          result.data_ = trafficBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn) {
+          return mergeFrom((com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn other) {
+        if (other == com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn.getDefaultInstance()) return this;
+        switch (other.getDataCase()) {
+          case KEYGEN_INIT: {
+            mergeKeygenInit(other.getKeygenInit());
+            break;
+          }
+          case SIGN_INIT: {
+            mergeSignInit(other.getSignInit());
+            break;
+          }
+          case TRAFFIC: {
+            mergeTraffic(other.getTraffic());
+            break;
+          }
+          case ABORT: {
+            setAbort(other.getAbort());
+            break;
+          }
+          case DATA_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getKeygenInitFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                dataCase_ = 1;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getSignInitFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                dataCase_ = 2;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getTrafficFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                dataCase_ = 3;
+                break;
+              } // case 26
+              case 32: {
+                data_ = input.readBool();
+                dataCase_ = 4;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int dataCase_ = 0;
+      private java.lang.Object data_;
+      public DataCase
+          getDataCase() {
+        return DataCase.forNumber(
+            dataCase_);
+      }
+
+      public Builder clearData() {
+        dataCase_ = 0;
+        data_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit, com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInitOrBuilder> keygenInitBuilder_;
+      /**
+       * <pre>
+       * first message only, Keygen
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenInit keygen_init = 1 [json_name = "keygenInit"];</code>
+       * @return Whether the keygenInit field is set.
+       */
+      @java.lang.Override
+      public boolean hasKeygenInit() {
+        return dataCase_ == 1;
+      }
+      /**
+       * <pre>
+       * first message only, Keygen
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenInit keygen_init = 1 [json_name = "keygenInit"];</code>
+       * @return The keygenInit.
+       */
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit getKeygenInit() {
+        if (keygenInitBuilder_ == null) {
+          if (dataCase_ == 1) {
+            return (com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit) data_;
+          }
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit.getDefaultInstance();
+        } else {
+          if (dataCase_ == 1) {
+            return keygenInitBuilder_.getMessage();
+          }
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * first message only, Keygen
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenInit keygen_init = 1 [json_name = "keygenInit"];</code>
+       */
+      public Builder setKeygenInit(com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit value) {
+        if (keygenInitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          data_ = value;
+          onChanged();
+        } else {
+          keygenInitBuilder_.setMessage(value);
+        }
+        dataCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * first message only, Keygen
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenInit keygen_init = 1 [json_name = "keygenInit"];</code>
+       */
+      public Builder setKeygenInit(
+          com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit.Builder builderForValue) {
+        if (keygenInitBuilder_ == null) {
+          data_ = builderForValue.build();
+          onChanged();
+        } else {
+          keygenInitBuilder_.setMessage(builderForValue.build());
+        }
+        dataCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * first message only, Keygen
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenInit keygen_init = 1 [json_name = "keygenInit"];</code>
+       */
+      public Builder mergeKeygenInit(com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit value) {
+        if (keygenInitBuilder_ == null) {
+          if (dataCase_ == 1 &&
+              data_ != com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit.getDefaultInstance()) {
+            data_ = com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit.newBuilder((com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit) data_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            data_ = value;
+          }
+          onChanged();
+        } else {
+          if (dataCase_ == 1) {
+            keygenInitBuilder_.mergeFrom(value);
+          } else {
+            keygenInitBuilder_.setMessage(value);
+          }
+        }
+        dataCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * first message only, Keygen
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenInit keygen_init = 1 [json_name = "keygenInit"];</code>
+       */
+      public Builder clearKeygenInit() {
+        if (keygenInitBuilder_ == null) {
+          if (dataCase_ == 1) {
+            dataCase_ = 0;
+            data_ = null;
+            onChanged();
+          }
+        } else {
+          if (dataCase_ == 1) {
+            dataCase_ = 0;
+            data_ = null;
+          }
+          keygenInitBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * first message only, Keygen
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenInit keygen_init = 1 [json_name = "keygenInit"];</code>
+       */
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit.Builder getKeygenInitBuilder() {
+        return getKeygenInitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * first message only, Keygen
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenInit keygen_init = 1 [json_name = "keygenInit"];</code>
+       */
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInitOrBuilder getKeygenInitOrBuilder() {
+        if ((dataCase_ == 1) && (keygenInitBuilder_ != null)) {
+          return keygenInitBuilder_.getMessageOrBuilder();
+        } else {
+          if (dataCase_ == 1) {
+            return (com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit) data_;
+          }
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * first message only, Keygen
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenInit keygen_init = 1 [json_name = "keygenInit"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit, com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInitOrBuilder> 
+          getKeygenInitFieldBuilder() {
+        if (keygenInitBuilder_ == null) {
+          if (!(dataCase_ == 1)) {
+            data_ = com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit.getDefaultInstance();
+          }
+          keygenInitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit, com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInitOrBuilder>(
+                  (com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit) data_,
+                  getParentForChildren(),
+                  isClean());
+          data_ = null;
+        }
+        dataCase_ = 1;
+        onChanged();
+        return keygenInitBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit, com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.SignInitOrBuilder> signInitBuilder_;
+      /**
+       * <pre>
+       * first message only, Sign
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.SignInit sign_init = 2 [json_name = "signInit"];</code>
+       * @return Whether the signInit field is set.
+       */
+      @java.lang.Override
+      public boolean hasSignInit() {
+        return dataCase_ == 2;
+      }
+      /**
+       * <pre>
+       * first message only, Sign
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.SignInit sign_init = 2 [json_name = "signInit"];</code>
+       * @return The signInit.
+       */
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit getSignInit() {
+        if (signInitBuilder_ == null) {
+          if (dataCase_ == 2) {
+            return (com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit) data_;
+          }
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit.getDefaultInstance();
+        } else {
+          if (dataCase_ == 2) {
+            return signInitBuilder_.getMessage();
+          }
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * first message only, Sign
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.SignInit sign_init = 2 [json_name = "signInit"];</code>
+       */
+      public Builder setSignInit(com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit value) {
+        if (signInitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          data_ = value;
+          onChanged();
+        } else {
+          signInitBuilder_.setMessage(value);
+        }
+        dataCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * first message only, Sign
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.SignInit sign_init = 2 [json_name = "signInit"];</code>
+       */
+      public Builder setSignInit(
+          com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit.Builder builderForValue) {
+        if (signInitBuilder_ == null) {
+          data_ = builderForValue.build();
+          onChanged();
+        } else {
+          signInitBuilder_.setMessage(builderForValue.build());
+        }
+        dataCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * first message only, Sign
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.SignInit sign_init = 2 [json_name = "signInit"];</code>
+       */
+      public Builder mergeSignInit(com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit value) {
+        if (signInitBuilder_ == null) {
+          if (dataCase_ == 2 &&
+              data_ != com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit.getDefaultInstance()) {
+            data_ = com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit.newBuilder((com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit) data_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            data_ = value;
+          }
+          onChanged();
+        } else {
+          if (dataCase_ == 2) {
+            signInitBuilder_.mergeFrom(value);
+          } else {
+            signInitBuilder_.setMessage(value);
+          }
+        }
+        dataCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * first message only, Sign
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.SignInit sign_init = 2 [json_name = "signInit"];</code>
+       */
+      public Builder clearSignInit() {
+        if (signInitBuilder_ == null) {
+          if (dataCase_ == 2) {
+            dataCase_ = 0;
+            data_ = null;
+            onChanged();
+          }
+        } else {
+          if (dataCase_ == 2) {
+            dataCase_ = 0;
+            data_ = null;
+          }
+          signInitBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * first message only, Sign
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.SignInit sign_init = 2 [json_name = "signInit"];</code>
+       */
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit.Builder getSignInitBuilder() {
+        return getSignInitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * first message only, Sign
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.SignInit sign_init = 2 [json_name = "signInit"];</code>
+       */
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.SignInitOrBuilder getSignInitOrBuilder() {
+        if ((dataCase_ == 2) && (signInitBuilder_ != null)) {
+          return signInitBuilder_.getMessageOrBuilder();
+        } else {
+          if (dataCase_ == 2) {
+            return (com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit) data_;
+          }
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * first message only, Sign
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.SignInit sign_init = 2 [json_name = "signInit"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit, com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.SignInitOrBuilder> 
+          getSignInitFieldBuilder() {
+        if (signInitBuilder_ == null) {
+          if (!(dataCase_ == 2)) {
+            data_ = com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit.getDefaultInstance();
+          }
+          signInitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit, com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.SignInitOrBuilder>(
+                  (com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit) data_,
+                  getParentForChildren(),
+                  isClean());
+          data_ = null;
+        }
+        dataCase_ = 2;
+        onChanged();
+        return signInitBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn, com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficInOrBuilder> trafficBuilder_;
+      /**
+       * <pre>
+       * all subsequent messages
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.TrafficIn traffic = 3 [json_name = "traffic"];</code>
+       * @return Whether the traffic field is set.
+       */
+      @java.lang.Override
+      public boolean hasTraffic() {
+        return dataCase_ == 3;
+      }
+      /**
+       * <pre>
+       * all subsequent messages
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.TrafficIn traffic = 3 [json_name = "traffic"];</code>
+       * @return The traffic.
+       */
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn getTraffic() {
+        if (trafficBuilder_ == null) {
+          if (dataCase_ == 3) {
+            return (com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn) data_;
+          }
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn.getDefaultInstance();
+        } else {
+          if (dataCase_ == 3) {
+            return trafficBuilder_.getMessage();
+          }
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * all subsequent messages
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.TrafficIn traffic = 3 [json_name = "traffic"];</code>
+       */
+      public Builder setTraffic(com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn value) {
+        if (trafficBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          data_ = value;
+          onChanged();
+        } else {
+          trafficBuilder_.setMessage(value);
+        }
+        dataCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * all subsequent messages
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.TrafficIn traffic = 3 [json_name = "traffic"];</code>
+       */
+      public Builder setTraffic(
+          com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn.Builder builderForValue) {
+        if (trafficBuilder_ == null) {
+          data_ = builderForValue.build();
+          onChanged();
+        } else {
+          trafficBuilder_.setMessage(builderForValue.build());
+        }
+        dataCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * all subsequent messages
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.TrafficIn traffic = 3 [json_name = "traffic"];</code>
+       */
+      public Builder mergeTraffic(com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn value) {
+        if (trafficBuilder_ == null) {
+          if (dataCase_ == 3 &&
+              data_ != com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn.getDefaultInstance()) {
+            data_ = com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn.newBuilder((com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn) data_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            data_ = value;
+          }
+          onChanged();
+        } else {
+          if (dataCase_ == 3) {
+            trafficBuilder_.mergeFrom(value);
+          } else {
+            trafficBuilder_.setMessage(value);
+          }
+        }
+        dataCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * all subsequent messages
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.TrafficIn traffic = 3 [json_name = "traffic"];</code>
+       */
+      public Builder clearTraffic() {
+        if (trafficBuilder_ == null) {
+          if (dataCase_ == 3) {
+            dataCase_ = 0;
+            data_ = null;
+            onChanged();
+          }
+        } else {
+          if (dataCase_ == 3) {
+            dataCase_ = 0;
+            data_ = null;
+          }
+          trafficBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * all subsequent messages
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.TrafficIn traffic = 3 [json_name = "traffic"];</code>
+       */
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn.Builder getTrafficBuilder() {
+        return getTrafficFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * all subsequent messages
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.TrafficIn traffic = 3 [json_name = "traffic"];</code>
+       */
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficInOrBuilder getTrafficOrBuilder() {
+        if ((dataCase_ == 3) && (trafficBuilder_ != null)) {
+          return trafficBuilder_.getMessageOrBuilder();
+        } else {
+          if (dataCase_ == 3) {
+            return (com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn) data_;
+          }
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * all subsequent messages
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.TrafficIn traffic = 3 [json_name = "traffic"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn, com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficInOrBuilder> 
+          getTrafficFieldBuilder() {
+        if (trafficBuilder_ == null) {
+          if (!(dataCase_ == 3)) {
+            data_ = com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn.getDefaultInstance();
+          }
+          trafficBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn, com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficInOrBuilder>(
+                  (com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn) data_,
+                  getParentForChildren(),
+                  isClean());
+          data_ = null;
+        }
+        dataCase_ = 3;
+        onChanged();
+        return trafficBuilder_;
+      }
+
+      /**
+       * <pre>
+       * abort the protocol, ignore the bool value
+       * </pre>
+       *
+       * <code>bool abort = 4 [json_name = "abort"];</code>
+       * @return Whether the abort field is set.
+       */
+      public boolean hasAbort() {
+        return dataCase_ == 4;
+      }
+      /**
+       * <pre>
+       * abort the protocol, ignore the bool value
+       * </pre>
+       *
+       * <code>bool abort = 4 [json_name = "abort"];</code>
+       * @return The abort.
+       */
+      public boolean getAbort() {
+        if (dataCase_ == 4) {
+          return (java.lang.Boolean) data_;
+        }
+        return false;
+      }
+      /**
+       * <pre>
+       * abort the protocol, ignore the bool value
+       * </pre>
+       *
+       * <code>bool abort = 4 [json_name = "abort"];</code>
+       * @param value The abort to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAbort(boolean value) {
+
+        dataCase_ = 4;
+        data_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * abort the protocol, ignore the bool value
+       * </pre>
+       *
+       * <code>bool abort = 4 [json_name = "abort"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAbort() {
+        if (dataCase_ == 4) {
+          dataCase_ = 0;
+          data_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.tss.tofnd.v1beta1.MessageIn)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.tss.tofnd.v1beta1.MessageIn)
+    private static final com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn();
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MessageIn>
+        PARSER = new com.google.protobuf.AbstractParser<MessageIn>() {
+      @java.lang.Override
+      public MessageIn parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MessageIn> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MessageIn> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageIn getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MessageOutOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.tss.tofnd.v1beta1.MessageOut)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * all but final message
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.TrafficOut traffic = 1 [json_name = "traffic"];</code>
+     * @return Whether the traffic field is set.
+     */
+    boolean hasTraffic();
+    /**
+     * <pre>
+     * all but final message
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.TrafficOut traffic = 1 [json_name = "traffic"];</code>
+     * @return The traffic.
+     */
+    com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut getTraffic();
+    /**
+     * <pre>
+     * all but final message
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.TrafficOut traffic = 1 [json_name = "traffic"];</code>
+     */
+    com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOutOrBuilder getTrafficOrBuilder();
+
+    /**
+     * <pre>
+     * final message only, Keygen
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.MessageOut.KeygenResult keygen_result = 2 [json_name = "keygenResult"];</code>
+     * @return Whether the keygenResult field is set.
+     */
+    boolean hasKeygenResult();
+    /**
+     * <pre>
+     * final message only, Keygen
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.MessageOut.KeygenResult keygen_result = 2 [json_name = "keygenResult"];</code>
+     * @return The keygenResult.
+     */
+    com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult getKeygenResult();
+    /**
+     * <pre>
+     * final message only, Keygen
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.MessageOut.KeygenResult keygen_result = 2 [json_name = "keygenResult"];</code>
+     */
+    com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResultOrBuilder getKeygenResultOrBuilder();
+
+    /**
+     * <pre>
+     * final message only, Sign
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.MessageOut.SignResult sign_result = 3 [json_name = "signResult"];</code>
+     * @return Whether the signResult field is set.
+     */
+    boolean hasSignResult();
+    /**
+     * <pre>
+     * final message only, Sign
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.MessageOut.SignResult sign_result = 3 [json_name = "signResult"];</code>
+     * @return The signResult.
+     */
+    com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult getSignResult();
+    /**
+     * <pre>
+     * final message only, Sign
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.MessageOut.SignResult sign_result = 3 [json_name = "signResult"];</code>
+     */
+    com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResultOrBuilder getSignResultOrBuilder();
+
+    /**
+     * <pre>
+     * issue recover from client
+     * </pre>
+     *
+     * <code>bool need_recover = 4 [json_name = "needRecover"];</code>
+     * @return Whether the needRecover field is set.
+     */
+    boolean hasNeedRecover();
+    /**
+     * <pre>
+     * issue recover from client
+     * </pre>
+     *
+     * <code>bool need_recover = 4 [json_name = "needRecover"];</code>
+     * @return The needRecover.
+     */
+    boolean getNeedRecover();
+
+    com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.DataCase getDataCase();
+  }
+  /**
+   * Protobuf type {@code axelar.tss.tofnd.v1beta1.MessageOut}
+   */
+  public static final class MessageOut extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.tss.tofnd.v1beta1.MessageOut)
+      MessageOutOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MessageOut.newBuilder() to construct.
+    private MessageOut(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MessageOut() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MessageOut();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_MessageOut_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_MessageOut_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.class, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.Builder.class);
+    }
+
+    public interface KeygenResultOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:axelar.tss.tofnd.v1beta1.MessageOut.KeygenResult)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Success response
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenOutput data = 1 [json_name = "data"];</code>
+       * @return Whether the data field is set.
+       */
+      boolean hasData();
+      /**
+       * <pre>
+       * Success response
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenOutput data = 1 [json_name = "data"];</code>
+       * @return The data.
+       */
+      com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput getData();
+      /**
+       * <pre>
+       * Success response
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenOutput data = 1 [json_name = "data"];</code>
+       */
+      com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutputOrBuilder getDataOrBuilder();
+
+      /**
+       * <pre>
+       * Faiilure response
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList criminals = 2 [json_name = "criminals"];</code>
+       * @return Whether the criminals field is set.
+       */
+      boolean hasCriminals();
+      /**
+       * <pre>
+       * Faiilure response
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList criminals = 2 [json_name = "criminals"];</code>
+       * @return The criminals.
+       */
+      com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList getCriminals();
+      /**
+       * <pre>
+       * Faiilure response
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList criminals = 2 [json_name = "criminals"];</code>
+       */
+      com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalListOrBuilder getCriminalsOrBuilder();
+
+      com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult.KeygenResultDataCase getKeygenResultDataCase();
+    }
+    /**
+     * <pre>
+     * Keygen's response types
+     * </pre>
+     *
+     * Protobuf type {@code axelar.tss.tofnd.v1beta1.MessageOut.KeygenResult}
+     */
+    public static final class KeygenResult extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:axelar.tss.tofnd.v1beta1.MessageOut.KeygenResult)
+        KeygenResultOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use KeygenResult.newBuilder() to construct.
+      private KeygenResult(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private KeygenResult() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new KeygenResult();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_MessageOut_KeygenResult_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_MessageOut_KeygenResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult.class, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult.Builder.class);
+      }
+
+      private int keygenResultDataCase_ = 0;
+      @SuppressWarnings("serial")
+      private java.lang.Object keygenResultData_;
+      public enum KeygenResultDataCase
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+        DATA(1),
+        CRIMINALS(2),
+        KEYGENRESULTDATA_NOT_SET(0);
+        private final int value;
+        private KeygenResultDataCase(int value) {
+          this.value = value;
+        }
+        /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static KeygenResultDataCase valueOf(int value) {
+          return forNumber(value);
+        }
+
+        public static KeygenResultDataCase forNumber(int value) {
+          switch (value) {
+            case 1: return DATA;
+            case 2: return CRIMINALS;
+            case 0: return KEYGENRESULTDATA_NOT_SET;
+            default: return null;
+          }
+        }
+        public int getNumber() {
+          return this.value;
+        }
+      };
+
+      public KeygenResultDataCase
+      getKeygenResultDataCase() {
+        return KeygenResultDataCase.forNumber(
+            keygenResultDataCase_);
+      }
+
+      public static final int DATA_FIELD_NUMBER = 1;
+      /**
+       * <pre>
+       * Success response
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenOutput data = 1 [json_name = "data"];</code>
+       * @return Whether the data field is set.
+       */
+      @java.lang.Override
+      public boolean hasData() {
+        return keygenResultDataCase_ == 1;
+      }
+      /**
+       * <pre>
+       * Success response
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenOutput data = 1 [json_name = "data"];</code>
+       * @return The data.
+       */
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput getData() {
+        if (keygenResultDataCase_ == 1) {
+           return (com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput) keygenResultData_;
+        }
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput.getDefaultInstance();
+      }
+      /**
+       * <pre>
+       * Success response
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.KeygenOutput data = 1 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutputOrBuilder getDataOrBuilder() {
+        if (keygenResultDataCase_ == 1) {
+           return (com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput) keygenResultData_;
+        }
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput.getDefaultInstance();
+      }
+
+      public static final int CRIMINALS_FIELD_NUMBER = 2;
+      /**
+       * <pre>
+       * Faiilure response
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList criminals = 2 [json_name = "criminals"];</code>
+       * @return Whether the criminals field is set.
+       */
+      @java.lang.Override
+      public boolean hasCriminals() {
+        return keygenResultDataCase_ == 2;
+      }
+      /**
+       * <pre>
+       * Faiilure response
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList criminals = 2 [json_name = "criminals"];</code>
+       * @return The criminals.
+       */
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList getCriminals() {
+        if (keygenResultDataCase_ == 2) {
+           return (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList) keygenResultData_;
+        }
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.getDefaultInstance();
+      }
+      /**
+       * <pre>
+       * Faiilure response
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList criminals = 2 [json_name = "criminals"];</code>
+       */
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalListOrBuilder getCriminalsOrBuilder() {
+        if (keygenResultDataCase_ == 2) {
+           return (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList) keygenResultData_;
+        }
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.getDefaultInstance();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (keygenResultDataCase_ == 1) {
+          output.writeMessage(1, (com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput) keygenResultData_);
+        }
+        if (keygenResultDataCase_ == 2) {
+          output.writeMessage(2, (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList) keygenResultData_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (keygenResultDataCase_ == 1) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, (com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput) keygenResultData_);
+        }
+        if (keygenResultDataCase_ == 2) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList) keygenResultData_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult)) {
+          return super.equals(obj);
+        }
+        com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult other = (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult) obj;
+
+        if (!getKeygenResultDataCase().equals(other.getKeygenResultDataCase())) return false;
+        switch (keygenResultDataCase_) {
+          case 1:
+            if (!getData()
+                .equals(other.getData())) return false;
+            break;
+          case 2:
+            if (!getCriminals()
+                .equals(other.getCriminals())) return false;
+            break;
+          case 0:
+          default:
+        }
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        switch (keygenResultDataCase_) {
+          case 1:
+            hash = (37 * hash) + DATA_FIELD_NUMBER;
+            hash = (53 * hash) + getData().hashCode();
+            break;
+          case 2:
+            hash = (37 * hash) + CRIMINALS_FIELD_NUMBER;
+            hash = (53 * hash) + getCriminals().hashCode();
+            break;
+          case 0:
+          default:
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Keygen's response types
+       * </pre>
+       *
+       * Protobuf type {@code axelar.tss.tofnd.v1beta1.MessageOut.KeygenResult}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:axelar.tss.tofnd.v1beta1.MessageOut.KeygenResult)
+          com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResultOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_MessageOut_KeygenResult_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_MessageOut_KeygenResult_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult.class, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult.Builder.class);
+        }
+
+        // Construct using com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          if (dataBuilder_ != null) {
+            dataBuilder_.clear();
+          }
+          if (criminalsBuilder_ != null) {
+            criminalsBuilder_.clear();
+          }
+          keygenResultDataCase_ = 0;
+          keygenResultData_ = null;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_MessageOut_KeygenResult_descriptor;
+        }
+
+        @java.lang.Override
+        public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult getDefaultInstanceForType() {
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult build() {
+          com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult buildPartial() {
+          com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult result = new com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          buildPartialOneofs(result);
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult result) {
+          int from_bitField0_ = bitField0_;
+        }
+
+        private void buildPartialOneofs(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult result) {
+          result.keygenResultDataCase_ = keygenResultDataCase_;
+          result.keygenResultData_ = this.keygenResultData_;
+          if (keygenResultDataCase_ == 1 &&
+              dataBuilder_ != null) {
+            result.keygenResultData_ = dataBuilder_.build();
+          }
+          if (keygenResultDataCase_ == 2 &&
+              criminalsBuilder_ != null) {
+            result.keygenResultData_ = criminalsBuilder_.build();
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult) {
+            return mergeFrom((com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult other) {
+          if (other == com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult.getDefaultInstance()) return this;
+          switch (other.getKeygenResultDataCase()) {
+            case DATA: {
+              mergeData(other.getData());
+              break;
+            }
+            case CRIMINALS: {
+              mergeCriminals(other.getCriminals());
+              break;
+            }
+            case KEYGENRESULTDATA_NOT_SET: {
+              break;
+            }
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  input.readMessage(
+                      getDataFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  keygenResultDataCase_ = 1;
+                  break;
+                } // case 10
+                case 18: {
+                  input.readMessage(
+                      getCriminalsFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  keygenResultDataCase_ = 2;
+                  break;
+                } // case 18
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int keygenResultDataCase_ = 0;
+        private java.lang.Object keygenResultData_;
+        public KeygenResultDataCase
+            getKeygenResultDataCase() {
+          return KeygenResultDataCase.forNumber(
+              keygenResultDataCase_);
+        }
+
+        public Builder clearKeygenResultData() {
+          keygenResultDataCase_ = 0;
+          keygenResultData_ = null;
+          onChanged();
+          return this;
+        }
+
+        private int bitField0_;
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput, com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutputOrBuilder> dataBuilder_;
+        /**
+         * <pre>
+         * Success response
+         * </pre>
+         *
+         * <code>.axelar.tss.tofnd.v1beta1.KeygenOutput data = 1 [json_name = "data"];</code>
+         * @return Whether the data field is set.
+         */
+        @java.lang.Override
+        public boolean hasData() {
+          return keygenResultDataCase_ == 1;
+        }
+        /**
+         * <pre>
+         * Success response
+         * </pre>
+         *
+         * <code>.axelar.tss.tofnd.v1beta1.KeygenOutput data = 1 [json_name = "data"];</code>
+         * @return The data.
+         */
+        @java.lang.Override
+        public com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput getData() {
+          if (dataBuilder_ == null) {
+            if (keygenResultDataCase_ == 1) {
+              return (com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput) keygenResultData_;
+            }
+            return com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput.getDefaultInstance();
+          } else {
+            if (keygenResultDataCase_ == 1) {
+              return dataBuilder_.getMessage();
+            }
+            return com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Success response
+         * </pre>
+         *
+         * <code>.axelar.tss.tofnd.v1beta1.KeygenOutput data = 1 [json_name = "data"];</code>
+         */
+        public Builder setData(com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput value) {
+          if (dataBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            keygenResultData_ = value;
+            onChanged();
+          } else {
+            dataBuilder_.setMessage(value);
+          }
+          keygenResultDataCase_ = 1;
+          return this;
+        }
+        /**
+         * <pre>
+         * Success response
+         * </pre>
+         *
+         * <code>.axelar.tss.tofnd.v1beta1.KeygenOutput data = 1 [json_name = "data"];</code>
+         */
+        public Builder setData(
+            com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput.Builder builderForValue) {
+          if (dataBuilder_ == null) {
+            keygenResultData_ = builderForValue.build();
+            onChanged();
+          } else {
+            dataBuilder_.setMessage(builderForValue.build());
+          }
+          keygenResultDataCase_ = 1;
+          return this;
+        }
+        /**
+         * <pre>
+         * Success response
+         * </pre>
+         *
+         * <code>.axelar.tss.tofnd.v1beta1.KeygenOutput data = 1 [json_name = "data"];</code>
+         */
+        public Builder mergeData(com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput value) {
+          if (dataBuilder_ == null) {
+            if (keygenResultDataCase_ == 1 &&
+                keygenResultData_ != com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput.getDefaultInstance()) {
+              keygenResultData_ = com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput.newBuilder((com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput) keygenResultData_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              keygenResultData_ = value;
+            }
+            onChanged();
+          } else {
+            if (keygenResultDataCase_ == 1) {
+              dataBuilder_.mergeFrom(value);
+            } else {
+              dataBuilder_.setMessage(value);
+            }
+          }
+          keygenResultDataCase_ = 1;
+          return this;
+        }
+        /**
+         * <pre>
+         * Success response
+         * </pre>
+         *
+         * <code>.axelar.tss.tofnd.v1beta1.KeygenOutput data = 1 [json_name = "data"];</code>
+         */
+        public Builder clearData() {
+          if (dataBuilder_ == null) {
+            if (keygenResultDataCase_ == 1) {
+              keygenResultDataCase_ = 0;
+              keygenResultData_ = null;
+              onChanged();
+            }
+          } else {
+            if (keygenResultDataCase_ == 1) {
+              keygenResultDataCase_ = 0;
+              keygenResultData_ = null;
+            }
+            dataBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Success response
+         * </pre>
+         *
+         * <code>.axelar.tss.tofnd.v1beta1.KeygenOutput data = 1 [json_name = "data"];</code>
+         */
+        public com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput.Builder getDataBuilder() {
+          return getDataFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Success response
+         * </pre>
+         *
+         * <code>.axelar.tss.tofnd.v1beta1.KeygenOutput data = 1 [json_name = "data"];</code>
+         */
+        @java.lang.Override
+        public com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutputOrBuilder getDataOrBuilder() {
+          if ((keygenResultDataCase_ == 1) && (dataBuilder_ != null)) {
+            return dataBuilder_.getMessageOrBuilder();
+          } else {
+            if (keygenResultDataCase_ == 1) {
+              return (com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput) keygenResultData_;
+            }
+            return com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Success response
+         * </pre>
+         *
+         * <code>.axelar.tss.tofnd.v1beta1.KeygenOutput data = 1 [json_name = "data"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput, com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutputOrBuilder> 
+            getDataFieldBuilder() {
+          if (dataBuilder_ == null) {
+            if (!(keygenResultDataCase_ == 1)) {
+              keygenResultData_ = com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput.getDefaultInstance();
+            }
+            dataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput, com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutputOrBuilder>(
+                    (com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenOutput) keygenResultData_,
+                    getParentForChildren(),
+                    isClean());
+            keygenResultData_ = null;
+          }
+          keygenResultDataCase_ = 1;
+          onChanged();
+          return dataBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalListOrBuilder> criminalsBuilder_;
+        /**
+         * <pre>
+         * Faiilure response
+         * </pre>
+         *
+         * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList criminals = 2 [json_name = "criminals"];</code>
+         * @return Whether the criminals field is set.
+         */
+        @java.lang.Override
+        public boolean hasCriminals() {
+          return keygenResultDataCase_ == 2;
+        }
+        /**
+         * <pre>
+         * Faiilure response
+         * </pre>
+         *
+         * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList criminals = 2 [json_name = "criminals"];</code>
+         * @return The criminals.
+         */
+        @java.lang.Override
+        public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList getCriminals() {
+          if (criminalsBuilder_ == null) {
+            if (keygenResultDataCase_ == 2) {
+              return (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList) keygenResultData_;
+            }
+            return com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.getDefaultInstance();
+          } else {
+            if (keygenResultDataCase_ == 2) {
+              return criminalsBuilder_.getMessage();
+            }
+            return com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Faiilure response
+         * </pre>
+         *
+         * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList criminals = 2 [json_name = "criminals"];</code>
+         */
+        public Builder setCriminals(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList value) {
+          if (criminalsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            keygenResultData_ = value;
+            onChanged();
+          } else {
+            criminalsBuilder_.setMessage(value);
+          }
+          keygenResultDataCase_ = 2;
+          return this;
+        }
+        /**
+         * <pre>
+         * Faiilure response
+         * </pre>
+         *
+         * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList criminals = 2 [json_name = "criminals"];</code>
+         */
+        public Builder setCriminals(
+            com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Builder builderForValue) {
+          if (criminalsBuilder_ == null) {
+            keygenResultData_ = builderForValue.build();
+            onChanged();
+          } else {
+            criminalsBuilder_.setMessage(builderForValue.build());
+          }
+          keygenResultDataCase_ = 2;
+          return this;
+        }
+        /**
+         * <pre>
+         * Faiilure response
+         * </pre>
+         *
+         * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList criminals = 2 [json_name = "criminals"];</code>
+         */
+        public Builder mergeCriminals(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList value) {
+          if (criminalsBuilder_ == null) {
+            if (keygenResultDataCase_ == 2 &&
+                keygenResultData_ != com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.getDefaultInstance()) {
+              keygenResultData_ = com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.newBuilder((com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList) keygenResultData_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              keygenResultData_ = value;
+            }
+            onChanged();
+          } else {
+            if (keygenResultDataCase_ == 2) {
+              criminalsBuilder_.mergeFrom(value);
+            } else {
+              criminalsBuilder_.setMessage(value);
+            }
+          }
+          keygenResultDataCase_ = 2;
+          return this;
+        }
+        /**
+         * <pre>
+         * Faiilure response
+         * </pre>
+         *
+         * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList criminals = 2 [json_name = "criminals"];</code>
+         */
+        public Builder clearCriminals() {
+          if (criminalsBuilder_ == null) {
+            if (keygenResultDataCase_ == 2) {
+              keygenResultDataCase_ = 0;
+              keygenResultData_ = null;
+              onChanged();
+            }
+          } else {
+            if (keygenResultDataCase_ == 2) {
+              keygenResultDataCase_ = 0;
+              keygenResultData_ = null;
+            }
+            criminalsBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Faiilure response
+         * </pre>
+         *
+         * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList criminals = 2 [json_name = "criminals"];</code>
+         */
+        public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Builder getCriminalsBuilder() {
+          return getCriminalsFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Faiilure response
+         * </pre>
+         *
+         * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList criminals = 2 [json_name = "criminals"];</code>
+         */
+        @java.lang.Override
+        public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalListOrBuilder getCriminalsOrBuilder() {
+          if ((keygenResultDataCase_ == 2) && (criminalsBuilder_ != null)) {
+            return criminalsBuilder_.getMessageOrBuilder();
+          } else {
+            if (keygenResultDataCase_ == 2) {
+              return (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList) keygenResultData_;
+            }
+            return com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Faiilure response
+         * </pre>
+         *
+         * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList criminals = 2 [json_name = "criminals"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalListOrBuilder> 
+            getCriminalsFieldBuilder() {
+          if (criminalsBuilder_ == null) {
+            if (!(keygenResultDataCase_ == 2)) {
+              keygenResultData_ = com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.getDefaultInstance();
+            }
+            criminalsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalListOrBuilder>(
+                    (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList) keygenResultData_,
+                    getParentForChildren(),
+                    isClean());
+            keygenResultData_ = null;
+          }
+          keygenResultDataCase_ = 2;
+          onChanged();
+          return criminalsBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:axelar.tss.tofnd.v1beta1.MessageOut.KeygenResult)
+      }
+
+      // @@protoc_insertion_point(class_scope:axelar.tss.tofnd.v1beta1.MessageOut.KeygenResult)
+      private static final com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult();
+      }
+
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<KeygenResult>
+          PARSER = new com.google.protobuf.AbstractParser<KeygenResult>() {
+        @java.lang.Override
+        public KeygenResult parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<KeygenResult> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<KeygenResult> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface SignResultOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:axelar.tss.tofnd.v1beta1.MessageOut.SignResult)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Success response
+       * </pre>
+       *
+       * <code>bytes signature = 1 [json_name = "signature"];</code>
+       * @return Whether the signature field is set.
+       */
+      boolean hasSignature();
+      /**
+       * <pre>
+       * Success response
+       * </pre>
+       *
+       * <code>bytes signature = 1 [json_name = "signature"];</code>
+       * @return The signature.
+       */
+      com.google.protobuf.ByteString getSignature();
+
+      /**
+       * <pre>
+       * Failure response
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList criminals = 2 [json_name = "criminals"];</code>
+       * @return Whether the criminals field is set.
+       */
+      boolean hasCriminals();
+      /**
+       * <pre>
+       * Failure response
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList criminals = 2 [json_name = "criminals"];</code>
+       * @return The criminals.
+       */
+      com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList getCriminals();
+      /**
+       * <pre>
+       * Failure response
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList criminals = 2 [json_name = "criminals"];</code>
+       */
+      com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalListOrBuilder getCriminalsOrBuilder();
+
+      com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult.SignResultDataCase getSignResultDataCase();
+    }
+    /**
+     * <pre>
+     * Sign's response types
+     * </pre>
+     *
+     * Protobuf type {@code axelar.tss.tofnd.v1beta1.MessageOut.SignResult}
+     */
+    public static final class SignResult extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:axelar.tss.tofnd.v1beta1.MessageOut.SignResult)
+        SignResultOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use SignResult.newBuilder() to construct.
+      private SignResult(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private SignResult() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new SignResult();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_MessageOut_SignResult_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_MessageOut_SignResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult.class, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult.Builder.class);
+      }
+
+      private int signResultDataCase_ = 0;
+      @SuppressWarnings("serial")
+      private java.lang.Object signResultData_;
+      public enum SignResultDataCase
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+        SIGNATURE(1),
+        CRIMINALS(2),
+        SIGNRESULTDATA_NOT_SET(0);
+        private final int value;
+        private SignResultDataCase(int value) {
+          this.value = value;
+        }
+        /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static SignResultDataCase valueOf(int value) {
+          return forNumber(value);
+        }
+
+        public static SignResultDataCase forNumber(int value) {
+          switch (value) {
+            case 1: return SIGNATURE;
+            case 2: return CRIMINALS;
+            case 0: return SIGNRESULTDATA_NOT_SET;
+            default: return null;
+          }
+        }
+        public int getNumber() {
+          return this.value;
+        }
+      };
+
+      public SignResultDataCase
+      getSignResultDataCase() {
+        return SignResultDataCase.forNumber(
+            signResultDataCase_);
+      }
+
+      public static final int SIGNATURE_FIELD_NUMBER = 1;
+      /**
+       * <pre>
+       * Success response
+       * </pre>
+       *
+       * <code>bytes signature = 1 [json_name = "signature"];</code>
+       * @return Whether the signature field is set.
+       */
+      @java.lang.Override
+      public boolean hasSignature() {
+        return signResultDataCase_ == 1;
+      }
+      /**
+       * <pre>
+       * Success response
+       * </pre>
+       *
+       * <code>bytes signature = 1 [json_name = "signature"];</code>
+       * @return The signature.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSignature() {
+        if (signResultDataCase_ == 1) {
+          return (com.google.protobuf.ByteString) signResultData_;
+        }
+        return com.google.protobuf.ByteString.EMPTY;
+      }
+
+      public static final int CRIMINALS_FIELD_NUMBER = 2;
+      /**
+       * <pre>
+       * Failure response
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList criminals = 2 [json_name = "criminals"];</code>
+       * @return Whether the criminals field is set.
+       */
+      @java.lang.Override
+      public boolean hasCriminals() {
+        return signResultDataCase_ == 2;
+      }
+      /**
+       * <pre>
+       * Failure response
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList criminals = 2 [json_name = "criminals"];</code>
+       * @return The criminals.
+       */
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList getCriminals() {
+        if (signResultDataCase_ == 2) {
+           return (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList) signResultData_;
+        }
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.getDefaultInstance();
+      }
+      /**
+       * <pre>
+       * Failure response
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList criminals = 2 [json_name = "criminals"];</code>
+       */
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalListOrBuilder getCriminalsOrBuilder() {
+        if (signResultDataCase_ == 2) {
+           return (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList) signResultData_;
+        }
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.getDefaultInstance();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (signResultDataCase_ == 1) {
+          output.writeBytes(
+              1, (com.google.protobuf.ByteString) signResultData_);
+        }
+        if (signResultDataCase_ == 2) {
+          output.writeMessage(2, (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList) signResultData_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (signResultDataCase_ == 1) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBytesSize(
+                1, (com.google.protobuf.ByteString) signResultData_);
+        }
+        if (signResultDataCase_ == 2) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList) signResultData_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult)) {
+          return super.equals(obj);
+        }
+        com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult other = (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult) obj;
+
+        if (!getSignResultDataCase().equals(other.getSignResultDataCase())) return false;
+        switch (signResultDataCase_) {
+          case 1:
+            if (!getSignature()
+                .equals(other.getSignature())) return false;
+            break;
+          case 2:
+            if (!getCriminals()
+                .equals(other.getCriminals())) return false;
+            break;
+          case 0:
+          default:
+        }
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        switch (signResultDataCase_) {
+          case 1:
+            hash = (37 * hash) + SIGNATURE_FIELD_NUMBER;
+            hash = (53 * hash) + getSignature().hashCode();
+            break;
+          case 2:
+            hash = (37 * hash) + CRIMINALS_FIELD_NUMBER;
+            hash = (53 * hash) + getCriminals().hashCode();
+            break;
+          case 0:
+          default:
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Sign's response types
+       * </pre>
+       *
+       * Protobuf type {@code axelar.tss.tofnd.v1beta1.MessageOut.SignResult}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:axelar.tss.tofnd.v1beta1.MessageOut.SignResult)
+          com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResultOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_MessageOut_SignResult_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_MessageOut_SignResult_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult.class, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult.Builder.class);
+        }
+
+        // Construct using com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          if (criminalsBuilder_ != null) {
+            criminalsBuilder_.clear();
+          }
+          signResultDataCase_ = 0;
+          signResultData_ = null;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_MessageOut_SignResult_descriptor;
+        }
+
+        @java.lang.Override
+        public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult getDefaultInstanceForType() {
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult build() {
+          com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult buildPartial() {
+          com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult result = new com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          buildPartialOneofs(result);
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult result) {
+          int from_bitField0_ = bitField0_;
+        }
+
+        private void buildPartialOneofs(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult result) {
+          result.signResultDataCase_ = signResultDataCase_;
+          result.signResultData_ = this.signResultData_;
+          if (signResultDataCase_ == 2 &&
+              criminalsBuilder_ != null) {
+            result.signResultData_ = criminalsBuilder_.build();
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult) {
+            return mergeFrom((com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult other) {
+          if (other == com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult.getDefaultInstance()) return this;
+          switch (other.getSignResultDataCase()) {
+            case SIGNATURE: {
+              setSignature(other.getSignature());
+              break;
+            }
+            case CRIMINALS: {
+              mergeCriminals(other.getCriminals());
+              break;
+            }
+            case SIGNRESULTDATA_NOT_SET: {
+              break;
+            }
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  signResultData_ = input.readBytes();
+                  signResultDataCase_ = 1;
+                  break;
+                } // case 10
+                case 18: {
+                  input.readMessage(
+                      getCriminalsFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  signResultDataCase_ = 2;
+                  break;
+                } // case 18
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int signResultDataCase_ = 0;
+        private java.lang.Object signResultData_;
+        public SignResultDataCase
+            getSignResultDataCase() {
+          return SignResultDataCase.forNumber(
+              signResultDataCase_);
+        }
+
+        public Builder clearSignResultData() {
+          signResultDataCase_ = 0;
+          signResultData_ = null;
+          onChanged();
+          return this;
+        }
+
+        private int bitField0_;
+
+        /**
+         * <pre>
+         * Success response
+         * </pre>
+         *
+         * <code>bytes signature = 1 [json_name = "signature"];</code>
+         * @return Whether the signature field is set.
+         */
+        public boolean hasSignature() {
+          return signResultDataCase_ == 1;
+        }
+        /**
+         * <pre>
+         * Success response
+         * </pre>
+         *
+         * <code>bytes signature = 1 [json_name = "signature"];</code>
+         * @return The signature.
+         */
+        public com.google.protobuf.ByteString getSignature() {
+          if (signResultDataCase_ == 1) {
+            return (com.google.protobuf.ByteString) signResultData_;
+          }
+          return com.google.protobuf.ByteString.EMPTY;
+        }
+        /**
+         * <pre>
+         * Success response
+         * </pre>
+         *
+         * <code>bytes signature = 1 [json_name = "signature"];</code>
+         * @param value The signature to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSignature(com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          signResultDataCase_ = 1;
+          signResultData_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Success response
+         * </pre>
+         *
+         * <code>bytes signature = 1 [json_name = "signature"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSignature() {
+          if (signResultDataCase_ == 1) {
+            signResultDataCase_ = 0;
+            signResultData_ = null;
+            onChanged();
+          }
+          return this;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalListOrBuilder> criminalsBuilder_;
+        /**
+         * <pre>
+         * Failure response
+         * </pre>
+         *
+         * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList criminals = 2 [json_name = "criminals"];</code>
+         * @return Whether the criminals field is set.
+         */
+        @java.lang.Override
+        public boolean hasCriminals() {
+          return signResultDataCase_ == 2;
+        }
+        /**
+         * <pre>
+         * Failure response
+         * </pre>
+         *
+         * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList criminals = 2 [json_name = "criminals"];</code>
+         * @return The criminals.
+         */
+        @java.lang.Override
+        public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList getCriminals() {
+          if (criminalsBuilder_ == null) {
+            if (signResultDataCase_ == 2) {
+              return (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList) signResultData_;
+            }
+            return com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.getDefaultInstance();
+          } else {
+            if (signResultDataCase_ == 2) {
+              return criminalsBuilder_.getMessage();
+            }
+            return com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Failure response
+         * </pre>
+         *
+         * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList criminals = 2 [json_name = "criminals"];</code>
+         */
+        public Builder setCriminals(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList value) {
+          if (criminalsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            signResultData_ = value;
+            onChanged();
+          } else {
+            criminalsBuilder_.setMessage(value);
+          }
+          signResultDataCase_ = 2;
+          return this;
+        }
+        /**
+         * <pre>
+         * Failure response
+         * </pre>
+         *
+         * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList criminals = 2 [json_name = "criminals"];</code>
+         */
+        public Builder setCriminals(
+            com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Builder builderForValue) {
+          if (criminalsBuilder_ == null) {
+            signResultData_ = builderForValue.build();
+            onChanged();
+          } else {
+            criminalsBuilder_.setMessage(builderForValue.build());
+          }
+          signResultDataCase_ = 2;
+          return this;
+        }
+        /**
+         * <pre>
+         * Failure response
+         * </pre>
+         *
+         * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList criminals = 2 [json_name = "criminals"];</code>
+         */
+        public Builder mergeCriminals(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList value) {
+          if (criminalsBuilder_ == null) {
+            if (signResultDataCase_ == 2 &&
+                signResultData_ != com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.getDefaultInstance()) {
+              signResultData_ = com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.newBuilder((com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList) signResultData_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              signResultData_ = value;
+            }
+            onChanged();
+          } else {
+            if (signResultDataCase_ == 2) {
+              criminalsBuilder_.mergeFrom(value);
+            } else {
+              criminalsBuilder_.setMessage(value);
+            }
+          }
+          signResultDataCase_ = 2;
+          return this;
+        }
+        /**
+         * <pre>
+         * Failure response
+         * </pre>
+         *
+         * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList criminals = 2 [json_name = "criminals"];</code>
+         */
+        public Builder clearCriminals() {
+          if (criminalsBuilder_ == null) {
+            if (signResultDataCase_ == 2) {
+              signResultDataCase_ = 0;
+              signResultData_ = null;
+              onChanged();
+            }
+          } else {
+            if (signResultDataCase_ == 2) {
+              signResultDataCase_ = 0;
+              signResultData_ = null;
+            }
+            criminalsBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Failure response
+         * </pre>
+         *
+         * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList criminals = 2 [json_name = "criminals"];</code>
+         */
+        public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Builder getCriminalsBuilder() {
+          return getCriminalsFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Failure response
+         * </pre>
+         *
+         * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList criminals = 2 [json_name = "criminals"];</code>
+         */
+        @java.lang.Override
+        public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalListOrBuilder getCriminalsOrBuilder() {
+          if ((signResultDataCase_ == 2) && (criminalsBuilder_ != null)) {
+            return criminalsBuilder_.getMessageOrBuilder();
+          } else {
+            if (signResultDataCase_ == 2) {
+              return (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList) signResultData_;
+            }
+            return com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Failure response
+         * </pre>
+         *
+         * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList criminals = 2 [json_name = "criminals"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalListOrBuilder> 
+            getCriminalsFieldBuilder() {
+          if (criminalsBuilder_ == null) {
+            if (!(signResultDataCase_ == 2)) {
+              signResultData_ = com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.getDefaultInstance();
+            }
+            criminalsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalListOrBuilder>(
+                    (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList) signResultData_,
+                    getParentForChildren(),
+                    isClean());
+            signResultData_ = null;
+          }
+          signResultDataCase_ = 2;
+          onChanged();
+          return criminalsBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:axelar.tss.tofnd.v1beta1.MessageOut.SignResult)
+      }
+
+      // @@protoc_insertion_point(class_scope:axelar.tss.tofnd.v1beta1.MessageOut.SignResult)
+      private static final com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult();
+      }
+
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<SignResult>
+          PARSER = new com.google.protobuf.AbstractParser<SignResult>() {
+        @java.lang.Override
+        public SignResult parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<SignResult> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<SignResult> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface CriminalListOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:axelar.tss.tofnd.v1beta1.MessageOut.CriminalList)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>repeated .axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal criminals = 1 [json_name = "criminals"];</code>
+       */
+      java.util.List<com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal> 
+          getCriminalsList();
+      /**
+       * <code>repeated .axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal criminals = 1 [json_name = "criminals"];</code>
+       */
+      com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal getCriminals(int index);
+      /**
+       * <code>repeated .axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal criminals = 1 [json_name = "criminals"];</code>
+       */
+      int getCriminalsCount();
+      /**
+       * <code>repeated .axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal criminals = 1 [json_name = "criminals"];</code>
+       */
+      java.util.List<? extends com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.CriminalOrBuilder> 
+          getCriminalsOrBuilderList();
+      /**
+       * <code>repeated .axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal criminals = 1 [json_name = "criminals"];</code>
+       */
+      com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.CriminalOrBuilder getCriminalsOrBuilder(
+          int index);
+    }
+    /**
+     * <pre>
+     * Keygen/Sign failure response message
+     * </pre>
+     *
+     * Protobuf type {@code axelar.tss.tofnd.v1beta1.MessageOut.CriminalList}
+     */
+    public static final class CriminalList extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:axelar.tss.tofnd.v1beta1.MessageOut.CriminalList)
+        CriminalListOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use CriminalList.newBuilder() to construct.
+      private CriminalList(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private CriminalList() {
+        criminals_ = java.util.Collections.emptyList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new CriminalList();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_MessageOut_CriminalList_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_MessageOut_CriminalList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.class, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Builder.class);
+      }
+
+      public interface CriminalOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>string party_uid = 1 [json_name = "partyUid"];</code>
+         * @return The partyUid.
+         */
+        java.lang.String getPartyUid();
+        /**
+         * <code>string party_uid = 1 [json_name = "partyUid"];</code>
+         * @return The bytes for partyUid.
+         */
+        com.google.protobuf.ByteString
+            getPartyUidBytes();
+
+        /**
+         * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal.CrimeType crime_type = 2 [json_name = "crimeType"];</code>
+         * @return The enum numeric value on the wire for crimeType.
+         */
+        int getCrimeTypeValue();
+        /**
+         * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal.CrimeType crime_type = 2 [json_name = "crimeType"];</code>
+         * @return The crimeType.
+         */
+        com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.CrimeType getCrimeType();
+      }
+      /**
+       * Protobuf type {@code axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal}
+       */
+      public static final class Criminal extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal)
+          CriminalOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use Criminal.newBuilder() to construct.
+        private Criminal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private Criminal() {
+          partyUid_ = "";
+          crimeType_ = 0;
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new Criminal();
+        }
+
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_MessageOut_CriminalList_Criminal_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_MessageOut_CriminalList_Criminal_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.class, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.Builder.class);
+        }
+
+        /**
+         * Protobuf enum {@code axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal.CrimeType}
+         */
+        public enum CrimeType
+            implements com.google.protobuf.ProtocolMessageEnum {
+          /**
+           * <code>CRIME_TYPE_UNSPECIFIED = 0;</code>
+           */
+          CRIME_TYPE_UNSPECIFIED(0),
+          /**
+           * <code>CRIME_TYPE_NON_MALICIOUS = 1;</code>
+           */
+          CRIME_TYPE_NON_MALICIOUS(1),
+          /**
+           * <code>CRIME_TYPE_MALICIOUS = 2;</code>
+           */
+          CRIME_TYPE_MALICIOUS(2),
+          UNRECOGNIZED(-1),
+          ;
+
+          /**
+           * <code>CRIME_TYPE_UNSPECIFIED = 0;</code>
+           */
+          public static final int CRIME_TYPE_UNSPECIFIED_VALUE = 0;
+          /**
+           * <code>CRIME_TYPE_NON_MALICIOUS = 1;</code>
+           */
+          public static final int CRIME_TYPE_NON_MALICIOUS_VALUE = 1;
+          /**
+           * <code>CRIME_TYPE_MALICIOUS = 2;</code>
+           */
+          public static final int CRIME_TYPE_MALICIOUS_VALUE = 2;
+
+
+          public final int getNumber() {
+            if (this == UNRECOGNIZED) {
+              throw new java.lang.IllegalArgumentException(
+                  "Can't get the number of an unknown enum value.");
+            }
+            return value;
+          }
+
+          /**
+           * @param value The numeric wire value of the corresponding enum entry.
+           * @return The enum associated with the given numeric wire value.
+           * @deprecated Use {@link #forNumber(int)} instead.
+           */
+          @java.lang.Deprecated
+          public static CrimeType valueOf(int value) {
+            return forNumber(value);
+          }
+
+          /**
+           * @param value The numeric wire value of the corresponding enum entry.
+           * @return The enum associated with the given numeric wire value.
+           */
+          public static CrimeType forNumber(int value) {
+            switch (value) {
+              case 0: return CRIME_TYPE_UNSPECIFIED;
+              case 1: return CRIME_TYPE_NON_MALICIOUS;
+              case 2: return CRIME_TYPE_MALICIOUS;
+              default: return null;
+            }
+          }
+
+          public static com.google.protobuf.Internal.EnumLiteMap<CrimeType>
+              internalGetValueMap() {
+            return internalValueMap;
+          }
+          private static final com.google.protobuf.Internal.EnumLiteMap<
+              CrimeType> internalValueMap =
+                new com.google.protobuf.Internal.EnumLiteMap<CrimeType>() {
+                  public CrimeType findValueByNumber(int number) {
+                    return CrimeType.forNumber(number);
+                  }
+                };
+
+          public final com.google.protobuf.Descriptors.EnumValueDescriptor
+              getValueDescriptor() {
+            if (this == UNRECOGNIZED) {
+              throw new java.lang.IllegalStateException(
+                  "Can't get the descriptor of an unrecognized enum value.");
+            }
+            return getDescriptor().getValues().get(ordinal());
+          }
+          public final com.google.protobuf.Descriptors.EnumDescriptor
+              getDescriptorForType() {
+            return getDescriptor();
+          }
+          public static final com.google.protobuf.Descriptors.EnumDescriptor
+              getDescriptor() {
+            return com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.getDescriptor().getEnumTypes().get(0);
+          }
+
+          private static final CrimeType[] VALUES = values();
+
+          public static CrimeType valueOf(
+              com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+            if (desc.getType() != getDescriptor()) {
+              throw new java.lang.IllegalArgumentException(
+                "EnumValueDescriptor is not for this type.");
+            }
+            if (desc.getIndex() == -1) {
+              return UNRECOGNIZED;
+            }
+            return VALUES[desc.getIndex()];
+          }
+
+          private final int value;
+
+          private CrimeType(int value) {
+            this.value = value;
+          }
+
+          // @@protoc_insertion_point(enum_scope:axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal.CrimeType)
+        }
+
+        public static final int PARTY_UID_FIELD_NUMBER = 1;
+        @SuppressWarnings("serial")
+        private volatile java.lang.Object partyUid_ = "";
+        /**
+         * <code>string party_uid = 1 [json_name = "partyUid"];</code>
+         * @return The partyUid.
+         */
+        @java.lang.Override
+        public java.lang.String getPartyUid() {
+          java.lang.Object ref = partyUid_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            partyUid_ = s;
+            return s;
+          }
+        }
+        /**
+         * <code>string party_uid = 1 [json_name = "partyUid"];</code>
+         * @return The bytes for partyUid.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getPartyUidBytes() {
+          java.lang.Object ref = partyUid_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            partyUid_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        public static final int CRIME_TYPE_FIELD_NUMBER = 2;
+        private int crimeType_ = 0;
+        /**
+         * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal.CrimeType crime_type = 2 [json_name = "crimeType"];</code>
+         * @return The enum numeric value on the wire for crimeType.
+         */
+        @java.lang.Override public int getCrimeTypeValue() {
+          return crimeType_;
+        }
+        /**
+         * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal.CrimeType crime_type = 2 [json_name = "crimeType"];</code>
+         * @return The crimeType.
+         */
+        @java.lang.Override public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.CrimeType getCrimeType() {
+          com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.CrimeType result = com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.CrimeType.forNumber(crimeType_);
+          return result == null ? com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.CrimeType.UNRECOGNIZED : result;
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(partyUid_)) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 1, partyUid_);
+          }
+          if (crimeType_ != com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.CrimeType.CRIME_TYPE_UNSPECIFIED.getNumber()) {
+            output.writeEnum(2, crimeType_);
+          }
+          getUnknownFields().writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(partyUid_)) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, partyUid_);
+          }
+          if (crimeType_ != com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.CrimeType.CRIME_TYPE_UNSPECIFIED.getNumber()) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeEnumSize(2, crimeType_);
+          }
+          size += getUnknownFields().getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal)) {
+            return super.equals(obj);
+          }
+          com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal other = (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal) obj;
+
+          if (!getPartyUid()
+              .equals(other.getPartyUid())) return false;
+          if (crimeType_ != other.crimeType_) return false;
+          if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          hash = (37 * hash) + PARTY_UID_FIELD_NUMBER;
+          hash = (53 * hash) + getPartyUid().hashCode();
+          hash = (37 * hash) + CRIME_TYPE_FIELD_NUMBER;
+          hash = (53 * hash) + crimeType_;
+          hash = (29 * hash) + getUnknownFields().hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal)
+            com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.CriminalOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_MessageOut_CriminalList_Criminal_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_MessageOut_CriminalList_Criminal_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.class, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.Builder.class);
+          }
+
+          // Construct using com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.newBuilder()
+          private Builder() {
+
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            bitField0_ = 0;
+            partyUid_ = "";
+            crimeType_ = 0;
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_MessageOut_CriminalList_Criminal_descriptor;
+          }
+
+          @java.lang.Override
+          public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal getDefaultInstanceForType() {
+            return com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal build() {
+            com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal buildPartial() {
+            com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal result = new com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal(this);
+            if (bitField0_ != 0) { buildPartial0(result); }
+            onBuilt();
+            return result;
+          }
+
+          private void buildPartial0(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal result) {
+            int from_bitField0_ = bitField0_;
+            if (((from_bitField0_ & 0x00000001) != 0)) {
+              result.partyUid_ = partyUid_;
+            }
+            if (((from_bitField0_ & 0x00000002) != 0)) {
+              result.crimeType_ = crimeType_;
+            }
+          }
+
+          @java.lang.Override
+          public Builder clone() {
+            return super.clone();
+          }
+          @java.lang.Override
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.setField(field, value);
+          }
+          @java.lang.Override
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return super.clearField(field);
+          }
+          @java.lang.Override
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return super.clearOneof(oneof);
+          }
+          @java.lang.Override
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+            return super.setRepeatedField(field, index, value);
+          }
+          @java.lang.Override
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.addRepeatedField(field, value);
+          }
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal) {
+              return mergeFrom((com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal other) {
+            if (other == com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.getDefaultInstance()) return this;
+            if (!other.getPartyUid().isEmpty()) {
+              partyUid_ = other.partyUid_;
+              bitField0_ |= 0x00000001;
+              onChanged();
+            }
+            if (other.crimeType_ != 0) {
+              setCrimeTypeValue(other.getCrimeTypeValue());
+            }
+            this.mergeUnknownFields(other.getUnknownFields());
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            if (extensionRegistry == null) {
+              throw new java.lang.NullPointerException();
+            }
+            try {
+              boolean done = false;
+              while (!done) {
+                int tag = input.readTag();
+                switch (tag) {
+                  case 0:
+                    done = true;
+                    break;
+                  case 10: {
+                    partyUid_ = input.readStringRequireUtf8();
+                    bitField0_ |= 0x00000001;
+                    break;
+                  } // case 10
+                  case 16: {
+                    crimeType_ = input.readEnum();
+                    bitField0_ |= 0x00000002;
+                    break;
+                  } // case 16
+                  default: {
+                    if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                      done = true; // was an endgroup tag
+                    }
+                    break;
+                  } // default:
+                } // switch (tag)
+              } // while (!done)
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.unwrapIOException();
+            } finally {
+              onChanged();
+            } // finally
+            return this;
+          }
+          private int bitField0_;
+
+          private java.lang.Object partyUid_ = "";
+          /**
+           * <code>string party_uid = 1 [json_name = "partyUid"];</code>
+           * @return The partyUid.
+           */
+          public java.lang.String getPartyUid() {
+            java.lang.Object ref = partyUid_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              partyUid_ = s;
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <code>string party_uid = 1 [json_name = "partyUid"];</code>
+           * @return The bytes for partyUid.
+           */
+          public com.google.protobuf.ByteString
+              getPartyUidBytes() {
+            java.lang.Object ref = partyUid_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              partyUid_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <code>string party_uid = 1 [json_name = "partyUid"];</code>
+           * @param value The partyUid to set.
+           * @return This builder for chaining.
+           */
+          public Builder setPartyUid(
+              java.lang.String value) {
+            if (value == null) { throw new NullPointerException(); }
+            partyUid_ = value;
+            bitField0_ |= 0x00000001;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>string party_uid = 1 [json_name = "partyUid"];</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearPartyUid() {
+            partyUid_ = getDefaultInstance().getPartyUid();
+            bitField0_ = (bitField0_ & ~0x00000001);
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>string party_uid = 1 [json_name = "partyUid"];</code>
+           * @param value The bytes for partyUid to set.
+           * @return This builder for chaining.
+           */
+          public Builder setPartyUidBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) { throw new NullPointerException(); }
+            checkByteStringIsUtf8(value);
+            partyUid_ = value;
+            bitField0_ |= 0x00000001;
+            onChanged();
+            return this;
+          }
+
+          private int crimeType_ = 0;
+          /**
+           * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal.CrimeType crime_type = 2 [json_name = "crimeType"];</code>
+           * @return The enum numeric value on the wire for crimeType.
+           */
+          @java.lang.Override public int getCrimeTypeValue() {
+            return crimeType_;
+          }
+          /**
+           * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal.CrimeType crime_type = 2 [json_name = "crimeType"];</code>
+           * @param value The enum numeric value on the wire for crimeType to set.
+           * @return This builder for chaining.
+           */
+          public Builder setCrimeTypeValue(int value) {
+            crimeType_ = value;
+            bitField0_ |= 0x00000002;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal.CrimeType crime_type = 2 [json_name = "crimeType"];</code>
+           * @return The crimeType.
+           */
+          @java.lang.Override
+          public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.CrimeType getCrimeType() {
+            com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.CrimeType result = com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.CrimeType.forNumber(crimeType_);
+            return result == null ? com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.CrimeType.UNRECOGNIZED : result;
+          }
+          /**
+           * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal.CrimeType crime_type = 2 [json_name = "crimeType"];</code>
+           * @param value The crimeType to set.
+           * @return This builder for chaining.
+           */
+          public Builder setCrimeType(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.CrimeType value) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            bitField0_ |= 0x00000002;
+            crimeType_ = value.getNumber();
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>.axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal.CrimeType crime_type = 2 [json_name = "crimeType"];</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearCrimeType() {
+            bitField0_ = (bitField0_ & ~0x00000002);
+            crimeType_ = 0;
+            onChanged();
+            return this;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal)
+        }
+
+        // @@protoc_insertion_point(class_scope:axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal)
+        private static final com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal();
+        }
+
+        public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<Criminal>
+            PARSER = new com.google.protobuf.AbstractParser<Criminal>() {
+          @java.lang.Override
+          public Criminal parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
+          }
+        };
+
+        public static com.google.protobuf.Parser<Criminal> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<Criminal> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
+      public static final int CRIMINALS_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
+      private java.util.List<com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal> criminals_;
+      /**
+       * <code>repeated .axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal criminals = 1 [json_name = "criminals"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal> getCriminalsList() {
+        return criminals_;
+      }
+      /**
+       * <code>repeated .axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal criminals = 1 [json_name = "criminals"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<? extends com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.CriminalOrBuilder> 
+          getCriminalsOrBuilderList() {
+        return criminals_;
+      }
+      /**
+       * <code>repeated .axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal criminals = 1 [json_name = "criminals"];</code>
+       */
+      @java.lang.Override
+      public int getCriminalsCount() {
+        return criminals_.size();
+      }
+      /**
+       * <code>repeated .axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal criminals = 1 [json_name = "criminals"];</code>
+       */
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal getCriminals(int index) {
+        return criminals_.get(index);
+      }
+      /**
+       * <code>repeated .axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal criminals = 1 [json_name = "criminals"];</code>
+       */
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.CriminalOrBuilder getCriminalsOrBuilder(
+          int index) {
+        return criminals_.get(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        for (int i = 0; i < criminals_.size(); i++) {
+          output.writeMessage(1, criminals_.get(i));
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        for (int i = 0; i < criminals_.size(); i++) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, criminals_.get(i));
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList)) {
+          return super.equals(obj);
+        }
+        com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList other = (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList) obj;
+
+        if (!getCriminalsList()
+            .equals(other.getCriminalsList())) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getCriminalsCount() > 0) {
+          hash = (37 * hash) + CRIMINALS_FIELD_NUMBER;
+          hash = (53 * hash) + getCriminalsList().hashCode();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Keygen/Sign failure response message
+       * </pre>
+       *
+       * Protobuf type {@code axelar.tss.tofnd.v1beta1.MessageOut.CriminalList}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:axelar.tss.tofnd.v1beta1.MessageOut.CriminalList)
+          com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalListOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_MessageOut_CriminalList_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_MessageOut_CriminalList_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.class, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Builder.class);
+        }
+
+        // Construct using com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          if (criminalsBuilder_ == null) {
+            criminals_ = java.util.Collections.emptyList();
+          } else {
+            criminals_ = null;
+            criminalsBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_MessageOut_CriminalList_descriptor;
+        }
+
+        @java.lang.Override
+        public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList getDefaultInstanceForType() {
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList build() {
+          com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList buildPartial() {
+          com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList result = new com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList(this);
+          buildPartialRepeatedFields(result);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartialRepeatedFields(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList result) {
+          if (criminalsBuilder_ == null) {
+            if (((bitField0_ & 0x00000001) != 0)) {
+              criminals_ = java.util.Collections.unmodifiableList(criminals_);
+              bitField0_ = (bitField0_ & ~0x00000001);
+            }
+            result.criminals_ = criminals_;
+          } else {
+            result.criminals_ = criminalsBuilder_.build();
+          }
+        }
+
+        private void buildPartial0(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList result) {
+          int from_bitField0_ = bitField0_;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList) {
+            return mergeFrom((com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList other) {
+          if (other == com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.getDefaultInstance()) return this;
+          if (criminalsBuilder_ == null) {
+            if (!other.criminals_.isEmpty()) {
+              if (criminals_.isEmpty()) {
+                criminals_ = other.criminals_;
+                bitField0_ = (bitField0_ & ~0x00000001);
+              } else {
+                ensureCriminalsIsMutable();
+                criminals_.addAll(other.criminals_);
+              }
+              onChanged();
+            }
+          } else {
+            if (!other.criminals_.isEmpty()) {
+              if (criminalsBuilder_.isEmpty()) {
+                criminalsBuilder_.dispose();
+                criminalsBuilder_ = null;
+                criminals_ = other.criminals_;
+                bitField0_ = (bitField0_ & ~0x00000001);
+                criminalsBuilder_ = 
+                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                     getCriminalsFieldBuilder() : null;
+              } else {
+                criminalsBuilder_.addAllMessages(other.criminals_);
+              }
+            }
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal m =
+                      input.readMessage(
+                          com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.parser(),
+                          extensionRegistry);
+                  if (criminalsBuilder_ == null) {
+                    ensureCriminalsIsMutable();
+                    criminals_.add(m);
+                  } else {
+                    criminalsBuilder_.addMessage(m);
+                  }
+                  break;
+                } // case 10
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private java.util.List<com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal> criminals_ =
+          java.util.Collections.emptyList();
+        private void ensureCriminalsIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            criminals_ = new java.util.ArrayList<com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal>(criminals_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.CriminalOrBuilder> criminalsBuilder_;
+
+        /**
+         * <code>repeated .axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal criminals = 1 [json_name = "criminals"];</code>
+         */
+        public java.util.List<com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal> getCriminalsList() {
+          if (criminalsBuilder_ == null) {
+            return java.util.Collections.unmodifiableList(criminals_);
+          } else {
+            return criminalsBuilder_.getMessageList();
+          }
+        }
+        /**
+         * <code>repeated .axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal criminals = 1 [json_name = "criminals"];</code>
+         */
+        public int getCriminalsCount() {
+          if (criminalsBuilder_ == null) {
+            return criminals_.size();
+          } else {
+            return criminalsBuilder_.getCount();
+          }
+        }
+        /**
+         * <code>repeated .axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal criminals = 1 [json_name = "criminals"];</code>
+         */
+        public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal getCriminals(int index) {
+          if (criminalsBuilder_ == null) {
+            return criminals_.get(index);
+          } else {
+            return criminalsBuilder_.getMessage(index);
+          }
+        }
+        /**
+         * <code>repeated .axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal criminals = 1 [json_name = "criminals"];</code>
+         */
+        public Builder setCriminals(
+            int index, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal value) {
+          if (criminalsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureCriminalsIsMutable();
+            criminals_.set(index, value);
+            onChanged();
+          } else {
+            criminalsBuilder_.setMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal criminals = 1 [json_name = "criminals"];</code>
+         */
+        public Builder setCriminals(
+            int index, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.Builder builderForValue) {
+          if (criminalsBuilder_ == null) {
+            ensureCriminalsIsMutable();
+            criminals_.set(index, builderForValue.build());
+            onChanged();
+          } else {
+            criminalsBuilder_.setMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal criminals = 1 [json_name = "criminals"];</code>
+         */
+        public Builder addCriminals(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal value) {
+          if (criminalsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureCriminalsIsMutable();
+            criminals_.add(value);
+            onChanged();
+          } else {
+            criminalsBuilder_.addMessage(value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal criminals = 1 [json_name = "criminals"];</code>
+         */
+        public Builder addCriminals(
+            int index, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal value) {
+          if (criminalsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureCriminalsIsMutable();
+            criminals_.add(index, value);
+            onChanged();
+          } else {
+            criminalsBuilder_.addMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal criminals = 1 [json_name = "criminals"];</code>
+         */
+        public Builder addCriminals(
+            com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.Builder builderForValue) {
+          if (criminalsBuilder_ == null) {
+            ensureCriminalsIsMutable();
+            criminals_.add(builderForValue.build());
+            onChanged();
+          } else {
+            criminalsBuilder_.addMessage(builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal criminals = 1 [json_name = "criminals"];</code>
+         */
+        public Builder addCriminals(
+            int index, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.Builder builderForValue) {
+          if (criminalsBuilder_ == null) {
+            ensureCriminalsIsMutable();
+            criminals_.add(index, builderForValue.build());
+            onChanged();
+          } else {
+            criminalsBuilder_.addMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal criminals = 1 [json_name = "criminals"];</code>
+         */
+        public Builder addAllCriminals(
+            java.lang.Iterable<? extends com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal> values) {
+          if (criminalsBuilder_ == null) {
+            ensureCriminalsIsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, criminals_);
+            onChanged();
+          } else {
+            criminalsBuilder_.addAllMessages(values);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal criminals = 1 [json_name = "criminals"];</code>
+         */
+        public Builder clearCriminals() {
+          if (criminalsBuilder_ == null) {
+            criminals_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000001);
+            onChanged();
+          } else {
+            criminalsBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal criminals = 1 [json_name = "criminals"];</code>
+         */
+        public Builder removeCriminals(int index) {
+          if (criminalsBuilder_ == null) {
+            ensureCriminalsIsMutable();
+            criminals_.remove(index);
+            onChanged();
+          } else {
+            criminalsBuilder_.remove(index);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal criminals = 1 [json_name = "criminals"];</code>
+         */
+        public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.Builder getCriminalsBuilder(
+            int index) {
+          return getCriminalsFieldBuilder().getBuilder(index);
+        }
+        /**
+         * <code>repeated .axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal criminals = 1 [json_name = "criminals"];</code>
+         */
+        public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.CriminalOrBuilder getCriminalsOrBuilder(
+            int index) {
+          if (criminalsBuilder_ == null) {
+            return criminals_.get(index);  } else {
+            return criminalsBuilder_.getMessageOrBuilder(index);
+          }
+        }
+        /**
+         * <code>repeated .axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal criminals = 1 [json_name = "criminals"];</code>
+         */
+        public java.util.List<? extends com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.CriminalOrBuilder> 
+             getCriminalsOrBuilderList() {
+          if (criminalsBuilder_ != null) {
+            return criminalsBuilder_.getMessageOrBuilderList();
+          } else {
+            return java.util.Collections.unmodifiableList(criminals_);
+          }
+        }
+        /**
+         * <code>repeated .axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal criminals = 1 [json_name = "criminals"];</code>
+         */
+        public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.Builder addCriminalsBuilder() {
+          return getCriminalsFieldBuilder().addBuilder(
+              com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal criminals = 1 [json_name = "criminals"];</code>
+         */
+        public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.Builder addCriminalsBuilder(
+            int index) {
+          return getCriminalsFieldBuilder().addBuilder(
+              index, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .axelar.tss.tofnd.v1beta1.MessageOut.CriminalList.Criminal criminals = 1 [json_name = "criminals"];</code>
+         */
+        public java.util.List<com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.Builder> 
+             getCriminalsBuilderList() {
+          return getCriminalsFieldBuilder().getBuilderList();
+        }
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.CriminalOrBuilder> 
+            getCriminalsFieldBuilder() {
+          if (criminalsBuilder_ == null) {
+            criminalsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.Criminal.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList.CriminalOrBuilder>(
+                    criminals_,
+                    ((bitField0_ & 0x00000001) != 0),
+                    getParentForChildren(),
+                    isClean());
+            criminals_ = null;
+          }
+          return criminalsBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:axelar.tss.tofnd.v1beta1.MessageOut.CriminalList)
+      }
+
+      // @@protoc_insertion_point(class_scope:axelar.tss.tofnd.v1beta1.MessageOut.CriminalList)
+      private static final com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList();
+      }
+
+      public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<CriminalList>
+          PARSER = new com.google.protobuf.AbstractParser<CriminalList>() {
+        @java.lang.Override
+        public CriminalList parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<CriminalList> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<CriminalList> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.CriminalList getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int dataCase_ = 0;
+    @SuppressWarnings("serial")
+    private java.lang.Object data_;
+    public enum DataCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      TRAFFIC(1),
+      KEYGEN_RESULT(2),
+      SIGN_RESULT(3),
+      NEED_RECOVER(4),
+      DATA_NOT_SET(0);
+      private final int value;
+      private DataCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static DataCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static DataCase forNumber(int value) {
+        switch (value) {
+          case 1: return TRAFFIC;
+          case 2: return KEYGEN_RESULT;
+          case 3: return SIGN_RESULT;
+          case 4: return NEED_RECOVER;
+          case 0: return DATA_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public DataCase
+    getDataCase() {
+      return DataCase.forNumber(
+          dataCase_);
+    }
+
+    public static final int TRAFFIC_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * all but final message
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.TrafficOut traffic = 1 [json_name = "traffic"];</code>
+     * @return Whether the traffic field is set.
+     */
+    @java.lang.Override
+    public boolean hasTraffic() {
+      return dataCase_ == 1;
+    }
+    /**
+     * <pre>
+     * all but final message
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.TrafficOut traffic = 1 [json_name = "traffic"];</code>
+     * @return The traffic.
+     */
+    @java.lang.Override
+    public com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut getTraffic() {
+      if (dataCase_ == 1) {
+         return (com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut) data_;
+      }
+      return com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * all but final message
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.TrafficOut traffic = 1 [json_name = "traffic"];</code>
+     */
+    @java.lang.Override
+    public com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOutOrBuilder getTrafficOrBuilder() {
+      if (dataCase_ == 1) {
+         return (com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut) data_;
+      }
+      return com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut.getDefaultInstance();
+    }
+
+    public static final int KEYGEN_RESULT_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * final message only, Keygen
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.MessageOut.KeygenResult keygen_result = 2 [json_name = "keygenResult"];</code>
+     * @return Whether the keygenResult field is set.
+     */
+    @java.lang.Override
+    public boolean hasKeygenResult() {
+      return dataCase_ == 2;
+    }
+    /**
+     * <pre>
+     * final message only, Keygen
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.MessageOut.KeygenResult keygen_result = 2 [json_name = "keygenResult"];</code>
+     * @return The keygenResult.
+     */
+    @java.lang.Override
+    public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult getKeygenResult() {
+      if (dataCase_ == 2) {
+         return (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult) data_;
+      }
+      return com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * final message only, Keygen
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.MessageOut.KeygenResult keygen_result = 2 [json_name = "keygenResult"];</code>
+     */
+    @java.lang.Override
+    public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResultOrBuilder getKeygenResultOrBuilder() {
+      if (dataCase_ == 2) {
+         return (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult) data_;
+      }
+      return com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult.getDefaultInstance();
+    }
+
+    public static final int SIGN_RESULT_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * final message only, Sign
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.MessageOut.SignResult sign_result = 3 [json_name = "signResult"];</code>
+     * @return Whether the signResult field is set.
+     */
+    @java.lang.Override
+    public boolean hasSignResult() {
+      return dataCase_ == 3;
+    }
+    /**
+     * <pre>
+     * final message only, Sign
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.MessageOut.SignResult sign_result = 3 [json_name = "signResult"];</code>
+     * @return The signResult.
+     */
+    @java.lang.Override
+    public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult getSignResult() {
+      if (dataCase_ == 3) {
+         return (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult) data_;
+      }
+      return com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * final message only, Sign
+     * </pre>
+     *
+     * <code>.axelar.tss.tofnd.v1beta1.MessageOut.SignResult sign_result = 3 [json_name = "signResult"];</code>
+     */
+    @java.lang.Override
+    public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResultOrBuilder getSignResultOrBuilder() {
+      if (dataCase_ == 3) {
+         return (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult) data_;
+      }
+      return com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult.getDefaultInstance();
+    }
+
+    public static final int NEED_RECOVER_FIELD_NUMBER = 4;
+    /**
+     * <pre>
+     * issue recover from client
+     * </pre>
+     *
+     * <code>bool need_recover = 4 [json_name = "needRecover"];</code>
+     * @return Whether the needRecover field is set.
+     */
+    @java.lang.Override
+    public boolean hasNeedRecover() {
+      return dataCase_ == 4;
+    }
+    /**
+     * <pre>
+     * issue recover from client
+     * </pre>
+     *
+     * <code>bool need_recover = 4 [json_name = "needRecover"];</code>
+     * @return The needRecover.
+     */
+    @java.lang.Override
+    public boolean getNeedRecover() {
+      if (dataCase_ == 4) {
+        return (java.lang.Boolean) data_;
+      }
+      return false;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (dataCase_ == 1) {
+        output.writeMessage(1, (com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut) data_);
+      }
+      if (dataCase_ == 2) {
+        output.writeMessage(2, (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult) data_);
+      }
+      if (dataCase_ == 3) {
+        output.writeMessage(3, (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult) data_);
+      }
+      if (dataCase_ == 4) {
+        output.writeBool(
+            4, (boolean)((java.lang.Boolean) data_));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (dataCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut) data_);
+      }
+      if (dataCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult) data_);
+      }
+      if (dataCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult) data_);
+      }
+      if (dataCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(
+              4, (boolean)((java.lang.Boolean) data_));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut)) {
+        return super.equals(obj);
+      }
+      com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut other = (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut) obj;
+
+      if (!getDataCase().equals(other.getDataCase())) return false;
+      switch (dataCase_) {
+        case 1:
+          if (!getTraffic()
+              .equals(other.getTraffic())) return false;
+          break;
+        case 2:
+          if (!getKeygenResult()
+              .equals(other.getKeygenResult())) return false;
+          break;
+        case 3:
+          if (!getSignResult()
+              .equals(other.getSignResult())) return false;
+          break;
+        case 4:
+          if (getNeedRecover()
+              != other.getNeedRecover()) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (dataCase_) {
+        case 1:
+          hash = (37 * hash) + TRAFFIC_FIELD_NUMBER;
+          hash = (53 * hash) + getTraffic().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + KEYGEN_RESULT_FIELD_NUMBER;
+          hash = (53 * hash) + getKeygenResult().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + SIGN_RESULT_FIELD_NUMBER;
+          hash = (53 * hash) + getSignResult().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + NEED_RECOVER_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getNeedRecover());
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.tss.tofnd.v1beta1.MessageOut}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.tss.tofnd.v1beta1.MessageOut)
+        com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOutOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_MessageOut_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_MessageOut_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.class, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.Builder.class);
+      }
+
+      // Construct using com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (trafficBuilder_ != null) {
+          trafficBuilder_.clear();
+        }
+        if (keygenResultBuilder_ != null) {
+          keygenResultBuilder_.clear();
+        }
+        if (signResultBuilder_ != null) {
+          signResultBuilder_.clear();
+        }
+        dataCase_ = 0;
+        data_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_MessageOut_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut getDefaultInstanceForType() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut build() {
+        com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut buildPartial() {
+        com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut result = new com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      private void buildPartialOneofs(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut result) {
+        result.dataCase_ = dataCase_;
+        result.data_ = this.data_;
+        if (dataCase_ == 1 &&
+            trafficBuilder_ != null) {
+          result.data_ = trafficBuilder_.build();
+        }
+        if (dataCase_ == 2 &&
+            keygenResultBuilder_ != null) {
+          result.data_ = keygenResultBuilder_.build();
+        }
+        if (dataCase_ == 3 &&
+            signResultBuilder_ != null) {
+          result.data_ = signResultBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut) {
+          return mergeFrom((com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut other) {
+        if (other == com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.getDefaultInstance()) return this;
+        switch (other.getDataCase()) {
+          case TRAFFIC: {
+            mergeTraffic(other.getTraffic());
+            break;
+          }
+          case KEYGEN_RESULT: {
+            mergeKeygenResult(other.getKeygenResult());
+            break;
+          }
+          case SIGN_RESULT: {
+            mergeSignResult(other.getSignResult());
+            break;
+          }
+          case NEED_RECOVER: {
+            setNeedRecover(other.getNeedRecover());
+            break;
+          }
+          case DATA_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getTrafficFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                dataCase_ = 1;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getKeygenResultFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                dataCase_ = 2;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getSignResultFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                dataCase_ = 3;
+                break;
+              } // case 26
+              case 32: {
+                data_ = input.readBool();
+                dataCase_ = 4;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int dataCase_ = 0;
+      private java.lang.Object data_;
+      public DataCase
+          getDataCase() {
+        return DataCase.forNumber(
+            dataCase_);
+      }
+
+      public Builder clearData() {
+        dataCase_ = 0;
+        data_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut, com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOutOrBuilder> trafficBuilder_;
+      /**
+       * <pre>
+       * all but final message
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.TrafficOut traffic = 1 [json_name = "traffic"];</code>
+       * @return Whether the traffic field is set.
+       */
+      @java.lang.Override
+      public boolean hasTraffic() {
+        return dataCase_ == 1;
+      }
+      /**
+       * <pre>
+       * all but final message
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.TrafficOut traffic = 1 [json_name = "traffic"];</code>
+       * @return The traffic.
+       */
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut getTraffic() {
+        if (trafficBuilder_ == null) {
+          if (dataCase_ == 1) {
+            return (com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut) data_;
+          }
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut.getDefaultInstance();
+        } else {
+          if (dataCase_ == 1) {
+            return trafficBuilder_.getMessage();
+          }
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * all but final message
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.TrafficOut traffic = 1 [json_name = "traffic"];</code>
+       */
+      public Builder setTraffic(com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut value) {
+        if (trafficBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          data_ = value;
+          onChanged();
+        } else {
+          trafficBuilder_.setMessage(value);
+        }
+        dataCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * all but final message
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.TrafficOut traffic = 1 [json_name = "traffic"];</code>
+       */
+      public Builder setTraffic(
+          com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut.Builder builderForValue) {
+        if (trafficBuilder_ == null) {
+          data_ = builderForValue.build();
+          onChanged();
+        } else {
+          trafficBuilder_.setMessage(builderForValue.build());
+        }
+        dataCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * all but final message
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.TrafficOut traffic = 1 [json_name = "traffic"];</code>
+       */
+      public Builder mergeTraffic(com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut value) {
+        if (trafficBuilder_ == null) {
+          if (dataCase_ == 1 &&
+              data_ != com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut.getDefaultInstance()) {
+            data_ = com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut.newBuilder((com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut) data_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            data_ = value;
+          }
+          onChanged();
+        } else {
+          if (dataCase_ == 1) {
+            trafficBuilder_.mergeFrom(value);
+          } else {
+            trafficBuilder_.setMessage(value);
+          }
+        }
+        dataCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * all but final message
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.TrafficOut traffic = 1 [json_name = "traffic"];</code>
+       */
+      public Builder clearTraffic() {
+        if (trafficBuilder_ == null) {
+          if (dataCase_ == 1) {
+            dataCase_ = 0;
+            data_ = null;
+            onChanged();
+          }
+        } else {
+          if (dataCase_ == 1) {
+            dataCase_ = 0;
+            data_ = null;
+          }
+          trafficBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * all but final message
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.TrafficOut traffic = 1 [json_name = "traffic"];</code>
+       */
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut.Builder getTrafficBuilder() {
+        return getTrafficFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * all but final message
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.TrafficOut traffic = 1 [json_name = "traffic"];</code>
+       */
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOutOrBuilder getTrafficOrBuilder() {
+        if ((dataCase_ == 1) && (trafficBuilder_ != null)) {
+          return trafficBuilder_.getMessageOrBuilder();
+        } else {
+          if (dataCase_ == 1) {
+            return (com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut) data_;
+          }
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * all but final message
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.TrafficOut traffic = 1 [json_name = "traffic"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut, com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOutOrBuilder> 
+          getTrafficFieldBuilder() {
+        if (trafficBuilder_ == null) {
+          if (!(dataCase_ == 1)) {
+            data_ = com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut.getDefaultInstance();
+          }
+          trafficBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut, com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOutOrBuilder>(
+                  (com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut) data_,
+                  getParentForChildren(),
+                  isClean());
+          data_ = null;
+        }
+        dataCase_ = 1;
+        onChanged();
+        return trafficBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResultOrBuilder> keygenResultBuilder_;
+      /**
+       * <pre>
+       * final message only, Keygen
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.MessageOut.KeygenResult keygen_result = 2 [json_name = "keygenResult"];</code>
+       * @return Whether the keygenResult field is set.
+       */
+      @java.lang.Override
+      public boolean hasKeygenResult() {
+        return dataCase_ == 2;
+      }
+      /**
+       * <pre>
+       * final message only, Keygen
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.MessageOut.KeygenResult keygen_result = 2 [json_name = "keygenResult"];</code>
+       * @return The keygenResult.
+       */
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult getKeygenResult() {
+        if (keygenResultBuilder_ == null) {
+          if (dataCase_ == 2) {
+            return (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult) data_;
+          }
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult.getDefaultInstance();
+        } else {
+          if (dataCase_ == 2) {
+            return keygenResultBuilder_.getMessage();
+          }
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * final message only, Keygen
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.MessageOut.KeygenResult keygen_result = 2 [json_name = "keygenResult"];</code>
+       */
+      public Builder setKeygenResult(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult value) {
+        if (keygenResultBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          data_ = value;
+          onChanged();
+        } else {
+          keygenResultBuilder_.setMessage(value);
+        }
+        dataCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * final message only, Keygen
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.MessageOut.KeygenResult keygen_result = 2 [json_name = "keygenResult"];</code>
+       */
+      public Builder setKeygenResult(
+          com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult.Builder builderForValue) {
+        if (keygenResultBuilder_ == null) {
+          data_ = builderForValue.build();
+          onChanged();
+        } else {
+          keygenResultBuilder_.setMessage(builderForValue.build());
+        }
+        dataCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * final message only, Keygen
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.MessageOut.KeygenResult keygen_result = 2 [json_name = "keygenResult"];</code>
+       */
+      public Builder mergeKeygenResult(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult value) {
+        if (keygenResultBuilder_ == null) {
+          if (dataCase_ == 2 &&
+              data_ != com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult.getDefaultInstance()) {
+            data_ = com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult.newBuilder((com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult) data_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            data_ = value;
+          }
+          onChanged();
+        } else {
+          if (dataCase_ == 2) {
+            keygenResultBuilder_.mergeFrom(value);
+          } else {
+            keygenResultBuilder_.setMessage(value);
+          }
+        }
+        dataCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * final message only, Keygen
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.MessageOut.KeygenResult keygen_result = 2 [json_name = "keygenResult"];</code>
+       */
+      public Builder clearKeygenResult() {
+        if (keygenResultBuilder_ == null) {
+          if (dataCase_ == 2) {
+            dataCase_ = 0;
+            data_ = null;
+            onChanged();
+          }
+        } else {
+          if (dataCase_ == 2) {
+            dataCase_ = 0;
+            data_ = null;
+          }
+          keygenResultBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * final message only, Keygen
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.MessageOut.KeygenResult keygen_result = 2 [json_name = "keygenResult"];</code>
+       */
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult.Builder getKeygenResultBuilder() {
+        return getKeygenResultFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * final message only, Keygen
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.MessageOut.KeygenResult keygen_result = 2 [json_name = "keygenResult"];</code>
+       */
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResultOrBuilder getKeygenResultOrBuilder() {
+        if ((dataCase_ == 2) && (keygenResultBuilder_ != null)) {
+          return keygenResultBuilder_.getMessageOrBuilder();
+        } else {
+          if (dataCase_ == 2) {
+            return (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult) data_;
+          }
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * final message only, Keygen
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.MessageOut.KeygenResult keygen_result = 2 [json_name = "keygenResult"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResultOrBuilder> 
+          getKeygenResultFieldBuilder() {
+        if (keygenResultBuilder_ == null) {
+          if (!(dataCase_ == 2)) {
+            data_ = com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult.getDefaultInstance();
+          }
+          keygenResultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResultOrBuilder>(
+                  (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.KeygenResult) data_,
+                  getParentForChildren(),
+                  isClean());
+          data_ = null;
+        }
+        dataCase_ = 2;
+        onChanged();
+        return keygenResultBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResultOrBuilder> signResultBuilder_;
+      /**
+       * <pre>
+       * final message only, Sign
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.MessageOut.SignResult sign_result = 3 [json_name = "signResult"];</code>
+       * @return Whether the signResult field is set.
+       */
+      @java.lang.Override
+      public boolean hasSignResult() {
+        return dataCase_ == 3;
+      }
+      /**
+       * <pre>
+       * final message only, Sign
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.MessageOut.SignResult sign_result = 3 [json_name = "signResult"];</code>
+       * @return The signResult.
+       */
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult getSignResult() {
+        if (signResultBuilder_ == null) {
+          if (dataCase_ == 3) {
+            return (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult) data_;
+          }
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult.getDefaultInstance();
+        } else {
+          if (dataCase_ == 3) {
+            return signResultBuilder_.getMessage();
+          }
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * final message only, Sign
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.MessageOut.SignResult sign_result = 3 [json_name = "signResult"];</code>
+       */
+      public Builder setSignResult(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult value) {
+        if (signResultBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          data_ = value;
+          onChanged();
+        } else {
+          signResultBuilder_.setMessage(value);
+        }
+        dataCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * final message only, Sign
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.MessageOut.SignResult sign_result = 3 [json_name = "signResult"];</code>
+       */
+      public Builder setSignResult(
+          com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult.Builder builderForValue) {
+        if (signResultBuilder_ == null) {
+          data_ = builderForValue.build();
+          onChanged();
+        } else {
+          signResultBuilder_.setMessage(builderForValue.build());
+        }
+        dataCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * final message only, Sign
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.MessageOut.SignResult sign_result = 3 [json_name = "signResult"];</code>
+       */
+      public Builder mergeSignResult(com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult value) {
+        if (signResultBuilder_ == null) {
+          if (dataCase_ == 3 &&
+              data_ != com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult.getDefaultInstance()) {
+            data_ = com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult.newBuilder((com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult) data_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            data_ = value;
+          }
+          onChanged();
+        } else {
+          if (dataCase_ == 3) {
+            signResultBuilder_.mergeFrom(value);
+          } else {
+            signResultBuilder_.setMessage(value);
+          }
+        }
+        dataCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * final message only, Sign
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.MessageOut.SignResult sign_result = 3 [json_name = "signResult"];</code>
+       */
+      public Builder clearSignResult() {
+        if (signResultBuilder_ == null) {
+          if (dataCase_ == 3) {
+            dataCase_ = 0;
+            data_ = null;
+            onChanged();
+          }
+        } else {
+          if (dataCase_ == 3) {
+            dataCase_ = 0;
+            data_ = null;
+          }
+          signResultBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * final message only, Sign
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.MessageOut.SignResult sign_result = 3 [json_name = "signResult"];</code>
+       */
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult.Builder getSignResultBuilder() {
+        return getSignResultFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * final message only, Sign
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.MessageOut.SignResult sign_result = 3 [json_name = "signResult"];</code>
+       */
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResultOrBuilder getSignResultOrBuilder() {
+        if ((dataCase_ == 3) && (signResultBuilder_ != null)) {
+          return signResultBuilder_.getMessageOrBuilder();
+        } else {
+          if (dataCase_ == 3) {
+            return (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult) data_;
+          }
+          return com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * final message only, Sign
+       * </pre>
+       *
+       * <code>.axelar.tss.tofnd.v1beta1.MessageOut.SignResult sign_result = 3 [json_name = "signResult"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResultOrBuilder> 
+          getSignResultFieldBuilder() {
+        if (signResultBuilder_ == null) {
+          if (!(dataCase_ == 3)) {
+            data_ = com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult.getDefaultInstance();
+          }
+          signResultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult.Builder, com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResultOrBuilder>(
+                  (com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut.SignResult) data_,
+                  getParentForChildren(),
+                  isClean());
+          data_ = null;
+        }
+        dataCase_ = 3;
+        onChanged();
+        return signResultBuilder_;
+      }
+
+      /**
+       * <pre>
+       * issue recover from client
+       * </pre>
+       *
+       * <code>bool need_recover = 4 [json_name = "needRecover"];</code>
+       * @return Whether the needRecover field is set.
+       */
+      public boolean hasNeedRecover() {
+        return dataCase_ == 4;
+      }
+      /**
+       * <pre>
+       * issue recover from client
+       * </pre>
+       *
+       * <code>bool need_recover = 4 [json_name = "needRecover"];</code>
+       * @return The needRecover.
+       */
+      public boolean getNeedRecover() {
+        if (dataCase_ == 4) {
+          return (java.lang.Boolean) data_;
+        }
+        return false;
+      }
+      /**
+       * <pre>
+       * issue recover from client
+       * </pre>
+       *
+       * <code>bool need_recover = 4 [json_name = "needRecover"];</code>
+       * @param value The needRecover to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNeedRecover(boolean value) {
+
+        dataCase_ = 4;
+        data_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * issue recover from client
+       * </pre>
+       *
+       * <code>bool need_recover = 4 [json_name = "needRecover"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNeedRecover() {
+        if (dataCase_ == 4) {
+          dataCase_ = 0;
+          data_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.tss.tofnd.v1beta1.MessageOut)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.tss.tofnd.v1beta1.MessageOut)
+    private static final com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut();
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MessageOut>
+        PARSER = new com.google.protobuf.AbstractParser<MessageOut>() {
+      @java.lang.Override
+      public MessageOut parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MessageOut> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MessageOut> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.tss.tofnd.v1beta1.TofndProto.MessageOut getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TrafficInOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.tss.tofnd.v1beta1.TrafficIn)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string from_party_uid = 1 [json_name = "fromPartyUid"];</code>
+     * @return The fromPartyUid.
+     */
+    java.lang.String getFromPartyUid();
+    /**
+     * <code>string from_party_uid = 1 [json_name = "fromPartyUid"];</code>
+     * @return The bytes for fromPartyUid.
+     */
+    com.google.protobuf.ByteString
+        getFromPartyUidBytes();
+
+    /**
+     * <code>bytes payload = 2 [json_name = "payload"];</code>
+     * @return The payload.
+     */
+    com.google.protobuf.ByteString getPayload();
+
+    /**
+     * <code>bool is_broadcast = 3 [json_name = "isBroadcast"];</code>
+     * @return The isBroadcast.
+     */
+    boolean getIsBroadcast();
+  }
+  /**
+   * Protobuf type {@code axelar.tss.tofnd.v1beta1.TrafficIn}
+   */
+  public static final class TrafficIn extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.tss.tofnd.v1beta1.TrafficIn)
+      TrafficInOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TrafficIn.newBuilder() to construct.
+    private TrafficIn(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TrafficIn() {
+      fromPartyUid_ = "";
+      payload_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TrafficIn();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_TrafficIn_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_TrafficIn_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn.class, com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn.Builder.class);
+    }
+
+    public static final int FROM_PARTY_UID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object fromPartyUid_ = "";
+    /**
+     * <code>string from_party_uid = 1 [json_name = "fromPartyUid"];</code>
+     * @return The fromPartyUid.
+     */
+    @java.lang.Override
+    public java.lang.String getFromPartyUid() {
+      java.lang.Object ref = fromPartyUid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fromPartyUid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string from_party_uid = 1 [json_name = "fromPartyUid"];</code>
+     * @return The bytes for fromPartyUid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFromPartyUidBytes() {
+      java.lang.Object ref = fromPartyUid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fromPartyUid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAYLOAD_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString payload_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes payload = 2 [json_name = "payload"];</code>
+     * @return The payload.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getPayload() {
+      return payload_;
+    }
+
+    public static final int IS_BROADCAST_FIELD_NUMBER = 3;
+    private boolean isBroadcast_ = false;
+    /**
+     * <code>bool is_broadcast = 3 [json_name = "isBroadcast"];</code>
+     * @return The isBroadcast.
+     */
+    @java.lang.Override
+    public boolean getIsBroadcast() {
+      return isBroadcast_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fromPartyUid_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, fromPartyUid_);
+      }
+      if (!payload_.isEmpty()) {
+        output.writeBytes(2, payload_);
+      }
+      if (isBroadcast_ != false) {
+        output.writeBool(3, isBroadcast_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fromPartyUid_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, fromPartyUid_);
+      }
+      if (!payload_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, payload_);
+      }
+      if (isBroadcast_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, isBroadcast_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn)) {
+        return super.equals(obj);
+      }
+      com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn other = (com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn) obj;
+
+      if (!getFromPartyUid()
+          .equals(other.getFromPartyUid())) return false;
+      if (!getPayload()
+          .equals(other.getPayload())) return false;
+      if (getIsBroadcast()
+          != other.getIsBroadcast()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FROM_PARTY_UID_FIELD_NUMBER;
+      hash = (53 * hash) + getFromPartyUid().hashCode();
+      hash = (37 * hash) + PAYLOAD_FIELD_NUMBER;
+      hash = (53 * hash) + getPayload().hashCode();
+      hash = (37 * hash) + IS_BROADCAST_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsBroadcast());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.tss.tofnd.v1beta1.TrafficIn}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.tss.tofnd.v1beta1.TrafficIn)
+        com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficInOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_TrafficIn_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_TrafficIn_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn.class, com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn.Builder.class);
+      }
+
+      // Construct using com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        fromPartyUid_ = "";
+        payload_ = com.google.protobuf.ByteString.EMPTY;
+        isBroadcast_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_TrafficIn_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn getDefaultInstanceForType() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn build() {
+        com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn buildPartial() {
+        com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn result = new com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.fromPartyUid_ = fromPartyUid_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.payload_ = payload_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.isBroadcast_ = isBroadcast_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn) {
+          return mergeFrom((com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn other) {
+        if (other == com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn.getDefaultInstance()) return this;
+        if (!other.getFromPartyUid().isEmpty()) {
+          fromPartyUid_ = other.fromPartyUid_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getPayload() != com.google.protobuf.ByteString.EMPTY) {
+          setPayload(other.getPayload());
+        }
+        if (other.getIsBroadcast() != false) {
+          setIsBroadcast(other.getIsBroadcast());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                fromPartyUid_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                payload_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                isBroadcast_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object fromPartyUid_ = "";
+      /**
+       * <code>string from_party_uid = 1 [json_name = "fromPartyUid"];</code>
+       * @return The fromPartyUid.
+       */
+      public java.lang.String getFromPartyUid() {
+        java.lang.Object ref = fromPartyUid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          fromPartyUid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string from_party_uid = 1 [json_name = "fromPartyUid"];</code>
+       * @return The bytes for fromPartyUid.
+       */
+      public com.google.protobuf.ByteString
+          getFromPartyUidBytes() {
+        java.lang.Object ref = fromPartyUid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fromPartyUid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string from_party_uid = 1 [json_name = "fromPartyUid"];</code>
+       * @param value The fromPartyUid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromPartyUid(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        fromPartyUid_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from_party_uid = 1 [json_name = "fromPartyUid"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFromPartyUid() {
+        fromPartyUid_ = getDefaultInstance().getFromPartyUid();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from_party_uid = 1 [json_name = "fromPartyUid"];</code>
+       * @param value The bytes for fromPartyUid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromPartyUidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        fromPartyUid_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString payload_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes payload = 2 [json_name = "payload"];</code>
+       * @return The payload.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getPayload() {
+        return payload_;
+      }
+      /**
+       * <code>bytes payload = 2 [json_name = "payload"];</code>
+       * @param value The payload to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayload(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        payload_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes payload = 2 [json_name = "payload"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPayload() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        payload_ = getDefaultInstance().getPayload();
+        onChanged();
+        return this;
+      }
+
+      private boolean isBroadcast_ ;
+      /**
+       * <code>bool is_broadcast = 3 [json_name = "isBroadcast"];</code>
+       * @return The isBroadcast.
+       */
+      @java.lang.Override
+      public boolean getIsBroadcast() {
+        return isBroadcast_;
+      }
+      /**
+       * <code>bool is_broadcast = 3 [json_name = "isBroadcast"];</code>
+       * @param value The isBroadcast to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsBroadcast(boolean value) {
+
+        isBroadcast_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_broadcast = 3 [json_name = "isBroadcast"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsBroadcast() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        isBroadcast_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.tss.tofnd.v1beta1.TrafficIn)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.tss.tofnd.v1beta1.TrafficIn)
+    private static final com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn();
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TrafficIn>
+        PARSER = new com.google.protobuf.AbstractParser<TrafficIn>() {
+      @java.lang.Override
+      public TrafficIn parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TrafficIn> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TrafficIn> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficIn getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TrafficOutOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.tss.tofnd.v1beta1.TrafficOut)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string to_party_uid = 1 [json_name = "toPartyUid"];</code>
+     * @return The toPartyUid.
+     */
+    java.lang.String getToPartyUid();
+    /**
+     * <code>string to_party_uid = 1 [json_name = "toPartyUid"];</code>
+     * @return The bytes for toPartyUid.
+     */
+    com.google.protobuf.ByteString
+        getToPartyUidBytes();
+
+    /**
+     * <code>bytes payload = 2 [json_name = "payload"];</code>
+     * @return The payload.
+     */
+    com.google.protobuf.ByteString getPayload();
+
+    /**
+     * <code>bool is_broadcast = 3 [json_name = "isBroadcast"];</code>
+     * @return The isBroadcast.
+     */
+    boolean getIsBroadcast();
+  }
+  /**
+   * Protobuf type {@code axelar.tss.tofnd.v1beta1.TrafficOut}
+   */
+  public static final class TrafficOut extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.tss.tofnd.v1beta1.TrafficOut)
+      TrafficOutOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TrafficOut.newBuilder() to construct.
+    private TrafficOut(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TrafficOut() {
+      toPartyUid_ = "";
+      payload_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TrafficOut();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_TrafficOut_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_TrafficOut_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut.class, com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut.Builder.class);
+    }
+
+    public static final int TO_PARTY_UID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object toPartyUid_ = "";
+    /**
+     * <code>string to_party_uid = 1 [json_name = "toPartyUid"];</code>
+     * @return The toPartyUid.
+     */
+    @java.lang.Override
+    public java.lang.String getToPartyUid() {
+      java.lang.Object ref = toPartyUid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        toPartyUid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string to_party_uid = 1 [json_name = "toPartyUid"];</code>
+     * @return The bytes for toPartyUid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getToPartyUidBytes() {
+      java.lang.Object ref = toPartyUid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        toPartyUid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAYLOAD_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString payload_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes payload = 2 [json_name = "payload"];</code>
+     * @return The payload.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getPayload() {
+      return payload_;
+    }
+
+    public static final int IS_BROADCAST_FIELD_NUMBER = 3;
+    private boolean isBroadcast_ = false;
+    /**
+     * <code>bool is_broadcast = 3 [json_name = "isBroadcast"];</code>
+     * @return The isBroadcast.
+     */
+    @java.lang.Override
+    public boolean getIsBroadcast() {
+      return isBroadcast_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(toPartyUid_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, toPartyUid_);
+      }
+      if (!payload_.isEmpty()) {
+        output.writeBytes(2, payload_);
+      }
+      if (isBroadcast_ != false) {
+        output.writeBool(3, isBroadcast_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(toPartyUid_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, toPartyUid_);
+      }
+      if (!payload_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, payload_);
+      }
+      if (isBroadcast_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, isBroadcast_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut)) {
+        return super.equals(obj);
+      }
+      com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut other = (com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut) obj;
+
+      if (!getToPartyUid()
+          .equals(other.getToPartyUid())) return false;
+      if (!getPayload()
+          .equals(other.getPayload())) return false;
+      if (getIsBroadcast()
+          != other.getIsBroadcast()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TO_PARTY_UID_FIELD_NUMBER;
+      hash = (53 * hash) + getToPartyUid().hashCode();
+      hash = (37 * hash) + PAYLOAD_FIELD_NUMBER;
+      hash = (53 * hash) + getPayload().hashCode();
+      hash = (37 * hash) + IS_BROADCAST_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsBroadcast());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.tss.tofnd.v1beta1.TrafficOut}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.tss.tofnd.v1beta1.TrafficOut)
+        com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOutOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_TrafficOut_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_TrafficOut_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut.class, com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut.Builder.class);
+      }
+
+      // Construct using com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        toPartyUid_ = "";
+        payload_ = com.google.protobuf.ByteString.EMPTY;
+        isBroadcast_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_TrafficOut_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut getDefaultInstanceForType() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut build() {
+        com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut buildPartial() {
+        com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut result = new com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.toPartyUid_ = toPartyUid_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.payload_ = payload_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.isBroadcast_ = isBroadcast_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut) {
+          return mergeFrom((com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut other) {
+        if (other == com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut.getDefaultInstance()) return this;
+        if (!other.getToPartyUid().isEmpty()) {
+          toPartyUid_ = other.toPartyUid_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getPayload() != com.google.protobuf.ByteString.EMPTY) {
+          setPayload(other.getPayload());
+        }
+        if (other.getIsBroadcast() != false) {
+          setIsBroadcast(other.getIsBroadcast());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                toPartyUid_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                payload_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                isBroadcast_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object toPartyUid_ = "";
+      /**
+       * <code>string to_party_uid = 1 [json_name = "toPartyUid"];</code>
+       * @return The toPartyUid.
+       */
+      public java.lang.String getToPartyUid() {
+        java.lang.Object ref = toPartyUid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          toPartyUid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string to_party_uid = 1 [json_name = "toPartyUid"];</code>
+       * @return The bytes for toPartyUid.
+       */
+      public com.google.protobuf.ByteString
+          getToPartyUidBytes() {
+        java.lang.Object ref = toPartyUid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          toPartyUid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string to_party_uid = 1 [json_name = "toPartyUid"];</code>
+       * @param value The toPartyUid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToPartyUid(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        toPartyUid_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string to_party_uid = 1 [json_name = "toPartyUid"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearToPartyUid() {
+        toPartyUid_ = getDefaultInstance().getToPartyUid();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string to_party_uid = 1 [json_name = "toPartyUid"];</code>
+       * @param value The bytes for toPartyUid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToPartyUidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        toPartyUid_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString payload_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes payload = 2 [json_name = "payload"];</code>
+       * @return The payload.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getPayload() {
+        return payload_;
+      }
+      /**
+       * <code>bytes payload = 2 [json_name = "payload"];</code>
+       * @param value The payload to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayload(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        payload_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes payload = 2 [json_name = "payload"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPayload() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        payload_ = getDefaultInstance().getPayload();
+        onChanged();
+        return this;
+      }
+
+      private boolean isBroadcast_ ;
+      /**
+       * <code>bool is_broadcast = 3 [json_name = "isBroadcast"];</code>
+       * @return The isBroadcast.
+       */
+      @java.lang.Override
+      public boolean getIsBroadcast() {
+        return isBroadcast_;
+      }
+      /**
+       * <code>bool is_broadcast = 3 [json_name = "isBroadcast"];</code>
+       * @param value The isBroadcast to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsBroadcast(boolean value) {
+
+        isBroadcast_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_broadcast = 3 [json_name = "isBroadcast"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsBroadcast() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        isBroadcast_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.tss.tofnd.v1beta1.TrafficOut)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.tss.tofnd.v1beta1.TrafficOut)
+    private static final com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut();
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TrafficOut>
+        PARSER = new com.google.protobuf.AbstractParser<TrafficOut>() {
+      @java.lang.Override
+      public TrafficOut parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TrafficOut> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TrafficOut> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.tss.tofnd.v1beta1.TofndProto.TrafficOut getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface KeygenInitOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.tss.tofnd.v1beta1.KeygenInit)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string new_key_uid = 1 [json_name = "newKeyUid"];</code>
+     * @return The newKeyUid.
+     */
+    java.lang.String getNewKeyUid();
+    /**
+     * <code>string new_key_uid = 1 [json_name = "newKeyUid"];</code>
+     * @return The bytes for newKeyUid.
+     */
+    com.google.protobuf.ByteString
+        getNewKeyUidBytes();
+
+    /**
+     * <code>repeated string party_uids = 2 [json_name = "partyUids"];</code>
+     * @return A list containing the partyUids.
+     */
+    java.util.List<java.lang.String>
+        getPartyUidsList();
+    /**
+     * <code>repeated string party_uids = 2 [json_name = "partyUids"];</code>
+     * @return The count of partyUids.
+     */
+    int getPartyUidsCount();
+    /**
+     * <code>repeated string party_uids = 2 [json_name = "partyUids"];</code>
+     * @param index The index of the element to return.
+     * @return The partyUids at the given index.
+     */
+    java.lang.String getPartyUids(int index);
+    /**
+     * <code>repeated string party_uids = 2 [json_name = "partyUids"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the partyUids at the given index.
+     */
+    com.google.protobuf.ByteString
+        getPartyUidsBytes(int index);
+
+    /**
+     * <code>repeated uint32 party_share_counts = 5 [json_name = "partyShareCounts"];</code>
+     * @return A list containing the partyShareCounts.
+     */
+    java.util.List<java.lang.Integer> getPartyShareCountsList();
+    /**
+     * <code>repeated uint32 party_share_counts = 5 [json_name = "partyShareCounts"];</code>
+     * @return The count of partyShareCounts.
+     */
+    int getPartyShareCountsCount();
+    /**
+     * <code>repeated uint32 party_share_counts = 5 [json_name = "partyShareCounts"];</code>
+     * @param index The index of the element to return.
+     * @return The partyShareCounts at the given index.
+     */
+    int getPartyShareCounts(int index);
+
+    /**
+     * <pre>
+     * parties[my_party_index] belongs to the server
+     * </pre>
+     *
+     * <code>uint32 my_party_index = 3 [json_name = "myPartyIndex"];</code>
+     * @return The myPartyIndex.
+     */
+    int getMyPartyIndex();
+
+    /**
+     * <code>uint32 threshold = 4 [json_name = "threshold"];</code>
+     * @return The threshold.
+     */
+    int getThreshold();
+  }
+  /**
+   * Protobuf type {@code axelar.tss.tofnd.v1beta1.KeygenInit}
+   */
+  public static final class KeygenInit extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.tss.tofnd.v1beta1.KeygenInit)
+      KeygenInitOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use KeygenInit.newBuilder() to construct.
+    private KeygenInit(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private KeygenInit() {
+      newKeyUid_ = "";
+      partyUids_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      partyShareCounts_ = emptyIntList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new KeygenInit();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_KeygenInit_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_KeygenInit_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit.class, com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit.Builder.class);
+    }
+
+    public static final int NEW_KEY_UID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object newKeyUid_ = "";
+    /**
+     * <code>string new_key_uid = 1 [json_name = "newKeyUid"];</code>
+     * @return The newKeyUid.
+     */
+    @java.lang.Override
+    public java.lang.String getNewKeyUid() {
+      java.lang.Object ref = newKeyUid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        newKeyUid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string new_key_uid = 1 [json_name = "newKeyUid"];</code>
+     * @return The bytes for newKeyUid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNewKeyUidBytes() {
+      java.lang.Object ref = newKeyUid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        newKeyUid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PARTY_UIDS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList partyUids_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string party_uids = 2 [json_name = "partyUids"];</code>
+     * @return A list containing the partyUids.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getPartyUidsList() {
+      return partyUids_;
+    }
+    /**
+     * <code>repeated string party_uids = 2 [json_name = "partyUids"];</code>
+     * @return The count of partyUids.
+     */
+    public int getPartyUidsCount() {
+      return partyUids_.size();
+    }
+    /**
+     * <code>repeated string party_uids = 2 [json_name = "partyUids"];</code>
+     * @param index The index of the element to return.
+     * @return The partyUids at the given index.
+     */
+    public java.lang.String getPartyUids(int index) {
+      return partyUids_.get(index);
+    }
+    /**
+     * <code>repeated string party_uids = 2 [json_name = "partyUids"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the partyUids at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getPartyUidsBytes(int index) {
+      return partyUids_.getByteString(index);
+    }
+
+    public static final int PARTY_SHARE_COUNTS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.IntList partyShareCounts_;
+    /**
+     * <code>repeated uint32 party_share_counts = 5 [json_name = "partyShareCounts"];</code>
+     * @return A list containing the partyShareCounts.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getPartyShareCountsList() {
+      return partyShareCounts_;
+    }
+    /**
+     * <code>repeated uint32 party_share_counts = 5 [json_name = "partyShareCounts"];</code>
+     * @return The count of partyShareCounts.
+     */
+    public int getPartyShareCountsCount() {
+      return partyShareCounts_.size();
+    }
+    /**
+     * <code>repeated uint32 party_share_counts = 5 [json_name = "partyShareCounts"];</code>
+     * @param index The index of the element to return.
+     * @return The partyShareCounts at the given index.
+     */
+    public int getPartyShareCounts(int index) {
+      return partyShareCounts_.getInt(index);
+    }
+    private int partyShareCountsMemoizedSerializedSize = -1;
+
+    public static final int MY_PARTY_INDEX_FIELD_NUMBER = 3;
+    private int myPartyIndex_ = 0;
+    /**
+     * <pre>
+     * parties[my_party_index] belongs to the server
+     * </pre>
+     *
+     * <code>uint32 my_party_index = 3 [json_name = "myPartyIndex"];</code>
+     * @return The myPartyIndex.
+     */
+    @java.lang.Override
+    public int getMyPartyIndex() {
+      return myPartyIndex_;
+    }
+
+    public static final int THRESHOLD_FIELD_NUMBER = 4;
+    private int threshold_ = 0;
+    /**
+     * <code>uint32 threshold = 4 [json_name = "threshold"];</code>
+     * @return The threshold.
+     */
+    @java.lang.Override
+    public int getThreshold() {
+      return threshold_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newKeyUid_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, newKeyUid_);
+      }
+      for (int i = 0; i < partyUids_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, partyUids_.getRaw(i));
+      }
+      if (myPartyIndex_ != 0) {
+        output.writeUInt32(3, myPartyIndex_);
+      }
+      if (threshold_ != 0) {
+        output.writeUInt32(4, threshold_);
+      }
+      if (getPartyShareCountsList().size() > 0) {
+        output.writeUInt32NoTag(42);
+        output.writeUInt32NoTag(partyShareCountsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < partyShareCounts_.size(); i++) {
+        output.writeUInt32NoTag(partyShareCounts_.getInt(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newKeyUid_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, newKeyUid_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < partyUids_.size(); i++) {
+          dataSize += computeStringSizeNoTag(partyUids_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getPartyUidsList().size();
+      }
+      if (myPartyIndex_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, myPartyIndex_);
+      }
+      if (threshold_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, threshold_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < partyShareCounts_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(partyShareCounts_.getInt(i));
+        }
+        size += dataSize;
+        if (!getPartyShareCountsList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        partyShareCountsMemoizedSerializedSize = dataSize;
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit)) {
+        return super.equals(obj);
+      }
+      com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit other = (com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit) obj;
+
+      if (!getNewKeyUid()
+          .equals(other.getNewKeyUid())) return false;
+      if (!getPartyUidsList()
+          .equals(other.getPartyUidsList())) return false;
+      if (!getPartyShareCountsList()
+          .equals(other.getPartyShareCountsList())) return false;
+      if (getMyPartyIndex()
+          != other.getMyPartyIndex()) return false;
+      if (getThreshold()
+          != other.getThreshold()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NEW_KEY_UID_FIELD_NUMBER;
+      hash = (53 * hash) + getNewKeyUid().hashCode();
+      if (getPartyUidsCount() > 0) {
+        hash = (37 * hash) + PARTY_UIDS_FIELD_NUMBER;
+        hash = (53 * hash) + getPartyUidsList().hashCode();
+      }
+      if (getPartyShareCountsCount() > 0) {
+        hash = (37 * hash) + PARTY_SHARE_COUNTS_FIELD_NUMBER;
+        hash = (53 * hash) + getPartyShareCountsList().hashCode();
+      }
+      hash = (37 * hash) + MY_PARTY_INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getMyPartyIndex();
+      hash = (37 * hash) + THRESHOLD_FIELD_NUMBER;
+      hash = (53 * hash) + getThreshold();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.tss.tofnd.v1beta1.KeygenInit}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.tss.tofnd.v1beta1.KeygenInit)
+        com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInitOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_KeygenInit_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_KeygenInit_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit.class, com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit.Builder.class);
+      }
+
+      // Construct using com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        newKeyUid_ = "";
+        partyUids_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        partyShareCounts_ = emptyIntList();
+        myPartyIndex_ = 0;
+        threshold_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_KeygenInit_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit getDefaultInstanceForType() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit build() {
+        com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit buildPartial() {
+        com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit result = new com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          partyShareCounts_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.partyShareCounts_ = partyShareCounts_;
+      }
+
+      private void buildPartial0(com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.newKeyUid_ = newKeyUid_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          partyUids_.makeImmutable();
+          result.partyUids_ = partyUids_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.myPartyIndex_ = myPartyIndex_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.threshold_ = threshold_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit) {
+          return mergeFrom((com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit other) {
+        if (other == com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit.getDefaultInstance()) return this;
+        if (!other.getNewKeyUid().isEmpty()) {
+          newKeyUid_ = other.newKeyUid_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.partyUids_.isEmpty()) {
+          if (partyUids_.isEmpty()) {
+            partyUids_ = other.partyUids_;
+            bitField0_ |= 0x00000002;
+          } else {
+            ensurePartyUidsIsMutable();
+            partyUids_.addAll(other.partyUids_);
+          }
+          onChanged();
+        }
+        if (!other.partyShareCounts_.isEmpty()) {
+          if (partyShareCounts_.isEmpty()) {
+            partyShareCounts_ = other.partyShareCounts_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensurePartyShareCountsIsMutable();
+            partyShareCounts_.addAll(other.partyShareCounts_);
+          }
+          onChanged();
+        }
+        if (other.getMyPartyIndex() != 0) {
+          setMyPartyIndex(other.getMyPartyIndex());
+        }
+        if (other.getThreshold() != 0) {
+          setThreshold(other.getThreshold());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                newKeyUid_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensurePartyUidsIsMutable();
+                partyUids_.add(s);
+                break;
+              } // case 18
+              case 24: {
+                myPartyIndex_ = input.readUInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 24
+              case 32: {
+                threshold_ = input.readUInt32();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 32
+              case 40: {
+                int v = input.readUInt32();
+                ensurePartyShareCountsIsMutable();
+                partyShareCounts_.addInt(v);
+                break;
+              } // case 40
+              case 42: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensurePartyShareCountsIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  partyShareCounts_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object newKeyUid_ = "";
+      /**
+       * <code>string new_key_uid = 1 [json_name = "newKeyUid"];</code>
+       * @return The newKeyUid.
+       */
+      public java.lang.String getNewKeyUid() {
+        java.lang.Object ref = newKeyUid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          newKeyUid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string new_key_uid = 1 [json_name = "newKeyUid"];</code>
+       * @return The bytes for newKeyUid.
+       */
+      public com.google.protobuf.ByteString
+          getNewKeyUidBytes() {
+        java.lang.Object ref = newKeyUid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          newKeyUid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string new_key_uid = 1 [json_name = "newKeyUid"];</code>
+       * @param value The newKeyUid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewKeyUid(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        newKeyUid_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string new_key_uid = 1 [json_name = "newKeyUid"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewKeyUid() {
+        newKeyUid_ = getDefaultInstance().getNewKeyUid();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string new_key_uid = 1 [json_name = "newKeyUid"];</code>
+       * @param value The bytes for newKeyUid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewKeyUidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        newKeyUid_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList partyUids_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensurePartyUidsIsMutable() {
+        if (!partyUids_.isModifiable()) {
+          partyUids_ = new com.google.protobuf.LazyStringArrayList(partyUids_);
+        }
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <code>repeated string party_uids = 2 [json_name = "partyUids"];</code>
+       * @return A list containing the partyUids.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getPartyUidsList() {
+        partyUids_.makeImmutable();
+        return partyUids_;
+      }
+      /**
+       * <code>repeated string party_uids = 2 [json_name = "partyUids"];</code>
+       * @return The count of partyUids.
+       */
+      public int getPartyUidsCount() {
+        return partyUids_.size();
+      }
+      /**
+       * <code>repeated string party_uids = 2 [json_name = "partyUids"];</code>
+       * @param index The index of the element to return.
+       * @return The partyUids at the given index.
+       */
+      public java.lang.String getPartyUids(int index) {
+        return partyUids_.get(index);
+      }
+      /**
+       * <code>repeated string party_uids = 2 [json_name = "partyUids"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the partyUids at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getPartyUidsBytes(int index) {
+        return partyUids_.getByteString(index);
+      }
+      /**
+       * <code>repeated string party_uids = 2 [json_name = "partyUids"];</code>
+       * @param index The index to set the value at.
+       * @param value The partyUids to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPartyUids(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensurePartyUidsIsMutable();
+        partyUids_.set(index, value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string party_uids = 2 [json_name = "partyUids"];</code>
+       * @param value The partyUids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPartyUids(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensurePartyUidsIsMutable();
+        partyUids_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string party_uids = 2 [json_name = "partyUids"];</code>
+       * @param values The partyUids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPartyUids(
+          java.lang.Iterable<java.lang.String> values) {
+        ensurePartyUidsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, partyUids_);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string party_uids = 2 [json_name = "partyUids"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPartyUids() {
+        partyUids_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string party_uids = 2 [json_name = "partyUids"];</code>
+       * @param value The bytes of the partyUids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPartyUidsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensurePartyUidsIsMutable();
+        partyUids_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.IntList partyShareCounts_ = emptyIntList();
+      private void ensurePartyShareCountsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          partyShareCounts_ = mutableCopy(partyShareCounts_);
+          bitField0_ |= 0x00000004;
+        }
+      }
+      /**
+       * <code>repeated uint32 party_share_counts = 5 [json_name = "partyShareCounts"];</code>
+       * @return A list containing the partyShareCounts.
+       */
+      public java.util.List<java.lang.Integer>
+          getPartyShareCountsList() {
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(partyShareCounts_) : partyShareCounts_;
+      }
+      /**
+       * <code>repeated uint32 party_share_counts = 5 [json_name = "partyShareCounts"];</code>
+       * @return The count of partyShareCounts.
+       */
+      public int getPartyShareCountsCount() {
+        return partyShareCounts_.size();
+      }
+      /**
+       * <code>repeated uint32 party_share_counts = 5 [json_name = "partyShareCounts"];</code>
+       * @param index The index of the element to return.
+       * @return The partyShareCounts at the given index.
+       */
+      public int getPartyShareCounts(int index) {
+        return partyShareCounts_.getInt(index);
+      }
+      /**
+       * <code>repeated uint32 party_share_counts = 5 [json_name = "partyShareCounts"];</code>
+       * @param index The index to set the value at.
+       * @param value The partyShareCounts to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPartyShareCounts(
+          int index, int value) {
+
+        ensurePartyShareCountsIsMutable();
+        partyShareCounts_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 party_share_counts = 5 [json_name = "partyShareCounts"];</code>
+       * @param value The partyShareCounts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPartyShareCounts(int value) {
+
+        ensurePartyShareCountsIsMutable();
+        partyShareCounts_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 party_share_counts = 5 [json_name = "partyShareCounts"];</code>
+       * @param values The partyShareCounts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPartyShareCounts(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensurePartyShareCountsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, partyShareCounts_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 party_share_counts = 5 [json_name = "partyShareCounts"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPartyShareCounts() {
+        partyShareCounts_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+
+      private int myPartyIndex_ ;
+      /**
+       * <pre>
+       * parties[my_party_index] belongs to the server
+       * </pre>
+       *
+       * <code>uint32 my_party_index = 3 [json_name = "myPartyIndex"];</code>
+       * @return The myPartyIndex.
+       */
+      @java.lang.Override
+      public int getMyPartyIndex() {
+        return myPartyIndex_;
+      }
+      /**
+       * <pre>
+       * parties[my_party_index] belongs to the server
+       * </pre>
+       *
+       * <code>uint32 my_party_index = 3 [json_name = "myPartyIndex"];</code>
+       * @param value The myPartyIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMyPartyIndex(int value) {
+
+        myPartyIndex_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * parties[my_party_index] belongs to the server
+       * </pre>
+       *
+       * <code>uint32 my_party_index = 3 [json_name = "myPartyIndex"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMyPartyIndex() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        myPartyIndex_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int threshold_ ;
+      /**
+       * <code>uint32 threshold = 4 [json_name = "threshold"];</code>
+       * @return The threshold.
+       */
+      @java.lang.Override
+      public int getThreshold() {
+        return threshold_;
+      }
+      /**
+       * <code>uint32 threshold = 4 [json_name = "threshold"];</code>
+       * @param value The threshold to set.
+       * @return This builder for chaining.
+       */
+      public Builder setThreshold(int value) {
+
+        threshold_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 threshold = 4 [json_name = "threshold"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearThreshold() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        threshold_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.tss.tofnd.v1beta1.KeygenInit)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.tss.tofnd.v1beta1.KeygenInit)
+    private static final com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit();
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<KeygenInit>
+        PARSER = new com.google.protobuf.AbstractParser<KeygenInit>() {
+      @java.lang.Override
+      public KeygenInit parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<KeygenInit> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<KeygenInit> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.tss.tofnd.v1beta1.TofndProto.KeygenInit getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SignInitOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.tss.tofnd.v1beta1.SignInit)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string new_sig_uid = 1 [json_name = "newSigUid"];</code>
+     * @return The newSigUid.
+     */
+    java.lang.String getNewSigUid();
+    /**
+     * <code>string new_sig_uid = 1 [json_name = "newSigUid"];</code>
+     * @return The bytes for newSigUid.
+     */
+    com.google.protobuf.ByteString
+        getNewSigUidBytes();
+
+    /**
+     * <code>string key_uid = 2 [json_name = "keyUid"];</code>
+     * @return The keyUid.
+     */
+    java.lang.String getKeyUid();
+    /**
+     * <code>string key_uid = 2 [json_name = "keyUid"];</code>
+     * @return The bytes for keyUid.
+     */
+    com.google.protobuf.ByteString
+        getKeyUidBytes();
+
+    /**
+     * <pre>
+     * TODO replace this with a subset of indices?
+     * </pre>
+     *
+     * <code>repeated string party_uids = 3 [json_name = "partyUids"];</code>
+     * @return A list containing the partyUids.
+     */
+    java.util.List<java.lang.String>
+        getPartyUidsList();
+    /**
+     * <pre>
+     * TODO replace this with a subset of indices?
+     * </pre>
+     *
+     * <code>repeated string party_uids = 3 [json_name = "partyUids"];</code>
+     * @return The count of partyUids.
+     */
+    int getPartyUidsCount();
+    /**
+     * <pre>
+     * TODO replace this with a subset of indices?
+     * </pre>
+     *
+     * <code>repeated string party_uids = 3 [json_name = "partyUids"];</code>
+     * @param index The index of the element to return.
+     * @return The partyUids at the given index.
+     */
+    java.lang.String getPartyUids(int index);
+    /**
+     * <pre>
+     * TODO replace this with a subset of indices?
+     * </pre>
+     *
+     * <code>repeated string party_uids = 3 [json_name = "partyUids"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the partyUids at the given index.
+     */
+    com.google.protobuf.ByteString
+        getPartyUidsBytes(int index);
+
+    /**
+     * <code>bytes message_to_sign = 4 [json_name = "messageToSign"];</code>
+     * @return The messageToSign.
+     */
+    com.google.protobuf.ByteString getMessageToSign();
+  }
+  /**
+   * Protobuf type {@code axelar.tss.tofnd.v1beta1.SignInit}
+   */
+  public static final class SignInit extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.tss.tofnd.v1beta1.SignInit)
+      SignInitOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SignInit.newBuilder() to construct.
+    private SignInit(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SignInit() {
+      newSigUid_ = "";
+      keyUid_ = "";
+      partyUids_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      messageToSign_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SignInit();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_SignInit_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_SignInit_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit.class, com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit.Builder.class);
+    }
+
+    public static final int NEW_SIG_UID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object newSigUid_ = "";
+    /**
+     * <code>string new_sig_uid = 1 [json_name = "newSigUid"];</code>
+     * @return The newSigUid.
+     */
+    @java.lang.Override
+    public java.lang.String getNewSigUid() {
+      java.lang.Object ref = newSigUid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        newSigUid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string new_sig_uid = 1 [json_name = "newSigUid"];</code>
+     * @return The bytes for newSigUid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNewSigUidBytes() {
+      java.lang.Object ref = newSigUid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        newSigUid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int KEY_UID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object keyUid_ = "";
+    /**
+     * <code>string key_uid = 2 [json_name = "keyUid"];</code>
+     * @return The keyUid.
+     */
+    @java.lang.Override
+    public java.lang.String getKeyUid() {
+      java.lang.Object ref = keyUid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        keyUid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string key_uid = 2 [json_name = "keyUid"];</code>
+     * @return The bytes for keyUid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKeyUidBytes() {
+      java.lang.Object ref = keyUid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        keyUid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PARTY_UIDS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList partyUids_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * TODO replace this with a subset of indices?
+     * </pre>
+     *
+     * <code>repeated string party_uids = 3 [json_name = "partyUids"];</code>
+     * @return A list containing the partyUids.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getPartyUidsList() {
+      return partyUids_;
+    }
+    /**
+     * <pre>
+     * TODO replace this with a subset of indices?
+     * </pre>
+     *
+     * <code>repeated string party_uids = 3 [json_name = "partyUids"];</code>
+     * @return The count of partyUids.
+     */
+    public int getPartyUidsCount() {
+      return partyUids_.size();
+    }
+    /**
+     * <pre>
+     * TODO replace this with a subset of indices?
+     * </pre>
+     *
+     * <code>repeated string party_uids = 3 [json_name = "partyUids"];</code>
+     * @param index The index of the element to return.
+     * @return The partyUids at the given index.
+     */
+    public java.lang.String getPartyUids(int index) {
+      return partyUids_.get(index);
+    }
+    /**
+     * <pre>
+     * TODO replace this with a subset of indices?
+     * </pre>
+     *
+     * <code>repeated string party_uids = 3 [json_name = "partyUids"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the partyUids at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getPartyUidsBytes(int index) {
+      return partyUids_.getByteString(index);
+    }
+
+    public static final int MESSAGE_TO_SIGN_FIELD_NUMBER = 4;
+    private com.google.protobuf.ByteString messageToSign_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes message_to_sign = 4 [json_name = "messageToSign"];</code>
+     * @return The messageToSign.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMessageToSign() {
+      return messageToSign_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newSigUid_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, newSigUid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyUid_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, keyUid_);
+      }
+      for (int i = 0; i < partyUids_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, partyUids_.getRaw(i));
+      }
+      if (!messageToSign_.isEmpty()) {
+        output.writeBytes(4, messageToSign_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newSigUid_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, newSigUid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyUid_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, keyUid_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < partyUids_.size(); i++) {
+          dataSize += computeStringSizeNoTag(partyUids_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getPartyUidsList().size();
+      }
+      if (!messageToSign_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, messageToSign_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit)) {
+        return super.equals(obj);
+      }
+      com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit other = (com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit) obj;
+
+      if (!getNewSigUid()
+          .equals(other.getNewSigUid())) return false;
+      if (!getKeyUid()
+          .equals(other.getKeyUid())) return false;
+      if (!getPartyUidsList()
+          .equals(other.getPartyUidsList())) return false;
+      if (!getMessageToSign()
+          .equals(other.getMessageToSign())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NEW_SIG_UID_FIELD_NUMBER;
+      hash = (53 * hash) + getNewSigUid().hashCode();
+      hash = (37 * hash) + KEY_UID_FIELD_NUMBER;
+      hash = (53 * hash) + getKeyUid().hashCode();
+      if (getPartyUidsCount() > 0) {
+        hash = (37 * hash) + PARTY_UIDS_FIELD_NUMBER;
+        hash = (53 * hash) + getPartyUidsList().hashCode();
+      }
+      hash = (37 * hash) + MESSAGE_TO_SIGN_FIELD_NUMBER;
+      hash = (53 * hash) + getMessageToSign().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.tss.tofnd.v1beta1.SignInit}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.tss.tofnd.v1beta1.SignInit)
+        com.axelar.tss.tofnd.v1beta1.TofndProto.SignInitOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_SignInit_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_SignInit_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit.class, com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit.Builder.class);
+      }
+
+      // Construct using com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        newSigUid_ = "";
+        keyUid_ = "";
+        partyUids_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        messageToSign_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.internal_static_axelar_tss_tofnd_v1beta1_SignInit_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit getDefaultInstanceForType() {
+        return com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit build() {
+        com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit buildPartial() {
+        com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit result = new com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.newSigUid_ = newSigUid_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.keyUid_ = keyUid_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          partyUids_.makeImmutable();
+          result.partyUids_ = partyUids_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.messageToSign_ = messageToSign_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit) {
+          return mergeFrom((com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit other) {
+        if (other == com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit.getDefaultInstance()) return this;
+        if (!other.getNewSigUid().isEmpty()) {
+          newSigUid_ = other.newSigUid_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getKeyUid().isEmpty()) {
+          keyUid_ = other.keyUid_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.partyUids_.isEmpty()) {
+          if (partyUids_.isEmpty()) {
+            partyUids_ = other.partyUids_;
+            bitField0_ |= 0x00000004;
+          } else {
+            ensurePartyUidsIsMutable();
+            partyUids_.addAll(other.partyUids_);
+          }
+          onChanged();
+        }
+        if (other.getMessageToSign() != com.google.protobuf.ByteString.EMPTY) {
+          setMessageToSign(other.getMessageToSign());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                newSigUid_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                keyUid_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensurePartyUidsIsMutable();
+                partyUids_.add(s);
+                break;
+              } // case 26
+              case 34: {
+                messageToSign_ = input.readBytes();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object newSigUid_ = "";
+      /**
+       * <code>string new_sig_uid = 1 [json_name = "newSigUid"];</code>
+       * @return The newSigUid.
+       */
+      public java.lang.String getNewSigUid() {
+        java.lang.Object ref = newSigUid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          newSigUid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string new_sig_uid = 1 [json_name = "newSigUid"];</code>
+       * @return The bytes for newSigUid.
+       */
+      public com.google.protobuf.ByteString
+          getNewSigUidBytes() {
+        java.lang.Object ref = newSigUid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          newSigUid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string new_sig_uid = 1 [json_name = "newSigUid"];</code>
+       * @param value The newSigUid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewSigUid(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        newSigUid_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string new_sig_uid = 1 [json_name = "newSigUid"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewSigUid() {
+        newSigUid_ = getDefaultInstance().getNewSigUid();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string new_sig_uid = 1 [json_name = "newSigUid"];</code>
+       * @param value The bytes for newSigUid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewSigUidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        newSigUid_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object keyUid_ = "";
+      /**
+       * <code>string key_uid = 2 [json_name = "keyUid"];</code>
+       * @return The keyUid.
+       */
+      public java.lang.String getKeyUid() {
+        java.lang.Object ref = keyUid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          keyUid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string key_uid = 2 [json_name = "keyUid"];</code>
+       * @return The bytes for keyUid.
+       */
+      public com.google.protobuf.ByteString
+          getKeyUidBytes() {
+        java.lang.Object ref = keyUid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          keyUid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string key_uid = 2 [json_name = "keyUid"];</code>
+       * @param value The keyUid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyUid(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        keyUid_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key_uid = 2 [json_name = "keyUid"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKeyUid() {
+        keyUid_ = getDefaultInstance().getKeyUid();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key_uid = 2 [json_name = "keyUid"];</code>
+       * @param value The bytes for keyUid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyUidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        keyUid_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList partyUids_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensurePartyUidsIsMutable() {
+        if (!partyUids_.isModifiable()) {
+          partyUids_ = new com.google.protobuf.LazyStringArrayList(partyUids_);
+        }
+        bitField0_ |= 0x00000004;
+      }
+      /**
+       * <pre>
+       * TODO replace this with a subset of indices?
+       * </pre>
+       *
+       * <code>repeated string party_uids = 3 [json_name = "partyUids"];</code>
+       * @return A list containing the partyUids.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getPartyUidsList() {
+        partyUids_.makeImmutable();
+        return partyUids_;
+      }
+      /**
+       * <pre>
+       * TODO replace this with a subset of indices?
+       * </pre>
+       *
+       * <code>repeated string party_uids = 3 [json_name = "partyUids"];</code>
+       * @return The count of partyUids.
+       */
+      public int getPartyUidsCount() {
+        return partyUids_.size();
+      }
+      /**
+       * <pre>
+       * TODO replace this with a subset of indices?
+       * </pre>
+       *
+       * <code>repeated string party_uids = 3 [json_name = "partyUids"];</code>
+       * @param index The index of the element to return.
+       * @return The partyUids at the given index.
+       */
+      public java.lang.String getPartyUids(int index) {
+        return partyUids_.get(index);
+      }
+      /**
+       * <pre>
+       * TODO replace this with a subset of indices?
+       * </pre>
+       *
+       * <code>repeated string party_uids = 3 [json_name = "partyUids"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the partyUids at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getPartyUidsBytes(int index) {
+        return partyUids_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * TODO replace this with a subset of indices?
+       * </pre>
+       *
+       * <code>repeated string party_uids = 3 [json_name = "partyUids"];</code>
+       * @param index The index to set the value at.
+       * @param value The partyUids to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPartyUids(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensurePartyUidsIsMutable();
+        partyUids_.set(index, value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * TODO replace this with a subset of indices?
+       * </pre>
+       *
+       * <code>repeated string party_uids = 3 [json_name = "partyUids"];</code>
+       * @param value The partyUids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPartyUids(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensurePartyUidsIsMutable();
+        partyUids_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * TODO replace this with a subset of indices?
+       * </pre>
+       *
+       * <code>repeated string party_uids = 3 [json_name = "partyUids"];</code>
+       * @param values The partyUids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPartyUids(
+          java.lang.Iterable<java.lang.String> values) {
+        ensurePartyUidsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, partyUids_);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * TODO replace this with a subset of indices?
+       * </pre>
+       *
+       * <code>repeated string party_uids = 3 [json_name = "partyUids"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPartyUids() {
+        partyUids_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * TODO replace this with a subset of indices?
+       * </pre>
+       *
+       * <code>repeated string party_uids = 3 [json_name = "partyUids"];</code>
+       * @param value The bytes of the partyUids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPartyUidsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensurePartyUidsIsMutable();
+        partyUids_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString messageToSign_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes message_to_sign = 4 [json_name = "messageToSign"];</code>
+       * @return The messageToSign.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMessageToSign() {
+        return messageToSign_;
+      }
+      /**
+       * <code>bytes message_to_sign = 4 [json_name = "messageToSign"];</code>
+       * @param value The messageToSign to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessageToSign(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        messageToSign_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes message_to_sign = 4 [json_name = "messageToSign"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMessageToSign() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        messageToSign_ = getDefaultInstance().getMessageToSign();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.tss.tofnd.v1beta1.SignInit)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.tss.tofnd.v1beta1.SignInit)
+    private static final com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit();
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SignInit>
+        PARSER = new com.google.protobuf.AbstractParser<SignInit>() {
+      @java.lang.Override
+      public SignInit parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SignInit> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SignInit> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.tss.tofnd.v1beta1.TofndProto.SignInit getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_tss_tofnd_v1beta1_RecoverRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_tss_tofnd_v1beta1_RecoverRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_tss_tofnd_v1beta1_RecoverResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_tss_tofnd_v1beta1_RecoverResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_tss_tofnd_v1beta1_KeygenOutput_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_tss_tofnd_v1beta1_KeygenOutput_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_tss_tofnd_v1beta1_MessageIn_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_tss_tofnd_v1beta1_MessageIn_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_tss_tofnd_v1beta1_MessageOut_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_tss_tofnd_v1beta1_MessageOut_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_tss_tofnd_v1beta1_MessageOut_KeygenResult_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_tss_tofnd_v1beta1_MessageOut_KeygenResult_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_tss_tofnd_v1beta1_MessageOut_SignResult_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_tss_tofnd_v1beta1_MessageOut_SignResult_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_tss_tofnd_v1beta1_MessageOut_CriminalList_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_tss_tofnd_v1beta1_MessageOut_CriminalList_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_tss_tofnd_v1beta1_MessageOut_CriminalList_Criminal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_tss_tofnd_v1beta1_MessageOut_CriminalList_Criminal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_tss_tofnd_v1beta1_TrafficIn_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_tss_tofnd_v1beta1_TrafficIn_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_tss_tofnd_v1beta1_TrafficOut_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_tss_tofnd_v1beta1_TrafficOut_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_tss_tofnd_v1beta1_KeygenInit_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_tss_tofnd_v1beta1_KeygenInit_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_tss_tofnd_v1beta1_SignInit_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_tss_tofnd_v1beta1_SignInit_fieldAccessorTable;
 
@@ -148,12 +12289,12 @@ public final class TofndProto {
       "_sig_uid\030\001 \001(\tR\tnewSigUid\022\027\n\007key_uid\030\002 \001" +
       "(\tR\006keyUid\022\035\n\nparty_uids\030\003 \003(\tR\tpartyUid" +
       "s\022&\n\017message_to_sign\030\004 \001(\014R\rmessageToSig" +
-      "nB\337\001\n\034com.axelar.tss.tofnd.v1beta1B\nTofn" +
-      "dProtoP\001Z0github.com/axelarnetwork/axela" +
-      "r-core/x/tss/tofnd\242\002\003ATT\252\002\030Axelar.Tss.To" +
-      "fnd.V1beta1\312\002\030Axelar\\Tss\\Tofnd\\V1beta1\342\002" +
-      "$Axelar\\Tss\\Tofnd\\V1beta1\\GPBMetadata\352\002\033" +
-      "Axelar::Tss::Tofnd::V1beta1b\006proto3"
+      "nB\335\001\n\034com.axelar.tss.tofnd.v1beta1B\nTofn" +
+      "dProtoZ0github.com/axelarnetwork/axelar-" +
+      "core/x/tss/tofnd\242\002\003ATT\252\002\030Axelar.Tss.Tofn" +
+      "d.V1beta1\312\002\030Axelar\\Tss\\Tofnd\\V1beta1\342\002$A" +
+      "xelar\\Tss\\Tofnd\\V1beta1\\GPBMetadata\352\002\033Ax" +
+      "elar::Tss::Tofnd::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

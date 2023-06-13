@@ -33,15 +33,15 @@ public final class ServiceProto {
       "ssetmantle.modules.splits.transactions.u" +
       "nwrap.Message\032C.assetmantle.modules.spli" +
       "ts.transactions.unwrap.TransactionRespon" +
-      "se\"\035\202\323\344\223\002\027\"\025/mantle/splits/unwrapB\240\002\n2co" +
+      "se\"\035\202\323\344\223\002\027\"\025/mantle/splits/unwrapB\236\002\n2co" +
       "m.assetmantle.modules.splits.transaction" +
-      "s.unwrapB\014ServiceProtoP\001\242\002\005AMSTU\252\002.Asset" +
-      "mantle.Modules.Splits.Transactions.Unwra" +
-      "p\312\002.Assetmantle\\Modules\\Splits\\Transacti" +
-      "ons\\Unwrap\342\002:Assetmantle\\Modules\\Splits\\" +
-      "Transactions\\Unwrap\\GPBMetadata\352\0022Assetm" +
-      "antle::Modules::Splits::Transactions::Un" +
-      "wrapb\006proto3"
+      "s.unwrapB\014ServiceProto\242\002\005AMSTU\252\002.Assetma" +
+      "ntle.Modules.Splits.Transactions.Unwrap\312" +
+      "\002.Assetmantle\\Modules\\Splits\\Transaction" +
+      "s\\Unwrap\342\002:Assetmantle\\Modules\\Splits\\Tr" +
+      "ansactions\\Unwrap\\GPBMetadata\352\0022Assetman" +
+      "tle::Modules::Splits::Transactions::Unwr" +
+      "apb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

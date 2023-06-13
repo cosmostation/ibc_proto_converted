@@ -14,34 +14,5122 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.msgfees.v1.QueryParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryParamsRequest is the request type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.msgfees.v1.QueryParamsRequest}
+   */
+  public static final class QueryParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.msgfees.v1.QueryParamsRequest)
+      QueryParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsRequest.newBuilder() to construct.
+    private QueryParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.msgfees.v1.QueryProto.internal_static_provenance_msgfees_v1_QueryParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.msgfees.v1.QueryProto.internal_static_provenance_msgfees_v1_QueryParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.msgfees.v1.QueryProto.QueryParamsRequest.class, com.provenance.msgfees.v1.QueryProto.QueryParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.msgfees.v1.QueryProto.QueryParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.provenance.msgfees.v1.QueryProto.QueryParamsRequest other = (com.provenance.msgfees.v1.QueryProto.QueryParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.msgfees.v1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.msgfees.v1.QueryProto.QueryParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.msgfees.v1.QueryProto.QueryParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.msgfees.v1.QueryProto.QueryParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsRequest is the request type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.msgfees.v1.QueryParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.msgfees.v1.QueryParamsRequest)
+        com.provenance.msgfees.v1.QueryProto.QueryParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.msgfees.v1.QueryProto.internal_static_provenance_msgfees_v1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.msgfees.v1.QueryProto.internal_static_provenance_msgfees_v1_QueryParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.msgfees.v1.QueryProto.QueryParamsRequest.class, com.provenance.msgfees.v1.QueryProto.QueryParamsRequest.Builder.class);
+      }
+
+      // Construct using com.provenance.msgfees.v1.QueryProto.QueryParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.msgfees.v1.QueryProto.internal_static_provenance_msgfees_v1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.msgfees.v1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+        return com.provenance.msgfees.v1.QueryProto.QueryParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.msgfees.v1.QueryProto.QueryParamsRequest build() {
+        com.provenance.msgfees.v1.QueryProto.QueryParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.msgfees.v1.QueryProto.QueryParamsRequest buildPartial() {
+        com.provenance.msgfees.v1.QueryProto.QueryParamsRequest result = new com.provenance.msgfees.v1.QueryProto.QueryParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.msgfees.v1.QueryProto.QueryParamsRequest) {
+          return mergeFrom((com.provenance.msgfees.v1.QueryProto.QueryParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.msgfees.v1.QueryProto.QueryParamsRequest other) {
+        if (other == com.provenance.msgfees.v1.QueryProto.QueryParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.msgfees.v1.QueryParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.msgfees.v1.QueryParamsRequest)
+    private static final com.provenance.msgfees.v1.QueryProto.QueryParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.msgfees.v1.QueryProto.QueryParamsRequest();
+    }
+
+    public static com.provenance.msgfees.v1.QueryProto.QueryParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsRequest>() {
+      @java.lang.Override
+      public QueryParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.msgfees.v1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.msgfees.v1.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>.provenance.msgfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>.provenance.msgfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.provenance.msgfees.v1.MsgfeesProto.Params getParams();
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>.provenance.msgfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.msgfees.v1.MsgfeesProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryParamsResponse is the response type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.msgfees.v1.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.msgfees.v1.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.msgfees.v1.QueryProto.internal_static_provenance_msgfees_v1_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.msgfees.v1.QueryProto.internal_static_provenance_msgfees_v1_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.msgfees.v1.QueryProto.QueryParamsResponse.class, com.provenance.msgfees.v1.QueryProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.provenance.msgfees.v1.MsgfeesProto.Params params_;
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>.provenance.msgfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>.provenance.msgfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.provenance.msgfees.v1.MsgfeesProto.Params getParams() {
+      return params_ == null ? com.provenance.msgfees.v1.MsgfeesProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>.provenance.msgfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.msgfees.v1.MsgfeesProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.provenance.msgfees.v1.MsgfeesProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.msgfees.v1.QueryProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.provenance.msgfees.v1.QueryProto.QueryParamsResponse other = (com.provenance.msgfees.v1.QueryProto.QueryParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.msgfees.v1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.msgfees.v1.QueryProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.msgfees.v1.QueryProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.msgfees.v1.QueryProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsResponse is the response type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.msgfees.v1.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.msgfees.v1.QueryParamsResponse)
+        com.provenance.msgfees.v1.QueryProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.msgfees.v1.QueryProto.internal_static_provenance_msgfees_v1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.msgfees.v1.QueryProto.internal_static_provenance_msgfees_v1_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.msgfees.v1.QueryProto.QueryParamsResponse.class, com.provenance.msgfees.v1.QueryProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.provenance.msgfees.v1.QueryProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.msgfees.v1.QueryProto.internal_static_provenance_msgfees_v1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.msgfees.v1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.provenance.msgfees.v1.QueryProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.msgfees.v1.QueryProto.QueryParamsResponse build() {
+        com.provenance.msgfees.v1.QueryProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.msgfees.v1.QueryProto.QueryParamsResponse buildPartial() {
+        com.provenance.msgfees.v1.QueryProto.QueryParamsResponse result = new com.provenance.msgfees.v1.QueryProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.msgfees.v1.QueryProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.msgfees.v1.QueryProto.QueryParamsResponse) {
+          return mergeFrom((com.provenance.msgfees.v1.QueryProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.msgfees.v1.QueryProto.QueryParamsResponse other) {
+        if (other == com.provenance.msgfees.v1.QueryProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.provenance.msgfees.v1.MsgfeesProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.msgfees.v1.MsgfeesProto.Params, com.provenance.msgfees.v1.MsgfeesProto.Params.Builder, com.provenance.msgfees.v1.MsgfeesProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.provenance.msgfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.provenance.msgfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.provenance.msgfees.v1.MsgfeesProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.provenance.msgfees.v1.MsgfeesProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.provenance.msgfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.provenance.msgfees.v1.MsgfeesProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.provenance.msgfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.provenance.msgfees.v1.MsgfeesProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.provenance.msgfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.provenance.msgfees.v1.MsgfeesProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.provenance.msgfees.v1.MsgfeesProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.provenance.msgfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.provenance.msgfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.msgfees.v1.MsgfeesProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.provenance.msgfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.msgfees.v1.MsgfeesProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.provenance.msgfees.v1.MsgfeesProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.provenance.msgfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.msgfees.v1.MsgfeesProto.Params, com.provenance.msgfees.v1.MsgfeesProto.Params.Builder, com.provenance.msgfees.v1.MsgfeesProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.msgfees.v1.MsgfeesProto.Params, com.provenance.msgfees.v1.MsgfeesProto.Params.Builder, com.provenance.msgfees.v1.MsgfeesProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.msgfees.v1.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.msgfees.v1.QueryParamsResponse)
+    private static final com.provenance.msgfees.v1.QueryProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.msgfees.v1.QueryProto.QueryParamsResponse();
+    }
+
+    public static com.provenance.msgfees.v1.QueryProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.msgfees.v1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAllMsgFeesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.msgfees.v1.QueryAllMsgFeesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryAllMsgFeesRequest queries all Msg which have fees associated with them.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.msgfees.v1.QueryAllMsgFeesRequest}
+   */
+  public static final class QueryAllMsgFeesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.msgfees.v1.QueryAllMsgFeesRequest)
+      QueryAllMsgFeesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAllMsgFeesRequest.newBuilder() to construct.
+    private QueryAllMsgFeesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAllMsgFeesRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAllMsgFeesRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.msgfees.v1.QueryProto.internal_static_provenance_msgfees_v1_QueryAllMsgFeesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.msgfees.v1.QueryProto.internal_static_provenance_msgfees_v1_QueryAllMsgFeesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest.class, com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest)) {
+        return super.equals(obj);
+      }
+      com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest other = (com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAllMsgFeesRequest queries all Msg which have fees associated with them.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.msgfees.v1.QueryAllMsgFeesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.msgfees.v1.QueryAllMsgFeesRequest)
+        com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.msgfees.v1.QueryProto.internal_static_provenance_msgfees_v1_QueryAllMsgFeesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.msgfees.v1.QueryProto.internal_static_provenance_msgfees_v1_QueryAllMsgFeesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest.class, com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest.Builder.class);
+      }
+
+      // Construct using com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.msgfees.v1.QueryProto.internal_static_provenance_msgfees_v1_QueryAllMsgFeesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest getDefaultInstanceForType() {
+        return com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest build() {
+        com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest buildPartial() {
+        com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest result = new com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest) {
+          return mergeFrom((com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest other) {
+        if (other == com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.msgfees.v1.QueryAllMsgFeesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.msgfees.v1.QueryAllMsgFeesRequest)
+    private static final com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest();
+    }
+
+    public static com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAllMsgFeesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAllMsgFeesRequest>() {
+      @java.lang.Override
+      public QueryAllMsgFeesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAllMsgFeesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAllMsgFeesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAllMsgFeesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.msgfees.v1.QueryAllMsgFeesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .provenance.msgfees.v1.MsgFee msg_fees = 1 [json_name = "msgFees"];</code>
+     */
+    java.util.List<com.provenance.msgfees.v1.MsgfeesProto.MsgFee> 
+        getMsgFeesList();
+    /**
+     * <code>repeated .provenance.msgfees.v1.MsgFee msg_fees = 1 [json_name = "msgFees"];</code>
+     */
+    com.provenance.msgfees.v1.MsgfeesProto.MsgFee getMsgFees(int index);
+    /**
+     * <code>repeated .provenance.msgfees.v1.MsgFee msg_fees = 1 [json_name = "msgFees"];</code>
+     */
+    int getMsgFeesCount();
+    /**
+     * <code>repeated .provenance.msgfees.v1.MsgFee msg_fees = 1 [json_name = "msgFees"];</code>
+     */
+    java.util.List<? extends com.provenance.msgfees.v1.MsgfeesProto.MsgFeeOrBuilder> 
+        getMsgFeesOrBuilderList();
+    /**
+     * <code>repeated .provenance.msgfees.v1.MsgFee msg_fees = 1 [json_name = "msgFees"];</code>
+     */
+    com.provenance.msgfees.v1.MsgfeesProto.MsgFeeOrBuilder getMsgFeesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * response for querying all msg's with fees associated with them
+   * </pre>
+   *
+   * Protobuf type {@code provenance.msgfees.v1.QueryAllMsgFeesResponse}
+   */
+  public static final class QueryAllMsgFeesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.msgfees.v1.QueryAllMsgFeesResponse)
+      QueryAllMsgFeesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAllMsgFeesResponse.newBuilder() to construct.
+    private QueryAllMsgFeesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAllMsgFeesResponse() {
+      msgFees_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAllMsgFeesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.msgfees.v1.QueryProto.internal_static_provenance_msgfees_v1_QueryAllMsgFeesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.msgfees.v1.QueryProto.internal_static_provenance_msgfees_v1_QueryAllMsgFeesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse.class, com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse.Builder.class);
+    }
+
+    public static final int MSG_FEES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.msgfees.v1.MsgfeesProto.MsgFee> msgFees_;
+    /**
+     * <code>repeated .provenance.msgfees.v1.MsgFee msg_fees = 1 [json_name = "msgFees"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.msgfees.v1.MsgfeesProto.MsgFee> getMsgFeesList() {
+      return msgFees_;
+    }
+    /**
+     * <code>repeated .provenance.msgfees.v1.MsgFee msg_fees = 1 [json_name = "msgFees"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.msgfees.v1.MsgfeesProto.MsgFeeOrBuilder> 
+        getMsgFeesOrBuilderList() {
+      return msgFees_;
+    }
+    /**
+     * <code>repeated .provenance.msgfees.v1.MsgFee msg_fees = 1 [json_name = "msgFees"];</code>
+     */
+    @java.lang.Override
+    public int getMsgFeesCount() {
+      return msgFees_.size();
+    }
+    /**
+     * <code>repeated .provenance.msgfees.v1.MsgFee msg_fees = 1 [json_name = "msgFees"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.msgfees.v1.MsgfeesProto.MsgFee getMsgFees(int index) {
+      return msgFees_.get(index);
+    }
+    /**
+     * <code>repeated .provenance.msgfees.v1.MsgFee msg_fees = 1 [json_name = "msgFees"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.msgfees.v1.MsgfeesProto.MsgFeeOrBuilder getMsgFeesOrBuilder(
+        int index) {
+      return msgFees_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < msgFees_.size(); i++) {
+        output.writeMessage(1, msgFees_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < msgFees_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, msgFees_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse)) {
+        return super.equals(obj);
+      }
+      com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse other = (com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse) obj;
+
+      if (!getMsgFeesList()
+          .equals(other.getMsgFeesList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getMsgFeesCount() > 0) {
+        hash = (37 * hash) + MSG_FEES_FIELD_NUMBER;
+        hash = (53 * hash) + getMsgFeesList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * response for querying all msg's with fees associated with them
+     * </pre>
+     *
+     * Protobuf type {@code provenance.msgfees.v1.QueryAllMsgFeesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.msgfees.v1.QueryAllMsgFeesResponse)
+        com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.msgfees.v1.QueryProto.internal_static_provenance_msgfees_v1_QueryAllMsgFeesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.msgfees.v1.QueryProto.internal_static_provenance_msgfees_v1_QueryAllMsgFeesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse.class, com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse.Builder.class);
+      }
+
+      // Construct using com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (msgFeesBuilder_ == null) {
+          msgFees_ = java.util.Collections.emptyList();
+        } else {
+          msgFees_ = null;
+          msgFeesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.msgfees.v1.QueryProto.internal_static_provenance_msgfees_v1_QueryAllMsgFeesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse getDefaultInstanceForType() {
+        return com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse build() {
+        com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse buildPartial() {
+        com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse result = new com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse result) {
+        if (msgFeesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            msgFees_ = java.util.Collections.unmodifiableList(msgFees_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.msgFees_ = msgFees_;
+        } else {
+          result.msgFees_ = msgFeesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse) {
+          return mergeFrom((com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse other) {
+        if (other == com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse.getDefaultInstance()) return this;
+        if (msgFeesBuilder_ == null) {
+          if (!other.msgFees_.isEmpty()) {
+            if (msgFees_.isEmpty()) {
+              msgFees_ = other.msgFees_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureMsgFeesIsMutable();
+              msgFees_.addAll(other.msgFees_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.msgFees_.isEmpty()) {
+            if (msgFeesBuilder_.isEmpty()) {
+              msgFeesBuilder_.dispose();
+              msgFeesBuilder_ = null;
+              msgFees_ = other.msgFees_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              msgFeesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMsgFeesFieldBuilder() : null;
+            } else {
+              msgFeesBuilder_.addAllMessages(other.msgFees_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.provenance.msgfees.v1.MsgfeesProto.MsgFee m =
+                    input.readMessage(
+                        com.provenance.msgfees.v1.MsgfeesProto.MsgFee.parser(),
+                        extensionRegistry);
+                if (msgFeesBuilder_ == null) {
+                  ensureMsgFeesIsMutable();
+                  msgFees_.add(m);
+                } else {
+                  msgFeesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.provenance.msgfees.v1.MsgfeesProto.MsgFee> msgFees_ =
+        java.util.Collections.emptyList();
+      private void ensureMsgFeesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          msgFees_ = new java.util.ArrayList<com.provenance.msgfees.v1.MsgfeesProto.MsgFee>(msgFees_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.msgfees.v1.MsgfeesProto.MsgFee, com.provenance.msgfees.v1.MsgfeesProto.MsgFee.Builder, com.provenance.msgfees.v1.MsgfeesProto.MsgFeeOrBuilder> msgFeesBuilder_;
+
+      /**
+       * <code>repeated .provenance.msgfees.v1.MsgFee msg_fees = 1 [json_name = "msgFees"];</code>
+       */
+      public java.util.List<com.provenance.msgfees.v1.MsgfeesProto.MsgFee> getMsgFeesList() {
+        if (msgFeesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(msgFees_);
+        } else {
+          return msgFeesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.MsgFee msg_fees = 1 [json_name = "msgFees"];</code>
+       */
+      public int getMsgFeesCount() {
+        if (msgFeesBuilder_ == null) {
+          return msgFees_.size();
+        } else {
+          return msgFeesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.MsgFee msg_fees = 1 [json_name = "msgFees"];</code>
+       */
+      public com.provenance.msgfees.v1.MsgfeesProto.MsgFee getMsgFees(int index) {
+        if (msgFeesBuilder_ == null) {
+          return msgFees_.get(index);
+        } else {
+          return msgFeesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.MsgFee msg_fees = 1 [json_name = "msgFees"];</code>
+       */
+      public Builder setMsgFees(
+          int index, com.provenance.msgfees.v1.MsgfeesProto.MsgFee value) {
+        if (msgFeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMsgFeesIsMutable();
+          msgFees_.set(index, value);
+          onChanged();
+        } else {
+          msgFeesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.MsgFee msg_fees = 1 [json_name = "msgFees"];</code>
+       */
+      public Builder setMsgFees(
+          int index, com.provenance.msgfees.v1.MsgfeesProto.MsgFee.Builder builderForValue) {
+        if (msgFeesBuilder_ == null) {
+          ensureMsgFeesIsMutable();
+          msgFees_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          msgFeesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.MsgFee msg_fees = 1 [json_name = "msgFees"];</code>
+       */
+      public Builder addMsgFees(com.provenance.msgfees.v1.MsgfeesProto.MsgFee value) {
+        if (msgFeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMsgFeesIsMutable();
+          msgFees_.add(value);
+          onChanged();
+        } else {
+          msgFeesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.MsgFee msg_fees = 1 [json_name = "msgFees"];</code>
+       */
+      public Builder addMsgFees(
+          int index, com.provenance.msgfees.v1.MsgfeesProto.MsgFee value) {
+        if (msgFeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMsgFeesIsMutable();
+          msgFees_.add(index, value);
+          onChanged();
+        } else {
+          msgFeesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.MsgFee msg_fees = 1 [json_name = "msgFees"];</code>
+       */
+      public Builder addMsgFees(
+          com.provenance.msgfees.v1.MsgfeesProto.MsgFee.Builder builderForValue) {
+        if (msgFeesBuilder_ == null) {
+          ensureMsgFeesIsMutable();
+          msgFees_.add(builderForValue.build());
+          onChanged();
+        } else {
+          msgFeesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.MsgFee msg_fees = 1 [json_name = "msgFees"];</code>
+       */
+      public Builder addMsgFees(
+          int index, com.provenance.msgfees.v1.MsgfeesProto.MsgFee.Builder builderForValue) {
+        if (msgFeesBuilder_ == null) {
+          ensureMsgFeesIsMutable();
+          msgFees_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          msgFeesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.MsgFee msg_fees = 1 [json_name = "msgFees"];</code>
+       */
+      public Builder addAllMsgFees(
+          java.lang.Iterable<? extends com.provenance.msgfees.v1.MsgfeesProto.MsgFee> values) {
+        if (msgFeesBuilder_ == null) {
+          ensureMsgFeesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, msgFees_);
+          onChanged();
+        } else {
+          msgFeesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.MsgFee msg_fees = 1 [json_name = "msgFees"];</code>
+       */
+      public Builder clearMsgFees() {
+        if (msgFeesBuilder_ == null) {
+          msgFees_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          msgFeesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.MsgFee msg_fees = 1 [json_name = "msgFees"];</code>
+       */
+      public Builder removeMsgFees(int index) {
+        if (msgFeesBuilder_ == null) {
+          ensureMsgFeesIsMutable();
+          msgFees_.remove(index);
+          onChanged();
+        } else {
+          msgFeesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.MsgFee msg_fees = 1 [json_name = "msgFees"];</code>
+       */
+      public com.provenance.msgfees.v1.MsgfeesProto.MsgFee.Builder getMsgFeesBuilder(
+          int index) {
+        return getMsgFeesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.MsgFee msg_fees = 1 [json_name = "msgFees"];</code>
+       */
+      public com.provenance.msgfees.v1.MsgfeesProto.MsgFeeOrBuilder getMsgFeesOrBuilder(
+          int index) {
+        if (msgFeesBuilder_ == null) {
+          return msgFees_.get(index);  } else {
+          return msgFeesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.MsgFee msg_fees = 1 [json_name = "msgFees"];</code>
+       */
+      public java.util.List<? extends com.provenance.msgfees.v1.MsgfeesProto.MsgFeeOrBuilder> 
+           getMsgFeesOrBuilderList() {
+        if (msgFeesBuilder_ != null) {
+          return msgFeesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(msgFees_);
+        }
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.MsgFee msg_fees = 1 [json_name = "msgFees"];</code>
+       */
+      public com.provenance.msgfees.v1.MsgfeesProto.MsgFee.Builder addMsgFeesBuilder() {
+        return getMsgFeesFieldBuilder().addBuilder(
+            com.provenance.msgfees.v1.MsgfeesProto.MsgFee.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.MsgFee msg_fees = 1 [json_name = "msgFees"];</code>
+       */
+      public com.provenance.msgfees.v1.MsgfeesProto.MsgFee.Builder addMsgFeesBuilder(
+          int index) {
+        return getMsgFeesFieldBuilder().addBuilder(
+            index, com.provenance.msgfees.v1.MsgfeesProto.MsgFee.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.msgfees.v1.MsgFee msg_fees = 1 [json_name = "msgFees"];</code>
+       */
+      public java.util.List<com.provenance.msgfees.v1.MsgfeesProto.MsgFee.Builder> 
+           getMsgFeesBuilderList() {
+        return getMsgFeesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.msgfees.v1.MsgfeesProto.MsgFee, com.provenance.msgfees.v1.MsgfeesProto.MsgFee.Builder, com.provenance.msgfees.v1.MsgfeesProto.MsgFeeOrBuilder> 
+          getMsgFeesFieldBuilder() {
+        if (msgFeesBuilder_ == null) {
+          msgFeesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.msgfees.v1.MsgfeesProto.MsgFee, com.provenance.msgfees.v1.MsgfeesProto.MsgFee.Builder, com.provenance.msgfees.v1.MsgfeesProto.MsgFeeOrBuilder>(
+                  msgFees_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          msgFees_ = null;
+        }
+        return msgFeesBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.msgfees.v1.QueryAllMsgFeesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.msgfees.v1.QueryAllMsgFeesResponse)
+    private static final com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse();
+    }
+
+    public static com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAllMsgFeesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAllMsgFeesResponse>() {
+      @java.lang.Override
+      public QueryAllMsgFeesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAllMsgFeesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAllMsgFeesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.msgfees.v1.QueryProto.QueryAllMsgFeesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CalculateTxFeesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.msgfees.v1.CalculateTxFeesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * tx_bytes is the transaction to simulate.
+     * </pre>
+     *
+     * <code>bytes tx_bytes = 1 [json_name = "txBytes"];</code>
+     * @return The txBytes.
+     */
+    com.google.protobuf.ByteString getTxBytes();
+
+    /**
+     * <pre>
+     * default_base_denom is used to set the denom used for gas fees
+     * if not set it will default to nhash.
+     * </pre>
+     *
+     * <code>string default_base_denom = 2 [json_name = "defaultBaseDenom"];</code>
+     * @return The defaultBaseDenom.
+     */
+    java.lang.String getDefaultBaseDenom();
+    /**
+     * <pre>
+     * default_base_denom is used to set the denom used for gas fees
+     * if not set it will default to nhash.
+     * </pre>
+     *
+     * <code>string default_base_denom = 2 [json_name = "defaultBaseDenom"];</code>
+     * @return The bytes for defaultBaseDenom.
+     */
+    com.google.protobuf.ByteString
+        getDefaultBaseDenomBytes();
+
+    /**
+     * <pre>
+     * gas_adjustment is the adjustment factor to be multiplied against the estimate returned by the tx simulation
+     * </pre>
+     *
+     * <code>float gas_adjustment = 3 [json_name = "gasAdjustment"];</code>
+     * @return The gasAdjustment.
+     */
+    float getGasAdjustment();
+  }
+  /**
+   * <pre>
+   * CalculateTxFeesRequest is the request type for the Query RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.msgfees.v1.CalculateTxFeesRequest}
+   */
+  public static final class CalculateTxFeesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.msgfees.v1.CalculateTxFeesRequest)
+      CalculateTxFeesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CalculateTxFeesRequest.newBuilder() to construct.
+    private CalculateTxFeesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CalculateTxFeesRequest() {
+      txBytes_ = com.google.protobuf.ByteString.EMPTY;
+      defaultBaseDenom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CalculateTxFeesRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.msgfees.v1.QueryProto.internal_static_provenance_msgfees_v1_CalculateTxFeesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.msgfees.v1.QueryProto.internal_static_provenance_msgfees_v1_CalculateTxFeesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest.class, com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest.Builder.class);
+    }
+
+    public static final int TX_BYTES_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString txBytes_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * tx_bytes is the transaction to simulate.
+     * </pre>
+     *
+     * <code>bytes tx_bytes = 1 [json_name = "txBytes"];</code>
+     * @return The txBytes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getTxBytes() {
+      return txBytes_;
+    }
+
+    public static final int DEFAULT_BASE_DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object defaultBaseDenom_ = "";
+    /**
+     * <pre>
+     * default_base_denom is used to set the denom used for gas fees
+     * if not set it will default to nhash.
+     * </pre>
+     *
+     * <code>string default_base_denom = 2 [json_name = "defaultBaseDenom"];</code>
+     * @return The defaultBaseDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getDefaultBaseDenom() {
+      java.lang.Object ref = defaultBaseDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        defaultBaseDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * default_base_denom is used to set the denom used for gas fees
+     * if not set it will default to nhash.
+     * </pre>
+     *
+     * <code>string default_base_denom = 2 [json_name = "defaultBaseDenom"];</code>
+     * @return The bytes for defaultBaseDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDefaultBaseDenomBytes() {
+      java.lang.Object ref = defaultBaseDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        defaultBaseDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GAS_ADJUSTMENT_FIELD_NUMBER = 3;
+    private float gasAdjustment_ = 0F;
+    /**
+     * <pre>
+     * gas_adjustment is the adjustment factor to be multiplied against the estimate returned by the tx simulation
+     * </pre>
+     *
+     * <code>float gas_adjustment = 3 [json_name = "gasAdjustment"];</code>
+     * @return The gasAdjustment.
+     */
+    @java.lang.Override
+    public float getGasAdjustment() {
+      return gasAdjustment_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!txBytes_.isEmpty()) {
+        output.writeBytes(1, txBytes_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultBaseDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, defaultBaseDenom_);
+      }
+      if (java.lang.Float.floatToRawIntBits(gasAdjustment_) != 0) {
+        output.writeFloat(3, gasAdjustment_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!txBytes_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, txBytes_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultBaseDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, defaultBaseDenom_);
+      }
+      if (java.lang.Float.floatToRawIntBits(gasAdjustment_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(3, gasAdjustment_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest)) {
+        return super.equals(obj);
+      }
+      com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest other = (com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest) obj;
+
+      if (!getTxBytes()
+          .equals(other.getTxBytes())) return false;
+      if (!getDefaultBaseDenom()
+          .equals(other.getDefaultBaseDenom())) return false;
+      if (java.lang.Float.floatToIntBits(getGasAdjustment())
+          != java.lang.Float.floatToIntBits(
+              other.getGasAdjustment())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TX_BYTES_FIELD_NUMBER;
+      hash = (53 * hash) + getTxBytes().hashCode();
+      hash = (37 * hash) + DEFAULT_BASE_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDefaultBaseDenom().hashCode();
+      hash = (37 * hash) + GAS_ADJUSTMENT_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getGasAdjustment());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * CalculateTxFeesRequest is the request type for the Query RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.msgfees.v1.CalculateTxFeesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.msgfees.v1.CalculateTxFeesRequest)
+        com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.msgfees.v1.QueryProto.internal_static_provenance_msgfees_v1_CalculateTxFeesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.msgfees.v1.QueryProto.internal_static_provenance_msgfees_v1_CalculateTxFeesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest.class, com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest.Builder.class);
+      }
+
+      // Construct using com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        txBytes_ = com.google.protobuf.ByteString.EMPTY;
+        defaultBaseDenom_ = "";
+        gasAdjustment_ = 0F;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.msgfees.v1.QueryProto.internal_static_provenance_msgfees_v1_CalculateTxFeesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest getDefaultInstanceForType() {
+        return com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest build() {
+        com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest buildPartial() {
+        com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest result = new com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.txBytes_ = txBytes_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.defaultBaseDenom_ = defaultBaseDenom_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.gasAdjustment_ = gasAdjustment_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest) {
+          return mergeFrom((com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest other) {
+        if (other == com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest.getDefaultInstance()) return this;
+        if (other.getTxBytes() != com.google.protobuf.ByteString.EMPTY) {
+          setTxBytes(other.getTxBytes());
+        }
+        if (!other.getDefaultBaseDenom().isEmpty()) {
+          defaultBaseDenom_ = other.defaultBaseDenom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getGasAdjustment() != 0F) {
+          setGasAdjustment(other.getGasAdjustment());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                txBytes_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                defaultBaseDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 29: {
+                gasAdjustment_ = input.readFloat();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 29
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString txBytes_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * tx_bytes is the transaction to simulate.
+       * </pre>
+       *
+       * <code>bytes tx_bytes = 1 [json_name = "txBytes"];</code>
+       * @return The txBytes.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getTxBytes() {
+        return txBytes_;
+      }
+      /**
+       * <pre>
+       * tx_bytes is the transaction to simulate.
+       * </pre>
+       *
+       * <code>bytes tx_bytes = 1 [json_name = "txBytes"];</code>
+       * @param value The txBytes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTxBytes(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        txBytes_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * tx_bytes is the transaction to simulate.
+       * </pre>
+       *
+       * <code>bytes tx_bytes = 1 [json_name = "txBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTxBytes() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        txBytes_ = getDefaultInstance().getTxBytes();
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object defaultBaseDenom_ = "";
+      /**
+       * <pre>
+       * default_base_denom is used to set the denom used for gas fees
+       * if not set it will default to nhash.
+       * </pre>
+       *
+       * <code>string default_base_denom = 2 [json_name = "defaultBaseDenom"];</code>
+       * @return The defaultBaseDenom.
+       */
+      public java.lang.String getDefaultBaseDenom() {
+        java.lang.Object ref = defaultBaseDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          defaultBaseDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * default_base_denom is used to set the denom used for gas fees
+       * if not set it will default to nhash.
+       * </pre>
+       *
+       * <code>string default_base_denom = 2 [json_name = "defaultBaseDenom"];</code>
+       * @return The bytes for defaultBaseDenom.
+       */
+      public com.google.protobuf.ByteString
+          getDefaultBaseDenomBytes() {
+        java.lang.Object ref = defaultBaseDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          defaultBaseDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * default_base_denom is used to set the denom used for gas fees
+       * if not set it will default to nhash.
+       * </pre>
+       *
+       * <code>string default_base_denom = 2 [json_name = "defaultBaseDenom"];</code>
+       * @param value The defaultBaseDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultBaseDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        defaultBaseDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * default_base_denom is used to set the denom used for gas fees
+       * if not set it will default to nhash.
+       * </pre>
+       *
+       * <code>string default_base_denom = 2 [json_name = "defaultBaseDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefaultBaseDenom() {
+        defaultBaseDenom_ = getDefaultInstance().getDefaultBaseDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * default_base_denom is used to set the denom used for gas fees
+       * if not set it will default to nhash.
+       * </pre>
+       *
+       * <code>string default_base_denom = 2 [json_name = "defaultBaseDenom"];</code>
+       * @param value The bytes for defaultBaseDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultBaseDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        defaultBaseDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private float gasAdjustment_ ;
+      /**
+       * <pre>
+       * gas_adjustment is the adjustment factor to be multiplied against the estimate returned by the tx simulation
+       * </pre>
+       *
+       * <code>float gas_adjustment = 3 [json_name = "gasAdjustment"];</code>
+       * @return The gasAdjustment.
+       */
+      @java.lang.Override
+      public float getGasAdjustment() {
+        return gasAdjustment_;
+      }
+      /**
+       * <pre>
+       * gas_adjustment is the adjustment factor to be multiplied against the estimate returned by the tx simulation
+       * </pre>
+       *
+       * <code>float gas_adjustment = 3 [json_name = "gasAdjustment"];</code>
+       * @param value The gasAdjustment to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGasAdjustment(float value) {
+
+        gasAdjustment_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_adjustment is the adjustment factor to be multiplied against the estimate returned by the tx simulation
+       * </pre>
+       *
+       * <code>float gas_adjustment = 3 [json_name = "gasAdjustment"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGasAdjustment() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        gasAdjustment_ = 0F;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.msgfees.v1.CalculateTxFeesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.msgfees.v1.CalculateTxFeesRequest)
+    private static final com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest();
+    }
+
+    public static com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CalculateTxFeesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CalculateTxFeesRequest>() {
+      @java.lang.Override
+      public CalculateTxFeesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CalculateTxFeesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CalculateTxFeesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.msgfees.v1.QueryProto.CalculateTxFeesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CalculateTxFeesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.msgfees.v1.CalculateTxFeesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * additional_fees are the amount of coins to be for addition msg fees
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin additional_fees = 1 [json_name = "additionalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getAdditionalFeesList();
+    /**
+     * <pre>
+     * additional_fees are the amount of coins to be for addition msg fees
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin additional_fees = 1 [json_name = "additionalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getAdditionalFees(int index);
+    /**
+     * <pre>
+     * additional_fees are the amount of coins to be for addition msg fees
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin additional_fees = 1 [json_name = "additionalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getAdditionalFeesCount();
+    /**
+     * <pre>
+     * additional_fees are the amount of coins to be for addition msg fees
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin additional_fees = 1 [json_name = "additionalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getAdditionalFeesOrBuilderList();
+    /**
+     * <pre>
+     * additional_fees are the amount of coins to be for addition msg fees
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin additional_fees = 1 [json_name = "additionalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAdditionalFeesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * total_fees are the total amount of fees needed for the transactions (msg fees + gas fee)
+     * note: the gas fee is calculated with the floor gas price module param.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getTotalFeesList();
+    /**
+     * <pre>
+     * total_fees are the total amount of fees needed for the transactions (msg fees + gas fee)
+     * note: the gas fee is calculated with the floor gas price module param.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getTotalFees(int index);
+    /**
+     * <pre>
+     * total_fees are the total amount of fees needed for the transactions (msg fees + gas fee)
+     * note: the gas fee is calculated with the floor gas price module param.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getTotalFeesCount();
+    /**
+     * <pre>
+     * total_fees are the total amount of fees needed for the transactions (msg fees + gas fee)
+     * note: the gas fee is calculated with the floor gas price module param.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getTotalFeesOrBuilderList();
+    /**
+     * <pre>
+     * total_fees are the total amount of fees needed for the transactions (msg fees + gas fee)
+     * note: the gas fee is calculated with the floor gas price module param.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTotalFeesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * estimated_gas is the amount of gas needed for the transaction
+     * </pre>
+     *
+     * <code>uint64 estimated_gas = 3 [json_name = "estimatedGas"];</code>
+     * @return The estimatedGas.
+     */
+    long getEstimatedGas();
+  }
+  /**
+   * <pre>
+   * CalculateTxFeesResponse is the response type for the Query RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.msgfees.v1.CalculateTxFeesResponse}
+   */
+  public static final class CalculateTxFeesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.msgfees.v1.CalculateTxFeesResponse)
+      CalculateTxFeesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CalculateTxFeesResponse.newBuilder() to construct.
+    private CalculateTxFeesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CalculateTxFeesResponse() {
+      additionalFees_ = java.util.Collections.emptyList();
+      totalFees_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CalculateTxFeesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.msgfees.v1.QueryProto.internal_static_provenance_msgfees_v1_CalculateTxFeesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.msgfees.v1.QueryProto.internal_static_provenance_msgfees_v1_CalculateTxFeesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse.class, com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse.Builder.class);
+    }
+
+    public static final int ADDITIONAL_FEES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> additionalFees_;
+    /**
+     * <pre>
+     * additional_fees are the amount of coins to be for addition msg fees
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin additional_fees = 1 [json_name = "additionalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getAdditionalFeesList() {
+      return additionalFees_;
+    }
+    /**
+     * <pre>
+     * additional_fees are the amount of coins to be for addition msg fees
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin additional_fees = 1 [json_name = "additionalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getAdditionalFeesOrBuilderList() {
+      return additionalFees_;
+    }
+    /**
+     * <pre>
+     * additional_fees are the amount of coins to be for addition msg fees
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin additional_fees = 1 [json_name = "additionalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getAdditionalFeesCount() {
+      return additionalFees_.size();
+    }
+    /**
+     * <pre>
+     * additional_fees are the amount of coins to be for addition msg fees
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin additional_fees = 1 [json_name = "additionalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getAdditionalFees(int index) {
+      return additionalFees_.get(index);
+    }
+    /**
+     * <pre>
+     * additional_fees are the amount of coins to be for addition msg fees
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin additional_fees = 1 [json_name = "additionalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAdditionalFeesOrBuilder(
+        int index) {
+      return additionalFees_.get(index);
+    }
+
+    public static final int TOTAL_FEES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> totalFees_;
+    /**
+     * <pre>
+     * total_fees are the total amount of fees needed for the transactions (msg fees + gas fee)
+     * note: the gas fee is calculated with the floor gas price module param.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getTotalFeesList() {
+      return totalFees_;
+    }
+    /**
+     * <pre>
+     * total_fees are the total amount of fees needed for the transactions (msg fees + gas fee)
+     * note: the gas fee is calculated with the floor gas price module param.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getTotalFeesOrBuilderList() {
+      return totalFees_;
+    }
+    /**
+     * <pre>
+     * total_fees are the total amount of fees needed for the transactions (msg fees + gas fee)
+     * note: the gas fee is calculated with the floor gas price module param.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getTotalFeesCount() {
+      return totalFees_.size();
+    }
+    /**
+     * <pre>
+     * total_fees are the total amount of fees needed for the transactions (msg fees + gas fee)
+     * note: the gas fee is calculated with the floor gas price module param.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getTotalFees(int index) {
+      return totalFees_.get(index);
+    }
+    /**
+     * <pre>
+     * total_fees are the total amount of fees needed for the transactions (msg fees + gas fee)
+     * note: the gas fee is calculated with the floor gas price module param.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTotalFeesOrBuilder(
+        int index) {
+      return totalFees_.get(index);
+    }
+
+    public static final int ESTIMATED_GAS_FIELD_NUMBER = 3;
+    private long estimatedGas_ = 0L;
+    /**
+     * <pre>
+     * estimated_gas is the amount of gas needed for the transaction
+     * </pre>
+     *
+     * <code>uint64 estimated_gas = 3 [json_name = "estimatedGas"];</code>
+     * @return The estimatedGas.
+     */
+    @java.lang.Override
+    public long getEstimatedGas() {
+      return estimatedGas_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < additionalFees_.size(); i++) {
+        output.writeMessage(1, additionalFees_.get(i));
+      }
+      for (int i = 0; i < totalFees_.size(); i++) {
+        output.writeMessage(2, totalFees_.get(i));
+      }
+      if (estimatedGas_ != 0L) {
+        output.writeUInt64(3, estimatedGas_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < additionalFees_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, additionalFees_.get(i));
+      }
+      for (int i = 0; i < totalFees_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, totalFees_.get(i));
+      }
+      if (estimatedGas_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, estimatedGas_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse)) {
+        return super.equals(obj);
+      }
+      com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse other = (com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse) obj;
+
+      if (!getAdditionalFeesList()
+          .equals(other.getAdditionalFeesList())) return false;
+      if (!getTotalFeesList()
+          .equals(other.getTotalFeesList())) return false;
+      if (getEstimatedGas()
+          != other.getEstimatedGas()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAdditionalFeesCount() > 0) {
+        hash = (37 * hash) + ADDITIONAL_FEES_FIELD_NUMBER;
+        hash = (53 * hash) + getAdditionalFeesList().hashCode();
+      }
+      if (getTotalFeesCount() > 0) {
+        hash = (37 * hash) + TOTAL_FEES_FIELD_NUMBER;
+        hash = (53 * hash) + getTotalFeesList().hashCode();
+      }
+      hash = (37 * hash) + ESTIMATED_GAS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getEstimatedGas());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * CalculateTxFeesResponse is the response type for the Query RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.msgfees.v1.CalculateTxFeesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.msgfees.v1.CalculateTxFeesResponse)
+        com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.msgfees.v1.QueryProto.internal_static_provenance_msgfees_v1_CalculateTxFeesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.msgfees.v1.QueryProto.internal_static_provenance_msgfees_v1_CalculateTxFeesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse.class, com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse.Builder.class);
+      }
+
+      // Construct using com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (additionalFeesBuilder_ == null) {
+          additionalFees_ = java.util.Collections.emptyList();
+        } else {
+          additionalFees_ = null;
+          additionalFeesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (totalFeesBuilder_ == null) {
+          totalFees_ = java.util.Collections.emptyList();
+        } else {
+          totalFees_ = null;
+          totalFeesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        estimatedGas_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.msgfees.v1.QueryProto.internal_static_provenance_msgfees_v1_CalculateTxFeesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse getDefaultInstanceForType() {
+        return com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse build() {
+        com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse buildPartial() {
+        com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse result = new com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse result) {
+        if (additionalFeesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            additionalFees_ = java.util.Collections.unmodifiableList(additionalFees_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.additionalFees_ = additionalFees_;
+        } else {
+          result.additionalFees_ = additionalFeesBuilder_.build();
+        }
+        if (totalFeesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            totalFees_ = java.util.Collections.unmodifiableList(totalFees_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.totalFees_ = totalFees_;
+        } else {
+          result.totalFees_ = totalFeesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.estimatedGas_ = estimatedGas_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse) {
+          return mergeFrom((com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse other) {
+        if (other == com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse.getDefaultInstance()) return this;
+        if (additionalFeesBuilder_ == null) {
+          if (!other.additionalFees_.isEmpty()) {
+            if (additionalFees_.isEmpty()) {
+              additionalFees_ = other.additionalFees_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAdditionalFeesIsMutable();
+              additionalFees_.addAll(other.additionalFees_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.additionalFees_.isEmpty()) {
+            if (additionalFeesBuilder_.isEmpty()) {
+              additionalFeesBuilder_.dispose();
+              additionalFeesBuilder_ = null;
+              additionalFees_ = other.additionalFees_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              additionalFeesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAdditionalFeesFieldBuilder() : null;
+            } else {
+              additionalFeesBuilder_.addAllMessages(other.additionalFees_);
+            }
+          }
+        }
+        if (totalFeesBuilder_ == null) {
+          if (!other.totalFees_.isEmpty()) {
+            if (totalFees_.isEmpty()) {
+              totalFees_ = other.totalFees_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureTotalFeesIsMutable();
+              totalFees_.addAll(other.totalFees_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.totalFees_.isEmpty()) {
+            if (totalFeesBuilder_.isEmpty()) {
+              totalFeesBuilder_.dispose();
+              totalFeesBuilder_ = null;
+              totalFees_ = other.totalFees_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              totalFeesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTotalFeesFieldBuilder() : null;
+            } else {
+              totalFeesBuilder_.addAllMessages(other.totalFees_);
+            }
+          }
+        }
+        if (other.getEstimatedGas() != 0L) {
+          setEstimatedGas(other.getEstimatedGas());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (additionalFeesBuilder_ == null) {
+                  ensureAdditionalFeesIsMutable();
+                  additionalFees_.add(m);
+                } else {
+                  additionalFeesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (totalFeesBuilder_ == null) {
+                  ensureTotalFeesIsMutable();
+                  totalFees_.add(m);
+                } else {
+                  totalFeesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 24: {
+                estimatedGas_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> additionalFees_ =
+        java.util.Collections.emptyList();
+      private void ensureAdditionalFeesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          additionalFees_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(additionalFees_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> additionalFeesBuilder_;
+
+      /**
+       * <pre>
+       * additional_fees are the amount of coins to be for addition msg fees
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin additional_fees = 1 [json_name = "additionalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getAdditionalFeesList() {
+        if (additionalFeesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(additionalFees_);
+        } else {
+          return additionalFeesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * additional_fees are the amount of coins to be for addition msg fees
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin additional_fees = 1 [json_name = "additionalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getAdditionalFeesCount() {
+        if (additionalFeesBuilder_ == null) {
+          return additionalFees_.size();
+        } else {
+          return additionalFeesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * additional_fees are the amount of coins to be for addition msg fees
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin additional_fees = 1 [json_name = "additionalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getAdditionalFees(int index) {
+        if (additionalFeesBuilder_ == null) {
+          return additionalFees_.get(index);
+        } else {
+          return additionalFeesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * additional_fees are the amount of coins to be for addition msg fees
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin additional_fees = 1 [json_name = "additionalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setAdditionalFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (additionalFeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAdditionalFeesIsMutable();
+          additionalFees_.set(index, value);
+          onChanged();
+        } else {
+          additionalFeesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * additional_fees are the amount of coins to be for addition msg fees
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin additional_fees = 1 [json_name = "additionalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setAdditionalFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (additionalFeesBuilder_ == null) {
+          ensureAdditionalFeesIsMutable();
+          additionalFees_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          additionalFeesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * additional_fees are the amount of coins to be for addition msg fees
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin additional_fees = 1 [json_name = "additionalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAdditionalFees(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (additionalFeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAdditionalFeesIsMutable();
+          additionalFees_.add(value);
+          onChanged();
+        } else {
+          additionalFeesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * additional_fees are the amount of coins to be for addition msg fees
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin additional_fees = 1 [json_name = "additionalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAdditionalFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (additionalFeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAdditionalFeesIsMutable();
+          additionalFees_.add(index, value);
+          onChanged();
+        } else {
+          additionalFeesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * additional_fees are the amount of coins to be for addition msg fees
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin additional_fees = 1 [json_name = "additionalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAdditionalFees(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (additionalFeesBuilder_ == null) {
+          ensureAdditionalFeesIsMutable();
+          additionalFees_.add(builderForValue.build());
+          onChanged();
+        } else {
+          additionalFeesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * additional_fees are the amount of coins to be for addition msg fees
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin additional_fees = 1 [json_name = "additionalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAdditionalFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (additionalFeesBuilder_ == null) {
+          ensureAdditionalFeesIsMutable();
+          additionalFees_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          additionalFeesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * additional_fees are the amount of coins to be for addition msg fees
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin additional_fees = 1 [json_name = "additionalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllAdditionalFees(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (additionalFeesBuilder_ == null) {
+          ensureAdditionalFeesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, additionalFees_);
+          onChanged();
+        } else {
+          additionalFeesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * additional_fees are the amount of coins to be for addition msg fees
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin additional_fees = 1 [json_name = "additionalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearAdditionalFees() {
+        if (additionalFeesBuilder_ == null) {
+          additionalFees_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          additionalFeesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * additional_fees are the amount of coins to be for addition msg fees
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin additional_fees = 1 [json_name = "additionalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeAdditionalFees(int index) {
+        if (additionalFeesBuilder_ == null) {
+          ensureAdditionalFeesIsMutable();
+          additionalFees_.remove(index);
+          onChanged();
+        } else {
+          additionalFeesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * additional_fees are the amount of coins to be for addition msg fees
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin additional_fees = 1 [json_name = "additionalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getAdditionalFeesBuilder(
+          int index) {
+        return getAdditionalFeesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * additional_fees are the amount of coins to be for addition msg fees
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin additional_fees = 1 [json_name = "additionalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAdditionalFeesOrBuilder(
+          int index) {
+        if (additionalFeesBuilder_ == null) {
+          return additionalFees_.get(index);  } else {
+          return additionalFeesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * additional_fees are the amount of coins to be for addition msg fees
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin additional_fees = 1 [json_name = "additionalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getAdditionalFeesOrBuilderList() {
+        if (additionalFeesBuilder_ != null) {
+          return additionalFeesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(additionalFees_);
+        }
+      }
+      /**
+       * <pre>
+       * additional_fees are the amount of coins to be for addition msg fees
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin additional_fees = 1 [json_name = "additionalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addAdditionalFeesBuilder() {
+        return getAdditionalFeesFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * additional_fees are the amount of coins to be for addition msg fees
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin additional_fees = 1 [json_name = "additionalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addAdditionalFeesBuilder(
+          int index) {
+        return getAdditionalFeesFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * additional_fees are the amount of coins to be for addition msg fees
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin additional_fees = 1 [json_name = "additionalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getAdditionalFeesBuilderList() {
+        return getAdditionalFeesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getAdditionalFeesFieldBuilder() {
+        if (additionalFeesBuilder_ == null) {
+          additionalFeesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  additionalFees_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          additionalFees_ = null;
+        }
+        return additionalFeesBuilder_;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> totalFees_ =
+        java.util.Collections.emptyList();
+      private void ensureTotalFeesIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          totalFees_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(totalFees_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> totalFeesBuilder_;
+
+      /**
+       * <pre>
+       * total_fees are the total amount of fees needed for the transactions (msg fees + gas fee)
+       * note: the gas fee is calculated with the floor gas price module param.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getTotalFeesList() {
+        if (totalFeesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(totalFees_);
+        } else {
+          return totalFeesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * total_fees are the total amount of fees needed for the transactions (msg fees + gas fee)
+       * note: the gas fee is calculated with the floor gas price module param.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getTotalFeesCount() {
+        if (totalFeesBuilder_ == null) {
+          return totalFees_.size();
+        } else {
+          return totalFeesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * total_fees are the total amount of fees needed for the transactions (msg fees + gas fee)
+       * note: the gas fee is calculated with the floor gas price module param.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getTotalFees(int index) {
+        if (totalFeesBuilder_ == null) {
+          return totalFees_.get(index);
+        } else {
+          return totalFeesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * total_fees are the total amount of fees needed for the transactions (msg fees + gas fee)
+       * note: the gas fee is calculated with the floor gas price module param.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setTotalFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (totalFeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTotalFeesIsMutable();
+          totalFees_.set(index, value);
+          onChanged();
+        } else {
+          totalFeesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * total_fees are the total amount of fees needed for the transactions (msg fees + gas fee)
+       * note: the gas fee is calculated with the floor gas price module param.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setTotalFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (totalFeesBuilder_ == null) {
+          ensureTotalFeesIsMutable();
+          totalFees_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          totalFeesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * total_fees are the total amount of fees needed for the transactions (msg fees + gas fee)
+       * note: the gas fee is calculated with the floor gas price module param.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addTotalFees(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (totalFeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTotalFeesIsMutable();
+          totalFees_.add(value);
+          onChanged();
+        } else {
+          totalFeesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * total_fees are the total amount of fees needed for the transactions (msg fees + gas fee)
+       * note: the gas fee is calculated with the floor gas price module param.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addTotalFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (totalFeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTotalFeesIsMutable();
+          totalFees_.add(index, value);
+          onChanged();
+        } else {
+          totalFeesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * total_fees are the total amount of fees needed for the transactions (msg fees + gas fee)
+       * note: the gas fee is calculated with the floor gas price module param.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addTotalFees(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (totalFeesBuilder_ == null) {
+          ensureTotalFeesIsMutable();
+          totalFees_.add(builderForValue.build());
+          onChanged();
+        } else {
+          totalFeesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * total_fees are the total amount of fees needed for the transactions (msg fees + gas fee)
+       * note: the gas fee is calculated with the floor gas price module param.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addTotalFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (totalFeesBuilder_ == null) {
+          ensureTotalFeesIsMutable();
+          totalFees_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          totalFeesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * total_fees are the total amount of fees needed for the transactions (msg fees + gas fee)
+       * note: the gas fee is calculated with the floor gas price module param.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllTotalFees(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (totalFeesBuilder_ == null) {
+          ensureTotalFeesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, totalFees_);
+          onChanged();
+        } else {
+          totalFeesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * total_fees are the total amount of fees needed for the transactions (msg fees + gas fee)
+       * note: the gas fee is calculated with the floor gas price module param.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearTotalFees() {
+        if (totalFeesBuilder_ == null) {
+          totalFees_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          totalFeesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * total_fees are the total amount of fees needed for the transactions (msg fees + gas fee)
+       * note: the gas fee is calculated with the floor gas price module param.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeTotalFees(int index) {
+        if (totalFeesBuilder_ == null) {
+          ensureTotalFeesIsMutable();
+          totalFees_.remove(index);
+          onChanged();
+        } else {
+          totalFeesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * total_fees are the total amount of fees needed for the transactions (msg fees + gas fee)
+       * note: the gas fee is calculated with the floor gas price module param.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getTotalFeesBuilder(
+          int index) {
+        return getTotalFeesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * total_fees are the total amount of fees needed for the transactions (msg fees + gas fee)
+       * note: the gas fee is calculated with the floor gas price module param.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTotalFeesOrBuilder(
+          int index) {
+        if (totalFeesBuilder_ == null) {
+          return totalFees_.get(index);  } else {
+          return totalFeesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * total_fees are the total amount of fees needed for the transactions (msg fees + gas fee)
+       * note: the gas fee is calculated with the floor gas price module param.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getTotalFeesOrBuilderList() {
+        if (totalFeesBuilder_ != null) {
+          return totalFeesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(totalFees_);
+        }
+      }
+      /**
+       * <pre>
+       * total_fees are the total amount of fees needed for the transactions (msg fees + gas fee)
+       * note: the gas fee is calculated with the floor gas price module param.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addTotalFeesBuilder() {
+        return getTotalFeesFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * total_fees are the total amount of fees needed for the transactions (msg fees + gas fee)
+       * note: the gas fee is calculated with the floor gas price module param.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addTotalFeesBuilder(
+          int index) {
+        return getTotalFeesFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * total_fees are the total amount of fees needed for the transactions (msg fees + gas fee)
+       * note: the gas fee is calculated with the floor gas price module param.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getTotalFeesBuilderList() {
+        return getTotalFeesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getTotalFeesFieldBuilder() {
+        if (totalFeesBuilder_ == null) {
+          totalFeesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  totalFees_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          totalFees_ = null;
+        }
+        return totalFeesBuilder_;
+      }
+
+      private long estimatedGas_ ;
+      /**
+       * <pre>
+       * estimated_gas is the amount of gas needed for the transaction
+       * </pre>
+       *
+       * <code>uint64 estimated_gas = 3 [json_name = "estimatedGas"];</code>
+       * @return The estimatedGas.
+       */
+      @java.lang.Override
+      public long getEstimatedGas() {
+        return estimatedGas_;
+      }
+      /**
+       * <pre>
+       * estimated_gas is the amount of gas needed for the transaction
+       * </pre>
+       *
+       * <code>uint64 estimated_gas = 3 [json_name = "estimatedGas"];</code>
+       * @param value The estimatedGas to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEstimatedGas(long value) {
+
+        estimatedGas_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * estimated_gas is the amount of gas needed for the transaction
+       * </pre>
+       *
+       * <code>uint64 estimated_gas = 3 [json_name = "estimatedGas"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEstimatedGas() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        estimatedGas_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.msgfees.v1.CalculateTxFeesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.msgfees.v1.CalculateTxFeesResponse)
+    private static final com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse();
+    }
+
+    public static com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CalculateTxFeesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<CalculateTxFeesResponse>() {
+      @java.lang.Override
+      public CalculateTxFeesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CalculateTxFeesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CalculateTxFeesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.msgfees.v1.QueryProto.CalculateTxFeesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_msgfees_v1_QueryParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_msgfees_v1_QueryParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_msgfees_v1_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_msgfees_v1_QueryParamsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_msgfees_v1_QueryAllMsgFeesRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_msgfees_v1_QueryAllMsgFeesRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_msgfees_v1_QueryAllMsgFeesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_msgfees_v1_QueryAllMsgFeesResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_msgfees_v1_CalculateTxFeesRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_msgfees_v1_CalculateTxFeesRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_msgfees_v1_CalculateTxFeesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_msgfees_v1_CalculateTxFeesResponse_fieldAccessorTable;
 
@@ -91,7 +5179,7 @@ public final class QueryProto {
       "es.v1.CalculateTxFeesResponse\"4\202\323\344\223\002.\")/" +
       "provenance/tx/v1/calculate_msg_based_fee" +
       ":\001*B\322\001\n\031com.provenance.msgfees.v1B\nQuery" +
-      "ProtoP\001Z3github.com/provenance-io/proven" +
+      "ProtoP\000Z3github.com/provenance-io/proven" +
       "ance/x/msgfees/types\242\002\003PMX\252\002\025Provenance." +
       "Msgfees.V1\312\002\025Provenance\\Msgfees\\V1\342\002!Pro" +
       "venance\\Msgfees\\V1\\GPBMetadata\352\002\027Provena" +

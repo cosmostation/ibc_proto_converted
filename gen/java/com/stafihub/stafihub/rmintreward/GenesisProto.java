@@ -14,39 +14,7862 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.rmintreward.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.stafihub.stafihub.rmintreward.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.stafihub.stafihub.rmintreward.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.stafihub.stafihub.rmintreward.ParamsProto.Params getParams();
+    /**
+     * <code>.stafihub.stafihub.rmintreward.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.stafihub.stafihub.rmintreward.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.ActLatestCycle actLatestCycleList = 2 [json_name = "actLatestCycleList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle> 
+        getActLatestCycleListList();
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.ActLatestCycle actLatestCycleList = 2 [json_name = "actLatestCycleList"];</code>
+     */
+    com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle getActLatestCycleList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.ActLatestCycle actLatestCycleList = 2 [json_name = "actLatestCycleList"];</code>
+     */
+    int getActLatestCycleListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.ActLatestCycle actLatestCycleList = 2 [json_name = "actLatestCycleList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycleOrBuilder> 
+        getActLatestCycleListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.ActLatestCycle actLatestCycleList = 2 [json_name = "actLatestCycleList"];</code>
+     */
+    com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycleOrBuilder getActLatestCycleListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.ActCurrentCycle actCurrentCycleList = 3 [json_name = "actCurrentCycleList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle> 
+        getActCurrentCycleListList();
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.ActCurrentCycle actCurrentCycleList = 3 [json_name = "actCurrentCycleList"];</code>
+     */
+    com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle getActCurrentCycleList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.ActCurrentCycle actCurrentCycleList = 3 [json_name = "actCurrentCycleList"];</code>
+     */
+    int getActCurrentCycleListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.ActCurrentCycle actCurrentCycleList = 3 [json_name = "actCurrentCycleList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycleOrBuilder> 
+        getActCurrentCycleListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.ActCurrentCycle actCurrentCycleList = 3 [json_name = "actCurrentCycleList"];</code>
+     */
+    com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycleOrBuilder getActCurrentCycleListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.GenesisMintRewardAct mintrewardActList = 4 [json_name = "mintrewardActList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct> 
+        getMintrewardActListList();
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.GenesisMintRewardAct mintrewardActList = 4 [json_name = "mintrewardActList"];</code>
+     */
+    com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct getMintrewardActList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.GenesisMintRewardAct mintrewardActList = 4 [json_name = "mintrewardActList"];</code>
+     */
+    int getMintrewardActListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.GenesisMintRewardAct mintrewardActList = 4 [json_name = "mintrewardActList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardActOrBuilder> 
+        getMintrewardActListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.GenesisMintRewardAct mintrewardActList = 4 [json_name = "mintrewardActList"];</code>
+     */
+    com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardActOrBuilder getMintrewardActListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserClaimInfo userClaimInfoList = 5 [json_name = "userClaimInfoList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo> 
+        getUserClaimInfoListList();
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserClaimInfo userClaimInfoList = 5 [json_name = "userClaimInfoList"];</code>
+     */
+    com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo getUserClaimInfoList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserClaimInfo userClaimInfoList = 5 [json_name = "userClaimInfoList"];</code>
+     */
+    int getUserClaimInfoListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserClaimInfo userClaimInfoList = 5 [json_name = "userClaimInfoList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfoOrBuilder> 
+        getUserClaimInfoListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserClaimInfo userClaimInfoList = 5 [json_name = "userClaimInfoList"];</code>
+     */
+    com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfoOrBuilder getUserClaimInfoListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserAct userActList = 6 [json_name = "userActList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct> 
+        getUserActListList();
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserAct userActList = 6 [json_name = "userActList"];</code>
+     */
+    com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct getUserActList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserAct userActList = 6 [json_name = "userActList"];</code>
+     */
+    int getUserActListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserAct userActList = 6 [json_name = "userActList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserActOrBuilder> 
+        getUserActListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserAct userActList = 6 [json_name = "userActList"];</code>
+     */
+    com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserActOrBuilder getUserActListOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.rmintreward.UserMintCount userMintCountList = 7 [json_name = "userMintCountList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount> 
+        getUserMintCountListList();
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.rmintreward.UserMintCount userMintCountList = 7 [json_name = "userMintCountList"];</code>
+     */
+    com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount getUserMintCountList(int index);
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.rmintreward.UserMintCount userMintCountList = 7 [json_name = "userMintCountList"];</code>
+     */
+    int getUserMintCountListCount();
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.rmintreward.UserMintCount userMintCountList = 7 [json_name = "userMintCountList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCountOrBuilder> 
+        getUserMintCountListOrBuilderList();
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.rmintreward.UserMintCount userMintCountList = 7 [json_name = "userMintCountList"];</code>
+     */
+    com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCountOrBuilder getUserMintCountListOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the rmintreward module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code stafihub.stafihub.rmintreward.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.rmintreward.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      actLatestCycleList_ = java.util.Collections.emptyList();
+      actCurrentCycleList_ = java.util.Collections.emptyList();
+      mintrewardActList_ = java.util.Collections.emptyList();
+      userClaimInfoList_ = java.util.Collections.emptyList();
+      userActList_ = java.util.Collections.emptyList();
+      userMintCountList_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState.class, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.stafihub.stafihub.rmintreward.ParamsProto.Params params_;
+    /**
+     * <code>.stafihub.stafihub.rmintreward.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.stafihub.stafihub.rmintreward.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rmintreward.ParamsProto.Params getParams() {
+      return params_ == null ? com.stafihub.stafihub.rmintreward.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.stafihub.stafihub.rmintreward.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rmintreward.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.stafihub.stafihub.rmintreward.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int ACTLATESTCYCLELIST_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle> actLatestCycleList_;
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.ActLatestCycle actLatestCycleList = 2 [json_name = "actLatestCycleList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle> getActLatestCycleListList() {
+      return actLatestCycleList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.ActLatestCycle actLatestCycleList = 2 [json_name = "actLatestCycleList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycleOrBuilder> 
+        getActLatestCycleListOrBuilderList() {
+      return actLatestCycleList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.ActLatestCycle actLatestCycleList = 2 [json_name = "actLatestCycleList"];</code>
+     */
+    @java.lang.Override
+    public int getActLatestCycleListCount() {
+      return actLatestCycleList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.ActLatestCycle actLatestCycleList = 2 [json_name = "actLatestCycleList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle getActLatestCycleList(int index) {
+      return actLatestCycleList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.ActLatestCycle actLatestCycleList = 2 [json_name = "actLatestCycleList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycleOrBuilder getActLatestCycleListOrBuilder(
+        int index) {
+      return actLatestCycleList_.get(index);
+    }
+
+    public static final int ACTCURRENTCYCLELIST_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle> actCurrentCycleList_;
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.ActCurrentCycle actCurrentCycleList = 3 [json_name = "actCurrentCycleList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle> getActCurrentCycleListList() {
+      return actCurrentCycleList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.ActCurrentCycle actCurrentCycleList = 3 [json_name = "actCurrentCycleList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycleOrBuilder> 
+        getActCurrentCycleListOrBuilderList() {
+      return actCurrentCycleList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.ActCurrentCycle actCurrentCycleList = 3 [json_name = "actCurrentCycleList"];</code>
+     */
+    @java.lang.Override
+    public int getActCurrentCycleListCount() {
+      return actCurrentCycleList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.ActCurrentCycle actCurrentCycleList = 3 [json_name = "actCurrentCycleList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle getActCurrentCycleList(int index) {
+      return actCurrentCycleList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.ActCurrentCycle actCurrentCycleList = 3 [json_name = "actCurrentCycleList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycleOrBuilder getActCurrentCycleListOrBuilder(
+        int index) {
+      return actCurrentCycleList_.get(index);
+    }
+
+    public static final int MINTREWARDACTLIST_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct> mintrewardActList_;
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.GenesisMintRewardAct mintrewardActList = 4 [json_name = "mintrewardActList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct> getMintrewardActListList() {
+      return mintrewardActList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.GenesisMintRewardAct mintrewardActList = 4 [json_name = "mintrewardActList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardActOrBuilder> 
+        getMintrewardActListOrBuilderList() {
+      return mintrewardActList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.GenesisMintRewardAct mintrewardActList = 4 [json_name = "mintrewardActList"];</code>
+     */
+    @java.lang.Override
+    public int getMintrewardActListCount() {
+      return mintrewardActList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.GenesisMintRewardAct mintrewardActList = 4 [json_name = "mintrewardActList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct getMintrewardActList(int index) {
+      return mintrewardActList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.GenesisMintRewardAct mintrewardActList = 4 [json_name = "mintrewardActList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardActOrBuilder getMintrewardActListOrBuilder(
+        int index) {
+      return mintrewardActList_.get(index);
+    }
+
+    public static final int USERCLAIMINFOLIST_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo> userClaimInfoList_;
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserClaimInfo userClaimInfoList = 5 [json_name = "userClaimInfoList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo> getUserClaimInfoListList() {
+      return userClaimInfoList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserClaimInfo userClaimInfoList = 5 [json_name = "userClaimInfoList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfoOrBuilder> 
+        getUserClaimInfoListOrBuilderList() {
+      return userClaimInfoList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserClaimInfo userClaimInfoList = 5 [json_name = "userClaimInfoList"];</code>
+     */
+    @java.lang.Override
+    public int getUserClaimInfoListCount() {
+      return userClaimInfoList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserClaimInfo userClaimInfoList = 5 [json_name = "userClaimInfoList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo getUserClaimInfoList(int index) {
+      return userClaimInfoList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserClaimInfo userClaimInfoList = 5 [json_name = "userClaimInfoList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfoOrBuilder getUserClaimInfoListOrBuilder(
+        int index) {
+      return userClaimInfoList_.get(index);
+    }
+
+    public static final int USERACTLIST_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct> userActList_;
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserAct userActList = 6 [json_name = "userActList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct> getUserActListList() {
+      return userActList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserAct userActList = 6 [json_name = "userActList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserActOrBuilder> 
+        getUserActListOrBuilderList() {
+      return userActList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserAct userActList = 6 [json_name = "userActList"];</code>
+     */
+    @java.lang.Override
+    public int getUserActListCount() {
+      return userActList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserAct userActList = 6 [json_name = "userActList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct getUserActList(int index) {
+      return userActList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserAct userActList = 6 [json_name = "userActList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserActOrBuilder getUserActListOrBuilder(
+        int index) {
+      return userActList_.get(index);
+    }
+
+    public static final int USERMINTCOUNTLIST_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount> userMintCountList_;
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.rmintreward.UserMintCount userMintCountList = 7 [json_name = "userMintCountList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount> getUserMintCountListList() {
+      return userMintCountList_;
+    }
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.rmintreward.UserMintCount userMintCountList = 7 [json_name = "userMintCountList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCountOrBuilder> 
+        getUserMintCountListOrBuilderList() {
+      return userMintCountList_;
+    }
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.rmintreward.UserMintCount userMintCountList = 7 [json_name = "userMintCountList"];</code>
+     */
+    @java.lang.Override
+    public int getUserMintCountListCount() {
+      return userMintCountList_.size();
+    }
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.rmintreward.UserMintCount userMintCountList = 7 [json_name = "userMintCountList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount getUserMintCountList(int index) {
+      return userMintCountList_.get(index);
+    }
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.rmintreward.UserMintCount userMintCountList = 7 [json_name = "userMintCountList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCountOrBuilder getUserMintCountListOrBuilder(
+        int index) {
+      return userMintCountList_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      for (int i = 0; i < actLatestCycleList_.size(); i++) {
+        output.writeMessage(2, actLatestCycleList_.get(i));
+      }
+      for (int i = 0; i < actCurrentCycleList_.size(); i++) {
+        output.writeMessage(3, actCurrentCycleList_.get(i));
+      }
+      for (int i = 0; i < mintrewardActList_.size(); i++) {
+        output.writeMessage(4, mintrewardActList_.get(i));
+      }
+      for (int i = 0; i < userClaimInfoList_.size(); i++) {
+        output.writeMessage(5, userClaimInfoList_.get(i));
+      }
+      for (int i = 0; i < userActList_.size(); i++) {
+        output.writeMessage(6, userActList_.get(i));
+      }
+      for (int i = 0; i < userMintCountList_.size(); i++) {
+        output.writeMessage(7, userMintCountList_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      for (int i = 0; i < actLatestCycleList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, actLatestCycleList_.get(i));
+      }
+      for (int i = 0; i < actCurrentCycleList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, actCurrentCycleList_.get(i));
+      }
+      for (int i = 0; i < mintrewardActList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, mintrewardActList_.get(i));
+      }
+      for (int i = 0; i < userClaimInfoList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, userClaimInfoList_.get(i));
+      }
+      for (int i = 0; i < userActList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, userActList_.get(i));
+      }
+      for (int i = 0; i < userMintCountList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, userMintCountList_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState other = (com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getActLatestCycleListList()
+          .equals(other.getActLatestCycleListList())) return false;
+      if (!getActCurrentCycleListList()
+          .equals(other.getActCurrentCycleListList())) return false;
+      if (!getMintrewardActListList()
+          .equals(other.getMintrewardActListList())) return false;
+      if (!getUserClaimInfoListList()
+          .equals(other.getUserClaimInfoListList())) return false;
+      if (!getUserActListList()
+          .equals(other.getUserActListList())) return false;
+      if (!getUserMintCountListList()
+          .equals(other.getUserMintCountListList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (getActLatestCycleListCount() > 0) {
+        hash = (37 * hash) + ACTLATESTCYCLELIST_FIELD_NUMBER;
+        hash = (53 * hash) + getActLatestCycleListList().hashCode();
+      }
+      if (getActCurrentCycleListCount() > 0) {
+        hash = (37 * hash) + ACTCURRENTCYCLELIST_FIELD_NUMBER;
+        hash = (53 * hash) + getActCurrentCycleListList().hashCode();
+      }
+      if (getMintrewardActListCount() > 0) {
+        hash = (37 * hash) + MINTREWARDACTLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getMintrewardActListList().hashCode();
+      }
+      if (getUserClaimInfoListCount() > 0) {
+        hash = (37 * hash) + USERCLAIMINFOLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getUserClaimInfoListList().hashCode();
+      }
+      if (getUserActListCount() > 0) {
+        hash = (37 * hash) + USERACTLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getUserActListList().hashCode();
+      }
+      if (getUserMintCountListCount() > 0) {
+        hash = (37 * hash) + USERMINTCOUNTLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getUserMintCountListList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the rmintreward module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code stafihub.stafihub.rmintreward.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.rmintreward.GenesisState)
+        com.stafihub.stafihub.rmintreward.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState.class, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        if (actLatestCycleListBuilder_ == null) {
+          actLatestCycleList_ = java.util.Collections.emptyList();
+        } else {
+          actLatestCycleList_ = null;
+          actLatestCycleListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (actCurrentCycleListBuilder_ == null) {
+          actCurrentCycleList_ = java.util.Collections.emptyList();
+        } else {
+          actCurrentCycleList_ = null;
+          actCurrentCycleListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (mintrewardActListBuilder_ == null) {
+          mintrewardActList_ = java.util.Collections.emptyList();
+        } else {
+          mintrewardActList_ = null;
+          mintrewardActListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (userClaimInfoListBuilder_ == null) {
+          userClaimInfoList_ = java.util.Collections.emptyList();
+        } else {
+          userClaimInfoList_ = null;
+          userClaimInfoListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (userActListBuilder_ == null) {
+          userActList_ = java.util.Collections.emptyList();
+        } else {
+          userActList_ = null;
+          userActListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        if (userMintCountListBuilder_ == null) {
+          userMintCountList_ = java.util.Collections.emptyList();
+        } else {
+          userMintCountList_ = null;
+          userMintCountListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState build() {
+        com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState buildPartial() {
+        com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState result = new com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState result) {
+        if (actLatestCycleListBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            actLatestCycleList_ = java.util.Collections.unmodifiableList(actLatestCycleList_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.actLatestCycleList_ = actLatestCycleList_;
+        } else {
+          result.actLatestCycleList_ = actLatestCycleListBuilder_.build();
+        }
+        if (actCurrentCycleListBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            actCurrentCycleList_ = java.util.Collections.unmodifiableList(actCurrentCycleList_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.actCurrentCycleList_ = actCurrentCycleList_;
+        } else {
+          result.actCurrentCycleList_ = actCurrentCycleListBuilder_.build();
+        }
+        if (mintrewardActListBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            mintrewardActList_ = java.util.Collections.unmodifiableList(mintrewardActList_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.mintrewardActList_ = mintrewardActList_;
+        } else {
+          result.mintrewardActList_ = mintrewardActListBuilder_.build();
+        }
+        if (userClaimInfoListBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            userClaimInfoList_ = java.util.Collections.unmodifiableList(userClaimInfoList_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.userClaimInfoList_ = userClaimInfoList_;
+        } else {
+          result.userClaimInfoList_ = userClaimInfoListBuilder_.build();
+        }
+        if (userActListBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            userActList_ = java.util.Collections.unmodifiableList(userActList_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.userActList_ = userActList_;
+        } else {
+          result.userActList_ = userActListBuilder_.build();
+        }
+        if (userMintCountListBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0)) {
+            userMintCountList_ = java.util.Collections.unmodifiableList(userMintCountList_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.userMintCountList_ = userMintCountList_;
+        } else {
+          result.userMintCountList_ = userMintCountListBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState) {
+          return mergeFrom((com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState other) {
+        if (other == com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (actLatestCycleListBuilder_ == null) {
+          if (!other.actLatestCycleList_.isEmpty()) {
+            if (actLatestCycleList_.isEmpty()) {
+              actLatestCycleList_ = other.actLatestCycleList_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureActLatestCycleListIsMutable();
+              actLatestCycleList_.addAll(other.actLatestCycleList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.actLatestCycleList_.isEmpty()) {
+            if (actLatestCycleListBuilder_.isEmpty()) {
+              actLatestCycleListBuilder_.dispose();
+              actLatestCycleListBuilder_ = null;
+              actLatestCycleList_ = other.actLatestCycleList_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              actLatestCycleListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getActLatestCycleListFieldBuilder() : null;
+            } else {
+              actLatestCycleListBuilder_.addAllMessages(other.actLatestCycleList_);
+            }
+          }
+        }
+        if (actCurrentCycleListBuilder_ == null) {
+          if (!other.actCurrentCycleList_.isEmpty()) {
+            if (actCurrentCycleList_.isEmpty()) {
+              actCurrentCycleList_ = other.actCurrentCycleList_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureActCurrentCycleListIsMutable();
+              actCurrentCycleList_.addAll(other.actCurrentCycleList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.actCurrentCycleList_.isEmpty()) {
+            if (actCurrentCycleListBuilder_.isEmpty()) {
+              actCurrentCycleListBuilder_.dispose();
+              actCurrentCycleListBuilder_ = null;
+              actCurrentCycleList_ = other.actCurrentCycleList_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              actCurrentCycleListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getActCurrentCycleListFieldBuilder() : null;
+            } else {
+              actCurrentCycleListBuilder_.addAllMessages(other.actCurrentCycleList_);
+            }
+          }
+        }
+        if (mintrewardActListBuilder_ == null) {
+          if (!other.mintrewardActList_.isEmpty()) {
+            if (mintrewardActList_.isEmpty()) {
+              mintrewardActList_ = other.mintrewardActList_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureMintrewardActListIsMutable();
+              mintrewardActList_.addAll(other.mintrewardActList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.mintrewardActList_.isEmpty()) {
+            if (mintrewardActListBuilder_.isEmpty()) {
+              mintrewardActListBuilder_.dispose();
+              mintrewardActListBuilder_ = null;
+              mintrewardActList_ = other.mintrewardActList_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              mintrewardActListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMintrewardActListFieldBuilder() : null;
+            } else {
+              mintrewardActListBuilder_.addAllMessages(other.mintrewardActList_);
+            }
+          }
+        }
+        if (userClaimInfoListBuilder_ == null) {
+          if (!other.userClaimInfoList_.isEmpty()) {
+            if (userClaimInfoList_.isEmpty()) {
+              userClaimInfoList_ = other.userClaimInfoList_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureUserClaimInfoListIsMutable();
+              userClaimInfoList_.addAll(other.userClaimInfoList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.userClaimInfoList_.isEmpty()) {
+            if (userClaimInfoListBuilder_.isEmpty()) {
+              userClaimInfoListBuilder_.dispose();
+              userClaimInfoListBuilder_ = null;
+              userClaimInfoList_ = other.userClaimInfoList_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              userClaimInfoListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getUserClaimInfoListFieldBuilder() : null;
+            } else {
+              userClaimInfoListBuilder_.addAllMessages(other.userClaimInfoList_);
+            }
+          }
+        }
+        if (userActListBuilder_ == null) {
+          if (!other.userActList_.isEmpty()) {
+            if (userActList_.isEmpty()) {
+              userActList_ = other.userActList_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureUserActListIsMutable();
+              userActList_.addAll(other.userActList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.userActList_.isEmpty()) {
+            if (userActListBuilder_.isEmpty()) {
+              userActListBuilder_.dispose();
+              userActListBuilder_ = null;
+              userActList_ = other.userActList_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              userActListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getUserActListFieldBuilder() : null;
+            } else {
+              userActListBuilder_.addAllMessages(other.userActList_);
+            }
+          }
+        }
+        if (userMintCountListBuilder_ == null) {
+          if (!other.userMintCountList_.isEmpty()) {
+            if (userMintCountList_.isEmpty()) {
+              userMintCountList_ = other.userMintCountList_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureUserMintCountListIsMutable();
+              userMintCountList_.addAll(other.userMintCountList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.userMintCountList_.isEmpty()) {
+            if (userMintCountListBuilder_.isEmpty()) {
+              userMintCountListBuilder_.dispose();
+              userMintCountListBuilder_ = null;
+              userMintCountList_ = other.userMintCountList_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              userMintCountListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getUserMintCountListFieldBuilder() : null;
+            } else {
+              userMintCountListBuilder_.addAllMessages(other.userMintCountList_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle m =
+                    input.readMessage(
+                        com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle.parser(),
+                        extensionRegistry);
+                if (actLatestCycleListBuilder_ == null) {
+                  ensureActLatestCycleListIsMutable();
+                  actLatestCycleList_.add(m);
+                } else {
+                  actLatestCycleListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle m =
+                    input.readMessage(
+                        com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle.parser(),
+                        extensionRegistry);
+                if (actCurrentCycleListBuilder_ == null) {
+                  ensureActCurrentCycleListIsMutable();
+                  actCurrentCycleList_.add(m);
+                } else {
+                  actCurrentCycleListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct m =
+                    input.readMessage(
+                        com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct.parser(),
+                        extensionRegistry);
+                if (mintrewardActListBuilder_ == null) {
+                  ensureMintrewardActListIsMutable();
+                  mintrewardActList_.add(m);
+                } else {
+                  mintrewardActListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo m =
+                    input.readMessage(
+                        com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo.parser(),
+                        extensionRegistry);
+                if (userClaimInfoListBuilder_ == null) {
+                  ensureUserClaimInfoListIsMutable();
+                  userClaimInfoList_.add(m);
+                } else {
+                  userClaimInfoListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct m =
+                    input.readMessage(
+                        com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct.parser(),
+                        extensionRegistry);
+                if (userActListBuilder_ == null) {
+                  ensureUserActListIsMutable();
+                  userActList_.add(m);
+                } else {
+                  userActListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 58: {
+                com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount m =
+                    input.readMessage(
+                        com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount.parser(),
+                        extensionRegistry);
+                if (userMintCountListBuilder_ == null) {
+                  ensureUserMintCountListIsMutable();
+                  userMintCountList_.add(m);
+                } else {
+                  userMintCountListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.stafihub.stafihub.rmintreward.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.stafihub.stafihub.rmintreward.ParamsProto.Params, com.stafihub.stafihub.rmintreward.ParamsProto.Params.Builder, com.stafihub.stafihub.rmintreward.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.stafihub.stafihub.rmintreward.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.stafihub.stafihub.rmintreward.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.stafihub.stafihub.rmintreward.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.stafihub.stafihub.rmintreward.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.stafihub.stafihub.rmintreward.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.stafihub.stafihub.rmintreward.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.stafihub.stafihub.rmintreward.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.stafihub.stafihub.rmintreward.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.stafihub.stafihub.rmintreward.ParamsProto.Params, com.stafihub.stafihub.rmintreward.ParamsProto.Params.Builder, com.stafihub.stafihub.rmintreward.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.stafihub.stafihub.rmintreward.ParamsProto.Params, com.stafihub.stafihub.rmintreward.ParamsProto.Params.Builder, com.stafihub.stafihub.rmintreward.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle> actLatestCycleList_ =
+        java.util.Collections.emptyList();
+      private void ensureActLatestCycleListIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          actLatestCycleList_ = new java.util.ArrayList<com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle>(actLatestCycleList_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle, com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle.Builder, com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycleOrBuilder> actLatestCycleListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActLatestCycle actLatestCycleList = 2 [json_name = "actLatestCycleList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle> getActLatestCycleListList() {
+        if (actLatestCycleListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(actLatestCycleList_);
+        } else {
+          return actLatestCycleListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActLatestCycle actLatestCycleList = 2 [json_name = "actLatestCycleList"];</code>
+       */
+      public int getActLatestCycleListCount() {
+        if (actLatestCycleListBuilder_ == null) {
+          return actLatestCycleList_.size();
+        } else {
+          return actLatestCycleListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActLatestCycle actLatestCycleList = 2 [json_name = "actLatestCycleList"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle getActLatestCycleList(int index) {
+        if (actLatestCycleListBuilder_ == null) {
+          return actLatestCycleList_.get(index);
+        } else {
+          return actLatestCycleListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActLatestCycle actLatestCycleList = 2 [json_name = "actLatestCycleList"];</code>
+       */
+      public Builder setActLatestCycleList(
+          int index, com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle value) {
+        if (actLatestCycleListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureActLatestCycleListIsMutable();
+          actLatestCycleList_.set(index, value);
+          onChanged();
+        } else {
+          actLatestCycleListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActLatestCycle actLatestCycleList = 2 [json_name = "actLatestCycleList"];</code>
+       */
+      public Builder setActLatestCycleList(
+          int index, com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle.Builder builderForValue) {
+        if (actLatestCycleListBuilder_ == null) {
+          ensureActLatestCycleListIsMutable();
+          actLatestCycleList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          actLatestCycleListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActLatestCycle actLatestCycleList = 2 [json_name = "actLatestCycleList"];</code>
+       */
+      public Builder addActLatestCycleList(com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle value) {
+        if (actLatestCycleListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureActLatestCycleListIsMutable();
+          actLatestCycleList_.add(value);
+          onChanged();
+        } else {
+          actLatestCycleListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActLatestCycle actLatestCycleList = 2 [json_name = "actLatestCycleList"];</code>
+       */
+      public Builder addActLatestCycleList(
+          int index, com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle value) {
+        if (actLatestCycleListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureActLatestCycleListIsMutable();
+          actLatestCycleList_.add(index, value);
+          onChanged();
+        } else {
+          actLatestCycleListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActLatestCycle actLatestCycleList = 2 [json_name = "actLatestCycleList"];</code>
+       */
+      public Builder addActLatestCycleList(
+          com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle.Builder builderForValue) {
+        if (actLatestCycleListBuilder_ == null) {
+          ensureActLatestCycleListIsMutable();
+          actLatestCycleList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          actLatestCycleListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActLatestCycle actLatestCycleList = 2 [json_name = "actLatestCycleList"];</code>
+       */
+      public Builder addActLatestCycleList(
+          int index, com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle.Builder builderForValue) {
+        if (actLatestCycleListBuilder_ == null) {
+          ensureActLatestCycleListIsMutable();
+          actLatestCycleList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          actLatestCycleListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActLatestCycle actLatestCycleList = 2 [json_name = "actLatestCycleList"];</code>
+       */
+      public Builder addAllActLatestCycleList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle> values) {
+        if (actLatestCycleListBuilder_ == null) {
+          ensureActLatestCycleListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, actLatestCycleList_);
+          onChanged();
+        } else {
+          actLatestCycleListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActLatestCycle actLatestCycleList = 2 [json_name = "actLatestCycleList"];</code>
+       */
+      public Builder clearActLatestCycleList() {
+        if (actLatestCycleListBuilder_ == null) {
+          actLatestCycleList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          actLatestCycleListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActLatestCycle actLatestCycleList = 2 [json_name = "actLatestCycleList"];</code>
+       */
+      public Builder removeActLatestCycleList(int index) {
+        if (actLatestCycleListBuilder_ == null) {
+          ensureActLatestCycleListIsMutable();
+          actLatestCycleList_.remove(index);
+          onChanged();
+        } else {
+          actLatestCycleListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActLatestCycle actLatestCycleList = 2 [json_name = "actLatestCycleList"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle.Builder getActLatestCycleListBuilder(
+          int index) {
+        return getActLatestCycleListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActLatestCycle actLatestCycleList = 2 [json_name = "actLatestCycleList"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycleOrBuilder getActLatestCycleListOrBuilder(
+          int index) {
+        if (actLatestCycleListBuilder_ == null) {
+          return actLatestCycleList_.get(index);  } else {
+          return actLatestCycleListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActLatestCycle actLatestCycleList = 2 [json_name = "actLatestCycleList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycleOrBuilder> 
+           getActLatestCycleListOrBuilderList() {
+        if (actLatestCycleListBuilder_ != null) {
+          return actLatestCycleListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(actLatestCycleList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActLatestCycle actLatestCycleList = 2 [json_name = "actLatestCycleList"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle.Builder addActLatestCycleListBuilder() {
+        return getActLatestCycleListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActLatestCycle actLatestCycleList = 2 [json_name = "actLatestCycleList"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle.Builder addActLatestCycleListBuilder(
+          int index) {
+        return getActLatestCycleListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActLatestCycle actLatestCycleList = 2 [json_name = "actLatestCycleList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle.Builder> 
+           getActLatestCycleListBuilderList() {
+        return getActLatestCycleListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle, com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle.Builder, com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycleOrBuilder> 
+          getActLatestCycleListFieldBuilder() {
+        if (actLatestCycleListBuilder_ == null) {
+          actLatestCycleListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle, com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle.Builder, com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycleOrBuilder>(
+                  actLatestCycleList_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          actLatestCycleList_ = null;
+        }
+        return actLatestCycleListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle> actCurrentCycleList_ =
+        java.util.Collections.emptyList();
+      private void ensureActCurrentCycleListIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          actCurrentCycleList_ = new java.util.ArrayList<com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle>(actCurrentCycleList_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle, com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle.Builder, com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycleOrBuilder> actCurrentCycleListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActCurrentCycle actCurrentCycleList = 3 [json_name = "actCurrentCycleList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle> getActCurrentCycleListList() {
+        if (actCurrentCycleListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(actCurrentCycleList_);
+        } else {
+          return actCurrentCycleListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActCurrentCycle actCurrentCycleList = 3 [json_name = "actCurrentCycleList"];</code>
+       */
+      public int getActCurrentCycleListCount() {
+        if (actCurrentCycleListBuilder_ == null) {
+          return actCurrentCycleList_.size();
+        } else {
+          return actCurrentCycleListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActCurrentCycle actCurrentCycleList = 3 [json_name = "actCurrentCycleList"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle getActCurrentCycleList(int index) {
+        if (actCurrentCycleListBuilder_ == null) {
+          return actCurrentCycleList_.get(index);
+        } else {
+          return actCurrentCycleListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActCurrentCycle actCurrentCycleList = 3 [json_name = "actCurrentCycleList"];</code>
+       */
+      public Builder setActCurrentCycleList(
+          int index, com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle value) {
+        if (actCurrentCycleListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureActCurrentCycleListIsMutable();
+          actCurrentCycleList_.set(index, value);
+          onChanged();
+        } else {
+          actCurrentCycleListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActCurrentCycle actCurrentCycleList = 3 [json_name = "actCurrentCycleList"];</code>
+       */
+      public Builder setActCurrentCycleList(
+          int index, com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle.Builder builderForValue) {
+        if (actCurrentCycleListBuilder_ == null) {
+          ensureActCurrentCycleListIsMutable();
+          actCurrentCycleList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          actCurrentCycleListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActCurrentCycle actCurrentCycleList = 3 [json_name = "actCurrentCycleList"];</code>
+       */
+      public Builder addActCurrentCycleList(com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle value) {
+        if (actCurrentCycleListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureActCurrentCycleListIsMutable();
+          actCurrentCycleList_.add(value);
+          onChanged();
+        } else {
+          actCurrentCycleListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActCurrentCycle actCurrentCycleList = 3 [json_name = "actCurrentCycleList"];</code>
+       */
+      public Builder addActCurrentCycleList(
+          int index, com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle value) {
+        if (actCurrentCycleListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureActCurrentCycleListIsMutable();
+          actCurrentCycleList_.add(index, value);
+          onChanged();
+        } else {
+          actCurrentCycleListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActCurrentCycle actCurrentCycleList = 3 [json_name = "actCurrentCycleList"];</code>
+       */
+      public Builder addActCurrentCycleList(
+          com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle.Builder builderForValue) {
+        if (actCurrentCycleListBuilder_ == null) {
+          ensureActCurrentCycleListIsMutable();
+          actCurrentCycleList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          actCurrentCycleListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActCurrentCycle actCurrentCycleList = 3 [json_name = "actCurrentCycleList"];</code>
+       */
+      public Builder addActCurrentCycleList(
+          int index, com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle.Builder builderForValue) {
+        if (actCurrentCycleListBuilder_ == null) {
+          ensureActCurrentCycleListIsMutable();
+          actCurrentCycleList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          actCurrentCycleListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActCurrentCycle actCurrentCycleList = 3 [json_name = "actCurrentCycleList"];</code>
+       */
+      public Builder addAllActCurrentCycleList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle> values) {
+        if (actCurrentCycleListBuilder_ == null) {
+          ensureActCurrentCycleListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, actCurrentCycleList_);
+          onChanged();
+        } else {
+          actCurrentCycleListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActCurrentCycle actCurrentCycleList = 3 [json_name = "actCurrentCycleList"];</code>
+       */
+      public Builder clearActCurrentCycleList() {
+        if (actCurrentCycleListBuilder_ == null) {
+          actCurrentCycleList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          actCurrentCycleListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActCurrentCycle actCurrentCycleList = 3 [json_name = "actCurrentCycleList"];</code>
+       */
+      public Builder removeActCurrentCycleList(int index) {
+        if (actCurrentCycleListBuilder_ == null) {
+          ensureActCurrentCycleListIsMutable();
+          actCurrentCycleList_.remove(index);
+          onChanged();
+        } else {
+          actCurrentCycleListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActCurrentCycle actCurrentCycleList = 3 [json_name = "actCurrentCycleList"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle.Builder getActCurrentCycleListBuilder(
+          int index) {
+        return getActCurrentCycleListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActCurrentCycle actCurrentCycleList = 3 [json_name = "actCurrentCycleList"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycleOrBuilder getActCurrentCycleListOrBuilder(
+          int index) {
+        if (actCurrentCycleListBuilder_ == null) {
+          return actCurrentCycleList_.get(index);  } else {
+          return actCurrentCycleListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActCurrentCycle actCurrentCycleList = 3 [json_name = "actCurrentCycleList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycleOrBuilder> 
+           getActCurrentCycleListOrBuilderList() {
+        if (actCurrentCycleListBuilder_ != null) {
+          return actCurrentCycleListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(actCurrentCycleList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActCurrentCycle actCurrentCycleList = 3 [json_name = "actCurrentCycleList"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle.Builder addActCurrentCycleListBuilder() {
+        return getActCurrentCycleListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActCurrentCycle actCurrentCycleList = 3 [json_name = "actCurrentCycleList"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle.Builder addActCurrentCycleListBuilder(
+          int index) {
+        return getActCurrentCycleListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.ActCurrentCycle actCurrentCycleList = 3 [json_name = "actCurrentCycleList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle.Builder> 
+           getActCurrentCycleListBuilderList() {
+        return getActCurrentCycleListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle, com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle.Builder, com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycleOrBuilder> 
+          getActCurrentCycleListFieldBuilder() {
+        if (actCurrentCycleListBuilder_ == null) {
+          actCurrentCycleListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle, com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle.Builder, com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycleOrBuilder>(
+                  actCurrentCycleList_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          actCurrentCycleList_ = null;
+        }
+        return actCurrentCycleListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct> mintrewardActList_ =
+        java.util.Collections.emptyList();
+      private void ensureMintrewardActListIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          mintrewardActList_ = new java.util.ArrayList<com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct>(mintrewardActList_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct.Builder, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardActOrBuilder> mintrewardActListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisMintRewardAct mintrewardActList = 4 [json_name = "mintrewardActList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct> getMintrewardActListList() {
+        if (mintrewardActListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(mintrewardActList_);
+        } else {
+          return mintrewardActListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisMintRewardAct mintrewardActList = 4 [json_name = "mintrewardActList"];</code>
+       */
+      public int getMintrewardActListCount() {
+        if (mintrewardActListBuilder_ == null) {
+          return mintrewardActList_.size();
+        } else {
+          return mintrewardActListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisMintRewardAct mintrewardActList = 4 [json_name = "mintrewardActList"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct getMintrewardActList(int index) {
+        if (mintrewardActListBuilder_ == null) {
+          return mintrewardActList_.get(index);
+        } else {
+          return mintrewardActListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisMintRewardAct mintrewardActList = 4 [json_name = "mintrewardActList"];</code>
+       */
+      public Builder setMintrewardActList(
+          int index, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct value) {
+        if (mintrewardActListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMintrewardActListIsMutable();
+          mintrewardActList_.set(index, value);
+          onChanged();
+        } else {
+          mintrewardActListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisMintRewardAct mintrewardActList = 4 [json_name = "mintrewardActList"];</code>
+       */
+      public Builder setMintrewardActList(
+          int index, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct.Builder builderForValue) {
+        if (mintrewardActListBuilder_ == null) {
+          ensureMintrewardActListIsMutable();
+          mintrewardActList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          mintrewardActListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisMintRewardAct mintrewardActList = 4 [json_name = "mintrewardActList"];</code>
+       */
+      public Builder addMintrewardActList(com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct value) {
+        if (mintrewardActListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMintrewardActListIsMutable();
+          mintrewardActList_.add(value);
+          onChanged();
+        } else {
+          mintrewardActListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisMintRewardAct mintrewardActList = 4 [json_name = "mintrewardActList"];</code>
+       */
+      public Builder addMintrewardActList(
+          int index, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct value) {
+        if (mintrewardActListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMintrewardActListIsMutable();
+          mintrewardActList_.add(index, value);
+          onChanged();
+        } else {
+          mintrewardActListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisMintRewardAct mintrewardActList = 4 [json_name = "mintrewardActList"];</code>
+       */
+      public Builder addMintrewardActList(
+          com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct.Builder builderForValue) {
+        if (mintrewardActListBuilder_ == null) {
+          ensureMintrewardActListIsMutable();
+          mintrewardActList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          mintrewardActListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisMintRewardAct mintrewardActList = 4 [json_name = "mintrewardActList"];</code>
+       */
+      public Builder addMintrewardActList(
+          int index, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct.Builder builderForValue) {
+        if (mintrewardActListBuilder_ == null) {
+          ensureMintrewardActListIsMutable();
+          mintrewardActList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          mintrewardActListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisMintRewardAct mintrewardActList = 4 [json_name = "mintrewardActList"];</code>
+       */
+      public Builder addAllMintrewardActList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct> values) {
+        if (mintrewardActListBuilder_ == null) {
+          ensureMintrewardActListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, mintrewardActList_);
+          onChanged();
+        } else {
+          mintrewardActListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisMintRewardAct mintrewardActList = 4 [json_name = "mintrewardActList"];</code>
+       */
+      public Builder clearMintrewardActList() {
+        if (mintrewardActListBuilder_ == null) {
+          mintrewardActList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          mintrewardActListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisMintRewardAct mintrewardActList = 4 [json_name = "mintrewardActList"];</code>
+       */
+      public Builder removeMintrewardActList(int index) {
+        if (mintrewardActListBuilder_ == null) {
+          ensureMintrewardActListIsMutable();
+          mintrewardActList_.remove(index);
+          onChanged();
+        } else {
+          mintrewardActListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisMintRewardAct mintrewardActList = 4 [json_name = "mintrewardActList"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct.Builder getMintrewardActListBuilder(
+          int index) {
+        return getMintrewardActListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisMintRewardAct mintrewardActList = 4 [json_name = "mintrewardActList"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardActOrBuilder getMintrewardActListOrBuilder(
+          int index) {
+        if (mintrewardActListBuilder_ == null) {
+          return mintrewardActList_.get(index);  } else {
+          return mintrewardActListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisMintRewardAct mintrewardActList = 4 [json_name = "mintrewardActList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardActOrBuilder> 
+           getMintrewardActListOrBuilderList() {
+        if (mintrewardActListBuilder_ != null) {
+          return mintrewardActListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(mintrewardActList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisMintRewardAct mintrewardActList = 4 [json_name = "mintrewardActList"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct.Builder addMintrewardActListBuilder() {
+        return getMintrewardActListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisMintRewardAct mintrewardActList = 4 [json_name = "mintrewardActList"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct.Builder addMintrewardActListBuilder(
+          int index) {
+        return getMintrewardActListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisMintRewardAct mintrewardActList = 4 [json_name = "mintrewardActList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct.Builder> 
+           getMintrewardActListBuilderList() {
+        return getMintrewardActListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct.Builder, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardActOrBuilder> 
+          getMintrewardActListFieldBuilder() {
+        if (mintrewardActListBuilder_ == null) {
+          mintrewardActListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct.Builder, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardActOrBuilder>(
+                  mintrewardActList_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          mintrewardActList_ = null;
+        }
+        return mintrewardActListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo> userClaimInfoList_ =
+        java.util.Collections.emptyList();
+      private void ensureUserClaimInfoListIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          userClaimInfoList_ = new java.util.ArrayList<com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo>(userClaimInfoList_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo.Builder, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfoOrBuilder> userClaimInfoListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserClaimInfo userClaimInfoList = 5 [json_name = "userClaimInfoList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo> getUserClaimInfoListList() {
+        if (userClaimInfoListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(userClaimInfoList_);
+        } else {
+          return userClaimInfoListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserClaimInfo userClaimInfoList = 5 [json_name = "userClaimInfoList"];</code>
+       */
+      public int getUserClaimInfoListCount() {
+        if (userClaimInfoListBuilder_ == null) {
+          return userClaimInfoList_.size();
+        } else {
+          return userClaimInfoListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserClaimInfo userClaimInfoList = 5 [json_name = "userClaimInfoList"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo getUserClaimInfoList(int index) {
+        if (userClaimInfoListBuilder_ == null) {
+          return userClaimInfoList_.get(index);
+        } else {
+          return userClaimInfoListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserClaimInfo userClaimInfoList = 5 [json_name = "userClaimInfoList"];</code>
+       */
+      public Builder setUserClaimInfoList(
+          int index, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo value) {
+        if (userClaimInfoListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUserClaimInfoListIsMutable();
+          userClaimInfoList_.set(index, value);
+          onChanged();
+        } else {
+          userClaimInfoListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserClaimInfo userClaimInfoList = 5 [json_name = "userClaimInfoList"];</code>
+       */
+      public Builder setUserClaimInfoList(
+          int index, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo.Builder builderForValue) {
+        if (userClaimInfoListBuilder_ == null) {
+          ensureUserClaimInfoListIsMutable();
+          userClaimInfoList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          userClaimInfoListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserClaimInfo userClaimInfoList = 5 [json_name = "userClaimInfoList"];</code>
+       */
+      public Builder addUserClaimInfoList(com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo value) {
+        if (userClaimInfoListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUserClaimInfoListIsMutable();
+          userClaimInfoList_.add(value);
+          onChanged();
+        } else {
+          userClaimInfoListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserClaimInfo userClaimInfoList = 5 [json_name = "userClaimInfoList"];</code>
+       */
+      public Builder addUserClaimInfoList(
+          int index, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo value) {
+        if (userClaimInfoListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUserClaimInfoListIsMutable();
+          userClaimInfoList_.add(index, value);
+          onChanged();
+        } else {
+          userClaimInfoListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserClaimInfo userClaimInfoList = 5 [json_name = "userClaimInfoList"];</code>
+       */
+      public Builder addUserClaimInfoList(
+          com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo.Builder builderForValue) {
+        if (userClaimInfoListBuilder_ == null) {
+          ensureUserClaimInfoListIsMutable();
+          userClaimInfoList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          userClaimInfoListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserClaimInfo userClaimInfoList = 5 [json_name = "userClaimInfoList"];</code>
+       */
+      public Builder addUserClaimInfoList(
+          int index, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo.Builder builderForValue) {
+        if (userClaimInfoListBuilder_ == null) {
+          ensureUserClaimInfoListIsMutable();
+          userClaimInfoList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          userClaimInfoListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserClaimInfo userClaimInfoList = 5 [json_name = "userClaimInfoList"];</code>
+       */
+      public Builder addAllUserClaimInfoList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo> values) {
+        if (userClaimInfoListBuilder_ == null) {
+          ensureUserClaimInfoListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, userClaimInfoList_);
+          onChanged();
+        } else {
+          userClaimInfoListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserClaimInfo userClaimInfoList = 5 [json_name = "userClaimInfoList"];</code>
+       */
+      public Builder clearUserClaimInfoList() {
+        if (userClaimInfoListBuilder_ == null) {
+          userClaimInfoList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          userClaimInfoListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserClaimInfo userClaimInfoList = 5 [json_name = "userClaimInfoList"];</code>
+       */
+      public Builder removeUserClaimInfoList(int index) {
+        if (userClaimInfoListBuilder_ == null) {
+          ensureUserClaimInfoListIsMutable();
+          userClaimInfoList_.remove(index);
+          onChanged();
+        } else {
+          userClaimInfoListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserClaimInfo userClaimInfoList = 5 [json_name = "userClaimInfoList"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo.Builder getUserClaimInfoListBuilder(
+          int index) {
+        return getUserClaimInfoListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserClaimInfo userClaimInfoList = 5 [json_name = "userClaimInfoList"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfoOrBuilder getUserClaimInfoListOrBuilder(
+          int index) {
+        if (userClaimInfoListBuilder_ == null) {
+          return userClaimInfoList_.get(index);  } else {
+          return userClaimInfoListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserClaimInfo userClaimInfoList = 5 [json_name = "userClaimInfoList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfoOrBuilder> 
+           getUserClaimInfoListOrBuilderList() {
+        if (userClaimInfoListBuilder_ != null) {
+          return userClaimInfoListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(userClaimInfoList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserClaimInfo userClaimInfoList = 5 [json_name = "userClaimInfoList"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo.Builder addUserClaimInfoListBuilder() {
+        return getUserClaimInfoListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserClaimInfo userClaimInfoList = 5 [json_name = "userClaimInfoList"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo.Builder addUserClaimInfoListBuilder(
+          int index) {
+        return getUserClaimInfoListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserClaimInfo userClaimInfoList = 5 [json_name = "userClaimInfoList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo.Builder> 
+           getUserClaimInfoListBuilderList() {
+        return getUserClaimInfoListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo.Builder, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfoOrBuilder> 
+          getUserClaimInfoListFieldBuilder() {
+        if (userClaimInfoListBuilder_ == null) {
+          userClaimInfoListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo.Builder, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfoOrBuilder>(
+                  userClaimInfoList_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          userClaimInfoList_ = null;
+        }
+        return userClaimInfoListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct> userActList_ =
+        java.util.Collections.emptyList();
+      private void ensureUserActListIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          userActList_ = new java.util.ArrayList<com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct>(userActList_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct.Builder, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserActOrBuilder> userActListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserAct userActList = 6 [json_name = "userActList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct> getUserActListList() {
+        if (userActListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(userActList_);
+        } else {
+          return userActListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserAct userActList = 6 [json_name = "userActList"];</code>
+       */
+      public int getUserActListCount() {
+        if (userActListBuilder_ == null) {
+          return userActList_.size();
+        } else {
+          return userActListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserAct userActList = 6 [json_name = "userActList"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct getUserActList(int index) {
+        if (userActListBuilder_ == null) {
+          return userActList_.get(index);
+        } else {
+          return userActListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserAct userActList = 6 [json_name = "userActList"];</code>
+       */
+      public Builder setUserActList(
+          int index, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct value) {
+        if (userActListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUserActListIsMutable();
+          userActList_.set(index, value);
+          onChanged();
+        } else {
+          userActListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserAct userActList = 6 [json_name = "userActList"];</code>
+       */
+      public Builder setUserActList(
+          int index, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct.Builder builderForValue) {
+        if (userActListBuilder_ == null) {
+          ensureUserActListIsMutable();
+          userActList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          userActListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserAct userActList = 6 [json_name = "userActList"];</code>
+       */
+      public Builder addUserActList(com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct value) {
+        if (userActListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUserActListIsMutable();
+          userActList_.add(value);
+          onChanged();
+        } else {
+          userActListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserAct userActList = 6 [json_name = "userActList"];</code>
+       */
+      public Builder addUserActList(
+          int index, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct value) {
+        if (userActListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUserActListIsMutable();
+          userActList_.add(index, value);
+          onChanged();
+        } else {
+          userActListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserAct userActList = 6 [json_name = "userActList"];</code>
+       */
+      public Builder addUserActList(
+          com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct.Builder builderForValue) {
+        if (userActListBuilder_ == null) {
+          ensureUserActListIsMutable();
+          userActList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          userActListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserAct userActList = 6 [json_name = "userActList"];</code>
+       */
+      public Builder addUserActList(
+          int index, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct.Builder builderForValue) {
+        if (userActListBuilder_ == null) {
+          ensureUserActListIsMutable();
+          userActList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          userActListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserAct userActList = 6 [json_name = "userActList"];</code>
+       */
+      public Builder addAllUserActList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct> values) {
+        if (userActListBuilder_ == null) {
+          ensureUserActListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, userActList_);
+          onChanged();
+        } else {
+          userActListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserAct userActList = 6 [json_name = "userActList"];</code>
+       */
+      public Builder clearUserActList() {
+        if (userActListBuilder_ == null) {
+          userActList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          userActListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserAct userActList = 6 [json_name = "userActList"];</code>
+       */
+      public Builder removeUserActList(int index) {
+        if (userActListBuilder_ == null) {
+          ensureUserActListIsMutable();
+          userActList_.remove(index);
+          onChanged();
+        } else {
+          userActListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserAct userActList = 6 [json_name = "userActList"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct.Builder getUserActListBuilder(
+          int index) {
+        return getUserActListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserAct userActList = 6 [json_name = "userActList"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserActOrBuilder getUserActListOrBuilder(
+          int index) {
+        if (userActListBuilder_ == null) {
+          return userActList_.get(index);  } else {
+          return userActListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserAct userActList = 6 [json_name = "userActList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserActOrBuilder> 
+           getUserActListOrBuilderList() {
+        if (userActListBuilder_ != null) {
+          return userActListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(userActList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserAct userActList = 6 [json_name = "userActList"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct.Builder addUserActListBuilder() {
+        return getUserActListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserAct userActList = 6 [json_name = "userActList"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct.Builder addUserActListBuilder(
+          int index) {
+        return getUserActListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rmintreward.GenesisUserAct userActList = 6 [json_name = "userActList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct.Builder> 
+           getUserActListBuilderList() {
+        return getUserActListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct.Builder, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserActOrBuilder> 
+          getUserActListFieldBuilder() {
+        if (userActListBuilder_ == null) {
+          userActListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct.Builder, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserActOrBuilder>(
+                  userActList_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          userActList_ = null;
+        }
+        return userActListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount> userMintCountList_ =
+        java.util.Collections.emptyList();
+      private void ensureUserMintCountListIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          userMintCountList_ = new java.util.ArrayList<com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount>(userMintCountList_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount, com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount.Builder, com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCountOrBuilder> userMintCountListBuilder_;
+
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rmintreward.UserMintCount userMintCountList = 7 [json_name = "userMintCountList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount> getUserMintCountListList() {
+        if (userMintCountListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(userMintCountList_);
+        } else {
+          return userMintCountListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rmintreward.UserMintCount userMintCountList = 7 [json_name = "userMintCountList"];</code>
+       */
+      public int getUserMintCountListCount() {
+        if (userMintCountListBuilder_ == null) {
+          return userMintCountList_.size();
+        } else {
+          return userMintCountListBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rmintreward.UserMintCount userMintCountList = 7 [json_name = "userMintCountList"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount getUserMintCountList(int index) {
+        if (userMintCountListBuilder_ == null) {
+          return userMintCountList_.get(index);
+        } else {
+          return userMintCountListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rmintreward.UserMintCount userMintCountList = 7 [json_name = "userMintCountList"];</code>
+       */
+      public Builder setUserMintCountList(
+          int index, com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount value) {
+        if (userMintCountListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUserMintCountListIsMutable();
+          userMintCountList_.set(index, value);
+          onChanged();
+        } else {
+          userMintCountListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rmintreward.UserMintCount userMintCountList = 7 [json_name = "userMintCountList"];</code>
+       */
+      public Builder setUserMintCountList(
+          int index, com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount.Builder builderForValue) {
+        if (userMintCountListBuilder_ == null) {
+          ensureUserMintCountListIsMutable();
+          userMintCountList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          userMintCountListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rmintreward.UserMintCount userMintCountList = 7 [json_name = "userMintCountList"];</code>
+       */
+      public Builder addUserMintCountList(com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount value) {
+        if (userMintCountListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUserMintCountListIsMutable();
+          userMintCountList_.add(value);
+          onChanged();
+        } else {
+          userMintCountListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rmintreward.UserMintCount userMintCountList = 7 [json_name = "userMintCountList"];</code>
+       */
+      public Builder addUserMintCountList(
+          int index, com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount value) {
+        if (userMintCountListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUserMintCountListIsMutable();
+          userMintCountList_.add(index, value);
+          onChanged();
+        } else {
+          userMintCountListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rmintreward.UserMintCount userMintCountList = 7 [json_name = "userMintCountList"];</code>
+       */
+      public Builder addUserMintCountList(
+          com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount.Builder builderForValue) {
+        if (userMintCountListBuilder_ == null) {
+          ensureUserMintCountListIsMutable();
+          userMintCountList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          userMintCountListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rmintreward.UserMintCount userMintCountList = 7 [json_name = "userMintCountList"];</code>
+       */
+      public Builder addUserMintCountList(
+          int index, com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount.Builder builderForValue) {
+        if (userMintCountListBuilder_ == null) {
+          ensureUserMintCountListIsMutable();
+          userMintCountList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          userMintCountListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rmintreward.UserMintCount userMintCountList = 7 [json_name = "userMintCountList"];</code>
+       */
+      public Builder addAllUserMintCountList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount> values) {
+        if (userMintCountListBuilder_ == null) {
+          ensureUserMintCountListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, userMintCountList_);
+          onChanged();
+        } else {
+          userMintCountListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rmintreward.UserMintCount userMintCountList = 7 [json_name = "userMintCountList"];</code>
+       */
+      public Builder clearUserMintCountList() {
+        if (userMintCountListBuilder_ == null) {
+          userMintCountList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          userMintCountListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rmintreward.UserMintCount userMintCountList = 7 [json_name = "userMintCountList"];</code>
+       */
+      public Builder removeUserMintCountList(int index) {
+        if (userMintCountListBuilder_ == null) {
+          ensureUserMintCountListIsMutable();
+          userMintCountList_.remove(index);
+          onChanged();
+        } else {
+          userMintCountListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rmintreward.UserMintCount userMintCountList = 7 [json_name = "userMintCountList"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount.Builder getUserMintCountListBuilder(
+          int index) {
+        return getUserMintCountListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rmintreward.UserMintCount userMintCountList = 7 [json_name = "userMintCountList"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCountOrBuilder getUserMintCountListOrBuilder(
+          int index) {
+        if (userMintCountListBuilder_ == null) {
+          return userMintCountList_.get(index);  } else {
+          return userMintCountListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rmintreward.UserMintCount userMintCountList = 7 [json_name = "userMintCountList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCountOrBuilder> 
+           getUserMintCountListOrBuilderList() {
+        if (userMintCountListBuilder_ != null) {
+          return userMintCountListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(userMintCountList_);
+        }
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rmintreward.UserMintCount userMintCountList = 7 [json_name = "userMintCountList"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount.Builder addUserMintCountListBuilder() {
+        return getUserMintCountListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rmintreward.UserMintCount userMintCountList = 7 [json_name = "userMintCountList"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount.Builder addUserMintCountListBuilder(
+          int index) {
+        return getUserMintCountListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rmintreward.UserMintCount userMintCountList = 7 [json_name = "userMintCountList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount.Builder> 
+           getUserMintCountListBuilderList() {
+        return getUserMintCountListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount, com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount.Builder, com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCountOrBuilder> 
+          getUserMintCountListFieldBuilder() {
+        if (userMintCountListBuilder_ == null) {
+          userMintCountListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount, com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount.Builder, com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCountOrBuilder>(
+                  userMintCountList_,
+                  ((bitField0_ & 0x00000040) != 0),
+                  getParentForChildren(),
+                  isClean());
+          userMintCountList_ = null;
+        }
+        return userMintCountListBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.rmintreward.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.rmintreward.GenesisState)
+    private static final com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState();
+    }
+
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ActLatestCycleOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.rmintreward.ActLatestCycle)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>uint64 cycle = 2 [json_name = "cycle"];</code>
+     * @return The cycle.
+     */
+    long getCycle();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.rmintreward.ActLatestCycle}
+   */
+  public static final class ActLatestCycle extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.rmintreward.ActLatestCycle)
+      ActLatestCycleOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ActLatestCycle.newBuilder() to construct.
+    private ActLatestCycle(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ActLatestCycle() {
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ActLatestCycle();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_ActLatestCycle_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_ActLatestCycle_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle.class, com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CYCLE_FIELD_NUMBER = 2;
+    private long cycle_ = 0L;
+    /**
+     * <code>uint64 cycle = 2 [json_name = "cycle"];</code>
+     * @return The cycle.
+     */
+    @java.lang.Override
+    public long getCycle() {
+      return cycle_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (cycle_ != 0L) {
+        output.writeUInt64(2, cycle_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (cycle_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, cycle_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle other = (com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (getCycle()
+          != other.getCycle()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + CYCLE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCycle());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.rmintreward.ActLatestCycle}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.rmintreward.ActLatestCycle)
+        com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycleOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_ActLatestCycle_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_ActLatestCycle_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle.class, com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        cycle_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_ActLatestCycle_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle getDefaultInstanceForType() {
+        return com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle build() {
+        com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle buildPartial() {
+        com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle result = new com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.cycle_ = cycle_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle) {
+          return mergeFrom((com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle other) {
+        if (other == com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getCycle() != 0L) {
+          setCycle(other.getCycle());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                cycle_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long cycle_ ;
+      /**
+       * <code>uint64 cycle = 2 [json_name = "cycle"];</code>
+       * @return The cycle.
+       */
+      @java.lang.Override
+      public long getCycle() {
+        return cycle_;
+      }
+      /**
+       * <code>uint64 cycle = 2 [json_name = "cycle"];</code>
+       * @param value The cycle to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCycle(long value) {
+
+        cycle_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 cycle = 2 [json_name = "cycle"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCycle() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        cycle_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.rmintreward.ActLatestCycle)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.rmintreward.ActLatestCycle)
+    private static final com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle();
+    }
+
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ActLatestCycle>
+        PARSER = new com.google.protobuf.AbstractParser<ActLatestCycle>() {
+      @java.lang.Override
+      public ActLatestCycle parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ActLatestCycle> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ActLatestCycle> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.rmintreward.GenesisProto.ActLatestCycle getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ActCurrentCycleOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.rmintreward.ActCurrentCycle)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>uint64 cycle = 2 [json_name = "cycle"];</code>
+     * @return The cycle.
+     */
+    long getCycle();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.rmintreward.ActCurrentCycle}
+   */
+  public static final class ActCurrentCycle extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.rmintreward.ActCurrentCycle)
+      ActCurrentCycleOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ActCurrentCycle.newBuilder() to construct.
+    private ActCurrentCycle(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ActCurrentCycle() {
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ActCurrentCycle();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_ActCurrentCycle_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_ActCurrentCycle_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle.class, com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CYCLE_FIELD_NUMBER = 2;
+    private long cycle_ = 0L;
+    /**
+     * <code>uint64 cycle = 2 [json_name = "cycle"];</code>
+     * @return The cycle.
+     */
+    @java.lang.Override
+    public long getCycle() {
+      return cycle_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (cycle_ != 0L) {
+        output.writeUInt64(2, cycle_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (cycle_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, cycle_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle other = (com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (getCycle()
+          != other.getCycle()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + CYCLE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCycle());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.rmintreward.ActCurrentCycle}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.rmintreward.ActCurrentCycle)
+        com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycleOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_ActCurrentCycle_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_ActCurrentCycle_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle.class, com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        cycle_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_ActCurrentCycle_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle getDefaultInstanceForType() {
+        return com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle build() {
+        com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle buildPartial() {
+        com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle result = new com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.cycle_ = cycle_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle) {
+          return mergeFrom((com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle other) {
+        if (other == com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getCycle() != 0L) {
+          setCycle(other.getCycle());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                cycle_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long cycle_ ;
+      /**
+       * <code>uint64 cycle = 2 [json_name = "cycle"];</code>
+       * @return The cycle.
+       */
+      @java.lang.Override
+      public long getCycle() {
+        return cycle_;
+      }
+      /**
+       * <code>uint64 cycle = 2 [json_name = "cycle"];</code>
+       * @param value The cycle to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCycle(long value) {
+
+        cycle_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 cycle = 2 [json_name = "cycle"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCycle() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        cycle_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.rmintreward.ActCurrentCycle)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.rmintreward.ActCurrentCycle)
+    private static final com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle();
+    }
+
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ActCurrentCycle>
+        PARSER = new com.google.protobuf.AbstractParser<ActCurrentCycle>() {
+      @java.lang.Override
+      public ActCurrentCycle parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ActCurrentCycle> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ActCurrentCycle> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.rmintreward.GenesisProto.ActCurrentCycle getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GenesisMintRewardActOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.rmintreward.GenesisMintRewardAct)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>uint64 cycle = 2 [json_name = "cycle"];</code>
+     * @return The cycle.
+     */
+    long getCycle();
+
+    /**
+     * <code>.stafihub.stafihub.rmintreward.MintRewardAct mintRewardAct = 3 [json_name = "mintRewardAct"];</code>
+     * @return Whether the mintRewardAct field is set.
+     */
+    boolean hasMintRewardAct();
+    /**
+     * <code>.stafihub.stafihub.rmintreward.MintRewardAct mintRewardAct = 3 [json_name = "mintRewardAct"];</code>
+     * @return The mintRewardAct.
+     */
+    com.stafihub.stafihub.rmintreward.ModelsProto.MintRewardAct getMintRewardAct();
+    /**
+     * <code>.stafihub.stafihub.rmintreward.MintRewardAct mintRewardAct = 3 [json_name = "mintRewardAct"];</code>
+     */
+    com.stafihub.stafihub.rmintreward.ModelsProto.MintRewardActOrBuilder getMintRewardActOrBuilder();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.rmintreward.GenesisMintRewardAct}
+   */
+  public static final class GenesisMintRewardAct extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.rmintreward.GenesisMintRewardAct)
+      GenesisMintRewardActOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisMintRewardAct.newBuilder() to construct.
+    private GenesisMintRewardAct(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisMintRewardAct() {
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisMintRewardAct();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_GenesisMintRewardAct_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_GenesisMintRewardAct_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct.class, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CYCLE_FIELD_NUMBER = 2;
+    private long cycle_ = 0L;
+    /**
+     * <code>uint64 cycle = 2 [json_name = "cycle"];</code>
+     * @return The cycle.
+     */
+    @java.lang.Override
+    public long getCycle() {
+      return cycle_;
+    }
+
+    public static final int MINTREWARDACT_FIELD_NUMBER = 3;
+    private com.stafihub.stafihub.rmintreward.ModelsProto.MintRewardAct mintRewardAct_;
+    /**
+     * <code>.stafihub.stafihub.rmintreward.MintRewardAct mintRewardAct = 3 [json_name = "mintRewardAct"];</code>
+     * @return Whether the mintRewardAct field is set.
+     */
+    @java.lang.Override
+    public boolean hasMintRewardAct() {
+      return mintRewardAct_ != null;
+    }
+    /**
+     * <code>.stafihub.stafihub.rmintreward.MintRewardAct mintRewardAct = 3 [json_name = "mintRewardAct"];</code>
+     * @return The mintRewardAct.
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rmintreward.ModelsProto.MintRewardAct getMintRewardAct() {
+      return mintRewardAct_ == null ? com.stafihub.stafihub.rmintreward.ModelsProto.MintRewardAct.getDefaultInstance() : mintRewardAct_;
+    }
+    /**
+     * <code>.stafihub.stafihub.rmintreward.MintRewardAct mintRewardAct = 3 [json_name = "mintRewardAct"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rmintreward.ModelsProto.MintRewardActOrBuilder getMintRewardActOrBuilder() {
+      return mintRewardAct_ == null ? com.stafihub.stafihub.rmintreward.ModelsProto.MintRewardAct.getDefaultInstance() : mintRewardAct_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (cycle_ != 0L) {
+        output.writeUInt64(2, cycle_);
+      }
+      if (mintRewardAct_ != null) {
+        output.writeMessage(3, getMintRewardAct());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (cycle_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, cycle_);
+      }
+      if (mintRewardAct_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getMintRewardAct());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct other = (com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (getCycle()
+          != other.getCycle()) return false;
+      if (hasMintRewardAct() != other.hasMintRewardAct()) return false;
+      if (hasMintRewardAct()) {
+        if (!getMintRewardAct()
+            .equals(other.getMintRewardAct())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + CYCLE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCycle());
+      if (hasMintRewardAct()) {
+        hash = (37 * hash) + MINTREWARDACT_FIELD_NUMBER;
+        hash = (53 * hash) + getMintRewardAct().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.rmintreward.GenesisMintRewardAct}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.rmintreward.GenesisMintRewardAct)
+        com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardActOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_GenesisMintRewardAct_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_GenesisMintRewardAct_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct.class, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        cycle_ = 0L;
+        mintRewardAct_ = null;
+        if (mintRewardActBuilder_ != null) {
+          mintRewardActBuilder_.dispose();
+          mintRewardActBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_GenesisMintRewardAct_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct getDefaultInstanceForType() {
+        return com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct build() {
+        com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct buildPartial() {
+        com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct result = new com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.cycle_ = cycle_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.mintRewardAct_ = mintRewardActBuilder_ == null
+              ? mintRewardAct_
+              : mintRewardActBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct) {
+          return mergeFrom((com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct other) {
+        if (other == com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getCycle() != 0L) {
+          setCycle(other.getCycle());
+        }
+        if (other.hasMintRewardAct()) {
+          mergeMintRewardAct(other.getMintRewardAct());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                cycle_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                input.readMessage(
+                    getMintRewardActFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long cycle_ ;
+      /**
+       * <code>uint64 cycle = 2 [json_name = "cycle"];</code>
+       * @return The cycle.
+       */
+      @java.lang.Override
+      public long getCycle() {
+        return cycle_;
+      }
+      /**
+       * <code>uint64 cycle = 2 [json_name = "cycle"];</code>
+       * @param value The cycle to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCycle(long value) {
+
+        cycle_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 cycle = 2 [json_name = "cycle"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCycle() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        cycle_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.stafihub.stafihub.rmintreward.ModelsProto.MintRewardAct mintRewardAct_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.stafihub.stafihub.rmintreward.ModelsProto.MintRewardAct, com.stafihub.stafihub.rmintreward.ModelsProto.MintRewardAct.Builder, com.stafihub.stafihub.rmintreward.ModelsProto.MintRewardActOrBuilder> mintRewardActBuilder_;
+      /**
+       * <code>.stafihub.stafihub.rmintreward.MintRewardAct mintRewardAct = 3 [json_name = "mintRewardAct"];</code>
+       * @return Whether the mintRewardAct field is set.
+       */
+      public boolean hasMintRewardAct() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.MintRewardAct mintRewardAct = 3 [json_name = "mintRewardAct"];</code>
+       * @return The mintRewardAct.
+       */
+      public com.stafihub.stafihub.rmintreward.ModelsProto.MintRewardAct getMintRewardAct() {
+        if (mintRewardActBuilder_ == null) {
+          return mintRewardAct_ == null ? com.stafihub.stafihub.rmintreward.ModelsProto.MintRewardAct.getDefaultInstance() : mintRewardAct_;
+        } else {
+          return mintRewardActBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.MintRewardAct mintRewardAct = 3 [json_name = "mintRewardAct"];</code>
+       */
+      public Builder setMintRewardAct(com.stafihub.stafihub.rmintreward.ModelsProto.MintRewardAct value) {
+        if (mintRewardActBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mintRewardAct_ = value;
+        } else {
+          mintRewardActBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.MintRewardAct mintRewardAct = 3 [json_name = "mintRewardAct"];</code>
+       */
+      public Builder setMintRewardAct(
+          com.stafihub.stafihub.rmintreward.ModelsProto.MintRewardAct.Builder builderForValue) {
+        if (mintRewardActBuilder_ == null) {
+          mintRewardAct_ = builderForValue.build();
+        } else {
+          mintRewardActBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.MintRewardAct mintRewardAct = 3 [json_name = "mintRewardAct"];</code>
+       */
+      public Builder mergeMintRewardAct(com.stafihub.stafihub.rmintreward.ModelsProto.MintRewardAct value) {
+        if (mintRewardActBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            mintRewardAct_ != null &&
+            mintRewardAct_ != com.stafihub.stafihub.rmintreward.ModelsProto.MintRewardAct.getDefaultInstance()) {
+            getMintRewardActBuilder().mergeFrom(value);
+          } else {
+            mintRewardAct_ = value;
+          }
+        } else {
+          mintRewardActBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.MintRewardAct mintRewardAct = 3 [json_name = "mintRewardAct"];</code>
+       */
+      public Builder clearMintRewardAct() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        mintRewardAct_ = null;
+        if (mintRewardActBuilder_ != null) {
+          mintRewardActBuilder_.dispose();
+          mintRewardActBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.MintRewardAct mintRewardAct = 3 [json_name = "mintRewardAct"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.ModelsProto.MintRewardAct.Builder getMintRewardActBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getMintRewardActFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.MintRewardAct mintRewardAct = 3 [json_name = "mintRewardAct"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.ModelsProto.MintRewardActOrBuilder getMintRewardActOrBuilder() {
+        if (mintRewardActBuilder_ != null) {
+          return mintRewardActBuilder_.getMessageOrBuilder();
+        } else {
+          return mintRewardAct_ == null ?
+              com.stafihub.stafihub.rmintreward.ModelsProto.MintRewardAct.getDefaultInstance() : mintRewardAct_;
+        }
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.MintRewardAct mintRewardAct = 3 [json_name = "mintRewardAct"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.stafihub.stafihub.rmintreward.ModelsProto.MintRewardAct, com.stafihub.stafihub.rmintreward.ModelsProto.MintRewardAct.Builder, com.stafihub.stafihub.rmintreward.ModelsProto.MintRewardActOrBuilder> 
+          getMintRewardActFieldBuilder() {
+        if (mintRewardActBuilder_ == null) {
+          mintRewardActBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.stafihub.stafihub.rmintreward.ModelsProto.MintRewardAct, com.stafihub.stafihub.rmintreward.ModelsProto.MintRewardAct.Builder, com.stafihub.stafihub.rmintreward.ModelsProto.MintRewardActOrBuilder>(
+                  getMintRewardAct(),
+                  getParentForChildren(),
+                  isClean());
+          mintRewardAct_ = null;
+        }
+        return mintRewardActBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.rmintreward.GenesisMintRewardAct)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.rmintreward.GenesisMintRewardAct)
+    private static final com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct();
+    }
+
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisMintRewardAct>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisMintRewardAct>() {
+      @java.lang.Override
+      public GenesisMintRewardAct parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisMintRewardAct> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisMintRewardAct> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisMintRewardAct getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GenesisUserClaimInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.rmintreward.GenesisUserClaimInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The account.
+     */
+    java.lang.String getAccount();
+    /**
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    com.google.protobuf.ByteString
+        getAccountBytes();
+
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>uint64 cycle = 3 [json_name = "cycle"];</code>
+     * @return The cycle.
+     */
+    long getCycle();
+
+    /**
+     * <code>uint64 mintIndex = 4 [json_name = "mintIndex"];</code>
+     * @return The mintIndex.
+     */
+    long getMintIndex();
+
+    /**
+     * <code>.stafihub.stafihub.rmintreward.UserClaimInfo userClaimInfo = 5 [json_name = "userClaimInfo"];</code>
+     * @return Whether the userClaimInfo field is set.
+     */
+    boolean hasUserClaimInfo();
+    /**
+     * <code>.stafihub.stafihub.rmintreward.UserClaimInfo userClaimInfo = 5 [json_name = "userClaimInfo"];</code>
+     * @return The userClaimInfo.
+     */
+    com.stafihub.stafihub.rmintreward.ModelsProto.UserClaimInfo getUserClaimInfo();
+    /**
+     * <code>.stafihub.stafihub.rmintreward.UserClaimInfo userClaimInfo = 5 [json_name = "userClaimInfo"];</code>
+     */
+    com.stafihub.stafihub.rmintreward.ModelsProto.UserClaimInfoOrBuilder getUserClaimInfoOrBuilder();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.rmintreward.GenesisUserClaimInfo}
+   */
+  public static final class GenesisUserClaimInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.rmintreward.GenesisUserClaimInfo)
+      GenesisUserClaimInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisUserClaimInfo.newBuilder() to construct.
+    private GenesisUserClaimInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisUserClaimInfo() {
+      account_ = "";
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisUserClaimInfo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_GenesisUserClaimInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_GenesisUserClaimInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo.class, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo.Builder.class);
+    }
+
+    public static final int ACCOUNT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object account_ = "";
+    /**
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The account.
+     */
+    @java.lang.Override
+    public java.lang.String getAccount() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        account_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccountBytes() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        account_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CYCLE_FIELD_NUMBER = 3;
+    private long cycle_ = 0L;
+    /**
+     * <code>uint64 cycle = 3 [json_name = "cycle"];</code>
+     * @return The cycle.
+     */
+    @java.lang.Override
+    public long getCycle() {
+      return cycle_;
+    }
+
+    public static final int MINTINDEX_FIELD_NUMBER = 4;
+    private long mintIndex_ = 0L;
+    /**
+     * <code>uint64 mintIndex = 4 [json_name = "mintIndex"];</code>
+     * @return The mintIndex.
+     */
+    @java.lang.Override
+    public long getMintIndex() {
+      return mintIndex_;
+    }
+
+    public static final int USERCLAIMINFO_FIELD_NUMBER = 5;
+    private com.stafihub.stafihub.rmintreward.ModelsProto.UserClaimInfo userClaimInfo_;
+    /**
+     * <code>.stafihub.stafihub.rmintreward.UserClaimInfo userClaimInfo = 5 [json_name = "userClaimInfo"];</code>
+     * @return Whether the userClaimInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasUserClaimInfo() {
+      return userClaimInfo_ != null;
+    }
+    /**
+     * <code>.stafihub.stafihub.rmintreward.UserClaimInfo userClaimInfo = 5 [json_name = "userClaimInfo"];</code>
+     * @return The userClaimInfo.
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rmintreward.ModelsProto.UserClaimInfo getUserClaimInfo() {
+      return userClaimInfo_ == null ? com.stafihub.stafihub.rmintreward.ModelsProto.UserClaimInfo.getDefaultInstance() : userClaimInfo_;
+    }
+    /**
+     * <code>.stafihub.stafihub.rmintreward.UserClaimInfo userClaimInfo = 5 [json_name = "userClaimInfo"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rmintreward.ModelsProto.UserClaimInfoOrBuilder getUserClaimInfoOrBuilder() {
+      return userClaimInfo_ == null ? com.stafihub.stafihub.rmintreward.ModelsProto.UserClaimInfo.getDefaultInstance() : userClaimInfo_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, account_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, denom_);
+      }
+      if (cycle_ != 0L) {
+        output.writeUInt64(3, cycle_);
+      }
+      if (mintIndex_ != 0L) {
+        output.writeUInt64(4, mintIndex_);
+      }
+      if (userClaimInfo_ != null) {
+        output.writeMessage(5, getUserClaimInfo());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, account_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, denom_);
+      }
+      if (cycle_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, cycle_);
+      }
+      if (mintIndex_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, mintIndex_);
+      }
+      if (userClaimInfo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getUserClaimInfo());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo other = (com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo) obj;
+
+      if (!getAccount()
+          .equals(other.getAccount())) return false;
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (getCycle()
+          != other.getCycle()) return false;
+      if (getMintIndex()
+          != other.getMintIndex()) return false;
+      if (hasUserClaimInfo() != other.hasUserClaimInfo()) return false;
+      if (hasUserClaimInfo()) {
+        if (!getUserClaimInfo()
+            .equals(other.getUserClaimInfo())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAccount().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + CYCLE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCycle());
+      hash = (37 * hash) + MINTINDEX_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMintIndex());
+      if (hasUserClaimInfo()) {
+        hash = (37 * hash) + USERCLAIMINFO_FIELD_NUMBER;
+        hash = (53 * hash) + getUserClaimInfo().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.rmintreward.GenesisUserClaimInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.rmintreward.GenesisUserClaimInfo)
+        com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_GenesisUserClaimInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_GenesisUserClaimInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo.class, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        account_ = "";
+        denom_ = "";
+        cycle_ = 0L;
+        mintIndex_ = 0L;
+        userClaimInfo_ = null;
+        if (userClaimInfoBuilder_ != null) {
+          userClaimInfoBuilder_.dispose();
+          userClaimInfoBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_GenesisUserClaimInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo getDefaultInstanceForType() {
+        return com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo build() {
+        com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo buildPartial() {
+        com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo result = new com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.account_ = account_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.cycle_ = cycle_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.mintIndex_ = mintIndex_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.userClaimInfo_ = userClaimInfoBuilder_ == null
+              ? userClaimInfo_
+              : userClaimInfoBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo) {
+          return mergeFrom((com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo other) {
+        if (other == com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo.getDefaultInstance()) return this;
+        if (!other.getAccount().isEmpty()) {
+          account_ = other.account_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getCycle() != 0L) {
+          setCycle(other.getCycle());
+        }
+        if (other.getMintIndex() != 0L) {
+          setMintIndex(other.getMintIndex());
+        }
+        if (other.hasUserClaimInfo()) {
+          mergeUserClaimInfo(other.getUserClaimInfo());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                account_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                cycle_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                mintIndex_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                input.readMessage(
+                    getUserClaimInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object account_ = "";
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @return The account.
+       */
+      public java.lang.String getAccount() {
+        java.lang.Object ref = account_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          account_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @return The bytes for account.
+       */
+      public com.google.protobuf.ByteString
+          getAccountBytes() {
+        java.lang.Object ref = account_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          account_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @param value The account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        account_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccount() {
+        account_ = getDefaultInstance().getAccount();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @param value The bytes for account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        account_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long cycle_ ;
+      /**
+       * <code>uint64 cycle = 3 [json_name = "cycle"];</code>
+       * @return The cycle.
+       */
+      @java.lang.Override
+      public long getCycle() {
+        return cycle_;
+      }
+      /**
+       * <code>uint64 cycle = 3 [json_name = "cycle"];</code>
+       * @param value The cycle to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCycle(long value) {
+
+        cycle_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 cycle = 3 [json_name = "cycle"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCycle() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        cycle_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long mintIndex_ ;
+      /**
+       * <code>uint64 mintIndex = 4 [json_name = "mintIndex"];</code>
+       * @return The mintIndex.
+       */
+      @java.lang.Override
+      public long getMintIndex() {
+        return mintIndex_;
+      }
+      /**
+       * <code>uint64 mintIndex = 4 [json_name = "mintIndex"];</code>
+       * @param value The mintIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMintIndex(long value) {
+
+        mintIndex_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 mintIndex = 4 [json_name = "mintIndex"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMintIndex() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        mintIndex_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.stafihub.stafihub.rmintreward.ModelsProto.UserClaimInfo userClaimInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.stafihub.stafihub.rmintreward.ModelsProto.UserClaimInfo, com.stafihub.stafihub.rmintreward.ModelsProto.UserClaimInfo.Builder, com.stafihub.stafihub.rmintreward.ModelsProto.UserClaimInfoOrBuilder> userClaimInfoBuilder_;
+      /**
+       * <code>.stafihub.stafihub.rmintreward.UserClaimInfo userClaimInfo = 5 [json_name = "userClaimInfo"];</code>
+       * @return Whether the userClaimInfo field is set.
+       */
+      public boolean hasUserClaimInfo() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.UserClaimInfo userClaimInfo = 5 [json_name = "userClaimInfo"];</code>
+       * @return The userClaimInfo.
+       */
+      public com.stafihub.stafihub.rmintreward.ModelsProto.UserClaimInfo getUserClaimInfo() {
+        if (userClaimInfoBuilder_ == null) {
+          return userClaimInfo_ == null ? com.stafihub.stafihub.rmintreward.ModelsProto.UserClaimInfo.getDefaultInstance() : userClaimInfo_;
+        } else {
+          return userClaimInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.UserClaimInfo userClaimInfo = 5 [json_name = "userClaimInfo"];</code>
+       */
+      public Builder setUserClaimInfo(com.stafihub.stafihub.rmintreward.ModelsProto.UserClaimInfo value) {
+        if (userClaimInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          userClaimInfo_ = value;
+        } else {
+          userClaimInfoBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.UserClaimInfo userClaimInfo = 5 [json_name = "userClaimInfo"];</code>
+       */
+      public Builder setUserClaimInfo(
+          com.stafihub.stafihub.rmintreward.ModelsProto.UserClaimInfo.Builder builderForValue) {
+        if (userClaimInfoBuilder_ == null) {
+          userClaimInfo_ = builderForValue.build();
+        } else {
+          userClaimInfoBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.UserClaimInfo userClaimInfo = 5 [json_name = "userClaimInfo"];</code>
+       */
+      public Builder mergeUserClaimInfo(com.stafihub.stafihub.rmintreward.ModelsProto.UserClaimInfo value) {
+        if (userClaimInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            userClaimInfo_ != null &&
+            userClaimInfo_ != com.stafihub.stafihub.rmintreward.ModelsProto.UserClaimInfo.getDefaultInstance()) {
+            getUserClaimInfoBuilder().mergeFrom(value);
+          } else {
+            userClaimInfo_ = value;
+          }
+        } else {
+          userClaimInfoBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.UserClaimInfo userClaimInfo = 5 [json_name = "userClaimInfo"];</code>
+       */
+      public Builder clearUserClaimInfo() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        userClaimInfo_ = null;
+        if (userClaimInfoBuilder_ != null) {
+          userClaimInfoBuilder_.dispose();
+          userClaimInfoBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.UserClaimInfo userClaimInfo = 5 [json_name = "userClaimInfo"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.ModelsProto.UserClaimInfo.Builder getUserClaimInfoBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getUserClaimInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.UserClaimInfo userClaimInfo = 5 [json_name = "userClaimInfo"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.ModelsProto.UserClaimInfoOrBuilder getUserClaimInfoOrBuilder() {
+        if (userClaimInfoBuilder_ != null) {
+          return userClaimInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return userClaimInfo_ == null ?
+              com.stafihub.stafihub.rmintreward.ModelsProto.UserClaimInfo.getDefaultInstance() : userClaimInfo_;
+        }
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.UserClaimInfo userClaimInfo = 5 [json_name = "userClaimInfo"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.stafihub.stafihub.rmintreward.ModelsProto.UserClaimInfo, com.stafihub.stafihub.rmintreward.ModelsProto.UserClaimInfo.Builder, com.stafihub.stafihub.rmintreward.ModelsProto.UserClaimInfoOrBuilder> 
+          getUserClaimInfoFieldBuilder() {
+        if (userClaimInfoBuilder_ == null) {
+          userClaimInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.stafihub.stafihub.rmintreward.ModelsProto.UserClaimInfo, com.stafihub.stafihub.rmintreward.ModelsProto.UserClaimInfo.Builder, com.stafihub.stafihub.rmintreward.ModelsProto.UserClaimInfoOrBuilder>(
+                  getUserClaimInfo(),
+                  getParentForChildren(),
+                  isClean());
+          userClaimInfo_ = null;
+        }
+        return userClaimInfoBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.rmintreward.GenesisUserClaimInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.rmintreward.GenesisUserClaimInfo)
+    private static final com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo();
+    }
+
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisUserClaimInfo>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisUserClaimInfo>() {
+      @java.lang.Override
+      public GenesisUserClaimInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisUserClaimInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisUserClaimInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserClaimInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GenesisUserActOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.rmintreward.GenesisUserAct)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The account.
+     */
+    java.lang.String getAccount();
+    /**
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    com.google.protobuf.ByteString
+        getAccountBytes();
+
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>.stafihub.stafihub.rmintreward.Acts acts = 3 [json_name = "acts"];</code>
+     * @return Whether the acts field is set.
+     */
+    boolean hasActs();
+    /**
+     * <code>.stafihub.stafihub.rmintreward.Acts acts = 3 [json_name = "acts"];</code>
+     * @return The acts.
+     */
+    com.stafihub.stafihub.rmintreward.ModelsProto.Acts getActs();
+    /**
+     * <code>.stafihub.stafihub.rmintreward.Acts acts = 3 [json_name = "acts"];</code>
+     */
+    com.stafihub.stafihub.rmintreward.ModelsProto.ActsOrBuilder getActsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.rmintreward.GenesisUserAct}
+   */
+  public static final class GenesisUserAct extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.rmintreward.GenesisUserAct)
+      GenesisUserActOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisUserAct.newBuilder() to construct.
+    private GenesisUserAct(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisUserAct() {
+      account_ = "";
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisUserAct();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_GenesisUserAct_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_GenesisUserAct_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct.class, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct.Builder.class);
+    }
+
+    public static final int ACCOUNT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object account_ = "";
+    /**
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The account.
+     */
+    @java.lang.Override
+    public java.lang.String getAccount() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        account_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccountBytes() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        account_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACTS_FIELD_NUMBER = 3;
+    private com.stafihub.stafihub.rmintreward.ModelsProto.Acts acts_;
+    /**
+     * <code>.stafihub.stafihub.rmintreward.Acts acts = 3 [json_name = "acts"];</code>
+     * @return Whether the acts field is set.
+     */
+    @java.lang.Override
+    public boolean hasActs() {
+      return acts_ != null;
+    }
+    /**
+     * <code>.stafihub.stafihub.rmintreward.Acts acts = 3 [json_name = "acts"];</code>
+     * @return The acts.
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rmintreward.ModelsProto.Acts getActs() {
+      return acts_ == null ? com.stafihub.stafihub.rmintreward.ModelsProto.Acts.getDefaultInstance() : acts_;
+    }
+    /**
+     * <code>.stafihub.stafihub.rmintreward.Acts acts = 3 [json_name = "acts"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rmintreward.ModelsProto.ActsOrBuilder getActsOrBuilder() {
+      return acts_ == null ? com.stafihub.stafihub.rmintreward.ModelsProto.Acts.getDefaultInstance() : acts_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, account_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, denom_);
+      }
+      if (acts_ != null) {
+        output.writeMessage(3, getActs());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, account_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, denom_);
+      }
+      if (acts_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getActs());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct other = (com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct) obj;
+
+      if (!getAccount()
+          .equals(other.getAccount())) return false;
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (hasActs() != other.hasActs()) return false;
+      if (hasActs()) {
+        if (!getActs()
+            .equals(other.getActs())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAccount().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      if (hasActs()) {
+        hash = (37 * hash) + ACTS_FIELD_NUMBER;
+        hash = (53 * hash) + getActs().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.rmintreward.GenesisUserAct}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.rmintreward.GenesisUserAct)
+        com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserActOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_GenesisUserAct_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_GenesisUserAct_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct.class, com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        account_ = "";
+        denom_ = "";
+        acts_ = null;
+        if (actsBuilder_ != null) {
+          actsBuilder_.dispose();
+          actsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_GenesisUserAct_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct getDefaultInstanceForType() {
+        return com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct build() {
+        com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct buildPartial() {
+        com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct result = new com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.account_ = account_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.acts_ = actsBuilder_ == null
+              ? acts_
+              : actsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct) {
+          return mergeFrom((com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct other) {
+        if (other == com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct.getDefaultInstance()) return this;
+        if (!other.getAccount().isEmpty()) {
+          account_ = other.account_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasActs()) {
+          mergeActs(other.getActs());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                account_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getActsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object account_ = "";
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @return The account.
+       */
+      public java.lang.String getAccount() {
+        java.lang.Object ref = account_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          account_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @return The bytes for account.
+       */
+      public com.google.protobuf.ByteString
+          getAccountBytes() {
+        java.lang.Object ref = account_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          account_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @param value The account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        account_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccount() {
+        account_ = getDefaultInstance().getAccount();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @param value The bytes for account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        account_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.stafihub.stafihub.rmintreward.ModelsProto.Acts acts_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.stafihub.stafihub.rmintreward.ModelsProto.Acts, com.stafihub.stafihub.rmintreward.ModelsProto.Acts.Builder, com.stafihub.stafihub.rmintreward.ModelsProto.ActsOrBuilder> actsBuilder_;
+      /**
+       * <code>.stafihub.stafihub.rmintreward.Acts acts = 3 [json_name = "acts"];</code>
+       * @return Whether the acts field is set.
+       */
+      public boolean hasActs() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.Acts acts = 3 [json_name = "acts"];</code>
+       * @return The acts.
+       */
+      public com.stafihub.stafihub.rmintreward.ModelsProto.Acts getActs() {
+        if (actsBuilder_ == null) {
+          return acts_ == null ? com.stafihub.stafihub.rmintreward.ModelsProto.Acts.getDefaultInstance() : acts_;
+        } else {
+          return actsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.Acts acts = 3 [json_name = "acts"];</code>
+       */
+      public Builder setActs(com.stafihub.stafihub.rmintreward.ModelsProto.Acts value) {
+        if (actsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          acts_ = value;
+        } else {
+          actsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.Acts acts = 3 [json_name = "acts"];</code>
+       */
+      public Builder setActs(
+          com.stafihub.stafihub.rmintreward.ModelsProto.Acts.Builder builderForValue) {
+        if (actsBuilder_ == null) {
+          acts_ = builderForValue.build();
+        } else {
+          actsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.Acts acts = 3 [json_name = "acts"];</code>
+       */
+      public Builder mergeActs(com.stafihub.stafihub.rmintreward.ModelsProto.Acts value) {
+        if (actsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            acts_ != null &&
+            acts_ != com.stafihub.stafihub.rmintreward.ModelsProto.Acts.getDefaultInstance()) {
+            getActsBuilder().mergeFrom(value);
+          } else {
+            acts_ = value;
+          }
+        } else {
+          actsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.Acts acts = 3 [json_name = "acts"];</code>
+       */
+      public Builder clearActs() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        acts_ = null;
+        if (actsBuilder_ != null) {
+          actsBuilder_.dispose();
+          actsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.Acts acts = 3 [json_name = "acts"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.ModelsProto.Acts.Builder getActsBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getActsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.Acts acts = 3 [json_name = "acts"];</code>
+       */
+      public com.stafihub.stafihub.rmintreward.ModelsProto.ActsOrBuilder getActsOrBuilder() {
+        if (actsBuilder_ != null) {
+          return actsBuilder_.getMessageOrBuilder();
+        } else {
+          return acts_ == null ?
+              com.stafihub.stafihub.rmintreward.ModelsProto.Acts.getDefaultInstance() : acts_;
+        }
+      }
+      /**
+       * <code>.stafihub.stafihub.rmintreward.Acts acts = 3 [json_name = "acts"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.stafihub.stafihub.rmintreward.ModelsProto.Acts, com.stafihub.stafihub.rmintreward.ModelsProto.Acts.Builder, com.stafihub.stafihub.rmintreward.ModelsProto.ActsOrBuilder> 
+          getActsFieldBuilder() {
+        if (actsBuilder_ == null) {
+          actsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.stafihub.stafihub.rmintreward.ModelsProto.Acts, com.stafihub.stafihub.rmintreward.ModelsProto.Acts.Builder, com.stafihub.stafihub.rmintreward.ModelsProto.ActsOrBuilder>(
+                  getActs(),
+                  getParentForChildren(),
+                  isClean());
+          acts_ = null;
+        }
+        return actsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.rmintreward.GenesisUserAct)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.rmintreward.GenesisUserAct)
+    private static final com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct();
+    }
+
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisUserAct>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisUserAct>() {
+      @java.lang.Override
+      public GenesisUserAct parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisUserAct> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisUserAct> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.rmintreward.GenesisProto.GenesisUserAct getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UserMintCountOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.rmintreward.UserMintCount)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The account.
+     */
+    java.lang.String getAccount();
+    /**
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    com.google.protobuf.ByteString
+        getAccountBytes();
+
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>uint64 cycle = 3 [json_name = "cycle"];</code>
+     * @return The cycle.
+     */
+    long getCycle();
+
+    /**
+     * <code>uint64 count = 4 [json_name = "count"];</code>
+     * @return The count.
+     */
+    long getCount();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.rmintreward.UserMintCount}
+   */
+  public static final class UserMintCount extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.rmintreward.UserMintCount)
+      UserMintCountOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UserMintCount.newBuilder() to construct.
+    private UserMintCount(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UserMintCount() {
+      account_ = "";
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UserMintCount();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_UserMintCount_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_UserMintCount_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount.class, com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount.Builder.class);
+    }
+
+    public static final int ACCOUNT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object account_ = "";
+    /**
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The account.
+     */
+    @java.lang.Override
+    public java.lang.String getAccount() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        account_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccountBytes() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        account_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CYCLE_FIELD_NUMBER = 3;
+    private long cycle_ = 0L;
+    /**
+     * <code>uint64 cycle = 3 [json_name = "cycle"];</code>
+     * @return The cycle.
+     */
+    @java.lang.Override
+    public long getCycle() {
+      return cycle_;
+    }
+
+    public static final int COUNT_FIELD_NUMBER = 4;
+    private long count_ = 0L;
+    /**
+     * <code>uint64 count = 4 [json_name = "count"];</code>
+     * @return The count.
+     */
+    @java.lang.Override
+    public long getCount() {
+      return count_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, account_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, denom_);
+      }
+      if (cycle_ != 0L) {
+        output.writeUInt64(3, cycle_);
+      }
+      if (count_ != 0L) {
+        output.writeUInt64(4, count_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, account_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, denom_);
+      }
+      if (cycle_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, cycle_);
+      }
+      if (count_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, count_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount other = (com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount) obj;
+
+      if (!getAccount()
+          .equals(other.getAccount())) return false;
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (getCycle()
+          != other.getCycle()) return false;
+      if (getCount()
+          != other.getCount()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAccount().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + CYCLE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCycle());
+      hash = (37 * hash) + COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCount());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.rmintreward.UserMintCount}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.rmintreward.UserMintCount)
+        com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCountOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_UserMintCount_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_UserMintCount_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount.class, com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        account_ = "";
+        denom_ = "";
+        cycle_ = 0L;
+        count_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.rmintreward.GenesisProto.internal_static_stafihub_stafihub_rmintreward_UserMintCount_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount getDefaultInstanceForType() {
+        return com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount build() {
+        com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount buildPartial() {
+        com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount result = new com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.account_ = account_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.cycle_ = cycle_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.count_ = count_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount) {
+          return mergeFrom((com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount other) {
+        if (other == com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount.getDefaultInstance()) return this;
+        if (!other.getAccount().isEmpty()) {
+          account_ = other.account_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getCycle() != 0L) {
+          setCycle(other.getCycle());
+        }
+        if (other.getCount() != 0L) {
+          setCount(other.getCount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                account_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                cycle_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                count_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object account_ = "";
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @return The account.
+       */
+      public java.lang.String getAccount() {
+        java.lang.Object ref = account_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          account_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @return The bytes for account.
+       */
+      public com.google.protobuf.ByteString
+          getAccountBytes() {
+        java.lang.Object ref = account_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          account_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @param value The account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        account_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccount() {
+        account_ = getDefaultInstance().getAccount();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @param value The bytes for account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        account_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long cycle_ ;
+      /**
+       * <code>uint64 cycle = 3 [json_name = "cycle"];</code>
+       * @return The cycle.
+       */
+      @java.lang.Override
+      public long getCycle() {
+        return cycle_;
+      }
+      /**
+       * <code>uint64 cycle = 3 [json_name = "cycle"];</code>
+       * @param value The cycle to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCycle(long value) {
+
+        cycle_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 cycle = 3 [json_name = "cycle"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCycle() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        cycle_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long count_ ;
+      /**
+       * <code>uint64 count = 4 [json_name = "count"];</code>
+       * @return The count.
+       */
+      @java.lang.Override
+      public long getCount() {
+        return count_;
+      }
+      /**
+       * <code>uint64 count = 4 [json_name = "count"];</code>
+       * @param value The count to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCount(long value) {
+
+        count_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 count = 4 [json_name = "count"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCount() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        count_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.rmintreward.UserMintCount)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.rmintreward.UserMintCount)
+    private static final com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount();
+    }
+
+    public static com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UserMintCount>
+        PARSER = new com.google.protobuf.AbstractParser<UserMintCount>() {
+      @java.lang.Override
+      public UserMintCount parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UserMintCount> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UserMintCount> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.rmintreward.GenesisProto.UserMintCount getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_rmintreward_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_rmintreward_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_rmintreward_ActLatestCycle_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_rmintreward_ActLatestCycle_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_rmintreward_ActCurrentCycle_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_rmintreward_ActCurrentCycle_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_rmintreward_GenesisMintRewardAct_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_rmintreward_GenesisMintRewardAct_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_rmintreward_GenesisUserClaimInfo_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_rmintreward_GenesisUserClaimInfo_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_rmintreward_GenesisUserAct_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_rmintreward_GenesisUserAct_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_rmintreward_UserMintCount_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_rmintreward_UserMintCount_fieldAccessorTable;
 
@@ -96,13 +7919,13 @@ public final class GenesisProto {
       "ntreward.ActsR\004acts\"k\n\rUserMintCount\022\030\n\007" +
       "account\030\001 \001(\tR\007account\022\024\n\005denom\030\002 \001(\tR\005d" +
       "enom\022\024\n\005cycle\030\003 \001(\004R\005cycle\022\024\n\005count\030\004 \001(" +
-      "\004R\005countB\371\001\n!com.stafihub.stafihub.rmint" +
-      "rewardB\014GenesisProtoP\001Z0github.com/stafi" +
-      "hub/stafihub/x/rmintreward/types\242\002\003SSR\252\002" +
-      "\035Stafihub.Stafihub.Rmintreward\312\002\035Stafihu" +
-      "b\\Stafihub\\Rmintreward\342\002)Stafihub\\Stafih" +
-      "ub\\Rmintreward\\GPBMetadata\352\002\037Stafihub::S" +
-      "tafihub::Rmintrewardb\006proto3"
+      "\004R\005countB\367\001\n!com.stafihub.stafihub.rmint" +
+      "rewardB\014GenesisProtoZ0github.com/stafihu" +
+      "b/stafihub/x/rmintreward/types\242\002\003SSR\252\002\035S" +
+      "tafihub.Stafihub.Rmintreward\312\002\035Stafihub\\" +
+      "Stafihub\\Rmintreward\342\002)Stafihub\\Stafihub" +
+      "\\Rmintreward\\GPBMetadata\352\002\037Stafihub::Sta" +
+      "fihub::Rmintrewardb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

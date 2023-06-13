@@ -14,14 +14,1904 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryClaimsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.claimsmanager.v1.QueryClaimsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+     * @return The chainId.
+     */
+    java.lang.String getChainId();
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+     * @return The bytes for chainId.
+     */
+    com.google.protobuf.ByteString
+        getChainIdBytes();
+
+    /**
+     * <code>string address = 2 [json_name = "address", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 2 [json_name = "address", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryClaimsRequest is the request type for the Query/Claims RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code quicksilver.claimsmanager.v1.QueryClaimsRequest}
+   */
+  public static final class QueryClaimsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.claimsmanager.v1.QueryClaimsRequest)
+      QueryClaimsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryClaimsRequest.newBuilder() to construct.
+    private QueryClaimsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryClaimsRequest() {
+      chainId_ = "";
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryClaimsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.claimsmanager.v1.QueryProto.internal_static_quicksilver_claimsmanager_v1_QueryClaimsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.claimsmanager.v1.QueryProto.internal_static_quicksilver_claimsmanager_v1_QueryClaimsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest.class, com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest.Builder.class);
+    }
+
+    public static final int CHAIN_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object chainId_ = "";
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+     * @return The chainId.
+     */
+    @java.lang.Override
+    public java.lang.String getChainId() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        chainId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+     * @return The bytes for chainId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChainIdBytes() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        chainId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 2 [json_name = "address", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 2 [json_name = "address", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 3;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, chainId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, address_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(3, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, chainId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, address_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest other = (com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest) obj;
+
+      if (!getChainId()
+          .equals(other.getChainId())) return false;
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CHAIN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getChainId().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryClaimsRequest is the request type for the Query/Claims RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code quicksilver.claimsmanager.v1.QueryClaimsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.claimsmanager.v1.QueryClaimsRequest)
+        com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.claimsmanager.v1.QueryProto.internal_static_quicksilver_claimsmanager_v1_QueryClaimsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.claimsmanager.v1.QueryProto.internal_static_quicksilver_claimsmanager_v1_QueryClaimsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest.class, com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest.Builder.class);
+      }
+
+      // Construct using com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        chainId_ = "";
+        address_ = "";
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.claimsmanager.v1.QueryProto.internal_static_quicksilver_claimsmanager_v1_QueryClaimsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest getDefaultInstanceForType() {
+        return com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest build() {
+        com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest buildPartial() {
+        com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest result = new com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.chainId_ = chainId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest) {
+          return mergeFrom((com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest other) {
+        if (other == com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest.getDefaultInstance()) return this;
+        if (!other.getChainId().isEmpty()) {
+          chainId_ = other.chainId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                chainId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object chainId_ = "";
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+       * @return The chainId.
+       */
+      public java.lang.String getChainId() {
+        java.lang.Object ref = chainId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          chainId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+       * @return The bytes for chainId.
+       */
+      public com.google.protobuf.ByteString
+          getChainIdBytes() {
+        java.lang.Object ref = chainId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          chainId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+       * @param value The chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        chainId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChainId() {
+        chainId_ = getDefaultInstance().getChainId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+       * @param value The bytes for chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        chainId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 2 [json_name = "address", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 2 [json_name = "address", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 2 [json_name = "address", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 2 [json_name = "address", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 2 [json_name = "address", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.claimsmanager.v1.QueryClaimsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.claimsmanager.v1.QueryClaimsRequest)
+    private static final com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest();
+    }
+
+    public static com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryClaimsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryClaimsRequest>() {
+      @java.lang.Override
+      public QueryClaimsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryClaimsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryClaimsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryClaimsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.claimsmanager.v1.QueryClaimsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .quicksilver.claimsmanager.v1.Claim claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim> 
+        getClaimsList();
+    /**
+     * <code>repeated .quicksilver.claimsmanager.v1.Claim claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+     */
+    com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim getClaims(int index);
+    /**
+     * <code>repeated .quicksilver.claimsmanager.v1.Claim claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+     */
+    int getClaimsCount();
+    /**
+     * <code>repeated .quicksilver.claimsmanager.v1.Claim claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ClaimOrBuilder> 
+        getClaimsOrBuilderList();
+    /**
+     * <code>repeated .quicksilver.claimsmanager.v1.Claim claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+     */
+    com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ClaimOrBuilder getClaimsOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryClaimsResponse is the response type for the Query/Claims RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code quicksilver.claimsmanager.v1.QueryClaimsResponse}
+   */
+  public static final class QueryClaimsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.claimsmanager.v1.QueryClaimsResponse)
+      QueryClaimsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryClaimsResponse.newBuilder() to construct.
+    private QueryClaimsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryClaimsResponse() {
+      claims_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryClaimsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.claimsmanager.v1.QueryProto.internal_static_quicksilver_claimsmanager_v1_QueryClaimsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.claimsmanager.v1.QueryProto.internal_static_quicksilver_claimsmanager_v1_QueryClaimsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse.class, com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse.Builder.class);
+    }
+
+    public static final int CLAIMS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim> claims_;
+    /**
+     * <code>repeated .quicksilver.claimsmanager.v1.Claim claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim> getClaimsList() {
+      return claims_;
+    }
+    /**
+     * <code>repeated .quicksilver.claimsmanager.v1.Claim claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ClaimOrBuilder> 
+        getClaimsOrBuilderList() {
+      return claims_;
+    }
+    /**
+     * <code>repeated .quicksilver.claimsmanager.v1.Claim claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getClaimsCount() {
+      return claims_.size();
+    }
+    /**
+     * <code>repeated .quicksilver.claimsmanager.v1.Claim claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim getClaims(int index) {
+      return claims_.get(index);
+    }
+    /**
+     * <code>repeated .quicksilver.claimsmanager.v1.Claim claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ClaimOrBuilder getClaimsOrBuilder(
+        int index) {
+      return claims_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < claims_.size(); i++) {
+        output.writeMessage(1, claims_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < claims_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, claims_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse other = (com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse) obj;
+
+      if (!getClaimsList()
+          .equals(other.getClaimsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getClaimsCount() > 0) {
+        hash = (37 * hash) + CLAIMS_FIELD_NUMBER;
+        hash = (53 * hash) + getClaimsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryClaimsResponse is the response type for the Query/Claims RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code quicksilver.claimsmanager.v1.QueryClaimsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.claimsmanager.v1.QueryClaimsResponse)
+        com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.claimsmanager.v1.QueryProto.internal_static_quicksilver_claimsmanager_v1_QueryClaimsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.claimsmanager.v1.QueryProto.internal_static_quicksilver_claimsmanager_v1_QueryClaimsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse.class, com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse.Builder.class);
+      }
+
+      // Construct using com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (claimsBuilder_ == null) {
+          claims_ = java.util.Collections.emptyList();
+        } else {
+          claims_ = null;
+          claimsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.claimsmanager.v1.QueryProto.internal_static_quicksilver_claimsmanager_v1_QueryClaimsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse getDefaultInstanceForType() {
+        return com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse build() {
+        com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse buildPartial() {
+        com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse result = new com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse result) {
+        if (claimsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            claims_ = java.util.Collections.unmodifiableList(claims_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.claims_ = claims_;
+        } else {
+          result.claims_ = claimsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse) {
+          return mergeFrom((com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse other) {
+        if (other == com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse.getDefaultInstance()) return this;
+        if (claimsBuilder_ == null) {
+          if (!other.claims_.isEmpty()) {
+            if (claims_.isEmpty()) {
+              claims_ = other.claims_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureClaimsIsMutable();
+              claims_.addAll(other.claims_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.claims_.isEmpty()) {
+            if (claimsBuilder_.isEmpty()) {
+              claimsBuilder_.dispose();
+              claimsBuilder_ = null;
+              claims_ = other.claims_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              claimsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getClaimsFieldBuilder() : null;
+            } else {
+              claimsBuilder_.addAllMessages(other.claims_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim m =
+                    input.readMessage(
+                        com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim.parser(),
+                        extensionRegistry);
+                if (claimsBuilder_ == null) {
+                  ensureClaimsIsMutable();
+                  claims_.add(m);
+                } else {
+                  claimsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim> claims_ =
+        java.util.Collections.emptyList();
+      private void ensureClaimsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          claims_ = new java.util.ArrayList<com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim>(claims_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim, com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim.Builder, com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ClaimOrBuilder> claimsBuilder_;
+
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Claim claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim> getClaimsList() {
+        if (claimsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(claims_);
+        } else {
+          return claimsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Claim claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public int getClaimsCount() {
+        if (claimsBuilder_ == null) {
+          return claims_.size();
+        } else {
+          return claimsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Claim claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim getClaims(int index) {
+        if (claimsBuilder_ == null) {
+          return claims_.get(index);
+        } else {
+          return claimsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Claim claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setClaims(
+          int index, com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim value) {
+        if (claimsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimsIsMutable();
+          claims_.set(index, value);
+          onChanged();
+        } else {
+          claimsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Claim claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setClaims(
+          int index, com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim.Builder builderForValue) {
+        if (claimsBuilder_ == null) {
+          ensureClaimsIsMutable();
+          claims_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          claimsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Claim claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClaims(com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim value) {
+        if (claimsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimsIsMutable();
+          claims_.add(value);
+          onChanged();
+        } else {
+          claimsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Claim claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClaims(
+          int index, com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim value) {
+        if (claimsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimsIsMutable();
+          claims_.add(index, value);
+          onChanged();
+        } else {
+          claimsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Claim claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClaims(
+          com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim.Builder builderForValue) {
+        if (claimsBuilder_ == null) {
+          ensureClaimsIsMutable();
+          claims_.add(builderForValue.build());
+          onChanged();
+        } else {
+          claimsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Claim claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClaims(
+          int index, com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim.Builder builderForValue) {
+        if (claimsBuilder_ == null) {
+          ensureClaimsIsMutable();
+          claims_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          claimsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Claim claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllClaims(
+          java.lang.Iterable<? extends com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim> values) {
+        if (claimsBuilder_ == null) {
+          ensureClaimsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, claims_);
+          onChanged();
+        } else {
+          claimsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Claim claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearClaims() {
+        if (claimsBuilder_ == null) {
+          claims_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          claimsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Claim claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeClaims(int index) {
+        if (claimsBuilder_ == null) {
+          ensureClaimsIsMutable();
+          claims_.remove(index);
+          onChanged();
+        } else {
+          claimsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Claim claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim.Builder getClaimsBuilder(
+          int index) {
+        return getClaimsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Claim claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ClaimOrBuilder getClaimsOrBuilder(
+          int index) {
+        if (claimsBuilder_ == null) {
+          return claims_.get(index);  } else {
+          return claimsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Claim claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ClaimOrBuilder> 
+           getClaimsOrBuilderList() {
+        if (claimsBuilder_ != null) {
+          return claimsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(claims_);
+        }
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Claim claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim.Builder addClaimsBuilder() {
+        return getClaimsFieldBuilder().addBuilder(
+            com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Claim claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim.Builder addClaimsBuilder(
+          int index) {
+        return getClaimsFieldBuilder().addBuilder(
+            index, com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .quicksilver.claimsmanager.v1.Claim claims = 1 [json_name = "claims", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim.Builder> 
+           getClaimsBuilderList() {
+        return getClaimsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim, com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim.Builder, com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ClaimOrBuilder> 
+          getClaimsFieldBuilder() {
+        if (claimsBuilder_ == null) {
+          claimsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim, com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim.Builder, com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ClaimOrBuilder>(
+                  claims_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          claims_ = null;
+        }
+        return claimsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.claimsmanager.v1.QueryClaimsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.claimsmanager.v1.QueryClaimsResponse)
+    private static final com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse();
+    }
+
+    public static com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryClaimsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryClaimsResponse>() {
+      @java.lang.Override
+      public QueryClaimsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryClaimsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryClaimsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.claimsmanager.v1.QueryProto.QueryClaimsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_claimsmanager_v1_QueryClaimsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_claimsmanager_v1_QueryClaimsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_claimsmanager_v1_QueryClaimsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_claimsmanager_v1_QueryClaimsResponse_fieldAccessorTable;
 
@@ -66,14 +1956,14 @@ public final class QueryProto {
       "nager.v1.QueryClaimsRequest\0321.quicksilve" +
       "r.claimsmanager.v1.QueryClaimsResponse\"J" +
       "\202\323\344\223\002D\022B/quicksilver/claimsmanager/v1/us" +
-      "er/{address}/previous_epoch_claimsB\376\001\n c" +
+      "er/{address}/previous_epoch_claimsB\374\001\n c" +
       "om.quicksilver.claimsmanager.v1B\nQueryPr" +
-      "otoP\001Z<github.com/ingenuity-build/quicks" +
-      "ilver/x/claimsmanager/types\242\002\003QCX\252\002\034Quic" +
-      "ksilver.Claimsmanager.V1\312\002\034Quicksilver\\C" +
-      "laimsmanager\\V1\342\002(Quicksilver\\Claimsmana" +
-      "ger\\V1\\GPBMetadata\352\002\036Quicksilver::Claims" +
-      "manager::V1b\006proto3"
+      "otoZ<github.com/ingenuity-build/quicksil" +
+      "ver/x/claimsmanager/types\242\002\003QCX\252\002\034Quicks" +
+      "ilver.Claimsmanager.V1\312\002\034Quicksilver\\Cla" +
+      "imsmanager\\V1\342\002(Quicksilver\\Claimsmanage" +
+      "r\\V1\\GPBMetadata\352\002\036Quicksilver::Claimsma" +
+      "nager::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

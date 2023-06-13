@@ -14,19 +14,8465 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:gravity.v1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string gravity_id = 1 [json_name = "gravityId"];</code>
+     * @return The gravityId.
+     */
+    java.lang.String getGravityId();
+    /**
+     * <code>string gravity_id = 1 [json_name = "gravityId"];</code>
+     * @return The bytes for gravityId.
+     */
+    com.google.protobuf.ByteString
+        getGravityIdBytes();
+
+    /**
+     * <code>string contract_source_hash = 2 [json_name = "contractSourceHash"];</code>
+     * @return The contractSourceHash.
+     */
+    java.lang.String getContractSourceHash();
+    /**
+     * <code>string contract_source_hash = 2 [json_name = "contractSourceHash"];</code>
+     * @return The bytes for contractSourceHash.
+     */
+    com.google.protobuf.ByteString
+        getContractSourceHashBytes();
+
+    /**
+     * <code>string bridge_ethereum_address = 4 [json_name = "bridgeEthereumAddress"];</code>
+     * @return The bridgeEthereumAddress.
+     */
+    java.lang.String getBridgeEthereumAddress();
+    /**
+     * <code>string bridge_ethereum_address = 4 [json_name = "bridgeEthereumAddress"];</code>
+     * @return The bytes for bridgeEthereumAddress.
+     */
+    com.google.protobuf.ByteString
+        getBridgeEthereumAddressBytes();
+
+    /**
+     * <code>uint64 bridge_chain_id = 5 [json_name = "bridgeChainId"];</code>
+     * @return The bridgeChainId.
+     */
+    long getBridgeChainId();
+
+    /**
+     * <code>uint64 signed_valsets_window = 6 [json_name = "signedValsetsWindow"];</code>
+     * @return The signedValsetsWindow.
+     */
+    long getSignedValsetsWindow();
+
+    /**
+     * <code>uint64 signed_batches_window = 7 [json_name = "signedBatchesWindow"];</code>
+     * @return The signedBatchesWindow.
+     */
+    long getSignedBatchesWindow();
+
+    /**
+     * <code>uint64 signed_logic_calls_window = 8 [json_name = "signedLogicCallsWindow"];</code>
+     * @return The signedLogicCallsWindow.
+     */
+    long getSignedLogicCallsWindow();
+
+    /**
+     * <code>uint64 target_batch_timeout = 9 [json_name = "targetBatchTimeout"];</code>
+     * @return The targetBatchTimeout.
+     */
+    long getTargetBatchTimeout();
+
+    /**
+     * <code>uint64 average_block_time = 10 [json_name = "averageBlockTime"];</code>
+     * @return The averageBlockTime.
+     */
+    long getAverageBlockTime();
+
+    /**
+     * <code>uint64 average_ethereum_block_time = 11 [json_name = "averageEthereumBlockTime"];</code>
+     * @return The averageEthereumBlockTime.
+     */
+    long getAverageEthereumBlockTime();
+
+    /**
+     * <code>bytes slash_fraction_valset = 12 [json_name = "slashFractionValset", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The slashFractionValset.
+     */
+    com.google.protobuf.ByteString getSlashFractionValset();
+
+    /**
+     * <code>bytes slash_fraction_batch = 13 [json_name = "slashFractionBatch", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The slashFractionBatch.
+     */
+    com.google.protobuf.ByteString getSlashFractionBatch();
+
+    /**
+     * <code>bytes slash_fraction_logic_call = 14 [json_name = "slashFractionLogicCall", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The slashFractionLogicCall.
+     */
+    com.google.protobuf.ByteString getSlashFractionLogicCall();
+
+    /**
+     * <code>uint64 unbond_slashing_valsets_window = 15 [json_name = "unbondSlashingValsetsWindow"];</code>
+     * @return The unbondSlashingValsetsWindow.
+     */
+    long getUnbondSlashingValsetsWindow();
+
+    /**
+     * <code>bytes slash_fraction_bad_eth_signature = 16 [json_name = "slashFractionBadEthSignature", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The slashFractionBadEthSignature.
+     */
+    com.google.protobuf.ByteString getSlashFractionBadEthSignature();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin valset_reward = 17 [json_name = "valsetReward", (.gogoproto.nullable) = false];</code>
+     * @return Whether the valsetReward field is set.
+     */
+    boolean hasValsetReward();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin valset_reward = 17 [json_name = "valsetReward", (.gogoproto.nullable) = false];</code>
+     * @return The valsetReward.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getValsetReward();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin valset_reward = 17 [json_name = "valsetReward", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getValsetRewardOrBuilder();
+
+    /**
+     * <code>bool bridge_active = 18 [json_name = "bridgeActive"];</code>
+     * @return The bridgeActive.
+     */
+    boolean getBridgeActive();
+
+    /**
+     * <pre>
+     * addresses on this blacklist are forbidden from depositing or withdrawing
+     * from Ethereum to the bridge
+     * </pre>
+     *
+     * <code>repeated string ethereum_blacklist = 19 [json_name = "ethereumBlacklist"];</code>
+     * @return A list containing the ethereumBlacklist.
+     */
+    java.util.List<java.lang.String>
+        getEthereumBlacklistList();
+    /**
+     * <pre>
+     * addresses on this blacklist are forbidden from depositing or withdrawing
+     * from Ethereum to the bridge
+     * </pre>
+     *
+     * <code>repeated string ethereum_blacklist = 19 [json_name = "ethereumBlacklist"];</code>
+     * @return The count of ethereumBlacklist.
+     */
+    int getEthereumBlacklistCount();
+    /**
+     * <pre>
+     * addresses on this blacklist are forbidden from depositing or withdrawing
+     * from Ethereum to the bridge
+     * </pre>
+     *
+     * <code>repeated string ethereum_blacklist = 19 [json_name = "ethereumBlacklist"];</code>
+     * @param index The index of the element to return.
+     * @return The ethereumBlacklist at the given index.
+     */
+    java.lang.String getEthereumBlacklist(int index);
+    /**
+     * <pre>
+     * addresses on this blacklist are forbidden from depositing or withdrawing
+     * from Ethereum to the bridge
+     * </pre>
+     *
+     * <code>repeated string ethereum_blacklist = 19 [json_name = "ethereumBlacklist"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the ethereumBlacklist at the given index.
+     */
+    com.google.protobuf.ByteString
+        getEthereumBlacklistBytes(int index);
+
+    /**
+     * <code>uint64 min_chain_fee_basis_points = 20 [json_name = "minChainFeeBasisPoints"];</code>
+     * @return The minChainFeeBasisPoints.
+     */
+    long getMinChainFeeBasisPoints();
+  }
+  /**
+   * <pre>
+   * The slashing fractions for the various gravity related slashing conditions. The first three
+   * refer to not submitting a particular message, the third for submitting a different claim
+   * for the same Ethereum event
+   *
+   * unbond_slashing_valsets_window
+   *
+   * The unbond slashing valsets window is used to determine how many blocks after starting to unbond
+   * a validator needs to continue signing blocks. The goal of this paramater is that when a validator leaves
+   * the set, if their leaving creates enough change in the validator set to justify an update they will sign
+   * a validator set update for the Ethereum bridge that does not include themselves. Allowing us to remove them
+   * from the Ethereum bridge and replace them with the new set gracefully.
+   *
+   * valset_reward
+   *
+   * These parameters allow for the bridge oracle to resolve a fork on the Ethereum chain without halting
+   * the chain. Once set reset bridge state will roll back events to the nonce provided in reset_bridge_nonce
+   * if and only if those events have not yet been observed (executed on the Cosmos chain). This allows for easy
+   * handling of cases where for example an Ethereum hardfork has occured and more than 1/3 of the vlaidtor set
+   * disagrees with the rest. Normally this would require a chain halt, manual genesis editing and restar to resolve
+   * with this feature a governance proposal can be used instead
+   *
+   * bridge_active
+   *
+   * This boolean flag can be used by governance to temporarily halt the bridge due to a vulnerability or other issue
+   * In this context halting the bridge means prevent the execution of any oracle events from Ethereum and preventing
+   * the creation of new batches that may be relayed to Ethereum.
+   * This does not prevent the creation of validator sets
+   * or slashing for not submitting validator set signatures as either of these might allow key signers to leave the validator
+   * set and steal funds on Ethereum without consequence.
+   * The practical outcome of this flag being set to 'false' is that deposits from Ethereum will not show up and withdraws from
+   * Cosmos will not execute on Ethereum.
+   *
+   * min_chain_fee_basis_points
+   *
+   * The minimum SendToEth `chain_fee` amount, in terms of basis points. e.g. 10% fee = 1000, and 0.02% fee = 2
+   * </pre>
+   *
+   * Protobuf type {@code gravity.v1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:gravity.v1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      gravityId_ = "";
+      contractSourceHash_ = "";
+      bridgeEthereumAddress_ = "";
+      slashFractionValset_ = com.google.protobuf.ByteString.EMPTY;
+      slashFractionBatch_ = com.google.protobuf.ByteString.EMPTY;
+      slashFractionLogicCall_ = com.google.protobuf.ByteString.EMPTY;
+      slashFractionBadEthSignature_ = com.google.protobuf.ByteString.EMPTY;
+      ethereumBlacklist_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.gravity.v1.GenesisProto.internal_static_gravity_v1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.gravity.v1.GenesisProto.internal_static_gravity_v1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.gravity.v1.GenesisProto.Params.class, com.gravity.v1.GenesisProto.Params.Builder.class);
+    }
+
+    public static final int GRAVITY_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object gravityId_ = "";
+    /**
+     * <code>string gravity_id = 1 [json_name = "gravityId"];</code>
+     * @return The gravityId.
+     */
+    @java.lang.Override
+    public java.lang.String getGravityId() {
+      java.lang.Object ref = gravityId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        gravityId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string gravity_id = 1 [json_name = "gravityId"];</code>
+     * @return The bytes for gravityId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGravityIdBytes() {
+      java.lang.Object ref = gravityId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        gravityId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTRACT_SOURCE_HASH_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contractSourceHash_ = "";
+    /**
+     * <code>string contract_source_hash = 2 [json_name = "contractSourceHash"];</code>
+     * @return The contractSourceHash.
+     */
+    @java.lang.Override
+    public java.lang.String getContractSourceHash() {
+      java.lang.Object ref = contractSourceHash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contractSourceHash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string contract_source_hash = 2 [json_name = "contractSourceHash"];</code>
+     * @return The bytes for contractSourceHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractSourceHashBytes() {
+      java.lang.Object ref = contractSourceHash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contractSourceHash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BRIDGE_ETHEREUM_ADDRESS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object bridgeEthereumAddress_ = "";
+    /**
+     * <code>string bridge_ethereum_address = 4 [json_name = "bridgeEthereumAddress"];</code>
+     * @return The bridgeEthereumAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getBridgeEthereumAddress() {
+      java.lang.Object ref = bridgeEthereumAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bridgeEthereumAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string bridge_ethereum_address = 4 [json_name = "bridgeEthereumAddress"];</code>
+     * @return The bytes for bridgeEthereumAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBridgeEthereumAddressBytes() {
+      java.lang.Object ref = bridgeEthereumAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bridgeEthereumAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BRIDGE_CHAIN_ID_FIELD_NUMBER = 5;
+    private long bridgeChainId_ = 0L;
+    /**
+     * <code>uint64 bridge_chain_id = 5 [json_name = "bridgeChainId"];</code>
+     * @return The bridgeChainId.
+     */
+    @java.lang.Override
+    public long getBridgeChainId() {
+      return bridgeChainId_;
+    }
+
+    public static final int SIGNED_VALSETS_WINDOW_FIELD_NUMBER = 6;
+    private long signedValsetsWindow_ = 0L;
+    /**
+     * <code>uint64 signed_valsets_window = 6 [json_name = "signedValsetsWindow"];</code>
+     * @return The signedValsetsWindow.
+     */
+    @java.lang.Override
+    public long getSignedValsetsWindow() {
+      return signedValsetsWindow_;
+    }
+
+    public static final int SIGNED_BATCHES_WINDOW_FIELD_NUMBER = 7;
+    private long signedBatchesWindow_ = 0L;
+    /**
+     * <code>uint64 signed_batches_window = 7 [json_name = "signedBatchesWindow"];</code>
+     * @return The signedBatchesWindow.
+     */
+    @java.lang.Override
+    public long getSignedBatchesWindow() {
+      return signedBatchesWindow_;
+    }
+
+    public static final int SIGNED_LOGIC_CALLS_WINDOW_FIELD_NUMBER = 8;
+    private long signedLogicCallsWindow_ = 0L;
+    /**
+     * <code>uint64 signed_logic_calls_window = 8 [json_name = "signedLogicCallsWindow"];</code>
+     * @return The signedLogicCallsWindow.
+     */
+    @java.lang.Override
+    public long getSignedLogicCallsWindow() {
+      return signedLogicCallsWindow_;
+    }
+
+    public static final int TARGET_BATCH_TIMEOUT_FIELD_NUMBER = 9;
+    private long targetBatchTimeout_ = 0L;
+    /**
+     * <code>uint64 target_batch_timeout = 9 [json_name = "targetBatchTimeout"];</code>
+     * @return The targetBatchTimeout.
+     */
+    @java.lang.Override
+    public long getTargetBatchTimeout() {
+      return targetBatchTimeout_;
+    }
+
+    public static final int AVERAGE_BLOCK_TIME_FIELD_NUMBER = 10;
+    private long averageBlockTime_ = 0L;
+    /**
+     * <code>uint64 average_block_time = 10 [json_name = "averageBlockTime"];</code>
+     * @return The averageBlockTime.
+     */
+    @java.lang.Override
+    public long getAverageBlockTime() {
+      return averageBlockTime_;
+    }
+
+    public static final int AVERAGE_ETHEREUM_BLOCK_TIME_FIELD_NUMBER = 11;
+    private long averageEthereumBlockTime_ = 0L;
+    /**
+     * <code>uint64 average_ethereum_block_time = 11 [json_name = "averageEthereumBlockTime"];</code>
+     * @return The averageEthereumBlockTime.
+     */
+    @java.lang.Override
+    public long getAverageEthereumBlockTime() {
+      return averageEthereumBlockTime_;
+    }
+
+    public static final int SLASH_FRACTION_VALSET_FIELD_NUMBER = 12;
+    private com.google.protobuf.ByteString slashFractionValset_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes slash_fraction_valset = 12 [json_name = "slashFractionValset", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The slashFractionValset.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSlashFractionValset() {
+      return slashFractionValset_;
+    }
+
+    public static final int SLASH_FRACTION_BATCH_FIELD_NUMBER = 13;
+    private com.google.protobuf.ByteString slashFractionBatch_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes slash_fraction_batch = 13 [json_name = "slashFractionBatch", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The slashFractionBatch.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSlashFractionBatch() {
+      return slashFractionBatch_;
+    }
+
+    public static final int SLASH_FRACTION_LOGIC_CALL_FIELD_NUMBER = 14;
+    private com.google.protobuf.ByteString slashFractionLogicCall_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes slash_fraction_logic_call = 14 [json_name = "slashFractionLogicCall", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The slashFractionLogicCall.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSlashFractionLogicCall() {
+      return slashFractionLogicCall_;
+    }
+
+    public static final int UNBOND_SLASHING_VALSETS_WINDOW_FIELD_NUMBER = 15;
+    private long unbondSlashingValsetsWindow_ = 0L;
+    /**
+     * <code>uint64 unbond_slashing_valsets_window = 15 [json_name = "unbondSlashingValsetsWindow"];</code>
+     * @return The unbondSlashingValsetsWindow.
+     */
+    @java.lang.Override
+    public long getUnbondSlashingValsetsWindow() {
+      return unbondSlashingValsetsWindow_;
+    }
+
+    public static final int SLASH_FRACTION_BAD_ETH_SIGNATURE_FIELD_NUMBER = 16;
+    private com.google.protobuf.ByteString slashFractionBadEthSignature_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes slash_fraction_bad_eth_signature = 16 [json_name = "slashFractionBadEthSignature", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The slashFractionBadEthSignature.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSlashFractionBadEthSignature() {
+      return slashFractionBadEthSignature_;
+    }
+
+    public static final int VALSET_REWARD_FIELD_NUMBER = 17;
+    private com.cosmos.base.v1beta1.CoinProto.Coin valsetReward_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin valset_reward = 17 [json_name = "valsetReward", (.gogoproto.nullable) = false];</code>
+     * @return Whether the valsetReward field is set.
+     */
+    @java.lang.Override
+    public boolean hasValsetReward() {
+      return valsetReward_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin valset_reward = 17 [json_name = "valsetReward", (.gogoproto.nullable) = false];</code>
+     * @return The valsetReward.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getValsetReward() {
+      return valsetReward_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : valsetReward_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin valset_reward = 17 [json_name = "valsetReward", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getValsetRewardOrBuilder() {
+      return valsetReward_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : valsetReward_;
+    }
+
+    public static final int BRIDGE_ACTIVE_FIELD_NUMBER = 18;
+    private boolean bridgeActive_ = false;
+    /**
+     * <code>bool bridge_active = 18 [json_name = "bridgeActive"];</code>
+     * @return The bridgeActive.
+     */
+    @java.lang.Override
+    public boolean getBridgeActive() {
+      return bridgeActive_;
+    }
+
+    public static final int ETHEREUM_BLACKLIST_FIELD_NUMBER = 19;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList ethereumBlacklist_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * addresses on this blacklist are forbidden from depositing or withdrawing
+     * from Ethereum to the bridge
+     * </pre>
+     *
+     * <code>repeated string ethereum_blacklist = 19 [json_name = "ethereumBlacklist"];</code>
+     * @return A list containing the ethereumBlacklist.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getEthereumBlacklistList() {
+      return ethereumBlacklist_;
+    }
+    /**
+     * <pre>
+     * addresses on this blacklist are forbidden from depositing or withdrawing
+     * from Ethereum to the bridge
+     * </pre>
+     *
+     * <code>repeated string ethereum_blacklist = 19 [json_name = "ethereumBlacklist"];</code>
+     * @return The count of ethereumBlacklist.
+     */
+    public int getEthereumBlacklistCount() {
+      return ethereumBlacklist_.size();
+    }
+    /**
+     * <pre>
+     * addresses on this blacklist are forbidden from depositing or withdrawing
+     * from Ethereum to the bridge
+     * </pre>
+     *
+     * <code>repeated string ethereum_blacklist = 19 [json_name = "ethereumBlacklist"];</code>
+     * @param index The index of the element to return.
+     * @return The ethereumBlacklist at the given index.
+     */
+    public java.lang.String getEthereumBlacklist(int index) {
+      return ethereumBlacklist_.get(index);
+    }
+    /**
+     * <pre>
+     * addresses on this blacklist are forbidden from depositing or withdrawing
+     * from Ethereum to the bridge
+     * </pre>
+     *
+     * <code>repeated string ethereum_blacklist = 19 [json_name = "ethereumBlacklist"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the ethereumBlacklist at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getEthereumBlacklistBytes(int index) {
+      return ethereumBlacklist_.getByteString(index);
+    }
+
+    public static final int MIN_CHAIN_FEE_BASIS_POINTS_FIELD_NUMBER = 20;
+    private long minChainFeeBasisPoints_ = 0L;
+    /**
+     * <code>uint64 min_chain_fee_basis_points = 20 [json_name = "minChainFeeBasisPoints"];</code>
+     * @return The minChainFeeBasisPoints.
+     */
+    @java.lang.Override
+    public long getMinChainFeeBasisPoints() {
+      return minChainFeeBasisPoints_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gravityId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, gravityId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractSourceHash_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, contractSourceHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bridgeEthereumAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, bridgeEthereumAddress_);
+      }
+      if (bridgeChainId_ != 0L) {
+        output.writeUInt64(5, bridgeChainId_);
+      }
+      if (signedValsetsWindow_ != 0L) {
+        output.writeUInt64(6, signedValsetsWindow_);
+      }
+      if (signedBatchesWindow_ != 0L) {
+        output.writeUInt64(7, signedBatchesWindow_);
+      }
+      if (signedLogicCallsWindow_ != 0L) {
+        output.writeUInt64(8, signedLogicCallsWindow_);
+      }
+      if (targetBatchTimeout_ != 0L) {
+        output.writeUInt64(9, targetBatchTimeout_);
+      }
+      if (averageBlockTime_ != 0L) {
+        output.writeUInt64(10, averageBlockTime_);
+      }
+      if (averageEthereumBlockTime_ != 0L) {
+        output.writeUInt64(11, averageEthereumBlockTime_);
+      }
+      if (!slashFractionValset_.isEmpty()) {
+        output.writeBytes(12, slashFractionValset_);
+      }
+      if (!slashFractionBatch_.isEmpty()) {
+        output.writeBytes(13, slashFractionBatch_);
+      }
+      if (!slashFractionLogicCall_.isEmpty()) {
+        output.writeBytes(14, slashFractionLogicCall_);
+      }
+      if (unbondSlashingValsetsWindow_ != 0L) {
+        output.writeUInt64(15, unbondSlashingValsetsWindow_);
+      }
+      if (!slashFractionBadEthSignature_.isEmpty()) {
+        output.writeBytes(16, slashFractionBadEthSignature_);
+      }
+      if (valsetReward_ != null) {
+        output.writeMessage(17, getValsetReward());
+      }
+      if (bridgeActive_ != false) {
+        output.writeBool(18, bridgeActive_);
+      }
+      for (int i = 0; i < ethereumBlacklist_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 19, ethereumBlacklist_.getRaw(i));
+      }
+      if (minChainFeeBasisPoints_ != 0L) {
+        output.writeUInt64(20, minChainFeeBasisPoints_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gravityId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, gravityId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractSourceHash_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, contractSourceHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bridgeEthereumAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, bridgeEthereumAddress_);
+      }
+      if (bridgeChainId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, bridgeChainId_);
+      }
+      if (signedValsetsWindow_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(6, signedValsetsWindow_);
+      }
+      if (signedBatchesWindow_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(7, signedBatchesWindow_);
+      }
+      if (signedLogicCallsWindow_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(8, signedLogicCallsWindow_);
+      }
+      if (targetBatchTimeout_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(9, targetBatchTimeout_);
+      }
+      if (averageBlockTime_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(10, averageBlockTime_);
+      }
+      if (averageEthereumBlockTime_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(11, averageEthereumBlockTime_);
+      }
+      if (!slashFractionValset_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(12, slashFractionValset_);
+      }
+      if (!slashFractionBatch_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(13, slashFractionBatch_);
+      }
+      if (!slashFractionLogicCall_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(14, slashFractionLogicCall_);
+      }
+      if (unbondSlashingValsetsWindow_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(15, unbondSlashingValsetsWindow_);
+      }
+      if (!slashFractionBadEthSignature_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(16, slashFractionBadEthSignature_);
+      }
+      if (valsetReward_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(17, getValsetReward());
+      }
+      if (bridgeActive_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(18, bridgeActive_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < ethereumBlacklist_.size(); i++) {
+          dataSize += computeStringSizeNoTag(ethereumBlacklist_.getRaw(i));
+        }
+        size += dataSize;
+        size += 2 * getEthereumBlacklistList().size();
+      }
+      if (minChainFeeBasisPoints_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(20, minChainFeeBasisPoints_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.gravity.v1.GenesisProto.Params)) {
+        return super.equals(obj);
+      }
+      com.gravity.v1.GenesisProto.Params other = (com.gravity.v1.GenesisProto.Params) obj;
+
+      if (!getGravityId()
+          .equals(other.getGravityId())) return false;
+      if (!getContractSourceHash()
+          .equals(other.getContractSourceHash())) return false;
+      if (!getBridgeEthereumAddress()
+          .equals(other.getBridgeEthereumAddress())) return false;
+      if (getBridgeChainId()
+          != other.getBridgeChainId()) return false;
+      if (getSignedValsetsWindow()
+          != other.getSignedValsetsWindow()) return false;
+      if (getSignedBatchesWindow()
+          != other.getSignedBatchesWindow()) return false;
+      if (getSignedLogicCallsWindow()
+          != other.getSignedLogicCallsWindow()) return false;
+      if (getTargetBatchTimeout()
+          != other.getTargetBatchTimeout()) return false;
+      if (getAverageBlockTime()
+          != other.getAverageBlockTime()) return false;
+      if (getAverageEthereumBlockTime()
+          != other.getAverageEthereumBlockTime()) return false;
+      if (!getSlashFractionValset()
+          .equals(other.getSlashFractionValset())) return false;
+      if (!getSlashFractionBatch()
+          .equals(other.getSlashFractionBatch())) return false;
+      if (!getSlashFractionLogicCall()
+          .equals(other.getSlashFractionLogicCall())) return false;
+      if (getUnbondSlashingValsetsWindow()
+          != other.getUnbondSlashingValsetsWindow()) return false;
+      if (!getSlashFractionBadEthSignature()
+          .equals(other.getSlashFractionBadEthSignature())) return false;
+      if (hasValsetReward() != other.hasValsetReward()) return false;
+      if (hasValsetReward()) {
+        if (!getValsetReward()
+            .equals(other.getValsetReward())) return false;
+      }
+      if (getBridgeActive()
+          != other.getBridgeActive()) return false;
+      if (!getEthereumBlacklistList()
+          .equals(other.getEthereumBlacklistList())) return false;
+      if (getMinChainFeeBasisPoints()
+          != other.getMinChainFeeBasisPoints()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + GRAVITY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getGravityId().hashCode();
+      hash = (37 * hash) + CONTRACT_SOURCE_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getContractSourceHash().hashCode();
+      hash = (37 * hash) + BRIDGE_ETHEREUM_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getBridgeEthereumAddress().hashCode();
+      hash = (37 * hash) + BRIDGE_CHAIN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getBridgeChainId());
+      hash = (37 * hash) + SIGNED_VALSETS_WINDOW_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSignedValsetsWindow());
+      hash = (37 * hash) + SIGNED_BATCHES_WINDOW_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSignedBatchesWindow());
+      hash = (37 * hash) + SIGNED_LOGIC_CALLS_WINDOW_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSignedLogicCallsWindow());
+      hash = (37 * hash) + TARGET_BATCH_TIMEOUT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTargetBatchTimeout());
+      hash = (37 * hash) + AVERAGE_BLOCK_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAverageBlockTime());
+      hash = (37 * hash) + AVERAGE_ETHEREUM_BLOCK_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAverageEthereumBlockTime());
+      hash = (37 * hash) + SLASH_FRACTION_VALSET_FIELD_NUMBER;
+      hash = (53 * hash) + getSlashFractionValset().hashCode();
+      hash = (37 * hash) + SLASH_FRACTION_BATCH_FIELD_NUMBER;
+      hash = (53 * hash) + getSlashFractionBatch().hashCode();
+      hash = (37 * hash) + SLASH_FRACTION_LOGIC_CALL_FIELD_NUMBER;
+      hash = (53 * hash) + getSlashFractionLogicCall().hashCode();
+      hash = (37 * hash) + UNBOND_SLASHING_VALSETS_WINDOW_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getUnbondSlashingValsetsWindow());
+      hash = (37 * hash) + SLASH_FRACTION_BAD_ETH_SIGNATURE_FIELD_NUMBER;
+      hash = (53 * hash) + getSlashFractionBadEthSignature().hashCode();
+      if (hasValsetReward()) {
+        hash = (37 * hash) + VALSET_REWARD_FIELD_NUMBER;
+        hash = (53 * hash) + getValsetReward().hashCode();
+      }
+      hash = (37 * hash) + BRIDGE_ACTIVE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getBridgeActive());
+      if (getEthereumBlacklistCount() > 0) {
+        hash = (37 * hash) + ETHEREUM_BLACKLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getEthereumBlacklistList().hashCode();
+      }
+      hash = (37 * hash) + MIN_CHAIN_FEE_BASIS_POINTS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMinChainFeeBasisPoints());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.gravity.v1.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.GenesisProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.GenesisProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.GenesisProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gravity.v1.GenesisProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.gravity.v1.GenesisProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.gravity.v1.GenesisProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.gravity.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gravity.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.gravity.v1.GenesisProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * The slashing fractions for the various gravity related slashing conditions. The first three
+     * refer to not submitting a particular message, the third for submitting a different claim
+     * for the same Ethereum event
+     *
+     * unbond_slashing_valsets_window
+     *
+     * The unbond slashing valsets window is used to determine how many blocks after starting to unbond
+     * a validator needs to continue signing blocks. The goal of this paramater is that when a validator leaves
+     * the set, if their leaving creates enough change in the validator set to justify an update they will sign
+     * a validator set update for the Ethereum bridge that does not include themselves. Allowing us to remove them
+     * from the Ethereum bridge and replace them with the new set gracefully.
+     *
+     * valset_reward
+     *
+     * These parameters allow for the bridge oracle to resolve a fork on the Ethereum chain without halting
+     * the chain. Once set reset bridge state will roll back events to the nonce provided in reset_bridge_nonce
+     * if and only if those events have not yet been observed (executed on the Cosmos chain). This allows for easy
+     * handling of cases where for example an Ethereum hardfork has occured and more than 1/3 of the vlaidtor set
+     * disagrees with the rest. Normally this would require a chain halt, manual genesis editing and restar to resolve
+     * with this feature a governance proposal can be used instead
+     *
+     * bridge_active
+     *
+     * This boolean flag can be used by governance to temporarily halt the bridge due to a vulnerability or other issue
+     * In this context halting the bridge means prevent the execution of any oracle events from Ethereum and preventing
+     * the creation of new batches that may be relayed to Ethereum.
+     * This does not prevent the creation of validator sets
+     * or slashing for not submitting validator set signatures as either of these might allow key signers to leave the validator
+     * set and steal funds on Ethereum without consequence.
+     * The practical outcome of this flag being set to 'false' is that deposits from Ethereum will not show up and withdraws from
+     * Cosmos will not execute on Ethereum.
+     *
+     * min_chain_fee_basis_points
+     *
+     * The minimum SendToEth `chain_fee` amount, in terms of basis points. e.g. 10% fee = 1000, and 0.02% fee = 2
+     * </pre>
+     *
+     * Protobuf type {@code gravity.v1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:gravity.v1.Params)
+        com.gravity.v1.GenesisProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.gravity.v1.GenesisProto.internal_static_gravity_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.gravity.v1.GenesisProto.internal_static_gravity_v1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.gravity.v1.GenesisProto.Params.class, com.gravity.v1.GenesisProto.Params.Builder.class);
+      }
+
+      // Construct using com.gravity.v1.GenesisProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        gravityId_ = "";
+        contractSourceHash_ = "";
+        bridgeEthereumAddress_ = "";
+        bridgeChainId_ = 0L;
+        signedValsetsWindow_ = 0L;
+        signedBatchesWindow_ = 0L;
+        signedLogicCallsWindow_ = 0L;
+        targetBatchTimeout_ = 0L;
+        averageBlockTime_ = 0L;
+        averageEthereumBlockTime_ = 0L;
+        slashFractionValset_ = com.google.protobuf.ByteString.EMPTY;
+        slashFractionBatch_ = com.google.protobuf.ByteString.EMPTY;
+        slashFractionLogicCall_ = com.google.protobuf.ByteString.EMPTY;
+        unbondSlashingValsetsWindow_ = 0L;
+        slashFractionBadEthSignature_ = com.google.protobuf.ByteString.EMPTY;
+        valsetReward_ = null;
+        if (valsetRewardBuilder_ != null) {
+          valsetRewardBuilder_.dispose();
+          valsetRewardBuilder_ = null;
+        }
+        bridgeActive_ = false;
+        ethereumBlacklist_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        minChainFeeBasisPoints_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.gravity.v1.GenesisProto.internal_static_gravity_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.GenesisProto.Params getDefaultInstanceForType() {
+        return com.gravity.v1.GenesisProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.GenesisProto.Params build() {
+        com.gravity.v1.GenesisProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.GenesisProto.Params buildPartial() {
+        com.gravity.v1.GenesisProto.Params result = new com.gravity.v1.GenesisProto.Params(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.gravity.v1.GenesisProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.gravityId_ = gravityId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.contractSourceHash_ = contractSourceHash_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.bridgeEthereumAddress_ = bridgeEthereumAddress_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.bridgeChainId_ = bridgeChainId_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.signedValsetsWindow_ = signedValsetsWindow_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.signedBatchesWindow_ = signedBatchesWindow_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.signedLogicCallsWindow_ = signedLogicCallsWindow_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.targetBatchTimeout_ = targetBatchTimeout_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.averageBlockTime_ = averageBlockTime_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.averageEthereumBlockTime_ = averageEthereumBlockTime_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.slashFractionValset_ = slashFractionValset_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.slashFractionBatch_ = slashFractionBatch_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.slashFractionLogicCall_ = slashFractionLogicCall_;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.unbondSlashingValsetsWindow_ = unbondSlashingValsetsWindow_;
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.slashFractionBadEthSignature_ = slashFractionBadEthSignature_;
+        }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          result.valsetReward_ = valsetRewardBuilder_ == null
+              ? valsetReward_
+              : valsetRewardBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00010000) != 0)) {
+          result.bridgeActive_ = bridgeActive_;
+        }
+        if (((from_bitField0_ & 0x00020000) != 0)) {
+          ethereumBlacklist_.makeImmutable();
+          result.ethereumBlacklist_ = ethereumBlacklist_;
+        }
+        if (((from_bitField0_ & 0x00040000) != 0)) {
+          result.minChainFeeBasisPoints_ = minChainFeeBasisPoints_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.gravity.v1.GenesisProto.Params) {
+          return mergeFrom((com.gravity.v1.GenesisProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.gravity.v1.GenesisProto.Params other) {
+        if (other == com.gravity.v1.GenesisProto.Params.getDefaultInstance()) return this;
+        if (!other.getGravityId().isEmpty()) {
+          gravityId_ = other.gravityId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getContractSourceHash().isEmpty()) {
+          contractSourceHash_ = other.contractSourceHash_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getBridgeEthereumAddress().isEmpty()) {
+          bridgeEthereumAddress_ = other.bridgeEthereumAddress_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.getBridgeChainId() != 0L) {
+          setBridgeChainId(other.getBridgeChainId());
+        }
+        if (other.getSignedValsetsWindow() != 0L) {
+          setSignedValsetsWindow(other.getSignedValsetsWindow());
+        }
+        if (other.getSignedBatchesWindow() != 0L) {
+          setSignedBatchesWindow(other.getSignedBatchesWindow());
+        }
+        if (other.getSignedLogicCallsWindow() != 0L) {
+          setSignedLogicCallsWindow(other.getSignedLogicCallsWindow());
+        }
+        if (other.getTargetBatchTimeout() != 0L) {
+          setTargetBatchTimeout(other.getTargetBatchTimeout());
+        }
+        if (other.getAverageBlockTime() != 0L) {
+          setAverageBlockTime(other.getAverageBlockTime());
+        }
+        if (other.getAverageEthereumBlockTime() != 0L) {
+          setAverageEthereumBlockTime(other.getAverageEthereumBlockTime());
+        }
+        if (other.getSlashFractionValset() != com.google.protobuf.ByteString.EMPTY) {
+          setSlashFractionValset(other.getSlashFractionValset());
+        }
+        if (other.getSlashFractionBatch() != com.google.protobuf.ByteString.EMPTY) {
+          setSlashFractionBatch(other.getSlashFractionBatch());
+        }
+        if (other.getSlashFractionLogicCall() != com.google.protobuf.ByteString.EMPTY) {
+          setSlashFractionLogicCall(other.getSlashFractionLogicCall());
+        }
+        if (other.getUnbondSlashingValsetsWindow() != 0L) {
+          setUnbondSlashingValsetsWindow(other.getUnbondSlashingValsetsWindow());
+        }
+        if (other.getSlashFractionBadEthSignature() != com.google.protobuf.ByteString.EMPTY) {
+          setSlashFractionBadEthSignature(other.getSlashFractionBadEthSignature());
+        }
+        if (other.hasValsetReward()) {
+          mergeValsetReward(other.getValsetReward());
+        }
+        if (other.getBridgeActive() != false) {
+          setBridgeActive(other.getBridgeActive());
+        }
+        if (!other.ethereumBlacklist_.isEmpty()) {
+          if (ethereumBlacklist_.isEmpty()) {
+            ethereumBlacklist_ = other.ethereumBlacklist_;
+            bitField0_ |= 0x00020000;
+          } else {
+            ensureEthereumBlacklistIsMutable();
+            ethereumBlacklist_.addAll(other.ethereumBlacklist_);
+          }
+          onChanged();
+        }
+        if (other.getMinChainFeeBasisPoints() != 0L) {
+          setMinChainFeeBasisPoints(other.getMinChainFeeBasisPoints());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                gravityId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                contractSourceHash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 34: {
+                bridgeEthereumAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 34
+              case 40: {
+                bridgeChainId_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 40
+              case 48: {
+                signedValsetsWindow_ = input.readUInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 48
+              case 56: {
+                signedBatchesWindow_ = input.readUInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 56
+              case 64: {
+                signedLogicCallsWindow_ = input.readUInt64();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 64
+              case 72: {
+                targetBatchTimeout_ = input.readUInt64();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 72
+              case 80: {
+                averageBlockTime_ = input.readUInt64();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 80
+              case 88: {
+                averageEthereumBlockTime_ = input.readUInt64();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 88
+              case 98: {
+                slashFractionValset_ = input.readBytes();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 98
+              case 106: {
+                slashFractionBatch_ = input.readBytes();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 106
+              case 114: {
+                slashFractionLogicCall_ = input.readBytes();
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 114
+              case 120: {
+                unbondSlashingValsetsWindow_ = input.readUInt64();
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 120
+              case 130: {
+                slashFractionBadEthSignature_ = input.readBytes();
+                bitField0_ |= 0x00004000;
+                break;
+              } // case 130
+              case 138: {
+                input.readMessage(
+                    getValsetRewardFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00008000;
+                break;
+              } // case 138
+              case 144: {
+                bridgeActive_ = input.readBool();
+                bitField0_ |= 0x00010000;
+                break;
+              } // case 144
+              case 154: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureEthereumBlacklistIsMutable();
+                ethereumBlacklist_.add(s);
+                break;
+              } // case 154
+              case 160: {
+                minChainFeeBasisPoints_ = input.readUInt64();
+                bitField0_ |= 0x00040000;
+                break;
+              } // case 160
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object gravityId_ = "";
+      /**
+       * <code>string gravity_id = 1 [json_name = "gravityId"];</code>
+       * @return The gravityId.
+       */
+      public java.lang.String getGravityId() {
+        java.lang.Object ref = gravityId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          gravityId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string gravity_id = 1 [json_name = "gravityId"];</code>
+       * @return The bytes for gravityId.
+       */
+      public com.google.protobuf.ByteString
+          getGravityIdBytes() {
+        java.lang.Object ref = gravityId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          gravityId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string gravity_id = 1 [json_name = "gravityId"];</code>
+       * @param value The gravityId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGravityId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        gravityId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string gravity_id = 1 [json_name = "gravityId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGravityId() {
+        gravityId_ = getDefaultInstance().getGravityId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string gravity_id = 1 [json_name = "gravityId"];</code>
+       * @param value The bytes for gravityId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGravityIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        gravityId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object contractSourceHash_ = "";
+      /**
+       * <code>string contract_source_hash = 2 [json_name = "contractSourceHash"];</code>
+       * @return The contractSourceHash.
+       */
+      public java.lang.String getContractSourceHash() {
+        java.lang.Object ref = contractSourceHash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contractSourceHash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string contract_source_hash = 2 [json_name = "contractSourceHash"];</code>
+       * @return The bytes for contractSourceHash.
+       */
+      public com.google.protobuf.ByteString
+          getContractSourceHashBytes() {
+        java.lang.Object ref = contractSourceHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contractSourceHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string contract_source_hash = 2 [json_name = "contractSourceHash"];</code>
+       * @param value The contractSourceHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractSourceHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contractSourceHash_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string contract_source_hash = 2 [json_name = "contractSourceHash"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractSourceHash() {
+        contractSourceHash_ = getDefaultInstance().getContractSourceHash();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string contract_source_hash = 2 [json_name = "contractSourceHash"];</code>
+       * @param value The bytes for contractSourceHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractSourceHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contractSourceHash_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object bridgeEthereumAddress_ = "";
+      /**
+       * <code>string bridge_ethereum_address = 4 [json_name = "bridgeEthereumAddress"];</code>
+       * @return The bridgeEthereumAddress.
+       */
+      public java.lang.String getBridgeEthereumAddress() {
+        java.lang.Object ref = bridgeEthereumAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bridgeEthereumAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string bridge_ethereum_address = 4 [json_name = "bridgeEthereumAddress"];</code>
+       * @return The bytes for bridgeEthereumAddress.
+       */
+      public com.google.protobuf.ByteString
+          getBridgeEthereumAddressBytes() {
+        java.lang.Object ref = bridgeEthereumAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bridgeEthereumAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string bridge_ethereum_address = 4 [json_name = "bridgeEthereumAddress"];</code>
+       * @param value The bridgeEthereumAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBridgeEthereumAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        bridgeEthereumAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bridge_ethereum_address = 4 [json_name = "bridgeEthereumAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBridgeEthereumAddress() {
+        bridgeEthereumAddress_ = getDefaultInstance().getBridgeEthereumAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bridge_ethereum_address = 4 [json_name = "bridgeEthereumAddress"];</code>
+       * @param value The bytes for bridgeEthereumAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBridgeEthereumAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        bridgeEthereumAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private long bridgeChainId_ ;
+      /**
+       * <code>uint64 bridge_chain_id = 5 [json_name = "bridgeChainId"];</code>
+       * @return The bridgeChainId.
+       */
+      @java.lang.Override
+      public long getBridgeChainId() {
+        return bridgeChainId_;
+      }
+      /**
+       * <code>uint64 bridge_chain_id = 5 [json_name = "bridgeChainId"];</code>
+       * @param value The bridgeChainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBridgeChainId(long value) {
+
+        bridgeChainId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 bridge_chain_id = 5 [json_name = "bridgeChainId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBridgeChainId() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        bridgeChainId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long signedValsetsWindow_ ;
+      /**
+       * <code>uint64 signed_valsets_window = 6 [json_name = "signedValsetsWindow"];</code>
+       * @return The signedValsetsWindow.
+       */
+      @java.lang.Override
+      public long getSignedValsetsWindow() {
+        return signedValsetsWindow_;
+      }
+      /**
+       * <code>uint64 signed_valsets_window = 6 [json_name = "signedValsetsWindow"];</code>
+       * @param value The signedValsetsWindow to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignedValsetsWindow(long value) {
+
+        signedValsetsWindow_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 signed_valsets_window = 6 [json_name = "signedValsetsWindow"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSignedValsetsWindow() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        signedValsetsWindow_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long signedBatchesWindow_ ;
+      /**
+       * <code>uint64 signed_batches_window = 7 [json_name = "signedBatchesWindow"];</code>
+       * @return The signedBatchesWindow.
+       */
+      @java.lang.Override
+      public long getSignedBatchesWindow() {
+        return signedBatchesWindow_;
+      }
+      /**
+       * <code>uint64 signed_batches_window = 7 [json_name = "signedBatchesWindow"];</code>
+       * @param value The signedBatchesWindow to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignedBatchesWindow(long value) {
+
+        signedBatchesWindow_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 signed_batches_window = 7 [json_name = "signedBatchesWindow"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSignedBatchesWindow() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        signedBatchesWindow_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long signedLogicCallsWindow_ ;
+      /**
+       * <code>uint64 signed_logic_calls_window = 8 [json_name = "signedLogicCallsWindow"];</code>
+       * @return The signedLogicCallsWindow.
+       */
+      @java.lang.Override
+      public long getSignedLogicCallsWindow() {
+        return signedLogicCallsWindow_;
+      }
+      /**
+       * <code>uint64 signed_logic_calls_window = 8 [json_name = "signedLogicCallsWindow"];</code>
+       * @param value The signedLogicCallsWindow to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignedLogicCallsWindow(long value) {
+
+        signedLogicCallsWindow_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 signed_logic_calls_window = 8 [json_name = "signedLogicCallsWindow"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSignedLogicCallsWindow() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        signedLogicCallsWindow_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long targetBatchTimeout_ ;
+      /**
+       * <code>uint64 target_batch_timeout = 9 [json_name = "targetBatchTimeout"];</code>
+       * @return The targetBatchTimeout.
+       */
+      @java.lang.Override
+      public long getTargetBatchTimeout() {
+        return targetBatchTimeout_;
+      }
+      /**
+       * <code>uint64 target_batch_timeout = 9 [json_name = "targetBatchTimeout"];</code>
+       * @param value The targetBatchTimeout to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTargetBatchTimeout(long value) {
+
+        targetBatchTimeout_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 target_batch_timeout = 9 [json_name = "targetBatchTimeout"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTargetBatchTimeout() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        targetBatchTimeout_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long averageBlockTime_ ;
+      /**
+       * <code>uint64 average_block_time = 10 [json_name = "averageBlockTime"];</code>
+       * @return The averageBlockTime.
+       */
+      @java.lang.Override
+      public long getAverageBlockTime() {
+        return averageBlockTime_;
+      }
+      /**
+       * <code>uint64 average_block_time = 10 [json_name = "averageBlockTime"];</code>
+       * @param value The averageBlockTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAverageBlockTime(long value) {
+
+        averageBlockTime_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 average_block_time = 10 [json_name = "averageBlockTime"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAverageBlockTime() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        averageBlockTime_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long averageEthereumBlockTime_ ;
+      /**
+       * <code>uint64 average_ethereum_block_time = 11 [json_name = "averageEthereumBlockTime"];</code>
+       * @return The averageEthereumBlockTime.
+       */
+      @java.lang.Override
+      public long getAverageEthereumBlockTime() {
+        return averageEthereumBlockTime_;
+      }
+      /**
+       * <code>uint64 average_ethereum_block_time = 11 [json_name = "averageEthereumBlockTime"];</code>
+       * @param value The averageEthereumBlockTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAverageEthereumBlockTime(long value) {
+
+        averageEthereumBlockTime_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 average_ethereum_block_time = 11 [json_name = "averageEthereumBlockTime"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAverageEthereumBlockTime() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        averageEthereumBlockTime_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString slashFractionValset_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes slash_fraction_valset = 12 [json_name = "slashFractionValset", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The slashFractionValset.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSlashFractionValset() {
+        return slashFractionValset_;
+      }
+      /**
+       * <code>bytes slash_fraction_valset = 12 [json_name = "slashFractionValset", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The slashFractionValset to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSlashFractionValset(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        slashFractionValset_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes slash_fraction_valset = 12 [json_name = "slashFractionValset", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSlashFractionValset() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        slashFractionValset_ = getDefaultInstance().getSlashFractionValset();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString slashFractionBatch_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes slash_fraction_batch = 13 [json_name = "slashFractionBatch", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The slashFractionBatch.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSlashFractionBatch() {
+        return slashFractionBatch_;
+      }
+      /**
+       * <code>bytes slash_fraction_batch = 13 [json_name = "slashFractionBatch", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The slashFractionBatch to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSlashFractionBatch(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        slashFractionBatch_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes slash_fraction_batch = 13 [json_name = "slashFractionBatch", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSlashFractionBatch() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        slashFractionBatch_ = getDefaultInstance().getSlashFractionBatch();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString slashFractionLogicCall_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes slash_fraction_logic_call = 14 [json_name = "slashFractionLogicCall", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The slashFractionLogicCall.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSlashFractionLogicCall() {
+        return slashFractionLogicCall_;
+      }
+      /**
+       * <code>bytes slash_fraction_logic_call = 14 [json_name = "slashFractionLogicCall", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The slashFractionLogicCall to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSlashFractionLogicCall(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        slashFractionLogicCall_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes slash_fraction_logic_call = 14 [json_name = "slashFractionLogicCall", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSlashFractionLogicCall() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        slashFractionLogicCall_ = getDefaultInstance().getSlashFractionLogicCall();
+        onChanged();
+        return this;
+      }
+
+      private long unbondSlashingValsetsWindow_ ;
+      /**
+       * <code>uint64 unbond_slashing_valsets_window = 15 [json_name = "unbondSlashingValsetsWindow"];</code>
+       * @return The unbondSlashingValsetsWindow.
+       */
+      @java.lang.Override
+      public long getUnbondSlashingValsetsWindow() {
+        return unbondSlashingValsetsWindow_;
+      }
+      /**
+       * <code>uint64 unbond_slashing_valsets_window = 15 [json_name = "unbondSlashingValsetsWindow"];</code>
+       * @param value The unbondSlashingValsetsWindow to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnbondSlashingValsetsWindow(long value) {
+
+        unbondSlashingValsetsWindow_ = value;
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 unbond_slashing_valsets_window = 15 [json_name = "unbondSlashingValsetsWindow"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUnbondSlashingValsetsWindow() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        unbondSlashingValsetsWindow_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString slashFractionBadEthSignature_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes slash_fraction_bad_eth_signature = 16 [json_name = "slashFractionBadEthSignature", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The slashFractionBadEthSignature.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSlashFractionBadEthSignature() {
+        return slashFractionBadEthSignature_;
+      }
+      /**
+       * <code>bytes slash_fraction_bad_eth_signature = 16 [json_name = "slashFractionBadEthSignature", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The slashFractionBadEthSignature to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSlashFractionBadEthSignature(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        slashFractionBadEthSignature_ = value;
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes slash_fraction_bad_eth_signature = 16 [json_name = "slashFractionBadEthSignature", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSlashFractionBadEthSignature() {
+        bitField0_ = (bitField0_ & ~0x00004000);
+        slashFractionBadEthSignature_ = getDefaultInstance().getSlashFractionBadEthSignature();
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin valsetReward_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> valsetRewardBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin valset_reward = 17 [json_name = "valsetReward", (.gogoproto.nullable) = false];</code>
+       * @return Whether the valsetReward field is set.
+       */
+      public boolean hasValsetReward() {
+        return ((bitField0_ & 0x00008000) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin valset_reward = 17 [json_name = "valsetReward", (.gogoproto.nullable) = false];</code>
+       * @return The valsetReward.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getValsetReward() {
+        if (valsetRewardBuilder_ == null) {
+          return valsetReward_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : valsetReward_;
+        } else {
+          return valsetRewardBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin valset_reward = 17 [json_name = "valsetReward", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setValsetReward(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (valsetRewardBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          valsetReward_ = value;
+        } else {
+          valsetRewardBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00008000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin valset_reward = 17 [json_name = "valsetReward", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setValsetReward(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (valsetRewardBuilder_ == null) {
+          valsetReward_ = builderForValue.build();
+        } else {
+          valsetRewardBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00008000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin valset_reward = 17 [json_name = "valsetReward", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeValsetReward(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (valsetRewardBuilder_ == null) {
+          if (((bitField0_ & 0x00008000) != 0) &&
+            valsetReward_ != null &&
+            valsetReward_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getValsetRewardBuilder().mergeFrom(value);
+          } else {
+            valsetReward_ = value;
+          }
+        } else {
+          valsetRewardBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00008000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin valset_reward = 17 [json_name = "valsetReward", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearValsetReward() {
+        bitField0_ = (bitField0_ & ~0x00008000);
+        valsetReward_ = null;
+        if (valsetRewardBuilder_ != null) {
+          valsetRewardBuilder_.dispose();
+          valsetRewardBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin valset_reward = 17 [json_name = "valsetReward", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getValsetRewardBuilder() {
+        bitField0_ |= 0x00008000;
+        onChanged();
+        return getValsetRewardFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin valset_reward = 17 [json_name = "valsetReward", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getValsetRewardOrBuilder() {
+        if (valsetRewardBuilder_ != null) {
+          return valsetRewardBuilder_.getMessageOrBuilder();
+        } else {
+          return valsetReward_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : valsetReward_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin valset_reward = 17 [json_name = "valsetReward", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getValsetRewardFieldBuilder() {
+        if (valsetRewardBuilder_ == null) {
+          valsetRewardBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getValsetReward(),
+                  getParentForChildren(),
+                  isClean());
+          valsetReward_ = null;
+        }
+        return valsetRewardBuilder_;
+      }
+
+      private boolean bridgeActive_ ;
+      /**
+       * <code>bool bridge_active = 18 [json_name = "bridgeActive"];</code>
+       * @return The bridgeActive.
+       */
+      @java.lang.Override
+      public boolean getBridgeActive() {
+        return bridgeActive_;
+      }
+      /**
+       * <code>bool bridge_active = 18 [json_name = "bridgeActive"];</code>
+       * @param value The bridgeActive to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBridgeActive(boolean value) {
+
+        bridgeActive_ = value;
+        bitField0_ |= 0x00010000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool bridge_active = 18 [json_name = "bridgeActive"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBridgeActive() {
+        bitField0_ = (bitField0_ & ~0x00010000);
+        bridgeActive_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList ethereumBlacklist_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureEthereumBlacklistIsMutable() {
+        if (!ethereumBlacklist_.isModifiable()) {
+          ethereumBlacklist_ = new com.google.protobuf.LazyStringArrayList(ethereumBlacklist_);
+        }
+        bitField0_ |= 0x00020000;
+      }
+      /**
+       * <pre>
+       * addresses on this blacklist are forbidden from depositing or withdrawing
+       * from Ethereum to the bridge
+       * </pre>
+       *
+       * <code>repeated string ethereum_blacklist = 19 [json_name = "ethereumBlacklist"];</code>
+       * @return A list containing the ethereumBlacklist.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getEthereumBlacklistList() {
+        ethereumBlacklist_.makeImmutable();
+        return ethereumBlacklist_;
+      }
+      /**
+       * <pre>
+       * addresses on this blacklist are forbidden from depositing or withdrawing
+       * from Ethereum to the bridge
+       * </pre>
+       *
+       * <code>repeated string ethereum_blacklist = 19 [json_name = "ethereumBlacklist"];</code>
+       * @return The count of ethereumBlacklist.
+       */
+      public int getEthereumBlacklistCount() {
+        return ethereumBlacklist_.size();
+      }
+      /**
+       * <pre>
+       * addresses on this blacklist are forbidden from depositing or withdrawing
+       * from Ethereum to the bridge
+       * </pre>
+       *
+       * <code>repeated string ethereum_blacklist = 19 [json_name = "ethereumBlacklist"];</code>
+       * @param index The index of the element to return.
+       * @return The ethereumBlacklist at the given index.
+       */
+      public java.lang.String getEthereumBlacklist(int index) {
+        return ethereumBlacklist_.get(index);
+      }
+      /**
+       * <pre>
+       * addresses on this blacklist are forbidden from depositing or withdrawing
+       * from Ethereum to the bridge
+       * </pre>
+       *
+       * <code>repeated string ethereum_blacklist = 19 [json_name = "ethereumBlacklist"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the ethereumBlacklist at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getEthereumBlacklistBytes(int index) {
+        return ethereumBlacklist_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * addresses on this blacklist are forbidden from depositing or withdrawing
+       * from Ethereum to the bridge
+       * </pre>
+       *
+       * <code>repeated string ethereum_blacklist = 19 [json_name = "ethereumBlacklist"];</code>
+       * @param index The index to set the value at.
+       * @param value The ethereumBlacklist to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEthereumBlacklist(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureEthereumBlacklistIsMutable();
+        ethereumBlacklist_.set(index, value);
+        bitField0_ |= 0x00020000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * addresses on this blacklist are forbidden from depositing or withdrawing
+       * from Ethereum to the bridge
+       * </pre>
+       *
+       * <code>repeated string ethereum_blacklist = 19 [json_name = "ethereumBlacklist"];</code>
+       * @param value The ethereumBlacklist to add.
+       * @return This builder for chaining.
+       */
+      public Builder addEthereumBlacklist(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureEthereumBlacklistIsMutable();
+        ethereumBlacklist_.add(value);
+        bitField0_ |= 0x00020000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * addresses on this blacklist are forbidden from depositing or withdrawing
+       * from Ethereum to the bridge
+       * </pre>
+       *
+       * <code>repeated string ethereum_blacklist = 19 [json_name = "ethereumBlacklist"];</code>
+       * @param values The ethereumBlacklist to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllEthereumBlacklist(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureEthereumBlacklistIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, ethereumBlacklist_);
+        bitField0_ |= 0x00020000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * addresses on this blacklist are forbidden from depositing or withdrawing
+       * from Ethereum to the bridge
+       * </pre>
+       *
+       * <code>repeated string ethereum_blacklist = 19 [json_name = "ethereumBlacklist"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEthereumBlacklist() {
+        ethereumBlacklist_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00020000);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * addresses on this blacklist are forbidden from depositing or withdrawing
+       * from Ethereum to the bridge
+       * </pre>
+       *
+       * <code>repeated string ethereum_blacklist = 19 [json_name = "ethereumBlacklist"];</code>
+       * @param value The bytes of the ethereumBlacklist to add.
+       * @return This builder for chaining.
+       */
+      public Builder addEthereumBlacklistBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureEthereumBlacklistIsMutable();
+        ethereumBlacklist_.add(value);
+        bitField0_ |= 0x00020000;
+        onChanged();
+        return this;
+      }
+
+      private long minChainFeeBasisPoints_ ;
+      /**
+       * <code>uint64 min_chain_fee_basis_points = 20 [json_name = "minChainFeeBasisPoints"];</code>
+       * @return The minChainFeeBasisPoints.
+       */
+      @java.lang.Override
+      public long getMinChainFeeBasisPoints() {
+        return minChainFeeBasisPoints_;
+      }
+      /**
+       * <code>uint64 min_chain_fee_basis_points = 20 [json_name = "minChainFeeBasisPoints"];</code>
+       * @param value The minChainFeeBasisPoints to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinChainFeeBasisPoints(long value) {
+
+        minChainFeeBasisPoints_ = value;
+        bitField0_ |= 0x00040000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 min_chain_fee_basis_points = 20 [json_name = "minChainFeeBasisPoints"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinChainFeeBasisPoints() {
+        bitField0_ = (bitField0_ & ~0x00040000);
+        minChainFeeBasisPoints_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:gravity.v1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:gravity.v1.Params)
+    private static final com.gravity.v1.GenesisProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.gravity.v1.GenesisProto.Params();
+    }
+
+    public static com.gravity.v1.GenesisProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.gravity.v1.GenesisProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:gravity.v1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.gravity.v1.Params params = 1 [json_name = "params"];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.gravity.v1.Params params = 1 [json_name = "params"];</code>
+     * @return The params.
+     */
+    com.gravity.v1.GenesisProto.Params getParams();
+    /**
+     * <code>.gravity.v1.Params params = 1 [json_name = "params"];</code>
+     */
+    com.gravity.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <code>.gravity.v1.GravityNonces gravity_nonces = 2 [json_name = "gravityNonces", (.gogoproto.nullable) = false];</code>
+     * @return Whether the gravityNonces field is set.
+     */
+    boolean hasGravityNonces();
+    /**
+     * <code>.gravity.v1.GravityNonces gravity_nonces = 2 [json_name = "gravityNonces", (.gogoproto.nullable) = false];</code>
+     * @return The gravityNonces.
+     */
+    com.gravity.v1.GenesisProto.GravityNonces getGravityNonces();
+    /**
+     * <code>.gravity.v1.GravityNonces gravity_nonces = 2 [json_name = "gravityNonces", (.gogoproto.nullable) = false];</code>
+     */
+    com.gravity.v1.GenesisProto.GravityNoncesOrBuilder getGravityNoncesOrBuilder();
+
+    /**
+     * <code>repeated .gravity.v1.Valset valsets = 3 [json_name = "valsets", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.gravity.v1.TypesProto.Valset> 
+        getValsetsList();
+    /**
+     * <code>repeated .gravity.v1.Valset valsets = 3 [json_name = "valsets", (.gogoproto.nullable) = false];</code>
+     */
+    com.gravity.v1.TypesProto.Valset getValsets(int index);
+    /**
+     * <code>repeated .gravity.v1.Valset valsets = 3 [json_name = "valsets", (.gogoproto.nullable) = false];</code>
+     */
+    int getValsetsCount();
+    /**
+     * <code>repeated .gravity.v1.Valset valsets = 3 [json_name = "valsets", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.gravity.v1.TypesProto.ValsetOrBuilder> 
+        getValsetsOrBuilderList();
+    /**
+     * <code>repeated .gravity.v1.Valset valsets = 3 [json_name = "valsets", (.gogoproto.nullable) = false];</code>
+     */
+    com.gravity.v1.TypesProto.ValsetOrBuilder getValsetsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .gravity.v1.MsgValsetConfirm valset_confirms = 4 [json_name = "valsetConfirms", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.gravity.v1.MsgsProto.MsgValsetConfirm> 
+        getValsetConfirmsList();
+    /**
+     * <code>repeated .gravity.v1.MsgValsetConfirm valset_confirms = 4 [json_name = "valsetConfirms", (.gogoproto.nullable) = false];</code>
+     */
+    com.gravity.v1.MsgsProto.MsgValsetConfirm getValsetConfirms(int index);
+    /**
+     * <code>repeated .gravity.v1.MsgValsetConfirm valset_confirms = 4 [json_name = "valsetConfirms", (.gogoproto.nullable) = false];</code>
+     */
+    int getValsetConfirmsCount();
+    /**
+     * <code>repeated .gravity.v1.MsgValsetConfirm valset_confirms = 4 [json_name = "valsetConfirms", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.gravity.v1.MsgsProto.MsgValsetConfirmOrBuilder> 
+        getValsetConfirmsOrBuilderList();
+    /**
+     * <code>repeated .gravity.v1.MsgValsetConfirm valset_confirms = 4 [json_name = "valsetConfirms", (.gogoproto.nullable) = false];</code>
+     */
+    com.gravity.v1.MsgsProto.MsgValsetConfirmOrBuilder getValsetConfirmsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .gravity.v1.OutgoingTxBatch batches = 5 [json_name = "batches", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.gravity.v1.BatchProto.OutgoingTxBatch> 
+        getBatchesList();
+    /**
+     * <code>repeated .gravity.v1.OutgoingTxBatch batches = 5 [json_name = "batches", (.gogoproto.nullable) = false];</code>
+     */
+    com.gravity.v1.BatchProto.OutgoingTxBatch getBatches(int index);
+    /**
+     * <code>repeated .gravity.v1.OutgoingTxBatch batches = 5 [json_name = "batches", (.gogoproto.nullable) = false];</code>
+     */
+    int getBatchesCount();
+    /**
+     * <code>repeated .gravity.v1.OutgoingTxBatch batches = 5 [json_name = "batches", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.gravity.v1.BatchProto.OutgoingTxBatchOrBuilder> 
+        getBatchesOrBuilderList();
+    /**
+     * <code>repeated .gravity.v1.OutgoingTxBatch batches = 5 [json_name = "batches", (.gogoproto.nullable) = false];</code>
+     */
+    com.gravity.v1.BatchProto.OutgoingTxBatchOrBuilder getBatchesOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .gravity.v1.MsgConfirmBatch batch_confirms = 6 [json_name = "batchConfirms", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.gravity.v1.MsgsProto.MsgConfirmBatch> 
+        getBatchConfirmsList();
+    /**
+     * <code>repeated .gravity.v1.MsgConfirmBatch batch_confirms = 6 [json_name = "batchConfirms", (.gogoproto.nullable) = false];</code>
+     */
+    com.gravity.v1.MsgsProto.MsgConfirmBatch getBatchConfirms(int index);
+    /**
+     * <code>repeated .gravity.v1.MsgConfirmBatch batch_confirms = 6 [json_name = "batchConfirms", (.gogoproto.nullable) = false];</code>
+     */
+    int getBatchConfirmsCount();
+    /**
+     * <code>repeated .gravity.v1.MsgConfirmBatch batch_confirms = 6 [json_name = "batchConfirms", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.gravity.v1.MsgsProto.MsgConfirmBatchOrBuilder> 
+        getBatchConfirmsOrBuilderList();
+    /**
+     * <code>repeated .gravity.v1.MsgConfirmBatch batch_confirms = 6 [json_name = "batchConfirms", (.gogoproto.nullable) = false];</code>
+     */
+    com.gravity.v1.MsgsProto.MsgConfirmBatchOrBuilder getBatchConfirmsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .gravity.v1.OutgoingLogicCall logic_calls = 7 [json_name = "logicCalls", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.gravity.v1.BatchProto.OutgoingLogicCall> 
+        getLogicCallsList();
+    /**
+     * <code>repeated .gravity.v1.OutgoingLogicCall logic_calls = 7 [json_name = "logicCalls", (.gogoproto.nullable) = false];</code>
+     */
+    com.gravity.v1.BatchProto.OutgoingLogicCall getLogicCalls(int index);
+    /**
+     * <code>repeated .gravity.v1.OutgoingLogicCall logic_calls = 7 [json_name = "logicCalls", (.gogoproto.nullable) = false];</code>
+     */
+    int getLogicCallsCount();
+    /**
+     * <code>repeated .gravity.v1.OutgoingLogicCall logic_calls = 7 [json_name = "logicCalls", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.gravity.v1.BatchProto.OutgoingLogicCallOrBuilder> 
+        getLogicCallsOrBuilderList();
+    /**
+     * <code>repeated .gravity.v1.OutgoingLogicCall logic_calls = 7 [json_name = "logicCalls", (.gogoproto.nullable) = false];</code>
+     */
+    com.gravity.v1.BatchProto.OutgoingLogicCallOrBuilder getLogicCallsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .gravity.v1.MsgConfirmLogicCall logic_call_confirms = 8 [json_name = "logicCallConfirms", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.gravity.v1.MsgsProto.MsgConfirmLogicCall> 
+        getLogicCallConfirmsList();
+    /**
+     * <code>repeated .gravity.v1.MsgConfirmLogicCall logic_call_confirms = 8 [json_name = "logicCallConfirms", (.gogoproto.nullable) = false];</code>
+     */
+    com.gravity.v1.MsgsProto.MsgConfirmLogicCall getLogicCallConfirms(int index);
+    /**
+     * <code>repeated .gravity.v1.MsgConfirmLogicCall logic_call_confirms = 8 [json_name = "logicCallConfirms", (.gogoproto.nullable) = false];</code>
+     */
+    int getLogicCallConfirmsCount();
+    /**
+     * <code>repeated .gravity.v1.MsgConfirmLogicCall logic_call_confirms = 8 [json_name = "logicCallConfirms", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.gravity.v1.MsgsProto.MsgConfirmLogicCallOrBuilder> 
+        getLogicCallConfirmsOrBuilderList();
+    /**
+     * <code>repeated .gravity.v1.MsgConfirmLogicCall logic_call_confirms = 8 [json_name = "logicCallConfirms", (.gogoproto.nullable) = false];</code>
+     */
+    com.gravity.v1.MsgsProto.MsgConfirmLogicCallOrBuilder getLogicCallConfirmsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .gravity.v1.Attestation attestations = 9 [json_name = "attestations", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.gravity.v1.AttestationProto.Attestation> 
+        getAttestationsList();
+    /**
+     * <code>repeated .gravity.v1.Attestation attestations = 9 [json_name = "attestations", (.gogoproto.nullable) = false];</code>
+     */
+    com.gravity.v1.AttestationProto.Attestation getAttestations(int index);
+    /**
+     * <code>repeated .gravity.v1.Attestation attestations = 9 [json_name = "attestations", (.gogoproto.nullable) = false];</code>
+     */
+    int getAttestationsCount();
+    /**
+     * <code>repeated .gravity.v1.Attestation attestations = 9 [json_name = "attestations", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.gravity.v1.AttestationProto.AttestationOrBuilder> 
+        getAttestationsOrBuilderList();
+    /**
+     * <code>repeated .gravity.v1.Attestation attestations = 9 [json_name = "attestations", (.gogoproto.nullable) = false];</code>
+     */
+    com.gravity.v1.AttestationProto.AttestationOrBuilder getAttestationsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .gravity.v1.MsgSetOrchestratorAddress delegate_keys = 10 [json_name = "delegateKeys", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.gravity.v1.MsgsProto.MsgSetOrchestratorAddress> 
+        getDelegateKeysList();
+    /**
+     * <code>repeated .gravity.v1.MsgSetOrchestratorAddress delegate_keys = 10 [json_name = "delegateKeys", (.gogoproto.nullable) = false];</code>
+     */
+    com.gravity.v1.MsgsProto.MsgSetOrchestratorAddress getDelegateKeys(int index);
+    /**
+     * <code>repeated .gravity.v1.MsgSetOrchestratorAddress delegate_keys = 10 [json_name = "delegateKeys", (.gogoproto.nullable) = false];</code>
+     */
+    int getDelegateKeysCount();
+    /**
+     * <code>repeated .gravity.v1.MsgSetOrchestratorAddress delegate_keys = 10 [json_name = "delegateKeys", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.gravity.v1.MsgsProto.MsgSetOrchestratorAddressOrBuilder> 
+        getDelegateKeysOrBuilderList();
+    /**
+     * <code>repeated .gravity.v1.MsgSetOrchestratorAddress delegate_keys = 10 [json_name = "delegateKeys", (.gogoproto.nullable) = false];</code>
+     */
+    com.gravity.v1.MsgsProto.MsgSetOrchestratorAddressOrBuilder getDelegateKeysOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .gravity.v1.ERC20ToDenom erc20_to_denoms = 11 [json_name = "erc20ToDenoms", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.gravity.v1.TypesProto.ERC20ToDenom> 
+        getErc20ToDenomsList();
+    /**
+     * <code>repeated .gravity.v1.ERC20ToDenom erc20_to_denoms = 11 [json_name = "erc20ToDenoms", (.gogoproto.nullable) = false];</code>
+     */
+    com.gravity.v1.TypesProto.ERC20ToDenom getErc20ToDenoms(int index);
+    /**
+     * <code>repeated .gravity.v1.ERC20ToDenom erc20_to_denoms = 11 [json_name = "erc20ToDenoms", (.gogoproto.nullable) = false];</code>
+     */
+    int getErc20ToDenomsCount();
+    /**
+     * <code>repeated .gravity.v1.ERC20ToDenom erc20_to_denoms = 11 [json_name = "erc20ToDenoms", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.gravity.v1.TypesProto.ERC20ToDenomOrBuilder> 
+        getErc20ToDenomsOrBuilderList();
+    /**
+     * <code>repeated .gravity.v1.ERC20ToDenom erc20_to_denoms = 11 [json_name = "erc20ToDenoms", (.gogoproto.nullable) = false];</code>
+     */
+    com.gravity.v1.TypesProto.ERC20ToDenomOrBuilder getErc20ToDenomsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .gravity.v1.OutgoingTransferTx unbatched_transfers = 12 [json_name = "unbatchedTransfers", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.gravity.v1.BatchProto.OutgoingTransferTx> 
+        getUnbatchedTransfersList();
+    /**
+     * <code>repeated .gravity.v1.OutgoingTransferTx unbatched_transfers = 12 [json_name = "unbatchedTransfers", (.gogoproto.nullable) = false];</code>
+     */
+    com.gravity.v1.BatchProto.OutgoingTransferTx getUnbatchedTransfers(int index);
+    /**
+     * <code>repeated .gravity.v1.OutgoingTransferTx unbatched_transfers = 12 [json_name = "unbatchedTransfers", (.gogoproto.nullable) = false];</code>
+     */
+    int getUnbatchedTransfersCount();
+    /**
+     * <code>repeated .gravity.v1.OutgoingTransferTx unbatched_transfers = 12 [json_name = "unbatchedTransfers", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.gravity.v1.BatchProto.OutgoingTransferTxOrBuilder> 
+        getUnbatchedTransfersOrBuilderList();
+    /**
+     * <code>repeated .gravity.v1.OutgoingTransferTx unbatched_transfers = 12 [json_name = "unbatchedTransfers", (.gogoproto.nullable) = false];</code>
+     */
+    com.gravity.v1.BatchProto.OutgoingTransferTxOrBuilder getUnbatchedTransfersOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .gravity.v1.PendingIbcAutoForward pending_ibc_auto_forwards = 13 [json_name = "pendingIbcAutoForwards", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.gravity.v1.TypesProto.PendingIbcAutoForward> 
+        getPendingIbcAutoForwardsList();
+    /**
+     * <code>repeated .gravity.v1.PendingIbcAutoForward pending_ibc_auto_forwards = 13 [json_name = "pendingIbcAutoForwards", (.gogoproto.nullable) = false];</code>
+     */
+    com.gravity.v1.TypesProto.PendingIbcAutoForward getPendingIbcAutoForwards(int index);
+    /**
+     * <code>repeated .gravity.v1.PendingIbcAutoForward pending_ibc_auto_forwards = 13 [json_name = "pendingIbcAutoForwards", (.gogoproto.nullable) = false];</code>
+     */
+    int getPendingIbcAutoForwardsCount();
+    /**
+     * <code>repeated .gravity.v1.PendingIbcAutoForward pending_ibc_auto_forwards = 13 [json_name = "pendingIbcAutoForwards", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.gravity.v1.TypesProto.PendingIbcAutoForwardOrBuilder> 
+        getPendingIbcAutoForwardsOrBuilderList();
+    /**
+     * <code>repeated .gravity.v1.PendingIbcAutoForward pending_ibc_auto_forwards = 13 [json_name = "pendingIbcAutoForwards", (.gogoproto.nullable) = false];</code>
+     */
+    com.gravity.v1.TypesProto.PendingIbcAutoForwardOrBuilder getPendingIbcAutoForwardsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState struct, containing all persistant data required by the Gravity module
+   * </pre>
+   *
+   * Protobuf type {@code gravity.v1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:gravity.v1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      valsets_ = java.util.Collections.emptyList();
+      valsetConfirms_ = java.util.Collections.emptyList();
+      batches_ = java.util.Collections.emptyList();
+      batchConfirms_ = java.util.Collections.emptyList();
+      logicCalls_ = java.util.Collections.emptyList();
+      logicCallConfirms_ = java.util.Collections.emptyList();
+      attestations_ = java.util.Collections.emptyList();
+      delegateKeys_ = java.util.Collections.emptyList();
+      erc20ToDenoms_ = java.util.Collections.emptyList();
+      unbatchedTransfers_ = java.util.Collections.emptyList();
+      pendingIbcAutoForwards_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.gravity.v1.GenesisProto.internal_static_gravity_v1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.gravity.v1.GenesisProto.internal_static_gravity_v1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.gravity.v1.GenesisProto.GenesisState.class, com.gravity.v1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.gravity.v1.GenesisProto.Params params_;
+    /**
+     * <code>.gravity.v1.Params params = 1 [json_name = "params"];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.gravity.v1.Params params = 1 [json_name = "params"];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.gravity.v1.GenesisProto.Params getParams() {
+      return params_ == null ? com.gravity.v1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.gravity.v1.Params params = 1 [json_name = "params"];</code>
+     */
+    @java.lang.Override
+    public com.gravity.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.gravity.v1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int GRAVITY_NONCES_FIELD_NUMBER = 2;
+    private com.gravity.v1.GenesisProto.GravityNonces gravityNonces_;
+    /**
+     * <code>.gravity.v1.GravityNonces gravity_nonces = 2 [json_name = "gravityNonces", (.gogoproto.nullable) = false];</code>
+     * @return Whether the gravityNonces field is set.
+     */
+    @java.lang.Override
+    public boolean hasGravityNonces() {
+      return gravityNonces_ != null;
+    }
+    /**
+     * <code>.gravity.v1.GravityNonces gravity_nonces = 2 [json_name = "gravityNonces", (.gogoproto.nullable) = false];</code>
+     * @return The gravityNonces.
+     */
+    @java.lang.Override
+    public com.gravity.v1.GenesisProto.GravityNonces getGravityNonces() {
+      return gravityNonces_ == null ? com.gravity.v1.GenesisProto.GravityNonces.getDefaultInstance() : gravityNonces_;
+    }
+    /**
+     * <code>.gravity.v1.GravityNonces gravity_nonces = 2 [json_name = "gravityNonces", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.gravity.v1.GenesisProto.GravityNoncesOrBuilder getGravityNoncesOrBuilder() {
+      return gravityNonces_ == null ? com.gravity.v1.GenesisProto.GravityNonces.getDefaultInstance() : gravityNonces_;
+    }
+
+    public static final int VALSETS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.gravity.v1.TypesProto.Valset> valsets_;
+    /**
+     * <code>repeated .gravity.v1.Valset valsets = 3 [json_name = "valsets", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.gravity.v1.TypesProto.Valset> getValsetsList() {
+      return valsets_;
+    }
+    /**
+     * <code>repeated .gravity.v1.Valset valsets = 3 [json_name = "valsets", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.gravity.v1.TypesProto.ValsetOrBuilder> 
+        getValsetsOrBuilderList() {
+      return valsets_;
+    }
+    /**
+     * <code>repeated .gravity.v1.Valset valsets = 3 [json_name = "valsets", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getValsetsCount() {
+      return valsets_.size();
+    }
+    /**
+     * <code>repeated .gravity.v1.Valset valsets = 3 [json_name = "valsets", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.gravity.v1.TypesProto.Valset getValsets(int index) {
+      return valsets_.get(index);
+    }
+    /**
+     * <code>repeated .gravity.v1.Valset valsets = 3 [json_name = "valsets", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.gravity.v1.TypesProto.ValsetOrBuilder getValsetsOrBuilder(
+        int index) {
+      return valsets_.get(index);
+    }
+
+    public static final int VALSET_CONFIRMS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.gravity.v1.MsgsProto.MsgValsetConfirm> valsetConfirms_;
+    /**
+     * <code>repeated .gravity.v1.MsgValsetConfirm valset_confirms = 4 [json_name = "valsetConfirms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.gravity.v1.MsgsProto.MsgValsetConfirm> getValsetConfirmsList() {
+      return valsetConfirms_;
+    }
+    /**
+     * <code>repeated .gravity.v1.MsgValsetConfirm valset_confirms = 4 [json_name = "valsetConfirms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.gravity.v1.MsgsProto.MsgValsetConfirmOrBuilder> 
+        getValsetConfirmsOrBuilderList() {
+      return valsetConfirms_;
+    }
+    /**
+     * <code>repeated .gravity.v1.MsgValsetConfirm valset_confirms = 4 [json_name = "valsetConfirms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getValsetConfirmsCount() {
+      return valsetConfirms_.size();
+    }
+    /**
+     * <code>repeated .gravity.v1.MsgValsetConfirm valset_confirms = 4 [json_name = "valsetConfirms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.gravity.v1.MsgsProto.MsgValsetConfirm getValsetConfirms(int index) {
+      return valsetConfirms_.get(index);
+    }
+    /**
+     * <code>repeated .gravity.v1.MsgValsetConfirm valset_confirms = 4 [json_name = "valsetConfirms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.gravity.v1.MsgsProto.MsgValsetConfirmOrBuilder getValsetConfirmsOrBuilder(
+        int index) {
+      return valsetConfirms_.get(index);
+    }
+
+    public static final int BATCHES_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.gravity.v1.BatchProto.OutgoingTxBatch> batches_;
+    /**
+     * <code>repeated .gravity.v1.OutgoingTxBatch batches = 5 [json_name = "batches", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.gravity.v1.BatchProto.OutgoingTxBatch> getBatchesList() {
+      return batches_;
+    }
+    /**
+     * <code>repeated .gravity.v1.OutgoingTxBatch batches = 5 [json_name = "batches", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.gravity.v1.BatchProto.OutgoingTxBatchOrBuilder> 
+        getBatchesOrBuilderList() {
+      return batches_;
+    }
+    /**
+     * <code>repeated .gravity.v1.OutgoingTxBatch batches = 5 [json_name = "batches", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getBatchesCount() {
+      return batches_.size();
+    }
+    /**
+     * <code>repeated .gravity.v1.OutgoingTxBatch batches = 5 [json_name = "batches", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.gravity.v1.BatchProto.OutgoingTxBatch getBatches(int index) {
+      return batches_.get(index);
+    }
+    /**
+     * <code>repeated .gravity.v1.OutgoingTxBatch batches = 5 [json_name = "batches", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.gravity.v1.BatchProto.OutgoingTxBatchOrBuilder getBatchesOrBuilder(
+        int index) {
+      return batches_.get(index);
+    }
+
+    public static final int BATCH_CONFIRMS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.gravity.v1.MsgsProto.MsgConfirmBatch> batchConfirms_;
+    /**
+     * <code>repeated .gravity.v1.MsgConfirmBatch batch_confirms = 6 [json_name = "batchConfirms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.gravity.v1.MsgsProto.MsgConfirmBatch> getBatchConfirmsList() {
+      return batchConfirms_;
+    }
+    /**
+     * <code>repeated .gravity.v1.MsgConfirmBatch batch_confirms = 6 [json_name = "batchConfirms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.gravity.v1.MsgsProto.MsgConfirmBatchOrBuilder> 
+        getBatchConfirmsOrBuilderList() {
+      return batchConfirms_;
+    }
+    /**
+     * <code>repeated .gravity.v1.MsgConfirmBatch batch_confirms = 6 [json_name = "batchConfirms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getBatchConfirmsCount() {
+      return batchConfirms_.size();
+    }
+    /**
+     * <code>repeated .gravity.v1.MsgConfirmBatch batch_confirms = 6 [json_name = "batchConfirms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.gravity.v1.MsgsProto.MsgConfirmBatch getBatchConfirms(int index) {
+      return batchConfirms_.get(index);
+    }
+    /**
+     * <code>repeated .gravity.v1.MsgConfirmBatch batch_confirms = 6 [json_name = "batchConfirms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.gravity.v1.MsgsProto.MsgConfirmBatchOrBuilder getBatchConfirmsOrBuilder(
+        int index) {
+      return batchConfirms_.get(index);
+    }
+
+    public static final int LOGIC_CALLS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private java.util.List<com.gravity.v1.BatchProto.OutgoingLogicCall> logicCalls_;
+    /**
+     * <code>repeated .gravity.v1.OutgoingLogicCall logic_calls = 7 [json_name = "logicCalls", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.gravity.v1.BatchProto.OutgoingLogicCall> getLogicCallsList() {
+      return logicCalls_;
+    }
+    /**
+     * <code>repeated .gravity.v1.OutgoingLogicCall logic_calls = 7 [json_name = "logicCalls", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.gravity.v1.BatchProto.OutgoingLogicCallOrBuilder> 
+        getLogicCallsOrBuilderList() {
+      return logicCalls_;
+    }
+    /**
+     * <code>repeated .gravity.v1.OutgoingLogicCall logic_calls = 7 [json_name = "logicCalls", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getLogicCallsCount() {
+      return logicCalls_.size();
+    }
+    /**
+     * <code>repeated .gravity.v1.OutgoingLogicCall logic_calls = 7 [json_name = "logicCalls", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.gravity.v1.BatchProto.OutgoingLogicCall getLogicCalls(int index) {
+      return logicCalls_.get(index);
+    }
+    /**
+     * <code>repeated .gravity.v1.OutgoingLogicCall logic_calls = 7 [json_name = "logicCalls", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.gravity.v1.BatchProto.OutgoingLogicCallOrBuilder getLogicCallsOrBuilder(
+        int index) {
+      return logicCalls_.get(index);
+    }
+
+    public static final int LOGIC_CALL_CONFIRMS_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private java.util.List<com.gravity.v1.MsgsProto.MsgConfirmLogicCall> logicCallConfirms_;
+    /**
+     * <code>repeated .gravity.v1.MsgConfirmLogicCall logic_call_confirms = 8 [json_name = "logicCallConfirms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.gravity.v1.MsgsProto.MsgConfirmLogicCall> getLogicCallConfirmsList() {
+      return logicCallConfirms_;
+    }
+    /**
+     * <code>repeated .gravity.v1.MsgConfirmLogicCall logic_call_confirms = 8 [json_name = "logicCallConfirms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.gravity.v1.MsgsProto.MsgConfirmLogicCallOrBuilder> 
+        getLogicCallConfirmsOrBuilderList() {
+      return logicCallConfirms_;
+    }
+    /**
+     * <code>repeated .gravity.v1.MsgConfirmLogicCall logic_call_confirms = 8 [json_name = "logicCallConfirms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getLogicCallConfirmsCount() {
+      return logicCallConfirms_.size();
+    }
+    /**
+     * <code>repeated .gravity.v1.MsgConfirmLogicCall logic_call_confirms = 8 [json_name = "logicCallConfirms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.gravity.v1.MsgsProto.MsgConfirmLogicCall getLogicCallConfirms(int index) {
+      return logicCallConfirms_.get(index);
+    }
+    /**
+     * <code>repeated .gravity.v1.MsgConfirmLogicCall logic_call_confirms = 8 [json_name = "logicCallConfirms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.gravity.v1.MsgsProto.MsgConfirmLogicCallOrBuilder getLogicCallConfirmsOrBuilder(
+        int index) {
+      return logicCallConfirms_.get(index);
+    }
+
+    public static final int ATTESTATIONS_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private java.util.List<com.gravity.v1.AttestationProto.Attestation> attestations_;
+    /**
+     * <code>repeated .gravity.v1.Attestation attestations = 9 [json_name = "attestations", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.gravity.v1.AttestationProto.Attestation> getAttestationsList() {
+      return attestations_;
+    }
+    /**
+     * <code>repeated .gravity.v1.Attestation attestations = 9 [json_name = "attestations", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.gravity.v1.AttestationProto.AttestationOrBuilder> 
+        getAttestationsOrBuilderList() {
+      return attestations_;
+    }
+    /**
+     * <code>repeated .gravity.v1.Attestation attestations = 9 [json_name = "attestations", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getAttestationsCount() {
+      return attestations_.size();
+    }
+    /**
+     * <code>repeated .gravity.v1.Attestation attestations = 9 [json_name = "attestations", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.gravity.v1.AttestationProto.Attestation getAttestations(int index) {
+      return attestations_.get(index);
+    }
+    /**
+     * <code>repeated .gravity.v1.Attestation attestations = 9 [json_name = "attestations", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.gravity.v1.AttestationProto.AttestationOrBuilder getAttestationsOrBuilder(
+        int index) {
+      return attestations_.get(index);
+    }
+
+    public static final int DELEGATE_KEYS_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
+    private java.util.List<com.gravity.v1.MsgsProto.MsgSetOrchestratorAddress> delegateKeys_;
+    /**
+     * <code>repeated .gravity.v1.MsgSetOrchestratorAddress delegate_keys = 10 [json_name = "delegateKeys", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.gravity.v1.MsgsProto.MsgSetOrchestratorAddress> getDelegateKeysList() {
+      return delegateKeys_;
+    }
+    /**
+     * <code>repeated .gravity.v1.MsgSetOrchestratorAddress delegate_keys = 10 [json_name = "delegateKeys", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.gravity.v1.MsgsProto.MsgSetOrchestratorAddressOrBuilder> 
+        getDelegateKeysOrBuilderList() {
+      return delegateKeys_;
+    }
+    /**
+     * <code>repeated .gravity.v1.MsgSetOrchestratorAddress delegate_keys = 10 [json_name = "delegateKeys", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getDelegateKeysCount() {
+      return delegateKeys_.size();
+    }
+    /**
+     * <code>repeated .gravity.v1.MsgSetOrchestratorAddress delegate_keys = 10 [json_name = "delegateKeys", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.gravity.v1.MsgsProto.MsgSetOrchestratorAddress getDelegateKeys(int index) {
+      return delegateKeys_.get(index);
+    }
+    /**
+     * <code>repeated .gravity.v1.MsgSetOrchestratorAddress delegate_keys = 10 [json_name = "delegateKeys", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.gravity.v1.MsgsProto.MsgSetOrchestratorAddressOrBuilder getDelegateKeysOrBuilder(
+        int index) {
+      return delegateKeys_.get(index);
+    }
+
+    public static final int ERC20_TO_DENOMS_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
+    private java.util.List<com.gravity.v1.TypesProto.ERC20ToDenom> erc20ToDenoms_;
+    /**
+     * <code>repeated .gravity.v1.ERC20ToDenom erc20_to_denoms = 11 [json_name = "erc20ToDenoms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.gravity.v1.TypesProto.ERC20ToDenom> getErc20ToDenomsList() {
+      return erc20ToDenoms_;
+    }
+    /**
+     * <code>repeated .gravity.v1.ERC20ToDenom erc20_to_denoms = 11 [json_name = "erc20ToDenoms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.gravity.v1.TypesProto.ERC20ToDenomOrBuilder> 
+        getErc20ToDenomsOrBuilderList() {
+      return erc20ToDenoms_;
+    }
+    /**
+     * <code>repeated .gravity.v1.ERC20ToDenom erc20_to_denoms = 11 [json_name = "erc20ToDenoms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getErc20ToDenomsCount() {
+      return erc20ToDenoms_.size();
+    }
+    /**
+     * <code>repeated .gravity.v1.ERC20ToDenom erc20_to_denoms = 11 [json_name = "erc20ToDenoms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.gravity.v1.TypesProto.ERC20ToDenom getErc20ToDenoms(int index) {
+      return erc20ToDenoms_.get(index);
+    }
+    /**
+     * <code>repeated .gravity.v1.ERC20ToDenom erc20_to_denoms = 11 [json_name = "erc20ToDenoms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.gravity.v1.TypesProto.ERC20ToDenomOrBuilder getErc20ToDenomsOrBuilder(
+        int index) {
+      return erc20ToDenoms_.get(index);
+    }
+
+    public static final int UNBATCHED_TRANSFERS_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
+    private java.util.List<com.gravity.v1.BatchProto.OutgoingTransferTx> unbatchedTransfers_;
+    /**
+     * <code>repeated .gravity.v1.OutgoingTransferTx unbatched_transfers = 12 [json_name = "unbatchedTransfers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.gravity.v1.BatchProto.OutgoingTransferTx> getUnbatchedTransfersList() {
+      return unbatchedTransfers_;
+    }
+    /**
+     * <code>repeated .gravity.v1.OutgoingTransferTx unbatched_transfers = 12 [json_name = "unbatchedTransfers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.gravity.v1.BatchProto.OutgoingTransferTxOrBuilder> 
+        getUnbatchedTransfersOrBuilderList() {
+      return unbatchedTransfers_;
+    }
+    /**
+     * <code>repeated .gravity.v1.OutgoingTransferTx unbatched_transfers = 12 [json_name = "unbatchedTransfers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getUnbatchedTransfersCount() {
+      return unbatchedTransfers_.size();
+    }
+    /**
+     * <code>repeated .gravity.v1.OutgoingTransferTx unbatched_transfers = 12 [json_name = "unbatchedTransfers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.gravity.v1.BatchProto.OutgoingTransferTx getUnbatchedTransfers(int index) {
+      return unbatchedTransfers_.get(index);
+    }
+    /**
+     * <code>repeated .gravity.v1.OutgoingTransferTx unbatched_transfers = 12 [json_name = "unbatchedTransfers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.gravity.v1.BatchProto.OutgoingTransferTxOrBuilder getUnbatchedTransfersOrBuilder(
+        int index) {
+      return unbatchedTransfers_.get(index);
+    }
+
+    public static final int PENDING_IBC_AUTO_FORWARDS_FIELD_NUMBER = 13;
+    @SuppressWarnings("serial")
+    private java.util.List<com.gravity.v1.TypesProto.PendingIbcAutoForward> pendingIbcAutoForwards_;
+    /**
+     * <code>repeated .gravity.v1.PendingIbcAutoForward pending_ibc_auto_forwards = 13 [json_name = "pendingIbcAutoForwards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.gravity.v1.TypesProto.PendingIbcAutoForward> getPendingIbcAutoForwardsList() {
+      return pendingIbcAutoForwards_;
+    }
+    /**
+     * <code>repeated .gravity.v1.PendingIbcAutoForward pending_ibc_auto_forwards = 13 [json_name = "pendingIbcAutoForwards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.gravity.v1.TypesProto.PendingIbcAutoForwardOrBuilder> 
+        getPendingIbcAutoForwardsOrBuilderList() {
+      return pendingIbcAutoForwards_;
+    }
+    /**
+     * <code>repeated .gravity.v1.PendingIbcAutoForward pending_ibc_auto_forwards = 13 [json_name = "pendingIbcAutoForwards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getPendingIbcAutoForwardsCount() {
+      return pendingIbcAutoForwards_.size();
+    }
+    /**
+     * <code>repeated .gravity.v1.PendingIbcAutoForward pending_ibc_auto_forwards = 13 [json_name = "pendingIbcAutoForwards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.gravity.v1.TypesProto.PendingIbcAutoForward getPendingIbcAutoForwards(int index) {
+      return pendingIbcAutoForwards_.get(index);
+    }
+    /**
+     * <code>repeated .gravity.v1.PendingIbcAutoForward pending_ibc_auto_forwards = 13 [json_name = "pendingIbcAutoForwards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.gravity.v1.TypesProto.PendingIbcAutoForwardOrBuilder getPendingIbcAutoForwardsOrBuilder(
+        int index) {
+      return pendingIbcAutoForwards_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      if (gravityNonces_ != null) {
+        output.writeMessage(2, getGravityNonces());
+      }
+      for (int i = 0; i < valsets_.size(); i++) {
+        output.writeMessage(3, valsets_.get(i));
+      }
+      for (int i = 0; i < valsetConfirms_.size(); i++) {
+        output.writeMessage(4, valsetConfirms_.get(i));
+      }
+      for (int i = 0; i < batches_.size(); i++) {
+        output.writeMessage(5, batches_.get(i));
+      }
+      for (int i = 0; i < batchConfirms_.size(); i++) {
+        output.writeMessage(6, batchConfirms_.get(i));
+      }
+      for (int i = 0; i < logicCalls_.size(); i++) {
+        output.writeMessage(7, logicCalls_.get(i));
+      }
+      for (int i = 0; i < logicCallConfirms_.size(); i++) {
+        output.writeMessage(8, logicCallConfirms_.get(i));
+      }
+      for (int i = 0; i < attestations_.size(); i++) {
+        output.writeMessage(9, attestations_.get(i));
+      }
+      for (int i = 0; i < delegateKeys_.size(); i++) {
+        output.writeMessage(10, delegateKeys_.get(i));
+      }
+      for (int i = 0; i < erc20ToDenoms_.size(); i++) {
+        output.writeMessage(11, erc20ToDenoms_.get(i));
+      }
+      for (int i = 0; i < unbatchedTransfers_.size(); i++) {
+        output.writeMessage(12, unbatchedTransfers_.get(i));
+      }
+      for (int i = 0; i < pendingIbcAutoForwards_.size(); i++) {
+        output.writeMessage(13, pendingIbcAutoForwards_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      if (gravityNonces_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getGravityNonces());
+      }
+      for (int i = 0; i < valsets_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, valsets_.get(i));
+      }
+      for (int i = 0; i < valsetConfirms_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, valsetConfirms_.get(i));
+      }
+      for (int i = 0; i < batches_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, batches_.get(i));
+      }
+      for (int i = 0; i < batchConfirms_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, batchConfirms_.get(i));
+      }
+      for (int i = 0; i < logicCalls_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, logicCalls_.get(i));
+      }
+      for (int i = 0; i < logicCallConfirms_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, logicCallConfirms_.get(i));
+      }
+      for (int i = 0; i < attestations_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, attestations_.get(i));
+      }
+      for (int i = 0; i < delegateKeys_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, delegateKeys_.get(i));
+      }
+      for (int i = 0; i < erc20ToDenoms_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, erc20ToDenoms_.get(i));
+      }
+      for (int i = 0; i < unbatchedTransfers_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, unbatchedTransfers_.get(i));
+      }
+      for (int i = 0; i < pendingIbcAutoForwards_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, pendingIbcAutoForwards_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.gravity.v1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.gravity.v1.GenesisProto.GenesisState other = (com.gravity.v1.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (hasGravityNonces() != other.hasGravityNonces()) return false;
+      if (hasGravityNonces()) {
+        if (!getGravityNonces()
+            .equals(other.getGravityNonces())) return false;
+      }
+      if (!getValsetsList()
+          .equals(other.getValsetsList())) return false;
+      if (!getValsetConfirmsList()
+          .equals(other.getValsetConfirmsList())) return false;
+      if (!getBatchesList()
+          .equals(other.getBatchesList())) return false;
+      if (!getBatchConfirmsList()
+          .equals(other.getBatchConfirmsList())) return false;
+      if (!getLogicCallsList()
+          .equals(other.getLogicCallsList())) return false;
+      if (!getLogicCallConfirmsList()
+          .equals(other.getLogicCallConfirmsList())) return false;
+      if (!getAttestationsList()
+          .equals(other.getAttestationsList())) return false;
+      if (!getDelegateKeysList()
+          .equals(other.getDelegateKeysList())) return false;
+      if (!getErc20ToDenomsList()
+          .equals(other.getErc20ToDenomsList())) return false;
+      if (!getUnbatchedTransfersList()
+          .equals(other.getUnbatchedTransfersList())) return false;
+      if (!getPendingIbcAutoForwardsList()
+          .equals(other.getPendingIbcAutoForwardsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (hasGravityNonces()) {
+        hash = (37 * hash) + GRAVITY_NONCES_FIELD_NUMBER;
+        hash = (53 * hash) + getGravityNonces().hashCode();
+      }
+      if (getValsetsCount() > 0) {
+        hash = (37 * hash) + VALSETS_FIELD_NUMBER;
+        hash = (53 * hash) + getValsetsList().hashCode();
+      }
+      if (getValsetConfirmsCount() > 0) {
+        hash = (37 * hash) + VALSET_CONFIRMS_FIELD_NUMBER;
+        hash = (53 * hash) + getValsetConfirmsList().hashCode();
+      }
+      if (getBatchesCount() > 0) {
+        hash = (37 * hash) + BATCHES_FIELD_NUMBER;
+        hash = (53 * hash) + getBatchesList().hashCode();
+      }
+      if (getBatchConfirmsCount() > 0) {
+        hash = (37 * hash) + BATCH_CONFIRMS_FIELD_NUMBER;
+        hash = (53 * hash) + getBatchConfirmsList().hashCode();
+      }
+      if (getLogicCallsCount() > 0) {
+        hash = (37 * hash) + LOGIC_CALLS_FIELD_NUMBER;
+        hash = (53 * hash) + getLogicCallsList().hashCode();
+      }
+      if (getLogicCallConfirmsCount() > 0) {
+        hash = (37 * hash) + LOGIC_CALL_CONFIRMS_FIELD_NUMBER;
+        hash = (53 * hash) + getLogicCallConfirmsList().hashCode();
+      }
+      if (getAttestationsCount() > 0) {
+        hash = (37 * hash) + ATTESTATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getAttestationsList().hashCode();
+      }
+      if (getDelegateKeysCount() > 0) {
+        hash = (37 * hash) + DELEGATE_KEYS_FIELD_NUMBER;
+        hash = (53 * hash) + getDelegateKeysList().hashCode();
+      }
+      if (getErc20ToDenomsCount() > 0) {
+        hash = (37 * hash) + ERC20_TO_DENOMS_FIELD_NUMBER;
+        hash = (53 * hash) + getErc20ToDenomsList().hashCode();
+      }
+      if (getUnbatchedTransfersCount() > 0) {
+        hash = (37 * hash) + UNBATCHED_TRANSFERS_FIELD_NUMBER;
+        hash = (53 * hash) + getUnbatchedTransfersList().hashCode();
+      }
+      if (getPendingIbcAutoForwardsCount() > 0) {
+        hash = (37 * hash) + PENDING_IBC_AUTO_FORWARDS_FIELD_NUMBER;
+        hash = (53 * hash) + getPendingIbcAutoForwardsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.gravity.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gravity.v1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.gravity.v1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.gravity.v1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.gravity.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gravity.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.gravity.v1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState struct, containing all persistant data required by the Gravity module
+     * </pre>
+     *
+     * Protobuf type {@code gravity.v1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:gravity.v1.GenesisState)
+        com.gravity.v1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.gravity.v1.GenesisProto.internal_static_gravity_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.gravity.v1.GenesisProto.internal_static_gravity_v1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.gravity.v1.GenesisProto.GenesisState.class, com.gravity.v1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.gravity.v1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        gravityNonces_ = null;
+        if (gravityNoncesBuilder_ != null) {
+          gravityNoncesBuilder_.dispose();
+          gravityNoncesBuilder_ = null;
+        }
+        if (valsetsBuilder_ == null) {
+          valsets_ = java.util.Collections.emptyList();
+        } else {
+          valsets_ = null;
+          valsetsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (valsetConfirmsBuilder_ == null) {
+          valsetConfirms_ = java.util.Collections.emptyList();
+        } else {
+          valsetConfirms_ = null;
+          valsetConfirmsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (batchesBuilder_ == null) {
+          batches_ = java.util.Collections.emptyList();
+        } else {
+          batches_ = null;
+          batchesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (batchConfirmsBuilder_ == null) {
+          batchConfirms_ = java.util.Collections.emptyList();
+        } else {
+          batchConfirms_ = null;
+          batchConfirmsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        if (logicCallsBuilder_ == null) {
+          logicCalls_ = java.util.Collections.emptyList();
+        } else {
+          logicCalls_ = null;
+          logicCallsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        if (logicCallConfirmsBuilder_ == null) {
+          logicCallConfirms_ = java.util.Collections.emptyList();
+        } else {
+          logicCallConfirms_ = null;
+          logicCallConfirmsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        if (attestationsBuilder_ == null) {
+          attestations_ = java.util.Collections.emptyList();
+        } else {
+          attestations_ = null;
+          attestationsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000100);
+        if (delegateKeysBuilder_ == null) {
+          delegateKeys_ = java.util.Collections.emptyList();
+        } else {
+          delegateKeys_ = null;
+          delegateKeysBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000200);
+        if (erc20ToDenomsBuilder_ == null) {
+          erc20ToDenoms_ = java.util.Collections.emptyList();
+        } else {
+          erc20ToDenoms_ = null;
+          erc20ToDenomsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000400);
+        if (unbatchedTransfersBuilder_ == null) {
+          unbatchedTransfers_ = java.util.Collections.emptyList();
+        } else {
+          unbatchedTransfers_ = null;
+          unbatchedTransfersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000800);
+        if (pendingIbcAutoForwardsBuilder_ == null) {
+          pendingIbcAutoForwards_ = java.util.Collections.emptyList();
+        } else {
+          pendingIbcAutoForwards_ = null;
+          pendingIbcAutoForwardsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00001000);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.gravity.v1.GenesisProto.internal_static_gravity_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.gravity.v1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.GenesisProto.GenesisState build() {
+        com.gravity.v1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.GenesisProto.GenesisState buildPartial() {
+        com.gravity.v1.GenesisProto.GenesisState result = new com.gravity.v1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.gravity.v1.GenesisProto.GenesisState result) {
+        if (valsetsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            valsets_ = java.util.Collections.unmodifiableList(valsets_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.valsets_ = valsets_;
+        } else {
+          result.valsets_ = valsetsBuilder_.build();
+        }
+        if (valsetConfirmsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            valsetConfirms_ = java.util.Collections.unmodifiableList(valsetConfirms_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.valsetConfirms_ = valsetConfirms_;
+        } else {
+          result.valsetConfirms_ = valsetConfirmsBuilder_.build();
+        }
+        if (batchesBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            batches_ = java.util.Collections.unmodifiableList(batches_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.batches_ = batches_;
+        } else {
+          result.batches_ = batchesBuilder_.build();
+        }
+        if (batchConfirmsBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            batchConfirms_ = java.util.Collections.unmodifiableList(batchConfirms_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.batchConfirms_ = batchConfirms_;
+        } else {
+          result.batchConfirms_ = batchConfirmsBuilder_.build();
+        }
+        if (logicCallsBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0)) {
+            logicCalls_ = java.util.Collections.unmodifiableList(logicCalls_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.logicCalls_ = logicCalls_;
+        } else {
+          result.logicCalls_ = logicCallsBuilder_.build();
+        }
+        if (logicCallConfirmsBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0)) {
+            logicCallConfirms_ = java.util.Collections.unmodifiableList(logicCallConfirms_);
+            bitField0_ = (bitField0_ & ~0x00000080);
+          }
+          result.logicCallConfirms_ = logicCallConfirms_;
+        } else {
+          result.logicCallConfirms_ = logicCallConfirmsBuilder_.build();
+        }
+        if (attestationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0)) {
+            attestations_ = java.util.Collections.unmodifiableList(attestations_);
+            bitField0_ = (bitField0_ & ~0x00000100);
+          }
+          result.attestations_ = attestations_;
+        } else {
+          result.attestations_ = attestationsBuilder_.build();
+        }
+        if (delegateKeysBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) != 0)) {
+            delegateKeys_ = java.util.Collections.unmodifiableList(delegateKeys_);
+            bitField0_ = (bitField0_ & ~0x00000200);
+          }
+          result.delegateKeys_ = delegateKeys_;
+        } else {
+          result.delegateKeys_ = delegateKeysBuilder_.build();
+        }
+        if (erc20ToDenomsBuilder_ == null) {
+          if (((bitField0_ & 0x00000400) != 0)) {
+            erc20ToDenoms_ = java.util.Collections.unmodifiableList(erc20ToDenoms_);
+            bitField0_ = (bitField0_ & ~0x00000400);
+          }
+          result.erc20ToDenoms_ = erc20ToDenoms_;
+        } else {
+          result.erc20ToDenoms_ = erc20ToDenomsBuilder_.build();
+        }
+        if (unbatchedTransfersBuilder_ == null) {
+          if (((bitField0_ & 0x00000800) != 0)) {
+            unbatchedTransfers_ = java.util.Collections.unmodifiableList(unbatchedTransfers_);
+            bitField0_ = (bitField0_ & ~0x00000800);
+          }
+          result.unbatchedTransfers_ = unbatchedTransfers_;
+        } else {
+          result.unbatchedTransfers_ = unbatchedTransfersBuilder_.build();
+        }
+        if (pendingIbcAutoForwardsBuilder_ == null) {
+          if (((bitField0_ & 0x00001000) != 0)) {
+            pendingIbcAutoForwards_ = java.util.Collections.unmodifiableList(pendingIbcAutoForwards_);
+            bitField0_ = (bitField0_ & ~0x00001000);
+          }
+          result.pendingIbcAutoForwards_ = pendingIbcAutoForwards_;
+        } else {
+          result.pendingIbcAutoForwards_ = pendingIbcAutoForwardsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.gravity.v1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.gravityNonces_ = gravityNoncesBuilder_ == null
+              ? gravityNonces_
+              : gravityNoncesBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.gravity.v1.GenesisProto.GenesisState) {
+          return mergeFrom((com.gravity.v1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.gravity.v1.GenesisProto.GenesisState other) {
+        if (other == com.gravity.v1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (other.hasGravityNonces()) {
+          mergeGravityNonces(other.getGravityNonces());
+        }
+        if (valsetsBuilder_ == null) {
+          if (!other.valsets_.isEmpty()) {
+            if (valsets_.isEmpty()) {
+              valsets_ = other.valsets_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureValsetsIsMutable();
+              valsets_.addAll(other.valsets_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.valsets_.isEmpty()) {
+            if (valsetsBuilder_.isEmpty()) {
+              valsetsBuilder_.dispose();
+              valsetsBuilder_ = null;
+              valsets_ = other.valsets_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              valsetsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getValsetsFieldBuilder() : null;
+            } else {
+              valsetsBuilder_.addAllMessages(other.valsets_);
+            }
+          }
+        }
+        if (valsetConfirmsBuilder_ == null) {
+          if (!other.valsetConfirms_.isEmpty()) {
+            if (valsetConfirms_.isEmpty()) {
+              valsetConfirms_ = other.valsetConfirms_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureValsetConfirmsIsMutable();
+              valsetConfirms_.addAll(other.valsetConfirms_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.valsetConfirms_.isEmpty()) {
+            if (valsetConfirmsBuilder_.isEmpty()) {
+              valsetConfirmsBuilder_.dispose();
+              valsetConfirmsBuilder_ = null;
+              valsetConfirms_ = other.valsetConfirms_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              valsetConfirmsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getValsetConfirmsFieldBuilder() : null;
+            } else {
+              valsetConfirmsBuilder_.addAllMessages(other.valsetConfirms_);
+            }
+          }
+        }
+        if (batchesBuilder_ == null) {
+          if (!other.batches_.isEmpty()) {
+            if (batches_.isEmpty()) {
+              batches_ = other.batches_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureBatchesIsMutable();
+              batches_.addAll(other.batches_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.batches_.isEmpty()) {
+            if (batchesBuilder_.isEmpty()) {
+              batchesBuilder_.dispose();
+              batchesBuilder_ = null;
+              batches_ = other.batches_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              batchesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBatchesFieldBuilder() : null;
+            } else {
+              batchesBuilder_.addAllMessages(other.batches_);
+            }
+          }
+        }
+        if (batchConfirmsBuilder_ == null) {
+          if (!other.batchConfirms_.isEmpty()) {
+            if (batchConfirms_.isEmpty()) {
+              batchConfirms_ = other.batchConfirms_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureBatchConfirmsIsMutable();
+              batchConfirms_.addAll(other.batchConfirms_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.batchConfirms_.isEmpty()) {
+            if (batchConfirmsBuilder_.isEmpty()) {
+              batchConfirmsBuilder_.dispose();
+              batchConfirmsBuilder_ = null;
+              batchConfirms_ = other.batchConfirms_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              batchConfirmsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBatchConfirmsFieldBuilder() : null;
+            } else {
+              batchConfirmsBuilder_.addAllMessages(other.batchConfirms_);
+            }
+          }
+        }
+        if (logicCallsBuilder_ == null) {
+          if (!other.logicCalls_.isEmpty()) {
+            if (logicCalls_.isEmpty()) {
+              logicCalls_ = other.logicCalls_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureLogicCallsIsMutable();
+              logicCalls_.addAll(other.logicCalls_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.logicCalls_.isEmpty()) {
+            if (logicCallsBuilder_.isEmpty()) {
+              logicCallsBuilder_.dispose();
+              logicCallsBuilder_ = null;
+              logicCalls_ = other.logicCalls_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              logicCallsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLogicCallsFieldBuilder() : null;
+            } else {
+              logicCallsBuilder_.addAllMessages(other.logicCalls_);
+            }
+          }
+        }
+        if (logicCallConfirmsBuilder_ == null) {
+          if (!other.logicCallConfirms_.isEmpty()) {
+            if (logicCallConfirms_.isEmpty()) {
+              logicCallConfirms_ = other.logicCallConfirms_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+            } else {
+              ensureLogicCallConfirmsIsMutable();
+              logicCallConfirms_.addAll(other.logicCallConfirms_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.logicCallConfirms_.isEmpty()) {
+            if (logicCallConfirmsBuilder_.isEmpty()) {
+              logicCallConfirmsBuilder_.dispose();
+              logicCallConfirmsBuilder_ = null;
+              logicCallConfirms_ = other.logicCallConfirms_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+              logicCallConfirmsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLogicCallConfirmsFieldBuilder() : null;
+            } else {
+              logicCallConfirmsBuilder_.addAllMessages(other.logicCallConfirms_);
+            }
+          }
+        }
+        if (attestationsBuilder_ == null) {
+          if (!other.attestations_.isEmpty()) {
+            if (attestations_.isEmpty()) {
+              attestations_ = other.attestations_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+            } else {
+              ensureAttestationsIsMutable();
+              attestations_.addAll(other.attestations_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.attestations_.isEmpty()) {
+            if (attestationsBuilder_.isEmpty()) {
+              attestationsBuilder_.dispose();
+              attestationsBuilder_ = null;
+              attestations_ = other.attestations_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+              attestationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAttestationsFieldBuilder() : null;
+            } else {
+              attestationsBuilder_.addAllMessages(other.attestations_);
+            }
+          }
+        }
+        if (delegateKeysBuilder_ == null) {
+          if (!other.delegateKeys_.isEmpty()) {
+            if (delegateKeys_.isEmpty()) {
+              delegateKeys_ = other.delegateKeys_;
+              bitField0_ = (bitField0_ & ~0x00000200);
+            } else {
+              ensureDelegateKeysIsMutable();
+              delegateKeys_.addAll(other.delegateKeys_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.delegateKeys_.isEmpty()) {
+            if (delegateKeysBuilder_.isEmpty()) {
+              delegateKeysBuilder_.dispose();
+              delegateKeysBuilder_ = null;
+              delegateKeys_ = other.delegateKeys_;
+              bitField0_ = (bitField0_ & ~0x00000200);
+              delegateKeysBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDelegateKeysFieldBuilder() : null;
+            } else {
+              delegateKeysBuilder_.addAllMessages(other.delegateKeys_);
+            }
+          }
+        }
+        if (erc20ToDenomsBuilder_ == null) {
+          if (!other.erc20ToDenoms_.isEmpty()) {
+            if (erc20ToDenoms_.isEmpty()) {
+              erc20ToDenoms_ = other.erc20ToDenoms_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+            } else {
+              ensureErc20ToDenomsIsMutable();
+              erc20ToDenoms_.addAll(other.erc20ToDenoms_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.erc20ToDenoms_.isEmpty()) {
+            if (erc20ToDenomsBuilder_.isEmpty()) {
+              erc20ToDenomsBuilder_.dispose();
+              erc20ToDenomsBuilder_ = null;
+              erc20ToDenoms_ = other.erc20ToDenoms_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+              erc20ToDenomsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getErc20ToDenomsFieldBuilder() : null;
+            } else {
+              erc20ToDenomsBuilder_.addAllMessages(other.erc20ToDenoms_);
+            }
+          }
+        }
+        if (unbatchedTransfersBuilder_ == null) {
+          if (!other.unbatchedTransfers_.isEmpty()) {
+            if (unbatchedTransfers_.isEmpty()) {
+              unbatchedTransfers_ = other.unbatchedTransfers_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+            } else {
+              ensureUnbatchedTransfersIsMutable();
+              unbatchedTransfers_.addAll(other.unbatchedTransfers_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.unbatchedTransfers_.isEmpty()) {
+            if (unbatchedTransfersBuilder_.isEmpty()) {
+              unbatchedTransfersBuilder_.dispose();
+              unbatchedTransfersBuilder_ = null;
+              unbatchedTransfers_ = other.unbatchedTransfers_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+              unbatchedTransfersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getUnbatchedTransfersFieldBuilder() : null;
+            } else {
+              unbatchedTransfersBuilder_.addAllMessages(other.unbatchedTransfers_);
+            }
+          }
+        }
+        if (pendingIbcAutoForwardsBuilder_ == null) {
+          if (!other.pendingIbcAutoForwards_.isEmpty()) {
+            if (pendingIbcAutoForwards_.isEmpty()) {
+              pendingIbcAutoForwards_ = other.pendingIbcAutoForwards_;
+              bitField0_ = (bitField0_ & ~0x00001000);
+            } else {
+              ensurePendingIbcAutoForwardsIsMutable();
+              pendingIbcAutoForwards_.addAll(other.pendingIbcAutoForwards_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.pendingIbcAutoForwards_.isEmpty()) {
+            if (pendingIbcAutoForwardsBuilder_.isEmpty()) {
+              pendingIbcAutoForwardsBuilder_.dispose();
+              pendingIbcAutoForwardsBuilder_ = null;
+              pendingIbcAutoForwards_ = other.pendingIbcAutoForwards_;
+              bitField0_ = (bitField0_ & ~0x00001000);
+              pendingIbcAutoForwardsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPendingIbcAutoForwardsFieldBuilder() : null;
+            } else {
+              pendingIbcAutoForwardsBuilder_.addAllMessages(other.pendingIbcAutoForwards_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getGravityNoncesFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.gravity.v1.TypesProto.Valset m =
+                    input.readMessage(
+                        com.gravity.v1.TypesProto.Valset.parser(),
+                        extensionRegistry);
+                if (valsetsBuilder_ == null) {
+                  ensureValsetsIsMutable();
+                  valsets_.add(m);
+                } else {
+                  valsetsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                com.gravity.v1.MsgsProto.MsgValsetConfirm m =
+                    input.readMessage(
+                        com.gravity.v1.MsgsProto.MsgValsetConfirm.parser(),
+                        extensionRegistry);
+                if (valsetConfirmsBuilder_ == null) {
+                  ensureValsetConfirmsIsMutable();
+                  valsetConfirms_.add(m);
+                } else {
+                  valsetConfirmsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                com.gravity.v1.BatchProto.OutgoingTxBatch m =
+                    input.readMessage(
+                        com.gravity.v1.BatchProto.OutgoingTxBatch.parser(),
+                        extensionRegistry);
+                if (batchesBuilder_ == null) {
+                  ensureBatchesIsMutable();
+                  batches_.add(m);
+                } else {
+                  batchesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                com.gravity.v1.MsgsProto.MsgConfirmBatch m =
+                    input.readMessage(
+                        com.gravity.v1.MsgsProto.MsgConfirmBatch.parser(),
+                        extensionRegistry);
+                if (batchConfirmsBuilder_ == null) {
+                  ensureBatchConfirmsIsMutable();
+                  batchConfirms_.add(m);
+                } else {
+                  batchConfirmsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 58: {
+                com.gravity.v1.BatchProto.OutgoingLogicCall m =
+                    input.readMessage(
+                        com.gravity.v1.BatchProto.OutgoingLogicCall.parser(),
+                        extensionRegistry);
+                if (logicCallsBuilder_ == null) {
+                  ensureLogicCallsIsMutable();
+                  logicCalls_.add(m);
+                } else {
+                  logicCallsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              case 66: {
+                com.gravity.v1.MsgsProto.MsgConfirmLogicCall m =
+                    input.readMessage(
+                        com.gravity.v1.MsgsProto.MsgConfirmLogicCall.parser(),
+                        extensionRegistry);
+                if (logicCallConfirmsBuilder_ == null) {
+                  ensureLogicCallConfirmsIsMutable();
+                  logicCallConfirms_.add(m);
+                } else {
+                  logicCallConfirmsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 66
+              case 74: {
+                com.gravity.v1.AttestationProto.Attestation m =
+                    input.readMessage(
+                        com.gravity.v1.AttestationProto.Attestation.parser(),
+                        extensionRegistry);
+                if (attestationsBuilder_ == null) {
+                  ensureAttestationsIsMutable();
+                  attestations_.add(m);
+                } else {
+                  attestationsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 74
+              case 82: {
+                com.gravity.v1.MsgsProto.MsgSetOrchestratorAddress m =
+                    input.readMessage(
+                        com.gravity.v1.MsgsProto.MsgSetOrchestratorAddress.parser(),
+                        extensionRegistry);
+                if (delegateKeysBuilder_ == null) {
+                  ensureDelegateKeysIsMutable();
+                  delegateKeys_.add(m);
+                } else {
+                  delegateKeysBuilder_.addMessage(m);
+                }
+                break;
+              } // case 82
+              case 90: {
+                com.gravity.v1.TypesProto.ERC20ToDenom m =
+                    input.readMessage(
+                        com.gravity.v1.TypesProto.ERC20ToDenom.parser(),
+                        extensionRegistry);
+                if (erc20ToDenomsBuilder_ == null) {
+                  ensureErc20ToDenomsIsMutable();
+                  erc20ToDenoms_.add(m);
+                } else {
+                  erc20ToDenomsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 90
+              case 98: {
+                com.gravity.v1.BatchProto.OutgoingTransferTx m =
+                    input.readMessage(
+                        com.gravity.v1.BatchProto.OutgoingTransferTx.parser(),
+                        extensionRegistry);
+                if (unbatchedTransfersBuilder_ == null) {
+                  ensureUnbatchedTransfersIsMutable();
+                  unbatchedTransfers_.add(m);
+                } else {
+                  unbatchedTransfersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 98
+              case 106: {
+                com.gravity.v1.TypesProto.PendingIbcAutoForward m =
+                    input.readMessage(
+                        com.gravity.v1.TypesProto.PendingIbcAutoForward.parser(),
+                        extensionRegistry);
+                if (pendingIbcAutoForwardsBuilder_ == null) {
+                  ensurePendingIbcAutoForwardsIsMutable();
+                  pendingIbcAutoForwards_.add(m);
+                } else {
+                  pendingIbcAutoForwardsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 106
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.gravity.v1.GenesisProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.gravity.v1.GenesisProto.Params, com.gravity.v1.GenesisProto.Params.Builder, com.gravity.v1.GenesisProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.gravity.v1.Params params = 1 [json_name = "params"];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.gravity.v1.Params params = 1 [json_name = "params"];</code>
+       * @return The params.
+       */
+      public com.gravity.v1.GenesisProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.gravity.v1.GenesisProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.gravity.v1.Params params = 1 [json_name = "params"];</code>
+       */
+      public Builder setParams(com.gravity.v1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.gravity.v1.Params params = 1 [json_name = "params"];</code>
+       */
+      public Builder setParams(
+          com.gravity.v1.GenesisProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.gravity.v1.Params params = 1 [json_name = "params"];</code>
+       */
+      public Builder mergeParams(com.gravity.v1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.gravity.v1.GenesisProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.gravity.v1.Params params = 1 [json_name = "params"];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.gravity.v1.Params params = 1 [json_name = "params"];</code>
+       */
+      public com.gravity.v1.GenesisProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.gravity.v1.Params params = 1 [json_name = "params"];</code>
+       */
+      public com.gravity.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.gravity.v1.GenesisProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.gravity.v1.Params params = 1 [json_name = "params"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.gravity.v1.GenesisProto.Params, com.gravity.v1.GenesisProto.Params.Builder, com.gravity.v1.GenesisProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.gravity.v1.GenesisProto.Params, com.gravity.v1.GenesisProto.Params.Builder, com.gravity.v1.GenesisProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private com.gravity.v1.GenesisProto.GravityNonces gravityNonces_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.gravity.v1.GenesisProto.GravityNonces, com.gravity.v1.GenesisProto.GravityNonces.Builder, com.gravity.v1.GenesisProto.GravityNoncesOrBuilder> gravityNoncesBuilder_;
+      /**
+       * <code>.gravity.v1.GravityNonces gravity_nonces = 2 [json_name = "gravityNonces", (.gogoproto.nullable) = false];</code>
+       * @return Whether the gravityNonces field is set.
+       */
+      public boolean hasGravityNonces() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.gravity.v1.GravityNonces gravity_nonces = 2 [json_name = "gravityNonces", (.gogoproto.nullable) = false];</code>
+       * @return The gravityNonces.
+       */
+      public com.gravity.v1.GenesisProto.GravityNonces getGravityNonces() {
+        if (gravityNoncesBuilder_ == null) {
+          return gravityNonces_ == null ? com.gravity.v1.GenesisProto.GravityNonces.getDefaultInstance() : gravityNonces_;
+        } else {
+          return gravityNoncesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.gravity.v1.GravityNonces gravity_nonces = 2 [json_name = "gravityNonces", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGravityNonces(com.gravity.v1.GenesisProto.GravityNonces value) {
+        if (gravityNoncesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          gravityNonces_ = value;
+        } else {
+          gravityNoncesBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.gravity.v1.GravityNonces gravity_nonces = 2 [json_name = "gravityNonces", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGravityNonces(
+          com.gravity.v1.GenesisProto.GravityNonces.Builder builderForValue) {
+        if (gravityNoncesBuilder_ == null) {
+          gravityNonces_ = builderForValue.build();
+        } else {
+          gravityNoncesBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.gravity.v1.GravityNonces gravity_nonces = 2 [json_name = "gravityNonces", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeGravityNonces(com.gravity.v1.GenesisProto.GravityNonces value) {
+        if (gravityNoncesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            gravityNonces_ != null &&
+            gravityNonces_ != com.gravity.v1.GenesisProto.GravityNonces.getDefaultInstance()) {
+            getGravityNoncesBuilder().mergeFrom(value);
+          } else {
+            gravityNonces_ = value;
+          }
+        } else {
+          gravityNoncesBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.gravity.v1.GravityNonces gravity_nonces = 2 [json_name = "gravityNonces", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearGravityNonces() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        gravityNonces_ = null;
+        if (gravityNoncesBuilder_ != null) {
+          gravityNoncesBuilder_.dispose();
+          gravityNoncesBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.gravity.v1.GravityNonces gravity_nonces = 2 [json_name = "gravityNonces", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.GenesisProto.GravityNonces.Builder getGravityNoncesBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getGravityNoncesFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.gravity.v1.GravityNonces gravity_nonces = 2 [json_name = "gravityNonces", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.GenesisProto.GravityNoncesOrBuilder getGravityNoncesOrBuilder() {
+        if (gravityNoncesBuilder_ != null) {
+          return gravityNoncesBuilder_.getMessageOrBuilder();
+        } else {
+          return gravityNonces_ == null ?
+              com.gravity.v1.GenesisProto.GravityNonces.getDefaultInstance() : gravityNonces_;
+        }
+      }
+      /**
+       * <code>.gravity.v1.GravityNonces gravity_nonces = 2 [json_name = "gravityNonces", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.gravity.v1.GenesisProto.GravityNonces, com.gravity.v1.GenesisProto.GravityNonces.Builder, com.gravity.v1.GenesisProto.GravityNoncesOrBuilder> 
+          getGravityNoncesFieldBuilder() {
+        if (gravityNoncesBuilder_ == null) {
+          gravityNoncesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.gravity.v1.GenesisProto.GravityNonces, com.gravity.v1.GenesisProto.GravityNonces.Builder, com.gravity.v1.GenesisProto.GravityNoncesOrBuilder>(
+                  getGravityNonces(),
+                  getParentForChildren(),
+                  isClean());
+          gravityNonces_ = null;
+        }
+        return gravityNoncesBuilder_;
+      }
+
+      private java.util.List<com.gravity.v1.TypesProto.Valset> valsets_ =
+        java.util.Collections.emptyList();
+      private void ensureValsetsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          valsets_ = new java.util.ArrayList<com.gravity.v1.TypesProto.Valset>(valsets_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.gravity.v1.TypesProto.Valset, com.gravity.v1.TypesProto.Valset.Builder, com.gravity.v1.TypesProto.ValsetOrBuilder> valsetsBuilder_;
+
+      /**
+       * <code>repeated .gravity.v1.Valset valsets = 3 [json_name = "valsets", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.gravity.v1.TypesProto.Valset> getValsetsList() {
+        if (valsetsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(valsets_);
+        } else {
+          return valsetsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.Valset valsets = 3 [json_name = "valsets", (.gogoproto.nullable) = false];</code>
+       */
+      public int getValsetsCount() {
+        if (valsetsBuilder_ == null) {
+          return valsets_.size();
+        } else {
+          return valsetsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.Valset valsets = 3 [json_name = "valsets", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.TypesProto.Valset getValsets(int index) {
+        if (valsetsBuilder_ == null) {
+          return valsets_.get(index);
+        } else {
+          return valsetsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.Valset valsets = 3 [json_name = "valsets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setValsets(
+          int index, com.gravity.v1.TypesProto.Valset value) {
+        if (valsetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValsetsIsMutable();
+          valsets_.set(index, value);
+          onChanged();
+        } else {
+          valsetsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.Valset valsets = 3 [json_name = "valsets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setValsets(
+          int index, com.gravity.v1.TypesProto.Valset.Builder builderForValue) {
+        if (valsetsBuilder_ == null) {
+          ensureValsetsIsMutable();
+          valsets_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          valsetsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.Valset valsets = 3 [json_name = "valsets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addValsets(com.gravity.v1.TypesProto.Valset value) {
+        if (valsetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValsetsIsMutable();
+          valsets_.add(value);
+          onChanged();
+        } else {
+          valsetsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.Valset valsets = 3 [json_name = "valsets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addValsets(
+          int index, com.gravity.v1.TypesProto.Valset value) {
+        if (valsetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValsetsIsMutable();
+          valsets_.add(index, value);
+          onChanged();
+        } else {
+          valsetsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.Valset valsets = 3 [json_name = "valsets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addValsets(
+          com.gravity.v1.TypesProto.Valset.Builder builderForValue) {
+        if (valsetsBuilder_ == null) {
+          ensureValsetsIsMutable();
+          valsets_.add(builderForValue.build());
+          onChanged();
+        } else {
+          valsetsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.Valset valsets = 3 [json_name = "valsets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addValsets(
+          int index, com.gravity.v1.TypesProto.Valset.Builder builderForValue) {
+        if (valsetsBuilder_ == null) {
+          ensureValsetsIsMutable();
+          valsets_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          valsetsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.Valset valsets = 3 [json_name = "valsets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllValsets(
+          java.lang.Iterable<? extends com.gravity.v1.TypesProto.Valset> values) {
+        if (valsetsBuilder_ == null) {
+          ensureValsetsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, valsets_);
+          onChanged();
+        } else {
+          valsetsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.Valset valsets = 3 [json_name = "valsets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearValsets() {
+        if (valsetsBuilder_ == null) {
+          valsets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          valsetsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.Valset valsets = 3 [json_name = "valsets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeValsets(int index) {
+        if (valsetsBuilder_ == null) {
+          ensureValsetsIsMutable();
+          valsets_.remove(index);
+          onChanged();
+        } else {
+          valsetsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.Valset valsets = 3 [json_name = "valsets", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.TypesProto.Valset.Builder getValsetsBuilder(
+          int index) {
+        return getValsetsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .gravity.v1.Valset valsets = 3 [json_name = "valsets", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.TypesProto.ValsetOrBuilder getValsetsOrBuilder(
+          int index) {
+        if (valsetsBuilder_ == null) {
+          return valsets_.get(index);  } else {
+          return valsetsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.Valset valsets = 3 [json_name = "valsets", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.gravity.v1.TypesProto.ValsetOrBuilder> 
+           getValsetsOrBuilderList() {
+        if (valsetsBuilder_ != null) {
+          return valsetsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(valsets_);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.Valset valsets = 3 [json_name = "valsets", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.TypesProto.Valset.Builder addValsetsBuilder() {
+        return getValsetsFieldBuilder().addBuilder(
+            com.gravity.v1.TypesProto.Valset.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .gravity.v1.Valset valsets = 3 [json_name = "valsets", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.TypesProto.Valset.Builder addValsetsBuilder(
+          int index) {
+        return getValsetsFieldBuilder().addBuilder(
+            index, com.gravity.v1.TypesProto.Valset.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .gravity.v1.Valset valsets = 3 [json_name = "valsets", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.gravity.v1.TypesProto.Valset.Builder> 
+           getValsetsBuilderList() {
+        return getValsetsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.gravity.v1.TypesProto.Valset, com.gravity.v1.TypesProto.Valset.Builder, com.gravity.v1.TypesProto.ValsetOrBuilder> 
+          getValsetsFieldBuilder() {
+        if (valsetsBuilder_ == null) {
+          valsetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.gravity.v1.TypesProto.Valset, com.gravity.v1.TypesProto.Valset.Builder, com.gravity.v1.TypesProto.ValsetOrBuilder>(
+                  valsets_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          valsets_ = null;
+        }
+        return valsetsBuilder_;
+      }
+
+      private java.util.List<com.gravity.v1.MsgsProto.MsgValsetConfirm> valsetConfirms_ =
+        java.util.Collections.emptyList();
+      private void ensureValsetConfirmsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          valsetConfirms_ = new java.util.ArrayList<com.gravity.v1.MsgsProto.MsgValsetConfirm>(valsetConfirms_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.gravity.v1.MsgsProto.MsgValsetConfirm, com.gravity.v1.MsgsProto.MsgValsetConfirm.Builder, com.gravity.v1.MsgsProto.MsgValsetConfirmOrBuilder> valsetConfirmsBuilder_;
+
+      /**
+       * <code>repeated .gravity.v1.MsgValsetConfirm valset_confirms = 4 [json_name = "valsetConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.gravity.v1.MsgsProto.MsgValsetConfirm> getValsetConfirmsList() {
+        if (valsetConfirmsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(valsetConfirms_);
+        } else {
+          return valsetConfirmsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgValsetConfirm valset_confirms = 4 [json_name = "valsetConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public int getValsetConfirmsCount() {
+        if (valsetConfirmsBuilder_ == null) {
+          return valsetConfirms_.size();
+        } else {
+          return valsetConfirmsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgValsetConfirm valset_confirms = 4 [json_name = "valsetConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.MsgsProto.MsgValsetConfirm getValsetConfirms(int index) {
+        if (valsetConfirmsBuilder_ == null) {
+          return valsetConfirms_.get(index);
+        } else {
+          return valsetConfirmsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgValsetConfirm valset_confirms = 4 [json_name = "valsetConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setValsetConfirms(
+          int index, com.gravity.v1.MsgsProto.MsgValsetConfirm value) {
+        if (valsetConfirmsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValsetConfirmsIsMutable();
+          valsetConfirms_.set(index, value);
+          onChanged();
+        } else {
+          valsetConfirmsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgValsetConfirm valset_confirms = 4 [json_name = "valsetConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setValsetConfirms(
+          int index, com.gravity.v1.MsgsProto.MsgValsetConfirm.Builder builderForValue) {
+        if (valsetConfirmsBuilder_ == null) {
+          ensureValsetConfirmsIsMutable();
+          valsetConfirms_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          valsetConfirmsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgValsetConfirm valset_confirms = 4 [json_name = "valsetConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addValsetConfirms(com.gravity.v1.MsgsProto.MsgValsetConfirm value) {
+        if (valsetConfirmsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValsetConfirmsIsMutable();
+          valsetConfirms_.add(value);
+          onChanged();
+        } else {
+          valsetConfirmsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgValsetConfirm valset_confirms = 4 [json_name = "valsetConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addValsetConfirms(
+          int index, com.gravity.v1.MsgsProto.MsgValsetConfirm value) {
+        if (valsetConfirmsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValsetConfirmsIsMutable();
+          valsetConfirms_.add(index, value);
+          onChanged();
+        } else {
+          valsetConfirmsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgValsetConfirm valset_confirms = 4 [json_name = "valsetConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addValsetConfirms(
+          com.gravity.v1.MsgsProto.MsgValsetConfirm.Builder builderForValue) {
+        if (valsetConfirmsBuilder_ == null) {
+          ensureValsetConfirmsIsMutable();
+          valsetConfirms_.add(builderForValue.build());
+          onChanged();
+        } else {
+          valsetConfirmsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgValsetConfirm valset_confirms = 4 [json_name = "valsetConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addValsetConfirms(
+          int index, com.gravity.v1.MsgsProto.MsgValsetConfirm.Builder builderForValue) {
+        if (valsetConfirmsBuilder_ == null) {
+          ensureValsetConfirmsIsMutable();
+          valsetConfirms_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          valsetConfirmsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgValsetConfirm valset_confirms = 4 [json_name = "valsetConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllValsetConfirms(
+          java.lang.Iterable<? extends com.gravity.v1.MsgsProto.MsgValsetConfirm> values) {
+        if (valsetConfirmsBuilder_ == null) {
+          ensureValsetConfirmsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, valsetConfirms_);
+          onChanged();
+        } else {
+          valsetConfirmsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgValsetConfirm valset_confirms = 4 [json_name = "valsetConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearValsetConfirms() {
+        if (valsetConfirmsBuilder_ == null) {
+          valsetConfirms_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          valsetConfirmsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgValsetConfirm valset_confirms = 4 [json_name = "valsetConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeValsetConfirms(int index) {
+        if (valsetConfirmsBuilder_ == null) {
+          ensureValsetConfirmsIsMutable();
+          valsetConfirms_.remove(index);
+          onChanged();
+        } else {
+          valsetConfirmsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgValsetConfirm valset_confirms = 4 [json_name = "valsetConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.MsgsProto.MsgValsetConfirm.Builder getValsetConfirmsBuilder(
+          int index) {
+        return getValsetConfirmsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgValsetConfirm valset_confirms = 4 [json_name = "valsetConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.MsgsProto.MsgValsetConfirmOrBuilder getValsetConfirmsOrBuilder(
+          int index) {
+        if (valsetConfirmsBuilder_ == null) {
+          return valsetConfirms_.get(index);  } else {
+          return valsetConfirmsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgValsetConfirm valset_confirms = 4 [json_name = "valsetConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.gravity.v1.MsgsProto.MsgValsetConfirmOrBuilder> 
+           getValsetConfirmsOrBuilderList() {
+        if (valsetConfirmsBuilder_ != null) {
+          return valsetConfirmsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(valsetConfirms_);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgValsetConfirm valset_confirms = 4 [json_name = "valsetConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.MsgsProto.MsgValsetConfirm.Builder addValsetConfirmsBuilder() {
+        return getValsetConfirmsFieldBuilder().addBuilder(
+            com.gravity.v1.MsgsProto.MsgValsetConfirm.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgValsetConfirm valset_confirms = 4 [json_name = "valsetConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.MsgsProto.MsgValsetConfirm.Builder addValsetConfirmsBuilder(
+          int index) {
+        return getValsetConfirmsFieldBuilder().addBuilder(
+            index, com.gravity.v1.MsgsProto.MsgValsetConfirm.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgValsetConfirm valset_confirms = 4 [json_name = "valsetConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.gravity.v1.MsgsProto.MsgValsetConfirm.Builder> 
+           getValsetConfirmsBuilderList() {
+        return getValsetConfirmsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.gravity.v1.MsgsProto.MsgValsetConfirm, com.gravity.v1.MsgsProto.MsgValsetConfirm.Builder, com.gravity.v1.MsgsProto.MsgValsetConfirmOrBuilder> 
+          getValsetConfirmsFieldBuilder() {
+        if (valsetConfirmsBuilder_ == null) {
+          valsetConfirmsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.gravity.v1.MsgsProto.MsgValsetConfirm, com.gravity.v1.MsgsProto.MsgValsetConfirm.Builder, com.gravity.v1.MsgsProto.MsgValsetConfirmOrBuilder>(
+                  valsetConfirms_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          valsetConfirms_ = null;
+        }
+        return valsetConfirmsBuilder_;
+      }
+
+      private java.util.List<com.gravity.v1.BatchProto.OutgoingTxBatch> batches_ =
+        java.util.Collections.emptyList();
+      private void ensureBatchesIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          batches_ = new java.util.ArrayList<com.gravity.v1.BatchProto.OutgoingTxBatch>(batches_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.gravity.v1.BatchProto.OutgoingTxBatch, com.gravity.v1.BatchProto.OutgoingTxBatch.Builder, com.gravity.v1.BatchProto.OutgoingTxBatchOrBuilder> batchesBuilder_;
+
+      /**
+       * <code>repeated .gravity.v1.OutgoingTxBatch batches = 5 [json_name = "batches", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.gravity.v1.BatchProto.OutgoingTxBatch> getBatchesList() {
+        if (batchesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(batches_);
+        } else {
+          return batchesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTxBatch batches = 5 [json_name = "batches", (.gogoproto.nullable) = false];</code>
+       */
+      public int getBatchesCount() {
+        if (batchesBuilder_ == null) {
+          return batches_.size();
+        } else {
+          return batchesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTxBatch batches = 5 [json_name = "batches", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.BatchProto.OutgoingTxBatch getBatches(int index) {
+        if (batchesBuilder_ == null) {
+          return batches_.get(index);
+        } else {
+          return batchesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTxBatch batches = 5 [json_name = "batches", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBatches(
+          int index, com.gravity.v1.BatchProto.OutgoingTxBatch value) {
+        if (batchesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBatchesIsMutable();
+          batches_.set(index, value);
+          onChanged();
+        } else {
+          batchesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTxBatch batches = 5 [json_name = "batches", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBatches(
+          int index, com.gravity.v1.BatchProto.OutgoingTxBatch.Builder builderForValue) {
+        if (batchesBuilder_ == null) {
+          ensureBatchesIsMutable();
+          batches_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          batchesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTxBatch batches = 5 [json_name = "batches", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBatches(com.gravity.v1.BatchProto.OutgoingTxBatch value) {
+        if (batchesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBatchesIsMutable();
+          batches_.add(value);
+          onChanged();
+        } else {
+          batchesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTxBatch batches = 5 [json_name = "batches", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBatches(
+          int index, com.gravity.v1.BatchProto.OutgoingTxBatch value) {
+        if (batchesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBatchesIsMutable();
+          batches_.add(index, value);
+          onChanged();
+        } else {
+          batchesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTxBatch batches = 5 [json_name = "batches", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBatches(
+          com.gravity.v1.BatchProto.OutgoingTxBatch.Builder builderForValue) {
+        if (batchesBuilder_ == null) {
+          ensureBatchesIsMutable();
+          batches_.add(builderForValue.build());
+          onChanged();
+        } else {
+          batchesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTxBatch batches = 5 [json_name = "batches", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBatches(
+          int index, com.gravity.v1.BatchProto.OutgoingTxBatch.Builder builderForValue) {
+        if (batchesBuilder_ == null) {
+          ensureBatchesIsMutable();
+          batches_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          batchesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTxBatch batches = 5 [json_name = "batches", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllBatches(
+          java.lang.Iterable<? extends com.gravity.v1.BatchProto.OutgoingTxBatch> values) {
+        if (batchesBuilder_ == null) {
+          ensureBatchesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, batches_);
+          onChanged();
+        } else {
+          batchesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTxBatch batches = 5 [json_name = "batches", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearBatches() {
+        if (batchesBuilder_ == null) {
+          batches_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          batchesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTxBatch batches = 5 [json_name = "batches", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeBatches(int index) {
+        if (batchesBuilder_ == null) {
+          ensureBatchesIsMutable();
+          batches_.remove(index);
+          onChanged();
+        } else {
+          batchesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTxBatch batches = 5 [json_name = "batches", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.BatchProto.OutgoingTxBatch.Builder getBatchesBuilder(
+          int index) {
+        return getBatchesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTxBatch batches = 5 [json_name = "batches", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.BatchProto.OutgoingTxBatchOrBuilder getBatchesOrBuilder(
+          int index) {
+        if (batchesBuilder_ == null) {
+          return batches_.get(index);  } else {
+          return batchesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTxBatch batches = 5 [json_name = "batches", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.gravity.v1.BatchProto.OutgoingTxBatchOrBuilder> 
+           getBatchesOrBuilderList() {
+        if (batchesBuilder_ != null) {
+          return batchesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(batches_);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTxBatch batches = 5 [json_name = "batches", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.BatchProto.OutgoingTxBatch.Builder addBatchesBuilder() {
+        return getBatchesFieldBuilder().addBuilder(
+            com.gravity.v1.BatchProto.OutgoingTxBatch.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTxBatch batches = 5 [json_name = "batches", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.BatchProto.OutgoingTxBatch.Builder addBatchesBuilder(
+          int index) {
+        return getBatchesFieldBuilder().addBuilder(
+            index, com.gravity.v1.BatchProto.OutgoingTxBatch.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTxBatch batches = 5 [json_name = "batches", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.gravity.v1.BatchProto.OutgoingTxBatch.Builder> 
+           getBatchesBuilderList() {
+        return getBatchesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.gravity.v1.BatchProto.OutgoingTxBatch, com.gravity.v1.BatchProto.OutgoingTxBatch.Builder, com.gravity.v1.BatchProto.OutgoingTxBatchOrBuilder> 
+          getBatchesFieldBuilder() {
+        if (batchesBuilder_ == null) {
+          batchesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.gravity.v1.BatchProto.OutgoingTxBatch, com.gravity.v1.BatchProto.OutgoingTxBatch.Builder, com.gravity.v1.BatchProto.OutgoingTxBatchOrBuilder>(
+                  batches_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          batches_ = null;
+        }
+        return batchesBuilder_;
+      }
+
+      private java.util.List<com.gravity.v1.MsgsProto.MsgConfirmBatch> batchConfirms_ =
+        java.util.Collections.emptyList();
+      private void ensureBatchConfirmsIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          batchConfirms_ = new java.util.ArrayList<com.gravity.v1.MsgsProto.MsgConfirmBatch>(batchConfirms_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.gravity.v1.MsgsProto.MsgConfirmBatch, com.gravity.v1.MsgsProto.MsgConfirmBatch.Builder, com.gravity.v1.MsgsProto.MsgConfirmBatchOrBuilder> batchConfirmsBuilder_;
+
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmBatch batch_confirms = 6 [json_name = "batchConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.gravity.v1.MsgsProto.MsgConfirmBatch> getBatchConfirmsList() {
+        if (batchConfirmsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(batchConfirms_);
+        } else {
+          return batchConfirmsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmBatch batch_confirms = 6 [json_name = "batchConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public int getBatchConfirmsCount() {
+        if (batchConfirmsBuilder_ == null) {
+          return batchConfirms_.size();
+        } else {
+          return batchConfirmsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmBatch batch_confirms = 6 [json_name = "batchConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.MsgsProto.MsgConfirmBatch getBatchConfirms(int index) {
+        if (batchConfirmsBuilder_ == null) {
+          return batchConfirms_.get(index);
+        } else {
+          return batchConfirmsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmBatch batch_confirms = 6 [json_name = "batchConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBatchConfirms(
+          int index, com.gravity.v1.MsgsProto.MsgConfirmBatch value) {
+        if (batchConfirmsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBatchConfirmsIsMutable();
+          batchConfirms_.set(index, value);
+          onChanged();
+        } else {
+          batchConfirmsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmBatch batch_confirms = 6 [json_name = "batchConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBatchConfirms(
+          int index, com.gravity.v1.MsgsProto.MsgConfirmBatch.Builder builderForValue) {
+        if (batchConfirmsBuilder_ == null) {
+          ensureBatchConfirmsIsMutable();
+          batchConfirms_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          batchConfirmsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmBatch batch_confirms = 6 [json_name = "batchConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBatchConfirms(com.gravity.v1.MsgsProto.MsgConfirmBatch value) {
+        if (batchConfirmsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBatchConfirmsIsMutable();
+          batchConfirms_.add(value);
+          onChanged();
+        } else {
+          batchConfirmsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmBatch batch_confirms = 6 [json_name = "batchConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBatchConfirms(
+          int index, com.gravity.v1.MsgsProto.MsgConfirmBatch value) {
+        if (batchConfirmsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBatchConfirmsIsMutable();
+          batchConfirms_.add(index, value);
+          onChanged();
+        } else {
+          batchConfirmsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmBatch batch_confirms = 6 [json_name = "batchConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBatchConfirms(
+          com.gravity.v1.MsgsProto.MsgConfirmBatch.Builder builderForValue) {
+        if (batchConfirmsBuilder_ == null) {
+          ensureBatchConfirmsIsMutable();
+          batchConfirms_.add(builderForValue.build());
+          onChanged();
+        } else {
+          batchConfirmsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmBatch batch_confirms = 6 [json_name = "batchConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBatchConfirms(
+          int index, com.gravity.v1.MsgsProto.MsgConfirmBatch.Builder builderForValue) {
+        if (batchConfirmsBuilder_ == null) {
+          ensureBatchConfirmsIsMutable();
+          batchConfirms_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          batchConfirmsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmBatch batch_confirms = 6 [json_name = "batchConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllBatchConfirms(
+          java.lang.Iterable<? extends com.gravity.v1.MsgsProto.MsgConfirmBatch> values) {
+        if (batchConfirmsBuilder_ == null) {
+          ensureBatchConfirmsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, batchConfirms_);
+          onChanged();
+        } else {
+          batchConfirmsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmBatch batch_confirms = 6 [json_name = "batchConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearBatchConfirms() {
+        if (batchConfirmsBuilder_ == null) {
+          batchConfirms_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          batchConfirmsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmBatch batch_confirms = 6 [json_name = "batchConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeBatchConfirms(int index) {
+        if (batchConfirmsBuilder_ == null) {
+          ensureBatchConfirmsIsMutable();
+          batchConfirms_.remove(index);
+          onChanged();
+        } else {
+          batchConfirmsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmBatch batch_confirms = 6 [json_name = "batchConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.MsgsProto.MsgConfirmBatch.Builder getBatchConfirmsBuilder(
+          int index) {
+        return getBatchConfirmsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmBatch batch_confirms = 6 [json_name = "batchConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.MsgsProto.MsgConfirmBatchOrBuilder getBatchConfirmsOrBuilder(
+          int index) {
+        if (batchConfirmsBuilder_ == null) {
+          return batchConfirms_.get(index);  } else {
+          return batchConfirmsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmBatch batch_confirms = 6 [json_name = "batchConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.gravity.v1.MsgsProto.MsgConfirmBatchOrBuilder> 
+           getBatchConfirmsOrBuilderList() {
+        if (batchConfirmsBuilder_ != null) {
+          return batchConfirmsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(batchConfirms_);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmBatch batch_confirms = 6 [json_name = "batchConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.MsgsProto.MsgConfirmBatch.Builder addBatchConfirmsBuilder() {
+        return getBatchConfirmsFieldBuilder().addBuilder(
+            com.gravity.v1.MsgsProto.MsgConfirmBatch.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmBatch batch_confirms = 6 [json_name = "batchConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.MsgsProto.MsgConfirmBatch.Builder addBatchConfirmsBuilder(
+          int index) {
+        return getBatchConfirmsFieldBuilder().addBuilder(
+            index, com.gravity.v1.MsgsProto.MsgConfirmBatch.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmBatch batch_confirms = 6 [json_name = "batchConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.gravity.v1.MsgsProto.MsgConfirmBatch.Builder> 
+           getBatchConfirmsBuilderList() {
+        return getBatchConfirmsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.gravity.v1.MsgsProto.MsgConfirmBatch, com.gravity.v1.MsgsProto.MsgConfirmBatch.Builder, com.gravity.v1.MsgsProto.MsgConfirmBatchOrBuilder> 
+          getBatchConfirmsFieldBuilder() {
+        if (batchConfirmsBuilder_ == null) {
+          batchConfirmsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.gravity.v1.MsgsProto.MsgConfirmBatch, com.gravity.v1.MsgsProto.MsgConfirmBatch.Builder, com.gravity.v1.MsgsProto.MsgConfirmBatchOrBuilder>(
+                  batchConfirms_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          batchConfirms_ = null;
+        }
+        return batchConfirmsBuilder_;
+      }
+
+      private java.util.List<com.gravity.v1.BatchProto.OutgoingLogicCall> logicCalls_ =
+        java.util.Collections.emptyList();
+      private void ensureLogicCallsIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          logicCalls_ = new java.util.ArrayList<com.gravity.v1.BatchProto.OutgoingLogicCall>(logicCalls_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.gravity.v1.BatchProto.OutgoingLogicCall, com.gravity.v1.BatchProto.OutgoingLogicCall.Builder, com.gravity.v1.BatchProto.OutgoingLogicCallOrBuilder> logicCallsBuilder_;
+
+      /**
+       * <code>repeated .gravity.v1.OutgoingLogicCall logic_calls = 7 [json_name = "logicCalls", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.gravity.v1.BatchProto.OutgoingLogicCall> getLogicCallsList() {
+        if (logicCallsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(logicCalls_);
+        } else {
+          return logicCallsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingLogicCall logic_calls = 7 [json_name = "logicCalls", (.gogoproto.nullable) = false];</code>
+       */
+      public int getLogicCallsCount() {
+        if (logicCallsBuilder_ == null) {
+          return logicCalls_.size();
+        } else {
+          return logicCallsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingLogicCall logic_calls = 7 [json_name = "logicCalls", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.BatchProto.OutgoingLogicCall getLogicCalls(int index) {
+        if (logicCallsBuilder_ == null) {
+          return logicCalls_.get(index);
+        } else {
+          return logicCallsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingLogicCall logic_calls = 7 [json_name = "logicCalls", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setLogicCalls(
+          int index, com.gravity.v1.BatchProto.OutgoingLogicCall value) {
+        if (logicCallsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLogicCallsIsMutable();
+          logicCalls_.set(index, value);
+          onChanged();
+        } else {
+          logicCallsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingLogicCall logic_calls = 7 [json_name = "logicCalls", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setLogicCalls(
+          int index, com.gravity.v1.BatchProto.OutgoingLogicCall.Builder builderForValue) {
+        if (logicCallsBuilder_ == null) {
+          ensureLogicCallsIsMutable();
+          logicCalls_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          logicCallsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingLogicCall logic_calls = 7 [json_name = "logicCalls", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addLogicCalls(com.gravity.v1.BatchProto.OutgoingLogicCall value) {
+        if (logicCallsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLogicCallsIsMutable();
+          logicCalls_.add(value);
+          onChanged();
+        } else {
+          logicCallsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingLogicCall logic_calls = 7 [json_name = "logicCalls", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addLogicCalls(
+          int index, com.gravity.v1.BatchProto.OutgoingLogicCall value) {
+        if (logicCallsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLogicCallsIsMutable();
+          logicCalls_.add(index, value);
+          onChanged();
+        } else {
+          logicCallsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingLogicCall logic_calls = 7 [json_name = "logicCalls", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addLogicCalls(
+          com.gravity.v1.BatchProto.OutgoingLogicCall.Builder builderForValue) {
+        if (logicCallsBuilder_ == null) {
+          ensureLogicCallsIsMutable();
+          logicCalls_.add(builderForValue.build());
+          onChanged();
+        } else {
+          logicCallsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingLogicCall logic_calls = 7 [json_name = "logicCalls", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addLogicCalls(
+          int index, com.gravity.v1.BatchProto.OutgoingLogicCall.Builder builderForValue) {
+        if (logicCallsBuilder_ == null) {
+          ensureLogicCallsIsMutable();
+          logicCalls_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          logicCallsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingLogicCall logic_calls = 7 [json_name = "logicCalls", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllLogicCalls(
+          java.lang.Iterable<? extends com.gravity.v1.BatchProto.OutgoingLogicCall> values) {
+        if (logicCallsBuilder_ == null) {
+          ensureLogicCallsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, logicCalls_);
+          onChanged();
+        } else {
+          logicCallsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingLogicCall logic_calls = 7 [json_name = "logicCalls", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearLogicCalls() {
+        if (logicCallsBuilder_ == null) {
+          logicCalls_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          logicCallsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingLogicCall logic_calls = 7 [json_name = "logicCalls", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeLogicCalls(int index) {
+        if (logicCallsBuilder_ == null) {
+          ensureLogicCallsIsMutable();
+          logicCalls_.remove(index);
+          onChanged();
+        } else {
+          logicCallsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingLogicCall logic_calls = 7 [json_name = "logicCalls", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.BatchProto.OutgoingLogicCall.Builder getLogicCallsBuilder(
+          int index) {
+        return getLogicCallsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingLogicCall logic_calls = 7 [json_name = "logicCalls", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.BatchProto.OutgoingLogicCallOrBuilder getLogicCallsOrBuilder(
+          int index) {
+        if (logicCallsBuilder_ == null) {
+          return logicCalls_.get(index);  } else {
+          return logicCallsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingLogicCall logic_calls = 7 [json_name = "logicCalls", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.gravity.v1.BatchProto.OutgoingLogicCallOrBuilder> 
+           getLogicCallsOrBuilderList() {
+        if (logicCallsBuilder_ != null) {
+          return logicCallsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(logicCalls_);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingLogicCall logic_calls = 7 [json_name = "logicCalls", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.BatchProto.OutgoingLogicCall.Builder addLogicCallsBuilder() {
+        return getLogicCallsFieldBuilder().addBuilder(
+            com.gravity.v1.BatchProto.OutgoingLogicCall.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingLogicCall logic_calls = 7 [json_name = "logicCalls", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.BatchProto.OutgoingLogicCall.Builder addLogicCallsBuilder(
+          int index) {
+        return getLogicCallsFieldBuilder().addBuilder(
+            index, com.gravity.v1.BatchProto.OutgoingLogicCall.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingLogicCall logic_calls = 7 [json_name = "logicCalls", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.gravity.v1.BatchProto.OutgoingLogicCall.Builder> 
+           getLogicCallsBuilderList() {
+        return getLogicCallsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.gravity.v1.BatchProto.OutgoingLogicCall, com.gravity.v1.BatchProto.OutgoingLogicCall.Builder, com.gravity.v1.BatchProto.OutgoingLogicCallOrBuilder> 
+          getLogicCallsFieldBuilder() {
+        if (logicCallsBuilder_ == null) {
+          logicCallsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.gravity.v1.BatchProto.OutgoingLogicCall, com.gravity.v1.BatchProto.OutgoingLogicCall.Builder, com.gravity.v1.BatchProto.OutgoingLogicCallOrBuilder>(
+                  logicCalls_,
+                  ((bitField0_ & 0x00000040) != 0),
+                  getParentForChildren(),
+                  isClean());
+          logicCalls_ = null;
+        }
+        return logicCallsBuilder_;
+      }
+
+      private java.util.List<com.gravity.v1.MsgsProto.MsgConfirmLogicCall> logicCallConfirms_ =
+        java.util.Collections.emptyList();
+      private void ensureLogicCallConfirmsIsMutable() {
+        if (!((bitField0_ & 0x00000080) != 0)) {
+          logicCallConfirms_ = new java.util.ArrayList<com.gravity.v1.MsgsProto.MsgConfirmLogicCall>(logicCallConfirms_);
+          bitField0_ |= 0x00000080;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.gravity.v1.MsgsProto.MsgConfirmLogicCall, com.gravity.v1.MsgsProto.MsgConfirmLogicCall.Builder, com.gravity.v1.MsgsProto.MsgConfirmLogicCallOrBuilder> logicCallConfirmsBuilder_;
+
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmLogicCall logic_call_confirms = 8 [json_name = "logicCallConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.gravity.v1.MsgsProto.MsgConfirmLogicCall> getLogicCallConfirmsList() {
+        if (logicCallConfirmsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(logicCallConfirms_);
+        } else {
+          return logicCallConfirmsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmLogicCall logic_call_confirms = 8 [json_name = "logicCallConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public int getLogicCallConfirmsCount() {
+        if (logicCallConfirmsBuilder_ == null) {
+          return logicCallConfirms_.size();
+        } else {
+          return logicCallConfirmsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmLogicCall logic_call_confirms = 8 [json_name = "logicCallConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.MsgsProto.MsgConfirmLogicCall getLogicCallConfirms(int index) {
+        if (logicCallConfirmsBuilder_ == null) {
+          return logicCallConfirms_.get(index);
+        } else {
+          return logicCallConfirmsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmLogicCall logic_call_confirms = 8 [json_name = "logicCallConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setLogicCallConfirms(
+          int index, com.gravity.v1.MsgsProto.MsgConfirmLogicCall value) {
+        if (logicCallConfirmsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLogicCallConfirmsIsMutable();
+          logicCallConfirms_.set(index, value);
+          onChanged();
+        } else {
+          logicCallConfirmsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmLogicCall logic_call_confirms = 8 [json_name = "logicCallConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setLogicCallConfirms(
+          int index, com.gravity.v1.MsgsProto.MsgConfirmLogicCall.Builder builderForValue) {
+        if (logicCallConfirmsBuilder_ == null) {
+          ensureLogicCallConfirmsIsMutable();
+          logicCallConfirms_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          logicCallConfirmsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmLogicCall logic_call_confirms = 8 [json_name = "logicCallConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addLogicCallConfirms(com.gravity.v1.MsgsProto.MsgConfirmLogicCall value) {
+        if (logicCallConfirmsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLogicCallConfirmsIsMutable();
+          logicCallConfirms_.add(value);
+          onChanged();
+        } else {
+          logicCallConfirmsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmLogicCall logic_call_confirms = 8 [json_name = "logicCallConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addLogicCallConfirms(
+          int index, com.gravity.v1.MsgsProto.MsgConfirmLogicCall value) {
+        if (logicCallConfirmsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLogicCallConfirmsIsMutable();
+          logicCallConfirms_.add(index, value);
+          onChanged();
+        } else {
+          logicCallConfirmsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmLogicCall logic_call_confirms = 8 [json_name = "logicCallConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addLogicCallConfirms(
+          com.gravity.v1.MsgsProto.MsgConfirmLogicCall.Builder builderForValue) {
+        if (logicCallConfirmsBuilder_ == null) {
+          ensureLogicCallConfirmsIsMutable();
+          logicCallConfirms_.add(builderForValue.build());
+          onChanged();
+        } else {
+          logicCallConfirmsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmLogicCall logic_call_confirms = 8 [json_name = "logicCallConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addLogicCallConfirms(
+          int index, com.gravity.v1.MsgsProto.MsgConfirmLogicCall.Builder builderForValue) {
+        if (logicCallConfirmsBuilder_ == null) {
+          ensureLogicCallConfirmsIsMutable();
+          logicCallConfirms_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          logicCallConfirmsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmLogicCall logic_call_confirms = 8 [json_name = "logicCallConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllLogicCallConfirms(
+          java.lang.Iterable<? extends com.gravity.v1.MsgsProto.MsgConfirmLogicCall> values) {
+        if (logicCallConfirmsBuilder_ == null) {
+          ensureLogicCallConfirmsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, logicCallConfirms_);
+          onChanged();
+        } else {
+          logicCallConfirmsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmLogicCall logic_call_confirms = 8 [json_name = "logicCallConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearLogicCallConfirms() {
+        if (logicCallConfirmsBuilder_ == null) {
+          logicCallConfirms_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
+          onChanged();
+        } else {
+          logicCallConfirmsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmLogicCall logic_call_confirms = 8 [json_name = "logicCallConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeLogicCallConfirms(int index) {
+        if (logicCallConfirmsBuilder_ == null) {
+          ensureLogicCallConfirmsIsMutable();
+          logicCallConfirms_.remove(index);
+          onChanged();
+        } else {
+          logicCallConfirmsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmLogicCall logic_call_confirms = 8 [json_name = "logicCallConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.MsgsProto.MsgConfirmLogicCall.Builder getLogicCallConfirmsBuilder(
+          int index) {
+        return getLogicCallConfirmsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmLogicCall logic_call_confirms = 8 [json_name = "logicCallConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.MsgsProto.MsgConfirmLogicCallOrBuilder getLogicCallConfirmsOrBuilder(
+          int index) {
+        if (logicCallConfirmsBuilder_ == null) {
+          return logicCallConfirms_.get(index);  } else {
+          return logicCallConfirmsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmLogicCall logic_call_confirms = 8 [json_name = "logicCallConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.gravity.v1.MsgsProto.MsgConfirmLogicCallOrBuilder> 
+           getLogicCallConfirmsOrBuilderList() {
+        if (logicCallConfirmsBuilder_ != null) {
+          return logicCallConfirmsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(logicCallConfirms_);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmLogicCall logic_call_confirms = 8 [json_name = "logicCallConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.MsgsProto.MsgConfirmLogicCall.Builder addLogicCallConfirmsBuilder() {
+        return getLogicCallConfirmsFieldBuilder().addBuilder(
+            com.gravity.v1.MsgsProto.MsgConfirmLogicCall.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmLogicCall logic_call_confirms = 8 [json_name = "logicCallConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.MsgsProto.MsgConfirmLogicCall.Builder addLogicCallConfirmsBuilder(
+          int index) {
+        return getLogicCallConfirmsFieldBuilder().addBuilder(
+            index, com.gravity.v1.MsgsProto.MsgConfirmLogicCall.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgConfirmLogicCall logic_call_confirms = 8 [json_name = "logicCallConfirms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.gravity.v1.MsgsProto.MsgConfirmLogicCall.Builder> 
+           getLogicCallConfirmsBuilderList() {
+        return getLogicCallConfirmsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.gravity.v1.MsgsProto.MsgConfirmLogicCall, com.gravity.v1.MsgsProto.MsgConfirmLogicCall.Builder, com.gravity.v1.MsgsProto.MsgConfirmLogicCallOrBuilder> 
+          getLogicCallConfirmsFieldBuilder() {
+        if (logicCallConfirmsBuilder_ == null) {
+          logicCallConfirmsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.gravity.v1.MsgsProto.MsgConfirmLogicCall, com.gravity.v1.MsgsProto.MsgConfirmLogicCall.Builder, com.gravity.v1.MsgsProto.MsgConfirmLogicCallOrBuilder>(
+                  logicCallConfirms_,
+                  ((bitField0_ & 0x00000080) != 0),
+                  getParentForChildren(),
+                  isClean());
+          logicCallConfirms_ = null;
+        }
+        return logicCallConfirmsBuilder_;
+      }
+
+      private java.util.List<com.gravity.v1.AttestationProto.Attestation> attestations_ =
+        java.util.Collections.emptyList();
+      private void ensureAttestationsIsMutable() {
+        if (!((bitField0_ & 0x00000100) != 0)) {
+          attestations_ = new java.util.ArrayList<com.gravity.v1.AttestationProto.Attestation>(attestations_);
+          bitField0_ |= 0x00000100;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.gravity.v1.AttestationProto.Attestation, com.gravity.v1.AttestationProto.Attestation.Builder, com.gravity.v1.AttestationProto.AttestationOrBuilder> attestationsBuilder_;
+
+      /**
+       * <code>repeated .gravity.v1.Attestation attestations = 9 [json_name = "attestations", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.gravity.v1.AttestationProto.Attestation> getAttestationsList() {
+        if (attestationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(attestations_);
+        } else {
+          return attestationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.Attestation attestations = 9 [json_name = "attestations", (.gogoproto.nullable) = false];</code>
+       */
+      public int getAttestationsCount() {
+        if (attestationsBuilder_ == null) {
+          return attestations_.size();
+        } else {
+          return attestationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.Attestation attestations = 9 [json_name = "attestations", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.AttestationProto.Attestation getAttestations(int index) {
+        if (attestationsBuilder_ == null) {
+          return attestations_.get(index);
+        } else {
+          return attestationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.Attestation attestations = 9 [json_name = "attestations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAttestations(
+          int index, com.gravity.v1.AttestationProto.Attestation value) {
+        if (attestationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttestationsIsMutable();
+          attestations_.set(index, value);
+          onChanged();
+        } else {
+          attestationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.Attestation attestations = 9 [json_name = "attestations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAttestations(
+          int index, com.gravity.v1.AttestationProto.Attestation.Builder builderForValue) {
+        if (attestationsBuilder_ == null) {
+          ensureAttestationsIsMutable();
+          attestations_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          attestationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.Attestation attestations = 9 [json_name = "attestations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAttestations(com.gravity.v1.AttestationProto.Attestation value) {
+        if (attestationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttestationsIsMutable();
+          attestations_.add(value);
+          onChanged();
+        } else {
+          attestationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.Attestation attestations = 9 [json_name = "attestations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAttestations(
+          int index, com.gravity.v1.AttestationProto.Attestation value) {
+        if (attestationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttestationsIsMutable();
+          attestations_.add(index, value);
+          onChanged();
+        } else {
+          attestationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.Attestation attestations = 9 [json_name = "attestations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAttestations(
+          com.gravity.v1.AttestationProto.Attestation.Builder builderForValue) {
+        if (attestationsBuilder_ == null) {
+          ensureAttestationsIsMutable();
+          attestations_.add(builderForValue.build());
+          onChanged();
+        } else {
+          attestationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.Attestation attestations = 9 [json_name = "attestations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAttestations(
+          int index, com.gravity.v1.AttestationProto.Attestation.Builder builderForValue) {
+        if (attestationsBuilder_ == null) {
+          ensureAttestationsIsMutable();
+          attestations_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          attestationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.Attestation attestations = 9 [json_name = "attestations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllAttestations(
+          java.lang.Iterable<? extends com.gravity.v1.AttestationProto.Attestation> values) {
+        if (attestationsBuilder_ == null) {
+          ensureAttestationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, attestations_);
+          onChanged();
+        } else {
+          attestationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.Attestation attestations = 9 [json_name = "attestations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAttestations() {
+        if (attestationsBuilder_ == null) {
+          attestations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000100);
+          onChanged();
+        } else {
+          attestationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.Attestation attestations = 9 [json_name = "attestations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeAttestations(int index) {
+        if (attestationsBuilder_ == null) {
+          ensureAttestationsIsMutable();
+          attestations_.remove(index);
+          onChanged();
+        } else {
+          attestationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.Attestation attestations = 9 [json_name = "attestations", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.AttestationProto.Attestation.Builder getAttestationsBuilder(
+          int index) {
+        return getAttestationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .gravity.v1.Attestation attestations = 9 [json_name = "attestations", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.AttestationProto.AttestationOrBuilder getAttestationsOrBuilder(
+          int index) {
+        if (attestationsBuilder_ == null) {
+          return attestations_.get(index);  } else {
+          return attestationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.Attestation attestations = 9 [json_name = "attestations", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.gravity.v1.AttestationProto.AttestationOrBuilder> 
+           getAttestationsOrBuilderList() {
+        if (attestationsBuilder_ != null) {
+          return attestationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(attestations_);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.Attestation attestations = 9 [json_name = "attestations", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.AttestationProto.Attestation.Builder addAttestationsBuilder() {
+        return getAttestationsFieldBuilder().addBuilder(
+            com.gravity.v1.AttestationProto.Attestation.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .gravity.v1.Attestation attestations = 9 [json_name = "attestations", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.AttestationProto.Attestation.Builder addAttestationsBuilder(
+          int index) {
+        return getAttestationsFieldBuilder().addBuilder(
+            index, com.gravity.v1.AttestationProto.Attestation.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .gravity.v1.Attestation attestations = 9 [json_name = "attestations", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.gravity.v1.AttestationProto.Attestation.Builder> 
+           getAttestationsBuilderList() {
+        return getAttestationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.gravity.v1.AttestationProto.Attestation, com.gravity.v1.AttestationProto.Attestation.Builder, com.gravity.v1.AttestationProto.AttestationOrBuilder> 
+          getAttestationsFieldBuilder() {
+        if (attestationsBuilder_ == null) {
+          attestationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.gravity.v1.AttestationProto.Attestation, com.gravity.v1.AttestationProto.Attestation.Builder, com.gravity.v1.AttestationProto.AttestationOrBuilder>(
+                  attestations_,
+                  ((bitField0_ & 0x00000100) != 0),
+                  getParentForChildren(),
+                  isClean());
+          attestations_ = null;
+        }
+        return attestationsBuilder_;
+      }
+
+      private java.util.List<com.gravity.v1.MsgsProto.MsgSetOrchestratorAddress> delegateKeys_ =
+        java.util.Collections.emptyList();
+      private void ensureDelegateKeysIsMutable() {
+        if (!((bitField0_ & 0x00000200) != 0)) {
+          delegateKeys_ = new java.util.ArrayList<com.gravity.v1.MsgsProto.MsgSetOrchestratorAddress>(delegateKeys_);
+          bitField0_ |= 0x00000200;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.gravity.v1.MsgsProto.MsgSetOrchestratorAddress, com.gravity.v1.MsgsProto.MsgSetOrchestratorAddress.Builder, com.gravity.v1.MsgsProto.MsgSetOrchestratorAddressOrBuilder> delegateKeysBuilder_;
+
+      /**
+       * <code>repeated .gravity.v1.MsgSetOrchestratorAddress delegate_keys = 10 [json_name = "delegateKeys", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.gravity.v1.MsgsProto.MsgSetOrchestratorAddress> getDelegateKeysList() {
+        if (delegateKeysBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(delegateKeys_);
+        } else {
+          return delegateKeysBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgSetOrchestratorAddress delegate_keys = 10 [json_name = "delegateKeys", (.gogoproto.nullable) = false];</code>
+       */
+      public int getDelegateKeysCount() {
+        if (delegateKeysBuilder_ == null) {
+          return delegateKeys_.size();
+        } else {
+          return delegateKeysBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgSetOrchestratorAddress delegate_keys = 10 [json_name = "delegateKeys", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.MsgsProto.MsgSetOrchestratorAddress getDelegateKeys(int index) {
+        if (delegateKeysBuilder_ == null) {
+          return delegateKeys_.get(index);
+        } else {
+          return delegateKeysBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgSetOrchestratorAddress delegate_keys = 10 [json_name = "delegateKeys", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDelegateKeys(
+          int index, com.gravity.v1.MsgsProto.MsgSetOrchestratorAddress value) {
+        if (delegateKeysBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDelegateKeysIsMutable();
+          delegateKeys_.set(index, value);
+          onChanged();
+        } else {
+          delegateKeysBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgSetOrchestratorAddress delegate_keys = 10 [json_name = "delegateKeys", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDelegateKeys(
+          int index, com.gravity.v1.MsgsProto.MsgSetOrchestratorAddress.Builder builderForValue) {
+        if (delegateKeysBuilder_ == null) {
+          ensureDelegateKeysIsMutable();
+          delegateKeys_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          delegateKeysBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgSetOrchestratorAddress delegate_keys = 10 [json_name = "delegateKeys", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDelegateKeys(com.gravity.v1.MsgsProto.MsgSetOrchestratorAddress value) {
+        if (delegateKeysBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDelegateKeysIsMutable();
+          delegateKeys_.add(value);
+          onChanged();
+        } else {
+          delegateKeysBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgSetOrchestratorAddress delegate_keys = 10 [json_name = "delegateKeys", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDelegateKeys(
+          int index, com.gravity.v1.MsgsProto.MsgSetOrchestratorAddress value) {
+        if (delegateKeysBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDelegateKeysIsMutable();
+          delegateKeys_.add(index, value);
+          onChanged();
+        } else {
+          delegateKeysBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgSetOrchestratorAddress delegate_keys = 10 [json_name = "delegateKeys", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDelegateKeys(
+          com.gravity.v1.MsgsProto.MsgSetOrchestratorAddress.Builder builderForValue) {
+        if (delegateKeysBuilder_ == null) {
+          ensureDelegateKeysIsMutable();
+          delegateKeys_.add(builderForValue.build());
+          onChanged();
+        } else {
+          delegateKeysBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgSetOrchestratorAddress delegate_keys = 10 [json_name = "delegateKeys", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDelegateKeys(
+          int index, com.gravity.v1.MsgsProto.MsgSetOrchestratorAddress.Builder builderForValue) {
+        if (delegateKeysBuilder_ == null) {
+          ensureDelegateKeysIsMutable();
+          delegateKeys_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          delegateKeysBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgSetOrchestratorAddress delegate_keys = 10 [json_name = "delegateKeys", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllDelegateKeys(
+          java.lang.Iterable<? extends com.gravity.v1.MsgsProto.MsgSetOrchestratorAddress> values) {
+        if (delegateKeysBuilder_ == null) {
+          ensureDelegateKeysIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, delegateKeys_);
+          onChanged();
+        } else {
+          delegateKeysBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgSetOrchestratorAddress delegate_keys = 10 [json_name = "delegateKeys", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDelegateKeys() {
+        if (delegateKeysBuilder_ == null) {
+          delegateKeys_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000200);
+          onChanged();
+        } else {
+          delegateKeysBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgSetOrchestratorAddress delegate_keys = 10 [json_name = "delegateKeys", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeDelegateKeys(int index) {
+        if (delegateKeysBuilder_ == null) {
+          ensureDelegateKeysIsMutable();
+          delegateKeys_.remove(index);
+          onChanged();
+        } else {
+          delegateKeysBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgSetOrchestratorAddress delegate_keys = 10 [json_name = "delegateKeys", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.MsgsProto.MsgSetOrchestratorAddress.Builder getDelegateKeysBuilder(
+          int index) {
+        return getDelegateKeysFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgSetOrchestratorAddress delegate_keys = 10 [json_name = "delegateKeys", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.MsgsProto.MsgSetOrchestratorAddressOrBuilder getDelegateKeysOrBuilder(
+          int index) {
+        if (delegateKeysBuilder_ == null) {
+          return delegateKeys_.get(index);  } else {
+          return delegateKeysBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgSetOrchestratorAddress delegate_keys = 10 [json_name = "delegateKeys", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.gravity.v1.MsgsProto.MsgSetOrchestratorAddressOrBuilder> 
+           getDelegateKeysOrBuilderList() {
+        if (delegateKeysBuilder_ != null) {
+          return delegateKeysBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(delegateKeys_);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgSetOrchestratorAddress delegate_keys = 10 [json_name = "delegateKeys", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.MsgsProto.MsgSetOrchestratorAddress.Builder addDelegateKeysBuilder() {
+        return getDelegateKeysFieldBuilder().addBuilder(
+            com.gravity.v1.MsgsProto.MsgSetOrchestratorAddress.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgSetOrchestratorAddress delegate_keys = 10 [json_name = "delegateKeys", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.MsgsProto.MsgSetOrchestratorAddress.Builder addDelegateKeysBuilder(
+          int index) {
+        return getDelegateKeysFieldBuilder().addBuilder(
+            index, com.gravity.v1.MsgsProto.MsgSetOrchestratorAddress.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .gravity.v1.MsgSetOrchestratorAddress delegate_keys = 10 [json_name = "delegateKeys", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.gravity.v1.MsgsProto.MsgSetOrchestratorAddress.Builder> 
+           getDelegateKeysBuilderList() {
+        return getDelegateKeysFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.gravity.v1.MsgsProto.MsgSetOrchestratorAddress, com.gravity.v1.MsgsProto.MsgSetOrchestratorAddress.Builder, com.gravity.v1.MsgsProto.MsgSetOrchestratorAddressOrBuilder> 
+          getDelegateKeysFieldBuilder() {
+        if (delegateKeysBuilder_ == null) {
+          delegateKeysBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.gravity.v1.MsgsProto.MsgSetOrchestratorAddress, com.gravity.v1.MsgsProto.MsgSetOrchestratorAddress.Builder, com.gravity.v1.MsgsProto.MsgSetOrchestratorAddressOrBuilder>(
+                  delegateKeys_,
+                  ((bitField0_ & 0x00000200) != 0),
+                  getParentForChildren(),
+                  isClean());
+          delegateKeys_ = null;
+        }
+        return delegateKeysBuilder_;
+      }
+
+      private java.util.List<com.gravity.v1.TypesProto.ERC20ToDenom> erc20ToDenoms_ =
+        java.util.Collections.emptyList();
+      private void ensureErc20ToDenomsIsMutable() {
+        if (!((bitField0_ & 0x00000400) != 0)) {
+          erc20ToDenoms_ = new java.util.ArrayList<com.gravity.v1.TypesProto.ERC20ToDenom>(erc20ToDenoms_);
+          bitField0_ |= 0x00000400;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.gravity.v1.TypesProto.ERC20ToDenom, com.gravity.v1.TypesProto.ERC20ToDenom.Builder, com.gravity.v1.TypesProto.ERC20ToDenomOrBuilder> erc20ToDenomsBuilder_;
+
+      /**
+       * <code>repeated .gravity.v1.ERC20ToDenom erc20_to_denoms = 11 [json_name = "erc20ToDenoms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.gravity.v1.TypesProto.ERC20ToDenom> getErc20ToDenomsList() {
+        if (erc20ToDenomsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(erc20ToDenoms_);
+        } else {
+          return erc20ToDenomsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.ERC20ToDenom erc20_to_denoms = 11 [json_name = "erc20ToDenoms", (.gogoproto.nullable) = false];</code>
+       */
+      public int getErc20ToDenomsCount() {
+        if (erc20ToDenomsBuilder_ == null) {
+          return erc20ToDenoms_.size();
+        } else {
+          return erc20ToDenomsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.ERC20ToDenom erc20_to_denoms = 11 [json_name = "erc20ToDenoms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.TypesProto.ERC20ToDenom getErc20ToDenoms(int index) {
+        if (erc20ToDenomsBuilder_ == null) {
+          return erc20ToDenoms_.get(index);
+        } else {
+          return erc20ToDenomsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.ERC20ToDenom erc20_to_denoms = 11 [json_name = "erc20ToDenoms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setErc20ToDenoms(
+          int index, com.gravity.v1.TypesProto.ERC20ToDenom value) {
+        if (erc20ToDenomsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureErc20ToDenomsIsMutable();
+          erc20ToDenoms_.set(index, value);
+          onChanged();
+        } else {
+          erc20ToDenomsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.ERC20ToDenom erc20_to_denoms = 11 [json_name = "erc20ToDenoms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setErc20ToDenoms(
+          int index, com.gravity.v1.TypesProto.ERC20ToDenom.Builder builderForValue) {
+        if (erc20ToDenomsBuilder_ == null) {
+          ensureErc20ToDenomsIsMutable();
+          erc20ToDenoms_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          erc20ToDenomsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.ERC20ToDenom erc20_to_denoms = 11 [json_name = "erc20ToDenoms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addErc20ToDenoms(com.gravity.v1.TypesProto.ERC20ToDenom value) {
+        if (erc20ToDenomsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureErc20ToDenomsIsMutable();
+          erc20ToDenoms_.add(value);
+          onChanged();
+        } else {
+          erc20ToDenomsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.ERC20ToDenom erc20_to_denoms = 11 [json_name = "erc20ToDenoms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addErc20ToDenoms(
+          int index, com.gravity.v1.TypesProto.ERC20ToDenom value) {
+        if (erc20ToDenomsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureErc20ToDenomsIsMutable();
+          erc20ToDenoms_.add(index, value);
+          onChanged();
+        } else {
+          erc20ToDenomsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.ERC20ToDenom erc20_to_denoms = 11 [json_name = "erc20ToDenoms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addErc20ToDenoms(
+          com.gravity.v1.TypesProto.ERC20ToDenom.Builder builderForValue) {
+        if (erc20ToDenomsBuilder_ == null) {
+          ensureErc20ToDenomsIsMutable();
+          erc20ToDenoms_.add(builderForValue.build());
+          onChanged();
+        } else {
+          erc20ToDenomsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.ERC20ToDenom erc20_to_denoms = 11 [json_name = "erc20ToDenoms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addErc20ToDenoms(
+          int index, com.gravity.v1.TypesProto.ERC20ToDenom.Builder builderForValue) {
+        if (erc20ToDenomsBuilder_ == null) {
+          ensureErc20ToDenomsIsMutable();
+          erc20ToDenoms_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          erc20ToDenomsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.ERC20ToDenom erc20_to_denoms = 11 [json_name = "erc20ToDenoms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllErc20ToDenoms(
+          java.lang.Iterable<? extends com.gravity.v1.TypesProto.ERC20ToDenom> values) {
+        if (erc20ToDenomsBuilder_ == null) {
+          ensureErc20ToDenomsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, erc20ToDenoms_);
+          onChanged();
+        } else {
+          erc20ToDenomsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.ERC20ToDenom erc20_to_denoms = 11 [json_name = "erc20ToDenoms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearErc20ToDenoms() {
+        if (erc20ToDenomsBuilder_ == null) {
+          erc20ToDenoms_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000400);
+          onChanged();
+        } else {
+          erc20ToDenomsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.ERC20ToDenom erc20_to_denoms = 11 [json_name = "erc20ToDenoms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeErc20ToDenoms(int index) {
+        if (erc20ToDenomsBuilder_ == null) {
+          ensureErc20ToDenomsIsMutable();
+          erc20ToDenoms_.remove(index);
+          onChanged();
+        } else {
+          erc20ToDenomsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.ERC20ToDenom erc20_to_denoms = 11 [json_name = "erc20ToDenoms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.TypesProto.ERC20ToDenom.Builder getErc20ToDenomsBuilder(
+          int index) {
+        return getErc20ToDenomsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .gravity.v1.ERC20ToDenom erc20_to_denoms = 11 [json_name = "erc20ToDenoms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.TypesProto.ERC20ToDenomOrBuilder getErc20ToDenomsOrBuilder(
+          int index) {
+        if (erc20ToDenomsBuilder_ == null) {
+          return erc20ToDenoms_.get(index);  } else {
+          return erc20ToDenomsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.ERC20ToDenom erc20_to_denoms = 11 [json_name = "erc20ToDenoms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.gravity.v1.TypesProto.ERC20ToDenomOrBuilder> 
+           getErc20ToDenomsOrBuilderList() {
+        if (erc20ToDenomsBuilder_ != null) {
+          return erc20ToDenomsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(erc20ToDenoms_);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.ERC20ToDenom erc20_to_denoms = 11 [json_name = "erc20ToDenoms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.TypesProto.ERC20ToDenom.Builder addErc20ToDenomsBuilder() {
+        return getErc20ToDenomsFieldBuilder().addBuilder(
+            com.gravity.v1.TypesProto.ERC20ToDenom.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .gravity.v1.ERC20ToDenom erc20_to_denoms = 11 [json_name = "erc20ToDenoms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.TypesProto.ERC20ToDenom.Builder addErc20ToDenomsBuilder(
+          int index) {
+        return getErc20ToDenomsFieldBuilder().addBuilder(
+            index, com.gravity.v1.TypesProto.ERC20ToDenom.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .gravity.v1.ERC20ToDenom erc20_to_denoms = 11 [json_name = "erc20ToDenoms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.gravity.v1.TypesProto.ERC20ToDenom.Builder> 
+           getErc20ToDenomsBuilderList() {
+        return getErc20ToDenomsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.gravity.v1.TypesProto.ERC20ToDenom, com.gravity.v1.TypesProto.ERC20ToDenom.Builder, com.gravity.v1.TypesProto.ERC20ToDenomOrBuilder> 
+          getErc20ToDenomsFieldBuilder() {
+        if (erc20ToDenomsBuilder_ == null) {
+          erc20ToDenomsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.gravity.v1.TypesProto.ERC20ToDenom, com.gravity.v1.TypesProto.ERC20ToDenom.Builder, com.gravity.v1.TypesProto.ERC20ToDenomOrBuilder>(
+                  erc20ToDenoms_,
+                  ((bitField0_ & 0x00000400) != 0),
+                  getParentForChildren(),
+                  isClean());
+          erc20ToDenoms_ = null;
+        }
+        return erc20ToDenomsBuilder_;
+      }
+
+      private java.util.List<com.gravity.v1.BatchProto.OutgoingTransferTx> unbatchedTransfers_ =
+        java.util.Collections.emptyList();
+      private void ensureUnbatchedTransfersIsMutable() {
+        if (!((bitField0_ & 0x00000800) != 0)) {
+          unbatchedTransfers_ = new java.util.ArrayList<com.gravity.v1.BatchProto.OutgoingTransferTx>(unbatchedTransfers_);
+          bitField0_ |= 0x00000800;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.gravity.v1.BatchProto.OutgoingTransferTx, com.gravity.v1.BatchProto.OutgoingTransferTx.Builder, com.gravity.v1.BatchProto.OutgoingTransferTxOrBuilder> unbatchedTransfersBuilder_;
+
+      /**
+       * <code>repeated .gravity.v1.OutgoingTransferTx unbatched_transfers = 12 [json_name = "unbatchedTransfers", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.gravity.v1.BatchProto.OutgoingTransferTx> getUnbatchedTransfersList() {
+        if (unbatchedTransfersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(unbatchedTransfers_);
+        } else {
+          return unbatchedTransfersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTransferTx unbatched_transfers = 12 [json_name = "unbatchedTransfers", (.gogoproto.nullable) = false];</code>
+       */
+      public int getUnbatchedTransfersCount() {
+        if (unbatchedTransfersBuilder_ == null) {
+          return unbatchedTransfers_.size();
+        } else {
+          return unbatchedTransfersBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTransferTx unbatched_transfers = 12 [json_name = "unbatchedTransfers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.BatchProto.OutgoingTransferTx getUnbatchedTransfers(int index) {
+        if (unbatchedTransfersBuilder_ == null) {
+          return unbatchedTransfers_.get(index);
+        } else {
+          return unbatchedTransfersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTransferTx unbatched_transfers = 12 [json_name = "unbatchedTransfers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setUnbatchedTransfers(
+          int index, com.gravity.v1.BatchProto.OutgoingTransferTx value) {
+        if (unbatchedTransfersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnbatchedTransfersIsMutable();
+          unbatchedTransfers_.set(index, value);
+          onChanged();
+        } else {
+          unbatchedTransfersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTransferTx unbatched_transfers = 12 [json_name = "unbatchedTransfers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setUnbatchedTransfers(
+          int index, com.gravity.v1.BatchProto.OutgoingTransferTx.Builder builderForValue) {
+        if (unbatchedTransfersBuilder_ == null) {
+          ensureUnbatchedTransfersIsMutable();
+          unbatchedTransfers_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          unbatchedTransfersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTransferTx unbatched_transfers = 12 [json_name = "unbatchedTransfers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addUnbatchedTransfers(com.gravity.v1.BatchProto.OutgoingTransferTx value) {
+        if (unbatchedTransfersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnbatchedTransfersIsMutable();
+          unbatchedTransfers_.add(value);
+          onChanged();
+        } else {
+          unbatchedTransfersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTransferTx unbatched_transfers = 12 [json_name = "unbatchedTransfers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addUnbatchedTransfers(
+          int index, com.gravity.v1.BatchProto.OutgoingTransferTx value) {
+        if (unbatchedTransfersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnbatchedTransfersIsMutable();
+          unbatchedTransfers_.add(index, value);
+          onChanged();
+        } else {
+          unbatchedTransfersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTransferTx unbatched_transfers = 12 [json_name = "unbatchedTransfers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addUnbatchedTransfers(
+          com.gravity.v1.BatchProto.OutgoingTransferTx.Builder builderForValue) {
+        if (unbatchedTransfersBuilder_ == null) {
+          ensureUnbatchedTransfersIsMutable();
+          unbatchedTransfers_.add(builderForValue.build());
+          onChanged();
+        } else {
+          unbatchedTransfersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTransferTx unbatched_transfers = 12 [json_name = "unbatchedTransfers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addUnbatchedTransfers(
+          int index, com.gravity.v1.BatchProto.OutgoingTransferTx.Builder builderForValue) {
+        if (unbatchedTransfersBuilder_ == null) {
+          ensureUnbatchedTransfersIsMutable();
+          unbatchedTransfers_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          unbatchedTransfersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTransferTx unbatched_transfers = 12 [json_name = "unbatchedTransfers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllUnbatchedTransfers(
+          java.lang.Iterable<? extends com.gravity.v1.BatchProto.OutgoingTransferTx> values) {
+        if (unbatchedTransfersBuilder_ == null) {
+          ensureUnbatchedTransfersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, unbatchedTransfers_);
+          onChanged();
+        } else {
+          unbatchedTransfersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTransferTx unbatched_transfers = 12 [json_name = "unbatchedTransfers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearUnbatchedTransfers() {
+        if (unbatchedTransfersBuilder_ == null) {
+          unbatchedTransfers_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000800);
+          onChanged();
+        } else {
+          unbatchedTransfersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTransferTx unbatched_transfers = 12 [json_name = "unbatchedTransfers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeUnbatchedTransfers(int index) {
+        if (unbatchedTransfersBuilder_ == null) {
+          ensureUnbatchedTransfersIsMutable();
+          unbatchedTransfers_.remove(index);
+          onChanged();
+        } else {
+          unbatchedTransfersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTransferTx unbatched_transfers = 12 [json_name = "unbatchedTransfers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.BatchProto.OutgoingTransferTx.Builder getUnbatchedTransfersBuilder(
+          int index) {
+        return getUnbatchedTransfersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTransferTx unbatched_transfers = 12 [json_name = "unbatchedTransfers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.BatchProto.OutgoingTransferTxOrBuilder getUnbatchedTransfersOrBuilder(
+          int index) {
+        if (unbatchedTransfersBuilder_ == null) {
+          return unbatchedTransfers_.get(index);  } else {
+          return unbatchedTransfersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTransferTx unbatched_transfers = 12 [json_name = "unbatchedTransfers", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.gravity.v1.BatchProto.OutgoingTransferTxOrBuilder> 
+           getUnbatchedTransfersOrBuilderList() {
+        if (unbatchedTransfersBuilder_ != null) {
+          return unbatchedTransfersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(unbatchedTransfers_);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTransferTx unbatched_transfers = 12 [json_name = "unbatchedTransfers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.BatchProto.OutgoingTransferTx.Builder addUnbatchedTransfersBuilder() {
+        return getUnbatchedTransfersFieldBuilder().addBuilder(
+            com.gravity.v1.BatchProto.OutgoingTransferTx.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTransferTx unbatched_transfers = 12 [json_name = "unbatchedTransfers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.BatchProto.OutgoingTransferTx.Builder addUnbatchedTransfersBuilder(
+          int index) {
+        return getUnbatchedTransfersFieldBuilder().addBuilder(
+            index, com.gravity.v1.BatchProto.OutgoingTransferTx.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .gravity.v1.OutgoingTransferTx unbatched_transfers = 12 [json_name = "unbatchedTransfers", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.gravity.v1.BatchProto.OutgoingTransferTx.Builder> 
+           getUnbatchedTransfersBuilderList() {
+        return getUnbatchedTransfersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.gravity.v1.BatchProto.OutgoingTransferTx, com.gravity.v1.BatchProto.OutgoingTransferTx.Builder, com.gravity.v1.BatchProto.OutgoingTransferTxOrBuilder> 
+          getUnbatchedTransfersFieldBuilder() {
+        if (unbatchedTransfersBuilder_ == null) {
+          unbatchedTransfersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.gravity.v1.BatchProto.OutgoingTransferTx, com.gravity.v1.BatchProto.OutgoingTransferTx.Builder, com.gravity.v1.BatchProto.OutgoingTransferTxOrBuilder>(
+                  unbatchedTransfers_,
+                  ((bitField0_ & 0x00000800) != 0),
+                  getParentForChildren(),
+                  isClean());
+          unbatchedTransfers_ = null;
+        }
+        return unbatchedTransfersBuilder_;
+      }
+
+      private java.util.List<com.gravity.v1.TypesProto.PendingIbcAutoForward> pendingIbcAutoForwards_ =
+        java.util.Collections.emptyList();
+      private void ensurePendingIbcAutoForwardsIsMutable() {
+        if (!((bitField0_ & 0x00001000) != 0)) {
+          pendingIbcAutoForwards_ = new java.util.ArrayList<com.gravity.v1.TypesProto.PendingIbcAutoForward>(pendingIbcAutoForwards_);
+          bitField0_ |= 0x00001000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.gravity.v1.TypesProto.PendingIbcAutoForward, com.gravity.v1.TypesProto.PendingIbcAutoForward.Builder, com.gravity.v1.TypesProto.PendingIbcAutoForwardOrBuilder> pendingIbcAutoForwardsBuilder_;
+
+      /**
+       * <code>repeated .gravity.v1.PendingIbcAutoForward pending_ibc_auto_forwards = 13 [json_name = "pendingIbcAutoForwards", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.gravity.v1.TypesProto.PendingIbcAutoForward> getPendingIbcAutoForwardsList() {
+        if (pendingIbcAutoForwardsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(pendingIbcAutoForwards_);
+        } else {
+          return pendingIbcAutoForwardsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.PendingIbcAutoForward pending_ibc_auto_forwards = 13 [json_name = "pendingIbcAutoForwards", (.gogoproto.nullable) = false];</code>
+       */
+      public int getPendingIbcAutoForwardsCount() {
+        if (pendingIbcAutoForwardsBuilder_ == null) {
+          return pendingIbcAutoForwards_.size();
+        } else {
+          return pendingIbcAutoForwardsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.PendingIbcAutoForward pending_ibc_auto_forwards = 13 [json_name = "pendingIbcAutoForwards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.TypesProto.PendingIbcAutoForward getPendingIbcAutoForwards(int index) {
+        if (pendingIbcAutoForwardsBuilder_ == null) {
+          return pendingIbcAutoForwards_.get(index);
+        } else {
+          return pendingIbcAutoForwardsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.PendingIbcAutoForward pending_ibc_auto_forwards = 13 [json_name = "pendingIbcAutoForwards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPendingIbcAutoForwards(
+          int index, com.gravity.v1.TypesProto.PendingIbcAutoForward value) {
+        if (pendingIbcAutoForwardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePendingIbcAutoForwardsIsMutable();
+          pendingIbcAutoForwards_.set(index, value);
+          onChanged();
+        } else {
+          pendingIbcAutoForwardsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.PendingIbcAutoForward pending_ibc_auto_forwards = 13 [json_name = "pendingIbcAutoForwards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPendingIbcAutoForwards(
+          int index, com.gravity.v1.TypesProto.PendingIbcAutoForward.Builder builderForValue) {
+        if (pendingIbcAutoForwardsBuilder_ == null) {
+          ensurePendingIbcAutoForwardsIsMutable();
+          pendingIbcAutoForwards_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          pendingIbcAutoForwardsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.PendingIbcAutoForward pending_ibc_auto_forwards = 13 [json_name = "pendingIbcAutoForwards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPendingIbcAutoForwards(com.gravity.v1.TypesProto.PendingIbcAutoForward value) {
+        if (pendingIbcAutoForwardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePendingIbcAutoForwardsIsMutable();
+          pendingIbcAutoForwards_.add(value);
+          onChanged();
+        } else {
+          pendingIbcAutoForwardsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.PendingIbcAutoForward pending_ibc_auto_forwards = 13 [json_name = "pendingIbcAutoForwards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPendingIbcAutoForwards(
+          int index, com.gravity.v1.TypesProto.PendingIbcAutoForward value) {
+        if (pendingIbcAutoForwardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePendingIbcAutoForwardsIsMutable();
+          pendingIbcAutoForwards_.add(index, value);
+          onChanged();
+        } else {
+          pendingIbcAutoForwardsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.PendingIbcAutoForward pending_ibc_auto_forwards = 13 [json_name = "pendingIbcAutoForwards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPendingIbcAutoForwards(
+          com.gravity.v1.TypesProto.PendingIbcAutoForward.Builder builderForValue) {
+        if (pendingIbcAutoForwardsBuilder_ == null) {
+          ensurePendingIbcAutoForwardsIsMutable();
+          pendingIbcAutoForwards_.add(builderForValue.build());
+          onChanged();
+        } else {
+          pendingIbcAutoForwardsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.PendingIbcAutoForward pending_ibc_auto_forwards = 13 [json_name = "pendingIbcAutoForwards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPendingIbcAutoForwards(
+          int index, com.gravity.v1.TypesProto.PendingIbcAutoForward.Builder builderForValue) {
+        if (pendingIbcAutoForwardsBuilder_ == null) {
+          ensurePendingIbcAutoForwardsIsMutable();
+          pendingIbcAutoForwards_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          pendingIbcAutoForwardsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.PendingIbcAutoForward pending_ibc_auto_forwards = 13 [json_name = "pendingIbcAutoForwards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllPendingIbcAutoForwards(
+          java.lang.Iterable<? extends com.gravity.v1.TypesProto.PendingIbcAutoForward> values) {
+        if (pendingIbcAutoForwardsBuilder_ == null) {
+          ensurePendingIbcAutoForwardsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, pendingIbcAutoForwards_);
+          onChanged();
+        } else {
+          pendingIbcAutoForwardsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.PendingIbcAutoForward pending_ibc_auto_forwards = 13 [json_name = "pendingIbcAutoForwards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPendingIbcAutoForwards() {
+        if (pendingIbcAutoForwardsBuilder_ == null) {
+          pendingIbcAutoForwards_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00001000);
+          onChanged();
+        } else {
+          pendingIbcAutoForwardsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.PendingIbcAutoForward pending_ibc_auto_forwards = 13 [json_name = "pendingIbcAutoForwards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removePendingIbcAutoForwards(int index) {
+        if (pendingIbcAutoForwardsBuilder_ == null) {
+          ensurePendingIbcAutoForwardsIsMutable();
+          pendingIbcAutoForwards_.remove(index);
+          onChanged();
+        } else {
+          pendingIbcAutoForwardsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.PendingIbcAutoForward pending_ibc_auto_forwards = 13 [json_name = "pendingIbcAutoForwards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.TypesProto.PendingIbcAutoForward.Builder getPendingIbcAutoForwardsBuilder(
+          int index) {
+        return getPendingIbcAutoForwardsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .gravity.v1.PendingIbcAutoForward pending_ibc_auto_forwards = 13 [json_name = "pendingIbcAutoForwards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.TypesProto.PendingIbcAutoForwardOrBuilder getPendingIbcAutoForwardsOrBuilder(
+          int index) {
+        if (pendingIbcAutoForwardsBuilder_ == null) {
+          return pendingIbcAutoForwards_.get(index);  } else {
+          return pendingIbcAutoForwardsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.PendingIbcAutoForward pending_ibc_auto_forwards = 13 [json_name = "pendingIbcAutoForwards", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.gravity.v1.TypesProto.PendingIbcAutoForwardOrBuilder> 
+           getPendingIbcAutoForwardsOrBuilderList() {
+        if (pendingIbcAutoForwardsBuilder_ != null) {
+          return pendingIbcAutoForwardsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(pendingIbcAutoForwards_);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.PendingIbcAutoForward pending_ibc_auto_forwards = 13 [json_name = "pendingIbcAutoForwards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.TypesProto.PendingIbcAutoForward.Builder addPendingIbcAutoForwardsBuilder() {
+        return getPendingIbcAutoForwardsFieldBuilder().addBuilder(
+            com.gravity.v1.TypesProto.PendingIbcAutoForward.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .gravity.v1.PendingIbcAutoForward pending_ibc_auto_forwards = 13 [json_name = "pendingIbcAutoForwards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.TypesProto.PendingIbcAutoForward.Builder addPendingIbcAutoForwardsBuilder(
+          int index) {
+        return getPendingIbcAutoForwardsFieldBuilder().addBuilder(
+            index, com.gravity.v1.TypesProto.PendingIbcAutoForward.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .gravity.v1.PendingIbcAutoForward pending_ibc_auto_forwards = 13 [json_name = "pendingIbcAutoForwards", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.gravity.v1.TypesProto.PendingIbcAutoForward.Builder> 
+           getPendingIbcAutoForwardsBuilderList() {
+        return getPendingIbcAutoForwardsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.gravity.v1.TypesProto.PendingIbcAutoForward, com.gravity.v1.TypesProto.PendingIbcAutoForward.Builder, com.gravity.v1.TypesProto.PendingIbcAutoForwardOrBuilder> 
+          getPendingIbcAutoForwardsFieldBuilder() {
+        if (pendingIbcAutoForwardsBuilder_ == null) {
+          pendingIbcAutoForwardsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.gravity.v1.TypesProto.PendingIbcAutoForward, com.gravity.v1.TypesProto.PendingIbcAutoForward.Builder, com.gravity.v1.TypesProto.PendingIbcAutoForwardOrBuilder>(
+                  pendingIbcAutoForwards_,
+                  ((bitField0_ & 0x00001000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          pendingIbcAutoForwards_ = null;
+        }
+        return pendingIbcAutoForwardsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:gravity.v1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:gravity.v1.GenesisState)
+    private static final com.gravity.v1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.gravity.v1.GenesisProto.GenesisState();
+    }
+
+    public static com.gravity.v1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.gravity.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GravityNoncesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:gravity.v1.GravityNonces)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * the nonce of the last generated validator set
+     * </pre>
+     *
+     * <code>uint64 latest_valset_nonce = 1 [json_name = "latestValsetNonce"];</code>
+     * @return The latestValsetNonce.
+     */
+    long getLatestValsetNonce();
+
+    /**
+     * <pre>
+     * the last observed Gravity.sol contract event nonce
+     * </pre>
+     *
+     * <code>uint64 last_observed_nonce = 2 [json_name = "lastObservedNonce"];</code>
+     * @return The lastObservedNonce.
+     */
+    long getLastObservedNonce();
+
+    /**
+     * <pre>
+     * the last valset nonce we have slashed, to prevent double slashing
+     * </pre>
+     *
+     * <code>uint64 last_slashed_valset_nonce = 3 [json_name = "lastSlashedValsetNonce"];</code>
+     * @return The lastSlashedValsetNonce.
+     */
+    long getLastSlashedValsetNonce();
+
+    /**
+     * <pre>
+     * the last batch Cosmos chain block that batch slashing has completed for
+     * there is an individual batch nonce for each token type so this removes
+     * the need to store them all
+     * </pre>
+     *
+     * <code>uint64 last_slashed_batch_block = 4 [json_name = "lastSlashedBatchBlock"];</code>
+     * @return The lastSlashedBatchBlock.
+     */
+    long getLastSlashedBatchBlock();
+
+    /**
+     * <pre>
+     * the last cosmos block that logic call slashing has completed for
+     * </pre>
+     *
+     * <code>uint64 last_slashed_logic_call_block = 5 [json_name = "lastSlashedLogicCallBlock"];</code>
+     * @return The lastSlashedLogicCallBlock.
+     */
+    long getLastSlashedLogicCallBlock();
+
+    /**
+     * <pre>
+     * the last transaction id from the Gravity TX pool, this prevents ID
+     * duplication during chain upgrades
+     * </pre>
+     *
+     * <code>uint64 last_tx_pool_id = 6 [json_name = "lastTxPoolId"];</code>
+     * @return The lastTxPoolId.
+     */
+    long getLastTxPoolId();
+
+    /**
+     * <pre>
+     * the last batch id from the Gravity batch pool, this prevents ID duplication
+     * during chain upgrades
+     * </pre>
+     *
+     * <code>uint64 last_batch_id = 7 [json_name = "lastBatchId"];</code>
+     * @return The lastBatchId.
+     */
+    long getLastBatchId();
+  }
+  /**
+   * <pre>
+   * GravityCounters contains the many noces and counters required to maintain the bridge state in the genesis
+   * </pre>
+   *
+   * Protobuf type {@code gravity.v1.GravityNonces}
+   */
+  public static final class GravityNonces extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:gravity.v1.GravityNonces)
+      GravityNoncesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GravityNonces.newBuilder() to construct.
+    private GravityNonces(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GravityNonces() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GravityNonces();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.gravity.v1.GenesisProto.internal_static_gravity_v1_GravityNonces_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.gravity.v1.GenesisProto.internal_static_gravity_v1_GravityNonces_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.gravity.v1.GenesisProto.GravityNonces.class, com.gravity.v1.GenesisProto.GravityNonces.Builder.class);
+    }
+
+    public static final int LATEST_VALSET_NONCE_FIELD_NUMBER = 1;
+    private long latestValsetNonce_ = 0L;
+    /**
+     * <pre>
+     * the nonce of the last generated validator set
+     * </pre>
+     *
+     * <code>uint64 latest_valset_nonce = 1 [json_name = "latestValsetNonce"];</code>
+     * @return The latestValsetNonce.
+     */
+    @java.lang.Override
+    public long getLatestValsetNonce() {
+      return latestValsetNonce_;
+    }
+
+    public static final int LAST_OBSERVED_NONCE_FIELD_NUMBER = 2;
+    private long lastObservedNonce_ = 0L;
+    /**
+     * <pre>
+     * the last observed Gravity.sol contract event nonce
+     * </pre>
+     *
+     * <code>uint64 last_observed_nonce = 2 [json_name = "lastObservedNonce"];</code>
+     * @return The lastObservedNonce.
+     */
+    @java.lang.Override
+    public long getLastObservedNonce() {
+      return lastObservedNonce_;
+    }
+
+    public static final int LAST_SLASHED_VALSET_NONCE_FIELD_NUMBER = 3;
+    private long lastSlashedValsetNonce_ = 0L;
+    /**
+     * <pre>
+     * the last valset nonce we have slashed, to prevent double slashing
+     * </pre>
+     *
+     * <code>uint64 last_slashed_valset_nonce = 3 [json_name = "lastSlashedValsetNonce"];</code>
+     * @return The lastSlashedValsetNonce.
+     */
+    @java.lang.Override
+    public long getLastSlashedValsetNonce() {
+      return lastSlashedValsetNonce_;
+    }
+
+    public static final int LAST_SLASHED_BATCH_BLOCK_FIELD_NUMBER = 4;
+    private long lastSlashedBatchBlock_ = 0L;
+    /**
+     * <pre>
+     * the last batch Cosmos chain block that batch slashing has completed for
+     * there is an individual batch nonce for each token type so this removes
+     * the need to store them all
+     * </pre>
+     *
+     * <code>uint64 last_slashed_batch_block = 4 [json_name = "lastSlashedBatchBlock"];</code>
+     * @return The lastSlashedBatchBlock.
+     */
+    @java.lang.Override
+    public long getLastSlashedBatchBlock() {
+      return lastSlashedBatchBlock_;
+    }
+
+    public static final int LAST_SLASHED_LOGIC_CALL_BLOCK_FIELD_NUMBER = 5;
+    private long lastSlashedLogicCallBlock_ = 0L;
+    /**
+     * <pre>
+     * the last cosmos block that logic call slashing has completed for
+     * </pre>
+     *
+     * <code>uint64 last_slashed_logic_call_block = 5 [json_name = "lastSlashedLogicCallBlock"];</code>
+     * @return The lastSlashedLogicCallBlock.
+     */
+    @java.lang.Override
+    public long getLastSlashedLogicCallBlock() {
+      return lastSlashedLogicCallBlock_;
+    }
+
+    public static final int LAST_TX_POOL_ID_FIELD_NUMBER = 6;
+    private long lastTxPoolId_ = 0L;
+    /**
+     * <pre>
+     * the last transaction id from the Gravity TX pool, this prevents ID
+     * duplication during chain upgrades
+     * </pre>
+     *
+     * <code>uint64 last_tx_pool_id = 6 [json_name = "lastTxPoolId"];</code>
+     * @return The lastTxPoolId.
+     */
+    @java.lang.Override
+    public long getLastTxPoolId() {
+      return lastTxPoolId_;
+    }
+
+    public static final int LAST_BATCH_ID_FIELD_NUMBER = 7;
+    private long lastBatchId_ = 0L;
+    /**
+     * <pre>
+     * the last batch id from the Gravity batch pool, this prevents ID duplication
+     * during chain upgrades
+     * </pre>
+     *
+     * <code>uint64 last_batch_id = 7 [json_name = "lastBatchId"];</code>
+     * @return The lastBatchId.
+     */
+    @java.lang.Override
+    public long getLastBatchId() {
+      return lastBatchId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (latestValsetNonce_ != 0L) {
+        output.writeUInt64(1, latestValsetNonce_);
+      }
+      if (lastObservedNonce_ != 0L) {
+        output.writeUInt64(2, lastObservedNonce_);
+      }
+      if (lastSlashedValsetNonce_ != 0L) {
+        output.writeUInt64(3, lastSlashedValsetNonce_);
+      }
+      if (lastSlashedBatchBlock_ != 0L) {
+        output.writeUInt64(4, lastSlashedBatchBlock_);
+      }
+      if (lastSlashedLogicCallBlock_ != 0L) {
+        output.writeUInt64(5, lastSlashedLogicCallBlock_);
+      }
+      if (lastTxPoolId_ != 0L) {
+        output.writeUInt64(6, lastTxPoolId_);
+      }
+      if (lastBatchId_ != 0L) {
+        output.writeUInt64(7, lastBatchId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (latestValsetNonce_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, latestValsetNonce_);
+      }
+      if (lastObservedNonce_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, lastObservedNonce_);
+      }
+      if (lastSlashedValsetNonce_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, lastSlashedValsetNonce_);
+      }
+      if (lastSlashedBatchBlock_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, lastSlashedBatchBlock_);
+      }
+      if (lastSlashedLogicCallBlock_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, lastSlashedLogicCallBlock_);
+      }
+      if (lastTxPoolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(6, lastTxPoolId_);
+      }
+      if (lastBatchId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(7, lastBatchId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.gravity.v1.GenesisProto.GravityNonces)) {
+        return super.equals(obj);
+      }
+      com.gravity.v1.GenesisProto.GravityNonces other = (com.gravity.v1.GenesisProto.GravityNonces) obj;
+
+      if (getLatestValsetNonce()
+          != other.getLatestValsetNonce()) return false;
+      if (getLastObservedNonce()
+          != other.getLastObservedNonce()) return false;
+      if (getLastSlashedValsetNonce()
+          != other.getLastSlashedValsetNonce()) return false;
+      if (getLastSlashedBatchBlock()
+          != other.getLastSlashedBatchBlock()) return false;
+      if (getLastSlashedLogicCallBlock()
+          != other.getLastSlashedLogicCallBlock()) return false;
+      if (getLastTxPoolId()
+          != other.getLastTxPoolId()) return false;
+      if (getLastBatchId()
+          != other.getLastBatchId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LATEST_VALSET_NONCE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLatestValsetNonce());
+      hash = (37 * hash) + LAST_OBSERVED_NONCE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLastObservedNonce());
+      hash = (37 * hash) + LAST_SLASHED_VALSET_NONCE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLastSlashedValsetNonce());
+      hash = (37 * hash) + LAST_SLASHED_BATCH_BLOCK_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLastSlashedBatchBlock());
+      hash = (37 * hash) + LAST_SLASHED_LOGIC_CALL_BLOCK_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLastSlashedLogicCallBlock());
+      hash = (37 * hash) + LAST_TX_POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLastTxPoolId());
+      hash = (37 * hash) + LAST_BATCH_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLastBatchId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.gravity.v1.GenesisProto.GravityNonces parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.GenesisProto.GravityNonces parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.GenesisProto.GravityNonces parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.GenesisProto.GravityNonces parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.GenesisProto.GravityNonces parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.GenesisProto.GravityNonces parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.GenesisProto.GravityNonces parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gravity.v1.GenesisProto.GravityNonces parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.gravity.v1.GenesisProto.GravityNonces parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.gravity.v1.GenesisProto.GravityNonces parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.gravity.v1.GenesisProto.GravityNonces parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gravity.v1.GenesisProto.GravityNonces parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.gravity.v1.GenesisProto.GravityNonces prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GravityCounters contains the many noces and counters required to maintain the bridge state in the genesis
+     * </pre>
+     *
+     * Protobuf type {@code gravity.v1.GravityNonces}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:gravity.v1.GravityNonces)
+        com.gravity.v1.GenesisProto.GravityNoncesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.gravity.v1.GenesisProto.internal_static_gravity_v1_GravityNonces_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.gravity.v1.GenesisProto.internal_static_gravity_v1_GravityNonces_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.gravity.v1.GenesisProto.GravityNonces.class, com.gravity.v1.GenesisProto.GravityNonces.Builder.class);
+      }
+
+      // Construct using com.gravity.v1.GenesisProto.GravityNonces.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        latestValsetNonce_ = 0L;
+        lastObservedNonce_ = 0L;
+        lastSlashedValsetNonce_ = 0L;
+        lastSlashedBatchBlock_ = 0L;
+        lastSlashedLogicCallBlock_ = 0L;
+        lastTxPoolId_ = 0L;
+        lastBatchId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.gravity.v1.GenesisProto.internal_static_gravity_v1_GravityNonces_descriptor;
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.GenesisProto.GravityNonces getDefaultInstanceForType() {
+        return com.gravity.v1.GenesisProto.GravityNonces.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.GenesisProto.GravityNonces build() {
+        com.gravity.v1.GenesisProto.GravityNonces result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.GenesisProto.GravityNonces buildPartial() {
+        com.gravity.v1.GenesisProto.GravityNonces result = new com.gravity.v1.GenesisProto.GravityNonces(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.gravity.v1.GenesisProto.GravityNonces result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.latestValsetNonce_ = latestValsetNonce_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.lastObservedNonce_ = lastObservedNonce_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.lastSlashedValsetNonce_ = lastSlashedValsetNonce_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.lastSlashedBatchBlock_ = lastSlashedBatchBlock_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.lastSlashedLogicCallBlock_ = lastSlashedLogicCallBlock_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.lastTxPoolId_ = lastTxPoolId_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.lastBatchId_ = lastBatchId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.gravity.v1.GenesisProto.GravityNonces) {
+          return mergeFrom((com.gravity.v1.GenesisProto.GravityNonces)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.gravity.v1.GenesisProto.GravityNonces other) {
+        if (other == com.gravity.v1.GenesisProto.GravityNonces.getDefaultInstance()) return this;
+        if (other.getLatestValsetNonce() != 0L) {
+          setLatestValsetNonce(other.getLatestValsetNonce());
+        }
+        if (other.getLastObservedNonce() != 0L) {
+          setLastObservedNonce(other.getLastObservedNonce());
+        }
+        if (other.getLastSlashedValsetNonce() != 0L) {
+          setLastSlashedValsetNonce(other.getLastSlashedValsetNonce());
+        }
+        if (other.getLastSlashedBatchBlock() != 0L) {
+          setLastSlashedBatchBlock(other.getLastSlashedBatchBlock());
+        }
+        if (other.getLastSlashedLogicCallBlock() != 0L) {
+          setLastSlashedLogicCallBlock(other.getLastSlashedLogicCallBlock());
+        }
+        if (other.getLastTxPoolId() != 0L) {
+          setLastTxPoolId(other.getLastTxPoolId());
+        }
+        if (other.getLastBatchId() != 0L) {
+          setLastBatchId(other.getLastBatchId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                latestValsetNonce_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                lastObservedNonce_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                lastSlashedValsetNonce_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                lastSlashedBatchBlock_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 40: {
+                lastSlashedLogicCallBlock_ = input.readUInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 48: {
+                lastTxPoolId_ = input.readUInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              case 56: {
+                lastBatchId_ = input.readUInt64();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long latestValsetNonce_ ;
+      /**
+       * <pre>
+       * the nonce of the last generated validator set
+       * </pre>
+       *
+       * <code>uint64 latest_valset_nonce = 1 [json_name = "latestValsetNonce"];</code>
+       * @return The latestValsetNonce.
+       */
+      @java.lang.Override
+      public long getLatestValsetNonce() {
+        return latestValsetNonce_;
+      }
+      /**
+       * <pre>
+       * the nonce of the last generated validator set
+       * </pre>
+       *
+       * <code>uint64 latest_valset_nonce = 1 [json_name = "latestValsetNonce"];</code>
+       * @param value The latestValsetNonce to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLatestValsetNonce(long value) {
+
+        latestValsetNonce_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the nonce of the last generated validator set
+       * </pre>
+       *
+       * <code>uint64 latest_valset_nonce = 1 [json_name = "latestValsetNonce"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLatestValsetNonce() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        latestValsetNonce_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long lastObservedNonce_ ;
+      /**
+       * <pre>
+       * the last observed Gravity.sol contract event nonce
+       * </pre>
+       *
+       * <code>uint64 last_observed_nonce = 2 [json_name = "lastObservedNonce"];</code>
+       * @return The lastObservedNonce.
+       */
+      @java.lang.Override
+      public long getLastObservedNonce() {
+        return lastObservedNonce_;
+      }
+      /**
+       * <pre>
+       * the last observed Gravity.sol contract event nonce
+       * </pre>
+       *
+       * <code>uint64 last_observed_nonce = 2 [json_name = "lastObservedNonce"];</code>
+       * @param value The lastObservedNonce to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastObservedNonce(long value) {
+
+        lastObservedNonce_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the last observed Gravity.sol contract event nonce
+       * </pre>
+       *
+       * <code>uint64 last_observed_nonce = 2 [json_name = "lastObservedNonce"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastObservedNonce() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        lastObservedNonce_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long lastSlashedValsetNonce_ ;
+      /**
+       * <pre>
+       * the last valset nonce we have slashed, to prevent double slashing
+       * </pre>
+       *
+       * <code>uint64 last_slashed_valset_nonce = 3 [json_name = "lastSlashedValsetNonce"];</code>
+       * @return The lastSlashedValsetNonce.
+       */
+      @java.lang.Override
+      public long getLastSlashedValsetNonce() {
+        return lastSlashedValsetNonce_;
+      }
+      /**
+       * <pre>
+       * the last valset nonce we have slashed, to prevent double slashing
+       * </pre>
+       *
+       * <code>uint64 last_slashed_valset_nonce = 3 [json_name = "lastSlashedValsetNonce"];</code>
+       * @param value The lastSlashedValsetNonce to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastSlashedValsetNonce(long value) {
+
+        lastSlashedValsetNonce_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the last valset nonce we have slashed, to prevent double slashing
+       * </pre>
+       *
+       * <code>uint64 last_slashed_valset_nonce = 3 [json_name = "lastSlashedValsetNonce"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastSlashedValsetNonce() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        lastSlashedValsetNonce_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long lastSlashedBatchBlock_ ;
+      /**
+       * <pre>
+       * the last batch Cosmos chain block that batch slashing has completed for
+       * there is an individual batch nonce for each token type so this removes
+       * the need to store them all
+       * </pre>
+       *
+       * <code>uint64 last_slashed_batch_block = 4 [json_name = "lastSlashedBatchBlock"];</code>
+       * @return The lastSlashedBatchBlock.
+       */
+      @java.lang.Override
+      public long getLastSlashedBatchBlock() {
+        return lastSlashedBatchBlock_;
+      }
+      /**
+       * <pre>
+       * the last batch Cosmos chain block that batch slashing has completed for
+       * there is an individual batch nonce for each token type so this removes
+       * the need to store them all
+       * </pre>
+       *
+       * <code>uint64 last_slashed_batch_block = 4 [json_name = "lastSlashedBatchBlock"];</code>
+       * @param value The lastSlashedBatchBlock to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastSlashedBatchBlock(long value) {
+
+        lastSlashedBatchBlock_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the last batch Cosmos chain block that batch slashing has completed for
+       * there is an individual batch nonce for each token type so this removes
+       * the need to store them all
+       * </pre>
+       *
+       * <code>uint64 last_slashed_batch_block = 4 [json_name = "lastSlashedBatchBlock"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastSlashedBatchBlock() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        lastSlashedBatchBlock_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long lastSlashedLogicCallBlock_ ;
+      /**
+       * <pre>
+       * the last cosmos block that logic call slashing has completed for
+       * </pre>
+       *
+       * <code>uint64 last_slashed_logic_call_block = 5 [json_name = "lastSlashedLogicCallBlock"];</code>
+       * @return The lastSlashedLogicCallBlock.
+       */
+      @java.lang.Override
+      public long getLastSlashedLogicCallBlock() {
+        return lastSlashedLogicCallBlock_;
+      }
+      /**
+       * <pre>
+       * the last cosmos block that logic call slashing has completed for
+       * </pre>
+       *
+       * <code>uint64 last_slashed_logic_call_block = 5 [json_name = "lastSlashedLogicCallBlock"];</code>
+       * @param value The lastSlashedLogicCallBlock to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastSlashedLogicCallBlock(long value) {
+
+        lastSlashedLogicCallBlock_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the last cosmos block that logic call slashing has completed for
+       * </pre>
+       *
+       * <code>uint64 last_slashed_logic_call_block = 5 [json_name = "lastSlashedLogicCallBlock"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastSlashedLogicCallBlock() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        lastSlashedLogicCallBlock_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long lastTxPoolId_ ;
+      /**
+       * <pre>
+       * the last transaction id from the Gravity TX pool, this prevents ID
+       * duplication during chain upgrades
+       * </pre>
+       *
+       * <code>uint64 last_tx_pool_id = 6 [json_name = "lastTxPoolId"];</code>
+       * @return The lastTxPoolId.
+       */
+      @java.lang.Override
+      public long getLastTxPoolId() {
+        return lastTxPoolId_;
+      }
+      /**
+       * <pre>
+       * the last transaction id from the Gravity TX pool, this prevents ID
+       * duplication during chain upgrades
+       * </pre>
+       *
+       * <code>uint64 last_tx_pool_id = 6 [json_name = "lastTxPoolId"];</code>
+       * @param value The lastTxPoolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastTxPoolId(long value) {
+
+        lastTxPoolId_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the last transaction id from the Gravity TX pool, this prevents ID
+       * duplication during chain upgrades
+       * </pre>
+       *
+       * <code>uint64 last_tx_pool_id = 6 [json_name = "lastTxPoolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastTxPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        lastTxPoolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long lastBatchId_ ;
+      /**
+       * <pre>
+       * the last batch id from the Gravity batch pool, this prevents ID duplication
+       * during chain upgrades
+       * </pre>
+       *
+       * <code>uint64 last_batch_id = 7 [json_name = "lastBatchId"];</code>
+       * @return The lastBatchId.
+       */
+      @java.lang.Override
+      public long getLastBatchId() {
+        return lastBatchId_;
+      }
+      /**
+       * <pre>
+       * the last batch id from the Gravity batch pool, this prevents ID duplication
+       * during chain upgrades
+       * </pre>
+       *
+       * <code>uint64 last_batch_id = 7 [json_name = "lastBatchId"];</code>
+       * @param value The lastBatchId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastBatchId(long value) {
+
+        lastBatchId_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the last batch id from the Gravity batch pool, this prevents ID duplication
+       * during chain upgrades
+       * </pre>
+       *
+       * <code>uint64 last_batch_id = 7 [json_name = "lastBatchId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastBatchId() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        lastBatchId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:gravity.v1.GravityNonces)
+    }
+
+    // @@protoc_insertion_point(class_scope:gravity.v1.GravityNonces)
+    private static final com.gravity.v1.GenesisProto.GravityNonces DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.gravity.v1.GenesisProto.GravityNonces();
+    }
+
+    public static com.gravity.v1.GenesisProto.GravityNonces getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GravityNonces>
+        PARSER = new com.google.protobuf.AbstractParser<GravityNonces>() {
+      @java.lang.Override
+      public GravityNonces parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GravityNonces> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GravityNonces> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.gravity.v1.GenesisProto.GravityNonces getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_gravity_v1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_gravity_v1_Params_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_gravity_v1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_gravity_v1_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_gravity_v1_GravityNonces_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_gravity_v1_GravityNonces_fieldAccessorTable;
 
@@ -106,12 +8552,12 @@ public final class GenesisProto {
       "atchBlock\022@\n\035last_slashed_logic_call_blo" +
       "ck\030\005 \001(\004R\031lastSlashedLogicCallBlock\022%\n\017l" +
       "ast_tx_pool_id\030\006 \001(\004R\014lastTxPoolId\022\"\n\rla" +
-      "st_batch_id\030\007 \001(\004R\013lastBatchIdB\250\001\n\016com.g" +
-      "ravity.v1B\014GenesisProtoP\001Z?github.com/Gr" +
-      "avity-Bridge/Gravity-Bridge/module/x/gra" +
-      "vity/types\242\002\003GXX\252\002\nGravity.V1\312\002\nGravity\\" +
-      "V1\342\002\026Gravity\\V1\\GPBMetadata\352\002\013Gravity::V" +
-      "1b\006proto3"
+      "st_batch_id\030\007 \001(\004R\013lastBatchIdB\246\001\n\016com.g" +
+      "ravity.v1B\014GenesisProtoZ?github.com/Grav" +
+      "ity-Bridge/Gravity-Bridge/module/x/gravi" +
+      "ty/types\242\002\003GXX\252\002\nGravity.V1\312\002\nGravity\\V1" +
+      "\342\002\026Gravity\\V1\\GPBMetadata\352\002\013Gravity::V1b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

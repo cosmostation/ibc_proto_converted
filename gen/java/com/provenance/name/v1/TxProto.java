@@ -14,44 +14,4972 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgBindNameRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.name.v1.MsgBindNameRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The parent record to bind this name under.
+     * </pre>
+     *
+     * <code>.provenance.name.v1.NameRecord parent = 1 [json_name = "parent", (.gogoproto.nullable) = false];</code>
+     * @return Whether the parent field is set.
+     */
+    boolean hasParent();
+    /**
+     * <pre>
+     * The parent record to bind this name under.
+     * </pre>
+     *
+     * <code>.provenance.name.v1.NameRecord parent = 1 [json_name = "parent", (.gogoproto.nullable) = false];</code>
+     * @return The parent.
+     */
+    com.provenance.name.v1.NameProto.NameRecord getParent();
+    /**
+     * <pre>
+     * The parent record to bind this name under.
+     * </pre>
+     *
+     * <code>.provenance.name.v1.NameRecord parent = 1 [json_name = "parent", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.name.v1.NameProto.NameRecordOrBuilder getParentOrBuilder();
+
+    /**
+     * <pre>
+     * The name record to bind under the parent
+     * </pre>
+     *
+     * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+     * @return Whether the record field is set.
+     */
+    boolean hasRecord();
+    /**
+     * <pre>
+     * The name record to bind under the parent
+     * </pre>
+     *
+     * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+     * @return The record.
+     */
+    com.provenance.name.v1.NameProto.NameRecord getRecord();
+    /**
+     * <pre>
+     * The name record to bind under the parent
+     * </pre>
+     *
+     * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.name.v1.NameProto.NameRecordOrBuilder getRecordOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgBindNameRequest defines an sdk.Msg type that is used to add an address/name binding under an optional parent name.
+   * The record may optionally be restricted to prevent additional names from being added under this one without the
+   * owner signing the request.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.name.v1.MsgBindNameRequest}
+   */
+  public static final class MsgBindNameRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.name.v1.MsgBindNameRequest)
+      MsgBindNameRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgBindNameRequest.newBuilder() to construct.
+    private MsgBindNameRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgBindNameRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgBindNameRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgBindNameRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgBindNameRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.name.v1.TxProto.MsgBindNameRequest.class, com.provenance.name.v1.TxProto.MsgBindNameRequest.Builder.class);
+    }
+
+    public static final int PARENT_FIELD_NUMBER = 1;
+    private com.provenance.name.v1.NameProto.NameRecord parent_;
+    /**
+     * <pre>
+     * The parent record to bind this name under.
+     * </pre>
+     *
+     * <code>.provenance.name.v1.NameRecord parent = 1 [json_name = "parent", (.gogoproto.nullable) = false];</code>
+     * @return Whether the parent field is set.
+     */
+    @java.lang.Override
+    public boolean hasParent() {
+      return parent_ != null;
+    }
+    /**
+     * <pre>
+     * The parent record to bind this name under.
+     * </pre>
+     *
+     * <code>.provenance.name.v1.NameRecord parent = 1 [json_name = "parent", (.gogoproto.nullable) = false];</code>
+     * @return The parent.
+     */
+    @java.lang.Override
+    public com.provenance.name.v1.NameProto.NameRecord getParent() {
+      return parent_ == null ? com.provenance.name.v1.NameProto.NameRecord.getDefaultInstance() : parent_;
+    }
+    /**
+     * <pre>
+     * The parent record to bind this name under.
+     * </pre>
+     *
+     * <code>.provenance.name.v1.NameRecord parent = 1 [json_name = "parent", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.name.v1.NameProto.NameRecordOrBuilder getParentOrBuilder() {
+      return parent_ == null ? com.provenance.name.v1.NameProto.NameRecord.getDefaultInstance() : parent_;
+    }
+
+    public static final int RECORD_FIELD_NUMBER = 2;
+    private com.provenance.name.v1.NameProto.NameRecord record_;
+    /**
+     * <pre>
+     * The name record to bind under the parent
+     * </pre>
+     *
+     * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+     * @return Whether the record field is set.
+     */
+    @java.lang.Override
+    public boolean hasRecord() {
+      return record_ != null;
+    }
+    /**
+     * <pre>
+     * The name record to bind under the parent
+     * </pre>
+     *
+     * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+     * @return The record.
+     */
+    @java.lang.Override
+    public com.provenance.name.v1.NameProto.NameRecord getRecord() {
+      return record_ == null ? com.provenance.name.v1.NameProto.NameRecord.getDefaultInstance() : record_;
+    }
+    /**
+     * <pre>
+     * The name record to bind under the parent
+     * </pre>
+     *
+     * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.name.v1.NameProto.NameRecordOrBuilder getRecordOrBuilder() {
+      return record_ == null ? com.provenance.name.v1.NameProto.NameRecord.getDefaultInstance() : record_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (parent_ != null) {
+        output.writeMessage(1, getParent());
+      }
+      if (record_ != null) {
+        output.writeMessage(2, getRecord());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (parent_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParent());
+      }
+      if (record_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getRecord());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.name.v1.TxProto.MsgBindNameRequest)) {
+        return super.equals(obj);
+      }
+      com.provenance.name.v1.TxProto.MsgBindNameRequest other = (com.provenance.name.v1.TxProto.MsgBindNameRequest) obj;
+
+      if (hasParent() != other.hasParent()) return false;
+      if (hasParent()) {
+        if (!getParent()
+            .equals(other.getParent())) return false;
+      }
+      if (hasRecord() != other.hasRecord()) return false;
+      if (hasRecord()) {
+        if (!getRecord()
+            .equals(other.getRecord())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParent()) {
+        hash = (37 * hash) + PARENT_FIELD_NUMBER;
+        hash = (53 * hash) + getParent().hashCode();
+      }
+      if (hasRecord()) {
+        hash = (37 * hash) + RECORD_FIELD_NUMBER;
+        hash = (53 * hash) + getRecord().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgBindNameRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.name.v1.TxProto.MsgBindNameRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgBindNameRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.name.v1.TxProto.MsgBindNameRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgBindNameRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.name.v1.TxProto.MsgBindNameRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgBindNameRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.name.v1.TxProto.MsgBindNameRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgBindNameRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgBindNameRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgBindNameRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.name.v1.TxProto.MsgBindNameRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.name.v1.TxProto.MsgBindNameRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgBindNameRequest defines an sdk.Msg type that is used to add an address/name binding under an optional parent name.
+     * The record may optionally be restricted to prevent additional names from being added under this one without the
+     * owner signing the request.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.name.v1.MsgBindNameRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.name.v1.MsgBindNameRequest)
+        com.provenance.name.v1.TxProto.MsgBindNameRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgBindNameRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgBindNameRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.name.v1.TxProto.MsgBindNameRequest.class, com.provenance.name.v1.TxProto.MsgBindNameRequest.Builder.class);
+      }
+
+      // Construct using com.provenance.name.v1.TxProto.MsgBindNameRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        parent_ = null;
+        if (parentBuilder_ != null) {
+          parentBuilder_.dispose();
+          parentBuilder_ = null;
+        }
+        record_ = null;
+        if (recordBuilder_ != null) {
+          recordBuilder_.dispose();
+          recordBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgBindNameRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.name.v1.TxProto.MsgBindNameRequest getDefaultInstanceForType() {
+        return com.provenance.name.v1.TxProto.MsgBindNameRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.name.v1.TxProto.MsgBindNameRequest build() {
+        com.provenance.name.v1.TxProto.MsgBindNameRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.name.v1.TxProto.MsgBindNameRequest buildPartial() {
+        com.provenance.name.v1.TxProto.MsgBindNameRequest result = new com.provenance.name.v1.TxProto.MsgBindNameRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.name.v1.TxProto.MsgBindNameRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.parent_ = parentBuilder_ == null
+              ? parent_
+              : parentBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.record_ = recordBuilder_ == null
+              ? record_
+              : recordBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.name.v1.TxProto.MsgBindNameRequest) {
+          return mergeFrom((com.provenance.name.v1.TxProto.MsgBindNameRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.name.v1.TxProto.MsgBindNameRequest other) {
+        if (other == com.provenance.name.v1.TxProto.MsgBindNameRequest.getDefaultInstance()) return this;
+        if (other.hasParent()) {
+          mergeParent(other.getParent());
+        }
+        if (other.hasRecord()) {
+          mergeRecord(other.getRecord());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParentFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getRecordFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.provenance.name.v1.NameProto.NameRecord parent_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.name.v1.NameProto.NameRecord, com.provenance.name.v1.NameProto.NameRecord.Builder, com.provenance.name.v1.NameProto.NameRecordOrBuilder> parentBuilder_;
+      /**
+       * <pre>
+       * The parent record to bind this name under.
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord parent = 1 [json_name = "parent", (.gogoproto.nullable) = false];</code>
+       * @return Whether the parent field is set.
+       */
+      public boolean hasParent() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The parent record to bind this name under.
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord parent = 1 [json_name = "parent", (.gogoproto.nullable) = false];</code>
+       * @return The parent.
+       */
+      public com.provenance.name.v1.NameProto.NameRecord getParent() {
+        if (parentBuilder_ == null) {
+          return parent_ == null ? com.provenance.name.v1.NameProto.NameRecord.getDefaultInstance() : parent_;
+        } else {
+          return parentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The parent record to bind this name under.
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord parent = 1 [json_name = "parent", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParent(com.provenance.name.v1.NameProto.NameRecord value) {
+        if (parentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          parent_ = value;
+        } else {
+          parentBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The parent record to bind this name under.
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord parent = 1 [json_name = "parent", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParent(
+          com.provenance.name.v1.NameProto.NameRecord.Builder builderForValue) {
+        if (parentBuilder_ == null) {
+          parent_ = builderForValue.build();
+        } else {
+          parentBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The parent record to bind this name under.
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord parent = 1 [json_name = "parent", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParent(com.provenance.name.v1.NameProto.NameRecord value) {
+        if (parentBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            parent_ != null &&
+            parent_ != com.provenance.name.v1.NameProto.NameRecord.getDefaultInstance()) {
+            getParentBuilder().mergeFrom(value);
+          } else {
+            parent_ = value;
+          }
+        } else {
+          parentBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The parent record to bind this name under.
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord parent = 1 [json_name = "parent", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParent() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        parent_ = null;
+        if (parentBuilder_ != null) {
+          parentBuilder_.dispose();
+          parentBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The parent record to bind this name under.
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord parent = 1 [json_name = "parent", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.name.v1.NameProto.NameRecord.Builder getParentBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParentFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The parent record to bind this name under.
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord parent = 1 [json_name = "parent", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.name.v1.NameProto.NameRecordOrBuilder getParentOrBuilder() {
+        if (parentBuilder_ != null) {
+          return parentBuilder_.getMessageOrBuilder();
+        } else {
+          return parent_ == null ?
+              com.provenance.name.v1.NameProto.NameRecord.getDefaultInstance() : parent_;
+        }
+      }
+      /**
+       * <pre>
+       * The parent record to bind this name under.
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord parent = 1 [json_name = "parent", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.name.v1.NameProto.NameRecord, com.provenance.name.v1.NameProto.NameRecord.Builder, com.provenance.name.v1.NameProto.NameRecordOrBuilder> 
+          getParentFieldBuilder() {
+        if (parentBuilder_ == null) {
+          parentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.name.v1.NameProto.NameRecord, com.provenance.name.v1.NameProto.NameRecord.Builder, com.provenance.name.v1.NameProto.NameRecordOrBuilder>(
+                  getParent(),
+                  getParentForChildren(),
+                  isClean());
+          parent_ = null;
+        }
+        return parentBuilder_;
+      }
+
+      private com.provenance.name.v1.NameProto.NameRecord record_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.name.v1.NameProto.NameRecord, com.provenance.name.v1.NameProto.NameRecord.Builder, com.provenance.name.v1.NameProto.NameRecordOrBuilder> recordBuilder_;
+      /**
+       * <pre>
+       * The name record to bind under the parent
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       * @return Whether the record field is set.
+       */
+      public boolean hasRecord() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * The name record to bind under the parent
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       * @return The record.
+       */
+      public com.provenance.name.v1.NameProto.NameRecord getRecord() {
+        if (recordBuilder_ == null) {
+          return record_ == null ? com.provenance.name.v1.NameProto.NameRecord.getDefaultInstance() : record_;
+        } else {
+          return recordBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The name record to bind under the parent
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRecord(com.provenance.name.v1.NameProto.NameRecord value) {
+        if (recordBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          record_ = value;
+        } else {
+          recordBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name record to bind under the parent
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRecord(
+          com.provenance.name.v1.NameProto.NameRecord.Builder builderForValue) {
+        if (recordBuilder_ == null) {
+          record_ = builderForValue.build();
+        } else {
+          recordBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name record to bind under the parent
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeRecord(com.provenance.name.v1.NameProto.NameRecord value) {
+        if (recordBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            record_ != null &&
+            record_ != com.provenance.name.v1.NameProto.NameRecord.getDefaultInstance()) {
+            getRecordBuilder().mergeFrom(value);
+          } else {
+            record_ = value;
+          }
+        } else {
+          recordBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name record to bind under the parent
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearRecord() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        record_ = null;
+        if (recordBuilder_ != null) {
+          recordBuilder_.dispose();
+          recordBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name record to bind under the parent
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.name.v1.NameProto.NameRecord.Builder getRecordBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getRecordFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The name record to bind under the parent
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.name.v1.NameProto.NameRecordOrBuilder getRecordOrBuilder() {
+        if (recordBuilder_ != null) {
+          return recordBuilder_.getMessageOrBuilder();
+        } else {
+          return record_ == null ?
+              com.provenance.name.v1.NameProto.NameRecord.getDefaultInstance() : record_;
+        }
+      }
+      /**
+       * <pre>
+       * The name record to bind under the parent
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.name.v1.NameProto.NameRecord, com.provenance.name.v1.NameProto.NameRecord.Builder, com.provenance.name.v1.NameProto.NameRecordOrBuilder> 
+          getRecordFieldBuilder() {
+        if (recordBuilder_ == null) {
+          recordBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.name.v1.NameProto.NameRecord, com.provenance.name.v1.NameProto.NameRecord.Builder, com.provenance.name.v1.NameProto.NameRecordOrBuilder>(
+                  getRecord(),
+                  getParentForChildren(),
+                  isClean());
+          record_ = null;
+        }
+        return recordBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.name.v1.MsgBindNameRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.name.v1.MsgBindNameRequest)
+    private static final com.provenance.name.v1.TxProto.MsgBindNameRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.name.v1.TxProto.MsgBindNameRequest();
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgBindNameRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgBindNameRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MsgBindNameRequest>() {
+      @java.lang.Override
+      public MsgBindNameRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgBindNameRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgBindNameRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.name.v1.TxProto.MsgBindNameRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgBindNameResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.name.v1.MsgBindNameResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgBindNameResponse defines the Msg/BindName response type.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.name.v1.MsgBindNameResponse}
+   */
+  public static final class MsgBindNameResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.name.v1.MsgBindNameResponse)
+      MsgBindNameResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgBindNameResponse.newBuilder() to construct.
+    private MsgBindNameResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgBindNameResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgBindNameResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgBindNameResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgBindNameResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.name.v1.TxProto.MsgBindNameResponse.class, com.provenance.name.v1.TxProto.MsgBindNameResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.name.v1.TxProto.MsgBindNameResponse)) {
+        return super.equals(obj);
+      }
+      com.provenance.name.v1.TxProto.MsgBindNameResponse other = (com.provenance.name.v1.TxProto.MsgBindNameResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgBindNameResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.name.v1.TxProto.MsgBindNameResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgBindNameResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.name.v1.TxProto.MsgBindNameResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgBindNameResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.name.v1.TxProto.MsgBindNameResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgBindNameResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.name.v1.TxProto.MsgBindNameResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgBindNameResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgBindNameResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgBindNameResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.name.v1.TxProto.MsgBindNameResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.name.v1.TxProto.MsgBindNameResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgBindNameResponse defines the Msg/BindName response type.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.name.v1.MsgBindNameResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.name.v1.MsgBindNameResponse)
+        com.provenance.name.v1.TxProto.MsgBindNameResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgBindNameResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgBindNameResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.name.v1.TxProto.MsgBindNameResponse.class, com.provenance.name.v1.TxProto.MsgBindNameResponse.Builder.class);
+      }
+
+      // Construct using com.provenance.name.v1.TxProto.MsgBindNameResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgBindNameResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.name.v1.TxProto.MsgBindNameResponse getDefaultInstanceForType() {
+        return com.provenance.name.v1.TxProto.MsgBindNameResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.name.v1.TxProto.MsgBindNameResponse build() {
+        com.provenance.name.v1.TxProto.MsgBindNameResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.name.v1.TxProto.MsgBindNameResponse buildPartial() {
+        com.provenance.name.v1.TxProto.MsgBindNameResponse result = new com.provenance.name.v1.TxProto.MsgBindNameResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.name.v1.TxProto.MsgBindNameResponse) {
+          return mergeFrom((com.provenance.name.v1.TxProto.MsgBindNameResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.name.v1.TxProto.MsgBindNameResponse other) {
+        if (other == com.provenance.name.v1.TxProto.MsgBindNameResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.name.v1.MsgBindNameResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.name.v1.MsgBindNameResponse)
+    private static final com.provenance.name.v1.TxProto.MsgBindNameResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.name.v1.TxProto.MsgBindNameResponse();
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgBindNameResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgBindNameResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgBindNameResponse>() {
+      @java.lang.Override
+      public MsgBindNameResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgBindNameResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgBindNameResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.name.v1.TxProto.MsgBindNameResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDeleteNameRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.name.v1.MsgDeleteNameRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The record being removed
+     * </pre>
+     *
+     * <code>.provenance.name.v1.NameRecord record = 1 [json_name = "record", (.gogoproto.nullable) = false];</code>
+     * @return Whether the record field is set.
+     */
+    boolean hasRecord();
+    /**
+     * <pre>
+     * The record being removed
+     * </pre>
+     *
+     * <code>.provenance.name.v1.NameRecord record = 1 [json_name = "record", (.gogoproto.nullable) = false];</code>
+     * @return The record.
+     */
+    com.provenance.name.v1.NameProto.NameRecord getRecord();
+    /**
+     * <pre>
+     * The record being removed
+     * </pre>
+     *
+     * <code>.provenance.name.v1.NameRecord record = 1 [json_name = "record", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.name.v1.NameProto.NameRecordOrBuilder getRecordOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgDeleteNameRequest defines an sdk.Msg type that is used to remove an existing address/name binding.  The binding
+   * may not have any child names currently bound for this request to be successful. All associated attributes on account
+   * addresses will be deleted.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.name.v1.MsgDeleteNameRequest}
+   */
+  public static final class MsgDeleteNameRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.name.v1.MsgDeleteNameRequest)
+      MsgDeleteNameRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDeleteNameRequest.newBuilder() to construct.
+    private MsgDeleteNameRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDeleteNameRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDeleteNameRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgDeleteNameRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgDeleteNameRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.name.v1.TxProto.MsgDeleteNameRequest.class, com.provenance.name.v1.TxProto.MsgDeleteNameRequest.Builder.class);
+    }
+
+    public static final int RECORD_FIELD_NUMBER = 1;
+    private com.provenance.name.v1.NameProto.NameRecord record_;
+    /**
+     * <pre>
+     * The record being removed
+     * </pre>
+     *
+     * <code>.provenance.name.v1.NameRecord record = 1 [json_name = "record", (.gogoproto.nullable) = false];</code>
+     * @return Whether the record field is set.
+     */
+    @java.lang.Override
+    public boolean hasRecord() {
+      return record_ != null;
+    }
+    /**
+     * <pre>
+     * The record being removed
+     * </pre>
+     *
+     * <code>.provenance.name.v1.NameRecord record = 1 [json_name = "record", (.gogoproto.nullable) = false];</code>
+     * @return The record.
+     */
+    @java.lang.Override
+    public com.provenance.name.v1.NameProto.NameRecord getRecord() {
+      return record_ == null ? com.provenance.name.v1.NameProto.NameRecord.getDefaultInstance() : record_;
+    }
+    /**
+     * <pre>
+     * The record being removed
+     * </pre>
+     *
+     * <code>.provenance.name.v1.NameRecord record = 1 [json_name = "record", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.name.v1.NameProto.NameRecordOrBuilder getRecordOrBuilder() {
+      return record_ == null ? com.provenance.name.v1.NameProto.NameRecord.getDefaultInstance() : record_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (record_ != null) {
+        output.writeMessage(1, getRecord());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (record_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getRecord());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.name.v1.TxProto.MsgDeleteNameRequest)) {
+        return super.equals(obj);
+      }
+      com.provenance.name.v1.TxProto.MsgDeleteNameRequest other = (com.provenance.name.v1.TxProto.MsgDeleteNameRequest) obj;
+
+      if (hasRecord() != other.hasRecord()) return false;
+      if (hasRecord()) {
+        if (!getRecord()
+            .equals(other.getRecord())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasRecord()) {
+        hash = (37 * hash) + RECORD_FIELD_NUMBER;
+        hash = (53 * hash) + getRecord().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgDeleteNameRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.name.v1.TxProto.MsgDeleteNameRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgDeleteNameRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.name.v1.TxProto.MsgDeleteNameRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgDeleteNameRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.name.v1.TxProto.MsgDeleteNameRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgDeleteNameRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.name.v1.TxProto.MsgDeleteNameRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgDeleteNameRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgDeleteNameRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgDeleteNameRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.name.v1.TxProto.MsgDeleteNameRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.name.v1.TxProto.MsgDeleteNameRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgDeleteNameRequest defines an sdk.Msg type that is used to remove an existing address/name binding.  The binding
+     * may not have any child names currently bound for this request to be successful. All associated attributes on account
+     * addresses will be deleted.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.name.v1.MsgDeleteNameRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.name.v1.MsgDeleteNameRequest)
+        com.provenance.name.v1.TxProto.MsgDeleteNameRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgDeleteNameRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgDeleteNameRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.name.v1.TxProto.MsgDeleteNameRequest.class, com.provenance.name.v1.TxProto.MsgDeleteNameRequest.Builder.class);
+      }
+
+      // Construct using com.provenance.name.v1.TxProto.MsgDeleteNameRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        record_ = null;
+        if (recordBuilder_ != null) {
+          recordBuilder_.dispose();
+          recordBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgDeleteNameRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.name.v1.TxProto.MsgDeleteNameRequest getDefaultInstanceForType() {
+        return com.provenance.name.v1.TxProto.MsgDeleteNameRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.name.v1.TxProto.MsgDeleteNameRequest build() {
+        com.provenance.name.v1.TxProto.MsgDeleteNameRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.name.v1.TxProto.MsgDeleteNameRequest buildPartial() {
+        com.provenance.name.v1.TxProto.MsgDeleteNameRequest result = new com.provenance.name.v1.TxProto.MsgDeleteNameRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.name.v1.TxProto.MsgDeleteNameRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.record_ = recordBuilder_ == null
+              ? record_
+              : recordBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.name.v1.TxProto.MsgDeleteNameRequest) {
+          return mergeFrom((com.provenance.name.v1.TxProto.MsgDeleteNameRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.name.v1.TxProto.MsgDeleteNameRequest other) {
+        if (other == com.provenance.name.v1.TxProto.MsgDeleteNameRequest.getDefaultInstance()) return this;
+        if (other.hasRecord()) {
+          mergeRecord(other.getRecord());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getRecordFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.provenance.name.v1.NameProto.NameRecord record_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.name.v1.NameProto.NameRecord, com.provenance.name.v1.NameProto.NameRecord.Builder, com.provenance.name.v1.NameProto.NameRecordOrBuilder> recordBuilder_;
+      /**
+       * <pre>
+       * The record being removed
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 1 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       * @return Whether the record field is set.
+       */
+      public boolean hasRecord() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The record being removed
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 1 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       * @return The record.
+       */
+      public com.provenance.name.v1.NameProto.NameRecord getRecord() {
+        if (recordBuilder_ == null) {
+          return record_ == null ? com.provenance.name.v1.NameProto.NameRecord.getDefaultInstance() : record_;
+        } else {
+          return recordBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The record being removed
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 1 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRecord(com.provenance.name.v1.NameProto.NameRecord value) {
+        if (recordBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          record_ = value;
+        } else {
+          recordBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The record being removed
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 1 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRecord(
+          com.provenance.name.v1.NameProto.NameRecord.Builder builderForValue) {
+        if (recordBuilder_ == null) {
+          record_ = builderForValue.build();
+        } else {
+          recordBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The record being removed
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 1 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeRecord(com.provenance.name.v1.NameProto.NameRecord value) {
+        if (recordBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            record_ != null &&
+            record_ != com.provenance.name.v1.NameProto.NameRecord.getDefaultInstance()) {
+            getRecordBuilder().mergeFrom(value);
+          } else {
+            record_ = value;
+          }
+        } else {
+          recordBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The record being removed
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 1 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearRecord() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        record_ = null;
+        if (recordBuilder_ != null) {
+          recordBuilder_.dispose();
+          recordBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The record being removed
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 1 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.name.v1.NameProto.NameRecord.Builder getRecordBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getRecordFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The record being removed
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 1 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.name.v1.NameProto.NameRecordOrBuilder getRecordOrBuilder() {
+        if (recordBuilder_ != null) {
+          return recordBuilder_.getMessageOrBuilder();
+        } else {
+          return record_ == null ?
+              com.provenance.name.v1.NameProto.NameRecord.getDefaultInstance() : record_;
+        }
+      }
+      /**
+       * <pre>
+       * The record being removed
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 1 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.name.v1.NameProto.NameRecord, com.provenance.name.v1.NameProto.NameRecord.Builder, com.provenance.name.v1.NameProto.NameRecordOrBuilder> 
+          getRecordFieldBuilder() {
+        if (recordBuilder_ == null) {
+          recordBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.name.v1.NameProto.NameRecord, com.provenance.name.v1.NameProto.NameRecord.Builder, com.provenance.name.v1.NameProto.NameRecordOrBuilder>(
+                  getRecord(),
+                  getParentForChildren(),
+                  isClean());
+          record_ = null;
+        }
+        return recordBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.name.v1.MsgDeleteNameRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.name.v1.MsgDeleteNameRequest)
+    private static final com.provenance.name.v1.TxProto.MsgDeleteNameRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.name.v1.TxProto.MsgDeleteNameRequest();
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgDeleteNameRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDeleteNameRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDeleteNameRequest>() {
+      @java.lang.Override
+      public MsgDeleteNameRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDeleteNameRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDeleteNameRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.name.v1.TxProto.MsgDeleteNameRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDeleteNameResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.name.v1.MsgDeleteNameResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgDeleteNameResponse defines the Msg/DeleteName response type.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.name.v1.MsgDeleteNameResponse}
+   */
+  public static final class MsgDeleteNameResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.name.v1.MsgDeleteNameResponse)
+      MsgDeleteNameResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDeleteNameResponse.newBuilder() to construct.
+    private MsgDeleteNameResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDeleteNameResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDeleteNameResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgDeleteNameResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgDeleteNameResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.name.v1.TxProto.MsgDeleteNameResponse.class, com.provenance.name.v1.TxProto.MsgDeleteNameResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.name.v1.TxProto.MsgDeleteNameResponse)) {
+        return super.equals(obj);
+      }
+      com.provenance.name.v1.TxProto.MsgDeleteNameResponse other = (com.provenance.name.v1.TxProto.MsgDeleteNameResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgDeleteNameResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.name.v1.TxProto.MsgDeleteNameResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgDeleteNameResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.name.v1.TxProto.MsgDeleteNameResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgDeleteNameResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.name.v1.TxProto.MsgDeleteNameResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgDeleteNameResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.name.v1.TxProto.MsgDeleteNameResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgDeleteNameResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgDeleteNameResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgDeleteNameResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.name.v1.TxProto.MsgDeleteNameResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.name.v1.TxProto.MsgDeleteNameResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgDeleteNameResponse defines the Msg/DeleteName response type.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.name.v1.MsgDeleteNameResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.name.v1.MsgDeleteNameResponse)
+        com.provenance.name.v1.TxProto.MsgDeleteNameResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgDeleteNameResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgDeleteNameResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.name.v1.TxProto.MsgDeleteNameResponse.class, com.provenance.name.v1.TxProto.MsgDeleteNameResponse.Builder.class);
+      }
+
+      // Construct using com.provenance.name.v1.TxProto.MsgDeleteNameResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgDeleteNameResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.name.v1.TxProto.MsgDeleteNameResponse getDefaultInstanceForType() {
+        return com.provenance.name.v1.TxProto.MsgDeleteNameResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.name.v1.TxProto.MsgDeleteNameResponse build() {
+        com.provenance.name.v1.TxProto.MsgDeleteNameResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.name.v1.TxProto.MsgDeleteNameResponse buildPartial() {
+        com.provenance.name.v1.TxProto.MsgDeleteNameResponse result = new com.provenance.name.v1.TxProto.MsgDeleteNameResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.name.v1.TxProto.MsgDeleteNameResponse) {
+          return mergeFrom((com.provenance.name.v1.TxProto.MsgDeleteNameResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.name.v1.TxProto.MsgDeleteNameResponse other) {
+        if (other == com.provenance.name.v1.TxProto.MsgDeleteNameResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.name.v1.MsgDeleteNameResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.name.v1.MsgDeleteNameResponse)
+    private static final com.provenance.name.v1.TxProto.MsgDeleteNameResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.name.v1.TxProto.MsgDeleteNameResponse();
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgDeleteNameResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDeleteNameResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDeleteNameResponse>() {
+      @java.lang.Override
+      public MsgDeleteNameResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDeleteNameResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDeleteNameResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.name.v1.TxProto.MsgDeleteNameResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateRootNameRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.name.v1.MsgCreateRootNameRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The signing authority for the request
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The authority.
+     */
+    java.lang.String getAuthority();
+    /**
+     * <pre>
+     * The signing authority for the request
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for authority.
+     */
+    com.google.protobuf.ByteString
+        getAuthorityBytes();
+
+    /**
+     * <pre>
+     * NameRecord is a structure used to bind ownership of a name hierarchy to a collection of addresses
+     * </pre>
+     *
+     * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record"];</code>
+     * @return Whether the record field is set.
+     */
+    boolean hasRecord();
+    /**
+     * <pre>
+     * NameRecord is a structure used to bind ownership of a name hierarchy to a collection of addresses
+     * </pre>
+     *
+     * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record"];</code>
+     * @return The record.
+     */
+    com.provenance.name.v1.NameProto.NameRecord getRecord();
+    /**
+     * <pre>
+     * NameRecord is a structure used to bind ownership of a name hierarchy to a collection of addresses
+     * </pre>
+     *
+     * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record"];</code>
+     */
+    com.provenance.name.v1.NameProto.NameRecordOrBuilder getRecordOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgCreateRootNameRequest defines an sdk.Msg type to create a new root name
+   * that is controlled by a given owner and optionally restricted to the owner
+   * for the sole creation of sub names.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.name.v1.MsgCreateRootNameRequest}
+   */
+  public static final class MsgCreateRootNameRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.name.v1.MsgCreateRootNameRequest)
+      MsgCreateRootNameRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateRootNameRequest.newBuilder() to construct.
+    private MsgCreateRootNameRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateRootNameRequest() {
+      authority_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateRootNameRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgCreateRootNameRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgCreateRootNameRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.name.v1.TxProto.MsgCreateRootNameRequest.class, com.provenance.name.v1.TxProto.MsgCreateRootNameRequest.Builder.class);
+    }
+
+    public static final int AUTHORITY_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object authority_ = "";
+    /**
+     * <pre>
+     * The signing authority for the request
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The authority.
+     */
+    @java.lang.Override
+    public java.lang.String getAuthority() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        authority_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The signing authority for the request
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for authority.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAuthorityBytes() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authority_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RECORD_FIELD_NUMBER = 2;
+    private com.provenance.name.v1.NameProto.NameRecord record_;
+    /**
+     * <pre>
+     * NameRecord is a structure used to bind ownership of a name hierarchy to a collection of addresses
+     * </pre>
+     *
+     * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record"];</code>
+     * @return Whether the record field is set.
+     */
+    @java.lang.Override
+    public boolean hasRecord() {
+      return record_ != null;
+    }
+    /**
+     * <pre>
+     * NameRecord is a structure used to bind ownership of a name hierarchy to a collection of addresses
+     * </pre>
+     *
+     * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record"];</code>
+     * @return The record.
+     */
+    @java.lang.Override
+    public com.provenance.name.v1.NameProto.NameRecord getRecord() {
+      return record_ == null ? com.provenance.name.v1.NameProto.NameRecord.getDefaultInstance() : record_;
+    }
+    /**
+     * <pre>
+     * NameRecord is a structure used to bind ownership of a name hierarchy to a collection of addresses
+     * </pre>
+     *
+     * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.name.v1.NameProto.NameRecordOrBuilder getRecordOrBuilder() {
+      return record_ == null ? com.provenance.name.v1.NameProto.NameRecord.getDefaultInstance() : record_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authority_);
+      }
+      if (record_ != null) {
+        output.writeMessage(2, getRecord());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authority_);
+      }
+      if (record_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getRecord());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.name.v1.TxProto.MsgCreateRootNameRequest)) {
+        return super.equals(obj);
+      }
+      com.provenance.name.v1.TxProto.MsgCreateRootNameRequest other = (com.provenance.name.v1.TxProto.MsgCreateRootNameRequest) obj;
+
+      if (!getAuthority()
+          .equals(other.getAuthority())) return false;
+      if (hasRecord() != other.hasRecord()) return false;
+      if (hasRecord()) {
+        if (!getRecord()
+            .equals(other.getRecord())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AUTHORITY_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthority().hashCode();
+      if (hasRecord()) {
+        hash = (37 * hash) + RECORD_FIELD_NUMBER;
+        hash = (53 * hash) + getRecord().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgCreateRootNameRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.name.v1.TxProto.MsgCreateRootNameRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgCreateRootNameRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.name.v1.TxProto.MsgCreateRootNameRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgCreateRootNameRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.name.v1.TxProto.MsgCreateRootNameRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgCreateRootNameRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.name.v1.TxProto.MsgCreateRootNameRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgCreateRootNameRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgCreateRootNameRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgCreateRootNameRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.name.v1.TxProto.MsgCreateRootNameRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.name.v1.TxProto.MsgCreateRootNameRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateRootNameRequest defines an sdk.Msg type to create a new root name
+     * that is controlled by a given owner and optionally restricted to the owner
+     * for the sole creation of sub names.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.name.v1.MsgCreateRootNameRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.name.v1.MsgCreateRootNameRequest)
+        com.provenance.name.v1.TxProto.MsgCreateRootNameRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgCreateRootNameRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgCreateRootNameRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.name.v1.TxProto.MsgCreateRootNameRequest.class, com.provenance.name.v1.TxProto.MsgCreateRootNameRequest.Builder.class);
+      }
+
+      // Construct using com.provenance.name.v1.TxProto.MsgCreateRootNameRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        authority_ = "";
+        record_ = null;
+        if (recordBuilder_ != null) {
+          recordBuilder_.dispose();
+          recordBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgCreateRootNameRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.name.v1.TxProto.MsgCreateRootNameRequest getDefaultInstanceForType() {
+        return com.provenance.name.v1.TxProto.MsgCreateRootNameRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.name.v1.TxProto.MsgCreateRootNameRequest build() {
+        com.provenance.name.v1.TxProto.MsgCreateRootNameRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.name.v1.TxProto.MsgCreateRootNameRequest buildPartial() {
+        com.provenance.name.v1.TxProto.MsgCreateRootNameRequest result = new com.provenance.name.v1.TxProto.MsgCreateRootNameRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.name.v1.TxProto.MsgCreateRootNameRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.authority_ = authority_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.record_ = recordBuilder_ == null
+              ? record_
+              : recordBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.name.v1.TxProto.MsgCreateRootNameRequest) {
+          return mergeFrom((com.provenance.name.v1.TxProto.MsgCreateRootNameRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.name.v1.TxProto.MsgCreateRootNameRequest other) {
+        if (other == com.provenance.name.v1.TxProto.MsgCreateRootNameRequest.getDefaultInstance()) return this;
+        if (!other.getAuthority().isEmpty()) {
+          authority_ = other.authority_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasRecord()) {
+          mergeRecord(other.getRecord());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                authority_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getRecordFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object authority_ = "";
+      /**
+       * <pre>
+       * The signing authority for the request
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The authority.
+       */
+      public java.lang.String getAuthority() {
+        java.lang.Object ref = authority_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          authority_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The signing authority for the request
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for authority.
+       */
+      public com.google.protobuf.ByteString
+          getAuthorityBytes() {
+        java.lang.Object ref = authority_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authority_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The signing authority for the request
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthority(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The signing authority for the request
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthority() {
+        authority_ = getDefaultInstance().getAuthority();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The signing authority for the request
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthorityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.provenance.name.v1.NameProto.NameRecord record_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.name.v1.NameProto.NameRecord, com.provenance.name.v1.NameProto.NameRecord.Builder, com.provenance.name.v1.NameProto.NameRecordOrBuilder> recordBuilder_;
+      /**
+       * <pre>
+       * NameRecord is a structure used to bind ownership of a name hierarchy to a collection of addresses
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record"];</code>
+       * @return Whether the record field is set.
+       */
+      public boolean hasRecord() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * NameRecord is a structure used to bind ownership of a name hierarchy to a collection of addresses
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record"];</code>
+       * @return The record.
+       */
+      public com.provenance.name.v1.NameProto.NameRecord getRecord() {
+        if (recordBuilder_ == null) {
+          return record_ == null ? com.provenance.name.v1.NameProto.NameRecord.getDefaultInstance() : record_;
+        } else {
+          return recordBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * NameRecord is a structure used to bind ownership of a name hierarchy to a collection of addresses
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record"];</code>
+       */
+      public Builder setRecord(com.provenance.name.v1.NameProto.NameRecord value) {
+        if (recordBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          record_ = value;
+        } else {
+          recordBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * NameRecord is a structure used to bind ownership of a name hierarchy to a collection of addresses
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record"];</code>
+       */
+      public Builder setRecord(
+          com.provenance.name.v1.NameProto.NameRecord.Builder builderForValue) {
+        if (recordBuilder_ == null) {
+          record_ = builderForValue.build();
+        } else {
+          recordBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * NameRecord is a structure used to bind ownership of a name hierarchy to a collection of addresses
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record"];</code>
+       */
+      public Builder mergeRecord(com.provenance.name.v1.NameProto.NameRecord value) {
+        if (recordBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            record_ != null &&
+            record_ != com.provenance.name.v1.NameProto.NameRecord.getDefaultInstance()) {
+            getRecordBuilder().mergeFrom(value);
+          } else {
+            record_ = value;
+          }
+        } else {
+          recordBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * NameRecord is a structure used to bind ownership of a name hierarchy to a collection of addresses
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record"];</code>
+       */
+      public Builder clearRecord() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        record_ = null;
+        if (recordBuilder_ != null) {
+          recordBuilder_.dispose();
+          recordBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * NameRecord is a structure used to bind ownership of a name hierarchy to a collection of addresses
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record"];</code>
+       */
+      public com.provenance.name.v1.NameProto.NameRecord.Builder getRecordBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getRecordFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * NameRecord is a structure used to bind ownership of a name hierarchy to a collection of addresses
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record"];</code>
+       */
+      public com.provenance.name.v1.NameProto.NameRecordOrBuilder getRecordOrBuilder() {
+        if (recordBuilder_ != null) {
+          return recordBuilder_.getMessageOrBuilder();
+        } else {
+          return record_ == null ?
+              com.provenance.name.v1.NameProto.NameRecord.getDefaultInstance() : record_;
+        }
+      }
+      /**
+       * <pre>
+       * NameRecord is a structure used to bind ownership of a name hierarchy to a collection of addresses
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.name.v1.NameProto.NameRecord, com.provenance.name.v1.NameProto.NameRecord.Builder, com.provenance.name.v1.NameProto.NameRecordOrBuilder> 
+          getRecordFieldBuilder() {
+        if (recordBuilder_ == null) {
+          recordBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.name.v1.NameProto.NameRecord, com.provenance.name.v1.NameProto.NameRecord.Builder, com.provenance.name.v1.NameProto.NameRecordOrBuilder>(
+                  getRecord(),
+                  getParentForChildren(),
+                  isClean());
+          record_ = null;
+        }
+        return recordBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.name.v1.MsgCreateRootNameRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.name.v1.MsgCreateRootNameRequest)
+    private static final com.provenance.name.v1.TxProto.MsgCreateRootNameRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.name.v1.TxProto.MsgCreateRootNameRequest();
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgCreateRootNameRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateRootNameRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateRootNameRequest>() {
+      @java.lang.Override
+      public MsgCreateRootNameRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateRootNameRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateRootNameRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.name.v1.TxProto.MsgCreateRootNameRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateRootNameResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.name.v1.MsgCreateRootNameResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgCreateRootNameResponse defines Msg/CreateRootName response type.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.name.v1.MsgCreateRootNameResponse}
+   */
+  public static final class MsgCreateRootNameResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.name.v1.MsgCreateRootNameResponse)
+      MsgCreateRootNameResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateRootNameResponse.newBuilder() to construct.
+    private MsgCreateRootNameResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateRootNameResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateRootNameResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgCreateRootNameResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgCreateRootNameResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.name.v1.TxProto.MsgCreateRootNameResponse.class, com.provenance.name.v1.TxProto.MsgCreateRootNameResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.name.v1.TxProto.MsgCreateRootNameResponse)) {
+        return super.equals(obj);
+      }
+      com.provenance.name.v1.TxProto.MsgCreateRootNameResponse other = (com.provenance.name.v1.TxProto.MsgCreateRootNameResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgCreateRootNameResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.name.v1.TxProto.MsgCreateRootNameResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgCreateRootNameResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.name.v1.TxProto.MsgCreateRootNameResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgCreateRootNameResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.name.v1.TxProto.MsgCreateRootNameResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgCreateRootNameResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.name.v1.TxProto.MsgCreateRootNameResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgCreateRootNameResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgCreateRootNameResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgCreateRootNameResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.name.v1.TxProto.MsgCreateRootNameResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.name.v1.TxProto.MsgCreateRootNameResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateRootNameResponse defines Msg/CreateRootName response type.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.name.v1.MsgCreateRootNameResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.name.v1.MsgCreateRootNameResponse)
+        com.provenance.name.v1.TxProto.MsgCreateRootNameResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgCreateRootNameResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgCreateRootNameResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.name.v1.TxProto.MsgCreateRootNameResponse.class, com.provenance.name.v1.TxProto.MsgCreateRootNameResponse.Builder.class);
+      }
+
+      // Construct using com.provenance.name.v1.TxProto.MsgCreateRootNameResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgCreateRootNameResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.name.v1.TxProto.MsgCreateRootNameResponse getDefaultInstanceForType() {
+        return com.provenance.name.v1.TxProto.MsgCreateRootNameResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.name.v1.TxProto.MsgCreateRootNameResponse build() {
+        com.provenance.name.v1.TxProto.MsgCreateRootNameResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.name.v1.TxProto.MsgCreateRootNameResponse buildPartial() {
+        com.provenance.name.v1.TxProto.MsgCreateRootNameResponse result = new com.provenance.name.v1.TxProto.MsgCreateRootNameResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.name.v1.TxProto.MsgCreateRootNameResponse) {
+          return mergeFrom((com.provenance.name.v1.TxProto.MsgCreateRootNameResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.name.v1.TxProto.MsgCreateRootNameResponse other) {
+        if (other == com.provenance.name.v1.TxProto.MsgCreateRootNameResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.name.v1.MsgCreateRootNameResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.name.v1.MsgCreateRootNameResponse)
+    private static final com.provenance.name.v1.TxProto.MsgCreateRootNameResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.name.v1.TxProto.MsgCreateRootNameResponse();
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgCreateRootNameResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateRootNameResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateRootNameResponse>() {
+      @java.lang.Override
+      public MsgCreateRootNameResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateRootNameResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateRootNameResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.name.v1.TxProto.MsgCreateRootNameResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgModifyNameRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.name.v1.MsgModifyNameRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The address signing the message
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The authority.
+     */
+    java.lang.String getAuthority();
+    /**
+     * <pre>
+     * The address signing the message
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for authority.
+     */
+    com.google.protobuf.ByteString
+        getAuthorityBytes();
+
+    /**
+     * <pre>
+     * The record being updated
+     * </pre>
+     *
+     * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+     * @return Whether the record field is set.
+     */
+    boolean hasRecord();
+    /**
+     * <pre>
+     * The record being updated
+     * </pre>
+     *
+     * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+     * @return The record.
+     */
+    com.provenance.name.v1.NameProto.NameRecord getRecord();
+    /**
+     * <pre>
+     * The record being updated
+     * </pre>
+     *
+     * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.name.v1.NameProto.NameRecordOrBuilder getRecordOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgModifyNameRequest defines a governance method that is used to update an existing address/name binding.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.name.v1.MsgModifyNameRequest}
+   */
+  public static final class MsgModifyNameRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.name.v1.MsgModifyNameRequest)
+      MsgModifyNameRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgModifyNameRequest.newBuilder() to construct.
+    private MsgModifyNameRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgModifyNameRequest() {
+      authority_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgModifyNameRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgModifyNameRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgModifyNameRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.name.v1.TxProto.MsgModifyNameRequest.class, com.provenance.name.v1.TxProto.MsgModifyNameRequest.Builder.class);
+    }
+
+    public static final int AUTHORITY_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object authority_ = "";
+    /**
+     * <pre>
+     * The address signing the message
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The authority.
+     */
+    @java.lang.Override
+    public java.lang.String getAuthority() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        authority_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The address signing the message
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for authority.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAuthorityBytes() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authority_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RECORD_FIELD_NUMBER = 2;
+    private com.provenance.name.v1.NameProto.NameRecord record_;
+    /**
+     * <pre>
+     * The record being updated
+     * </pre>
+     *
+     * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+     * @return Whether the record field is set.
+     */
+    @java.lang.Override
+    public boolean hasRecord() {
+      return record_ != null;
+    }
+    /**
+     * <pre>
+     * The record being updated
+     * </pre>
+     *
+     * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+     * @return The record.
+     */
+    @java.lang.Override
+    public com.provenance.name.v1.NameProto.NameRecord getRecord() {
+      return record_ == null ? com.provenance.name.v1.NameProto.NameRecord.getDefaultInstance() : record_;
+    }
+    /**
+     * <pre>
+     * The record being updated
+     * </pre>
+     *
+     * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.name.v1.NameProto.NameRecordOrBuilder getRecordOrBuilder() {
+      return record_ == null ? com.provenance.name.v1.NameProto.NameRecord.getDefaultInstance() : record_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authority_);
+      }
+      if (record_ != null) {
+        output.writeMessage(2, getRecord());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authority_);
+      }
+      if (record_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getRecord());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.name.v1.TxProto.MsgModifyNameRequest)) {
+        return super.equals(obj);
+      }
+      com.provenance.name.v1.TxProto.MsgModifyNameRequest other = (com.provenance.name.v1.TxProto.MsgModifyNameRequest) obj;
+
+      if (!getAuthority()
+          .equals(other.getAuthority())) return false;
+      if (hasRecord() != other.hasRecord()) return false;
+      if (hasRecord()) {
+        if (!getRecord()
+            .equals(other.getRecord())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AUTHORITY_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthority().hashCode();
+      if (hasRecord()) {
+        hash = (37 * hash) + RECORD_FIELD_NUMBER;
+        hash = (53 * hash) + getRecord().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgModifyNameRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.name.v1.TxProto.MsgModifyNameRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgModifyNameRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.name.v1.TxProto.MsgModifyNameRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgModifyNameRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.name.v1.TxProto.MsgModifyNameRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgModifyNameRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.name.v1.TxProto.MsgModifyNameRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgModifyNameRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgModifyNameRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgModifyNameRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.name.v1.TxProto.MsgModifyNameRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.name.v1.TxProto.MsgModifyNameRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgModifyNameRequest defines a governance method that is used to update an existing address/name binding.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.name.v1.MsgModifyNameRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.name.v1.MsgModifyNameRequest)
+        com.provenance.name.v1.TxProto.MsgModifyNameRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgModifyNameRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgModifyNameRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.name.v1.TxProto.MsgModifyNameRequest.class, com.provenance.name.v1.TxProto.MsgModifyNameRequest.Builder.class);
+      }
+
+      // Construct using com.provenance.name.v1.TxProto.MsgModifyNameRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        authority_ = "";
+        record_ = null;
+        if (recordBuilder_ != null) {
+          recordBuilder_.dispose();
+          recordBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgModifyNameRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.name.v1.TxProto.MsgModifyNameRequest getDefaultInstanceForType() {
+        return com.provenance.name.v1.TxProto.MsgModifyNameRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.name.v1.TxProto.MsgModifyNameRequest build() {
+        com.provenance.name.v1.TxProto.MsgModifyNameRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.name.v1.TxProto.MsgModifyNameRequest buildPartial() {
+        com.provenance.name.v1.TxProto.MsgModifyNameRequest result = new com.provenance.name.v1.TxProto.MsgModifyNameRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.name.v1.TxProto.MsgModifyNameRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.authority_ = authority_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.record_ = recordBuilder_ == null
+              ? record_
+              : recordBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.name.v1.TxProto.MsgModifyNameRequest) {
+          return mergeFrom((com.provenance.name.v1.TxProto.MsgModifyNameRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.name.v1.TxProto.MsgModifyNameRequest other) {
+        if (other == com.provenance.name.v1.TxProto.MsgModifyNameRequest.getDefaultInstance()) return this;
+        if (!other.getAuthority().isEmpty()) {
+          authority_ = other.authority_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasRecord()) {
+          mergeRecord(other.getRecord());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                authority_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getRecordFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object authority_ = "";
+      /**
+       * <pre>
+       * The address signing the message
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The authority.
+       */
+      public java.lang.String getAuthority() {
+        java.lang.Object ref = authority_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          authority_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The address signing the message
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for authority.
+       */
+      public com.google.protobuf.ByteString
+          getAuthorityBytes() {
+        java.lang.Object ref = authority_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authority_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The address signing the message
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthority(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The address signing the message
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthority() {
+        authority_ = getDefaultInstance().getAuthority();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The address signing the message
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthorityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.provenance.name.v1.NameProto.NameRecord record_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.name.v1.NameProto.NameRecord, com.provenance.name.v1.NameProto.NameRecord.Builder, com.provenance.name.v1.NameProto.NameRecordOrBuilder> recordBuilder_;
+      /**
+       * <pre>
+       * The record being updated
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       * @return Whether the record field is set.
+       */
+      public boolean hasRecord() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * The record being updated
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       * @return The record.
+       */
+      public com.provenance.name.v1.NameProto.NameRecord getRecord() {
+        if (recordBuilder_ == null) {
+          return record_ == null ? com.provenance.name.v1.NameProto.NameRecord.getDefaultInstance() : record_;
+        } else {
+          return recordBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The record being updated
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRecord(com.provenance.name.v1.NameProto.NameRecord value) {
+        if (recordBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          record_ = value;
+        } else {
+          recordBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The record being updated
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRecord(
+          com.provenance.name.v1.NameProto.NameRecord.Builder builderForValue) {
+        if (recordBuilder_ == null) {
+          record_ = builderForValue.build();
+        } else {
+          recordBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The record being updated
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeRecord(com.provenance.name.v1.NameProto.NameRecord value) {
+        if (recordBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            record_ != null &&
+            record_ != com.provenance.name.v1.NameProto.NameRecord.getDefaultInstance()) {
+            getRecordBuilder().mergeFrom(value);
+          } else {
+            record_ = value;
+          }
+        } else {
+          recordBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The record being updated
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearRecord() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        record_ = null;
+        if (recordBuilder_ != null) {
+          recordBuilder_.dispose();
+          recordBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The record being updated
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.name.v1.NameProto.NameRecord.Builder getRecordBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getRecordFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The record being updated
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.name.v1.NameProto.NameRecordOrBuilder getRecordOrBuilder() {
+        if (recordBuilder_ != null) {
+          return recordBuilder_.getMessageOrBuilder();
+        } else {
+          return record_ == null ?
+              com.provenance.name.v1.NameProto.NameRecord.getDefaultInstance() : record_;
+        }
+      }
+      /**
+       * <pre>
+       * The record being updated
+       * </pre>
+       *
+       * <code>.provenance.name.v1.NameRecord record = 2 [json_name = "record", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.name.v1.NameProto.NameRecord, com.provenance.name.v1.NameProto.NameRecord.Builder, com.provenance.name.v1.NameProto.NameRecordOrBuilder> 
+          getRecordFieldBuilder() {
+        if (recordBuilder_ == null) {
+          recordBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.name.v1.NameProto.NameRecord, com.provenance.name.v1.NameProto.NameRecord.Builder, com.provenance.name.v1.NameProto.NameRecordOrBuilder>(
+                  getRecord(),
+                  getParentForChildren(),
+                  isClean());
+          record_ = null;
+        }
+        return recordBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.name.v1.MsgModifyNameRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.name.v1.MsgModifyNameRequest)
+    private static final com.provenance.name.v1.TxProto.MsgModifyNameRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.name.v1.TxProto.MsgModifyNameRequest();
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgModifyNameRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgModifyNameRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MsgModifyNameRequest>() {
+      @java.lang.Override
+      public MsgModifyNameRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgModifyNameRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgModifyNameRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.name.v1.TxProto.MsgModifyNameRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgModifyNameResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.name.v1.MsgModifyNameResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgModifyNameResponse defines the Msg/ModifyName response type.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.name.v1.MsgModifyNameResponse}
+   */
+  public static final class MsgModifyNameResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.name.v1.MsgModifyNameResponse)
+      MsgModifyNameResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgModifyNameResponse.newBuilder() to construct.
+    private MsgModifyNameResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgModifyNameResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgModifyNameResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgModifyNameResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgModifyNameResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.name.v1.TxProto.MsgModifyNameResponse.class, com.provenance.name.v1.TxProto.MsgModifyNameResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.name.v1.TxProto.MsgModifyNameResponse)) {
+        return super.equals(obj);
+      }
+      com.provenance.name.v1.TxProto.MsgModifyNameResponse other = (com.provenance.name.v1.TxProto.MsgModifyNameResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgModifyNameResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.name.v1.TxProto.MsgModifyNameResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgModifyNameResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.name.v1.TxProto.MsgModifyNameResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgModifyNameResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.name.v1.TxProto.MsgModifyNameResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgModifyNameResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.name.v1.TxProto.MsgModifyNameResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgModifyNameResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgModifyNameResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.name.v1.TxProto.MsgModifyNameResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.name.v1.TxProto.MsgModifyNameResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.name.v1.TxProto.MsgModifyNameResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgModifyNameResponse defines the Msg/ModifyName response type.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.name.v1.MsgModifyNameResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.name.v1.MsgModifyNameResponse)
+        com.provenance.name.v1.TxProto.MsgModifyNameResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgModifyNameResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgModifyNameResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.name.v1.TxProto.MsgModifyNameResponse.class, com.provenance.name.v1.TxProto.MsgModifyNameResponse.Builder.class);
+      }
+
+      // Construct using com.provenance.name.v1.TxProto.MsgModifyNameResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.name.v1.TxProto.internal_static_provenance_name_v1_MsgModifyNameResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.name.v1.TxProto.MsgModifyNameResponse getDefaultInstanceForType() {
+        return com.provenance.name.v1.TxProto.MsgModifyNameResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.name.v1.TxProto.MsgModifyNameResponse build() {
+        com.provenance.name.v1.TxProto.MsgModifyNameResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.name.v1.TxProto.MsgModifyNameResponse buildPartial() {
+        com.provenance.name.v1.TxProto.MsgModifyNameResponse result = new com.provenance.name.v1.TxProto.MsgModifyNameResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.name.v1.TxProto.MsgModifyNameResponse) {
+          return mergeFrom((com.provenance.name.v1.TxProto.MsgModifyNameResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.name.v1.TxProto.MsgModifyNameResponse other) {
+        if (other == com.provenance.name.v1.TxProto.MsgModifyNameResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.name.v1.MsgModifyNameResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.name.v1.MsgModifyNameResponse)
+    private static final com.provenance.name.v1.TxProto.MsgModifyNameResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.name.v1.TxProto.MsgModifyNameResponse();
+    }
+
+    public static com.provenance.name.v1.TxProto.MsgModifyNameResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgModifyNameResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgModifyNameResponse>() {
+      @java.lang.Override
+      public MsgModifyNameResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgModifyNameResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgModifyNameResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.name.v1.TxProto.MsgModifyNameResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_name_v1_MsgBindNameRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_name_v1_MsgBindNameRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_name_v1_MsgBindNameResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_name_v1_MsgBindNameResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_name_v1_MsgDeleteNameRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_name_v1_MsgDeleteNameRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_name_v1_MsgDeleteNameResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_name_v1_MsgDeleteNameResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_name_v1_MsgCreateRootNameRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_name_v1_MsgCreateRootNameRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_name_v1_MsgCreateRootNameResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_name_v1_MsgCreateRootNameResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_name_v1_MsgModifyNameRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_name_v1_MsgModifyNameRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_name_v1_MsgModifyNameResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_name_v1_MsgModifyNameResponse_fieldAccessorTable;
 
@@ -94,7 +5022,7 @@ public final class TxProto {
       "onse\022m\n\016CreateRootName\022,.provenance.name" +
       ".v1.MsgCreateRootNameRequest\032-.provenanc" +
       "e.name.v1.MsgCreateRootNameResponseB\275\001\n\026" +
-      "com.provenance.name.v1B\007TxProtoP\001Z0githu" +
+      "com.provenance.name.v1B\007TxProtoP\000Z0githu" +
       "b.com/provenance-io/provenance/x/name/ty" +
       "pes\242\002\003PNX\252\002\022Provenance.Name.V1\312\002\022Provena" +
       "nce\\Name\\V1\342\002\036Provenance\\Name\\V1\\GPBMeta" +

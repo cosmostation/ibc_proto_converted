@@ -14,9 +14,791 @@ public final class ListDataProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ListDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:assetmantle.schema.data.base.ListData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .assetmantle.schema.data.base.AnyListableData any_listable_data = 1 [json_name = "anyListableData"];</code>
+     */
+    java.util.List<com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableData> 
+        getAnyListableDataList();
+    /**
+     * <code>repeated .assetmantle.schema.data.base.AnyListableData any_listable_data = 1 [json_name = "anyListableData"];</code>
+     */
+    com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableData getAnyListableData(int index);
+    /**
+     * <code>repeated .assetmantle.schema.data.base.AnyListableData any_listable_data = 1 [json_name = "anyListableData"];</code>
+     */
+    int getAnyListableDataCount();
+    /**
+     * <code>repeated .assetmantle.schema.data.base.AnyListableData any_listable_data = 1 [json_name = "anyListableData"];</code>
+     */
+    java.util.List<? extends com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableDataOrBuilder> 
+        getAnyListableDataOrBuilderList();
+    /**
+     * <code>repeated .assetmantle.schema.data.base.AnyListableData any_listable_data = 1 [json_name = "anyListableData"];</code>
+     */
+    com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableDataOrBuilder getAnyListableDataOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code assetmantle.schema.data.base.ListData}
+   */
+  public static final class ListData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:assetmantle.schema.data.base.ListData)
+      ListDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListData.newBuilder() to construct.
+    private ListData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListData() {
+      anyListableData_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListData();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.assetmantle.schema.data.base.ListDataProto.internal_static_assetmantle_schema_data_base_ListData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.assetmantle.schema.data.base.ListDataProto.internal_static_assetmantle_schema_data_base_ListData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.assetmantle.schema.data.base.ListDataProto.ListData.class, com.assetmantle.schema.data.base.ListDataProto.ListData.Builder.class);
+    }
+
+    public static final int ANY_LISTABLE_DATA_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableData> anyListableData_;
+    /**
+     * <code>repeated .assetmantle.schema.data.base.AnyListableData any_listable_data = 1 [json_name = "anyListableData"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableData> getAnyListableDataList() {
+      return anyListableData_;
+    }
+    /**
+     * <code>repeated .assetmantle.schema.data.base.AnyListableData any_listable_data = 1 [json_name = "anyListableData"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableDataOrBuilder> 
+        getAnyListableDataOrBuilderList() {
+      return anyListableData_;
+    }
+    /**
+     * <code>repeated .assetmantle.schema.data.base.AnyListableData any_listable_data = 1 [json_name = "anyListableData"];</code>
+     */
+    @java.lang.Override
+    public int getAnyListableDataCount() {
+      return anyListableData_.size();
+    }
+    /**
+     * <code>repeated .assetmantle.schema.data.base.AnyListableData any_listable_data = 1 [json_name = "anyListableData"];</code>
+     */
+    @java.lang.Override
+    public com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableData getAnyListableData(int index) {
+      return anyListableData_.get(index);
+    }
+    /**
+     * <code>repeated .assetmantle.schema.data.base.AnyListableData any_listable_data = 1 [json_name = "anyListableData"];</code>
+     */
+    @java.lang.Override
+    public com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableDataOrBuilder getAnyListableDataOrBuilder(
+        int index) {
+      return anyListableData_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < anyListableData_.size(); i++) {
+        output.writeMessage(1, anyListableData_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < anyListableData_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, anyListableData_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.assetmantle.schema.data.base.ListDataProto.ListData)) {
+        return super.equals(obj);
+      }
+      com.assetmantle.schema.data.base.ListDataProto.ListData other = (com.assetmantle.schema.data.base.ListDataProto.ListData) obj;
+
+      if (!getAnyListableDataList()
+          .equals(other.getAnyListableDataList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAnyListableDataCount() > 0) {
+        hash = (37 * hash) + ANY_LISTABLE_DATA_FIELD_NUMBER;
+        hash = (53 * hash) + getAnyListableDataList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.assetmantle.schema.data.base.ListDataProto.ListData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.assetmantle.schema.data.base.ListDataProto.ListData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.assetmantle.schema.data.base.ListDataProto.ListData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.assetmantle.schema.data.base.ListDataProto.ListData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.assetmantle.schema.data.base.ListDataProto.ListData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.assetmantle.schema.data.base.ListDataProto.ListData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.assetmantle.schema.data.base.ListDataProto.ListData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.assetmantle.schema.data.base.ListDataProto.ListData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.assetmantle.schema.data.base.ListDataProto.ListData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.assetmantle.schema.data.base.ListDataProto.ListData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.assetmantle.schema.data.base.ListDataProto.ListData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.assetmantle.schema.data.base.ListDataProto.ListData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.assetmantle.schema.data.base.ListDataProto.ListData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code assetmantle.schema.data.base.ListData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:assetmantle.schema.data.base.ListData)
+        com.assetmantle.schema.data.base.ListDataProto.ListDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.assetmantle.schema.data.base.ListDataProto.internal_static_assetmantle_schema_data_base_ListData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.assetmantle.schema.data.base.ListDataProto.internal_static_assetmantle_schema_data_base_ListData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.assetmantle.schema.data.base.ListDataProto.ListData.class, com.assetmantle.schema.data.base.ListDataProto.ListData.Builder.class);
+      }
+
+      // Construct using com.assetmantle.schema.data.base.ListDataProto.ListData.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (anyListableDataBuilder_ == null) {
+          anyListableData_ = java.util.Collections.emptyList();
+        } else {
+          anyListableData_ = null;
+          anyListableDataBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.assetmantle.schema.data.base.ListDataProto.internal_static_assetmantle_schema_data_base_ListData_descriptor;
+      }
+
+      @java.lang.Override
+      public com.assetmantle.schema.data.base.ListDataProto.ListData getDefaultInstanceForType() {
+        return com.assetmantle.schema.data.base.ListDataProto.ListData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.assetmantle.schema.data.base.ListDataProto.ListData build() {
+        com.assetmantle.schema.data.base.ListDataProto.ListData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.assetmantle.schema.data.base.ListDataProto.ListData buildPartial() {
+        com.assetmantle.schema.data.base.ListDataProto.ListData result = new com.assetmantle.schema.data.base.ListDataProto.ListData(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.assetmantle.schema.data.base.ListDataProto.ListData result) {
+        if (anyListableDataBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            anyListableData_ = java.util.Collections.unmodifiableList(anyListableData_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.anyListableData_ = anyListableData_;
+        } else {
+          result.anyListableData_ = anyListableDataBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.assetmantle.schema.data.base.ListDataProto.ListData result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.assetmantle.schema.data.base.ListDataProto.ListData) {
+          return mergeFrom((com.assetmantle.schema.data.base.ListDataProto.ListData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.assetmantle.schema.data.base.ListDataProto.ListData other) {
+        if (other == com.assetmantle.schema.data.base.ListDataProto.ListData.getDefaultInstance()) return this;
+        if (anyListableDataBuilder_ == null) {
+          if (!other.anyListableData_.isEmpty()) {
+            if (anyListableData_.isEmpty()) {
+              anyListableData_ = other.anyListableData_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAnyListableDataIsMutable();
+              anyListableData_.addAll(other.anyListableData_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.anyListableData_.isEmpty()) {
+            if (anyListableDataBuilder_.isEmpty()) {
+              anyListableDataBuilder_.dispose();
+              anyListableDataBuilder_ = null;
+              anyListableData_ = other.anyListableData_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              anyListableDataBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAnyListableDataFieldBuilder() : null;
+            } else {
+              anyListableDataBuilder_.addAllMessages(other.anyListableData_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableData m =
+                    input.readMessage(
+                        com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableData.parser(),
+                        extensionRegistry);
+                if (anyListableDataBuilder_ == null) {
+                  ensureAnyListableDataIsMutable();
+                  anyListableData_.add(m);
+                } else {
+                  anyListableDataBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableData> anyListableData_ =
+        java.util.Collections.emptyList();
+      private void ensureAnyListableDataIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          anyListableData_ = new java.util.ArrayList<com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableData>(anyListableData_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableData, com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableData.Builder, com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableDataOrBuilder> anyListableDataBuilder_;
+
+      /**
+       * <code>repeated .assetmantle.schema.data.base.AnyListableData any_listable_data = 1 [json_name = "anyListableData"];</code>
+       */
+      public java.util.List<com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableData> getAnyListableDataList() {
+        if (anyListableDataBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(anyListableData_);
+        } else {
+          return anyListableDataBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .assetmantle.schema.data.base.AnyListableData any_listable_data = 1 [json_name = "anyListableData"];</code>
+       */
+      public int getAnyListableDataCount() {
+        if (anyListableDataBuilder_ == null) {
+          return anyListableData_.size();
+        } else {
+          return anyListableDataBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .assetmantle.schema.data.base.AnyListableData any_listable_data = 1 [json_name = "anyListableData"];</code>
+       */
+      public com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableData getAnyListableData(int index) {
+        if (anyListableDataBuilder_ == null) {
+          return anyListableData_.get(index);
+        } else {
+          return anyListableDataBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .assetmantle.schema.data.base.AnyListableData any_listable_data = 1 [json_name = "anyListableData"];</code>
+       */
+      public Builder setAnyListableData(
+          int index, com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableData value) {
+        if (anyListableDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAnyListableDataIsMutable();
+          anyListableData_.set(index, value);
+          onChanged();
+        } else {
+          anyListableDataBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .assetmantle.schema.data.base.AnyListableData any_listable_data = 1 [json_name = "anyListableData"];</code>
+       */
+      public Builder setAnyListableData(
+          int index, com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableData.Builder builderForValue) {
+        if (anyListableDataBuilder_ == null) {
+          ensureAnyListableDataIsMutable();
+          anyListableData_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          anyListableDataBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .assetmantle.schema.data.base.AnyListableData any_listable_data = 1 [json_name = "anyListableData"];</code>
+       */
+      public Builder addAnyListableData(com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableData value) {
+        if (anyListableDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAnyListableDataIsMutable();
+          anyListableData_.add(value);
+          onChanged();
+        } else {
+          anyListableDataBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .assetmantle.schema.data.base.AnyListableData any_listable_data = 1 [json_name = "anyListableData"];</code>
+       */
+      public Builder addAnyListableData(
+          int index, com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableData value) {
+        if (anyListableDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAnyListableDataIsMutable();
+          anyListableData_.add(index, value);
+          onChanged();
+        } else {
+          anyListableDataBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .assetmantle.schema.data.base.AnyListableData any_listable_data = 1 [json_name = "anyListableData"];</code>
+       */
+      public Builder addAnyListableData(
+          com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableData.Builder builderForValue) {
+        if (anyListableDataBuilder_ == null) {
+          ensureAnyListableDataIsMutable();
+          anyListableData_.add(builderForValue.build());
+          onChanged();
+        } else {
+          anyListableDataBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .assetmantle.schema.data.base.AnyListableData any_listable_data = 1 [json_name = "anyListableData"];</code>
+       */
+      public Builder addAnyListableData(
+          int index, com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableData.Builder builderForValue) {
+        if (anyListableDataBuilder_ == null) {
+          ensureAnyListableDataIsMutable();
+          anyListableData_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          anyListableDataBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .assetmantle.schema.data.base.AnyListableData any_listable_data = 1 [json_name = "anyListableData"];</code>
+       */
+      public Builder addAllAnyListableData(
+          java.lang.Iterable<? extends com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableData> values) {
+        if (anyListableDataBuilder_ == null) {
+          ensureAnyListableDataIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, anyListableData_);
+          onChanged();
+        } else {
+          anyListableDataBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .assetmantle.schema.data.base.AnyListableData any_listable_data = 1 [json_name = "anyListableData"];</code>
+       */
+      public Builder clearAnyListableData() {
+        if (anyListableDataBuilder_ == null) {
+          anyListableData_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          anyListableDataBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .assetmantle.schema.data.base.AnyListableData any_listable_data = 1 [json_name = "anyListableData"];</code>
+       */
+      public Builder removeAnyListableData(int index) {
+        if (anyListableDataBuilder_ == null) {
+          ensureAnyListableDataIsMutable();
+          anyListableData_.remove(index);
+          onChanged();
+        } else {
+          anyListableDataBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .assetmantle.schema.data.base.AnyListableData any_listable_data = 1 [json_name = "anyListableData"];</code>
+       */
+      public com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableData.Builder getAnyListableDataBuilder(
+          int index) {
+        return getAnyListableDataFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .assetmantle.schema.data.base.AnyListableData any_listable_data = 1 [json_name = "anyListableData"];</code>
+       */
+      public com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableDataOrBuilder getAnyListableDataOrBuilder(
+          int index) {
+        if (anyListableDataBuilder_ == null) {
+          return anyListableData_.get(index);  } else {
+          return anyListableDataBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .assetmantle.schema.data.base.AnyListableData any_listable_data = 1 [json_name = "anyListableData"];</code>
+       */
+      public java.util.List<? extends com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableDataOrBuilder> 
+           getAnyListableDataOrBuilderList() {
+        if (anyListableDataBuilder_ != null) {
+          return anyListableDataBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(anyListableData_);
+        }
+      }
+      /**
+       * <code>repeated .assetmantle.schema.data.base.AnyListableData any_listable_data = 1 [json_name = "anyListableData"];</code>
+       */
+      public com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableData.Builder addAnyListableDataBuilder() {
+        return getAnyListableDataFieldBuilder().addBuilder(
+            com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableData.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .assetmantle.schema.data.base.AnyListableData any_listable_data = 1 [json_name = "anyListableData"];</code>
+       */
+      public com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableData.Builder addAnyListableDataBuilder(
+          int index) {
+        return getAnyListableDataFieldBuilder().addBuilder(
+            index, com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableData.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .assetmantle.schema.data.base.AnyListableData any_listable_data = 1 [json_name = "anyListableData"];</code>
+       */
+      public java.util.List<com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableData.Builder> 
+           getAnyListableDataBuilderList() {
+        return getAnyListableDataFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableData, com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableData.Builder, com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableDataOrBuilder> 
+          getAnyListableDataFieldBuilder() {
+        if (anyListableDataBuilder_ == null) {
+          anyListableDataBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableData, com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableData.Builder, com.assetmantle.schema.data.base.AnyListableDataProto.AnyListableDataOrBuilder>(
+                  anyListableData_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          anyListableData_ = null;
+        }
+        return anyListableDataBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:assetmantle.schema.data.base.ListData)
+    }
+
+    // @@protoc_insertion_point(class_scope:assetmantle.schema.data.base.ListData)
+    private static final com.assetmantle.schema.data.base.ListDataProto.ListData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.assetmantle.schema.data.base.ListDataProto.ListData();
+    }
+
+    public static com.assetmantle.schema.data.base.ListDataProto.ListData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListData>
+        PARSER = new com.google.protobuf.AbstractParser<ListData>() {
+      @java.lang.Override
+      public ListData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.assetmantle.schema.data.base.ListDataProto.ListData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_assetmantle_schema_data_base_ListData_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_assetmantle_schema_data_base_ListData_fieldAccessorTable;
 
@@ -34,12 +816,12 @@ public final class ListDataProto {
       "goproto/gogo.proto\"k\n\010ListData\022Y\n\021any_li" +
       "stable_data\030\001 \003(\0132-.assetmantle.schema.d" +
       "ata.base.AnyListableDataR\017anyListableDat" +
-      "a:\004\210\240\037\000B\305\001\n com.assetmantle.schema.data." +
-      "baseB\rListDataProtoP\001\242\002\004ASDB\252\002\034Assetmant" +
-      "le.Schema.Data.Base\312\002\034Assetmantle\\Schema" +
-      "\\Data\\Base\342\002(Assetmantle\\Schema\\Data\\Bas" +
-      "e\\GPBMetadata\352\002\037Assetmantle::Schema::Dat" +
-      "a::Baseb\006proto3"
+      "a:\004\210\240\037\000B\303\001\n com.assetmantle.schema.data." +
+      "baseB\rListDataProto\242\002\004ASDB\252\002\034Assetmantle" +
+      ".Schema.Data.Base\312\002\034Assetmantle\\Schema\\D" +
+      "ata\\Base\342\002(Assetmantle\\Schema\\Data\\Base\\" +
+      "GPBMetadata\352\002\037Assetmantle::Schema::Data:" +
+      ":Baseb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

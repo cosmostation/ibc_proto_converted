@@ -14,59 +14,13532 @@ public final class EventsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface EventCreateClassOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.ecocredit.v1alpha2.EventCreateClass)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * class_id is the unique ID of credit class.
+     * </pre>
+     *
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <pre>
+     * class_id is the unique ID of credit class.
+     * </pre>
+     *
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <pre>
+     * admin is the admin of the credit class.
+     * </pre>
+     *
+     * <code>string admin = 2 [json_name = "admin"];</code>
+     * @return The admin.
+     */
+    java.lang.String getAdmin();
+    /**
+     * <pre>
+     * admin is the admin of the credit class.
+     * </pre>
+     *
+     * <code>string admin = 2 [json_name = "admin"];</code>
+     * @return The bytes for admin.
+     */
+    com.google.protobuf.ByteString
+        getAdminBytes();
+  }
+  /**
+   * <pre>
+   * EventCreateClass is an event emitted when a credit class is created.
+   * </pre>
+   *
+   * Protobuf type {@code regen.ecocredit.v1alpha2.EventCreateClass}
+   */
+  public static final class EventCreateClass extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.ecocredit.v1alpha2.EventCreateClass)
+      EventCreateClassOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventCreateClass.newBuilder() to construct.
+    private EventCreateClass(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventCreateClass() {
+      classId_ = "";
+      admin_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventCreateClass();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventCreateClass_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventCreateClass_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass.class, com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass.Builder.class);
+    }
+
+    public static final int CLASS_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
+    /**
+     * <pre>
+     * class_id is the unique ID of credit class.
+     * </pre>
+     *
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * class_id is the unique ID of credit class.
+     * </pre>
+     *
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADMIN_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object admin_ = "";
+    /**
+     * <pre>
+     * admin is the admin of the credit class.
+     * </pre>
+     *
+     * <code>string admin = 2 [json_name = "admin"];</code>
+     * @return The admin.
+     */
+    @java.lang.Override
+    public java.lang.String getAdmin() {
+      java.lang.Object ref = admin_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        admin_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * admin is the admin of the credit class.
+     * </pre>
+     *
+     * <code>string admin = 2 [json_name = "admin"];</code>
+     * @return The bytes for admin.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAdminBytes() {
+      java.lang.Object ref = admin_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        admin_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(admin_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, admin_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(admin_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, admin_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass)) {
+        return super.equals(obj);
+      }
+      com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass other = (com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass) obj;
+
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (!getAdmin()
+          .equals(other.getAdmin())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      hash = (37 * hash) + ADMIN_FIELD_NUMBER;
+      hash = (53 * hash) + getAdmin().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventCreateClass is an event emitted when a credit class is created.
+     * </pre>
+     *
+     * Protobuf type {@code regen.ecocredit.v1alpha2.EventCreateClass}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.ecocredit.v1alpha2.EventCreateClass)
+        com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClassOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventCreateClass_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventCreateClass_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass.class, com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass.Builder.class);
+      }
+
+      // Construct using com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        classId_ = "";
+        admin_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventCreateClass_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass getDefaultInstanceForType() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass build() {
+        com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass buildPartial() {
+        com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass result = new com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.classId_ = classId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.admin_ = admin_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass) {
+          return mergeFrom((com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass other) {
+        if (other == com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass.getDefaultInstance()) return this;
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getAdmin().isEmpty()) {
+          admin_ = other.admin_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                classId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                admin_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <pre>
+       * class_id is the unique ID of credit class.
+       * </pre>
+       *
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * class_id is the unique ID of credit class.
+       * </pre>
+       *
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * class_id is the unique ID of credit class.
+       * </pre>
+       *
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * class_id is the unique ID of credit class.
+       * </pre>
+       *
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * class_id is the unique ID of credit class.
+       * </pre>
+       *
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object admin_ = "";
+      /**
+       * <pre>
+       * admin is the admin of the credit class.
+       * </pre>
+       *
+       * <code>string admin = 2 [json_name = "admin"];</code>
+       * @return The admin.
+       */
+      public java.lang.String getAdmin() {
+        java.lang.Object ref = admin_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          admin_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * admin is the admin of the credit class.
+       * </pre>
+       *
+       * <code>string admin = 2 [json_name = "admin"];</code>
+       * @return The bytes for admin.
+       */
+      public com.google.protobuf.ByteString
+          getAdminBytes() {
+        java.lang.Object ref = admin_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          admin_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * admin is the admin of the credit class.
+       * </pre>
+       *
+       * <code>string admin = 2 [json_name = "admin"];</code>
+       * @param value The admin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdmin(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        admin_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * admin is the admin of the credit class.
+       * </pre>
+       *
+       * <code>string admin = 2 [json_name = "admin"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAdmin() {
+        admin_ = getDefaultInstance().getAdmin();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * admin is the admin of the credit class.
+       * </pre>
+       *
+       * <code>string admin = 2 [json_name = "admin"];</code>
+       * @param value The bytes for admin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdminBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        admin_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.ecocredit.v1alpha2.EventCreateClass)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.ecocredit.v1alpha2.EventCreateClass)
+    private static final com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass();
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventCreateClass>
+        PARSER = new com.google.protobuf.AbstractParser<EventCreateClass>() {
+      @java.lang.Override
+      public EventCreateClass parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventCreateClass> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventCreateClass> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.ecocredit.v1alpha2.EventsProto.EventCreateClass getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventCreateProjectOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.ecocredit.v1alpha2.EventCreateProject)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * project_id is the unique ID of the project.
+     * </pre>
+     *
+     * <code>string project_id = 1 [json_name = "projectId"];</code>
+     * @return The projectId.
+     */
+    java.lang.String getProjectId();
+    /**
+     * <pre>
+     * project_id is the unique ID of the project.
+     * </pre>
+     *
+     * <code>string project_id = 1 [json_name = "projectId"];</code>
+     * @return The bytes for projectId.
+     */
+    com.google.protobuf.ByteString
+        getProjectIdBytes();
+
+    /**
+     * <pre>
+     * class_id is the unique ID of credit class for this project.
+     * </pre>
+     *
+     * <code>string class_id = 2 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <pre>
+     * class_id is the unique ID of credit class for this project.
+     * </pre>
+     *
+     * <code>string class_id = 2 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <pre>
+     * issuer is the issuer of the credit batches for this project.
+     * </pre>
+     *
+     * <code>string issuer = 3 [json_name = "issuer"];</code>
+     * @return The issuer.
+     */
+    java.lang.String getIssuer();
+    /**
+     * <pre>
+     * issuer is the issuer of the credit batches for this project.
+     * </pre>
+     *
+     * <code>string issuer = 3 [json_name = "issuer"];</code>
+     * @return The bytes for issuer.
+     */
+    com.google.protobuf.ByteString
+        getIssuerBytes();
+
+    /**
+     * <pre>
+     * project_location is the location of the project.
+     * Full documentation can be found in MsgCreateProject.project_location.
+     * </pre>
+     *
+     * <code>string project_location = 4 [json_name = "projectLocation"];</code>
+     * @return The projectLocation.
+     */
+    java.lang.String getProjectLocation();
+    /**
+     * <pre>
+     * project_location is the location of the project.
+     * Full documentation can be found in MsgCreateProject.project_location.
+     * </pre>
+     *
+     * <code>string project_location = 4 [json_name = "projectLocation"];</code>
+     * @return The bytes for projectLocation.
+     */
+    com.google.protobuf.ByteString
+        getProjectLocationBytes();
+  }
+  /**
+   * <pre>
+   * EventCreateProject is an event emitted when a project is created.
+   * </pre>
+   *
+   * Protobuf type {@code regen.ecocredit.v1alpha2.EventCreateProject}
+   */
+  public static final class EventCreateProject extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.ecocredit.v1alpha2.EventCreateProject)
+      EventCreateProjectOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventCreateProject.newBuilder() to construct.
+    private EventCreateProject(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventCreateProject() {
+      projectId_ = "";
+      classId_ = "";
+      issuer_ = "";
+      projectLocation_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventCreateProject();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventCreateProject_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventCreateProject_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject.class, com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject.Builder.class);
+    }
+
+    public static final int PROJECT_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object projectId_ = "";
+    /**
+     * <pre>
+     * project_id is the unique ID of the project.
+     * </pre>
+     *
+     * <code>string project_id = 1 [json_name = "projectId"];</code>
+     * @return The projectId.
+     */
+    @java.lang.Override
+    public java.lang.String getProjectId() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        projectId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * project_id is the unique ID of the project.
+     * </pre>
+     *
+     * <code>string project_id = 1 [json_name = "projectId"];</code>
+     * @return The bytes for projectId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProjectIdBytes() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        projectId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLASS_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
+    /**
+     * <pre>
+     * class_id is the unique ID of credit class for this project.
+     * </pre>
+     *
+     * <code>string class_id = 2 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * class_id is the unique ID of credit class for this project.
+     * </pre>
+     *
+     * <code>string class_id = 2 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ISSUER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object issuer_ = "";
+    /**
+     * <pre>
+     * issuer is the issuer of the credit batches for this project.
+     * </pre>
+     *
+     * <code>string issuer = 3 [json_name = "issuer"];</code>
+     * @return The issuer.
+     */
+    @java.lang.Override
+    public java.lang.String getIssuer() {
+      java.lang.Object ref = issuer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        issuer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * issuer is the issuer of the credit batches for this project.
+     * </pre>
+     *
+     * <code>string issuer = 3 [json_name = "issuer"];</code>
+     * @return The bytes for issuer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIssuerBytes() {
+      java.lang.Object ref = issuer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        issuer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROJECT_LOCATION_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object projectLocation_ = "";
+    /**
+     * <pre>
+     * project_location is the location of the project.
+     * Full documentation can be found in MsgCreateProject.project_location.
+     * </pre>
+     *
+     * <code>string project_location = 4 [json_name = "projectLocation"];</code>
+     * @return The projectLocation.
+     */
+    @java.lang.Override
+    public java.lang.String getProjectLocation() {
+      java.lang.Object ref = projectLocation_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        projectLocation_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * project_location is the location of the project.
+     * Full documentation can be found in MsgCreateProject.project_location.
+     * </pre>
+     *
+     * <code>string project_location = 4 [json_name = "projectLocation"];</code>
+     * @return The bytes for projectLocation.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProjectLocationBytes() {
+      java.lang.Object ref = projectLocation_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        projectLocation_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, projectId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(issuer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, issuer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectLocation_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, projectLocation_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, projectId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(issuer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, issuer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectLocation_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, projectLocation_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject)) {
+        return super.equals(obj);
+      }
+      com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject other = (com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject) obj;
+
+      if (!getProjectId()
+          .equals(other.getProjectId())) return false;
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (!getIssuer()
+          .equals(other.getIssuer())) return false;
+      if (!getProjectLocation()
+          .equals(other.getProjectLocation())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getProjectId().hashCode();
+      hash = (37 * hash) + CLASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      hash = (37 * hash) + ISSUER_FIELD_NUMBER;
+      hash = (53 * hash) + getIssuer().hashCode();
+      hash = (37 * hash) + PROJECT_LOCATION_FIELD_NUMBER;
+      hash = (53 * hash) + getProjectLocation().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventCreateProject is an event emitted when a project is created.
+     * </pre>
+     *
+     * Protobuf type {@code regen.ecocredit.v1alpha2.EventCreateProject}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.ecocredit.v1alpha2.EventCreateProject)
+        com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProjectOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventCreateProject_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventCreateProject_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject.class, com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject.Builder.class);
+      }
+
+      // Construct using com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        projectId_ = "";
+        classId_ = "";
+        issuer_ = "";
+        projectLocation_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventCreateProject_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject getDefaultInstanceForType() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject build() {
+        com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject buildPartial() {
+        com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject result = new com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.projectId_ = projectId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.classId_ = classId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.issuer_ = issuer_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.projectLocation_ = projectLocation_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject) {
+          return mergeFrom((com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject other) {
+        if (other == com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject.getDefaultInstance()) return this;
+        if (!other.getProjectId().isEmpty()) {
+          projectId_ = other.projectId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getIssuer().isEmpty()) {
+          issuer_ = other.issuer_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getProjectLocation().isEmpty()) {
+          projectLocation_ = other.projectLocation_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                projectId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                classId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                issuer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                projectLocation_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object projectId_ = "";
+      /**
+       * <pre>
+       * project_id is the unique ID of the project.
+       * </pre>
+       *
+       * <code>string project_id = 1 [json_name = "projectId"];</code>
+       * @return The projectId.
+       */
+      public java.lang.String getProjectId() {
+        java.lang.Object ref = projectId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          projectId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * project_id is the unique ID of the project.
+       * </pre>
+       *
+       * <code>string project_id = 1 [json_name = "projectId"];</code>
+       * @return The bytes for projectId.
+       */
+      public com.google.protobuf.ByteString
+          getProjectIdBytes() {
+        java.lang.Object ref = projectId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          projectId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * project_id is the unique ID of the project.
+       * </pre>
+       *
+       * <code>string project_id = 1 [json_name = "projectId"];</code>
+       * @param value The projectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        projectId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * project_id is the unique ID of the project.
+       * </pre>
+       *
+       * <code>string project_id = 1 [json_name = "projectId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProjectId() {
+        projectId_ = getDefaultInstance().getProjectId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * project_id is the unique ID of the project.
+       * </pre>
+       *
+       * <code>string project_id = 1 [json_name = "projectId"];</code>
+       * @param value The bytes for projectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        projectId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <pre>
+       * class_id is the unique ID of credit class for this project.
+       * </pre>
+       *
+       * <code>string class_id = 2 [json_name = "classId"];</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * class_id is the unique ID of credit class for this project.
+       * </pre>
+       *
+       * <code>string class_id = 2 [json_name = "classId"];</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * class_id is the unique ID of credit class for this project.
+       * </pre>
+       *
+       * <code>string class_id = 2 [json_name = "classId"];</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * class_id is the unique ID of credit class for this project.
+       * </pre>
+       *
+       * <code>string class_id = 2 [json_name = "classId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * class_id is the unique ID of credit class for this project.
+       * </pre>
+       *
+       * <code>string class_id = 2 [json_name = "classId"];</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object issuer_ = "";
+      /**
+       * <pre>
+       * issuer is the issuer of the credit batches for this project.
+       * </pre>
+       *
+       * <code>string issuer = 3 [json_name = "issuer"];</code>
+       * @return The issuer.
+       */
+      public java.lang.String getIssuer() {
+        java.lang.Object ref = issuer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          issuer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * issuer is the issuer of the credit batches for this project.
+       * </pre>
+       *
+       * <code>string issuer = 3 [json_name = "issuer"];</code>
+       * @return The bytes for issuer.
+       */
+      public com.google.protobuf.ByteString
+          getIssuerBytes() {
+        java.lang.Object ref = issuer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          issuer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * issuer is the issuer of the credit batches for this project.
+       * </pre>
+       *
+       * <code>string issuer = 3 [json_name = "issuer"];</code>
+       * @param value The issuer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssuer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        issuer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * issuer is the issuer of the credit batches for this project.
+       * </pre>
+       *
+       * <code>string issuer = 3 [json_name = "issuer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIssuer() {
+        issuer_ = getDefaultInstance().getIssuer();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * issuer is the issuer of the credit batches for this project.
+       * </pre>
+       *
+       * <code>string issuer = 3 [json_name = "issuer"];</code>
+       * @param value The bytes for issuer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssuerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        issuer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object projectLocation_ = "";
+      /**
+       * <pre>
+       * project_location is the location of the project.
+       * Full documentation can be found in MsgCreateProject.project_location.
+       * </pre>
+       *
+       * <code>string project_location = 4 [json_name = "projectLocation"];</code>
+       * @return The projectLocation.
+       */
+      public java.lang.String getProjectLocation() {
+        java.lang.Object ref = projectLocation_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          projectLocation_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * project_location is the location of the project.
+       * Full documentation can be found in MsgCreateProject.project_location.
+       * </pre>
+       *
+       * <code>string project_location = 4 [json_name = "projectLocation"];</code>
+       * @return The bytes for projectLocation.
+       */
+      public com.google.protobuf.ByteString
+          getProjectLocationBytes() {
+        java.lang.Object ref = projectLocation_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          projectLocation_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * project_location is the location of the project.
+       * Full documentation can be found in MsgCreateProject.project_location.
+       * </pre>
+       *
+       * <code>string project_location = 4 [json_name = "projectLocation"];</code>
+       * @param value The projectLocation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectLocation(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        projectLocation_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * project_location is the location of the project.
+       * Full documentation can be found in MsgCreateProject.project_location.
+       * </pre>
+       *
+       * <code>string project_location = 4 [json_name = "projectLocation"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProjectLocation() {
+        projectLocation_ = getDefaultInstance().getProjectLocation();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * project_location is the location of the project.
+       * Full documentation can be found in MsgCreateProject.project_location.
+       * </pre>
+       *
+       * <code>string project_location = 4 [json_name = "projectLocation"];</code>
+       * @param value The bytes for projectLocation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectLocationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        projectLocation_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.ecocredit.v1alpha2.EventCreateProject)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.ecocredit.v1alpha2.EventCreateProject)
+    private static final com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject();
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventCreateProject>
+        PARSER = new com.google.protobuf.AbstractParser<EventCreateProject>() {
+      @java.lang.Override
+      public EventCreateProject parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventCreateProject> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventCreateProject> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.ecocredit.v1alpha2.EventsProto.EventCreateProject getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventCreateBatchOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.ecocredit.v1alpha2.EventCreateBatch)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * class_id is the unique ID of credit class.
+     * </pre>
+     *
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <pre>
+     * class_id is the unique ID of credit class.
+     * </pre>
+     *
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <pre>
+     * batch_denom is the unique ID of credit batch.
+     * </pre>
+     *
+     * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+     * @return The batchDenom.
+     */
+    java.lang.String getBatchDenom();
+    /**
+     * <pre>
+     * batch_denom is the unique ID of credit batch.
+     * </pre>
+     *
+     * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+     * @return The bytes for batchDenom.
+     */
+    com.google.protobuf.ByteString
+        getBatchDenomBytes();
+
+    /**
+     * <pre>
+     * issuer is the account address of the issuer of the credit batch.
+     * </pre>
+     *
+     * <code>string issuer = 3 [json_name = "issuer"];</code>
+     * @return The issuer.
+     */
+    java.lang.String getIssuer();
+    /**
+     * <pre>
+     * issuer is the account address of the issuer of the credit batch.
+     * </pre>
+     *
+     * <code>string issuer = 3 [json_name = "issuer"];</code>
+     * @return The bytes for issuer.
+     */
+    com.google.protobuf.ByteString
+        getIssuerBytes();
+
+    /**
+     * <pre>
+     * total_amount is the total number of credits in the credit batch.
+     * </pre>
+     *
+     * <code>string total_amount = 4 [json_name = "totalAmount"];</code>
+     * @return The totalAmount.
+     */
+    java.lang.String getTotalAmount();
+    /**
+     * <pre>
+     * total_amount is the total number of credits in the credit batch.
+     * </pre>
+     *
+     * <code>string total_amount = 4 [json_name = "totalAmount"];</code>
+     * @return The bytes for totalAmount.
+     */
+    com.google.protobuf.ByteString
+        getTotalAmountBytes();
+
+    /**
+     * <pre>
+     * start_date is the beginning of the period during which this credit batch
+     * was quantified and verified.
+     * </pre>
+     *
+     * <code>string start_date = 5 [json_name = "startDate"];</code>
+     * @return The startDate.
+     */
+    java.lang.String getStartDate();
+    /**
+     * <pre>
+     * start_date is the beginning of the period during which this credit batch
+     * was quantified and verified.
+     * </pre>
+     *
+     * <code>string start_date = 5 [json_name = "startDate"];</code>
+     * @return The bytes for startDate.
+     */
+    com.google.protobuf.ByteString
+        getStartDateBytes();
+
+    /**
+     * <pre>
+     * end_date is the end of the period during which this credit batch was
+     * quantified and verified.
+     * </pre>
+     *
+     * <code>string end_date = 6 [json_name = "endDate"];</code>
+     * @return The endDate.
+     */
+    java.lang.String getEndDate();
+    /**
+     * <pre>
+     * end_date is the end of the period during which this credit batch was
+     * quantified and verified.
+     * </pre>
+     *
+     * <code>string end_date = 6 [json_name = "endDate"];</code>
+     * @return The bytes for endDate.
+     */
+    com.google.protobuf.ByteString
+        getEndDateBytes();
+
+    /**
+     * <pre>
+     * project_location is the location of the project.
+     * Full documentation can be found in MsgCreateProject.project_location.
+     * </pre>
+     *
+     * <code>string project_location = 7 [json_name = "projectLocation"];</code>
+     * @return The projectLocation.
+     */
+    java.lang.String getProjectLocation();
+    /**
+     * <pre>
+     * project_location is the location of the project.
+     * Full documentation can be found in MsgCreateProject.project_location.
+     * </pre>
+     *
+     * <code>string project_location = 7 [json_name = "projectLocation"];</code>
+     * @return The bytes for projectLocation.
+     */
+    com.google.protobuf.ByteString
+        getProjectLocationBytes();
+
+    /**
+     * <pre>
+     * project_id is the unique ID of the project this batch belongs to.
+     * </pre>
+     *
+     * <code>string project_id = 8 [json_name = "projectId"];</code>
+     * @return The projectId.
+     */
+    java.lang.String getProjectId();
+    /**
+     * <pre>
+     * project_id is the unique ID of the project this batch belongs to.
+     * </pre>
+     *
+     * <code>string project_id = 8 [json_name = "projectId"];</code>
+     * @return The bytes for projectId.
+     */
+    com.google.protobuf.ByteString
+        getProjectIdBytes();
+  }
+  /**
+   * <pre>
+   * EventCreateBatch is an event emitted when a credit batch is created.
+   * </pre>
+   *
+   * Protobuf type {@code regen.ecocredit.v1alpha2.EventCreateBatch}
+   */
+  public static final class EventCreateBatch extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.ecocredit.v1alpha2.EventCreateBatch)
+      EventCreateBatchOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventCreateBatch.newBuilder() to construct.
+    private EventCreateBatch(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventCreateBatch() {
+      classId_ = "";
+      batchDenom_ = "";
+      issuer_ = "";
+      totalAmount_ = "";
+      startDate_ = "";
+      endDate_ = "";
+      projectLocation_ = "";
+      projectId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventCreateBatch();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventCreateBatch_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventCreateBatch_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch.class, com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch.Builder.class);
+    }
+
+    public static final int CLASS_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
+    /**
+     * <pre>
+     * class_id is the unique ID of credit class.
+     * </pre>
+     *
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * class_id is the unique ID of credit class.
+     * </pre>
+     *
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BATCH_DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object batchDenom_ = "";
+    /**
+     * <pre>
+     * batch_denom is the unique ID of credit batch.
+     * </pre>
+     *
+     * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+     * @return The batchDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getBatchDenom() {
+      java.lang.Object ref = batchDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        batchDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * batch_denom is the unique ID of credit batch.
+     * </pre>
+     *
+     * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+     * @return The bytes for batchDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBatchDenomBytes() {
+      java.lang.Object ref = batchDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        batchDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ISSUER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object issuer_ = "";
+    /**
+     * <pre>
+     * issuer is the account address of the issuer of the credit batch.
+     * </pre>
+     *
+     * <code>string issuer = 3 [json_name = "issuer"];</code>
+     * @return The issuer.
+     */
+    @java.lang.Override
+    public java.lang.String getIssuer() {
+      java.lang.Object ref = issuer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        issuer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * issuer is the account address of the issuer of the credit batch.
+     * </pre>
+     *
+     * <code>string issuer = 3 [json_name = "issuer"];</code>
+     * @return The bytes for issuer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIssuerBytes() {
+      java.lang.Object ref = issuer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        issuer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOTAL_AMOUNT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object totalAmount_ = "";
+    /**
+     * <pre>
+     * total_amount is the total number of credits in the credit batch.
+     * </pre>
+     *
+     * <code>string total_amount = 4 [json_name = "totalAmount"];</code>
+     * @return The totalAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getTotalAmount() {
+      java.lang.Object ref = totalAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        totalAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * total_amount is the total number of credits in the credit batch.
+     * </pre>
+     *
+     * <code>string total_amount = 4 [json_name = "totalAmount"];</code>
+     * @return The bytes for totalAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTotalAmountBytes() {
+      java.lang.Object ref = totalAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        totalAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int START_DATE_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object startDate_ = "";
+    /**
+     * <pre>
+     * start_date is the beginning of the period during which this credit batch
+     * was quantified and verified.
+     * </pre>
+     *
+     * <code>string start_date = 5 [json_name = "startDate"];</code>
+     * @return The startDate.
+     */
+    @java.lang.Override
+    public java.lang.String getStartDate() {
+      java.lang.Object ref = startDate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        startDate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * start_date is the beginning of the period during which this credit batch
+     * was quantified and verified.
+     * </pre>
+     *
+     * <code>string start_date = 5 [json_name = "startDate"];</code>
+     * @return The bytes for startDate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStartDateBytes() {
+      java.lang.Object ref = startDate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        startDate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int END_DATE_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object endDate_ = "";
+    /**
+     * <pre>
+     * end_date is the end of the period during which this credit batch was
+     * quantified and verified.
+     * </pre>
+     *
+     * <code>string end_date = 6 [json_name = "endDate"];</code>
+     * @return The endDate.
+     */
+    @java.lang.Override
+    public java.lang.String getEndDate() {
+      java.lang.Object ref = endDate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        endDate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * end_date is the end of the period during which this credit batch was
+     * quantified and verified.
+     * </pre>
+     *
+     * <code>string end_date = 6 [json_name = "endDate"];</code>
+     * @return The bytes for endDate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEndDateBytes() {
+      java.lang.Object ref = endDate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        endDate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROJECT_LOCATION_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object projectLocation_ = "";
+    /**
+     * <pre>
+     * project_location is the location of the project.
+     * Full documentation can be found in MsgCreateProject.project_location.
+     * </pre>
+     *
+     * <code>string project_location = 7 [json_name = "projectLocation"];</code>
+     * @return The projectLocation.
+     */
+    @java.lang.Override
+    public java.lang.String getProjectLocation() {
+      java.lang.Object ref = projectLocation_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        projectLocation_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * project_location is the location of the project.
+     * Full documentation can be found in MsgCreateProject.project_location.
+     * </pre>
+     *
+     * <code>string project_location = 7 [json_name = "projectLocation"];</code>
+     * @return The bytes for projectLocation.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProjectLocationBytes() {
+      java.lang.Object ref = projectLocation_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        projectLocation_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROJECT_ID_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object projectId_ = "";
+    /**
+     * <pre>
+     * project_id is the unique ID of the project this batch belongs to.
+     * </pre>
+     *
+     * <code>string project_id = 8 [json_name = "projectId"];</code>
+     * @return The projectId.
+     */
+    @java.lang.Override
+    public java.lang.String getProjectId() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        projectId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * project_id is the unique ID of the project this batch belongs to.
+     * </pre>
+     *
+     * <code>string project_id = 8 [json_name = "projectId"];</code>
+     * @return The bytes for projectId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProjectIdBytes() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        projectId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(batchDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, batchDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(issuer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, issuer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, totalAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startDate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, startDate_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endDate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, endDate_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectLocation_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, projectLocation_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, projectId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(batchDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, batchDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(issuer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, issuer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, totalAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startDate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, startDate_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endDate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, endDate_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectLocation_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, projectLocation_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, projectId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch)) {
+        return super.equals(obj);
+      }
+      com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch other = (com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch) obj;
+
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (!getBatchDenom()
+          .equals(other.getBatchDenom())) return false;
+      if (!getIssuer()
+          .equals(other.getIssuer())) return false;
+      if (!getTotalAmount()
+          .equals(other.getTotalAmount())) return false;
+      if (!getStartDate()
+          .equals(other.getStartDate())) return false;
+      if (!getEndDate()
+          .equals(other.getEndDate())) return false;
+      if (!getProjectLocation()
+          .equals(other.getProjectLocation())) return false;
+      if (!getProjectId()
+          .equals(other.getProjectId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      hash = (37 * hash) + BATCH_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getBatchDenom().hashCode();
+      hash = (37 * hash) + ISSUER_FIELD_NUMBER;
+      hash = (53 * hash) + getIssuer().hashCode();
+      hash = (37 * hash) + TOTAL_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalAmount().hashCode();
+      hash = (37 * hash) + START_DATE_FIELD_NUMBER;
+      hash = (53 * hash) + getStartDate().hashCode();
+      hash = (37 * hash) + END_DATE_FIELD_NUMBER;
+      hash = (53 * hash) + getEndDate().hashCode();
+      hash = (37 * hash) + PROJECT_LOCATION_FIELD_NUMBER;
+      hash = (53 * hash) + getProjectLocation().hashCode();
+      hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getProjectId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventCreateBatch is an event emitted when a credit batch is created.
+     * </pre>
+     *
+     * Protobuf type {@code regen.ecocredit.v1alpha2.EventCreateBatch}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.ecocredit.v1alpha2.EventCreateBatch)
+        com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatchOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventCreateBatch_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventCreateBatch_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch.class, com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch.Builder.class);
+      }
+
+      // Construct using com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        classId_ = "";
+        batchDenom_ = "";
+        issuer_ = "";
+        totalAmount_ = "";
+        startDate_ = "";
+        endDate_ = "";
+        projectLocation_ = "";
+        projectId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventCreateBatch_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch getDefaultInstanceForType() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch build() {
+        com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch buildPartial() {
+        com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch result = new com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.classId_ = classId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.batchDenom_ = batchDenom_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.issuer_ = issuer_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.totalAmount_ = totalAmount_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.startDate_ = startDate_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.endDate_ = endDate_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.projectLocation_ = projectLocation_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.projectId_ = projectId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch) {
+          return mergeFrom((com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch other) {
+        if (other == com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch.getDefaultInstance()) return this;
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getBatchDenom().isEmpty()) {
+          batchDenom_ = other.batchDenom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getIssuer().isEmpty()) {
+          issuer_ = other.issuer_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getTotalAmount().isEmpty()) {
+          totalAmount_ = other.totalAmount_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getStartDate().isEmpty()) {
+          startDate_ = other.startDate_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getEndDate().isEmpty()) {
+          endDate_ = other.endDate_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getProjectLocation().isEmpty()) {
+          projectLocation_ = other.projectLocation_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (!other.getProjectId().isEmpty()) {
+          projectId_ = other.projectId_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                classId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                batchDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                issuer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                totalAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                startDate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                endDate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                projectLocation_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                projectId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <pre>
+       * class_id is the unique ID of credit class.
+       * </pre>
+       *
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * class_id is the unique ID of credit class.
+       * </pre>
+       *
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * class_id is the unique ID of credit class.
+       * </pre>
+       *
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * class_id is the unique ID of credit class.
+       * </pre>
+       *
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * class_id is the unique ID of credit class.
+       * </pre>
+       *
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object batchDenom_ = "";
+      /**
+       * <pre>
+       * batch_denom is the unique ID of credit batch.
+       * </pre>
+       *
+       * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+       * @return The batchDenom.
+       */
+      public java.lang.String getBatchDenom() {
+        java.lang.Object ref = batchDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          batchDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * batch_denom is the unique ID of credit batch.
+       * </pre>
+       *
+       * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+       * @return The bytes for batchDenom.
+       */
+      public com.google.protobuf.ByteString
+          getBatchDenomBytes() {
+        java.lang.Object ref = batchDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          batchDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * batch_denom is the unique ID of credit batch.
+       * </pre>
+       *
+       * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+       * @param value The batchDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBatchDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        batchDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * batch_denom is the unique ID of credit batch.
+       * </pre>
+       *
+       * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBatchDenom() {
+        batchDenom_ = getDefaultInstance().getBatchDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * batch_denom is the unique ID of credit batch.
+       * </pre>
+       *
+       * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+       * @param value The bytes for batchDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBatchDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        batchDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object issuer_ = "";
+      /**
+       * <pre>
+       * issuer is the account address of the issuer of the credit batch.
+       * </pre>
+       *
+       * <code>string issuer = 3 [json_name = "issuer"];</code>
+       * @return The issuer.
+       */
+      public java.lang.String getIssuer() {
+        java.lang.Object ref = issuer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          issuer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * issuer is the account address of the issuer of the credit batch.
+       * </pre>
+       *
+       * <code>string issuer = 3 [json_name = "issuer"];</code>
+       * @return The bytes for issuer.
+       */
+      public com.google.protobuf.ByteString
+          getIssuerBytes() {
+        java.lang.Object ref = issuer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          issuer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * issuer is the account address of the issuer of the credit batch.
+       * </pre>
+       *
+       * <code>string issuer = 3 [json_name = "issuer"];</code>
+       * @param value The issuer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssuer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        issuer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * issuer is the account address of the issuer of the credit batch.
+       * </pre>
+       *
+       * <code>string issuer = 3 [json_name = "issuer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIssuer() {
+        issuer_ = getDefaultInstance().getIssuer();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * issuer is the account address of the issuer of the credit batch.
+       * </pre>
+       *
+       * <code>string issuer = 3 [json_name = "issuer"];</code>
+       * @param value The bytes for issuer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssuerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        issuer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object totalAmount_ = "";
+      /**
+       * <pre>
+       * total_amount is the total number of credits in the credit batch.
+       * </pre>
+       *
+       * <code>string total_amount = 4 [json_name = "totalAmount"];</code>
+       * @return The totalAmount.
+       */
+      public java.lang.String getTotalAmount() {
+        java.lang.Object ref = totalAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          totalAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * total_amount is the total number of credits in the credit batch.
+       * </pre>
+       *
+       * <code>string total_amount = 4 [json_name = "totalAmount"];</code>
+       * @return The bytes for totalAmount.
+       */
+      public com.google.protobuf.ByteString
+          getTotalAmountBytes() {
+        java.lang.Object ref = totalAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          totalAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * total_amount is the total number of credits in the credit batch.
+       * </pre>
+       *
+       * <code>string total_amount = 4 [json_name = "totalAmount"];</code>
+       * @param value The totalAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        totalAmount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_amount is the total number of credits in the credit batch.
+       * </pre>
+       *
+       * <code>string total_amount = 4 [json_name = "totalAmount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalAmount() {
+        totalAmount_ = getDefaultInstance().getTotalAmount();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_amount is the total number of credits in the credit batch.
+       * </pre>
+       *
+       * <code>string total_amount = 4 [json_name = "totalAmount"];</code>
+       * @param value The bytes for totalAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        totalAmount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object startDate_ = "";
+      /**
+       * <pre>
+       * start_date is the beginning of the period during which this credit batch
+       * was quantified and verified.
+       * </pre>
+       *
+       * <code>string start_date = 5 [json_name = "startDate"];</code>
+       * @return The startDate.
+       */
+      public java.lang.String getStartDate() {
+        java.lang.Object ref = startDate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          startDate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * start_date is the beginning of the period during which this credit batch
+       * was quantified and verified.
+       * </pre>
+       *
+       * <code>string start_date = 5 [json_name = "startDate"];</code>
+       * @return The bytes for startDate.
+       */
+      public com.google.protobuf.ByteString
+          getStartDateBytes() {
+        java.lang.Object ref = startDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          startDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * start_date is the beginning of the period during which this credit batch
+       * was quantified and verified.
+       * </pre>
+       *
+       * <code>string start_date = 5 [json_name = "startDate"];</code>
+       * @param value The startDate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartDate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        startDate_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_date is the beginning of the period during which this credit batch
+       * was quantified and verified.
+       * </pre>
+       *
+       * <code>string start_date = 5 [json_name = "startDate"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStartDate() {
+        startDate_ = getDefaultInstance().getStartDate();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_date is the beginning of the period during which this credit batch
+       * was quantified and verified.
+       * </pre>
+       *
+       * <code>string start_date = 5 [json_name = "startDate"];</code>
+       * @param value The bytes for startDate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        startDate_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object endDate_ = "";
+      /**
+       * <pre>
+       * end_date is the end of the period during which this credit batch was
+       * quantified and verified.
+       * </pre>
+       *
+       * <code>string end_date = 6 [json_name = "endDate"];</code>
+       * @return The endDate.
+       */
+      public java.lang.String getEndDate() {
+        java.lang.Object ref = endDate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          endDate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * end_date is the end of the period during which this credit batch was
+       * quantified and verified.
+       * </pre>
+       *
+       * <code>string end_date = 6 [json_name = "endDate"];</code>
+       * @return The bytes for endDate.
+       */
+      public com.google.protobuf.ByteString
+          getEndDateBytes() {
+        java.lang.Object ref = endDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          endDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * end_date is the end of the period during which this credit batch was
+       * quantified and verified.
+       * </pre>
+       *
+       * <code>string end_date = 6 [json_name = "endDate"];</code>
+       * @param value The endDate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndDate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        endDate_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * end_date is the end of the period during which this credit batch was
+       * quantified and verified.
+       * </pre>
+       *
+       * <code>string end_date = 6 [json_name = "endDate"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEndDate() {
+        endDate_ = getDefaultInstance().getEndDate();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * end_date is the end of the period during which this credit batch was
+       * quantified and verified.
+       * </pre>
+       *
+       * <code>string end_date = 6 [json_name = "endDate"];</code>
+       * @param value The bytes for endDate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        endDate_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object projectLocation_ = "";
+      /**
+       * <pre>
+       * project_location is the location of the project.
+       * Full documentation can be found in MsgCreateProject.project_location.
+       * </pre>
+       *
+       * <code>string project_location = 7 [json_name = "projectLocation"];</code>
+       * @return The projectLocation.
+       */
+      public java.lang.String getProjectLocation() {
+        java.lang.Object ref = projectLocation_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          projectLocation_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * project_location is the location of the project.
+       * Full documentation can be found in MsgCreateProject.project_location.
+       * </pre>
+       *
+       * <code>string project_location = 7 [json_name = "projectLocation"];</code>
+       * @return The bytes for projectLocation.
+       */
+      public com.google.protobuf.ByteString
+          getProjectLocationBytes() {
+        java.lang.Object ref = projectLocation_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          projectLocation_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * project_location is the location of the project.
+       * Full documentation can be found in MsgCreateProject.project_location.
+       * </pre>
+       *
+       * <code>string project_location = 7 [json_name = "projectLocation"];</code>
+       * @param value The projectLocation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectLocation(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        projectLocation_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * project_location is the location of the project.
+       * Full documentation can be found in MsgCreateProject.project_location.
+       * </pre>
+       *
+       * <code>string project_location = 7 [json_name = "projectLocation"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProjectLocation() {
+        projectLocation_ = getDefaultInstance().getProjectLocation();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * project_location is the location of the project.
+       * Full documentation can be found in MsgCreateProject.project_location.
+       * </pre>
+       *
+       * <code>string project_location = 7 [json_name = "projectLocation"];</code>
+       * @param value The bytes for projectLocation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectLocationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        projectLocation_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object projectId_ = "";
+      /**
+       * <pre>
+       * project_id is the unique ID of the project this batch belongs to.
+       * </pre>
+       *
+       * <code>string project_id = 8 [json_name = "projectId"];</code>
+       * @return The projectId.
+       */
+      public java.lang.String getProjectId() {
+        java.lang.Object ref = projectId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          projectId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * project_id is the unique ID of the project this batch belongs to.
+       * </pre>
+       *
+       * <code>string project_id = 8 [json_name = "projectId"];</code>
+       * @return The bytes for projectId.
+       */
+      public com.google.protobuf.ByteString
+          getProjectIdBytes() {
+        java.lang.Object ref = projectId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          projectId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * project_id is the unique ID of the project this batch belongs to.
+       * </pre>
+       *
+       * <code>string project_id = 8 [json_name = "projectId"];</code>
+       * @param value The projectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        projectId_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * project_id is the unique ID of the project this batch belongs to.
+       * </pre>
+       *
+       * <code>string project_id = 8 [json_name = "projectId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProjectId() {
+        projectId_ = getDefaultInstance().getProjectId();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * project_id is the unique ID of the project this batch belongs to.
+       * </pre>
+       *
+       * <code>string project_id = 8 [json_name = "projectId"];</code>
+       * @param value The bytes for projectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        projectId_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.ecocredit.v1alpha2.EventCreateBatch)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.ecocredit.v1alpha2.EventCreateBatch)
+    private static final com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch();
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventCreateBatch>
+        PARSER = new com.google.protobuf.AbstractParser<EventCreateBatch>() {
+      @java.lang.Override
+      public EventCreateBatch parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventCreateBatch> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventCreateBatch> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.ecocredit.v1alpha2.EventsProto.EventCreateBatch getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventReceiveOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.ecocredit.v1alpha2.EventReceive)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * sender is the sender of the credits in the case that this event is the
+     * result of a transfer. It will not be set when credits are received at
+     * initial issuance.
+     * </pre>
+     *
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <pre>
+     * sender is the sender of the credits in the case that this event is the
+     * result of a transfer. It will not be set when credits are received at
+     * initial issuance.
+     * </pre>
+     *
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+
+    /**
+     * <pre>
+     * recipient is the recipient of the credits
+     * </pre>
+     *
+     * <code>string recipient = 2 [json_name = "recipient"];</code>
+     * @return The recipient.
+     */
+    java.lang.String getRecipient();
+    /**
+     * <pre>
+     * recipient is the recipient of the credits
+     * </pre>
+     *
+     * <code>string recipient = 2 [json_name = "recipient"];</code>
+     * @return The bytes for recipient.
+     */
+    com.google.protobuf.ByteString
+        getRecipientBytes();
+
+    /**
+     * <pre>
+     * batch_denom is the unique ID of credit batch.
+     * </pre>
+     *
+     * <code>string batch_denom = 3 [json_name = "batchDenom"];</code>
+     * @return The batchDenom.
+     */
+    java.lang.String getBatchDenom();
+    /**
+     * <pre>
+     * batch_denom is the unique ID of credit batch.
+     * </pre>
+     *
+     * <code>string batch_denom = 3 [json_name = "batchDenom"];</code>
+     * @return The bytes for batchDenom.
+     */
+    com.google.protobuf.ByteString
+        getBatchDenomBytes();
+
+    /**
+     * <pre>
+     * tradable_amount is the decimal number of tradable credits received.
+     * </pre>
+     *
+     * <code>string tradable_amount = 4 [json_name = "tradableAmount"];</code>
+     * @return The tradableAmount.
+     */
+    java.lang.String getTradableAmount();
+    /**
+     * <pre>
+     * tradable_amount is the decimal number of tradable credits received.
+     * </pre>
+     *
+     * <code>string tradable_amount = 4 [json_name = "tradableAmount"];</code>
+     * @return The bytes for tradableAmount.
+     */
+    com.google.protobuf.ByteString
+        getTradableAmountBytes();
+
+    /**
+     * <pre>
+     * retired_amount is the decimal number of retired credits received.
+     * </pre>
+     *
+     * <code>string retired_amount = 5 [json_name = "retiredAmount"];</code>
+     * @return The retiredAmount.
+     */
+    java.lang.String getRetiredAmount();
+    /**
+     * <pre>
+     * retired_amount is the decimal number of retired credits received.
+     * </pre>
+     *
+     * <code>string retired_amount = 5 [json_name = "retiredAmount"];</code>
+     * @return The bytes for retiredAmount.
+     */
+    com.google.protobuf.ByteString
+        getRetiredAmountBytes();
+  }
+  /**
+   * <pre>
+   * EventReceive is an event emitted when credits are received either upon
+   * creation of a new batch or upon transfer. Each batch_denom created or
+   * transferred will result in a separate EventReceive for easy indexing.
+   * </pre>
+   *
+   * Protobuf type {@code regen.ecocredit.v1alpha2.EventReceive}
+   */
+  public static final class EventReceive extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.ecocredit.v1alpha2.EventReceive)
+      EventReceiveOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventReceive.newBuilder() to construct.
+    private EventReceive(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventReceive() {
+      sender_ = "";
+      recipient_ = "";
+      batchDenom_ = "";
+      tradableAmount_ = "";
+      retiredAmount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventReceive();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventReceive_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventReceive_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.ecocredit.v1alpha2.EventsProto.EventReceive.class, com.regen.ecocredit.v1alpha2.EventsProto.EventReceive.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <pre>
+     * sender is the sender of the credits in the case that this event is the
+     * result of a transfer. It will not be set when credits are received at
+     * initial issuance.
+     * </pre>
+     *
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * sender is the sender of the credits in the case that this event is the
+     * result of a transfer. It will not be set when credits are received at
+     * initial issuance.
+     * </pre>
+     *
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RECIPIENT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object recipient_ = "";
+    /**
+     * <pre>
+     * recipient is the recipient of the credits
+     * </pre>
+     *
+     * <code>string recipient = 2 [json_name = "recipient"];</code>
+     * @return The recipient.
+     */
+    @java.lang.Override
+    public java.lang.String getRecipient() {
+      java.lang.Object ref = recipient_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recipient_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * recipient is the recipient of the credits
+     * </pre>
+     *
+     * <code>string recipient = 2 [json_name = "recipient"];</code>
+     * @return The bytes for recipient.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRecipientBytes() {
+      java.lang.Object ref = recipient_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recipient_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BATCH_DENOM_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object batchDenom_ = "";
+    /**
+     * <pre>
+     * batch_denom is the unique ID of credit batch.
+     * </pre>
+     *
+     * <code>string batch_denom = 3 [json_name = "batchDenom"];</code>
+     * @return The batchDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getBatchDenom() {
+      java.lang.Object ref = batchDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        batchDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * batch_denom is the unique ID of credit batch.
+     * </pre>
+     *
+     * <code>string batch_denom = 3 [json_name = "batchDenom"];</code>
+     * @return The bytes for batchDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBatchDenomBytes() {
+      java.lang.Object ref = batchDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        batchDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRADABLE_AMOUNT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object tradableAmount_ = "";
+    /**
+     * <pre>
+     * tradable_amount is the decimal number of tradable credits received.
+     * </pre>
+     *
+     * <code>string tradable_amount = 4 [json_name = "tradableAmount"];</code>
+     * @return The tradableAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getTradableAmount() {
+      java.lang.Object ref = tradableAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tradableAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * tradable_amount is the decimal number of tradable credits received.
+     * </pre>
+     *
+     * <code>string tradable_amount = 4 [json_name = "tradableAmount"];</code>
+     * @return The bytes for tradableAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTradableAmountBytes() {
+      java.lang.Object ref = tradableAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tradableAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RETIRED_AMOUNT_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object retiredAmount_ = "";
+    /**
+     * <pre>
+     * retired_amount is the decimal number of retired credits received.
+     * </pre>
+     *
+     * <code>string retired_amount = 5 [json_name = "retiredAmount"];</code>
+     * @return The retiredAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getRetiredAmount() {
+      java.lang.Object ref = retiredAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        retiredAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * retired_amount is the decimal number of retired credits received.
+     * </pre>
+     *
+     * <code>string retired_amount = 5 [json_name = "retiredAmount"];</code>
+     * @return The bytes for retiredAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRetiredAmountBytes() {
+      java.lang.Object ref = retiredAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        retiredAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, recipient_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(batchDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, batchDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tradableAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, tradableAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(retiredAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, retiredAmount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, recipient_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(batchDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, batchDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tradableAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, tradableAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(retiredAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, retiredAmount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.ecocredit.v1alpha2.EventsProto.EventReceive)) {
+        return super.equals(obj);
+      }
+      com.regen.ecocredit.v1alpha2.EventsProto.EventReceive other = (com.regen.ecocredit.v1alpha2.EventsProto.EventReceive) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getRecipient()
+          .equals(other.getRecipient())) return false;
+      if (!getBatchDenom()
+          .equals(other.getBatchDenom())) return false;
+      if (!getTradableAmount()
+          .equals(other.getTradableAmount())) return false;
+      if (!getRetiredAmount()
+          .equals(other.getRetiredAmount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (37 * hash) + RECIPIENT_FIELD_NUMBER;
+      hash = (53 * hash) + getRecipient().hashCode();
+      hash = (37 * hash) + BATCH_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getBatchDenom().hashCode();
+      hash = (37 * hash) + TRADABLE_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getTradableAmount().hashCode();
+      hash = (37 * hash) + RETIRED_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getRetiredAmount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventReceive parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventReceive parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventReceive parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventReceive parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventReceive parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventReceive parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventReceive parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventReceive parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventReceive parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventReceive parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventReceive parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventReceive parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.ecocredit.v1alpha2.EventsProto.EventReceive prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventReceive is an event emitted when credits are received either upon
+     * creation of a new batch or upon transfer. Each batch_denom created or
+     * transferred will result in a separate EventReceive for easy indexing.
+     * </pre>
+     *
+     * Protobuf type {@code regen.ecocredit.v1alpha2.EventReceive}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.ecocredit.v1alpha2.EventReceive)
+        com.regen.ecocredit.v1alpha2.EventsProto.EventReceiveOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventReceive_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventReceive_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.ecocredit.v1alpha2.EventsProto.EventReceive.class, com.regen.ecocredit.v1alpha2.EventsProto.EventReceive.Builder.class);
+      }
+
+      // Construct using com.regen.ecocredit.v1alpha2.EventsProto.EventReceive.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = "";
+        recipient_ = "";
+        batchDenom_ = "";
+        tradableAmount_ = "";
+        retiredAmount_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventReceive_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventReceive getDefaultInstanceForType() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.EventReceive.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventReceive build() {
+        com.regen.ecocredit.v1alpha2.EventsProto.EventReceive result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventReceive buildPartial() {
+        com.regen.ecocredit.v1alpha2.EventsProto.EventReceive result = new com.regen.ecocredit.v1alpha2.EventsProto.EventReceive(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.ecocredit.v1alpha2.EventsProto.EventReceive result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.recipient_ = recipient_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.batchDenom_ = batchDenom_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.tradableAmount_ = tradableAmount_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.retiredAmount_ = retiredAmount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.ecocredit.v1alpha2.EventsProto.EventReceive) {
+          return mergeFrom((com.regen.ecocredit.v1alpha2.EventsProto.EventReceive)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.ecocredit.v1alpha2.EventsProto.EventReceive other) {
+        if (other == com.regen.ecocredit.v1alpha2.EventsProto.EventReceive.getDefaultInstance()) return this;
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getRecipient().isEmpty()) {
+          recipient_ = other.recipient_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getBatchDenom().isEmpty()) {
+          batchDenom_ = other.batchDenom_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getTradableAmount().isEmpty()) {
+          tradableAmount_ = other.tradableAmount_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getRetiredAmount().isEmpty()) {
+          retiredAmount_ = other.retiredAmount_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                recipient_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                batchDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                tradableAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                retiredAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <pre>
+       * sender is the sender of the credits in the case that this event is the
+       * result of a transfer. It will not be set when credits are received at
+       * initial issuance.
+       * </pre>
+       *
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * sender is the sender of the credits in the case that this event is the
+       * result of a transfer. It will not be set when credits are received at
+       * initial issuance.
+       * </pre>
+       *
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * sender is the sender of the credits in the case that this event is the
+       * result of a transfer. It will not be set when credits are received at
+       * initial issuance.
+       * </pre>
+       *
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * sender is the sender of the credits in the case that this event is the
+       * result of a transfer. It will not be set when credits are received at
+       * initial issuance.
+       * </pre>
+       *
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * sender is the sender of the credits in the case that this event is the
+       * result of a transfer. It will not be set when credits are received at
+       * initial issuance.
+       * </pre>
+       *
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object recipient_ = "";
+      /**
+       * <pre>
+       * recipient is the recipient of the credits
+       * </pre>
+       *
+       * <code>string recipient = 2 [json_name = "recipient"];</code>
+       * @return The recipient.
+       */
+      public java.lang.String getRecipient() {
+        java.lang.Object ref = recipient_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          recipient_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * recipient is the recipient of the credits
+       * </pre>
+       *
+       * <code>string recipient = 2 [json_name = "recipient"];</code>
+       * @return The bytes for recipient.
+       */
+      public com.google.protobuf.ByteString
+          getRecipientBytes() {
+        java.lang.Object ref = recipient_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          recipient_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * recipient is the recipient of the credits
+       * </pre>
+       *
+       * <code>string recipient = 2 [json_name = "recipient"];</code>
+       * @param value The recipient to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipient(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        recipient_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * recipient is the recipient of the credits
+       * </pre>
+       *
+       * <code>string recipient = 2 [json_name = "recipient"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecipient() {
+        recipient_ = getDefaultInstance().getRecipient();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * recipient is the recipient of the credits
+       * </pre>
+       *
+       * <code>string recipient = 2 [json_name = "recipient"];</code>
+       * @param value The bytes for recipient to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipientBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        recipient_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object batchDenom_ = "";
+      /**
+       * <pre>
+       * batch_denom is the unique ID of credit batch.
+       * </pre>
+       *
+       * <code>string batch_denom = 3 [json_name = "batchDenom"];</code>
+       * @return The batchDenom.
+       */
+      public java.lang.String getBatchDenom() {
+        java.lang.Object ref = batchDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          batchDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * batch_denom is the unique ID of credit batch.
+       * </pre>
+       *
+       * <code>string batch_denom = 3 [json_name = "batchDenom"];</code>
+       * @return The bytes for batchDenom.
+       */
+      public com.google.protobuf.ByteString
+          getBatchDenomBytes() {
+        java.lang.Object ref = batchDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          batchDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * batch_denom is the unique ID of credit batch.
+       * </pre>
+       *
+       * <code>string batch_denom = 3 [json_name = "batchDenom"];</code>
+       * @param value The batchDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBatchDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        batchDenom_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * batch_denom is the unique ID of credit batch.
+       * </pre>
+       *
+       * <code>string batch_denom = 3 [json_name = "batchDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBatchDenom() {
+        batchDenom_ = getDefaultInstance().getBatchDenom();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * batch_denom is the unique ID of credit batch.
+       * </pre>
+       *
+       * <code>string batch_denom = 3 [json_name = "batchDenom"];</code>
+       * @param value The bytes for batchDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBatchDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        batchDenom_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object tradableAmount_ = "";
+      /**
+       * <pre>
+       * tradable_amount is the decimal number of tradable credits received.
+       * </pre>
+       *
+       * <code>string tradable_amount = 4 [json_name = "tradableAmount"];</code>
+       * @return The tradableAmount.
+       */
+      public java.lang.String getTradableAmount() {
+        java.lang.Object ref = tradableAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tradableAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * tradable_amount is the decimal number of tradable credits received.
+       * </pre>
+       *
+       * <code>string tradable_amount = 4 [json_name = "tradableAmount"];</code>
+       * @return The bytes for tradableAmount.
+       */
+      public com.google.protobuf.ByteString
+          getTradableAmountBytes() {
+        java.lang.Object ref = tradableAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tradableAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * tradable_amount is the decimal number of tradable credits received.
+       * </pre>
+       *
+       * <code>string tradable_amount = 4 [json_name = "tradableAmount"];</code>
+       * @param value The tradableAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTradableAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        tradableAmount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * tradable_amount is the decimal number of tradable credits received.
+       * </pre>
+       *
+       * <code>string tradable_amount = 4 [json_name = "tradableAmount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTradableAmount() {
+        tradableAmount_ = getDefaultInstance().getTradableAmount();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * tradable_amount is the decimal number of tradable credits received.
+       * </pre>
+       *
+       * <code>string tradable_amount = 4 [json_name = "tradableAmount"];</code>
+       * @param value The bytes for tradableAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTradableAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        tradableAmount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object retiredAmount_ = "";
+      /**
+       * <pre>
+       * retired_amount is the decimal number of retired credits received.
+       * </pre>
+       *
+       * <code>string retired_amount = 5 [json_name = "retiredAmount"];</code>
+       * @return The retiredAmount.
+       */
+      public java.lang.String getRetiredAmount() {
+        java.lang.Object ref = retiredAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          retiredAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * retired_amount is the decimal number of retired credits received.
+       * </pre>
+       *
+       * <code>string retired_amount = 5 [json_name = "retiredAmount"];</code>
+       * @return The bytes for retiredAmount.
+       */
+      public com.google.protobuf.ByteString
+          getRetiredAmountBytes() {
+        java.lang.Object ref = retiredAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          retiredAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * retired_amount is the decimal number of retired credits received.
+       * </pre>
+       *
+       * <code>string retired_amount = 5 [json_name = "retiredAmount"];</code>
+       * @param value The retiredAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRetiredAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        retiredAmount_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * retired_amount is the decimal number of retired credits received.
+       * </pre>
+       *
+       * <code>string retired_amount = 5 [json_name = "retiredAmount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRetiredAmount() {
+        retiredAmount_ = getDefaultInstance().getRetiredAmount();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * retired_amount is the decimal number of retired credits received.
+       * </pre>
+       *
+       * <code>string retired_amount = 5 [json_name = "retiredAmount"];</code>
+       * @param value The bytes for retiredAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRetiredAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        retiredAmount_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.ecocredit.v1alpha2.EventReceive)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.ecocredit.v1alpha2.EventReceive)
+    private static final com.regen.ecocredit.v1alpha2.EventsProto.EventReceive DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.ecocredit.v1alpha2.EventsProto.EventReceive();
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventReceive getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventReceive>
+        PARSER = new com.google.protobuf.AbstractParser<EventReceive>() {
+      @java.lang.Override
+      public EventReceive parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventReceive> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventReceive> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.ecocredit.v1alpha2.EventsProto.EventReceive getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventRetireOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.ecocredit.v1alpha2.EventRetire)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * retirer is the account which has done the "retiring". This will be the
+     * account receiving credits in the case that credits were retired upon
+     * issuance using Msg/CreateBatch or retired upon transfer using Msg/Send.
+     * </pre>
+     *
+     * <code>string retirer = 1 [json_name = "retirer"];</code>
+     * @return The retirer.
+     */
+    java.lang.String getRetirer();
+    /**
+     * <pre>
+     * retirer is the account which has done the "retiring". This will be the
+     * account receiving credits in the case that credits were retired upon
+     * issuance using Msg/CreateBatch or retired upon transfer using Msg/Send.
+     * </pre>
+     *
+     * <code>string retirer = 1 [json_name = "retirer"];</code>
+     * @return The bytes for retirer.
+     */
+    com.google.protobuf.ByteString
+        getRetirerBytes();
+
+    /**
+     * <pre>
+     * batch_denom is the unique ID of credit batch.
+     * </pre>
+     *
+     * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+     * @return The batchDenom.
+     */
+    java.lang.String getBatchDenom();
+    /**
+     * <pre>
+     * batch_denom is the unique ID of credit batch.
+     * </pre>
+     *
+     * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+     * @return The bytes for batchDenom.
+     */
+    com.google.protobuf.ByteString
+        getBatchDenomBytes();
+
+    /**
+     * <pre>
+     * amount is the decimal number of credits that have been retired.
+     * </pre>
+     *
+     * <code>string amount = 3 [json_name = "amount"];</code>
+     * @return The amount.
+     */
+    java.lang.String getAmount();
+    /**
+     * <pre>
+     * amount is the decimal number of credits that have been retired.
+     * </pre>
+     *
+     * <code>string amount = 3 [json_name = "amount"];</code>
+     * @return The bytes for amount.
+     */
+    com.google.protobuf.ByteString
+        getAmountBytes();
+
+    /**
+     * <pre>
+     * location is the location of the beneficiary or buyer of the retired
+     * credits. It is a string of the form
+     * &lt;country-code&gt;[-&lt;sub-national-code&gt;[ &lt;postal-code&gt;]], with the first two
+     * fields conforming to ISO 3166-2, and postal-code being up to 64
+     * alphanumeric characters.
+     * </pre>
+     *
+     * <code>string location = 4 [json_name = "location"];</code>
+     * @return The location.
+     */
+    java.lang.String getLocation();
+    /**
+     * <pre>
+     * location is the location of the beneficiary or buyer of the retired
+     * credits. It is a string of the form
+     * &lt;country-code&gt;[-&lt;sub-national-code&gt;[ &lt;postal-code&gt;]], with the first two
+     * fields conforming to ISO 3166-2, and postal-code being up to 64
+     * alphanumeric characters.
+     * </pre>
+     *
+     * <code>string location = 4 [json_name = "location"];</code>
+     * @return The bytes for location.
+     */
+    com.google.protobuf.ByteString
+        getLocationBytes();
+  }
+  /**
+   * <pre>
+   * EventRetire is an event emitted when credits are retired. When credits are
+   * retired from multiple batches in the same transaction, a separate event is
+   * emitted for each batch_denom. This allows for easier indexing.
+   * </pre>
+   *
+   * Protobuf type {@code regen.ecocredit.v1alpha2.EventRetire}
+   */
+  public static final class EventRetire extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.ecocredit.v1alpha2.EventRetire)
+      EventRetireOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventRetire.newBuilder() to construct.
+    private EventRetire(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventRetire() {
+      retirer_ = "";
+      batchDenom_ = "";
+      amount_ = "";
+      location_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventRetire();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventRetire_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventRetire_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.ecocredit.v1alpha2.EventsProto.EventRetire.class, com.regen.ecocredit.v1alpha2.EventsProto.EventRetire.Builder.class);
+    }
+
+    public static final int RETIRER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object retirer_ = "";
+    /**
+     * <pre>
+     * retirer is the account which has done the "retiring". This will be the
+     * account receiving credits in the case that credits were retired upon
+     * issuance using Msg/CreateBatch or retired upon transfer using Msg/Send.
+     * </pre>
+     *
+     * <code>string retirer = 1 [json_name = "retirer"];</code>
+     * @return The retirer.
+     */
+    @java.lang.Override
+    public java.lang.String getRetirer() {
+      java.lang.Object ref = retirer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        retirer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * retirer is the account which has done the "retiring". This will be the
+     * account receiving credits in the case that credits were retired upon
+     * issuance using Msg/CreateBatch or retired upon transfer using Msg/Send.
+     * </pre>
+     *
+     * <code>string retirer = 1 [json_name = "retirer"];</code>
+     * @return The bytes for retirer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRetirerBytes() {
+      java.lang.Object ref = retirer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        retirer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BATCH_DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object batchDenom_ = "";
+    /**
+     * <pre>
+     * batch_denom is the unique ID of credit batch.
+     * </pre>
+     *
+     * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+     * @return The batchDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getBatchDenom() {
+      java.lang.Object ref = batchDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        batchDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * batch_denom is the unique ID of credit batch.
+     * </pre>
+     *
+     * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+     * @return The bytes for batchDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBatchDenomBytes() {
+      java.lang.Object ref = batchDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        batchDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object amount_ = "";
+    /**
+     * <pre>
+     * amount is the decimal number of credits that have been retired.
+     * </pre>
+     *
+     * <code>string amount = 3 [json_name = "amount"];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public java.lang.String getAmount() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        amount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * amount is the decimal number of credits that have been retired.
+     * </pre>
+     *
+     * <code>string amount = 3 [json_name = "amount"];</code>
+     * @return The bytes for amount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAmountBytes() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        amount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOCATION_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object location_ = "";
+    /**
+     * <pre>
+     * location is the location of the beneficiary or buyer of the retired
+     * credits. It is a string of the form
+     * &lt;country-code&gt;[-&lt;sub-national-code&gt;[ &lt;postal-code&gt;]], with the first two
+     * fields conforming to ISO 3166-2, and postal-code being up to 64
+     * alphanumeric characters.
+     * </pre>
+     *
+     * <code>string location = 4 [json_name = "location"];</code>
+     * @return The location.
+     */
+    @java.lang.Override
+    public java.lang.String getLocation() {
+      java.lang.Object ref = location_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        location_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * location is the location of the beneficiary or buyer of the retired
+     * credits. It is a string of the form
+     * &lt;country-code&gt;[-&lt;sub-national-code&gt;[ &lt;postal-code&gt;]], with the first two
+     * fields conforming to ISO 3166-2, and postal-code being up to 64
+     * alphanumeric characters.
+     * </pre>
+     *
+     * <code>string location = 4 [json_name = "location"];</code>
+     * @return The bytes for location.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLocationBytes() {
+      java.lang.Object ref = location_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        location_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(retirer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, retirer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(batchDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, batchDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, amount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(location_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, location_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(retirer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, retirer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(batchDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, batchDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, amount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(location_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, location_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.ecocredit.v1alpha2.EventsProto.EventRetire)) {
+        return super.equals(obj);
+      }
+      com.regen.ecocredit.v1alpha2.EventsProto.EventRetire other = (com.regen.ecocredit.v1alpha2.EventsProto.EventRetire) obj;
+
+      if (!getRetirer()
+          .equals(other.getRetirer())) return false;
+      if (!getBatchDenom()
+          .equals(other.getBatchDenom())) return false;
+      if (!getAmount()
+          .equals(other.getAmount())) return false;
+      if (!getLocation()
+          .equals(other.getLocation())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RETIRER_FIELD_NUMBER;
+      hash = (53 * hash) + getRetirer().hashCode();
+      hash = (37 * hash) + BATCH_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getBatchDenom().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAmount().hashCode();
+      hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+      hash = (53 * hash) + getLocation().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventRetire parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventRetire parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventRetire parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventRetire parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventRetire parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventRetire parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventRetire parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventRetire parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventRetire parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventRetire parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventRetire parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventRetire parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.ecocredit.v1alpha2.EventsProto.EventRetire prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventRetire is an event emitted when credits are retired. When credits are
+     * retired from multiple batches in the same transaction, a separate event is
+     * emitted for each batch_denom. This allows for easier indexing.
+     * </pre>
+     *
+     * Protobuf type {@code regen.ecocredit.v1alpha2.EventRetire}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.ecocredit.v1alpha2.EventRetire)
+        com.regen.ecocredit.v1alpha2.EventsProto.EventRetireOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventRetire_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventRetire_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.ecocredit.v1alpha2.EventsProto.EventRetire.class, com.regen.ecocredit.v1alpha2.EventsProto.EventRetire.Builder.class);
+      }
+
+      // Construct using com.regen.ecocredit.v1alpha2.EventsProto.EventRetire.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        retirer_ = "";
+        batchDenom_ = "";
+        amount_ = "";
+        location_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventRetire_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventRetire getDefaultInstanceForType() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.EventRetire.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventRetire build() {
+        com.regen.ecocredit.v1alpha2.EventsProto.EventRetire result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventRetire buildPartial() {
+        com.regen.ecocredit.v1alpha2.EventsProto.EventRetire result = new com.regen.ecocredit.v1alpha2.EventsProto.EventRetire(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.ecocredit.v1alpha2.EventsProto.EventRetire result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.retirer_ = retirer_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.batchDenom_ = batchDenom_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.amount_ = amount_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.location_ = location_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.ecocredit.v1alpha2.EventsProto.EventRetire) {
+          return mergeFrom((com.regen.ecocredit.v1alpha2.EventsProto.EventRetire)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.ecocredit.v1alpha2.EventsProto.EventRetire other) {
+        if (other == com.regen.ecocredit.v1alpha2.EventsProto.EventRetire.getDefaultInstance()) return this;
+        if (!other.getRetirer().isEmpty()) {
+          retirer_ = other.retirer_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getBatchDenom().isEmpty()) {
+          batchDenom_ = other.batchDenom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getAmount().isEmpty()) {
+          amount_ = other.amount_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getLocation().isEmpty()) {
+          location_ = other.location_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                retirer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                batchDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                amount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                location_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object retirer_ = "";
+      /**
+       * <pre>
+       * retirer is the account which has done the "retiring". This will be the
+       * account receiving credits in the case that credits were retired upon
+       * issuance using Msg/CreateBatch or retired upon transfer using Msg/Send.
+       * </pre>
+       *
+       * <code>string retirer = 1 [json_name = "retirer"];</code>
+       * @return The retirer.
+       */
+      public java.lang.String getRetirer() {
+        java.lang.Object ref = retirer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          retirer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * retirer is the account which has done the "retiring". This will be the
+       * account receiving credits in the case that credits were retired upon
+       * issuance using Msg/CreateBatch or retired upon transfer using Msg/Send.
+       * </pre>
+       *
+       * <code>string retirer = 1 [json_name = "retirer"];</code>
+       * @return The bytes for retirer.
+       */
+      public com.google.protobuf.ByteString
+          getRetirerBytes() {
+        java.lang.Object ref = retirer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          retirer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * retirer is the account which has done the "retiring". This will be the
+       * account receiving credits in the case that credits were retired upon
+       * issuance using Msg/CreateBatch or retired upon transfer using Msg/Send.
+       * </pre>
+       *
+       * <code>string retirer = 1 [json_name = "retirer"];</code>
+       * @param value The retirer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRetirer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        retirer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * retirer is the account which has done the "retiring". This will be the
+       * account receiving credits in the case that credits were retired upon
+       * issuance using Msg/CreateBatch or retired upon transfer using Msg/Send.
+       * </pre>
+       *
+       * <code>string retirer = 1 [json_name = "retirer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRetirer() {
+        retirer_ = getDefaultInstance().getRetirer();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * retirer is the account which has done the "retiring". This will be the
+       * account receiving credits in the case that credits were retired upon
+       * issuance using Msg/CreateBatch or retired upon transfer using Msg/Send.
+       * </pre>
+       *
+       * <code>string retirer = 1 [json_name = "retirer"];</code>
+       * @param value The bytes for retirer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRetirerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        retirer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object batchDenom_ = "";
+      /**
+       * <pre>
+       * batch_denom is the unique ID of credit batch.
+       * </pre>
+       *
+       * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+       * @return The batchDenom.
+       */
+      public java.lang.String getBatchDenom() {
+        java.lang.Object ref = batchDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          batchDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * batch_denom is the unique ID of credit batch.
+       * </pre>
+       *
+       * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+       * @return The bytes for batchDenom.
+       */
+      public com.google.protobuf.ByteString
+          getBatchDenomBytes() {
+        java.lang.Object ref = batchDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          batchDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * batch_denom is the unique ID of credit batch.
+       * </pre>
+       *
+       * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+       * @param value The batchDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBatchDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        batchDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * batch_denom is the unique ID of credit batch.
+       * </pre>
+       *
+       * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBatchDenom() {
+        batchDenom_ = getDefaultInstance().getBatchDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * batch_denom is the unique ID of credit batch.
+       * </pre>
+       *
+       * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+       * @param value The bytes for batchDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBatchDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        batchDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object amount_ = "";
+      /**
+       * <pre>
+       * amount is the decimal number of credits that have been retired.
+       * </pre>
+       *
+       * <code>string amount = 3 [json_name = "amount"];</code>
+       * @return The amount.
+       */
+      public java.lang.String getAmount() {
+        java.lang.Object ref = amount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          amount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * amount is the decimal number of credits that have been retired.
+       * </pre>
+       *
+       * <code>string amount = 3 [json_name = "amount"];</code>
+       * @return The bytes for amount.
+       */
+      public com.google.protobuf.ByteString
+          getAmountBytes() {
+        java.lang.Object ref = amount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * amount is the decimal number of credits that have been retired.
+       * </pre>
+       *
+       * <code>string amount = 3 [json_name = "amount"];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        amount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount is the decimal number of credits that have been retired.
+       * </pre>
+       *
+       * <code>string amount = 3 [json_name = "amount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        amount_ = getDefaultInstance().getAmount();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount is the decimal number of credits that have been retired.
+       * </pre>
+       *
+       * <code>string amount = 3 [json_name = "amount"];</code>
+       * @param value The bytes for amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        amount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object location_ = "";
+      /**
+       * <pre>
+       * location is the location of the beneficiary or buyer of the retired
+       * credits. It is a string of the form
+       * &lt;country-code&gt;[-&lt;sub-national-code&gt;[ &lt;postal-code&gt;]], with the first two
+       * fields conforming to ISO 3166-2, and postal-code being up to 64
+       * alphanumeric characters.
+       * </pre>
+       *
+       * <code>string location = 4 [json_name = "location"];</code>
+       * @return The location.
+       */
+      public java.lang.String getLocation() {
+        java.lang.Object ref = location_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          location_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * location is the location of the beneficiary or buyer of the retired
+       * credits. It is a string of the form
+       * &lt;country-code&gt;[-&lt;sub-national-code&gt;[ &lt;postal-code&gt;]], with the first two
+       * fields conforming to ISO 3166-2, and postal-code being up to 64
+       * alphanumeric characters.
+       * </pre>
+       *
+       * <code>string location = 4 [json_name = "location"];</code>
+       * @return The bytes for location.
+       */
+      public com.google.protobuf.ByteString
+          getLocationBytes() {
+        java.lang.Object ref = location_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          location_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * location is the location of the beneficiary or buyer of the retired
+       * credits. It is a string of the form
+       * &lt;country-code&gt;[-&lt;sub-national-code&gt;[ &lt;postal-code&gt;]], with the first two
+       * fields conforming to ISO 3166-2, and postal-code being up to 64
+       * alphanumeric characters.
+       * </pre>
+       *
+       * <code>string location = 4 [json_name = "location"];</code>
+       * @param value The location to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocation(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        location_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * location is the location of the beneficiary or buyer of the retired
+       * credits. It is a string of the form
+       * &lt;country-code&gt;[-&lt;sub-national-code&gt;[ &lt;postal-code&gt;]], with the first two
+       * fields conforming to ISO 3166-2, and postal-code being up to 64
+       * alphanumeric characters.
+       * </pre>
+       *
+       * <code>string location = 4 [json_name = "location"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLocation() {
+        location_ = getDefaultInstance().getLocation();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * location is the location of the beneficiary or buyer of the retired
+       * credits. It is a string of the form
+       * &lt;country-code&gt;[-&lt;sub-national-code&gt;[ &lt;postal-code&gt;]], with the first two
+       * fields conforming to ISO 3166-2, and postal-code being up to 64
+       * alphanumeric characters.
+       * </pre>
+       *
+       * <code>string location = 4 [json_name = "location"];</code>
+       * @param value The bytes for location to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        location_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.ecocredit.v1alpha2.EventRetire)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.ecocredit.v1alpha2.EventRetire)
+    private static final com.regen.ecocredit.v1alpha2.EventsProto.EventRetire DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.ecocredit.v1alpha2.EventsProto.EventRetire();
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventRetire getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventRetire>
+        PARSER = new com.google.protobuf.AbstractParser<EventRetire>() {
+      @java.lang.Override
+      public EventRetire parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventRetire> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventRetire> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.ecocredit.v1alpha2.EventsProto.EventRetire getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventCancelOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.ecocredit.v1alpha2.EventCancel)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * canceller is the account which has cancelled the credits, which should be
+     * the holder of the credits.
+     * </pre>
+     *
+     * <code>string canceller = 1 [json_name = "canceller"];</code>
+     * @return The canceller.
+     */
+    java.lang.String getCanceller();
+    /**
+     * <pre>
+     * canceller is the account which has cancelled the credits, which should be
+     * the holder of the credits.
+     * </pre>
+     *
+     * <code>string canceller = 1 [json_name = "canceller"];</code>
+     * @return The bytes for canceller.
+     */
+    com.google.protobuf.ByteString
+        getCancellerBytes();
+
+    /**
+     * <pre>
+     * batch_denom is the unique ID of credit batch.
+     * </pre>
+     *
+     * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+     * @return The batchDenom.
+     */
+    java.lang.String getBatchDenom();
+    /**
+     * <pre>
+     * batch_denom is the unique ID of credit batch.
+     * </pre>
+     *
+     * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+     * @return The bytes for batchDenom.
+     */
+    com.google.protobuf.ByteString
+        getBatchDenomBytes();
+
+    /**
+     * <pre>
+     * amount is the decimal number of credits that have been cancelled.
+     * </pre>
+     *
+     * <code>string amount = 3 [json_name = "amount"];</code>
+     * @return The amount.
+     */
+    java.lang.String getAmount();
+    /**
+     * <pre>
+     * amount is the decimal number of credits that have been cancelled.
+     * </pre>
+     *
+     * <code>string amount = 3 [json_name = "amount"];</code>
+     * @return The bytes for amount.
+     */
+    com.google.protobuf.ByteString
+        getAmountBytes();
+  }
+  /**
+   * <pre>
+   * EventCancel is an event emitted when credits are cancelled. When credits are
+   * cancelled from multiple batches in the same transaction, a separate event is
+   * emitted for each batch_denom. This allows for easier indexing.
+   * </pre>
+   *
+   * Protobuf type {@code regen.ecocredit.v1alpha2.EventCancel}
+   */
+  public static final class EventCancel extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.ecocredit.v1alpha2.EventCancel)
+      EventCancelOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventCancel.newBuilder() to construct.
+    private EventCancel(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventCancel() {
+      canceller_ = "";
+      batchDenom_ = "";
+      amount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventCancel();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventCancel_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventCancel_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.ecocredit.v1alpha2.EventsProto.EventCancel.class, com.regen.ecocredit.v1alpha2.EventsProto.EventCancel.Builder.class);
+    }
+
+    public static final int CANCELLER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object canceller_ = "";
+    /**
+     * <pre>
+     * canceller is the account which has cancelled the credits, which should be
+     * the holder of the credits.
+     * </pre>
+     *
+     * <code>string canceller = 1 [json_name = "canceller"];</code>
+     * @return The canceller.
+     */
+    @java.lang.Override
+    public java.lang.String getCanceller() {
+      java.lang.Object ref = canceller_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        canceller_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * canceller is the account which has cancelled the credits, which should be
+     * the holder of the credits.
+     * </pre>
+     *
+     * <code>string canceller = 1 [json_name = "canceller"];</code>
+     * @return The bytes for canceller.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCancellerBytes() {
+      java.lang.Object ref = canceller_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        canceller_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BATCH_DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object batchDenom_ = "";
+    /**
+     * <pre>
+     * batch_denom is the unique ID of credit batch.
+     * </pre>
+     *
+     * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+     * @return The batchDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getBatchDenom() {
+      java.lang.Object ref = batchDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        batchDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * batch_denom is the unique ID of credit batch.
+     * </pre>
+     *
+     * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+     * @return The bytes for batchDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBatchDenomBytes() {
+      java.lang.Object ref = batchDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        batchDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object amount_ = "";
+    /**
+     * <pre>
+     * amount is the decimal number of credits that have been cancelled.
+     * </pre>
+     *
+     * <code>string amount = 3 [json_name = "amount"];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public java.lang.String getAmount() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        amount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * amount is the decimal number of credits that have been cancelled.
+     * </pre>
+     *
+     * <code>string amount = 3 [json_name = "amount"];</code>
+     * @return The bytes for amount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAmountBytes() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        amount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(canceller_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, canceller_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(batchDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, batchDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, amount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(canceller_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, canceller_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(batchDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, batchDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, amount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.ecocredit.v1alpha2.EventsProto.EventCancel)) {
+        return super.equals(obj);
+      }
+      com.regen.ecocredit.v1alpha2.EventsProto.EventCancel other = (com.regen.ecocredit.v1alpha2.EventsProto.EventCancel) obj;
+
+      if (!getCanceller()
+          .equals(other.getCanceller())) return false;
+      if (!getBatchDenom()
+          .equals(other.getBatchDenom())) return false;
+      if (!getAmount()
+          .equals(other.getAmount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CANCELLER_FIELD_NUMBER;
+      hash = (53 * hash) + getCanceller().hashCode();
+      hash = (37 * hash) + BATCH_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getBatchDenom().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAmount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCancel parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCancel parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCancel parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCancel parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCancel parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCancel parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCancel parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCancel parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCancel parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCancel parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCancel parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCancel parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.ecocredit.v1alpha2.EventsProto.EventCancel prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventCancel is an event emitted when credits are cancelled. When credits are
+     * cancelled from multiple batches in the same transaction, a separate event is
+     * emitted for each batch_denom. This allows for easier indexing.
+     * </pre>
+     *
+     * Protobuf type {@code regen.ecocredit.v1alpha2.EventCancel}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.ecocredit.v1alpha2.EventCancel)
+        com.regen.ecocredit.v1alpha2.EventsProto.EventCancelOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventCancel_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventCancel_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.ecocredit.v1alpha2.EventsProto.EventCancel.class, com.regen.ecocredit.v1alpha2.EventsProto.EventCancel.Builder.class);
+      }
+
+      // Construct using com.regen.ecocredit.v1alpha2.EventsProto.EventCancel.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        canceller_ = "";
+        batchDenom_ = "";
+        amount_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventCancel_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventCancel getDefaultInstanceForType() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.EventCancel.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventCancel build() {
+        com.regen.ecocredit.v1alpha2.EventsProto.EventCancel result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventCancel buildPartial() {
+        com.regen.ecocredit.v1alpha2.EventsProto.EventCancel result = new com.regen.ecocredit.v1alpha2.EventsProto.EventCancel(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.ecocredit.v1alpha2.EventsProto.EventCancel result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.canceller_ = canceller_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.batchDenom_ = batchDenom_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.amount_ = amount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.ecocredit.v1alpha2.EventsProto.EventCancel) {
+          return mergeFrom((com.regen.ecocredit.v1alpha2.EventsProto.EventCancel)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.ecocredit.v1alpha2.EventsProto.EventCancel other) {
+        if (other == com.regen.ecocredit.v1alpha2.EventsProto.EventCancel.getDefaultInstance()) return this;
+        if (!other.getCanceller().isEmpty()) {
+          canceller_ = other.canceller_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getBatchDenom().isEmpty()) {
+          batchDenom_ = other.batchDenom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getAmount().isEmpty()) {
+          amount_ = other.amount_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                canceller_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                batchDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                amount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object canceller_ = "";
+      /**
+       * <pre>
+       * canceller is the account which has cancelled the credits, which should be
+       * the holder of the credits.
+       * </pre>
+       *
+       * <code>string canceller = 1 [json_name = "canceller"];</code>
+       * @return The canceller.
+       */
+      public java.lang.String getCanceller() {
+        java.lang.Object ref = canceller_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          canceller_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * canceller is the account which has cancelled the credits, which should be
+       * the holder of the credits.
+       * </pre>
+       *
+       * <code>string canceller = 1 [json_name = "canceller"];</code>
+       * @return The bytes for canceller.
+       */
+      public com.google.protobuf.ByteString
+          getCancellerBytes() {
+        java.lang.Object ref = canceller_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          canceller_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * canceller is the account which has cancelled the credits, which should be
+       * the holder of the credits.
+       * </pre>
+       *
+       * <code>string canceller = 1 [json_name = "canceller"];</code>
+       * @param value The canceller to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCanceller(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        canceller_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * canceller is the account which has cancelled the credits, which should be
+       * the holder of the credits.
+       * </pre>
+       *
+       * <code>string canceller = 1 [json_name = "canceller"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCanceller() {
+        canceller_ = getDefaultInstance().getCanceller();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * canceller is the account which has cancelled the credits, which should be
+       * the holder of the credits.
+       * </pre>
+       *
+       * <code>string canceller = 1 [json_name = "canceller"];</code>
+       * @param value The bytes for canceller to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCancellerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        canceller_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object batchDenom_ = "";
+      /**
+       * <pre>
+       * batch_denom is the unique ID of credit batch.
+       * </pre>
+       *
+       * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+       * @return The batchDenom.
+       */
+      public java.lang.String getBatchDenom() {
+        java.lang.Object ref = batchDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          batchDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * batch_denom is the unique ID of credit batch.
+       * </pre>
+       *
+       * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+       * @return The bytes for batchDenom.
+       */
+      public com.google.protobuf.ByteString
+          getBatchDenomBytes() {
+        java.lang.Object ref = batchDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          batchDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * batch_denom is the unique ID of credit batch.
+       * </pre>
+       *
+       * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+       * @param value The batchDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBatchDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        batchDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * batch_denom is the unique ID of credit batch.
+       * </pre>
+       *
+       * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBatchDenom() {
+        batchDenom_ = getDefaultInstance().getBatchDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * batch_denom is the unique ID of credit batch.
+       * </pre>
+       *
+       * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+       * @param value The bytes for batchDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBatchDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        batchDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object amount_ = "";
+      /**
+       * <pre>
+       * amount is the decimal number of credits that have been cancelled.
+       * </pre>
+       *
+       * <code>string amount = 3 [json_name = "amount"];</code>
+       * @return The amount.
+       */
+      public java.lang.String getAmount() {
+        java.lang.Object ref = amount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          amount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * amount is the decimal number of credits that have been cancelled.
+       * </pre>
+       *
+       * <code>string amount = 3 [json_name = "amount"];</code>
+       * @return The bytes for amount.
+       */
+      public com.google.protobuf.ByteString
+          getAmountBytes() {
+        java.lang.Object ref = amount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * amount is the decimal number of credits that have been cancelled.
+       * </pre>
+       *
+       * <code>string amount = 3 [json_name = "amount"];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        amount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount is the decimal number of credits that have been cancelled.
+       * </pre>
+       *
+       * <code>string amount = 3 [json_name = "amount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        amount_ = getDefaultInstance().getAmount();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount is the decimal number of credits that have been cancelled.
+       * </pre>
+       *
+       * <code>string amount = 3 [json_name = "amount"];</code>
+       * @param value The bytes for amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        amount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.ecocredit.v1alpha2.EventCancel)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.ecocredit.v1alpha2.EventCancel)
+    private static final com.regen.ecocredit.v1alpha2.EventsProto.EventCancel DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.ecocredit.v1alpha2.EventsProto.EventCancel();
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventCancel getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventCancel>
+        PARSER = new com.google.protobuf.AbstractParser<EventCancel>() {
+      @java.lang.Override
+      public EventCancel parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventCancel> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventCancel> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.ecocredit.v1alpha2.EventsProto.EventCancel getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventSellOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.ecocredit.v1alpha2.EventSell)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * order_id is the unique ID of sell order.
+     * </pre>
+     *
+     * <code>uint64 order_id = 1 [json_name = "orderId"];</code>
+     * @return The orderId.
+     */
+    long getOrderId();
+
+    /**
+     * <pre>
+     * batch_denom is the credit batch being sold.
+     * </pre>
+     *
+     * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+     * @return The batchDenom.
+     */
+    java.lang.String getBatchDenom();
+    /**
+     * <pre>
+     * batch_denom is the credit batch being sold.
+     * </pre>
+     *
+     * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+     * @return The bytes for batchDenom.
+     */
+    com.google.protobuf.ByteString
+        getBatchDenomBytes();
+
+    /**
+     * <pre>
+     * quantity is the quantity of credits being sold.
+     * </pre>
+     *
+     * <code>string quantity = 3 [json_name = "quantity"];</code>
+     * @return The quantity.
+     */
+    java.lang.String getQuantity();
+    /**
+     * <pre>
+     * quantity is the quantity of credits being sold.
+     * </pre>
+     *
+     * <code>string quantity = 3 [json_name = "quantity"];</code>
+     * @return The bytes for quantity.
+     */
+    com.google.protobuf.ByteString
+        getQuantityBytes();
+
+    /**
+     * <pre>
+     * ask_price is the price the seller is asking for each unit of the
+     * batch_denom. Each credit unit of the batch will be sold for at least the
+     * ask_price or more.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin ask_price = 4 [json_name = "askPrice"];</code>
+     * @return Whether the askPrice field is set.
+     */
+    boolean hasAskPrice();
+    /**
+     * <pre>
+     * ask_price is the price the seller is asking for each unit of the
+     * batch_denom. Each credit unit of the batch will be sold for at least the
+     * ask_price or more.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin ask_price = 4 [json_name = "askPrice"];</code>
+     * @return The askPrice.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getAskPrice();
+    /**
+     * <pre>
+     * ask_price is the price the seller is asking for each unit of the
+     * batch_denom. Each credit unit of the batch will be sold for at least the
+     * ask_price or more.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin ask_price = 4 [json_name = "askPrice"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAskPriceOrBuilder();
+
+    /**
+     * <pre>
+     * disable_auto_retire disables auto-retirement of credits which allows a
+     * buyer to disable auto-retirement in their buy order enabling them to
+     * resell the credits to another buyer.
+     * </pre>
+     *
+     * <code>bool disable_auto_retire = 5 [json_name = "disableAutoRetire"];</code>
+     * @return The disableAutoRetire.
+     */
+    boolean getDisableAutoRetire();
+  }
+  /**
+   * <pre>
+   * EventSell is an event emitted when a sell order is created.
+   * </pre>
+   *
+   * Protobuf type {@code regen.ecocredit.v1alpha2.EventSell}
+   */
+  public static final class EventSell extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.ecocredit.v1alpha2.EventSell)
+      EventSellOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventSell.newBuilder() to construct.
+    private EventSell(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventSell() {
+      batchDenom_ = "";
+      quantity_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventSell();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventSell_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventSell_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.ecocredit.v1alpha2.EventsProto.EventSell.class, com.regen.ecocredit.v1alpha2.EventsProto.EventSell.Builder.class);
+    }
+
+    public static final int ORDER_ID_FIELD_NUMBER = 1;
+    private long orderId_ = 0L;
+    /**
+     * <pre>
+     * order_id is the unique ID of sell order.
+     * </pre>
+     *
+     * <code>uint64 order_id = 1 [json_name = "orderId"];</code>
+     * @return The orderId.
+     */
+    @java.lang.Override
+    public long getOrderId() {
+      return orderId_;
+    }
+
+    public static final int BATCH_DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object batchDenom_ = "";
+    /**
+     * <pre>
+     * batch_denom is the credit batch being sold.
+     * </pre>
+     *
+     * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+     * @return The batchDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getBatchDenom() {
+      java.lang.Object ref = batchDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        batchDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * batch_denom is the credit batch being sold.
+     * </pre>
+     *
+     * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+     * @return The bytes for batchDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBatchDenomBytes() {
+      java.lang.Object ref = batchDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        batchDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int QUANTITY_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object quantity_ = "";
+    /**
+     * <pre>
+     * quantity is the quantity of credits being sold.
+     * </pre>
+     *
+     * <code>string quantity = 3 [json_name = "quantity"];</code>
+     * @return The quantity.
+     */
+    @java.lang.Override
+    public java.lang.String getQuantity() {
+      java.lang.Object ref = quantity_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        quantity_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * quantity is the quantity of credits being sold.
+     * </pre>
+     *
+     * <code>string quantity = 3 [json_name = "quantity"];</code>
+     * @return The bytes for quantity.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getQuantityBytes() {
+      java.lang.Object ref = quantity_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        quantity_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ASK_PRICE_FIELD_NUMBER = 4;
+    private com.cosmos.base.v1beta1.CoinProto.Coin askPrice_;
+    /**
+     * <pre>
+     * ask_price is the price the seller is asking for each unit of the
+     * batch_denom. Each credit unit of the batch will be sold for at least the
+     * ask_price or more.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin ask_price = 4 [json_name = "askPrice"];</code>
+     * @return Whether the askPrice field is set.
+     */
+    @java.lang.Override
+    public boolean hasAskPrice() {
+      return askPrice_ != null;
+    }
+    /**
+     * <pre>
+     * ask_price is the price the seller is asking for each unit of the
+     * batch_denom. Each credit unit of the batch will be sold for at least the
+     * ask_price or more.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin ask_price = 4 [json_name = "askPrice"];</code>
+     * @return The askPrice.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getAskPrice() {
+      return askPrice_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : askPrice_;
+    }
+    /**
+     * <pre>
+     * ask_price is the price the seller is asking for each unit of the
+     * batch_denom. Each credit unit of the batch will be sold for at least the
+     * ask_price or more.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin ask_price = 4 [json_name = "askPrice"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAskPriceOrBuilder() {
+      return askPrice_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : askPrice_;
+    }
+
+    public static final int DISABLE_AUTO_RETIRE_FIELD_NUMBER = 5;
+    private boolean disableAutoRetire_ = false;
+    /**
+     * <pre>
+     * disable_auto_retire disables auto-retirement of credits which allows a
+     * buyer to disable auto-retirement in their buy order enabling them to
+     * resell the credits to another buyer.
+     * </pre>
+     *
+     * <code>bool disable_auto_retire = 5 [json_name = "disableAutoRetire"];</code>
+     * @return The disableAutoRetire.
+     */
+    @java.lang.Override
+    public boolean getDisableAutoRetire() {
+      return disableAutoRetire_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (orderId_ != 0L) {
+        output.writeUInt64(1, orderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(batchDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, batchDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quantity_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, quantity_);
+      }
+      if (askPrice_ != null) {
+        output.writeMessage(4, getAskPrice());
+      }
+      if (disableAutoRetire_ != false) {
+        output.writeBool(5, disableAutoRetire_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (orderId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, orderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(batchDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, batchDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quantity_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, quantity_);
+      }
+      if (askPrice_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getAskPrice());
+      }
+      if (disableAutoRetire_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, disableAutoRetire_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.ecocredit.v1alpha2.EventsProto.EventSell)) {
+        return super.equals(obj);
+      }
+      com.regen.ecocredit.v1alpha2.EventsProto.EventSell other = (com.regen.ecocredit.v1alpha2.EventsProto.EventSell) obj;
+
+      if (getOrderId()
+          != other.getOrderId()) return false;
+      if (!getBatchDenom()
+          .equals(other.getBatchDenom())) return false;
+      if (!getQuantity()
+          .equals(other.getQuantity())) return false;
+      if (hasAskPrice() != other.hasAskPrice()) return false;
+      if (hasAskPrice()) {
+        if (!getAskPrice()
+            .equals(other.getAskPrice())) return false;
+      }
+      if (getDisableAutoRetire()
+          != other.getDisableAutoRetire()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ORDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getOrderId());
+      hash = (37 * hash) + BATCH_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getBatchDenom().hashCode();
+      hash = (37 * hash) + QUANTITY_FIELD_NUMBER;
+      hash = (53 * hash) + getQuantity().hashCode();
+      if (hasAskPrice()) {
+        hash = (37 * hash) + ASK_PRICE_FIELD_NUMBER;
+        hash = (53 * hash) + getAskPrice().hashCode();
+      }
+      hash = (37 * hash) + DISABLE_AUTO_RETIRE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDisableAutoRetire());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventSell parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventSell parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventSell parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventSell parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventSell parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventSell parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventSell parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventSell parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventSell parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventSell parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventSell parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventSell parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.ecocredit.v1alpha2.EventsProto.EventSell prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventSell is an event emitted when a sell order is created.
+     * </pre>
+     *
+     * Protobuf type {@code regen.ecocredit.v1alpha2.EventSell}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.ecocredit.v1alpha2.EventSell)
+        com.regen.ecocredit.v1alpha2.EventsProto.EventSellOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventSell_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventSell_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.ecocredit.v1alpha2.EventsProto.EventSell.class, com.regen.ecocredit.v1alpha2.EventsProto.EventSell.Builder.class);
+      }
+
+      // Construct using com.regen.ecocredit.v1alpha2.EventsProto.EventSell.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        orderId_ = 0L;
+        batchDenom_ = "";
+        quantity_ = "";
+        askPrice_ = null;
+        if (askPriceBuilder_ != null) {
+          askPriceBuilder_.dispose();
+          askPriceBuilder_ = null;
+        }
+        disableAutoRetire_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventSell_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventSell getDefaultInstanceForType() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.EventSell.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventSell build() {
+        com.regen.ecocredit.v1alpha2.EventsProto.EventSell result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventSell buildPartial() {
+        com.regen.ecocredit.v1alpha2.EventsProto.EventSell result = new com.regen.ecocredit.v1alpha2.EventsProto.EventSell(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.ecocredit.v1alpha2.EventsProto.EventSell result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.orderId_ = orderId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.batchDenom_ = batchDenom_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.quantity_ = quantity_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.askPrice_ = askPriceBuilder_ == null
+              ? askPrice_
+              : askPriceBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.disableAutoRetire_ = disableAutoRetire_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.ecocredit.v1alpha2.EventsProto.EventSell) {
+          return mergeFrom((com.regen.ecocredit.v1alpha2.EventsProto.EventSell)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.ecocredit.v1alpha2.EventsProto.EventSell other) {
+        if (other == com.regen.ecocredit.v1alpha2.EventsProto.EventSell.getDefaultInstance()) return this;
+        if (other.getOrderId() != 0L) {
+          setOrderId(other.getOrderId());
+        }
+        if (!other.getBatchDenom().isEmpty()) {
+          batchDenom_ = other.batchDenom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getQuantity().isEmpty()) {
+          quantity_ = other.quantity_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.hasAskPrice()) {
+          mergeAskPrice(other.getAskPrice());
+        }
+        if (other.getDisableAutoRetire() != false) {
+          setDisableAutoRetire(other.getDisableAutoRetire());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                orderId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                batchDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                quantity_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getAskPriceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                disableAutoRetire_ = input.readBool();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long orderId_ ;
+      /**
+       * <pre>
+       * order_id is the unique ID of sell order.
+       * </pre>
+       *
+       * <code>uint64 order_id = 1 [json_name = "orderId"];</code>
+       * @return The orderId.
+       */
+      @java.lang.Override
+      public long getOrderId() {
+        return orderId_;
+      }
+      /**
+       * <pre>
+       * order_id is the unique ID of sell order.
+       * </pre>
+       *
+       * <code>uint64 order_id = 1 [json_name = "orderId"];</code>
+       * @param value The orderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrderId(long value) {
+
+        orderId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * order_id is the unique ID of sell order.
+       * </pre>
+       *
+       * <code>uint64 order_id = 1 [json_name = "orderId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrderId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        orderId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object batchDenom_ = "";
+      /**
+       * <pre>
+       * batch_denom is the credit batch being sold.
+       * </pre>
+       *
+       * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+       * @return The batchDenom.
+       */
+      public java.lang.String getBatchDenom() {
+        java.lang.Object ref = batchDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          batchDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * batch_denom is the credit batch being sold.
+       * </pre>
+       *
+       * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+       * @return The bytes for batchDenom.
+       */
+      public com.google.protobuf.ByteString
+          getBatchDenomBytes() {
+        java.lang.Object ref = batchDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          batchDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * batch_denom is the credit batch being sold.
+       * </pre>
+       *
+       * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+       * @param value The batchDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBatchDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        batchDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * batch_denom is the credit batch being sold.
+       * </pre>
+       *
+       * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBatchDenom() {
+        batchDenom_ = getDefaultInstance().getBatchDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * batch_denom is the credit batch being sold.
+       * </pre>
+       *
+       * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+       * @param value The bytes for batchDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBatchDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        batchDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object quantity_ = "";
+      /**
+       * <pre>
+       * quantity is the quantity of credits being sold.
+       * </pre>
+       *
+       * <code>string quantity = 3 [json_name = "quantity"];</code>
+       * @return The quantity.
+       */
+      public java.lang.String getQuantity() {
+        java.lang.Object ref = quantity_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          quantity_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * quantity is the quantity of credits being sold.
+       * </pre>
+       *
+       * <code>string quantity = 3 [json_name = "quantity"];</code>
+       * @return The bytes for quantity.
+       */
+      public com.google.protobuf.ByteString
+          getQuantityBytes() {
+        java.lang.Object ref = quantity_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          quantity_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * quantity is the quantity of credits being sold.
+       * </pre>
+       *
+       * <code>string quantity = 3 [json_name = "quantity"];</code>
+       * @param value The quantity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuantity(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        quantity_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * quantity is the quantity of credits being sold.
+       * </pre>
+       *
+       * <code>string quantity = 3 [json_name = "quantity"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQuantity() {
+        quantity_ = getDefaultInstance().getQuantity();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * quantity is the quantity of credits being sold.
+       * </pre>
+       *
+       * <code>string quantity = 3 [json_name = "quantity"];</code>
+       * @param value The bytes for quantity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuantityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        quantity_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin askPrice_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> askPriceBuilder_;
+      /**
+       * <pre>
+       * ask_price is the price the seller is asking for each unit of the
+       * batch_denom. Each credit unit of the batch will be sold for at least the
+       * ask_price or more.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin ask_price = 4 [json_name = "askPrice"];</code>
+       * @return Whether the askPrice field is set.
+       */
+      public boolean hasAskPrice() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * ask_price is the price the seller is asking for each unit of the
+       * batch_denom. Each credit unit of the batch will be sold for at least the
+       * ask_price or more.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin ask_price = 4 [json_name = "askPrice"];</code>
+       * @return The askPrice.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getAskPrice() {
+        if (askPriceBuilder_ == null) {
+          return askPrice_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : askPrice_;
+        } else {
+          return askPriceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * ask_price is the price the seller is asking for each unit of the
+       * batch_denom. Each credit unit of the batch will be sold for at least the
+       * ask_price or more.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin ask_price = 4 [json_name = "askPrice"];</code>
+       */
+      public Builder setAskPrice(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (askPriceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          askPrice_ = value;
+        } else {
+          askPriceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ask_price is the price the seller is asking for each unit of the
+       * batch_denom. Each credit unit of the batch will be sold for at least the
+       * ask_price or more.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin ask_price = 4 [json_name = "askPrice"];</code>
+       */
+      public Builder setAskPrice(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (askPriceBuilder_ == null) {
+          askPrice_ = builderForValue.build();
+        } else {
+          askPriceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ask_price is the price the seller is asking for each unit of the
+       * batch_denom. Each credit unit of the batch will be sold for at least the
+       * ask_price or more.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin ask_price = 4 [json_name = "askPrice"];</code>
+       */
+      public Builder mergeAskPrice(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (askPriceBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            askPrice_ != null &&
+            askPrice_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getAskPriceBuilder().mergeFrom(value);
+          } else {
+            askPrice_ = value;
+          }
+        } else {
+          askPriceBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ask_price is the price the seller is asking for each unit of the
+       * batch_denom. Each credit unit of the batch will be sold for at least the
+       * ask_price or more.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin ask_price = 4 [json_name = "askPrice"];</code>
+       */
+      public Builder clearAskPrice() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        askPrice_ = null;
+        if (askPriceBuilder_ != null) {
+          askPriceBuilder_.dispose();
+          askPriceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ask_price is the price the seller is asking for each unit of the
+       * batch_denom. Each credit unit of the batch will be sold for at least the
+       * ask_price or more.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin ask_price = 4 [json_name = "askPrice"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getAskPriceBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getAskPriceFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * ask_price is the price the seller is asking for each unit of the
+       * batch_denom. Each credit unit of the batch will be sold for at least the
+       * ask_price or more.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin ask_price = 4 [json_name = "askPrice"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAskPriceOrBuilder() {
+        if (askPriceBuilder_ != null) {
+          return askPriceBuilder_.getMessageOrBuilder();
+        } else {
+          return askPrice_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : askPrice_;
+        }
+      }
+      /**
+       * <pre>
+       * ask_price is the price the seller is asking for each unit of the
+       * batch_denom. Each credit unit of the batch will be sold for at least the
+       * ask_price or more.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin ask_price = 4 [json_name = "askPrice"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getAskPriceFieldBuilder() {
+        if (askPriceBuilder_ == null) {
+          askPriceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getAskPrice(),
+                  getParentForChildren(),
+                  isClean());
+          askPrice_ = null;
+        }
+        return askPriceBuilder_;
+      }
+
+      private boolean disableAutoRetire_ ;
+      /**
+       * <pre>
+       * disable_auto_retire disables auto-retirement of credits which allows a
+       * buyer to disable auto-retirement in their buy order enabling them to
+       * resell the credits to another buyer.
+       * </pre>
+       *
+       * <code>bool disable_auto_retire = 5 [json_name = "disableAutoRetire"];</code>
+       * @return The disableAutoRetire.
+       */
+      @java.lang.Override
+      public boolean getDisableAutoRetire() {
+        return disableAutoRetire_;
+      }
+      /**
+       * <pre>
+       * disable_auto_retire disables auto-retirement of credits which allows a
+       * buyer to disable auto-retirement in their buy order enabling them to
+       * resell the credits to another buyer.
+       * </pre>
+       *
+       * <code>bool disable_auto_retire = 5 [json_name = "disableAutoRetire"];</code>
+       * @param value The disableAutoRetire to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDisableAutoRetire(boolean value) {
+
+        disableAutoRetire_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * disable_auto_retire disables auto-retirement of credits which allows a
+       * buyer to disable auto-retirement in their buy order enabling them to
+       * resell the credits to another buyer.
+       * </pre>
+       *
+       * <code>bool disable_auto_retire = 5 [json_name = "disableAutoRetire"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDisableAutoRetire() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        disableAutoRetire_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.ecocredit.v1alpha2.EventSell)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.ecocredit.v1alpha2.EventSell)
+    private static final com.regen.ecocredit.v1alpha2.EventsProto.EventSell DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.ecocredit.v1alpha2.EventsProto.EventSell();
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventSell getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventSell>
+        PARSER = new com.google.protobuf.AbstractParser<EventSell>() {
+      @java.lang.Override
+      public EventSell parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventSell> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventSell> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.ecocredit.v1alpha2.EventsProto.EventSell getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventUpdateSellOrderOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.ecocredit.v1alpha2.EventUpdateSellOrder)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * owner is the owner of the sell orders.
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <pre>
+     * owner is the owner of the sell orders.
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <pre>
+     *  sell_order_id is the ID of an existing sell order.
+     * </pre>
+     *
+     * <code>uint64 sell_order_id = 2 [json_name = "sellOrderId"];</code>
+     * @return The sellOrderId.
+     */
+    long getSellOrderId();
+
+    /**
+     * <pre>
+     * batch_denom is the credit batch being sold.
+     * </pre>
+     *
+     * <code>string batch_denom = 3 [json_name = "batchDenom"];</code>
+     * @return The batchDenom.
+     */
+    java.lang.String getBatchDenom();
+    /**
+     * <pre>
+     * batch_denom is the credit batch being sold.
+     * </pre>
+     *
+     * <code>string batch_denom = 3 [json_name = "batchDenom"];</code>
+     * @return The bytes for batchDenom.
+     */
+    com.google.protobuf.ByteString
+        getBatchDenomBytes();
+
+    /**
+     * <pre>
+     * new_quantity is the updated quantity of credits available to sell, if it
+     * is set to zero then the order is cancelled.
+     * </pre>
+     *
+     * <code>string new_quantity = 4 [json_name = "newQuantity"];</code>
+     * @return The newQuantity.
+     */
+    java.lang.String getNewQuantity();
+    /**
+     * <pre>
+     * new_quantity is the updated quantity of credits available to sell, if it
+     * is set to zero then the order is cancelled.
+     * </pre>
+     *
+     * <code>string new_quantity = 4 [json_name = "newQuantity"];</code>
+     * @return The bytes for newQuantity.
+     */
+    com.google.protobuf.ByteString
+        getNewQuantityBytes();
+
+    /**
+     * <pre>
+     * new_ask_price is the new ask price for this sell order
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin new_ask_price = 5 [json_name = "newAskPrice"];</code>
+     * @return Whether the newAskPrice field is set.
+     */
+    boolean hasNewAskPrice();
+    /**
+     * <pre>
+     * new_ask_price is the new ask price for this sell order
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin new_ask_price = 5 [json_name = "newAskPrice"];</code>
+     * @return The newAskPrice.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getNewAskPrice();
+    /**
+     * <pre>
+     * new_ask_price is the new ask price for this sell order
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin new_ask_price = 5 [json_name = "newAskPrice"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getNewAskPriceOrBuilder();
+
+    /**
+     * <pre>
+     * disable_auto_retire updates the disable_auto_retire field in the sell order.
+     * </pre>
+     *
+     * <code>bool disable_auto_retire = 6 [json_name = "disableAutoRetire"];</code>
+     * @return The disableAutoRetire.
+     */
+    boolean getDisableAutoRetire();
+  }
+  /**
+   * <pre>
+   * EventUpdateSellOrder is an event emitted when a sell order is updated.
+   * </pre>
+   *
+   * Protobuf type {@code regen.ecocredit.v1alpha2.EventUpdateSellOrder}
+   */
+  public static final class EventUpdateSellOrder extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.ecocredit.v1alpha2.EventUpdateSellOrder)
+      EventUpdateSellOrderOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventUpdateSellOrder.newBuilder() to construct.
+    private EventUpdateSellOrder(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventUpdateSellOrder() {
+      owner_ = "";
+      batchDenom_ = "";
+      newQuantity_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventUpdateSellOrder();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventUpdateSellOrder_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventUpdateSellOrder_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder.class, com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder.Builder.class);
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <pre>
+     * owner is the owner of the sell orders.
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * owner is the owner of the sell orders.
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SELL_ORDER_ID_FIELD_NUMBER = 2;
+    private long sellOrderId_ = 0L;
+    /**
+     * <pre>
+     *  sell_order_id is the ID of an existing sell order.
+     * </pre>
+     *
+     * <code>uint64 sell_order_id = 2 [json_name = "sellOrderId"];</code>
+     * @return The sellOrderId.
+     */
+    @java.lang.Override
+    public long getSellOrderId() {
+      return sellOrderId_;
+    }
+
+    public static final int BATCH_DENOM_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object batchDenom_ = "";
+    /**
+     * <pre>
+     * batch_denom is the credit batch being sold.
+     * </pre>
+     *
+     * <code>string batch_denom = 3 [json_name = "batchDenom"];</code>
+     * @return The batchDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getBatchDenom() {
+      java.lang.Object ref = batchDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        batchDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * batch_denom is the credit batch being sold.
+     * </pre>
+     *
+     * <code>string batch_denom = 3 [json_name = "batchDenom"];</code>
+     * @return The bytes for batchDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBatchDenomBytes() {
+      java.lang.Object ref = batchDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        batchDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NEW_QUANTITY_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object newQuantity_ = "";
+    /**
+     * <pre>
+     * new_quantity is the updated quantity of credits available to sell, if it
+     * is set to zero then the order is cancelled.
+     * </pre>
+     *
+     * <code>string new_quantity = 4 [json_name = "newQuantity"];</code>
+     * @return The newQuantity.
+     */
+    @java.lang.Override
+    public java.lang.String getNewQuantity() {
+      java.lang.Object ref = newQuantity_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        newQuantity_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * new_quantity is the updated quantity of credits available to sell, if it
+     * is set to zero then the order is cancelled.
+     * </pre>
+     *
+     * <code>string new_quantity = 4 [json_name = "newQuantity"];</code>
+     * @return The bytes for newQuantity.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNewQuantityBytes() {
+      java.lang.Object ref = newQuantity_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        newQuantity_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NEW_ASK_PRICE_FIELD_NUMBER = 5;
+    private com.cosmos.base.v1beta1.CoinProto.Coin newAskPrice_;
+    /**
+     * <pre>
+     * new_ask_price is the new ask price for this sell order
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin new_ask_price = 5 [json_name = "newAskPrice"];</code>
+     * @return Whether the newAskPrice field is set.
+     */
+    @java.lang.Override
+    public boolean hasNewAskPrice() {
+      return newAskPrice_ != null;
+    }
+    /**
+     * <pre>
+     * new_ask_price is the new ask price for this sell order
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin new_ask_price = 5 [json_name = "newAskPrice"];</code>
+     * @return The newAskPrice.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getNewAskPrice() {
+      return newAskPrice_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : newAskPrice_;
+    }
+    /**
+     * <pre>
+     * new_ask_price is the new ask price for this sell order
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin new_ask_price = 5 [json_name = "newAskPrice"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getNewAskPriceOrBuilder() {
+      return newAskPrice_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : newAskPrice_;
+    }
+
+    public static final int DISABLE_AUTO_RETIRE_FIELD_NUMBER = 6;
+    private boolean disableAutoRetire_ = false;
+    /**
+     * <pre>
+     * disable_auto_retire updates the disable_auto_retire field in the sell order.
+     * </pre>
+     *
+     * <code>bool disable_auto_retire = 6 [json_name = "disableAutoRetire"];</code>
+     * @return The disableAutoRetire.
+     */
+    @java.lang.Override
+    public boolean getDisableAutoRetire() {
+      return disableAutoRetire_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, owner_);
+      }
+      if (sellOrderId_ != 0L) {
+        output.writeUInt64(2, sellOrderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(batchDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, batchDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newQuantity_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, newQuantity_);
+      }
+      if (newAskPrice_ != null) {
+        output.writeMessage(5, getNewAskPrice());
+      }
+      if (disableAutoRetire_ != false) {
+        output.writeBool(6, disableAutoRetire_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, owner_);
+      }
+      if (sellOrderId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, sellOrderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(batchDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, batchDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newQuantity_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, newQuantity_);
+      }
+      if (newAskPrice_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getNewAskPrice());
+      }
+      if (disableAutoRetire_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, disableAutoRetire_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder)) {
+        return super.equals(obj);
+      }
+      com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder other = (com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder) obj;
+
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (getSellOrderId()
+          != other.getSellOrderId()) return false;
+      if (!getBatchDenom()
+          .equals(other.getBatchDenom())) return false;
+      if (!getNewQuantity()
+          .equals(other.getNewQuantity())) return false;
+      if (hasNewAskPrice() != other.hasNewAskPrice()) return false;
+      if (hasNewAskPrice()) {
+        if (!getNewAskPrice()
+            .equals(other.getNewAskPrice())) return false;
+      }
+      if (getDisableAutoRetire()
+          != other.getDisableAutoRetire()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + SELL_ORDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSellOrderId());
+      hash = (37 * hash) + BATCH_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getBatchDenom().hashCode();
+      hash = (37 * hash) + NEW_QUANTITY_FIELD_NUMBER;
+      hash = (53 * hash) + getNewQuantity().hashCode();
+      if (hasNewAskPrice()) {
+        hash = (37 * hash) + NEW_ASK_PRICE_FIELD_NUMBER;
+        hash = (53 * hash) + getNewAskPrice().hashCode();
+      }
+      hash = (37 * hash) + DISABLE_AUTO_RETIRE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDisableAutoRetire());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventUpdateSellOrder is an event emitted when a sell order is updated.
+     * </pre>
+     *
+     * Protobuf type {@code regen.ecocredit.v1alpha2.EventUpdateSellOrder}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.ecocredit.v1alpha2.EventUpdateSellOrder)
+        com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrderOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventUpdateSellOrder_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventUpdateSellOrder_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder.class, com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder.Builder.class);
+      }
+
+      // Construct using com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        owner_ = "";
+        sellOrderId_ = 0L;
+        batchDenom_ = "";
+        newQuantity_ = "";
+        newAskPrice_ = null;
+        if (newAskPriceBuilder_ != null) {
+          newAskPriceBuilder_.dispose();
+          newAskPriceBuilder_ = null;
+        }
+        disableAutoRetire_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventUpdateSellOrder_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder getDefaultInstanceForType() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder build() {
+        com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder buildPartial() {
+        com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder result = new com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.sellOrderId_ = sellOrderId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.batchDenom_ = batchDenom_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.newQuantity_ = newQuantity_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.newAskPrice_ = newAskPriceBuilder_ == null
+              ? newAskPrice_
+              : newAskPriceBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.disableAutoRetire_ = disableAutoRetire_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder) {
+          return mergeFrom((com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder other) {
+        if (other == com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder.getDefaultInstance()) return this;
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getSellOrderId() != 0L) {
+          setSellOrderId(other.getSellOrderId());
+        }
+        if (!other.getBatchDenom().isEmpty()) {
+          batchDenom_ = other.batchDenom_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getNewQuantity().isEmpty()) {
+          newQuantity_ = other.newQuantity_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.hasNewAskPrice()) {
+          mergeNewAskPrice(other.getNewAskPrice());
+        }
+        if (other.getDisableAutoRetire() != false) {
+          setDisableAutoRetire(other.getDisableAutoRetire());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                sellOrderId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                batchDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                newQuantity_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getNewAskPriceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 48: {
+                disableAutoRetire_ = input.readBool();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <pre>
+       * owner is the owner of the sell orders.
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * owner is the owner of the sell orders.
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * owner is the owner of the sell orders.
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * owner is the owner of the sell orders.
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * owner is the owner of the sell orders.
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long sellOrderId_ ;
+      /**
+       * <pre>
+       *  sell_order_id is the ID of an existing sell order.
+       * </pre>
+       *
+       * <code>uint64 sell_order_id = 2 [json_name = "sellOrderId"];</code>
+       * @return The sellOrderId.
+       */
+      @java.lang.Override
+      public long getSellOrderId() {
+        return sellOrderId_;
+      }
+      /**
+       * <pre>
+       *  sell_order_id is the ID of an existing sell order.
+       * </pre>
+       *
+       * <code>uint64 sell_order_id = 2 [json_name = "sellOrderId"];</code>
+       * @param value The sellOrderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSellOrderId(long value) {
+
+        sellOrderId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *  sell_order_id is the ID of an existing sell order.
+       * </pre>
+       *
+       * <code>uint64 sell_order_id = 2 [json_name = "sellOrderId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSellOrderId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        sellOrderId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object batchDenom_ = "";
+      /**
+       * <pre>
+       * batch_denom is the credit batch being sold.
+       * </pre>
+       *
+       * <code>string batch_denom = 3 [json_name = "batchDenom"];</code>
+       * @return The batchDenom.
+       */
+      public java.lang.String getBatchDenom() {
+        java.lang.Object ref = batchDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          batchDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * batch_denom is the credit batch being sold.
+       * </pre>
+       *
+       * <code>string batch_denom = 3 [json_name = "batchDenom"];</code>
+       * @return The bytes for batchDenom.
+       */
+      public com.google.protobuf.ByteString
+          getBatchDenomBytes() {
+        java.lang.Object ref = batchDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          batchDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * batch_denom is the credit batch being sold.
+       * </pre>
+       *
+       * <code>string batch_denom = 3 [json_name = "batchDenom"];</code>
+       * @param value The batchDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBatchDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        batchDenom_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * batch_denom is the credit batch being sold.
+       * </pre>
+       *
+       * <code>string batch_denom = 3 [json_name = "batchDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBatchDenom() {
+        batchDenom_ = getDefaultInstance().getBatchDenom();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * batch_denom is the credit batch being sold.
+       * </pre>
+       *
+       * <code>string batch_denom = 3 [json_name = "batchDenom"];</code>
+       * @param value The bytes for batchDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBatchDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        batchDenom_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object newQuantity_ = "";
+      /**
+       * <pre>
+       * new_quantity is the updated quantity of credits available to sell, if it
+       * is set to zero then the order is cancelled.
+       * </pre>
+       *
+       * <code>string new_quantity = 4 [json_name = "newQuantity"];</code>
+       * @return The newQuantity.
+       */
+      public java.lang.String getNewQuantity() {
+        java.lang.Object ref = newQuantity_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          newQuantity_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * new_quantity is the updated quantity of credits available to sell, if it
+       * is set to zero then the order is cancelled.
+       * </pre>
+       *
+       * <code>string new_quantity = 4 [json_name = "newQuantity"];</code>
+       * @return The bytes for newQuantity.
+       */
+      public com.google.protobuf.ByteString
+          getNewQuantityBytes() {
+        java.lang.Object ref = newQuantity_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          newQuantity_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * new_quantity is the updated quantity of credits available to sell, if it
+       * is set to zero then the order is cancelled.
+       * </pre>
+       *
+       * <code>string new_quantity = 4 [json_name = "newQuantity"];</code>
+       * @param value The newQuantity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewQuantity(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        newQuantity_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * new_quantity is the updated quantity of credits available to sell, if it
+       * is set to zero then the order is cancelled.
+       * </pre>
+       *
+       * <code>string new_quantity = 4 [json_name = "newQuantity"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewQuantity() {
+        newQuantity_ = getDefaultInstance().getNewQuantity();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * new_quantity is the updated quantity of credits available to sell, if it
+       * is set to zero then the order is cancelled.
+       * </pre>
+       *
+       * <code>string new_quantity = 4 [json_name = "newQuantity"];</code>
+       * @param value The bytes for newQuantity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewQuantityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        newQuantity_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin newAskPrice_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> newAskPriceBuilder_;
+      /**
+       * <pre>
+       * new_ask_price is the new ask price for this sell order
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin new_ask_price = 5 [json_name = "newAskPrice"];</code>
+       * @return Whether the newAskPrice field is set.
+       */
+      public boolean hasNewAskPrice() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * new_ask_price is the new ask price for this sell order
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin new_ask_price = 5 [json_name = "newAskPrice"];</code>
+       * @return The newAskPrice.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getNewAskPrice() {
+        if (newAskPriceBuilder_ == null) {
+          return newAskPrice_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : newAskPrice_;
+        } else {
+          return newAskPriceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * new_ask_price is the new ask price for this sell order
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin new_ask_price = 5 [json_name = "newAskPrice"];</code>
+       */
+      public Builder setNewAskPrice(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (newAskPriceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          newAskPrice_ = value;
+        } else {
+          newAskPriceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * new_ask_price is the new ask price for this sell order
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin new_ask_price = 5 [json_name = "newAskPrice"];</code>
+       */
+      public Builder setNewAskPrice(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (newAskPriceBuilder_ == null) {
+          newAskPrice_ = builderForValue.build();
+        } else {
+          newAskPriceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * new_ask_price is the new ask price for this sell order
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin new_ask_price = 5 [json_name = "newAskPrice"];</code>
+       */
+      public Builder mergeNewAskPrice(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (newAskPriceBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            newAskPrice_ != null &&
+            newAskPrice_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getNewAskPriceBuilder().mergeFrom(value);
+          } else {
+            newAskPrice_ = value;
+          }
+        } else {
+          newAskPriceBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * new_ask_price is the new ask price for this sell order
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin new_ask_price = 5 [json_name = "newAskPrice"];</code>
+       */
+      public Builder clearNewAskPrice() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        newAskPrice_ = null;
+        if (newAskPriceBuilder_ != null) {
+          newAskPriceBuilder_.dispose();
+          newAskPriceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * new_ask_price is the new ask price for this sell order
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin new_ask_price = 5 [json_name = "newAskPrice"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getNewAskPriceBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getNewAskPriceFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * new_ask_price is the new ask price for this sell order
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin new_ask_price = 5 [json_name = "newAskPrice"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getNewAskPriceOrBuilder() {
+        if (newAskPriceBuilder_ != null) {
+          return newAskPriceBuilder_.getMessageOrBuilder();
+        } else {
+          return newAskPrice_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : newAskPrice_;
+        }
+      }
+      /**
+       * <pre>
+       * new_ask_price is the new ask price for this sell order
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin new_ask_price = 5 [json_name = "newAskPrice"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getNewAskPriceFieldBuilder() {
+        if (newAskPriceBuilder_ == null) {
+          newAskPriceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getNewAskPrice(),
+                  getParentForChildren(),
+                  isClean());
+          newAskPrice_ = null;
+        }
+        return newAskPriceBuilder_;
+      }
+
+      private boolean disableAutoRetire_ ;
+      /**
+       * <pre>
+       * disable_auto_retire updates the disable_auto_retire field in the sell order.
+       * </pre>
+       *
+       * <code>bool disable_auto_retire = 6 [json_name = "disableAutoRetire"];</code>
+       * @return The disableAutoRetire.
+       */
+      @java.lang.Override
+      public boolean getDisableAutoRetire() {
+        return disableAutoRetire_;
+      }
+      /**
+       * <pre>
+       * disable_auto_retire updates the disable_auto_retire field in the sell order.
+       * </pre>
+       *
+       * <code>bool disable_auto_retire = 6 [json_name = "disableAutoRetire"];</code>
+       * @param value The disableAutoRetire to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDisableAutoRetire(boolean value) {
+
+        disableAutoRetire_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * disable_auto_retire updates the disable_auto_retire field in the sell order.
+       * </pre>
+       *
+       * <code>bool disable_auto_retire = 6 [json_name = "disableAutoRetire"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDisableAutoRetire() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        disableAutoRetire_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.ecocredit.v1alpha2.EventUpdateSellOrder)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.ecocredit.v1alpha2.EventUpdateSellOrder)
+    private static final com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder();
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventUpdateSellOrder>
+        PARSER = new com.google.protobuf.AbstractParser<EventUpdateSellOrder>() {
+      @java.lang.Override
+      public EventUpdateSellOrder parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventUpdateSellOrder> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventUpdateSellOrder> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.ecocredit.v1alpha2.EventsProto.EventUpdateSellOrder getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventBuyOrderCreatedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.ecocredit.v1alpha2.EventBuyOrderCreated)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * buy_order_id is the unique ID of buy order.
+     * </pre>
+     *
+     * <code>uint64 buy_order_id = 1 [json_name = "buyOrderId"];</code>
+     * @return The buyOrderId.
+     */
+    long getBuyOrderId();
+
+    /**
+     * <pre>
+     * sell_order_id is the sell order ID against which the buyer is trying to buy.
+     * </pre>
+     *
+     * <code>uint64 sell_order_id = 2 [json_name = "sellOrderId"];</code>
+     * @return The sellOrderId.
+     */
+    long getSellOrderId();
+
+    /**
+     * <pre>
+     * quantity is the quantity of credits to buy. If the quantity of credits
+     * available is less than this amount the order will be partially filled
+     * unless disable_partial_fill is true.
+     * </pre>
+     *
+     * <code>string quantity = 3 [json_name = "quantity"];</code>
+     * @return The quantity.
+     */
+    java.lang.String getQuantity();
+    /**
+     * <pre>
+     * quantity is the quantity of credits to buy. If the quantity of credits
+     * available is less than this amount the order will be partially filled
+     * unless disable_partial_fill is true.
+     * </pre>
+     *
+     * <code>string quantity = 3 [json_name = "quantity"];</code>
+     * @return The bytes for quantity.
+     */
+    com.google.protobuf.ByteString
+        getQuantityBytes();
+
+    /**
+     * <pre>
+     * bid price is the bid price for this buy order. A credit unit will be
+     * settled at a purchase price that is no more than the bid price. The
+     * buy order will fail if the buyer does not have enough funds available
+     * to complete the purchase.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin bid_price = 4 [json_name = "bidPrice"];</code>
+     * @return Whether the bidPrice field is set.
+     */
+    boolean hasBidPrice();
+    /**
+     * <pre>
+     * bid price is the bid price for this buy order. A credit unit will be
+     * settled at a purchase price that is no more than the bid price. The
+     * buy order will fail if the buyer does not have enough funds available
+     * to complete the purchase.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin bid_price = 4 [json_name = "bidPrice"];</code>
+     * @return The bidPrice.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getBidPrice();
+    /**
+     * <pre>
+     * bid price is the bid price for this buy order. A credit unit will be
+     * settled at a purchase price that is no more than the bid price. The
+     * buy order will fail if the buyer does not have enough funds available
+     * to complete the purchase.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin bid_price = 4 [json_name = "bidPrice"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBidPriceOrBuilder();
+
+    /**
+     * <pre>
+     * disable_auto_retire allows auto-retirement to be disabled. If it is set to true
+     * the credits will not auto-retire and can be resold assuming that the
+     * corresponding sell order has auto-retirement disabled. If the sell order
+     * hasn't disabled auto-retirement and the buy order tries to disable it,
+     * that buy order will fail.
+     * </pre>
+     *
+     * <code>bool disable_auto_retire = 5 [json_name = "disableAutoRetire"];</code>
+     * @return The disableAutoRetire.
+     */
+    boolean getDisableAutoRetire();
+
+    /**
+     * <pre>
+     * disable_partial_fill disables the default behavior of partially filling
+     * buy orders if the requested quantity is not available.
+     * </pre>
+     *
+     * <code>bool disable_partial_fill = 6 [json_name = "disablePartialFill"];</code>
+     * @return The disablePartialFill.
+     */
+    boolean getDisablePartialFill();
+  }
+  /**
+   * <pre>
+   * EventBuyOrderCreated is an event emitted when a buy order is created.
+   * </pre>
+   *
+   * Protobuf type {@code regen.ecocredit.v1alpha2.EventBuyOrderCreated}
+   */
+  public static final class EventBuyOrderCreated extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.ecocredit.v1alpha2.EventBuyOrderCreated)
+      EventBuyOrderCreatedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventBuyOrderCreated.newBuilder() to construct.
+    private EventBuyOrderCreated(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventBuyOrderCreated() {
+      quantity_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventBuyOrderCreated();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventBuyOrderCreated_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventBuyOrderCreated_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated.class, com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated.Builder.class);
+    }
+
+    public static final int BUY_ORDER_ID_FIELD_NUMBER = 1;
+    private long buyOrderId_ = 0L;
+    /**
+     * <pre>
+     * buy_order_id is the unique ID of buy order.
+     * </pre>
+     *
+     * <code>uint64 buy_order_id = 1 [json_name = "buyOrderId"];</code>
+     * @return The buyOrderId.
+     */
+    @java.lang.Override
+    public long getBuyOrderId() {
+      return buyOrderId_;
+    }
+
+    public static final int SELL_ORDER_ID_FIELD_NUMBER = 2;
+    private long sellOrderId_ = 0L;
+    /**
+     * <pre>
+     * sell_order_id is the sell order ID against which the buyer is trying to buy.
+     * </pre>
+     *
+     * <code>uint64 sell_order_id = 2 [json_name = "sellOrderId"];</code>
+     * @return The sellOrderId.
+     */
+    @java.lang.Override
+    public long getSellOrderId() {
+      return sellOrderId_;
+    }
+
+    public static final int QUANTITY_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object quantity_ = "";
+    /**
+     * <pre>
+     * quantity is the quantity of credits to buy. If the quantity of credits
+     * available is less than this amount the order will be partially filled
+     * unless disable_partial_fill is true.
+     * </pre>
+     *
+     * <code>string quantity = 3 [json_name = "quantity"];</code>
+     * @return The quantity.
+     */
+    @java.lang.Override
+    public java.lang.String getQuantity() {
+      java.lang.Object ref = quantity_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        quantity_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * quantity is the quantity of credits to buy. If the quantity of credits
+     * available is less than this amount the order will be partially filled
+     * unless disable_partial_fill is true.
+     * </pre>
+     *
+     * <code>string quantity = 3 [json_name = "quantity"];</code>
+     * @return The bytes for quantity.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getQuantityBytes() {
+      java.lang.Object ref = quantity_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        quantity_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BID_PRICE_FIELD_NUMBER = 4;
+    private com.cosmos.base.v1beta1.CoinProto.Coin bidPrice_;
+    /**
+     * <pre>
+     * bid price is the bid price for this buy order. A credit unit will be
+     * settled at a purchase price that is no more than the bid price. The
+     * buy order will fail if the buyer does not have enough funds available
+     * to complete the purchase.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin bid_price = 4 [json_name = "bidPrice"];</code>
+     * @return Whether the bidPrice field is set.
+     */
+    @java.lang.Override
+    public boolean hasBidPrice() {
+      return bidPrice_ != null;
+    }
+    /**
+     * <pre>
+     * bid price is the bid price for this buy order. A credit unit will be
+     * settled at a purchase price that is no more than the bid price. The
+     * buy order will fail if the buyer does not have enough funds available
+     * to complete the purchase.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin bid_price = 4 [json_name = "bidPrice"];</code>
+     * @return The bidPrice.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getBidPrice() {
+      return bidPrice_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : bidPrice_;
+    }
+    /**
+     * <pre>
+     * bid price is the bid price for this buy order. A credit unit will be
+     * settled at a purchase price that is no more than the bid price. The
+     * buy order will fail if the buyer does not have enough funds available
+     * to complete the purchase.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin bid_price = 4 [json_name = "bidPrice"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBidPriceOrBuilder() {
+      return bidPrice_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : bidPrice_;
+    }
+
+    public static final int DISABLE_AUTO_RETIRE_FIELD_NUMBER = 5;
+    private boolean disableAutoRetire_ = false;
+    /**
+     * <pre>
+     * disable_auto_retire allows auto-retirement to be disabled. If it is set to true
+     * the credits will not auto-retire and can be resold assuming that the
+     * corresponding sell order has auto-retirement disabled. If the sell order
+     * hasn't disabled auto-retirement and the buy order tries to disable it,
+     * that buy order will fail.
+     * </pre>
+     *
+     * <code>bool disable_auto_retire = 5 [json_name = "disableAutoRetire"];</code>
+     * @return The disableAutoRetire.
+     */
+    @java.lang.Override
+    public boolean getDisableAutoRetire() {
+      return disableAutoRetire_;
+    }
+
+    public static final int DISABLE_PARTIAL_FILL_FIELD_NUMBER = 6;
+    private boolean disablePartialFill_ = false;
+    /**
+     * <pre>
+     * disable_partial_fill disables the default behavior of partially filling
+     * buy orders if the requested quantity is not available.
+     * </pre>
+     *
+     * <code>bool disable_partial_fill = 6 [json_name = "disablePartialFill"];</code>
+     * @return The disablePartialFill.
+     */
+    @java.lang.Override
+    public boolean getDisablePartialFill() {
+      return disablePartialFill_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (buyOrderId_ != 0L) {
+        output.writeUInt64(1, buyOrderId_);
+      }
+      if (sellOrderId_ != 0L) {
+        output.writeUInt64(2, sellOrderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quantity_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, quantity_);
+      }
+      if (bidPrice_ != null) {
+        output.writeMessage(4, getBidPrice());
+      }
+      if (disableAutoRetire_ != false) {
+        output.writeBool(5, disableAutoRetire_);
+      }
+      if (disablePartialFill_ != false) {
+        output.writeBool(6, disablePartialFill_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (buyOrderId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, buyOrderId_);
+      }
+      if (sellOrderId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, sellOrderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quantity_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, quantity_);
+      }
+      if (bidPrice_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getBidPrice());
+      }
+      if (disableAutoRetire_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, disableAutoRetire_);
+      }
+      if (disablePartialFill_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, disablePartialFill_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated)) {
+        return super.equals(obj);
+      }
+      com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated other = (com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated) obj;
+
+      if (getBuyOrderId()
+          != other.getBuyOrderId()) return false;
+      if (getSellOrderId()
+          != other.getSellOrderId()) return false;
+      if (!getQuantity()
+          .equals(other.getQuantity())) return false;
+      if (hasBidPrice() != other.hasBidPrice()) return false;
+      if (hasBidPrice()) {
+        if (!getBidPrice()
+            .equals(other.getBidPrice())) return false;
+      }
+      if (getDisableAutoRetire()
+          != other.getDisableAutoRetire()) return false;
+      if (getDisablePartialFill()
+          != other.getDisablePartialFill()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BUY_ORDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getBuyOrderId());
+      hash = (37 * hash) + SELL_ORDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSellOrderId());
+      hash = (37 * hash) + QUANTITY_FIELD_NUMBER;
+      hash = (53 * hash) + getQuantity().hashCode();
+      if (hasBidPrice()) {
+        hash = (37 * hash) + BID_PRICE_FIELD_NUMBER;
+        hash = (53 * hash) + getBidPrice().hashCode();
+      }
+      hash = (37 * hash) + DISABLE_AUTO_RETIRE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDisableAutoRetire());
+      hash = (37 * hash) + DISABLE_PARTIAL_FILL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDisablePartialFill());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventBuyOrderCreated is an event emitted when a buy order is created.
+     * </pre>
+     *
+     * Protobuf type {@code regen.ecocredit.v1alpha2.EventBuyOrderCreated}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.ecocredit.v1alpha2.EventBuyOrderCreated)
+        com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreatedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventBuyOrderCreated_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventBuyOrderCreated_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated.class, com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated.Builder.class);
+      }
+
+      // Construct using com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        buyOrderId_ = 0L;
+        sellOrderId_ = 0L;
+        quantity_ = "";
+        bidPrice_ = null;
+        if (bidPriceBuilder_ != null) {
+          bidPriceBuilder_.dispose();
+          bidPriceBuilder_ = null;
+        }
+        disableAutoRetire_ = false;
+        disablePartialFill_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventBuyOrderCreated_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated getDefaultInstanceForType() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated build() {
+        com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated buildPartial() {
+        com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated result = new com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.buyOrderId_ = buyOrderId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.sellOrderId_ = sellOrderId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.quantity_ = quantity_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.bidPrice_ = bidPriceBuilder_ == null
+              ? bidPrice_
+              : bidPriceBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.disableAutoRetire_ = disableAutoRetire_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.disablePartialFill_ = disablePartialFill_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated) {
+          return mergeFrom((com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated other) {
+        if (other == com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated.getDefaultInstance()) return this;
+        if (other.getBuyOrderId() != 0L) {
+          setBuyOrderId(other.getBuyOrderId());
+        }
+        if (other.getSellOrderId() != 0L) {
+          setSellOrderId(other.getSellOrderId());
+        }
+        if (!other.getQuantity().isEmpty()) {
+          quantity_ = other.quantity_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.hasBidPrice()) {
+          mergeBidPrice(other.getBidPrice());
+        }
+        if (other.getDisableAutoRetire() != false) {
+          setDisableAutoRetire(other.getDisableAutoRetire());
+        }
+        if (other.getDisablePartialFill() != false) {
+          setDisablePartialFill(other.getDisablePartialFill());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                buyOrderId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                sellOrderId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                quantity_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getBidPriceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                disableAutoRetire_ = input.readBool();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 48: {
+                disablePartialFill_ = input.readBool();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long buyOrderId_ ;
+      /**
+       * <pre>
+       * buy_order_id is the unique ID of buy order.
+       * </pre>
+       *
+       * <code>uint64 buy_order_id = 1 [json_name = "buyOrderId"];</code>
+       * @return The buyOrderId.
+       */
+      @java.lang.Override
+      public long getBuyOrderId() {
+        return buyOrderId_;
+      }
+      /**
+       * <pre>
+       * buy_order_id is the unique ID of buy order.
+       * </pre>
+       *
+       * <code>uint64 buy_order_id = 1 [json_name = "buyOrderId"];</code>
+       * @param value The buyOrderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyOrderId(long value) {
+
+        buyOrderId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * buy_order_id is the unique ID of buy order.
+       * </pre>
+       *
+       * <code>uint64 buy_order_id = 1 [json_name = "buyOrderId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBuyOrderId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        buyOrderId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long sellOrderId_ ;
+      /**
+       * <pre>
+       * sell_order_id is the sell order ID against which the buyer is trying to buy.
+       * </pre>
+       *
+       * <code>uint64 sell_order_id = 2 [json_name = "sellOrderId"];</code>
+       * @return The sellOrderId.
+       */
+      @java.lang.Override
+      public long getSellOrderId() {
+        return sellOrderId_;
+      }
+      /**
+       * <pre>
+       * sell_order_id is the sell order ID against which the buyer is trying to buy.
+       * </pre>
+       *
+       * <code>uint64 sell_order_id = 2 [json_name = "sellOrderId"];</code>
+       * @param value The sellOrderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSellOrderId(long value) {
+
+        sellOrderId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * sell_order_id is the sell order ID against which the buyer is trying to buy.
+       * </pre>
+       *
+       * <code>uint64 sell_order_id = 2 [json_name = "sellOrderId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSellOrderId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        sellOrderId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object quantity_ = "";
+      /**
+       * <pre>
+       * quantity is the quantity of credits to buy. If the quantity of credits
+       * available is less than this amount the order will be partially filled
+       * unless disable_partial_fill is true.
+       * </pre>
+       *
+       * <code>string quantity = 3 [json_name = "quantity"];</code>
+       * @return The quantity.
+       */
+      public java.lang.String getQuantity() {
+        java.lang.Object ref = quantity_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          quantity_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * quantity is the quantity of credits to buy. If the quantity of credits
+       * available is less than this amount the order will be partially filled
+       * unless disable_partial_fill is true.
+       * </pre>
+       *
+       * <code>string quantity = 3 [json_name = "quantity"];</code>
+       * @return The bytes for quantity.
+       */
+      public com.google.protobuf.ByteString
+          getQuantityBytes() {
+        java.lang.Object ref = quantity_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          quantity_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * quantity is the quantity of credits to buy. If the quantity of credits
+       * available is less than this amount the order will be partially filled
+       * unless disable_partial_fill is true.
+       * </pre>
+       *
+       * <code>string quantity = 3 [json_name = "quantity"];</code>
+       * @param value The quantity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuantity(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        quantity_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * quantity is the quantity of credits to buy. If the quantity of credits
+       * available is less than this amount the order will be partially filled
+       * unless disable_partial_fill is true.
+       * </pre>
+       *
+       * <code>string quantity = 3 [json_name = "quantity"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQuantity() {
+        quantity_ = getDefaultInstance().getQuantity();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * quantity is the quantity of credits to buy. If the quantity of credits
+       * available is less than this amount the order will be partially filled
+       * unless disable_partial_fill is true.
+       * </pre>
+       *
+       * <code>string quantity = 3 [json_name = "quantity"];</code>
+       * @param value The bytes for quantity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuantityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        quantity_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin bidPrice_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> bidPriceBuilder_;
+      /**
+       * <pre>
+       * bid price is the bid price for this buy order. A credit unit will be
+       * settled at a purchase price that is no more than the bid price. The
+       * buy order will fail if the buyer does not have enough funds available
+       * to complete the purchase.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin bid_price = 4 [json_name = "bidPrice"];</code>
+       * @return Whether the bidPrice field is set.
+       */
+      public boolean hasBidPrice() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * bid price is the bid price for this buy order. A credit unit will be
+       * settled at a purchase price that is no more than the bid price. The
+       * buy order will fail if the buyer does not have enough funds available
+       * to complete the purchase.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin bid_price = 4 [json_name = "bidPrice"];</code>
+       * @return The bidPrice.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getBidPrice() {
+        if (bidPriceBuilder_ == null) {
+          return bidPrice_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : bidPrice_;
+        } else {
+          return bidPriceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * bid price is the bid price for this buy order. A credit unit will be
+       * settled at a purchase price that is no more than the bid price. The
+       * buy order will fail if the buyer does not have enough funds available
+       * to complete the purchase.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin bid_price = 4 [json_name = "bidPrice"];</code>
+       */
+      public Builder setBidPrice(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (bidPriceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bidPrice_ = value;
+        } else {
+          bidPriceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * bid price is the bid price for this buy order. A credit unit will be
+       * settled at a purchase price that is no more than the bid price. The
+       * buy order will fail if the buyer does not have enough funds available
+       * to complete the purchase.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin bid_price = 4 [json_name = "bidPrice"];</code>
+       */
+      public Builder setBidPrice(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (bidPriceBuilder_ == null) {
+          bidPrice_ = builderForValue.build();
+        } else {
+          bidPriceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * bid price is the bid price for this buy order. A credit unit will be
+       * settled at a purchase price that is no more than the bid price. The
+       * buy order will fail if the buyer does not have enough funds available
+       * to complete the purchase.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin bid_price = 4 [json_name = "bidPrice"];</code>
+       */
+      public Builder mergeBidPrice(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (bidPriceBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            bidPrice_ != null &&
+            bidPrice_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getBidPriceBuilder().mergeFrom(value);
+          } else {
+            bidPrice_ = value;
+          }
+        } else {
+          bidPriceBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * bid price is the bid price for this buy order. A credit unit will be
+       * settled at a purchase price that is no more than the bid price. The
+       * buy order will fail if the buyer does not have enough funds available
+       * to complete the purchase.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin bid_price = 4 [json_name = "bidPrice"];</code>
+       */
+      public Builder clearBidPrice() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        bidPrice_ = null;
+        if (bidPriceBuilder_ != null) {
+          bidPriceBuilder_.dispose();
+          bidPriceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * bid price is the bid price for this buy order. A credit unit will be
+       * settled at a purchase price that is no more than the bid price. The
+       * buy order will fail if the buyer does not have enough funds available
+       * to complete the purchase.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin bid_price = 4 [json_name = "bidPrice"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getBidPriceBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getBidPriceFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * bid price is the bid price for this buy order. A credit unit will be
+       * settled at a purchase price that is no more than the bid price. The
+       * buy order will fail if the buyer does not have enough funds available
+       * to complete the purchase.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin bid_price = 4 [json_name = "bidPrice"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBidPriceOrBuilder() {
+        if (bidPriceBuilder_ != null) {
+          return bidPriceBuilder_.getMessageOrBuilder();
+        } else {
+          return bidPrice_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : bidPrice_;
+        }
+      }
+      /**
+       * <pre>
+       * bid price is the bid price for this buy order. A credit unit will be
+       * settled at a purchase price that is no more than the bid price. The
+       * buy order will fail if the buyer does not have enough funds available
+       * to complete the purchase.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin bid_price = 4 [json_name = "bidPrice"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getBidPriceFieldBuilder() {
+        if (bidPriceBuilder_ == null) {
+          bidPriceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getBidPrice(),
+                  getParentForChildren(),
+                  isClean());
+          bidPrice_ = null;
+        }
+        return bidPriceBuilder_;
+      }
+
+      private boolean disableAutoRetire_ ;
+      /**
+       * <pre>
+       * disable_auto_retire allows auto-retirement to be disabled. If it is set to true
+       * the credits will not auto-retire and can be resold assuming that the
+       * corresponding sell order has auto-retirement disabled. If the sell order
+       * hasn't disabled auto-retirement and the buy order tries to disable it,
+       * that buy order will fail.
+       * </pre>
+       *
+       * <code>bool disable_auto_retire = 5 [json_name = "disableAutoRetire"];</code>
+       * @return The disableAutoRetire.
+       */
+      @java.lang.Override
+      public boolean getDisableAutoRetire() {
+        return disableAutoRetire_;
+      }
+      /**
+       * <pre>
+       * disable_auto_retire allows auto-retirement to be disabled. If it is set to true
+       * the credits will not auto-retire and can be resold assuming that the
+       * corresponding sell order has auto-retirement disabled. If the sell order
+       * hasn't disabled auto-retirement and the buy order tries to disable it,
+       * that buy order will fail.
+       * </pre>
+       *
+       * <code>bool disable_auto_retire = 5 [json_name = "disableAutoRetire"];</code>
+       * @param value The disableAutoRetire to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDisableAutoRetire(boolean value) {
+
+        disableAutoRetire_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * disable_auto_retire allows auto-retirement to be disabled. If it is set to true
+       * the credits will not auto-retire and can be resold assuming that the
+       * corresponding sell order has auto-retirement disabled. If the sell order
+       * hasn't disabled auto-retirement and the buy order tries to disable it,
+       * that buy order will fail.
+       * </pre>
+       *
+       * <code>bool disable_auto_retire = 5 [json_name = "disableAutoRetire"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDisableAutoRetire() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        disableAutoRetire_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean disablePartialFill_ ;
+      /**
+       * <pre>
+       * disable_partial_fill disables the default behavior of partially filling
+       * buy orders if the requested quantity is not available.
+       * </pre>
+       *
+       * <code>bool disable_partial_fill = 6 [json_name = "disablePartialFill"];</code>
+       * @return The disablePartialFill.
+       */
+      @java.lang.Override
+      public boolean getDisablePartialFill() {
+        return disablePartialFill_;
+      }
+      /**
+       * <pre>
+       * disable_partial_fill disables the default behavior of partially filling
+       * buy orders if the requested quantity is not available.
+       * </pre>
+       *
+       * <code>bool disable_partial_fill = 6 [json_name = "disablePartialFill"];</code>
+       * @param value The disablePartialFill to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDisablePartialFill(boolean value) {
+
+        disablePartialFill_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * disable_partial_fill disables the default behavior of partially filling
+       * buy orders if the requested quantity is not available.
+       * </pre>
+       *
+       * <code>bool disable_partial_fill = 6 [json_name = "disablePartialFill"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDisablePartialFill() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        disablePartialFill_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.ecocredit.v1alpha2.EventBuyOrderCreated)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.ecocredit.v1alpha2.EventBuyOrderCreated)
+    private static final com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated();
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventBuyOrderCreated>
+        PARSER = new com.google.protobuf.AbstractParser<EventBuyOrderCreated>() {
+      @java.lang.Override
+      public EventBuyOrderCreated parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventBuyOrderCreated> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventBuyOrderCreated> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderCreated getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventBuyOrderFilledOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.ecocredit.v1alpha2.EventBuyOrderFilled)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * buy_order_id is the unique ID of the buy order.
+     * </pre>
+     *
+     * <code>uint64 buy_order_id = 1 [json_name = "buyOrderId"];</code>
+     * @return The buyOrderId.
+     */
+    long getBuyOrderId();
+
+    /**
+     * <pre>
+     * sell_order_id is the unique ID of the sell order.
+     * </pre>
+     *
+     * <code>uint64 sell_order_id = 2 [json_name = "sellOrderId"];</code>
+     * @return The sellOrderId.
+     */
+    long getSellOrderId();
+
+    /**
+     * <pre>
+     * batch_denom is the credit batch ID of the purchased credits.
+     * </pre>
+     *
+     * <code>string batch_denom = 3 [json_name = "batchDenom"];</code>
+     * @return The batchDenom.
+     */
+    java.lang.String getBatchDenom();
+    /**
+     * <pre>
+     * batch_denom is the credit batch ID of the purchased credits.
+     * </pre>
+     *
+     * <code>string batch_denom = 3 [json_name = "batchDenom"];</code>
+     * @return The bytes for batchDenom.
+     */
+    com.google.protobuf.ByteString
+        getBatchDenomBytes();
+
+    /**
+     * <pre>
+     * quantity is the quantity of the purchased credits.
+     * </pre>
+     *
+     * <code>string quantity = 4 [json_name = "quantity"];</code>
+     * @return The quantity.
+     */
+    java.lang.String getQuantity();
+    /**
+     * <pre>
+     * quantity is the quantity of the purchased credits.
+     * </pre>
+     *
+     * <code>string quantity = 4 [json_name = "quantity"];</code>
+     * @return The bytes for quantity.
+     */
+    com.google.protobuf.ByteString
+        getQuantityBytes();
+
+    /**
+     * <pre>
+     * total_price is the total price for the purchased credits.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin total_price = 5 [json_name = "totalPrice"];</code>
+     * @return Whether the totalPrice field is set.
+     */
+    boolean hasTotalPrice();
+    /**
+     * <pre>
+     * total_price is the total price for the purchased credits.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin total_price = 5 [json_name = "totalPrice"];</code>
+     * @return The totalPrice.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getTotalPrice();
+    /**
+     * <pre>
+     * total_price is the total price for the purchased credits.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin total_price = 5 [json_name = "totalPrice"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTotalPriceOrBuilder();
+  }
+  /**
+   * <pre>
+   * EventBuyOrderFilled is an event emitted when a buy order is filled.
+   * </pre>
+   *
+   * Protobuf type {@code regen.ecocredit.v1alpha2.EventBuyOrderFilled}
+   */
+  public static final class EventBuyOrderFilled extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.ecocredit.v1alpha2.EventBuyOrderFilled)
+      EventBuyOrderFilledOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventBuyOrderFilled.newBuilder() to construct.
+    private EventBuyOrderFilled(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventBuyOrderFilled() {
+      batchDenom_ = "";
+      quantity_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventBuyOrderFilled();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventBuyOrderFilled_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventBuyOrderFilled_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled.class, com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled.Builder.class);
+    }
+
+    public static final int BUY_ORDER_ID_FIELD_NUMBER = 1;
+    private long buyOrderId_ = 0L;
+    /**
+     * <pre>
+     * buy_order_id is the unique ID of the buy order.
+     * </pre>
+     *
+     * <code>uint64 buy_order_id = 1 [json_name = "buyOrderId"];</code>
+     * @return The buyOrderId.
+     */
+    @java.lang.Override
+    public long getBuyOrderId() {
+      return buyOrderId_;
+    }
+
+    public static final int SELL_ORDER_ID_FIELD_NUMBER = 2;
+    private long sellOrderId_ = 0L;
+    /**
+     * <pre>
+     * sell_order_id is the unique ID of the sell order.
+     * </pre>
+     *
+     * <code>uint64 sell_order_id = 2 [json_name = "sellOrderId"];</code>
+     * @return The sellOrderId.
+     */
+    @java.lang.Override
+    public long getSellOrderId() {
+      return sellOrderId_;
+    }
+
+    public static final int BATCH_DENOM_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object batchDenom_ = "";
+    /**
+     * <pre>
+     * batch_denom is the credit batch ID of the purchased credits.
+     * </pre>
+     *
+     * <code>string batch_denom = 3 [json_name = "batchDenom"];</code>
+     * @return The batchDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getBatchDenom() {
+      java.lang.Object ref = batchDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        batchDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * batch_denom is the credit batch ID of the purchased credits.
+     * </pre>
+     *
+     * <code>string batch_denom = 3 [json_name = "batchDenom"];</code>
+     * @return The bytes for batchDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBatchDenomBytes() {
+      java.lang.Object ref = batchDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        batchDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int QUANTITY_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object quantity_ = "";
+    /**
+     * <pre>
+     * quantity is the quantity of the purchased credits.
+     * </pre>
+     *
+     * <code>string quantity = 4 [json_name = "quantity"];</code>
+     * @return The quantity.
+     */
+    @java.lang.Override
+    public java.lang.String getQuantity() {
+      java.lang.Object ref = quantity_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        quantity_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * quantity is the quantity of the purchased credits.
+     * </pre>
+     *
+     * <code>string quantity = 4 [json_name = "quantity"];</code>
+     * @return The bytes for quantity.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getQuantityBytes() {
+      java.lang.Object ref = quantity_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        quantity_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOTAL_PRICE_FIELD_NUMBER = 5;
+    private com.cosmos.base.v1beta1.CoinProto.Coin totalPrice_;
+    /**
+     * <pre>
+     * total_price is the total price for the purchased credits.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin total_price = 5 [json_name = "totalPrice"];</code>
+     * @return Whether the totalPrice field is set.
+     */
+    @java.lang.Override
+    public boolean hasTotalPrice() {
+      return totalPrice_ != null;
+    }
+    /**
+     * <pre>
+     * total_price is the total price for the purchased credits.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin total_price = 5 [json_name = "totalPrice"];</code>
+     * @return The totalPrice.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getTotalPrice() {
+      return totalPrice_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : totalPrice_;
+    }
+    /**
+     * <pre>
+     * total_price is the total price for the purchased credits.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin total_price = 5 [json_name = "totalPrice"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTotalPriceOrBuilder() {
+      return totalPrice_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : totalPrice_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (buyOrderId_ != 0L) {
+        output.writeUInt64(1, buyOrderId_);
+      }
+      if (sellOrderId_ != 0L) {
+        output.writeUInt64(2, sellOrderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(batchDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, batchDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quantity_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, quantity_);
+      }
+      if (totalPrice_ != null) {
+        output.writeMessage(5, getTotalPrice());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (buyOrderId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, buyOrderId_);
+      }
+      if (sellOrderId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, sellOrderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(batchDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, batchDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quantity_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, quantity_);
+      }
+      if (totalPrice_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getTotalPrice());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled)) {
+        return super.equals(obj);
+      }
+      com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled other = (com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled) obj;
+
+      if (getBuyOrderId()
+          != other.getBuyOrderId()) return false;
+      if (getSellOrderId()
+          != other.getSellOrderId()) return false;
+      if (!getBatchDenom()
+          .equals(other.getBatchDenom())) return false;
+      if (!getQuantity()
+          .equals(other.getQuantity())) return false;
+      if (hasTotalPrice() != other.hasTotalPrice()) return false;
+      if (hasTotalPrice()) {
+        if (!getTotalPrice()
+            .equals(other.getTotalPrice())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BUY_ORDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getBuyOrderId());
+      hash = (37 * hash) + SELL_ORDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSellOrderId());
+      hash = (37 * hash) + BATCH_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getBatchDenom().hashCode();
+      hash = (37 * hash) + QUANTITY_FIELD_NUMBER;
+      hash = (53 * hash) + getQuantity().hashCode();
+      if (hasTotalPrice()) {
+        hash = (37 * hash) + TOTAL_PRICE_FIELD_NUMBER;
+        hash = (53 * hash) + getTotalPrice().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventBuyOrderFilled is an event emitted when a buy order is filled.
+     * </pre>
+     *
+     * Protobuf type {@code regen.ecocredit.v1alpha2.EventBuyOrderFilled}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.ecocredit.v1alpha2.EventBuyOrderFilled)
+        com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilledOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventBuyOrderFilled_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventBuyOrderFilled_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled.class, com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled.Builder.class);
+      }
+
+      // Construct using com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        buyOrderId_ = 0L;
+        sellOrderId_ = 0L;
+        batchDenom_ = "";
+        quantity_ = "";
+        totalPrice_ = null;
+        if (totalPriceBuilder_ != null) {
+          totalPriceBuilder_.dispose();
+          totalPriceBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventBuyOrderFilled_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled getDefaultInstanceForType() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled build() {
+        com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled buildPartial() {
+        com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled result = new com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.buyOrderId_ = buyOrderId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.sellOrderId_ = sellOrderId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.batchDenom_ = batchDenom_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.quantity_ = quantity_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.totalPrice_ = totalPriceBuilder_ == null
+              ? totalPrice_
+              : totalPriceBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled) {
+          return mergeFrom((com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled other) {
+        if (other == com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled.getDefaultInstance()) return this;
+        if (other.getBuyOrderId() != 0L) {
+          setBuyOrderId(other.getBuyOrderId());
+        }
+        if (other.getSellOrderId() != 0L) {
+          setSellOrderId(other.getSellOrderId());
+        }
+        if (!other.getBatchDenom().isEmpty()) {
+          batchDenom_ = other.batchDenom_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getQuantity().isEmpty()) {
+          quantity_ = other.quantity_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.hasTotalPrice()) {
+          mergeTotalPrice(other.getTotalPrice());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                buyOrderId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                sellOrderId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                batchDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                quantity_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getTotalPriceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long buyOrderId_ ;
+      /**
+       * <pre>
+       * buy_order_id is the unique ID of the buy order.
+       * </pre>
+       *
+       * <code>uint64 buy_order_id = 1 [json_name = "buyOrderId"];</code>
+       * @return The buyOrderId.
+       */
+      @java.lang.Override
+      public long getBuyOrderId() {
+        return buyOrderId_;
+      }
+      /**
+       * <pre>
+       * buy_order_id is the unique ID of the buy order.
+       * </pre>
+       *
+       * <code>uint64 buy_order_id = 1 [json_name = "buyOrderId"];</code>
+       * @param value The buyOrderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyOrderId(long value) {
+
+        buyOrderId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * buy_order_id is the unique ID of the buy order.
+       * </pre>
+       *
+       * <code>uint64 buy_order_id = 1 [json_name = "buyOrderId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBuyOrderId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        buyOrderId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long sellOrderId_ ;
+      /**
+       * <pre>
+       * sell_order_id is the unique ID of the sell order.
+       * </pre>
+       *
+       * <code>uint64 sell_order_id = 2 [json_name = "sellOrderId"];</code>
+       * @return The sellOrderId.
+       */
+      @java.lang.Override
+      public long getSellOrderId() {
+        return sellOrderId_;
+      }
+      /**
+       * <pre>
+       * sell_order_id is the unique ID of the sell order.
+       * </pre>
+       *
+       * <code>uint64 sell_order_id = 2 [json_name = "sellOrderId"];</code>
+       * @param value The sellOrderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSellOrderId(long value) {
+
+        sellOrderId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * sell_order_id is the unique ID of the sell order.
+       * </pre>
+       *
+       * <code>uint64 sell_order_id = 2 [json_name = "sellOrderId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSellOrderId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        sellOrderId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object batchDenom_ = "";
+      /**
+       * <pre>
+       * batch_denom is the credit batch ID of the purchased credits.
+       * </pre>
+       *
+       * <code>string batch_denom = 3 [json_name = "batchDenom"];</code>
+       * @return The batchDenom.
+       */
+      public java.lang.String getBatchDenom() {
+        java.lang.Object ref = batchDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          batchDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * batch_denom is the credit batch ID of the purchased credits.
+       * </pre>
+       *
+       * <code>string batch_denom = 3 [json_name = "batchDenom"];</code>
+       * @return The bytes for batchDenom.
+       */
+      public com.google.protobuf.ByteString
+          getBatchDenomBytes() {
+        java.lang.Object ref = batchDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          batchDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * batch_denom is the credit batch ID of the purchased credits.
+       * </pre>
+       *
+       * <code>string batch_denom = 3 [json_name = "batchDenom"];</code>
+       * @param value The batchDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBatchDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        batchDenom_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * batch_denom is the credit batch ID of the purchased credits.
+       * </pre>
+       *
+       * <code>string batch_denom = 3 [json_name = "batchDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBatchDenom() {
+        batchDenom_ = getDefaultInstance().getBatchDenom();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * batch_denom is the credit batch ID of the purchased credits.
+       * </pre>
+       *
+       * <code>string batch_denom = 3 [json_name = "batchDenom"];</code>
+       * @param value The bytes for batchDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBatchDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        batchDenom_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object quantity_ = "";
+      /**
+       * <pre>
+       * quantity is the quantity of the purchased credits.
+       * </pre>
+       *
+       * <code>string quantity = 4 [json_name = "quantity"];</code>
+       * @return The quantity.
+       */
+      public java.lang.String getQuantity() {
+        java.lang.Object ref = quantity_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          quantity_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * quantity is the quantity of the purchased credits.
+       * </pre>
+       *
+       * <code>string quantity = 4 [json_name = "quantity"];</code>
+       * @return The bytes for quantity.
+       */
+      public com.google.protobuf.ByteString
+          getQuantityBytes() {
+        java.lang.Object ref = quantity_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          quantity_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * quantity is the quantity of the purchased credits.
+       * </pre>
+       *
+       * <code>string quantity = 4 [json_name = "quantity"];</code>
+       * @param value The quantity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuantity(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        quantity_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * quantity is the quantity of the purchased credits.
+       * </pre>
+       *
+       * <code>string quantity = 4 [json_name = "quantity"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQuantity() {
+        quantity_ = getDefaultInstance().getQuantity();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * quantity is the quantity of the purchased credits.
+       * </pre>
+       *
+       * <code>string quantity = 4 [json_name = "quantity"];</code>
+       * @param value The bytes for quantity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuantityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        quantity_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin totalPrice_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> totalPriceBuilder_;
+      /**
+       * <pre>
+       * total_price is the total price for the purchased credits.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_price = 5 [json_name = "totalPrice"];</code>
+       * @return Whether the totalPrice field is set.
+       */
+      public boolean hasTotalPrice() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * total_price is the total price for the purchased credits.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_price = 5 [json_name = "totalPrice"];</code>
+       * @return The totalPrice.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getTotalPrice() {
+        if (totalPriceBuilder_ == null) {
+          return totalPrice_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : totalPrice_;
+        } else {
+          return totalPriceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * total_price is the total price for the purchased credits.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_price = 5 [json_name = "totalPrice"];</code>
+       */
+      public Builder setTotalPrice(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (totalPriceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          totalPrice_ = value;
+        } else {
+          totalPriceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_price is the total price for the purchased credits.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_price = 5 [json_name = "totalPrice"];</code>
+       */
+      public Builder setTotalPrice(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (totalPriceBuilder_ == null) {
+          totalPrice_ = builderForValue.build();
+        } else {
+          totalPriceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_price is the total price for the purchased credits.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_price = 5 [json_name = "totalPrice"];</code>
+       */
+      public Builder mergeTotalPrice(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (totalPriceBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            totalPrice_ != null &&
+            totalPrice_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getTotalPriceBuilder().mergeFrom(value);
+          } else {
+            totalPrice_ = value;
+          }
+        } else {
+          totalPriceBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_price is the total price for the purchased credits.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_price = 5 [json_name = "totalPrice"];</code>
+       */
+      public Builder clearTotalPrice() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        totalPrice_ = null;
+        if (totalPriceBuilder_ != null) {
+          totalPriceBuilder_.dispose();
+          totalPriceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_price is the total price for the purchased credits.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_price = 5 [json_name = "totalPrice"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getTotalPriceBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getTotalPriceFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * total_price is the total price for the purchased credits.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_price = 5 [json_name = "totalPrice"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTotalPriceOrBuilder() {
+        if (totalPriceBuilder_ != null) {
+          return totalPriceBuilder_.getMessageOrBuilder();
+        } else {
+          return totalPrice_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : totalPrice_;
+        }
+      }
+      /**
+       * <pre>
+       * total_price is the total price for the purchased credits.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_price = 5 [json_name = "totalPrice"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getTotalPriceFieldBuilder() {
+        if (totalPriceBuilder_ == null) {
+          totalPriceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getTotalPrice(),
+                  getParentForChildren(),
+                  isClean());
+          totalPrice_ = null;
+        }
+        return totalPriceBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.ecocredit.v1alpha2.EventBuyOrderFilled)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.ecocredit.v1alpha2.EventBuyOrderFilled)
+    private static final com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled();
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventBuyOrderFilled>
+        PARSER = new com.google.protobuf.AbstractParser<EventBuyOrderFilled>() {
+      @java.lang.Override
+      public EventBuyOrderFilled parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventBuyOrderFilled> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventBuyOrderFilled> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.ecocredit.v1alpha2.EventsProto.EventBuyOrderFilled getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventAllowAskDenomOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.ecocredit.v1alpha2.EventAllowAskDenom)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * denom is the denom to allow (ex. ibc/GLKHDSG423SGS)
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <pre>
+     * denom is the denom to allow (ex. ibc/GLKHDSG423SGS)
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <pre>
+     * display_denom is the denom to display to the user and is informational
+     * </pre>
+     *
+     * <code>string display_denom = 2 [json_name = "displayDenom"];</code>
+     * @return The displayDenom.
+     */
+    java.lang.String getDisplayDenom();
+    /**
+     * <pre>
+     * display_denom is the denom to display to the user and is informational
+     * </pre>
+     *
+     * <code>string display_denom = 2 [json_name = "displayDenom"];</code>
+     * @return The bytes for displayDenom.
+     */
+    com.google.protobuf.ByteString
+        getDisplayDenomBytes();
+
+    /**
+     * <pre>
+     * exponent is the exponent that relates the denom to the display_denom and is
+     * informational
+     * </pre>
+     *
+     * <code>uint32 exponent = 3 [json_name = "exponent"];</code>
+     * @return The exponent.
+     */
+    int getExponent();
+  }
+  /**
+   * <pre>
+   * EventAllowAskDenom is an event emitted when an ask denom is added.
+   * </pre>
+   *
+   * Protobuf type {@code regen.ecocredit.v1alpha2.EventAllowAskDenom}
+   */
+  public static final class EventAllowAskDenom extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.ecocredit.v1alpha2.EventAllowAskDenom)
+      EventAllowAskDenomOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventAllowAskDenom.newBuilder() to construct.
+    private EventAllowAskDenom(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventAllowAskDenom() {
+      denom_ = "";
+      displayDenom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventAllowAskDenom();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventAllowAskDenom_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventAllowAskDenom_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom.class, com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <pre>
+     * denom is the denom to allow (ex. ibc/GLKHDSG423SGS)
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * denom is the denom to allow (ex. ibc/GLKHDSG423SGS)
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DISPLAY_DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object displayDenom_ = "";
+    /**
+     * <pre>
+     * display_denom is the denom to display to the user and is informational
+     * </pre>
+     *
+     * <code>string display_denom = 2 [json_name = "displayDenom"];</code>
+     * @return The displayDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getDisplayDenom() {
+      java.lang.Object ref = displayDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        displayDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * display_denom is the denom to display to the user and is informational
+     * </pre>
+     *
+     * <code>string display_denom = 2 [json_name = "displayDenom"];</code>
+     * @return The bytes for displayDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDisplayDenomBytes() {
+      java.lang.Object ref = displayDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        displayDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EXPONENT_FIELD_NUMBER = 3;
+    private int exponent_ = 0;
+    /**
+     * <pre>
+     * exponent is the exponent that relates the denom to the display_denom and is
+     * informational
+     * </pre>
+     *
+     * <code>uint32 exponent = 3 [json_name = "exponent"];</code>
+     * @return The exponent.
+     */
+    @java.lang.Override
+    public int getExponent() {
+      return exponent_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, displayDenom_);
+      }
+      if (exponent_ != 0) {
+        output.writeUInt32(3, exponent_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, displayDenom_);
+      }
+      if (exponent_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, exponent_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom)) {
+        return super.equals(obj);
+      }
+      com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom other = (com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getDisplayDenom()
+          .equals(other.getDisplayDenom())) return false;
+      if (getExponent()
+          != other.getExponent()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + DISPLAY_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDisplayDenom().hashCode();
+      hash = (37 * hash) + EXPONENT_FIELD_NUMBER;
+      hash = (53 * hash) + getExponent();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventAllowAskDenom is an event emitted when an ask denom is added.
+     * </pre>
+     *
+     * Protobuf type {@code regen.ecocredit.v1alpha2.EventAllowAskDenom}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.ecocredit.v1alpha2.EventAllowAskDenom)
+        com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenomOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventAllowAskDenom_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventAllowAskDenom_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom.class, com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom.Builder.class);
+      }
+
+      // Construct using com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        displayDenom_ = "";
+        exponent_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.internal_static_regen_ecocredit_v1alpha2_EventAllowAskDenom_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom getDefaultInstanceForType() {
+        return com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom build() {
+        com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom buildPartial() {
+        com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom result = new com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.displayDenom_ = displayDenom_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.exponent_ = exponent_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom) {
+          return mergeFrom((com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom other) {
+        if (other == com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDisplayDenom().isEmpty()) {
+          displayDenom_ = other.displayDenom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getExponent() != 0) {
+          setExponent(other.getExponent());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                displayDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                exponent_ = input.readUInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <pre>
+       * denom is the denom to allow (ex. ibc/GLKHDSG423SGS)
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * denom is the denom to allow (ex. ibc/GLKHDSG423SGS)
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * denom is the denom to allow (ex. ibc/GLKHDSG423SGS)
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * denom is the denom to allow (ex. ibc/GLKHDSG423SGS)
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * denom is the denom to allow (ex. ibc/GLKHDSG423SGS)
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object displayDenom_ = "";
+      /**
+       * <pre>
+       * display_denom is the denom to display to the user and is informational
+       * </pre>
+       *
+       * <code>string display_denom = 2 [json_name = "displayDenom"];</code>
+       * @return The displayDenom.
+       */
+      public java.lang.String getDisplayDenom() {
+        java.lang.Object ref = displayDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          displayDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * display_denom is the denom to display to the user and is informational
+       * </pre>
+       *
+       * <code>string display_denom = 2 [json_name = "displayDenom"];</code>
+       * @return The bytes for displayDenom.
+       */
+      public com.google.protobuf.ByteString
+          getDisplayDenomBytes() {
+        java.lang.Object ref = displayDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          displayDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * display_denom is the denom to display to the user and is informational
+       * </pre>
+       *
+       * <code>string display_denom = 2 [json_name = "displayDenom"];</code>
+       * @param value The displayDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDisplayDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        displayDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * display_denom is the denom to display to the user and is informational
+       * </pre>
+       *
+       * <code>string display_denom = 2 [json_name = "displayDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDisplayDenom() {
+        displayDenom_ = getDefaultInstance().getDisplayDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * display_denom is the denom to display to the user and is informational
+       * </pre>
+       *
+       * <code>string display_denom = 2 [json_name = "displayDenom"];</code>
+       * @param value The bytes for displayDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDisplayDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        displayDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private int exponent_ ;
+      /**
+       * <pre>
+       * exponent is the exponent that relates the denom to the display_denom and is
+       * informational
+       * </pre>
+       *
+       * <code>uint32 exponent = 3 [json_name = "exponent"];</code>
+       * @return The exponent.
+       */
+      @java.lang.Override
+      public int getExponent() {
+        return exponent_;
+      }
+      /**
+       * <pre>
+       * exponent is the exponent that relates the denom to the display_denom and is
+       * informational
+       * </pre>
+       *
+       * <code>uint32 exponent = 3 [json_name = "exponent"];</code>
+       * @param value The exponent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExponent(int value) {
+
+        exponent_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * exponent is the exponent that relates the denom to the display_denom and is
+       * informational
+       * </pre>
+       *
+       * <code>uint32 exponent = 3 [json_name = "exponent"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExponent() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        exponent_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.ecocredit.v1alpha2.EventAllowAskDenom)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.ecocredit.v1alpha2.EventAllowAskDenom)
+    private static final com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom();
+    }
+
+    public static com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventAllowAskDenom>
+        PARSER = new com.google.protobuf.AbstractParser<EventAllowAskDenom>() {
+      @java.lang.Override
+      public EventAllowAskDenom parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventAllowAskDenom> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventAllowAskDenom> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.ecocredit.v1alpha2.EventsProto.EventAllowAskDenom getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_ecocredit_v1alpha2_EventCreateClass_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_ecocredit_v1alpha2_EventCreateClass_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_ecocredit_v1alpha2_EventCreateProject_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_ecocredit_v1alpha2_EventCreateProject_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_ecocredit_v1alpha2_EventCreateBatch_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_ecocredit_v1alpha2_EventCreateBatch_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_ecocredit_v1alpha2_EventReceive_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_ecocredit_v1alpha2_EventReceive_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_ecocredit_v1alpha2_EventRetire_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_ecocredit_v1alpha2_EventRetire_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_ecocredit_v1alpha2_EventCancel_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_ecocredit_v1alpha2_EventCancel_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_ecocredit_v1alpha2_EventSell_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_ecocredit_v1alpha2_EventSell_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_ecocredit_v1alpha2_EventUpdateSellOrder_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_ecocredit_v1alpha2_EventUpdateSellOrder_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_ecocredit_v1alpha2_EventBuyOrderCreated_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_ecocredit_v1alpha2_EventBuyOrderCreated_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_ecocredit_v1alpha2_EventBuyOrderFilled_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_ecocredit_v1alpha2_EventBuyOrderFilled_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_ecocredit_v1alpha2_EventAllowAskDenom_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_ecocredit_v1alpha2_EventAllowAskDenom_fieldAccessorTable;
 
@@ -129,13 +13602,13 @@ public final class EventsProto {
       "\031.cosmos.base.v1beta1.CoinR\ntotalPrice\"k" +
       "\n\022EventAllowAskDenom\022\024\n\005denom\030\001 \001(\tR\005den" +
       "om\022#\n\rdisplay_denom\030\002 \001(\tR\014displayDenom\022" +
-      "\032\n\010exponent\030\003 \001(\rR\010exponentB\340\001\n\034com.rege" +
-      "n.ecocredit.v1alpha2B\013EventsProtoP\001Z1git" +
-      "hub.com/regen-network/regen-ledger/x/eco" +
-      "credit\242\002\003REX\252\002\030Regen.Ecocredit.V1alpha2\312" +
-      "\002\030Regen\\Ecocredit\\V1alpha2\342\002$Regen\\Ecocr" +
-      "edit\\V1alpha2\\GPBMetadata\352\002\032Regen::Ecocr" +
-      "edit::V1alpha2b\006proto3"
+      "\032\n\010exponent\030\003 \001(\rR\010exponentB\336\001\n\034com.rege" +
+      "n.ecocredit.v1alpha2B\013EventsProtoZ1githu" +
+      "b.com/regen-network/regen-ledger/x/ecocr" +
+      "edit\242\002\003REX\252\002\030Regen.Ecocredit.V1alpha2\312\002\030" +
+      "Regen\\Ecocredit\\V1alpha2\342\002$Regen\\Ecocred" +
+      "it\\V1alpha2\\GPBMetadata\352\002\032Regen::Ecocred" +
+      "it::V1alpha2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

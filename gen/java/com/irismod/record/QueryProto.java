@@ -14,14 +14,1182 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryRecordRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.record.QueryRecordRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string record_id = 1 [json_name = "recordId"];</code>
+     * @return The recordId.
+     */
+    java.lang.String getRecordId();
+    /**
+     * <code>string record_id = 1 [json_name = "recordId"];</code>
+     * @return The bytes for recordId.
+     */
+    com.google.protobuf.ByteString
+        getRecordIdBytes();
+  }
+  /**
+   * <pre>
+   * QueryRecordRequest is the request type for the Query/Record RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.record.QueryRecordRequest}
+   */
+  public static final class QueryRecordRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.record.QueryRecordRequest)
+      QueryRecordRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRecordRequest.newBuilder() to construct.
+    private QueryRecordRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRecordRequest() {
+      recordId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRecordRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.record.QueryProto.internal_static_irismod_record_QueryRecordRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.record.QueryProto.internal_static_irismod_record_QueryRecordRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.record.QueryProto.QueryRecordRequest.class, com.irismod.record.QueryProto.QueryRecordRequest.Builder.class);
+    }
+
+    public static final int RECORD_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object recordId_ = "";
+    /**
+     * <code>string record_id = 1 [json_name = "recordId"];</code>
+     * @return The recordId.
+     */
+    @java.lang.Override
+    public java.lang.String getRecordId() {
+      java.lang.Object ref = recordId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recordId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string record_id = 1 [json_name = "recordId"];</code>
+     * @return The bytes for recordId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRecordIdBytes() {
+      java.lang.Object ref = recordId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recordId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, recordId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, recordId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.record.QueryProto.QueryRecordRequest)) {
+        return super.equals(obj);
+      }
+      com.irismod.record.QueryProto.QueryRecordRequest other = (com.irismod.record.QueryProto.QueryRecordRequest) obj;
+
+      if (!getRecordId()
+          .equals(other.getRecordId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RECORD_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRecordId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.record.QueryProto.QueryRecordRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.record.QueryProto.QueryRecordRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.record.QueryProto.QueryRecordRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.record.QueryProto.QueryRecordRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.record.QueryProto.QueryRecordRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.record.QueryProto.QueryRecordRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.record.QueryProto.QueryRecordRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.record.QueryProto.QueryRecordRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.record.QueryProto.QueryRecordRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.record.QueryProto.QueryRecordRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.record.QueryProto.QueryRecordRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.record.QueryProto.QueryRecordRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.record.QueryProto.QueryRecordRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryRecordRequest is the request type for the Query/Record RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.record.QueryRecordRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.record.QueryRecordRequest)
+        com.irismod.record.QueryProto.QueryRecordRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.record.QueryProto.internal_static_irismod_record_QueryRecordRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.record.QueryProto.internal_static_irismod_record_QueryRecordRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.record.QueryProto.QueryRecordRequest.class, com.irismod.record.QueryProto.QueryRecordRequest.Builder.class);
+      }
+
+      // Construct using com.irismod.record.QueryProto.QueryRecordRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        recordId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.record.QueryProto.internal_static_irismod_record_QueryRecordRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.record.QueryProto.QueryRecordRequest getDefaultInstanceForType() {
+        return com.irismod.record.QueryProto.QueryRecordRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.record.QueryProto.QueryRecordRequest build() {
+        com.irismod.record.QueryProto.QueryRecordRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.record.QueryProto.QueryRecordRequest buildPartial() {
+        com.irismod.record.QueryProto.QueryRecordRequest result = new com.irismod.record.QueryProto.QueryRecordRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.record.QueryProto.QueryRecordRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.recordId_ = recordId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.record.QueryProto.QueryRecordRequest) {
+          return mergeFrom((com.irismod.record.QueryProto.QueryRecordRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.record.QueryProto.QueryRecordRequest other) {
+        if (other == com.irismod.record.QueryProto.QueryRecordRequest.getDefaultInstance()) return this;
+        if (!other.getRecordId().isEmpty()) {
+          recordId_ = other.recordId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                recordId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object recordId_ = "";
+      /**
+       * <code>string record_id = 1 [json_name = "recordId"];</code>
+       * @return The recordId.
+       */
+      public java.lang.String getRecordId() {
+        java.lang.Object ref = recordId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          recordId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string record_id = 1 [json_name = "recordId"];</code>
+       * @return The bytes for recordId.
+       */
+      public com.google.protobuf.ByteString
+          getRecordIdBytes() {
+        java.lang.Object ref = recordId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          recordId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string record_id = 1 [json_name = "recordId"];</code>
+       * @param value The recordId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        recordId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string record_id = 1 [json_name = "recordId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecordId() {
+        recordId_ = getDefaultInstance().getRecordId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string record_id = 1 [json_name = "recordId"];</code>
+       * @param value The bytes for recordId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        recordId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.record.QueryRecordRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.record.QueryRecordRequest)
+    private static final com.irismod.record.QueryProto.QueryRecordRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.record.QueryProto.QueryRecordRequest();
+    }
+
+    public static com.irismod.record.QueryProto.QueryRecordRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRecordRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRecordRequest>() {
+      @java.lang.Override
+      public QueryRecordRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRecordRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRecordRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.record.QueryProto.QueryRecordRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRecordResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.record.QueryRecordResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.irismod.record.Record record = 1 [json_name = "record"];</code>
+     * @return Whether the record field is set.
+     */
+    boolean hasRecord();
+    /**
+     * <code>.irismod.record.Record record = 1 [json_name = "record"];</code>
+     * @return The record.
+     */
+    com.irismod.record.RecordProto.Record getRecord();
+    /**
+     * <code>.irismod.record.Record record = 1 [json_name = "record"];</code>
+     */
+    com.irismod.record.RecordProto.RecordOrBuilder getRecordOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryRecordResponse is the response type for the Query/Record RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.record.QueryRecordResponse}
+   */
+  public static final class QueryRecordResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.record.QueryRecordResponse)
+      QueryRecordResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRecordResponse.newBuilder() to construct.
+    private QueryRecordResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRecordResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRecordResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.record.QueryProto.internal_static_irismod_record_QueryRecordResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.record.QueryProto.internal_static_irismod_record_QueryRecordResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.record.QueryProto.QueryRecordResponse.class, com.irismod.record.QueryProto.QueryRecordResponse.Builder.class);
+    }
+
+    public static final int RECORD_FIELD_NUMBER = 1;
+    private com.irismod.record.RecordProto.Record record_;
+    /**
+     * <code>.irismod.record.Record record = 1 [json_name = "record"];</code>
+     * @return Whether the record field is set.
+     */
+    @java.lang.Override
+    public boolean hasRecord() {
+      return record_ != null;
+    }
+    /**
+     * <code>.irismod.record.Record record = 1 [json_name = "record"];</code>
+     * @return The record.
+     */
+    @java.lang.Override
+    public com.irismod.record.RecordProto.Record getRecord() {
+      return record_ == null ? com.irismod.record.RecordProto.Record.getDefaultInstance() : record_;
+    }
+    /**
+     * <code>.irismod.record.Record record = 1 [json_name = "record"];</code>
+     */
+    @java.lang.Override
+    public com.irismod.record.RecordProto.RecordOrBuilder getRecordOrBuilder() {
+      return record_ == null ? com.irismod.record.RecordProto.Record.getDefaultInstance() : record_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (record_ != null) {
+        output.writeMessage(1, getRecord());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (record_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getRecord());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.record.QueryProto.QueryRecordResponse)) {
+        return super.equals(obj);
+      }
+      com.irismod.record.QueryProto.QueryRecordResponse other = (com.irismod.record.QueryProto.QueryRecordResponse) obj;
+
+      if (hasRecord() != other.hasRecord()) return false;
+      if (hasRecord()) {
+        if (!getRecord()
+            .equals(other.getRecord())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasRecord()) {
+        hash = (37 * hash) + RECORD_FIELD_NUMBER;
+        hash = (53 * hash) + getRecord().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.record.QueryProto.QueryRecordResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.record.QueryProto.QueryRecordResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.record.QueryProto.QueryRecordResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.record.QueryProto.QueryRecordResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.record.QueryProto.QueryRecordResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.record.QueryProto.QueryRecordResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.record.QueryProto.QueryRecordResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.record.QueryProto.QueryRecordResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.record.QueryProto.QueryRecordResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.record.QueryProto.QueryRecordResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.record.QueryProto.QueryRecordResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.record.QueryProto.QueryRecordResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.record.QueryProto.QueryRecordResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryRecordResponse is the response type for the Query/Record RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.record.QueryRecordResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.record.QueryRecordResponse)
+        com.irismod.record.QueryProto.QueryRecordResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.record.QueryProto.internal_static_irismod_record_QueryRecordResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.record.QueryProto.internal_static_irismod_record_QueryRecordResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.record.QueryProto.QueryRecordResponse.class, com.irismod.record.QueryProto.QueryRecordResponse.Builder.class);
+      }
+
+      // Construct using com.irismod.record.QueryProto.QueryRecordResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        record_ = null;
+        if (recordBuilder_ != null) {
+          recordBuilder_.dispose();
+          recordBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.record.QueryProto.internal_static_irismod_record_QueryRecordResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.record.QueryProto.QueryRecordResponse getDefaultInstanceForType() {
+        return com.irismod.record.QueryProto.QueryRecordResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.record.QueryProto.QueryRecordResponse build() {
+        com.irismod.record.QueryProto.QueryRecordResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.record.QueryProto.QueryRecordResponse buildPartial() {
+        com.irismod.record.QueryProto.QueryRecordResponse result = new com.irismod.record.QueryProto.QueryRecordResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.record.QueryProto.QueryRecordResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.record_ = recordBuilder_ == null
+              ? record_
+              : recordBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.record.QueryProto.QueryRecordResponse) {
+          return mergeFrom((com.irismod.record.QueryProto.QueryRecordResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.record.QueryProto.QueryRecordResponse other) {
+        if (other == com.irismod.record.QueryProto.QueryRecordResponse.getDefaultInstance()) return this;
+        if (other.hasRecord()) {
+          mergeRecord(other.getRecord());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getRecordFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.irismod.record.RecordProto.Record record_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.irismod.record.RecordProto.Record, com.irismod.record.RecordProto.Record.Builder, com.irismod.record.RecordProto.RecordOrBuilder> recordBuilder_;
+      /**
+       * <code>.irismod.record.Record record = 1 [json_name = "record"];</code>
+       * @return Whether the record field is set.
+       */
+      public boolean hasRecord() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.irismod.record.Record record = 1 [json_name = "record"];</code>
+       * @return The record.
+       */
+      public com.irismod.record.RecordProto.Record getRecord() {
+        if (recordBuilder_ == null) {
+          return record_ == null ? com.irismod.record.RecordProto.Record.getDefaultInstance() : record_;
+        } else {
+          return recordBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.irismod.record.Record record = 1 [json_name = "record"];</code>
+       */
+      public Builder setRecord(com.irismod.record.RecordProto.Record value) {
+        if (recordBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          record_ = value;
+        } else {
+          recordBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.record.Record record = 1 [json_name = "record"];</code>
+       */
+      public Builder setRecord(
+          com.irismod.record.RecordProto.Record.Builder builderForValue) {
+        if (recordBuilder_ == null) {
+          record_ = builderForValue.build();
+        } else {
+          recordBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.record.Record record = 1 [json_name = "record"];</code>
+       */
+      public Builder mergeRecord(com.irismod.record.RecordProto.Record value) {
+        if (recordBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            record_ != null &&
+            record_ != com.irismod.record.RecordProto.Record.getDefaultInstance()) {
+            getRecordBuilder().mergeFrom(value);
+          } else {
+            record_ = value;
+          }
+        } else {
+          recordBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.record.Record record = 1 [json_name = "record"];</code>
+       */
+      public Builder clearRecord() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        record_ = null;
+        if (recordBuilder_ != null) {
+          recordBuilder_.dispose();
+          recordBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.record.Record record = 1 [json_name = "record"];</code>
+       */
+      public com.irismod.record.RecordProto.Record.Builder getRecordBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getRecordFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.irismod.record.Record record = 1 [json_name = "record"];</code>
+       */
+      public com.irismod.record.RecordProto.RecordOrBuilder getRecordOrBuilder() {
+        if (recordBuilder_ != null) {
+          return recordBuilder_.getMessageOrBuilder();
+        } else {
+          return record_ == null ?
+              com.irismod.record.RecordProto.Record.getDefaultInstance() : record_;
+        }
+      }
+      /**
+       * <code>.irismod.record.Record record = 1 [json_name = "record"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.irismod.record.RecordProto.Record, com.irismod.record.RecordProto.Record.Builder, com.irismod.record.RecordProto.RecordOrBuilder> 
+          getRecordFieldBuilder() {
+        if (recordBuilder_ == null) {
+          recordBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.irismod.record.RecordProto.Record, com.irismod.record.RecordProto.Record.Builder, com.irismod.record.RecordProto.RecordOrBuilder>(
+                  getRecord(),
+                  getParentForChildren(),
+                  isClean());
+          record_ = null;
+        }
+        return recordBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.record.QueryRecordResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.record.QueryRecordResponse)
+    private static final com.irismod.record.QueryProto.QueryRecordResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.record.QueryProto.QueryRecordResponse();
+    }
+
+    public static com.irismod.record.QueryProto.QueryRecordResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRecordResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRecordResponse>() {
+      @java.lang.Override
+      public QueryRecordResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRecordResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRecordResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.record.QueryProto.QueryRecordResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_record_QueryRecordRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_record_QueryRecordRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_record_QueryRecordResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_record_QueryRecordResponse_fieldAccessorTable;
 
@@ -42,11 +1210,11 @@ public final class QueryProto {
       "ecord\022\".irismod.record.QueryRecordReques" +
       "t\032#.irismod.record.QueryRecordResponse\"+" +
       "\202\323\344\223\002%\022#/irismod/record/records/{record_" +
-      "id}B\252\001\n\022com.irismod.recordB\nQueryProtoP\001" +
-      "Z/github.com/irisnet/irismod/modules/rec" +
-      "ord/types\242\002\003IRX\252\002\016Irismod.Record\312\002\016Irism" +
-      "od\\Record\342\002\032Irismod\\Record\\GPBMetadata\352\002" +
-      "\017Irismod::Recordb\006proto3"
+      "id}B\250\001\n\022com.irismod.recordB\nQueryProtoZ/" +
+      "github.com/irisnet/irismod/modules/recor" +
+      "d/types\242\002\003IRX\252\002\016Irismod.Record\312\002\016Irismod" +
+      "\\Record\342\002\032Irismod\\Record\\GPBMetadata\352\002\017I" +
+      "rismod::Recordb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,44 +14,6077 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgCreateValidatorOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.MsgCreateValidator)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Description meta data
+     * </pre>
+     *
+     * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false];</code>
+     * @return Whether the description field is set.
+     */
+    boolean hasDescription();
+    /**
+     * <pre>
+     * Description meta data
+     * </pre>
+     *
+     * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false];</code>
+     * @return The description.
+     */
+    com.cosmos.staking.v1beta1.StakingProto.Description getDescription();
+    /**
+     * <pre>
+     * Description meta data
+     * </pre>
+     *
+     * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.staking.v1beta1.StakingProto.DescriptionOrBuilder getDescriptionOrBuilder();
+
+    /**
+     * <pre>
+     * OperatorAddress is the bech32 address string
+     * </pre>
+     *
+     * <code>string operator_address = 4 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+     * @return The operatorAddress.
+     */
+    java.lang.String getOperatorAddress();
+    /**
+     * <pre>
+     * OperatorAddress is the bech32 address string
+     * </pre>
+     *
+     * <code>string operator_address = 4 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+     * @return The bytes for operatorAddress.
+     */
+    com.google.protobuf.ByteString
+        getOperatorAddressBytes();
+
+    /**
+     * <pre>
+     * Pubkey public key
+     * </pre>
+     *
+     * <code>.google.protobuf.Any pubkey = 6 [json_name = "pubkey", (.cosmos_proto.accepts_interface) = "cosmos.crypto.PubKey"];</code>
+     * @return Whether the pubkey field is set.
+     */
+    boolean hasPubkey();
+    /**
+     * <pre>
+     * Pubkey public key
+     * </pre>
+     *
+     * <code>.google.protobuf.Any pubkey = 6 [json_name = "pubkey", (.cosmos_proto.accepts_interface) = "cosmos.crypto.PubKey"];</code>
+     * @return The pubkey.
+     */
+    com.google.protobuf.Any getPubkey();
+    /**
+     * <pre>
+     * Pubkey public key
+     * </pre>
+     *
+     * <code>.google.protobuf.Any pubkey = 6 [json_name = "pubkey", (.cosmos_proto.accepts_interface) = "cosmos.crypto.PubKey"];</code>
+     */
+    com.google.protobuf.AnyOrBuilder getPubkeyOrBuilder();
+
+    /**
+     * <pre>
+     * Amount defines the initial staking amount from a liquid balance
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin amount = 7 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+     * @return Whether the amount field is set.
+     */
+    boolean hasAmount();
+    /**
+     * <pre>
+     * Amount defines the initial staking amount from a liquid balance
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin amount = 7 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+     * @return The amount.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getAmount();
+    /**
+     * <pre>
+     * Amount defines the initial staking amount from a liquid balance
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin amount = 7 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder();
+
+    /**
+     * <pre>
+     * VestingAmount defines the initial staking amount from a vesting account
+     * balance
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin vesting_amount = 8 [json_name = "vestingAmount", (.gogoproto.nullable) = false];</code>
+     * @return Whether the vestingAmount field is set.
+     */
+    boolean hasVestingAmount();
+    /**
+     * <pre>
+     * VestingAmount defines the initial staking amount from a vesting account
+     * balance
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin vesting_amount = 8 [json_name = "vestingAmount", (.gogoproto.nullable) = false];</code>
+     * @return The vestingAmount.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getVestingAmount();
+    /**
+     * <pre>
+     * VestingAmount defines the initial staking amount from a vesting account
+     * balance
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin vesting_amount = 8 [json_name = "vestingAmount", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getVestingAmountOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgCreateValidator defines a PoE message for creating a new validator.
+   * Based on the SDK staking.MsgCreateValidator
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.MsgCreateValidator}
+   */
+  public static final class MsgCreateValidator extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.MsgCreateValidator)
+      MsgCreateValidatorOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateValidator.newBuilder() to construct.
+    private MsgCreateValidator(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateValidator() {
+      operatorAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateValidator();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgCreateValidator_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgCreateValidator_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.TxProto.MsgCreateValidator.class, com.confio.poe.v1beta1.TxProto.MsgCreateValidator.Builder.class);
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 1;
+    private com.cosmos.staking.v1beta1.StakingProto.Description description_;
+    /**
+     * <pre>
+     * Description meta data
+     * </pre>
+     *
+     * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false];</code>
+     * @return Whether the description field is set.
+     */
+    @java.lang.Override
+    public boolean hasDescription() {
+      return description_ != null;
+    }
+    /**
+     * <pre>
+     * Description meta data
+     * </pre>
+     *
+     * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public com.cosmos.staking.v1beta1.StakingProto.Description getDescription() {
+      return description_ == null ? com.cosmos.staking.v1beta1.StakingProto.Description.getDefaultInstance() : description_;
+    }
+    /**
+     * <pre>
+     * Description meta data
+     * </pre>
+     *
+     * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.staking.v1beta1.StakingProto.DescriptionOrBuilder getDescriptionOrBuilder() {
+      return description_ == null ? com.cosmos.staking.v1beta1.StakingProto.Description.getDefaultInstance() : description_;
+    }
+
+    public static final int OPERATOR_ADDRESS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object operatorAddress_ = "";
+    /**
+     * <pre>
+     * OperatorAddress is the bech32 address string
+     * </pre>
+     *
+     * <code>string operator_address = 4 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+     * @return The operatorAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getOperatorAddress() {
+      java.lang.Object ref = operatorAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        operatorAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * OperatorAddress is the bech32 address string
+     * </pre>
+     *
+     * <code>string operator_address = 4 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+     * @return The bytes for operatorAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOperatorAddressBytes() {
+      java.lang.Object ref = operatorAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        operatorAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PUBKEY_FIELD_NUMBER = 6;
+    private com.google.protobuf.Any pubkey_;
+    /**
+     * <pre>
+     * Pubkey public key
+     * </pre>
+     *
+     * <code>.google.protobuf.Any pubkey = 6 [json_name = "pubkey", (.cosmos_proto.accepts_interface) = "cosmos.crypto.PubKey"];</code>
+     * @return Whether the pubkey field is set.
+     */
+    @java.lang.Override
+    public boolean hasPubkey() {
+      return pubkey_ != null;
+    }
+    /**
+     * <pre>
+     * Pubkey public key
+     * </pre>
+     *
+     * <code>.google.protobuf.Any pubkey = 6 [json_name = "pubkey", (.cosmos_proto.accepts_interface) = "cosmos.crypto.PubKey"];</code>
+     * @return The pubkey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Any getPubkey() {
+      return pubkey_ == null ? com.google.protobuf.Any.getDefaultInstance() : pubkey_;
+    }
+    /**
+     * <pre>
+     * Pubkey public key
+     * </pre>
+     *
+     * <code>.google.protobuf.Any pubkey = 6 [json_name = "pubkey", (.cosmos_proto.accepts_interface) = "cosmos.crypto.PubKey"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.AnyOrBuilder getPubkeyOrBuilder() {
+      return pubkey_ == null ? com.google.protobuf.Any.getDefaultInstance() : pubkey_;
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 7;
+    private com.cosmos.base.v1beta1.CoinProto.Coin amount_;
+    /**
+     * <pre>
+     * Amount defines the initial staking amount from a liquid balance
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin amount = 7 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+     * @return Whether the amount field is set.
+     */
+    @java.lang.Override
+    public boolean hasAmount() {
+      return amount_ != null;
+    }
+    /**
+     * <pre>
+     * Amount defines the initial staking amount from a liquid balance
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin amount = 7 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getAmount() {
+      return amount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : amount_;
+    }
+    /**
+     * <pre>
+     * Amount defines the initial staking amount from a liquid balance
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin amount = 7 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder() {
+      return amount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : amount_;
+    }
+
+    public static final int VESTING_AMOUNT_FIELD_NUMBER = 8;
+    private com.cosmos.base.v1beta1.CoinProto.Coin vestingAmount_;
+    /**
+     * <pre>
+     * VestingAmount defines the initial staking amount from a vesting account
+     * balance
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin vesting_amount = 8 [json_name = "vestingAmount", (.gogoproto.nullable) = false];</code>
+     * @return Whether the vestingAmount field is set.
+     */
+    @java.lang.Override
+    public boolean hasVestingAmount() {
+      return vestingAmount_ != null;
+    }
+    /**
+     * <pre>
+     * VestingAmount defines the initial staking amount from a vesting account
+     * balance
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin vesting_amount = 8 [json_name = "vestingAmount", (.gogoproto.nullable) = false];</code>
+     * @return The vestingAmount.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getVestingAmount() {
+      return vestingAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : vestingAmount_;
+    }
+    /**
+     * <pre>
+     * VestingAmount defines the initial staking amount from a vesting account
+     * balance
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin vesting_amount = 8 [json_name = "vestingAmount", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getVestingAmountOrBuilder() {
+      return vestingAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : vestingAmount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (description_ != null) {
+        output.writeMessage(1, getDescription());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatorAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, operatorAddress_);
+      }
+      if (pubkey_ != null) {
+        output.writeMessage(6, getPubkey());
+      }
+      if (amount_ != null) {
+        output.writeMessage(7, getAmount());
+      }
+      if (vestingAmount_ != null) {
+        output.writeMessage(8, getVestingAmount());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (description_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getDescription());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatorAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, operatorAddress_);
+      }
+      if (pubkey_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getPubkey());
+      }
+      if (amount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getAmount());
+      }
+      if (vestingAmount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getVestingAmount());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.TxProto.MsgCreateValidator)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.TxProto.MsgCreateValidator other = (com.confio.poe.v1beta1.TxProto.MsgCreateValidator) obj;
+
+      if (hasDescription() != other.hasDescription()) return false;
+      if (hasDescription()) {
+        if (!getDescription()
+            .equals(other.getDescription())) return false;
+      }
+      if (!getOperatorAddress()
+          .equals(other.getOperatorAddress())) return false;
+      if (hasPubkey() != other.hasPubkey()) return false;
+      if (hasPubkey()) {
+        if (!getPubkey()
+            .equals(other.getPubkey())) return false;
+      }
+      if (hasAmount() != other.hasAmount()) return false;
+      if (hasAmount()) {
+        if (!getAmount()
+            .equals(other.getAmount())) return false;
+      }
+      if (hasVestingAmount() != other.hasVestingAmount()) return false;
+      if (hasVestingAmount()) {
+        if (!getVestingAmount()
+            .equals(other.getVestingAmount())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDescription()) {
+        hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+        hash = (53 * hash) + getDescription().hashCode();
+      }
+      hash = (37 * hash) + OPERATOR_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getOperatorAddress().hashCode();
+      if (hasPubkey()) {
+        hash = (37 * hash) + PUBKEY_FIELD_NUMBER;
+        hash = (53 * hash) + getPubkey().hashCode();
+      }
+      if (hasAmount()) {
+        hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getAmount().hashCode();
+      }
+      if (hasVestingAmount()) {
+        hash = (37 * hash) + VESTING_AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getVestingAmount().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgCreateValidator parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgCreateValidator parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgCreateValidator parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgCreateValidator parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgCreateValidator parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgCreateValidator parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgCreateValidator parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgCreateValidator parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgCreateValidator parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgCreateValidator parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgCreateValidator parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgCreateValidator parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.TxProto.MsgCreateValidator prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateValidator defines a PoE message for creating a new validator.
+     * Based on the SDK staking.MsgCreateValidator
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.MsgCreateValidator}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.MsgCreateValidator)
+        com.confio.poe.v1beta1.TxProto.MsgCreateValidatorOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgCreateValidator_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgCreateValidator_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.TxProto.MsgCreateValidator.class, com.confio.poe.v1beta1.TxProto.MsgCreateValidator.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.TxProto.MsgCreateValidator.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        description_ = null;
+        if (descriptionBuilder_ != null) {
+          descriptionBuilder_.dispose();
+          descriptionBuilder_ = null;
+        }
+        operatorAddress_ = "";
+        pubkey_ = null;
+        if (pubkeyBuilder_ != null) {
+          pubkeyBuilder_.dispose();
+          pubkeyBuilder_ = null;
+        }
+        amount_ = null;
+        if (amountBuilder_ != null) {
+          amountBuilder_.dispose();
+          amountBuilder_ = null;
+        }
+        vestingAmount_ = null;
+        if (vestingAmountBuilder_ != null) {
+          vestingAmountBuilder_.dispose();
+          vestingAmountBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgCreateValidator_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.TxProto.MsgCreateValidator getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.TxProto.MsgCreateValidator.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.TxProto.MsgCreateValidator build() {
+        com.confio.poe.v1beta1.TxProto.MsgCreateValidator result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.TxProto.MsgCreateValidator buildPartial() {
+        com.confio.poe.v1beta1.TxProto.MsgCreateValidator result = new com.confio.poe.v1beta1.TxProto.MsgCreateValidator(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.poe.v1beta1.TxProto.MsgCreateValidator result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.description_ = descriptionBuilder_ == null
+              ? description_
+              : descriptionBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.operatorAddress_ = operatorAddress_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.pubkey_ = pubkeyBuilder_ == null
+              ? pubkey_
+              : pubkeyBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.amount_ = amountBuilder_ == null
+              ? amount_
+              : amountBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.vestingAmount_ = vestingAmountBuilder_ == null
+              ? vestingAmount_
+              : vestingAmountBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.TxProto.MsgCreateValidator) {
+          return mergeFrom((com.confio.poe.v1beta1.TxProto.MsgCreateValidator)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.TxProto.MsgCreateValidator other) {
+        if (other == com.confio.poe.v1beta1.TxProto.MsgCreateValidator.getDefaultInstance()) return this;
+        if (other.hasDescription()) {
+          mergeDescription(other.getDescription());
+        }
+        if (!other.getOperatorAddress().isEmpty()) {
+          operatorAddress_ = other.operatorAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasPubkey()) {
+          mergePubkey(other.getPubkey());
+        }
+        if (other.hasAmount()) {
+          mergeAmount(other.getAmount());
+        }
+        if (other.hasVestingAmount()) {
+          mergeVestingAmount(other.getVestingAmount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDescriptionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 34: {
+                operatorAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 34
+              case 50: {
+                input.readMessage(
+                    getPubkeyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 50
+              case 58: {
+                input.readMessage(
+                    getAmountFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 58
+              case 66: {
+                input.readMessage(
+                    getVestingAmountFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 66
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.staking.v1beta1.StakingProto.Description description_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.staking.v1beta1.StakingProto.Description, com.cosmos.staking.v1beta1.StakingProto.Description.Builder, com.cosmos.staking.v1beta1.StakingProto.DescriptionOrBuilder> descriptionBuilder_;
+      /**
+       * <pre>
+       * Description meta data
+       * </pre>
+       *
+       * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false];</code>
+       * @return Whether the description field is set.
+       */
+      public boolean hasDescription() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Description meta data
+       * </pre>
+       *
+       * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false];</code>
+       * @return The description.
+       */
+      public com.cosmos.staking.v1beta1.StakingProto.Description getDescription() {
+        if (descriptionBuilder_ == null) {
+          return description_ == null ? com.cosmos.staking.v1beta1.StakingProto.Description.getDefaultInstance() : description_;
+        } else {
+          return descriptionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Description meta data
+       * </pre>
+       *
+       * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDescription(com.cosmos.staking.v1beta1.StakingProto.Description value) {
+        if (descriptionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          description_ = value;
+        } else {
+          descriptionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description meta data
+       * </pre>
+       *
+       * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDescription(
+          com.cosmos.staking.v1beta1.StakingProto.Description.Builder builderForValue) {
+        if (descriptionBuilder_ == null) {
+          description_ = builderForValue.build();
+        } else {
+          descriptionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description meta data
+       * </pre>
+       *
+       * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeDescription(com.cosmos.staking.v1beta1.StakingProto.Description value) {
+        if (descriptionBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            description_ != null &&
+            description_ != com.cosmos.staking.v1beta1.StakingProto.Description.getDefaultInstance()) {
+            getDescriptionBuilder().mergeFrom(value);
+          } else {
+            description_ = value;
+          }
+        } else {
+          descriptionBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description meta data
+       * </pre>
+       *
+       * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDescription() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        description_ = null;
+        if (descriptionBuilder_ != null) {
+          descriptionBuilder_.dispose();
+          descriptionBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description meta data
+       * </pre>
+       *
+       * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.staking.v1beta1.StakingProto.Description.Builder getDescriptionBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getDescriptionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Description meta data
+       * </pre>
+       *
+       * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.staking.v1beta1.StakingProto.DescriptionOrBuilder getDescriptionOrBuilder() {
+        if (descriptionBuilder_ != null) {
+          return descriptionBuilder_.getMessageOrBuilder();
+        } else {
+          return description_ == null ?
+              com.cosmos.staking.v1beta1.StakingProto.Description.getDefaultInstance() : description_;
+        }
+      }
+      /**
+       * <pre>
+       * Description meta data
+       * </pre>
+       *
+       * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.staking.v1beta1.StakingProto.Description, com.cosmos.staking.v1beta1.StakingProto.Description.Builder, com.cosmos.staking.v1beta1.StakingProto.DescriptionOrBuilder> 
+          getDescriptionFieldBuilder() {
+        if (descriptionBuilder_ == null) {
+          descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.staking.v1beta1.StakingProto.Description, com.cosmos.staking.v1beta1.StakingProto.Description.Builder, com.cosmos.staking.v1beta1.StakingProto.DescriptionOrBuilder>(
+                  getDescription(),
+                  getParentForChildren(),
+                  isClean());
+          description_ = null;
+        }
+        return descriptionBuilder_;
+      }
+
+      private java.lang.Object operatorAddress_ = "";
+      /**
+       * <pre>
+       * OperatorAddress is the bech32 address string
+       * </pre>
+       *
+       * <code>string operator_address = 4 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+       * @return The operatorAddress.
+       */
+      public java.lang.String getOperatorAddress() {
+        java.lang.Object ref = operatorAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          operatorAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * OperatorAddress is the bech32 address string
+       * </pre>
+       *
+       * <code>string operator_address = 4 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+       * @return The bytes for operatorAddress.
+       */
+      public com.google.protobuf.ByteString
+          getOperatorAddressBytes() {
+        java.lang.Object ref = operatorAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          operatorAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * OperatorAddress is the bech32 address string
+       * </pre>
+       *
+       * <code>string operator_address = 4 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+       * @param value The operatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperatorAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        operatorAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * OperatorAddress is the bech32 address string
+       * </pre>
+       *
+       * <code>string operator_address = 4 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOperatorAddress() {
+        operatorAddress_ = getDefaultInstance().getOperatorAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * OperatorAddress is the bech32 address string
+       * </pre>
+       *
+       * <code>string operator_address = 4 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+       * @param value The bytes for operatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperatorAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        operatorAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Any pubkey_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> pubkeyBuilder_;
+      /**
+       * <pre>
+       * Pubkey public key
+       * </pre>
+       *
+       * <code>.google.protobuf.Any pubkey = 6 [json_name = "pubkey", (.cosmos_proto.accepts_interface) = "cosmos.crypto.PubKey"];</code>
+       * @return Whether the pubkey field is set.
+       */
+      public boolean hasPubkey() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Pubkey public key
+       * </pre>
+       *
+       * <code>.google.protobuf.Any pubkey = 6 [json_name = "pubkey", (.cosmos_proto.accepts_interface) = "cosmos.crypto.PubKey"];</code>
+       * @return The pubkey.
+       */
+      public com.google.protobuf.Any getPubkey() {
+        if (pubkeyBuilder_ == null) {
+          return pubkey_ == null ? com.google.protobuf.Any.getDefaultInstance() : pubkey_;
+        } else {
+          return pubkeyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Pubkey public key
+       * </pre>
+       *
+       * <code>.google.protobuf.Any pubkey = 6 [json_name = "pubkey", (.cosmos_proto.accepts_interface) = "cosmos.crypto.PubKey"];</code>
+       */
+      public Builder setPubkey(com.google.protobuf.Any value) {
+        if (pubkeyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pubkey_ = value;
+        } else {
+          pubkeyBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Pubkey public key
+       * </pre>
+       *
+       * <code>.google.protobuf.Any pubkey = 6 [json_name = "pubkey", (.cosmos_proto.accepts_interface) = "cosmos.crypto.PubKey"];</code>
+       */
+      public Builder setPubkey(
+          com.google.protobuf.Any.Builder builderForValue) {
+        if (pubkeyBuilder_ == null) {
+          pubkey_ = builderForValue.build();
+        } else {
+          pubkeyBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Pubkey public key
+       * </pre>
+       *
+       * <code>.google.protobuf.Any pubkey = 6 [json_name = "pubkey", (.cosmos_proto.accepts_interface) = "cosmos.crypto.PubKey"];</code>
+       */
+      public Builder mergePubkey(com.google.protobuf.Any value) {
+        if (pubkeyBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            pubkey_ != null &&
+            pubkey_ != com.google.protobuf.Any.getDefaultInstance()) {
+            getPubkeyBuilder().mergeFrom(value);
+          } else {
+            pubkey_ = value;
+          }
+        } else {
+          pubkeyBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Pubkey public key
+       * </pre>
+       *
+       * <code>.google.protobuf.Any pubkey = 6 [json_name = "pubkey", (.cosmos_proto.accepts_interface) = "cosmos.crypto.PubKey"];</code>
+       */
+      public Builder clearPubkey() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        pubkey_ = null;
+        if (pubkeyBuilder_ != null) {
+          pubkeyBuilder_.dispose();
+          pubkeyBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Pubkey public key
+       * </pre>
+       *
+       * <code>.google.protobuf.Any pubkey = 6 [json_name = "pubkey", (.cosmos_proto.accepts_interface) = "cosmos.crypto.PubKey"];</code>
+       */
+      public com.google.protobuf.Any.Builder getPubkeyBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getPubkeyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Pubkey public key
+       * </pre>
+       *
+       * <code>.google.protobuf.Any pubkey = 6 [json_name = "pubkey", (.cosmos_proto.accepts_interface) = "cosmos.crypto.PubKey"];</code>
+       */
+      public com.google.protobuf.AnyOrBuilder getPubkeyOrBuilder() {
+        if (pubkeyBuilder_ != null) {
+          return pubkeyBuilder_.getMessageOrBuilder();
+        } else {
+          return pubkey_ == null ?
+              com.google.protobuf.Any.getDefaultInstance() : pubkey_;
+        }
+      }
+      /**
+       * <pre>
+       * Pubkey public key
+       * </pre>
+       *
+       * <code>.google.protobuf.Any pubkey = 6 [json_name = "pubkey", (.cosmos_proto.accepts_interface) = "cosmos.crypto.PubKey"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
+          getPubkeyFieldBuilder() {
+        if (pubkeyBuilder_ == null) {
+          pubkeyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
+                  getPubkey(),
+                  getParentForChildren(),
+                  isClean());
+          pubkey_ = null;
+        }
+        return pubkeyBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin amount_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> amountBuilder_;
+      /**
+       * <pre>
+       * Amount defines the initial staking amount from a liquid balance
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 7 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       * @return Whether the amount field is set.
+       */
+      public boolean hasAmount() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * Amount defines the initial staking amount from a liquid balance
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 7 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       * @return The amount.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getAmount() {
+        if (amountBuilder_ == null) {
+          return amount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : amount_;
+        } else {
+          return amountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Amount defines the initial staking amount from a liquid balance
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 7 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (amountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          amount_ = value;
+        } else {
+          amountBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount defines the initial staking amount from a liquid balance
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 7 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAmount(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (amountBuilder_ == null) {
+          amount_ = builderForValue.build();
+        } else {
+          amountBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount defines the initial staking amount from a liquid balance
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 7 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (amountBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            amount_ != null &&
+            amount_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getAmountBuilder().mergeFrom(value);
+          } else {
+            amount_ = value;
+          }
+        } else {
+          amountBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount defines the initial staking amount from a liquid balance
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 7 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAmount() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        amount_ = null;
+        if (amountBuilder_ != null) {
+          amountBuilder_.dispose();
+          amountBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount defines the initial staking amount from a liquid balance
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 7 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getAmountBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getAmountFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Amount defines the initial staking amount from a liquid balance
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 7 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder() {
+        if (amountBuilder_ != null) {
+          return amountBuilder_.getMessageOrBuilder();
+        } else {
+          return amount_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : amount_;
+        }
+      }
+      /**
+       * <pre>
+       * Amount defines the initial staking amount from a liquid balance
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin amount = 7 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getAmountFieldBuilder() {
+        if (amountBuilder_ == null) {
+          amountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getAmount(),
+                  getParentForChildren(),
+                  isClean());
+          amount_ = null;
+        }
+        return amountBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin vestingAmount_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> vestingAmountBuilder_;
+      /**
+       * <pre>
+       * VestingAmount defines the initial staking amount from a vesting account
+       * balance
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin vesting_amount = 8 [json_name = "vestingAmount", (.gogoproto.nullable) = false];</code>
+       * @return Whether the vestingAmount field is set.
+       */
+      public boolean hasVestingAmount() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * VestingAmount defines the initial staking amount from a vesting account
+       * balance
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin vesting_amount = 8 [json_name = "vestingAmount", (.gogoproto.nullable) = false];</code>
+       * @return The vestingAmount.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getVestingAmount() {
+        if (vestingAmountBuilder_ == null) {
+          return vestingAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : vestingAmount_;
+        } else {
+          return vestingAmountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * VestingAmount defines the initial staking amount from a vesting account
+       * balance
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin vesting_amount = 8 [json_name = "vestingAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setVestingAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (vestingAmountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          vestingAmount_ = value;
+        } else {
+          vestingAmountBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * VestingAmount defines the initial staking amount from a vesting account
+       * balance
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin vesting_amount = 8 [json_name = "vestingAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setVestingAmount(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (vestingAmountBuilder_ == null) {
+          vestingAmount_ = builderForValue.build();
+        } else {
+          vestingAmountBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * VestingAmount defines the initial staking amount from a vesting account
+       * balance
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin vesting_amount = 8 [json_name = "vestingAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeVestingAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (vestingAmountBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            vestingAmount_ != null &&
+            vestingAmount_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getVestingAmountBuilder().mergeFrom(value);
+          } else {
+            vestingAmount_ = value;
+          }
+        } else {
+          vestingAmountBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * VestingAmount defines the initial staking amount from a vesting account
+       * balance
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin vesting_amount = 8 [json_name = "vestingAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearVestingAmount() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        vestingAmount_ = null;
+        if (vestingAmountBuilder_ != null) {
+          vestingAmountBuilder_.dispose();
+          vestingAmountBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * VestingAmount defines the initial staking amount from a vesting account
+       * balance
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin vesting_amount = 8 [json_name = "vestingAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getVestingAmountBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getVestingAmountFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * VestingAmount defines the initial staking amount from a vesting account
+       * balance
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin vesting_amount = 8 [json_name = "vestingAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getVestingAmountOrBuilder() {
+        if (vestingAmountBuilder_ != null) {
+          return vestingAmountBuilder_.getMessageOrBuilder();
+        } else {
+          return vestingAmount_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : vestingAmount_;
+        }
+      }
+      /**
+       * <pre>
+       * VestingAmount defines the initial staking amount from a vesting account
+       * balance
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin vesting_amount = 8 [json_name = "vestingAmount", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getVestingAmountFieldBuilder() {
+        if (vestingAmountBuilder_ == null) {
+          vestingAmountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getVestingAmount(),
+                  getParentForChildren(),
+                  isClean());
+          vestingAmount_ = null;
+        }
+        return vestingAmountBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.MsgCreateValidator)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.MsgCreateValidator)
+    private static final com.confio.poe.v1beta1.TxProto.MsgCreateValidator DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.TxProto.MsgCreateValidator();
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgCreateValidator getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateValidator>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateValidator>() {
+      @java.lang.Override
+      public MsgCreateValidator parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateValidator> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateValidator> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.TxProto.MsgCreateValidator getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateValidatorResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.MsgCreateValidatorResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgCreateValidatorResponse defines the MsgCreateValidator response type.
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.MsgCreateValidatorResponse}
+   */
+  public static final class MsgCreateValidatorResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.MsgCreateValidatorResponse)
+      MsgCreateValidatorResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateValidatorResponse.newBuilder() to construct.
+    private MsgCreateValidatorResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateValidatorResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateValidatorResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgCreateValidatorResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgCreateValidatorResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse.class, com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse other = (com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateValidatorResponse defines the MsgCreateValidator response type.
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.MsgCreateValidatorResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.MsgCreateValidatorResponse)
+        com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgCreateValidatorResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgCreateValidatorResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse.class, com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgCreateValidatorResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse build() {
+        com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse buildPartial() {
+        com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse result = new com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse) {
+          return mergeFrom((com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse other) {
+        if (other == com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.MsgCreateValidatorResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.MsgCreateValidatorResponse)
+    private static final com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse();
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateValidatorResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateValidatorResponse>() {
+      @java.lang.Override
+      public MsgCreateValidatorResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateValidatorResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateValidatorResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.TxProto.MsgCreateValidatorResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUpdateValidatorOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.MsgUpdateValidator)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * New Description meta data
+     * </pre>
+     *
+     * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false];</code>
+     * @return Whether the description field is set.
+     */
+    boolean hasDescription();
+    /**
+     * <pre>
+     * New Description meta data
+     * </pre>
+     *
+     * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false];</code>
+     * @return The description.
+     */
+    com.cosmos.staking.v1beta1.StakingProto.Description getDescription();
+    /**
+     * <pre>
+     * New Description meta data
+     * </pre>
+     *
+     * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.staking.v1beta1.StakingProto.DescriptionOrBuilder getDescriptionOrBuilder();
+
+    /**
+     * <pre>
+     * OperatorAddress is the bech32 address string
+     * Also know as "signer" in other messages
+     * </pre>
+     *
+     * <code>string operator_address = 2 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+     * @return The operatorAddress.
+     */
+    java.lang.String getOperatorAddress();
+    /**
+     * <pre>
+     * OperatorAddress is the bech32 address string
+     * Also know as "signer" in other messages
+     * </pre>
+     *
+     * <code>string operator_address = 2 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+     * @return The bytes for operatorAddress.
+     */
+    com.google.protobuf.ByteString
+        getOperatorAddressBytes();
+  }
+  /**
+   * <pre>
+   * MsgCreateValidator defines a PoE message for updating validator metadata
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.MsgUpdateValidator}
+   */
+  public static final class MsgUpdateValidator extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.MsgUpdateValidator)
+      MsgUpdateValidatorOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdateValidator.newBuilder() to construct.
+    private MsgUpdateValidator(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdateValidator() {
+      operatorAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdateValidator();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgUpdateValidator_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgUpdateValidator_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.TxProto.MsgUpdateValidator.class, com.confio.poe.v1beta1.TxProto.MsgUpdateValidator.Builder.class);
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 1;
+    private com.cosmos.staking.v1beta1.StakingProto.Description description_;
+    /**
+     * <pre>
+     * New Description meta data
+     * </pre>
+     *
+     * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false];</code>
+     * @return Whether the description field is set.
+     */
+    @java.lang.Override
+    public boolean hasDescription() {
+      return description_ != null;
+    }
+    /**
+     * <pre>
+     * New Description meta data
+     * </pre>
+     *
+     * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public com.cosmos.staking.v1beta1.StakingProto.Description getDescription() {
+      return description_ == null ? com.cosmos.staking.v1beta1.StakingProto.Description.getDefaultInstance() : description_;
+    }
+    /**
+     * <pre>
+     * New Description meta data
+     * </pre>
+     *
+     * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.staking.v1beta1.StakingProto.DescriptionOrBuilder getDescriptionOrBuilder() {
+      return description_ == null ? com.cosmos.staking.v1beta1.StakingProto.Description.getDefaultInstance() : description_;
+    }
+
+    public static final int OPERATOR_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object operatorAddress_ = "";
+    /**
+     * <pre>
+     * OperatorAddress is the bech32 address string
+     * Also know as "signer" in other messages
+     * </pre>
+     *
+     * <code>string operator_address = 2 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+     * @return The operatorAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getOperatorAddress() {
+      java.lang.Object ref = operatorAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        operatorAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * OperatorAddress is the bech32 address string
+     * Also know as "signer" in other messages
+     * </pre>
+     *
+     * <code>string operator_address = 2 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+     * @return The bytes for operatorAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOperatorAddressBytes() {
+      java.lang.Object ref = operatorAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        operatorAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (description_ != null) {
+        output.writeMessage(1, getDescription());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatorAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, operatorAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (description_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getDescription());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatorAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, operatorAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.TxProto.MsgUpdateValidator)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.TxProto.MsgUpdateValidator other = (com.confio.poe.v1beta1.TxProto.MsgUpdateValidator) obj;
+
+      if (hasDescription() != other.hasDescription()) return false;
+      if (hasDescription()) {
+        if (!getDescription()
+            .equals(other.getDescription())) return false;
+      }
+      if (!getOperatorAddress()
+          .equals(other.getOperatorAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDescription()) {
+        hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+        hash = (53 * hash) + getDescription().hashCode();
+      }
+      hash = (37 * hash) + OPERATOR_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getOperatorAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgUpdateValidator parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUpdateValidator parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUpdateValidator parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUpdateValidator parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUpdateValidator parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUpdateValidator parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUpdateValidator parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUpdateValidator parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgUpdateValidator parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgUpdateValidator parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUpdateValidator parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUpdateValidator parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.TxProto.MsgUpdateValidator prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateValidator defines a PoE message for updating validator metadata
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.MsgUpdateValidator}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.MsgUpdateValidator)
+        com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgUpdateValidator_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgUpdateValidator_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.TxProto.MsgUpdateValidator.class, com.confio.poe.v1beta1.TxProto.MsgUpdateValidator.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.TxProto.MsgUpdateValidator.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        description_ = null;
+        if (descriptionBuilder_ != null) {
+          descriptionBuilder_.dispose();
+          descriptionBuilder_ = null;
+        }
+        operatorAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgUpdateValidator_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.TxProto.MsgUpdateValidator getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.TxProto.MsgUpdateValidator.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.TxProto.MsgUpdateValidator build() {
+        com.confio.poe.v1beta1.TxProto.MsgUpdateValidator result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.TxProto.MsgUpdateValidator buildPartial() {
+        com.confio.poe.v1beta1.TxProto.MsgUpdateValidator result = new com.confio.poe.v1beta1.TxProto.MsgUpdateValidator(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.poe.v1beta1.TxProto.MsgUpdateValidator result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.description_ = descriptionBuilder_ == null
+              ? description_
+              : descriptionBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.operatorAddress_ = operatorAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.TxProto.MsgUpdateValidator) {
+          return mergeFrom((com.confio.poe.v1beta1.TxProto.MsgUpdateValidator)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.TxProto.MsgUpdateValidator other) {
+        if (other == com.confio.poe.v1beta1.TxProto.MsgUpdateValidator.getDefaultInstance()) return this;
+        if (other.hasDescription()) {
+          mergeDescription(other.getDescription());
+        }
+        if (!other.getOperatorAddress().isEmpty()) {
+          operatorAddress_ = other.operatorAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDescriptionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                operatorAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.staking.v1beta1.StakingProto.Description description_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.staking.v1beta1.StakingProto.Description, com.cosmos.staking.v1beta1.StakingProto.Description.Builder, com.cosmos.staking.v1beta1.StakingProto.DescriptionOrBuilder> descriptionBuilder_;
+      /**
+       * <pre>
+       * New Description meta data
+       * </pre>
+       *
+       * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false];</code>
+       * @return Whether the description field is set.
+       */
+      public boolean hasDescription() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * New Description meta data
+       * </pre>
+       *
+       * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false];</code>
+       * @return The description.
+       */
+      public com.cosmos.staking.v1beta1.StakingProto.Description getDescription() {
+        if (descriptionBuilder_ == null) {
+          return description_ == null ? com.cosmos.staking.v1beta1.StakingProto.Description.getDefaultInstance() : description_;
+        } else {
+          return descriptionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * New Description meta data
+       * </pre>
+       *
+       * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDescription(com.cosmos.staking.v1beta1.StakingProto.Description value) {
+        if (descriptionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          description_ = value;
+        } else {
+          descriptionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New Description meta data
+       * </pre>
+       *
+       * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDescription(
+          com.cosmos.staking.v1beta1.StakingProto.Description.Builder builderForValue) {
+        if (descriptionBuilder_ == null) {
+          description_ = builderForValue.build();
+        } else {
+          descriptionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New Description meta data
+       * </pre>
+       *
+       * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeDescription(com.cosmos.staking.v1beta1.StakingProto.Description value) {
+        if (descriptionBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            description_ != null &&
+            description_ != com.cosmos.staking.v1beta1.StakingProto.Description.getDefaultInstance()) {
+            getDescriptionBuilder().mergeFrom(value);
+          } else {
+            description_ = value;
+          }
+        } else {
+          descriptionBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New Description meta data
+       * </pre>
+       *
+       * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDescription() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        description_ = null;
+        if (descriptionBuilder_ != null) {
+          descriptionBuilder_.dispose();
+          descriptionBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New Description meta data
+       * </pre>
+       *
+       * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.staking.v1beta1.StakingProto.Description.Builder getDescriptionBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getDescriptionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * New Description meta data
+       * </pre>
+       *
+       * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.staking.v1beta1.StakingProto.DescriptionOrBuilder getDescriptionOrBuilder() {
+        if (descriptionBuilder_ != null) {
+          return descriptionBuilder_.getMessageOrBuilder();
+        } else {
+          return description_ == null ?
+              com.cosmos.staking.v1beta1.StakingProto.Description.getDefaultInstance() : description_;
+        }
+      }
+      /**
+       * <pre>
+       * New Description meta data
+       * </pre>
+       *
+       * <code>.cosmos.staking.v1beta1.Description description = 1 [json_name = "description", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.staking.v1beta1.StakingProto.Description, com.cosmos.staking.v1beta1.StakingProto.Description.Builder, com.cosmos.staking.v1beta1.StakingProto.DescriptionOrBuilder> 
+          getDescriptionFieldBuilder() {
+        if (descriptionBuilder_ == null) {
+          descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.staking.v1beta1.StakingProto.Description, com.cosmos.staking.v1beta1.StakingProto.Description.Builder, com.cosmos.staking.v1beta1.StakingProto.DescriptionOrBuilder>(
+                  getDescription(),
+                  getParentForChildren(),
+                  isClean());
+          description_ = null;
+        }
+        return descriptionBuilder_;
+      }
+
+      private java.lang.Object operatorAddress_ = "";
+      /**
+       * <pre>
+       * OperatorAddress is the bech32 address string
+       * Also know as "signer" in other messages
+       * </pre>
+       *
+       * <code>string operator_address = 2 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+       * @return The operatorAddress.
+       */
+      public java.lang.String getOperatorAddress() {
+        java.lang.Object ref = operatorAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          operatorAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * OperatorAddress is the bech32 address string
+       * Also know as "signer" in other messages
+       * </pre>
+       *
+       * <code>string operator_address = 2 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+       * @return The bytes for operatorAddress.
+       */
+      public com.google.protobuf.ByteString
+          getOperatorAddressBytes() {
+        java.lang.Object ref = operatorAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          operatorAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * OperatorAddress is the bech32 address string
+       * Also know as "signer" in other messages
+       * </pre>
+       *
+       * <code>string operator_address = 2 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+       * @param value The operatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperatorAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        operatorAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * OperatorAddress is the bech32 address string
+       * Also know as "signer" in other messages
+       * </pre>
+       *
+       * <code>string operator_address = 2 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOperatorAddress() {
+        operatorAddress_ = getDefaultInstance().getOperatorAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * OperatorAddress is the bech32 address string
+       * Also know as "signer" in other messages
+       * </pre>
+       *
+       * <code>string operator_address = 2 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+       * @param value The bytes for operatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperatorAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        operatorAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.MsgUpdateValidator)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.MsgUpdateValidator)
+    private static final com.confio.poe.v1beta1.TxProto.MsgUpdateValidator DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.TxProto.MsgUpdateValidator();
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgUpdateValidator getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdateValidator>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdateValidator>() {
+      @java.lang.Override
+      public MsgUpdateValidator parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdateValidator> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdateValidator> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.TxProto.MsgUpdateValidator getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUpdateValidatorResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.MsgUpdateValidatorResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgUpdateValidatorResponse defines the MsgUpdateValidator response type.
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.MsgUpdateValidatorResponse}
+   */
+  public static final class MsgUpdateValidatorResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.MsgUpdateValidatorResponse)
+      MsgUpdateValidatorResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdateValidatorResponse.newBuilder() to construct.
+    private MsgUpdateValidatorResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdateValidatorResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdateValidatorResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgUpdateValidatorResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgUpdateValidatorResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse.class, com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse other = (com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgUpdateValidatorResponse defines the MsgUpdateValidator response type.
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.MsgUpdateValidatorResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.MsgUpdateValidatorResponse)
+        com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgUpdateValidatorResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgUpdateValidatorResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse.class, com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgUpdateValidatorResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse build() {
+        com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse buildPartial() {
+        com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse result = new com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse) {
+          return mergeFrom((com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse other) {
+        if (other == com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.MsgUpdateValidatorResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.MsgUpdateValidatorResponse)
+    private static final com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse();
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdateValidatorResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdateValidatorResponse>() {
+      @java.lang.Override
+      public MsgUpdateValidatorResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdateValidatorResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdateValidatorResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.TxProto.MsgUpdateValidatorResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDelegateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.MsgDelegate)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+     * @return The operatorAddress.
+     */
+    java.lang.String getOperatorAddress();
+    /**
+     * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+     * @return The bytes for operatorAddress.
+     */
+    com.google.protobuf.ByteString
+        getOperatorAddressBytes();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+     * @return Whether the amount field is set.
+     */
+    boolean hasAmount();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+     * @return The amount.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getAmount();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin vesting_amount = 3 [json_name = "vestingAmount", (.gogoproto.nullable) = false];</code>
+     * @return Whether the vestingAmount field is set.
+     */
+    boolean hasVestingAmount();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin vesting_amount = 3 [json_name = "vestingAmount", (.gogoproto.nullable) = false];</code>
+     * @return The vestingAmount.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getVestingAmount();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin vesting_amount = 3 [json_name = "vestingAmount", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getVestingAmountOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgDelegate defines a SDK message for performing a self delegation of coins
+   * by a node operator
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.MsgDelegate}
+   */
+  public static final class MsgDelegate extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.MsgDelegate)
+      MsgDelegateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDelegate.newBuilder() to construct.
+    private MsgDelegate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDelegate() {
+      operatorAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDelegate();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgDelegate_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgDelegate_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.TxProto.MsgDelegate.class, com.confio.poe.v1beta1.TxProto.MsgDelegate.Builder.class);
+    }
+
+    public static final int OPERATOR_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object operatorAddress_ = "";
+    /**
+     * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+     * @return The operatorAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getOperatorAddress() {
+      java.lang.Object ref = operatorAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        operatorAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+     * @return The bytes for operatorAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOperatorAddressBytes() {
+      java.lang.Object ref = operatorAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        operatorAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin amount_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+     * @return Whether the amount field is set.
+     */
+    @java.lang.Override
+    public boolean hasAmount() {
+      return amount_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getAmount() {
+      return amount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : amount_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder() {
+      return amount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : amount_;
+    }
+
+    public static final int VESTING_AMOUNT_FIELD_NUMBER = 3;
+    private com.cosmos.base.v1beta1.CoinProto.Coin vestingAmount_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin vesting_amount = 3 [json_name = "vestingAmount", (.gogoproto.nullable) = false];</code>
+     * @return Whether the vestingAmount field is set.
+     */
+    @java.lang.Override
+    public boolean hasVestingAmount() {
+      return vestingAmount_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin vesting_amount = 3 [json_name = "vestingAmount", (.gogoproto.nullable) = false];</code>
+     * @return The vestingAmount.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getVestingAmount() {
+      return vestingAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : vestingAmount_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin vesting_amount = 3 [json_name = "vestingAmount", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getVestingAmountOrBuilder() {
+      return vestingAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : vestingAmount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatorAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, operatorAddress_);
+      }
+      if (amount_ != null) {
+        output.writeMessage(2, getAmount());
+      }
+      if (vestingAmount_ != null) {
+        output.writeMessage(3, getVestingAmount());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatorAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, operatorAddress_);
+      }
+      if (amount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getAmount());
+      }
+      if (vestingAmount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getVestingAmount());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.TxProto.MsgDelegate)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.TxProto.MsgDelegate other = (com.confio.poe.v1beta1.TxProto.MsgDelegate) obj;
+
+      if (!getOperatorAddress()
+          .equals(other.getOperatorAddress())) return false;
+      if (hasAmount() != other.hasAmount()) return false;
+      if (hasAmount()) {
+        if (!getAmount()
+            .equals(other.getAmount())) return false;
+      }
+      if (hasVestingAmount() != other.hasVestingAmount()) return false;
+      if (hasVestingAmount()) {
+        if (!getVestingAmount()
+            .equals(other.getVestingAmount())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OPERATOR_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getOperatorAddress().hashCode();
+      if (hasAmount()) {
+        hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getAmount().hashCode();
+      }
+      if (hasVestingAmount()) {
+        hash = (37 * hash) + VESTING_AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getVestingAmount().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgDelegate parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgDelegate parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgDelegate parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgDelegate parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgDelegate parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgDelegate parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgDelegate parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgDelegate parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgDelegate parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgDelegate parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgDelegate parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgDelegate parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.TxProto.MsgDelegate prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgDelegate defines a SDK message for performing a self delegation of coins
+     * by a node operator
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.MsgDelegate}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.MsgDelegate)
+        com.confio.poe.v1beta1.TxProto.MsgDelegateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgDelegate_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgDelegate_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.TxProto.MsgDelegate.class, com.confio.poe.v1beta1.TxProto.MsgDelegate.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.TxProto.MsgDelegate.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        operatorAddress_ = "";
+        amount_ = null;
+        if (amountBuilder_ != null) {
+          amountBuilder_.dispose();
+          amountBuilder_ = null;
+        }
+        vestingAmount_ = null;
+        if (vestingAmountBuilder_ != null) {
+          vestingAmountBuilder_.dispose();
+          vestingAmountBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgDelegate_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.TxProto.MsgDelegate getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.TxProto.MsgDelegate.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.TxProto.MsgDelegate build() {
+        com.confio.poe.v1beta1.TxProto.MsgDelegate result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.TxProto.MsgDelegate buildPartial() {
+        com.confio.poe.v1beta1.TxProto.MsgDelegate result = new com.confio.poe.v1beta1.TxProto.MsgDelegate(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.poe.v1beta1.TxProto.MsgDelegate result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.operatorAddress_ = operatorAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.amount_ = amountBuilder_ == null
+              ? amount_
+              : amountBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.vestingAmount_ = vestingAmountBuilder_ == null
+              ? vestingAmount_
+              : vestingAmountBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.TxProto.MsgDelegate) {
+          return mergeFrom((com.confio.poe.v1beta1.TxProto.MsgDelegate)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.TxProto.MsgDelegate other) {
+        if (other == com.confio.poe.v1beta1.TxProto.MsgDelegate.getDefaultInstance()) return this;
+        if (!other.getOperatorAddress().isEmpty()) {
+          operatorAddress_ = other.operatorAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasAmount()) {
+          mergeAmount(other.getAmount());
+        }
+        if (other.hasVestingAmount()) {
+          mergeVestingAmount(other.getVestingAmount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                operatorAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getAmountFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getVestingAmountFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object operatorAddress_ = "";
+      /**
+       * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+       * @return The operatorAddress.
+       */
+      public java.lang.String getOperatorAddress() {
+        java.lang.Object ref = operatorAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          operatorAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+       * @return The bytes for operatorAddress.
+       */
+      public com.google.protobuf.ByteString
+          getOperatorAddressBytes() {
+        java.lang.Object ref = operatorAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          operatorAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+       * @param value The operatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperatorAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        operatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOperatorAddress() {
+        operatorAddress_ = getDefaultInstance().getOperatorAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+       * @param value The bytes for operatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperatorAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        operatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin amount_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> amountBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       * @return Whether the amount field is set.
+       */
+      public boolean hasAmount() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       * @return The amount.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getAmount() {
+        if (amountBuilder_ == null) {
+          return amount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : amount_;
+        } else {
+          return amountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (amountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          amount_ = value;
+        } else {
+          amountBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAmount(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (amountBuilder_ == null) {
+          amount_ = builderForValue.build();
+        } else {
+          amountBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (amountBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            amount_ != null &&
+            amount_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getAmountBuilder().mergeFrom(value);
+          } else {
+            amount_ = value;
+          }
+        } else {
+          amountBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAmount() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        amount_ = null;
+        if (amountBuilder_ != null) {
+          amountBuilder_.dispose();
+          amountBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getAmountBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getAmountFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder() {
+        if (amountBuilder_ != null) {
+          return amountBuilder_.getMessageOrBuilder();
+        } else {
+          return amount_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : amount_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getAmountFieldBuilder() {
+        if (amountBuilder_ == null) {
+          amountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getAmount(),
+                  getParentForChildren(),
+                  isClean());
+          amount_ = null;
+        }
+        return amountBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin vestingAmount_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> vestingAmountBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin vesting_amount = 3 [json_name = "vestingAmount", (.gogoproto.nullable) = false];</code>
+       * @return Whether the vestingAmount field is set.
+       */
+      public boolean hasVestingAmount() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin vesting_amount = 3 [json_name = "vestingAmount", (.gogoproto.nullable) = false];</code>
+       * @return The vestingAmount.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getVestingAmount() {
+        if (vestingAmountBuilder_ == null) {
+          return vestingAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : vestingAmount_;
+        } else {
+          return vestingAmountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin vesting_amount = 3 [json_name = "vestingAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setVestingAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (vestingAmountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          vestingAmount_ = value;
+        } else {
+          vestingAmountBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin vesting_amount = 3 [json_name = "vestingAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setVestingAmount(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (vestingAmountBuilder_ == null) {
+          vestingAmount_ = builderForValue.build();
+        } else {
+          vestingAmountBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin vesting_amount = 3 [json_name = "vestingAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeVestingAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (vestingAmountBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            vestingAmount_ != null &&
+            vestingAmount_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getVestingAmountBuilder().mergeFrom(value);
+          } else {
+            vestingAmount_ = value;
+          }
+        } else {
+          vestingAmountBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin vesting_amount = 3 [json_name = "vestingAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearVestingAmount() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        vestingAmount_ = null;
+        if (vestingAmountBuilder_ != null) {
+          vestingAmountBuilder_.dispose();
+          vestingAmountBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin vesting_amount = 3 [json_name = "vestingAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getVestingAmountBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getVestingAmountFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin vesting_amount = 3 [json_name = "vestingAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getVestingAmountOrBuilder() {
+        if (vestingAmountBuilder_ != null) {
+          return vestingAmountBuilder_.getMessageOrBuilder();
+        } else {
+          return vestingAmount_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : vestingAmount_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin vesting_amount = 3 [json_name = "vestingAmount", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getVestingAmountFieldBuilder() {
+        if (vestingAmountBuilder_ == null) {
+          vestingAmountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getVestingAmount(),
+                  getParentForChildren(),
+                  isClean());
+          vestingAmount_ = null;
+        }
+        return vestingAmountBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.MsgDelegate)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.MsgDelegate)
+    private static final com.confio.poe.v1beta1.TxProto.MsgDelegate DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.TxProto.MsgDelegate();
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgDelegate getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDelegate>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDelegate>() {
+      @java.lang.Override
+      public MsgDelegate parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDelegate> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDelegate> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.TxProto.MsgDelegate getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDelegateResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.MsgDelegateResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgDelegateResponse defines the Msg/Delegate response type.
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.MsgDelegateResponse}
+   */
+  public static final class MsgDelegateResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.MsgDelegateResponse)
+      MsgDelegateResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDelegateResponse.newBuilder() to construct.
+    private MsgDelegateResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDelegateResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDelegateResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgDelegateResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgDelegateResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.TxProto.MsgDelegateResponse.class, com.confio.poe.v1beta1.TxProto.MsgDelegateResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.TxProto.MsgDelegateResponse)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.TxProto.MsgDelegateResponse other = (com.confio.poe.v1beta1.TxProto.MsgDelegateResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgDelegateResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgDelegateResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgDelegateResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgDelegateResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgDelegateResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgDelegateResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgDelegateResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgDelegateResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgDelegateResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgDelegateResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgDelegateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgDelegateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.TxProto.MsgDelegateResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgDelegateResponse defines the Msg/Delegate response type.
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.MsgDelegateResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.MsgDelegateResponse)
+        com.confio.poe.v1beta1.TxProto.MsgDelegateResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgDelegateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgDelegateResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.TxProto.MsgDelegateResponse.class, com.confio.poe.v1beta1.TxProto.MsgDelegateResponse.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.TxProto.MsgDelegateResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgDelegateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.TxProto.MsgDelegateResponse getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.TxProto.MsgDelegateResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.TxProto.MsgDelegateResponse build() {
+        com.confio.poe.v1beta1.TxProto.MsgDelegateResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.TxProto.MsgDelegateResponse buildPartial() {
+        com.confio.poe.v1beta1.TxProto.MsgDelegateResponse result = new com.confio.poe.v1beta1.TxProto.MsgDelegateResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.TxProto.MsgDelegateResponse) {
+          return mergeFrom((com.confio.poe.v1beta1.TxProto.MsgDelegateResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.TxProto.MsgDelegateResponse other) {
+        if (other == com.confio.poe.v1beta1.TxProto.MsgDelegateResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.MsgDelegateResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.MsgDelegateResponse)
+    private static final com.confio.poe.v1beta1.TxProto.MsgDelegateResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.TxProto.MsgDelegateResponse();
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgDelegateResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDelegateResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDelegateResponse>() {
+      @java.lang.Override
+      public MsgDelegateResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDelegateResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDelegateResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.TxProto.MsgDelegateResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUndelegateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.MsgUndelegate)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+     * @return The operatorAddress.
+     */
+    java.lang.String getOperatorAddress();
+    /**
+     * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+     * @return The bytes for operatorAddress.
+     */
+    com.google.protobuf.ByteString
+        getOperatorAddressBytes();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+     * @return Whether the amount field is set.
+     */
+    boolean hasAmount();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+     * @return The amount.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getAmount();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgUndelegate defines a SDK message for performing an undelegation from a
+   * node operator
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.MsgUndelegate}
+   */
+  public static final class MsgUndelegate extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.MsgUndelegate)
+      MsgUndelegateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUndelegate.newBuilder() to construct.
+    private MsgUndelegate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUndelegate() {
+      operatorAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUndelegate();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgUndelegate_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgUndelegate_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.TxProto.MsgUndelegate.class, com.confio.poe.v1beta1.TxProto.MsgUndelegate.Builder.class);
+    }
+
+    public static final int OPERATOR_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object operatorAddress_ = "";
+    /**
+     * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+     * @return The operatorAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getOperatorAddress() {
+      java.lang.Object ref = operatorAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        operatorAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+     * @return The bytes for operatorAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOperatorAddressBytes() {
+      java.lang.Object ref = operatorAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        operatorAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin amount_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+     * @return Whether the amount field is set.
+     */
+    @java.lang.Override
+    public boolean hasAmount() {
+      return amount_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getAmount() {
+      return amount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : amount_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder() {
+      return amount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : amount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatorAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, operatorAddress_);
+      }
+      if (amount_ != null) {
+        output.writeMessage(2, getAmount());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatorAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, operatorAddress_);
+      }
+      if (amount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getAmount());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.TxProto.MsgUndelegate)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.TxProto.MsgUndelegate other = (com.confio.poe.v1beta1.TxProto.MsgUndelegate) obj;
+
+      if (!getOperatorAddress()
+          .equals(other.getOperatorAddress())) return false;
+      if (hasAmount() != other.hasAmount()) return false;
+      if (hasAmount()) {
+        if (!getAmount()
+            .equals(other.getAmount())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OPERATOR_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getOperatorAddress().hashCode();
+      if (hasAmount()) {
+        hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getAmount().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgUndelegate parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUndelegate parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUndelegate parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUndelegate parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUndelegate parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUndelegate parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUndelegate parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUndelegate parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgUndelegate parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgUndelegate parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUndelegate parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUndelegate parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.TxProto.MsgUndelegate prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgUndelegate defines a SDK message for performing an undelegation from a
+     * node operator
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.MsgUndelegate}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.MsgUndelegate)
+        com.confio.poe.v1beta1.TxProto.MsgUndelegateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgUndelegate_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgUndelegate_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.TxProto.MsgUndelegate.class, com.confio.poe.v1beta1.TxProto.MsgUndelegate.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.TxProto.MsgUndelegate.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        operatorAddress_ = "";
+        amount_ = null;
+        if (amountBuilder_ != null) {
+          amountBuilder_.dispose();
+          amountBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgUndelegate_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.TxProto.MsgUndelegate getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.TxProto.MsgUndelegate.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.TxProto.MsgUndelegate build() {
+        com.confio.poe.v1beta1.TxProto.MsgUndelegate result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.TxProto.MsgUndelegate buildPartial() {
+        com.confio.poe.v1beta1.TxProto.MsgUndelegate result = new com.confio.poe.v1beta1.TxProto.MsgUndelegate(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.poe.v1beta1.TxProto.MsgUndelegate result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.operatorAddress_ = operatorAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.amount_ = amountBuilder_ == null
+              ? amount_
+              : amountBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.TxProto.MsgUndelegate) {
+          return mergeFrom((com.confio.poe.v1beta1.TxProto.MsgUndelegate)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.TxProto.MsgUndelegate other) {
+        if (other == com.confio.poe.v1beta1.TxProto.MsgUndelegate.getDefaultInstance()) return this;
+        if (!other.getOperatorAddress().isEmpty()) {
+          operatorAddress_ = other.operatorAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasAmount()) {
+          mergeAmount(other.getAmount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                operatorAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getAmountFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object operatorAddress_ = "";
+      /**
+       * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+       * @return The operatorAddress.
+       */
+      public java.lang.String getOperatorAddress() {
+        java.lang.Object ref = operatorAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          operatorAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+       * @return The bytes for operatorAddress.
+       */
+      public com.google.protobuf.ByteString
+          getOperatorAddressBytes() {
+        java.lang.Object ref = operatorAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          operatorAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+       * @param value The operatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperatorAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        operatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOperatorAddress() {
+        operatorAddress_ = getDefaultInstance().getOperatorAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string operator_address = 1 [json_name = "operatorAddress", (.gogoproto.moretags) = "yaml:&#92;"operator_address&#92;""];</code>
+       * @param value The bytes for operatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperatorAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        operatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin amount_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> amountBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       * @return Whether the amount field is set.
+       */
+      public boolean hasAmount() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       * @return The amount.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getAmount() {
+        if (amountBuilder_ == null) {
+          return amount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : amount_;
+        } else {
+          return amountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (amountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          amount_ = value;
+        } else {
+          amountBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAmount(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (amountBuilder_ == null) {
+          amount_ = builderForValue.build();
+        } else {
+          amountBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (amountBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            amount_ != null &&
+            amount_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getAmountBuilder().mergeFrom(value);
+          } else {
+            amount_ = value;
+          }
+        } else {
+          amountBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAmount() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        amount_ = null;
+        if (amountBuilder_ != null) {
+          amountBuilder_.dispose();
+          amountBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getAmountBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getAmountFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder() {
+        if (amountBuilder_ != null) {
+          return amountBuilder_.getMessageOrBuilder();
+        } else {
+          return amount_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : amount_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin amount = 2 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getAmountFieldBuilder() {
+        if (amountBuilder_ == null) {
+          amountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getAmount(),
+                  getParentForChildren(),
+                  isClean());
+          amount_ = null;
+        }
+        return amountBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.MsgUndelegate)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.MsgUndelegate)
+    private static final com.confio.poe.v1beta1.TxProto.MsgUndelegate DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.TxProto.MsgUndelegate();
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgUndelegate getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUndelegate>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUndelegate>() {
+      @java.lang.Override
+      public MsgUndelegate parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUndelegate> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUndelegate> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.TxProto.MsgUndelegate getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUndelegateResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.MsgUndelegateResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.google.protobuf.Timestamp completion_time = 1 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the completionTime field is set.
+     */
+    boolean hasCompletionTime();
+    /**
+     * <code>.google.protobuf.Timestamp completion_time = 1 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The completionTime.
+     */
+    com.google.protobuf.Timestamp getCompletionTime();
+    /**
+     * <code>.google.protobuf.Timestamp completion_time = 1 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCompletionTimeOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgUndelegateResponse defines the Msg/Undelegate response type.
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.MsgUndelegateResponse}
+   */
+  public static final class MsgUndelegateResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.MsgUndelegateResponse)
+      MsgUndelegateResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUndelegateResponse.newBuilder() to construct.
+    private MsgUndelegateResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUndelegateResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUndelegateResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgUndelegateResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgUndelegateResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse.class, com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse.Builder.class);
+    }
+
+    public static final int COMPLETION_TIME_FIELD_NUMBER = 1;
+    private com.google.protobuf.Timestamp completionTime_;
+    /**
+     * <code>.google.protobuf.Timestamp completion_time = 1 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the completionTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasCompletionTime() {
+      return completionTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp completion_time = 1 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The completionTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCompletionTime() {
+      return completionTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : completionTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp completion_time = 1 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCompletionTimeOrBuilder() {
+      return completionTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : completionTime_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (completionTime_ != null) {
+        output.writeMessage(1, getCompletionTime());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (completionTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCompletionTime());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse other = (com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse) obj;
+
+      if (hasCompletionTime() != other.hasCompletionTime()) return false;
+      if (hasCompletionTime()) {
+        if (!getCompletionTime()
+            .equals(other.getCompletionTime())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasCompletionTime()) {
+        hash = (37 * hash) + COMPLETION_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getCompletionTime().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgUndelegateResponse defines the Msg/Undelegate response type.
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.MsgUndelegateResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.MsgUndelegateResponse)
+        com.confio.poe.v1beta1.TxProto.MsgUndelegateResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgUndelegateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgUndelegateResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse.class, com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        completionTime_ = null;
+        if (completionTimeBuilder_ != null) {
+          completionTimeBuilder_.dispose();
+          completionTimeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.TxProto.internal_static_confio_poe_v1beta1_MsgUndelegateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse build() {
+        com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse buildPartial() {
+        com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse result = new com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.completionTime_ = completionTimeBuilder_ == null
+              ? completionTime_
+              : completionTimeBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse) {
+          return mergeFrom((com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse other) {
+        if (other == com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse.getDefaultInstance()) return this;
+        if (other.hasCompletionTime()) {
+          mergeCompletionTime(other.getCompletionTime());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getCompletionTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Timestamp completionTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> completionTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp completion_time = 1 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return Whether the completionTime field is set.
+       */
+      public boolean hasCompletionTime() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp completion_time = 1 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return The completionTime.
+       */
+      public com.google.protobuf.Timestamp getCompletionTime() {
+        if (completionTimeBuilder_ == null) {
+          return completionTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : completionTime_;
+        } else {
+          return completionTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp completion_time = 1 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setCompletionTime(com.google.protobuf.Timestamp value) {
+        if (completionTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          completionTime_ = value;
+        } else {
+          completionTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp completion_time = 1 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setCompletionTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (completionTimeBuilder_ == null) {
+          completionTime_ = builderForValue.build();
+        } else {
+          completionTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp completion_time = 1 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeCompletionTime(com.google.protobuf.Timestamp value) {
+        if (completionTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            completionTime_ != null &&
+            completionTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCompletionTimeBuilder().mergeFrom(value);
+          } else {
+            completionTime_ = value;
+          }
+        } else {
+          completionTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp completion_time = 1 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearCompletionTime() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        completionTime_ = null;
+        if (completionTimeBuilder_ != null) {
+          completionTimeBuilder_.dispose();
+          completionTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp completion_time = 1 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCompletionTimeBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getCompletionTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp completion_time = 1 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCompletionTimeOrBuilder() {
+        if (completionTimeBuilder_ != null) {
+          return completionTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return completionTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : completionTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp completion_time = 1 [json_name = "completionTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCompletionTimeFieldBuilder() {
+        if (completionTimeBuilder_ == null) {
+          completionTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCompletionTime(),
+                  getParentForChildren(),
+                  isClean());
+          completionTime_ = null;
+        }
+        return completionTimeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.MsgUndelegateResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.MsgUndelegateResponse)
+    private static final com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse();
+    }
+
+    public static com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUndelegateResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUndelegateResponse>() {
+      @java.lang.Override
+      public MsgUndelegateResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUndelegateResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUndelegateResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.TxProto.MsgUndelegateResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_MsgCreateValidator_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_MsgCreateValidator_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_MsgCreateValidatorResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_MsgCreateValidatorResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_MsgUpdateValidator_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_MsgUpdateValidator_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_MsgUpdateValidatorResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_MsgUpdateValidatorResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_MsgDelegate_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_MsgDelegate_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_MsgDelegateResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_MsgDelegateResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_MsgUndelegate_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_MsgUndelegate_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_MsgUndelegateResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_MsgUndelegateResponse_fieldAccessorTable;
 
@@ -107,11 +6140,11 @@ public final class TxProto {
       ".poe.v1beta1.MsgDelegateResponse\022Z\n\nUnde" +
       "legate\022!.confio.poe.v1beta1.MsgUndelegat" +
       "e\032).confio.poe.v1beta1.MsgUndelegateResp" +
-      "onseB\261\001\n\026com.confio.poe.v1beta1B\007TxProto" +
-      "P\001Z$github.com/confio/tgrade/x/poe/types" +
-      "\242\002\003CPX\252\002\022Confio.Poe.V1beta1\312\002\022Confio\\Poe" +
-      "\\V1beta1\342\002\036Confio\\Poe\\V1beta1\\GPBMetadat" +
-      "a\352\002\024Confio::Poe::V1beta1b\006proto3"
+      "onseB\257\001\n\026com.confio.poe.v1beta1B\007TxProto" +
+      "Z$github.com/confio/tgrade/x/poe/types\242\002" +
+      "\003CPX\252\002\022Confio.Poe.V1beta1\312\002\022Confio\\Poe\\V" +
+      "1beta1\342\002\036Confio\\Poe\\V1beta1\\GPBMetadata\352" +
+      "\002\024Confio::Poe::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

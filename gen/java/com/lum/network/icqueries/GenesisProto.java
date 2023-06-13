@@ -14,19 +14,3241 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.icqueries.Query)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string connection_id = 2 [json_name = "connectionId"];</code>
+     * @return The connectionId.
+     */
+    java.lang.String getConnectionId();
+    /**
+     * <code>string connection_id = 2 [json_name = "connectionId"];</code>
+     * @return The bytes for connectionId.
+     */
+    com.google.protobuf.ByteString
+        getConnectionIdBytes();
+
+    /**
+     * <code>string chain_id = 3 [json_name = "chainId"];</code>
+     * @return The chainId.
+     */
+    java.lang.String getChainId();
+    /**
+     * <code>string chain_id = 3 [json_name = "chainId"];</code>
+     * @return The bytes for chainId.
+     */
+    com.google.protobuf.ByteString
+        getChainIdBytes();
+
+    /**
+     * <code>string query_type = 4 [json_name = "queryType"];</code>
+     * @return The queryType.
+     */
+    java.lang.String getQueryType();
+    /**
+     * <code>string query_type = 4 [json_name = "queryType"];</code>
+     * @return The bytes for queryType.
+     */
+    com.google.protobuf.ByteString
+        getQueryTypeBytes();
+
+    /**
+     * <code>bytes request = 5 [json_name = "request"];</code>
+     * @return The request.
+     */
+    com.google.protobuf.ByteString getRequest();
+
+    /**
+     * <code>string callback_id = 8 [json_name = "callbackId"];</code>
+     * @return The callbackId.
+     */
+    java.lang.String getCallbackId();
+    /**
+     * <code>string callback_id = 8 [json_name = "callbackId"];</code>
+     * @return The bytes for callbackId.
+     */
+    com.google.protobuf.ByteString
+        getCallbackIdBytes();
+
+    /**
+     * <code>uint64 ttl = 9 [json_name = "ttl"];</code>
+     * @return The ttl.
+     */
+    long getTtl();
+
+    /**
+     * <code>bool request_sent = 11 [json_name = "requestSent"];</code>
+     * @return The requestSent.
+     */
+    boolean getRequestSent();
+
+    /**
+     * <code>string extra_id = 12 [json_name = "extraId"];</code>
+     * @return The extraId.
+     */
+    java.lang.String getExtraId();
+    /**
+     * <code>string extra_id = 12 [json_name = "extraId"];</code>
+     * @return The bytes for extraId.
+     */
+    com.google.protobuf.ByteString
+        getExtraIdBytes();
+  }
+  /**
+   * Protobuf type {@code lum.network.icqueries.Query}
+   */
+  public static final class Query extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.icqueries.Query)
+      QueryOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Query.newBuilder() to construct.
+    private Query(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Query() {
+      id_ = "";
+      connectionId_ = "";
+      chainId_ = "";
+      queryType_ = "";
+      request_ = com.google.protobuf.ByteString.EMPTY;
+      callbackId_ = "";
+      extraId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Query();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.icqueries.GenesisProto.internal_static_lum_network_icqueries_Query_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.icqueries.GenesisProto.internal_static_lum_network_icqueries_Query_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.icqueries.GenesisProto.Query.class, com.lum.network.icqueries.GenesisProto.Query.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONNECTION_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object connectionId_ = "";
+    /**
+     * <code>string connection_id = 2 [json_name = "connectionId"];</code>
+     * @return The connectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getConnectionId() {
+      java.lang.Object ref = connectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        connectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string connection_id = 2 [json_name = "connectionId"];</code>
+     * @return The bytes for connectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConnectionIdBytes() {
+      java.lang.Object ref = connectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        connectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CHAIN_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object chainId_ = "";
+    /**
+     * <code>string chain_id = 3 [json_name = "chainId"];</code>
+     * @return The chainId.
+     */
+    @java.lang.Override
+    public java.lang.String getChainId() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        chainId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string chain_id = 3 [json_name = "chainId"];</code>
+     * @return The bytes for chainId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChainIdBytes() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        chainId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int QUERY_TYPE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object queryType_ = "";
+    /**
+     * <code>string query_type = 4 [json_name = "queryType"];</code>
+     * @return The queryType.
+     */
+    @java.lang.Override
+    public java.lang.String getQueryType() {
+      java.lang.Object ref = queryType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        queryType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string query_type = 4 [json_name = "queryType"];</code>
+     * @return The bytes for queryType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getQueryTypeBytes() {
+      java.lang.Object ref = queryType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        queryType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REQUEST_FIELD_NUMBER = 5;
+    private com.google.protobuf.ByteString request_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes request = 5 [json_name = "request"];</code>
+     * @return The request.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getRequest() {
+      return request_;
+    }
+
+    public static final int CALLBACK_ID_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object callbackId_ = "";
+    /**
+     * <code>string callback_id = 8 [json_name = "callbackId"];</code>
+     * @return The callbackId.
+     */
+    @java.lang.Override
+    public java.lang.String getCallbackId() {
+      java.lang.Object ref = callbackId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        callbackId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string callback_id = 8 [json_name = "callbackId"];</code>
+     * @return The bytes for callbackId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCallbackIdBytes() {
+      java.lang.Object ref = callbackId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        callbackId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TTL_FIELD_NUMBER = 9;
+    private long ttl_ = 0L;
+    /**
+     * <code>uint64 ttl = 9 [json_name = "ttl"];</code>
+     * @return The ttl.
+     */
+    @java.lang.Override
+    public long getTtl() {
+      return ttl_;
+    }
+
+    public static final int REQUEST_SENT_FIELD_NUMBER = 11;
+    private boolean requestSent_ = false;
+    /**
+     * <code>bool request_sent = 11 [json_name = "requestSent"];</code>
+     * @return The requestSent.
+     */
+    @java.lang.Override
+    public boolean getRequestSent() {
+      return requestSent_;
+    }
+
+    public static final int EXTRA_ID_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object extraId_ = "";
+    /**
+     * <code>string extra_id = 12 [json_name = "extraId"];</code>
+     * @return The extraId.
+     */
+    @java.lang.Override
+    public java.lang.String getExtraId() {
+      java.lang.Object ref = extraId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        extraId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string extra_id = 12 [json_name = "extraId"];</code>
+     * @return The bytes for extraId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExtraIdBytes() {
+      java.lang.Object ref = extraId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        extraId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, connectionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, chainId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(queryType_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, queryType_);
+      }
+      if (!request_.isEmpty()) {
+        output.writeBytes(5, request_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callbackId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, callbackId_);
+      }
+      if (ttl_ != 0L) {
+        output.writeUInt64(9, ttl_);
+      }
+      if (requestSent_ != false) {
+        output.writeBool(11, requestSent_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(extraId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, extraId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, connectionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, chainId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(queryType_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, queryType_);
+      }
+      if (!request_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, request_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callbackId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, callbackId_);
+      }
+      if (ttl_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(9, ttl_);
+      }
+      if (requestSent_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(11, requestSent_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(extraId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, extraId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.icqueries.GenesisProto.Query)) {
+        return super.equals(obj);
+      }
+      com.lum.network.icqueries.GenesisProto.Query other = (com.lum.network.icqueries.GenesisProto.Query) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getConnectionId()
+          .equals(other.getConnectionId())) return false;
+      if (!getChainId()
+          .equals(other.getChainId())) return false;
+      if (!getQueryType()
+          .equals(other.getQueryType())) return false;
+      if (!getRequest()
+          .equals(other.getRequest())) return false;
+      if (!getCallbackId()
+          .equals(other.getCallbackId())) return false;
+      if (getTtl()
+          != other.getTtl()) return false;
+      if (getRequestSent()
+          != other.getRequestSent()) return false;
+      if (!getExtraId()
+          .equals(other.getExtraId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getConnectionId().hashCode();
+      hash = (37 * hash) + CHAIN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getChainId().hashCode();
+      hash = (37 * hash) + QUERY_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getQueryType().hashCode();
+      hash = (37 * hash) + REQUEST_FIELD_NUMBER;
+      hash = (53 * hash) + getRequest().hashCode();
+      hash = (37 * hash) + CALLBACK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getCallbackId().hashCode();
+      hash = (37 * hash) + TTL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTtl());
+      hash = (37 * hash) + REQUEST_SENT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getRequestSent());
+      hash = (37 * hash) + EXTRA_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getExtraId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.icqueries.GenesisProto.Query parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.icqueries.GenesisProto.Query parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.icqueries.GenesisProto.Query parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.icqueries.GenesisProto.Query parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.icqueries.GenesisProto.Query parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.icqueries.GenesisProto.Query parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.icqueries.GenesisProto.Query parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.icqueries.GenesisProto.Query parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.icqueries.GenesisProto.Query parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.icqueries.GenesisProto.Query parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.icqueries.GenesisProto.Query parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.icqueries.GenesisProto.Query parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.icqueries.GenesisProto.Query prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.icqueries.Query}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.icqueries.Query)
+        com.lum.network.icqueries.GenesisProto.QueryOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.icqueries.GenesisProto.internal_static_lum_network_icqueries_Query_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.icqueries.GenesisProto.internal_static_lum_network_icqueries_Query_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.icqueries.GenesisProto.Query.class, com.lum.network.icqueries.GenesisProto.Query.Builder.class);
+      }
+
+      // Construct using com.lum.network.icqueries.GenesisProto.Query.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = "";
+        connectionId_ = "";
+        chainId_ = "";
+        queryType_ = "";
+        request_ = com.google.protobuf.ByteString.EMPTY;
+        callbackId_ = "";
+        ttl_ = 0L;
+        requestSent_ = false;
+        extraId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.icqueries.GenesisProto.internal_static_lum_network_icqueries_Query_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.icqueries.GenesisProto.Query getDefaultInstanceForType() {
+        return com.lum.network.icqueries.GenesisProto.Query.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.icqueries.GenesisProto.Query build() {
+        com.lum.network.icqueries.GenesisProto.Query result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.icqueries.GenesisProto.Query buildPartial() {
+        com.lum.network.icqueries.GenesisProto.Query result = new com.lum.network.icqueries.GenesisProto.Query(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.lum.network.icqueries.GenesisProto.Query result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.connectionId_ = connectionId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.chainId_ = chainId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.queryType_ = queryType_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.request_ = request_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.callbackId_ = callbackId_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.ttl_ = ttl_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.requestSent_ = requestSent_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.extraId_ = extraId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.icqueries.GenesisProto.Query) {
+          return mergeFrom((com.lum.network.icqueries.GenesisProto.Query)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.icqueries.GenesisProto.Query other) {
+        if (other == com.lum.network.icqueries.GenesisProto.Query.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getConnectionId().isEmpty()) {
+          connectionId_ = other.connectionId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getChainId().isEmpty()) {
+          chainId_ = other.chainId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getQueryType().isEmpty()) {
+          queryType_ = other.queryType_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.getRequest() != com.google.protobuf.ByteString.EMPTY) {
+          setRequest(other.getRequest());
+        }
+        if (!other.getCallbackId().isEmpty()) {
+          callbackId_ = other.callbackId_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (other.getTtl() != 0L) {
+          setTtl(other.getTtl());
+        }
+        if (other.getRequestSent() != false) {
+          setRequestSent(other.getRequestSent());
+        }
+        if (!other.getExtraId().isEmpty()) {
+          extraId_ = other.extraId_;
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                connectionId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                chainId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                queryType_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                request_ = input.readBytes();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 66: {
+                callbackId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 66
+              case 72: {
+                ttl_ = input.readUInt64();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 72
+              case 88: {
+                requestSent_ = input.readBool();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 88
+              case 98: {
+                extraId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 98
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object connectionId_ = "";
+      /**
+       * <code>string connection_id = 2 [json_name = "connectionId"];</code>
+       * @return The connectionId.
+       */
+      public java.lang.String getConnectionId() {
+        java.lang.Object ref = connectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          connectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string connection_id = 2 [json_name = "connectionId"];</code>
+       * @return The bytes for connectionId.
+       */
+      public com.google.protobuf.ByteString
+          getConnectionIdBytes() {
+        java.lang.Object ref = connectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          connectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string connection_id = 2 [json_name = "connectionId"];</code>
+       * @param value The connectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectionId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        connectionId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string connection_id = 2 [json_name = "connectionId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConnectionId() {
+        connectionId_ = getDefaultInstance().getConnectionId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string connection_id = 2 [json_name = "connectionId"];</code>
+       * @param value The bytes for connectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        connectionId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object chainId_ = "";
+      /**
+       * <code>string chain_id = 3 [json_name = "chainId"];</code>
+       * @return The chainId.
+       */
+      public java.lang.String getChainId() {
+        java.lang.Object ref = chainId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          chainId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 3 [json_name = "chainId"];</code>
+       * @return The bytes for chainId.
+       */
+      public com.google.protobuf.ByteString
+          getChainIdBytes() {
+        java.lang.Object ref = chainId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          chainId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 3 [json_name = "chainId"];</code>
+       * @param value The chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        chainId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 3 [json_name = "chainId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChainId() {
+        chainId_ = getDefaultInstance().getChainId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 3 [json_name = "chainId"];</code>
+       * @param value The bytes for chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        chainId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object queryType_ = "";
+      /**
+       * <code>string query_type = 4 [json_name = "queryType"];</code>
+       * @return The queryType.
+       */
+      public java.lang.String getQueryType() {
+        java.lang.Object ref = queryType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          queryType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string query_type = 4 [json_name = "queryType"];</code>
+       * @return The bytes for queryType.
+       */
+      public com.google.protobuf.ByteString
+          getQueryTypeBytes() {
+        java.lang.Object ref = queryType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          queryType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string query_type = 4 [json_name = "queryType"];</code>
+       * @param value The queryType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQueryType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        queryType_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string query_type = 4 [json_name = "queryType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQueryType() {
+        queryType_ = getDefaultInstance().getQueryType();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string query_type = 4 [json_name = "queryType"];</code>
+       * @param value The bytes for queryType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQueryTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        queryType_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString request_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes request = 5 [json_name = "request"];</code>
+       * @return The request.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getRequest() {
+        return request_;
+      }
+      /**
+       * <code>bytes request = 5 [json_name = "request"];</code>
+       * @param value The request to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequest(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        request_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes request = 5 [json_name = "request"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequest() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        request_ = getDefaultInstance().getRequest();
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object callbackId_ = "";
+      /**
+       * <code>string callback_id = 8 [json_name = "callbackId"];</code>
+       * @return The callbackId.
+       */
+      public java.lang.String getCallbackId() {
+        java.lang.Object ref = callbackId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          callbackId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string callback_id = 8 [json_name = "callbackId"];</code>
+       * @return The bytes for callbackId.
+       */
+      public com.google.protobuf.ByteString
+          getCallbackIdBytes() {
+        java.lang.Object ref = callbackId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          callbackId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string callback_id = 8 [json_name = "callbackId"];</code>
+       * @param value The callbackId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCallbackId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        callbackId_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string callback_id = 8 [json_name = "callbackId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCallbackId() {
+        callbackId_ = getDefaultInstance().getCallbackId();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string callback_id = 8 [json_name = "callbackId"];</code>
+       * @param value The bytes for callbackId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCallbackIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        callbackId_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private long ttl_ ;
+      /**
+       * <code>uint64 ttl = 9 [json_name = "ttl"];</code>
+       * @return The ttl.
+       */
+      @java.lang.Override
+      public long getTtl() {
+        return ttl_;
+      }
+      /**
+       * <code>uint64 ttl = 9 [json_name = "ttl"];</code>
+       * @param value The ttl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTtl(long value) {
+
+        ttl_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 ttl = 9 [json_name = "ttl"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTtl() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        ttl_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private boolean requestSent_ ;
+      /**
+       * <code>bool request_sent = 11 [json_name = "requestSent"];</code>
+       * @return The requestSent.
+       */
+      @java.lang.Override
+      public boolean getRequestSent() {
+        return requestSent_;
+      }
+      /**
+       * <code>bool request_sent = 11 [json_name = "requestSent"];</code>
+       * @param value The requestSent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestSent(boolean value) {
+
+        requestSent_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool request_sent = 11 [json_name = "requestSent"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequestSent() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        requestSent_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object extraId_ = "";
+      /**
+       * <code>string extra_id = 12 [json_name = "extraId"];</code>
+       * @return The extraId.
+       */
+      public java.lang.String getExtraId() {
+        java.lang.Object ref = extraId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          extraId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string extra_id = 12 [json_name = "extraId"];</code>
+       * @return The bytes for extraId.
+       */
+      public com.google.protobuf.ByteString
+          getExtraIdBytes() {
+        java.lang.Object ref = extraId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          extraId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string extra_id = 12 [json_name = "extraId"];</code>
+       * @param value The extraId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExtraId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        extraId_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string extra_id = 12 [json_name = "extraId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExtraId() {
+        extraId_ = getDefaultInstance().getExtraId();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string extra_id = 12 [json_name = "extraId"];</code>
+       * @param value The bytes for extraId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExtraIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        extraId_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.icqueries.Query)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.icqueries.Query)
+    private static final com.lum.network.icqueries.GenesisProto.Query DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.icqueries.GenesisProto.Query();
+    }
+
+    public static com.lum.network.icqueries.GenesisProto.Query getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Query>
+        PARSER = new com.google.protobuf.AbstractParser<Query>() {
+      @java.lang.Override
+      public Query parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Query> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Query> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.icqueries.GenesisProto.Query getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DataPointOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.icqueries.DataPoint)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string remote_height = 2 [json_name = "remoteHeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+     * @return The remoteHeight.
+     */
+    java.lang.String getRemoteHeight();
+    /**
+     * <code>string remote_height = 2 [json_name = "remoteHeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+     * @return The bytes for remoteHeight.
+     */
+    com.google.protobuf.ByteString
+        getRemoteHeightBytes();
+
+    /**
+     * <code>string local_height = 3 [json_name = "localHeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+     * @return The localHeight.
+     */
+    java.lang.String getLocalHeight();
+    /**
+     * <code>string local_height = 3 [json_name = "localHeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+     * @return The bytes for localHeight.
+     */
+    com.google.protobuf.ByteString
+        getLocalHeightBytes();
+
+    /**
+     * <code>bytes value = 4 [json_name = "value", (.gogoproto.jsontag) = "result,omitempty"];</code>
+     * @return The value.
+     */
+    com.google.protobuf.ByteString getValue();
+  }
+  /**
+   * Protobuf type {@code lum.network.icqueries.DataPoint}
+   */
+  public static final class DataPoint extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.icqueries.DataPoint)
+      DataPointOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DataPoint.newBuilder() to construct.
+    private DataPoint(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DataPoint() {
+      id_ = "";
+      remoteHeight_ = "";
+      localHeight_ = "";
+      value_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DataPoint();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.icqueries.GenesisProto.internal_static_lum_network_icqueries_DataPoint_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.icqueries.GenesisProto.internal_static_lum_network_icqueries_DataPoint_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.icqueries.GenesisProto.DataPoint.class, com.lum.network.icqueries.GenesisProto.DataPoint.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REMOTE_HEIGHT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object remoteHeight_ = "";
+    /**
+     * <code>string remote_height = 2 [json_name = "remoteHeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+     * @return The remoteHeight.
+     */
+    @java.lang.Override
+    public java.lang.String getRemoteHeight() {
+      java.lang.Object ref = remoteHeight_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        remoteHeight_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string remote_height = 2 [json_name = "remoteHeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+     * @return The bytes for remoteHeight.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRemoteHeightBytes() {
+      java.lang.Object ref = remoteHeight_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        remoteHeight_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOCAL_HEIGHT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object localHeight_ = "";
+    /**
+     * <code>string local_height = 3 [json_name = "localHeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+     * @return The localHeight.
+     */
+    @java.lang.Override
+    public java.lang.String getLocalHeight() {
+      java.lang.Object ref = localHeight_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        localHeight_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string local_height = 3 [json_name = "localHeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+     * @return The bytes for localHeight.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLocalHeightBytes() {
+      java.lang.Object ref = localHeight_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        localHeight_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 4;
+    private com.google.protobuf.ByteString value_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes value = 4 [json_name = "value", (.gogoproto.jsontag) = "result,omitempty"];</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getValue() {
+      return value_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(remoteHeight_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, remoteHeight_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(localHeight_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, localHeight_);
+      }
+      if (!value_.isEmpty()) {
+        output.writeBytes(4, value_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(remoteHeight_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, remoteHeight_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(localHeight_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, localHeight_);
+      }
+      if (!value_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, value_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.icqueries.GenesisProto.DataPoint)) {
+        return super.equals(obj);
+      }
+      com.lum.network.icqueries.GenesisProto.DataPoint other = (com.lum.network.icqueries.GenesisProto.DataPoint) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getRemoteHeight()
+          .equals(other.getRemoteHeight())) return false;
+      if (!getLocalHeight()
+          .equals(other.getLocalHeight())) return false;
+      if (!getValue()
+          .equals(other.getValue())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + REMOTE_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + getRemoteHeight().hashCode();
+      hash = (37 * hash) + LOCAL_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + getLocalHeight().hashCode();
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getValue().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.icqueries.GenesisProto.DataPoint parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.icqueries.GenesisProto.DataPoint parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.icqueries.GenesisProto.DataPoint parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.icqueries.GenesisProto.DataPoint parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.icqueries.GenesisProto.DataPoint parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.icqueries.GenesisProto.DataPoint parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.icqueries.GenesisProto.DataPoint parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.icqueries.GenesisProto.DataPoint parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.icqueries.GenesisProto.DataPoint parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.icqueries.GenesisProto.DataPoint parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.icqueries.GenesisProto.DataPoint parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.icqueries.GenesisProto.DataPoint parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.icqueries.GenesisProto.DataPoint prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.icqueries.DataPoint}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.icqueries.DataPoint)
+        com.lum.network.icqueries.GenesisProto.DataPointOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.icqueries.GenesisProto.internal_static_lum_network_icqueries_DataPoint_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.icqueries.GenesisProto.internal_static_lum_network_icqueries_DataPoint_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.icqueries.GenesisProto.DataPoint.class, com.lum.network.icqueries.GenesisProto.DataPoint.Builder.class);
+      }
+
+      // Construct using com.lum.network.icqueries.GenesisProto.DataPoint.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = "";
+        remoteHeight_ = "";
+        localHeight_ = "";
+        value_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.icqueries.GenesisProto.internal_static_lum_network_icqueries_DataPoint_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.icqueries.GenesisProto.DataPoint getDefaultInstanceForType() {
+        return com.lum.network.icqueries.GenesisProto.DataPoint.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.icqueries.GenesisProto.DataPoint build() {
+        com.lum.network.icqueries.GenesisProto.DataPoint result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.icqueries.GenesisProto.DataPoint buildPartial() {
+        com.lum.network.icqueries.GenesisProto.DataPoint result = new com.lum.network.icqueries.GenesisProto.DataPoint(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.lum.network.icqueries.GenesisProto.DataPoint result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.remoteHeight_ = remoteHeight_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.localHeight_ = localHeight_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.value_ = value_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.icqueries.GenesisProto.DataPoint) {
+          return mergeFrom((com.lum.network.icqueries.GenesisProto.DataPoint)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.icqueries.GenesisProto.DataPoint other) {
+        if (other == com.lum.network.icqueries.GenesisProto.DataPoint.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getRemoteHeight().isEmpty()) {
+          remoteHeight_ = other.remoteHeight_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getLocalHeight().isEmpty()) {
+          localHeight_ = other.localHeight_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.getValue() != com.google.protobuf.ByteString.EMPTY) {
+          setValue(other.getValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                remoteHeight_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                localHeight_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                value_ = input.readBytes();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object remoteHeight_ = "";
+      /**
+       * <code>string remote_height = 2 [json_name = "remoteHeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * @return The remoteHeight.
+       */
+      public java.lang.String getRemoteHeight() {
+        java.lang.Object ref = remoteHeight_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          remoteHeight_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string remote_height = 2 [json_name = "remoteHeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * @return The bytes for remoteHeight.
+       */
+      public com.google.protobuf.ByteString
+          getRemoteHeightBytes() {
+        java.lang.Object ref = remoteHeight_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          remoteHeight_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string remote_height = 2 [json_name = "remoteHeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * @param value The remoteHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRemoteHeight(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        remoteHeight_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string remote_height = 2 [json_name = "remoteHeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRemoteHeight() {
+        remoteHeight_ = getDefaultInstance().getRemoteHeight();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string remote_height = 2 [json_name = "remoteHeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * @param value The bytes for remoteHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRemoteHeightBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        remoteHeight_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object localHeight_ = "";
+      /**
+       * <code>string local_height = 3 [json_name = "localHeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * @return The localHeight.
+       */
+      public java.lang.String getLocalHeight() {
+        java.lang.Object ref = localHeight_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          localHeight_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string local_height = 3 [json_name = "localHeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * @return The bytes for localHeight.
+       */
+      public com.google.protobuf.ByteString
+          getLocalHeightBytes() {
+        java.lang.Object ref = localHeight_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          localHeight_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string local_height = 3 [json_name = "localHeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * @param value The localHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocalHeight(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        localHeight_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string local_height = 3 [json_name = "localHeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLocalHeight() {
+        localHeight_ = getDefaultInstance().getLocalHeight();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string local_height = 3 [json_name = "localHeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.cosmos_proto.scalar) = "cosmos.Int"];</code>
+       * @param value The bytes for localHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocalHeightBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        localHeight_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString value_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes value = 4 [json_name = "value", (.gogoproto.jsontag) = "result,omitempty"];</code>
+       * @return The value.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getValue() {
+        return value_;
+      }
+      /**
+       * <code>bytes value = 4 [json_name = "value", (.gogoproto.jsontag) = "result,omitempty"];</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        value_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes value = 4 [json_name = "value", (.gogoproto.jsontag) = "result,omitempty"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        value_ = getDefaultInstance().getValue();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.icqueries.DataPoint)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.icqueries.DataPoint)
+    private static final com.lum.network.icqueries.GenesisProto.DataPoint DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.icqueries.GenesisProto.DataPoint();
+    }
+
+    public static com.lum.network.icqueries.GenesisProto.DataPoint getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DataPoint>
+        PARSER = new com.google.protobuf.AbstractParser<DataPoint>() {
+      @java.lang.Override
+      public DataPoint parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DataPoint> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DataPoint> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.icqueries.GenesisProto.DataPoint getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.icqueries.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.lum.network.icqueries.GenesisProto.Query> 
+        getQueriesList();
+    /**
+     * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+     */
+    com.lum.network.icqueries.GenesisProto.Query getQueries(int index);
+    /**
+     * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+     */
+    int getQueriesCount();
+    /**
+     * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.lum.network.icqueries.GenesisProto.QueryOrBuilder> 
+        getQueriesOrBuilderList();
+    /**
+     * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+     */
+    com.lum.network.icqueries.GenesisProto.QueryOrBuilder getQueriesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the epochs module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code lum.network.icqueries.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.icqueries.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      queries_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.icqueries.GenesisProto.internal_static_lum_network_icqueries_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.icqueries.GenesisProto.internal_static_lum_network_icqueries_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.icqueries.GenesisProto.GenesisState.class, com.lum.network.icqueries.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int QUERIES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.lum.network.icqueries.GenesisProto.Query> queries_;
+    /**
+     * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.lum.network.icqueries.GenesisProto.Query> getQueriesList() {
+      return queries_;
+    }
+    /**
+     * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.lum.network.icqueries.GenesisProto.QueryOrBuilder> 
+        getQueriesOrBuilderList() {
+      return queries_;
+    }
+    /**
+     * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getQueriesCount() {
+      return queries_.size();
+    }
+    /**
+     * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.lum.network.icqueries.GenesisProto.Query getQueries(int index) {
+      return queries_.get(index);
+    }
+    /**
+     * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.lum.network.icqueries.GenesisProto.QueryOrBuilder getQueriesOrBuilder(
+        int index) {
+      return queries_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < queries_.size(); i++) {
+        output.writeMessage(1, queries_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < queries_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, queries_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.icqueries.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.lum.network.icqueries.GenesisProto.GenesisState other = (com.lum.network.icqueries.GenesisProto.GenesisState) obj;
+
+      if (!getQueriesList()
+          .equals(other.getQueriesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getQueriesCount() > 0) {
+        hash = (37 * hash) + QUERIES_FIELD_NUMBER;
+        hash = (53 * hash) + getQueriesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.icqueries.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.icqueries.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.icqueries.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.icqueries.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.icqueries.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.icqueries.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.icqueries.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.icqueries.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.icqueries.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.icqueries.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.icqueries.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.icqueries.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.icqueries.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the epochs module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code lum.network.icqueries.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.icqueries.GenesisState)
+        com.lum.network.icqueries.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.icqueries.GenesisProto.internal_static_lum_network_icqueries_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.icqueries.GenesisProto.internal_static_lum_network_icqueries_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.icqueries.GenesisProto.GenesisState.class, com.lum.network.icqueries.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.lum.network.icqueries.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (queriesBuilder_ == null) {
+          queries_ = java.util.Collections.emptyList();
+        } else {
+          queries_ = null;
+          queriesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.icqueries.GenesisProto.internal_static_lum_network_icqueries_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.icqueries.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.lum.network.icqueries.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.icqueries.GenesisProto.GenesisState build() {
+        com.lum.network.icqueries.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.icqueries.GenesisProto.GenesisState buildPartial() {
+        com.lum.network.icqueries.GenesisProto.GenesisState result = new com.lum.network.icqueries.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.lum.network.icqueries.GenesisProto.GenesisState result) {
+        if (queriesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            queries_ = java.util.Collections.unmodifiableList(queries_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.queries_ = queries_;
+        } else {
+          result.queries_ = queriesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.lum.network.icqueries.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.icqueries.GenesisProto.GenesisState) {
+          return mergeFrom((com.lum.network.icqueries.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.icqueries.GenesisProto.GenesisState other) {
+        if (other == com.lum.network.icqueries.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (queriesBuilder_ == null) {
+          if (!other.queries_.isEmpty()) {
+            if (queries_.isEmpty()) {
+              queries_ = other.queries_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureQueriesIsMutable();
+              queries_.addAll(other.queries_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.queries_.isEmpty()) {
+            if (queriesBuilder_.isEmpty()) {
+              queriesBuilder_.dispose();
+              queriesBuilder_ = null;
+              queries_ = other.queries_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              queriesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getQueriesFieldBuilder() : null;
+            } else {
+              queriesBuilder_.addAllMessages(other.queries_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.lum.network.icqueries.GenesisProto.Query m =
+                    input.readMessage(
+                        com.lum.network.icqueries.GenesisProto.Query.parser(),
+                        extensionRegistry);
+                if (queriesBuilder_ == null) {
+                  ensureQueriesIsMutable();
+                  queries_.add(m);
+                } else {
+                  queriesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.lum.network.icqueries.GenesisProto.Query> queries_ =
+        java.util.Collections.emptyList();
+      private void ensureQueriesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          queries_ = new java.util.ArrayList<com.lum.network.icqueries.GenesisProto.Query>(queries_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.lum.network.icqueries.GenesisProto.Query, com.lum.network.icqueries.GenesisProto.Query.Builder, com.lum.network.icqueries.GenesisProto.QueryOrBuilder> queriesBuilder_;
+
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.lum.network.icqueries.GenesisProto.Query> getQueriesList() {
+        if (queriesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(queries_);
+        } else {
+          return queriesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public int getQueriesCount() {
+        if (queriesBuilder_ == null) {
+          return queries_.size();
+        } else {
+          return queriesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.icqueries.GenesisProto.Query getQueries(int index) {
+        if (queriesBuilder_ == null) {
+          return queries_.get(index);
+        } else {
+          return queriesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setQueries(
+          int index, com.lum.network.icqueries.GenesisProto.Query value) {
+        if (queriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQueriesIsMutable();
+          queries_.set(index, value);
+          onChanged();
+        } else {
+          queriesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setQueries(
+          int index, com.lum.network.icqueries.GenesisProto.Query.Builder builderForValue) {
+        if (queriesBuilder_ == null) {
+          ensureQueriesIsMutable();
+          queries_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          queriesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addQueries(com.lum.network.icqueries.GenesisProto.Query value) {
+        if (queriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQueriesIsMutable();
+          queries_.add(value);
+          onChanged();
+        } else {
+          queriesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addQueries(
+          int index, com.lum.network.icqueries.GenesisProto.Query value) {
+        if (queriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQueriesIsMutable();
+          queries_.add(index, value);
+          onChanged();
+        } else {
+          queriesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addQueries(
+          com.lum.network.icqueries.GenesisProto.Query.Builder builderForValue) {
+        if (queriesBuilder_ == null) {
+          ensureQueriesIsMutable();
+          queries_.add(builderForValue.build());
+          onChanged();
+        } else {
+          queriesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addQueries(
+          int index, com.lum.network.icqueries.GenesisProto.Query.Builder builderForValue) {
+        if (queriesBuilder_ == null) {
+          ensureQueriesIsMutable();
+          queries_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          queriesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllQueries(
+          java.lang.Iterable<? extends com.lum.network.icqueries.GenesisProto.Query> values) {
+        if (queriesBuilder_ == null) {
+          ensureQueriesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, queries_);
+          onChanged();
+        } else {
+          queriesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearQueries() {
+        if (queriesBuilder_ == null) {
+          queries_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          queriesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeQueries(int index) {
+        if (queriesBuilder_ == null) {
+          ensureQueriesIsMutable();
+          queries_.remove(index);
+          onChanged();
+        } else {
+          queriesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.icqueries.GenesisProto.Query.Builder getQueriesBuilder(
+          int index) {
+        return getQueriesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.icqueries.GenesisProto.QueryOrBuilder getQueriesOrBuilder(
+          int index) {
+        if (queriesBuilder_ == null) {
+          return queries_.get(index);  } else {
+          return queriesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.lum.network.icqueries.GenesisProto.QueryOrBuilder> 
+           getQueriesOrBuilderList() {
+        if (queriesBuilder_ != null) {
+          return queriesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(queries_);
+        }
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.icqueries.GenesisProto.Query.Builder addQueriesBuilder() {
+        return getQueriesFieldBuilder().addBuilder(
+            com.lum.network.icqueries.GenesisProto.Query.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.icqueries.GenesisProto.Query.Builder addQueriesBuilder(
+          int index) {
+        return getQueriesFieldBuilder().addBuilder(
+            index, com.lum.network.icqueries.GenesisProto.Query.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.lum.network.icqueries.GenesisProto.Query.Builder> 
+           getQueriesBuilderList() {
+        return getQueriesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.lum.network.icqueries.GenesisProto.Query, com.lum.network.icqueries.GenesisProto.Query.Builder, com.lum.network.icqueries.GenesisProto.QueryOrBuilder> 
+          getQueriesFieldBuilder() {
+        if (queriesBuilder_ == null) {
+          queriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.lum.network.icqueries.GenesisProto.Query, com.lum.network.icqueries.GenesisProto.Query.Builder, com.lum.network.icqueries.GenesisProto.QueryOrBuilder>(
+                  queries_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          queries_ = null;
+        }
+        return queriesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.icqueries.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.icqueries.GenesisState)
+    private static final com.lum.network.icqueries.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.icqueries.GenesisProto.GenesisState();
+    }
+
+    public static com.lum.network.icqueries.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.icqueries.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_icqueries_Query_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_icqueries_Query_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_icqueries_DataPoint_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_icqueries_DataPoint_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_icqueries_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_icqueries_GenesisState_fieldAccessorTable;
 
@@ -55,13 +3277,13 @@ public final class GenesisProto {
       "ypes.Int\322\264-\ncosmos.IntR\013localHeight\022*\n\005v" +
       "alue\030\004 \001(\014B\024\352\336\037\020result,omitemptyR\005value\"" +
       "L\n\014GenesisState\022<\n\007queries\030\001 \003(\0132\034.lum.n" +
-      "etwork.icqueries.QueryB\004\310\336\037\000R\007queriesB\317\001" +
+      "etwork.icqueries.QueryB\004\310\336\037\000R\007queriesB\315\001" +
       "\n\031com.lum.network.icqueriesB\014GenesisProt" +
-      "oP\001Z.github.com/lum-network/chain/x/icqu" +
-      "eries/types\242\002\003LNI\252\002\025Lum.Network.Icquerie" +
-      "s\312\002\025Lum\\Network\\Icqueries\342\002!Lum\\Network\\" +
-      "Icqueries\\GPBMetadata\352\002\027Lum::Network::Ic" +
-      "queriesb\006proto3"
+      "oZ.github.com/lum-network/chain/x/icquer" +
+      "ies/types\242\002\003LNI\252\002\025Lum.Network.Icqueries\312" +
+      "\002\025Lum\\Network\\Icqueries\342\002!Lum\\Network\\Ic" +
+      "queries\\GPBMetadata\352\002\027Lum::Network::Icqu" +
+      "eriesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

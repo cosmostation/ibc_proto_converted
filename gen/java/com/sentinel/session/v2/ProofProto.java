@@ -14,9 +14,878 @@ public final class ProofProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ProofOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.session.v2.Proof)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 id = 1 [json_name = "id", (.gogoproto.customname) = "ID"];</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <code>.sentinel.types.v1.Bandwidth bandwidth = 2 [json_name = "bandwidth", (.gogoproto.nullable) = false];</code>
+     * @return Whether the bandwidth field is set.
+     */
+    boolean hasBandwidth();
+    /**
+     * <code>.sentinel.types.v1.Bandwidth bandwidth = 2 [json_name = "bandwidth", (.gogoproto.nullable) = false];</code>
+     * @return The bandwidth.
+     */
+    com.sentinel.types.v1.BandwidthProto.Bandwidth getBandwidth();
+    /**
+     * <code>.sentinel.types.v1.Bandwidth bandwidth = 2 [json_name = "bandwidth", (.gogoproto.nullable) = false];</code>
+     */
+    com.sentinel.types.v1.BandwidthProto.BandwidthOrBuilder getBandwidthOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the duration field is set.
+     */
+    boolean hasDuration();
+    /**
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return The duration.
+     */
+    com.google.protobuf.Duration getDuration();
+    /**
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getDurationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code sentinel.session.v2.Proof}
+   */
+  public static final class Proof extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.session.v2.Proof)
+      ProofOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Proof.newBuilder() to construct.
+    private Proof(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Proof() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Proof();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.session.v2.ProofProto.internal_static_sentinel_session_v2_Proof_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.session.v2.ProofProto.internal_static_sentinel_session_v2_Proof_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.session.v2.ProofProto.Proof.class, com.sentinel.session.v2.ProofProto.Proof.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 1 [json_name = "id", (.gogoproto.customname) = "ID"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int BANDWIDTH_FIELD_NUMBER = 2;
+    private com.sentinel.types.v1.BandwidthProto.Bandwidth bandwidth_;
+    /**
+     * <code>.sentinel.types.v1.Bandwidth bandwidth = 2 [json_name = "bandwidth", (.gogoproto.nullable) = false];</code>
+     * @return Whether the bandwidth field is set.
+     */
+    @java.lang.Override
+    public boolean hasBandwidth() {
+      return bandwidth_ != null;
+    }
+    /**
+     * <code>.sentinel.types.v1.Bandwidth bandwidth = 2 [json_name = "bandwidth", (.gogoproto.nullable) = false];</code>
+     * @return The bandwidth.
+     */
+    @java.lang.Override
+    public com.sentinel.types.v1.BandwidthProto.Bandwidth getBandwidth() {
+      return bandwidth_ == null ? com.sentinel.types.v1.BandwidthProto.Bandwidth.getDefaultInstance() : bandwidth_;
+    }
+    /**
+     * <code>.sentinel.types.v1.Bandwidth bandwidth = 2 [json_name = "bandwidth", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.sentinel.types.v1.BandwidthProto.BandwidthOrBuilder getBandwidthOrBuilder() {
+      return bandwidth_ == null ? com.sentinel.types.v1.BandwidthProto.Bandwidth.getDefaultInstance() : bandwidth_;
+    }
+
+    public static final int DURATION_FIELD_NUMBER = 3;
+    private com.google.protobuf.Duration duration_;
+    /**
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the duration field is set.
+     */
+    @java.lang.Override
+    public boolean hasDuration() {
+      return duration_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return The duration.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getDuration() {
+      return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+    }
+    /**
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
+      return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      if (bandwidth_ != null) {
+        output.writeMessage(2, getBandwidth());
+      }
+      if (duration_ != null) {
+        output.writeMessage(3, getDuration());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      if (bandwidth_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getBandwidth());
+      }
+      if (duration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getDuration());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.session.v2.ProofProto.Proof)) {
+        return super.equals(obj);
+      }
+      com.sentinel.session.v2.ProofProto.Proof other = (com.sentinel.session.v2.ProofProto.Proof) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (hasBandwidth() != other.hasBandwidth()) return false;
+      if (hasBandwidth()) {
+        if (!getBandwidth()
+            .equals(other.getBandwidth())) return false;
+      }
+      if (hasDuration() != other.hasDuration()) return false;
+      if (hasDuration()) {
+        if (!getDuration()
+            .equals(other.getDuration())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      if (hasBandwidth()) {
+        hash = (37 * hash) + BANDWIDTH_FIELD_NUMBER;
+        hash = (53 * hash) + getBandwidth().hashCode();
+      }
+      if (hasDuration()) {
+        hash = (37 * hash) + DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getDuration().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.session.v2.ProofProto.Proof parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.ProofProto.Proof parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.ProofProto.Proof parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.ProofProto.Proof parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.ProofProto.Proof parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.ProofProto.Proof parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.ProofProto.Proof parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.ProofProto.Proof parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.session.v2.ProofProto.Proof parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.session.v2.ProofProto.Proof parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.ProofProto.Proof parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.ProofProto.Proof parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.session.v2.ProofProto.Proof prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.session.v2.Proof}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.session.v2.Proof)
+        com.sentinel.session.v2.ProofProto.ProofOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.session.v2.ProofProto.internal_static_sentinel_session_v2_Proof_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.session.v2.ProofProto.internal_static_sentinel_session_v2_Proof_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.session.v2.ProofProto.Proof.class, com.sentinel.session.v2.ProofProto.Proof.Builder.class);
+      }
+
+      // Construct using com.sentinel.session.v2.ProofProto.Proof.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        bandwidth_ = null;
+        if (bandwidthBuilder_ != null) {
+          bandwidthBuilder_.dispose();
+          bandwidthBuilder_ = null;
+        }
+        duration_ = null;
+        if (durationBuilder_ != null) {
+          durationBuilder_.dispose();
+          durationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.session.v2.ProofProto.internal_static_sentinel_session_v2_Proof_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.ProofProto.Proof getDefaultInstanceForType() {
+        return com.sentinel.session.v2.ProofProto.Proof.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.ProofProto.Proof build() {
+        com.sentinel.session.v2.ProofProto.Proof result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.ProofProto.Proof buildPartial() {
+        com.sentinel.session.v2.ProofProto.Proof result = new com.sentinel.session.v2.ProofProto.Proof(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.sentinel.session.v2.ProofProto.Proof result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.bandwidth_ = bandwidthBuilder_ == null
+              ? bandwidth_
+              : bandwidthBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.duration_ = durationBuilder_ == null
+              ? duration_
+              : durationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.session.v2.ProofProto.Proof) {
+          return mergeFrom((com.sentinel.session.v2.ProofProto.Proof)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.session.v2.ProofProto.Proof other) {
+        if (other == com.sentinel.session.v2.ProofProto.Proof.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (other.hasBandwidth()) {
+          mergeBandwidth(other.getBandwidth());
+        }
+        if (other.hasDuration()) {
+          mergeDuration(other.getDuration());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getBandwidthFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getDurationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 1 [json_name = "id", (.gogoproto.customname) = "ID"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id", (.gogoproto.customname) = "ID"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id", (.gogoproto.customname) = "ID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.sentinel.types.v1.BandwidthProto.Bandwidth bandwidth_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.sentinel.types.v1.BandwidthProto.Bandwidth, com.sentinel.types.v1.BandwidthProto.Bandwidth.Builder, com.sentinel.types.v1.BandwidthProto.BandwidthOrBuilder> bandwidthBuilder_;
+      /**
+       * <code>.sentinel.types.v1.Bandwidth bandwidth = 2 [json_name = "bandwidth", (.gogoproto.nullable) = false];</code>
+       * @return Whether the bandwidth field is set.
+       */
+      public boolean hasBandwidth() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.sentinel.types.v1.Bandwidth bandwidth = 2 [json_name = "bandwidth", (.gogoproto.nullable) = false];</code>
+       * @return The bandwidth.
+       */
+      public com.sentinel.types.v1.BandwidthProto.Bandwidth getBandwidth() {
+        if (bandwidthBuilder_ == null) {
+          return bandwidth_ == null ? com.sentinel.types.v1.BandwidthProto.Bandwidth.getDefaultInstance() : bandwidth_;
+        } else {
+          return bandwidthBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.sentinel.types.v1.Bandwidth bandwidth = 2 [json_name = "bandwidth", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBandwidth(com.sentinel.types.v1.BandwidthProto.Bandwidth value) {
+        if (bandwidthBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bandwidth_ = value;
+        } else {
+          bandwidthBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.types.v1.Bandwidth bandwidth = 2 [json_name = "bandwidth", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBandwidth(
+          com.sentinel.types.v1.BandwidthProto.Bandwidth.Builder builderForValue) {
+        if (bandwidthBuilder_ == null) {
+          bandwidth_ = builderForValue.build();
+        } else {
+          bandwidthBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.types.v1.Bandwidth bandwidth = 2 [json_name = "bandwidth", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeBandwidth(com.sentinel.types.v1.BandwidthProto.Bandwidth value) {
+        if (bandwidthBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            bandwidth_ != null &&
+            bandwidth_ != com.sentinel.types.v1.BandwidthProto.Bandwidth.getDefaultInstance()) {
+            getBandwidthBuilder().mergeFrom(value);
+          } else {
+            bandwidth_ = value;
+          }
+        } else {
+          bandwidthBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.types.v1.Bandwidth bandwidth = 2 [json_name = "bandwidth", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearBandwidth() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        bandwidth_ = null;
+        if (bandwidthBuilder_ != null) {
+          bandwidthBuilder_.dispose();
+          bandwidthBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.types.v1.Bandwidth bandwidth = 2 [json_name = "bandwidth", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.types.v1.BandwidthProto.Bandwidth.Builder getBandwidthBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getBandwidthFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.sentinel.types.v1.Bandwidth bandwidth = 2 [json_name = "bandwidth", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.types.v1.BandwidthProto.BandwidthOrBuilder getBandwidthOrBuilder() {
+        if (bandwidthBuilder_ != null) {
+          return bandwidthBuilder_.getMessageOrBuilder();
+        } else {
+          return bandwidth_ == null ?
+              com.sentinel.types.v1.BandwidthProto.Bandwidth.getDefaultInstance() : bandwidth_;
+        }
+      }
+      /**
+       * <code>.sentinel.types.v1.Bandwidth bandwidth = 2 [json_name = "bandwidth", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.sentinel.types.v1.BandwidthProto.Bandwidth, com.sentinel.types.v1.BandwidthProto.Bandwidth.Builder, com.sentinel.types.v1.BandwidthProto.BandwidthOrBuilder> 
+          getBandwidthFieldBuilder() {
+        if (bandwidthBuilder_ == null) {
+          bandwidthBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.sentinel.types.v1.BandwidthProto.Bandwidth, com.sentinel.types.v1.BandwidthProto.Bandwidth.Builder, com.sentinel.types.v1.BandwidthProto.BandwidthOrBuilder>(
+                  getBandwidth(),
+                  getParentForChildren(),
+                  isClean());
+          bandwidth_ = null;
+        }
+        return bandwidthBuilder_;
+      }
+
+      private com.google.protobuf.Duration duration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> durationBuilder_;
+      /**
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       * @return Whether the duration field is set.
+       */
+      public boolean hasDuration() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       * @return The duration.
+       */
+      public com.google.protobuf.Duration getDuration() {
+        if (durationBuilder_ == null) {
+          return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+        } else {
+          return durationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setDuration(com.google.protobuf.Duration value) {
+        if (durationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          duration_ = value;
+        } else {
+          durationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (durationBuilder_ == null) {
+          duration_ = builderForValue.build();
+        } else {
+          durationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeDuration(com.google.protobuf.Duration value) {
+        if (durationBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            duration_ != null &&
+            duration_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getDurationBuilder().mergeFrom(value);
+          } else {
+            duration_ = value;
+          }
+        } else {
+          durationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearDuration() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        duration_ = null;
+        if (durationBuilder_ != null) {
+          durationBuilder_.dispose();
+          durationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getDurationBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
+        if (durationBuilder_ != null) {
+          return durationBuilder_.getMessageOrBuilder();
+        } else {
+          return duration_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : duration_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getDurationFieldBuilder() {
+        if (durationBuilder_ == null) {
+          durationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getDuration(),
+                  getParentForChildren(),
+                  isClean());
+          duration_ = null;
+        }
+        return durationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.session.v2.Proof)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.session.v2.Proof)
+    private static final com.sentinel.session.v2.ProofProto.Proof DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.session.v2.ProofProto.Proof();
+    }
+
+    public static com.sentinel.session.v2.ProofProto.Proof getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Proof>
+        PARSER = new com.google.protobuf.AbstractParser<Proof>() {
+      @java.lang.Override
+      public Proof parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Proof> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Proof> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.session.v2.ProofProto.Proof getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_session_v2_Proof_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_session_v2_Proof_fieldAccessorTable;
 
@@ -35,13 +904,13 @@ public final class ProofProto {
       "\001 \001(\004B\006\342\336\037\002IDR\002id\022@\n\tbandwidth\030\002 \001(\0132\034.s" +
       "entinel.types.v1.BandwidthB\004\310\336\037\000R\tbandwi" +
       "dth\022?\n\010duration\030\003 \001(\0132\031.google.protobuf." +
-      "DurationB\010\310\336\037\000\230\337\037\001R\010durationB\315\001\n\027com.sen" +
-      "tinel.session.v2B\nProofProtoP\001Z0github.c" +
-      "om/sentinel-official/hub/x/session/types" +
-      "\242\002\003SSX\252\002\023Sentinel.Session.V2\312\002\023Sentinel\\" +
-      "Session\\V2\342\002\037Sentinel\\Session\\V2\\GPBMeta" +
-      "data\352\002\025Sentinel::Session::V2\310\341\036\000\250\342\036\000b\006pr" +
-      "oto3"
+      "DurationB\010\310\336\037\000\230\337\037\001R\010durationB\313\001\n\027com.sen" +
+      "tinel.session.v2B\nProofProtoZ0github.com" +
+      "/sentinel-official/hub/x/session/types\242\002" +
+      "\003SSX\252\002\023Sentinel.Session.V2\312\002\023Sentinel\\Se" +
+      "ssion\\V2\342\002\037Sentinel\\Session\\V2\\GPBMetada" +
+      "ta\352\002\025Sentinel::Session::V2\310\341\036\000\250\342\036\000b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

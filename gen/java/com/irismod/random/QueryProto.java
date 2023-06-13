@@ -14,24 +14,2467 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryRandomRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.random.QueryRandomRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string req_id = 1 [json_name = "reqId"];</code>
+     * @return The reqId.
+     */
+    java.lang.String getReqId();
+    /**
+     * <code>string req_id = 1 [json_name = "reqId"];</code>
+     * @return The bytes for reqId.
+     */
+    com.google.protobuf.ByteString
+        getReqIdBytes();
+  }
+  /**
+   * <pre>
+   * QueryRandomRequest is request type for the Query/Random RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.random.QueryRandomRequest}
+   */
+  public static final class QueryRandomRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.random.QueryRandomRequest)
+      QueryRandomRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRandomRequest.newBuilder() to construct.
+    private QueryRandomRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRandomRequest() {
+      reqId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRandomRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.random.QueryProto.internal_static_irismod_random_QueryRandomRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.random.QueryProto.internal_static_irismod_random_QueryRandomRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.random.QueryProto.QueryRandomRequest.class, com.irismod.random.QueryProto.QueryRandomRequest.Builder.class);
+    }
+
+    public static final int REQ_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object reqId_ = "";
+    /**
+     * <code>string req_id = 1 [json_name = "reqId"];</code>
+     * @return The reqId.
+     */
+    @java.lang.Override
+    public java.lang.String getReqId() {
+      java.lang.Object ref = reqId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        reqId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string req_id = 1 [json_name = "reqId"];</code>
+     * @return The bytes for reqId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReqIdBytes() {
+      java.lang.Object ref = reqId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        reqId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reqId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, reqId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reqId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, reqId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.random.QueryProto.QueryRandomRequest)) {
+        return super.equals(obj);
+      }
+      com.irismod.random.QueryProto.QueryRandomRequest other = (com.irismod.random.QueryProto.QueryRandomRequest) obj;
+
+      if (!getReqId()
+          .equals(other.getReqId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REQ_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getReqId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.random.QueryProto.QueryRandomRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.random.QueryProto.QueryRandomRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.random.QueryProto.QueryRandomRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.random.QueryProto.QueryRandomRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryRandomRequest is request type for the Query/Random RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.random.QueryRandomRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.random.QueryRandomRequest)
+        com.irismod.random.QueryProto.QueryRandomRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.random.QueryProto.internal_static_irismod_random_QueryRandomRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.random.QueryProto.internal_static_irismod_random_QueryRandomRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.random.QueryProto.QueryRandomRequest.class, com.irismod.random.QueryProto.QueryRandomRequest.Builder.class);
+      }
+
+      // Construct using com.irismod.random.QueryProto.QueryRandomRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        reqId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.random.QueryProto.internal_static_irismod_random_QueryRandomRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.random.QueryProto.QueryRandomRequest getDefaultInstanceForType() {
+        return com.irismod.random.QueryProto.QueryRandomRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.random.QueryProto.QueryRandomRequest build() {
+        com.irismod.random.QueryProto.QueryRandomRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.random.QueryProto.QueryRandomRequest buildPartial() {
+        com.irismod.random.QueryProto.QueryRandomRequest result = new com.irismod.random.QueryProto.QueryRandomRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.random.QueryProto.QueryRandomRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.reqId_ = reqId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.random.QueryProto.QueryRandomRequest) {
+          return mergeFrom((com.irismod.random.QueryProto.QueryRandomRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.random.QueryProto.QueryRandomRequest other) {
+        if (other == com.irismod.random.QueryProto.QueryRandomRequest.getDefaultInstance()) return this;
+        if (!other.getReqId().isEmpty()) {
+          reqId_ = other.reqId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                reqId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object reqId_ = "";
+      /**
+       * <code>string req_id = 1 [json_name = "reqId"];</code>
+       * @return The reqId.
+       */
+      public java.lang.String getReqId() {
+        java.lang.Object ref = reqId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          reqId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string req_id = 1 [json_name = "reqId"];</code>
+       * @return The bytes for reqId.
+       */
+      public com.google.protobuf.ByteString
+          getReqIdBytes() {
+        java.lang.Object ref = reqId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          reqId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string req_id = 1 [json_name = "reqId"];</code>
+       * @param value The reqId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReqId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        reqId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string req_id = 1 [json_name = "reqId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReqId() {
+        reqId_ = getDefaultInstance().getReqId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string req_id = 1 [json_name = "reqId"];</code>
+       * @param value The bytes for reqId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReqIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        reqId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.random.QueryRandomRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.random.QueryRandomRequest)
+    private static final com.irismod.random.QueryProto.QueryRandomRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.random.QueryProto.QueryRandomRequest();
+    }
+
+    public static com.irismod.random.QueryProto.QueryRandomRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRandomRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRandomRequest>() {
+      @java.lang.Override
+      public QueryRandomRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRandomRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRandomRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.random.QueryProto.QueryRandomRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRandomResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.random.QueryRandomResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.irismod.random.Random random = 1 [json_name = "random"];</code>
+     * @return Whether the random field is set.
+     */
+    boolean hasRandom();
+    /**
+     * <code>.irismod.random.Random random = 1 [json_name = "random"];</code>
+     * @return The random.
+     */
+    com.irismod.random.RandomProto.Random getRandom();
+    /**
+     * <code>.irismod.random.Random random = 1 [json_name = "random"];</code>
+     */
+    com.irismod.random.RandomProto.RandomOrBuilder getRandomOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryParametersResponse is response type for the Query/Random RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.random.QueryRandomResponse}
+   */
+  public static final class QueryRandomResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.random.QueryRandomResponse)
+      QueryRandomResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRandomResponse.newBuilder() to construct.
+    private QueryRandomResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRandomResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRandomResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.random.QueryProto.internal_static_irismod_random_QueryRandomResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.random.QueryProto.internal_static_irismod_random_QueryRandomResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.random.QueryProto.QueryRandomResponse.class, com.irismod.random.QueryProto.QueryRandomResponse.Builder.class);
+    }
+
+    public static final int RANDOM_FIELD_NUMBER = 1;
+    private com.irismod.random.RandomProto.Random random_;
+    /**
+     * <code>.irismod.random.Random random = 1 [json_name = "random"];</code>
+     * @return Whether the random field is set.
+     */
+    @java.lang.Override
+    public boolean hasRandom() {
+      return random_ != null;
+    }
+    /**
+     * <code>.irismod.random.Random random = 1 [json_name = "random"];</code>
+     * @return The random.
+     */
+    @java.lang.Override
+    public com.irismod.random.RandomProto.Random getRandom() {
+      return random_ == null ? com.irismod.random.RandomProto.Random.getDefaultInstance() : random_;
+    }
+    /**
+     * <code>.irismod.random.Random random = 1 [json_name = "random"];</code>
+     */
+    @java.lang.Override
+    public com.irismod.random.RandomProto.RandomOrBuilder getRandomOrBuilder() {
+      return random_ == null ? com.irismod.random.RandomProto.Random.getDefaultInstance() : random_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (random_ != null) {
+        output.writeMessage(1, getRandom());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (random_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getRandom());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.random.QueryProto.QueryRandomResponse)) {
+        return super.equals(obj);
+      }
+      com.irismod.random.QueryProto.QueryRandomResponse other = (com.irismod.random.QueryProto.QueryRandomResponse) obj;
+
+      if (hasRandom() != other.hasRandom()) return false;
+      if (hasRandom()) {
+        if (!getRandom()
+            .equals(other.getRandom())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasRandom()) {
+        hash = (37 * hash) + RANDOM_FIELD_NUMBER;
+        hash = (53 * hash) + getRandom().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.random.QueryProto.QueryRandomResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.random.QueryProto.QueryRandomResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.random.QueryProto.QueryRandomResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.random.QueryProto.QueryRandomResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParametersResponse is response type for the Query/Random RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.random.QueryRandomResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.random.QueryRandomResponse)
+        com.irismod.random.QueryProto.QueryRandomResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.random.QueryProto.internal_static_irismod_random_QueryRandomResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.random.QueryProto.internal_static_irismod_random_QueryRandomResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.random.QueryProto.QueryRandomResponse.class, com.irismod.random.QueryProto.QueryRandomResponse.Builder.class);
+      }
+
+      // Construct using com.irismod.random.QueryProto.QueryRandomResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        random_ = null;
+        if (randomBuilder_ != null) {
+          randomBuilder_.dispose();
+          randomBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.random.QueryProto.internal_static_irismod_random_QueryRandomResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.random.QueryProto.QueryRandomResponse getDefaultInstanceForType() {
+        return com.irismod.random.QueryProto.QueryRandomResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.random.QueryProto.QueryRandomResponse build() {
+        com.irismod.random.QueryProto.QueryRandomResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.random.QueryProto.QueryRandomResponse buildPartial() {
+        com.irismod.random.QueryProto.QueryRandomResponse result = new com.irismod.random.QueryProto.QueryRandomResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.random.QueryProto.QueryRandomResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.random_ = randomBuilder_ == null
+              ? random_
+              : randomBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.random.QueryProto.QueryRandomResponse) {
+          return mergeFrom((com.irismod.random.QueryProto.QueryRandomResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.random.QueryProto.QueryRandomResponse other) {
+        if (other == com.irismod.random.QueryProto.QueryRandomResponse.getDefaultInstance()) return this;
+        if (other.hasRandom()) {
+          mergeRandom(other.getRandom());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getRandomFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.irismod.random.RandomProto.Random random_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.irismod.random.RandomProto.Random, com.irismod.random.RandomProto.Random.Builder, com.irismod.random.RandomProto.RandomOrBuilder> randomBuilder_;
+      /**
+       * <code>.irismod.random.Random random = 1 [json_name = "random"];</code>
+       * @return Whether the random field is set.
+       */
+      public boolean hasRandom() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.irismod.random.Random random = 1 [json_name = "random"];</code>
+       * @return The random.
+       */
+      public com.irismod.random.RandomProto.Random getRandom() {
+        if (randomBuilder_ == null) {
+          return random_ == null ? com.irismod.random.RandomProto.Random.getDefaultInstance() : random_;
+        } else {
+          return randomBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.irismod.random.Random random = 1 [json_name = "random"];</code>
+       */
+      public Builder setRandom(com.irismod.random.RandomProto.Random value) {
+        if (randomBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          random_ = value;
+        } else {
+          randomBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.random.Random random = 1 [json_name = "random"];</code>
+       */
+      public Builder setRandom(
+          com.irismod.random.RandomProto.Random.Builder builderForValue) {
+        if (randomBuilder_ == null) {
+          random_ = builderForValue.build();
+        } else {
+          randomBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.random.Random random = 1 [json_name = "random"];</code>
+       */
+      public Builder mergeRandom(com.irismod.random.RandomProto.Random value) {
+        if (randomBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            random_ != null &&
+            random_ != com.irismod.random.RandomProto.Random.getDefaultInstance()) {
+            getRandomBuilder().mergeFrom(value);
+          } else {
+            random_ = value;
+          }
+        } else {
+          randomBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.random.Random random = 1 [json_name = "random"];</code>
+       */
+      public Builder clearRandom() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        random_ = null;
+        if (randomBuilder_ != null) {
+          randomBuilder_.dispose();
+          randomBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.random.Random random = 1 [json_name = "random"];</code>
+       */
+      public com.irismod.random.RandomProto.Random.Builder getRandomBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getRandomFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.irismod.random.Random random = 1 [json_name = "random"];</code>
+       */
+      public com.irismod.random.RandomProto.RandomOrBuilder getRandomOrBuilder() {
+        if (randomBuilder_ != null) {
+          return randomBuilder_.getMessageOrBuilder();
+        } else {
+          return random_ == null ?
+              com.irismod.random.RandomProto.Random.getDefaultInstance() : random_;
+        }
+      }
+      /**
+       * <code>.irismod.random.Random random = 1 [json_name = "random"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.irismod.random.RandomProto.Random, com.irismod.random.RandomProto.Random.Builder, com.irismod.random.RandomProto.RandomOrBuilder> 
+          getRandomFieldBuilder() {
+        if (randomBuilder_ == null) {
+          randomBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.irismod.random.RandomProto.Random, com.irismod.random.RandomProto.Random.Builder, com.irismod.random.RandomProto.RandomOrBuilder>(
+                  getRandom(),
+                  getParentForChildren(),
+                  isClean());
+          random_ = null;
+        }
+        return randomBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.random.QueryRandomResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.random.QueryRandomResponse)
+    private static final com.irismod.random.QueryProto.QueryRandomResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.random.QueryProto.QueryRandomResponse();
+    }
+
+    public static com.irismod.random.QueryProto.QueryRandomResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRandomResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRandomResponse>() {
+      @java.lang.Override
+      public QueryRandomResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRandomResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRandomResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.random.QueryProto.QueryRandomResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRandomRequestQueueRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.random.QueryRandomRequestQueueRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 height = 1 [json_name = "height"];</code>
+     * @return The height.
+     */
+    long getHeight();
+  }
+  /**
+   * <pre>
+   * QueryRandomRequestQueueRequest is request type for the Query/RandomRequestQueue RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.random.QueryRandomRequestQueueRequest}
+   */
+  public static final class QueryRandomRequestQueueRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.random.QueryRandomRequestQueueRequest)
+      QueryRandomRequestQueueRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRandomRequestQueueRequest.newBuilder() to construct.
+    private QueryRandomRequestQueueRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRandomRequestQueueRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRandomRequestQueueRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.random.QueryProto.internal_static_irismod_random_QueryRandomRequestQueueRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.random.QueryProto.internal_static_irismod_random_QueryRandomRequestQueueRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.random.QueryProto.QueryRandomRequestQueueRequest.class, com.irismod.random.QueryProto.QueryRandomRequestQueueRequest.Builder.class);
+    }
+
+    public static final int HEIGHT_FIELD_NUMBER = 1;
+    private long height_ = 0L;
+    /**
+     * <code>int64 height = 1 [json_name = "height"];</code>
+     * @return The height.
+     */
+    @java.lang.Override
+    public long getHeight() {
+      return height_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (height_ != 0L) {
+        output.writeInt64(1, height_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (height_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, height_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.random.QueryProto.QueryRandomRequestQueueRequest)) {
+        return super.equals(obj);
+      }
+      com.irismod.random.QueryProto.QueryRandomRequestQueueRequest other = (com.irismod.random.QueryProto.QueryRandomRequestQueueRequest) obj;
+
+      if (getHeight()
+          != other.getHeight()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getHeight());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.random.QueryProto.QueryRandomRequestQueueRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomRequestQueueRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomRequestQueueRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomRequestQueueRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomRequestQueueRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomRequestQueueRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomRequestQueueRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomRequestQueueRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.random.QueryProto.QueryRandomRequestQueueRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.random.QueryProto.QueryRandomRequestQueueRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomRequestQueueRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomRequestQueueRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.random.QueryProto.QueryRandomRequestQueueRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryRandomRequestQueueRequest is request type for the Query/RandomRequestQueue RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.random.QueryRandomRequestQueueRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.random.QueryRandomRequestQueueRequest)
+        com.irismod.random.QueryProto.QueryRandomRequestQueueRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.random.QueryProto.internal_static_irismod_random_QueryRandomRequestQueueRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.random.QueryProto.internal_static_irismod_random_QueryRandomRequestQueueRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.random.QueryProto.QueryRandomRequestQueueRequest.class, com.irismod.random.QueryProto.QueryRandomRequestQueueRequest.Builder.class);
+      }
+
+      // Construct using com.irismod.random.QueryProto.QueryRandomRequestQueueRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        height_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.random.QueryProto.internal_static_irismod_random_QueryRandomRequestQueueRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.random.QueryProto.QueryRandomRequestQueueRequest getDefaultInstanceForType() {
+        return com.irismod.random.QueryProto.QueryRandomRequestQueueRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.random.QueryProto.QueryRandomRequestQueueRequest build() {
+        com.irismod.random.QueryProto.QueryRandomRequestQueueRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.random.QueryProto.QueryRandomRequestQueueRequest buildPartial() {
+        com.irismod.random.QueryProto.QueryRandomRequestQueueRequest result = new com.irismod.random.QueryProto.QueryRandomRequestQueueRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.random.QueryProto.QueryRandomRequestQueueRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.height_ = height_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.random.QueryProto.QueryRandomRequestQueueRequest) {
+          return mergeFrom((com.irismod.random.QueryProto.QueryRandomRequestQueueRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.random.QueryProto.QueryRandomRequestQueueRequest other) {
+        if (other == com.irismod.random.QueryProto.QueryRandomRequestQueueRequest.getDefaultInstance()) return this;
+        if (other.getHeight() != 0L) {
+          setHeight(other.getHeight());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                height_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long height_ ;
+      /**
+       * <code>int64 height = 1 [json_name = "height"];</code>
+       * @return The height.
+       */
+      @java.lang.Override
+      public long getHeight() {
+        return height_;
+      }
+      /**
+       * <code>int64 height = 1 [json_name = "height"];</code>
+       * @param value The height to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeight(long value) {
+
+        height_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 height = 1 [json_name = "height"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHeight() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        height_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.random.QueryRandomRequestQueueRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.random.QueryRandomRequestQueueRequest)
+    private static final com.irismod.random.QueryProto.QueryRandomRequestQueueRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.random.QueryProto.QueryRandomRequestQueueRequest();
+    }
+
+    public static com.irismod.random.QueryProto.QueryRandomRequestQueueRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRandomRequestQueueRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRandomRequestQueueRequest>() {
+      @java.lang.Override
+      public QueryRandomRequestQueueRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRandomRequestQueueRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRandomRequestQueueRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.random.QueryProto.QueryRandomRequestQueueRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRandomRequestQueueResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.random.QueryRandomRequestQueueResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.irismod.random.RandomProto.Request> 
+        getRequestsList();
+    /**
+     * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+     */
+    com.irismod.random.RandomProto.Request getRequests(int index);
+    /**
+     * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+     */
+    int getRequestsCount();
+    /**
+     * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.irismod.random.RandomProto.RequestOrBuilder> 
+        getRequestsOrBuilderList();
+    /**
+     * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+     */
+    com.irismod.random.RandomProto.RequestOrBuilder getRequestsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * QueryRandomRequestQueueResponse is response type for the Query/RandomRequestQueue RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.random.QueryRandomRequestQueueResponse}
+   */
+  public static final class QueryRandomRequestQueueResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.random.QueryRandomRequestQueueResponse)
+      QueryRandomRequestQueueResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRandomRequestQueueResponse.newBuilder() to construct.
+    private QueryRandomRequestQueueResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRandomRequestQueueResponse() {
+      requests_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRandomRequestQueueResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.random.QueryProto.internal_static_irismod_random_QueryRandomRequestQueueResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.random.QueryProto.internal_static_irismod_random_QueryRandomRequestQueueResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.random.QueryProto.QueryRandomRequestQueueResponse.class, com.irismod.random.QueryProto.QueryRandomRequestQueueResponse.Builder.class);
+    }
+
+    public static final int REQUESTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.irismod.random.RandomProto.Request> requests_;
+    /**
+     * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.irismod.random.RandomProto.Request> getRequestsList() {
+      return requests_;
+    }
+    /**
+     * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.irismod.random.RandomProto.RequestOrBuilder> 
+        getRequestsOrBuilderList() {
+      return requests_;
+    }
+    /**
+     * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getRequestsCount() {
+      return requests_.size();
+    }
+    /**
+     * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.irismod.random.RandomProto.Request getRequests(int index) {
+      return requests_.get(index);
+    }
+    /**
+     * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.irismod.random.RandomProto.RequestOrBuilder getRequestsOrBuilder(
+        int index) {
+      return requests_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < requests_.size(); i++) {
+        output.writeMessage(1, requests_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < requests_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, requests_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.random.QueryProto.QueryRandomRequestQueueResponse)) {
+        return super.equals(obj);
+      }
+      com.irismod.random.QueryProto.QueryRandomRequestQueueResponse other = (com.irismod.random.QueryProto.QueryRandomRequestQueueResponse) obj;
+
+      if (!getRequestsList()
+          .equals(other.getRequestsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getRequestsCount() > 0) {
+        hash = (37 * hash) + REQUESTS_FIELD_NUMBER;
+        hash = (53 * hash) + getRequestsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.random.QueryProto.QueryRandomRequestQueueResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomRequestQueueResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomRequestQueueResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomRequestQueueResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomRequestQueueResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomRequestQueueResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomRequestQueueResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomRequestQueueResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.random.QueryProto.QueryRandomRequestQueueResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.random.QueryProto.QueryRandomRequestQueueResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomRequestQueueResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.random.QueryProto.QueryRandomRequestQueueResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.random.QueryProto.QueryRandomRequestQueueResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryRandomRequestQueueResponse is response type for the Query/RandomRequestQueue RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.random.QueryRandomRequestQueueResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.random.QueryRandomRequestQueueResponse)
+        com.irismod.random.QueryProto.QueryRandomRequestQueueResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.random.QueryProto.internal_static_irismod_random_QueryRandomRequestQueueResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.random.QueryProto.internal_static_irismod_random_QueryRandomRequestQueueResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.random.QueryProto.QueryRandomRequestQueueResponse.class, com.irismod.random.QueryProto.QueryRandomRequestQueueResponse.Builder.class);
+      }
+
+      // Construct using com.irismod.random.QueryProto.QueryRandomRequestQueueResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (requestsBuilder_ == null) {
+          requests_ = java.util.Collections.emptyList();
+        } else {
+          requests_ = null;
+          requestsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.random.QueryProto.internal_static_irismod_random_QueryRandomRequestQueueResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.random.QueryProto.QueryRandomRequestQueueResponse getDefaultInstanceForType() {
+        return com.irismod.random.QueryProto.QueryRandomRequestQueueResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.random.QueryProto.QueryRandomRequestQueueResponse build() {
+        com.irismod.random.QueryProto.QueryRandomRequestQueueResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.random.QueryProto.QueryRandomRequestQueueResponse buildPartial() {
+        com.irismod.random.QueryProto.QueryRandomRequestQueueResponse result = new com.irismod.random.QueryProto.QueryRandomRequestQueueResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.irismod.random.QueryProto.QueryRandomRequestQueueResponse result) {
+        if (requestsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            requests_ = java.util.Collections.unmodifiableList(requests_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.requests_ = requests_;
+        } else {
+          result.requests_ = requestsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.irismod.random.QueryProto.QueryRandomRequestQueueResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.random.QueryProto.QueryRandomRequestQueueResponse) {
+          return mergeFrom((com.irismod.random.QueryProto.QueryRandomRequestQueueResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.random.QueryProto.QueryRandomRequestQueueResponse other) {
+        if (other == com.irismod.random.QueryProto.QueryRandomRequestQueueResponse.getDefaultInstance()) return this;
+        if (requestsBuilder_ == null) {
+          if (!other.requests_.isEmpty()) {
+            if (requests_.isEmpty()) {
+              requests_ = other.requests_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRequestsIsMutable();
+              requests_.addAll(other.requests_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.requests_.isEmpty()) {
+            if (requestsBuilder_.isEmpty()) {
+              requestsBuilder_.dispose();
+              requestsBuilder_ = null;
+              requests_ = other.requests_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              requestsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRequestsFieldBuilder() : null;
+            } else {
+              requestsBuilder_.addAllMessages(other.requests_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.irismod.random.RandomProto.Request m =
+                    input.readMessage(
+                        com.irismod.random.RandomProto.Request.parser(),
+                        extensionRegistry);
+                if (requestsBuilder_ == null) {
+                  ensureRequestsIsMutable();
+                  requests_.add(m);
+                } else {
+                  requestsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.irismod.random.RandomProto.Request> requests_ =
+        java.util.Collections.emptyList();
+      private void ensureRequestsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          requests_ = new java.util.ArrayList<com.irismod.random.RandomProto.Request>(requests_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.irismod.random.RandomProto.Request, com.irismod.random.RandomProto.Request.Builder, com.irismod.random.RandomProto.RequestOrBuilder> requestsBuilder_;
+
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.irismod.random.RandomProto.Request> getRequestsList() {
+        if (requestsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(requests_);
+        } else {
+          return requestsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public int getRequestsCount() {
+        if (requestsBuilder_ == null) {
+          return requests_.size();
+        } else {
+          return requestsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.random.RandomProto.Request getRequests(int index) {
+        if (requestsBuilder_ == null) {
+          return requests_.get(index);
+        } else {
+          return requestsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRequests(
+          int index, com.irismod.random.RandomProto.Request value) {
+        if (requestsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRequestsIsMutable();
+          requests_.set(index, value);
+          onChanged();
+        } else {
+          requestsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRequests(
+          int index, com.irismod.random.RandomProto.Request.Builder builderForValue) {
+        if (requestsBuilder_ == null) {
+          ensureRequestsIsMutable();
+          requests_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          requestsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRequests(com.irismod.random.RandomProto.Request value) {
+        if (requestsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRequestsIsMutable();
+          requests_.add(value);
+          onChanged();
+        } else {
+          requestsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRequests(
+          int index, com.irismod.random.RandomProto.Request value) {
+        if (requestsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRequestsIsMutable();
+          requests_.add(index, value);
+          onChanged();
+        } else {
+          requestsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRequests(
+          com.irismod.random.RandomProto.Request.Builder builderForValue) {
+        if (requestsBuilder_ == null) {
+          ensureRequestsIsMutable();
+          requests_.add(builderForValue.build());
+          onChanged();
+        } else {
+          requestsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRequests(
+          int index, com.irismod.random.RandomProto.Request.Builder builderForValue) {
+        if (requestsBuilder_ == null) {
+          ensureRequestsIsMutable();
+          requests_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          requestsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllRequests(
+          java.lang.Iterable<? extends com.irismod.random.RandomProto.Request> values) {
+        if (requestsBuilder_ == null) {
+          ensureRequestsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, requests_);
+          onChanged();
+        } else {
+          requestsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearRequests() {
+        if (requestsBuilder_ == null) {
+          requests_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          requestsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeRequests(int index) {
+        if (requestsBuilder_ == null) {
+          ensureRequestsIsMutable();
+          requests_.remove(index);
+          onChanged();
+        } else {
+          requestsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.random.RandomProto.Request.Builder getRequestsBuilder(
+          int index) {
+        return getRequestsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.random.RandomProto.RequestOrBuilder getRequestsOrBuilder(
+          int index) {
+        if (requestsBuilder_ == null) {
+          return requests_.get(index);  } else {
+          return requestsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.irismod.random.RandomProto.RequestOrBuilder> 
+           getRequestsOrBuilderList() {
+        if (requestsBuilder_ != null) {
+          return requestsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(requests_);
+        }
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.random.RandomProto.Request.Builder addRequestsBuilder() {
+        return getRequestsFieldBuilder().addBuilder(
+            com.irismod.random.RandomProto.Request.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.random.RandomProto.Request.Builder addRequestsBuilder(
+          int index) {
+        return getRequestsFieldBuilder().addBuilder(
+            index, com.irismod.random.RandomProto.Request.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.irismod.random.RandomProto.Request.Builder> 
+           getRequestsBuilderList() {
+        return getRequestsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.irismod.random.RandomProto.Request, com.irismod.random.RandomProto.Request.Builder, com.irismod.random.RandomProto.RequestOrBuilder> 
+          getRequestsFieldBuilder() {
+        if (requestsBuilder_ == null) {
+          requestsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.irismod.random.RandomProto.Request, com.irismod.random.RandomProto.Request.Builder, com.irismod.random.RandomProto.RequestOrBuilder>(
+                  requests_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          requests_ = null;
+        }
+        return requestsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.random.QueryRandomRequestQueueResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.random.QueryRandomRequestQueueResponse)
+    private static final com.irismod.random.QueryProto.QueryRandomRequestQueueResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.random.QueryProto.QueryRandomRequestQueueResponse();
+    }
+
+    public static com.irismod.random.QueryProto.QueryRandomRequestQueueResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRandomRequestQueueResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRandomRequestQueueResponse>() {
+      @java.lang.Override
+      public QueryRandomRequestQueueResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRandomRequestQueueResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRandomRequestQueueResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.random.QueryProto.QueryRandomRequestQueueResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_random_QueryRandomRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_random_QueryRandomRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_random_QueryRandomResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_random_QueryRandomResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_random_QueryRandomRequestQueueRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_random_QueryRandomRequestQueueRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_random_QueryRandomRequestQueueResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_random_QueryRandomRequestQueueResponse_fieldAccessorTable;
 
@@ -60,11 +2503,11 @@ public final class QueryProto {
       "d.random.QueryRandomRequestQueueRequest\032" +
       "/.irismod.random.QueryRandomRequestQueue" +
       "Response\"\035\202\323\344\223\002\027\022\025/irismod/random/queueB" +
-      "\252\001\n\022com.irismod.randomB\nQueryProtoP\001Z/gi" +
-      "thub.com/irisnet/irismod/modules/random/" +
-      "types\242\002\003IRX\252\002\016Irismod.Random\312\002\016Irismod\\R" +
-      "andom\342\002\032Irismod\\Random\\GPBMetadata\352\002\017Iri" +
-      "smod::Randomb\006proto3"
+      "\250\001\n\022com.irismod.randomB\nQueryProtoZ/gith" +
+      "ub.com/irisnet/irismod/modules/random/ty" +
+      "pes\242\002\003IRX\252\002\016Irismod.Random\312\002\016Irismod\\Ran" +
+      "dom\342\002\032Irismod\\Random\\GPBMetadata\352\002\017Irism" +
+      "od::Randomb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

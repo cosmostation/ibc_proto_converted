@@ -14,19 +14,2089 @@ public final class EventsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface EventAnchorDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.data.v1alpha2.EventAnchorData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * iri is the data IRI
+     * </pre>
+     *
+     * <code>string iri = 1 [json_name = "iri"];</code>
+     * @return The iri.
+     */
+    java.lang.String getIri();
+    /**
+     * <pre>
+     * iri is the data IRI
+     * </pre>
+     *
+     * <code>string iri = 1 [json_name = "iri"];</code>
+     * @return The bytes for iri.
+     */
+    com.google.protobuf.ByteString
+        getIriBytes();
+  }
+  /**
+   * <pre>
+   * EventAnchorData is an event emitted when data is anchored on-chain.
+   * </pre>
+   *
+   * Protobuf type {@code regen.data.v1alpha2.EventAnchorData}
+   */
+  public static final class EventAnchorData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.data.v1alpha2.EventAnchorData)
+      EventAnchorDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventAnchorData.newBuilder() to construct.
+    private EventAnchorData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventAnchorData() {
+      iri_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventAnchorData();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.data.v1alpha2.EventsProto.internal_static_regen_data_v1alpha2_EventAnchorData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.data.v1alpha2.EventsProto.internal_static_regen_data_v1alpha2_EventAnchorData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.data.v1alpha2.EventsProto.EventAnchorData.class, com.regen.data.v1alpha2.EventsProto.EventAnchorData.Builder.class);
+    }
+
+    public static final int IRI_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object iri_ = "";
+    /**
+     * <pre>
+     * iri is the data IRI
+     * </pre>
+     *
+     * <code>string iri = 1 [json_name = "iri"];</code>
+     * @return The iri.
+     */
+    @java.lang.Override
+    public java.lang.String getIri() {
+      java.lang.Object ref = iri_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        iri_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * iri is the data IRI
+     * </pre>
+     *
+     * <code>string iri = 1 [json_name = "iri"];</code>
+     * @return The bytes for iri.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIriBytes() {
+      java.lang.Object ref = iri_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        iri_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iri_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, iri_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iri_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, iri_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.data.v1alpha2.EventsProto.EventAnchorData)) {
+        return super.equals(obj);
+      }
+      com.regen.data.v1alpha2.EventsProto.EventAnchorData other = (com.regen.data.v1alpha2.EventsProto.EventAnchorData) obj;
+
+      if (!getIri()
+          .equals(other.getIri())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + IRI_FIELD_NUMBER;
+      hash = (53 * hash) + getIri().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.data.v1alpha2.EventsProto.EventAnchorData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.EventsProto.EventAnchorData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.EventsProto.EventAnchorData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.EventsProto.EventAnchorData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.EventsProto.EventAnchorData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.EventsProto.EventAnchorData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.EventsProto.EventAnchorData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.EventsProto.EventAnchorData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.data.v1alpha2.EventsProto.EventAnchorData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.data.v1alpha2.EventsProto.EventAnchorData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.EventsProto.EventAnchorData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.EventsProto.EventAnchorData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.data.v1alpha2.EventsProto.EventAnchorData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventAnchorData is an event emitted when data is anchored on-chain.
+     * </pre>
+     *
+     * Protobuf type {@code regen.data.v1alpha2.EventAnchorData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.data.v1alpha2.EventAnchorData)
+        com.regen.data.v1alpha2.EventsProto.EventAnchorDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.data.v1alpha2.EventsProto.internal_static_regen_data_v1alpha2_EventAnchorData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.data.v1alpha2.EventsProto.internal_static_regen_data_v1alpha2_EventAnchorData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.data.v1alpha2.EventsProto.EventAnchorData.class, com.regen.data.v1alpha2.EventsProto.EventAnchorData.Builder.class);
+      }
+
+      // Construct using com.regen.data.v1alpha2.EventsProto.EventAnchorData.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        iri_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.data.v1alpha2.EventsProto.internal_static_regen_data_v1alpha2_EventAnchorData_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.EventsProto.EventAnchorData getDefaultInstanceForType() {
+        return com.regen.data.v1alpha2.EventsProto.EventAnchorData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.EventsProto.EventAnchorData build() {
+        com.regen.data.v1alpha2.EventsProto.EventAnchorData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.EventsProto.EventAnchorData buildPartial() {
+        com.regen.data.v1alpha2.EventsProto.EventAnchorData result = new com.regen.data.v1alpha2.EventsProto.EventAnchorData(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.data.v1alpha2.EventsProto.EventAnchorData result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.iri_ = iri_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.data.v1alpha2.EventsProto.EventAnchorData) {
+          return mergeFrom((com.regen.data.v1alpha2.EventsProto.EventAnchorData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.data.v1alpha2.EventsProto.EventAnchorData other) {
+        if (other == com.regen.data.v1alpha2.EventsProto.EventAnchorData.getDefaultInstance()) return this;
+        if (!other.getIri().isEmpty()) {
+          iri_ = other.iri_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                iri_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object iri_ = "";
+      /**
+       * <pre>
+       * iri is the data IRI
+       * </pre>
+       *
+       * <code>string iri = 1 [json_name = "iri"];</code>
+       * @return The iri.
+       */
+      public java.lang.String getIri() {
+        java.lang.Object ref = iri_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          iri_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * iri is the data IRI
+       * </pre>
+       *
+       * <code>string iri = 1 [json_name = "iri"];</code>
+       * @return The bytes for iri.
+       */
+      public com.google.protobuf.ByteString
+          getIriBytes() {
+        java.lang.Object ref = iri_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          iri_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * iri is the data IRI
+       * </pre>
+       *
+       * <code>string iri = 1 [json_name = "iri"];</code>
+       * @param value The iri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIri(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        iri_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * iri is the data IRI
+       * </pre>
+       *
+       * <code>string iri = 1 [json_name = "iri"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIri() {
+        iri_ = getDefaultInstance().getIri();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * iri is the data IRI
+       * </pre>
+       *
+       * <code>string iri = 1 [json_name = "iri"];</code>
+       * @param value The bytes for iri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIriBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        iri_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.data.v1alpha2.EventAnchorData)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.data.v1alpha2.EventAnchorData)
+    private static final com.regen.data.v1alpha2.EventsProto.EventAnchorData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.data.v1alpha2.EventsProto.EventAnchorData();
+    }
+
+    public static com.regen.data.v1alpha2.EventsProto.EventAnchorData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventAnchorData>
+        PARSER = new com.google.protobuf.AbstractParser<EventAnchorData>() {
+      @java.lang.Override
+      public EventAnchorData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventAnchorData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventAnchorData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.data.v1alpha2.EventsProto.EventAnchorData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventSignDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.data.v1alpha2.EventSignData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * iri is the data IRI
+     * </pre>
+     *
+     * <code>string iri = 1 [json_name = "iri"];</code>
+     * @return The iri.
+     */
+    java.lang.String getIri();
+    /**
+     * <pre>
+     * iri is the data IRI
+     * </pre>
+     *
+     * <code>string iri = 1 [json_name = "iri"];</code>
+     * @return The bytes for iri.
+     */
+    com.google.protobuf.ByteString
+        getIriBytes();
+
+    /**
+     * <pre>
+     * signers are the addresses of the accounts which have signed the data.
+     * </pre>
+     *
+     * <code>repeated string signers = 2 [json_name = "signers"];</code>
+     * @return A list containing the signers.
+     */
+    java.util.List<java.lang.String>
+        getSignersList();
+    /**
+     * <pre>
+     * signers are the addresses of the accounts which have signed the data.
+     * </pre>
+     *
+     * <code>repeated string signers = 2 [json_name = "signers"];</code>
+     * @return The count of signers.
+     */
+    int getSignersCount();
+    /**
+     * <pre>
+     * signers are the addresses of the accounts which have signed the data.
+     * </pre>
+     *
+     * <code>repeated string signers = 2 [json_name = "signers"];</code>
+     * @param index The index of the element to return.
+     * @return The signers at the given index.
+     */
+    java.lang.String getSigners(int index);
+    /**
+     * <pre>
+     * signers are the addresses of the accounts which have signed the data.
+     * </pre>
+     *
+     * <code>repeated string signers = 2 [json_name = "signers"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the signers at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSignersBytes(int index);
+  }
+  /**
+   * <pre>
+   * EventSignData is an event emitted when data is signed on-chain.
+   * </pre>
+   *
+   * Protobuf type {@code regen.data.v1alpha2.EventSignData}
+   */
+  public static final class EventSignData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.data.v1alpha2.EventSignData)
+      EventSignDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventSignData.newBuilder() to construct.
+    private EventSignData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventSignData() {
+      iri_ = "";
+      signers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventSignData();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.data.v1alpha2.EventsProto.internal_static_regen_data_v1alpha2_EventSignData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.data.v1alpha2.EventsProto.internal_static_regen_data_v1alpha2_EventSignData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.data.v1alpha2.EventsProto.EventSignData.class, com.regen.data.v1alpha2.EventsProto.EventSignData.Builder.class);
+    }
+
+    public static final int IRI_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object iri_ = "";
+    /**
+     * <pre>
+     * iri is the data IRI
+     * </pre>
+     *
+     * <code>string iri = 1 [json_name = "iri"];</code>
+     * @return The iri.
+     */
+    @java.lang.Override
+    public java.lang.String getIri() {
+      java.lang.Object ref = iri_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        iri_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * iri is the data IRI
+     * </pre>
+     *
+     * <code>string iri = 1 [json_name = "iri"];</code>
+     * @return The bytes for iri.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIriBytes() {
+      java.lang.Object ref = iri_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        iri_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SIGNERS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList signers_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * signers are the addresses of the accounts which have signed the data.
+     * </pre>
+     *
+     * <code>repeated string signers = 2 [json_name = "signers"];</code>
+     * @return A list containing the signers.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSignersList() {
+      return signers_;
+    }
+    /**
+     * <pre>
+     * signers are the addresses of the accounts which have signed the data.
+     * </pre>
+     *
+     * <code>repeated string signers = 2 [json_name = "signers"];</code>
+     * @return The count of signers.
+     */
+    public int getSignersCount() {
+      return signers_.size();
+    }
+    /**
+     * <pre>
+     * signers are the addresses of the accounts which have signed the data.
+     * </pre>
+     *
+     * <code>repeated string signers = 2 [json_name = "signers"];</code>
+     * @param index The index of the element to return.
+     * @return The signers at the given index.
+     */
+    public java.lang.String getSigners(int index) {
+      return signers_.get(index);
+    }
+    /**
+     * <pre>
+     * signers are the addresses of the accounts which have signed the data.
+     * </pre>
+     *
+     * <code>repeated string signers = 2 [json_name = "signers"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the signers at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSignersBytes(int index) {
+      return signers_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iri_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, iri_);
+      }
+      for (int i = 0; i < signers_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, signers_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iri_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, iri_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < signers_.size(); i++) {
+          dataSize += computeStringSizeNoTag(signers_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSignersList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.data.v1alpha2.EventsProto.EventSignData)) {
+        return super.equals(obj);
+      }
+      com.regen.data.v1alpha2.EventsProto.EventSignData other = (com.regen.data.v1alpha2.EventsProto.EventSignData) obj;
+
+      if (!getIri()
+          .equals(other.getIri())) return false;
+      if (!getSignersList()
+          .equals(other.getSignersList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + IRI_FIELD_NUMBER;
+      hash = (53 * hash) + getIri().hashCode();
+      if (getSignersCount() > 0) {
+        hash = (37 * hash) + SIGNERS_FIELD_NUMBER;
+        hash = (53 * hash) + getSignersList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.data.v1alpha2.EventsProto.EventSignData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.EventsProto.EventSignData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.EventsProto.EventSignData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.EventsProto.EventSignData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.EventsProto.EventSignData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.EventsProto.EventSignData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.EventsProto.EventSignData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.EventsProto.EventSignData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.data.v1alpha2.EventsProto.EventSignData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.data.v1alpha2.EventsProto.EventSignData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.EventsProto.EventSignData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.EventsProto.EventSignData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.data.v1alpha2.EventsProto.EventSignData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventSignData is an event emitted when data is signed on-chain.
+     * </pre>
+     *
+     * Protobuf type {@code regen.data.v1alpha2.EventSignData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.data.v1alpha2.EventSignData)
+        com.regen.data.v1alpha2.EventsProto.EventSignDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.data.v1alpha2.EventsProto.internal_static_regen_data_v1alpha2_EventSignData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.data.v1alpha2.EventsProto.internal_static_regen_data_v1alpha2_EventSignData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.data.v1alpha2.EventsProto.EventSignData.class, com.regen.data.v1alpha2.EventsProto.EventSignData.Builder.class);
+      }
+
+      // Construct using com.regen.data.v1alpha2.EventsProto.EventSignData.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        iri_ = "";
+        signers_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.data.v1alpha2.EventsProto.internal_static_regen_data_v1alpha2_EventSignData_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.EventsProto.EventSignData getDefaultInstanceForType() {
+        return com.regen.data.v1alpha2.EventsProto.EventSignData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.EventsProto.EventSignData build() {
+        com.regen.data.v1alpha2.EventsProto.EventSignData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.EventsProto.EventSignData buildPartial() {
+        com.regen.data.v1alpha2.EventsProto.EventSignData result = new com.regen.data.v1alpha2.EventsProto.EventSignData(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.data.v1alpha2.EventsProto.EventSignData result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.iri_ = iri_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          signers_.makeImmutable();
+          result.signers_ = signers_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.data.v1alpha2.EventsProto.EventSignData) {
+          return mergeFrom((com.regen.data.v1alpha2.EventsProto.EventSignData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.data.v1alpha2.EventsProto.EventSignData other) {
+        if (other == com.regen.data.v1alpha2.EventsProto.EventSignData.getDefaultInstance()) return this;
+        if (!other.getIri().isEmpty()) {
+          iri_ = other.iri_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.signers_.isEmpty()) {
+          if (signers_.isEmpty()) {
+            signers_ = other.signers_;
+            bitField0_ |= 0x00000002;
+          } else {
+            ensureSignersIsMutable();
+            signers_.addAll(other.signers_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                iri_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureSignersIsMutable();
+                signers_.add(s);
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object iri_ = "";
+      /**
+       * <pre>
+       * iri is the data IRI
+       * </pre>
+       *
+       * <code>string iri = 1 [json_name = "iri"];</code>
+       * @return The iri.
+       */
+      public java.lang.String getIri() {
+        java.lang.Object ref = iri_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          iri_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * iri is the data IRI
+       * </pre>
+       *
+       * <code>string iri = 1 [json_name = "iri"];</code>
+       * @return The bytes for iri.
+       */
+      public com.google.protobuf.ByteString
+          getIriBytes() {
+        java.lang.Object ref = iri_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          iri_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * iri is the data IRI
+       * </pre>
+       *
+       * <code>string iri = 1 [json_name = "iri"];</code>
+       * @param value The iri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIri(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        iri_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * iri is the data IRI
+       * </pre>
+       *
+       * <code>string iri = 1 [json_name = "iri"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIri() {
+        iri_ = getDefaultInstance().getIri();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * iri is the data IRI
+       * </pre>
+       *
+       * <code>string iri = 1 [json_name = "iri"];</code>
+       * @param value The bytes for iri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIriBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        iri_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList signers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureSignersIsMutable() {
+        if (!signers_.isModifiable()) {
+          signers_ = new com.google.protobuf.LazyStringArrayList(signers_);
+        }
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <pre>
+       * signers are the addresses of the accounts which have signed the data.
+       * </pre>
+       *
+       * <code>repeated string signers = 2 [json_name = "signers"];</code>
+       * @return A list containing the signers.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSignersList() {
+        signers_.makeImmutable();
+        return signers_;
+      }
+      /**
+       * <pre>
+       * signers are the addresses of the accounts which have signed the data.
+       * </pre>
+       *
+       * <code>repeated string signers = 2 [json_name = "signers"];</code>
+       * @return The count of signers.
+       */
+      public int getSignersCount() {
+        return signers_.size();
+      }
+      /**
+       * <pre>
+       * signers are the addresses of the accounts which have signed the data.
+       * </pre>
+       *
+       * <code>repeated string signers = 2 [json_name = "signers"];</code>
+       * @param index The index of the element to return.
+       * @return The signers at the given index.
+       */
+      public java.lang.String getSigners(int index) {
+        return signers_.get(index);
+      }
+      /**
+       * <pre>
+       * signers are the addresses of the accounts which have signed the data.
+       * </pre>
+       *
+       * <code>repeated string signers = 2 [json_name = "signers"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the signers at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSignersBytes(int index) {
+        return signers_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * signers are the addresses of the accounts which have signed the data.
+       * </pre>
+       *
+       * <code>repeated string signers = 2 [json_name = "signers"];</code>
+       * @param index The index to set the value at.
+       * @param value The signers to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSigners(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureSignersIsMutable();
+        signers_.set(index, value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * signers are the addresses of the accounts which have signed the data.
+       * </pre>
+       *
+       * <code>repeated string signers = 2 [json_name = "signers"];</code>
+       * @param value The signers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSigners(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureSignersIsMutable();
+        signers_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * signers are the addresses of the accounts which have signed the data.
+       * </pre>
+       *
+       * <code>repeated string signers = 2 [json_name = "signers"];</code>
+       * @param values The signers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSigners(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSignersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, signers_);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * signers are the addresses of the accounts which have signed the data.
+       * </pre>
+       *
+       * <code>repeated string signers = 2 [json_name = "signers"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSigners() {
+        signers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * signers are the addresses of the accounts which have signed the data.
+       * </pre>
+       *
+       * <code>repeated string signers = 2 [json_name = "signers"];</code>
+       * @param value The bytes of the signers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSignersBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureSignersIsMutable();
+        signers_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.data.v1alpha2.EventSignData)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.data.v1alpha2.EventSignData)
+    private static final com.regen.data.v1alpha2.EventsProto.EventSignData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.data.v1alpha2.EventsProto.EventSignData();
+    }
+
+    public static com.regen.data.v1alpha2.EventsProto.EventSignData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventSignData>
+        PARSER = new com.google.protobuf.AbstractParser<EventSignData>() {
+      @java.lang.Override
+      public EventSignData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventSignData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventSignData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.data.v1alpha2.EventsProto.EventSignData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventStoreRawDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.data.v1alpha2.EventStoreRawData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * iri is the data IRI
+     * </pre>
+     *
+     * <code>string iri = 1 [json_name = "iri"];</code>
+     * @return The iri.
+     */
+    java.lang.String getIri();
+    /**
+     * <pre>
+     * iri is the data IRI
+     * </pre>
+     *
+     * <code>string iri = 1 [json_name = "iri"];</code>
+     * @return The bytes for iri.
+     */
+    com.google.protobuf.ByteString
+        getIriBytes();
+  }
+  /**
+   * <pre>
+   * EventStoreRawData is an event emitted when data is stored on-chain.
+   * </pre>
+   *
+   * Protobuf type {@code regen.data.v1alpha2.EventStoreRawData}
+   */
+  public static final class EventStoreRawData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.data.v1alpha2.EventStoreRawData)
+      EventStoreRawDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventStoreRawData.newBuilder() to construct.
+    private EventStoreRawData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventStoreRawData() {
+      iri_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventStoreRawData();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.data.v1alpha2.EventsProto.internal_static_regen_data_v1alpha2_EventStoreRawData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.data.v1alpha2.EventsProto.internal_static_regen_data_v1alpha2_EventStoreRawData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.data.v1alpha2.EventsProto.EventStoreRawData.class, com.regen.data.v1alpha2.EventsProto.EventStoreRawData.Builder.class);
+    }
+
+    public static final int IRI_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object iri_ = "";
+    /**
+     * <pre>
+     * iri is the data IRI
+     * </pre>
+     *
+     * <code>string iri = 1 [json_name = "iri"];</code>
+     * @return The iri.
+     */
+    @java.lang.Override
+    public java.lang.String getIri() {
+      java.lang.Object ref = iri_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        iri_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * iri is the data IRI
+     * </pre>
+     *
+     * <code>string iri = 1 [json_name = "iri"];</code>
+     * @return The bytes for iri.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIriBytes() {
+      java.lang.Object ref = iri_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        iri_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iri_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, iri_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iri_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, iri_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.data.v1alpha2.EventsProto.EventStoreRawData)) {
+        return super.equals(obj);
+      }
+      com.regen.data.v1alpha2.EventsProto.EventStoreRawData other = (com.regen.data.v1alpha2.EventsProto.EventStoreRawData) obj;
+
+      if (!getIri()
+          .equals(other.getIri())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + IRI_FIELD_NUMBER;
+      hash = (53 * hash) + getIri().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.data.v1alpha2.EventsProto.EventStoreRawData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.EventsProto.EventStoreRawData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.EventsProto.EventStoreRawData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.EventsProto.EventStoreRawData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.EventsProto.EventStoreRawData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.EventsProto.EventStoreRawData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.EventsProto.EventStoreRawData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.EventsProto.EventStoreRawData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.data.v1alpha2.EventsProto.EventStoreRawData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.data.v1alpha2.EventsProto.EventStoreRawData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.EventsProto.EventStoreRawData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.EventsProto.EventStoreRawData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.data.v1alpha2.EventsProto.EventStoreRawData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventStoreRawData is an event emitted when data is stored on-chain.
+     * </pre>
+     *
+     * Protobuf type {@code regen.data.v1alpha2.EventStoreRawData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.data.v1alpha2.EventStoreRawData)
+        com.regen.data.v1alpha2.EventsProto.EventStoreRawDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.data.v1alpha2.EventsProto.internal_static_regen_data_v1alpha2_EventStoreRawData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.data.v1alpha2.EventsProto.internal_static_regen_data_v1alpha2_EventStoreRawData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.data.v1alpha2.EventsProto.EventStoreRawData.class, com.regen.data.v1alpha2.EventsProto.EventStoreRawData.Builder.class);
+      }
+
+      // Construct using com.regen.data.v1alpha2.EventsProto.EventStoreRawData.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        iri_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.data.v1alpha2.EventsProto.internal_static_regen_data_v1alpha2_EventStoreRawData_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.EventsProto.EventStoreRawData getDefaultInstanceForType() {
+        return com.regen.data.v1alpha2.EventsProto.EventStoreRawData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.EventsProto.EventStoreRawData build() {
+        com.regen.data.v1alpha2.EventsProto.EventStoreRawData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.EventsProto.EventStoreRawData buildPartial() {
+        com.regen.data.v1alpha2.EventsProto.EventStoreRawData result = new com.regen.data.v1alpha2.EventsProto.EventStoreRawData(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.data.v1alpha2.EventsProto.EventStoreRawData result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.iri_ = iri_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.data.v1alpha2.EventsProto.EventStoreRawData) {
+          return mergeFrom((com.regen.data.v1alpha2.EventsProto.EventStoreRawData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.data.v1alpha2.EventsProto.EventStoreRawData other) {
+        if (other == com.regen.data.v1alpha2.EventsProto.EventStoreRawData.getDefaultInstance()) return this;
+        if (!other.getIri().isEmpty()) {
+          iri_ = other.iri_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                iri_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object iri_ = "";
+      /**
+       * <pre>
+       * iri is the data IRI
+       * </pre>
+       *
+       * <code>string iri = 1 [json_name = "iri"];</code>
+       * @return The iri.
+       */
+      public java.lang.String getIri() {
+        java.lang.Object ref = iri_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          iri_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * iri is the data IRI
+       * </pre>
+       *
+       * <code>string iri = 1 [json_name = "iri"];</code>
+       * @return The bytes for iri.
+       */
+      public com.google.protobuf.ByteString
+          getIriBytes() {
+        java.lang.Object ref = iri_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          iri_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * iri is the data IRI
+       * </pre>
+       *
+       * <code>string iri = 1 [json_name = "iri"];</code>
+       * @param value The iri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIri(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        iri_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * iri is the data IRI
+       * </pre>
+       *
+       * <code>string iri = 1 [json_name = "iri"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIri() {
+        iri_ = getDefaultInstance().getIri();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * iri is the data IRI
+       * </pre>
+       *
+       * <code>string iri = 1 [json_name = "iri"];</code>
+       * @param value The bytes for iri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIriBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        iri_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.data.v1alpha2.EventStoreRawData)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.data.v1alpha2.EventStoreRawData)
+    private static final com.regen.data.v1alpha2.EventsProto.EventStoreRawData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.data.v1alpha2.EventsProto.EventStoreRawData();
+    }
+
+    public static com.regen.data.v1alpha2.EventsProto.EventStoreRawData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventStoreRawData>
+        PARSER = new com.google.protobuf.AbstractParser<EventStoreRawData>() {
+      @java.lang.Override
+      public EventStoreRawData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventStoreRawData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventStoreRawData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.data.v1alpha2.EventsProto.EventStoreRawData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_data_v1alpha2_EventAnchorData_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_data_v1alpha2_EventAnchorData_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_data_v1alpha2_EventSignData_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_data_v1alpha2_EventSignData_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_data_v1alpha2_EventStoreRawData_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_data_v1alpha2_EventStoreRawData_fieldAccessorTable;
 
@@ -43,12 +2113,12 @@ public final class EventsProto {
       "es.proto\"#\n\017EventAnchorData\022\020\n\003iri\030\001 \001(\t" +
       "R\003iri\";\n\rEventSignData\022\020\n\003iri\030\001 \001(\tR\003iri" +
       "\022\030\n\007signers\030\002 \003(\tR\007signers\"%\n\021EventStore" +
-      "RawData\022\020\n\003iri\030\001 \001(\tR\003iriB\302\001\n\027com.regen." +
-      "data.v1alpha2B\013EventsProtoP\001Z,github.com" +
-      "/regen-network/regen-ledger/x/data\242\002\003RDX" +
-      "\252\002\023Regen.Data.V1alpha2\312\002\023Regen\\Data\\V1al" +
-      "pha2\342\002\037Regen\\Data\\V1alpha2\\GPBMetadata\352\002" +
-      "\025Regen::Data::V1alpha2b\006proto3"
+      "RawData\022\020\n\003iri\030\001 \001(\tR\003iriB\300\001\n\027com.regen." +
+      "data.v1alpha2B\013EventsProtoZ,github.com/r" +
+      "egen-network/regen-ledger/x/data\242\002\003RDX\252\002" +
+      "\023Regen.Data.V1alpha2\312\002\023Regen\\Data\\V1alph" +
+      "a2\342\002\037Regen\\Data\\V1alpha2\\GPBMetadata\352\002\025R" +
+      "egen::Data::V1alpha2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

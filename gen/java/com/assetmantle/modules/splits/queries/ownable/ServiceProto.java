@@ -33,14 +33,14 @@ public final class ServiceProto {
       "es.splits.queries.ownable.QueryRequest\0329" +
       ".assetmantle.modules.splits.queries.owna" +
       "ble.QueryResponse\"&\202\323\344\223\002 \022\036/mantle/split" +
-      "s/v1beta1/ownableB\214\002\n.com.assetmantle.mo" +
+      "s/v1beta1/ownableB\212\002\n.com.assetmantle.mo" +
       "dules.splits.queries.ownableB\014ServicePro" +
-      "toP\001\242\002\005AMSQO\252\002*Assetmantle.Modules.Split" +
-      "s.Queries.Ownable\312\002*Assetmantle\\Modules\\" +
-      "Splits\\Queries\\Ownable\342\0026Assetmantle\\Mod" +
-      "ules\\Splits\\Queries\\Ownable\\GPBMetadata\352" +
-      "\002.Assetmantle::Modules::Splits::Queries:" +
-      ":Ownableb\006proto3"
+      "to\242\002\005AMSQO\252\002*Assetmantle.Modules.Splits." +
+      "Queries.Ownable\312\002*Assetmantle\\Modules\\Sp" +
+      "lits\\Queries\\Ownable\342\0026Assetmantle\\Modul" +
+      "es\\Splits\\Queries\\Ownable\\GPBMetadata\352\002." +
+      "Assetmantle::Modules::Splits::Queries::O" +
+      "wnableb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

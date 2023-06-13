@@ -43,11 +43,11 @@ public final class QueryProto {
       "DenomHashRequest\0324.ibc.applications.tran" +
       "sfer.v1.QueryDenomHashResponse\"2\202\323\344\223\002,\022*" +
       "/ibc/apps/transfer/v1/denom_hashes/{trac" +
-      "e}B\264\001\n\024com.neutron.transferB\nQueryProtoP" +
-      "\001Z/github.com/neutron-org/neutron/x/tran" +
-      "sfer/types\242\002\003NTX\252\002\020Neutron.Transfer\312\002\020Ne" +
-      "utron\\Transfer\342\002\034Neutron\\Transfer\\GPBMet" +
-      "adata\352\002\021Neutron::Transferb\006proto3"
+      "e}B\262\001\n\024com.neutron.transferB\nQueryProtoZ" +
+      "/github.com/neutron-org/neutron/x/transf" +
+      "er/types\242\002\003NTX\252\002\020Neutron.Transfer\312\002\020Neut" +
+      "ron\\Transfer\342\002\034Neutron\\Transfer\\GPBMetad" +
+      "ata\352\002\021Neutron::Transferb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

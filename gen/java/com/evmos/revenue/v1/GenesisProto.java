@@ -14,14 +14,1968 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.revenue.v1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * params are the revenue module parameters
+     * </pre>
+     *
+     * <code>.evmos.revenue.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params are the revenue module parameters
+     * </pre>
+     *
+     * <code>.evmos.revenue.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.evmos.revenue.v1.GenesisProto.Params getParams();
+    /**
+     * <pre>
+     * params are the revenue module parameters
+     * </pre>
+     *
+     * <code>.evmos.revenue.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.evmos.revenue.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <pre>
+     * revenues is a slice of active registered contracts for fee distribution
+     * </pre>
+     *
+     * <code>repeated .evmos.revenue.v1.Revenue revenues = 2 [json_name = "revenues", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.evmos.revenue.v1.RevenueProto.Revenue> 
+        getRevenuesList();
+    /**
+     * <pre>
+     * revenues is a slice of active registered contracts for fee distribution
+     * </pre>
+     *
+     * <code>repeated .evmos.revenue.v1.Revenue revenues = 2 [json_name = "revenues", (.gogoproto.nullable) = false];</code>
+     */
+    com.evmos.revenue.v1.RevenueProto.Revenue getRevenues(int index);
+    /**
+     * <pre>
+     * revenues is a slice of active registered contracts for fee distribution
+     * </pre>
+     *
+     * <code>repeated .evmos.revenue.v1.Revenue revenues = 2 [json_name = "revenues", (.gogoproto.nullable) = false];</code>
+     */
+    int getRevenuesCount();
+    /**
+     * <pre>
+     * revenues is a slice of active registered contracts for fee distribution
+     * </pre>
+     *
+     * <code>repeated .evmos.revenue.v1.Revenue revenues = 2 [json_name = "revenues", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.evmos.revenue.v1.RevenueProto.RevenueOrBuilder> 
+        getRevenuesOrBuilderList();
+    /**
+     * <pre>
+     * revenues is a slice of active registered contracts for fee distribution
+     * </pre>
+     *
+     * <code>repeated .evmos.revenue.v1.Revenue revenues = 2 [json_name = "revenues", (.gogoproto.nullable) = false];</code>
+     */
+    com.evmos.revenue.v1.RevenueProto.RevenueOrBuilder getRevenuesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.revenue.v1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.revenue.v1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      revenues_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.revenue.v1.GenesisProto.internal_static_evmos_revenue_v1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.revenue.v1.GenesisProto.internal_static_evmos_revenue_v1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.revenue.v1.GenesisProto.GenesisState.class, com.evmos.revenue.v1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.evmos.revenue.v1.GenesisProto.Params params_;
+    /**
+     * <pre>
+     * params are the revenue module parameters
+     * </pre>
+     *
+     * <code>.evmos.revenue.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params are the revenue module parameters
+     * </pre>
+     *
+     * <code>.evmos.revenue.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.evmos.revenue.v1.GenesisProto.Params getParams() {
+      return params_ == null ? com.evmos.revenue.v1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params are the revenue module parameters
+     * </pre>
+     *
+     * <code>.evmos.revenue.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.evmos.revenue.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.evmos.revenue.v1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int REVENUES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.evmos.revenue.v1.RevenueProto.Revenue> revenues_;
+    /**
+     * <pre>
+     * revenues is a slice of active registered contracts for fee distribution
+     * </pre>
+     *
+     * <code>repeated .evmos.revenue.v1.Revenue revenues = 2 [json_name = "revenues", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.evmos.revenue.v1.RevenueProto.Revenue> getRevenuesList() {
+      return revenues_;
+    }
+    /**
+     * <pre>
+     * revenues is a slice of active registered contracts for fee distribution
+     * </pre>
+     *
+     * <code>repeated .evmos.revenue.v1.Revenue revenues = 2 [json_name = "revenues", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.evmos.revenue.v1.RevenueProto.RevenueOrBuilder> 
+        getRevenuesOrBuilderList() {
+      return revenues_;
+    }
+    /**
+     * <pre>
+     * revenues is a slice of active registered contracts for fee distribution
+     * </pre>
+     *
+     * <code>repeated .evmos.revenue.v1.Revenue revenues = 2 [json_name = "revenues", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getRevenuesCount() {
+      return revenues_.size();
+    }
+    /**
+     * <pre>
+     * revenues is a slice of active registered contracts for fee distribution
+     * </pre>
+     *
+     * <code>repeated .evmos.revenue.v1.Revenue revenues = 2 [json_name = "revenues", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.evmos.revenue.v1.RevenueProto.Revenue getRevenues(int index) {
+      return revenues_.get(index);
+    }
+    /**
+     * <pre>
+     * revenues is a slice of active registered contracts for fee distribution
+     * </pre>
+     *
+     * <code>repeated .evmos.revenue.v1.Revenue revenues = 2 [json_name = "revenues", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.evmos.revenue.v1.RevenueProto.RevenueOrBuilder getRevenuesOrBuilder(
+        int index) {
+      return revenues_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      for (int i = 0; i < revenues_.size(); i++) {
+        output.writeMessage(2, revenues_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      for (int i = 0; i < revenues_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, revenues_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.revenue.v1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.evmos.revenue.v1.GenesisProto.GenesisState other = (com.evmos.revenue.v1.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getRevenuesList()
+          .equals(other.getRevenuesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (getRevenuesCount() > 0) {
+        hash = (37 * hash) + REVENUES_FIELD_NUMBER;
+        hash = (53 * hash) + getRevenuesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.revenue.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.revenue.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.revenue.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.revenue.v1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.revenue.v1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.revenue.v1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.revenue.v1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.revenue.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.revenue.v1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.revenue.v1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.revenue.v1.GenesisState)
+        com.evmos.revenue.v1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.revenue.v1.GenesisProto.internal_static_evmos_revenue_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.revenue.v1.GenesisProto.internal_static_evmos_revenue_v1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.revenue.v1.GenesisProto.GenesisState.class, com.evmos.revenue.v1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.evmos.revenue.v1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        if (revenuesBuilder_ == null) {
+          revenues_ = java.util.Collections.emptyList();
+        } else {
+          revenues_ = null;
+          revenuesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.revenue.v1.GenesisProto.internal_static_evmos_revenue_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.revenue.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.evmos.revenue.v1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.revenue.v1.GenesisProto.GenesisState build() {
+        com.evmos.revenue.v1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.revenue.v1.GenesisProto.GenesisState buildPartial() {
+        com.evmos.revenue.v1.GenesisProto.GenesisState result = new com.evmos.revenue.v1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.evmos.revenue.v1.GenesisProto.GenesisState result) {
+        if (revenuesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            revenues_ = java.util.Collections.unmodifiableList(revenues_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.revenues_ = revenues_;
+        } else {
+          result.revenues_ = revenuesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.evmos.revenue.v1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.revenue.v1.GenesisProto.GenesisState) {
+          return mergeFrom((com.evmos.revenue.v1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.revenue.v1.GenesisProto.GenesisState other) {
+        if (other == com.evmos.revenue.v1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (revenuesBuilder_ == null) {
+          if (!other.revenues_.isEmpty()) {
+            if (revenues_.isEmpty()) {
+              revenues_ = other.revenues_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureRevenuesIsMutable();
+              revenues_.addAll(other.revenues_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.revenues_.isEmpty()) {
+            if (revenuesBuilder_.isEmpty()) {
+              revenuesBuilder_.dispose();
+              revenuesBuilder_ = null;
+              revenues_ = other.revenues_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              revenuesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRevenuesFieldBuilder() : null;
+            } else {
+              revenuesBuilder_.addAllMessages(other.revenues_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.evmos.revenue.v1.RevenueProto.Revenue m =
+                    input.readMessage(
+                        com.evmos.revenue.v1.RevenueProto.Revenue.parser(),
+                        extensionRegistry);
+                if (revenuesBuilder_ == null) {
+                  ensureRevenuesIsMutable();
+                  revenues_.add(m);
+                } else {
+                  revenuesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.evmos.revenue.v1.GenesisProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.evmos.revenue.v1.GenesisProto.Params, com.evmos.revenue.v1.GenesisProto.Params.Builder, com.evmos.revenue.v1.GenesisProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params are the revenue module parameters
+       * </pre>
+       *
+       * <code>.evmos.revenue.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * params are the revenue module parameters
+       * </pre>
+       *
+       * <code>.evmos.revenue.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.evmos.revenue.v1.GenesisProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.evmos.revenue.v1.GenesisProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params are the revenue module parameters
+       * </pre>
+       *
+       * <code>.evmos.revenue.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.evmos.revenue.v1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params are the revenue module parameters
+       * </pre>
+       *
+       * <code>.evmos.revenue.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.evmos.revenue.v1.GenesisProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params are the revenue module parameters
+       * </pre>
+       *
+       * <code>.evmos.revenue.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.evmos.revenue.v1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.evmos.revenue.v1.GenesisProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params are the revenue module parameters
+       * </pre>
+       *
+       * <code>.evmos.revenue.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params are the revenue module parameters
+       * </pre>
+       *
+       * <code>.evmos.revenue.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.revenue.v1.GenesisProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params are the revenue module parameters
+       * </pre>
+       *
+       * <code>.evmos.revenue.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.revenue.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.evmos.revenue.v1.GenesisProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params are the revenue module parameters
+       * </pre>
+       *
+       * <code>.evmos.revenue.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.evmos.revenue.v1.GenesisProto.Params, com.evmos.revenue.v1.GenesisProto.Params.Builder, com.evmos.revenue.v1.GenesisProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.evmos.revenue.v1.GenesisProto.Params, com.evmos.revenue.v1.GenesisProto.Params.Builder, com.evmos.revenue.v1.GenesisProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private java.util.List<com.evmos.revenue.v1.RevenueProto.Revenue> revenues_ =
+        java.util.Collections.emptyList();
+      private void ensureRevenuesIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          revenues_ = new java.util.ArrayList<com.evmos.revenue.v1.RevenueProto.Revenue>(revenues_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.evmos.revenue.v1.RevenueProto.Revenue, com.evmos.revenue.v1.RevenueProto.Revenue.Builder, com.evmos.revenue.v1.RevenueProto.RevenueOrBuilder> revenuesBuilder_;
+
+      /**
+       * <pre>
+       * revenues is a slice of active registered contracts for fee distribution
+       * </pre>
+       *
+       * <code>repeated .evmos.revenue.v1.Revenue revenues = 2 [json_name = "revenues", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.evmos.revenue.v1.RevenueProto.Revenue> getRevenuesList() {
+        if (revenuesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(revenues_);
+        } else {
+          return revenuesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * revenues is a slice of active registered contracts for fee distribution
+       * </pre>
+       *
+       * <code>repeated .evmos.revenue.v1.Revenue revenues = 2 [json_name = "revenues", (.gogoproto.nullable) = false];</code>
+       */
+      public int getRevenuesCount() {
+        if (revenuesBuilder_ == null) {
+          return revenues_.size();
+        } else {
+          return revenuesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * revenues is a slice of active registered contracts for fee distribution
+       * </pre>
+       *
+       * <code>repeated .evmos.revenue.v1.Revenue revenues = 2 [json_name = "revenues", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.revenue.v1.RevenueProto.Revenue getRevenues(int index) {
+        if (revenuesBuilder_ == null) {
+          return revenues_.get(index);
+        } else {
+          return revenuesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * revenues is a slice of active registered contracts for fee distribution
+       * </pre>
+       *
+       * <code>repeated .evmos.revenue.v1.Revenue revenues = 2 [json_name = "revenues", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRevenues(
+          int index, com.evmos.revenue.v1.RevenueProto.Revenue value) {
+        if (revenuesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRevenuesIsMutable();
+          revenues_.set(index, value);
+          onChanged();
+        } else {
+          revenuesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * revenues is a slice of active registered contracts for fee distribution
+       * </pre>
+       *
+       * <code>repeated .evmos.revenue.v1.Revenue revenues = 2 [json_name = "revenues", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRevenues(
+          int index, com.evmos.revenue.v1.RevenueProto.Revenue.Builder builderForValue) {
+        if (revenuesBuilder_ == null) {
+          ensureRevenuesIsMutable();
+          revenues_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          revenuesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * revenues is a slice of active registered contracts for fee distribution
+       * </pre>
+       *
+       * <code>repeated .evmos.revenue.v1.Revenue revenues = 2 [json_name = "revenues", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRevenues(com.evmos.revenue.v1.RevenueProto.Revenue value) {
+        if (revenuesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRevenuesIsMutable();
+          revenues_.add(value);
+          onChanged();
+        } else {
+          revenuesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * revenues is a slice of active registered contracts for fee distribution
+       * </pre>
+       *
+       * <code>repeated .evmos.revenue.v1.Revenue revenues = 2 [json_name = "revenues", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRevenues(
+          int index, com.evmos.revenue.v1.RevenueProto.Revenue value) {
+        if (revenuesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRevenuesIsMutable();
+          revenues_.add(index, value);
+          onChanged();
+        } else {
+          revenuesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * revenues is a slice of active registered contracts for fee distribution
+       * </pre>
+       *
+       * <code>repeated .evmos.revenue.v1.Revenue revenues = 2 [json_name = "revenues", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRevenues(
+          com.evmos.revenue.v1.RevenueProto.Revenue.Builder builderForValue) {
+        if (revenuesBuilder_ == null) {
+          ensureRevenuesIsMutable();
+          revenues_.add(builderForValue.build());
+          onChanged();
+        } else {
+          revenuesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * revenues is a slice of active registered contracts for fee distribution
+       * </pre>
+       *
+       * <code>repeated .evmos.revenue.v1.Revenue revenues = 2 [json_name = "revenues", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRevenues(
+          int index, com.evmos.revenue.v1.RevenueProto.Revenue.Builder builderForValue) {
+        if (revenuesBuilder_ == null) {
+          ensureRevenuesIsMutable();
+          revenues_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          revenuesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * revenues is a slice of active registered contracts for fee distribution
+       * </pre>
+       *
+       * <code>repeated .evmos.revenue.v1.Revenue revenues = 2 [json_name = "revenues", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllRevenues(
+          java.lang.Iterable<? extends com.evmos.revenue.v1.RevenueProto.Revenue> values) {
+        if (revenuesBuilder_ == null) {
+          ensureRevenuesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, revenues_);
+          onChanged();
+        } else {
+          revenuesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * revenues is a slice of active registered contracts for fee distribution
+       * </pre>
+       *
+       * <code>repeated .evmos.revenue.v1.Revenue revenues = 2 [json_name = "revenues", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearRevenues() {
+        if (revenuesBuilder_ == null) {
+          revenues_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          revenuesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * revenues is a slice of active registered contracts for fee distribution
+       * </pre>
+       *
+       * <code>repeated .evmos.revenue.v1.Revenue revenues = 2 [json_name = "revenues", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeRevenues(int index) {
+        if (revenuesBuilder_ == null) {
+          ensureRevenuesIsMutable();
+          revenues_.remove(index);
+          onChanged();
+        } else {
+          revenuesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * revenues is a slice of active registered contracts for fee distribution
+       * </pre>
+       *
+       * <code>repeated .evmos.revenue.v1.Revenue revenues = 2 [json_name = "revenues", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.revenue.v1.RevenueProto.Revenue.Builder getRevenuesBuilder(
+          int index) {
+        return getRevenuesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * revenues is a slice of active registered contracts for fee distribution
+       * </pre>
+       *
+       * <code>repeated .evmos.revenue.v1.Revenue revenues = 2 [json_name = "revenues", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.revenue.v1.RevenueProto.RevenueOrBuilder getRevenuesOrBuilder(
+          int index) {
+        if (revenuesBuilder_ == null) {
+          return revenues_.get(index);  } else {
+          return revenuesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * revenues is a slice of active registered contracts for fee distribution
+       * </pre>
+       *
+       * <code>repeated .evmos.revenue.v1.Revenue revenues = 2 [json_name = "revenues", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.evmos.revenue.v1.RevenueProto.RevenueOrBuilder> 
+           getRevenuesOrBuilderList() {
+        if (revenuesBuilder_ != null) {
+          return revenuesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(revenues_);
+        }
+      }
+      /**
+       * <pre>
+       * revenues is a slice of active registered contracts for fee distribution
+       * </pre>
+       *
+       * <code>repeated .evmos.revenue.v1.Revenue revenues = 2 [json_name = "revenues", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.revenue.v1.RevenueProto.Revenue.Builder addRevenuesBuilder() {
+        return getRevenuesFieldBuilder().addBuilder(
+            com.evmos.revenue.v1.RevenueProto.Revenue.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * revenues is a slice of active registered contracts for fee distribution
+       * </pre>
+       *
+       * <code>repeated .evmos.revenue.v1.Revenue revenues = 2 [json_name = "revenues", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.revenue.v1.RevenueProto.Revenue.Builder addRevenuesBuilder(
+          int index) {
+        return getRevenuesFieldBuilder().addBuilder(
+            index, com.evmos.revenue.v1.RevenueProto.Revenue.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * revenues is a slice of active registered contracts for fee distribution
+       * </pre>
+       *
+       * <code>repeated .evmos.revenue.v1.Revenue revenues = 2 [json_name = "revenues", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.evmos.revenue.v1.RevenueProto.Revenue.Builder> 
+           getRevenuesBuilderList() {
+        return getRevenuesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.evmos.revenue.v1.RevenueProto.Revenue, com.evmos.revenue.v1.RevenueProto.Revenue.Builder, com.evmos.revenue.v1.RevenueProto.RevenueOrBuilder> 
+          getRevenuesFieldBuilder() {
+        if (revenuesBuilder_ == null) {
+          revenuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.evmos.revenue.v1.RevenueProto.Revenue, com.evmos.revenue.v1.RevenueProto.Revenue.Builder, com.evmos.revenue.v1.RevenueProto.RevenueOrBuilder>(
+                  revenues_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          revenues_ = null;
+        }
+        return revenuesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.revenue.v1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.revenue.v1.GenesisState)
+    private static final com.evmos.revenue.v1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.revenue.v1.GenesisProto.GenesisState();
+    }
+
+    public static com.evmos.revenue.v1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.revenue.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.revenue.v1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * enable_revenue defines a parameter to enable the revenue module
+     * </pre>
+     *
+     * <code>bool enable_revenue = 1 [json_name = "enableRevenue"];</code>
+     * @return The enableRevenue.
+     */
+    boolean getEnableRevenue();
+
+    /**
+     * <pre>
+     * developer_shares defines the proportion of the transaction fees to be
+     * distributed to the registered contract owner
+     * </pre>
+     *
+     * <code>string developer_shares = 2 [json_name = "developerShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The developerShares.
+     */
+    java.lang.String getDeveloperShares();
+    /**
+     * <pre>
+     * developer_shares defines the proportion of the transaction fees to be
+     * distributed to the registered contract owner
+     * </pre>
+     *
+     * <code>string developer_shares = 2 [json_name = "developerShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for developerShares.
+     */
+    com.google.protobuf.ByteString
+        getDeveloperSharesBytes();
+
+    /**
+     * <pre>
+     * addr_derivation_cost_create defines the cost of address derivation for
+     * verifying the contract deployer at fee registration
+     * </pre>
+     *
+     * <code>uint64 addr_derivation_cost_create = 3 [json_name = "addrDerivationCostCreate"];</code>
+     * @return The addrDerivationCostCreate.
+     */
+    long getAddrDerivationCostCreate();
+  }
+  /**
+   * <pre>
+   * Params defines the revenue module params
+   * </pre>
+   *
+   * Protobuf type {@code evmos.revenue.v1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.revenue.v1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      developerShares_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.revenue.v1.GenesisProto.internal_static_evmos_revenue_v1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.revenue.v1.GenesisProto.internal_static_evmos_revenue_v1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.revenue.v1.GenesisProto.Params.class, com.evmos.revenue.v1.GenesisProto.Params.Builder.class);
+    }
+
+    public static final int ENABLE_REVENUE_FIELD_NUMBER = 1;
+    private boolean enableRevenue_ = false;
+    /**
+     * <pre>
+     * enable_revenue defines a parameter to enable the revenue module
+     * </pre>
+     *
+     * <code>bool enable_revenue = 1 [json_name = "enableRevenue"];</code>
+     * @return The enableRevenue.
+     */
+    @java.lang.Override
+    public boolean getEnableRevenue() {
+      return enableRevenue_;
+    }
+
+    public static final int DEVELOPER_SHARES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object developerShares_ = "";
+    /**
+     * <pre>
+     * developer_shares defines the proportion of the transaction fees to be
+     * distributed to the registered contract owner
+     * </pre>
+     *
+     * <code>string developer_shares = 2 [json_name = "developerShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The developerShares.
+     */
+    @java.lang.Override
+    public java.lang.String getDeveloperShares() {
+      java.lang.Object ref = developerShares_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        developerShares_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * developer_shares defines the proportion of the transaction fees to be
+     * distributed to the registered contract owner
+     * </pre>
+     *
+     * <code>string developer_shares = 2 [json_name = "developerShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for developerShares.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDeveloperSharesBytes() {
+      java.lang.Object ref = developerShares_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        developerShares_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADDR_DERIVATION_COST_CREATE_FIELD_NUMBER = 3;
+    private long addrDerivationCostCreate_ = 0L;
+    /**
+     * <pre>
+     * addr_derivation_cost_create defines the cost of address derivation for
+     * verifying the contract deployer at fee registration
+     * </pre>
+     *
+     * <code>uint64 addr_derivation_cost_create = 3 [json_name = "addrDerivationCostCreate"];</code>
+     * @return The addrDerivationCostCreate.
+     */
+    @java.lang.Override
+    public long getAddrDerivationCostCreate() {
+      return addrDerivationCostCreate_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (enableRevenue_ != false) {
+        output.writeBool(1, enableRevenue_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(developerShares_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, developerShares_);
+      }
+      if (addrDerivationCostCreate_ != 0L) {
+        output.writeUInt64(3, addrDerivationCostCreate_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (enableRevenue_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, enableRevenue_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(developerShares_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, developerShares_);
+      }
+      if (addrDerivationCostCreate_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, addrDerivationCostCreate_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.revenue.v1.GenesisProto.Params)) {
+        return super.equals(obj);
+      }
+      com.evmos.revenue.v1.GenesisProto.Params other = (com.evmos.revenue.v1.GenesisProto.Params) obj;
+
+      if (getEnableRevenue()
+          != other.getEnableRevenue()) return false;
+      if (!getDeveloperShares()
+          .equals(other.getDeveloperShares())) return false;
+      if (getAddrDerivationCostCreate()
+          != other.getAddrDerivationCostCreate()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENABLE_REVENUE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnableRevenue());
+      hash = (37 * hash) + DEVELOPER_SHARES_FIELD_NUMBER;
+      hash = (53 * hash) + getDeveloperShares().hashCode();
+      hash = (37 * hash) + ADDR_DERIVATION_COST_CREATE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAddrDerivationCostCreate());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.revenue.v1.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.revenue.v1.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.revenue.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.GenesisProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.revenue.v1.GenesisProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.GenesisProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.revenue.v1.GenesisProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.revenue.v1.GenesisProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.revenue.v1.GenesisProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.revenue.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.revenue.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.revenue.v1.GenesisProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params defines the revenue module params
+     * </pre>
+     *
+     * Protobuf type {@code evmos.revenue.v1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.revenue.v1.Params)
+        com.evmos.revenue.v1.GenesisProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.revenue.v1.GenesisProto.internal_static_evmos_revenue_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.revenue.v1.GenesisProto.internal_static_evmos_revenue_v1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.revenue.v1.GenesisProto.Params.class, com.evmos.revenue.v1.GenesisProto.Params.Builder.class);
+      }
+
+      // Construct using com.evmos.revenue.v1.GenesisProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        enableRevenue_ = false;
+        developerShares_ = "";
+        addrDerivationCostCreate_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.revenue.v1.GenesisProto.internal_static_evmos_revenue_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.revenue.v1.GenesisProto.Params getDefaultInstanceForType() {
+        return com.evmos.revenue.v1.GenesisProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.revenue.v1.GenesisProto.Params build() {
+        com.evmos.revenue.v1.GenesisProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.revenue.v1.GenesisProto.Params buildPartial() {
+        com.evmos.revenue.v1.GenesisProto.Params result = new com.evmos.revenue.v1.GenesisProto.Params(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.revenue.v1.GenesisProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.enableRevenue_ = enableRevenue_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.developerShares_ = developerShares_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.addrDerivationCostCreate_ = addrDerivationCostCreate_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.revenue.v1.GenesisProto.Params) {
+          return mergeFrom((com.evmos.revenue.v1.GenesisProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.revenue.v1.GenesisProto.Params other) {
+        if (other == com.evmos.revenue.v1.GenesisProto.Params.getDefaultInstance()) return this;
+        if (other.getEnableRevenue() != false) {
+          setEnableRevenue(other.getEnableRevenue());
+        }
+        if (!other.getDeveloperShares().isEmpty()) {
+          developerShares_ = other.developerShares_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getAddrDerivationCostCreate() != 0L) {
+          setAddrDerivationCostCreate(other.getAddrDerivationCostCreate());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                enableRevenue_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                developerShares_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                addrDerivationCostCreate_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean enableRevenue_ ;
+      /**
+       * <pre>
+       * enable_revenue defines a parameter to enable the revenue module
+       * </pre>
+       *
+       * <code>bool enable_revenue = 1 [json_name = "enableRevenue"];</code>
+       * @return The enableRevenue.
+       */
+      @java.lang.Override
+      public boolean getEnableRevenue() {
+        return enableRevenue_;
+      }
+      /**
+       * <pre>
+       * enable_revenue defines a parameter to enable the revenue module
+       * </pre>
+       *
+       * <code>bool enable_revenue = 1 [json_name = "enableRevenue"];</code>
+       * @param value The enableRevenue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnableRevenue(boolean value) {
+
+        enableRevenue_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * enable_revenue defines a parameter to enable the revenue module
+       * </pre>
+       *
+       * <code>bool enable_revenue = 1 [json_name = "enableRevenue"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnableRevenue() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        enableRevenue_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object developerShares_ = "";
+      /**
+       * <pre>
+       * developer_shares defines the proportion of the transaction fees to be
+       * distributed to the registered contract owner
+       * </pre>
+       *
+       * <code>string developer_shares = 2 [json_name = "developerShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The developerShares.
+       */
+      public java.lang.String getDeveloperShares() {
+        java.lang.Object ref = developerShares_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          developerShares_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * developer_shares defines the proportion of the transaction fees to be
+       * distributed to the registered contract owner
+       * </pre>
+       *
+       * <code>string developer_shares = 2 [json_name = "developerShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for developerShares.
+       */
+      public com.google.protobuf.ByteString
+          getDeveloperSharesBytes() {
+        java.lang.Object ref = developerShares_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          developerShares_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * developer_shares defines the proportion of the transaction fees to be
+       * distributed to the registered contract owner
+       * </pre>
+       *
+       * <code>string developer_shares = 2 [json_name = "developerShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The developerShares to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeveloperShares(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        developerShares_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * developer_shares defines the proportion of the transaction fees to be
+       * distributed to the registered contract owner
+       * </pre>
+       *
+       * <code>string developer_shares = 2 [json_name = "developerShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeveloperShares() {
+        developerShares_ = getDefaultInstance().getDeveloperShares();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * developer_shares defines the proportion of the transaction fees to be
+       * distributed to the registered contract owner
+       * </pre>
+       *
+       * <code>string developer_shares = 2 [json_name = "developerShares", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for developerShares to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeveloperSharesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        developerShares_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long addrDerivationCostCreate_ ;
+      /**
+       * <pre>
+       * addr_derivation_cost_create defines the cost of address derivation for
+       * verifying the contract deployer at fee registration
+       * </pre>
+       *
+       * <code>uint64 addr_derivation_cost_create = 3 [json_name = "addrDerivationCostCreate"];</code>
+       * @return The addrDerivationCostCreate.
+       */
+      @java.lang.Override
+      public long getAddrDerivationCostCreate() {
+        return addrDerivationCostCreate_;
+      }
+      /**
+       * <pre>
+       * addr_derivation_cost_create defines the cost of address derivation for
+       * verifying the contract deployer at fee registration
+       * </pre>
+       *
+       * <code>uint64 addr_derivation_cost_create = 3 [json_name = "addrDerivationCostCreate"];</code>
+       * @param value The addrDerivationCostCreate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddrDerivationCostCreate(long value) {
+
+        addrDerivationCostCreate_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * addr_derivation_cost_create defines the cost of address derivation for
+       * verifying the contract deployer at fee registration
+       * </pre>
+       *
+       * <code>uint64 addr_derivation_cost_create = 3 [json_name = "addrDerivationCostCreate"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddrDerivationCostCreate() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        addrDerivationCostCreate_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.revenue.v1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.revenue.v1.Params)
+    private static final com.evmos.revenue.v1.GenesisProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.revenue.v1.GenesisProto.Params();
+    }
+
+    public static com.evmos.revenue.v1.GenesisProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.revenue.v1.GenesisProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_revenue_v1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_revenue_v1_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_revenue_v1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_revenue_v1_Params_fieldAccessorTable;
 
@@ -44,11 +1998,11 @@ public final class GenesisProto {
       "\332\336\037&github.com/cosmos/cosmos-sdk/types.D" +
       "ecR\017developerShares\022=\n\033addr_derivation_c" +
       "ost_create\030\003 \001(\004R\030addrDerivationCostCrea" +
-      "teB\265\001\n\024com.evmos.revenue.v1B\014GenesisProt" +
-      "oP\001Z-github.com/evmos/evmos/v13/x/revenu" +
-      "e/v1/types\242\002\003ERX\252\002\020Evmos.Revenue.V1\312\002\020Ev" +
-      "mos\\Revenue\\V1\342\002\034Evmos\\Revenue\\V1\\GPBMet" +
-      "adata\352\002\022Evmos::Revenue::V1b\006proto3"
+      "teB\263\001\n\024com.evmos.revenue.v1B\014GenesisProt" +
+      "oZ-github.com/evmos/evmos/v13/x/revenue/" +
+      "v1/types\242\002\003ERX\252\002\020Evmos.Revenue.V1\312\002\020Evmo" +
+      "s\\Revenue\\V1\342\002\034Evmos\\Revenue\\V1\\GPBMetad" +
+      "ata\352\002\022Evmos::Revenue::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,34 +14,4623 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryAllTokenMintedForAllAppsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.tokenmint.v1beta1.QueryAllTokenMintedForAllAppsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.tokenmint.v1beta1.QueryAllTokenMintedForAllAppsRequest}
+   */
+  public static final class QueryAllTokenMintedForAllAppsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.tokenmint.v1beta1.QueryAllTokenMintedForAllAppsRequest)
+      QueryAllTokenMintedForAllAppsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAllTokenMintedForAllAppsRequest.newBuilder() to construct.
+    private QueryAllTokenMintedForAllAppsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAllTokenMintedForAllAppsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAllTokenMintedForAllAppsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.tokenmint.v1beta1.QueryProto.internal_static_comdex_tokenmint_v1beta1_QueryAllTokenMintedForAllAppsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.tokenmint.v1beta1.QueryProto.internal_static_comdex_tokenmint_v1beta1_QueryAllTokenMintedForAllAppsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest.class, com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 1;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(1, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest other = (com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.tokenmint.v1beta1.QueryAllTokenMintedForAllAppsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.tokenmint.v1beta1.QueryAllTokenMintedForAllAppsRequest)
+        com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.tokenmint.v1beta1.QueryProto.internal_static_comdex_tokenmint_v1beta1_QueryAllTokenMintedForAllAppsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.tokenmint.v1beta1.QueryProto.internal_static_comdex_tokenmint_v1beta1_QueryAllTokenMintedForAllAppsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest.class, com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.tokenmint.v1beta1.QueryProto.internal_static_comdex_tokenmint_v1beta1_QueryAllTokenMintedForAllAppsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest getDefaultInstanceForType() {
+        return com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest build() {
+        com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest buildPartial() {
+        com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest result = new com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest) {
+          return mergeFrom((com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest other) {
+        if (other == com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.tokenmint.v1beta1.QueryAllTokenMintedForAllAppsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.tokenmint.v1beta1.QueryAllTokenMintedForAllAppsRequest)
+    private static final com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest();
+    }
+
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAllTokenMintedForAllAppsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAllTokenMintedForAllAppsRequest>() {
+      @java.lang.Override
+      public QueryAllTokenMintedForAllAppsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAllTokenMintedForAllAppsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAllTokenMintedForAllAppsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAllTokenMintedForAllAppsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.tokenmint.v1beta1.QueryAllTokenMintedForAllAppsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+     */
+    java.util.List<com.comdex.tokenmint.v1beta1.MintProto.TokenMint> 
+        getTokenMintList();
+    /**
+     * <code>repeated .comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+     */
+    com.comdex.tokenmint.v1beta1.MintProto.TokenMint getTokenMint(int index);
+    /**
+     * <code>repeated .comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+     */
+    int getTokenMintCount();
+    /**
+     * <code>repeated .comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.tokenmint.v1beta1.MintProto.TokenMintOrBuilder> 
+        getTokenMintOrBuilderList();
+    /**
+     * <code>repeated .comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+     */
+    com.comdex.tokenmint.v1beta1.MintProto.TokenMintOrBuilder getTokenMintOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.tokenmint.v1beta1.QueryAllTokenMintedForAllAppsResponse}
+   */
+  public static final class QueryAllTokenMintedForAllAppsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.tokenmint.v1beta1.QueryAllTokenMintedForAllAppsResponse)
+      QueryAllTokenMintedForAllAppsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAllTokenMintedForAllAppsResponse.newBuilder() to construct.
+    private QueryAllTokenMintedForAllAppsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAllTokenMintedForAllAppsResponse() {
+      tokenMint_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAllTokenMintedForAllAppsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.tokenmint.v1beta1.QueryProto.internal_static_comdex_tokenmint_v1beta1_QueryAllTokenMintedForAllAppsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.tokenmint.v1beta1.QueryProto.internal_static_comdex_tokenmint_v1beta1_QueryAllTokenMintedForAllAppsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse.class, com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse.Builder.class);
+    }
+
+    public static final int TOKENMINT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.tokenmint.v1beta1.MintProto.TokenMint> tokenMint_;
+    /**
+     * <code>repeated .comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.tokenmint.v1beta1.MintProto.TokenMint> getTokenMintList() {
+      return tokenMint_;
+    }
+    /**
+     * <code>repeated .comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.tokenmint.v1beta1.MintProto.TokenMintOrBuilder> 
+        getTokenMintOrBuilderList() {
+      return tokenMint_;
+    }
+    /**
+     * <code>repeated .comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getTokenMintCount() {
+      return tokenMint_.size();
+    }
+    /**
+     * <code>repeated .comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.tokenmint.v1beta1.MintProto.TokenMint getTokenMint(int index) {
+      return tokenMint_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.tokenmint.v1beta1.MintProto.TokenMintOrBuilder getTokenMintOrBuilder(
+        int index) {
+      return tokenMint_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < tokenMint_.size(); i++) {
+        output.writeMessage(1, tokenMint_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < tokenMint_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, tokenMint_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse)) {
+        return super.equals(obj);
+      }
+      com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse other = (com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse) obj;
+
+      if (!getTokenMintList()
+          .equals(other.getTokenMintList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getTokenMintCount() > 0) {
+        hash = (37 * hash) + TOKENMINT_FIELD_NUMBER;
+        hash = (53 * hash) + getTokenMintList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.tokenmint.v1beta1.QueryAllTokenMintedForAllAppsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.tokenmint.v1beta1.QueryAllTokenMintedForAllAppsResponse)
+        com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.tokenmint.v1beta1.QueryProto.internal_static_comdex_tokenmint_v1beta1_QueryAllTokenMintedForAllAppsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.tokenmint.v1beta1.QueryProto.internal_static_comdex_tokenmint_v1beta1_QueryAllTokenMintedForAllAppsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse.class, com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse.Builder.class);
+      }
+
+      // Construct using com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (tokenMintBuilder_ == null) {
+          tokenMint_ = java.util.Collections.emptyList();
+        } else {
+          tokenMint_ = null;
+          tokenMintBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.tokenmint.v1beta1.QueryProto.internal_static_comdex_tokenmint_v1beta1_QueryAllTokenMintedForAllAppsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse getDefaultInstanceForType() {
+        return com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse build() {
+        com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse buildPartial() {
+        com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse result = new com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse result) {
+        if (tokenMintBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            tokenMint_ = java.util.Collections.unmodifiableList(tokenMint_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.tokenMint_ = tokenMint_;
+        } else {
+          result.tokenMint_ = tokenMintBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse) {
+          return mergeFrom((com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse other) {
+        if (other == com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse.getDefaultInstance()) return this;
+        if (tokenMintBuilder_ == null) {
+          if (!other.tokenMint_.isEmpty()) {
+            if (tokenMint_.isEmpty()) {
+              tokenMint_ = other.tokenMint_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTokenMintIsMutable();
+              tokenMint_.addAll(other.tokenMint_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.tokenMint_.isEmpty()) {
+            if (tokenMintBuilder_.isEmpty()) {
+              tokenMintBuilder_.dispose();
+              tokenMintBuilder_ = null;
+              tokenMint_ = other.tokenMint_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              tokenMintBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTokenMintFieldBuilder() : null;
+            } else {
+              tokenMintBuilder_.addAllMessages(other.tokenMint_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.comdex.tokenmint.v1beta1.MintProto.TokenMint m =
+                    input.readMessage(
+                        com.comdex.tokenmint.v1beta1.MintProto.TokenMint.parser(),
+                        extensionRegistry);
+                if (tokenMintBuilder_ == null) {
+                  ensureTokenMintIsMutable();
+                  tokenMint_.add(m);
+                } else {
+                  tokenMintBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.comdex.tokenmint.v1beta1.MintProto.TokenMint> tokenMint_ =
+        java.util.Collections.emptyList();
+      private void ensureTokenMintIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          tokenMint_ = new java.util.ArrayList<com.comdex.tokenmint.v1beta1.MintProto.TokenMint>(tokenMint_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.tokenmint.v1beta1.MintProto.TokenMint, com.comdex.tokenmint.v1beta1.MintProto.TokenMint.Builder, com.comdex.tokenmint.v1beta1.MintProto.TokenMintOrBuilder> tokenMintBuilder_;
+
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+       */
+      public java.util.List<com.comdex.tokenmint.v1beta1.MintProto.TokenMint> getTokenMintList() {
+        if (tokenMintBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(tokenMint_);
+        } else {
+          return tokenMintBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+       */
+      public int getTokenMintCount() {
+        if (tokenMintBuilder_ == null) {
+          return tokenMint_.size();
+        } else {
+          return tokenMintBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+       */
+      public com.comdex.tokenmint.v1beta1.MintProto.TokenMint getTokenMint(int index) {
+        if (tokenMintBuilder_ == null) {
+          return tokenMint_.get(index);
+        } else {
+          return tokenMintBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+       */
+      public Builder setTokenMint(
+          int index, com.comdex.tokenmint.v1beta1.MintProto.TokenMint value) {
+        if (tokenMintBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenMintIsMutable();
+          tokenMint_.set(index, value);
+          onChanged();
+        } else {
+          tokenMintBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+       */
+      public Builder setTokenMint(
+          int index, com.comdex.tokenmint.v1beta1.MintProto.TokenMint.Builder builderForValue) {
+        if (tokenMintBuilder_ == null) {
+          ensureTokenMintIsMutable();
+          tokenMint_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokenMintBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+       */
+      public Builder addTokenMint(com.comdex.tokenmint.v1beta1.MintProto.TokenMint value) {
+        if (tokenMintBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenMintIsMutable();
+          tokenMint_.add(value);
+          onChanged();
+        } else {
+          tokenMintBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+       */
+      public Builder addTokenMint(
+          int index, com.comdex.tokenmint.v1beta1.MintProto.TokenMint value) {
+        if (tokenMintBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenMintIsMutable();
+          tokenMint_.add(index, value);
+          onChanged();
+        } else {
+          tokenMintBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+       */
+      public Builder addTokenMint(
+          com.comdex.tokenmint.v1beta1.MintProto.TokenMint.Builder builderForValue) {
+        if (tokenMintBuilder_ == null) {
+          ensureTokenMintIsMutable();
+          tokenMint_.add(builderForValue.build());
+          onChanged();
+        } else {
+          tokenMintBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+       */
+      public Builder addTokenMint(
+          int index, com.comdex.tokenmint.v1beta1.MintProto.TokenMint.Builder builderForValue) {
+        if (tokenMintBuilder_ == null) {
+          ensureTokenMintIsMutable();
+          tokenMint_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokenMintBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+       */
+      public Builder addAllTokenMint(
+          java.lang.Iterable<? extends com.comdex.tokenmint.v1beta1.MintProto.TokenMint> values) {
+        if (tokenMintBuilder_ == null) {
+          ensureTokenMintIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tokenMint_);
+          onChanged();
+        } else {
+          tokenMintBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+       */
+      public Builder clearTokenMint() {
+        if (tokenMintBuilder_ == null) {
+          tokenMint_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          tokenMintBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+       */
+      public Builder removeTokenMint(int index) {
+        if (tokenMintBuilder_ == null) {
+          ensureTokenMintIsMutable();
+          tokenMint_.remove(index);
+          onChanged();
+        } else {
+          tokenMintBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+       */
+      public com.comdex.tokenmint.v1beta1.MintProto.TokenMint.Builder getTokenMintBuilder(
+          int index) {
+        return getTokenMintFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+       */
+      public com.comdex.tokenmint.v1beta1.MintProto.TokenMintOrBuilder getTokenMintOrBuilder(
+          int index) {
+        if (tokenMintBuilder_ == null) {
+          return tokenMint_.get(index);  } else {
+          return tokenMintBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.tokenmint.v1beta1.MintProto.TokenMintOrBuilder> 
+           getTokenMintOrBuilderList() {
+        if (tokenMintBuilder_ != null) {
+          return tokenMintBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(tokenMint_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+       */
+      public com.comdex.tokenmint.v1beta1.MintProto.TokenMint.Builder addTokenMintBuilder() {
+        return getTokenMintFieldBuilder().addBuilder(
+            com.comdex.tokenmint.v1beta1.MintProto.TokenMint.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+       */
+      public com.comdex.tokenmint.v1beta1.MintProto.TokenMint.Builder addTokenMintBuilder(
+          int index) {
+        return getTokenMintFieldBuilder().addBuilder(
+            index, com.comdex.tokenmint.v1beta1.MintProto.TokenMint.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+       */
+      public java.util.List<com.comdex.tokenmint.v1beta1.MintProto.TokenMint.Builder> 
+           getTokenMintBuilderList() {
+        return getTokenMintFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.tokenmint.v1beta1.MintProto.TokenMint, com.comdex.tokenmint.v1beta1.MintProto.TokenMint.Builder, com.comdex.tokenmint.v1beta1.MintProto.TokenMintOrBuilder> 
+          getTokenMintFieldBuilder() {
+        if (tokenMintBuilder_ == null) {
+          tokenMintBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.tokenmint.v1beta1.MintProto.TokenMint, com.comdex.tokenmint.v1beta1.MintProto.TokenMint.Builder, com.comdex.tokenmint.v1beta1.MintProto.TokenMintOrBuilder>(
+                  tokenMint_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          tokenMint_ = null;
+        }
+        return tokenMintBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.tokenmint.v1beta1.QueryAllTokenMintedForAllAppsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.tokenmint.v1beta1.QueryAllTokenMintedForAllAppsResponse)
+    private static final com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse();
+    }
+
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAllTokenMintedForAllAppsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAllTokenMintedForAllAppsResponse>() {
+      @java.lang.Override
+      public QueryAllTokenMintedForAllAppsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAllTokenMintedForAllAppsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAllTokenMintedForAllAppsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.tokenmint.v1beta1.QueryProto.QueryAllTokenMintedForAllAppsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTokenMintedByAppRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.tokenmint.v1beta1.QueryTokenMintedByAppRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.tokenmint.v1beta1.QueryTokenMintedByAppRequest}
+   */
+  public static final class QueryTokenMintedByAppRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.tokenmint.v1beta1.QueryTokenMintedByAppRequest)
+      QueryTokenMintedByAppRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTokenMintedByAppRequest.newBuilder() to construct.
+    private QueryTokenMintedByAppRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTokenMintedByAppRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTokenMintedByAppRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.tokenmint.v1beta1.QueryProto.internal_static_comdex_tokenmint_v1beta1_QueryTokenMintedByAppRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.tokenmint.v1beta1.QueryProto.internal_static_comdex_tokenmint_v1beta1_QueryTokenMintedByAppRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest.class, com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest.Builder.class);
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 1;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (appId_ != 0L) {
+        output.writeUInt64(1, appId_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, appId_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest other = (com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest) obj;
+
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.tokenmint.v1beta1.QueryTokenMintedByAppRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.tokenmint.v1beta1.QueryTokenMintedByAppRequest)
+        com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.tokenmint.v1beta1.QueryProto.internal_static_comdex_tokenmint_v1beta1_QueryTokenMintedByAppRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.tokenmint.v1beta1.QueryProto.internal_static_comdex_tokenmint_v1beta1_QueryTokenMintedByAppRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest.class, com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        appId_ = 0L;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.tokenmint.v1beta1.QueryProto.internal_static_comdex_tokenmint_v1beta1_QueryTokenMintedByAppRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest getDefaultInstanceForType() {
+        return com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest build() {
+        com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest buildPartial() {
+        com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest result = new com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest) {
+          return mergeFrom((com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest other) {
+        if (other == com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest.getDefaultInstance()) return this;
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.tokenmint.v1beta1.QueryTokenMintedByAppRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.tokenmint.v1beta1.QueryTokenMintedByAppRequest)
+    private static final com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest();
+    }
+
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTokenMintedByAppRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTokenMintedByAppRequest>() {
+      @java.lang.Override
+      public QueryTokenMintedByAppRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTokenMintedByAppRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTokenMintedByAppRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTokenMintedByAppResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.tokenmint.v1beta1.QueryTokenMintedByAppResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+     * @return Whether the tokenMint field is set.
+     */
+    boolean hasTokenMint();
+    /**
+     * <code>.comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+     * @return The tokenMint.
+     */
+    com.comdex.tokenmint.v1beta1.MintProto.TokenMint getTokenMint();
+    /**
+     * <code>.comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+     */
+    com.comdex.tokenmint.v1beta1.MintProto.TokenMintOrBuilder getTokenMintOrBuilder();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.tokenmint.v1beta1.QueryTokenMintedByAppResponse}
+   */
+  public static final class QueryTokenMintedByAppResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.tokenmint.v1beta1.QueryTokenMintedByAppResponse)
+      QueryTokenMintedByAppResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTokenMintedByAppResponse.newBuilder() to construct.
+    private QueryTokenMintedByAppResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTokenMintedByAppResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTokenMintedByAppResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.tokenmint.v1beta1.QueryProto.internal_static_comdex_tokenmint_v1beta1_QueryTokenMintedByAppResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.tokenmint.v1beta1.QueryProto.internal_static_comdex_tokenmint_v1beta1_QueryTokenMintedByAppResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse.class, com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse.Builder.class);
+    }
+
+    public static final int TOKENMINT_FIELD_NUMBER = 1;
+    private com.comdex.tokenmint.v1beta1.MintProto.TokenMint tokenMint_;
+    /**
+     * <code>.comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+     * @return Whether the tokenMint field is set.
+     */
+    @java.lang.Override
+    public boolean hasTokenMint() {
+      return tokenMint_ != null;
+    }
+    /**
+     * <code>.comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+     * @return The tokenMint.
+     */
+    @java.lang.Override
+    public com.comdex.tokenmint.v1beta1.MintProto.TokenMint getTokenMint() {
+      return tokenMint_ == null ? com.comdex.tokenmint.v1beta1.MintProto.TokenMint.getDefaultInstance() : tokenMint_;
+    }
+    /**
+     * <code>.comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.tokenmint.v1beta1.MintProto.TokenMintOrBuilder getTokenMintOrBuilder() {
+      return tokenMint_ == null ? com.comdex.tokenmint.v1beta1.MintProto.TokenMint.getDefaultInstance() : tokenMint_;
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (tokenMint_ != null) {
+        output.writeMessage(1, getTokenMint());
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (tokenMint_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTokenMint());
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse)) {
+        return super.equals(obj);
+      }
+      com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse other = (com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse) obj;
+
+      if (hasTokenMint() != other.hasTokenMint()) return false;
+      if (hasTokenMint()) {
+        if (!getTokenMint()
+            .equals(other.getTokenMint())) return false;
+      }
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTokenMint()) {
+        hash = (37 * hash) + TOKENMINT_FIELD_NUMBER;
+        hash = (53 * hash) + getTokenMint().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.tokenmint.v1beta1.QueryTokenMintedByAppResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.tokenmint.v1beta1.QueryTokenMintedByAppResponse)
+        com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.tokenmint.v1beta1.QueryProto.internal_static_comdex_tokenmint_v1beta1_QueryTokenMintedByAppResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.tokenmint.v1beta1.QueryProto.internal_static_comdex_tokenmint_v1beta1_QueryTokenMintedByAppResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse.class, com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse.Builder.class);
+      }
+
+      // Construct using com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        tokenMint_ = null;
+        if (tokenMintBuilder_ != null) {
+          tokenMintBuilder_.dispose();
+          tokenMintBuilder_ = null;
+        }
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.tokenmint.v1beta1.QueryProto.internal_static_comdex_tokenmint_v1beta1_QueryTokenMintedByAppResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse getDefaultInstanceForType() {
+        return com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse build() {
+        com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse buildPartial() {
+        com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse result = new com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.tokenMint_ = tokenMintBuilder_ == null
+              ? tokenMint_
+              : tokenMintBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse) {
+          return mergeFrom((com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse other) {
+        if (other == com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse.getDefaultInstance()) return this;
+        if (other.hasTokenMint()) {
+          mergeTokenMint(other.getTokenMint());
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getTokenMintFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.comdex.tokenmint.v1beta1.MintProto.TokenMint tokenMint_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.tokenmint.v1beta1.MintProto.TokenMint, com.comdex.tokenmint.v1beta1.MintProto.TokenMint.Builder, com.comdex.tokenmint.v1beta1.MintProto.TokenMintOrBuilder> tokenMintBuilder_;
+      /**
+       * <code>.comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+       * @return Whether the tokenMint field is set.
+       */
+      public boolean hasTokenMint() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+       * @return The tokenMint.
+       */
+      public com.comdex.tokenmint.v1beta1.MintProto.TokenMint getTokenMint() {
+        if (tokenMintBuilder_ == null) {
+          return tokenMint_ == null ? com.comdex.tokenmint.v1beta1.MintProto.TokenMint.getDefaultInstance() : tokenMint_;
+        } else {
+          return tokenMintBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+       */
+      public Builder setTokenMint(com.comdex.tokenmint.v1beta1.MintProto.TokenMint value) {
+        if (tokenMintBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tokenMint_ = value;
+        } else {
+          tokenMintBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+       */
+      public Builder setTokenMint(
+          com.comdex.tokenmint.v1beta1.MintProto.TokenMint.Builder builderForValue) {
+        if (tokenMintBuilder_ == null) {
+          tokenMint_ = builderForValue.build();
+        } else {
+          tokenMintBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+       */
+      public Builder mergeTokenMint(com.comdex.tokenmint.v1beta1.MintProto.TokenMint value) {
+        if (tokenMintBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            tokenMint_ != null &&
+            tokenMint_ != com.comdex.tokenmint.v1beta1.MintProto.TokenMint.getDefaultInstance()) {
+            getTokenMintBuilder().mergeFrom(value);
+          } else {
+            tokenMint_ = value;
+          }
+        } else {
+          tokenMintBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+       */
+      public Builder clearTokenMint() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        tokenMint_ = null;
+        if (tokenMintBuilder_ != null) {
+          tokenMintBuilder_.dispose();
+          tokenMintBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+       */
+      public com.comdex.tokenmint.v1beta1.MintProto.TokenMint.Builder getTokenMintBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getTokenMintFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+       */
+      public com.comdex.tokenmint.v1beta1.MintProto.TokenMintOrBuilder getTokenMintOrBuilder() {
+        if (tokenMintBuilder_ != null) {
+          return tokenMintBuilder_.getMessageOrBuilder();
+        } else {
+          return tokenMint_ == null ?
+              com.comdex.tokenmint.v1beta1.MintProto.TokenMint.getDefaultInstance() : tokenMint_;
+        }
+      }
+      /**
+       * <code>.comdex.tokenmint.v1beta1.TokenMint tokenMint = 1 [json_name = "tokenMint", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tokenMint&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.tokenmint.v1beta1.MintProto.TokenMint, com.comdex.tokenmint.v1beta1.MintProto.TokenMint.Builder, com.comdex.tokenmint.v1beta1.MintProto.TokenMintOrBuilder> 
+          getTokenMintFieldBuilder() {
+        if (tokenMintBuilder_ == null) {
+          tokenMintBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.comdex.tokenmint.v1beta1.MintProto.TokenMint, com.comdex.tokenmint.v1beta1.MintProto.TokenMint.Builder, com.comdex.tokenmint.v1beta1.MintProto.TokenMintOrBuilder>(
+                  getTokenMint(),
+                  getParentForChildren(),
+                  isClean());
+          tokenMint_ = null;
+        }
+        return tokenMintBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.tokenmint.v1beta1.QueryTokenMintedByAppResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.tokenmint.v1beta1.QueryTokenMintedByAppResponse)
+    private static final com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse();
+    }
+
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTokenMintedByAppResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTokenMintedByAppResponse>() {
+      @java.lang.Override
+      public QueryTokenMintedByAppResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTokenMintedByAppResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTokenMintedByAppResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTokenMintedByAppAndAssetRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.tokenmint.v1beta1.QueryTokenMintedByAppAndAssetRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>uint64 asset_id = 2 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+     * @return The assetId.
+     */
+    long getAssetId();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.tokenmint.v1beta1.QueryTokenMintedByAppAndAssetRequest}
+   */
+  public static final class QueryTokenMintedByAppAndAssetRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.tokenmint.v1beta1.QueryTokenMintedByAppAndAssetRequest)
+      QueryTokenMintedByAppAndAssetRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTokenMintedByAppAndAssetRequest.newBuilder() to construct.
+    private QueryTokenMintedByAppAndAssetRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTokenMintedByAppAndAssetRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTokenMintedByAppAndAssetRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.tokenmint.v1beta1.QueryProto.internal_static_comdex_tokenmint_v1beta1_QueryTokenMintedByAppAndAssetRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.tokenmint.v1beta1.QueryProto.internal_static_comdex_tokenmint_v1beta1_QueryTokenMintedByAppAndAssetRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest.class, com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest.Builder.class);
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 1;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int ASSET_ID_FIELD_NUMBER = 2;
+    private long assetId_ = 0L;
+    /**
+     * <code>uint64 asset_id = 2 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+     * @return The assetId.
+     */
+    @java.lang.Override
+    public long getAssetId() {
+      return assetId_;
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 3;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (appId_ != 0L) {
+        output.writeUInt64(1, appId_);
+      }
+      if (assetId_ != 0L) {
+        output.writeUInt64(2, assetId_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(3, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, appId_);
+      }
+      if (assetId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, assetId_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest other = (com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest) obj;
+
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (getAssetId()
+          != other.getAssetId()) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (37 * hash) + ASSET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAssetId());
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.tokenmint.v1beta1.QueryTokenMintedByAppAndAssetRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.tokenmint.v1beta1.QueryTokenMintedByAppAndAssetRequest)
+        com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.tokenmint.v1beta1.QueryProto.internal_static_comdex_tokenmint_v1beta1_QueryTokenMintedByAppAndAssetRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.tokenmint.v1beta1.QueryProto.internal_static_comdex_tokenmint_v1beta1_QueryTokenMintedByAppAndAssetRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest.class, com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        appId_ = 0L;
+        assetId_ = 0L;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.tokenmint.v1beta1.QueryProto.internal_static_comdex_tokenmint_v1beta1_QueryTokenMintedByAppAndAssetRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest getDefaultInstanceForType() {
+        return com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest build() {
+        com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest buildPartial() {
+        com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest result = new com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.assetId_ = assetId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest) {
+          return mergeFrom((com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest other) {
+        if (other == com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest.getDefaultInstance()) return this;
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (other.getAssetId() != 0L) {
+          setAssetId(other.getAssetId());
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                assetId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long assetId_ ;
+      /**
+       * <code>uint64 asset_id = 2 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+       * @return The assetId.
+       */
+      @java.lang.Override
+      public long getAssetId() {
+        return assetId_;
+      }
+      /**
+       * <code>uint64 asset_id = 2 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+       * @param value The assetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssetId(long value) {
+
+        assetId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 asset_id = 2 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAssetId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        assetId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.tokenmint.v1beta1.QueryTokenMintedByAppAndAssetRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.tokenmint.v1beta1.QueryTokenMintedByAppAndAssetRequest)
+    private static final com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest();
+    }
+
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTokenMintedByAppAndAssetRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTokenMintedByAppAndAssetRequest>() {
+      @java.lang.Override
+      public QueryTokenMintedByAppAndAssetRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTokenMintedByAppAndAssetRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTokenMintedByAppAndAssetRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTokenMintedByAppAndAssetResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.tokenmint.v1beta1.QueryTokenMintedByAppAndAssetResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.comdex.tokenmint.v1beta1.MintedTokens mintedTokens = 1 [json_name = "mintedTokens", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"mintedTokens&#92;""];</code>
+     * @return Whether the mintedTokens field is set.
+     */
+    boolean hasMintedTokens();
+    /**
+     * <code>.comdex.tokenmint.v1beta1.MintedTokens mintedTokens = 1 [json_name = "mintedTokens", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"mintedTokens&#92;""];</code>
+     * @return The mintedTokens.
+     */
+    com.comdex.tokenmint.v1beta1.MintProto.MintedTokens getMintedTokens();
+    /**
+     * <code>.comdex.tokenmint.v1beta1.MintedTokens mintedTokens = 1 [json_name = "mintedTokens", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"mintedTokens&#92;""];</code>
+     */
+    com.comdex.tokenmint.v1beta1.MintProto.MintedTokensOrBuilder getMintedTokensOrBuilder();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.tokenmint.v1beta1.QueryTokenMintedByAppAndAssetResponse}
+   */
+  public static final class QueryTokenMintedByAppAndAssetResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.tokenmint.v1beta1.QueryTokenMintedByAppAndAssetResponse)
+      QueryTokenMintedByAppAndAssetResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTokenMintedByAppAndAssetResponse.newBuilder() to construct.
+    private QueryTokenMintedByAppAndAssetResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTokenMintedByAppAndAssetResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTokenMintedByAppAndAssetResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.tokenmint.v1beta1.QueryProto.internal_static_comdex_tokenmint_v1beta1_QueryTokenMintedByAppAndAssetResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.tokenmint.v1beta1.QueryProto.internal_static_comdex_tokenmint_v1beta1_QueryTokenMintedByAppAndAssetResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse.class, com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse.Builder.class);
+    }
+
+    public static final int MINTEDTOKENS_FIELD_NUMBER = 1;
+    private com.comdex.tokenmint.v1beta1.MintProto.MintedTokens mintedTokens_;
+    /**
+     * <code>.comdex.tokenmint.v1beta1.MintedTokens mintedTokens = 1 [json_name = "mintedTokens", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"mintedTokens&#92;""];</code>
+     * @return Whether the mintedTokens field is set.
+     */
+    @java.lang.Override
+    public boolean hasMintedTokens() {
+      return mintedTokens_ != null;
+    }
+    /**
+     * <code>.comdex.tokenmint.v1beta1.MintedTokens mintedTokens = 1 [json_name = "mintedTokens", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"mintedTokens&#92;""];</code>
+     * @return The mintedTokens.
+     */
+    @java.lang.Override
+    public com.comdex.tokenmint.v1beta1.MintProto.MintedTokens getMintedTokens() {
+      return mintedTokens_ == null ? com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.getDefaultInstance() : mintedTokens_;
+    }
+    /**
+     * <code>.comdex.tokenmint.v1beta1.MintedTokens mintedTokens = 1 [json_name = "mintedTokens", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"mintedTokens&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.tokenmint.v1beta1.MintProto.MintedTokensOrBuilder getMintedTokensOrBuilder() {
+      return mintedTokens_ == null ? com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.getDefaultInstance() : mintedTokens_;
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (mintedTokens_ != null) {
+        output.writeMessage(1, getMintedTokens());
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (mintedTokens_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMintedTokens());
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse)) {
+        return super.equals(obj);
+      }
+      com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse other = (com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse) obj;
+
+      if (hasMintedTokens() != other.hasMintedTokens()) return false;
+      if (hasMintedTokens()) {
+        if (!getMintedTokens()
+            .equals(other.getMintedTokens())) return false;
+      }
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMintedTokens()) {
+        hash = (37 * hash) + MINTEDTOKENS_FIELD_NUMBER;
+        hash = (53 * hash) + getMintedTokens().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.tokenmint.v1beta1.QueryTokenMintedByAppAndAssetResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.tokenmint.v1beta1.QueryTokenMintedByAppAndAssetResponse)
+        com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.tokenmint.v1beta1.QueryProto.internal_static_comdex_tokenmint_v1beta1_QueryTokenMintedByAppAndAssetResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.tokenmint.v1beta1.QueryProto.internal_static_comdex_tokenmint_v1beta1_QueryTokenMintedByAppAndAssetResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse.class, com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse.Builder.class);
+      }
+
+      // Construct using com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        mintedTokens_ = null;
+        if (mintedTokensBuilder_ != null) {
+          mintedTokensBuilder_.dispose();
+          mintedTokensBuilder_ = null;
+        }
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.tokenmint.v1beta1.QueryProto.internal_static_comdex_tokenmint_v1beta1_QueryTokenMintedByAppAndAssetResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse getDefaultInstanceForType() {
+        return com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse build() {
+        com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse buildPartial() {
+        com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse result = new com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.mintedTokens_ = mintedTokensBuilder_ == null
+              ? mintedTokens_
+              : mintedTokensBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse) {
+          return mergeFrom((com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse other) {
+        if (other == com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse.getDefaultInstance()) return this;
+        if (other.hasMintedTokens()) {
+          mergeMintedTokens(other.getMintedTokens());
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getMintedTokensFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.comdex.tokenmint.v1beta1.MintProto.MintedTokens mintedTokens_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.tokenmint.v1beta1.MintProto.MintedTokens, com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.Builder, com.comdex.tokenmint.v1beta1.MintProto.MintedTokensOrBuilder> mintedTokensBuilder_;
+      /**
+       * <code>.comdex.tokenmint.v1beta1.MintedTokens mintedTokens = 1 [json_name = "mintedTokens", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"mintedTokens&#92;""];</code>
+       * @return Whether the mintedTokens field is set.
+       */
+      public boolean hasMintedTokens() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.comdex.tokenmint.v1beta1.MintedTokens mintedTokens = 1 [json_name = "mintedTokens", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"mintedTokens&#92;""];</code>
+       * @return The mintedTokens.
+       */
+      public com.comdex.tokenmint.v1beta1.MintProto.MintedTokens getMintedTokens() {
+        if (mintedTokensBuilder_ == null) {
+          return mintedTokens_ == null ? com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.getDefaultInstance() : mintedTokens_;
+        } else {
+          return mintedTokensBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.comdex.tokenmint.v1beta1.MintedTokens mintedTokens = 1 [json_name = "mintedTokens", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"mintedTokens&#92;""];</code>
+       */
+      public Builder setMintedTokens(com.comdex.tokenmint.v1beta1.MintProto.MintedTokens value) {
+        if (mintedTokensBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mintedTokens_ = value;
+        } else {
+          mintedTokensBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.tokenmint.v1beta1.MintedTokens mintedTokens = 1 [json_name = "mintedTokens", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"mintedTokens&#92;""];</code>
+       */
+      public Builder setMintedTokens(
+          com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.Builder builderForValue) {
+        if (mintedTokensBuilder_ == null) {
+          mintedTokens_ = builderForValue.build();
+        } else {
+          mintedTokensBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.tokenmint.v1beta1.MintedTokens mintedTokens = 1 [json_name = "mintedTokens", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"mintedTokens&#92;""];</code>
+       */
+      public Builder mergeMintedTokens(com.comdex.tokenmint.v1beta1.MintProto.MintedTokens value) {
+        if (mintedTokensBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            mintedTokens_ != null &&
+            mintedTokens_ != com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.getDefaultInstance()) {
+            getMintedTokensBuilder().mergeFrom(value);
+          } else {
+            mintedTokens_ = value;
+          }
+        } else {
+          mintedTokensBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.tokenmint.v1beta1.MintedTokens mintedTokens = 1 [json_name = "mintedTokens", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"mintedTokens&#92;""];</code>
+       */
+      public Builder clearMintedTokens() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        mintedTokens_ = null;
+        if (mintedTokensBuilder_ != null) {
+          mintedTokensBuilder_.dispose();
+          mintedTokensBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.tokenmint.v1beta1.MintedTokens mintedTokens = 1 [json_name = "mintedTokens", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"mintedTokens&#92;""];</code>
+       */
+      public com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.Builder getMintedTokensBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getMintedTokensFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.comdex.tokenmint.v1beta1.MintedTokens mintedTokens = 1 [json_name = "mintedTokens", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"mintedTokens&#92;""];</code>
+       */
+      public com.comdex.tokenmint.v1beta1.MintProto.MintedTokensOrBuilder getMintedTokensOrBuilder() {
+        if (mintedTokensBuilder_ != null) {
+          return mintedTokensBuilder_.getMessageOrBuilder();
+        } else {
+          return mintedTokens_ == null ?
+              com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.getDefaultInstance() : mintedTokens_;
+        }
+      }
+      /**
+       * <code>.comdex.tokenmint.v1beta1.MintedTokens mintedTokens = 1 [json_name = "mintedTokens", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"mintedTokens&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.tokenmint.v1beta1.MintProto.MintedTokens, com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.Builder, com.comdex.tokenmint.v1beta1.MintProto.MintedTokensOrBuilder> 
+          getMintedTokensFieldBuilder() {
+        if (mintedTokensBuilder_ == null) {
+          mintedTokensBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.comdex.tokenmint.v1beta1.MintProto.MintedTokens, com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.Builder, com.comdex.tokenmint.v1beta1.MintProto.MintedTokensOrBuilder>(
+                  getMintedTokens(),
+                  getParentForChildren(),
+                  isClean());
+          mintedTokens_ = null;
+        }
+        return mintedTokensBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination", (.gogoproto.moretags) = "yaml:&#92;"pagination&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.tokenmint.v1beta1.QueryTokenMintedByAppAndAssetResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.tokenmint.v1beta1.QueryTokenMintedByAppAndAssetResponse)
+    private static final com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse();
+    }
+
+    public static com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTokenMintedByAppAndAssetResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTokenMintedByAppAndAssetResponse>() {
+      @java.lang.Override
+      public QueryTokenMintedByAppAndAssetResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTokenMintedByAppAndAssetResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTokenMintedByAppAndAssetResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.tokenmint.v1beta1.QueryProto.QueryTokenMintedByAppAndAssetResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_tokenmint_v1beta1_QueryAllTokenMintedForAllAppsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_tokenmint_v1beta1_QueryAllTokenMintedForAllAppsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_tokenmint_v1beta1_QueryAllTokenMintedForAllAppsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_tokenmint_v1beta1_QueryAllTokenMintedForAllAppsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_tokenmint_v1beta1_QueryTokenMintedByAppRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_tokenmint_v1beta1_QueryTokenMintedByAppRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_tokenmint_v1beta1_QueryTokenMintedByAppResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_tokenmint_v1beta1_QueryTokenMintedByAppResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_tokenmint_v1beta1_QueryTokenMintedByAppAndAssetRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_tokenmint_v1beta1_QueryTokenMintedByAppAndAssetRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_tokenmint_v1beta1_QueryTokenMintedByAppAndAssetResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_tokenmint_v1beta1_QueryTokenMintedByAppAndAssetResponse_fieldAccessorTable;
 
@@ -105,13 +4694,13 @@ public final class QueryProto {
       "est\032?.comdex.tokenmint.v1beta1.QueryToke" +
       "nMintedByAppAndAssetResponse\"S\202\323\344\223\002M\022K/c" +
       "omdex/tokenmint/v1beta1/token-minted-by-" +
-      "app-and-asset/{app_id}/{asset_id}B\351\001\n\034co" +
-      "m.comdex.tokenmint.v1beta1B\nQueryProtoP\001" +
-      "Z3github.com/comdex-official/comdex/x/to" +
-      "kenmint/types\242\002\003CTX\252\002\030Comdex.Tokenmint.V" +
-      "1beta1\312\002\030Comdex\\Tokenmint\\V1beta1\342\002$Comd" +
-      "ex\\Tokenmint\\V1beta1\\GPBMetadata\352\002\032Comde" +
-      "x::Tokenmint::V1beta1\310\341\036\000\250\342\036\000b\006proto3"
+      "app-and-asset/{app_id}/{asset_id}B\347\001\n\034co" +
+      "m.comdex.tokenmint.v1beta1B\nQueryProtoZ3" +
+      "github.com/comdex-official/comdex/x/toke" +
+      "nmint/types\242\002\003CTX\252\002\030Comdex.Tokenmint.V1b" +
+      "eta1\312\002\030Comdex\\Tokenmint\\V1beta1\342\002$Comdex" +
+      "\\Tokenmint\\V1beta1\\GPBMetadata\352\002\032Comdex:" +
+      ":Tokenmint::V1beta1\310\341\036\000\250\342\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

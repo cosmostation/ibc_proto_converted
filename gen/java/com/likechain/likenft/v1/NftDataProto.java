@@ -14,9 +14,755 @@ public final class NftDataProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface NFTDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.NFTData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes metadata = 1 [json_name = "metadata", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "JsonInput"];</code>
+     * @return The metadata.
+     */
+    com.google.protobuf.ByteString getMetadata();
+
+    /**
+     * <code>.likechain.likenft.v1.ClassParent class_parent = 2 [json_name = "classParent", (.gogoproto.nullable) = false];</code>
+     * @return Whether the classParent field is set.
+     */
+    boolean hasClassParent();
+    /**
+     * <code>.likechain.likenft.v1.ClassParent class_parent = 2 [json_name = "classParent", (.gogoproto.nullable) = false];</code>
+     * @return The classParent.
+     */
+    com.likechain.likenft.v1.ClassDataProto.ClassParent getClassParent();
+    /**
+     * <code>.likechain.likenft.v1.ClassParent class_parent = 2 [json_name = "classParent", (.gogoproto.nullable) = false];</code>
+     */
+    com.likechain.likenft.v1.ClassDataProto.ClassParentOrBuilder getClassParentOrBuilder();
+
+    /**
+     * <code>bool to_be_revealed = 3 [json_name = "toBeRevealed"];</code>
+     * @return The toBeRevealed.
+     */
+    boolean getToBeRevealed();
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.NFTData}
+   */
+  public static final class NFTData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.NFTData)
+      NFTDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use NFTData.newBuilder() to construct.
+    private NFTData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private NFTData() {
+      metadata_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new NFTData();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.NftDataProto.internal_static_likechain_likenft_v1_NFTData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.NftDataProto.internal_static_likechain_likenft_v1_NFTData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.NftDataProto.NFTData.class, com.likechain.likenft.v1.NftDataProto.NFTData.Builder.class);
+    }
+
+    public static final int METADATA_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString metadata_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes metadata = 1 [json_name = "metadata", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "JsonInput"];</code>
+     * @return The metadata.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMetadata() {
+      return metadata_;
+    }
+
+    public static final int CLASS_PARENT_FIELD_NUMBER = 2;
+    private com.likechain.likenft.v1.ClassDataProto.ClassParent classParent_;
+    /**
+     * <code>.likechain.likenft.v1.ClassParent class_parent = 2 [json_name = "classParent", (.gogoproto.nullable) = false];</code>
+     * @return Whether the classParent field is set.
+     */
+    @java.lang.Override
+    public boolean hasClassParent() {
+      return classParent_ != null;
+    }
+    /**
+     * <code>.likechain.likenft.v1.ClassParent class_parent = 2 [json_name = "classParent", (.gogoproto.nullable) = false];</code>
+     * @return The classParent.
+     */
+    @java.lang.Override
+    public com.likechain.likenft.v1.ClassDataProto.ClassParent getClassParent() {
+      return classParent_ == null ? com.likechain.likenft.v1.ClassDataProto.ClassParent.getDefaultInstance() : classParent_;
+    }
+    /**
+     * <code>.likechain.likenft.v1.ClassParent class_parent = 2 [json_name = "classParent", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.likechain.likenft.v1.ClassDataProto.ClassParentOrBuilder getClassParentOrBuilder() {
+      return classParent_ == null ? com.likechain.likenft.v1.ClassDataProto.ClassParent.getDefaultInstance() : classParent_;
+    }
+
+    public static final int TO_BE_REVEALED_FIELD_NUMBER = 3;
+    private boolean toBeRevealed_ = false;
+    /**
+     * <code>bool to_be_revealed = 3 [json_name = "toBeRevealed"];</code>
+     * @return The toBeRevealed.
+     */
+    @java.lang.Override
+    public boolean getToBeRevealed() {
+      return toBeRevealed_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!metadata_.isEmpty()) {
+        output.writeBytes(1, metadata_);
+      }
+      if (classParent_ != null) {
+        output.writeMessage(2, getClassParent());
+      }
+      if (toBeRevealed_ != false) {
+        output.writeBool(3, toBeRevealed_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!metadata_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, metadata_);
+      }
+      if (classParent_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getClassParent());
+      }
+      if (toBeRevealed_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, toBeRevealed_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.NftDataProto.NFTData)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.NftDataProto.NFTData other = (com.likechain.likenft.v1.NftDataProto.NFTData) obj;
+
+      if (!getMetadata()
+          .equals(other.getMetadata())) return false;
+      if (hasClassParent() != other.hasClassParent()) return false;
+      if (hasClassParent()) {
+        if (!getClassParent()
+            .equals(other.getClassParent())) return false;
+      }
+      if (getToBeRevealed()
+          != other.getToBeRevealed()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + METADATA_FIELD_NUMBER;
+      hash = (53 * hash) + getMetadata().hashCode();
+      if (hasClassParent()) {
+        hash = (37 * hash) + CLASS_PARENT_FIELD_NUMBER;
+        hash = (53 * hash) + getClassParent().hashCode();
+      }
+      hash = (37 * hash) + TO_BE_REVEALED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getToBeRevealed());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.NftDataProto.NFTData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.NftDataProto.NFTData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.NftDataProto.NFTData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.NftDataProto.NFTData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.NftDataProto.NFTData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.NftDataProto.NFTData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.NftDataProto.NFTData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.NftDataProto.NFTData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.NftDataProto.NFTData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.NftDataProto.NFTData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.NftDataProto.NFTData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.NftDataProto.NFTData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.NftDataProto.NFTData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.NFTData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.NFTData)
+        com.likechain.likenft.v1.NftDataProto.NFTDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.NftDataProto.internal_static_likechain_likenft_v1_NFTData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.NftDataProto.internal_static_likechain_likenft_v1_NFTData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.NftDataProto.NFTData.class, com.likechain.likenft.v1.NftDataProto.NFTData.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.NftDataProto.NFTData.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        metadata_ = com.google.protobuf.ByteString.EMPTY;
+        classParent_ = null;
+        if (classParentBuilder_ != null) {
+          classParentBuilder_.dispose();
+          classParentBuilder_ = null;
+        }
+        toBeRevealed_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.NftDataProto.internal_static_likechain_likenft_v1_NFTData_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.NftDataProto.NFTData getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.NftDataProto.NFTData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.NftDataProto.NFTData build() {
+        com.likechain.likenft.v1.NftDataProto.NFTData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.NftDataProto.NFTData buildPartial() {
+        com.likechain.likenft.v1.NftDataProto.NFTData result = new com.likechain.likenft.v1.NftDataProto.NFTData(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.NftDataProto.NFTData result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.metadata_ = metadata_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.classParent_ = classParentBuilder_ == null
+              ? classParent_
+              : classParentBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.toBeRevealed_ = toBeRevealed_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.NftDataProto.NFTData) {
+          return mergeFrom((com.likechain.likenft.v1.NftDataProto.NFTData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.NftDataProto.NFTData other) {
+        if (other == com.likechain.likenft.v1.NftDataProto.NFTData.getDefaultInstance()) return this;
+        if (other.getMetadata() != com.google.protobuf.ByteString.EMPTY) {
+          setMetadata(other.getMetadata());
+        }
+        if (other.hasClassParent()) {
+          mergeClassParent(other.getClassParent());
+        }
+        if (other.getToBeRevealed() != false) {
+          setToBeRevealed(other.getToBeRevealed());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                metadata_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getClassParentFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                toBeRevealed_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString metadata_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes metadata = 1 [json_name = "metadata", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "JsonInput"];</code>
+       * @return The metadata.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMetadata() {
+        return metadata_;
+      }
+      /**
+       * <code>bytes metadata = 1 [json_name = "metadata", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "JsonInput"];</code>
+       * @param value The metadata to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetadata(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        metadata_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes metadata = 1 [json_name = "metadata", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "JsonInput"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMetadata() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        metadata_ = getDefaultInstance().getMetadata();
+        onChanged();
+        return this;
+      }
+
+      private com.likechain.likenft.v1.ClassDataProto.ClassParent classParent_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.likechain.likenft.v1.ClassDataProto.ClassParent, com.likechain.likenft.v1.ClassDataProto.ClassParent.Builder, com.likechain.likenft.v1.ClassDataProto.ClassParentOrBuilder> classParentBuilder_;
+      /**
+       * <code>.likechain.likenft.v1.ClassParent class_parent = 2 [json_name = "classParent", (.gogoproto.nullable) = false];</code>
+       * @return Whether the classParent field is set.
+       */
+      public boolean hasClassParent() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.likechain.likenft.v1.ClassParent class_parent = 2 [json_name = "classParent", (.gogoproto.nullable) = false];</code>
+       * @return The classParent.
+       */
+      public com.likechain.likenft.v1.ClassDataProto.ClassParent getClassParent() {
+        if (classParentBuilder_ == null) {
+          return classParent_ == null ? com.likechain.likenft.v1.ClassDataProto.ClassParent.getDefaultInstance() : classParent_;
+        } else {
+          return classParentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.likechain.likenft.v1.ClassParent class_parent = 2 [json_name = "classParent", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setClassParent(com.likechain.likenft.v1.ClassDataProto.ClassParent value) {
+        if (classParentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          classParent_ = value;
+        } else {
+          classParentBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.likenft.v1.ClassParent class_parent = 2 [json_name = "classParent", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setClassParent(
+          com.likechain.likenft.v1.ClassDataProto.ClassParent.Builder builderForValue) {
+        if (classParentBuilder_ == null) {
+          classParent_ = builderForValue.build();
+        } else {
+          classParentBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.likenft.v1.ClassParent class_parent = 2 [json_name = "classParent", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeClassParent(com.likechain.likenft.v1.ClassDataProto.ClassParent value) {
+        if (classParentBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            classParent_ != null &&
+            classParent_ != com.likechain.likenft.v1.ClassDataProto.ClassParent.getDefaultInstance()) {
+            getClassParentBuilder().mergeFrom(value);
+          } else {
+            classParent_ = value;
+          }
+        } else {
+          classParentBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.likenft.v1.ClassParent class_parent = 2 [json_name = "classParent", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearClassParent() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        classParent_ = null;
+        if (classParentBuilder_ != null) {
+          classParentBuilder_.dispose();
+          classParentBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.likenft.v1.ClassParent class_parent = 2 [json_name = "classParent", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.likenft.v1.ClassDataProto.ClassParent.Builder getClassParentBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getClassParentFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.likechain.likenft.v1.ClassParent class_parent = 2 [json_name = "classParent", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.likenft.v1.ClassDataProto.ClassParentOrBuilder getClassParentOrBuilder() {
+        if (classParentBuilder_ != null) {
+          return classParentBuilder_.getMessageOrBuilder();
+        } else {
+          return classParent_ == null ?
+              com.likechain.likenft.v1.ClassDataProto.ClassParent.getDefaultInstance() : classParent_;
+        }
+      }
+      /**
+       * <code>.likechain.likenft.v1.ClassParent class_parent = 2 [json_name = "classParent", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.likechain.likenft.v1.ClassDataProto.ClassParent, com.likechain.likenft.v1.ClassDataProto.ClassParent.Builder, com.likechain.likenft.v1.ClassDataProto.ClassParentOrBuilder> 
+          getClassParentFieldBuilder() {
+        if (classParentBuilder_ == null) {
+          classParentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.likechain.likenft.v1.ClassDataProto.ClassParent, com.likechain.likenft.v1.ClassDataProto.ClassParent.Builder, com.likechain.likenft.v1.ClassDataProto.ClassParentOrBuilder>(
+                  getClassParent(),
+                  getParentForChildren(),
+                  isClean());
+          classParent_ = null;
+        }
+        return classParentBuilder_;
+      }
+
+      private boolean toBeRevealed_ ;
+      /**
+       * <code>bool to_be_revealed = 3 [json_name = "toBeRevealed"];</code>
+       * @return The toBeRevealed.
+       */
+      @java.lang.Override
+      public boolean getToBeRevealed() {
+        return toBeRevealed_;
+      }
+      /**
+       * <code>bool to_be_revealed = 3 [json_name = "toBeRevealed"];</code>
+       * @param value The toBeRevealed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToBeRevealed(boolean value) {
+
+        toBeRevealed_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool to_be_revealed = 3 [json_name = "toBeRevealed"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearToBeRevealed() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        toBeRevealed_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.NFTData)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.NFTData)
+    private static final com.likechain.likenft.v1.NftDataProto.NFTData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.NftDataProto.NFTData();
+    }
+
+    public static com.likechain.likenft.v1.NftDataProto.NFTData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<NFTData>
+        PARSER = new com.google.protobuf.AbstractParser<NFTData>() {
+      @java.lang.Override
+      public NFTData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<NFTData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<NFTData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.NftDataProto.NFTData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_NFTData_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_NFTData_fieldAccessorTable;
 
@@ -35,12 +781,12 @@ public final class NftDataProto {
       "JsonInputR\010metadata\022J\n\014class_parent\030\002 \001(" +
       "\0132!.likechain.likenft.v1.ClassParentB\004\310\336" +
       "\037\000R\013classParent\022$\n\016to_be_revealed\030\003 \001(\010R" +
-      "\014toBeRevealedB\321\001\n\030com.likechain.likenft." +
-      "v1B\014NftDataProtoP\001Z5github.com/likecoin/" +
-      "likecoin-chain/v4/x/likenft/types\242\002\003LLX\252" +
-      "\002\024Likechain.Likenft.V1\312\002\024Likechain\\Liken" +
-      "ft\\V1\342\002 Likechain\\Likenft\\V1\\GPBMetadata" +
-      "\352\002\026Likechain::Likenft::V1b\006proto3"
+      "\014toBeRevealedB\317\001\n\030com.likechain.likenft." +
+      "v1B\014NftDataProtoZ5github.com/likecoin/li" +
+      "kecoin-chain/v4/x/likenft/types\242\002\003LLX\252\002\024" +
+      "Likechain.Likenft.V1\312\002\024Likechain\\Likenft" +
+      "\\V1\342\002 Likechain\\Likenft\\V1\\GPBMetadata\352\002" +
+      "\026Likechain::Likenft::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

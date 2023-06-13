@@ -14,34 +14,3982 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryTokenPairsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.erc20.v1.QueryTokenPairsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryTokenPairsRequest is the request type for the Query/TokenPairs RPC
+   * method.
+   * </pre>
+   *
+   * Protobuf type {@code canto.erc20.v1.QueryTokenPairsRequest}
+   */
+  public static final class QueryTokenPairsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.erc20.v1.QueryTokenPairsRequest)
+      QueryTokenPairsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTokenPairsRequest.newBuilder() to construct.
+    private QueryTokenPairsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTokenPairsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTokenPairsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.erc20.v1.QueryProto.internal_static_canto_erc20_v1_QueryTokenPairsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.erc20.v1.QueryProto.internal_static_canto_erc20_v1_QueryTokenPairsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest.class, com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 1;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(1, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest)) {
+        return super.equals(obj);
+      }
+      com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest other = (com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryTokenPairsRequest is the request type for the Query/TokenPairs RPC
+     * method.
+     * </pre>
+     *
+     * Protobuf type {@code canto.erc20.v1.QueryTokenPairsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.erc20.v1.QueryTokenPairsRequest)
+        com.canto.erc20.v1.QueryProto.QueryTokenPairsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.erc20.v1.QueryProto.internal_static_canto_erc20_v1_QueryTokenPairsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.erc20.v1.QueryProto.internal_static_canto_erc20_v1_QueryTokenPairsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest.class, com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest.Builder.class);
+      }
+
+      // Construct using com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.erc20.v1.QueryProto.internal_static_canto_erc20_v1_QueryTokenPairsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest getDefaultInstanceForType() {
+        return com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest build() {
+        com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest buildPartial() {
+        com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest result = new com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest) {
+          return mergeFrom((com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest other) {
+        if (other == com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.erc20.v1.QueryTokenPairsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.erc20.v1.QueryTokenPairsRequest)
+    private static final com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest();
+    }
+
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTokenPairsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTokenPairsRequest>() {
+      @java.lang.Override
+      public QueryTokenPairsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTokenPairsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTokenPairsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.erc20.v1.QueryProto.QueryTokenPairsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTokenPairsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.erc20.v1.QueryTokenPairsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .canto.erc20.v1.TokenPair token_pairs = 1 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.canto.erc20.v1.Erc20Proto.TokenPair> 
+        getTokenPairsList();
+    /**
+     * <code>repeated .canto.erc20.v1.TokenPair token_pairs = 1 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+     */
+    com.canto.erc20.v1.Erc20Proto.TokenPair getTokenPairs(int index);
+    /**
+     * <code>repeated .canto.erc20.v1.TokenPair token_pairs = 1 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+     */
+    int getTokenPairsCount();
+    /**
+     * <code>repeated .canto.erc20.v1.TokenPair token_pairs = 1 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.canto.erc20.v1.Erc20Proto.TokenPairOrBuilder> 
+        getTokenPairsOrBuilderList();
+    /**
+     * <code>repeated .canto.erc20.v1.TokenPair token_pairs = 1 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+     */
+    com.canto.erc20.v1.Erc20Proto.TokenPairOrBuilder getTokenPairsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryTokenPairsResponse is the response type for the Query/TokenPairs RPC
+   * method.
+   * </pre>
+   *
+   * Protobuf type {@code canto.erc20.v1.QueryTokenPairsResponse}
+   */
+  public static final class QueryTokenPairsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.erc20.v1.QueryTokenPairsResponse)
+      QueryTokenPairsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTokenPairsResponse.newBuilder() to construct.
+    private QueryTokenPairsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTokenPairsResponse() {
+      tokenPairs_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTokenPairsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.erc20.v1.QueryProto.internal_static_canto_erc20_v1_QueryTokenPairsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.erc20.v1.QueryProto.internal_static_canto_erc20_v1_QueryTokenPairsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse.class, com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse.Builder.class);
+    }
+
+    public static final int TOKEN_PAIRS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.canto.erc20.v1.Erc20Proto.TokenPair> tokenPairs_;
+    /**
+     * <code>repeated .canto.erc20.v1.TokenPair token_pairs = 1 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.canto.erc20.v1.Erc20Proto.TokenPair> getTokenPairsList() {
+      return tokenPairs_;
+    }
+    /**
+     * <code>repeated .canto.erc20.v1.TokenPair token_pairs = 1 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.canto.erc20.v1.Erc20Proto.TokenPairOrBuilder> 
+        getTokenPairsOrBuilderList() {
+      return tokenPairs_;
+    }
+    /**
+     * <code>repeated .canto.erc20.v1.TokenPair token_pairs = 1 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getTokenPairsCount() {
+      return tokenPairs_.size();
+    }
+    /**
+     * <code>repeated .canto.erc20.v1.TokenPair token_pairs = 1 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.canto.erc20.v1.Erc20Proto.TokenPair getTokenPairs(int index) {
+      return tokenPairs_.get(index);
+    }
+    /**
+     * <code>repeated .canto.erc20.v1.TokenPair token_pairs = 1 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.canto.erc20.v1.Erc20Proto.TokenPairOrBuilder getTokenPairsOrBuilder(
+        int index) {
+      return tokenPairs_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < tokenPairs_.size(); i++) {
+        output.writeMessage(1, tokenPairs_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < tokenPairs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, tokenPairs_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse)) {
+        return super.equals(obj);
+      }
+      com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse other = (com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse) obj;
+
+      if (!getTokenPairsList()
+          .equals(other.getTokenPairsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getTokenPairsCount() > 0) {
+        hash = (37 * hash) + TOKEN_PAIRS_FIELD_NUMBER;
+        hash = (53 * hash) + getTokenPairsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryTokenPairsResponse is the response type for the Query/TokenPairs RPC
+     * method.
+     * </pre>
+     *
+     * Protobuf type {@code canto.erc20.v1.QueryTokenPairsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.erc20.v1.QueryTokenPairsResponse)
+        com.canto.erc20.v1.QueryProto.QueryTokenPairsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.erc20.v1.QueryProto.internal_static_canto_erc20_v1_QueryTokenPairsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.erc20.v1.QueryProto.internal_static_canto_erc20_v1_QueryTokenPairsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse.class, com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse.Builder.class);
+      }
+
+      // Construct using com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (tokenPairsBuilder_ == null) {
+          tokenPairs_ = java.util.Collections.emptyList();
+        } else {
+          tokenPairs_ = null;
+          tokenPairsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.erc20.v1.QueryProto.internal_static_canto_erc20_v1_QueryTokenPairsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse getDefaultInstanceForType() {
+        return com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse build() {
+        com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse buildPartial() {
+        com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse result = new com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse result) {
+        if (tokenPairsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            tokenPairs_ = java.util.Collections.unmodifiableList(tokenPairs_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.tokenPairs_ = tokenPairs_;
+        } else {
+          result.tokenPairs_ = tokenPairsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse) {
+          return mergeFrom((com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse other) {
+        if (other == com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse.getDefaultInstance()) return this;
+        if (tokenPairsBuilder_ == null) {
+          if (!other.tokenPairs_.isEmpty()) {
+            if (tokenPairs_.isEmpty()) {
+              tokenPairs_ = other.tokenPairs_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTokenPairsIsMutable();
+              tokenPairs_.addAll(other.tokenPairs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.tokenPairs_.isEmpty()) {
+            if (tokenPairsBuilder_.isEmpty()) {
+              tokenPairsBuilder_.dispose();
+              tokenPairsBuilder_ = null;
+              tokenPairs_ = other.tokenPairs_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              tokenPairsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTokenPairsFieldBuilder() : null;
+            } else {
+              tokenPairsBuilder_.addAllMessages(other.tokenPairs_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.canto.erc20.v1.Erc20Proto.TokenPair m =
+                    input.readMessage(
+                        com.canto.erc20.v1.Erc20Proto.TokenPair.parser(),
+                        extensionRegistry);
+                if (tokenPairsBuilder_ == null) {
+                  ensureTokenPairsIsMutable();
+                  tokenPairs_.add(m);
+                } else {
+                  tokenPairsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.canto.erc20.v1.Erc20Proto.TokenPair> tokenPairs_ =
+        java.util.Collections.emptyList();
+      private void ensureTokenPairsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          tokenPairs_ = new java.util.ArrayList<com.canto.erc20.v1.Erc20Proto.TokenPair>(tokenPairs_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.canto.erc20.v1.Erc20Proto.TokenPair, com.canto.erc20.v1.Erc20Proto.TokenPair.Builder, com.canto.erc20.v1.Erc20Proto.TokenPairOrBuilder> tokenPairsBuilder_;
+
+      /**
+       * <code>repeated .canto.erc20.v1.TokenPair token_pairs = 1 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.canto.erc20.v1.Erc20Proto.TokenPair> getTokenPairsList() {
+        if (tokenPairsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(tokenPairs_);
+        } else {
+          return tokenPairsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .canto.erc20.v1.TokenPair token_pairs = 1 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public int getTokenPairsCount() {
+        if (tokenPairsBuilder_ == null) {
+          return tokenPairs_.size();
+        } else {
+          return tokenPairsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .canto.erc20.v1.TokenPair token_pairs = 1 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.erc20.v1.Erc20Proto.TokenPair getTokenPairs(int index) {
+        if (tokenPairsBuilder_ == null) {
+          return tokenPairs_.get(index);
+        } else {
+          return tokenPairsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .canto.erc20.v1.TokenPair token_pairs = 1 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTokenPairs(
+          int index, com.canto.erc20.v1.Erc20Proto.TokenPair value) {
+        if (tokenPairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenPairsIsMutable();
+          tokenPairs_.set(index, value);
+          onChanged();
+        } else {
+          tokenPairsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .canto.erc20.v1.TokenPair token_pairs = 1 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTokenPairs(
+          int index, com.canto.erc20.v1.Erc20Proto.TokenPair.Builder builderForValue) {
+        if (tokenPairsBuilder_ == null) {
+          ensureTokenPairsIsMutable();
+          tokenPairs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokenPairsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .canto.erc20.v1.TokenPair token_pairs = 1 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTokenPairs(com.canto.erc20.v1.Erc20Proto.TokenPair value) {
+        if (tokenPairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenPairsIsMutable();
+          tokenPairs_.add(value);
+          onChanged();
+        } else {
+          tokenPairsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .canto.erc20.v1.TokenPair token_pairs = 1 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTokenPairs(
+          int index, com.canto.erc20.v1.Erc20Proto.TokenPair value) {
+        if (tokenPairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenPairsIsMutable();
+          tokenPairs_.add(index, value);
+          onChanged();
+        } else {
+          tokenPairsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .canto.erc20.v1.TokenPair token_pairs = 1 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTokenPairs(
+          com.canto.erc20.v1.Erc20Proto.TokenPair.Builder builderForValue) {
+        if (tokenPairsBuilder_ == null) {
+          ensureTokenPairsIsMutable();
+          tokenPairs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          tokenPairsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .canto.erc20.v1.TokenPair token_pairs = 1 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTokenPairs(
+          int index, com.canto.erc20.v1.Erc20Proto.TokenPair.Builder builderForValue) {
+        if (tokenPairsBuilder_ == null) {
+          ensureTokenPairsIsMutable();
+          tokenPairs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokenPairsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .canto.erc20.v1.TokenPair token_pairs = 1 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllTokenPairs(
+          java.lang.Iterable<? extends com.canto.erc20.v1.Erc20Proto.TokenPair> values) {
+        if (tokenPairsBuilder_ == null) {
+          ensureTokenPairsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tokenPairs_);
+          onChanged();
+        } else {
+          tokenPairsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .canto.erc20.v1.TokenPair token_pairs = 1 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearTokenPairs() {
+        if (tokenPairsBuilder_ == null) {
+          tokenPairs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          tokenPairsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .canto.erc20.v1.TokenPair token_pairs = 1 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeTokenPairs(int index) {
+        if (tokenPairsBuilder_ == null) {
+          ensureTokenPairsIsMutable();
+          tokenPairs_.remove(index);
+          onChanged();
+        } else {
+          tokenPairsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .canto.erc20.v1.TokenPair token_pairs = 1 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.erc20.v1.Erc20Proto.TokenPair.Builder getTokenPairsBuilder(
+          int index) {
+        return getTokenPairsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .canto.erc20.v1.TokenPair token_pairs = 1 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.erc20.v1.Erc20Proto.TokenPairOrBuilder getTokenPairsOrBuilder(
+          int index) {
+        if (tokenPairsBuilder_ == null) {
+          return tokenPairs_.get(index);  } else {
+          return tokenPairsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .canto.erc20.v1.TokenPair token_pairs = 1 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.canto.erc20.v1.Erc20Proto.TokenPairOrBuilder> 
+           getTokenPairsOrBuilderList() {
+        if (tokenPairsBuilder_ != null) {
+          return tokenPairsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(tokenPairs_);
+        }
+      }
+      /**
+       * <code>repeated .canto.erc20.v1.TokenPair token_pairs = 1 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.erc20.v1.Erc20Proto.TokenPair.Builder addTokenPairsBuilder() {
+        return getTokenPairsFieldBuilder().addBuilder(
+            com.canto.erc20.v1.Erc20Proto.TokenPair.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .canto.erc20.v1.TokenPair token_pairs = 1 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.erc20.v1.Erc20Proto.TokenPair.Builder addTokenPairsBuilder(
+          int index) {
+        return getTokenPairsFieldBuilder().addBuilder(
+            index, com.canto.erc20.v1.Erc20Proto.TokenPair.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .canto.erc20.v1.TokenPair token_pairs = 1 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.canto.erc20.v1.Erc20Proto.TokenPair.Builder> 
+           getTokenPairsBuilderList() {
+        return getTokenPairsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.canto.erc20.v1.Erc20Proto.TokenPair, com.canto.erc20.v1.Erc20Proto.TokenPair.Builder, com.canto.erc20.v1.Erc20Proto.TokenPairOrBuilder> 
+          getTokenPairsFieldBuilder() {
+        if (tokenPairsBuilder_ == null) {
+          tokenPairsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.canto.erc20.v1.Erc20Proto.TokenPair, com.canto.erc20.v1.Erc20Proto.TokenPair.Builder, com.canto.erc20.v1.Erc20Proto.TokenPairOrBuilder>(
+                  tokenPairs_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          tokenPairs_ = null;
+        }
+        return tokenPairsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.erc20.v1.QueryTokenPairsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.erc20.v1.QueryTokenPairsResponse)
+    private static final com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse();
+    }
+
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTokenPairsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTokenPairsResponse>() {
+      @java.lang.Override
+      public QueryTokenPairsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTokenPairsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTokenPairsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.erc20.v1.QueryProto.QueryTokenPairsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTokenPairRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.erc20.v1.QueryTokenPairRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * token identifier can be either the hex contract address of the ERC20 or the
+     * Cosmos base denomination
+     * </pre>
+     *
+     * <code>string token = 1 [json_name = "token"];</code>
+     * @return The token.
+     */
+    java.lang.String getToken();
+    /**
+     * <pre>
+     * token identifier can be either the hex contract address of the ERC20 or the
+     * Cosmos base denomination
+     * </pre>
+     *
+     * <code>string token = 1 [json_name = "token"];</code>
+     * @return The bytes for token.
+     */
+    com.google.protobuf.ByteString
+        getTokenBytes();
+  }
+  /**
+   * <pre>
+   * QueryTokenPairRequest is the request type for the Query/TokenPair RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code canto.erc20.v1.QueryTokenPairRequest}
+   */
+  public static final class QueryTokenPairRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.erc20.v1.QueryTokenPairRequest)
+      QueryTokenPairRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTokenPairRequest.newBuilder() to construct.
+    private QueryTokenPairRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTokenPairRequest() {
+      token_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTokenPairRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.erc20.v1.QueryProto.internal_static_canto_erc20_v1_QueryTokenPairRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.erc20.v1.QueryProto.internal_static_canto_erc20_v1_QueryTokenPairRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.erc20.v1.QueryProto.QueryTokenPairRequest.class, com.canto.erc20.v1.QueryProto.QueryTokenPairRequest.Builder.class);
+    }
+
+    public static final int TOKEN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object token_ = "";
+    /**
+     * <pre>
+     * token identifier can be either the hex contract address of the ERC20 or the
+     * Cosmos base denomination
+     * </pre>
+     *
+     * <code>string token = 1 [json_name = "token"];</code>
+     * @return The token.
+     */
+    @java.lang.Override
+    public java.lang.String getToken() {
+      java.lang.Object ref = token_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        token_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * token identifier can be either the hex contract address of the ERC20 or the
+     * Cosmos base denomination
+     * </pre>
+     *
+     * <code>string token = 1 [json_name = "token"];</code>
+     * @return The bytes for token.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTokenBytes() {
+      java.lang.Object ref = token_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        token_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, token_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, token_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.erc20.v1.QueryProto.QueryTokenPairRequest)) {
+        return super.equals(obj);
+      }
+      com.canto.erc20.v1.QueryProto.QueryTokenPairRequest other = (com.canto.erc20.v1.QueryProto.QueryTokenPairRequest) obj;
+
+      if (!getToken()
+          .equals(other.getToken())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getToken().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.erc20.v1.QueryProto.QueryTokenPairRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryTokenPairRequest is the request type for the Query/TokenPair RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code canto.erc20.v1.QueryTokenPairRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.erc20.v1.QueryTokenPairRequest)
+        com.canto.erc20.v1.QueryProto.QueryTokenPairRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.erc20.v1.QueryProto.internal_static_canto_erc20_v1_QueryTokenPairRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.erc20.v1.QueryProto.internal_static_canto_erc20_v1_QueryTokenPairRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.erc20.v1.QueryProto.QueryTokenPairRequest.class, com.canto.erc20.v1.QueryProto.QueryTokenPairRequest.Builder.class);
+      }
+
+      // Construct using com.canto.erc20.v1.QueryProto.QueryTokenPairRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        token_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.erc20.v1.QueryProto.internal_static_canto_erc20_v1_QueryTokenPairRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.QueryProto.QueryTokenPairRequest getDefaultInstanceForType() {
+        return com.canto.erc20.v1.QueryProto.QueryTokenPairRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.QueryProto.QueryTokenPairRequest build() {
+        com.canto.erc20.v1.QueryProto.QueryTokenPairRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.QueryProto.QueryTokenPairRequest buildPartial() {
+        com.canto.erc20.v1.QueryProto.QueryTokenPairRequest result = new com.canto.erc20.v1.QueryProto.QueryTokenPairRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.canto.erc20.v1.QueryProto.QueryTokenPairRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.token_ = token_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.erc20.v1.QueryProto.QueryTokenPairRequest) {
+          return mergeFrom((com.canto.erc20.v1.QueryProto.QueryTokenPairRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.erc20.v1.QueryProto.QueryTokenPairRequest other) {
+        if (other == com.canto.erc20.v1.QueryProto.QueryTokenPairRequest.getDefaultInstance()) return this;
+        if (!other.getToken().isEmpty()) {
+          token_ = other.token_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                token_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object token_ = "";
+      /**
+       * <pre>
+       * token identifier can be either the hex contract address of the ERC20 or the
+       * Cosmos base denomination
+       * </pre>
+       *
+       * <code>string token = 1 [json_name = "token"];</code>
+       * @return The token.
+       */
+      public java.lang.String getToken() {
+        java.lang.Object ref = token_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          token_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * token identifier can be either the hex contract address of the ERC20 or the
+       * Cosmos base denomination
+       * </pre>
+       *
+       * <code>string token = 1 [json_name = "token"];</code>
+       * @return The bytes for token.
+       */
+      public com.google.protobuf.ByteString
+          getTokenBytes() {
+        java.lang.Object ref = token_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          token_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * token identifier can be either the hex contract address of the ERC20 or the
+       * Cosmos base denomination
+       * </pre>
+       *
+       * <code>string token = 1 [json_name = "token"];</code>
+       * @param value The token to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToken(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        token_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token identifier can be either the hex contract address of the ERC20 or the
+       * Cosmos base denomination
+       * </pre>
+       *
+       * <code>string token = 1 [json_name = "token"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearToken() {
+        token_ = getDefaultInstance().getToken();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token identifier can be either the hex contract address of the ERC20 or the
+       * Cosmos base denomination
+       * </pre>
+       *
+       * <code>string token = 1 [json_name = "token"];</code>
+       * @param value The bytes for token to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        token_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.erc20.v1.QueryTokenPairRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.erc20.v1.QueryTokenPairRequest)
+    private static final com.canto.erc20.v1.QueryProto.QueryTokenPairRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.erc20.v1.QueryProto.QueryTokenPairRequest();
+    }
+
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTokenPairRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTokenPairRequest>() {
+      @java.lang.Override
+      public QueryTokenPairRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTokenPairRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTokenPairRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.erc20.v1.QueryProto.QueryTokenPairRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTokenPairResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.erc20.v1.QueryTokenPairResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.canto.erc20.v1.TokenPair token_pair = 1 [json_name = "tokenPair", (.gogoproto.nullable) = false];</code>
+     * @return Whether the tokenPair field is set.
+     */
+    boolean hasTokenPair();
+    /**
+     * <code>.canto.erc20.v1.TokenPair token_pair = 1 [json_name = "tokenPair", (.gogoproto.nullable) = false];</code>
+     * @return The tokenPair.
+     */
+    com.canto.erc20.v1.Erc20Proto.TokenPair getTokenPair();
+    /**
+     * <code>.canto.erc20.v1.TokenPair token_pair = 1 [json_name = "tokenPair", (.gogoproto.nullable) = false];</code>
+     */
+    com.canto.erc20.v1.Erc20Proto.TokenPairOrBuilder getTokenPairOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryTokenPairResponse is the response type for the Query/TokenPair RPC
+   * method.
+   * </pre>
+   *
+   * Protobuf type {@code canto.erc20.v1.QueryTokenPairResponse}
+   */
+  public static final class QueryTokenPairResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.erc20.v1.QueryTokenPairResponse)
+      QueryTokenPairResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTokenPairResponse.newBuilder() to construct.
+    private QueryTokenPairResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTokenPairResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTokenPairResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.erc20.v1.QueryProto.internal_static_canto_erc20_v1_QueryTokenPairResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.erc20.v1.QueryProto.internal_static_canto_erc20_v1_QueryTokenPairResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.erc20.v1.QueryProto.QueryTokenPairResponse.class, com.canto.erc20.v1.QueryProto.QueryTokenPairResponse.Builder.class);
+    }
+
+    public static final int TOKEN_PAIR_FIELD_NUMBER = 1;
+    private com.canto.erc20.v1.Erc20Proto.TokenPair tokenPair_;
+    /**
+     * <code>.canto.erc20.v1.TokenPair token_pair = 1 [json_name = "tokenPair", (.gogoproto.nullable) = false];</code>
+     * @return Whether the tokenPair field is set.
+     */
+    @java.lang.Override
+    public boolean hasTokenPair() {
+      return tokenPair_ != null;
+    }
+    /**
+     * <code>.canto.erc20.v1.TokenPair token_pair = 1 [json_name = "tokenPair", (.gogoproto.nullable) = false];</code>
+     * @return The tokenPair.
+     */
+    @java.lang.Override
+    public com.canto.erc20.v1.Erc20Proto.TokenPair getTokenPair() {
+      return tokenPair_ == null ? com.canto.erc20.v1.Erc20Proto.TokenPair.getDefaultInstance() : tokenPair_;
+    }
+    /**
+     * <code>.canto.erc20.v1.TokenPair token_pair = 1 [json_name = "tokenPair", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.canto.erc20.v1.Erc20Proto.TokenPairOrBuilder getTokenPairOrBuilder() {
+      return tokenPair_ == null ? com.canto.erc20.v1.Erc20Proto.TokenPair.getDefaultInstance() : tokenPair_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (tokenPair_ != null) {
+        output.writeMessage(1, getTokenPair());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (tokenPair_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTokenPair());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.erc20.v1.QueryProto.QueryTokenPairResponse)) {
+        return super.equals(obj);
+      }
+      com.canto.erc20.v1.QueryProto.QueryTokenPairResponse other = (com.canto.erc20.v1.QueryProto.QueryTokenPairResponse) obj;
+
+      if (hasTokenPair() != other.hasTokenPair()) return false;
+      if (hasTokenPair()) {
+        if (!getTokenPair()
+            .equals(other.getTokenPair())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTokenPair()) {
+        hash = (37 * hash) + TOKEN_PAIR_FIELD_NUMBER;
+        hash = (53 * hash) + getTokenPair().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.erc20.v1.QueryProto.QueryTokenPairResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryTokenPairResponse is the response type for the Query/TokenPair RPC
+     * method.
+     * </pre>
+     *
+     * Protobuf type {@code canto.erc20.v1.QueryTokenPairResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.erc20.v1.QueryTokenPairResponse)
+        com.canto.erc20.v1.QueryProto.QueryTokenPairResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.erc20.v1.QueryProto.internal_static_canto_erc20_v1_QueryTokenPairResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.erc20.v1.QueryProto.internal_static_canto_erc20_v1_QueryTokenPairResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.erc20.v1.QueryProto.QueryTokenPairResponse.class, com.canto.erc20.v1.QueryProto.QueryTokenPairResponse.Builder.class);
+      }
+
+      // Construct using com.canto.erc20.v1.QueryProto.QueryTokenPairResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        tokenPair_ = null;
+        if (tokenPairBuilder_ != null) {
+          tokenPairBuilder_.dispose();
+          tokenPairBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.erc20.v1.QueryProto.internal_static_canto_erc20_v1_QueryTokenPairResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.QueryProto.QueryTokenPairResponse getDefaultInstanceForType() {
+        return com.canto.erc20.v1.QueryProto.QueryTokenPairResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.QueryProto.QueryTokenPairResponse build() {
+        com.canto.erc20.v1.QueryProto.QueryTokenPairResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.QueryProto.QueryTokenPairResponse buildPartial() {
+        com.canto.erc20.v1.QueryProto.QueryTokenPairResponse result = new com.canto.erc20.v1.QueryProto.QueryTokenPairResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.canto.erc20.v1.QueryProto.QueryTokenPairResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.tokenPair_ = tokenPairBuilder_ == null
+              ? tokenPair_
+              : tokenPairBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.erc20.v1.QueryProto.QueryTokenPairResponse) {
+          return mergeFrom((com.canto.erc20.v1.QueryProto.QueryTokenPairResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.erc20.v1.QueryProto.QueryTokenPairResponse other) {
+        if (other == com.canto.erc20.v1.QueryProto.QueryTokenPairResponse.getDefaultInstance()) return this;
+        if (other.hasTokenPair()) {
+          mergeTokenPair(other.getTokenPair());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getTokenPairFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.canto.erc20.v1.Erc20Proto.TokenPair tokenPair_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.canto.erc20.v1.Erc20Proto.TokenPair, com.canto.erc20.v1.Erc20Proto.TokenPair.Builder, com.canto.erc20.v1.Erc20Proto.TokenPairOrBuilder> tokenPairBuilder_;
+      /**
+       * <code>.canto.erc20.v1.TokenPair token_pair = 1 [json_name = "tokenPair", (.gogoproto.nullable) = false];</code>
+       * @return Whether the tokenPair field is set.
+       */
+      public boolean hasTokenPair() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.canto.erc20.v1.TokenPair token_pair = 1 [json_name = "tokenPair", (.gogoproto.nullable) = false];</code>
+       * @return The tokenPair.
+       */
+      public com.canto.erc20.v1.Erc20Proto.TokenPair getTokenPair() {
+        if (tokenPairBuilder_ == null) {
+          return tokenPair_ == null ? com.canto.erc20.v1.Erc20Proto.TokenPair.getDefaultInstance() : tokenPair_;
+        } else {
+          return tokenPairBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.canto.erc20.v1.TokenPair token_pair = 1 [json_name = "tokenPair", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTokenPair(com.canto.erc20.v1.Erc20Proto.TokenPair value) {
+        if (tokenPairBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tokenPair_ = value;
+        } else {
+          tokenPairBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.canto.erc20.v1.TokenPair token_pair = 1 [json_name = "tokenPair", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTokenPair(
+          com.canto.erc20.v1.Erc20Proto.TokenPair.Builder builderForValue) {
+        if (tokenPairBuilder_ == null) {
+          tokenPair_ = builderForValue.build();
+        } else {
+          tokenPairBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.canto.erc20.v1.TokenPair token_pair = 1 [json_name = "tokenPair", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeTokenPair(com.canto.erc20.v1.Erc20Proto.TokenPair value) {
+        if (tokenPairBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            tokenPair_ != null &&
+            tokenPair_ != com.canto.erc20.v1.Erc20Proto.TokenPair.getDefaultInstance()) {
+            getTokenPairBuilder().mergeFrom(value);
+          } else {
+            tokenPair_ = value;
+          }
+        } else {
+          tokenPairBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.canto.erc20.v1.TokenPair token_pair = 1 [json_name = "tokenPair", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearTokenPair() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        tokenPair_ = null;
+        if (tokenPairBuilder_ != null) {
+          tokenPairBuilder_.dispose();
+          tokenPairBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.canto.erc20.v1.TokenPair token_pair = 1 [json_name = "tokenPair", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.erc20.v1.Erc20Proto.TokenPair.Builder getTokenPairBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getTokenPairFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.canto.erc20.v1.TokenPair token_pair = 1 [json_name = "tokenPair", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.erc20.v1.Erc20Proto.TokenPairOrBuilder getTokenPairOrBuilder() {
+        if (tokenPairBuilder_ != null) {
+          return tokenPairBuilder_.getMessageOrBuilder();
+        } else {
+          return tokenPair_ == null ?
+              com.canto.erc20.v1.Erc20Proto.TokenPair.getDefaultInstance() : tokenPair_;
+        }
+      }
+      /**
+       * <code>.canto.erc20.v1.TokenPair token_pair = 1 [json_name = "tokenPair", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.canto.erc20.v1.Erc20Proto.TokenPair, com.canto.erc20.v1.Erc20Proto.TokenPair.Builder, com.canto.erc20.v1.Erc20Proto.TokenPairOrBuilder> 
+          getTokenPairFieldBuilder() {
+        if (tokenPairBuilder_ == null) {
+          tokenPairBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.canto.erc20.v1.Erc20Proto.TokenPair, com.canto.erc20.v1.Erc20Proto.TokenPair.Builder, com.canto.erc20.v1.Erc20Proto.TokenPairOrBuilder>(
+                  getTokenPair(),
+                  getParentForChildren(),
+                  isClean());
+          tokenPair_ = null;
+        }
+        return tokenPairBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.erc20.v1.QueryTokenPairResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.erc20.v1.QueryTokenPairResponse)
+    private static final com.canto.erc20.v1.QueryProto.QueryTokenPairResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.erc20.v1.QueryProto.QueryTokenPairResponse();
+    }
+
+    public static com.canto.erc20.v1.QueryProto.QueryTokenPairResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTokenPairResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTokenPairResponse>() {
+      @java.lang.Override
+      public QueryTokenPairResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTokenPairResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTokenPairResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.erc20.v1.QueryProto.QueryTokenPairResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.erc20.v1.QueryParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryParamsRequest is the request type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code canto.erc20.v1.QueryParamsRequest}
+   */
+  public static final class QueryParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.erc20.v1.QueryParamsRequest)
+      QueryParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsRequest.newBuilder() to construct.
+    private QueryParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.erc20.v1.QueryProto.internal_static_canto_erc20_v1_QueryParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.erc20.v1.QueryProto.internal_static_canto_erc20_v1_QueryParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.erc20.v1.QueryProto.QueryParamsRequest.class, com.canto.erc20.v1.QueryProto.QueryParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.erc20.v1.QueryProto.QueryParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.canto.erc20.v1.QueryProto.QueryParamsRequest other = (com.canto.erc20.v1.QueryProto.QueryParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.erc20.v1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.erc20.v1.QueryProto.QueryParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.erc20.v1.QueryProto.QueryParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.erc20.v1.QueryProto.QueryParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsRequest is the request type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code canto.erc20.v1.QueryParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.erc20.v1.QueryParamsRequest)
+        com.canto.erc20.v1.QueryProto.QueryParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.erc20.v1.QueryProto.internal_static_canto_erc20_v1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.erc20.v1.QueryProto.internal_static_canto_erc20_v1_QueryParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.erc20.v1.QueryProto.QueryParamsRequest.class, com.canto.erc20.v1.QueryProto.QueryParamsRequest.Builder.class);
+      }
+
+      // Construct using com.canto.erc20.v1.QueryProto.QueryParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.erc20.v1.QueryProto.internal_static_canto_erc20_v1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+        return com.canto.erc20.v1.QueryProto.QueryParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.QueryProto.QueryParamsRequest build() {
+        com.canto.erc20.v1.QueryProto.QueryParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.QueryProto.QueryParamsRequest buildPartial() {
+        com.canto.erc20.v1.QueryProto.QueryParamsRequest result = new com.canto.erc20.v1.QueryProto.QueryParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.erc20.v1.QueryProto.QueryParamsRequest) {
+          return mergeFrom((com.canto.erc20.v1.QueryProto.QueryParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.erc20.v1.QueryProto.QueryParamsRequest other) {
+        if (other == com.canto.erc20.v1.QueryProto.QueryParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.erc20.v1.QueryParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.erc20.v1.QueryParamsRequest)
+    private static final com.canto.erc20.v1.QueryProto.QueryParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.erc20.v1.QueryProto.QueryParamsRequest();
+    }
+
+    public static com.canto.erc20.v1.QueryProto.QueryParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsRequest>() {
+      @java.lang.Override
+      public QueryParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.erc20.v1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.erc20.v1.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.canto.erc20.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.canto.erc20.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.canto.erc20.v1.GenesisProto.Params getParams();
+    /**
+     * <code>.canto.erc20.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.canto.erc20.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryParamsResponse is the response type for the Query/Params RPC
+   * method.
+   * </pre>
+   *
+   * Protobuf type {@code canto.erc20.v1.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.erc20.v1.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.erc20.v1.QueryProto.internal_static_canto_erc20_v1_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.erc20.v1.QueryProto.internal_static_canto_erc20_v1_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.erc20.v1.QueryProto.QueryParamsResponse.class, com.canto.erc20.v1.QueryProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.canto.erc20.v1.GenesisProto.Params params_;
+    /**
+     * <code>.canto.erc20.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.canto.erc20.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.canto.erc20.v1.GenesisProto.Params getParams() {
+      return params_ == null ? com.canto.erc20.v1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.canto.erc20.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.canto.erc20.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.canto.erc20.v1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.erc20.v1.QueryProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.canto.erc20.v1.QueryProto.QueryParamsResponse other = (com.canto.erc20.v1.QueryProto.QueryParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.erc20.v1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.erc20.v1.QueryProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.erc20.v1.QueryProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.erc20.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.erc20.v1.QueryProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsResponse is the response type for the Query/Params RPC
+     * method.
+     * </pre>
+     *
+     * Protobuf type {@code canto.erc20.v1.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.erc20.v1.QueryParamsResponse)
+        com.canto.erc20.v1.QueryProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.erc20.v1.QueryProto.internal_static_canto_erc20_v1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.erc20.v1.QueryProto.internal_static_canto_erc20_v1_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.erc20.v1.QueryProto.QueryParamsResponse.class, com.canto.erc20.v1.QueryProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.canto.erc20.v1.QueryProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.erc20.v1.QueryProto.internal_static_canto_erc20_v1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.canto.erc20.v1.QueryProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.QueryProto.QueryParamsResponse build() {
+        com.canto.erc20.v1.QueryProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.QueryProto.QueryParamsResponse buildPartial() {
+        com.canto.erc20.v1.QueryProto.QueryParamsResponse result = new com.canto.erc20.v1.QueryProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.canto.erc20.v1.QueryProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.erc20.v1.QueryProto.QueryParamsResponse) {
+          return mergeFrom((com.canto.erc20.v1.QueryProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.erc20.v1.QueryProto.QueryParamsResponse other) {
+        if (other == com.canto.erc20.v1.QueryProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.canto.erc20.v1.GenesisProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.canto.erc20.v1.GenesisProto.Params, com.canto.erc20.v1.GenesisProto.Params.Builder, com.canto.erc20.v1.GenesisProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.canto.erc20.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.canto.erc20.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.canto.erc20.v1.GenesisProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.canto.erc20.v1.GenesisProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.canto.erc20.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.canto.erc20.v1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.canto.erc20.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.canto.erc20.v1.GenesisProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.canto.erc20.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.canto.erc20.v1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.canto.erc20.v1.GenesisProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.canto.erc20.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.canto.erc20.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.erc20.v1.GenesisProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.canto.erc20.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.erc20.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.canto.erc20.v1.GenesisProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.canto.erc20.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.canto.erc20.v1.GenesisProto.Params, com.canto.erc20.v1.GenesisProto.Params.Builder, com.canto.erc20.v1.GenesisProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.canto.erc20.v1.GenesisProto.Params, com.canto.erc20.v1.GenesisProto.Params.Builder, com.canto.erc20.v1.GenesisProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.erc20.v1.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.erc20.v1.QueryParamsResponse)
+    private static final com.canto.erc20.v1.QueryProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.erc20.v1.QueryProto.QueryParamsResponse();
+    }
+
+    public static com.canto.erc20.v1.QueryProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.erc20.v1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_erc20_v1_QueryTokenPairsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_erc20_v1_QueryTokenPairsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_erc20_v1_QueryTokenPairsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_erc20_v1_QueryTokenPairsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_erc20_v1_QueryTokenPairRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_erc20_v1_QueryTokenPairRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_erc20_v1_QueryTokenPairResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_erc20_v1_QueryTokenPairResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_erc20_v1_QueryParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_erc20_v1_QueryParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_erc20_v1_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_erc20_v1_QueryParamsResponse_fieldAccessorTable;
 
@@ -80,11 +4028,11 @@ public final class QueryProto {
       "/token_pairs/{token}\022q\n\006Params\022\".canto.e" +
       "rc20.v1.QueryParamsRequest\032#.canto.erc20" +
       ".v1.QueryParamsResponse\"\036\202\323\344\223\002\030\022\026/canto/" +
-      "erc20/v1/paramsB\253\001\n\022com.canto.erc20.v1B\n" +
-      "QueryProtoP\001Z/github.com/Canto-Network/C" +
-      "anto/v6/x/erc20/types\242\002\003CEX\252\002\016Canto.Erc2" +
-      "0.V1\312\002\016Canto\\Erc20\\V1\342\002\032Canto\\Erc20\\V1\\G" +
-      "PBMetadata\352\002\020Canto::Erc20::V1b\006proto3"
+      "erc20/v1/paramsB\251\001\n\022com.canto.erc20.v1B\n" +
+      "QueryProtoZ/github.com/Canto-Network/Can" +
+      "to/v6/x/erc20/types\242\002\003CEX\252\002\016Canto.Erc20." +
+      "V1\312\002\016Canto\\Erc20\\V1\342\002\032Canto\\Erc20\\V1\\GPB" +
+      "Metadata\352\002\020Canto::Erc20::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

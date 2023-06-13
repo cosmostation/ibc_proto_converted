@@ -14,14 +14,1321 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryBalancesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mars.safety.v1beta1.QueryBalancesRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueBalancesRequest is the request type of the QuerBalancesRPC method
+   * </pre>
+   *
+   * Protobuf type {@code mars.safety.v1beta1.QueryBalancesRequest}
+   */
+  public static final class QueryBalancesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:mars.safety.v1beta1.QueryBalancesRequest)
+      QueryBalancesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryBalancesRequest.newBuilder() to construct.
+    private QueryBalancesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryBalancesRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryBalancesRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.mars.safety.v1beta1.QueryProto.internal_static_mars_safety_v1beta1_QueryBalancesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.mars.safety.v1beta1.QueryProto.internal_static_mars_safety_v1beta1_QueryBalancesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest.class, com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest)) {
+        return super.equals(obj);
+      }
+      com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest other = (com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueBalancesRequest is the request type of the QuerBalancesRPC method
+     * </pre>
+     *
+     * Protobuf type {@code mars.safety.v1beta1.QueryBalancesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mars.safety.v1beta1.QueryBalancesRequest)
+        com.mars.safety.v1beta1.QueryProto.QueryBalancesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.mars.safety.v1beta1.QueryProto.internal_static_mars_safety_v1beta1_QueryBalancesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.mars.safety.v1beta1.QueryProto.internal_static_mars_safety_v1beta1_QueryBalancesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest.class, com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest.Builder.class);
+      }
+
+      // Construct using com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.mars.safety.v1beta1.QueryProto.internal_static_mars_safety_v1beta1_QueryBalancesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest getDefaultInstanceForType() {
+        return com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest build() {
+        com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest buildPartial() {
+        com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest result = new com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest) {
+          return mergeFrom((com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest other) {
+        if (other == com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:mars.safety.v1beta1.QueryBalancesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:mars.safety.v1beta1.QueryBalancesRequest)
+    private static final com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest();
+    }
+
+    public static com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryBalancesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryBalancesRequest>() {
+      @java.lang.Override
+      public QueryBalancesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryBalancesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryBalancesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.mars.safety.v1beta1.QueryProto.QueryBalancesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryBalancesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mars.safety.v1beta1.QueryBalancesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Balances is the coins available in the safety fund
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin balances = 1 [json_name = "balances", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getBalancesList();
+    /**
+     * <pre>
+     * Balances is the coins available in the safety fund
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin balances = 1 [json_name = "balances", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getBalances(int index);
+    /**
+     * <pre>
+     * Balances is the coins available in the safety fund
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin balances = 1 [json_name = "balances", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getBalancesCount();
+    /**
+     * <pre>
+     * Balances is the coins available in the safety fund
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin balances = 1 [json_name = "balances", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getBalancesOrBuilderList();
+    /**
+     * <pre>
+     * Balances is the coins available in the safety fund
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin balances = 1 [json_name = "balances", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBalancesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * QueBalancesResponse is the response type of the QuerBalancesRPC method
+   * </pre>
+   *
+   * Protobuf type {@code mars.safety.v1beta1.QueryBalancesResponse}
+   */
+  public static final class QueryBalancesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:mars.safety.v1beta1.QueryBalancesResponse)
+      QueryBalancesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryBalancesResponse.newBuilder() to construct.
+    private QueryBalancesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryBalancesResponse() {
+      balances_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryBalancesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.mars.safety.v1beta1.QueryProto.internal_static_mars_safety_v1beta1_QueryBalancesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.mars.safety.v1beta1.QueryProto.internal_static_mars_safety_v1beta1_QueryBalancesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse.class, com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse.Builder.class);
+    }
+
+    public static final int BALANCES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> balances_;
+    /**
+     * <pre>
+     * Balances is the coins available in the safety fund
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin balances = 1 [json_name = "balances", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getBalancesList() {
+      return balances_;
+    }
+    /**
+     * <pre>
+     * Balances is the coins available in the safety fund
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin balances = 1 [json_name = "balances", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getBalancesOrBuilderList() {
+      return balances_;
+    }
+    /**
+     * <pre>
+     * Balances is the coins available in the safety fund
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin balances = 1 [json_name = "balances", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getBalancesCount() {
+      return balances_.size();
+    }
+    /**
+     * <pre>
+     * Balances is the coins available in the safety fund
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin balances = 1 [json_name = "balances", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getBalances(int index) {
+      return balances_.get(index);
+    }
+    /**
+     * <pre>
+     * Balances is the coins available in the safety fund
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin balances = 1 [json_name = "balances", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBalancesOrBuilder(
+        int index) {
+      return balances_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < balances_.size(); i++) {
+        output.writeMessage(1, balances_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < balances_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, balances_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse)) {
+        return super.equals(obj);
+      }
+      com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse other = (com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse) obj;
+
+      if (!getBalancesList()
+          .equals(other.getBalancesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getBalancesCount() > 0) {
+        hash = (37 * hash) + BALANCES_FIELD_NUMBER;
+        hash = (53 * hash) + getBalancesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueBalancesResponse is the response type of the QuerBalancesRPC method
+     * </pre>
+     *
+     * Protobuf type {@code mars.safety.v1beta1.QueryBalancesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mars.safety.v1beta1.QueryBalancesResponse)
+        com.mars.safety.v1beta1.QueryProto.QueryBalancesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.mars.safety.v1beta1.QueryProto.internal_static_mars_safety_v1beta1_QueryBalancesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.mars.safety.v1beta1.QueryProto.internal_static_mars_safety_v1beta1_QueryBalancesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse.class, com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse.Builder.class);
+      }
+
+      // Construct using com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (balancesBuilder_ == null) {
+          balances_ = java.util.Collections.emptyList();
+        } else {
+          balances_ = null;
+          balancesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.mars.safety.v1beta1.QueryProto.internal_static_mars_safety_v1beta1_QueryBalancesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse getDefaultInstanceForType() {
+        return com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse build() {
+        com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse buildPartial() {
+        com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse result = new com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse result) {
+        if (balancesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            balances_ = java.util.Collections.unmodifiableList(balances_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.balances_ = balances_;
+        } else {
+          result.balances_ = balancesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse) {
+          return mergeFrom((com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse other) {
+        if (other == com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse.getDefaultInstance()) return this;
+        if (balancesBuilder_ == null) {
+          if (!other.balances_.isEmpty()) {
+            if (balances_.isEmpty()) {
+              balances_ = other.balances_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureBalancesIsMutable();
+              balances_.addAll(other.balances_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.balances_.isEmpty()) {
+            if (balancesBuilder_.isEmpty()) {
+              balancesBuilder_.dispose();
+              balancesBuilder_ = null;
+              balances_ = other.balances_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              balancesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBalancesFieldBuilder() : null;
+            } else {
+              balancesBuilder_.addAllMessages(other.balances_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (balancesBuilder_ == null) {
+                  ensureBalancesIsMutable();
+                  balances_.add(m);
+                } else {
+                  balancesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> balances_ =
+        java.util.Collections.emptyList();
+      private void ensureBalancesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          balances_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(balances_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> balancesBuilder_;
+
+      /**
+       * <pre>
+       * Balances is the coins available in the safety fund
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin balances = 1 [json_name = "balances", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getBalancesList() {
+        if (balancesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(balances_);
+        } else {
+          return balancesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Balances is the coins available in the safety fund
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin balances = 1 [json_name = "balances", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getBalancesCount() {
+        if (balancesBuilder_ == null) {
+          return balances_.size();
+        } else {
+          return balancesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Balances is the coins available in the safety fund
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin balances = 1 [json_name = "balances", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getBalances(int index) {
+        if (balancesBuilder_ == null) {
+          return balances_.get(index);
+        } else {
+          return balancesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Balances is the coins available in the safety fund
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin balances = 1 [json_name = "balances", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setBalances(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (balancesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBalancesIsMutable();
+          balances_.set(index, value);
+          onChanged();
+        } else {
+          balancesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Balances is the coins available in the safety fund
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin balances = 1 [json_name = "balances", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setBalances(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (balancesBuilder_ == null) {
+          ensureBalancesIsMutable();
+          balances_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          balancesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Balances is the coins available in the safety fund
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin balances = 1 [json_name = "balances", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addBalances(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (balancesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBalancesIsMutable();
+          balances_.add(value);
+          onChanged();
+        } else {
+          balancesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Balances is the coins available in the safety fund
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin balances = 1 [json_name = "balances", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addBalances(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (balancesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBalancesIsMutable();
+          balances_.add(index, value);
+          onChanged();
+        } else {
+          balancesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Balances is the coins available in the safety fund
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin balances = 1 [json_name = "balances", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addBalances(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (balancesBuilder_ == null) {
+          ensureBalancesIsMutable();
+          balances_.add(builderForValue.build());
+          onChanged();
+        } else {
+          balancesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Balances is the coins available in the safety fund
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin balances = 1 [json_name = "balances", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addBalances(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (balancesBuilder_ == null) {
+          ensureBalancesIsMutable();
+          balances_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          balancesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Balances is the coins available in the safety fund
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin balances = 1 [json_name = "balances", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllBalances(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (balancesBuilder_ == null) {
+          ensureBalancesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, balances_);
+          onChanged();
+        } else {
+          balancesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Balances is the coins available in the safety fund
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin balances = 1 [json_name = "balances", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearBalances() {
+        if (balancesBuilder_ == null) {
+          balances_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          balancesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Balances is the coins available in the safety fund
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin balances = 1 [json_name = "balances", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeBalances(int index) {
+        if (balancesBuilder_ == null) {
+          ensureBalancesIsMutable();
+          balances_.remove(index);
+          onChanged();
+        } else {
+          balancesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Balances is the coins available in the safety fund
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin balances = 1 [json_name = "balances", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getBalancesBuilder(
+          int index) {
+        return getBalancesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Balances is the coins available in the safety fund
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin balances = 1 [json_name = "balances", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBalancesOrBuilder(
+          int index) {
+        if (balancesBuilder_ == null) {
+          return balances_.get(index);  } else {
+          return balancesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Balances is the coins available in the safety fund
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin balances = 1 [json_name = "balances", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getBalancesOrBuilderList() {
+        if (balancesBuilder_ != null) {
+          return balancesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(balances_);
+        }
+      }
+      /**
+       * <pre>
+       * Balances is the coins available in the safety fund
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin balances = 1 [json_name = "balances", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addBalancesBuilder() {
+        return getBalancesFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Balances is the coins available in the safety fund
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin balances = 1 [json_name = "balances", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addBalancesBuilder(
+          int index) {
+        return getBalancesFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Balances is the coins available in the safety fund
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin balances = 1 [json_name = "balances", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getBalancesBuilderList() {
+        return getBalancesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getBalancesFieldBuilder() {
+        if (balancesBuilder_ == null) {
+          balancesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  balances_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          balances_ = null;
+        }
+        return balancesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:mars.safety.v1beta1.QueryBalancesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:mars.safety.v1beta1.QueryBalancesResponse)
+    private static final com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse();
+    }
+
+    public static com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryBalancesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryBalancesResponse>() {
+      @java.lang.Override
+      public QueryBalancesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryBalancesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryBalancesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.mars.safety.v1beta1.QueryProto.QueryBalancesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mars_safety_v1beta1_QueryBalancesRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_mars_safety_v1beta1_QueryBalancesRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mars_safety_v1beta1_QueryBalancesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_mars_safety_v1beta1_QueryBalancesResponse_fieldAccessorTable;
 
@@ -44,12 +1351,12 @@ public final class QueryProto {
       "ars.safety.v1beta1.QueryBalancesRequest\032" +
       "*.mars.safety.v1beta1.QueryBalancesRespo" +
       "nse\"%\202\323\344\223\002\037\022\035/mars/safety/v1beta1/balanc" +
-      "esB\300\001\n\027com.mars.safety.v1beta1B\nQueryPro" +
-      "toP\001Z+github.com/mars-protocol/hub/x/saf" +
-      "ety/types\242\002\003MSX\252\002\023Mars.Safety.V1beta1\312\002\023" +
-      "Mars\\Safety\\V1beta1\342\002\037Mars\\Safety\\V1beta" +
-      "1\\GPBMetadata\352\002\025Mars::Safety::V1beta1b\006p" +
-      "roto3"
+      "esB\276\001\n\027com.mars.safety.v1beta1B\nQueryPro" +
+      "toZ+github.com/mars-protocol/hub/x/safet" +
+      "y/types\242\002\003MSX\252\002\023Mars.Safety.V1beta1\312\002\023Ma" +
+      "rs\\Safety\\V1beta1\342\002\037Mars\\Safety\\V1beta1\\" +
+      "GPBMetadata\352\002\025Mars::Safety::V1beta1b\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

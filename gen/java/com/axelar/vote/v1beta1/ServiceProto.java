@@ -29,12 +29,12 @@ public final class ServiceProto {
       "e/v1beta1/tx.proto2w\n\nMsgService\022i\n\004Vote" +
       "\022 .axelar.vote.v1beta1.VoteRequest\032!.axe" +
       "lar.vote.v1beta1.VoteResponse\"\034\202\323\344\223\002\026\"\021/" +
-      "axelar/vote/vote:\001*B\314\001\n\027com.axelar.vote." +
-      "v1beta1B\014ServiceProtoP\001Z1github.com/axel" +
-      "arnetwork/axelar-core/x/vote/types\242\002\003AVX" +
-      "\252\002\023Axelar.Vote.V1beta1\312\002\023Axelar\\Vote\\V1b" +
-      "eta1\342\002\037Axelar\\Vote\\V1beta1\\GPBMetadata\352\002" +
-      "\025Axelar::Vote::V1beta1\300\343\036\001b\006proto3"
+      "axelar/vote/vote:\001*B\312\001\n\027com.axelar.vote." +
+      "v1beta1B\014ServiceProtoZ1github.com/axelar" +
+      "network/axelar-core/x/vote/types\242\002\003AVX\252\002" +
+      "\023Axelar.Vote.V1beta1\312\002\023Axelar\\Vote\\V1bet" +
+      "a1\342\002\037Axelar\\Vote\\V1beta1\\GPBMetadata\352\002\025A" +
+      "xelar::Vote::V1beta1\300\343\036\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

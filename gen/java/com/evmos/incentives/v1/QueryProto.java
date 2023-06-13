@@ -14,74 +14,10644 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryIncentivesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.incentives.v1.QueryIncentivesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryIncentivesRequest is the request type for the Query/Incentives RPC
+   * method.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.incentives.v1.QueryIncentivesRequest}
+   */
+  public static final class QueryIncentivesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.incentives.v1.QueryIncentivesRequest)
+      QueryIncentivesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryIncentivesRequest.newBuilder() to construct.
+    private QueryIncentivesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryIncentivesRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryIncentivesRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryIncentivesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryIncentivesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest.class, com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 1;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(1, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest)) {
+        return super.equals(obj);
+      }
+      com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest other = (com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryIncentivesRequest is the request type for the Query/Incentives RPC
+     * method.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.incentives.v1.QueryIncentivesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.incentives.v1.QueryIncentivesRequest)
+        com.evmos.incentives.v1.QueryProto.QueryIncentivesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryIncentivesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryIncentivesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest.class, com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest.Builder.class);
+      }
+
+      // Construct using com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryIncentivesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest getDefaultInstanceForType() {
+        return com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest build() {
+        com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest buildPartial() {
+        com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest result = new com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest) {
+          return mergeFrom((com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest other) {
+        if (other == com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.incentives.v1.QueryIncentivesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.incentives.v1.QueryIncentivesRequest)
+    private static final com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest();
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryIncentivesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryIncentivesRequest>() {
+      @java.lang.Override
+      public QueryIncentivesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryIncentivesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryIncentivesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.incentives.v1.QueryProto.QueryIncentivesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryIncentivesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.incentives.v1.QueryIncentivesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * incentives is a slice of all incentives
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.Incentive incentives = 1 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.evmos.incentives.v1.IncentivesProto.Incentive> 
+        getIncentivesList();
+    /**
+     * <pre>
+     * incentives is a slice of all incentives
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.Incentive incentives = 1 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+     */
+    com.evmos.incentives.v1.IncentivesProto.Incentive getIncentives(int index);
+    /**
+     * <pre>
+     * incentives is a slice of all incentives
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.Incentive incentives = 1 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+     */
+    int getIncentivesCount();
+    /**
+     * <pre>
+     * incentives is a slice of all incentives
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.Incentive incentives = 1 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.evmos.incentives.v1.IncentivesProto.IncentiveOrBuilder> 
+        getIncentivesOrBuilderList();
+    /**
+     * <pre>
+     * incentives is a slice of all incentives
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.Incentive incentives = 1 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+     */
+    com.evmos.incentives.v1.IncentivesProto.IncentiveOrBuilder getIncentivesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryIncentivesResponse is the response type for the Query/Incentives RPC
+   * method.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.incentives.v1.QueryIncentivesResponse}
+   */
+  public static final class QueryIncentivesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.incentives.v1.QueryIncentivesResponse)
+      QueryIncentivesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryIncentivesResponse.newBuilder() to construct.
+    private QueryIncentivesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryIncentivesResponse() {
+      incentives_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryIncentivesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryIncentivesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryIncentivesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse.class, com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse.Builder.class);
+    }
+
+    public static final int INCENTIVES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.evmos.incentives.v1.IncentivesProto.Incentive> incentives_;
+    /**
+     * <pre>
+     * incentives is a slice of all incentives
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.Incentive incentives = 1 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.evmos.incentives.v1.IncentivesProto.Incentive> getIncentivesList() {
+      return incentives_;
+    }
+    /**
+     * <pre>
+     * incentives is a slice of all incentives
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.Incentive incentives = 1 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.evmos.incentives.v1.IncentivesProto.IncentiveOrBuilder> 
+        getIncentivesOrBuilderList() {
+      return incentives_;
+    }
+    /**
+     * <pre>
+     * incentives is a slice of all incentives
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.Incentive incentives = 1 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getIncentivesCount() {
+      return incentives_.size();
+    }
+    /**
+     * <pre>
+     * incentives is a slice of all incentives
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.Incentive incentives = 1 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.evmos.incentives.v1.IncentivesProto.Incentive getIncentives(int index) {
+      return incentives_.get(index);
+    }
+    /**
+     * <pre>
+     * incentives is a slice of all incentives
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.Incentive incentives = 1 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.evmos.incentives.v1.IncentivesProto.IncentiveOrBuilder getIncentivesOrBuilder(
+        int index) {
+      return incentives_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < incentives_.size(); i++) {
+        output.writeMessage(1, incentives_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < incentives_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, incentives_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse)) {
+        return super.equals(obj);
+      }
+      com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse other = (com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse) obj;
+
+      if (!getIncentivesList()
+          .equals(other.getIncentivesList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getIncentivesCount() > 0) {
+        hash = (37 * hash) + INCENTIVES_FIELD_NUMBER;
+        hash = (53 * hash) + getIncentivesList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryIncentivesResponse is the response type for the Query/Incentives RPC
+     * method.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.incentives.v1.QueryIncentivesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.incentives.v1.QueryIncentivesResponse)
+        com.evmos.incentives.v1.QueryProto.QueryIncentivesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryIncentivesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryIncentivesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse.class, com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse.Builder.class);
+      }
+
+      // Construct using com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (incentivesBuilder_ == null) {
+          incentives_ = java.util.Collections.emptyList();
+        } else {
+          incentives_ = null;
+          incentivesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryIncentivesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse getDefaultInstanceForType() {
+        return com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse build() {
+        com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse buildPartial() {
+        com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse result = new com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse result) {
+        if (incentivesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            incentives_ = java.util.Collections.unmodifiableList(incentives_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.incentives_ = incentives_;
+        } else {
+          result.incentives_ = incentivesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse) {
+          return mergeFrom((com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse other) {
+        if (other == com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse.getDefaultInstance()) return this;
+        if (incentivesBuilder_ == null) {
+          if (!other.incentives_.isEmpty()) {
+            if (incentives_.isEmpty()) {
+              incentives_ = other.incentives_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureIncentivesIsMutable();
+              incentives_.addAll(other.incentives_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.incentives_.isEmpty()) {
+            if (incentivesBuilder_.isEmpty()) {
+              incentivesBuilder_.dispose();
+              incentivesBuilder_ = null;
+              incentives_ = other.incentives_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              incentivesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getIncentivesFieldBuilder() : null;
+            } else {
+              incentivesBuilder_.addAllMessages(other.incentives_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.evmos.incentives.v1.IncentivesProto.Incentive m =
+                    input.readMessage(
+                        com.evmos.incentives.v1.IncentivesProto.Incentive.parser(),
+                        extensionRegistry);
+                if (incentivesBuilder_ == null) {
+                  ensureIncentivesIsMutable();
+                  incentives_.add(m);
+                } else {
+                  incentivesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.evmos.incentives.v1.IncentivesProto.Incentive> incentives_ =
+        java.util.Collections.emptyList();
+      private void ensureIncentivesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          incentives_ = new java.util.ArrayList<com.evmos.incentives.v1.IncentivesProto.Incentive>(incentives_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.evmos.incentives.v1.IncentivesProto.Incentive, com.evmos.incentives.v1.IncentivesProto.Incentive.Builder, com.evmos.incentives.v1.IncentivesProto.IncentiveOrBuilder> incentivesBuilder_;
+
+      /**
+       * <pre>
+       * incentives is a slice of all incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 1 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.evmos.incentives.v1.IncentivesProto.Incentive> getIncentivesList() {
+        if (incentivesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(incentives_);
+        } else {
+          return incentivesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * incentives is a slice of all incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 1 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public int getIncentivesCount() {
+        if (incentivesBuilder_ == null) {
+          return incentives_.size();
+        } else {
+          return incentivesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * incentives is a slice of all incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 1 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.incentives.v1.IncentivesProto.Incentive getIncentives(int index) {
+        if (incentivesBuilder_ == null) {
+          return incentives_.get(index);
+        } else {
+          return incentivesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * incentives is a slice of all incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 1 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setIncentives(
+          int index, com.evmos.incentives.v1.IncentivesProto.Incentive value) {
+        if (incentivesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIncentivesIsMutable();
+          incentives_.set(index, value);
+          onChanged();
+        } else {
+          incentivesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * incentives is a slice of all incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 1 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setIncentives(
+          int index, com.evmos.incentives.v1.IncentivesProto.Incentive.Builder builderForValue) {
+        if (incentivesBuilder_ == null) {
+          ensureIncentivesIsMutable();
+          incentives_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          incentivesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * incentives is a slice of all incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 1 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addIncentives(com.evmos.incentives.v1.IncentivesProto.Incentive value) {
+        if (incentivesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIncentivesIsMutable();
+          incentives_.add(value);
+          onChanged();
+        } else {
+          incentivesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * incentives is a slice of all incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 1 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addIncentives(
+          int index, com.evmos.incentives.v1.IncentivesProto.Incentive value) {
+        if (incentivesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIncentivesIsMutable();
+          incentives_.add(index, value);
+          onChanged();
+        } else {
+          incentivesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * incentives is a slice of all incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 1 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addIncentives(
+          com.evmos.incentives.v1.IncentivesProto.Incentive.Builder builderForValue) {
+        if (incentivesBuilder_ == null) {
+          ensureIncentivesIsMutable();
+          incentives_.add(builderForValue.build());
+          onChanged();
+        } else {
+          incentivesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * incentives is a slice of all incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 1 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addIncentives(
+          int index, com.evmos.incentives.v1.IncentivesProto.Incentive.Builder builderForValue) {
+        if (incentivesBuilder_ == null) {
+          ensureIncentivesIsMutable();
+          incentives_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          incentivesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * incentives is a slice of all incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 1 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllIncentives(
+          java.lang.Iterable<? extends com.evmos.incentives.v1.IncentivesProto.Incentive> values) {
+        if (incentivesBuilder_ == null) {
+          ensureIncentivesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, incentives_);
+          onChanged();
+        } else {
+          incentivesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * incentives is a slice of all incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 1 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearIncentives() {
+        if (incentivesBuilder_ == null) {
+          incentives_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          incentivesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * incentives is a slice of all incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 1 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeIncentives(int index) {
+        if (incentivesBuilder_ == null) {
+          ensureIncentivesIsMutable();
+          incentives_.remove(index);
+          onChanged();
+        } else {
+          incentivesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * incentives is a slice of all incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 1 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.incentives.v1.IncentivesProto.Incentive.Builder getIncentivesBuilder(
+          int index) {
+        return getIncentivesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * incentives is a slice of all incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 1 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.incentives.v1.IncentivesProto.IncentiveOrBuilder getIncentivesOrBuilder(
+          int index) {
+        if (incentivesBuilder_ == null) {
+          return incentives_.get(index);  } else {
+          return incentivesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * incentives is a slice of all incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 1 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.evmos.incentives.v1.IncentivesProto.IncentiveOrBuilder> 
+           getIncentivesOrBuilderList() {
+        if (incentivesBuilder_ != null) {
+          return incentivesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(incentives_);
+        }
+      }
+      /**
+       * <pre>
+       * incentives is a slice of all incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 1 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.incentives.v1.IncentivesProto.Incentive.Builder addIncentivesBuilder() {
+        return getIncentivesFieldBuilder().addBuilder(
+            com.evmos.incentives.v1.IncentivesProto.Incentive.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * incentives is a slice of all incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 1 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.incentives.v1.IncentivesProto.Incentive.Builder addIncentivesBuilder(
+          int index) {
+        return getIncentivesFieldBuilder().addBuilder(
+            index, com.evmos.incentives.v1.IncentivesProto.Incentive.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * incentives is a slice of all incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 1 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.evmos.incentives.v1.IncentivesProto.Incentive.Builder> 
+           getIncentivesBuilderList() {
+        return getIncentivesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.evmos.incentives.v1.IncentivesProto.Incentive, com.evmos.incentives.v1.IncentivesProto.Incentive.Builder, com.evmos.incentives.v1.IncentivesProto.IncentiveOrBuilder> 
+          getIncentivesFieldBuilder() {
+        if (incentivesBuilder_ == null) {
+          incentivesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.evmos.incentives.v1.IncentivesProto.Incentive, com.evmos.incentives.v1.IncentivesProto.Incentive.Builder, com.evmos.incentives.v1.IncentivesProto.IncentiveOrBuilder>(
+                  incentives_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          incentives_ = null;
+        }
+        return incentivesBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.incentives.v1.QueryIncentivesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.incentives.v1.QueryIncentivesResponse)
+    private static final com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse();
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryIncentivesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryIncentivesResponse>() {
+      @java.lang.Override
+      public QueryIncentivesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryIncentivesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryIncentivesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.incentives.v1.QueryProto.QueryIncentivesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryIncentiveRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.incentives.v1.QueryIncentiveRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * contract is the hex contract address of a incentivized smart contract
+     * </pre>
+     *
+     * <code>string contract = 1 [json_name = "contract"];</code>
+     * @return The contract.
+     */
+    java.lang.String getContract();
+    /**
+     * <pre>
+     * contract is the hex contract address of a incentivized smart contract
+     * </pre>
+     *
+     * <code>string contract = 1 [json_name = "contract"];</code>
+     * @return The bytes for contract.
+     */
+    com.google.protobuf.ByteString
+        getContractBytes();
+  }
+  /**
+   * <pre>
+   * QueryIncentiveRequest is the request type for the Query/Incentive RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.incentives.v1.QueryIncentiveRequest}
+   */
+  public static final class QueryIncentiveRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.incentives.v1.QueryIncentiveRequest)
+      QueryIncentiveRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryIncentiveRequest.newBuilder() to construct.
+    private QueryIncentiveRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryIncentiveRequest() {
+      contract_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryIncentiveRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryIncentiveRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryIncentiveRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest.class, com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest.Builder.class);
+    }
+
+    public static final int CONTRACT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contract_ = "";
+    /**
+     * <pre>
+     * contract is the hex contract address of a incentivized smart contract
+     * </pre>
+     *
+     * <code>string contract = 1 [json_name = "contract"];</code>
+     * @return The contract.
+     */
+    @java.lang.Override
+    public java.lang.String getContract() {
+      java.lang.Object ref = contract_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contract_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * contract is the hex contract address of a incentivized smart contract
+     * </pre>
+     *
+     * <code>string contract = 1 [json_name = "contract"];</code>
+     * @return The bytes for contract.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractBytes() {
+      java.lang.Object ref = contract_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contract_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contract_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contract_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contract_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contract_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest)) {
+        return super.equals(obj);
+      }
+      com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest other = (com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest) obj;
+
+      if (!getContract()
+          .equals(other.getContract())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTRACT_FIELD_NUMBER;
+      hash = (53 * hash) + getContract().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryIncentiveRequest is the request type for the Query/Incentive RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.incentives.v1.QueryIncentiveRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.incentives.v1.QueryIncentiveRequest)
+        com.evmos.incentives.v1.QueryProto.QueryIncentiveRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryIncentiveRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryIncentiveRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest.class, com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest.Builder.class);
+      }
+
+      // Construct using com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contract_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryIncentiveRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest getDefaultInstanceForType() {
+        return com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest build() {
+        com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest buildPartial() {
+        com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest result = new com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.contract_ = contract_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest) {
+          return mergeFrom((com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest other) {
+        if (other == com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest.getDefaultInstance()) return this;
+        if (!other.getContract().isEmpty()) {
+          contract_ = other.contract_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                contract_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object contract_ = "";
+      /**
+       * <pre>
+       * contract is the hex contract address of a incentivized smart contract
+       * </pre>
+       *
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @return The contract.
+       */
+      public java.lang.String getContract() {
+        java.lang.Object ref = contract_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contract_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract is the hex contract address of a incentivized smart contract
+       * </pre>
+       *
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @return The bytes for contract.
+       */
+      public com.google.protobuf.ByteString
+          getContractBytes() {
+        java.lang.Object ref = contract_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contract_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract is the hex contract address of a incentivized smart contract
+       * </pre>
+       *
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @param value The contract to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContract(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contract_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract is the hex contract address of a incentivized smart contract
+       * </pre>
+       *
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContract() {
+        contract_ = getDefaultInstance().getContract();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract is the hex contract address of a incentivized smart contract
+       * </pre>
+       *
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @param value The bytes for contract to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contract_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.incentives.v1.QueryIncentiveRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.incentives.v1.QueryIncentiveRequest)
+    private static final com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest();
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryIncentiveRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryIncentiveRequest>() {
+      @java.lang.Override
+      public QueryIncentiveRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryIncentiveRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryIncentiveRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.incentives.v1.QueryProto.QueryIncentiveRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryIncentiveResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.incentives.v1.QueryIncentiveResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * incentive is the returned incentive for the queried contract
+     * </pre>
+     *
+     * <code>.evmos.incentives.v1.Incentive incentive = 1 [json_name = "incentive", (.gogoproto.nullable) = false];</code>
+     * @return Whether the incentive field is set.
+     */
+    boolean hasIncentive();
+    /**
+     * <pre>
+     * incentive is the returned incentive for the queried contract
+     * </pre>
+     *
+     * <code>.evmos.incentives.v1.Incentive incentive = 1 [json_name = "incentive", (.gogoproto.nullable) = false];</code>
+     * @return The incentive.
+     */
+    com.evmos.incentives.v1.IncentivesProto.Incentive getIncentive();
+    /**
+     * <pre>
+     * incentive is the returned incentive for the queried contract
+     * </pre>
+     *
+     * <code>.evmos.incentives.v1.Incentive incentive = 1 [json_name = "incentive", (.gogoproto.nullable) = false];</code>
+     */
+    com.evmos.incentives.v1.IncentivesProto.IncentiveOrBuilder getIncentiveOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryIncentiveResponse is the response type for the Query/Incentive RPC
+   * method.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.incentives.v1.QueryIncentiveResponse}
+   */
+  public static final class QueryIncentiveResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.incentives.v1.QueryIncentiveResponse)
+      QueryIncentiveResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryIncentiveResponse.newBuilder() to construct.
+    private QueryIncentiveResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryIncentiveResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryIncentiveResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryIncentiveResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryIncentiveResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse.class, com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse.Builder.class);
+    }
+
+    public static final int INCENTIVE_FIELD_NUMBER = 1;
+    private com.evmos.incentives.v1.IncentivesProto.Incentive incentive_;
+    /**
+     * <pre>
+     * incentive is the returned incentive for the queried contract
+     * </pre>
+     *
+     * <code>.evmos.incentives.v1.Incentive incentive = 1 [json_name = "incentive", (.gogoproto.nullable) = false];</code>
+     * @return Whether the incentive field is set.
+     */
+    @java.lang.Override
+    public boolean hasIncentive() {
+      return incentive_ != null;
+    }
+    /**
+     * <pre>
+     * incentive is the returned incentive for the queried contract
+     * </pre>
+     *
+     * <code>.evmos.incentives.v1.Incentive incentive = 1 [json_name = "incentive", (.gogoproto.nullable) = false];</code>
+     * @return The incentive.
+     */
+    @java.lang.Override
+    public com.evmos.incentives.v1.IncentivesProto.Incentive getIncentive() {
+      return incentive_ == null ? com.evmos.incentives.v1.IncentivesProto.Incentive.getDefaultInstance() : incentive_;
+    }
+    /**
+     * <pre>
+     * incentive is the returned incentive for the queried contract
+     * </pre>
+     *
+     * <code>.evmos.incentives.v1.Incentive incentive = 1 [json_name = "incentive", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.evmos.incentives.v1.IncentivesProto.IncentiveOrBuilder getIncentiveOrBuilder() {
+      return incentive_ == null ? com.evmos.incentives.v1.IncentivesProto.Incentive.getDefaultInstance() : incentive_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (incentive_ != null) {
+        output.writeMessage(1, getIncentive());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (incentive_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getIncentive());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse)) {
+        return super.equals(obj);
+      }
+      com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse other = (com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse) obj;
+
+      if (hasIncentive() != other.hasIncentive()) return false;
+      if (hasIncentive()) {
+        if (!getIncentive()
+            .equals(other.getIncentive())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasIncentive()) {
+        hash = (37 * hash) + INCENTIVE_FIELD_NUMBER;
+        hash = (53 * hash) + getIncentive().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryIncentiveResponse is the response type for the Query/Incentive RPC
+     * method.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.incentives.v1.QueryIncentiveResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.incentives.v1.QueryIncentiveResponse)
+        com.evmos.incentives.v1.QueryProto.QueryIncentiveResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryIncentiveResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryIncentiveResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse.class, com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse.Builder.class);
+      }
+
+      // Construct using com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        incentive_ = null;
+        if (incentiveBuilder_ != null) {
+          incentiveBuilder_.dispose();
+          incentiveBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryIncentiveResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse getDefaultInstanceForType() {
+        return com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse build() {
+        com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse buildPartial() {
+        com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse result = new com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.incentive_ = incentiveBuilder_ == null
+              ? incentive_
+              : incentiveBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse) {
+          return mergeFrom((com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse other) {
+        if (other == com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse.getDefaultInstance()) return this;
+        if (other.hasIncentive()) {
+          mergeIncentive(other.getIncentive());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getIncentiveFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.evmos.incentives.v1.IncentivesProto.Incentive incentive_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.evmos.incentives.v1.IncentivesProto.Incentive, com.evmos.incentives.v1.IncentivesProto.Incentive.Builder, com.evmos.incentives.v1.IncentivesProto.IncentiveOrBuilder> incentiveBuilder_;
+      /**
+       * <pre>
+       * incentive is the returned incentive for the queried contract
+       * </pre>
+       *
+       * <code>.evmos.incentives.v1.Incentive incentive = 1 [json_name = "incentive", (.gogoproto.nullable) = false];</code>
+       * @return Whether the incentive field is set.
+       */
+      public boolean hasIncentive() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * incentive is the returned incentive for the queried contract
+       * </pre>
+       *
+       * <code>.evmos.incentives.v1.Incentive incentive = 1 [json_name = "incentive", (.gogoproto.nullable) = false];</code>
+       * @return The incentive.
+       */
+      public com.evmos.incentives.v1.IncentivesProto.Incentive getIncentive() {
+        if (incentiveBuilder_ == null) {
+          return incentive_ == null ? com.evmos.incentives.v1.IncentivesProto.Incentive.getDefaultInstance() : incentive_;
+        } else {
+          return incentiveBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * incentive is the returned incentive for the queried contract
+       * </pre>
+       *
+       * <code>.evmos.incentives.v1.Incentive incentive = 1 [json_name = "incentive", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setIncentive(com.evmos.incentives.v1.IncentivesProto.Incentive value) {
+        if (incentiveBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          incentive_ = value;
+        } else {
+          incentiveBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * incentive is the returned incentive for the queried contract
+       * </pre>
+       *
+       * <code>.evmos.incentives.v1.Incentive incentive = 1 [json_name = "incentive", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setIncentive(
+          com.evmos.incentives.v1.IncentivesProto.Incentive.Builder builderForValue) {
+        if (incentiveBuilder_ == null) {
+          incentive_ = builderForValue.build();
+        } else {
+          incentiveBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * incentive is the returned incentive for the queried contract
+       * </pre>
+       *
+       * <code>.evmos.incentives.v1.Incentive incentive = 1 [json_name = "incentive", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeIncentive(com.evmos.incentives.v1.IncentivesProto.Incentive value) {
+        if (incentiveBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            incentive_ != null &&
+            incentive_ != com.evmos.incentives.v1.IncentivesProto.Incentive.getDefaultInstance()) {
+            getIncentiveBuilder().mergeFrom(value);
+          } else {
+            incentive_ = value;
+          }
+        } else {
+          incentiveBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * incentive is the returned incentive for the queried contract
+       * </pre>
+       *
+       * <code>.evmos.incentives.v1.Incentive incentive = 1 [json_name = "incentive", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearIncentive() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        incentive_ = null;
+        if (incentiveBuilder_ != null) {
+          incentiveBuilder_.dispose();
+          incentiveBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * incentive is the returned incentive for the queried contract
+       * </pre>
+       *
+       * <code>.evmos.incentives.v1.Incentive incentive = 1 [json_name = "incentive", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.incentives.v1.IncentivesProto.Incentive.Builder getIncentiveBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getIncentiveFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * incentive is the returned incentive for the queried contract
+       * </pre>
+       *
+       * <code>.evmos.incentives.v1.Incentive incentive = 1 [json_name = "incentive", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.incentives.v1.IncentivesProto.IncentiveOrBuilder getIncentiveOrBuilder() {
+        if (incentiveBuilder_ != null) {
+          return incentiveBuilder_.getMessageOrBuilder();
+        } else {
+          return incentive_ == null ?
+              com.evmos.incentives.v1.IncentivesProto.Incentive.getDefaultInstance() : incentive_;
+        }
+      }
+      /**
+       * <pre>
+       * incentive is the returned incentive for the queried contract
+       * </pre>
+       *
+       * <code>.evmos.incentives.v1.Incentive incentive = 1 [json_name = "incentive", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.evmos.incentives.v1.IncentivesProto.Incentive, com.evmos.incentives.v1.IncentivesProto.Incentive.Builder, com.evmos.incentives.v1.IncentivesProto.IncentiveOrBuilder> 
+          getIncentiveFieldBuilder() {
+        if (incentiveBuilder_ == null) {
+          incentiveBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.evmos.incentives.v1.IncentivesProto.Incentive, com.evmos.incentives.v1.IncentivesProto.Incentive.Builder, com.evmos.incentives.v1.IncentivesProto.IncentiveOrBuilder>(
+                  getIncentive(),
+                  getParentForChildren(),
+                  isClean());
+          incentive_ = null;
+        }
+        return incentiveBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.incentives.v1.QueryIncentiveResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.incentives.v1.QueryIncentiveResponse)
+    private static final com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse();
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryIncentiveResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryIncentiveResponse>() {
+      @java.lang.Override
+      public QueryIncentiveResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryIncentiveResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryIncentiveResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.incentives.v1.QueryProto.QueryIncentiveResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGasMetersRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.incentives.v1.QueryGasMetersRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * contract is the hex contract address of a incentivized smart contract
+     * </pre>
+     *
+     * <code>string contract = 1 [json_name = "contract"];</code>
+     * @return The contract.
+     */
+    java.lang.String getContract();
+    /**
+     * <pre>
+     * contract is the hex contract address of a incentivized smart contract
+     * </pre>
+     *
+     * <code>string contract = 1 [json_name = "contract"];</code>
+     * @return The bytes for contract.
+     */
+    com.google.protobuf.ByteString
+        getContractBytes();
+
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryGasMetersRequest is the request type for the Query/Incentives RPC
+   * method.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.incentives.v1.QueryGasMetersRequest}
+   */
+  public static final class QueryGasMetersRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.incentives.v1.QueryGasMetersRequest)
+      QueryGasMetersRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGasMetersRequest.newBuilder() to construct.
+    private QueryGasMetersRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGasMetersRequest() {
+      contract_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGasMetersRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryGasMetersRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryGasMetersRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest.class, com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest.Builder.class);
+    }
+
+    public static final int CONTRACT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contract_ = "";
+    /**
+     * <pre>
+     * contract is the hex contract address of a incentivized smart contract
+     * </pre>
+     *
+     * <code>string contract = 1 [json_name = "contract"];</code>
+     * @return The contract.
+     */
+    @java.lang.Override
+    public java.lang.String getContract() {
+      java.lang.Object ref = contract_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contract_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * contract is the hex contract address of a incentivized smart contract
+     * </pre>
+     *
+     * <code>string contract = 1 [json_name = "contract"];</code>
+     * @return The bytes for contract.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractBytes() {
+      java.lang.Object ref = contract_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contract_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contract_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contract_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contract_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contract_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest)) {
+        return super.equals(obj);
+      }
+      com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest other = (com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest) obj;
+
+      if (!getContract()
+          .equals(other.getContract())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTRACT_FIELD_NUMBER;
+      hash = (53 * hash) + getContract().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryGasMetersRequest is the request type for the Query/Incentives RPC
+     * method.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.incentives.v1.QueryGasMetersRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.incentives.v1.QueryGasMetersRequest)
+        com.evmos.incentives.v1.QueryProto.QueryGasMetersRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryGasMetersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryGasMetersRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest.class, com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest.Builder.class);
+      }
+
+      // Construct using com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contract_ = "";
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryGasMetersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest getDefaultInstanceForType() {
+        return com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest build() {
+        com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest buildPartial() {
+        com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest result = new com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.contract_ = contract_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest) {
+          return mergeFrom((com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest other) {
+        if (other == com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest.getDefaultInstance()) return this;
+        if (!other.getContract().isEmpty()) {
+          contract_ = other.contract_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                contract_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object contract_ = "";
+      /**
+       * <pre>
+       * contract is the hex contract address of a incentivized smart contract
+       * </pre>
+       *
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @return The contract.
+       */
+      public java.lang.String getContract() {
+        java.lang.Object ref = contract_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contract_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract is the hex contract address of a incentivized smart contract
+       * </pre>
+       *
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @return The bytes for contract.
+       */
+      public com.google.protobuf.ByteString
+          getContractBytes() {
+        java.lang.Object ref = contract_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contract_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract is the hex contract address of a incentivized smart contract
+       * </pre>
+       *
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @param value The contract to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContract(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contract_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract is the hex contract address of a incentivized smart contract
+       * </pre>
+       *
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContract() {
+        contract_ = getDefaultInstance().getContract();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract is the hex contract address of a incentivized smart contract
+       * </pre>
+       *
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @param value The bytes for contract to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contract_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.incentives.v1.QueryGasMetersRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.incentives.v1.QueryGasMetersRequest)
+    private static final com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest();
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGasMetersRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGasMetersRequest>() {
+      @java.lang.Override
+      public QueryGasMetersRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGasMetersRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGasMetersRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.incentives.v1.QueryProto.QueryGasMetersRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGasMetersResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.incentives.v1.QueryGasMetersResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * gas_meters is a slice of the gas meters for an incentivized smart contract
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 1 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.evmos.incentives.v1.IncentivesProto.GasMeter> 
+        getGasMetersList();
+    /**
+     * <pre>
+     * gas_meters is a slice of the gas meters for an incentivized smart contract
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 1 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+     */
+    com.evmos.incentives.v1.IncentivesProto.GasMeter getGasMeters(int index);
+    /**
+     * <pre>
+     * gas_meters is a slice of the gas meters for an incentivized smart contract
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 1 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+     */
+    int getGasMetersCount();
+    /**
+     * <pre>
+     * gas_meters is a slice of the gas meters for an incentivized smart contract
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 1 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.evmos.incentives.v1.IncentivesProto.GasMeterOrBuilder> 
+        getGasMetersOrBuilderList();
+    /**
+     * <pre>
+     * gas_meters is a slice of the gas meters for an incentivized smart contract
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 1 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+     */
+    com.evmos.incentives.v1.IncentivesProto.GasMeterOrBuilder getGasMetersOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryGasMetersResponse is the response type for the Query/Incentives RPC
+   * method.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.incentives.v1.QueryGasMetersResponse}
+   */
+  public static final class QueryGasMetersResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.incentives.v1.QueryGasMetersResponse)
+      QueryGasMetersResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGasMetersResponse.newBuilder() to construct.
+    private QueryGasMetersResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGasMetersResponse() {
+      gasMeters_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGasMetersResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryGasMetersResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryGasMetersResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse.class, com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse.Builder.class);
+    }
+
+    public static final int GAS_METERS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.evmos.incentives.v1.IncentivesProto.GasMeter> gasMeters_;
+    /**
+     * <pre>
+     * gas_meters is a slice of the gas meters for an incentivized smart contract
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 1 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.evmos.incentives.v1.IncentivesProto.GasMeter> getGasMetersList() {
+      return gasMeters_;
+    }
+    /**
+     * <pre>
+     * gas_meters is a slice of the gas meters for an incentivized smart contract
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 1 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.evmos.incentives.v1.IncentivesProto.GasMeterOrBuilder> 
+        getGasMetersOrBuilderList() {
+      return gasMeters_;
+    }
+    /**
+     * <pre>
+     * gas_meters is a slice of the gas meters for an incentivized smart contract
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 1 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getGasMetersCount() {
+      return gasMeters_.size();
+    }
+    /**
+     * <pre>
+     * gas_meters is a slice of the gas meters for an incentivized smart contract
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 1 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.evmos.incentives.v1.IncentivesProto.GasMeter getGasMeters(int index) {
+      return gasMeters_.get(index);
+    }
+    /**
+     * <pre>
+     * gas_meters is a slice of the gas meters for an incentivized smart contract
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 1 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.evmos.incentives.v1.IncentivesProto.GasMeterOrBuilder getGasMetersOrBuilder(
+        int index) {
+      return gasMeters_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < gasMeters_.size(); i++) {
+        output.writeMessage(1, gasMeters_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < gasMeters_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, gasMeters_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse)) {
+        return super.equals(obj);
+      }
+      com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse other = (com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse) obj;
+
+      if (!getGasMetersList()
+          .equals(other.getGasMetersList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getGasMetersCount() > 0) {
+        hash = (37 * hash) + GAS_METERS_FIELD_NUMBER;
+        hash = (53 * hash) + getGasMetersList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryGasMetersResponse is the response type for the Query/Incentives RPC
+     * method.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.incentives.v1.QueryGasMetersResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.incentives.v1.QueryGasMetersResponse)
+        com.evmos.incentives.v1.QueryProto.QueryGasMetersResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryGasMetersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryGasMetersResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse.class, com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse.Builder.class);
+      }
+
+      // Construct using com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (gasMetersBuilder_ == null) {
+          gasMeters_ = java.util.Collections.emptyList();
+        } else {
+          gasMeters_ = null;
+          gasMetersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryGasMetersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse getDefaultInstanceForType() {
+        return com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse build() {
+        com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse buildPartial() {
+        com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse result = new com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse result) {
+        if (gasMetersBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            gasMeters_ = java.util.Collections.unmodifiableList(gasMeters_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.gasMeters_ = gasMeters_;
+        } else {
+          result.gasMeters_ = gasMetersBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse) {
+          return mergeFrom((com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse other) {
+        if (other == com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse.getDefaultInstance()) return this;
+        if (gasMetersBuilder_ == null) {
+          if (!other.gasMeters_.isEmpty()) {
+            if (gasMeters_.isEmpty()) {
+              gasMeters_ = other.gasMeters_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureGasMetersIsMutable();
+              gasMeters_.addAll(other.gasMeters_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.gasMeters_.isEmpty()) {
+            if (gasMetersBuilder_.isEmpty()) {
+              gasMetersBuilder_.dispose();
+              gasMetersBuilder_ = null;
+              gasMeters_ = other.gasMeters_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              gasMetersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getGasMetersFieldBuilder() : null;
+            } else {
+              gasMetersBuilder_.addAllMessages(other.gasMeters_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.evmos.incentives.v1.IncentivesProto.GasMeter m =
+                    input.readMessage(
+                        com.evmos.incentives.v1.IncentivesProto.GasMeter.parser(),
+                        extensionRegistry);
+                if (gasMetersBuilder_ == null) {
+                  ensureGasMetersIsMutable();
+                  gasMeters_.add(m);
+                } else {
+                  gasMetersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.evmos.incentives.v1.IncentivesProto.GasMeter> gasMeters_ =
+        java.util.Collections.emptyList();
+      private void ensureGasMetersIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          gasMeters_ = new java.util.ArrayList<com.evmos.incentives.v1.IncentivesProto.GasMeter>(gasMeters_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.evmos.incentives.v1.IncentivesProto.GasMeter, com.evmos.incentives.v1.IncentivesProto.GasMeter.Builder, com.evmos.incentives.v1.IncentivesProto.GasMeterOrBuilder> gasMetersBuilder_;
+
+      /**
+       * <pre>
+       * gas_meters is a slice of the gas meters for an incentivized smart contract
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 1 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.evmos.incentives.v1.IncentivesProto.GasMeter> getGasMetersList() {
+        if (gasMetersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(gasMeters_);
+        } else {
+          return gasMetersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of the gas meters for an incentivized smart contract
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 1 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public int getGasMetersCount() {
+        if (gasMetersBuilder_ == null) {
+          return gasMeters_.size();
+        } else {
+          return gasMetersBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of the gas meters for an incentivized smart contract
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 1 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.incentives.v1.IncentivesProto.GasMeter getGasMeters(int index) {
+        if (gasMetersBuilder_ == null) {
+          return gasMeters_.get(index);
+        } else {
+          return gasMetersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of the gas meters for an incentivized smart contract
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 1 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGasMeters(
+          int index, com.evmos.incentives.v1.IncentivesProto.GasMeter value) {
+        if (gasMetersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGasMetersIsMutable();
+          gasMeters_.set(index, value);
+          onChanged();
+        } else {
+          gasMetersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of the gas meters for an incentivized smart contract
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 1 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGasMeters(
+          int index, com.evmos.incentives.v1.IncentivesProto.GasMeter.Builder builderForValue) {
+        if (gasMetersBuilder_ == null) {
+          ensureGasMetersIsMutable();
+          gasMeters_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          gasMetersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of the gas meters for an incentivized smart contract
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 1 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGasMeters(com.evmos.incentives.v1.IncentivesProto.GasMeter value) {
+        if (gasMetersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGasMetersIsMutable();
+          gasMeters_.add(value);
+          onChanged();
+        } else {
+          gasMetersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of the gas meters for an incentivized smart contract
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 1 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGasMeters(
+          int index, com.evmos.incentives.v1.IncentivesProto.GasMeter value) {
+        if (gasMetersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGasMetersIsMutable();
+          gasMeters_.add(index, value);
+          onChanged();
+        } else {
+          gasMetersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of the gas meters for an incentivized smart contract
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 1 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGasMeters(
+          com.evmos.incentives.v1.IncentivesProto.GasMeter.Builder builderForValue) {
+        if (gasMetersBuilder_ == null) {
+          ensureGasMetersIsMutable();
+          gasMeters_.add(builderForValue.build());
+          onChanged();
+        } else {
+          gasMetersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of the gas meters for an incentivized smart contract
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 1 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGasMeters(
+          int index, com.evmos.incentives.v1.IncentivesProto.GasMeter.Builder builderForValue) {
+        if (gasMetersBuilder_ == null) {
+          ensureGasMetersIsMutable();
+          gasMeters_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          gasMetersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of the gas meters for an incentivized smart contract
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 1 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllGasMeters(
+          java.lang.Iterable<? extends com.evmos.incentives.v1.IncentivesProto.GasMeter> values) {
+        if (gasMetersBuilder_ == null) {
+          ensureGasMetersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, gasMeters_);
+          onChanged();
+        } else {
+          gasMetersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of the gas meters for an incentivized smart contract
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 1 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearGasMeters() {
+        if (gasMetersBuilder_ == null) {
+          gasMeters_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          gasMetersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of the gas meters for an incentivized smart contract
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 1 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeGasMeters(int index) {
+        if (gasMetersBuilder_ == null) {
+          ensureGasMetersIsMutable();
+          gasMeters_.remove(index);
+          onChanged();
+        } else {
+          gasMetersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of the gas meters for an incentivized smart contract
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 1 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.incentives.v1.IncentivesProto.GasMeter.Builder getGasMetersBuilder(
+          int index) {
+        return getGasMetersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of the gas meters for an incentivized smart contract
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 1 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.incentives.v1.IncentivesProto.GasMeterOrBuilder getGasMetersOrBuilder(
+          int index) {
+        if (gasMetersBuilder_ == null) {
+          return gasMeters_.get(index);  } else {
+          return gasMetersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of the gas meters for an incentivized smart contract
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 1 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.evmos.incentives.v1.IncentivesProto.GasMeterOrBuilder> 
+           getGasMetersOrBuilderList() {
+        if (gasMetersBuilder_ != null) {
+          return gasMetersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(gasMeters_);
+        }
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of the gas meters for an incentivized smart contract
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 1 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.incentives.v1.IncentivesProto.GasMeter.Builder addGasMetersBuilder() {
+        return getGasMetersFieldBuilder().addBuilder(
+            com.evmos.incentives.v1.IncentivesProto.GasMeter.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of the gas meters for an incentivized smart contract
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 1 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.incentives.v1.IncentivesProto.GasMeter.Builder addGasMetersBuilder(
+          int index) {
+        return getGasMetersFieldBuilder().addBuilder(
+            index, com.evmos.incentives.v1.IncentivesProto.GasMeter.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of the gas meters for an incentivized smart contract
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 1 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.evmos.incentives.v1.IncentivesProto.GasMeter.Builder> 
+           getGasMetersBuilderList() {
+        return getGasMetersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.evmos.incentives.v1.IncentivesProto.GasMeter, com.evmos.incentives.v1.IncentivesProto.GasMeter.Builder, com.evmos.incentives.v1.IncentivesProto.GasMeterOrBuilder> 
+          getGasMetersFieldBuilder() {
+        if (gasMetersBuilder_ == null) {
+          gasMetersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.evmos.incentives.v1.IncentivesProto.GasMeter, com.evmos.incentives.v1.IncentivesProto.GasMeter.Builder, com.evmos.incentives.v1.IncentivesProto.GasMeterOrBuilder>(
+                  gasMeters_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          gasMeters_ = null;
+        }
+        return gasMetersBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.incentives.v1.QueryGasMetersResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.incentives.v1.QueryGasMetersResponse)
+    private static final com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse();
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGasMetersResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGasMetersResponse>() {
+      @java.lang.Override
+      public QueryGasMetersResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGasMetersResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGasMetersResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.incentives.v1.QueryProto.QueryGasMetersResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGasMeterRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.incentives.v1.QueryGasMeterRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * contract is the hex contract address of a contract
+     * </pre>
+     *
+     * <code>string contract = 1 [json_name = "contract"];</code>
+     * @return The contract.
+     */
+    java.lang.String getContract();
+    /**
+     * <pre>
+     * contract is the hex contract address of a contract
+     * </pre>
+     *
+     * <code>string contract = 1 [json_name = "contract"];</code>
+     * @return The bytes for contract.
+     */
+    com.google.protobuf.ByteString
+        getContractBytes();
+
+    /**
+     * <pre>
+     * participant is the hex address of a user
+     * </pre>
+     *
+     * <code>string participant = 2 [json_name = "participant"];</code>
+     * @return The participant.
+     */
+    java.lang.String getParticipant();
+    /**
+     * <pre>
+     * participant is the hex address of a user
+     * </pre>
+     *
+     * <code>string participant = 2 [json_name = "participant"];</code>
+     * @return The bytes for participant.
+     */
+    com.google.protobuf.ByteString
+        getParticipantBytes();
+  }
+  /**
+   * <pre>
+   * QueryGasMeterRequest is the request type for the Query/Incentive RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.incentives.v1.QueryGasMeterRequest}
+   */
+  public static final class QueryGasMeterRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.incentives.v1.QueryGasMeterRequest)
+      QueryGasMeterRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGasMeterRequest.newBuilder() to construct.
+    private QueryGasMeterRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGasMeterRequest() {
+      contract_ = "";
+      participant_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGasMeterRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryGasMeterRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryGasMeterRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest.class, com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest.Builder.class);
+    }
+
+    public static final int CONTRACT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contract_ = "";
+    /**
+     * <pre>
+     * contract is the hex contract address of a contract
+     * </pre>
+     *
+     * <code>string contract = 1 [json_name = "contract"];</code>
+     * @return The contract.
+     */
+    @java.lang.Override
+    public java.lang.String getContract() {
+      java.lang.Object ref = contract_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contract_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * contract is the hex contract address of a contract
+     * </pre>
+     *
+     * <code>string contract = 1 [json_name = "contract"];</code>
+     * @return The bytes for contract.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractBytes() {
+      java.lang.Object ref = contract_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contract_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PARTICIPANT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object participant_ = "";
+    /**
+     * <pre>
+     * participant is the hex address of a user
+     * </pre>
+     *
+     * <code>string participant = 2 [json_name = "participant"];</code>
+     * @return The participant.
+     */
+    @java.lang.Override
+    public java.lang.String getParticipant() {
+      java.lang.Object ref = participant_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        participant_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * participant is the hex address of a user
+     * </pre>
+     *
+     * <code>string participant = 2 [json_name = "participant"];</code>
+     * @return The bytes for participant.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getParticipantBytes() {
+      java.lang.Object ref = participant_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        participant_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contract_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contract_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(participant_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, participant_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contract_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contract_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(participant_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, participant_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest)) {
+        return super.equals(obj);
+      }
+      com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest other = (com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest) obj;
+
+      if (!getContract()
+          .equals(other.getContract())) return false;
+      if (!getParticipant()
+          .equals(other.getParticipant())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTRACT_FIELD_NUMBER;
+      hash = (53 * hash) + getContract().hashCode();
+      hash = (37 * hash) + PARTICIPANT_FIELD_NUMBER;
+      hash = (53 * hash) + getParticipant().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryGasMeterRequest is the request type for the Query/Incentive RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.incentives.v1.QueryGasMeterRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.incentives.v1.QueryGasMeterRequest)
+        com.evmos.incentives.v1.QueryProto.QueryGasMeterRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryGasMeterRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryGasMeterRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest.class, com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest.Builder.class);
+      }
+
+      // Construct using com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contract_ = "";
+        participant_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryGasMeterRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest getDefaultInstanceForType() {
+        return com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest build() {
+        com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest buildPartial() {
+        com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest result = new com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.contract_ = contract_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.participant_ = participant_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest) {
+          return mergeFrom((com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest other) {
+        if (other == com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest.getDefaultInstance()) return this;
+        if (!other.getContract().isEmpty()) {
+          contract_ = other.contract_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getParticipant().isEmpty()) {
+          participant_ = other.participant_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                contract_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                participant_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object contract_ = "";
+      /**
+       * <pre>
+       * contract is the hex contract address of a contract
+       * </pre>
+       *
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @return The contract.
+       */
+      public java.lang.String getContract() {
+        java.lang.Object ref = contract_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contract_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract is the hex contract address of a contract
+       * </pre>
+       *
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @return The bytes for contract.
+       */
+      public com.google.protobuf.ByteString
+          getContractBytes() {
+        java.lang.Object ref = contract_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contract_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract is the hex contract address of a contract
+       * </pre>
+       *
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @param value The contract to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContract(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contract_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract is the hex contract address of a contract
+       * </pre>
+       *
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContract() {
+        contract_ = getDefaultInstance().getContract();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract is the hex contract address of a contract
+       * </pre>
+       *
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @param value The bytes for contract to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contract_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object participant_ = "";
+      /**
+       * <pre>
+       * participant is the hex address of a user
+       * </pre>
+       *
+       * <code>string participant = 2 [json_name = "participant"];</code>
+       * @return The participant.
+       */
+      public java.lang.String getParticipant() {
+        java.lang.Object ref = participant_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          participant_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * participant is the hex address of a user
+       * </pre>
+       *
+       * <code>string participant = 2 [json_name = "participant"];</code>
+       * @return The bytes for participant.
+       */
+      public com.google.protobuf.ByteString
+          getParticipantBytes() {
+        java.lang.Object ref = participant_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          participant_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * participant is the hex address of a user
+       * </pre>
+       *
+       * <code>string participant = 2 [json_name = "participant"];</code>
+       * @param value The participant to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParticipant(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        participant_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * participant is the hex address of a user
+       * </pre>
+       *
+       * <code>string participant = 2 [json_name = "participant"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearParticipant() {
+        participant_ = getDefaultInstance().getParticipant();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * participant is the hex address of a user
+       * </pre>
+       *
+       * <code>string participant = 2 [json_name = "participant"];</code>
+       * @param value The bytes for participant to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParticipantBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        participant_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.incentives.v1.QueryGasMeterRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.incentives.v1.QueryGasMeterRequest)
+    private static final com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest();
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGasMeterRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGasMeterRequest>() {
+      @java.lang.Override
+      public QueryGasMeterRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGasMeterRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGasMeterRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.incentives.v1.QueryProto.QueryGasMeterRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGasMeterResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.incentives.v1.QueryGasMeterResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * gas_meter is a gas meter for one participant on an incentivized smart contract
+     * </pre>
+     *
+     * <code>uint64 gas_meter = 1 [json_name = "gasMeter"];</code>
+     * @return The gasMeter.
+     */
+    long getGasMeter();
+  }
+  /**
+   * <pre>
+   * QueryGasMeterResponse is the response type for the Query/Incentive RPC
+   * method.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.incentives.v1.QueryGasMeterResponse}
+   */
+  public static final class QueryGasMeterResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.incentives.v1.QueryGasMeterResponse)
+      QueryGasMeterResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGasMeterResponse.newBuilder() to construct.
+    private QueryGasMeterResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGasMeterResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGasMeterResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryGasMeterResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryGasMeterResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse.class, com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse.Builder.class);
+    }
+
+    public static final int GAS_METER_FIELD_NUMBER = 1;
+    private long gasMeter_ = 0L;
+    /**
+     * <pre>
+     * gas_meter is a gas meter for one participant on an incentivized smart contract
+     * </pre>
+     *
+     * <code>uint64 gas_meter = 1 [json_name = "gasMeter"];</code>
+     * @return The gasMeter.
+     */
+    @java.lang.Override
+    public long getGasMeter() {
+      return gasMeter_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (gasMeter_ != 0L) {
+        output.writeUInt64(1, gasMeter_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (gasMeter_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, gasMeter_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse)) {
+        return super.equals(obj);
+      }
+      com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse other = (com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse) obj;
+
+      if (getGasMeter()
+          != other.getGasMeter()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + GAS_METER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getGasMeter());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryGasMeterResponse is the response type for the Query/Incentive RPC
+     * method.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.incentives.v1.QueryGasMeterResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.incentives.v1.QueryGasMeterResponse)
+        com.evmos.incentives.v1.QueryProto.QueryGasMeterResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryGasMeterResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryGasMeterResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse.class, com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse.Builder.class);
+      }
+
+      // Construct using com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        gasMeter_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryGasMeterResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse getDefaultInstanceForType() {
+        return com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse build() {
+        com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse buildPartial() {
+        com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse result = new com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.gasMeter_ = gasMeter_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse) {
+          return mergeFrom((com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse other) {
+        if (other == com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse.getDefaultInstance()) return this;
+        if (other.getGasMeter() != 0L) {
+          setGasMeter(other.getGasMeter());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                gasMeter_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long gasMeter_ ;
+      /**
+       * <pre>
+       * gas_meter is a gas meter for one participant on an incentivized smart contract
+       * </pre>
+       *
+       * <code>uint64 gas_meter = 1 [json_name = "gasMeter"];</code>
+       * @return The gasMeter.
+       */
+      @java.lang.Override
+      public long getGasMeter() {
+        return gasMeter_;
+      }
+      /**
+       * <pre>
+       * gas_meter is a gas meter for one participant on an incentivized smart contract
+       * </pre>
+       *
+       * <code>uint64 gas_meter = 1 [json_name = "gasMeter"];</code>
+       * @param value The gasMeter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGasMeter(long value) {
+
+        gasMeter_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_meter is a gas meter for one participant on an incentivized smart contract
+       * </pre>
+       *
+       * <code>uint64 gas_meter = 1 [json_name = "gasMeter"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGasMeter() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        gasMeter_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.incentives.v1.QueryGasMeterResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.incentives.v1.QueryGasMeterResponse)
+    private static final com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse();
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGasMeterResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGasMeterResponse>() {
+      @java.lang.Override
+      public QueryGasMeterResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGasMeterResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGasMeterResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.incentives.v1.QueryProto.QueryGasMeterResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAllocationMetersRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.incentives.v1.QueryAllocationMetersRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryAllocationMetersRequest is the request type for the
+   * Query/AllocationMeters RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.incentives.v1.QueryAllocationMetersRequest}
+   */
+  public static final class QueryAllocationMetersRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.incentives.v1.QueryAllocationMetersRequest)
+      QueryAllocationMetersRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAllocationMetersRequest.newBuilder() to construct.
+    private QueryAllocationMetersRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAllocationMetersRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAllocationMetersRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryAllocationMetersRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryAllocationMetersRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest.class, com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 1;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(1, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest)) {
+        return super.equals(obj);
+      }
+      com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest other = (com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAllocationMetersRequest is the request type for the
+     * Query/AllocationMeters RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.incentives.v1.QueryAllocationMetersRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.incentives.v1.QueryAllocationMetersRequest)
+        com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryAllocationMetersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryAllocationMetersRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest.class, com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest.Builder.class);
+      }
+
+      // Construct using com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryAllocationMetersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest getDefaultInstanceForType() {
+        return com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest build() {
+        com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest buildPartial() {
+        com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest result = new com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest) {
+          return mergeFrom((com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest other) {
+        if (other == com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.incentives.v1.QueryAllocationMetersRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.incentives.v1.QueryAllocationMetersRequest)
+    private static final com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest();
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAllocationMetersRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAllocationMetersRequest>() {
+      @java.lang.Override
+      public QueryAllocationMetersRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAllocationMetersRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAllocationMetersRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.incentives.v1.QueryProto.QueryAllocationMetersRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAllocationMetersResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.incentives.v1.QueryAllocationMetersResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * allocation_meters is a slice of all allocations
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin allocation_meters = 1 [json_name = "allocationMeters", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> 
+        getAllocationMetersList();
+    /**
+     * <pre>
+     * allocation_meters is a slice of all allocations
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin allocation_meters = 1 [json_name = "allocationMeters", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getAllocationMeters(int index);
+    /**
+     * <pre>
+     * allocation_meters is a slice of all allocations
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin allocation_meters = 1 [json_name = "allocationMeters", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    int getAllocationMetersCount();
+    /**
+     * <pre>
+     * allocation_meters is a slice of all allocations
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin allocation_meters = 1 [json_name = "allocationMeters", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getAllocationMetersOrBuilderList();
+    /**
+     * <pre>
+     * allocation_meters is a slice of all allocations
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin allocation_meters = 1 [json_name = "allocationMeters", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getAllocationMetersOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryAllocationMetersResponse is the response type for the
+   * Query/AllocationMeters RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.incentives.v1.QueryAllocationMetersResponse}
+   */
+  public static final class QueryAllocationMetersResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.incentives.v1.QueryAllocationMetersResponse)
+      QueryAllocationMetersResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAllocationMetersResponse.newBuilder() to construct.
+    private QueryAllocationMetersResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAllocationMetersResponse() {
+      allocationMeters_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAllocationMetersResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryAllocationMetersResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryAllocationMetersResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse.class, com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse.Builder.class);
+    }
+
+    public static final int ALLOCATION_METERS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> allocationMeters_;
+    /**
+     * <pre>
+     * allocation_meters is a slice of all allocations
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin allocation_meters = 1 [json_name = "allocationMeters", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getAllocationMetersList() {
+      return allocationMeters_;
+    }
+    /**
+     * <pre>
+     * allocation_meters is a slice of all allocations
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin allocation_meters = 1 [json_name = "allocationMeters", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getAllocationMetersOrBuilderList() {
+      return allocationMeters_;
+    }
+    /**
+     * <pre>
+     * allocation_meters is a slice of all allocations
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin allocation_meters = 1 [json_name = "allocationMeters", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public int getAllocationMetersCount() {
+      return allocationMeters_.size();
+    }
+    /**
+     * <pre>
+     * allocation_meters is a slice of all allocations
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin allocation_meters = 1 [json_name = "allocationMeters", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getAllocationMeters(int index) {
+      return allocationMeters_.get(index);
+    }
+    /**
+     * <pre>
+     * allocation_meters is a slice of all allocations
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin allocation_meters = 1 [json_name = "allocationMeters", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getAllocationMetersOrBuilder(
+        int index) {
+      return allocationMeters_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < allocationMeters_.size(); i++) {
+        output.writeMessage(1, allocationMeters_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < allocationMeters_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, allocationMeters_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse)) {
+        return super.equals(obj);
+      }
+      com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse other = (com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse) obj;
+
+      if (!getAllocationMetersList()
+          .equals(other.getAllocationMetersList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAllocationMetersCount() > 0) {
+        hash = (37 * hash) + ALLOCATION_METERS_FIELD_NUMBER;
+        hash = (53 * hash) + getAllocationMetersList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAllocationMetersResponse is the response type for the
+     * Query/AllocationMeters RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.incentives.v1.QueryAllocationMetersResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.incentives.v1.QueryAllocationMetersResponse)
+        com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryAllocationMetersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryAllocationMetersResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse.class, com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse.Builder.class);
+      }
+
+      // Construct using com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (allocationMetersBuilder_ == null) {
+          allocationMeters_ = java.util.Collections.emptyList();
+        } else {
+          allocationMeters_ = null;
+          allocationMetersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryAllocationMetersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse getDefaultInstanceForType() {
+        return com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse build() {
+        com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse buildPartial() {
+        com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse result = new com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse result) {
+        if (allocationMetersBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            allocationMeters_ = java.util.Collections.unmodifiableList(allocationMeters_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.allocationMeters_ = allocationMeters_;
+        } else {
+          result.allocationMeters_ = allocationMetersBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse) {
+          return mergeFrom((com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse other) {
+        if (other == com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse.getDefaultInstance()) return this;
+        if (allocationMetersBuilder_ == null) {
+          if (!other.allocationMeters_.isEmpty()) {
+            if (allocationMeters_.isEmpty()) {
+              allocationMeters_ = other.allocationMeters_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAllocationMetersIsMutable();
+              allocationMeters_.addAll(other.allocationMeters_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.allocationMeters_.isEmpty()) {
+            if (allocationMetersBuilder_.isEmpty()) {
+              allocationMetersBuilder_.dispose();
+              allocationMetersBuilder_ = null;
+              allocationMeters_ = other.allocationMeters_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              allocationMetersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAllocationMetersFieldBuilder() : null;
+            } else {
+              allocationMetersBuilder_.addAllMessages(other.allocationMeters_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.DecCoin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.DecCoin.parser(),
+                        extensionRegistry);
+                if (allocationMetersBuilder_ == null) {
+                  ensureAllocationMetersIsMutable();
+                  allocationMeters_.add(m);
+                } else {
+                  allocationMetersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> allocationMeters_ =
+        java.util.Collections.emptyList();
+      private void ensureAllocationMetersIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          allocationMeters_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.DecCoin>(allocationMeters_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> allocationMetersBuilder_;
+
+      /**
+       * <pre>
+       * allocation_meters is a slice of all allocations
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocation_meters = 1 [json_name = "allocationMeters", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getAllocationMetersList() {
+        if (allocationMetersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(allocationMeters_);
+        } else {
+          return allocationMetersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * allocation_meters is a slice of all allocations
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocation_meters = 1 [json_name = "allocationMeters", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public int getAllocationMetersCount() {
+        if (allocationMetersBuilder_ == null) {
+          return allocationMeters_.size();
+        } else {
+          return allocationMetersBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * allocation_meters is a slice of all allocations
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocation_meters = 1 [json_name = "allocationMeters", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getAllocationMeters(int index) {
+        if (allocationMetersBuilder_ == null) {
+          return allocationMeters_.get(index);
+        } else {
+          return allocationMetersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * allocation_meters is a slice of all allocations
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocation_meters = 1 [json_name = "allocationMeters", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setAllocationMeters(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (allocationMetersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAllocationMetersIsMutable();
+          allocationMeters_.set(index, value);
+          onChanged();
+        } else {
+          allocationMetersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * allocation_meters is a slice of all allocations
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocation_meters = 1 [json_name = "allocationMeters", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setAllocationMeters(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (allocationMetersBuilder_ == null) {
+          ensureAllocationMetersIsMutable();
+          allocationMeters_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          allocationMetersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * allocation_meters is a slice of all allocations
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocation_meters = 1 [json_name = "allocationMeters", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllocationMeters(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (allocationMetersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAllocationMetersIsMutable();
+          allocationMeters_.add(value);
+          onChanged();
+        } else {
+          allocationMetersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * allocation_meters is a slice of all allocations
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocation_meters = 1 [json_name = "allocationMeters", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllocationMeters(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (allocationMetersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAllocationMetersIsMutable();
+          allocationMeters_.add(index, value);
+          onChanged();
+        } else {
+          allocationMetersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * allocation_meters is a slice of all allocations
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocation_meters = 1 [json_name = "allocationMeters", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllocationMeters(
+          com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (allocationMetersBuilder_ == null) {
+          ensureAllocationMetersIsMutable();
+          allocationMeters_.add(builderForValue.build());
+          onChanged();
+        } else {
+          allocationMetersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * allocation_meters is a slice of all allocations
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocation_meters = 1 [json_name = "allocationMeters", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllocationMeters(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (allocationMetersBuilder_ == null) {
+          ensureAllocationMetersIsMutable();
+          allocationMeters_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          allocationMetersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * allocation_meters is a slice of all allocations
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocation_meters = 1 [json_name = "allocationMeters", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllAllocationMeters(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.DecCoin> values) {
+        if (allocationMetersBuilder_ == null) {
+          ensureAllocationMetersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, allocationMeters_);
+          onChanged();
+        } else {
+          allocationMetersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * allocation_meters is a slice of all allocations
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocation_meters = 1 [json_name = "allocationMeters", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder clearAllocationMeters() {
+        if (allocationMetersBuilder_ == null) {
+          allocationMeters_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          allocationMetersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * allocation_meters is a slice of all allocations
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocation_meters = 1 [json_name = "allocationMeters", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder removeAllocationMeters(int index) {
+        if (allocationMetersBuilder_ == null) {
+          ensureAllocationMetersIsMutable();
+          allocationMeters_.remove(index);
+          onChanged();
+        } else {
+          allocationMetersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * allocation_meters is a slice of all allocations
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocation_meters = 1 [json_name = "allocationMeters", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getAllocationMetersBuilder(
+          int index) {
+        return getAllocationMetersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * allocation_meters is a slice of all allocations
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocation_meters = 1 [json_name = "allocationMeters", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getAllocationMetersOrBuilder(
+          int index) {
+        if (allocationMetersBuilder_ == null) {
+          return allocationMeters_.get(index);  } else {
+          return allocationMetersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * allocation_meters is a slice of all allocations
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocation_meters = 1 [json_name = "allocationMeters", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+           getAllocationMetersOrBuilderList() {
+        if (allocationMetersBuilder_ != null) {
+          return allocationMetersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(allocationMeters_);
+        }
+      }
+      /**
+       * <pre>
+       * allocation_meters is a slice of all allocations
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocation_meters = 1 [json_name = "allocationMeters", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addAllocationMetersBuilder() {
+        return getAllocationMetersFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * allocation_meters is a slice of all allocations
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocation_meters = 1 [json_name = "allocationMeters", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addAllocationMetersBuilder(
+          int index) {
+        return getAllocationMetersFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * allocation_meters is a slice of all allocations
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocation_meters = 1 [json_name = "allocationMeters", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder> 
+           getAllocationMetersBuilderList() {
+        return getAllocationMetersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+          getAllocationMetersFieldBuilder() {
+        if (allocationMetersBuilder_ == null) {
+          allocationMetersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
+                  allocationMeters_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          allocationMeters_ = null;
+        }
+        return allocationMetersBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.incentives.v1.QueryAllocationMetersResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.incentives.v1.QueryAllocationMetersResponse)
+    private static final com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse();
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAllocationMetersResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAllocationMetersResponse>() {
+      @java.lang.Override
+      public QueryAllocationMetersResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAllocationMetersResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAllocationMetersResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.incentives.v1.QueryProto.QueryAllocationMetersResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAllocationMeterRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.incentives.v1.QueryAllocationMeterRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * denom is the coin denom to query an allocation meter for.
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <pre>
+     * denom is the coin denom to query an allocation meter for.
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+  }
+  /**
+   * <pre>
+   * QueryAllocationMeterRequest is the request type for the Query/AllocationMeter
+   * RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.incentives.v1.QueryAllocationMeterRequest}
+   */
+  public static final class QueryAllocationMeterRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.incentives.v1.QueryAllocationMeterRequest)
+      QueryAllocationMeterRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAllocationMeterRequest.newBuilder() to construct.
+    private QueryAllocationMeterRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAllocationMeterRequest() {
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAllocationMeterRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryAllocationMeterRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryAllocationMeterRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest.class, com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <pre>
+     * denom is the coin denom to query an allocation meter for.
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * denom is the coin denom to query an allocation meter for.
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest)) {
+        return super.equals(obj);
+      }
+      com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest other = (com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAllocationMeterRequest is the request type for the Query/AllocationMeter
+     * RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.incentives.v1.QueryAllocationMeterRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.incentives.v1.QueryAllocationMeterRequest)
+        com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryAllocationMeterRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryAllocationMeterRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest.class, com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest.Builder.class);
+      }
+
+      // Construct using com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryAllocationMeterRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest getDefaultInstanceForType() {
+        return com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest build() {
+        com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest buildPartial() {
+        com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest result = new com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest) {
+          return mergeFrom((com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest other) {
+        if (other == com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <pre>
+       * denom is the coin denom to query an allocation meter for.
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * denom is the coin denom to query an allocation meter for.
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * denom is the coin denom to query an allocation meter for.
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * denom is the coin denom to query an allocation meter for.
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * denom is the coin denom to query an allocation meter for.
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.incentives.v1.QueryAllocationMeterRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.incentives.v1.QueryAllocationMeterRequest)
+    private static final com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest();
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAllocationMeterRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAllocationMeterRequest>() {
+      @java.lang.Override
+      public QueryAllocationMeterRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAllocationMeterRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAllocationMeterRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.incentives.v1.QueryProto.QueryAllocationMeterRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAllocationMeterResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.incentives.v1.QueryAllocationMeterResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * allocation_meter defines the allocation of the queried denom
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.DecCoin allocation_meter = 1 [json_name = "allocationMeter", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     * @return Whether the allocationMeter field is set.
+     */
+    boolean hasAllocationMeter();
+    /**
+     * <pre>
+     * allocation_meter defines the allocation of the queried denom
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.DecCoin allocation_meter = 1 [json_name = "allocationMeter", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     * @return The allocationMeter.
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getAllocationMeter();
+    /**
+     * <pre>
+     * allocation_meter defines the allocation of the queried denom
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.DecCoin allocation_meter = 1 [json_name = "allocationMeter", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getAllocationMeterOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryAllocationMeterResponse is the response type for the
+   * Query/AllocationMeter RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.incentives.v1.QueryAllocationMeterResponse}
+   */
+  public static final class QueryAllocationMeterResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.incentives.v1.QueryAllocationMeterResponse)
+      QueryAllocationMeterResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAllocationMeterResponse.newBuilder() to construct.
+    private QueryAllocationMeterResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAllocationMeterResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAllocationMeterResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryAllocationMeterResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryAllocationMeterResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse.class, com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse.Builder.class);
+    }
+
+    public static final int ALLOCATION_METER_FIELD_NUMBER = 1;
+    private com.cosmos.base.v1beta1.CoinProto.DecCoin allocationMeter_;
+    /**
+     * <pre>
+     * allocation_meter defines the allocation of the queried denom
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.DecCoin allocation_meter = 1 [json_name = "allocationMeter", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     * @return Whether the allocationMeter field is set.
+     */
+    @java.lang.Override
+    public boolean hasAllocationMeter() {
+      return allocationMeter_ != null;
+    }
+    /**
+     * <pre>
+     * allocation_meter defines the allocation of the queried denom
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.DecCoin allocation_meter = 1 [json_name = "allocationMeter", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     * @return The allocationMeter.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getAllocationMeter() {
+      return allocationMeter_ == null ? com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : allocationMeter_;
+    }
+    /**
+     * <pre>
+     * allocation_meter defines the allocation of the queried denom
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.DecCoin allocation_meter = 1 [json_name = "allocationMeter", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getAllocationMeterOrBuilder() {
+      return allocationMeter_ == null ? com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : allocationMeter_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (allocationMeter_ != null) {
+        output.writeMessage(1, getAllocationMeter());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (allocationMeter_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getAllocationMeter());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse)) {
+        return super.equals(obj);
+      }
+      com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse other = (com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse) obj;
+
+      if (hasAllocationMeter() != other.hasAllocationMeter()) return false;
+      if (hasAllocationMeter()) {
+        if (!getAllocationMeter()
+            .equals(other.getAllocationMeter())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAllocationMeter()) {
+        hash = (37 * hash) + ALLOCATION_METER_FIELD_NUMBER;
+        hash = (53 * hash) + getAllocationMeter().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAllocationMeterResponse is the response type for the
+     * Query/AllocationMeter RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.incentives.v1.QueryAllocationMeterResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.incentives.v1.QueryAllocationMeterResponse)
+        com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryAllocationMeterResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryAllocationMeterResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse.class, com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse.Builder.class);
+      }
+
+      // Construct using com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        allocationMeter_ = null;
+        if (allocationMeterBuilder_ != null) {
+          allocationMeterBuilder_.dispose();
+          allocationMeterBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryAllocationMeterResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse getDefaultInstanceForType() {
+        return com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse build() {
+        com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse buildPartial() {
+        com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse result = new com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.allocationMeter_ = allocationMeterBuilder_ == null
+              ? allocationMeter_
+              : allocationMeterBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse) {
+          return mergeFrom((com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse other) {
+        if (other == com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse.getDefaultInstance()) return this;
+        if (other.hasAllocationMeter()) {
+          mergeAllocationMeter(other.getAllocationMeter());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getAllocationMeterFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.v1beta1.CoinProto.DecCoin allocationMeter_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> allocationMeterBuilder_;
+      /**
+       * <pre>
+       * allocation_meter defines the allocation of the queried denom
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin allocation_meter = 1 [json_name = "allocationMeter", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       * @return Whether the allocationMeter field is set.
+       */
+      public boolean hasAllocationMeter() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * allocation_meter defines the allocation of the queried denom
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin allocation_meter = 1 [json_name = "allocationMeter", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       * @return The allocationMeter.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getAllocationMeter() {
+        if (allocationMeterBuilder_ == null) {
+          return allocationMeter_ == null ? com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : allocationMeter_;
+        } else {
+          return allocationMeterBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * allocation_meter defines the allocation of the queried denom
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin allocation_meter = 1 [json_name = "allocationMeter", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setAllocationMeter(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (allocationMeterBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          allocationMeter_ = value;
+        } else {
+          allocationMeterBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * allocation_meter defines the allocation of the queried denom
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin allocation_meter = 1 [json_name = "allocationMeter", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setAllocationMeter(
+          com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (allocationMeterBuilder_ == null) {
+          allocationMeter_ = builderForValue.build();
+        } else {
+          allocationMeterBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * allocation_meter defines the allocation of the queried denom
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin allocation_meter = 1 [json_name = "allocationMeter", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder mergeAllocationMeter(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (allocationMeterBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            allocationMeter_ != null &&
+            allocationMeter_ != com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance()) {
+            getAllocationMeterBuilder().mergeFrom(value);
+          } else {
+            allocationMeter_ = value;
+          }
+        } else {
+          allocationMeterBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * allocation_meter defines the allocation of the queried denom
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin allocation_meter = 1 [json_name = "allocationMeter", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder clearAllocationMeter() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        allocationMeter_ = null;
+        if (allocationMeterBuilder_ != null) {
+          allocationMeterBuilder_.dispose();
+          allocationMeterBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * allocation_meter defines the allocation of the queried denom
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin allocation_meter = 1 [json_name = "allocationMeter", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getAllocationMeterBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getAllocationMeterFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * allocation_meter defines the allocation of the queried denom
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin allocation_meter = 1 [json_name = "allocationMeter", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getAllocationMeterOrBuilder() {
+        if (allocationMeterBuilder_ != null) {
+          return allocationMeterBuilder_.getMessageOrBuilder();
+        } else {
+          return allocationMeter_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance() : allocationMeter_;
+        }
+      }
+      /**
+       * <pre>
+       * allocation_meter defines the allocation of the queried denom
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.DecCoin allocation_meter = 1 [json_name = "allocationMeter", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+          getAllocationMeterFieldBuilder() {
+        if (allocationMeterBuilder_ == null) {
+          allocationMeterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
+                  getAllocationMeter(),
+                  getParentForChildren(),
+                  isClean());
+          allocationMeter_ = null;
+        }
+        return allocationMeterBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.incentives.v1.QueryAllocationMeterResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.incentives.v1.QueryAllocationMeterResponse)
+    private static final com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse();
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAllocationMeterResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAllocationMeterResponse>() {
+      @java.lang.Override
+      public QueryAllocationMeterResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAllocationMeterResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAllocationMeterResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.incentives.v1.QueryProto.QueryAllocationMeterResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.incentives.v1.QueryParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryParamsRequest is the request type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.incentives.v1.QueryParamsRequest}
+   */
+  public static final class QueryParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.incentives.v1.QueryParamsRequest)
+      QueryParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsRequest.newBuilder() to construct.
+    private QueryParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.incentives.v1.QueryProto.QueryParamsRequest.class, com.evmos.incentives.v1.QueryProto.QueryParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.incentives.v1.QueryProto.QueryParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.evmos.incentives.v1.QueryProto.QueryParamsRequest other = (com.evmos.incentives.v1.QueryProto.QueryParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.incentives.v1.QueryProto.QueryParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsRequest is the request type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.incentives.v1.QueryParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.incentives.v1.QueryParamsRequest)
+        com.evmos.incentives.v1.QueryProto.QueryParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.incentives.v1.QueryProto.QueryParamsRequest.class, com.evmos.incentives.v1.QueryProto.QueryParamsRequest.Builder.class);
+      }
+
+      // Construct using com.evmos.incentives.v1.QueryProto.QueryParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+        return com.evmos.incentives.v1.QueryProto.QueryParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryParamsRequest build() {
+        com.evmos.incentives.v1.QueryProto.QueryParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryParamsRequest buildPartial() {
+        com.evmos.incentives.v1.QueryProto.QueryParamsRequest result = new com.evmos.incentives.v1.QueryProto.QueryParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.incentives.v1.QueryProto.QueryParamsRequest) {
+          return mergeFrom((com.evmos.incentives.v1.QueryProto.QueryParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.incentives.v1.QueryProto.QueryParamsRequest other) {
+        if (other == com.evmos.incentives.v1.QueryProto.QueryParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.incentives.v1.QueryParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.incentives.v1.QueryParamsRequest)
+    private static final com.evmos.incentives.v1.QueryProto.QueryParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.incentives.v1.QueryProto.QueryParamsRequest();
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsRequest>() {
+      @java.lang.Override
+      public QueryParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.incentives.v1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.incentives.v1.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * params are the incentives module parameters
+     * </pre>
+     *
+     * <code>.evmos.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params are the incentives module parameters
+     * </pre>
+     *
+     * <code>.evmos.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.evmos.incentives.v1.GenesisProto.Params getParams();
+    /**
+     * <pre>
+     * params are the incentives module parameters
+     * </pre>
+     *
+     * <code>.evmos.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.evmos.incentives.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryParamsResponse is the response type for the Query/Params RPC
+   * method.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.incentives.v1.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.incentives.v1.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.incentives.v1.QueryProto.QueryParamsResponse.class, com.evmos.incentives.v1.QueryProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.evmos.incentives.v1.GenesisProto.Params params_;
+    /**
+     * <pre>
+     * params are the incentives module parameters
+     * </pre>
+     *
+     * <code>.evmos.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params are the incentives module parameters
+     * </pre>
+     *
+     * <code>.evmos.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.evmos.incentives.v1.GenesisProto.Params getParams() {
+      return params_ == null ? com.evmos.incentives.v1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params are the incentives module parameters
+     * </pre>
+     *
+     * <code>.evmos.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.evmos.incentives.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.evmos.incentives.v1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.incentives.v1.QueryProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.evmos.incentives.v1.QueryProto.QueryParamsResponse other = (com.evmos.incentives.v1.QueryProto.QueryParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.incentives.v1.QueryProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsResponse is the response type for the Query/Params RPC
+     * method.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.incentives.v1.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.incentives.v1.QueryParamsResponse)
+        com.evmos.incentives.v1.QueryProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.incentives.v1.QueryProto.QueryParamsResponse.class, com.evmos.incentives.v1.QueryProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.evmos.incentives.v1.QueryProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.incentives.v1.QueryProto.internal_static_evmos_incentives_v1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.evmos.incentives.v1.QueryProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryParamsResponse build() {
+        com.evmos.incentives.v1.QueryProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.QueryProto.QueryParamsResponse buildPartial() {
+        com.evmos.incentives.v1.QueryProto.QueryParamsResponse result = new com.evmos.incentives.v1.QueryProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.incentives.v1.QueryProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.incentives.v1.QueryProto.QueryParamsResponse) {
+          return mergeFrom((com.evmos.incentives.v1.QueryProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.incentives.v1.QueryProto.QueryParamsResponse other) {
+        if (other == com.evmos.incentives.v1.QueryProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.evmos.incentives.v1.GenesisProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.evmos.incentives.v1.GenesisProto.Params, com.evmos.incentives.v1.GenesisProto.Params.Builder, com.evmos.incentives.v1.GenesisProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params are the incentives module parameters
+       * </pre>
+       *
+       * <code>.evmos.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * params are the incentives module parameters
+       * </pre>
+       *
+       * <code>.evmos.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.evmos.incentives.v1.GenesisProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.evmos.incentives.v1.GenesisProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params are the incentives module parameters
+       * </pre>
+       *
+       * <code>.evmos.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.evmos.incentives.v1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params are the incentives module parameters
+       * </pre>
+       *
+       * <code>.evmos.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.evmos.incentives.v1.GenesisProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params are the incentives module parameters
+       * </pre>
+       *
+       * <code>.evmos.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.evmos.incentives.v1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.evmos.incentives.v1.GenesisProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params are the incentives module parameters
+       * </pre>
+       *
+       * <code>.evmos.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params are the incentives module parameters
+       * </pre>
+       *
+       * <code>.evmos.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.incentives.v1.GenesisProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params are the incentives module parameters
+       * </pre>
+       *
+       * <code>.evmos.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.incentives.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.evmos.incentives.v1.GenesisProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params are the incentives module parameters
+       * </pre>
+       *
+       * <code>.evmos.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.evmos.incentives.v1.GenesisProto.Params, com.evmos.incentives.v1.GenesisProto.Params.Builder, com.evmos.incentives.v1.GenesisProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.evmos.incentives.v1.GenesisProto.Params, com.evmos.incentives.v1.GenesisProto.Params.Builder, com.evmos.incentives.v1.GenesisProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.incentives.v1.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.incentives.v1.QueryParamsResponse)
+    private static final com.evmos.incentives.v1.QueryProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.incentives.v1.QueryProto.QueryParamsResponse();
+    }
+
+    public static com.evmos.incentives.v1.QueryProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.incentives.v1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_incentives_v1_QueryIncentivesRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_incentives_v1_QueryIncentivesRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_incentives_v1_QueryIncentivesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_incentives_v1_QueryIncentivesResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_incentives_v1_QueryIncentiveRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_incentives_v1_QueryIncentiveRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_incentives_v1_QueryIncentiveResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_incentives_v1_QueryIncentiveResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_incentives_v1_QueryGasMetersRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_incentives_v1_QueryGasMetersRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_incentives_v1_QueryGasMetersResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_incentives_v1_QueryGasMetersResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_incentives_v1_QueryGasMeterRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_incentives_v1_QueryGasMeterRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_incentives_v1_QueryGasMeterResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_incentives_v1_QueryGasMeterResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_incentives_v1_QueryAllocationMetersRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_incentives_v1_QueryAllocationMetersRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_incentives_v1_QueryAllocationMetersResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_incentives_v1_QueryAllocationMetersResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_incentives_v1_QueryAllocationMeterRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_incentives_v1_QueryAllocationMeterRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_incentives_v1_QueryAllocationMeterResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_incentives_v1_QueryAllocationMeterResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_incentives_v1_QueryParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_incentives_v1_QueryParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_incentives_v1_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_incentives_v1_QueryParamsResponse_fieldAccessorTable;
 
@@ -164,12 +10734,12 @@ public final class QueryProto {
       "cation_meters/{denom}\022\200\001\n\006Params\022\'.evmos" +
       ".incentives.v1.QueryParamsRequest\032(.evmo" +
       "s.incentives.v1.QueryParamsResponse\"#\202\323\344" +
-      "\223\002\035\022\033/evmos/incentives/v1/paramsB\302\001\n\027com" +
-      ".evmos.incentives.v1B\nQueryProtoP\001Z-gith" +
-      "ub.com/evmos/evmos/v13/x/incentives/type" +
-      "s\242\002\003EIX\252\002\023Evmos.Incentives.V1\312\002\023Evmos\\In" +
-      "centives\\V1\342\002\037Evmos\\Incentives\\V1\\GPBMet" +
-      "adata\352\002\025Evmos::Incentives::V1b\006proto3"
+      "\223\002\035\022\033/evmos/incentives/v1/paramsB\300\001\n\027com" +
+      ".evmos.incentives.v1B\nQueryProtoZ-github" +
+      ".com/evmos/evmos/v13/x/incentives/types\242" +
+      "\002\003EIX\252\002\023Evmos.Incentives.V1\312\002\023Evmos\\Ince" +
+      "ntives\\V1\342\002\037Evmos\\Incentives\\V1\\GPBMetad" +
+      "ata\352\002\025Evmos::Incentives::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

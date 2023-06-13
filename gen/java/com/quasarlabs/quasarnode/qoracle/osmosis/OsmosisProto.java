@@ -14,19 +14,2279 @@ public final class OsmosisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface OsmosisRequestStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quasarlabs.quasarnode.qoracle.osmosis.OsmosisRequestState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 packet_sequence = 1 [json_name = "packetSequence"];</code>
+     * @return The packetSequence.
+     */
+    long getPacketSequence();
+
+    /**
+     * <code>bool acknowledged = 2 [json_name = "acknowledged"];</code>
+     * @return The acknowledged.
+     */
+    boolean getAcknowledged();
+
+    /**
+     * <code>bool failed = 3 [json_name = "failed"];</code>
+     * @return The failed.
+     */
+    boolean getFailed();
+
+    /**
+     * <code>int64 updated_at_height = 4 [json_name = "updatedAtHeight"];</code>
+     * @return The updatedAtHeight.
+     */
+    long getUpdatedAtHeight();
+  }
+  /**
+   * Protobuf type {@code quasarlabs.quasarnode.qoracle.osmosis.OsmosisRequestState}
+   */
+  public static final class OsmosisRequestState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quasarlabs.quasarnode.qoracle.osmosis.OsmosisRequestState)
+      OsmosisRequestStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use OsmosisRequestState.newBuilder() to construct.
+    private OsmosisRequestState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private OsmosisRequestState() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new OsmosisRequestState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.internal_static_quasarlabs_quasarnode_qoracle_osmosis_OsmosisRequestState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.internal_static_quasarlabs_quasarnode_qoracle_osmosis_OsmosisRequestState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState.class, com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState.Builder.class);
+    }
+
+    public static final int PACKET_SEQUENCE_FIELD_NUMBER = 1;
+    private long packetSequence_ = 0L;
+    /**
+     * <code>uint64 packet_sequence = 1 [json_name = "packetSequence"];</code>
+     * @return The packetSequence.
+     */
+    @java.lang.Override
+    public long getPacketSequence() {
+      return packetSequence_;
+    }
+
+    public static final int ACKNOWLEDGED_FIELD_NUMBER = 2;
+    private boolean acknowledged_ = false;
+    /**
+     * <code>bool acknowledged = 2 [json_name = "acknowledged"];</code>
+     * @return The acknowledged.
+     */
+    @java.lang.Override
+    public boolean getAcknowledged() {
+      return acknowledged_;
+    }
+
+    public static final int FAILED_FIELD_NUMBER = 3;
+    private boolean failed_ = false;
+    /**
+     * <code>bool failed = 3 [json_name = "failed"];</code>
+     * @return The failed.
+     */
+    @java.lang.Override
+    public boolean getFailed() {
+      return failed_;
+    }
+
+    public static final int UPDATED_AT_HEIGHT_FIELD_NUMBER = 4;
+    private long updatedAtHeight_ = 0L;
+    /**
+     * <code>int64 updated_at_height = 4 [json_name = "updatedAtHeight"];</code>
+     * @return The updatedAtHeight.
+     */
+    @java.lang.Override
+    public long getUpdatedAtHeight() {
+      return updatedAtHeight_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (packetSequence_ != 0L) {
+        output.writeUInt64(1, packetSequence_);
+      }
+      if (acknowledged_ != false) {
+        output.writeBool(2, acknowledged_);
+      }
+      if (failed_ != false) {
+        output.writeBool(3, failed_);
+      }
+      if (updatedAtHeight_ != 0L) {
+        output.writeInt64(4, updatedAtHeight_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (packetSequence_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, packetSequence_);
+      }
+      if (acknowledged_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, acknowledged_);
+      }
+      if (failed_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, failed_);
+      }
+      if (updatedAtHeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, updatedAtHeight_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState)) {
+        return super.equals(obj);
+      }
+      com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState other = (com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState) obj;
+
+      if (getPacketSequence()
+          != other.getPacketSequence()) return false;
+      if (getAcknowledged()
+          != other.getAcknowledged()) return false;
+      if (getFailed()
+          != other.getFailed()) return false;
+      if (getUpdatedAtHeight()
+          != other.getUpdatedAtHeight()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PACKET_SEQUENCE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPacketSequence());
+      hash = (37 * hash) + ACKNOWLEDGED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAcknowledged());
+      hash = (37 * hash) + FAILED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getFailed());
+      hash = (37 * hash) + UPDATED_AT_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getUpdatedAtHeight());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code quasarlabs.quasarnode.qoracle.osmosis.OsmosisRequestState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quasarlabs.quasarnode.qoracle.osmosis.OsmosisRequestState)
+        com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.internal_static_quasarlabs_quasarnode_qoracle_osmosis_OsmosisRequestState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.internal_static_quasarlabs_quasarnode_qoracle_osmosis_OsmosisRequestState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState.class, com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState.Builder.class);
+      }
+
+      // Construct using com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        packetSequence_ = 0L;
+        acknowledged_ = false;
+        failed_ = false;
+        updatedAtHeight_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.internal_static_quasarlabs_quasarnode_qoracle_osmosis_OsmosisRequestState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState getDefaultInstanceForType() {
+        return com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState build() {
+        com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState buildPartial() {
+        com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState result = new com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.packetSequence_ = packetSequence_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.acknowledged_ = acknowledged_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.failed_ = failed_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.updatedAtHeight_ = updatedAtHeight_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState) {
+          return mergeFrom((com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState other) {
+        if (other == com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState.getDefaultInstance()) return this;
+        if (other.getPacketSequence() != 0L) {
+          setPacketSequence(other.getPacketSequence());
+        }
+        if (other.getAcknowledged() != false) {
+          setAcknowledged(other.getAcknowledged());
+        }
+        if (other.getFailed() != false) {
+          setFailed(other.getFailed());
+        }
+        if (other.getUpdatedAtHeight() != 0L) {
+          setUpdatedAtHeight(other.getUpdatedAtHeight());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                packetSequence_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                acknowledged_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                failed_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                updatedAtHeight_ = input.readInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long packetSequence_ ;
+      /**
+       * <code>uint64 packet_sequence = 1 [json_name = "packetSequence"];</code>
+       * @return The packetSequence.
+       */
+      @java.lang.Override
+      public long getPacketSequence() {
+        return packetSequence_;
+      }
+      /**
+       * <code>uint64 packet_sequence = 1 [json_name = "packetSequence"];</code>
+       * @param value The packetSequence to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPacketSequence(long value) {
+
+        packetSequence_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 packet_sequence = 1 [json_name = "packetSequence"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPacketSequence() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        packetSequence_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private boolean acknowledged_ ;
+      /**
+       * <code>bool acknowledged = 2 [json_name = "acknowledged"];</code>
+       * @return The acknowledged.
+       */
+      @java.lang.Override
+      public boolean getAcknowledged() {
+        return acknowledged_;
+      }
+      /**
+       * <code>bool acknowledged = 2 [json_name = "acknowledged"];</code>
+       * @param value The acknowledged to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAcknowledged(boolean value) {
+
+        acknowledged_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool acknowledged = 2 [json_name = "acknowledged"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAcknowledged() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        acknowledged_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean failed_ ;
+      /**
+       * <code>bool failed = 3 [json_name = "failed"];</code>
+       * @return The failed.
+       */
+      @java.lang.Override
+      public boolean getFailed() {
+        return failed_;
+      }
+      /**
+       * <code>bool failed = 3 [json_name = "failed"];</code>
+       * @param value The failed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFailed(boolean value) {
+
+        failed_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool failed = 3 [json_name = "failed"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFailed() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        failed_ = false;
+        onChanged();
+        return this;
+      }
+
+      private long updatedAtHeight_ ;
+      /**
+       * <code>int64 updated_at_height = 4 [json_name = "updatedAtHeight"];</code>
+       * @return The updatedAtHeight.
+       */
+      @java.lang.Override
+      public long getUpdatedAtHeight() {
+        return updatedAtHeight_;
+      }
+      /**
+       * <code>int64 updated_at_height = 4 [json_name = "updatedAtHeight"];</code>
+       * @param value The updatedAtHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUpdatedAtHeight(long value) {
+
+        updatedAtHeight_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 updated_at_height = 4 [json_name = "updatedAtHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUpdatedAtHeight() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        updatedAtHeight_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quasarlabs.quasarnode.qoracle.osmosis.OsmosisRequestState)
+    }
+
+    // @@protoc_insertion_point(class_scope:quasarlabs.quasarnode.qoracle.osmosis.OsmosisRequestState)
+    private static final com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState();
+    }
+
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<OsmosisRequestState>
+        PARSER = new com.google.protobuf.AbstractParser<OsmosisRequestState>() {
+      @java.lang.Override
+      public OsmosisRequestState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<OsmosisRequestState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OsmosisRequestState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.OsmosisRequestState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface IncentivizedPoolsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quasarlabs.quasarnode.qoracle.osmosis.IncentivizedPools)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .osmosis.poolincentives.v1beta1.IncentivizedPool incentivized_pools = 1 [json_name = "incentivizedPools", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool> 
+        getIncentivizedPoolsList();
+    /**
+     * <code>repeated .osmosis.poolincentives.v1beta1.IncentivizedPool incentivized_pools = 1 [json_name = "incentivizedPools", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool getIncentivizedPools(int index);
+    /**
+     * <code>repeated .osmosis.poolincentives.v1beta1.IncentivizedPool incentivized_pools = 1 [json_name = "incentivizedPools", (.gogoproto.nullable) = false];</code>
+     */
+    int getIncentivizedPoolsCount();
+    /**
+     * <code>repeated .osmosis.poolincentives.v1beta1.IncentivizedPool incentivized_pools = 1 [json_name = "incentivizedPools", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPoolOrBuilder> 
+        getIncentivizedPoolsOrBuilderList();
+    /**
+     * <code>repeated .osmosis.poolincentives.v1beta1.IncentivizedPool incentivized_pools = 1 [json_name = "incentivizedPools", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPoolOrBuilder getIncentivizedPoolsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code quasarlabs.quasarnode.qoracle.osmosis.IncentivizedPools}
+   */
+  public static final class IncentivizedPools extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quasarlabs.quasarnode.qoracle.osmosis.IncentivizedPools)
+      IncentivizedPoolsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IncentivizedPools.newBuilder() to construct.
+    private IncentivizedPools(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IncentivizedPools() {
+      incentivizedPools_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IncentivizedPools();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.internal_static_quasarlabs_quasarnode_qoracle_osmosis_IncentivizedPools_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.internal_static_quasarlabs_quasarnode_qoracle_osmosis_IncentivizedPools_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools.class, com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools.Builder.class);
+    }
+
+    public static final int INCENTIVIZED_POOLS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool> incentivizedPools_;
+    /**
+     * <code>repeated .osmosis.poolincentives.v1beta1.IncentivizedPool incentivized_pools = 1 [json_name = "incentivizedPools", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool> getIncentivizedPoolsList() {
+      return incentivizedPools_;
+    }
+    /**
+     * <code>repeated .osmosis.poolincentives.v1beta1.IncentivizedPool incentivized_pools = 1 [json_name = "incentivizedPools", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPoolOrBuilder> 
+        getIncentivizedPoolsOrBuilderList() {
+      return incentivizedPools_;
+    }
+    /**
+     * <code>repeated .osmosis.poolincentives.v1beta1.IncentivizedPool incentivized_pools = 1 [json_name = "incentivizedPools", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getIncentivizedPoolsCount() {
+      return incentivizedPools_.size();
+    }
+    /**
+     * <code>repeated .osmosis.poolincentives.v1beta1.IncentivizedPool incentivized_pools = 1 [json_name = "incentivizedPools", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool getIncentivizedPools(int index) {
+      return incentivizedPools_.get(index);
+    }
+    /**
+     * <code>repeated .osmosis.poolincentives.v1beta1.IncentivizedPool incentivized_pools = 1 [json_name = "incentivizedPools", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPoolOrBuilder getIncentivizedPoolsOrBuilder(
+        int index) {
+      return incentivizedPools_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < incentivizedPools_.size(); i++) {
+        output.writeMessage(1, incentivizedPools_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < incentivizedPools_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, incentivizedPools_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools)) {
+        return super.equals(obj);
+      }
+      com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools other = (com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools) obj;
+
+      if (!getIncentivizedPoolsList()
+          .equals(other.getIncentivizedPoolsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getIncentivizedPoolsCount() > 0) {
+        hash = (37 * hash) + INCENTIVIZED_POOLS_FIELD_NUMBER;
+        hash = (53 * hash) + getIncentivizedPoolsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code quasarlabs.quasarnode.qoracle.osmosis.IncentivizedPools}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quasarlabs.quasarnode.qoracle.osmosis.IncentivizedPools)
+        com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPoolsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.internal_static_quasarlabs_quasarnode_qoracle_osmosis_IncentivizedPools_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.internal_static_quasarlabs_quasarnode_qoracle_osmosis_IncentivizedPools_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools.class, com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools.Builder.class);
+      }
+
+      // Construct using com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (incentivizedPoolsBuilder_ == null) {
+          incentivizedPools_ = java.util.Collections.emptyList();
+        } else {
+          incentivizedPools_ = null;
+          incentivizedPoolsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.internal_static_quasarlabs_quasarnode_qoracle_osmosis_IncentivizedPools_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools getDefaultInstanceForType() {
+        return com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools build() {
+        com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools buildPartial() {
+        com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools result = new com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools result) {
+        if (incentivizedPoolsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            incentivizedPools_ = java.util.Collections.unmodifiableList(incentivizedPools_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.incentivizedPools_ = incentivizedPools_;
+        } else {
+          result.incentivizedPools_ = incentivizedPoolsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools) {
+          return mergeFrom((com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools other) {
+        if (other == com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools.getDefaultInstance()) return this;
+        if (incentivizedPoolsBuilder_ == null) {
+          if (!other.incentivizedPools_.isEmpty()) {
+            if (incentivizedPools_.isEmpty()) {
+              incentivizedPools_ = other.incentivizedPools_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureIncentivizedPoolsIsMutable();
+              incentivizedPools_.addAll(other.incentivizedPools_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.incentivizedPools_.isEmpty()) {
+            if (incentivizedPoolsBuilder_.isEmpty()) {
+              incentivizedPoolsBuilder_.dispose();
+              incentivizedPoolsBuilder_ = null;
+              incentivizedPools_ = other.incentivizedPools_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              incentivizedPoolsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getIncentivizedPoolsFieldBuilder() : null;
+            } else {
+              incentivizedPoolsBuilder_.addAllMessages(other.incentivizedPools_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool m =
+                    input.readMessage(
+                        com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool.parser(),
+                        extensionRegistry);
+                if (incentivizedPoolsBuilder_ == null) {
+                  ensureIncentivizedPoolsIsMutable();
+                  incentivizedPools_.add(m);
+                } else {
+                  incentivizedPoolsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool> incentivizedPools_ =
+        java.util.Collections.emptyList();
+      private void ensureIncentivizedPoolsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          incentivizedPools_ = new java.util.ArrayList<com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool>(incentivizedPools_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool, com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool.Builder, com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPoolOrBuilder> incentivizedPoolsBuilder_;
+
+      /**
+       * <code>repeated .osmosis.poolincentives.v1beta1.IncentivizedPool incentivized_pools = 1 [json_name = "incentivizedPools", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool> getIncentivizedPoolsList() {
+        if (incentivizedPoolsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(incentivizedPools_);
+        } else {
+          return incentivizedPoolsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.poolincentives.v1beta1.IncentivizedPool incentivized_pools = 1 [json_name = "incentivizedPools", (.gogoproto.nullable) = false];</code>
+       */
+      public int getIncentivizedPoolsCount() {
+        if (incentivizedPoolsBuilder_ == null) {
+          return incentivizedPools_.size();
+        } else {
+          return incentivizedPoolsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.poolincentives.v1beta1.IncentivizedPool incentivized_pools = 1 [json_name = "incentivizedPools", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool getIncentivizedPools(int index) {
+        if (incentivizedPoolsBuilder_ == null) {
+          return incentivizedPools_.get(index);
+        } else {
+          return incentivizedPoolsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.poolincentives.v1beta1.IncentivizedPool incentivized_pools = 1 [json_name = "incentivizedPools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setIncentivizedPools(
+          int index, com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool value) {
+        if (incentivizedPoolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIncentivizedPoolsIsMutable();
+          incentivizedPools_.set(index, value);
+          onChanged();
+        } else {
+          incentivizedPoolsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolincentives.v1beta1.IncentivizedPool incentivized_pools = 1 [json_name = "incentivizedPools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setIncentivizedPools(
+          int index, com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool.Builder builderForValue) {
+        if (incentivizedPoolsBuilder_ == null) {
+          ensureIncentivizedPoolsIsMutable();
+          incentivizedPools_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          incentivizedPoolsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolincentives.v1beta1.IncentivizedPool incentivized_pools = 1 [json_name = "incentivizedPools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addIncentivizedPools(com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool value) {
+        if (incentivizedPoolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIncentivizedPoolsIsMutable();
+          incentivizedPools_.add(value);
+          onChanged();
+        } else {
+          incentivizedPoolsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolincentives.v1beta1.IncentivizedPool incentivized_pools = 1 [json_name = "incentivizedPools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addIncentivizedPools(
+          int index, com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool value) {
+        if (incentivizedPoolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIncentivizedPoolsIsMutable();
+          incentivizedPools_.add(index, value);
+          onChanged();
+        } else {
+          incentivizedPoolsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolincentives.v1beta1.IncentivizedPool incentivized_pools = 1 [json_name = "incentivizedPools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addIncentivizedPools(
+          com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool.Builder builderForValue) {
+        if (incentivizedPoolsBuilder_ == null) {
+          ensureIncentivizedPoolsIsMutable();
+          incentivizedPools_.add(builderForValue.build());
+          onChanged();
+        } else {
+          incentivizedPoolsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolincentives.v1beta1.IncentivizedPool incentivized_pools = 1 [json_name = "incentivizedPools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addIncentivizedPools(
+          int index, com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool.Builder builderForValue) {
+        if (incentivizedPoolsBuilder_ == null) {
+          ensureIncentivizedPoolsIsMutable();
+          incentivizedPools_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          incentivizedPoolsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolincentives.v1beta1.IncentivizedPool incentivized_pools = 1 [json_name = "incentivizedPools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllIncentivizedPools(
+          java.lang.Iterable<? extends com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool> values) {
+        if (incentivizedPoolsBuilder_ == null) {
+          ensureIncentivizedPoolsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, incentivizedPools_);
+          onChanged();
+        } else {
+          incentivizedPoolsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolincentives.v1beta1.IncentivizedPool incentivized_pools = 1 [json_name = "incentivizedPools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearIncentivizedPools() {
+        if (incentivizedPoolsBuilder_ == null) {
+          incentivizedPools_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          incentivizedPoolsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolincentives.v1beta1.IncentivizedPool incentivized_pools = 1 [json_name = "incentivizedPools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeIncentivizedPools(int index) {
+        if (incentivizedPoolsBuilder_ == null) {
+          ensureIncentivizedPoolsIsMutable();
+          incentivizedPools_.remove(index);
+          onChanged();
+        } else {
+          incentivizedPoolsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.poolincentives.v1beta1.IncentivizedPool incentivized_pools = 1 [json_name = "incentivizedPools", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool.Builder getIncentivizedPoolsBuilder(
+          int index) {
+        return getIncentivizedPoolsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .osmosis.poolincentives.v1beta1.IncentivizedPool incentivized_pools = 1 [json_name = "incentivizedPools", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPoolOrBuilder getIncentivizedPoolsOrBuilder(
+          int index) {
+        if (incentivizedPoolsBuilder_ == null) {
+          return incentivizedPools_.get(index);  } else {
+          return incentivizedPoolsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.poolincentives.v1beta1.IncentivizedPool incentivized_pools = 1 [json_name = "incentivizedPools", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPoolOrBuilder> 
+           getIncentivizedPoolsOrBuilderList() {
+        if (incentivizedPoolsBuilder_ != null) {
+          return incentivizedPoolsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(incentivizedPools_);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.poolincentives.v1beta1.IncentivizedPool incentivized_pools = 1 [json_name = "incentivizedPools", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool.Builder addIncentivizedPoolsBuilder() {
+        return getIncentivizedPoolsFieldBuilder().addBuilder(
+            com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.poolincentives.v1beta1.IncentivizedPool incentivized_pools = 1 [json_name = "incentivizedPools", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool.Builder addIncentivizedPoolsBuilder(
+          int index) {
+        return getIncentivizedPoolsFieldBuilder().addBuilder(
+            index, com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.poolincentives.v1beta1.IncentivizedPool incentivized_pools = 1 [json_name = "incentivizedPools", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool.Builder> 
+           getIncentivizedPoolsBuilderList() {
+        return getIncentivizedPoolsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool, com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool.Builder, com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPoolOrBuilder> 
+          getIncentivizedPoolsFieldBuilder() {
+        if (incentivizedPoolsBuilder_ == null) {
+          incentivizedPoolsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool, com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPool.Builder, com.osmosis.poolincentives.v1beta1.QueryProto.IncentivizedPoolOrBuilder>(
+                  incentivizedPools_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          incentivizedPools_ = null;
+        }
+        return incentivizedPoolsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quasarlabs.quasarnode.qoracle.osmosis.IncentivizedPools)
+    }
+
+    // @@protoc_insertion_point(class_scope:quasarlabs.quasarnode.qoracle.osmosis.IncentivizedPools)
+    private static final com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools();
+    }
+
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<IncentivizedPools>
+        PARSER = new com.google.protobuf.AbstractParser<IncentivizedPools>() {
+      @java.lang.Override
+      public IncentivizedPools parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<IncentivizedPools> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IncentivizedPools> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.IncentivizedPools getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EpochsInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quasarlabs.quasarnode.qoracle.osmosis.EpochsInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .osmosis.epochs.v1beta1.EpochInfo epochs_info = 1 [json_name = "epochsInfo", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo> 
+        getEpochsInfoList();
+    /**
+     * <code>repeated .osmosis.epochs.v1beta1.EpochInfo epochs_info = 1 [json_name = "epochsInfo", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo getEpochsInfo(int index);
+    /**
+     * <code>repeated .osmosis.epochs.v1beta1.EpochInfo epochs_info = 1 [json_name = "epochsInfo", (.gogoproto.nullable) = false];</code>
+     */
+    int getEpochsInfoCount();
+    /**
+     * <code>repeated .osmosis.epochs.v1beta1.EpochInfo epochs_info = 1 [json_name = "epochsInfo", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.osmosis.epochs.v1beta1.GenesisProto.EpochInfoOrBuilder> 
+        getEpochsInfoOrBuilderList();
+    /**
+     * <code>repeated .osmosis.epochs.v1beta1.EpochInfo epochs_info = 1 [json_name = "epochsInfo", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.epochs.v1beta1.GenesisProto.EpochInfoOrBuilder getEpochsInfoOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code quasarlabs.quasarnode.qoracle.osmosis.EpochsInfo}
+   */
+  public static final class EpochsInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quasarlabs.quasarnode.qoracle.osmosis.EpochsInfo)
+      EpochsInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EpochsInfo.newBuilder() to construct.
+    private EpochsInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EpochsInfo() {
+      epochsInfo_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EpochsInfo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.internal_static_quasarlabs_quasarnode_qoracle_osmosis_EpochsInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.internal_static_quasarlabs_quasarnode_qoracle_osmosis_EpochsInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo.class, com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo.Builder.class);
+    }
+
+    public static final int EPOCHS_INFO_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo> epochsInfo_;
+    /**
+     * <code>repeated .osmosis.epochs.v1beta1.EpochInfo epochs_info = 1 [json_name = "epochsInfo", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo> getEpochsInfoList() {
+      return epochsInfo_;
+    }
+    /**
+     * <code>repeated .osmosis.epochs.v1beta1.EpochInfo epochs_info = 1 [json_name = "epochsInfo", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.osmosis.epochs.v1beta1.GenesisProto.EpochInfoOrBuilder> 
+        getEpochsInfoOrBuilderList() {
+      return epochsInfo_;
+    }
+    /**
+     * <code>repeated .osmosis.epochs.v1beta1.EpochInfo epochs_info = 1 [json_name = "epochsInfo", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getEpochsInfoCount() {
+      return epochsInfo_.size();
+    }
+    /**
+     * <code>repeated .osmosis.epochs.v1beta1.EpochInfo epochs_info = 1 [json_name = "epochsInfo", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo getEpochsInfo(int index) {
+      return epochsInfo_.get(index);
+    }
+    /**
+     * <code>repeated .osmosis.epochs.v1beta1.EpochInfo epochs_info = 1 [json_name = "epochsInfo", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.epochs.v1beta1.GenesisProto.EpochInfoOrBuilder getEpochsInfoOrBuilder(
+        int index) {
+      return epochsInfo_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < epochsInfo_.size(); i++) {
+        output.writeMessage(1, epochsInfo_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < epochsInfo_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, epochsInfo_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo)) {
+        return super.equals(obj);
+      }
+      com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo other = (com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo) obj;
+
+      if (!getEpochsInfoList()
+          .equals(other.getEpochsInfoList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getEpochsInfoCount() > 0) {
+        hash = (37 * hash) + EPOCHS_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getEpochsInfoList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code quasarlabs.quasarnode.qoracle.osmosis.EpochsInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quasarlabs.quasarnode.qoracle.osmosis.EpochsInfo)
+        com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.internal_static_quasarlabs_quasarnode_qoracle_osmosis_EpochsInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.internal_static_quasarlabs_quasarnode_qoracle_osmosis_EpochsInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo.class, com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo.Builder.class);
+      }
+
+      // Construct using com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (epochsInfoBuilder_ == null) {
+          epochsInfo_ = java.util.Collections.emptyList();
+        } else {
+          epochsInfo_ = null;
+          epochsInfoBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.internal_static_quasarlabs_quasarnode_qoracle_osmosis_EpochsInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo getDefaultInstanceForType() {
+        return com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo build() {
+        com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo buildPartial() {
+        com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo result = new com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo result) {
+        if (epochsInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            epochsInfo_ = java.util.Collections.unmodifiableList(epochsInfo_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.epochsInfo_ = epochsInfo_;
+        } else {
+          result.epochsInfo_ = epochsInfoBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo) {
+          return mergeFrom((com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo other) {
+        if (other == com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo.getDefaultInstance()) return this;
+        if (epochsInfoBuilder_ == null) {
+          if (!other.epochsInfo_.isEmpty()) {
+            if (epochsInfo_.isEmpty()) {
+              epochsInfo_ = other.epochsInfo_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureEpochsInfoIsMutable();
+              epochsInfo_.addAll(other.epochsInfo_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.epochsInfo_.isEmpty()) {
+            if (epochsInfoBuilder_.isEmpty()) {
+              epochsInfoBuilder_.dispose();
+              epochsInfoBuilder_ = null;
+              epochsInfo_ = other.epochsInfo_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              epochsInfoBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEpochsInfoFieldBuilder() : null;
+            } else {
+              epochsInfoBuilder_.addAllMessages(other.epochsInfo_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo m =
+                    input.readMessage(
+                        com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo.parser(),
+                        extensionRegistry);
+                if (epochsInfoBuilder_ == null) {
+                  ensureEpochsInfoIsMutable();
+                  epochsInfo_.add(m);
+                } else {
+                  epochsInfoBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo> epochsInfo_ =
+        java.util.Collections.emptyList();
+      private void ensureEpochsInfoIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          epochsInfo_ = new java.util.ArrayList<com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo>(epochsInfo_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo, com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo.Builder, com.osmosis.epochs.v1beta1.GenesisProto.EpochInfoOrBuilder> epochsInfoBuilder_;
+
+      /**
+       * <code>repeated .osmosis.epochs.v1beta1.EpochInfo epochs_info = 1 [json_name = "epochsInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo> getEpochsInfoList() {
+        if (epochsInfoBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(epochsInfo_);
+        } else {
+          return epochsInfoBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.epochs.v1beta1.EpochInfo epochs_info = 1 [json_name = "epochsInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public int getEpochsInfoCount() {
+        if (epochsInfoBuilder_ == null) {
+          return epochsInfo_.size();
+        } else {
+          return epochsInfoBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.epochs.v1beta1.EpochInfo epochs_info = 1 [json_name = "epochsInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo getEpochsInfo(int index) {
+        if (epochsInfoBuilder_ == null) {
+          return epochsInfo_.get(index);
+        } else {
+          return epochsInfoBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.epochs.v1beta1.EpochInfo epochs_info = 1 [json_name = "epochsInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setEpochsInfo(
+          int index, com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo value) {
+        if (epochsInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEpochsInfoIsMutable();
+          epochsInfo_.set(index, value);
+          onChanged();
+        } else {
+          epochsInfoBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.epochs.v1beta1.EpochInfo epochs_info = 1 [json_name = "epochsInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setEpochsInfo(
+          int index, com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo.Builder builderForValue) {
+        if (epochsInfoBuilder_ == null) {
+          ensureEpochsInfoIsMutable();
+          epochsInfo_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          epochsInfoBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.epochs.v1beta1.EpochInfo epochs_info = 1 [json_name = "epochsInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addEpochsInfo(com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo value) {
+        if (epochsInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEpochsInfoIsMutable();
+          epochsInfo_.add(value);
+          onChanged();
+        } else {
+          epochsInfoBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.epochs.v1beta1.EpochInfo epochs_info = 1 [json_name = "epochsInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addEpochsInfo(
+          int index, com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo value) {
+        if (epochsInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEpochsInfoIsMutable();
+          epochsInfo_.add(index, value);
+          onChanged();
+        } else {
+          epochsInfoBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.epochs.v1beta1.EpochInfo epochs_info = 1 [json_name = "epochsInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addEpochsInfo(
+          com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo.Builder builderForValue) {
+        if (epochsInfoBuilder_ == null) {
+          ensureEpochsInfoIsMutable();
+          epochsInfo_.add(builderForValue.build());
+          onChanged();
+        } else {
+          epochsInfoBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.epochs.v1beta1.EpochInfo epochs_info = 1 [json_name = "epochsInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addEpochsInfo(
+          int index, com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo.Builder builderForValue) {
+        if (epochsInfoBuilder_ == null) {
+          ensureEpochsInfoIsMutable();
+          epochsInfo_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          epochsInfoBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.epochs.v1beta1.EpochInfo epochs_info = 1 [json_name = "epochsInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllEpochsInfo(
+          java.lang.Iterable<? extends com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo> values) {
+        if (epochsInfoBuilder_ == null) {
+          ensureEpochsInfoIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, epochsInfo_);
+          onChanged();
+        } else {
+          epochsInfoBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.epochs.v1beta1.EpochInfo epochs_info = 1 [json_name = "epochsInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearEpochsInfo() {
+        if (epochsInfoBuilder_ == null) {
+          epochsInfo_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          epochsInfoBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.epochs.v1beta1.EpochInfo epochs_info = 1 [json_name = "epochsInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeEpochsInfo(int index) {
+        if (epochsInfoBuilder_ == null) {
+          ensureEpochsInfoIsMutable();
+          epochsInfo_.remove(index);
+          onChanged();
+        } else {
+          epochsInfoBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.epochs.v1beta1.EpochInfo epochs_info = 1 [json_name = "epochsInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo.Builder getEpochsInfoBuilder(
+          int index) {
+        return getEpochsInfoFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .osmosis.epochs.v1beta1.EpochInfo epochs_info = 1 [json_name = "epochsInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.epochs.v1beta1.GenesisProto.EpochInfoOrBuilder getEpochsInfoOrBuilder(
+          int index) {
+        if (epochsInfoBuilder_ == null) {
+          return epochsInfo_.get(index);  } else {
+          return epochsInfoBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.epochs.v1beta1.EpochInfo epochs_info = 1 [json_name = "epochsInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.osmosis.epochs.v1beta1.GenesisProto.EpochInfoOrBuilder> 
+           getEpochsInfoOrBuilderList() {
+        if (epochsInfoBuilder_ != null) {
+          return epochsInfoBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(epochsInfo_);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.epochs.v1beta1.EpochInfo epochs_info = 1 [json_name = "epochsInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo.Builder addEpochsInfoBuilder() {
+        return getEpochsInfoFieldBuilder().addBuilder(
+            com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.epochs.v1beta1.EpochInfo epochs_info = 1 [json_name = "epochsInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo.Builder addEpochsInfoBuilder(
+          int index) {
+        return getEpochsInfoFieldBuilder().addBuilder(
+            index, com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.epochs.v1beta1.EpochInfo epochs_info = 1 [json_name = "epochsInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo.Builder> 
+           getEpochsInfoBuilderList() {
+        return getEpochsInfoFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo, com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo.Builder, com.osmosis.epochs.v1beta1.GenesisProto.EpochInfoOrBuilder> 
+          getEpochsInfoFieldBuilder() {
+        if (epochsInfoBuilder_ == null) {
+          epochsInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo, com.osmosis.epochs.v1beta1.GenesisProto.EpochInfo.Builder, com.osmosis.epochs.v1beta1.GenesisProto.EpochInfoOrBuilder>(
+                  epochsInfo_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          epochsInfo_ = null;
+        }
+        return epochsInfoBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quasarlabs.quasarnode.qoracle.osmosis.EpochsInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:quasarlabs.quasarnode.qoracle.osmosis.EpochsInfo)
+    private static final com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo();
+    }
+
+    public static com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EpochsInfo>
+        PARSER = new com.google.protobuf.AbstractParser<EpochsInfo>() {
+      @java.lang.Override
+      public EpochsInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EpochsInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EpochsInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quasarlabs.quasarnode.qoracle.osmosis.OsmosisProto.EpochsInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quasarlabs_quasarnode_qoracle_osmosis_OsmosisRequestState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quasarlabs_quasarnode_qoracle_osmosis_OsmosisRequestState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quasarlabs_quasarnode_qoracle_osmosis_IncentivizedPools_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quasarlabs_quasarnode_qoracle_osmosis_IncentivizedPools_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quasarlabs_quasarnode_qoracle_osmosis_EpochsInfo_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quasarlabs_quasarnode_qoracle_osmosis_EpochsInfo_fieldAccessorTable;
 
@@ -51,15 +2311,15 @@ public final class OsmosisProto {
       "is.poolincentives.v1beta1.IncentivizedPo" +
       "olB\004\310\336\037\000R\021incentivizedPools\"V\n\nEpochsInf" +
       "o\022H\n\013epochs_info\030\001 \003(\0132!.osmosis.epochs." +
-      "v1beta1.EpochInfoB\004\310\336\037\000R\nepochsInfoB\253\002\n)" +
+      "v1beta1.EpochInfoB\004\310\336\037\000R\nepochsInfoB\251\002\n)" +
       "com.quasarlabs.quasarnode.qoracle.osmosi" +
-      "sB\014OsmosisProtoP\001Z8github.com/quasarlabs" +
-      "/quasarnode/x/qoracle/osmosis/types\242\002\004QQ" +
-      "QO\252\002%Quasarlabs.Quasarnode.Qoracle.Osmos" +
-      "is\312\002%Quasarlabs\\Quasarnode\\Qoracle\\Osmos" +
-      "is\342\0021Quasarlabs\\Quasarnode\\Qoracle\\Osmos" +
-      "is\\GPBMetadata\352\002(Quasarlabs::Quasarnode:" +
-      ":Qoracle::Osmosisb\006proto3"
+      "sB\014OsmosisProtoZ8github.com/quasarlabs/q" +
+      "uasarnode/x/qoracle/osmosis/types\242\002\004QQQO" +
+      "\252\002%Quasarlabs.Quasarnode.Qoracle.Osmosis" +
+      "\312\002%Quasarlabs\\Quasarnode\\Qoracle\\Osmosis" +
+      "\342\0021Quasarlabs\\Quasarnode\\Qoracle\\Osmosis" +
+      "\\GPBMetadata\352\002(Quasarlabs::Quasarnode::Q" +
+      "oracle::Osmosisb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

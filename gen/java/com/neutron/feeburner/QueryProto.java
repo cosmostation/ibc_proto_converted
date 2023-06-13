@@ -14,24 +14,2114 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.feeburner.QueryParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryParamsRequest is request type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code neutron.feeburner.QueryParamsRequest}
+   */
+  public static final class QueryParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.feeburner.QueryParamsRequest)
+      QueryParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsRequest.newBuilder() to construct.
+    private QueryParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.feeburner.QueryProto.internal_static_neutron_feeburner_QueryParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.feeburner.QueryProto.internal_static_neutron_feeburner_QueryParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.feeburner.QueryProto.QueryParamsRequest.class, com.neutron.feeburner.QueryProto.QueryParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.feeburner.QueryProto.QueryParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.neutron.feeburner.QueryProto.QueryParamsRequest other = (com.neutron.feeburner.QueryProto.QueryParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.feeburner.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.feeburner.QueryProto.QueryParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.feeburner.QueryProto.QueryParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.feeburner.QueryProto.QueryParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsRequest is request type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code neutron.feeburner.QueryParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.feeburner.QueryParamsRequest)
+        com.neutron.feeburner.QueryProto.QueryParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.feeburner.QueryProto.internal_static_neutron_feeburner_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.feeburner.QueryProto.internal_static_neutron_feeburner_QueryParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.feeburner.QueryProto.QueryParamsRequest.class, com.neutron.feeburner.QueryProto.QueryParamsRequest.Builder.class);
+      }
+
+      // Construct using com.neutron.feeburner.QueryProto.QueryParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.feeburner.QueryProto.internal_static_neutron_feeburner_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.feeburner.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+        return com.neutron.feeburner.QueryProto.QueryParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.feeburner.QueryProto.QueryParamsRequest build() {
+        com.neutron.feeburner.QueryProto.QueryParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.feeburner.QueryProto.QueryParamsRequest buildPartial() {
+        com.neutron.feeburner.QueryProto.QueryParamsRequest result = new com.neutron.feeburner.QueryProto.QueryParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.feeburner.QueryProto.QueryParamsRequest) {
+          return mergeFrom((com.neutron.feeburner.QueryProto.QueryParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.feeburner.QueryProto.QueryParamsRequest other) {
+        if (other == com.neutron.feeburner.QueryProto.QueryParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.feeburner.QueryParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.feeburner.QueryParamsRequest)
+    private static final com.neutron.feeburner.QueryProto.QueryParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.feeburner.QueryProto.QueryParamsRequest();
+    }
+
+    public static com.neutron.feeburner.QueryProto.QueryParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsRequest>() {
+      @java.lang.Override
+      public QueryParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.feeburner.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.feeburner.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.neutron.feeburner.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.neutron.feeburner.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.neutron.feeburner.ParamsProto.Params getParams();
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.neutron.feeburner.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.neutron.feeburner.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryParamsResponse is response type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code neutron.feeburner.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.feeburner.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.feeburner.QueryProto.internal_static_neutron_feeburner_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.feeburner.QueryProto.internal_static_neutron_feeburner_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.feeburner.QueryProto.QueryParamsResponse.class, com.neutron.feeburner.QueryProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.neutron.feeburner.ParamsProto.Params params_;
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.neutron.feeburner.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.neutron.feeburner.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.neutron.feeburner.ParamsProto.Params getParams() {
+      return params_ == null ? com.neutron.feeburner.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.neutron.feeburner.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.neutron.feeburner.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.neutron.feeburner.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.feeburner.QueryProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.neutron.feeburner.QueryProto.QueryParamsResponse other = (com.neutron.feeburner.QueryProto.QueryParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.feeburner.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.feeburner.QueryProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.feeburner.QueryProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.feeburner.QueryProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsResponse is response type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code neutron.feeburner.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.feeburner.QueryParamsResponse)
+        com.neutron.feeburner.QueryProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.feeburner.QueryProto.internal_static_neutron_feeburner_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.feeburner.QueryProto.internal_static_neutron_feeburner_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.feeburner.QueryProto.QueryParamsResponse.class, com.neutron.feeburner.QueryProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.neutron.feeburner.QueryProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.feeburner.QueryProto.internal_static_neutron_feeburner_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.feeburner.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.neutron.feeburner.QueryProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.feeburner.QueryProto.QueryParamsResponse build() {
+        com.neutron.feeburner.QueryProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.feeburner.QueryProto.QueryParamsResponse buildPartial() {
+        com.neutron.feeburner.QueryProto.QueryParamsResponse result = new com.neutron.feeburner.QueryProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.neutron.feeburner.QueryProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.feeburner.QueryProto.QueryParamsResponse) {
+          return mergeFrom((com.neutron.feeburner.QueryProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.feeburner.QueryProto.QueryParamsResponse other) {
+        if (other == com.neutron.feeburner.QueryProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.neutron.feeburner.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.neutron.feeburner.ParamsProto.Params, com.neutron.feeburner.ParamsProto.Params.Builder, com.neutron.feeburner.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.neutron.feeburner.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.neutron.feeburner.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.neutron.feeburner.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.neutron.feeburner.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.neutron.feeburner.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.neutron.feeburner.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.neutron.feeburner.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.neutron.feeburner.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.neutron.feeburner.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.neutron.feeburner.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.neutron.feeburner.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.neutron.feeburner.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.neutron.feeburner.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.neutron.feeburner.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.neutron.feeburner.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.neutron.feeburner.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.neutron.feeburner.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.neutron.feeburner.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.neutron.feeburner.ParamsProto.Params, com.neutron.feeburner.ParamsProto.Params.Builder, com.neutron.feeburner.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.neutron.feeburner.ParamsProto.Params, com.neutron.feeburner.ParamsProto.Params.Builder, com.neutron.feeburner.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.feeburner.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.feeburner.QueryParamsResponse)
+    private static final com.neutron.feeburner.QueryProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.feeburner.QueryProto.QueryParamsResponse();
+    }
+
+    public static com.neutron.feeburner.QueryProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.feeburner.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTotalBurnedNeutronsAmountRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.feeburner.QueryTotalBurnedNeutronsAmountRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryTotalBurnedNeutronsAmountRequest is request type for the
+   * Query/QueryTotalBurnedNeutronsAmount method.
+   * </pre>
+   *
+   * Protobuf type {@code neutron.feeburner.QueryTotalBurnedNeutronsAmountRequest}
+   */
+  public static final class QueryTotalBurnedNeutronsAmountRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.feeburner.QueryTotalBurnedNeutronsAmountRequest)
+      QueryTotalBurnedNeutronsAmountRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTotalBurnedNeutronsAmountRequest.newBuilder() to construct.
+    private QueryTotalBurnedNeutronsAmountRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTotalBurnedNeutronsAmountRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTotalBurnedNeutronsAmountRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.feeburner.QueryProto.internal_static_neutron_feeburner_QueryTotalBurnedNeutronsAmountRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.feeburner.QueryProto.internal_static_neutron_feeburner_QueryTotalBurnedNeutronsAmountRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest.class, com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest)) {
+        return super.equals(obj);
+      }
+      com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest other = (com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryTotalBurnedNeutronsAmountRequest is request type for the
+     * Query/QueryTotalBurnedNeutronsAmount method.
+     * </pre>
+     *
+     * Protobuf type {@code neutron.feeburner.QueryTotalBurnedNeutronsAmountRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.feeburner.QueryTotalBurnedNeutronsAmountRequest)
+        com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.feeburner.QueryProto.internal_static_neutron_feeburner_QueryTotalBurnedNeutronsAmountRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.feeburner.QueryProto.internal_static_neutron_feeburner_QueryTotalBurnedNeutronsAmountRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest.class, com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest.Builder.class);
+      }
+
+      // Construct using com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.feeburner.QueryProto.internal_static_neutron_feeburner_QueryTotalBurnedNeutronsAmountRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest getDefaultInstanceForType() {
+        return com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest build() {
+        com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest buildPartial() {
+        com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest result = new com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest) {
+          return mergeFrom((com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest other) {
+        if (other == com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.feeburner.QueryTotalBurnedNeutronsAmountRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.feeburner.QueryTotalBurnedNeutronsAmountRequest)
+    private static final com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest();
+    }
+
+    public static com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTotalBurnedNeutronsAmountRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTotalBurnedNeutronsAmountRequest>() {
+      @java.lang.Override
+      public QueryTotalBurnedNeutronsAmountRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTotalBurnedNeutronsAmountRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTotalBurnedNeutronsAmountRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTotalBurnedNeutronsAmountResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.feeburner.QueryTotalBurnedNeutronsAmountResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.neutron.feeburner.TotalBurnedNeutronsAmount total_burned_neutrons_amount = 1 [json_name = "totalBurnedNeutronsAmount", (.gogoproto.nullable) = false];</code>
+     * @return Whether the totalBurnedNeutronsAmount field is set.
+     */
+    boolean hasTotalBurnedNeutronsAmount();
+    /**
+     * <code>.neutron.feeburner.TotalBurnedNeutronsAmount total_burned_neutrons_amount = 1 [json_name = "totalBurnedNeutronsAmount", (.gogoproto.nullable) = false];</code>
+     * @return The totalBurnedNeutronsAmount.
+     */
+    com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount getTotalBurnedNeutronsAmount();
+    /**
+     * <code>.neutron.feeburner.TotalBurnedNeutronsAmount total_burned_neutrons_amount = 1 [json_name = "totalBurnedNeutronsAmount", (.gogoproto.nullable) = false];</code>
+     */
+    com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmountOrBuilder getTotalBurnedNeutronsAmountOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryTotalBurnedNeutronsAmountResponse is response type for the
+   * Query/QueryTotalBurnedNeutronsAmount method.
+   * </pre>
+   *
+   * Protobuf type {@code neutron.feeburner.QueryTotalBurnedNeutronsAmountResponse}
+   */
+  public static final class QueryTotalBurnedNeutronsAmountResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.feeburner.QueryTotalBurnedNeutronsAmountResponse)
+      QueryTotalBurnedNeutronsAmountResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTotalBurnedNeutronsAmountResponse.newBuilder() to construct.
+    private QueryTotalBurnedNeutronsAmountResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTotalBurnedNeutronsAmountResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTotalBurnedNeutronsAmountResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.feeburner.QueryProto.internal_static_neutron_feeburner_QueryTotalBurnedNeutronsAmountResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.feeburner.QueryProto.internal_static_neutron_feeburner_QueryTotalBurnedNeutronsAmountResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse.class, com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse.Builder.class);
+    }
+
+    public static final int TOTAL_BURNED_NEUTRONS_AMOUNT_FIELD_NUMBER = 1;
+    private com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount totalBurnedNeutronsAmount_;
+    /**
+     * <code>.neutron.feeburner.TotalBurnedNeutronsAmount total_burned_neutrons_amount = 1 [json_name = "totalBurnedNeutronsAmount", (.gogoproto.nullable) = false];</code>
+     * @return Whether the totalBurnedNeutronsAmount field is set.
+     */
+    @java.lang.Override
+    public boolean hasTotalBurnedNeutronsAmount() {
+      return totalBurnedNeutronsAmount_ != null;
+    }
+    /**
+     * <code>.neutron.feeburner.TotalBurnedNeutronsAmount total_burned_neutrons_amount = 1 [json_name = "totalBurnedNeutronsAmount", (.gogoproto.nullable) = false];</code>
+     * @return The totalBurnedNeutronsAmount.
+     */
+    @java.lang.Override
+    public com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount getTotalBurnedNeutronsAmount() {
+      return totalBurnedNeutronsAmount_ == null ? com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount.getDefaultInstance() : totalBurnedNeutronsAmount_;
+    }
+    /**
+     * <code>.neutron.feeburner.TotalBurnedNeutronsAmount total_burned_neutrons_amount = 1 [json_name = "totalBurnedNeutronsAmount", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmountOrBuilder getTotalBurnedNeutronsAmountOrBuilder() {
+      return totalBurnedNeutronsAmount_ == null ? com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount.getDefaultInstance() : totalBurnedNeutronsAmount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (totalBurnedNeutronsAmount_ != null) {
+        output.writeMessage(1, getTotalBurnedNeutronsAmount());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (totalBurnedNeutronsAmount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTotalBurnedNeutronsAmount());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse)) {
+        return super.equals(obj);
+      }
+      com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse other = (com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse) obj;
+
+      if (hasTotalBurnedNeutronsAmount() != other.hasTotalBurnedNeutronsAmount()) return false;
+      if (hasTotalBurnedNeutronsAmount()) {
+        if (!getTotalBurnedNeutronsAmount()
+            .equals(other.getTotalBurnedNeutronsAmount())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTotalBurnedNeutronsAmount()) {
+        hash = (37 * hash) + TOTAL_BURNED_NEUTRONS_AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getTotalBurnedNeutronsAmount().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryTotalBurnedNeutronsAmountResponse is response type for the
+     * Query/QueryTotalBurnedNeutronsAmount method.
+     * </pre>
+     *
+     * Protobuf type {@code neutron.feeburner.QueryTotalBurnedNeutronsAmountResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.feeburner.QueryTotalBurnedNeutronsAmountResponse)
+        com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.feeburner.QueryProto.internal_static_neutron_feeburner_QueryTotalBurnedNeutronsAmountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.feeburner.QueryProto.internal_static_neutron_feeburner_QueryTotalBurnedNeutronsAmountResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse.class, com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse.Builder.class);
+      }
+
+      // Construct using com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        totalBurnedNeutronsAmount_ = null;
+        if (totalBurnedNeutronsAmountBuilder_ != null) {
+          totalBurnedNeutronsAmountBuilder_.dispose();
+          totalBurnedNeutronsAmountBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.feeburner.QueryProto.internal_static_neutron_feeburner_QueryTotalBurnedNeutronsAmountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse getDefaultInstanceForType() {
+        return com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse build() {
+        com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse buildPartial() {
+        com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse result = new com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.totalBurnedNeutronsAmount_ = totalBurnedNeutronsAmountBuilder_ == null
+              ? totalBurnedNeutronsAmount_
+              : totalBurnedNeutronsAmountBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse) {
+          return mergeFrom((com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse other) {
+        if (other == com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse.getDefaultInstance()) return this;
+        if (other.hasTotalBurnedNeutronsAmount()) {
+          mergeTotalBurnedNeutronsAmount(other.getTotalBurnedNeutronsAmount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getTotalBurnedNeutronsAmountFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount totalBurnedNeutronsAmount_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount, com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount.Builder, com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmountOrBuilder> totalBurnedNeutronsAmountBuilder_;
+      /**
+       * <code>.neutron.feeburner.TotalBurnedNeutronsAmount total_burned_neutrons_amount = 1 [json_name = "totalBurnedNeutronsAmount", (.gogoproto.nullable) = false];</code>
+       * @return Whether the totalBurnedNeutronsAmount field is set.
+       */
+      public boolean hasTotalBurnedNeutronsAmount() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.neutron.feeburner.TotalBurnedNeutronsAmount total_burned_neutrons_amount = 1 [json_name = "totalBurnedNeutronsAmount", (.gogoproto.nullable) = false];</code>
+       * @return The totalBurnedNeutronsAmount.
+       */
+      public com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount getTotalBurnedNeutronsAmount() {
+        if (totalBurnedNeutronsAmountBuilder_ == null) {
+          return totalBurnedNeutronsAmount_ == null ? com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount.getDefaultInstance() : totalBurnedNeutronsAmount_;
+        } else {
+          return totalBurnedNeutronsAmountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.neutron.feeburner.TotalBurnedNeutronsAmount total_burned_neutrons_amount = 1 [json_name = "totalBurnedNeutronsAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTotalBurnedNeutronsAmount(com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount value) {
+        if (totalBurnedNeutronsAmountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          totalBurnedNeutronsAmount_ = value;
+        } else {
+          totalBurnedNeutronsAmountBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.feeburner.TotalBurnedNeutronsAmount total_burned_neutrons_amount = 1 [json_name = "totalBurnedNeutronsAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTotalBurnedNeutronsAmount(
+          com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount.Builder builderForValue) {
+        if (totalBurnedNeutronsAmountBuilder_ == null) {
+          totalBurnedNeutronsAmount_ = builderForValue.build();
+        } else {
+          totalBurnedNeutronsAmountBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.feeburner.TotalBurnedNeutronsAmount total_burned_neutrons_amount = 1 [json_name = "totalBurnedNeutronsAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeTotalBurnedNeutronsAmount(com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount value) {
+        if (totalBurnedNeutronsAmountBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            totalBurnedNeutronsAmount_ != null &&
+            totalBurnedNeutronsAmount_ != com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount.getDefaultInstance()) {
+            getTotalBurnedNeutronsAmountBuilder().mergeFrom(value);
+          } else {
+            totalBurnedNeutronsAmount_ = value;
+          }
+        } else {
+          totalBurnedNeutronsAmountBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.feeburner.TotalBurnedNeutronsAmount total_burned_neutrons_amount = 1 [json_name = "totalBurnedNeutronsAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearTotalBurnedNeutronsAmount() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        totalBurnedNeutronsAmount_ = null;
+        if (totalBurnedNeutronsAmountBuilder_ != null) {
+          totalBurnedNeutronsAmountBuilder_.dispose();
+          totalBurnedNeutronsAmountBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.feeburner.TotalBurnedNeutronsAmount total_burned_neutrons_amount = 1 [json_name = "totalBurnedNeutronsAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount.Builder getTotalBurnedNeutronsAmountBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getTotalBurnedNeutronsAmountFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.neutron.feeburner.TotalBurnedNeutronsAmount total_burned_neutrons_amount = 1 [json_name = "totalBurnedNeutronsAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmountOrBuilder getTotalBurnedNeutronsAmountOrBuilder() {
+        if (totalBurnedNeutronsAmountBuilder_ != null) {
+          return totalBurnedNeutronsAmountBuilder_.getMessageOrBuilder();
+        } else {
+          return totalBurnedNeutronsAmount_ == null ?
+              com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount.getDefaultInstance() : totalBurnedNeutronsAmount_;
+        }
+      }
+      /**
+       * <code>.neutron.feeburner.TotalBurnedNeutronsAmount total_burned_neutrons_amount = 1 [json_name = "totalBurnedNeutronsAmount", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount, com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount.Builder, com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmountOrBuilder> 
+          getTotalBurnedNeutronsAmountFieldBuilder() {
+        if (totalBurnedNeutronsAmountBuilder_ == null) {
+          totalBurnedNeutronsAmountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount, com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmount.Builder, com.neutron.feeburner.TotalBurnedNeutronsAmountProto.TotalBurnedNeutronsAmountOrBuilder>(
+                  getTotalBurnedNeutronsAmount(),
+                  getParentForChildren(),
+                  isClean());
+          totalBurnedNeutronsAmount_ = null;
+        }
+        return totalBurnedNeutronsAmountBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.feeburner.QueryTotalBurnedNeutronsAmountResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.feeburner.QueryTotalBurnedNeutronsAmountResponse)
+    private static final com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse();
+    }
+
+    public static com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTotalBurnedNeutronsAmountResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTotalBurnedNeutronsAmountResponse>() {
+      @java.lang.Override
+      public QueryTotalBurnedNeutronsAmountResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTotalBurnedNeutronsAmountResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTotalBurnedNeutronsAmountResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.feeburner.QueryProto.QueryTotalBurnedNeutronsAmountResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_feeburner_QueryParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_feeburner_QueryParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_feeburner_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_feeburner_QueryParamsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_feeburner_QueryTotalBurnedNeutronsAmountRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_feeburner_QueryTotalBurnedNeutronsAmountRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_feeburner_QueryTotalBurnedNeutronsAmountResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_feeburner_QueryTotalBurnedNeutronsAmountResponse_fieldAccessorTable;
 
@@ -64,12 +2154,12 @@ public final class QueryProto {
       "QueryTotalBurnedNeutronsAmountRequest\0329." +
       "neutron.feeburner.QueryTotalBurnedNeutro" +
       "nsAmountResponse\"7\202\323\344\223\0021\022//neutron/feebu" +
-      "rner/total_burned_neutrons_amountB\272\001\n\025co" +
-      "m.neutron.feeburnerB\nQueryProtoP\001Z0githu" +
-      "b.com/neutron-org/neutron/x/feeburner/ty" +
-      "pes\242\002\003NFX\252\002\021Neutron.Feeburner\312\002\021Neutron\\" +
-      "Feeburner\342\002\035Neutron\\Feeburner\\GPBMetadat" +
-      "a\352\002\022Neutron::Feeburnerb\006proto3"
+      "rner/total_burned_neutrons_amountB\270\001\n\025co" +
+      "m.neutron.feeburnerB\nQueryProtoZ0github." +
+      "com/neutron-org/neutron/x/feeburner/type" +
+      "s\242\002\003NFX\252\002\021Neutron.Feeburner\312\002\021Neutron\\Fe" +
+      "eburner\342\002\035Neutron\\Feeburner\\GPBMetadata\352" +
+      "\002\022Neutron::Feeburnerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

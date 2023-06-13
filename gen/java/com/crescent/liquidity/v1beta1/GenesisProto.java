@@ -14,14 +14,3723 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidity.v1beta1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.crescent.liquidity.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.crescent.liquidity.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.crescent.liquidity.v1beta1.LiquidityProto.Params getParams();
+    /**
+     * <code>.crescent.liquidity.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.liquidity.v1beta1.LiquidityProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <code>uint64 last_pair_id = 2 [json_name = "lastPairId"];</code>
+     * @return The lastPairId.
+     */
+    long getLastPairId();
+
+    /**
+     * <code>uint64 last_pool_id = 3 [json_name = "lastPoolId"];</code>
+     * @return The lastPoolId.
+     */
+    long getLastPoolId();
+
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.Pair pairs = 4 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.crescent.liquidity.v1beta1.LiquidityProto.Pair> 
+        getPairsList();
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.Pair pairs = 4 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.liquidity.v1beta1.LiquidityProto.Pair getPairs(int index);
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.Pair pairs = 4 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    int getPairsCount();
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.Pair pairs = 4 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.crescent.liquidity.v1beta1.LiquidityProto.PairOrBuilder> 
+        getPairsOrBuilderList();
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.Pair pairs = 4 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.liquidity.v1beta1.LiquidityProto.PairOrBuilder getPairsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.Pool pools = 5 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.crescent.liquidity.v1beta1.LiquidityProto.Pool> 
+        getPoolsList();
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.Pool pools = 5 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.liquidity.v1beta1.LiquidityProto.Pool getPools(int index);
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.Pool pools = 5 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    int getPoolsCount();
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.Pool pools = 5 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.crescent.liquidity.v1beta1.LiquidityProto.PoolOrBuilder> 
+        getPoolsOrBuilderList();
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.Pool pools = 5 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.liquidity.v1beta1.LiquidityProto.PoolOrBuilder getPoolsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.DepositRequest deposit_requests = 6 [json_name = "depositRequests", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequest> 
+        getDepositRequestsList();
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.DepositRequest deposit_requests = 6 [json_name = "depositRequests", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequest getDepositRequests(int index);
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.DepositRequest deposit_requests = 6 [json_name = "depositRequests", (.gogoproto.nullable) = false];</code>
+     */
+    int getDepositRequestsCount();
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.DepositRequest deposit_requests = 6 [json_name = "depositRequests", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequestOrBuilder> 
+        getDepositRequestsOrBuilderList();
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.DepositRequest deposit_requests = 6 [json_name = "depositRequests", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequestOrBuilder getDepositRequestsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.WithdrawRequest withdraw_requests = 7 [json_name = "withdrawRequests", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequest> 
+        getWithdrawRequestsList();
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.WithdrawRequest withdraw_requests = 7 [json_name = "withdrawRequests", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequest getWithdrawRequests(int index);
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.WithdrawRequest withdraw_requests = 7 [json_name = "withdrawRequests", (.gogoproto.nullable) = false];</code>
+     */
+    int getWithdrawRequestsCount();
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.WithdrawRequest withdraw_requests = 7 [json_name = "withdrawRequests", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequestOrBuilder> 
+        getWithdrawRequestsOrBuilderList();
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.WithdrawRequest withdraw_requests = 7 [json_name = "withdrawRequests", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequestOrBuilder getWithdrawRequestsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.Order orders = 8 [json_name = "orders", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.crescent.liquidity.v1beta1.LiquidityProto.Order> 
+        getOrdersList();
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.Order orders = 8 [json_name = "orders", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.liquidity.v1beta1.LiquidityProto.Order getOrders(int index);
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.Order orders = 8 [json_name = "orders", (.gogoproto.nullable) = false];</code>
+     */
+    int getOrdersCount();
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.Order orders = 8 [json_name = "orders", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.crescent.liquidity.v1beta1.LiquidityProto.OrderOrBuilder> 
+        getOrdersOrBuilderList();
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.Order orders = 8 [json_name = "orders", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.liquidity.v1beta1.LiquidityProto.OrderOrBuilder getOrdersOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.NumMMOrdersRecord num_market_making_orders_records = 9 [json_name = "numMarketMakingOrdersRecords", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord> 
+        getNumMarketMakingOrdersRecordsList();
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.NumMMOrdersRecord num_market_making_orders_records = 9 [json_name = "numMarketMakingOrdersRecords", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord getNumMarketMakingOrdersRecords(int index);
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.NumMMOrdersRecord num_market_making_orders_records = 9 [json_name = "numMarketMakingOrdersRecords", (.gogoproto.nullable) = false];</code>
+     */
+    int getNumMarketMakingOrdersRecordsCount();
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.NumMMOrdersRecord num_market_making_orders_records = 9 [json_name = "numMarketMakingOrdersRecords", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecordOrBuilder> 
+        getNumMarketMakingOrdersRecordsOrBuilderList();
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.NumMMOrdersRecord num_market_making_orders_records = 9 [json_name = "numMarketMakingOrdersRecords", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecordOrBuilder getNumMarketMakingOrdersRecordsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the liquidity module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidity.v1beta1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidity.v1beta1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      pairs_ = java.util.Collections.emptyList();
+      pools_ = java.util.Collections.emptyList();
+      depositRequests_ = java.util.Collections.emptyList();
+      withdrawRequests_ = java.util.Collections.emptyList();
+      orders_ = java.util.Collections.emptyList();
+      numMarketMakingOrdersRecords_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidity.v1beta1.GenesisProto.internal_static_crescent_liquidity_v1beta1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidity.v1beta1.GenesisProto.internal_static_crescent_liquidity_v1beta1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidity.v1beta1.GenesisProto.GenesisState.class, com.crescent.liquidity.v1beta1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.crescent.liquidity.v1beta1.LiquidityProto.Params params_;
+    /**
+     * <code>.crescent.liquidity.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.crescent.liquidity.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.crescent.liquidity.v1beta1.LiquidityProto.Params getParams() {
+      return params_ == null ? com.crescent.liquidity.v1beta1.LiquidityProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.crescent.liquidity.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidity.v1beta1.LiquidityProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.crescent.liquidity.v1beta1.LiquidityProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int LAST_PAIR_ID_FIELD_NUMBER = 2;
+    private long lastPairId_ = 0L;
+    /**
+     * <code>uint64 last_pair_id = 2 [json_name = "lastPairId"];</code>
+     * @return The lastPairId.
+     */
+    @java.lang.Override
+    public long getLastPairId() {
+      return lastPairId_;
+    }
+
+    public static final int LAST_POOL_ID_FIELD_NUMBER = 3;
+    private long lastPoolId_ = 0L;
+    /**
+     * <code>uint64 last_pool_id = 3 [json_name = "lastPoolId"];</code>
+     * @return The lastPoolId.
+     */
+    @java.lang.Override
+    public long getLastPoolId() {
+      return lastPoolId_;
+    }
+
+    public static final int PAIRS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.crescent.liquidity.v1beta1.LiquidityProto.Pair> pairs_;
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.Pair pairs = 4 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.crescent.liquidity.v1beta1.LiquidityProto.Pair> getPairsList() {
+      return pairs_;
+    }
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.Pair pairs = 4 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.crescent.liquidity.v1beta1.LiquidityProto.PairOrBuilder> 
+        getPairsOrBuilderList() {
+      return pairs_;
+    }
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.Pair pairs = 4 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getPairsCount() {
+      return pairs_.size();
+    }
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.Pair pairs = 4 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidity.v1beta1.LiquidityProto.Pair getPairs(int index) {
+      return pairs_.get(index);
+    }
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.Pair pairs = 4 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidity.v1beta1.LiquidityProto.PairOrBuilder getPairsOrBuilder(
+        int index) {
+      return pairs_.get(index);
+    }
+
+    public static final int POOLS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.crescent.liquidity.v1beta1.LiquidityProto.Pool> pools_;
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.Pool pools = 5 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.crescent.liquidity.v1beta1.LiquidityProto.Pool> getPoolsList() {
+      return pools_;
+    }
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.Pool pools = 5 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.crescent.liquidity.v1beta1.LiquidityProto.PoolOrBuilder> 
+        getPoolsOrBuilderList() {
+      return pools_;
+    }
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.Pool pools = 5 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getPoolsCount() {
+      return pools_.size();
+    }
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.Pool pools = 5 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidity.v1beta1.LiquidityProto.Pool getPools(int index) {
+      return pools_.get(index);
+    }
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.Pool pools = 5 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidity.v1beta1.LiquidityProto.PoolOrBuilder getPoolsOrBuilder(
+        int index) {
+      return pools_.get(index);
+    }
+
+    public static final int DEPOSIT_REQUESTS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequest> depositRequests_;
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.DepositRequest deposit_requests = 6 [json_name = "depositRequests", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequest> getDepositRequestsList() {
+      return depositRequests_;
+    }
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.DepositRequest deposit_requests = 6 [json_name = "depositRequests", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequestOrBuilder> 
+        getDepositRequestsOrBuilderList() {
+      return depositRequests_;
+    }
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.DepositRequest deposit_requests = 6 [json_name = "depositRequests", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getDepositRequestsCount() {
+      return depositRequests_.size();
+    }
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.DepositRequest deposit_requests = 6 [json_name = "depositRequests", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequest getDepositRequests(int index) {
+      return depositRequests_.get(index);
+    }
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.DepositRequest deposit_requests = 6 [json_name = "depositRequests", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequestOrBuilder getDepositRequestsOrBuilder(
+        int index) {
+      return depositRequests_.get(index);
+    }
+
+    public static final int WITHDRAW_REQUESTS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private java.util.List<com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequest> withdrawRequests_;
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.WithdrawRequest withdraw_requests = 7 [json_name = "withdrawRequests", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequest> getWithdrawRequestsList() {
+      return withdrawRequests_;
+    }
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.WithdrawRequest withdraw_requests = 7 [json_name = "withdrawRequests", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequestOrBuilder> 
+        getWithdrawRequestsOrBuilderList() {
+      return withdrawRequests_;
+    }
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.WithdrawRequest withdraw_requests = 7 [json_name = "withdrawRequests", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getWithdrawRequestsCount() {
+      return withdrawRequests_.size();
+    }
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.WithdrawRequest withdraw_requests = 7 [json_name = "withdrawRequests", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequest getWithdrawRequests(int index) {
+      return withdrawRequests_.get(index);
+    }
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.WithdrawRequest withdraw_requests = 7 [json_name = "withdrawRequests", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequestOrBuilder getWithdrawRequestsOrBuilder(
+        int index) {
+      return withdrawRequests_.get(index);
+    }
+
+    public static final int ORDERS_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private java.util.List<com.crescent.liquidity.v1beta1.LiquidityProto.Order> orders_;
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.Order orders = 8 [json_name = "orders", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.crescent.liquidity.v1beta1.LiquidityProto.Order> getOrdersList() {
+      return orders_;
+    }
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.Order orders = 8 [json_name = "orders", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.crescent.liquidity.v1beta1.LiquidityProto.OrderOrBuilder> 
+        getOrdersOrBuilderList() {
+      return orders_;
+    }
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.Order orders = 8 [json_name = "orders", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getOrdersCount() {
+      return orders_.size();
+    }
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.Order orders = 8 [json_name = "orders", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidity.v1beta1.LiquidityProto.Order getOrders(int index) {
+      return orders_.get(index);
+    }
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.Order orders = 8 [json_name = "orders", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidity.v1beta1.LiquidityProto.OrderOrBuilder getOrdersOrBuilder(
+        int index) {
+      return orders_.get(index);
+    }
+
+    public static final int NUM_MARKET_MAKING_ORDERS_RECORDS_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private java.util.List<com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord> numMarketMakingOrdersRecords_;
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.NumMMOrdersRecord num_market_making_orders_records = 9 [json_name = "numMarketMakingOrdersRecords", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord> getNumMarketMakingOrdersRecordsList() {
+      return numMarketMakingOrdersRecords_;
+    }
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.NumMMOrdersRecord num_market_making_orders_records = 9 [json_name = "numMarketMakingOrdersRecords", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecordOrBuilder> 
+        getNumMarketMakingOrdersRecordsOrBuilderList() {
+      return numMarketMakingOrdersRecords_;
+    }
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.NumMMOrdersRecord num_market_making_orders_records = 9 [json_name = "numMarketMakingOrdersRecords", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getNumMarketMakingOrdersRecordsCount() {
+      return numMarketMakingOrdersRecords_.size();
+    }
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.NumMMOrdersRecord num_market_making_orders_records = 9 [json_name = "numMarketMakingOrdersRecords", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord getNumMarketMakingOrdersRecords(int index) {
+      return numMarketMakingOrdersRecords_.get(index);
+    }
+    /**
+     * <code>repeated .crescent.liquidity.v1beta1.NumMMOrdersRecord num_market_making_orders_records = 9 [json_name = "numMarketMakingOrdersRecords", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecordOrBuilder getNumMarketMakingOrdersRecordsOrBuilder(
+        int index) {
+      return numMarketMakingOrdersRecords_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      if (lastPairId_ != 0L) {
+        output.writeUInt64(2, lastPairId_);
+      }
+      if (lastPoolId_ != 0L) {
+        output.writeUInt64(3, lastPoolId_);
+      }
+      for (int i = 0; i < pairs_.size(); i++) {
+        output.writeMessage(4, pairs_.get(i));
+      }
+      for (int i = 0; i < pools_.size(); i++) {
+        output.writeMessage(5, pools_.get(i));
+      }
+      for (int i = 0; i < depositRequests_.size(); i++) {
+        output.writeMessage(6, depositRequests_.get(i));
+      }
+      for (int i = 0; i < withdrawRequests_.size(); i++) {
+        output.writeMessage(7, withdrawRequests_.get(i));
+      }
+      for (int i = 0; i < orders_.size(); i++) {
+        output.writeMessage(8, orders_.get(i));
+      }
+      for (int i = 0; i < numMarketMakingOrdersRecords_.size(); i++) {
+        output.writeMessage(9, numMarketMakingOrdersRecords_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      if (lastPairId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, lastPairId_);
+      }
+      if (lastPoolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, lastPoolId_);
+      }
+      for (int i = 0; i < pairs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, pairs_.get(i));
+      }
+      for (int i = 0; i < pools_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, pools_.get(i));
+      }
+      for (int i = 0; i < depositRequests_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, depositRequests_.get(i));
+      }
+      for (int i = 0; i < withdrawRequests_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, withdrawRequests_.get(i));
+      }
+      for (int i = 0; i < orders_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, orders_.get(i));
+      }
+      for (int i = 0; i < numMarketMakingOrdersRecords_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, numMarketMakingOrdersRecords_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidity.v1beta1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidity.v1beta1.GenesisProto.GenesisState other = (com.crescent.liquidity.v1beta1.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (getLastPairId()
+          != other.getLastPairId()) return false;
+      if (getLastPoolId()
+          != other.getLastPoolId()) return false;
+      if (!getPairsList()
+          .equals(other.getPairsList())) return false;
+      if (!getPoolsList()
+          .equals(other.getPoolsList())) return false;
+      if (!getDepositRequestsList()
+          .equals(other.getDepositRequestsList())) return false;
+      if (!getWithdrawRequestsList()
+          .equals(other.getWithdrawRequestsList())) return false;
+      if (!getOrdersList()
+          .equals(other.getOrdersList())) return false;
+      if (!getNumMarketMakingOrdersRecordsList()
+          .equals(other.getNumMarketMakingOrdersRecordsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (37 * hash) + LAST_PAIR_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLastPairId());
+      hash = (37 * hash) + LAST_POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLastPoolId());
+      if (getPairsCount() > 0) {
+        hash = (37 * hash) + PAIRS_FIELD_NUMBER;
+        hash = (53 * hash) + getPairsList().hashCode();
+      }
+      if (getPoolsCount() > 0) {
+        hash = (37 * hash) + POOLS_FIELD_NUMBER;
+        hash = (53 * hash) + getPoolsList().hashCode();
+      }
+      if (getDepositRequestsCount() > 0) {
+        hash = (37 * hash) + DEPOSIT_REQUESTS_FIELD_NUMBER;
+        hash = (53 * hash) + getDepositRequestsList().hashCode();
+      }
+      if (getWithdrawRequestsCount() > 0) {
+        hash = (37 * hash) + WITHDRAW_REQUESTS_FIELD_NUMBER;
+        hash = (53 * hash) + getWithdrawRequestsList().hashCode();
+      }
+      if (getOrdersCount() > 0) {
+        hash = (37 * hash) + ORDERS_FIELD_NUMBER;
+        hash = (53 * hash) + getOrdersList().hashCode();
+      }
+      if (getNumMarketMakingOrdersRecordsCount() > 0) {
+        hash = (37 * hash) + NUM_MARKET_MAKING_ORDERS_RECORDS_FIELD_NUMBER;
+        hash = (53 * hash) + getNumMarketMakingOrdersRecordsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidity.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidity.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidity.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidity.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidity.v1beta1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidity.v1beta1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidity.v1beta1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidity.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidity.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidity.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidity.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidity.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidity.v1beta1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the liquidity module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidity.v1beta1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidity.v1beta1.GenesisState)
+        com.crescent.liquidity.v1beta1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidity.v1beta1.GenesisProto.internal_static_crescent_liquidity_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidity.v1beta1.GenesisProto.internal_static_crescent_liquidity_v1beta1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidity.v1beta1.GenesisProto.GenesisState.class, com.crescent.liquidity.v1beta1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidity.v1beta1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        lastPairId_ = 0L;
+        lastPoolId_ = 0L;
+        if (pairsBuilder_ == null) {
+          pairs_ = java.util.Collections.emptyList();
+        } else {
+          pairs_ = null;
+          pairsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (poolsBuilder_ == null) {
+          pools_ = java.util.Collections.emptyList();
+        } else {
+          pools_ = null;
+          poolsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (depositRequestsBuilder_ == null) {
+          depositRequests_ = java.util.Collections.emptyList();
+        } else {
+          depositRequests_ = null;
+          depositRequestsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        if (withdrawRequestsBuilder_ == null) {
+          withdrawRequests_ = java.util.Collections.emptyList();
+        } else {
+          withdrawRequests_ = null;
+          withdrawRequestsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        if (ordersBuilder_ == null) {
+          orders_ = java.util.Collections.emptyList();
+        } else {
+          orders_ = null;
+          ordersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        if (numMarketMakingOrdersRecordsBuilder_ == null) {
+          numMarketMakingOrdersRecords_ = java.util.Collections.emptyList();
+        } else {
+          numMarketMakingOrdersRecords_ = null;
+          numMarketMakingOrdersRecordsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000100);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidity.v1beta1.GenesisProto.internal_static_crescent_liquidity_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidity.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.crescent.liquidity.v1beta1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidity.v1beta1.GenesisProto.GenesisState build() {
+        com.crescent.liquidity.v1beta1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidity.v1beta1.GenesisProto.GenesisState buildPartial() {
+        com.crescent.liquidity.v1beta1.GenesisProto.GenesisState result = new com.crescent.liquidity.v1beta1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.crescent.liquidity.v1beta1.GenesisProto.GenesisState result) {
+        if (pairsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            pairs_ = java.util.Collections.unmodifiableList(pairs_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.pairs_ = pairs_;
+        } else {
+          result.pairs_ = pairsBuilder_.build();
+        }
+        if (poolsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            pools_ = java.util.Collections.unmodifiableList(pools_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.pools_ = pools_;
+        } else {
+          result.pools_ = poolsBuilder_.build();
+        }
+        if (depositRequestsBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            depositRequests_ = java.util.Collections.unmodifiableList(depositRequests_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.depositRequests_ = depositRequests_;
+        } else {
+          result.depositRequests_ = depositRequestsBuilder_.build();
+        }
+        if (withdrawRequestsBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0)) {
+            withdrawRequests_ = java.util.Collections.unmodifiableList(withdrawRequests_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.withdrawRequests_ = withdrawRequests_;
+        } else {
+          result.withdrawRequests_ = withdrawRequestsBuilder_.build();
+        }
+        if (ordersBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0)) {
+            orders_ = java.util.Collections.unmodifiableList(orders_);
+            bitField0_ = (bitField0_ & ~0x00000080);
+          }
+          result.orders_ = orders_;
+        } else {
+          result.orders_ = ordersBuilder_.build();
+        }
+        if (numMarketMakingOrdersRecordsBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0)) {
+            numMarketMakingOrdersRecords_ = java.util.Collections.unmodifiableList(numMarketMakingOrdersRecords_);
+            bitField0_ = (bitField0_ & ~0x00000100);
+          }
+          result.numMarketMakingOrdersRecords_ = numMarketMakingOrdersRecords_;
+        } else {
+          result.numMarketMakingOrdersRecords_ = numMarketMakingOrdersRecordsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.crescent.liquidity.v1beta1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.lastPairId_ = lastPairId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.lastPoolId_ = lastPoolId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidity.v1beta1.GenesisProto.GenesisState) {
+          return mergeFrom((com.crescent.liquidity.v1beta1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidity.v1beta1.GenesisProto.GenesisState other) {
+        if (other == com.crescent.liquidity.v1beta1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (other.getLastPairId() != 0L) {
+          setLastPairId(other.getLastPairId());
+        }
+        if (other.getLastPoolId() != 0L) {
+          setLastPoolId(other.getLastPoolId());
+        }
+        if (pairsBuilder_ == null) {
+          if (!other.pairs_.isEmpty()) {
+            if (pairs_.isEmpty()) {
+              pairs_ = other.pairs_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensurePairsIsMutable();
+              pairs_.addAll(other.pairs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.pairs_.isEmpty()) {
+            if (pairsBuilder_.isEmpty()) {
+              pairsBuilder_.dispose();
+              pairsBuilder_ = null;
+              pairs_ = other.pairs_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              pairsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPairsFieldBuilder() : null;
+            } else {
+              pairsBuilder_.addAllMessages(other.pairs_);
+            }
+          }
+        }
+        if (poolsBuilder_ == null) {
+          if (!other.pools_.isEmpty()) {
+            if (pools_.isEmpty()) {
+              pools_ = other.pools_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensurePoolsIsMutable();
+              pools_.addAll(other.pools_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.pools_.isEmpty()) {
+            if (poolsBuilder_.isEmpty()) {
+              poolsBuilder_.dispose();
+              poolsBuilder_ = null;
+              pools_ = other.pools_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              poolsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPoolsFieldBuilder() : null;
+            } else {
+              poolsBuilder_.addAllMessages(other.pools_);
+            }
+          }
+        }
+        if (depositRequestsBuilder_ == null) {
+          if (!other.depositRequests_.isEmpty()) {
+            if (depositRequests_.isEmpty()) {
+              depositRequests_ = other.depositRequests_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureDepositRequestsIsMutable();
+              depositRequests_.addAll(other.depositRequests_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.depositRequests_.isEmpty()) {
+            if (depositRequestsBuilder_.isEmpty()) {
+              depositRequestsBuilder_.dispose();
+              depositRequestsBuilder_ = null;
+              depositRequests_ = other.depositRequests_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              depositRequestsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDepositRequestsFieldBuilder() : null;
+            } else {
+              depositRequestsBuilder_.addAllMessages(other.depositRequests_);
+            }
+          }
+        }
+        if (withdrawRequestsBuilder_ == null) {
+          if (!other.withdrawRequests_.isEmpty()) {
+            if (withdrawRequests_.isEmpty()) {
+              withdrawRequests_ = other.withdrawRequests_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureWithdrawRequestsIsMutable();
+              withdrawRequests_.addAll(other.withdrawRequests_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.withdrawRequests_.isEmpty()) {
+            if (withdrawRequestsBuilder_.isEmpty()) {
+              withdrawRequestsBuilder_.dispose();
+              withdrawRequestsBuilder_ = null;
+              withdrawRequests_ = other.withdrawRequests_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              withdrawRequestsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getWithdrawRequestsFieldBuilder() : null;
+            } else {
+              withdrawRequestsBuilder_.addAllMessages(other.withdrawRequests_);
+            }
+          }
+        }
+        if (ordersBuilder_ == null) {
+          if (!other.orders_.isEmpty()) {
+            if (orders_.isEmpty()) {
+              orders_ = other.orders_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+            } else {
+              ensureOrdersIsMutable();
+              orders_.addAll(other.orders_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.orders_.isEmpty()) {
+            if (ordersBuilder_.isEmpty()) {
+              ordersBuilder_.dispose();
+              ordersBuilder_ = null;
+              orders_ = other.orders_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+              ordersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOrdersFieldBuilder() : null;
+            } else {
+              ordersBuilder_.addAllMessages(other.orders_);
+            }
+          }
+        }
+        if (numMarketMakingOrdersRecordsBuilder_ == null) {
+          if (!other.numMarketMakingOrdersRecords_.isEmpty()) {
+            if (numMarketMakingOrdersRecords_.isEmpty()) {
+              numMarketMakingOrdersRecords_ = other.numMarketMakingOrdersRecords_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+            } else {
+              ensureNumMarketMakingOrdersRecordsIsMutable();
+              numMarketMakingOrdersRecords_.addAll(other.numMarketMakingOrdersRecords_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.numMarketMakingOrdersRecords_.isEmpty()) {
+            if (numMarketMakingOrdersRecordsBuilder_.isEmpty()) {
+              numMarketMakingOrdersRecordsBuilder_.dispose();
+              numMarketMakingOrdersRecordsBuilder_ = null;
+              numMarketMakingOrdersRecords_ = other.numMarketMakingOrdersRecords_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+              numMarketMakingOrdersRecordsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getNumMarketMakingOrdersRecordsFieldBuilder() : null;
+            } else {
+              numMarketMakingOrdersRecordsBuilder_.addAllMessages(other.numMarketMakingOrdersRecords_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                lastPairId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                lastPoolId_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                com.crescent.liquidity.v1beta1.LiquidityProto.Pair m =
+                    input.readMessage(
+                        com.crescent.liquidity.v1beta1.LiquidityProto.Pair.parser(),
+                        extensionRegistry);
+                if (pairsBuilder_ == null) {
+                  ensurePairsIsMutable();
+                  pairs_.add(m);
+                } else {
+                  pairsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                com.crescent.liquidity.v1beta1.LiquidityProto.Pool m =
+                    input.readMessage(
+                        com.crescent.liquidity.v1beta1.LiquidityProto.Pool.parser(),
+                        extensionRegistry);
+                if (poolsBuilder_ == null) {
+                  ensurePoolsIsMutable();
+                  pools_.add(m);
+                } else {
+                  poolsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequest m =
+                    input.readMessage(
+                        com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequest.parser(),
+                        extensionRegistry);
+                if (depositRequestsBuilder_ == null) {
+                  ensureDepositRequestsIsMutable();
+                  depositRequests_.add(m);
+                } else {
+                  depositRequestsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 58: {
+                com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequest m =
+                    input.readMessage(
+                        com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequest.parser(),
+                        extensionRegistry);
+                if (withdrawRequestsBuilder_ == null) {
+                  ensureWithdrawRequestsIsMutable();
+                  withdrawRequests_.add(m);
+                } else {
+                  withdrawRequestsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              case 66: {
+                com.crescent.liquidity.v1beta1.LiquidityProto.Order m =
+                    input.readMessage(
+                        com.crescent.liquidity.v1beta1.LiquidityProto.Order.parser(),
+                        extensionRegistry);
+                if (ordersBuilder_ == null) {
+                  ensureOrdersIsMutable();
+                  orders_.add(m);
+                } else {
+                  ordersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 66
+              case 74: {
+                com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord m =
+                    input.readMessage(
+                        com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord.parser(),
+                        extensionRegistry);
+                if (numMarketMakingOrdersRecordsBuilder_ == null) {
+                  ensureNumMarketMakingOrdersRecordsIsMutable();
+                  numMarketMakingOrdersRecords_.add(m);
+                } else {
+                  numMarketMakingOrdersRecordsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 74
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.crescent.liquidity.v1beta1.LiquidityProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.liquidity.v1beta1.LiquidityProto.Params, com.crescent.liquidity.v1beta1.LiquidityProto.Params.Builder, com.crescent.liquidity.v1beta1.LiquidityProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.crescent.liquidity.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.crescent.liquidity.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.crescent.liquidity.v1beta1.LiquidityProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.crescent.liquidity.v1beta1.LiquidityProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.crescent.liquidity.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.crescent.liquidity.v1beta1.LiquidityProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidity.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.crescent.liquidity.v1beta1.LiquidityProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidity.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.crescent.liquidity.v1beta1.LiquidityProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.crescent.liquidity.v1beta1.LiquidityProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidity.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.liquidity.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.LiquidityProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.crescent.liquidity.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.LiquidityProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.crescent.liquidity.v1beta1.LiquidityProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.crescent.liquidity.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.liquidity.v1beta1.LiquidityProto.Params, com.crescent.liquidity.v1beta1.LiquidityProto.Params.Builder, com.crescent.liquidity.v1beta1.LiquidityProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.crescent.liquidity.v1beta1.LiquidityProto.Params, com.crescent.liquidity.v1beta1.LiquidityProto.Params.Builder, com.crescent.liquidity.v1beta1.LiquidityProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private long lastPairId_ ;
+      /**
+       * <code>uint64 last_pair_id = 2 [json_name = "lastPairId"];</code>
+       * @return The lastPairId.
+       */
+      @java.lang.Override
+      public long getLastPairId() {
+        return lastPairId_;
+      }
+      /**
+       * <code>uint64 last_pair_id = 2 [json_name = "lastPairId"];</code>
+       * @param value The lastPairId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastPairId(long value) {
+
+        lastPairId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 last_pair_id = 2 [json_name = "lastPairId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastPairId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        lastPairId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long lastPoolId_ ;
+      /**
+       * <code>uint64 last_pool_id = 3 [json_name = "lastPoolId"];</code>
+       * @return The lastPoolId.
+       */
+      @java.lang.Override
+      public long getLastPoolId() {
+        return lastPoolId_;
+      }
+      /**
+       * <code>uint64 last_pool_id = 3 [json_name = "lastPoolId"];</code>
+       * @param value The lastPoolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastPoolId(long value) {
+
+        lastPoolId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 last_pool_id = 3 [json_name = "lastPoolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        lastPoolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.crescent.liquidity.v1beta1.LiquidityProto.Pair> pairs_ =
+        java.util.Collections.emptyList();
+      private void ensurePairsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          pairs_ = new java.util.ArrayList<com.crescent.liquidity.v1beta1.LiquidityProto.Pair>(pairs_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.liquidity.v1beta1.LiquidityProto.Pair, com.crescent.liquidity.v1beta1.LiquidityProto.Pair.Builder, com.crescent.liquidity.v1beta1.LiquidityProto.PairOrBuilder> pairsBuilder_;
+
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pair pairs = 4 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.liquidity.v1beta1.LiquidityProto.Pair> getPairsList() {
+        if (pairsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(pairs_);
+        } else {
+          return pairsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pair pairs = 4 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public int getPairsCount() {
+        if (pairsBuilder_ == null) {
+          return pairs_.size();
+        } else {
+          return pairsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pair pairs = 4 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.LiquidityProto.Pair getPairs(int index) {
+        if (pairsBuilder_ == null) {
+          return pairs_.get(index);
+        } else {
+          return pairsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pair pairs = 4 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPairs(
+          int index, com.crescent.liquidity.v1beta1.LiquidityProto.Pair value) {
+        if (pairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePairsIsMutable();
+          pairs_.set(index, value);
+          onChanged();
+        } else {
+          pairsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pair pairs = 4 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPairs(
+          int index, com.crescent.liquidity.v1beta1.LiquidityProto.Pair.Builder builderForValue) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          pairs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          pairsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pair pairs = 4 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPairs(com.crescent.liquidity.v1beta1.LiquidityProto.Pair value) {
+        if (pairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePairsIsMutable();
+          pairs_.add(value);
+          onChanged();
+        } else {
+          pairsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pair pairs = 4 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPairs(
+          int index, com.crescent.liquidity.v1beta1.LiquidityProto.Pair value) {
+        if (pairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePairsIsMutable();
+          pairs_.add(index, value);
+          onChanged();
+        } else {
+          pairsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pair pairs = 4 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPairs(
+          com.crescent.liquidity.v1beta1.LiquidityProto.Pair.Builder builderForValue) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          pairs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          pairsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pair pairs = 4 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPairs(
+          int index, com.crescent.liquidity.v1beta1.LiquidityProto.Pair.Builder builderForValue) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          pairs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          pairsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pair pairs = 4 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllPairs(
+          java.lang.Iterable<? extends com.crescent.liquidity.v1beta1.LiquidityProto.Pair> values) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, pairs_);
+          onChanged();
+        } else {
+          pairsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pair pairs = 4 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPairs() {
+        if (pairsBuilder_ == null) {
+          pairs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          pairsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pair pairs = 4 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removePairs(int index) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          pairs_.remove(index);
+          onChanged();
+        } else {
+          pairsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pair pairs = 4 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.LiquidityProto.Pair.Builder getPairsBuilder(
+          int index) {
+        return getPairsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pair pairs = 4 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.LiquidityProto.PairOrBuilder getPairsOrBuilder(
+          int index) {
+        if (pairsBuilder_ == null) {
+          return pairs_.get(index);  } else {
+          return pairsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pair pairs = 4 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.crescent.liquidity.v1beta1.LiquidityProto.PairOrBuilder> 
+           getPairsOrBuilderList() {
+        if (pairsBuilder_ != null) {
+          return pairsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(pairs_);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pair pairs = 4 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.LiquidityProto.Pair.Builder addPairsBuilder() {
+        return getPairsFieldBuilder().addBuilder(
+            com.crescent.liquidity.v1beta1.LiquidityProto.Pair.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pair pairs = 4 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.LiquidityProto.Pair.Builder addPairsBuilder(
+          int index) {
+        return getPairsFieldBuilder().addBuilder(
+            index, com.crescent.liquidity.v1beta1.LiquidityProto.Pair.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pair pairs = 4 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.liquidity.v1beta1.LiquidityProto.Pair.Builder> 
+           getPairsBuilderList() {
+        return getPairsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.liquidity.v1beta1.LiquidityProto.Pair, com.crescent.liquidity.v1beta1.LiquidityProto.Pair.Builder, com.crescent.liquidity.v1beta1.LiquidityProto.PairOrBuilder> 
+          getPairsFieldBuilder() {
+        if (pairsBuilder_ == null) {
+          pairsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.crescent.liquidity.v1beta1.LiquidityProto.Pair, com.crescent.liquidity.v1beta1.LiquidityProto.Pair.Builder, com.crescent.liquidity.v1beta1.LiquidityProto.PairOrBuilder>(
+                  pairs_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          pairs_ = null;
+        }
+        return pairsBuilder_;
+      }
+
+      private java.util.List<com.crescent.liquidity.v1beta1.LiquidityProto.Pool> pools_ =
+        java.util.Collections.emptyList();
+      private void ensurePoolsIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          pools_ = new java.util.ArrayList<com.crescent.liquidity.v1beta1.LiquidityProto.Pool>(pools_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.liquidity.v1beta1.LiquidityProto.Pool, com.crescent.liquidity.v1beta1.LiquidityProto.Pool.Builder, com.crescent.liquidity.v1beta1.LiquidityProto.PoolOrBuilder> poolsBuilder_;
+
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pool pools = 5 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.liquidity.v1beta1.LiquidityProto.Pool> getPoolsList() {
+        if (poolsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(pools_);
+        } else {
+          return poolsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pool pools = 5 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public int getPoolsCount() {
+        if (poolsBuilder_ == null) {
+          return pools_.size();
+        } else {
+          return poolsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pool pools = 5 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.LiquidityProto.Pool getPools(int index) {
+        if (poolsBuilder_ == null) {
+          return pools_.get(index);
+        } else {
+          return poolsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pool pools = 5 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPools(
+          int index, com.crescent.liquidity.v1beta1.LiquidityProto.Pool value) {
+        if (poolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolsIsMutable();
+          pools_.set(index, value);
+          onChanged();
+        } else {
+          poolsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pool pools = 5 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPools(
+          int index, com.crescent.liquidity.v1beta1.LiquidityProto.Pool.Builder builderForValue) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          pools_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          poolsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pool pools = 5 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPools(com.crescent.liquidity.v1beta1.LiquidityProto.Pool value) {
+        if (poolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolsIsMutable();
+          pools_.add(value);
+          onChanged();
+        } else {
+          poolsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pool pools = 5 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPools(
+          int index, com.crescent.liquidity.v1beta1.LiquidityProto.Pool value) {
+        if (poolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolsIsMutable();
+          pools_.add(index, value);
+          onChanged();
+        } else {
+          poolsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pool pools = 5 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPools(
+          com.crescent.liquidity.v1beta1.LiquidityProto.Pool.Builder builderForValue) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          pools_.add(builderForValue.build());
+          onChanged();
+        } else {
+          poolsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pool pools = 5 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPools(
+          int index, com.crescent.liquidity.v1beta1.LiquidityProto.Pool.Builder builderForValue) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          pools_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          poolsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pool pools = 5 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllPools(
+          java.lang.Iterable<? extends com.crescent.liquidity.v1beta1.LiquidityProto.Pool> values) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, pools_);
+          onChanged();
+        } else {
+          poolsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pool pools = 5 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPools() {
+        if (poolsBuilder_ == null) {
+          pools_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          poolsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pool pools = 5 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removePools(int index) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          pools_.remove(index);
+          onChanged();
+        } else {
+          poolsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pool pools = 5 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.LiquidityProto.Pool.Builder getPoolsBuilder(
+          int index) {
+        return getPoolsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pool pools = 5 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.LiquidityProto.PoolOrBuilder getPoolsOrBuilder(
+          int index) {
+        if (poolsBuilder_ == null) {
+          return pools_.get(index);  } else {
+          return poolsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pool pools = 5 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.crescent.liquidity.v1beta1.LiquidityProto.PoolOrBuilder> 
+           getPoolsOrBuilderList() {
+        if (poolsBuilder_ != null) {
+          return poolsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(pools_);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pool pools = 5 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.LiquidityProto.Pool.Builder addPoolsBuilder() {
+        return getPoolsFieldBuilder().addBuilder(
+            com.crescent.liquidity.v1beta1.LiquidityProto.Pool.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pool pools = 5 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.LiquidityProto.Pool.Builder addPoolsBuilder(
+          int index) {
+        return getPoolsFieldBuilder().addBuilder(
+            index, com.crescent.liquidity.v1beta1.LiquidityProto.Pool.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Pool pools = 5 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.liquidity.v1beta1.LiquidityProto.Pool.Builder> 
+           getPoolsBuilderList() {
+        return getPoolsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.liquidity.v1beta1.LiquidityProto.Pool, com.crescent.liquidity.v1beta1.LiquidityProto.Pool.Builder, com.crescent.liquidity.v1beta1.LiquidityProto.PoolOrBuilder> 
+          getPoolsFieldBuilder() {
+        if (poolsBuilder_ == null) {
+          poolsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.crescent.liquidity.v1beta1.LiquidityProto.Pool, com.crescent.liquidity.v1beta1.LiquidityProto.Pool.Builder, com.crescent.liquidity.v1beta1.LiquidityProto.PoolOrBuilder>(
+                  pools_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          pools_ = null;
+        }
+        return poolsBuilder_;
+      }
+
+      private java.util.List<com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequest> depositRequests_ =
+        java.util.Collections.emptyList();
+      private void ensureDepositRequestsIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          depositRequests_ = new java.util.ArrayList<com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequest>(depositRequests_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequest, com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequest.Builder, com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequestOrBuilder> depositRequestsBuilder_;
+
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.DepositRequest deposit_requests = 6 [json_name = "depositRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequest> getDepositRequestsList() {
+        if (depositRequestsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(depositRequests_);
+        } else {
+          return depositRequestsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.DepositRequest deposit_requests = 6 [json_name = "depositRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public int getDepositRequestsCount() {
+        if (depositRequestsBuilder_ == null) {
+          return depositRequests_.size();
+        } else {
+          return depositRequestsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.DepositRequest deposit_requests = 6 [json_name = "depositRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequest getDepositRequests(int index) {
+        if (depositRequestsBuilder_ == null) {
+          return depositRequests_.get(index);
+        } else {
+          return depositRequestsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.DepositRequest deposit_requests = 6 [json_name = "depositRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDepositRequests(
+          int index, com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequest value) {
+        if (depositRequestsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDepositRequestsIsMutable();
+          depositRequests_.set(index, value);
+          onChanged();
+        } else {
+          depositRequestsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.DepositRequest deposit_requests = 6 [json_name = "depositRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDepositRequests(
+          int index, com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequest.Builder builderForValue) {
+        if (depositRequestsBuilder_ == null) {
+          ensureDepositRequestsIsMutable();
+          depositRequests_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          depositRequestsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.DepositRequest deposit_requests = 6 [json_name = "depositRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDepositRequests(com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequest value) {
+        if (depositRequestsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDepositRequestsIsMutable();
+          depositRequests_.add(value);
+          onChanged();
+        } else {
+          depositRequestsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.DepositRequest deposit_requests = 6 [json_name = "depositRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDepositRequests(
+          int index, com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequest value) {
+        if (depositRequestsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDepositRequestsIsMutable();
+          depositRequests_.add(index, value);
+          onChanged();
+        } else {
+          depositRequestsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.DepositRequest deposit_requests = 6 [json_name = "depositRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDepositRequests(
+          com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequest.Builder builderForValue) {
+        if (depositRequestsBuilder_ == null) {
+          ensureDepositRequestsIsMutable();
+          depositRequests_.add(builderForValue.build());
+          onChanged();
+        } else {
+          depositRequestsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.DepositRequest deposit_requests = 6 [json_name = "depositRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDepositRequests(
+          int index, com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequest.Builder builderForValue) {
+        if (depositRequestsBuilder_ == null) {
+          ensureDepositRequestsIsMutable();
+          depositRequests_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          depositRequestsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.DepositRequest deposit_requests = 6 [json_name = "depositRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllDepositRequests(
+          java.lang.Iterable<? extends com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequest> values) {
+        if (depositRequestsBuilder_ == null) {
+          ensureDepositRequestsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, depositRequests_);
+          onChanged();
+        } else {
+          depositRequestsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.DepositRequest deposit_requests = 6 [json_name = "depositRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDepositRequests() {
+        if (depositRequestsBuilder_ == null) {
+          depositRequests_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          depositRequestsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.DepositRequest deposit_requests = 6 [json_name = "depositRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeDepositRequests(int index) {
+        if (depositRequestsBuilder_ == null) {
+          ensureDepositRequestsIsMutable();
+          depositRequests_.remove(index);
+          onChanged();
+        } else {
+          depositRequestsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.DepositRequest deposit_requests = 6 [json_name = "depositRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequest.Builder getDepositRequestsBuilder(
+          int index) {
+        return getDepositRequestsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.DepositRequest deposit_requests = 6 [json_name = "depositRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequestOrBuilder getDepositRequestsOrBuilder(
+          int index) {
+        if (depositRequestsBuilder_ == null) {
+          return depositRequests_.get(index);  } else {
+          return depositRequestsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.DepositRequest deposit_requests = 6 [json_name = "depositRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequestOrBuilder> 
+           getDepositRequestsOrBuilderList() {
+        if (depositRequestsBuilder_ != null) {
+          return depositRequestsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(depositRequests_);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.DepositRequest deposit_requests = 6 [json_name = "depositRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequest.Builder addDepositRequestsBuilder() {
+        return getDepositRequestsFieldBuilder().addBuilder(
+            com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequest.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.DepositRequest deposit_requests = 6 [json_name = "depositRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequest.Builder addDepositRequestsBuilder(
+          int index) {
+        return getDepositRequestsFieldBuilder().addBuilder(
+            index, com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequest.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.DepositRequest deposit_requests = 6 [json_name = "depositRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequest.Builder> 
+           getDepositRequestsBuilderList() {
+        return getDepositRequestsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequest, com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequest.Builder, com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequestOrBuilder> 
+          getDepositRequestsFieldBuilder() {
+        if (depositRequestsBuilder_ == null) {
+          depositRequestsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequest, com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequest.Builder, com.crescent.liquidity.v1beta1.LiquidityProto.DepositRequestOrBuilder>(
+                  depositRequests_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          depositRequests_ = null;
+        }
+        return depositRequestsBuilder_;
+      }
+
+      private java.util.List<com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequest> withdrawRequests_ =
+        java.util.Collections.emptyList();
+      private void ensureWithdrawRequestsIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          withdrawRequests_ = new java.util.ArrayList<com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequest>(withdrawRequests_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequest, com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequest.Builder, com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequestOrBuilder> withdrawRequestsBuilder_;
+
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.WithdrawRequest withdraw_requests = 7 [json_name = "withdrawRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequest> getWithdrawRequestsList() {
+        if (withdrawRequestsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(withdrawRequests_);
+        } else {
+          return withdrawRequestsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.WithdrawRequest withdraw_requests = 7 [json_name = "withdrawRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public int getWithdrawRequestsCount() {
+        if (withdrawRequestsBuilder_ == null) {
+          return withdrawRequests_.size();
+        } else {
+          return withdrawRequestsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.WithdrawRequest withdraw_requests = 7 [json_name = "withdrawRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequest getWithdrawRequests(int index) {
+        if (withdrawRequestsBuilder_ == null) {
+          return withdrawRequests_.get(index);
+        } else {
+          return withdrawRequestsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.WithdrawRequest withdraw_requests = 7 [json_name = "withdrawRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setWithdrawRequests(
+          int index, com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequest value) {
+        if (withdrawRequestsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWithdrawRequestsIsMutable();
+          withdrawRequests_.set(index, value);
+          onChanged();
+        } else {
+          withdrawRequestsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.WithdrawRequest withdraw_requests = 7 [json_name = "withdrawRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setWithdrawRequests(
+          int index, com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequest.Builder builderForValue) {
+        if (withdrawRequestsBuilder_ == null) {
+          ensureWithdrawRequestsIsMutable();
+          withdrawRequests_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          withdrawRequestsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.WithdrawRequest withdraw_requests = 7 [json_name = "withdrawRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addWithdrawRequests(com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequest value) {
+        if (withdrawRequestsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWithdrawRequestsIsMutable();
+          withdrawRequests_.add(value);
+          onChanged();
+        } else {
+          withdrawRequestsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.WithdrawRequest withdraw_requests = 7 [json_name = "withdrawRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addWithdrawRequests(
+          int index, com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequest value) {
+        if (withdrawRequestsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWithdrawRequestsIsMutable();
+          withdrawRequests_.add(index, value);
+          onChanged();
+        } else {
+          withdrawRequestsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.WithdrawRequest withdraw_requests = 7 [json_name = "withdrawRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addWithdrawRequests(
+          com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequest.Builder builderForValue) {
+        if (withdrawRequestsBuilder_ == null) {
+          ensureWithdrawRequestsIsMutable();
+          withdrawRequests_.add(builderForValue.build());
+          onChanged();
+        } else {
+          withdrawRequestsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.WithdrawRequest withdraw_requests = 7 [json_name = "withdrawRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addWithdrawRequests(
+          int index, com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequest.Builder builderForValue) {
+        if (withdrawRequestsBuilder_ == null) {
+          ensureWithdrawRequestsIsMutable();
+          withdrawRequests_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          withdrawRequestsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.WithdrawRequest withdraw_requests = 7 [json_name = "withdrawRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllWithdrawRequests(
+          java.lang.Iterable<? extends com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequest> values) {
+        if (withdrawRequestsBuilder_ == null) {
+          ensureWithdrawRequestsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, withdrawRequests_);
+          onChanged();
+        } else {
+          withdrawRequestsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.WithdrawRequest withdraw_requests = 7 [json_name = "withdrawRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearWithdrawRequests() {
+        if (withdrawRequestsBuilder_ == null) {
+          withdrawRequests_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          withdrawRequestsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.WithdrawRequest withdraw_requests = 7 [json_name = "withdrawRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeWithdrawRequests(int index) {
+        if (withdrawRequestsBuilder_ == null) {
+          ensureWithdrawRequestsIsMutable();
+          withdrawRequests_.remove(index);
+          onChanged();
+        } else {
+          withdrawRequestsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.WithdrawRequest withdraw_requests = 7 [json_name = "withdrawRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequest.Builder getWithdrawRequestsBuilder(
+          int index) {
+        return getWithdrawRequestsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.WithdrawRequest withdraw_requests = 7 [json_name = "withdrawRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequestOrBuilder getWithdrawRequestsOrBuilder(
+          int index) {
+        if (withdrawRequestsBuilder_ == null) {
+          return withdrawRequests_.get(index);  } else {
+          return withdrawRequestsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.WithdrawRequest withdraw_requests = 7 [json_name = "withdrawRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequestOrBuilder> 
+           getWithdrawRequestsOrBuilderList() {
+        if (withdrawRequestsBuilder_ != null) {
+          return withdrawRequestsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(withdrawRequests_);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.WithdrawRequest withdraw_requests = 7 [json_name = "withdrawRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequest.Builder addWithdrawRequestsBuilder() {
+        return getWithdrawRequestsFieldBuilder().addBuilder(
+            com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequest.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.WithdrawRequest withdraw_requests = 7 [json_name = "withdrawRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequest.Builder addWithdrawRequestsBuilder(
+          int index) {
+        return getWithdrawRequestsFieldBuilder().addBuilder(
+            index, com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequest.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.WithdrawRequest withdraw_requests = 7 [json_name = "withdrawRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequest.Builder> 
+           getWithdrawRequestsBuilderList() {
+        return getWithdrawRequestsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequest, com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequest.Builder, com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequestOrBuilder> 
+          getWithdrawRequestsFieldBuilder() {
+        if (withdrawRequestsBuilder_ == null) {
+          withdrawRequestsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequest, com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequest.Builder, com.crescent.liquidity.v1beta1.LiquidityProto.WithdrawRequestOrBuilder>(
+                  withdrawRequests_,
+                  ((bitField0_ & 0x00000040) != 0),
+                  getParentForChildren(),
+                  isClean());
+          withdrawRequests_ = null;
+        }
+        return withdrawRequestsBuilder_;
+      }
+
+      private java.util.List<com.crescent.liquidity.v1beta1.LiquidityProto.Order> orders_ =
+        java.util.Collections.emptyList();
+      private void ensureOrdersIsMutable() {
+        if (!((bitField0_ & 0x00000080) != 0)) {
+          orders_ = new java.util.ArrayList<com.crescent.liquidity.v1beta1.LiquidityProto.Order>(orders_);
+          bitField0_ |= 0x00000080;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.liquidity.v1beta1.LiquidityProto.Order, com.crescent.liquidity.v1beta1.LiquidityProto.Order.Builder, com.crescent.liquidity.v1beta1.LiquidityProto.OrderOrBuilder> ordersBuilder_;
+
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Order orders = 8 [json_name = "orders", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.liquidity.v1beta1.LiquidityProto.Order> getOrdersList() {
+        if (ordersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(orders_);
+        } else {
+          return ordersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Order orders = 8 [json_name = "orders", (.gogoproto.nullable) = false];</code>
+       */
+      public int getOrdersCount() {
+        if (ordersBuilder_ == null) {
+          return orders_.size();
+        } else {
+          return ordersBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Order orders = 8 [json_name = "orders", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.LiquidityProto.Order getOrders(int index) {
+        if (ordersBuilder_ == null) {
+          return orders_.get(index);
+        } else {
+          return ordersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Order orders = 8 [json_name = "orders", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOrders(
+          int index, com.crescent.liquidity.v1beta1.LiquidityProto.Order value) {
+        if (ordersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrdersIsMutable();
+          orders_.set(index, value);
+          onChanged();
+        } else {
+          ordersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Order orders = 8 [json_name = "orders", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOrders(
+          int index, com.crescent.liquidity.v1beta1.LiquidityProto.Order.Builder builderForValue) {
+        if (ordersBuilder_ == null) {
+          ensureOrdersIsMutable();
+          orders_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          ordersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Order orders = 8 [json_name = "orders", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOrders(com.crescent.liquidity.v1beta1.LiquidityProto.Order value) {
+        if (ordersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrdersIsMutable();
+          orders_.add(value);
+          onChanged();
+        } else {
+          ordersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Order orders = 8 [json_name = "orders", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOrders(
+          int index, com.crescent.liquidity.v1beta1.LiquidityProto.Order value) {
+        if (ordersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrdersIsMutable();
+          orders_.add(index, value);
+          onChanged();
+        } else {
+          ordersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Order orders = 8 [json_name = "orders", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOrders(
+          com.crescent.liquidity.v1beta1.LiquidityProto.Order.Builder builderForValue) {
+        if (ordersBuilder_ == null) {
+          ensureOrdersIsMutable();
+          orders_.add(builderForValue.build());
+          onChanged();
+        } else {
+          ordersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Order orders = 8 [json_name = "orders", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOrders(
+          int index, com.crescent.liquidity.v1beta1.LiquidityProto.Order.Builder builderForValue) {
+        if (ordersBuilder_ == null) {
+          ensureOrdersIsMutable();
+          orders_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          ordersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Order orders = 8 [json_name = "orders", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllOrders(
+          java.lang.Iterable<? extends com.crescent.liquidity.v1beta1.LiquidityProto.Order> values) {
+        if (ordersBuilder_ == null) {
+          ensureOrdersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, orders_);
+          onChanged();
+        } else {
+          ordersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Order orders = 8 [json_name = "orders", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearOrders() {
+        if (ordersBuilder_ == null) {
+          orders_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
+          onChanged();
+        } else {
+          ordersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Order orders = 8 [json_name = "orders", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeOrders(int index) {
+        if (ordersBuilder_ == null) {
+          ensureOrdersIsMutable();
+          orders_.remove(index);
+          onChanged();
+        } else {
+          ordersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Order orders = 8 [json_name = "orders", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.LiquidityProto.Order.Builder getOrdersBuilder(
+          int index) {
+        return getOrdersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Order orders = 8 [json_name = "orders", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.LiquidityProto.OrderOrBuilder getOrdersOrBuilder(
+          int index) {
+        if (ordersBuilder_ == null) {
+          return orders_.get(index);  } else {
+          return ordersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Order orders = 8 [json_name = "orders", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.crescent.liquidity.v1beta1.LiquidityProto.OrderOrBuilder> 
+           getOrdersOrBuilderList() {
+        if (ordersBuilder_ != null) {
+          return ordersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(orders_);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Order orders = 8 [json_name = "orders", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.LiquidityProto.Order.Builder addOrdersBuilder() {
+        return getOrdersFieldBuilder().addBuilder(
+            com.crescent.liquidity.v1beta1.LiquidityProto.Order.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Order orders = 8 [json_name = "orders", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.LiquidityProto.Order.Builder addOrdersBuilder(
+          int index) {
+        return getOrdersFieldBuilder().addBuilder(
+            index, com.crescent.liquidity.v1beta1.LiquidityProto.Order.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.Order orders = 8 [json_name = "orders", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.liquidity.v1beta1.LiquidityProto.Order.Builder> 
+           getOrdersBuilderList() {
+        return getOrdersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.liquidity.v1beta1.LiquidityProto.Order, com.crescent.liquidity.v1beta1.LiquidityProto.Order.Builder, com.crescent.liquidity.v1beta1.LiquidityProto.OrderOrBuilder> 
+          getOrdersFieldBuilder() {
+        if (ordersBuilder_ == null) {
+          ordersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.crescent.liquidity.v1beta1.LiquidityProto.Order, com.crescent.liquidity.v1beta1.LiquidityProto.Order.Builder, com.crescent.liquidity.v1beta1.LiquidityProto.OrderOrBuilder>(
+                  orders_,
+                  ((bitField0_ & 0x00000080) != 0),
+                  getParentForChildren(),
+                  isClean());
+          orders_ = null;
+        }
+        return ordersBuilder_;
+      }
+
+      private java.util.List<com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord> numMarketMakingOrdersRecords_ =
+        java.util.Collections.emptyList();
+      private void ensureNumMarketMakingOrdersRecordsIsMutable() {
+        if (!((bitField0_ & 0x00000100) != 0)) {
+          numMarketMakingOrdersRecords_ = new java.util.ArrayList<com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord>(numMarketMakingOrdersRecords_);
+          bitField0_ |= 0x00000100;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord, com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord.Builder, com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecordOrBuilder> numMarketMakingOrdersRecordsBuilder_;
+
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.NumMMOrdersRecord num_market_making_orders_records = 9 [json_name = "numMarketMakingOrdersRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord> getNumMarketMakingOrdersRecordsList() {
+        if (numMarketMakingOrdersRecordsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(numMarketMakingOrdersRecords_);
+        } else {
+          return numMarketMakingOrdersRecordsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.NumMMOrdersRecord num_market_making_orders_records = 9 [json_name = "numMarketMakingOrdersRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public int getNumMarketMakingOrdersRecordsCount() {
+        if (numMarketMakingOrdersRecordsBuilder_ == null) {
+          return numMarketMakingOrdersRecords_.size();
+        } else {
+          return numMarketMakingOrdersRecordsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.NumMMOrdersRecord num_market_making_orders_records = 9 [json_name = "numMarketMakingOrdersRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord getNumMarketMakingOrdersRecords(int index) {
+        if (numMarketMakingOrdersRecordsBuilder_ == null) {
+          return numMarketMakingOrdersRecords_.get(index);
+        } else {
+          return numMarketMakingOrdersRecordsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.NumMMOrdersRecord num_market_making_orders_records = 9 [json_name = "numMarketMakingOrdersRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setNumMarketMakingOrdersRecords(
+          int index, com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord value) {
+        if (numMarketMakingOrdersRecordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNumMarketMakingOrdersRecordsIsMutable();
+          numMarketMakingOrdersRecords_.set(index, value);
+          onChanged();
+        } else {
+          numMarketMakingOrdersRecordsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.NumMMOrdersRecord num_market_making_orders_records = 9 [json_name = "numMarketMakingOrdersRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setNumMarketMakingOrdersRecords(
+          int index, com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord.Builder builderForValue) {
+        if (numMarketMakingOrdersRecordsBuilder_ == null) {
+          ensureNumMarketMakingOrdersRecordsIsMutable();
+          numMarketMakingOrdersRecords_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          numMarketMakingOrdersRecordsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.NumMMOrdersRecord num_market_making_orders_records = 9 [json_name = "numMarketMakingOrdersRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addNumMarketMakingOrdersRecords(com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord value) {
+        if (numMarketMakingOrdersRecordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNumMarketMakingOrdersRecordsIsMutable();
+          numMarketMakingOrdersRecords_.add(value);
+          onChanged();
+        } else {
+          numMarketMakingOrdersRecordsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.NumMMOrdersRecord num_market_making_orders_records = 9 [json_name = "numMarketMakingOrdersRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addNumMarketMakingOrdersRecords(
+          int index, com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord value) {
+        if (numMarketMakingOrdersRecordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNumMarketMakingOrdersRecordsIsMutable();
+          numMarketMakingOrdersRecords_.add(index, value);
+          onChanged();
+        } else {
+          numMarketMakingOrdersRecordsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.NumMMOrdersRecord num_market_making_orders_records = 9 [json_name = "numMarketMakingOrdersRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addNumMarketMakingOrdersRecords(
+          com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord.Builder builderForValue) {
+        if (numMarketMakingOrdersRecordsBuilder_ == null) {
+          ensureNumMarketMakingOrdersRecordsIsMutable();
+          numMarketMakingOrdersRecords_.add(builderForValue.build());
+          onChanged();
+        } else {
+          numMarketMakingOrdersRecordsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.NumMMOrdersRecord num_market_making_orders_records = 9 [json_name = "numMarketMakingOrdersRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addNumMarketMakingOrdersRecords(
+          int index, com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord.Builder builderForValue) {
+        if (numMarketMakingOrdersRecordsBuilder_ == null) {
+          ensureNumMarketMakingOrdersRecordsIsMutable();
+          numMarketMakingOrdersRecords_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          numMarketMakingOrdersRecordsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.NumMMOrdersRecord num_market_making_orders_records = 9 [json_name = "numMarketMakingOrdersRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllNumMarketMakingOrdersRecords(
+          java.lang.Iterable<? extends com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord> values) {
+        if (numMarketMakingOrdersRecordsBuilder_ == null) {
+          ensureNumMarketMakingOrdersRecordsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, numMarketMakingOrdersRecords_);
+          onChanged();
+        } else {
+          numMarketMakingOrdersRecordsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.NumMMOrdersRecord num_market_making_orders_records = 9 [json_name = "numMarketMakingOrdersRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearNumMarketMakingOrdersRecords() {
+        if (numMarketMakingOrdersRecordsBuilder_ == null) {
+          numMarketMakingOrdersRecords_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000100);
+          onChanged();
+        } else {
+          numMarketMakingOrdersRecordsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.NumMMOrdersRecord num_market_making_orders_records = 9 [json_name = "numMarketMakingOrdersRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeNumMarketMakingOrdersRecords(int index) {
+        if (numMarketMakingOrdersRecordsBuilder_ == null) {
+          ensureNumMarketMakingOrdersRecordsIsMutable();
+          numMarketMakingOrdersRecords_.remove(index);
+          onChanged();
+        } else {
+          numMarketMakingOrdersRecordsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.NumMMOrdersRecord num_market_making_orders_records = 9 [json_name = "numMarketMakingOrdersRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord.Builder getNumMarketMakingOrdersRecordsBuilder(
+          int index) {
+        return getNumMarketMakingOrdersRecordsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.NumMMOrdersRecord num_market_making_orders_records = 9 [json_name = "numMarketMakingOrdersRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecordOrBuilder getNumMarketMakingOrdersRecordsOrBuilder(
+          int index) {
+        if (numMarketMakingOrdersRecordsBuilder_ == null) {
+          return numMarketMakingOrdersRecords_.get(index);  } else {
+          return numMarketMakingOrdersRecordsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.NumMMOrdersRecord num_market_making_orders_records = 9 [json_name = "numMarketMakingOrdersRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecordOrBuilder> 
+           getNumMarketMakingOrdersRecordsOrBuilderList() {
+        if (numMarketMakingOrdersRecordsBuilder_ != null) {
+          return numMarketMakingOrdersRecordsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(numMarketMakingOrdersRecords_);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.NumMMOrdersRecord num_market_making_orders_records = 9 [json_name = "numMarketMakingOrdersRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord.Builder addNumMarketMakingOrdersRecordsBuilder() {
+        return getNumMarketMakingOrdersRecordsFieldBuilder().addBuilder(
+            com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.NumMMOrdersRecord num_market_making_orders_records = 9 [json_name = "numMarketMakingOrdersRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord.Builder addNumMarketMakingOrdersRecordsBuilder(
+          int index) {
+        return getNumMarketMakingOrdersRecordsFieldBuilder().addBuilder(
+            index, com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.liquidity.v1beta1.NumMMOrdersRecord num_market_making_orders_records = 9 [json_name = "numMarketMakingOrdersRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord.Builder> 
+           getNumMarketMakingOrdersRecordsBuilderList() {
+        return getNumMarketMakingOrdersRecordsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord, com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord.Builder, com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecordOrBuilder> 
+          getNumMarketMakingOrdersRecordsFieldBuilder() {
+        if (numMarketMakingOrdersRecordsBuilder_ == null) {
+          numMarketMakingOrdersRecordsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord, com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord.Builder, com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecordOrBuilder>(
+                  numMarketMakingOrdersRecords_,
+                  ((bitField0_ & 0x00000100) != 0),
+                  getParentForChildren(),
+                  isClean());
+          numMarketMakingOrdersRecords_ = null;
+        }
+        return numMarketMakingOrdersRecordsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidity.v1beta1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidity.v1beta1.GenesisState)
+    private static final com.crescent.liquidity.v1beta1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidity.v1beta1.GenesisProto.GenesisState();
+    }
+
+    public static com.crescent.liquidity.v1beta1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidity.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface NumMMOrdersRecordOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidity.v1beta1.NumMMOrdersRecord)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string orderer = 1 [json_name = "orderer"];</code>
+     * @return The orderer.
+     */
+    java.lang.String getOrderer();
+    /**
+     * <code>string orderer = 1 [json_name = "orderer"];</code>
+     * @return The bytes for orderer.
+     */
+    com.google.protobuf.ByteString
+        getOrdererBytes();
+
+    /**
+     * <code>uint64 pair_id = 2 [json_name = "pairId"];</code>
+     * @return The pairId.
+     */
+    long getPairId();
+
+    /**
+     * <code>uint32 num_market_making_orders = 3 [json_name = "numMarketMakingOrders"];</code>
+     * @return The numMarketMakingOrders.
+     */
+    int getNumMarketMakingOrders();
+  }
+  /**
+   * <pre>
+   * NumMMOrdersRecord holds information about how many MM orders an orderer
+   * ordered per pair.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidity.v1beta1.NumMMOrdersRecord}
+   */
+  public static final class NumMMOrdersRecord extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidity.v1beta1.NumMMOrdersRecord)
+      NumMMOrdersRecordOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use NumMMOrdersRecord.newBuilder() to construct.
+    private NumMMOrdersRecord(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private NumMMOrdersRecord() {
+      orderer_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new NumMMOrdersRecord();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidity.v1beta1.GenesisProto.internal_static_crescent_liquidity_v1beta1_NumMMOrdersRecord_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidity.v1beta1.GenesisProto.internal_static_crescent_liquidity_v1beta1_NumMMOrdersRecord_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord.class, com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord.Builder.class);
+    }
+
+    public static final int ORDERER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object orderer_ = "";
+    /**
+     * <code>string orderer = 1 [json_name = "orderer"];</code>
+     * @return The orderer.
+     */
+    @java.lang.Override
+    public java.lang.String getOrderer() {
+      java.lang.Object ref = orderer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        orderer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string orderer = 1 [json_name = "orderer"];</code>
+     * @return The bytes for orderer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrdererBytes() {
+      java.lang.Object ref = orderer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        orderer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAIR_ID_FIELD_NUMBER = 2;
+    private long pairId_ = 0L;
+    /**
+     * <code>uint64 pair_id = 2 [json_name = "pairId"];</code>
+     * @return The pairId.
+     */
+    @java.lang.Override
+    public long getPairId() {
+      return pairId_;
+    }
+
+    public static final int NUM_MARKET_MAKING_ORDERS_FIELD_NUMBER = 3;
+    private int numMarketMakingOrders_ = 0;
+    /**
+     * <code>uint32 num_market_making_orders = 3 [json_name = "numMarketMakingOrders"];</code>
+     * @return The numMarketMakingOrders.
+     */
+    @java.lang.Override
+    public int getNumMarketMakingOrders() {
+      return numMarketMakingOrders_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orderer_);
+      }
+      if (pairId_ != 0L) {
+        output.writeUInt64(2, pairId_);
+      }
+      if (numMarketMakingOrders_ != 0) {
+        output.writeUInt32(3, numMarketMakingOrders_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orderer_);
+      }
+      if (pairId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, pairId_);
+      }
+      if (numMarketMakingOrders_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, numMarketMakingOrders_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord other = (com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord) obj;
+
+      if (!getOrderer()
+          .equals(other.getOrderer())) return false;
+      if (getPairId()
+          != other.getPairId()) return false;
+      if (getNumMarketMakingOrders()
+          != other.getNumMarketMakingOrders()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ORDERER_FIELD_NUMBER;
+      hash = (53 * hash) + getOrderer().hashCode();
+      hash = (37 * hash) + PAIR_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPairId());
+      hash = (37 * hash) + NUM_MARKET_MAKING_ORDERS_FIELD_NUMBER;
+      hash = (53 * hash) + getNumMarketMakingOrders();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * NumMMOrdersRecord holds information about how many MM orders an orderer
+     * ordered per pair.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidity.v1beta1.NumMMOrdersRecord}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidity.v1beta1.NumMMOrdersRecord)
+        com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecordOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidity.v1beta1.GenesisProto.internal_static_crescent_liquidity_v1beta1_NumMMOrdersRecord_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidity.v1beta1.GenesisProto.internal_static_crescent_liquidity_v1beta1_NumMMOrdersRecord_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord.class, com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        orderer_ = "";
+        pairId_ = 0L;
+        numMarketMakingOrders_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidity.v1beta1.GenesisProto.internal_static_crescent_liquidity_v1beta1_NumMMOrdersRecord_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord getDefaultInstanceForType() {
+        return com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord build() {
+        com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord buildPartial() {
+        com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord result = new com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.orderer_ = orderer_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pairId_ = pairId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.numMarketMakingOrders_ = numMarketMakingOrders_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord) {
+          return mergeFrom((com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord other) {
+        if (other == com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord.getDefaultInstance()) return this;
+        if (!other.getOrderer().isEmpty()) {
+          orderer_ = other.orderer_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getPairId() != 0L) {
+          setPairId(other.getPairId());
+        }
+        if (other.getNumMarketMakingOrders() != 0) {
+          setNumMarketMakingOrders(other.getNumMarketMakingOrders());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                orderer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                pairId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                numMarketMakingOrders_ = input.readUInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object orderer_ = "";
+      /**
+       * <code>string orderer = 1 [json_name = "orderer"];</code>
+       * @return The orderer.
+       */
+      public java.lang.String getOrderer() {
+        java.lang.Object ref = orderer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          orderer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string orderer = 1 [json_name = "orderer"];</code>
+       * @return The bytes for orderer.
+       */
+      public com.google.protobuf.ByteString
+          getOrdererBytes() {
+        java.lang.Object ref = orderer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          orderer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string orderer = 1 [json_name = "orderer"];</code>
+       * @param value The orderer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrderer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        orderer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string orderer = 1 [json_name = "orderer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrderer() {
+        orderer_ = getDefaultInstance().getOrderer();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string orderer = 1 [json_name = "orderer"];</code>
+       * @param value The bytes for orderer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrdererBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        orderer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long pairId_ ;
+      /**
+       * <code>uint64 pair_id = 2 [json_name = "pairId"];</code>
+       * @return The pairId.
+       */
+      @java.lang.Override
+      public long getPairId() {
+        return pairId_;
+      }
+      /**
+       * <code>uint64 pair_id = 2 [json_name = "pairId"];</code>
+       * @param value The pairId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPairId(long value) {
+
+        pairId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pair_id = 2 [json_name = "pairId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPairId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pairId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int numMarketMakingOrders_ ;
+      /**
+       * <code>uint32 num_market_making_orders = 3 [json_name = "numMarketMakingOrders"];</code>
+       * @return The numMarketMakingOrders.
+       */
+      @java.lang.Override
+      public int getNumMarketMakingOrders() {
+        return numMarketMakingOrders_;
+      }
+      /**
+       * <code>uint32 num_market_making_orders = 3 [json_name = "numMarketMakingOrders"];</code>
+       * @param value The numMarketMakingOrders to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumMarketMakingOrders(int value) {
+
+        numMarketMakingOrders_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 num_market_making_orders = 3 [json_name = "numMarketMakingOrders"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumMarketMakingOrders() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        numMarketMakingOrders_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidity.v1beta1.NumMMOrdersRecord)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidity.v1beta1.NumMMOrdersRecord)
+    private static final com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord();
+    }
+
+    public static com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<NumMMOrdersRecord>
+        PARSER = new com.google.protobuf.AbstractParser<NumMMOrdersRecord>() {
+      @java.lang.Override
+      public NumMMOrdersRecord parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<NumMMOrdersRecord> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<NumMMOrdersRecord> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidity.v1beta1.GenesisProto.NumMMOrdersRecord getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidity_v1beta1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidity_v1beta1_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidity_v1beta1_NumMMOrdersRecord_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidity_v1beta1_NumMMOrdersRecord_fieldAccessorTable;
 
@@ -56,13 +3765,13 @@ public final class GenesisProto {
       "rdersRecord\022\030\n\007orderer\030\001 \001(\tR\007orderer\022\027\n" +
       "\007pair_id\030\002 \001(\004R\006pairId\0227\n\030num_market_mak" +
       "ing_orders\030\003 \001(\rR\025numMarketMakingOrdersB" +
-      "\367\001\n\036com.crescent.liquidity.v1beta1B\014Gene" +
-      "sisProtoP\001Z9github.com/crescent-network/" +
-      "crescent/v5/x/liquidity/types\242\002\003CLX\252\002\032Cr" +
-      "escent.Liquidity.V1beta1\312\002\032Crescent\\Liqu" +
-      "idity\\V1beta1\342\002&Crescent\\Liquidity\\V1bet" +
-      "a1\\GPBMetadata\352\002\034Crescent::Liquidity::V1" +
-      "beta1\310\341\036\000b\006proto3"
+      "\365\001\n\036com.crescent.liquidity.v1beta1B\014Gene" +
+      "sisProtoZ9github.com/crescent-network/cr" +
+      "escent/v5/x/liquidity/types\242\002\003CLX\252\002\032Cres" +
+      "cent.Liquidity.V1beta1\312\002\032Crescent\\Liquid" +
+      "ity\\V1beta1\342\002&Crescent\\Liquidity\\V1beta1" +
+      "\\GPBMetadata\352\002\034Crescent::Liquidity::V1be" +
+      "ta1\310\341\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

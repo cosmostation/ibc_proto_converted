@@ -14,169 +14,19871 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryPoolRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QueryPoolRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QueryPoolRequest}
+   */
+  public static final class QueryPoolRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QueryPoolRequest)
+      QueryPoolRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPoolRequest.newBuilder() to construct.
+    private QueryPoolRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPoolRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPoolRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest other = (com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QueryPoolRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QueryPoolRequest)
+        com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest build() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest result = new com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QueryPoolRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QueryPoolRequest)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPoolRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPoolRequest>() {
+      @java.lang.Override
+      public QueryPoolRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPoolRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPoolRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QueryPoolRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPoolResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QueryPoolResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.shentu.shield.v1alpha1.Pool pool = 1 [json_name = "pool", (.gogoproto.nullable) = false];</code>
+     * @return Whether the pool field is set.
+     */
+    boolean hasPool();
+    /**
+     * <code>.shentu.shield.v1alpha1.Pool pool = 1 [json_name = "pool", (.gogoproto.nullable) = false];</code>
+     * @return The pool.
+     */
+    com.shentu.shield.v1alpha1.ShieldProto.Pool getPool();
+    /**
+     * <code>.shentu.shield.v1alpha1.Pool pool = 1 [json_name = "pool", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.shield.v1alpha1.ShieldProto.PoolOrBuilder getPoolOrBuilder();
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QueryPoolResponse}
+   */
+  public static final class QueryPoolResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QueryPoolResponse)
+      QueryPoolResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPoolResponse.newBuilder() to construct.
+    private QueryPoolResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPoolResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPoolResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse.Builder.class);
+    }
+
+    public static final int POOL_FIELD_NUMBER = 1;
+    private com.shentu.shield.v1alpha1.ShieldProto.Pool pool_;
+    /**
+     * <code>.shentu.shield.v1alpha1.Pool pool = 1 [json_name = "pool", (.gogoproto.nullable) = false];</code>
+     * @return Whether the pool field is set.
+     */
+    @java.lang.Override
+    public boolean hasPool() {
+      return pool_ != null;
+    }
+    /**
+     * <code>.shentu.shield.v1alpha1.Pool pool = 1 [json_name = "pool", (.gogoproto.nullable) = false];</code>
+     * @return The pool.
+     */
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.ShieldProto.Pool getPool() {
+      return pool_ == null ? com.shentu.shield.v1alpha1.ShieldProto.Pool.getDefaultInstance() : pool_;
+    }
+    /**
+     * <code>.shentu.shield.v1alpha1.Pool pool = 1 [json_name = "pool", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.ShieldProto.PoolOrBuilder getPoolOrBuilder() {
+      return pool_ == null ? com.shentu.shield.v1alpha1.ShieldProto.Pool.getDefaultInstance() : pool_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pool_ != null) {
+        output.writeMessage(1, getPool());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pool_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPool());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse other = (com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse) obj;
+
+      if (hasPool() != other.hasPool()) return false;
+      if (hasPool()) {
+        if (!getPool()
+            .equals(other.getPool())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPool()) {
+        hash = (37 * hash) + POOL_FIELD_NUMBER;
+        hash = (53 * hash) + getPool().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QueryPoolResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QueryPoolResponse)
+        com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pool_ = null;
+        if (poolBuilder_ != null) {
+          poolBuilder_.dispose();
+          poolBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse build() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse result = new com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pool_ = poolBuilder_ == null
+              ? pool_
+              : poolBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse.getDefaultInstance()) return this;
+        if (other.hasPool()) {
+          mergePool(other.getPool());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPoolFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.shentu.shield.v1alpha1.ShieldProto.Pool pool_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.shield.v1alpha1.ShieldProto.Pool, com.shentu.shield.v1alpha1.ShieldProto.Pool.Builder, com.shentu.shield.v1alpha1.ShieldProto.PoolOrBuilder> poolBuilder_;
+      /**
+       * <code>.shentu.shield.v1alpha1.Pool pool = 1 [json_name = "pool", (.gogoproto.nullable) = false];</code>
+       * @return Whether the pool field is set.
+       */
+      public boolean hasPool() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.Pool pool = 1 [json_name = "pool", (.gogoproto.nullable) = false];</code>
+       * @return The pool.
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.Pool getPool() {
+        if (poolBuilder_ == null) {
+          return pool_ == null ? com.shentu.shield.v1alpha1.ShieldProto.Pool.getDefaultInstance() : pool_;
+        } else {
+          return poolBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.Pool pool = 1 [json_name = "pool", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPool(com.shentu.shield.v1alpha1.ShieldProto.Pool value) {
+        if (poolBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pool_ = value;
+        } else {
+          poolBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.Pool pool = 1 [json_name = "pool", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPool(
+          com.shentu.shield.v1alpha1.ShieldProto.Pool.Builder builderForValue) {
+        if (poolBuilder_ == null) {
+          pool_ = builderForValue.build();
+        } else {
+          poolBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.Pool pool = 1 [json_name = "pool", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergePool(com.shentu.shield.v1alpha1.ShieldProto.Pool value) {
+        if (poolBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pool_ != null &&
+            pool_ != com.shentu.shield.v1alpha1.ShieldProto.Pool.getDefaultInstance()) {
+            getPoolBuilder().mergeFrom(value);
+          } else {
+            pool_ = value;
+          }
+        } else {
+          poolBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.Pool pool = 1 [json_name = "pool", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPool() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pool_ = null;
+        if (poolBuilder_ != null) {
+          poolBuilder_.dispose();
+          poolBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.Pool pool = 1 [json_name = "pool", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.Pool.Builder getPoolBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPoolFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.Pool pool = 1 [json_name = "pool", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.PoolOrBuilder getPoolOrBuilder() {
+        if (poolBuilder_ != null) {
+          return poolBuilder_.getMessageOrBuilder();
+        } else {
+          return pool_ == null ?
+              com.shentu.shield.v1alpha1.ShieldProto.Pool.getDefaultInstance() : pool_;
+        }
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.Pool pool = 1 [json_name = "pool", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.shield.v1alpha1.ShieldProto.Pool, com.shentu.shield.v1alpha1.ShieldProto.Pool.Builder, com.shentu.shield.v1alpha1.ShieldProto.PoolOrBuilder> 
+          getPoolFieldBuilder() {
+        if (poolBuilder_ == null) {
+          poolBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.shentu.shield.v1alpha1.ShieldProto.Pool, com.shentu.shield.v1alpha1.ShieldProto.Pool.Builder, com.shentu.shield.v1alpha1.ShieldProto.PoolOrBuilder>(
+                  getPool(),
+                  getParentForChildren(),
+                  isClean());
+          pool_ = null;
+        }
+        return poolBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QueryPoolResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QueryPoolResponse)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPoolResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPoolResponse>() {
+      @java.lang.Override
+      public QueryPoolResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPoolResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPoolResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QueryPoolResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySponsorRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QuerySponsorRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string sponsor = 1 [json_name = "sponsor"];</code>
+     * @return The sponsor.
+     */
+    java.lang.String getSponsor();
+    /**
+     * <code>string sponsor = 1 [json_name = "sponsor"];</code>
+     * @return The bytes for sponsor.
+     */
+    com.google.protobuf.ByteString
+        getSponsorBytes();
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QuerySponsorRequest}
+   */
+  public static final class QuerySponsorRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QuerySponsorRequest)
+      QuerySponsorRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySponsorRequest.newBuilder() to construct.
+    private QuerySponsorRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySponsorRequest() {
+      sponsor_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySponsorRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QuerySponsorRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QuerySponsorRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest.class, com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest.Builder.class);
+    }
+
+    public static final int SPONSOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sponsor_ = "";
+    /**
+     * <code>string sponsor = 1 [json_name = "sponsor"];</code>
+     * @return The sponsor.
+     */
+    @java.lang.Override
+    public java.lang.String getSponsor() {
+      java.lang.Object ref = sponsor_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sponsor_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string sponsor = 1 [json_name = "sponsor"];</code>
+     * @return The bytes for sponsor.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSponsorBytes() {
+      java.lang.Object ref = sponsor_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sponsor_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sponsor_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sponsor_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sponsor_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sponsor_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest other = (com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest) obj;
+
+      if (!getSponsor()
+          .equals(other.getSponsor())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SPONSOR_FIELD_NUMBER;
+      hash = (53 * hash) + getSponsor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QuerySponsorRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QuerySponsorRequest)
+        com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QuerySponsorRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QuerySponsorRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest.class, com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sponsor_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QuerySponsorRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest build() {
+        com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest result = new com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sponsor_ = sponsor_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest.getDefaultInstance()) return this;
+        if (!other.getSponsor().isEmpty()) {
+          sponsor_ = other.sponsor_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sponsor_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object sponsor_ = "";
+      /**
+       * <code>string sponsor = 1 [json_name = "sponsor"];</code>
+       * @return The sponsor.
+       */
+      public java.lang.String getSponsor() {
+        java.lang.Object ref = sponsor_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sponsor_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string sponsor = 1 [json_name = "sponsor"];</code>
+       * @return The bytes for sponsor.
+       */
+      public com.google.protobuf.ByteString
+          getSponsorBytes() {
+        java.lang.Object ref = sponsor_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sponsor_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string sponsor = 1 [json_name = "sponsor"];</code>
+       * @param value The sponsor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSponsor(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sponsor_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sponsor = 1 [json_name = "sponsor"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSponsor() {
+        sponsor_ = getDefaultInstance().getSponsor();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sponsor = 1 [json_name = "sponsor"];</code>
+       * @param value The bytes for sponsor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSponsorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sponsor_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QuerySponsorRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QuerySponsorRequest)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySponsorRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySponsorRequest>() {
+      @java.lang.Override
+      public QuerySponsorRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySponsorRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySponsorRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QuerySponsorRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySponsorResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QuerySponsorResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.shentu.shield.v1alpha1.ShieldProto.Pool> 
+        getPoolsList();
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.shield.v1alpha1.ShieldProto.Pool getPools(int index);
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    int getPoolsCount();
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.shentu.shield.v1alpha1.ShieldProto.PoolOrBuilder> 
+        getPoolsOrBuilderList();
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.shield.v1alpha1.ShieldProto.PoolOrBuilder getPoolsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QuerySponsorResponse}
+   */
+  public static final class QuerySponsorResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QuerySponsorResponse)
+      QuerySponsorResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySponsorResponse.newBuilder() to construct.
+    private QuerySponsorResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySponsorResponse() {
+      pools_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySponsorResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QuerySponsorResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QuerySponsorResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse.class, com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse.Builder.class);
+    }
+
+    public static final int POOLS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.shentu.shield.v1alpha1.ShieldProto.Pool> pools_;
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.shentu.shield.v1alpha1.ShieldProto.Pool> getPoolsList() {
+      return pools_;
+    }
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.shentu.shield.v1alpha1.ShieldProto.PoolOrBuilder> 
+        getPoolsOrBuilderList() {
+      return pools_;
+    }
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getPoolsCount() {
+      return pools_.size();
+    }
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.ShieldProto.Pool getPools(int index) {
+      return pools_.get(index);
+    }
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.ShieldProto.PoolOrBuilder getPoolsOrBuilder(
+        int index) {
+      return pools_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < pools_.size(); i++) {
+        output.writeMessage(1, pools_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < pools_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, pools_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse other = (com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse) obj;
+
+      if (!getPoolsList()
+          .equals(other.getPoolsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPoolsCount() > 0) {
+        hash = (37 * hash) + POOLS_FIELD_NUMBER;
+        hash = (53 * hash) + getPoolsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QuerySponsorResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QuerySponsorResponse)
+        com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QuerySponsorResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QuerySponsorResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse.class, com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (poolsBuilder_ == null) {
+          pools_ = java.util.Collections.emptyList();
+        } else {
+          pools_ = null;
+          poolsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QuerySponsorResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse build() {
+        com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse result = new com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse result) {
+        if (poolsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            pools_ = java.util.Collections.unmodifiableList(pools_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.pools_ = pools_;
+        } else {
+          result.pools_ = poolsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse.getDefaultInstance()) return this;
+        if (poolsBuilder_ == null) {
+          if (!other.pools_.isEmpty()) {
+            if (pools_.isEmpty()) {
+              pools_ = other.pools_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePoolsIsMutable();
+              pools_.addAll(other.pools_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.pools_.isEmpty()) {
+            if (poolsBuilder_.isEmpty()) {
+              poolsBuilder_.dispose();
+              poolsBuilder_ = null;
+              pools_ = other.pools_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              poolsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPoolsFieldBuilder() : null;
+            } else {
+              poolsBuilder_.addAllMessages(other.pools_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.shentu.shield.v1alpha1.ShieldProto.Pool m =
+                    input.readMessage(
+                        com.shentu.shield.v1alpha1.ShieldProto.Pool.parser(),
+                        extensionRegistry);
+                if (poolsBuilder_ == null) {
+                  ensurePoolsIsMutable();
+                  pools_.add(m);
+                } else {
+                  poolsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.shentu.shield.v1alpha1.ShieldProto.Pool> pools_ =
+        java.util.Collections.emptyList();
+      private void ensurePoolsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          pools_ = new java.util.ArrayList<com.shentu.shield.v1alpha1.ShieldProto.Pool>(pools_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.shentu.shield.v1alpha1.ShieldProto.Pool, com.shentu.shield.v1alpha1.ShieldProto.Pool.Builder, com.shentu.shield.v1alpha1.ShieldProto.PoolOrBuilder> poolsBuilder_;
+
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.shentu.shield.v1alpha1.ShieldProto.Pool> getPoolsList() {
+        if (poolsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(pools_);
+        } else {
+          return poolsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public int getPoolsCount() {
+        if (poolsBuilder_ == null) {
+          return pools_.size();
+        } else {
+          return poolsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.Pool getPools(int index) {
+        if (poolsBuilder_ == null) {
+          return pools_.get(index);
+        } else {
+          return poolsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPools(
+          int index, com.shentu.shield.v1alpha1.ShieldProto.Pool value) {
+        if (poolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolsIsMutable();
+          pools_.set(index, value);
+          onChanged();
+        } else {
+          poolsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPools(
+          int index, com.shentu.shield.v1alpha1.ShieldProto.Pool.Builder builderForValue) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          pools_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          poolsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPools(com.shentu.shield.v1alpha1.ShieldProto.Pool value) {
+        if (poolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolsIsMutable();
+          pools_.add(value);
+          onChanged();
+        } else {
+          poolsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPools(
+          int index, com.shentu.shield.v1alpha1.ShieldProto.Pool value) {
+        if (poolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolsIsMutable();
+          pools_.add(index, value);
+          onChanged();
+        } else {
+          poolsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPools(
+          com.shentu.shield.v1alpha1.ShieldProto.Pool.Builder builderForValue) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          pools_.add(builderForValue.build());
+          onChanged();
+        } else {
+          poolsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPools(
+          int index, com.shentu.shield.v1alpha1.ShieldProto.Pool.Builder builderForValue) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          pools_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          poolsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllPools(
+          java.lang.Iterable<? extends com.shentu.shield.v1alpha1.ShieldProto.Pool> values) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, pools_);
+          onChanged();
+        } else {
+          poolsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPools() {
+        if (poolsBuilder_ == null) {
+          pools_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          poolsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removePools(int index) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          pools_.remove(index);
+          onChanged();
+        } else {
+          poolsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.Pool.Builder getPoolsBuilder(
+          int index) {
+        return getPoolsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.PoolOrBuilder getPoolsOrBuilder(
+          int index) {
+        if (poolsBuilder_ == null) {
+          return pools_.get(index);  } else {
+          return poolsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.shentu.shield.v1alpha1.ShieldProto.PoolOrBuilder> 
+           getPoolsOrBuilderList() {
+        if (poolsBuilder_ != null) {
+          return poolsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(pools_);
+        }
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.Pool.Builder addPoolsBuilder() {
+        return getPoolsFieldBuilder().addBuilder(
+            com.shentu.shield.v1alpha1.ShieldProto.Pool.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.Pool.Builder addPoolsBuilder(
+          int index) {
+        return getPoolsFieldBuilder().addBuilder(
+            index, com.shentu.shield.v1alpha1.ShieldProto.Pool.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.shentu.shield.v1alpha1.ShieldProto.Pool.Builder> 
+           getPoolsBuilderList() {
+        return getPoolsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.shentu.shield.v1alpha1.ShieldProto.Pool, com.shentu.shield.v1alpha1.ShieldProto.Pool.Builder, com.shentu.shield.v1alpha1.ShieldProto.PoolOrBuilder> 
+          getPoolsFieldBuilder() {
+        if (poolsBuilder_ == null) {
+          poolsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.shentu.shield.v1alpha1.ShieldProto.Pool, com.shentu.shield.v1alpha1.ShieldProto.Pool.Builder, com.shentu.shield.v1alpha1.ShieldProto.PoolOrBuilder>(
+                  pools_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          pools_ = null;
+        }
+        return poolsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QuerySponsorResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QuerySponsorResponse)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySponsorResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySponsorResponse>() {
+      @java.lang.Override
+      public QuerySponsorResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySponsorResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySponsorResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QuerySponsorResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPoolsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QueryPoolsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QueryPoolsRequest}
+   */
+  public static final class QueryPoolsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QueryPoolsRequest)
+      QueryPoolsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPoolsRequest.newBuilder() to construct.
+    private QueryPoolsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPoolsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPoolsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest other = (com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QueryPoolsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QueryPoolsRequest)
+        com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest build() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest result = new com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QueryPoolsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QueryPoolsRequest)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPoolsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPoolsRequest>() {
+      @java.lang.Override
+      public QueryPoolsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPoolsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPoolsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QueryPoolsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPoolsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QueryPoolsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.shentu.shield.v1alpha1.ShieldProto.Pool> 
+        getPoolsList();
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.shield.v1alpha1.ShieldProto.Pool getPools(int index);
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    int getPoolsCount();
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.shentu.shield.v1alpha1.ShieldProto.PoolOrBuilder> 
+        getPoolsOrBuilderList();
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.shield.v1alpha1.ShieldProto.PoolOrBuilder getPoolsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QueryPoolsResponse}
+   */
+  public static final class QueryPoolsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QueryPoolsResponse)
+      QueryPoolsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPoolsResponse.newBuilder() to construct.
+    private QueryPoolsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPoolsResponse() {
+      pools_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPoolsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse.Builder.class);
+    }
+
+    public static final int POOLS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.shentu.shield.v1alpha1.ShieldProto.Pool> pools_;
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.shentu.shield.v1alpha1.ShieldProto.Pool> getPoolsList() {
+      return pools_;
+    }
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.shentu.shield.v1alpha1.ShieldProto.PoolOrBuilder> 
+        getPoolsOrBuilderList() {
+      return pools_;
+    }
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getPoolsCount() {
+      return pools_.size();
+    }
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.ShieldProto.Pool getPools(int index) {
+      return pools_.get(index);
+    }
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.ShieldProto.PoolOrBuilder getPoolsOrBuilder(
+        int index) {
+      return pools_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < pools_.size(); i++) {
+        output.writeMessage(1, pools_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < pools_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, pools_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse other = (com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse) obj;
+
+      if (!getPoolsList()
+          .equals(other.getPoolsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPoolsCount() > 0) {
+        hash = (37 * hash) + POOLS_FIELD_NUMBER;
+        hash = (53 * hash) + getPoolsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QueryPoolsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QueryPoolsResponse)
+        com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (poolsBuilder_ == null) {
+          pools_ = java.util.Collections.emptyList();
+        } else {
+          pools_ = null;
+          poolsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse build() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse result = new com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse result) {
+        if (poolsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            pools_ = java.util.Collections.unmodifiableList(pools_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.pools_ = pools_;
+        } else {
+          result.pools_ = poolsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse.getDefaultInstance()) return this;
+        if (poolsBuilder_ == null) {
+          if (!other.pools_.isEmpty()) {
+            if (pools_.isEmpty()) {
+              pools_ = other.pools_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePoolsIsMutable();
+              pools_.addAll(other.pools_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.pools_.isEmpty()) {
+            if (poolsBuilder_.isEmpty()) {
+              poolsBuilder_.dispose();
+              poolsBuilder_ = null;
+              pools_ = other.pools_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              poolsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPoolsFieldBuilder() : null;
+            } else {
+              poolsBuilder_.addAllMessages(other.pools_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.shentu.shield.v1alpha1.ShieldProto.Pool m =
+                    input.readMessage(
+                        com.shentu.shield.v1alpha1.ShieldProto.Pool.parser(),
+                        extensionRegistry);
+                if (poolsBuilder_ == null) {
+                  ensurePoolsIsMutable();
+                  pools_.add(m);
+                } else {
+                  poolsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.shentu.shield.v1alpha1.ShieldProto.Pool> pools_ =
+        java.util.Collections.emptyList();
+      private void ensurePoolsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          pools_ = new java.util.ArrayList<com.shentu.shield.v1alpha1.ShieldProto.Pool>(pools_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.shentu.shield.v1alpha1.ShieldProto.Pool, com.shentu.shield.v1alpha1.ShieldProto.Pool.Builder, com.shentu.shield.v1alpha1.ShieldProto.PoolOrBuilder> poolsBuilder_;
+
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.shentu.shield.v1alpha1.ShieldProto.Pool> getPoolsList() {
+        if (poolsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(pools_);
+        } else {
+          return poolsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public int getPoolsCount() {
+        if (poolsBuilder_ == null) {
+          return pools_.size();
+        } else {
+          return poolsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.Pool getPools(int index) {
+        if (poolsBuilder_ == null) {
+          return pools_.get(index);
+        } else {
+          return poolsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPools(
+          int index, com.shentu.shield.v1alpha1.ShieldProto.Pool value) {
+        if (poolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolsIsMutable();
+          pools_.set(index, value);
+          onChanged();
+        } else {
+          poolsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPools(
+          int index, com.shentu.shield.v1alpha1.ShieldProto.Pool.Builder builderForValue) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          pools_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          poolsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPools(com.shentu.shield.v1alpha1.ShieldProto.Pool value) {
+        if (poolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolsIsMutable();
+          pools_.add(value);
+          onChanged();
+        } else {
+          poolsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPools(
+          int index, com.shentu.shield.v1alpha1.ShieldProto.Pool value) {
+        if (poolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolsIsMutable();
+          pools_.add(index, value);
+          onChanged();
+        } else {
+          poolsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPools(
+          com.shentu.shield.v1alpha1.ShieldProto.Pool.Builder builderForValue) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          pools_.add(builderForValue.build());
+          onChanged();
+        } else {
+          poolsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPools(
+          int index, com.shentu.shield.v1alpha1.ShieldProto.Pool.Builder builderForValue) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          pools_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          poolsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllPools(
+          java.lang.Iterable<? extends com.shentu.shield.v1alpha1.ShieldProto.Pool> values) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, pools_);
+          onChanged();
+        } else {
+          poolsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPools() {
+        if (poolsBuilder_ == null) {
+          pools_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          poolsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removePools(int index) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          pools_.remove(index);
+          onChanged();
+        } else {
+          poolsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.Pool.Builder getPoolsBuilder(
+          int index) {
+        return getPoolsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.PoolOrBuilder getPoolsOrBuilder(
+          int index) {
+        if (poolsBuilder_ == null) {
+          return pools_.get(index);  } else {
+          return poolsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.shentu.shield.v1alpha1.ShieldProto.PoolOrBuilder> 
+           getPoolsOrBuilderList() {
+        if (poolsBuilder_ != null) {
+          return poolsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(pools_);
+        }
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.Pool.Builder addPoolsBuilder() {
+        return getPoolsFieldBuilder().addBuilder(
+            com.shentu.shield.v1alpha1.ShieldProto.Pool.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.Pool.Builder addPoolsBuilder(
+          int index) {
+        return getPoolsFieldBuilder().addBuilder(
+            index, com.shentu.shield.v1alpha1.ShieldProto.Pool.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Pool pools = 1 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.shentu.shield.v1alpha1.ShieldProto.Pool.Builder> 
+           getPoolsBuilderList() {
+        return getPoolsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.shentu.shield.v1alpha1.ShieldProto.Pool, com.shentu.shield.v1alpha1.ShieldProto.Pool.Builder, com.shentu.shield.v1alpha1.ShieldProto.PoolOrBuilder> 
+          getPoolsFieldBuilder() {
+        if (poolsBuilder_ == null) {
+          poolsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.shentu.shield.v1alpha1.ShieldProto.Pool, com.shentu.shield.v1alpha1.ShieldProto.Pool.Builder, com.shentu.shield.v1alpha1.ShieldProto.PoolOrBuilder>(
+                  pools_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          pools_ = null;
+        }
+        return poolsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QueryPoolsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QueryPoolsResponse)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPoolsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPoolsResponse>() {
+      @java.lang.Override
+      public QueryPoolsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPoolsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPoolsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QueryPoolsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPoolPurchaseListsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QueryPoolPurchaseListsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QueryPoolPurchaseListsRequest}
+   */
+  public static final class QueryPoolPurchaseListsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QueryPoolPurchaseListsRequest)
+      QueryPoolPurchaseListsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPoolPurchaseListsRequest.newBuilder() to construct.
+    private QueryPoolPurchaseListsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPoolPurchaseListsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPoolPurchaseListsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolPurchaseListsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolPurchaseListsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest other = (com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QueryPoolPurchaseListsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QueryPoolPurchaseListsRequest)
+        com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolPurchaseListsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolPurchaseListsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolPurchaseListsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest build() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest result = new com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QueryPoolPurchaseListsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QueryPoolPurchaseListsRequest)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPoolPurchaseListsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPoolPurchaseListsRequest>() {
+      @java.lang.Override
+      public QueryPoolPurchaseListsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPoolPurchaseListsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPoolPurchaseListsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QueryPoolPurchaseListsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPurchaseListsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QueryPurchaseListsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string purchaser = 1 [json_name = "purchaser"];</code>
+     * @return The purchaser.
+     */
+    java.lang.String getPurchaser();
+    /**
+     * <code>string purchaser = 1 [json_name = "purchaser"];</code>
+     * @return The bytes for purchaser.
+     */
+    com.google.protobuf.ByteString
+        getPurchaserBytes();
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QueryPurchaseListsRequest}
+   */
+  public static final class QueryPurchaseListsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QueryPurchaseListsRequest)
+      QueryPurchaseListsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPurchaseListsRequest.newBuilder() to construct.
+    private QueryPurchaseListsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPurchaseListsRequest() {
+      purchaser_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPurchaseListsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPurchaseListsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPurchaseListsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest.Builder.class);
+    }
+
+    public static final int PURCHASER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object purchaser_ = "";
+    /**
+     * <code>string purchaser = 1 [json_name = "purchaser"];</code>
+     * @return The purchaser.
+     */
+    @java.lang.Override
+    public java.lang.String getPurchaser() {
+      java.lang.Object ref = purchaser_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        purchaser_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string purchaser = 1 [json_name = "purchaser"];</code>
+     * @return The bytes for purchaser.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPurchaserBytes() {
+      java.lang.Object ref = purchaser_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        purchaser_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(purchaser_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, purchaser_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(purchaser_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, purchaser_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest other = (com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest) obj;
+
+      if (!getPurchaser()
+          .equals(other.getPurchaser())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PURCHASER_FIELD_NUMBER;
+      hash = (53 * hash) + getPurchaser().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QueryPurchaseListsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QueryPurchaseListsRequest)
+        com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPurchaseListsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPurchaseListsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        purchaser_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPurchaseListsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest build() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest result = new com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.purchaser_ = purchaser_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest.getDefaultInstance()) return this;
+        if (!other.getPurchaser().isEmpty()) {
+          purchaser_ = other.purchaser_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                purchaser_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object purchaser_ = "";
+      /**
+       * <code>string purchaser = 1 [json_name = "purchaser"];</code>
+       * @return The purchaser.
+       */
+      public java.lang.String getPurchaser() {
+        java.lang.Object ref = purchaser_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          purchaser_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string purchaser = 1 [json_name = "purchaser"];</code>
+       * @return The bytes for purchaser.
+       */
+      public com.google.protobuf.ByteString
+          getPurchaserBytes() {
+        java.lang.Object ref = purchaser_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          purchaser_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string purchaser = 1 [json_name = "purchaser"];</code>
+       * @param value The purchaser to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPurchaser(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        purchaser_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string purchaser = 1 [json_name = "purchaser"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPurchaser() {
+        purchaser_ = getDefaultInstance().getPurchaser();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string purchaser = 1 [json_name = "purchaser"];</code>
+       * @param value The bytes for purchaser to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPurchaserBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        purchaser_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QueryPurchaseListsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QueryPurchaseListsRequest)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPurchaseListsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPurchaseListsRequest>() {
+      @java.lang.Override
+      public QueryPurchaseListsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPurchaseListsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPurchaseListsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPurchaseListsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QueryPurchaseListsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.PurchaseList purchase_lists = 1 [json_name = "purchaseLists", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.shentu.shield.v1alpha1.ShieldProto.PurchaseList> 
+        getPurchaseListsList();
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.PurchaseList purchase_lists = 1 [json_name = "purchaseLists", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.shield.v1alpha1.ShieldProto.PurchaseList getPurchaseLists(int index);
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.PurchaseList purchase_lists = 1 [json_name = "purchaseLists", (.gogoproto.nullable) = false];</code>
+     */
+    int getPurchaseListsCount();
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.PurchaseList purchase_lists = 1 [json_name = "purchaseLists", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.shentu.shield.v1alpha1.ShieldProto.PurchaseListOrBuilder> 
+        getPurchaseListsOrBuilderList();
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.PurchaseList purchase_lists = 1 [json_name = "purchaseLists", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.shield.v1alpha1.ShieldProto.PurchaseListOrBuilder getPurchaseListsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QueryPurchaseListsResponse}
+   */
+  public static final class QueryPurchaseListsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QueryPurchaseListsResponse)
+      QueryPurchaseListsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPurchaseListsResponse.newBuilder() to construct.
+    private QueryPurchaseListsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPurchaseListsResponse() {
+      purchaseLists_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPurchaseListsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPurchaseListsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPurchaseListsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse.Builder.class);
+    }
+
+    public static final int PURCHASE_LISTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.shentu.shield.v1alpha1.ShieldProto.PurchaseList> purchaseLists_;
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.PurchaseList purchase_lists = 1 [json_name = "purchaseLists", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.shentu.shield.v1alpha1.ShieldProto.PurchaseList> getPurchaseListsList() {
+      return purchaseLists_;
+    }
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.PurchaseList purchase_lists = 1 [json_name = "purchaseLists", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.shentu.shield.v1alpha1.ShieldProto.PurchaseListOrBuilder> 
+        getPurchaseListsOrBuilderList() {
+      return purchaseLists_;
+    }
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.PurchaseList purchase_lists = 1 [json_name = "purchaseLists", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getPurchaseListsCount() {
+      return purchaseLists_.size();
+    }
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.PurchaseList purchase_lists = 1 [json_name = "purchaseLists", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.ShieldProto.PurchaseList getPurchaseLists(int index) {
+      return purchaseLists_.get(index);
+    }
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.PurchaseList purchase_lists = 1 [json_name = "purchaseLists", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.ShieldProto.PurchaseListOrBuilder getPurchaseListsOrBuilder(
+        int index) {
+      return purchaseLists_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < purchaseLists_.size(); i++) {
+        output.writeMessage(1, purchaseLists_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < purchaseLists_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, purchaseLists_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse other = (com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse) obj;
+
+      if (!getPurchaseListsList()
+          .equals(other.getPurchaseListsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPurchaseListsCount() > 0) {
+        hash = (37 * hash) + PURCHASE_LISTS_FIELD_NUMBER;
+        hash = (53 * hash) + getPurchaseListsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QueryPurchaseListsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QueryPurchaseListsResponse)
+        com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPurchaseListsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPurchaseListsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (purchaseListsBuilder_ == null) {
+          purchaseLists_ = java.util.Collections.emptyList();
+        } else {
+          purchaseLists_ = null;
+          purchaseListsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPurchaseListsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse build() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse result = new com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse result) {
+        if (purchaseListsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            purchaseLists_ = java.util.Collections.unmodifiableList(purchaseLists_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.purchaseLists_ = purchaseLists_;
+        } else {
+          result.purchaseLists_ = purchaseListsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse.getDefaultInstance()) return this;
+        if (purchaseListsBuilder_ == null) {
+          if (!other.purchaseLists_.isEmpty()) {
+            if (purchaseLists_.isEmpty()) {
+              purchaseLists_ = other.purchaseLists_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePurchaseListsIsMutable();
+              purchaseLists_.addAll(other.purchaseLists_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.purchaseLists_.isEmpty()) {
+            if (purchaseListsBuilder_.isEmpty()) {
+              purchaseListsBuilder_.dispose();
+              purchaseListsBuilder_ = null;
+              purchaseLists_ = other.purchaseLists_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              purchaseListsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPurchaseListsFieldBuilder() : null;
+            } else {
+              purchaseListsBuilder_.addAllMessages(other.purchaseLists_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.shentu.shield.v1alpha1.ShieldProto.PurchaseList m =
+                    input.readMessage(
+                        com.shentu.shield.v1alpha1.ShieldProto.PurchaseList.parser(),
+                        extensionRegistry);
+                if (purchaseListsBuilder_ == null) {
+                  ensurePurchaseListsIsMutable();
+                  purchaseLists_.add(m);
+                } else {
+                  purchaseListsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.shentu.shield.v1alpha1.ShieldProto.PurchaseList> purchaseLists_ =
+        java.util.Collections.emptyList();
+      private void ensurePurchaseListsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          purchaseLists_ = new java.util.ArrayList<com.shentu.shield.v1alpha1.ShieldProto.PurchaseList>(purchaseLists_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.shentu.shield.v1alpha1.ShieldProto.PurchaseList, com.shentu.shield.v1alpha1.ShieldProto.PurchaseList.Builder, com.shentu.shield.v1alpha1.ShieldProto.PurchaseListOrBuilder> purchaseListsBuilder_;
+
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.PurchaseList purchase_lists = 1 [json_name = "purchaseLists", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.shentu.shield.v1alpha1.ShieldProto.PurchaseList> getPurchaseListsList() {
+        if (purchaseListsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(purchaseLists_);
+        } else {
+          return purchaseListsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.PurchaseList purchase_lists = 1 [json_name = "purchaseLists", (.gogoproto.nullable) = false];</code>
+       */
+      public int getPurchaseListsCount() {
+        if (purchaseListsBuilder_ == null) {
+          return purchaseLists_.size();
+        } else {
+          return purchaseListsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.PurchaseList purchase_lists = 1 [json_name = "purchaseLists", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.PurchaseList getPurchaseLists(int index) {
+        if (purchaseListsBuilder_ == null) {
+          return purchaseLists_.get(index);
+        } else {
+          return purchaseListsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.PurchaseList purchase_lists = 1 [json_name = "purchaseLists", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPurchaseLists(
+          int index, com.shentu.shield.v1alpha1.ShieldProto.PurchaseList value) {
+        if (purchaseListsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePurchaseListsIsMutable();
+          purchaseLists_.set(index, value);
+          onChanged();
+        } else {
+          purchaseListsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.PurchaseList purchase_lists = 1 [json_name = "purchaseLists", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPurchaseLists(
+          int index, com.shentu.shield.v1alpha1.ShieldProto.PurchaseList.Builder builderForValue) {
+        if (purchaseListsBuilder_ == null) {
+          ensurePurchaseListsIsMutable();
+          purchaseLists_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          purchaseListsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.PurchaseList purchase_lists = 1 [json_name = "purchaseLists", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPurchaseLists(com.shentu.shield.v1alpha1.ShieldProto.PurchaseList value) {
+        if (purchaseListsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePurchaseListsIsMutable();
+          purchaseLists_.add(value);
+          onChanged();
+        } else {
+          purchaseListsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.PurchaseList purchase_lists = 1 [json_name = "purchaseLists", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPurchaseLists(
+          int index, com.shentu.shield.v1alpha1.ShieldProto.PurchaseList value) {
+        if (purchaseListsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePurchaseListsIsMutable();
+          purchaseLists_.add(index, value);
+          onChanged();
+        } else {
+          purchaseListsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.PurchaseList purchase_lists = 1 [json_name = "purchaseLists", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPurchaseLists(
+          com.shentu.shield.v1alpha1.ShieldProto.PurchaseList.Builder builderForValue) {
+        if (purchaseListsBuilder_ == null) {
+          ensurePurchaseListsIsMutable();
+          purchaseLists_.add(builderForValue.build());
+          onChanged();
+        } else {
+          purchaseListsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.PurchaseList purchase_lists = 1 [json_name = "purchaseLists", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPurchaseLists(
+          int index, com.shentu.shield.v1alpha1.ShieldProto.PurchaseList.Builder builderForValue) {
+        if (purchaseListsBuilder_ == null) {
+          ensurePurchaseListsIsMutable();
+          purchaseLists_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          purchaseListsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.PurchaseList purchase_lists = 1 [json_name = "purchaseLists", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllPurchaseLists(
+          java.lang.Iterable<? extends com.shentu.shield.v1alpha1.ShieldProto.PurchaseList> values) {
+        if (purchaseListsBuilder_ == null) {
+          ensurePurchaseListsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, purchaseLists_);
+          onChanged();
+        } else {
+          purchaseListsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.PurchaseList purchase_lists = 1 [json_name = "purchaseLists", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPurchaseLists() {
+        if (purchaseListsBuilder_ == null) {
+          purchaseLists_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          purchaseListsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.PurchaseList purchase_lists = 1 [json_name = "purchaseLists", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removePurchaseLists(int index) {
+        if (purchaseListsBuilder_ == null) {
+          ensurePurchaseListsIsMutable();
+          purchaseLists_.remove(index);
+          onChanged();
+        } else {
+          purchaseListsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.PurchaseList purchase_lists = 1 [json_name = "purchaseLists", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.PurchaseList.Builder getPurchaseListsBuilder(
+          int index) {
+        return getPurchaseListsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.PurchaseList purchase_lists = 1 [json_name = "purchaseLists", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.PurchaseListOrBuilder getPurchaseListsOrBuilder(
+          int index) {
+        if (purchaseListsBuilder_ == null) {
+          return purchaseLists_.get(index);  } else {
+          return purchaseListsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.PurchaseList purchase_lists = 1 [json_name = "purchaseLists", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.shentu.shield.v1alpha1.ShieldProto.PurchaseListOrBuilder> 
+           getPurchaseListsOrBuilderList() {
+        if (purchaseListsBuilder_ != null) {
+          return purchaseListsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(purchaseLists_);
+        }
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.PurchaseList purchase_lists = 1 [json_name = "purchaseLists", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.PurchaseList.Builder addPurchaseListsBuilder() {
+        return getPurchaseListsFieldBuilder().addBuilder(
+            com.shentu.shield.v1alpha1.ShieldProto.PurchaseList.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.PurchaseList purchase_lists = 1 [json_name = "purchaseLists", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.PurchaseList.Builder addPurchaseListsBuilder(
+          int index) {
+        return getPurchaseListsFieldBuilder().addBuilder(
+            index, com.shentu.shield.v1alpha1.ShieldProto.PurchaseList.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.PurchaseList purchase_lists = 1 [json_name = "purchaseLists", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.shentu.shield.v1alpha1.ShieldProto.PurchaseList.Builder> 
+           getPurchaseListsBuilderList() {
+        return getPurchaseListsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.shentu.shield.v1alpha1.ShieldProto.PurchaseList, com.shentu.shield.v1alpha1.ShieldProto.PurchaseList.Builder, com.shentu.shield.v1alpha1.ShieldProto.PurchaseListOrBuilder> 
+          getPurchaseListsFieldBuilder() {
+        if (purchaseListsBuilder_ == null) {
+          purchaseListsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.shentu.shield.v1alpha1.ShieldProto.PurchaseList, com.shentu.shield.v1alpha1.ShieldProto.PurchaseList.Builder, com.shentu.shield.v1alpha1.ShieldProto.PurchaseListOrBuilder>(
+                  purchaseLists_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          purchaseLists_ = null;
+        }
+        return purchaseListsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QueryPurchaseListsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QueryPurchaseListsResponse)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPurchaseListsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPurchaseListsResponse>() {
+      @java.lang.Override
+      public QueryPurchaseListsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPurchaseListsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPurchaseListsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPurchaseListRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QueryPurchaseListRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <code>string purchaser = 2 [json_name = "purchaser"];</code>
+     * @return The purchaser.
+     */
+    java.lang.String getPurchaser();
+    /**
+     * <code>string purchaser = 2 [json_name = "purchaser"];</code>
+     * @return The bytes for purchaser.
+     */
+    com.google.protobuf.ByteString
+        getPurchaserBytes();
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QueryPurchaseListRequest}
+   */
+  public static final class QueryPurchaseListRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QueryPurchaseListRequest)
+      QueryPurchaseListRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPurchaseListRequest.newBuilder() to construct.
+    private QueryPurchaseListRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPurchaseListRequest() {
+      purchaser_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPurchaseListRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPurchaseListRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPurchaseListRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int PURCHASER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object purchaser_ = "";
+    /**
+     * <code>string purchaser = 2 [json_name = "purchaser"];</code>
+     * @return The purchaser.
+     */
+    @java.lang.Override
+    public java.lang.String getPurchaser() {
+      java.lang.Object ref = purchaser_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        purchaser_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string purchaser = 2 [json_name = "purchaser"];</code>
+     * @return The bytes for purchaser.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPurchaserBytes() {
+      java.lang.Object ref = purchaser_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        purchaser_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(purchaser_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, purchaser_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(purchaser_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, purchaser_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest other = (com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getPurchaser()
+          .equals(other.getPurchaser())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + PURCHASER_FIELD_NUMBER;
+      hash = (53 * hash) + getPurchaser().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QueryPurchaseListRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QueryPurchaseListRequest)
+        com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPurchaseListRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPurchaseListRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        purchaser_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPurchaseListRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest build() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest result = new com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.purchaser_ = purchaser_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (!other.getPurchaser().isEmpty()) {
+          purchaser_ = other.purchaser_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                purchaser_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object purchaser_ = "";
+      /**
+       * <code>string purchaser = 2 [json_name = "purchaser"];</code>
+       * @return The purchaser.
+       */
+      public java.lang.String getPurchaser() {
+        java.lang.Object ref = purchaser_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          purchaser_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string purchaser = 2 [json_name = "purchaser"];</code>
+       * @return The bytes for purchaser.
+       */
+      public com.google.protobuf.ByteString
+          getPurchaserBytes() {
+        java.lang.Object ref = purchaser_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          purchaser_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string purchaser = 2 [json_name = "purchaser"];</code>
+       * @param value The purchaser to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPurchaser(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        purchaser_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string purchaser = 2 [json_name = "purchaser"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPurchaser() {
+        purchaser_ = getDefaultInstance().getPurchaser();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string purchaser = 2 [json_name = "purchaser"];</code>
+       * @param value The bytes for purchaser to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPurchaserBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        purchaser_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QueryPurchaseListRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QueryPurchaseListRequest)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPurchaseListRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPurchaseListRequest>() {
+      @java.lang.Override
+      public QueryPurchaseListRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPurchaseListRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPurchaseListRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPurchaseListResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QueryPurchaseListResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.shentu.shield.v1alpha1.PurchaseList purchase_list = 1 [json_name = "purchaseList", (.gogoproto.nullable) = false];</code>
+     * @return Whether the purchaseList field is set.
+     */
+    boolean hasPurchaseList();
+    /**
+     * <code>.shentu.shield.v1alpha1.PurchaseList purchase_list = 1 [json_name = "purchaseList", (.gogoproto.nullable) = false];</code>
+     * @return The purchaseList.
+     */
+    com.shentu.shield.v1alpha1.ShieldProto.PurchaseList getPurchaseList();
+    /**
+     * <code>.shentu.shield.v1alpha1.PurchaseList purchase_list = 1 [json_name = "purchaseList", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.shield.v1alpha1.ShieldProto.PurchaseListOrBuilder getPurchaseListOrBuilder();
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QueryPurchaseListResponse}
+   */
+  public static final class QueryPurchaseListResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QueryPurchaseListResponse)
+      QueryPurchaseListResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPurchaseListResponse.newBuilder() to construct.
+    private QueryPurchaseListResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPurchaseListResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPurchaseListResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPurchaseListResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPurchaseListResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse.Builder.class);
+    }
+
+    public static final int PURCHASE_LIST_FIELD_NUMBER = 1;
+    private com.shentu.shield.v1alpha1.ShieldProto.PurchaseList purchaseList_;
+    /**
+     * <code>.shentu.shield.v1alpha1.PurchaseList purchase_list = 1 [json_name = "purchaseList", (.gogoproto.nullable) = false];</code>
+     * @return Whether the purchaseList field is set.
+     */
+    @java.lang.Override
+    public boolean hasPurchaseList() {
+      return purchaseList_ != null;
+    }
+    /**
+     * <code>.shentu.shield.v1alpha1.PurchaseList purchase_list = 1 [json_name = "purchaseList", (.gogoproto.nullable) = false];</code>
+     * @return The purchaseList.
+     */
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.ShieldProto.PurchaseList getPurchaseList() {
+      return purchaseList_ == null ? com.shentu.shield.v1alpha1.ShieldProto.PurchaseList.getDefaultInstance() : purchaseList_;
+    }
+    /**
+     * <code>.shentu.shield.v1alpha1.PurchaseList purchase_list = 1 [json_name = "purchaseList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.ShieldProto.PurchaseListOrBuilder getPurchaseListOrBuilder() {
+      return purchaseList_ == null ? com.shentu.shield.v1alpha1.ShieldProto.PurchaseList.getDefaultInstance() : purchaseList_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (purchaseList_ != null) {
+        output.writeMessage(1, getPurchaseList());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (purchaseList_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPurchaseList());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse other = (com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse) obj;
+
+      if (hasPurchaseList() != other.hasPurchaseList()) return false;
+      if (hasPurchaseList()) {
+        if (!getPurchaseList()
+            .equals(other.getPurchaseList())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPurchaseList()) {
+        hash = (37 * hash) + PURCHASE_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getPurchaseList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QueryPurchaseListResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QueryPurchaseListResponse)
+        com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPurchaseListResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPurchaseListResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        purchaseList_ = null;
+        if (purchaseListBuilder_ != null) {
+          purchaseListBuilder_.dispose();
+          purchaseListBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPurchaseListResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse build() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse result = new com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.purchaseList_ = purchaseListBuilder_ == null
+              ? purchaseList_
+              : purchaseListBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse.getDefaultInstance()) return this;
+        if (other.hasPurchaseList()) {
+          mergePurchaseList(other.getPurchaseList());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPurchaseListFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.shentu.shield.v1alpha1.ShieldProto.PurchaseList purchaseList_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.shield.v1alpha1.ShieldProto.PurchaseList, com.shentu.shield.v1alpha1.ShieldProto.PurchaseList.Builder, com.shentu.shield.v1alpha1.ShieldProto.PurchaseListOrBuilder> purchaseListBuilder_;
+      /**
+       * <code>.shentu.shield.v1alpha1.PurchaseList purchase_list = 1 [json_name = "purchaseList", (.gogoproto.nullable) = false];</code>
+       * @return Whether the purchaseList field is set.
+       */
+      public boolean hasPurchaseList() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.PurchaseList purchase_list = 1 [json_name = "purchaseList", (.gogoproto.nullable) = false];</code>
+       * @return The purchaseList.
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.PurchaseList getPurchaseList() {
+        if (purchaseListBuilder_ == null) {
+          return purchaseList_ == null ? com.shentu.shield.v1alpha1.ShieldProto.PurchaseList.getDefaultInstance() : purchaseList_;
+        } else {
+          return purchaseListBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.PurchaseList purchase_list = 1 [json_name = "purchaseList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPurchaseList(com.shentu.shield.v1alpha1.ShieldProto.PurchaseList value) {
+        if (purchaseListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          purchaseList_ = value;
+        } else {
+          purchaseListBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.PurchaseList purchase_list = 1 [json_name = "purchaseList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPurchaseList(
+          com.shentu.shield.v1alpha1.ShieldProto.PurchaseList.Builder builderForValue) {
+        if (purchaseListBuilder_ == null) {
+          purchaseList_ = builderForValue.build();
+        } else {
+          purchaseListBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.PurchaseList purchase_list = 1 [json_name = "purchaseList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergePurchaseList(com.shentu.shield.v1alpha1.ShieldProto.PurchaseList value) {
+        if (purchaseListBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            purchaseList_ != null &&
+            purchaseList_ != com.shentu.shield.v1alpha1.ShieldProto.PurchaseList.getDefaultInstance()) {
+            getPurchaseListBuilder().mergeFrom(value);
+          } else {
+            purchaseList_ = value;
+          }
+        } else {
+          purchaseListBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.PurchaseList purchase_list = 1 [json_name = "purchaseList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPurchaseList() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        purchaseList_ = null;
+        if (purchaseListBuilder_ != null) {
+          purchaseListBuilder_.dispose();
+          purchaseListBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.PurchaseList purchase_list = 1 [json_name = "purchaseList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.PurchaseList.Builder getPurchaseListBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPurchaseListFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.PurchaseList purchase_list = 1 [json_name = "purchaseList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.PurchaseListOrBuilder getPurchaseListOrBuilder() {
+        if (purchaseListBuilder_ != null) {
+          return purchaseListBuilder_.getMessageOrBuilder();
+        } else {
+          return purchaseList_ == null ?
+              com.shentu.shield.v1alpha1.ShieldProto.PurchaseList.getDefaultInstance() : purchaseList_;
+        }
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.PurchaseList purchase_list = 1 [json_name = "purchaseList", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.shield.v1alpha1.ShieldProto.PurchaseList, com.shentu.shield.v1alpha1.ShieldProto.PurchaseList.Builder, com.shentu.shield.v1alpha1.ShieldProto.PurchaseListOrBuilder> 
+          getPurchaseListFieldBuilder() {
+        if (purchaseListBuilder_ == null) {
+          purchaseListBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.shentu.shield.v1alpha1.ShieldProto.PurchaseList, com.shentu.shield.v1alpha1.ShieldProto.PurchaseList.Builder, com.shentu.shield.v1alpha1.ShieldProto.PurchaseListOrBuilder>(
+                  getPurchaseList(),
+                  getParentForChildren(),
+                  isClean());
+          purchaseList_ = null;
+        }
+        return purchaseListBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QueryPurchaseListResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QueryPurchaseListResponse)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPurchaseListResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPurchaseListResponse>() {
+      @java.lang.Override
+      public QueryPurchaseListResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPurchaseListResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPurchaseListResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QueryPurchaseListResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPurchasesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QueryPurchasesRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QueryPurchasesRequest}
+   */
+  public static final class QueryPurchasesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QueryPurchasesRequest)
+      QueryPurchasesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPurchasesRequest.newBuilder() to construct.
+    private QueryPurchasesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPurchasesRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPurchasesRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPurchasesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPurchasesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest other = (com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QueryPurchasesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QueryPurchasesRequest)
+        com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPurchasesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPurchasesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPurchasesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest build() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest result = new com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QueryPurchasesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QueryPurchasesRequest)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPurchasesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPurchasesRequest>() {
+      @java.lang.Override
+      public QueryPurchasesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPurchasesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPurchasesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPurchasesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QueryPurchasesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Purchase purchases = 1 [json_name = "purchases", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.shentu.shield.v1alpha1.ShieldProto.Purchase> 
+        getPurchasesList();
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Purchase purchases = 1 [json_name = "purchases", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.shield.v1alpha1.ShieldProto.Purchase getPurchases(int index);
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Purchase purchases = 1 [json_name = "purchases", (.gogoproto.nullable) = false];</code>
+     */
+    int getPurchasesCount();
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Purchase purchases = 1 [json_name = "purchases", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.shentu.shield.v1alpha1.ShieldProto.PurchaseOrBuilder> 
+        getPurchasesOrBuilderList();
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Purchase purchases = 1 [json_name = "purchases", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.shield.v1alpha1.ShieldProto.PurchaseOrBuilder getPurchasesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QueryPurchasesResponse}
+   */
+  public static final class QueryPurchasesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QueryPurchasesResponse)
+      QueryPurchasesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPurchasesResponse.newBuilder() to construct.
+    private QueryPurchasesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPurchasesResponse() {
+      purchases_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPurchasesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPurchasesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPurchasesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse.Builder.class);
+    }
+
+    public static final int PURCHASES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.shentu.shield.v1alpha1.ShieldProto.Purchase> purchases_;
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Purchase purchases = 1 [json_name = "purchases", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.shentu.shield.v1alpha1.ShieldProto.Purchase> getPurchasesList() {
+      return purchases_;
+    }
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Purchase purchases = 1 [json_name = "purchases", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.shentu.shield.v1alpha1.ShieldProto.PurchaseOrBuilder> 
+        getPurchasesOrBuilderList() {
+      return purchases_;
+    }
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Purchase purchases = 1 [json_name = "purchases", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getPurchasesCount() {
+      return purchases_.size();
+    }
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Purchase purchases = 1 [json_name = "purchases", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.ShieldProto.Purchase getPurchases(int index) {
+      return purchases_.get(index);
+    }
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Purchase purchases = 1 [json_name = "purchases", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.ShieldProto.PurchaseOrBuilder getPurchasesOrBuilder(
+        int index) {
+      return purchases_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < purchases_.size(); i++) {
+        output.writeMessage(1, purchases_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < purchases_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, purchases_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse other = (com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse) obj;
+
+      if (!getPurchasesList()
+          .equals(other.getPurchasesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPurchasesCount() > 0) {
+        hash = (37 * hash) + PURCHASES_FIELD_NUMBER;
+        hash = (53 * hash) + getPurchasesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QueryPurchasesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QueryPurchasesResponse)
+        com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPurchasesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPurchasesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (purchasesBuilder_ == null) {
+          purchases_ = java.util.Collections.emptyList();
+        } else {
+          purchases_ = null;
+          purchasesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPurchasesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse build() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse result = new com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse result) {
+        if (purchasesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            purchases_ = java.util.Collections.unmodifiableList(purchases_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.purchases_ = purchases_;
+        } else {
+          result.purchases_ = purchasesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse.getDefaultInstance()) return this;
+        if (purchasesBuilder_ == null) {
+          if (!other.purchases_.isEmpty()) {
+            if (purchases_.isEmpty()) {
+              purchases_ = other.purchases_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePurchasesIsMutable();
+              purchases_.addAll(other.purchases_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.purchases_.isEmpty()) {
+            if (purchasesBuilder_.isEmpty()) {
+              purchasesBuilder_.dispose();
+              purchasesBuilder_ = null;
+              purchases_ = other.purchases_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              purchasesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPurchasesFieldBuilder() : null;
+            } else {
+              purchasesBuilder_.addAllMessages(other.purchases_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.shentu.shield.v1alpha1.ShieldProto.Purchase m =
+                    input.readMessage(
+                        com.shentu.shield.v1alpha1.ShieldProto.Purchase.parser(),
+                        extensionRegistry);
+                if (purchasesBuilder_ == null) {
+                  ensurePurchasesIsMutable();
+                  purchases_.add(m);
+                } else {
+                  purchasesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.shentu.shield.v1alpha1.ShieldProto.Purchase> purchases_ =
+        java.util.Collections.emptyList();
+      private void ensurePurchasesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          purchases_ = new java.util.ArrayList<com.shentu.shield.v1alpha1.ShieldProto.Purchase>(purchases_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.shentu.shield.v1alpha1.ShieldProto.Purchase, com.shentu.shield.v1alpha1.ShieldProto.Purchase.Builder, com.shentu.shield.v1alpha1.ShieldProto.PurchaseOrBuilder> purchasesBuilder_;
+
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Purchase purchases = 1 [json_name = "purchases", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.shentu.shield.v1alpha1.ShieldProto.Purchase> getPurchasesList() {
+        if (purchasesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(purchases_);
+        } else {
+          return purchasesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Purchase purchases = 1 [json_name = "purchases", (.gogoproto.nullable) = false];</code>
+       */
+      public int getPurchasesCount() {
+        if (purchasesBuilder_ == null) {
+          return purchases_.size();
+        } else {
+          return purchasesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Purchase purchases = 1 [json_name = "purchases", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.Purchase getPurchases(int index) {
+        if (purchasesBuilder_ == null) {
+          return purchases_.get(index);
+        } else {
+          return purchasesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Purchase purchases = 1 [json_name = "purchases", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPurchases(
+          int index, com.shentu.shield.v1alpha1.ShieldProto.Purchase value) {
+        if (purchasesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePurchasesIsMutable();
+          purchases_.set(index, value);
+          onChanged();
+        } else {
+          purchasesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Purchase purchases = 1 [json_name = "purchases", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPurchases(
+          int index, com.shentu.shield.v1alpha1.ShieldProto.Purchase.Builder builderForValue) {
+        if (purchasesBuilder_ == null) {
+          ensurePurchasesIsMutable();
+          purchases_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          purchasesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Purchase purchases = 1 [json_name = "purchases", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPurchases(com.shentu.shield.v1alpha1.ShieldProto.Purchase value) {
+        if (purchasesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePurchasesIsMutable();
+          purchases_.add(value);
+          onChanged();
+        } else {
+          purchasesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Purchase purchases = 1 [json_name = "purchases", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPurchases(
+          int index, com.shentu.shield.v1alpha1.ShieldProto.Purchase value) {
+        if (purchasesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePurchasesIsMutable();
+          purchases_.add(index, value);
+          onChanged();
+        } else {
+          purchasesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Purchase purchases = 1 [json_name = "purchases", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPurchases(
+          com.shentu.shield.v1alpha1.ShieldProto.Purchase.Builder builderForValue) {
+        if (purchasesBuilder_ == null) {
+          ensurePurchasesIsMutable();
+          purchases_.add(builderForValue.build());
+          onChanged();
+        } else {
+          purchasesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Purchase purchases = 1 [json_name = "purchases", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPurchases(
+          int index, com.shentu.shield.v1alpha1.ShieldProto.Purchase.Builder builderForValue) {
+        if (purchasesBuilder_ == null) {
+          ensurePurchasesIsMutable();
+          purchases_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          purchasesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Purchase purchases = 1 [json_name = "purchases", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllPurchases(
+          java.lang.Iterable<? extends com.shentu.shield.v1alpha1.ShieldProto.Purchase> values) {
+        if (purchasesBuilder_ == null) {
+          ensurePurchasesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, purchases_);
+          onChanged();
+        } else {
+          purchasesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Purchase purchases = 1 [json_name = "purchases", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPurchases() {
+        if (purchasesBuilder_ == null) {
+          purchases_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          purchasesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Purchase purchases = 1 [json_name = "purchases", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removePurchases(int index) {
+        if (purchasesBuilder_ == null) {
+          ensurePurchasesIsMutable();
+          purchases_.remove(index);
+          onChanged();
+        } else {
+          purchasesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Purchase purchases = 1 [json_name = "purchases", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.Purchase.Builder getPurchasesBuilder(
+          int index) {
+        return getPurchasesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Purchase purchases = 1 [json_name = "purchases", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.PurchaseOrBuilder getPurchasesOrBuilder(
+          int index) {
+        if (purchasesBuilder_ == null) {
+          return purchases_.get(index);  } else {
+          return purchasesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Purchase purchases = 1 [json_name = "purchases", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.shentu.shield.v1alpha1.ShieldProto.PurchaseOrBuilder> 
+           getPurchasesOrBuilderList() {
+        if (purchasesBuilder_ != null) {
+          return purchasesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(purchases_);
+        }
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Purchase purchases = 1 [json_name = "purchases", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.Purchase.Builder addPurchasesBuilder() {
+        return getPurchasesFieldBuilder().addBuilder(
+            com.shentu.shield.v1alpha1.ShieldProto.Purchase.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Purchase purchases = 1 [json_name = "purchases", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.Purchase.Builder addPurchasesBuilder(
+          int index) {
+        return getPurchasesFieldBuilder().addBuilder(
+            index, com.shentu.shield.v1alpha1.ShieldProto.Purchase.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Purchase purchases = 1 [json_name = "purchases", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.shentu.shield.v1alpha1.ShieldProto.Purchase.Builder> 
+           getPurchasesBuilderList() {
+        return getPurchasesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.shentu.shield.v1alpha1.ShieldProto.Purchase, com.shentu.shield.v1alpha1.ShieldProto.Purchase.Builder, com.shentu.shield.v1alpha1.ShieldProto.PurchaseOrBuilder> 
+          getPurchasesFieldBuilder() {
+        if (purchasesBuilder_ == null) {
+          purchasesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.shentu.shield.v1alpha1.ShieldProto.Purchase, com.shentu.shield.v1alpha1.ShieldProto.Purchase.Builder, com.shentu.shield.v1alpha1.ShieldProto.PurchaseOrBuilder>(
+                  purchases_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          purchases_ = null;
+        }
+        return purchasesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QueryPurchasesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QueryPurchasesResponse)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPurchasesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPurchasesResponse>() {
+      @java.lang.Override
+      public QueryPurchasesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPurchasesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPurchasesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QueryPurchasesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryProviderRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QueryProviderRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QueryProviderRequest}
+   */
+  public static final class QueryProviderRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QueryProviderRequest)
+      QueryProviderRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryProviderRequest.newBuilder() to construct.
+    private QueryProviderRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryProviderRequest() {
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryProviderRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryProviderRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryProviderRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest other = (com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QueryProviderRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QueryProviderRequest)
+        com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryProviderRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryProviderRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryProviderRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest build() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest result = new com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QueryProviderRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QueryProviderRequest)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryProviderRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryProviderRequest>() {
+      @java.lang.Override
+      public QueryProviderRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryProviderRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryProviderRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QueryProviderRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryProviderResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QueryProviderResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.shentu.shield.v1alpha1.Provider provider = 1 [json_name = "provider", (.gogoproto.nullable) = false];</code>
+     * @return Whether the provider field is set.
+     */
+    boolean hasProvider();
+    /**
+     * <code>.shentu.shield.v1alpha1.Provider provider = 1 [json_name = "provider", (.gogoproto.nullable) = false];</code>
+     * @return The provider.
+     */
+    com.shentu.shield.v1alpha1.ShieldProto.Provider getProvider();
+    /**
+     * <code>.shentu.shield.v1alpha1.Provider provider = 1 [json_name = "provider", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.shield.v1alpha1.ShieldProto.ProviderOrBuilder getProviderOrBuilder();
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QueryProviderResponse}
+   */
+  public static final class QueryProviderResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QueryProviderResponse)
+      QueryProviderResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryProviderResponse.newBuilder() to construct.
+    private QueryProviderResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryProviderResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryProviderResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryProviderResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryProviderResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse.Builder.class);
+    }
+
+    public static final int PROVIDER_FIELD_NUMBER = 1;
+    private com.shentu.shield.v1alpha1.ShieldProto.Provider provider_;
+    /**
+     * <code>.shentu.shield.v1alpha1.Provider provider = 1 [json_name = "provider", (.gogoproto.nullable) = false];</code>
+     * @return Whether the provider field is set.
+     */
+    @java.lang.Override
+    public boolean hasProvider() {
+      return provider_ != null;
+    }
+    /**
+     * <code>.shentu.shield.v1alpha1.Provider provider = 1 [json_name = "provider", (.gogoproto.nullable) = false];</code>
+     * @return The provider.
+     */
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.ShieldProto.Provider getProvider() {
+      return provider_ == null ? com.shentu.shield.v1alpha1.ShieldProto.Provider.getDefaultInstance() : provider_;
+    }
+    /**
+     * <code>.shentu.shield.v1alpha1.Provider provider = 1 [json_name = "provider", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.ShieldProto.ProviderOrBuilder getProviderOrBuilder() {
+      return provider_ == null ? com.shentu.shield.v1alpha1.ShieldProto.Provider.getDefaultInstance() : provider_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (provider_ != null) {
+        output.writeMessage(1, getProvider());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (provider_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getProvider());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse other = (com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse) obj;
+
+      if (hasProvider() != other.hasProvider()) return false;
+      if (hasProvider()) {
+        if (!getProvider()
+            .equals(other.getProvider())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasProvider()) {
+        hash = (37 * hash) + PROVIDER_FIELD_NUMBER;
+        hash = (53 * hash) + getProvider().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QueryProviderResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QueryProviderResponse)
+        com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryProviderResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryProviderResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        provider_ = null;
+        if (providerBuilder_ != null) {
+          providerBuilder_.dispose();
+          providerBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryProviderResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse build() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse result = new com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.provider_ = providerBuilder_ == null
+              ? provider_
+              : providerBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse.getDefaultInstance()) return this;
+        if (other.hasProvider()) {
+          mergeProvider(other.getProvider());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getProviderFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.shentu.shield.v1alpha1.ShieldProto.Provider provider_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.shield.v1alpha1.ShieldProto.Provider, com.shentu.shield.v1alpha1.ShieldProto.Provider.Builder, com.shentu.shield.v1alpha1.ShieldProto.ProviderOrBuilder> providerBuilder_;
+      /**
+       * <code>.shentu.shield.v1alpha1.Provider provider = 1 [json_name = "provider", (.gogoproto.nullable) = false];</code>
+       * @return Whether the provider field is set.
+       */
+      public boolean hasProvider() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.Provider provider = 1 [json_name = "provider", (.gogoproto.nullable) = false];</code>
+       * @return The provider.
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.Provider getProvider() {
+        if (providerBuilder_ == null) {
+          return provider_ == null ? com.shentu.shield.v1alpha1.ShieldProto.Provider.getDefaultInstance() : provider_;
+        } else {
+          return providerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.Provider provider = 1 [json_name = "provider", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setProvider(com.shentu.shield.v1alpha1.ShieldProto.Provider value) {
+        if (providerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          provider_ = value;
+        } else {
+          providerBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.Provider provider = 1 [json_name = "provider", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setProvider(
+          com.shentu.shield.v1alpha1.ShieldProto.Provider.Builder builderForValue) {
+        if (providerBuilder_ == null) {
+          provider_ = builderForValue.build();
+        } else {
+          providerBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.Provider provider = 1 [json_name = "provider", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeProvider(com.shentu.shield.v1alpha1.ShieldProto.Provider value) {
+        if (providerBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            provider_ != null &&
+            provider_ != com.shentu.shield.v1alpha1.ShieldProto.Provider.getDefaultInstance()) {
+            getProviderBuilder().mergeFrom(value);
+          } else {
+            provider_ = value;
+          }
+        } else {
+          providerBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.Provider provider = 1 [json_name = "provider", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearProvider() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        provider_ = null;
+        if (providerBuilder_ != null) {
+          providerBuilder_.dispose();
+          providerBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.Provider provider = 1 [json_name = "provider", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.Provider.Builder getProviderBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getProviderFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.Provider provider = 1 [json_name = "provider", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.ProviderOrBuilder getProviderOrBuilder() {
+        if (providerBuilder_ != null) {
+          return providerBuilder_.getMessageOrBuilder();
+        } else {
+          return provider_ == null ?
+              com.shentu.shield.v1alpha1.ShieldProto.Provider.getDefaultInstance() : provider_;
+        }
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.Provider provider = 1 [json_name = "provider", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.shield.v1alpha1.ShieldProto.Provider, com.shentu.shield.v1alpha1.ShieldProto.Provider.Builder, com.shentu.shield.v1alpha1.ShieldProto.ProviderOrBuilder> 
+          getProviderFieldBuilder() {
+        if (providerBuilder_ == null) {
+          providerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.shentu.shield.v1alpha1.ShieldProto.Provider, com.shentu.shield.v1alpha1.ShieldProto.Provider.Builder, com.shentu.shield.v1alpha1.ShieldProto.ProviderOrBuilder>(
+                  getProvider(),
+                  getParentForChildren(),
+                  isClean());
+          provider_ = null;
+        }
+        return providerBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QueryProviderResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QueryProviderResponse)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryProviderResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryProviderResponse>() {
+      @java.lang.Override
+      public QueryProviderResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryProviderResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryProviderResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QueryProviderResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryProvidersRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QueryProvidersRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QueryProvidersRequest}
+   */
+  public static final class QueryProvidersRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QueryProvidersRequest)
+      QueryProvidersRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryProvidersRequest.newBuilder() to construct.
+    private QueryProvidersRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryProvidersRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryProvidersRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryProvidersRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryProvidersRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest other = (com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QueryProvidersRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QueryProvidersRequest)
+        com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryProvidersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryProvidersRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryProvidersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest build() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest result = new com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QueryProvidersRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QueryProvidersRequest)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryProvidersRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryProvidersRequest>() {
+      @java.lang.Override
+      public QueryProvidersRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryProvidersRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryProvidersRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QueryProvidersRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryProvidersResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QueryProvidersResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Provider providers = 1 [json_name = "providers", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.shentu.shield.v1alpha1.ShieldProto.Provider> 
+        getProvidersList();
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Provider providers = 1 [json_name = "providers", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.shield.v1alpha1.ShieldProto.Provider getProviders(int index);
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Provider providers = 1 [json_name = "providers", (.gogoproto.nullable) = false];</code>
+     */
+    int getProvidersCount();
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Provider providers = 1 [json_name = "providers", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.shentu.shield.v1alpha1.ShieldProto.ProviderOrBuilder> 
+        getProvidersOrBuilderList();
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Provider providers = 1 [json_name = "providers", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.shield.v1alpha1.ShieldProto.ProviderOrBuilder getProvidersOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QueryProvidersResponse}
+   */
+  public static final class QueryProvidersResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QueryProvidersResponse)
+      QueryProvidersResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryProvidersResponse.newBuilder() to construct.
+    private QueryProvidersResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryProvidersResponse() {
+      providers_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryProvidersResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryProvidersResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryProvidersResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse.Builder.class);
+    }
+
+    public static final int PROVIDERS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.shentu.shield.v1alpha1.ShieldProto.Provider> providers_;
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Provider providers = 1 [json_name = "providers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.shentu.shield.v1alpha1.ShieldProto.Provider> getProvidersList() {
+      return providers_;
+    }
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Provider providers = 1 [json_name = "providers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.shentu.shield.v1alpha1.ShieldProto.ProviderOrBuilder> 
+        getProvidersOrBuilderList() {
+      return providers_;
+    }
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Provider providers = 1 [json_name = "providers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getProvidersCount() {
+      return providers_.size();
+    }
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Provider providers = 1 [json_name = "providers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.ShieldProto.Provider getProviders(int index) {
+      return providers_.get(index);
+    }
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.Provider providers = 1 [json_name = "providers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.ShieldProto.ProviderOrBuilder getProvidersOrBuilder(
+        int index) {
+      return providers_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < providers_.size(); i++) {
+        output.writeMessage(1, providers_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < providers_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, providers_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse other = (com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse) obj;
+
+      if (!getProvidersList()
+          .equals(other.getProvidersList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getProvidersCount() > 0) {
+        hash = (37 * hash) + PROVIDERS_FIELD_NUMBER;
+        hash = (53 * hash) + getProvidersList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QueryProvidersResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QueryProvidersResponse)
+        com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryProvidersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryProvidersResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (providersBuilder_ == null) {
+          providers_ = java.util.Collections.emptyList();
+        } else {
+          providers_ = null;
+          providersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryProvidersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse build() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse result = new com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse result) {
+        if (providersBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            providers_ = java.util.Collections.unmodifiableList(providers_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.providers_ = providers_;
+        } else {
+          result.providers_ = providersBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse.getDefaultInstance()) return this;
+        if (providersBuilder_ == null) {
+          if (!other.providers_.isEmpty()) {
+            if (providers_.isEmpty()) {
+              providers_ = other.providers_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureProvidersIsMutable();
+              providers_.addAll(other.providers_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.providers_.isEmpty()) {
+            if (providersBuilder_.isEmpty()) {
+              providersBuilder_.dispose();
+              providersBuilder_ = null;
+              providers_ = other.providers_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              providersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getProvidersFieldBuilder() : null;
+            } else {
+              providersBuilder_.addAllMessages(other.providers_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.shentu.shield.v1alpha1.ShieldProto.Provider m =
+                    input.readMessage(
+                        com.shentu.shield.v1alpha1.ShieldProto.Provider.parser(),
+                        extensionRegistry);
+                if (providersBuilder_ == null) {
+                  ensureProvidersIsMutable();
+                  providers_.add(m);
+                } else {
+                  providersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.shentu.shield.v1alpha1.ShieldProto.Provider> providers_ =
+        java.util.Collections.emptyList();
+      private void ensureProvidersIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          providers_ = new java.util.ArrayList<com.shentu.shield.v1alpha1.ShieldProto.Provider>(providers_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.shentu.shield.v1alpha1.ShieldProto.Provider, com.shentu.shield.v1alpha1.ShieldProto.Provider.Builder, com.shentu.shield.v1alpha1.ShieldProto.ProviderOrBuilder> providersBuilder_;
+
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Provider providers = 1 [json_name = "providers", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.shentu.shield.v1alpha1.ShieldProto.Provider> getProvidersList() {
+        if (providersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(providers_);
+        } else {
+          return providersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Provider providers = 1 [json_name = "providers", (.gogoproto.nullable) = false];</code>
+       */
+      public int getProvidersCount() {
+        if (providersBuilder_ == null) {
+          return providers_.size();
+        } else {
+          return providersBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Provider providers = 1 [json_name = "providers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.Provider getProviders(int index) {
+        if (providersBuilder_ == null) {
+          return providers_.get(index);
+        } else {
+          return providersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Provider providers = 1 [json_name = "providers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setProviders(
+          int index, com.shentu.shield.v1alpha1.ShieldProto.Provider value) {
+        if (providersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProvidersIsMutable();
+          providers_.set(index, value);
+          onChanged();
+        } else {
+          providersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Provider providers = 1 [json_name = "providers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setProviders(
+          int index, com.shentu.shield.v1alpha1.ShieldProto.Provider.Builder builderForValue) {
+        if (providersBuilder_ == null) {
+          ensureProvidersIsMutable();
+          providers_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          providersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Provider providers = 1 [json_name = "providers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addProviders(com.shentu.shield.v1alpha1.ShieldProto.Provider value) {
+        if (providersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProvidersIsMutable();
+          providers_.add(value);
+          onChanged();
+        } else {
+          providersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Provider providers = 1 [json_name = "providers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addProviders(
+          int index, com.shentu.shield.v1alpha1.ShieldProto.Provider value) {
+        if (providersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProvidersIsMutable();
+          providers_.add(index, value);
+          onChanged();
+        } else {
+          providersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Provider providers = 1 [json_name = "providers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addProviders(
+          com.shentu.shield.v1alpha1.ShieldProto.Provider.Builder builderForValue) {
+        if (providersBuilder_ == null) {
+          ensureProvidersIsMutable();
+          providers_.add(builderForValue.build());
+          onChanged();
+        } else {
+          providersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Provider providers = 1 [json_name = "providers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addProviders(
+          int index, com.shentu.shield.v1alpha1.ShieldProto.Provider.Builder builderForValue) {
+        if (providersBuilder_ == null) {
+          ensureProvidersIsMutable();
+          providers_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          providersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Provider providers = 1 [json_name = "providers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllProviders(
+          java.lang.Iterable<? extends com.shentu.shield.v1alpha1.ShieldProto.Provider> values) {
+        if (providersBuilder_ == null) {
+          ensureProvidersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, providers_);
+          onChanged();
+        } else {
+          providersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Provider providers = 1 [json_name = "providers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearProviders() {
+        if (providersBuilder_ == null) {
+          providers_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          providersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Provider providers = 1 [json_name = "providers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeProviders(int index) {
+        if (providersBuilder_ == null) {
+          ensureProvidersIsMutable();
+          providers_.remove(index);
+          onChanged();
+        } else {
+          providersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Provider providers = 1 [json_name = "providers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.Provider.Builder getProvidersBuilder(
+          int index) {
+        return getProvidersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Provider providers = 1 [json_name = "providers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.ProviderOrBuilder getProvidersOrBuilder(
+          int index) {
+        if (providersBuilder_ == null) {
+          return providers_.get(index);  } else {
+          return providersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Provider providers = 1 [json_name = "providers", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.shentu.shield.v1alpha1.ShieldProto.ProviderOrBuilder> 
+           getProvidersOrBuilderList() {
+        if (providersBuilder_ != null) {
+          return providersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(providers_);
+        }
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Provider providers = 1 [json_name = "providers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.Provider.Builder addProvidersBuilder() {
+        return getProvidersFieldBuilder().addBuilder(
+            com.shentu.shield.v1alpha1.ShieldProto.Provider.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Provider providers = 1 [json_name = "providers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.Provider.Builder addProvidersBuilder(
+          int index) {
+        return getProvidersFieldBuilder().addBuilder(
+            index, com.shentu.shield.v1alpha1.ShieldProto.Provider.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.Provider providers = 1 [json_name = "providers", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.shentu.shield.v1alpha1.ShieldProto.Provider.Builder> 
+           getProvidersBuilderList() {
+        return getProvidersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.shentu.shield.v1alpha1.ShieldProto.Provider, com.shentu.shield.v1alpha1.ShieldProto.Provider.Builder, com.shentu.shield.v1alpha1.ShieldProto.ProviderOrBuilder> 
+          getProvidersFieldBuilder() {
+        if (providersBuilder_ == null) {
+          providersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.shentu.shield.v1alpha1.ShieldProto.Provider, com.shentu.shield.v1alpha1.ShieldProto.Provider.Builder, com.shentu.shield.v1alpha1.ShieldProto.ProviderOrBuilder>(
+                  providers_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          providers_ = null;
+        }
+        return providersBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QueryProvidersResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QueryProvidersResponse)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryProvidersResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryProvidersResponse>() {
+      @java.lang.Override
+      public QueryProvidersResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryProvidersResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryProvidersResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QueryProvidersResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPoolParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QueryPoolParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QueryPoolParamsRequest}
+   */
+  public static final class QueryPoolParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QueryPoolParamsRequest)
+      QueryPoolParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPoolParamsRequest.newBuilder() to construct.
+    private QueryPoolParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPoolParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPoolParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest other = (com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QueryPoolParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QueryPoolParamsRequest)
+        com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest build() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest result = new com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QueryPoolParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QueryPoolParamsRequest)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPoolParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPoolParamsRequest>() {
+      @java.lang.Override
+      public QueryPoolParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPoolParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPoolParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPoolParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QueryPoolParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.shentu.shield.v1alpha1.PoolParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.shentu.shield.v1alpha1.PoolParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.shentu.shield.v1alpha1.GenesisProto.PoolParams getParams();
+    /**
+     * <code>.shentu.shield.v1alpha1.PoolParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.shield.v1alpha1.GenesisProto.PoolParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QueryPoolParamsResponse}
+   */
+  public static final class QueryPoolParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QueryPoolParamsResponse)
+      QueryPoolParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPoolParamsResponse.newBuilder() to construct.
+    private QueryPoolParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPoolParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPoolParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.shentu.shield.v1alpha1.GenesisProto.PoolParams params_;
+    /**
+     * <code>.shentu.shield.v1alpha1.PoolParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.shentu.shield.v1alpha1.PoolParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.GenesisProto.PoolParams getParams() {
+      return params_ == null ? com.shentu.shield.v1alpha1.GenesisProto.PoolParams.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.shentu.shield.v1alpha1.PoolParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.GenesisProto.PoolParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.shentu.shield.v1alpha1.GenesisProto.PoolParams.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse other = (com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QueryPoolParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QueryPoolParamsResponse)
+        com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryPoolParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse build() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse result = new com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.shentu.shield.v1alpha1.GenesisProto.PoolParams params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.shield.v1alpha1.GenesisProto.PoolParams, com.shentu.shield.v1alpha1.GenesisProto.PoolParams.Builder, com.shentu.shield.v1alpha1.GenesisProto.PoolParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.shentu.shield.v1alpha1.PoolParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.PoolParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.shentu.shield.v1alpha1.GenesisProto.PoolParams getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.shentu.shield.v1alpha1.GenesisProto.PoolParams.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.PoolParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.shentu.shield.v1alpha1.GenesisProto.PoolParams value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.PoolParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.shentu.shield.v1alpha1.GenesisProto.PoolParams.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.PoolParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.shentu.shield.v1alpha1.GenesisProto.PoolParams value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.shentu.shield.v1alpha1.GenesisProto.PoolParams.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.PoolParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.PoolParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.GenesisProto.PoolParams.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.PoolParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.GenesisProto.PoolParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.shentu.shield.v1alpha1.GenesisProto.PoolParams.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.PoolParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.shield.v1alpha1.GenesisProto.PoolParams, com.shentu.shield.v1alpha1.GenesisProto.PoolParams.Builder, com.shentu.shield.v1alpha1.GenesisProto.PoolParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.shentu.shield.v1alpha1.GenesisProto.PoolParams, com.shentu.shield.v1alpha1.GenesisProto.PoolParams.Builder, com.shentu.shield.v1alpha1.GenesisProto.PoolParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QueryPoolParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QueryPoolParamsResponse)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPoolParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPoolParamsResponse>() {
+      @java.lang.Override
+      public QueryPoolParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPoolParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPoolParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QueryPoolParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryClaimParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QueryClaimParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QueryClaimParamsRequest}
+   */
+  public static final class QueryClaimParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QueryClaimParamsRequest)
+      QueryClaimParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryClaimParamsRequest.newBuilder() to construct.
+    private QueryClaimParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryClaimParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryClaimParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryClaimParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryClaimParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest other = (com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QueryClaimParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QueryClaimParamsRequest)
+        com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryClaimParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryClaimParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryClaimParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest build() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest result = new com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QueryClaimParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QueryClaimParamsRequest)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryClaimParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryClaimParamsRequest>() {
+      @java.lang.Override
+      public QueryClaimParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryClaimParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryClaimParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryClaimParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QueryClaimParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.shentu.shield.v1alpha1.ClaimProposalParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.shentu.shield.v1alpha1.ClaimProposalParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.shentu.shield.v1alpha1.GenesisProto.ClaimProposalParams getParams();
+    /**
+     * <code>.shentu.shield.v1alpha1.ClaimProposalParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.shield.v1alpha1.GenesisProto.ClaimProposalParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QueryClaimParamsResponse}
+   */
+  public static final class QueryClaimParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QueryClaimParamsResponse)
+      QueryClaimParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryClaimParamsResponse.newBuilder() to construct.
+    private QueryClaimParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryClaimParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryClaimParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryClaimParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryClaimParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.shentu.shield.v1alpha1.GenesisProto.ClaimProposalParams params_;
+    /**
+     * <code>.shentu.shield.v1alpha1.ClaimProposalParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.shentu.shield.v1alpha1.ClaimProposalParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.GenesisProto.ClaimProposalParams getParams() {
+      return params_ == null ? com.shentu.shield.v1alpha1.GenesisProto.ClaimProposalParams.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.shentu.shield.v1alpha1.ClaimProposalParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.GenesisProto.ClaimProposalParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.shentu.shield.v1alpha1.GenesisProto.ClaimProposalParams.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse other = (com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QueryClaimParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QueryClaimParamsResponse)
+        com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryClaimParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryClaimParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryClaimParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse build() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse result = new com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.shentu.shield.v1alpha1.GenesisProto.ClaimProposalParams params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.shield.v1alpha1.GenesisProto.ClaimProposalParams, com.shentu.shield.v1alpha1.GenesisProto.ClaimProposalParams.Builder, com.shentu.shield.v1alpha1.GenesisProto.ClaimProposalParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.shentu.shield.v1alpha1.ClaimProposalParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.ClaimProposalParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.shentu.shield.v1alpha1.GenesisProto.ClaimProposalParams getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.shentu.shield.v1alpha1.GenesisProto.ClaimProposalParams.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.ClaimProposalParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.shentu.shield.v1alpha1.GenesisProto.ClaimProposalParams value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.ClaimProposalParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.shentu.shield.v1alpha1.GenesisProto.ClaimProposalParams.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.ClaimProposalParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.shentu.shield.v1alpha1.GenesisProto.ClaimProposalParams value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.shentu.shield.v1alpha1.GenesisProto.ClaimProposalParams.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.ClaimProposalParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.ClaimProposalParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.GenesisProto.ClaimProposalParams.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.ClaimProposalParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.GenesisProto.ClaimProposalParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.shentu.shield.v1alpha1.GenesisProto.ClaimProposalParams.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.ClaimProposalParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.shield.v1alpha1.GenesisProto.ClaimProposalParams, com.shentu.shield.v1alpha1.GenesisProto.ClaimProposalParams.Builder, com.shentu.shield.v1alpha1.GenesisProto.ClaimProposalParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.shentu.shield.v1alpha1.GenesisProto.ClaimProposalParams, com.shentu.shield.v1alpha1.GenesisProto.ClaimProposalParams.Builder, com.shentu.shield.v1alpha1.GenesisProto.ClaimProposalParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QueryClaimParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QueryClaimParamsResponse)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryClaimParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryClaimParamsResponse>() {
+      @java.lang.Override
+      public QueryClaimParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryClaimParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryClaimParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QueryClaimParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryDistrParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QueryDistrParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QueryDistrParamsRequest}
+   */
+  public static final class QueryDistrParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QueryDistrParamsRequest)
+      QueryDistrParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDistrParamsRequest.newBuilder() to construct.
+    private QueryDistrParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDistrParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDistrParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryDistrParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryDistrParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest other = (com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QueryDistrParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QueryDistrParamsRequest)
+        com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryDistrParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryDistrParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryDistrParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest build() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest result = new com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QueryDistrParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QueryDistrParamsRequest)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDistrParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDistrParamsRequest>() {
+      @java.lang.Override
+      public QueryDistrParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDistrParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDistrParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryDistrParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QueryDistrParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.shentu.shield.v1alpha1.DistributionParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.shentu.shield.v1alpha1.DistributionParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.shentu.shield.v1alpha1.GenesisProto.DistributionParams getParams();
+    /**
+     * <code>.shentu.shield.v1alpha1.DistributionParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.shield.v1alpha1.GenesisProto.DistributionParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QueryDistrParamsResponse}
+   */
+  public static final class QueryDistrParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QueryDistrParamsResponse)
+      QueryDistrParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDistrParamsResponse.newBuilder() to construct.
+    private QueryDistrParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDistrParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDistrParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryDistrParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryDistrParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.shentu.shield.v1alpha1.GenesisProto.DistributionParams params_;
+    /**
+     * <code>.shentu.shield.v1alpha1.DistributionParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.shentu.shield.v1alpha1.DistributionParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.GenesisProto.DistributionParams getParams() {
+      return params_ == null ? com.shentu.shield.v1alpha1.GenesisProto.DistributionParams.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.shentu.shield.v1alpha1.DistributionParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.GenesisProto.DistributionParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.shentu.shield.v1alpha1.GenesisProto.DistributionParams.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse other = (com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QueryDistrParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QueryDistrParamsResponse)
+        com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryDistrParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryDistrParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryDistrParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse build() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse result = new com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.shentu.shield.v1alpha1.GenesisProto.DistributionParams params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.shield.v1alpha1.GenesisProto.DistributionParams, com.shentu.shield.v1alpha1.GenesisProto.DistributionParams.Builder, com.shentu.shield.v1alpha1.GenesisProto.DistributionParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.shentu.shield.v1alpha1.DistributionParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.DistributionParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.shentu.shield.v1alpha1.GenesisProto.DistributionParams getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.shentu.shield.v1alpha1.GenesisProto.DistributionParams.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.DistributionParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.shentu.shield.v1alpha1.GenesisProto.DistributionParams value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.DistributionParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.shentu.shield.v1alpha1.GenesisProto.DistributionParams.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.DistributionParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.shentu.shield.v1alpha1.GenesisProto.DistributionParams value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.shentu.shield.v1alpha1.GenesisProto.DistributionParams.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.DistributionParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.DistributionParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.GenesisProto.DistributionParams.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.DistributionParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.GenesisProto.DistributionParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.shentu.shield.v1alpha1.GenesisProto.DistributionParams.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.DistributionParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.shield.v1alpha1.GenesisProto.DistributionParams, com.shentu.shield.v1alpha1.GenesisProto.DistributionParams.Builder, com.shentu.shield.v1alpha1.GenesisProto.DistributionParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.shentu.shield.v1alpha1.GenesisProto.DistributionParams, com.shentu.shield.v1alpha1.GenesisProto.DistributionParams.Builder, com.shentu.shield.v1alpha1.GenesisProto.DistributionParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QueryDistrParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QueryDistrParamsResponse)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDistrParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDistrParamsResponse>() {
+      @java.lang.Override
+      public QueryDistrParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDistrParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDistrParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QueryDistrParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryShieldStatusRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QueryShieldStatusRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QueryShieldStatusRequest}
+   */
+  public static final class QueryShieldStatusRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QueryShieldStatusRequest)
+      QueryShieldStatusRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryShieldStatusRequest.newBuilder() to construct.
+    private QueryShieldStatusRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryShieldStatusRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryShieldStatusRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryShieldStatusRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryShieldStatusRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest other = (com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QueryShieldStatusRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QueryShieldStatusRequest)
+        com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryShieldStatusRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryShieldStatusRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryShieldStatusRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest build() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest result = new com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QueryShieldStatusRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QueryShieldStatusRequest)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryShieldStatusRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryShieldStatusRequest>() {
+      @java.lang.Override
+      public QueryShieldStatusRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryShieldStatusRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryShieldStatusRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryShieldStatusResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QueryShieldStatusResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string total_collateral = 1 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;""];</code>
+     * @return The totalCollateral.
+     */
+    java.lang.String getTotalCollateral();
+    /**
+     * <code>string total_collateral = 1 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;""];</code>
+     * @return The bytes for totalCollateral.
+     */
+    com.google.protobuf.ByteString
+        getTotalCollateralBytes();
+
+    /**
+     * <code>string total_shield = 2 [json_name = "totalShield", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_shield&#92;""];</code>
+     * @return The totalShield.
+     */
+    java.lang.String getTotalShield();
+    /**
+     * <code>string total_shield = 2 [json_name = "totalShield", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_shield&#92;""];</code>
+     * @return The bytes for totalShield.
+     */
+    com.google.protobuf.ByteString
+        getTotalShieldBytes();
+
+    /**
+     * <code>string total_withdrawing = 3 [json_name = "totalWithdrawing", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_withdrawing&#92;""];</code>
+     * @return The totalWithdrawing.
+     */
+    java.lang.String getTotalWithdrawing();
+    /**
+     * <code>string total_withdrawing = 3 [json_name = "totalWithdrawing", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_withdrawing&#92;""];</code>
+     * @return The bytes for totalWithdrawing.
+     */
+    com.google.protobuf.ByteString
+        getTotalWithdrawingBytes();
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin current_service_fees = 4 [json_name = "currentServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> 
+        getCurrentServiceFeesList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin current_service_fees = 4 [json_name = "currentServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getCurrentServiceFees(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin current_service_fees = 4 [json_name = "currentServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    int getCurrentServiceFeesCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin current_service_fees = 4 [json_name = "currentServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getCurrentServiceFeesOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin current_service_fees = 4 [json_name = "currentServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getCurrentServiceFeesOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin remaining_service_fees = 5 [json_name = "remainingServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> 
+        getRemainingServiceFeesList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin remaining_service_fees = 5 [json_name = "remainingServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getRemainingServiceFees(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin remaining_service_fees = 5 [json_name = "remainingServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    int getRemainingServiceFeesCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin remaining_service_fees = 5 [json_name = "remainingServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getRemainingServiceFeesOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin remaining_service_fees = 5 [json_name = "remainingServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getRemainingServiceFeesOrBuilder(
+        int index);
+
+    /**
+     * <code>string global_shield_staking_pool = 6 [json_name = "globalShieldStakingPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"global_shield_staking_pool&#92;""];</code>
+     * @return The globalShieldStakingPool.
+     */
+    java.lang.String getGlobalShieldStakingPool();
+    /**
+     * <code>string global_shield_staking_pool = 6 [json_name = "globalShieldStakingPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"global_shield_staking_pool&#92;""];</code>
+     * @return The bytes for globalShieldStakingPool.
+     */
+    com.google.protobuf.ByteString
+        getGlobalShieldStakingPoolBytes();
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QueryShieldStatusResponse}
+   */
+  public static final class QueryShieldStatusResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QueryShieldStatusResponse)
+      QueryShieldStatusResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryShieldStatusResponse.newBuilder() to construct.
+    private QueryShieldStatusResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryShieldStatusResponse() {
+      totalCollateral_ = "";
+      totalShield_ = "";
+      totalWithdrawing_ = "";
+      currentServiceFees_ = java.util.Collections.emptyList();
+      remainingServiceFees_ = java.util.Collections.emptyList();
+      globalShieldStakingPool_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryShieldStatusResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryShieldStatusResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryShieldStatusResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse.Builder.class);
+    }
+
+    public static final int TOTAL_COLLATERAL_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object totalCollateral_ = "";
+    /**
+     * <code>string total_collateral = 1 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;""];</code>
+     * @return The totalCollateral.
+     */
+    @java.lang.Override
+    public java.lang.String getTotalCollateral() {
+      java.lang.Object ref = totalCollateral_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        totalCollateral_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string total_collateral = 1 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;""];</code>
+     * @return The bytes for totalCollateral.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTotalCollateralBytes() {
+      java.lang.Object ref = totalCollateral_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        totalCollateral_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOTAL_SHIELD_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object totalShield_ = "";
+    /**
+     * <code>string total_shield = 2 [json_name = "totalShield", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_shield&#92;""];</code>
+     * @return The totalShield.
+     */
+    @java.lang.Override
+    public java.lang.String getTotalShield() {
+      java.lang.Object ref = totalShield_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        totalShield_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string total_shield = 2 [json_name = "totalShield", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_shield&#92;""];</code>
+     * @return The bytes for totalShield.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTotalShieldBytes() {
+      java.lang.Object ref = totalShield_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        totalShield_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOTAL_WITHDRAWING_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object totalWithdrawing_ = "";
+    /**
+     * <code>string total_withdrawing = 3 [json_name = "totalWithdrawing", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_withdrawing&#92;""];</code>
+     * @return The totalWithdrawing.
+     */
+    @java.lang.Override
+    public java.lang.String getTotalWithdrawing() {
+      java.lang.Object ref = totalWithdrawing_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        totalWithdrawing_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string total_withdrawing = 3 [json_name = "totalWithdrawing", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_withdrawing&#92;""];</code>
+     * @return The bytes for totalWithdrawing.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTotalWithdrawingBytes() {
+      java.lang.Object ref = totalWithdrawing_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        totalWithdrawing_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CURRENT_SERVICE_FEES_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> currentServiceFees_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin current_service_fees = 4 [json_name = "currentServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getCurrentServiceFeesList() {
+      return currentServiceFees_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin current_service_fees = 4 [json_name = "currentServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getCurrentServiceFeesOrBuilderList() {
+      return currentServiceFees_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin current_service_fees = 4 [json_name = "currentServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public int getCurrentServiceFeesCount() {
+      return currentServiceFees_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin current_service_fees = 4 [json_name = "currentServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getCurrentServiceFees(int index) {
+      return currentServiceFees_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin current_service_fees = 4 [json_name = "currentServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getCurrentServiceFeesOrBuilder(
+        int index) {
+      return currentServiceFees_.get(index);
+    }
+
+    public static final int REMAINING_SERVICE_FEES_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> remainingServiceFees_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin remaining_service_fees = 5 [json_name = "remainingServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getRemainingServiceFeesList() {
+      return remainingServiceFees_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin remaining_service_fees = 5 [json_name = "remainingServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getRemainingServiceFeesOrBuilderList() {
+      return remainingServiceFees_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin remaining_service_fees = 5 [json_name = "remainingServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public int getRemainingServiceFeesCount() {
+      return remainingServiceFees_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin remaining_service_fees = 5 [json_name = "remainingServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getRemainingServiceFees(int index) {
+      return remainingServiceFees_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin remaining_service_fees = 5 [json_name = "remainingServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getRemainingServiceFeesOrBuilder(
+        int index) {
+      return remainingServiceFees_.get(index);
+    }
+
+    public static final int GLOBAL_SHIELD_STAKING_POOL_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object globalShieldStakingPool_ = "";
+    /**
+     * <code>string global_shield_staking_pool = 6 [json_name = "globalShieldStakingPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"global_shield_staking_pool&#92;""];</code>
+     * @return The globalShieldStakingPool.
+     */
+    @java.lang.Override
+    public java.lang.String getGlobalShieldStakingPool() {
+      java.lang.Object ref = globalShieldStakingPool_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        globalShieldStakingPool_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string global_shield_staking_pool = 6 [json_name = "globalShieldStakingPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"global_shield_staking_pool&#92;""];</code>
+     * @return The bytes for globalShieldStakingPool.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGlobalShieldStakingPoolBytes() {
+      java.lang.Object ref = globalShieldStakingPool_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        globalShieldStakingPool_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalCollateral_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, totalCollateral_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalShield_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, totalShield_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalWithdrawing_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, totalWithdrawing_);
+      }
+      for (int i = 0; i < currentServiceFees_.size(); i++) {
+        output.writeMessage(4, currentServiceFees_.get(i));
+      }
+      for (int i = 0; i < remainingServiceFees_.size(); i++) {
+        output.writeMessage(5, remainingServiceFees_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(globalShieldStakingPool_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, globalShieldStakingPool_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalCollateral_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, totalCollateral_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalShield_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, totalShield_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalWithdrawing_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, totalWithdrawing_);
+      }
+      for (int i = 0; i < currentServiceFees_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, currentServiceFees_.get(i));
+      }
+      for (int i = 0; i < remainingServiceFees_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, remainingServiceFees_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(globalShieldStakingPool_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, globalShieldStakingPool_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse other = (com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse) obj;
+
+      if (!getTotalCollateral()
+          .equals(other.getTotalCollateral())) return false;
+      if (!getTotalShield()
+          .equals(other.getTotalShield())) return false;
+      if (!getTotalWithdrawing()
+          .equals(other.getTotalWithdrawing())) return false;
+      if (!getCurrentServiceFeesList()
+          .equals(other.getCurrentServiceFeesList())) return false;
+      if (!getRemainingServiceFeesList()
+          .equals(other.getRemainingServiceFeesList())) return false;
+      if (!getGlobalShieldStakingPool()
+          .equals(other.getGlobalShieldStakingPool())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TOTAL_COLLATERAL_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalCollateral().hashCode();
+      hash = (37 * hash) + TOTAL_SHIELD_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalShield().hashCode();
+      hash = (37 * hash) + TOTAL_WITHDRAWING_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalWithdrawing().hashCode();
+      if (getCurrentServiceFeesCount() > 0) {
+        hash = (37 * hash) + CURRENT_SERVICE_FEES_FIELD_NUMBER;
+        hash = (53 * hash) + getCurrentServiceFeesList().hashCode();
+      }
+      if (getRemainingServiceFeesCount() > 0) {
+        hash = (37 * hash) + REMAINING_SERVICE_FEES_FIELD_NUMBER;
+        hash = (53 * hash) + getRemainingServiceFeesList().hashCode();
+      }
+      hash = (37 * hash) + GLOBAL_SHIELD_STAKING_POOL_FIELD_NUMBER;
+      hash = (53 * hash) + getGlobalShieldStakingPool().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QueryShieldStatusResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QueryShieldStatusResponse)
+        com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryShieldStatusResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryShieldStatusResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        totalCollateral_ = "";
+        totalShield_ = "";
+        totalWithdrawing_ = "";
+        if (currentServiceFeesBuilder_ == null) {
+          currentServiceFees_ = java.util.Collections.emptyList();
+        } else {
+          currentServiceFees_ = null;
+          currentServiceFeesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (remainingServiceFeesBuilder_ == null) {
+          remainingServiceFees_ = java.util.Collections.emptyList();
+        } else {
+          remainingServiceFees_ = null;
+          remainingServiceFeesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        globalShieldStakingPool_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryShieldStatusResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse build() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse result = new com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse result) {
+        if (currentServiceFeesBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            currentServiceFees_ = java.util.Collections.unmodifiableList(currentServiceFees_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.currentServiceFees_ = currentServiceFees_;
+        } else {
+          result.currentServiceFees_ = currentServiceFeesBuilder_.build();
+        }
+        if (remainingServiceFeesBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            remainingServiceFees_ = java.util.Collections.unmodifiableList(remainingServiceFees_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.remainingServiceFees_ = remainingServiceFees_;
+        } else {
+          result.remainingServiceFees_ = remainingServiceFeesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.totalCollateral_ = totalCollateral_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.totalShield_ = totalShield_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.totalWithdrawing_ = totalWithdrawing_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.globalShieldStakingPool_ = globalShieldStakingPool_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse.getDefaultInstance()) return this;
+        if (!other.getTotalCollateral().isEmpty()) {
+          totalCollateral_ = other.totalCollateral_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getTotalShield().isEmpty()) {
+          totalShield_ = other.totalShield_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getTotalWithdrawing().isEmpty()) {
+          totalWithdrawing_ = other.totalWithdrawing_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (currentServiceFeesBuilder_ == null) {
+          if (!other.currentServiceFees_.isEmpty()) {
+            if (currentServiceFees_.isEmpty()) {
+              currentServiceFees_ = other.currentServiceFees_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureCurrentServiceFeesIsMutable();
+              currentServiceFees_.addAll(other.currentServiceFees_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.currentServiceFees_.isEmpty()) {
+            if (currentServiceFeesBuilder_.isEmpty()) {
+              currentServiceFeesBuilder_.dispose();
+              currentServiceFeesBuilder_ = null;
+              currentServiceFees_ = other.currentServiceFees_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              currentServiceFeesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCurrentServiceFeesFieldBuilder() : null;
+            } else {
+              currentServiceFeesBuilder_.addAllMessages(other.currentServiceFees_);
+            }
+          }
+        }
+        if (remainingServiceFeesBuilder_ == null) {
+          if (!other.remainingServiceFees_.isEmpty()) {
+            if (remainingServiceFees_.isEmpty()) {
+              remainingServiceFees_ = other.remainingServiceFees_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureRemainingServiceFeesIsMutable();
+              remainingServiceFees_.addAll(other.remainingServiceFees_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.remainingServiceFees_.isEmpty()) {
+            if (remainingServiceFeesBuilder_.isEmpty()) {
+              remainingServiceFeesBuilder_.dispose();
+              remainingServiceFeesBuilder_ = null;
+              remainingServiceFees_ = other.remainingServiceFees_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              remainingServiceFeesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRemainingServiceFeesFieldBuilder() : null;
+            } else {
+              remainingServiceFeesBuilder_.addAllMessages(other.remainingServiceFees_);
+            }
+          }
+        }
+        if (!other.getGlobalShieldStakingPool().isEmpty()) {
+          globalShieldStakingPool_ = other.globalShieldStakingPool_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                totalCollateral_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                totalShield_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                totalWithdrawing_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                com.cosmos.base.v1beta1.CoinProto.DecCoin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.DecCoin.parser(),
+                        extensionRegistry);
+                if (currentServiceFeesBuilder_ == null) {
+                  ensureCurrentServiceFeesIsMutable();
+                  currentServiceFees_.add(m);
+                } else {
+                  currentServiceFeesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                com.cosmos.base.v1beta1.CoinProto.DecCoin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.DecCoin.parser(),
+                        extensionRegistry);
+                if (remainingServiceFeesBuilder_ == null) {
+                  ensureRemainingServiceFeesIsMutable();
+                  remainingServiceFees_.add(m);
+                } else {
+                  remainingServiceFeesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                globalShieldStakingPool_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object totalCollateral_ = "";
+      /**
+       * <code>string total_collateral = 1 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;""];</code>
+       * @return The totalCollateral.
+       */
+      public java.lang.String getTotalCollateral() {
+        java.lang.Object ref = totalCollateral_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          totalCollateral_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string total_collateral = 1 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;""];</code>
+       * @return The bytes for totalCollateral.
+       */
+      public com.google.protobuf.ByteString
+          getTotalCollateralBytes() {
+        java.lang.Object ref = totalCollateral_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          totalCollateral_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string total_collateral = 1 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;""];</code>
+       * @param value The totalCollateral to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalCollateral(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        totalCollateral_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string total_collateral = 1 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalCollateral() {
+        totalCollateral_ = getDefaultInstance().getTotalCollateral();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string total_collateral = 1 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;""];</code>
+       * @param value The bytes for totalCollateral to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalCollateralBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        totalCollateral_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object totalShield_ = "";
+      /**
+       * <code>string total_shield = 2 [json_name = "totalShield", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_shield&#92;""];</code>
+       * @return The totalShield.
+       */
+      public java.lang.String getTotalShield() {
+        java.lang.Object ref = totalShield_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          totalShield_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string total_shield = 2 [json_name = "totalShield", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_shield&#92;""];</code>
+       * @return The bytes for totalShield.
+       */
+      public com.google.protobuf.ByteString
+          getTotalShieldBytes() {
+        java.lang.Object ref = totalShield_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          totalShield_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string total_shield = 2 [json_name = "totalShield", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_shield&#92;""];</code>
+       * @param value The totalShield to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalShield(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        totalShield_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string total_shield = 2 [json_name = "totalShield", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_shield&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalShield() {
+        totalShield_ = getDefaultInstance().getTotalShield();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string total_shield = 2 [json_name = "totalShield", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_shield&#92;""];</code>
+       * @param value The bytes for totalShield to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalShieldBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        totalShield_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object totalWithdrawing_ = "";
+      /**
+       * <code>string total_withdrawing = 3 [json_name = "totalWithdrawing", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_withdrawing&#92;""];</code>
+       * @return The totalWithdrawing.
+       */
+      public java.lang.String getTotalWithdrawing() {
+        java.lang.Object ref = totalWithdrawing_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          totalWithdrawing_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string total_withdrawing = 3 [json_name = "totalWithdrawing", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_withdrawing&#92;""];</code>
+       * @return The bytes for totalWithdrawing.
+       */
+      public com.google.protobuf.ByteString
+          getTotalWithdrawingBytes() {
+        java.lang.Object ref = totalWithdrawing_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          totalWithdrawing_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string total_withdrawing = 3 [json_name = "totalWithdrawing", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_withdrawing&#92;""];</code>
+       * @param value The totalWithdrawing to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalWithdrawing(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        totalWithdrawing_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string total_withdrawing = 3 [json_name = "totalWithdrawing", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_withdrawing&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalWithdrawing() {
+        totalWithdrawing_ = getDefaultInstance().getTotalWithdrawing();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string total_withdrawing = 3 [json_name = "totalWithdrawing", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"total_withdrawing&#92;""];</code>
+       * @param value The bytes for totalWithdrawing to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalWithdrawingBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        totalWithdrawing_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> currentServiceFees_ =
+        java.util.Collections.emptyList();
+      private void ensureCurrentServiceFeesIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          currentServiceFees_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.DecCoin>(currentServiceFees_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> currentServiceFeesBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin current_service_fees = 4 [json_name = "currentServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getCurrentServiceFeesList() {
+        if (currentServiceFeesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(currentServiceFees_);
+        } else {
+          return currentServiceFeesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin current_service_fees = 4 [json_name = "currentServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public int getCurrentServiceFeesCount() {
+        if (currentServiceFeesBuilder_ == null) {
+          return currentServiceFees_.size();
+        } else {
+          return currentServiceFeesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin current_service_fees = 4 [json_name = "currentServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getCurrentServiceFees(int index) {
+        if (currentServiceFeesBuilder_ == null) {
+          return currentServiceFees_.get(index);
+        } else {
+          return currentServiceFeesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin current_service_fees = 4 [json_name = "currentServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setCurrentServiceFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (currentServiceFeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCurrentServiceFeesIsMutable();
+          currentServiceFees_.set(index, value);
+          onChanged();
+        } else {
+          currentServiceFeesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin current_service_fees = 4 [json_name = "currentServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setCurrentServiceFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (currentServiceFeesBuilder_ == null) {
+          ensureCurrentServiceFeesIsMutable();
+          currentServiceFees_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          currentServiceFeesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin current_service_fees = 4 [json_name = "currentServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addCurrentServiceFees(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (currentServiceFeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCurrentServiceFeesIsMutable();
+          currentServiceFees_.add(value);
+          onChanged();
+        } else {
+          currentServiceFeesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin current_service_fees = 4 [json_name = "currentServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addCurrentServiceFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (currentServiceFeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCurrentServiceFeesIsMutable();
+          currentServiceFees_.add(index, value);
+          onChanged();
+        } else {
+          currentServiceFeesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin current_service_fees = 4 [json_name = "currentServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addCurrentServiceFees(
+          com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (currentServiceFeesBuilder_ == null) {
+          ensureCurrentServiceFeesIsMutable();
+          currentServiceFees_.add(builderForValue.build());
+          onChanged();
+        } else {
+          currentServiceFeesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin current_service_fees = 4 [json_name = "currentServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addCurrentServiceFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (currentServiceFeesBuilder_ == null) {
+          ensureCurrentServiceFeesIsMutable();
+          currentServiceFees_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          currentServiceFeesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin current_service_fees = 4 [json_name = "currentServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllCurrentServiceFees(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.DecCoin> values) {
+        if (currentServiceFeesBuilder_ == null) {
+          ensureCurrentServiceFeesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, currentServiceFees_);
+          onChanged();
+        } else {
+          currentServiceFeesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin current_service_fees = 4 [json_name = "currentServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder clearCurrentServiceFees() {
+        if (currentServiceFeesBuilder_ == null) {
+          currentServiceFees_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          currentServiceFeesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin current_service_fees = 4 [json_name = "currentServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder removeCurrentServiceFees(int index) {
+        if (currentServiceFeesBuilder_ == null) {
+          ensureCurrentServiceFeesIsMutable();
+          currentServiceFees_.remove(index);
+          onChanged();
+        } else {
+          currentServiceFeesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin current_service_fees = 4 [json_name = "currentServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getCurrentServiceFeesBuilder(
+          int index) {
+        return getCurrentServiceFeesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin current_service_fees = 4 [json_name = "currentServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getCurrentServiceFeesOrBuilder(
+          int index) {
+        if (currentServiceFeesBuilder_ == null) {
+          return currentServiceFees_.get(index);  } else {
+          return currentServiceFeesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin current_service_fees = 4 [json_name = "currentServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+           getCurrentServiceFeesOrBuilderList() {
+        if (currentServiceFeesBuilder_ != null) {
+          return currentServiceFeesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(currentServiceFees_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin current_service_fees = 4 [json_name = "currentServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addCurrentServiceFeesBuilder() {
+        return getCurrentServiceFeesFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin current_service_fees = 4 [json_name = "currentServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addCurrentServiceFeesBuilder(
+          int index) {
+        return getCurrentServiceFeesFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin current_service_fees = 4 [json_name = "currentServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder> 
+           getCurrentServiceFeesBuilderList() {
+        return getCurrentServiceFeesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+          getCurrentServiceFeesFieldBuilder() {
+        if (currentServiceFeesBuilder_ == null) {
+          currentServiceFeesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
+                  currentServiceFees_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          currentServiceFees_ = null;
+        }
+        return currentServiceFeesBuilder_;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> remainingServiceFees_ =
+        java.util.Collections.emptyList();
+      private void ensureRemainingServiceFeesIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          remainingServiceFees_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.DecCoin>(remainingServiceFees_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> remainingServiceFeesBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin remaining_service_fees = 5 [json_name = "remainingServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getRemainingServiceFeesList() {
+        if (remainingServiceFeesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(remainingServiceFees_);
+        } else {
+          return remainingServiceFeesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin remaining_service_fees = 5 [json_name = "remainingServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public int getRemainingServiceFeesCount() {
+        if (remainingServiceFeesBuilder_ == null) {
+          return remainingServiceFees_.size();
+        } else {
+          return remainingServiceFeesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin remaining_service_fees = 5 [json_name = "remainingServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getRemainingServiceFees(int index) {
+        if (remainingServiceFeesBuilder_ == null) {
+          return remainingServiceFees_.get(index);
+        } else {
+          return remainingServiceFeesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin remaining_service_fees = 5 [json_name = "remainingServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setRemainingServiceFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (remainingServiceFeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemainingServiceFeesIsMutable();
+          remainingServiceFees_.set(index, value);
+          onChanged();
+        } else {
+          remainingServiceFeesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin remaining_service_fees = 5 [json_name = "remainingServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setRemainingServiceFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (remainingServiceFeesBuilder_ == null) {
+          ensureRemainingServiceFeesIsMutable();
+          remainingServiceFees_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          remainingServiceFeesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin remaining_service_fees = 5 [json_name = "remainingServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addRemainingServiceFees(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (remainingServiceFeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemainingServiceFeesIsMutable();
+          remainingServiceFees_.add(value);
+          onChanged();
+        } else {
+          remainingServiceFeesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin remaining_service_fees = 5 [json_name = "remainingServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addRemainingServiceFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (remainingServiceFeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemainingServiceFeesIsMutable();
+          remainingServiceFees_.add(index, value);
+          onChanged();
+        } else {
+          remainingServiceFeesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin remaining_service_fees = 5 [json_name = "remainingServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addRemainingServiceFees(
+          com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (remainingServiceFeesBuilder_ == null) {
+          ensureRemainingServiceFeesIsMutable();
+          remainingServiceFees_.add(builderForValue.build());
+          onChanged();
+        } else {
+          remainingServiceFeesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin remaining_service_fees = 5 [json_name = "remainingServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addRemainingServiceFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (remainingServiceFeesBuilder_ == null) {
+          ensureRemainingServiceFeesIsMutable();
+          remainingServiceFees_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          remainingServiceFeesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin remaining_service_fees = 5 [json_name = "remainingServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllRemainingServiceFees(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.DecCoin> values) {
+        if (remainingServiceFeesBuilder_ == null) {
+          ensureRemainingServiceFeesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, remainingServiceFees_);
+          onChanged();
+        } else {
+          remainingServiceFeesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin remaining_service_fees = 5 [json_name = "remainingServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder clearRemainingServiceFees() {
+        if (remainingServiceFeesBuilder_ == null) {
+          remainingServiceFees_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          remainingServiceFeesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin remaining_service_fees = 5 [json_name = "remainingServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder removeRemainingServiceFees(int index) {
+        if (remainingServiceFeesBuilder_ == null) {
+          ensureRemainingServiceFeesIsMutable();
+          remainingServiceFees_.remove(index);
+          onChanged();
+        } else {
+          remainingServiceFeesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin remaining_service_fees = 5 [json_name = "remainingServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getRemainingServiceFeesBuilder(
+          int index) {
+        return getRemainingServiceFeesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin remaining_service_fees = 5 [json_name = "remainingServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getRemainingServiceFeesOrBuilder(
+          int index) {
+        if (remainingServiceFeesBuilder_ == null) {
+          return remainingServiceFees_.get(index);  } else {
+          return remainingServiceFeesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin remaining_service_fees = 5 [json_name = "remainingServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+           getRemainingServiceFeesOrBuilderList() {
+        if (remainingServiceFeesBuilder_ != null) {
+          return remainingServiceFeesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(remainingServiceFees_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin remaining_service_fees = 5 [json_name = "remainingServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addRemainingServiceFeesBuilder() {
+        return getRemainingServiceFeesFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin remaining_service_fees = 5 [json_name = "remainingServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addRemainingServiceFeesBuilder(
+          int index) {
+        return getRemainingServiceFeesFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin remaining_service_fees = 5 [json_name = "remainingServiceFees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder> 
+           getRemainingServiceFeesBuilderList() {
+        return getRemainingServiceFeesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+          getRemainingServiceFeesFieldBuilder() {
+        if (remainingServiceFeesBuilder_ == null) {
+          remainingServiceFeesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
+                  remainingServiceFees_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          remainingServiceFees_ = null;
+        }
+        return remainingServiceFeesBuilder_;
+      }
+
+      private java.lang.Object globalShieldStakingPool_ = "";
+      /**
+       * <code>string global_shield_staking_pool = 6 [json_name = "globalShieldStakingPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"global_shield_staking_pool&#92;""];</code>
+       * @return The globalShieldStakingPool.
+       */
+      public java.lang.String getGlobalShieldStakingPool() {
+        java.lang.Object ref = globalShieldStakingPool_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          globalShieldStakingPool_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string global_shield_staking_pool = 6 [json_name = "globalShieldStakingPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"global_shield_staking_pool&#92;""];</code>
+       * @return The bytes for globalShieldStakingPool.
+       */
+      public com.google.protobuf.ByteString
+          getGlobalShieldStakingPoolBytes() {
+        java.lang.Object ref = globalShieldStakingPool_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          globalShieldStakingPool_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string global_shield_staking_pool = 6 [json_name = "globalShieldStakingPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"global_shield_staking_pool&#92;""];</code>
+       * @param value The globalShieldStakingPool to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGlobalShieldStakingPool(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        globalShieldStakingPool_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string global_shield_staking_pool = 6 [json_name = "globalShieldStakingPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"global_shield_staking_pool&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGlobalShieldStakingPool() {
+        globalShieldStakingPool_ = getDefaultInstance().getGlobalShieldStakingPool();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string global_shield_staking_pool = 6 [json_name = "globalShieldStakingPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"global_shield_staking_pool&#92;""];</code>
+       * @param value The bytes for globalShieldStakingPool to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGlobalShieldStakingPoolBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        globalShieldStakingPool_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QueryShieldStatusResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QueryShieldStatusResponse)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryShieldStatusResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryShieldStatusResponse>() {
+      @java.lang.Override
+      public QueryShieldStatusResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryShieldStatusResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryShieldStatusResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QueryShieldStatusResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryShieldStakingRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QueryShieldStakingRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <code>string purchaser = 2 [json_name = "purchaser"];</code>
+     * @return The purchaser.
+     */
+    java.lang.String getPurchaser();
+    /**
+     * <code>string purchaser = 2 [json_name = "purchaser"];</code>
+     * @return The bytes for purchaser.
+     */
+    com.google.protobuf.ByteString
+        getPurchaserBytes();
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QueryShieldStakingRequest}
+   */
+  public static final class QueryShieldStakingRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QueryShieldStakingRequest)
+      QueryShieldStakingRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryShieldStakingRequest.newBuilder() to construct.
+    private QueryShieldStakingRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryShieldStakingRequest() {
+      purchaser_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryShieldStakingRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryShieldStakingRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryShieldStakingRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int PURCHASER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object purchaser_ = "";
+    /**
+     * <code>string purchaser = 2 [json_name = "purchaser"];</code>
+     * @return The purchaser.
+     */
+    @java.lang.Override
+    public java.lang.String getPurchaser() {
+      java.lang.Object ref = purchaser_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        purchaser_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string purchaser = 2 [json_name = "purchaser"];</code>
+     * @return The bytes for purchaser.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPurchaserBytes() {
+      java.lang.Object ref = purchaser_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        purchaser_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(purchaser_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, purchaser_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(purchaser_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, purchaser_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest other = (com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getPurchaser()
+          .equals(other.getPurchaser())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + PURCHASER_FIELD_NUMBER;
+      hash = (53 * hash) + getPurchaser().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QueryShieldStakingRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QueryShieldStakingRequest)
+        com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryShieldStakingRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryShieldStakingRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        purchaser_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryShieldStakingRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest build() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest result = new com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.purchaser_ = purchaser_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (!other.getPurchaser().isEmpty()) {
+          purchaser_ = other.purchaser_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                purchaser_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object purchaser_ = "";
+      /**
+       * <code>string purchaser = 2 [json_name = "purchaser"];</code>
+       * @return The purchaser.
+       */
+      public java.lang.String getPurchaser() {
+        java.lang.Object ref = purchaser_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          purchaser_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string purchaser = 2 [json_name = "purchaser"];</code>
+       * @return The bytes for purchaser.
+       */
+      public com.google.protobuf.ByteString
+          getPurchaserBytes() {
+        java.lang.Object ref = purchaser_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          purchaser_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string purchaser = 2 [json_name = "purchaser"];</code>
+       * @param value The purchaser to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPurchaser(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        purchaser_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string purchaser = 2 [json_name = "purchaser"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPurchaser() {
+        purchaser_ = getDefaultInstance().getPurchaser();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string purchaser = 2 [json_name = "purchaser"];</code>
+       * @param value The bytes for purchaser to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPurchaserBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        purchaser_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QueryShieldStakingRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QueryShieldStakingRequest)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryShieldStakingRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryShieldStakingRequest>() {
+      @java.lang.Override
+      public QueryShieldStakingRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryShieldStakingRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryShieldStakingRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryShieldStakingResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QueryShieldStakingResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.shentu.shield.v1alpha1.ShieldStaking shield_staking = 1 [json_name = "shieldStaking", (.gogoproto.nullable) = false];</code>
+     * @return Whether the shieldStaking field is set.
+     */
+    boolean hasShieldStaking();
+    /**
+     * <code>.shentu.shield.v1alpha1.ShieldStaking shield_staking = 1 [json_name = "shieldStaking", (.gogoproto.nullable) = false];</code>
+     * @return The shieldStaking.
+     */
+    com.shentu.shield.v1alpha1.ShieldProto.ShieldStaking getShieldStaking();
+    /**
+     * <code>.shentu.shield.v1alpha1.ShieldStaking shield_staking = 1 [json_name = "shieldStaking", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.shield.v1alpha1.ShieldProto.ShieldStakingOrBuilder getShieldStakingOrBuilder();
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QueryShieldStakingResponse}
+   */
+  public static final class QueryShieldStakingResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QueryShieldStakingResponse)
+      QueryShieldStakingResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryShieldStakingResponse.newBuilder() to construct.
+    private QueryShieldStakingResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryShieldStakingResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryShieldStakingResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryShieldStakingResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryShieldStakingResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse.Builder.class);
+    }
+
+    public static final int SHIELD_STAKING_FIELD_NUMBER = 1;
+    private com.shentu.shield.v1alpha1.ShieldProto.ShieldStaking shieldStaking_;
+    /**
+     * <code>.shentu.shield.v1alpha1.ShieldStaking shield_staking = 1 [json_name = "shieldStaking", (.gogoproto.nullable) = false];</code>
+     * @return Whether the shieldStaking field is set.
+     */
+    @java.lang.Override
+    public boolean hasShieldStaking() {
+      return shieldStaking_ != null;
+    }
+    /**
+     * <code>.shentu.shield.v1alpha1.ShieldStaking shield_staking = 1 [json_name = "shieldStaking", (.gogoproto.nullable) = false];</code>
+     * @return The shieldStaking.
+     */
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.ShieldProto.ShieldStaking getShieldStaking() {
+      return shieldStaking_ == null ? com.shentu.shield.v1alpha1.ShieldProto.ShieldStaking.getDefaultInstance() : shieldStaking_;
+    }
+    /**
+     * <code>.shentu.shield.v1alpha1.ShieldStaking shield_staking = 1 [json_name = "shieldStaking", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.ShieldProto.ShieldStakingOrBuilder getShieldStakingOrBuilder() {
+      return shieldStaking_ == null ? com.shentu.shield.v1alpha1.ShieldProto.ShieldStaking.getDefaultInstance() : shieldStaking_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (shieldStaking_ != null) {
+        output.writeMessage(1, getShieldStaking());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (shieldStaking_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getShieldStaking());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse other = (com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse) obj;
+
+      if (hasShieldStaking() != other.hasShieldStaking()) return false;
+      if (hasShieldStaking()) {
+        if (!getShieldStaking()
+            .equals(other.getShieldStaking())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasShieldStaking()) {
+        hash = (37 * hash) + SHIELD_STAKING_FIELD_NUMBER;
+        hash = (53 * hash) + getShieldStaking().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QueryShieldStakingResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QueryShieldStakingResponse)
+        com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryShieldStakingResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryShieldStakingResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        shieldStaking_ = null;
+        if (shieldStakingBuilder_ != null) {
+          shieldStakingBuilder_.dispose();
+          shieldStakingBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryShieldStakingResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse build() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse result = new com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.shieldStaking_ = shieldStakingBuilder_ == null
+              ? shieldStaking_
+              : shieldStakingBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse.getDefaultInstance()) return this;
+        if (other.hasShieldStaking()) {
+          mergeShieldStaking(other.getShieldStaking());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getShieldStakingFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.shentu.shield.v1alpha1.ShieldProto.ShieldStaking shieldStaking_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.shield.v1alpha1.ShieldProto.ShieldStaking, com.shentu.shield.v1alpha1.ShieldProto.ShieldStaking.Builder, com.shentu.shield.v1alpha1.ShieldProto.ShieldStakingOrBuilder> shieldStakingBuilder_;
+      /**
+       * <code>.shentu.shield.v1alpha1.ShieldStaking shield_staking = 1 [json_name = "shieldStaking", (.gogoproto.nullable) = false];</code>
+       * @return Whether the shieldStaking field is set.
+       */
+      public boolean hasShieldStaking() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.ShieldStaking shield_staking = 1 [json_name = "shieldStaking", (.gogoproto.nullable) = false];</code>
+       * @return The shieldStaking.
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.ShieldStaking getShieldStaking() {
+        if (shieldStakingBuilder_ == null) {
+          return shieldStaking_ == null ? com.shentu.shield.v1alpha1.ShieldProto.ShieldStaking.getDefaultInstance() : shieldStaking_;
+        } else {
+          return shieldStakingBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.ShieldStaking shield_staking = 1 [json_name = "shieldStaking", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setShieldStaking(com.shentu.shield.v1alpha1.ShieldProto.ShieldStaking value) {
+        if (shieldStakingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          shieldStaking_ = value;
+        } else {
+          shieldStakingBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.ShieldStaking shield_staking = 1 [json_name = "shieldStaking", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setShieldStaking(
+          com.shentu.shield.v1alpha1.ShieldProto.ShieldStaking.Builder builderForValue) {
+        if (shieldStakingBuilder_ == null) {
+          shieldStaking_ = builderForValue.build();
+        } else {
+          shieldStakingBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.ShieldStaking shield_staking = 1 [json_name = "shieldStaking", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeShieldStaking(com.shentu.shield.v1alpha1.ShieldProto.ShieldStaking value) {
+        if (shieldStakingBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            shieldStaking_ != null &&
+            shieldStaking_ != com.shentu.shield.v1alpha1.ShieldProto.ShieldStaking.getDefaultInstance()) {
+            getShieldStakingBuilder().mergeFrom(value);
+          } else {
+            shieldStaking_ = value;
+          }
+        } else {
+          shieldStakingBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.ShieldStaking shield_staking = 1 [json_name = "shieldStaking", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearShieldStaking() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        shieldStaking_ = null;
+        if (shieldStakingBuilder_ != null) {
+          shieldStakingBuilder_.dispose();
+          shieldStakingBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.ShieldStaking shield_staking = 1 [json_name = "shieldStaking", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.ShieldStaking.Builder getShieldStakingBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getShieldStakingFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.ShieldStaking shield_staking = 1 [json_name = "shieldStaking", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.ShieldProto.ShieldStakingOrBuilder getShieldStakingOrBuilder() {
+        if (shieldStakingBuilder_ != null) {
+          return shieldStakingBuilder_.getMessageOrBuilder();
+        } else {
+          return shieldStaking_ == null ?
+              com.shentu.shield.v1alpha1.ShieldProto.ShieldStaking.getDefaultInstance() : shieldStaking_;
+        }
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.ShieldStaking shield_staking = 1 [json_name = "shieldStaking", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.shield.v1alpha1.ShieldProto.ShieldStaking, com.shentu.shield.v1alpha1.ShieldProto.ShieldStaking.Builder, com.shentu.shield.v1alpha1.ShieldProto.ShieldStakingOrBuilder> 
+          getShieldStakingFieldBuilder() {
+        if (shieldStakingBuilder_ == null) {
+          shieldStakingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.shentu.shield.v1alpha1.ShieldProto.ShieldStaking, com.shentu.shield.v1alpha1.ShieldProto.ShieldStaking.Builder, com.shentu.shield.v1alpha1.ShieldProto.ShieldStakingOrBuilder>(
+                  getShieldStaking(),
+                  getParentForChildren(),
+                  isClean());
+          shieldStaking_ = null;
+        }
+        return shieldStakingBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QueryShieldStakingResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QueryShieldStakingResponse)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryShieldStakingResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryShieldStakingResponse>() {
+      @java.lang.Override
+      public QueryShieldStakingResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryShieldStakingResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryShieldStakingResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryShieldStakingRateRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QueryShieldStakingRateRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QueryShieldStakingRateRequest}
+   */
+  public static final class QueryShieldStakingRateRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QueryShieldStakingRateRequest)
+      QueryShieldStakingRateRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryShieldStakingRateRequest.newBuilder() to construct.
+    private QueryShieldStakingRateRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryShieldStakingRateRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryShieldStakingRateRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryShieldStakingRateRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryShieldStakingRateRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest other = (com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QueryShieldStakingRateRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QueryShieldStakingRateRequest)
+        com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryShieldStakingRateRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryShieldStakingRateRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryShieldStakingRateRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest build() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest result = new com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QueryShieldStakingRateRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QueryShieldStakingRateRequest)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryShieldStakingRateRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryShieldStakingRateRequest>() {
+      @java.lang.Override
+      public QueryShieldStakingRateRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryShieldStakingRateRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryShieldStakingRateRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryShieldStakingRateResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QueryShieldStakingRateResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string rate = 1 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"rate&#92;""];</code>
+     * @return The rate.
+     */
+    java.lang.String getRate();
+    /**
+     * <code>string rate = 1 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"rate&#92;""];</code>
+     * @return The bytes for rate.
+     */
+    com.google.protobuf.ByteString
+        getRateBytes();
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QueryShieldStakingRateResponse}
+   */
+  public static final class QueryShieldStakingRateResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QueryShieldStakingRateResponse)
+      QueryShieldStakingRateResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryShieldStakingRateResponse.newBuilder() to construct.
+    private QueryShieldStakingRateResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryShieldStakingRateResponse() {
+      rate_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryShieldStakingRateResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryShieldStakingRateResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryShieldStakingRateResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse.Builder.class);
+    }
+
+    public static final int RATE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object rate_ = "";
+    /**
+     * <code>string rate = 1 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"rate&#92;""];</code>
+     * @return The rate.
+     */
+    @java.lang.Override
+    public java.lang.String getRate() {
+      java.lang.Object ref = rate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        rate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string rate = 1 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"rate&#92;""];</code>
+     * @return The bytes for rate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRateBytes() {
+      java.lang.Object ref = rate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        rate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, rate_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, rate_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse other = (com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse) obj;
+
+      if (!getRate()
+          .equals(other.getRate())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getRate().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QueryShieldStakingRateResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QueryShieldStakingRateResponse)
+        com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryShieldStakingRateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryShieldStakingRateResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        rate_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryShieldStakingRateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse build() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse result = new com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.rate_ = rate_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse.getDefaultInstance()) return this;
+        if (!other.getRate().isEmpty()) {
+          rate_ = other.rate_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                rate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object rate_ = "";
+      /**
+       * <code>string rate = 1 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"rate&#92;""];</code>
+       * @return The rate.
+       */
+      public java.lang.String getRate() {
+        java.lang.Object ref = rate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          rate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string rate = 1 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"rate&#92;""];</code>
+       * @return The bytes for rate.
+       */
+      public com.google.protobuf.ByteString
+          getRateBytes() {
+        java.lang.Object ref = rate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          rate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string rate = 1 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"rate&#92;""];</code>
+       * @param value The rate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        rate_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string rate = 1 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"rate&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRate() {
+        rate_ = getDefaultInstance().getRate();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string rate = 1 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"rate&#92;""];</code>
+       * @param value The bytes for rate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        rate_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QueryShieldStakingRateResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QueryShieldStakingRateResponse)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryShieldStakingRateResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryShieldStakingRateResponse>() {
+      @java.lang.Override
+      public QueryShieldStakingRateResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryShieldStakingRateResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryShieldStakingRateResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QueryShieldStakingRateResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryReimbursementRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QueryReimbursementRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 proposal_id = 1 [json_name = "proposalId"];</code>
+     * @return The proposalId.
+     */
+    long getProposalId();
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QueryReimbursementRequest}
+   */
+  public static final class QueryReimbursementRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QueryReimbursementRequest)
+      QueryReimbursementRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryReimbursementRequest.newBuilder() to construct.
+    private QueryReimbursementRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryReimbursementRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryReimbursementRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryReimbursementRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryReimbursementRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest.Builder.class);
+    }
+
+    public static final int PROPOSAL_ID_FIELD_NUMBER = 1;
+    private long proposalId_ = 0L;
+    /**
+     * <code>uint64 proposal_id = 1 [json_name = "proposalId"];</code>
+     * @return The proposalId.
+     */
+    @java.lang.Override
+    public long getProposalId() {
+      return proposalId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (proposalId_ != 0L) {
+        output.writeUInt64(1, proposalId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (proposalId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, proposalId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest other = (com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest) obj;
+
+      if (getProposalId()
+          != other.getProposalId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROPOSAL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getProposalId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QueryReimbursementRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QueryReimbursementRequest)
+        com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryReimbursementRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryReimbursementRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        proposalId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryReimbursementRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest build() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest result = new com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.proposalId_ = proposalId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest.getDefaultInstance()) return this;
+        if (other.getProposalId() != 0L) {
+          setProposalId(other.getProposalId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                proposalId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long proposalId_ ;
+      /**
+       * <code>uint64 proposal_id = 1 [json_name = "proposalId"];</code>
+       * @return The proposalId.
+       */
+      @java.lang.Override
+      public long getProposalId() {
+        return proposalId_;
+      }
+      /**
+       * <code>uint64 proposal_id = 1 [json_name = "proposalId"];</code>
+       * @param value The proposalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProposalId(long value) {
+
+        proposalId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 proposal_id = 1 [json_name = "proposalId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProposalId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        proposalId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QueryReimbursementRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QueryReimbursementRequest)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryReimbursementRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryReimbursementRequest>() {
+      @java.lang.Override
+      public QueryReimbursementRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryReimbursementRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryReimbursementRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryReimbursementResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QueryReimbursementResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.shentu.shield.v1alpha1.Reimbursement reimbursement = 1 [json_name = "reimbursement", (.gogoproto.nullable) = false];</code>
+     * @return Whether the reimbursement field is set.
+     */
+    boolean hasReimbursement();
+    /**
+     * <code>.shentu.shield.v1alpha1.Reimbursement reimbursement = 1 [json_name = "reimbursement", (.gogoproto.nullable) = false];</code>
+     * @return The reimbursement.
+     */
+    com.shentu.shield.v1alpha1.GenesisProto.Reimbursement getReimbursement();
+    /**
+     * <code>.shentu.shield.v1alpha1.Reimbursement reimbursement = 1 [json_name = "reimbursement", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.shield.v1alpha1.GenesisProto.ReimbursementOrBuilder getReimbursementOrBuilder();
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QueryReimbursementResponse}
+   */
+  public static final class QueryReimbursementResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QueryReimbursementResponse)
+      QueryReimbursementResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryReimbursementResponse.newBuilder() to construct.
+    private QueryReimbursementResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryReimbursementResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryReimbursementResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryReimbursementResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryReimbursementResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse.Builder.class);
+    }
+
+    public static final int REIMBURSEMENT_FIELD_NUMBER = 1;
+    private com.shentu.shield.v1alpha1.GenesisProto.Reimbursement reimbursement_;
+    /**
+     * <code>.shentu.shield.v1alpha1.Reimbursement reimbursement = 1 [json_name = "reimbursement", (.gogoproto.nullable) = false];</code>
+     * @return Whether the reimbursement field is set.
+     */
+    @java.lang.Override
+    public boolean hasReimbursement() {
+      return reimbursement_ != null;
+    }
+    /**
+     * <code>.shentu.shield.v1alpha1.Reimbursement reimbursement = 1 [json_name = "reimbursement", (.gogoproto.nullable) = false];</code>
+     * @return The reimbursement.
+     */
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.GenesisProto.Reimbursement getReimbursement() {
+      return reimbursement_ == null ? com.shentu.shield.v1alpha1.GenesisProto.Reimbursement.getDefaultInstance() : reimbursement_;
+    }
+    /**
+     * <code>.shentu.shield.v1alpha1.Reimbursement reimbursement = 1 [json_name = "reimbursement", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.GenesisProto.ReimbursementOrBuilder getReimbursementOrBuilder() {
+      return reimbursement_ == null ? com.shentu.shield.v1alpha1.GenesisProto.Reimbursement.getDefaultInstance() : reimbursement_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (reimbursement_ != null) {
+        output.writeMessage(1, getReimbursement());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (reimbursement_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getReimbursement());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse other = (com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse) obj;
+
+      if (hasReimbursement() != other.hasReimbursement()) return false;
+      if (hasReimbursement()) {
+        if (!getReimbursement()
+            .equals(other.getReimbursement())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasReimbursement()) {
+        hash = (37 * hash) + REIMBURSEMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getReimbursement().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QueryReimbursementResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QueryReimbursementResponse)
+        com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryReimbursementResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryReimbursementResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        reimbursement_ = null;
+        if (reimbursementBuilder_ != null) {
+          reimbursementBuilder_.dispose();
+          reimbursementBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryReimbursementResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse build() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse result = new com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.reimbursement_ = reimbursementBuilder_ == null
+              ? reimbursement_
+              : reimbursementBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse.getDefaultInstance()) return this;
+        if (other.hasReimbursement()) {
+          mergeReimbursement(other.getReimbursement());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getReimbursementFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.shentu.shield.v1alpha1.GenesisProto.Reimbursement reimbursement_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.shield.v1alpha1.GenesisProto.Reimbursement, com.shentu.shield.v1alpha1.GenesisProto.Reimbursement.Builder, com.shentu.shield.v1alpha1.GenesisProto.ReimbursementOrBuilder> reimbursementBuilder_;
+      /**
+       * <code>.shentu.shield.v1alpha1.Reimbursement reimbursement = 1 [json_name = "reimbursement", (.gogoproto.nullable) = false];</code>
+       * @return Whether the reimbursement field is set.
+       */
+      public boolean hasReimbursement() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.Reimbursement reimbursement = 1 [json_name = "reimbursement", (.gogoproto.nullable) = false];</code>
+       * @return The reimbursement.
+       */
+      public com.shentu.shield.v1alpha1.GenesisProto.Reimbursement getReimbursement() {
+        if (reimbursementBuilder_ == null) {
+          return reimbursement_ == null ? com.shentu.shield.v1alpha1.GenesisProto.Reimbursement.getDefaultInstance() : reimbursement_;
+        } else {
+          return reimbursementBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.Reimbursement reimbursement = 1 [json_name = "reimbursement", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setReimbursement(com.shentu.shield.v1alpha1.GenesisProto.Reimbursement value) {
+        if (reimbursementBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          reimbursement_ = value;
+        } else {
+          reimbursementBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.Reimbursement reimbursement = 1 [json_name = "reimbursement", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setReimbursement(
+          com.shentu.shield.v1alpha1.GenesisProto.Reimbursement.Builder builderForValue) {
+        if (reimbursementBuilder_ == null) {
+          reimbursement_ = builderForValue.build();
+        } else {
+          reimbursementBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.Reimbursement reimbursement = 1 [json_name = "reimbursement", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeReimbursement(com.shentu.shield.v1alpha1.GenesisProto.Reimbursement value) {
+        if (reimbursementBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            reimbursement_ != null &&
+            reimbursement_ != com.shentu.shield.v1alpha1.GenesisProto.Reimbursement.getDefaultInstance()) {
+            getReimbursementBuilder().mergeFrom(value);
+          } else {
+            reimbursement_ = value;
+          }
+        } else {
+          reimbursementBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.Reimbursement reimbursement = 1 [json_name = "reimbursement", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearReimbursement() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        reimbursement_ = null;
+        if (reimbursementBuilder_ != null) {
+          reimbursementBuilder_.dispose();
+          reimbursementBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.Reimbursement reimbursement = 1 [json_name = "reimbursement", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.GenesisProto.Reimbursement.Builder getReimbursementBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getReimbursementFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.Reimbursement reimbursement = 1 [json_name = "reimbursement", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.GenesisProto.ReimbursementOrBuilder getReimbursementOrBuilder() {
+        if (reimbursementBuilder_ != null) {
+          return reimbursementBuilder_.getMessageOrBuilder();
+        } else {
+          return reimbursement_ == null ?
+              com.shentu.shield.v1alpha1.GenesisProto.Reimbursement.getDefaultInstance() : reimbursement_;
+        }
+      }
+      /**
+       * <code>.shentu.shield.v1alpha1.Reimbursement reimbursement = 1 [json_name = "reimbursement", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.shield.v1alpha1.GenesisProto.Reimbursement, com.shentu.shield.v1alpha1.GenesisProto.Reimbursement.Builder, com.shentu.shield.v1alpha1.GenesisProto.ReimbursementOrBuilder> 
+          getReimbursementFieldBuilder() {
+        if (reimbursementBuilder_ == null) {
+          reimbursementBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.shentu.shield.v1alpha1.GenesisProto.Reimbursement, com.shentu.shield.v1alpha1.GenesisProto.Reimbursement.Builder, com.shentu.shield.v1alpha1.GenesisProto.ReimbursementOrBuilder>(
+                  getReimbursement(),
+                  getParentForChildren(),
+                  isClean());
+          reimbursement_ = null;
+        }
+        return reimbursementBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QueryReimbursementResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QueryReimbursementResponse)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryReimbursementResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryReimbursementResponse>() {
+      @java.lang.Override
+      public QueryReimbursementResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryReimbursementResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryReimbursementResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryReimbursementsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QueryReimbursementsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QueryReimbursementsRequest}
+   */
+  public static final class QueryReimbursementsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QueryReimbursementsRequest)
+      QueryReimbursementsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryReimbursementsRequest.newBuilder() to construct.
+    private QueryReimbursementsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryReimbursementsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryReimbursementsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryReimbursementsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryReimbursementsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest other = (com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QueryReimbursementsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QueryReimbursementsRequest)
+        com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryReimbursementsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryReimbursementsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest.class, com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryReimbursementsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest build() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest result = new com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QueryReimbursementsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QueryReimbursementsRequest)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryReimbursementsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryReimbursementsRequest>() {
+      @java.lang.Override
+      public QueryReimbursementsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryReimbursementsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryReimbursementsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryReimbursementsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.shield.v1alpha1.QueryReimbursementsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.ProposalIDReimbursementPair pairs = 1 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPair> 
+        getPairsList();
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.ProposalIDReimbursementPair pairs = 1 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPair getPairs(int index);
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.ProposalIDReimbursementPair pairs = 1 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    int getPairsCount();
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.ProposalIDReimbursementPair pairs = 1 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPairOrBuilder> 
+        getPairsOrBuilderList();
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.ProposalIDReimbursementPair pairs = 1 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPairOrBuilder getPairsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code shentu.shield.v1alpha1.QueryReimbursementsResponse}
+   */
+  public static final class QueryReimbursementsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.shield.v1alpha1.QueryReimbursementsResponse)
+      QueryReimbursementsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryReimbursementsResponse.newBuilder() to construct.
+    private QueryReimbursementsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryReimbursementsResponse() {
+      pairs_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryReimbursementsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryReimbursementsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryReimbursementsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse.Builder.class);
+    }
+
+    public static final int PAIRS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPair> pairs_;
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.ProposalIDReimbursementPair pairs = 1 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPair> getPairsList() {
+      return pairs_;
+    }
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.ProposalIDReimbursementPair pairs = 1 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPairOrBuilder> 
+        getPairsOrBuilderList() {
+      return pairs_;
+    }
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.ProposalIDReimbursementPair pairs = 1 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getPairsCount() {
+      return pairs_.size();
+    }
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.ProposalIDReimbursementPair pairs = 1 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPair getPairs(int index) {
+      return pairs_.get(index);
+    }
+    /**
+     * <code>repeated .shentu.shield.v1alpha1.ProposalIDReimbursementPair pairs = 1 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPairOrBuilder getPairsOrBuilder(
+        int index) {
+      return pairs_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < pairs_.size(); i++) {
+        output.writeMessage(1, pairs_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < pairs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, pairs_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse other = (com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse) obj;
+
+      if (!getPairsList()
+          .equals(other.getPairsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPairsCount() > 0) {
+        hash = (37 * hash) + PAIRS_FIELD_NUMBER;
+        hash = (53 * hash) + getPairsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.shield.v1alpha1.QueryReimbursementsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.shield.v1alpha1.QueryReimbursementsResponse)
+        com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryReimbursementsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryReimbursementsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse.class, com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (pairsBuilder_ == null) {
+          pairs_ = java.util.Collections.emptyList();
+        } else {
+          pairs_ = null;
+          pairsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.internal_static_shentu_shield_v1alpha1_QueryReimbursementsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse getDefaultInstanceForType() {
+        return com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse build() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse buildPartial() {
+        com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse result = new com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse result) {
+        if (pairsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            pairs_ = java.util.Collections.unmodifiableList(pairs_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.pairs_ = pairs_;
+        } else {
+          result.pairs_ = pairsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse) {
+          return mergeFrom((com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse other) {
+        if (other == com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse.getDefaultInstance()) return this;
+        if (pairsBuilder_ == null) {
+          if (!other.pairs_.isEmpty()) {
+            if (pairs_.isEmpty()) {
+              pairs_ = other.pairs_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePairsIsMutable();
+              pairs_.addAll(other.pairs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.pairs_.isEmpty()) {
+            if (pairsBuilder_.isEmpty()) {
+              pairsBuilder_.dispose();
+              pairsBuilder_ = null;
+              pairs_ = other.pairs_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              pairsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPairsFieldBuilder() : null;
+            } else {
+              pairsBuilder_.addAllMessages(other.pairs_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPair m =
+                    input.readMessage(
+                        com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPair.parser(),
+                        extensionRegistry);
+                if (pairsBuilder_ == null) {
+                  ensurePairsIsMutable();
+                  pairs_.add(m);
+                } else {
+                  pairsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPair> pairs_ =
+        java.util.Collections.emptyList();
+      private void ensurePairsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          pairs_ = new java.util.ArrayList<com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPair>(pairs_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPair, com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPair.Builder, com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPairOrBuilder> pairsBuilder_;
+
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.ProposalIDReimbursementPair pairs = 1 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPair> getPairsList() {
+        if (pairsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(pairs_);
+        } else {
+          return pairsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.ProposalIDReimbursementPair pairs = 1 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public int getPairsCount() {
+        if (pairsBuilder_ == null) {
+          return pairs_.size();
+        } else {
+          return pairsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.ProposalIDReimbursementPair pairs = 1 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPair getPairs(int index) {
+        if (pairsBuilder_ == null) {
+          return pairs_.get(index);
+        } else {
+          return pairsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.ProposalIDReimbursementPair pairs = 1 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPairs(
+          int index, com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPair value) {
+        if (pairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePairsIsMutable();
+          pairs_.set(index, value);
+          onChanged();
+        } else {
+          pairsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.ProposalIDReimbursementPair pairs = 1 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPairs(
+          int index, com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPair.Builder builderForValue) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          pairs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          pairsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.ProposalIDReimbursementPair pairs = 1 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPairs(com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPair value) {
+        if (pairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePairsIsMutable();
+          pairs_.add(value);
+          onChanged();
+        } else {
+          pairsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.ProposalIDReimbursementPair pairs = 1 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPairs(
+          int index, com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPair value) {
+        if (pairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePairsIsMutable();
+          pairs_.add(index, value);
+          onChanged();
+        } else {
+          pairsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.ProposalIDReimbursementPair pairs = 1 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPairs(
+          com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPair.Builder builderForValue) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          pairs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          pairsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.ProposalIDReimbursementPair pairs = 1 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPairs(
+          int index, com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPair.Builder builderForValue) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          pairs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          pairsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.ProposalIDReimbursementPair pairs = 1 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllPairs(
+          java.lang.Iterable<? extends com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPair> values) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, pairs_);
+          onChanged();
+        } else {
+          pairsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.ProposalIDReimbursementPair pairs = 1 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPairs() {
+        if (pairsBuilder_ == null) {
+          pairs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          pairsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.ProposalIDReimbursementPair pairs = 1 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removePairs(int index) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          pairs_.remove(index);
+          onChanged();
+        } else {
+          pairsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.ProposalIDReimbursementPair pairs = 1 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPair.Builder getPairsBuilder(
+          int index) {
+        return getPairsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.ProposalIDReimbursementPair pairs = 1 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPairOrBuilder getPairsOrBuilder(
+          int index) {
+        if (pairsBuilder_ == null) {
+          return pairs_.get(index);  } else {
+          return pairsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.ProposalIDReimbursementPair pairs = 1 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPairOrBuilder> 
+           getPairsOrBuilderList() {
+        if (pairsBuilder_ != null) {
+          return pairsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(pairs_);
+        }
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.ProposalIDReimbursementPair pairs = 1 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPair.Builder addPairsBuilder() {
+        return getPairsFieldBuilder().addBuilder(
+            com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPair.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.ProposalIDReimbursementPair pairs = 1 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPair.Builder addPairsBuilder(
+          int index) {
+        return getPairsFieldBuilder().addBuilder(
+            index, com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPair.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .shentu.shield.v1alpha1.ProposalIDReimbursementPair pairs = 1 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPair.Builder> 
+           getPairsBuilderList() {
+        return getPairsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPair, com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPair.Builder, com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPairOrBuilder> 
+          getPairsFieldBuilder() {
+        if (pairsBuilder_ == null) {
+          pairsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPair, com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPair.Builder, com.shentu.shield.v1alpha1.GenesisProto.ProposalIDReimbursementPairOrBuilder>(
+                  pairs_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          pairs_ = null;
+        }
+        return pairsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.shield.v1alpha1.QueryReimbursementsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.shield.v1alpha1.QueryReimbursementsResponse)
+    private static final com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse();
+    }
+
+    public static com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryReimbursementsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryReimbursementsResponse>() {
+      @java.lang.Override
+      public QueryReimbursementsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryReimbursementsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryReimbursementsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.shield.v1alpha1.QueryProto.QueryReimbursementsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QueryPoolRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QueryPoolRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QueryPoolResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QueryPoolResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QuerySponsorRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QuerySponsorRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QuerySponsorResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QuerySponsorResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QueryPoolsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QueryPoolsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QueryPoolsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QueryPoolsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QueryPoolPurchaseListsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QueryPoolPurchaseListsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QueryPurchaseListsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QueryPurchaseListsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QueryPurchaseListsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QueryPurchaseListsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QueryPurchaseListRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QueryPurchaseListRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QueryPurchaseListResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QueryPurchaseListResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QueryPurchasesRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QueryPurchasesRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QueryPurchasesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QueryPurchasesResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QueryProviderRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QueryProviderRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QueryProviderResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QueryProviderResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QueryProvidersRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QueryProvidersRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QueryProvidersResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QueryProvidersResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QueryPoolParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QueryPoolParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QueryPoolParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QueryPoolParamsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QueryClaimParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QueryClaimParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QueryClaimParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QueryClaimParamsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QueryDistrParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QueryDistrParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QueryDistrParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QueryDistrParamsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QueryShieldStatusRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QueryShieldStatusRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QueryShieldStatusResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QueryShieldStatusResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QueryShieldStakingRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QueryShieldStakingRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QueryShieldStakingResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QueryShieldStakingResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QueryShieldStakingRateRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QueryShieldStakingRateRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QueryShieldStakingRateResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QueryShieldStakingRateResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QueryReimbursementRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QueryReimbursementRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QueryReimbursementResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QueryReimbursementResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QueryReimbursementsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QueryReimbursementsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_shield_v1alpha1_QueryReimbursementsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_shield_v1alpha1_QueryReimbursementsResponse_fieldAccessorTable;
 
@@ -341,12 +20043,12 @@ public final class QueryProto {
       "ha1.QueryReimbursementsRequest\0323.shentu." +
       "shield.v1alpha1.QueryReimbursementsRespo" +
       "nse\".\202\323\344\223\002(\022&/shentu/shield/v1alpha1/rei" +
-      "mbursementsB\325\001\n\032com.shentu.shield.v1alph" +
-      "a1B\nQueryProtoP\001Z1github.com/shentufound" +
-      "ation/shentu/x/shield/types\242\002\003SSX\252\002\026Shen" +
-      "tu.Shield.V1alpha1\312\002\026Shentu\\Shield\\V1alp" +
-      "ha1\342\002\"Shentu\\Shield\\V1alpha1\\GPBMetadata" +
-      "\352\002\030Shentu::Shield::V1alpha1b\006proto3"
+      "mbursementsB\323\001\n\032com.shentu.shield.v1alph" +
+      "a1B\nQueryProtoZ1github.com/shentufoundat" +
+      "ion/shentu/x/shield/types\242\002\003SSX\252\002\026Shentu" +
+      ".Shield.V1alpha1\312\002\026Shentu\\Shield\\V1alpha" +
+      "1\342\002\"Shentu\\Shield\\V1alpha1\\GPBMetadata\352\002" +
+      "\030Shentu::Shield::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

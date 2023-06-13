@@ -33,14 +33,14 @@ public final class ServiceProto {
       "le.modules.assets.transactions.mint.Mess" +
       "age\032A.assetmantle.modules.assets.transac" +
       "tions.mint.TransactionResponse\"\033\202\323\344\223\002\025\"\023" +
-      "/mantle/assets/mintB\226\002\n0com.assetmantle." +
+      "/mantle/assets/mintB\224\002\n0com.assetmantle." +
       "modules.assets.transactions.mintB\014Servic" +
-      "eProtoP\001\242\002\005AMATM\252\002,Assetmantle.Modules.A" +
-      "ssets.Transactions.Mint\312\002,Assetmantle\\Mo" +
-      "dules\\Assets\\Transactions\\Mint\342\0028Assetma" +
-      "ntle\\Modules\\Assets\\Transactions\\Mint\\GP" +
-      "BMetadata\352\0020Assetmantle::Modules::Assets" +
-      "::Transactions::Mintb\006proto3"
+      "eProto\242\002\005AMATM\252\002,Assetmantle.Modules.Ass" +
+      "ets.Transactions.Mint\312\002,Assetmantle\\Modu" +
+      "les\\Assets\\Transactions\\Mint\342\0028Assetmant" +
+      "le\\Modules\\Assets\\Transactions\\Mint\\GPBM" +
+      "etadata\352\0020Assetmantle::Modules::Assets::" +
+      "Transactions::Mintb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

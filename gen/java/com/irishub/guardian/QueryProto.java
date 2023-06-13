@@ -14,14 +14,1668 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QuerySupersRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irishub.guardian.QuerySupersRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QuerySupersRequest is request type for the Query/Supers RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irishub.guardian.QuerySupersRequest}
+   */
+  public static final class QuerySupersRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irishub.guardian.QuerySupersRequest)
+      QuerySupersRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySupersRequest.newBuilder() to construct.
+    private QuerySupersRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySupersRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySupersRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irishub.guardian.QueryProto.internal_static_irishub_guardian_QuerySupersRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irishub.guardian.QueryProto.internal_static_irishub_guardian_QuerySupersRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irishub.guardian.QueryProto.QuerySupersRequest.class, com.irishub.guardian.QueryProto.QuerySupersRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 1;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(1, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irishub.guardian.QueryProto.QuerySupersRequest)) {
+        return super.equals(obj);
+      }
+      com.irishub.guardian.QueryProto.QuerySupersRequest other = (com.irishub.guardian.QueryProto.QuerySupersRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irishub.guardian.QueryProto.QuerySupersRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irishub.guardian.QueryProto.QuerySupersRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irishub.guardian.QueryProto.QuerySupersRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irishub.guardian.QueryProto.QuerySupersRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irishub.guardian.QueryProto.QuerySupersRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irishub.guardian.QueryProto.QuerySupersRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irishub.guardian.QueryProto.QuerySupersRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irishub.guardian.QueryProto.QuerySupersRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irishub.guardian.QueryProto.QuerySupersRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irishub.guardian.QueryProto.QuerySupersRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irishub.guardian.QueryProto.QuerySupersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irishub.guardian.QueryProto.QuerySupersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irishub.guardian.QueryProto.QuerySupersRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QuerySupersRequest is request type for the Query/Supers RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irishub.guardian.QuerySupersRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irishub.guardian.QuerySupersRequest)
+        com.irishub.guardian.QueryProto.QuerySupersRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irishub.guardian.QueryProto.internal_static_irishub_guardian_QuerySupersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irishub.guardian.QueryProto.internal_static_irishub_guardian_QuerySupersRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irishub.guardian.QueryProto.QuerySupersRequest.class, com.irishub.guardian.QueryProto.QuerySupersRequest.Builder.class);
+      }
+
+      // Construct using com.irishub.guardian.QueryProto.QuerySupersRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irishub.guardian.QueryProto.internal_static_irishub_guardian_QuerySupersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irishub.guardian.QueryProto.QuerySupersRequest getDefaultInstanceForType() {
+        return com.irishub.guardian.QueryProto.QuerySupersRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irishub.guardian.QueryProto.QuerySupersRequest build() {
+        com.irishub.guardian.QueryProto.QuerySupersRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irishub.guardian.QueryProto.QuerySupersRequest buildPartial() {
+        com.irishub.guardian.QueryProto.QuerySupersRequest result = new com.irishub.guardian.QueryProto.QuerySupersRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irishub.guardian.QueryProto.QuerySupersRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irishub.guardian.QueryProto.QuerySupersRequest) {
+          return mergeFrom((com.irishub.guardian.QueryProto.QuerySupersRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irishub.guardian.QueryProto.QuerySupersRequest other) {
+        if (other == com.irishub.guardian.QueryProto.QuerySupersRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irishub.guardian.QuerySupersRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:irishub.guardian.QuerySupersRequest)
+    private static final com.irishub.guardian.QueryProto.QuerySupersRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irishub.guardian.QueryProto.QuerySupersRequest();
+    }
+
+    public static com.irishub.guardian.QueryProto.QuerySupersRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySupersRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySupersRequest>() {
+      @java.lang.Override
+      public QuerySupersRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySupersRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySupersRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irishub.guardian.QueryProto.QuerySupersRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySupersResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irishub.guardian.QuerySupersResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.irishub.guardian.GuardianProto.Super> 
+        getSupersList();
+    /**
+     * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+     */
+    com.irishub.guardian.GuardianProto.Super getSupers(int index);
+    /**
+     * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+     */
+    int getSupersCount();
+    /**
+     * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.irishub.guardian.GuardianProto.SuperOrBuilder> 
+        getSupersOrBuilderList();
+    /**
+     * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+     */
+    com.irishub.guardian.GuardianProto.SuperOrBuilder getSupersOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QuerySupersResponse is response type for the Query/Supers RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irishub.guardian.QuerySupersResponse}
+   */
+  public static final class QuerySupersResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irishub.guardian.QuerySupersResponse)
+      QuerySupersResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySupersResponse.newBuilder() to construct.
+    private QuerySupersResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySupersResponse() {
+      supers_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySupersResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irishub.guardian.QueryProto.internal_static_irishub_guardian_QuerySupersResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irishub.guardian.QueryProto.internal_static_irishub_guardian_QuerySupersResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irishub.guardian.QueryProto.QuerySupersResponse.class, com.irishub.guardian.QueryProto.QuerySupersResponse.Builder.class);
+    }
+
+    public static final int SUPERS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.irishub.guardian.GuardianProto.Super> supers_;
+    /**
+     * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.irishub.guardian.GuardianProto.Super> getSupersList() {
+      return supers_;
+    }
+    /**
+     * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.irishub.guardian.GuardianProto.SuperOrBuilder> 
+        getSupersOrBuilderList() {
+      return supers_;
+    }
+    /**
+     * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getSupersCount() {
+      return supers_.size();
+    }
+    /**
+     * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.irishub.guardian.GuardianProto.Super getSupers(int index) {
+      return supers_.get(index);
+    }
+    /**
+     * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.irishub.guardian.GuardianProto.SuperOrBuilder getSupersOrBuilder(
+        int index) {
+      return supers_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < supers_.size(); i++) {
+        output.writeMessage(1, supers_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < supers_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, supers_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irishub.guardian.QueryProto.QuerySupersResponse)) {
+        return super.equals(obj);
+      }
+      com.irishub.guardian.QueryProto.QuerySupersResponse other = (com.irishub.guardian.QueryProto.QuerySupersResponse) obj;
+
+      if (!getSupersList()
+          .equals(other.getSupersList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getSupersCount() > 0) {
+        hash = (37 * hash) + SUPERS_FIELD_NUMBER;
+        hash = (53 * hash) + getSupersList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irishub.guardian.QueryProto.QuerySupersResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irishub.guardian.QueryProto.QuerySupersResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irishub.guardian.QueryProto.QuerySupersResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irishub.guardian.QueryProto.QuerySupersResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irishub.guardian.QueryProto.QuerySupersResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irishub.guardian.QueryProto.QuerySupersResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irishub.guardian.QueryProto.QuerySupersResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irishub.guardian.QueryProto.QuerySupersResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irishub.guardian.QueryProto.QuerySupersResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irishub.guardian.QueryProto.QuerySupersResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irishub.guardian.QueryProto.QuerySupersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irishub.guardian.QueryProto.QuerySupersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irishub.guardian.QueryProto.QuerySupersResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QuerySupersResponse is response type for the Query/Supers RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irishub.guardian.QuerySupersResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irishub.guardian.QuerySupersResponse)
+        com.irishub.guardian.QueryProto.QuerySupersResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irishub.guardian.QueryProto.internal_static_irishub_guardian_QuerySupersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irishub.guardian.QueryProto.internal_static_irishub_guardian_QuerySupersResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irishub.guardian.QueryProto.QuerySupersResponse.class, com.irishub.guardian.QueryProto.QuerySupersResponse.Builder.class);
+      }
+
+      // Construct using com.irishub.guardian.QueryProto.QuerySupersResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (supersBuilder_ == null) {
+          supers_ = java.util.Collections.emptyList();
+        } else {
+          supers_ = null;
+          supersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irishub.guardian.QueryProto.internal_static_irishub_guardian_QuerySupersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irishub.guardian.QueryProto.QuerySupersResponse getDefaultInstanceForType() {
+        return com.irishub.guardian.QueryProto.QuerySupersResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irishub.guardian.QueryProto.QuerySupersResponse build() {
+        com.irishub.guardian.QueryProto.QuerySupersResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irishub.guardian.QueryProto.QuerySupersResponse buildPartial() {
+        com.irishub.guardian.QueryProto.QuerySupersResponse result = new com.irishub.guardian.QueryProto.QuerySupersResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.irishub.guardian.QueryProto.QuerySupersResponse result) {
+        if (supersBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            supers_ = java.util.Collections.unmodifiableList(supers_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.supers_ = supers_;
+        } else {
+          result.supers_ = supersBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.irishub.guardian.QueryProto.QuerySupersResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irishub.guardian.QueryProto.QuerySupersResponse) {
+          return mergeFrom((com.irishub.guardian.QueryProto.QuerySupersResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irishub.guardian.QueryProto.QuerySupersResponse other) {
+        if (other == com.irishub.guardian.QueryProto.QuerySupersResponse.getDefaultInstance()) return this;
+        if (supersBuilder_ == null) {
+          if (!other.supers_.isEmpty()) {
+            if (supers_.isEmpty()) {
+              supers_ = other.supers_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureSupersIsMutable();
+              supers_.addAll(other.supers_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.supers_.isEmpty()) {
+            if (supersBuilder_.isEmpty()) {
+              supersBuilder_.dispose();
+              supersBuilder_ = null;
+              supers_ = other.supers_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              supersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSupersFieldBuilder() : null;
+            } else {
+              supersBuilder_.addAllMessages(other.supers_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.irishub.guardian.GuardianProto.Super m =
+                    input.readMessage(
+                        com.irishub.guardian.GuardianProto.Super.parser(),
+                        extensionRegistry);
+                if (supersBuilder_ == null) {
+                  ensureSupersIsMutable();
+                  supers_.add(m);
+                } else {
+                  supersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.irishub.guardian.GuardianProto.Super> supers_ =
+        java.util.Collections.emptyList();
+      private void ensureSupersIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          supers_ = new java.util.ArrayList<com.irishub.guardian.GuardianProto.Super>(supers_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.irishub.guardian.GuardianProto.Super, com.irishub.guardian.GuardianProto.Super.Builder, com.irishub.guardian.GuardianProto.SuperOrBuilder> supersBuilder_;
+
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.irishub.guardian.GuardianProto.Super> getSupersList() {
+        if (supersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(supers_);
+        } else {
+          return supersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public int getSupersCount() {
+        if (supersBuilder_ == null) {
+          return supers_.size();
+        } else {
+          return supersBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irishub.guardian.GuardianProto.Super getSupers(int index) {
+        if (supersBuilder_ == null) {
+          return supers_.get(index);
+        } else {
+          return supersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSupers(
+          int index, com.irishub.guardian.GuardianProto.Super value) {
+        if (supersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupersIsMutable();
+          supers_.set(index, value);
+          onChanged();
+        } else {
+          supersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSupers(
+          int index, com.irishub.guardian.GuardianProto.Super.Builder builderForValue) {
+        if (supersBuilder_ == null) {
+          ensureSupersIsMutable();
+          supers_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          supersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSupers(com.irishub.guardian.GuardianProto.Super value) {
+        if (supersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupersIsMutable();
+          supers_.add(value);
+          onChanged();
+        } else {
+          supersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSupers(
+          int index, com.irishub.guardian.GuardianProto.Super value) {
+        if (supersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupersIsMutable();
+          supers_.add(index, value);
+          onChanged();
+        } else {
+          supersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSupers(
+          com.irishub.guardian.GuardianProto.Super.Builder builderForValue) {
+        if (supersBuilder_ == null) {
+          ensureSupersIsMutable();
+          supers_.add(builderForValue.build());
+          onChanged();
+        } else {
+          supersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSupers(
+          int index, com.irishub.guardian.GuardianProto.Super.Builder builderForValue) {
+        if (supersBuilder_ == null) {
+          ensureSupersIsMutable();
+          supers_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          supersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllSupers(
+          java.lang.Iterable<? extends com.irishub.guardian.GuardianProto.Super> values) {
+        if (supersBuilder_ == null) {
+          ensureSupersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, supers_);
+          onChanged();
+        } else {
+          supersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearSupers() {
+        if (supersBuilder_ == null) {
+          supers_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          supersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeSupers(int index) {
+        if (supersBuilder_ == null) {
+          ensureSupersIsMutable();
+          supers_.remove(index);
+          onChanged();
+        } else {
+          supersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irishub.guardian.GuardianProto.Super.Builder getSupersBuilder(
+          int index) {
+        return getSupersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irishub.guardian.GuardianProto.SuperOrBuilder getSupersOrBuilder(
+          int index) {
+        if (supersBuilder_ == null) {
+          return supers_.get(index);  } else {
+          return supersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.irishub.guardian.GuardianProto.SuperOrBuilder> 
+           getSupersOrBuilderList() {
+        if (supersBuilder_ != null) {
+          return supersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(supers_);
+        }
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irishub.guardian.GuardianProto.Super.Builder addSupersBuilder() {
+        return getSupersFieldBuilder().addBuilder(
+            com.irishub.guardian.GuardianProto.Super.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irishub.guardian.GuardianProto.Super.Builder addSupersBuilder(
+          int index) {
+        return getSupersFieldBuilder().addBuilder(
+            index, com.irishub.guardian.GuardianProto.Super.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.irishub.guardian.GuardianProto.Super.Builder> 
+           getSupersBuilderList() {
+        return getSupersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.irishub.guardian.GuardianProto.Super, com.irishub.guardian.GuardianProto.Super.Builder, com.irishub.guardian.GuardianProto.SuperOrBuilder> 
+          getSupersFieldBuilder() {
+        if (supersBuilder_ == null) {
+          supersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.irishub.guardian.GuardianProto.Super, com.irishub.guardian.GuardianProto.Super.Builder, com.irishub.guardian.GuardianProto.SuperOrBuilder>(
+                  supers_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          supers_ = null;
+        }
+        return supersBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irishub.guardian.QuerySupersResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:irishub.guardian.QuerySupersResponse)
+    private static final com.irishub.guardian.QueryProto.QuerySupersResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irishub.guardian.QueryProto.QuerySupersResponse();
+    }
+
+    public static com.irishub.guardian.QueryProto.QuerySupersResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySupersResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySupersResponse>() {
+      @java.lang.Override
+      public QuerySupersResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySupersResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySupersResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irishub.guardian.QueryProto.QuerySupersResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irishub_guardian_QuerySupersRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irishub_guardian_QuerySupersRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irishub_guardian_QuerySupersResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irishub_guardian_QuerySupersResponse_fieldAccessorTable;
 
@@ -46,12 +1700,12 @@ public final class QueryProto {
       "ageResponseR\npagination2\200\001\n\005Query\022w\n\006Sup" +
       "ers\022$.irishub.guardian.QuerySupersReques" +
       "t\032%.irishub.guardian.QuerySupersResponse" +
-      "\" \202\323\344\223\002\032\022\030/irishub/guardian/supersB\266\001\n\024c" +
-      "om.irishub.guardianB\nQueryProtoP\001Z1githu" +
-      "b.com/irisnet/irishub/modules/guardian/t" +
-      "ypes\242\002\003IGX\252\002\020Irishub.Guardian\312\002\020Irishub\\" +
-      "Guardian\342\002\034Irishub\\Guardian\\GPBMetadata\352" +
-      "\002\021Irishub::Guardianb\006proto3"
+      "\" \202\323\344\223\002\032\022\030/irishub/guardian/supersB\264\001\n\024c" +
+      "om.irishub.guardianB\nQueryProtoZ1github." +
+      "com/irisnet/irishub/modules/guardian/typ" +
+      "es\242\002\003IGX\252\002\020Irishub.Guardian\312\002\020Irishub\\Gu" +
+      "ardian\342\002\034Irishub\\Guardian\\GPBMetadata\352\002\021" +
+      "Irishub::Guardianb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

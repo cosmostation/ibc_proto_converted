@@ -66,13 +66,12 @@ public final class ServiceProto {
       "beta1.KeygenSessionRequest\032..axelar.mult" +
       "isig.v1beta1.KeygenSessionResponse\"/\202\323\344\223" +
       "\002)\022\'/axelar/multisig/v1beta1/keygen_sess" +
-      "ionB\344\001\n\033com.axelar.multisig.v1beta1B\014Ser" +
-      "viceProtoP\001Z5github.com/axelarnetwork/ax" +
-      "elar-core/x/multisig/types\242\002\003AMX\252\002\027Axela" +
-      "r.Multisig.V1beta1\312\002\027Axelar\\Multisig\\V1b" +
-      "eta1\342\002#Axelar\\Multisig\\V1beta1\\GPBMetada" +
-      "ta\352\002\031Axelar::Multisig::V1beta1\300\343\036\001b\006prot" +
-      "o3"
+      "ionB\342\001\n\033com.axelar.multisig.v1beta1B\014Ser" +
+      "viceProtoZ5github.com/axelarnetwork/axel" +
+      "ar-core/x/multisig/types\242\002\003AMX\252\002\027Axelar." +
+      "Multisig.V1beta1\312\002\027Axelar\\Multisig\\V1bet" +
+      "a1\342\002#Axelar\\Multisig\\V1beta1\\GPBMetadata" +
+      "\352\002\031Axelar::Multisig::V1beta1\300\343\036\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

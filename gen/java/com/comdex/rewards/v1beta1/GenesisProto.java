@@ -14,9 +14,4175 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.InternalRewards internal_rewards = 1 [json_name = "internalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_rewards&#92;""];</code>
+     */
+    java.util.List<com.comdex.rewards.v1beta1.RewardsProto.InternalRewards> 
+        getInternalRewardsList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.InternalRewards internal_rewards = 1 [json_name = "internalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_rewards&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.RewardsProto.InternalRewards getInternalRewards(int index);
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.InternalRewards internal_rewards = 1 [json_name = "internalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_rewards&#92;""];</code>
+     */
+    int getInternalRewardsCount();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.InternalRewards internal_rewards = 1 [json_name = "internalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_rewards&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.InternalRewardsOrBuilder> 
+        getInternalRewardsOrBuilderList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.InternalRewards internal_rewards = 1 [json_name = "internalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_rewards&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.RewardsProto.InternalRewardsOrBuilder getInternalRewardsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LockerRewardsTracker locker_rewards_tracker = 2 [json_name = "lockerRewardsTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_rewards_tracker&#92;""];</code>
+     */
+    java.util.List<com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTracker> 
+        getLockerRewardsTrackerList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LockerRewardsTracker locker_rewards_tracker = 2 [json_name = "lockerRewardsTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_rewards_tracker&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTracker getLockerRewardsTracker(int index);
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LockerRewardsTracker locker_rewards_tracker = 2 [json_name = "lockerRewardsTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_rewards_tracker&#92;""];</code>
+     */
+    int getLockerRewardsTrackerCount();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LockerRewardsTracker locker_rewards_tracker = 2 [json_name = "lockerRewardsTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_rewards_tracker&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTrackerOrBuilder> 
+        getLockerRewardsTrackerOrBuilderList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LockerRewardsTracker locker_rewards_tracker = 2 [json_name = "lockerRewardsTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_rewards_tracker&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTrackerOrBuilder getLockerRewardsTrackerOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.VaultInterestTracker vault_interest_tracker = 3 [json_name = "vaultInterestTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_interest_tracker&#92;""];</code>
+     */
+    java.util.List<com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTracker> 
+        getVaultInterestTrackerList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.VaultInterestTracker vault_interest_tracker = 3 [json_name = "vaultInterestTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_interest_tracker&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTracker getVaultInterestTracker(int index);
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.VaultInterestTracker vault_interest_tracker = 3 [json_name = "vaultInterestTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_interest_tracker&#92;""];</code>
+     */
+    int getVaultInterestTrackerCount();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.VaultInterestTracker vault_interest_tracker = 3 [json_name = "vaultInterestTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_interest_tracker&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTrackerOrBuilder> 
+        getVaultInterestTrackerOrBuilderList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.VaultInterestTracker vault_interest_tracker = 3 [json_name = "vaultInterestTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_interest_tracker&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTrackerOrBuilder getVaultInterestTrackerOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 4 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+     */
+    java.util.List<com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards> 
+        getLockerExternalRewardsList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 4 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards getLockerExternalRewards(int index);
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 4 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+     */
+    int getLockerExternalRewardsCount();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 4 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewardsOrBuilder> 
+        getLockerExternalRewardsOrBuilderList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 4 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewardsOrBuilder getLockerExternalRewardsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 5 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+     */
+    java.util.List<com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards> 
+        getVaultExternalRewardsList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 5 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards getVaultExternalRewards(int index);
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 5 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+     */
+    int getVaultExternalRewardsCount();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 5 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewardsOrBuilder> 
+        getVaultExternalRewardsOrBuilderList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 5 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewardsOrBuilder getVaultExternalRewardsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated uint64 appIDs = 6 [json_name = "appIDs", (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+     * @return A list containing the appIDs.
+     */
+    java.util.List<java.lang.Long> getAppIDsList();
+    /**
+     * <code>repeated uint64 appIDs = 6 [json_name = "appIDs", (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+     * @return The count of appIDs.
+     */
+    int getAppIDsCount();
+    /**
+     * <code>repeated uint64 appIDs = 6 [json_name = "appIDs", (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The appIDs at the given index.
+     */
+    long getAppIDs(int index);
+
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochInfo = 7 [json_name = "epochInfo", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochInfo&#92;""];</code>
+     */
+    java.util.List<com.comdex.rewards.v1beta1.EpochsProto.EpochInfo> 
+        getEpochInfoList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochInfo = 7 [json_name = "epochInfo", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochInfo&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.EpochsProto.EpochInfo getEpochInfo(int index);
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochInfo = 7 [json_name = "epochInfo", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochInfo&#92;""];</code>
+     */
+    int getEpochInfoCount();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochInfo = 7 [json_name = "epochInfo", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochInfo&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.rewards.v1beta1.EpochsProto.EpochInfoOrBuilder> 
+        getEpochInfoOrBuilderList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochInfo = 7 [json_name = "epochInfo", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochInfo&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.EpochsProto.EpochInfoOrBuilder getEpochInfoOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.Gauge gauge = 8 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+     */
+    java.util.List<com.comdex.rewards.v1beta1.GaugeProto.Gauge> 
+        getGaugeList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.Gauge gauge = 8 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.GaugeProto.Gauge getGauge(int index);
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.Gauge gauge = 8 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+     */
+    int getGaugeCount();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.Gauge gauge = 8 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder> 
+        getGaugeOrBuilderList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.Gauge gauge = 8 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder getGaugeOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.GaugeByTriggerDuration gaugeByTriggerDuration = 9 [json_name = "gaugeByTriggerDuration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gaugeByTriggerDuration&#92;""];</code>
+     */
+    java.util.List<com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration> 
+        getGaugeByTriggerDurationList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.GaugeByTriggerDuration gaugeByTriggerDuration = 9 [json_name = "gaugeByTriggerDuration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gaugeByTriggerDuration&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration getGaugeByTriggerDuration(int index);
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.GaugeByTriggerDuration gaugeByTriggerDuration = 9 [json_name = "gaugeByTriggerDuration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gaugeByTriggerDuration&#92;""];</code>
+     */
+    int getGaugeByTriggerDurationCount();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.GaugeByTriggerDuration gaugeByTriggerDuration = 9 [json_name = "gaugeByTriggerDuration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gaugeByTriggerDuration&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDurationOrBuilder> 
+        getGaugeByTriggerDurationOrBuilderList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.GaugeByTriggerDuration gaugeByTriggerDuration = 9 [json_name = "gaugeByTriggerDuration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gaugeByTriggerDuration&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDurationOrBuilder getGaugeByTriggerDurationOrBuilder(
+        int index);
+
+    /**
+     * <code>.comdex.rewards.v1beta1.Params params = 10 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.comdex.rewards.v1beta1.Params params = 10 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+     * @return The params.
+     */
+    com.comdex.rewards.v1beta1.ParamsProto.Params getParams();
+    /**
+     * <code>.comdex.rewards.v1beta1.Params params = 10 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lendExternalRewards = 11 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lendExternalRewards&#92;""];</code>
+     */
+    java.util.List<com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards> 
+        getLendExternalRewardsList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lendExternalRewards = 11 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lendExternalRewards&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards getLendExternalRewards(int index);
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lendExternalRewards = 11 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lendExternalRewards&#92;""];</code>
+     */
+    int getLendExternalRewardsCount();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lendExternalRewards = 11 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lendExternalRewards&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewardsOrBuilder> 
+        getLendExternalRewardsOrBuilderList();
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lendExternalRewards = 11 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lendExternalRewards&#92;""];</code>
+     */
+    com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewardsOrBuilder getLendExternalRewardsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the rewards module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code comdex.rewards.v1beta1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      internalRewards_ = java.util.Collections.emptyList();
+      lockerRewardsTracker_ = java.util.Collections.emptyList();
+      vaultInterestTracker_ = java.util.Collections.emptyList();
+      lockerExternalRewards_ = java.util.Collections.emptyList();
+      vaultExternalRewards_ = java.util.Collections.emptyList();
+      appIDs_ = emptyLongList();
+      epochInfo_ = java.util.Collections.emptyList();
+      gauge_ = java.util.Collections.emptyList();
+      gaugeByTriggerDuration_ = java.util.Collections.emptyList();
+      lendExternalRewards_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.GenesisProto.internal_static_comdex_rewards_v1beta1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.GenesisProto.internal_static_comdex_rewards_v1beta1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.GenesisProto.GenesisState.class, com.comdex.rewards.v1beta1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int INTERNAL_REWARDS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.rewards.v1beta1.RewardsProto.InternalRewards> internalRewards_;
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.InternalRewards internal_rewards = 1 [json_name = "internalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.InternalRewards> getInternalRewardsList() {
+      return internalRewards_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.InternalRewards internal_rewards = 1 [json_name = "internalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.InternalRewardsOrBuilder> 
+        getInternalRewardsOrBuilderList() {
+      return internalRewards_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.InternalRewards internal_rewards = 1 [json_name = "internalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getInternalRewardsCount() {
+      return internalRewards_.size();
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.InternalRewards internal_rewards = 1 [json_name = "internalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.RewardsProto.InternalRewards getInternalRewards(int index) {
+      return internalRewards_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.InternalRewards internal_rewards = 1 [json_name = "internalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.RewardsProto.InternalRewardsOrBuilder getInternalRewardsOrBuilder(
+        int index) {
+      return internalRewards_.get(index);
+    }
+
+    public static final int LOCKER_REWARDS_TRACKER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTracker> lockerRewardsTracker_;
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LockerRewardsTracker locker_rewards_tracker = 2 [json_name = "lockerRewardsTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_rewards_tracker&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTracker> getLockerRewardsTrackerList() {
+      return lockerRewardsTracker_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LockerRewardsTracker locker_rewards_tracker = 2 [json_name = "lockerRewardsTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_rewards_tracker&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTrackerOrBuilder> 
+        getLockerRewardsTrackerOrBuilderList() {
+      return lockerRewardsTracker_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LockerRewardsTracker locker_rewards_tracker = 2 [json_name = "lockerRewardsTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_rewards_tracker&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getLockerRewardsTrackerCount() {
+      return lockerRewardsTracker_.size();
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LockerRewardsTracker locker_rewards_tracker = 2 [json_name = "lockerRewardsTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_rewards_tracker&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTracker getLockerRewardsTracker(int index) {
+      return lockerRewardsTracker_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LockerRewardsTracker locker_rewards_tracker = 2 [json_name = "lockerRewardsTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_rewards_tracker&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTrackerOrBuilder getLockerRewardsTrackerOrBuilder(
+        int index) {
+      return lockerRewardsTracker_.get(index);
+    }
+
+    public static final int VAULT_INTEREST_TRACKER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTracker> vaultInterestTracker_;
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.VaultInterestTracker vault_interest_tracker = 3 [json_name = "vaultInterestTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_interest_tracker&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTracker> getVaultInterestTrackerList() {
+      return vaultInterestTracker_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.VaultInterestTracker vault_interest_tracker = 3 [json_name = "vaultInterestTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_interest_tracker&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTrackerOrBuilder> 
+        getVaultInterestTrackerOrBuilderList() {
+      return vaultInterestTracker_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.VaultInterestTracker vault_interest_tracker = 3 [json_name = "vaultInterestTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_interest_tracker&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getVaultInterestTrackerCount() {
+      return vaultInterestTracker_.size();
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.VaultInterestTracker vault_interest_tracker = 3 [json_name = "vaultInterestTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_interest_tracker&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTracker getVaultInterestTracker(int index) {
+      return vaultInterestTracker_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.VaultInterestTracker vault_interest_tracker = 3 [json_name = "vaultInterestTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_interest_tracker&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTrackerOrBuilder getVaultInterestTrackerOrBuilder(
+        int index) {
+      return vaultInterestTracker_.get(index);
+    }
+
+    public static final int LOCKER_EXTERNAL_REWARDS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards> lockerExternalRewards_;
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 4 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards> getLockerExternalRewardsList() {
+      return lockerExternalRewards_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 4 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewardsOrBuilder> 
+        getLockerExternalRewardsOrBuilderList() {
+      return lockerExternalRewards_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 4 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getLockerExternalRewardsCount() {
+      return lockerExternalRewards_.size();
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 4 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards getLockerExternalRewards(int index) {
+      return lockerExternalRewards_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 4 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewardsOrBuilder getLockerExternalRewardsOrBuilder(
+        int index) {
+      return lockerExternalRewards_.get(index);
+    }
+
+    public static final int VAULT_EXTERNAL_REWARDS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards> vaultExternalRewards_;
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 5 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards> getVaultExternalRewardsList() {
+      return vaultExternalRewards_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 5 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewardsOrBuilder> 
+        getVaultExternalRewardsOrBuilderList() {
+      return vaultExternalRewards_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 5 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getVaultExternalRewardsCount() {
+      return vaultExternalRewards_.size();
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 5 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards getVaultExternalRewards(int index) {
+      return vaultExternalRewards_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 5 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewardsOrBuilder getVaultExternalRewardsOrBuilder(
+        int index) {
+      return vaultExternalRewards_.get(index);
+    }
+
+    public static final int APPIDS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.LongList appIDs_;
+    /**
+     * <code>repeated uint64 appIDs = 6 [json_name = "appIDs", (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+     * @return A list containing the appIDs.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Long>
+        getAppIDsList() {
+      return appIDs_;
+    }
+    /**
+     * <code>repeated uint64 appIDs = 6 [json_name = "appIDs", (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+     * @return The count of appIDs.
+     */
+    public int getAppIDsCount() {
+      return appIDs_.size();
+    }
+    /**
+     * <code>repeated uint64 appIDs = 6 [json_name = "appIDs", (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The appIDs at the given index.
+     */
+    public long getAppIDs(int index) {
+      return appIDs_.getLong(index);
+    }
+    private int appIDsMemoizedSerializedSize = -1;
+
+    public static final int EPOCHINFO_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.rewards.v1beta1.EpochsProto.EpochInfo> epochInfo_;
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochInfo = 7 [json_name = "epochInfo", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochInfo&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.rewards.v1beta1.EpochsProto.EpochInfo> getEpochInfoList() {
+      return epochInfo_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochInfo = 7 [json_name = "epochInfo", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochInfo&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.rewards.v1beta1.EpochsProto.EpochInfoOrBuilder> 
+        getEpochInfoOrBuilderList() {
+      return epochInfo_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochInfo = 7 [json_name = "epochInfo", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochInfo&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getEpochInfoCount() {
+      return epochInfo_.size();
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochInfo = 7 [json_name = "epochInfo", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochInfo&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.EpochsProto.EpochInfo getEpochInfo(int index) {
+      return epochInfo_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochInfo = 7 [json_name = "epochInfo", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochInfo&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.EpochsProto.EpochInfoOrBuilder getEpochInfoOrBuilder(
+        int index) {
+      return epochInfo_.get(index);
+    }
+
+    public static final int GAUGE_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.rewards.v1beta1.GaugeProto.Gauge> gauge_;
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.Gauge gauge = 8 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.rewards.v1beta1.GaugeProto.Gauge> getGaugeList() {
+      return gauge_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.Gauge gauge = 8 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder> 
+        getGaugeOrBuilderList() {
+      return gauge_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.Gauge gauge = 8 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getGaugeCount() {
+      return gauge_.size();
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.Gauge gauge = 8 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.GaugeProto.Gauge getGauge(int index) {
+      return gauge_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.Gauge gauge = 8 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder getGaugeOrBuilder(
+        int index) {
+      return gauge_.get(index);
+    }
+
+    public static final int GAUGEBYTRIGGERDURATION_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration> gaugeByTriggerDuration_;
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.GaugeByTriggerDuration gaugeByTriggerDuration = 9 [json_name = "gaugeByTriggerDuration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gaugeByTriggerDuration&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration> getGaugeByTriggerDurationList() {
+      return gaugeByTriggerDuration_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.GaugeByTriggerDuration gaugeByTriggerDuration = 9 [json_name = "gaugeByTriggerDuration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gaugeByTriggerDuration&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDurationOrBuilder> 
+        getGaugeByTriggerDurationOrBuilderList() {
+      return gaugeByTriggerDuration_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.GaugeByTriggerDuration gaugeByTriggerDuration = 9 [json_name = "gaugeByTriggerDuration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gaugeByTriggerDuration&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getGaugeByTriggerDurationCount() {
+      return gaugeByTriggerDuration_.size();
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.GaugeByTriggerDuration gaugeByTriggerDuration = 9 [json_name = "gaugeByTriggerDuration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gaugeByTriggerDuration&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration getGaugeByTriggerDuration(int index) {
+      return gaugeByTriggerDuration_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.GaugeByTriggerDuration gaugeByTriggerDuration = 9 [json_name = "gaugeByTriggerDuration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gaugeByTriggerDuration&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDurationOrBuilder getGaugeByTriggerDurationOrBuilder(
+        int index) {
+      return gaugeByTriggerDuration_.get(index);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 10;
+    private com.comdex.rewards.v1beta1.ParamsProto.Params params_;
+    /**
+     * <code>.comdex.rewards.v1beta1.Params params = 10 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.comdex.rewards.v1beta1.Params params = 10 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.ParamsProto.Params getParams() {
+      return params_ == null ? com.comdex.rewards.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.comdex.rewards.v1beta1.Params params = 10 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.comdex.rewards.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int LENDEXTERNALREWARDS_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards> lendExternalRewards_;
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lendExternalRewards = 11 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lendExternalRewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards> getLendExternalRewardsList() {
+      return lendExternalRewards_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lendExternalRewards = 11 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lendExternalRewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewardsOrBuilder> 
+        getLendExternalRewardsOrBuilderList() {
+      return lendExternalRewards_;
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lendExternalRewards = 11 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lendExternalRewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getLendExternalRewardsCount() {
+      return lendExternalRewards_.size();
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lendExternalRewards = 11 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lendExternalRewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards getLendExternalRewards(int index) {
+      return lendExternalRewards_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lendExternalRewards = 11 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lendExternalRewards&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewardsOrBuilder getLendExternalRewardsOrBuilder(
+        int index) {
+      return lendExternalRewards_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < internalRewards_.size(); i++) {
+        output.writeMessage(1, internalRewards_.get(i));
+      }
+      for (int i = 0; i < lockerRewardsTracker_.size(); i++) {
+        output.writeMessage(2, lockerRewardsTracker_.get(i));
+      }
+      for (int i = 0; i < vaultInterestTracker_.size(); i++) {
+        output.writeMessage(3, vaultInterestTracker_.get(i));
+      }
+      for (int i = 0; i < lockerExternalRewards_.size(); i++) {
+        output.writeMessage(4, lockerExternalRewards_.get(i));
+      }
+      for (int i = 0; i < vaultExternalRewards_.size(); i++) {
+        output.writeMessage(5, vaultExternalRewards_.get(i));
+      }
+      if (getAppIDsList().size() > 0) {
+        output.writeUInt32NoTag(50);
+        output.writeUInt32NoTag(appIDsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < appIDs_.size(); i++) {
+        output.writeUInt64NoTag(appIDs_.getLong(i));
+      }
+      for (int i = 0; i < epochInfo_.size(); i++) {
+        output.writeMessage(7, epochInfo_.get(i));
+      }
+      for (int i = 0; i < gauge_.size(); i++) {
+        output.writeMessage(8, gauge_.get(i));
+      }
+      for (int i = 0; i < gaugeByTriggerDuration_.size(); i++) {
+        output.writeMessage(9, gaugeByTriggerDuration_.get(i));
+      }
+      if (params_ != null) {
+        output.writeMessage(10, getParams());
+      }
+      for (int i = 0; i < lendExternalRewards_.size(); i++) {
+        output.writeMessage(11, lendExternalRewards_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < internalRewards_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, internalRewards_.get(i));
+      }
+      for (int i = 0; i < lockerRewardsTracker_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, lockerRewardsTracker_.get(i));
+      }
+      for (int i = 0; i < vaultInterestTracker_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, vaultInterestTracker_.get(i));
+      }
+      for (int i = 0; i < lockerExternalRewards_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, lockerExternalRewards_.get(i));
+      }
+      for (int i = 0; i < vaultExternalRewards_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, vaultExternalRewards_.get(i));
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < appIDs_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt64SizeNoTag(appIDs_.getLong(i));
+        }
+        size += dataSize;
+        if (!getAppIDsList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        appIDsMemoizedSerializedSize = dataSize;
+      }
+      for (int i = 0; i < epochInfo_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, epochInfo_.get(i));
+      }
+      for (int i = 0; i < gauge_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, gauge_.get(i));
+      }
+      for (int i = 0; i < gaugeByTriggerDuration_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, gaugeByTriggerDuration_.get(i));
+      }
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getParams());
+      }
+      for (int i = 0; i < lendExternalRewards_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, lendExternalRewards_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.GenesisProto.GenesisState other = (com.comdex.rewards.v1beta1.GenesisProto.GenesisState) obj;
+
+      if (!getInternalRewardsList()
+          .equals(other.getInternalRewardsList())) return false;
+      if (!getLockerRewardsTrackerList()
+          .equals(other.getLockerRewardsTrackerList())) return false;
+      if (!getVaultInterestTrackerList()
+          .equals(other.getVaultInterestTrackerList())) return false;
+      if (!getLockerExternalRewardsList()
+          .equals(other.getLockerExternalRewardsList())) return false;
+      if (!getVaultExternalRewardsList()
+          .equals(other.getVaultExternalRewardsList())) return false;
+      if (!getAppIDsList()
+          .equals(other.getAppIDsList())) return false;
+      if (!getEpochInfoList()
+          .equals(other.getEpochInfoList())) return false;
+      if (!getGaugeList()
+          .equals(other.getGaugeList())) return false;
+      if (!getGaugeByTriggerDurationList()
+          .equals(other.getGaugeByTriggerDurationList())) return false;
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getLendExternalRewardsList()
+          .equals(other.getLendExternalRewardsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getInternalRewardsCount() > 0) {
+        hash = (37 * hash) + INTERNAL_REWARDS_FIELD_NUMBER;
+        hash = (53 * hash) + getInternalRewardsList().hashCode();
+      }
+      if (getLockerRewardsTrackerCount() > 0) {
+        hash = (37 * hash) + LOCKER_REWARDS_TRACKER_FIELD_NUMBER;
+        hash = (53 * hash) + getLockerRewardsTrackerList().hashCode();
+      }
+      if (getVaultInterestTrackerCount() > 0) {
+        hash = (37 * hash) + VAULT_INTEREST_TRACKER_FIELD_NUMBER;
+        hash = (53 * hash) + getVaultInterestTrackerList().hashCode();
+      }
+      if (getLockerExternalRewardsCount() > 0) {
+        hash = (37 * hash) + LOCKER_EXTERNAL_REWARDS_FIELD_NUMBER;
+        hash = (53 * hash) + getLockerExternalRewardsList().hashCode();
+      }
+      if (getVaultExternalRewardsCount() > 0) {
+        hash = (37 * hash) + VAULT_EXTERNAL_REWARDS_FIELD_NUMBER;
+        hash = (53 * hash) + getVaultExternalRewardsList().hashCode();
+      }
+      if (getAppIDsCount() > 0) {
+        hash = (37 * hash) + APPIDS_FIELD_NUMBER;
+        hash = (53 * hash) + getAppIDsList().hashCode();
+      }
+      if (getEpochInfoCount() > 0) {
+        hash = (37 * hash) + EPOCHINFO_FIELD_NUMBER;
+        hash = (53 * hash) + getEpochInfoList().hashCode();
+      }
+      if (getGaugeCount() > 0) {
+        hash = (37 * hash) + GAUGE_FIELD_NUMBER;
+        hash = (53 * hash) + getGaugeList().hashCode();
+      }
+      if (getGaugeByTriggerDurationCount() > 0) {
+        hash = (37 * hash) + GAUGEBYTRIGGERDURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getGaugeByTriggerDurationList().hashCode();
+      }
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (getLendExternalRewardsCount() > 0) {
+        hash = (37 * hash) + LENDEXTERNALREWARDS_FIELD_NUMBER;
+        hash = (53 * hash) + getLendExternalRewardsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the rewards module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code comdex.rewards.v1beta1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.GenesisState)
+        com.comdex.rewards.v1beta1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.GenesisProto.internal_static_comdex_rewards_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.GenesisProto.internal_static_comdex_rewards_v1beta1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.GenesisProto.GenesisState.class, com.comdex.rewards.v1beta1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (internalRewardsBuilder_ == null) {
+          internalRewards_ = java.util.Collections.emptyList();
+        } else {
+          internalRewards_ = null;
+          internalRewardsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (lockerRewardsTrackerBuilder_ == null) {
+          lockerRewardsTracker_ = java.util.Collections.emptyList();
+        } else {
+          lockerRewardsTracker_ = null;
+          lockerRewardsTrackerBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (vaultInterestTrackerBuilder_ == null) {
+          vaultInterestTracker_ = java.util.Collections.emptyList();
+        } else {
+          vaultInterestTracker_ = null;
+          vaultInterestTrackerBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (lockerExternalRewardsBuilder_ == null) {
+          lockerExternalRewards_ = java.util.Collections.emptyList();
+        } else {
+          lockerExternalRewards_ = null;
+          lockerExternalRewardsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (vaultExternalRewardsBuilder_ == null) {
+          vaultExternalRewards_ = java.util.Collections.emptyList();
+        } else {
+          vaultExternalRewards_ = null;
+          vaultExternalRewardsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        appIDs_ = emptyLongList();
+        if (epochInfoBuilder_ == null) {
+          epochInfo_ = java.util.Collections.emptyList();
+        } else {
+          epochInfo_ = null;
+          epochInfoBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        if (gaugeBuilder_ == null) {
+          gauge_ = java.util.Collections.emptyList();
+        } else {
+          gauge_ = null;
+          gaugeBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        if (gaugeByTriggerDurationBuilder_ == null) {
+          gaugeByTriggerDuration_ = java.util.Collections.emptyList();
+        } else {
+          gaugeByTriggerDuration_ = null;
+          gaugeByTriggerDurationBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000100);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        if (lendExternalRewardsBuilder_ == null) {
+          lendExternalRewards_ = java.util.Collections.emptyList();
+        } else {
+          lendExternalRewards_ = null;
+          lendExternalRewardsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000400);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.GenesisProto.internal_static_comdex_rewards_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.GenesisProto.GenesisState build() {
+        com.comdex.rewards.v1beta1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.GenesisProto.GenesisState buildPartial() {
+        com.comdex.rewards.v1beta1.GenesisProto.GenesisState result = new com.comdex.rewards.v1beta1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.rewards.v1beta1.GenesisProto.GenesisState result) {
+        if (internalRewardsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            internalRewards_ = java.util.Collections.unmodifiableList(internalRewards_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.internalRewards_ = internalRewards_;
+        } else {
+          result.internalRewards_ = internalRewardsBuilder_.build();
+        }
+        if (lockerRewardsTrackerBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            lockerRewardsTracker_ = java.util.Collections.unmodifiableList(lockerRewardsTracker_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.lockerRewardsTracker_ = lockerRewardsTracker_;
+        } else {
+          result.lockerRewardsTracker_ = lockerRewardsTrackerBuilder_.build();
+        }
+        if (vaultInterestTrackerBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            vaultInterestTracker_ = java.util.Collections.unmodifiableList(vaultInterestTracker_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.vaultInterestTracker_ = vaultInterestTracker_;
+        } else {
+          result.vaultInterestTracker_ = vaultInterestTrackerBuilder_.build();
+        }
+        if (lockerExternalRewardsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            lockerExternalRewards_ = java.util.Collections.unmodifiableList(lockerExternalRewards_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.lockerExternalRewards_ = lockerExternalRewards_;
+        } else {
+          result.lockerExternalRewards_ = lockerExternalRewardsBuilder_.build();
+        }
+        if (vaultExternalRewardsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            vaultExternalRewards_ = java.util.Collections.unmodifiableList(vaultExternalRewards_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.vaultExternalRewards_ = vaultExternalRewards_;
+        } else {
+          result.vaultExternalRewards_ = vaultExternalRewardsBuilder_.build();
+        }
+        if (((bitField0_ & 0x00000020) != 0)) {
+          appIDs_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000020);
+        }
+        result.appIDs_ = appIDs_;
+        if (epochInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0)) {
+            epochInfo_ = java.util.Collections.unmodifiableList(epochInfo_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.epochInfo_ = epochInfo_;
+        } else {
+          result.epochInfo_ = epochInfoBuilder_.build();
+        }
+        if (gaugeBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0)) {
+            gauge_ = java.util.Collections.unmodifiableList(gauge_);
+            bitField0_ = (bitField0_ & ~0x00000080);
+          }
+          result.gauge_ = gauge_;
+        } else {
+          result.gauge_ = gaugeBuilder_.build();
+        }
+        if (gaugeByTriggerDurationBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0)) {
+            gaugeByTriggerDuration_ = java.util.Collections.unmodifiableList(gaugeByTriggerDuration_);
+            bitField0_ = (bitField0_ & ~0x00000100);
+          }
+          result.gaugeByTriggerDuration_ = gaugeByTriggerDuration_;
+        } else {
+          result.gaugeByTriggerDuration_ = gaugeByTriggerDurationBuilder_.build();
+        }
+        if (lendExternalRewardsBuilder_ == null) {
+          if (((bitField0_ & 0x00000400) != 0)) {
+            lendExternalRewards_ = java.util.Collections.unmodifiableList(lendExternalRewards_);
+            bitField0_ = (bitField0_ & ~0x00000400);
+          }
+          result.lendExternalRewards_ = lendExternalRewards_;
+        } else {
+          result.lendExternalRewards_ = lendExternalRewardsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.comdex.rewards.v1beta1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.GenesisProto.GenesisState) {
+          return mergeFrom((com.comdex.rewards.v1beta1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.GenesisProto.GenesisState other) {
+        if (other == com.comdex.rewards.v1beta1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (internalRewardsBuilder_ == null) {
+          if (!other.internalRewards_.isEmpty()) {
+            if (internalRewards_.isEmpty()) {
+              internalRewards_ = other.internalRewards_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureInternalRewardsIsMutable();
+              internalRewards_.addAll(other.internalRewards_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.internalRewards_.isEmpty()) {
+            if (internalRewardsBuilder_.isEmpty()) {
+              internalRewardsBuilder_.dispose();
+              internalRewardsBuilder_ = null;
+              internalRewards_ = other.internalRewards_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              internalRewardsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getInternalRewardsFieldBuilder() : null;
+            } else {
+              internalRewardsBuilder_.addAllMessages(other.internalRewards_);
+            }
+          }
+        }
+        if (lockerRewardsTrackerBuilder_ == null) {
+          if (!other.lockerRewardsTracker_.isEmpty()) {
+            if (lockerRewardsTracker_.isEmpty()) {
+              lockerRewardsTracker_ = other.lockerRewardsTracker_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureLockerRewardsTrackerIsMutable();
+              lockerRewardsTracker_.addAll(other.lockerRewardsTracker_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.lockerRewardsTracker_.isEmpty()) {
+            if (lockerRewardsTrackerBuilder_.isEmpty()) {
+              lockerRewardsTrackerBuilder_.dispose();
+              lockerRewardsTrackerBuilder_ = null;
+              lockerRewardsTracker_ = other.lockerRewardsTracker_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              lockerRewardsTrackerBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLockerRewardsTrackerFieldBuilder() : null;
+            } else {
+              lockerRewardsTrackerBuilder_.addAllMessages(other.lockerRewardsTracker_);
+            }
+          }
+        }
+        if (vaultInterestTrackerBuilder_ == null) {
+          if (!other.vaultInterestTracker_.isEmpty()) {
+            if (vaultInterestTracker_.isEmpty()) {
+              vaultInterestTracker_ = other.vaultInterestTracker_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureVaultInterestTrackerIsMutable();
+              vaultInterestTracker_.addAll(other.vaultInterestTracker_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.vaultInterestTracker_.isEmpty()) {
+            if (vaultInterestTrackerBuilder_.isEmpty()) {
+              vaultInterestTrackerBuilder_.dispose();
+              vaultInterestTrackerBuilder_ = null;
+              vaultInterestTracker_ = other.vaultInterestTracker_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              vaultInterestTrackerBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getVaultInterestTrackerFieldBuilder() : null;
+            } else {
+              vaultInterestTrackerBuilder_.addAllMessages(other.vaultInterestTracker_);
+            }
+          }
+        }
+        if (lockerExternalRewardsBuilder_ == null) {
+          if (!other.lockerExternalRewards_.isEmpty()) {
+            if (lockerExternalRewards_.isEmpty()) {
+              lockerExternalRewards_ = other.lockerExternalRewards_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureLockerExternalRewardsIsMutable();
+              lockerExternalRewards_.addAll(other.lockerExternalRewards_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.lockerExternalRewards_.isEmpty()) {
+            if (lockerExternalRewardsBuilder_.isEmpty()) {
+              lockerExternalRewardsBuilder_.dispose();
+              lockerExternalRewardsBuilder_ = null;
+              lockerExternalRewards_ = other.lockerExternalRewards_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              lockerExternalRewardsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLockerExternalRewardsFieldBuilder() : null;
+            } else {
+              lockerExternalRewardsBuilder_.addAllMessages(other.lockerExternalRewards_);
+            }
+          }
+        }
+        if (vaultExternalRewardsBuilder_ == null) {
+          if (!other.vaultExternalRewards_.isEmpty()) {
+            if (vaultExternalRewards_.isEmpty()) {
+              vaultExternalRewards_ = other.vaultExternalRewards_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureVaultExternalRewardsIsMutable();
+              vaultExternalRewards_.addAll(other.vaultExternalRewards_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.vaultExternalRewards_.isEmpty()) {
+            if (vaultExternalRewardsBuilder_.isEmpty()) {
+              vaultExternalRewardsBuilder_.dispose();
+              vaultExternalRewardsBuilder_ = null;
+              vaultExternalRewards_ = other.vaultExternalRewards_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              vaultExternalRewardsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getVaultExternalRewardsFieldBuilder() : null;
+            } else {
+              vaultExternalRewardsBuilder_.addAllMessages(other.vaultExternalRewards_);
+            }
+          }
+        }
+        if (!other.appIDs_.isEmpty()) {
+          if (appIDs_.isEmpty()) {
+            appIDs_ = other.appIDs_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+          } else {
+            ensureAppIDsIsMutable();
+            appIDs_.addAll(other.appIDs_);
+          }
+          onChanged();
+        }
+        if (epochInfoBuilder_ == null) {
+          if (!other.epochInfo_.isEmpty()) {
+            if (epochInfo_.isEmpty()) {
+              epochInfo_ = other.epochInfo_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureEpochInfoIsMutable();
+              epochInfo_.addAll(other.epochInfo_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.epochInfo_.isEmpty()) {
+            if (epochInfoBuilder_.isEmpty()) {
+              epochInfoBuilder_.dispose();
+              epochInfoBuilder_ = null;
+              epochInfo_ = other.epochInfo_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              epochInfoBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEpochInfoFieldBuilder() : null;
+            } else {
+              epochInfoBuilder_.addAllMessages(other.epochInfo_);
+            }
+          }
+        }
+        if (gaugeBuilder_ == null) {
+          if (!other.gauge_.isEmpty()) {
+            if (gauge_.isEmpty()) {
+              gauge_ = other.gauge_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+            } else {
+              ensureGaugeIsMutable();
+              gauge_.addAll(other.gauge_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.gauge_.isEmpty()) {
+            if (gaugeBuilder_.isEmpty()) {
+              gaugeBuilder_.dispose();
+              gaugeBuilder_ = null;
+              gauge_ = other.gauge_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+              gaugeBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getGaugeFieldBuilder() : null;
+            } else {
+              gaugeBuilder_.addAllMessages(other.gauge_);
+            }
+          }
+        }
+        if (gaugeByTriggerDurationBuilder_ == null) {
+          if (!other.gaugeByTriggerDuration_.isEmpty()) {
+            if (gaugeByTriggerDuration_.isEmpty()) {
+              gaugeByTriggerDuration_ = other.gaugeByTriggerDuration_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+            } else {
+              ensureGaugeByTriggerDurationIsMutable();
+              gaugeByTriggerDuration_.addAll(other.gaugeByTriggerDuration_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.gaugeByTriggerDuration_.isEmpty()) {
+            if (gaugeByTriggerDurationBuilder_.isEmpty()) {
+              gaugeByTriggerDurationBuilder_.dispose();
+              gaugeByTriggerDurationBuilder_ = null;
+              gaugeByTriggerDuration_ = other.gaugeByTriggerDuration_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+              gaugeByTriggerDurationBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getGaugeByTriggerDurationFieldBuilder() : null;
+            } else {
+              gaugeByTriggerDurationBuilder_.addAllMessages(other.gaugeByTriggerDuration_);
+            }
+          }
+        }
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (lendExternalRewardsBuilder_ == null) {
+          if (!other.lendExternalRewards_.isEmpty()) {
+            if (lendExternalRewards_.isEmpty()) {
+              lendExternalRewards_ = other.lendExternalRewards_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+            } else {
+              ensureLendExternalRewardsIsMutable();
+              lendExternalRewards_.addAll(other.lendExternalRewards_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.lendExternalRewards_.isEmpty()) {
+            if (lendExternalRewardsBuilder_.isEmpty()) {
+              lendExternalRewardsBuilder_.dispose();
+              lendExternalRewardsBuilder_ = null;
+              lendExternalRewards_ = other.lendExternalRewards_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+              lendExternalRewardsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLendExternalRewardsFieldBuilder() : null;
+            } else {
+              lendExternalRewardsBuilder_.addAllMessages(other.lendExternalRewards_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.comdex.rewards.v1beta1.RewardsProto.InternalRewards m =
+                    input.readMessage(
+                        com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.parser(),
+                        extensionRegistry);
+                if (internalRewardsBuilder_ == null) {
+                  ensureInternalRewardsIsMutable();
+                  internalRewards_.add(m);
+                } else {
+                  internalRewardsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTracker m =
+                    input.readMessage(
+                        com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTracker.parser(),
+                        extensionRegistry);
+                if (lockerRewardsTrackerBuilder_ == null) {
+                  ensureLockerRewardsTrackerIsMutable();
+                  lockerRewardsTracker_.add(m);
+                } else {
+                  lockerRewardsTrackerBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTracker m =
+                    input.readMessage(
+                        com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTracker.parser(),
+                        extensionRegistry);
+                if (vaultInterestTrackerBuilder_ == null) {
+                  ensureVaultInterestTrackerIsMutable();
+                  vaultInterestTracker_.add(m);
+                } else {
+                  vaultInterestTrackerBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards m =
+                    input.readMessage(
+                        com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards.parser(),
+                        extensionRegistry);
+                if (lockerExternalRewardsBuilder_ == null) {
+                  ensureLockerExternalRewardsIsMutable();
+                  lockerExternalRewards_.add(m);
+                } else {
+                  lockerExternalRewardsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards m =
+                    input.readMessage(
+                        com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards.parser(),
+                        extensionRegistry);
+                if (vaultExternalRewardsBuilder_ == null) {
+                  ensureVaultExternalRewardsIsMutable();
+                  vaultExternalRewards_.add(m);
+                } else {
+                  vaultExternalRewardsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 48: {
+                long v = input.readUInt64();
+                ensureAppIDsIsMutable();
+                appIDs_.addLong(v);
+                break;
+              } // case 48
+              case 50: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureAppIDsIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  appIDs_.addLong(input.readUInt64());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 50
+              case 58: {
+                com.comdex.rewards.v1beta1.EpochsProto.EpochInfo m =
+                    input.readMessage(
+                        com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.parser(),
+                        extensionRegistry);
+                if (epochInfoBuilder_ == null) {
+                  ensureEpochInfoIsMutable();
+                  epochInfo_.add(m);
+                } else {
+                  epochInfoBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              case 66: {
+                com.comdex.rewards.v1beta1.GaugeProto.Gauge m =
+                    input.readMessage(
+                        com.comdex.rewards.v1beta1.GaugeProto.Gauge.parser(),
+                        extensionRegistry);
+                if (gaugeBuilder_ == null) {
+                  ensureGaugeIsMutable();
+                  gauge_.add(m);
+                } else {
+                  gaugeBuilder_.addMessage(m);
+                }
+                break;
+              } // case 66
+              case 74: {
+                com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration m =
+                    input.readMessage(
+                        com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration.parser(),
+                        extensionRegistry);
+                if (gaugeByTriggerDurationBuilder_ == null) {
+                  ensureGaugeByTriggerDurationIsMutable();
+                  gaugeByTriggerDuration_.add(m);
+                } else {
+                  gaugeByTriggerDurationBuilder_.addMessage(m);
+                }
+                break;
+              } // case 74
+              case 82: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+              case 90: {
+                com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards m =
+                    input.readMessage(
+                        com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards.parser(),
+                        extensionRegistry);
+                if (lendExternalRewardsBuilder_ == null) {
+                  ensureLendExternalRewardsIsMutable();
+                  lendExternalRewards_.add(m);
+                } else {
+                  lendExternalRewardsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 90
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.comdex.rewards.v1beta1.RewardsProto.InternalRewards> internalRewards_ =
+        java.util.Collections.emptyList();
+      private void ensureInternalRewardsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          internalRewards_ = new java.util.ArrayList<com.comdex.rewards.v1beta1.RewardsProto.InternalRewards>(internalRewards_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.RewardsProto.InternalRewards, com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.Builder, com.comdex.rewards.v1beta1.RewardsProto.InternalRewardsOrBuilder> internalRewardsBuilder_;
+
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards internal_rewards = 1 [json_name = "internalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_rewards&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.InternalRewards> getInternalRewardsList() {
+        if (internalRewardsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(internalRewards_);
+        } else {
+          return internalRewardsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards internal_rewards = 1 [json_name = "internalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_rewards&#92;""];</code>
+       */
+      public int getInternalRewardsCount() {
+        if (internalRewardsBuilder_ == null) {
+          return internalRewards_.size();
+        } else {
+          return internalRewardsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards internal_rewards = 1 [json_name = "internalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.InternalRewards getInternalRewards(int index) {
+        if (internalRewardsBuilder_ == null) {
+          return internalRewards_.get(index);
+        } else {
+          return internalRewardsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards internal_rewards = 1 [json_name = "internalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_rewards&#92;""];</code>
+       */
+      public Builder setInternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.InternalRewards value) {
+        if (internalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInternalRewardsIsMutable();
+          internalRewards_.set(index, value);
+          onChanged();
+        } else {
+          internalRewardsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards internal_rewards = 1 [json_name = "internalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_rewards&#92;""];</code>
+       */
+      public Builder setInternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.Builder builderForValue) {
+        if (internalRewardsBuilder_ == null) {
+          ensureInternalRewardsIsMutable();
+          internalRewards_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          internalRewardsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards internal_rewards = 1 [json_name = "internalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_rewards&#92;""];</code>
+       */
+      public Builder addInternalRewards(com.comdex.rewards.v1beta1.RewardsProto.InternalRewards value) {
+        if (internalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInternalRewardsIsMutable();
+          internalRewards_.add(value);
+          onChanged();
+        } else {
+          internalRewardsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards internal_rewards = 1 [json_name = "internalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_rewards&#92;""];</code>
+       */
+      public Builder addInternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.InternalRewards value) {
+        if (internalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInternalRewardsIsMutable();
+          internalRewards_.add(index, value);
+          onChanged();
+        } else {
+          internalRewardsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards internal_rewards = 1 [json_name = "internalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_rewards&#92;""];</code>
+       */
+      public Builder addInternalRewards(
+          com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.Builder builderForValue) {
+        if (internalRewardsBuilder_ == null) {
+          ensureInternalRewardsIsMutable();
+          internalRewards_.add(builderForValue.build());
+          onChanged();
+        } else {
+          internalRewardsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards internal_rewards = 1 [json_name = "internalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_rewards&#92;""];</code>
+       */
+      public Builder addInternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.Builder builderForValue) {
+        if (internalRewardsBuilder_ == null) {
+          ensureInternalRewardsIsMutable();
+          internalRewards_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          internalRewardsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards internal_rewards = 1 [json_name = "internalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_rewards&#92;""];</code>
+       */
+      public Builder addAllInternalRewards(
+          java.lang.Iterable<? extends com.comdex.rewards.v1beta1.RewardsProto.InternalRewards> values) {
+        if (internalRewardsBuilder_ == null) {
+          ensureInternalRewardsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, internalRewards_);
+          onChanged();
+        } else {
+          internalRewardsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards internal_rewards = 1 [json_name = "internalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_rewards&#92;""];</code>
+       */
+      public Builder clearInternalRewards() {
+        if (internalRewardsBuilder_ == null) {
+          internalRewards_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          internalRewardsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards internal_rewards = 1 [json_name = "internalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_rewards&#92;""];</code>
+       */
+      public Builder removeInternalRewards(int index) {
+        if (internalRewardsBuilder_ == null) {
+          ensureInternalRewardsIsMutable();
+          internalRewards_.remove(index);
+          onChanged();
+        } else {
+          internalRewardsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards internal_rewards = 1 [json_name = "internalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.Builder getInternalRewardsBuilder(
+          int index) {
+        return getInternalRewardsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards internal_rewards = 1 [json_name = "internalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.InternalRewardsOrBuilder getInternalRewardsOrBuilder(
+          int index) {
+        if (internalRewardsBuilder_ == null) {
+          return internalRewards_.get(index);  } else {
+          return internalRewardsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards internal_rewards = 1 [json_name = "internalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_rewards&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.InternalRewardsOrBuilder> 
+           getInternalRewardsOrBuilderList() {
+        if (internalRewardsBuilder_ != null) {
+          return internalRewardsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(internalRewards_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards internal_rewards = 1 [json_name = "internalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.Builder addInternalRewardsBuilder() {
+        return getInternalRewardsFieldBuilder().addBuilder(
+            com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards internal_rewards = 1 [json_name = "internalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.Builder addInternalRewardsBuilder(
+          int index) {
+        return getInternalRewardsFieldBuilder().addBuilder(
+            index, com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.InternalRewards internal_rewards = 1 [json_name = "internalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"internal_rewards&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.Builder> 
+           getInternalRewardsBuilderList() {
+        return getInternalRewardsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.RewardsProto.InternalRewards, com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.Builder, com.comdex.rewards.v1beta1.RewardsProto.InternalRewardsOrBuilder> 
+          getInternalRewardsFieldBuilder() {
+        if (internalRewardsBuilder_ == null) {
+          internalRewardsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.rewards.v1beta1.RewardsProto.InternalRewards, com.comdex.rewards.v1beta1.RewardsProto.InternalRewards.Builder, com.comdex.rewards.v1beta1.RewardsProto.InternalRewardsOrBuilder>(
+                  internalRewards_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          internalRewards_ = null;
+        }
+        return internalRewardsBuilder_;
+      }
+
+      private java.util.List<com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTracker> lockerRewardsTracker_ =
+        java.util.Collections.emptyList();
+      private void ensureLockerRewardsTrackerIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          lockerRewardsTracker_ = new java.util.ArrayList<com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTracker>(lockerRewardsTracker_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTracker, com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTracker.Builder, com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTrackerOrBuilder> lockerRewardsTrackerBuilder_;
+
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerRewardsTracker locker_rewards_tracker = 2 [json_name = "lockerRewardsTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_rewards_tracker&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTracker> getLockerRewardsTrackerList() {
+        if (lockerRewardsTrackerBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(lockerRewardsTracker_);
+        } else {
+          return lockerRewardsTrackerBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerRewardsTracker locker_rewards_tracker = 2 [json_name = "lockerRewardsTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_rewards_tracker&#92;""];</code>
+       */
+      public int getLockerRewardsTrackerCount() {
+        if (lockerRewardsTrackerBuilder_ == null) {
+          return lockerRewardsTracker_.size();
+        } else {
+          return lockerRewardsTrackerBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerRewardsTracker locker_rewards_tracker = 2 [json_name = "lockerRewardsTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_rewards_tracker&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTracker getLockerRewardsTracker(int index) {
+        if (lockerRewardsTrackerBuilder_ == null) {
+          return lockerRewardsTracker_.get(index);
+        } else {
+          return lockerRewardsTrackerBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerRewardsTracker locker_rewards_tracker = 2 [json_name = "lockerRewardsTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_rewards_tracker&#92;""];</code>
+       */
+      public Builder setLockerRewardsTracker(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTracker value) {
+        if (lockerRewardsTrackerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLockerRewardsTrackerIsMutable();
+          lockerRewardsTracker_.set(index, value);
+          onChanged();
+        } else {
+          lockerRewardsTrackerBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerRewardsTracker locker_rewards_tracker = 2 [json_name = "lockerRewardsTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_rewards_tracker&#92;""];</code>
+       */
+      public Builder setLockerRewardsTracker(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTracker.Builder builderForValue) {
+        if (lockerRewardsTrackerBuilder_ == null) {
+          ensureLockerRewardsTrackerIsMutable();
+          lockerRewardsTracker_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          lockerRewardsTrackerBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerRewardsTracker locker_rewards_tracker = 2 [json_name = "lockerRewardsTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_rewards_tracker&#92;""];</code>
+       */
+      public Builder addLockerRewardsTracker(com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTracker value) {
+        if (lockerRewardsTrackerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLockerRewardsTrackerIsMutable();
+          lockerRewardsTracker_.add(value);
+          onChanged();
+        } else {
+          lockerRewardsTrackerBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerRewardsTracker locker_rewards_tracker = 2 [json_name = "lockerRewardsTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_rewards_tracker&#92;""];</code>
+       */
+      public Builder addLockerRewardsTracker(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTracker value) {
+        if (lockerRewardsTrackerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLockerRewardsTrackerIsMutable();
+          lockerRewardsTracker_.add(index, value);
+          onChanged();
+        } else {
+          lockerRewardsTrackerBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerRewardsTracker locker_rewards_tracker = 2 [json_name = "lockerRewardsTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_rewards_tracker&#92;""];</code>
+       */
+      public Builder addLockerRewardsTracker(
+          com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTracker.Builder builderForValue) {
+        if (lockerRewardsTrackerBuilder_ == null) {
+          ensureLockerRewardsTrackerIsMutable();
+          lockerRewardsTracker_.add(builderForValue.build());
+          onChanged();
+        } else {
+          lockerRewardsTrackerBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerRewardsTracker locker_rewards_tracker = 2 [json_name = "lockerRewardsTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_rewards_tracker&#92;""];</code>
+       */
+      public Builder addLockerRewardsTracker(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTracker.Builder builderForValue) {
+        if (lockerRewardsTrackerBuilder_ == null) {
+          ensureLockerRewardsTrackerIsMutable();
+          lockerRewardsTracker_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          lockerRewardsTrackerBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerRewardsTracker locker_rewards_tracker = 2 [json_name = "lockerRewardsTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_rewards_tracker&#92;""];</code>
+       */
+      public Builder addAllLockerRewardsTracker(
+          java.lang.Iterable<? extends com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTracker> values) {
+        if (lockerRewardsTrackerBuilder_ == null) {
+          ensureLockerRewardsTrackerIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, lockerRewardsTracker_);
+          onChanged();
+        } else {
+          lockerRewardsTrackerBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerRewardsTracker locker_rewards_tracker = 2 [json_name = "lockerRewardsTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_rewards_tracker&#92;""];</code>
+       */
+      public Builder clearLockerRewardsTracker() {
+        if (lockerRewardsTrackerBuilder_ == null) {
+          lockerRewardsTracker_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          lockerRewardsTrackerBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerRewardsTracker locker_rewards_tracker = 2 [json_name = "lockerRewardsTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_rewards_tracker&#92;""];</code>
+       */
+      public Builder removeLockerRewardsTracker(int index) {
+        if (lockerRewardsTrackerBuilder_ == null) {
+          ensureLockerRewardsTrackerIsMutable();
+          lockerRewardsTracker_.remove(index);
+          onChanged();
+        } else {
+          lockerRewardsTrackerBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerRewardsTracker locker_rewards_tracker = 2 [json_name = "lockerRewardsTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_rewards_tracker&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTracker.Builder getLockerRewardsTrackerBuilder(
+          int index) {
+        return getLockerRewardsTrackerFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerRewardsTracker locker_rewards_tracker = 2 [json_name = "lockerRewardsTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_rewards_tracker&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTrackerOrBuilder getLockerRewardsTrackerOrBuilder(
+          int index) {
+        if (lockerRewardsTrackerBuilder_ == null) {
+          return lockerRewardsTracker_.get(index);  } else {
+          return lockerRewardsTrackerBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerRewardsTracker locker_rewards_tracker = 2 [json_name = "lockerRewardsTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_rewards_tracker&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTrackerOrBuilder> 
+           getLockerRewardsTrackerOrBuilderList() {
+        if (lockerRewardsTrackerBuilder_ != null) {
+          return lockerRewardsTrackerBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(lockerRewardsTracker_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerRewardsTracker locker_rewards_tracker = 2 [json_name = "lockerRewardsTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_rewards_tracker&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTracker.Builder addLockerRewardsTrackerBuilder() {
+        return getLockerRewardsTrackerFieldBuilder().addBuilder(
+            com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTracker.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerRewardsTracker locker_rewards_tracker = 2 [json_name = "lockerRewardsTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_rewards_tracker&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTracker.Builder addLockerRewardsTrackerBuilder(
+          int index) {
+        return getLockerRewardsTrackerFieldBuilder().addBuilder(
+            index, com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTracker.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerRewardsTracker locker_rewards_tracker = 2 [json_name = "lockerRewardsTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_rewards_tracker&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTracker.Builder> 
+           getLockerRewardsTrackerBuilderList() {
+        return getLockerRewardsTrackerFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTracker, com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTracker.Builder, com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTrackerOrBuilder> 
+          getLockerRewardsTrackerFieldBuilder() {
+        if (lockerRewardsTrackerBuilder_ == null) {
+          lockerRewardsTrackerBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTracker, com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTracker.Builder, com.comdex.rewards.v1beta1.RewardsProto.LockerRewardsTrackerOrBuilder>(
+                  lockerRewardsTracker_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          lockerRewardsTracker_ = null;
+        }
+        return lockerRewardsTrackerBuilder_;
+      }
+
+      private java.util.List<com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTracker> vaultInterestTracker_ =
+        java.util.Collections.emptyList();
+      private void ensureVaultInterestTrackerIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          vaultInterestTracker_ = new java.util.ArrayList<com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTracker>(vaultInterestTracker_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTracker, com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTracker.Builder, com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTrackerOrBuilder> vaultInterestTrackerBuilder_;
+
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultInterestTracker vault_interest_tracker = 3 [json_name = "vaultInterestTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_interest_tracker&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTracker> getVaultInterestTrackerList() {
+        if (vaultInterestTrackerBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(vaultInterestTracker_);
+        } else {
+          return vaultInterestTrackerBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultInterestTracker vault_interest_tracker = 3 [json_name = "vaultInterestTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_interest_tracker&#92;""];</code>
+       */
+      public int getVaultInterestTrackerCount() {
+        if (vaultInterestTrackerBuilder_ == null) {
+          return vaultInterestTracker_.size();
+        } else {
+          return vaultInterestTrackerBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultInterestTracker vault_interest_tracker = 3 [json_name = "vaultInterestTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_interest_tracker&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTracker getVaultInterestTracker(int index) {
+        if (vaultInterestTrackerBuilder_ == null) {
+          return vaultInterestTracker_.get(index);
+        } else {
+          return vaultInterestTrackerBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultInterestTracker vault_interest_tracker = 3 [json_name = "vaultInterestTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_interest_tracker&#92;""];</code>
+       */
+      public Builder setVaultInterestTracker(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTracker value) {
+        if (vaultInterestTrackerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVaultInterestTrackerIsMutable();
+          vaultInterestTracker_.set(index, value);
+          onChanged();
+        } else {
+          vaultInterestTrackerBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultInterestTracker vault_interest_tracker = 3 [json_name = "vaultInterestTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_interest_tracker&#92;""];</code>
+       */
+      public Builder setVaultInterestTracker(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTracker.Builder builderForValue) {
+        if (vaultInterestTrackerBuilder_ == null) {
+          ensureVaultInterestTrackerIsMutable();
+          vaultInterestTracker_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          vaultInterestTrackerBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultInterestTracker vault_interest_tracker = 3 [json_name = "vaultInterestTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_interest_tracker&#92;""];</code>
+       */
+      public Builder addVaultInterestTracker(com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTracker value) {
+        if (vaultInterestTrackerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVaultInterestTrackerIsMutable();
+          vaultInterestTracker_.add(value);
+          onChanged();
+        } else {
+          vaultInterestTrackerBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultInterestTracker vault_interest_tracker = 3 [json_name = "vaultInterestTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_interest_tracker&#92;""];</code>
+       */
+      public Builder addVaultInterestTracker(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTracker value) {
+        if (vaultInterestTrackerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVaultInterestTrackerIsMutable();
+          vaultInterestTracker_.add(index, value);
+          onChanged();
+        } else {
+          vaultInterestTrackerBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultInterestTracker vault_interest_tracker = 3 [json_name = "vaultInterestTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_interest_tracker&#92;""];</code>
+       */
+      public Builder addVaultInterestTracker(
+          com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTracker.Builder builderForValue) {
+        if (vaultInterestTrackerBuilder_ == null) {
+          ensureVaultInterestTrackerIsMutable();
+          vaultInterestTracker_.add(builderForValue.build());
+          onChanged();
+        } else {
+          vaultInterestTrackerBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultInterestTracker vault_interest_tracker = 3 [json_name = "vaultInterestTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_interest_tracker&#92;""];</code>
+       */
+      public Builder addVaultInterestTracker(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTracker.Builder builderForValue) {
+        if (vaultInterestTrackerBuilder_ == null) {
+          ensureVaultInterestTrackerIsMutable();
+          vaultInterestTracker_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          vaultInterestTrackerBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultInterestTracker vault_interest_tracker = 3 [json_name = "vaultInterestTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_interest_tracker&#92;""];</code>
+       */
+      public Builder addAllVaultInterestTracker(
+          java.lang.Iterable<? extends com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTracker> values) {
+        if (vaultInterestTrackerBuilder_ == null) {
+          ensureVaultInterestTrackerIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, vaultInterestTracker_);
+          onChanged();
+        } else {
+          vaultInterestTrackerBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultInterestTracker vault_interest_tracker = 3 [json_name = "vaultInterestTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_interest_tracker&#92;""];</code>
+       */
+      public Builder clearVaultInterestTracker() {
+        if (vaultInterestTrackerBuilder_ == null) {
+          vaultInterestTracker_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          vaultInterestTrackerBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultInterestTracker vault_interest_tracker = 3 [json_name = "vaultInterestTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_interest_tracker&#92;""];</code>
+       */
+      public Builder removeVaultInterestTracker(int index) {
+        if (vaultInterestTrackerBuilder_ == null) {
+          ensureVaultInterestTrackerIsMutable();
+          vaultInterestTracker_.remove(index);
+          onChanged();
+        } else {
+          vaultInterestTrackerBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultInterestTracker vault_interest_tracker = 3 [json_name = "vaultInterestTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_interest_tracker&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTracker.Builder getVaultInterestTrackerBuilder(
+          int index) {
+        return getVaultInterestTrackerFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultInterestTracker vault_interest_tracker = 3 [json_name = "vaultInterestTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_interest_tracker&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTrackerOrBuilder getVaultInterestTrackerOrBuilder(
+          int index) {
+        if (vaultInterestTrackerBuilder_ == null) {
+          return vaultInterestTracker_.get(index);  } else {
+          return vaultInterestTrackerBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultInterestTracker vault_interest_tracker = 3 [json_name = "vaultInterestTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_interest_tracker&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTrackerOrBuilder> 
+           getVaultInterestTrackerOrBuilderList() {
+        if (vaultInterestTrackerBuilder_ != null) {
+          return vaultInterestTrackerBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(vaultInterestTracker_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultInterestTracker vault_interest_tracker = 3 [json_name = "vaultInterestTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_interest_tracker&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTracker.Builder addVaultInterestTrackerBuilder() {
+        return getVaultInterestTrackerFieldBuilder().addBuilder(
+            com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTracker.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultInterestTracker vault_interest_tracker = 3 [json_name = "vaultInterestTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_interest_tracker&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTracker.Builder addVaultInterestTrackerBuilder(
+          int index) {
+        return getVaultInterestTrackerFieldBuilder().addBuilder(
+            index, com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTracker.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultInterestTracker vault_interest_tracker = 3 [json_name = "vaultInterestTracker", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_interest_tracker&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTracker.Builder> 
+           getVaultInterestTrackerBuilderList() {
+        return getVaultInterestTrackerFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTracker, com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTracker.Builder, com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTrackerOrBuilder> 
+          getVaultInterestTrackerFieldBuilder() {
+        if (vaultInterestTrackerBuilder_ == null) {
+          vaultInterestTrackerBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTracker, com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTracker.Builder, com.comdex.rewards.v1beta1.RewardsProto.VaultInterestTrackerOrBuilder>(
+                  vaultInterestTracker_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          vaultInterestTracker_ = null;
+        }
+        return vaultInterestTrackerBuilder_;
+      }
+
+      private java.util.List<com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards> lockerExternalRewards_ =
+        java.util.Collections.emptyList();
+      private void ensureLockerExternalRewardsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          lockerExternalRewards_ = new java.util.ArrayList<com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards>(lockerExternalRewards_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards, com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards.Builder, com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewardsOrBuilder> lockerExternalRewardsBuilder_;
+
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 4 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards> getLockerExternalRewardsList() {
+        if (lockerExternalRewardsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(lockerExternalRewards_);
+        } else {
+          return lockerExternalRewardsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 4 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public int getLockerExternalRewardsCount() {
+        if (lockerExternalRewardsBuilder_ == null) {
+          return lockerExternalRewards_.size();
+        } else {
+          return lockerExternalRewardsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 4 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards getLockerExternalRewards(int index) {
+        if (lockerExternalRewardsBuilder_ == null) {
+          return lockerExternalRewards_.get(index);
+        } else {
+          return lockerExternalRewardsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 4 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public Builder setLockerExternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards value) {
+        if (lockerExternalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLockerExternalRewardsIsMutable();
+          lockerExternalRewards_.set(index, value);
+          onChanged();
+        } else {
+          lockerExternalRewardsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 4 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public Builder setLockerExternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards.Builder builderForValue) {
+        if (lockerExternalRewardsBuilder_ == null) {
+          ensureLockerExternalRewardsIsMutable();
+          lockerExternalRewards_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          lockerExternalRewardsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 4 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public Builder addLockerExternalRewards(com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards value) {
+        if (lockerExternalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLockerExternalRewardsIsMutable();
+          lockerExternalRewards_.add(value);
+          onChanged();
+        } else {
+          lockerExternalRewardsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 4 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public Builder addLockerExternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards value) {
+        if (lockerExternalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLockerExternalRewardsIsMutable();
+          lockerExternalRewards_.add(index, value);
+          onChanged();
+        } else {
+          lockerExternalRewardsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 4 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public Builder addLockerExternalRewards(
+          com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards.Builder builderForValue) {
+        if (lockerExternalRewardsBuilder_ == null) {
+          ensureLockerExternalRewardsIsMutable();
+          lockerExternalRewards_.add(builderForValue.build());
+          onChanged();
+        } else {
+          lockerExternalRewardsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 4 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public Builder addLockerExternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards.Builder builderForValue) {
+        if (lockerExternalRewardsBuilder_ == null) {
+          ensureLockerExternalRewardsIsMutable();
+          lockerExternalRewards_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          lockerExternalRewardsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 4 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public Builder addAllLockerExternalRewards(
+          java.lang.Iterable<? extends com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards> values) {
+        if (lockerExternalRewardsBuilder_ == null) {
+          ensureLockerExternalRewardsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, lockerExternalRewards_);
+          onChanged();
+        } else {
+          lockerExternalRewardsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 4 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public Builder clearLockerExternalRewards() {
+        if (lockerExternalRewardsBuilder_ == null) {
+          lockerExternalRewards_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          lockerExternalRewardsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 4 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public Builder removeLockerExternalRewards(int index) {
+        if (lockerExternalRewardsBuilder_ == null) {
+          ensureLockerExternalRewardsIsMutable();
+          lockerExternalRewards_.remove(index);
+          onChanged();
+        } else {
+          lockerExternalRewardsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 4 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards.Builder getLockerExternalRewardsBuilder(
+          int index) {
+        return getLockerExternalRewardsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 4 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewardsOrBuilder getLockerExternalRewardsOrBuilder(
+          int index) {
+        if (lockerExternalRewardsBuilder_ == null) {
+          return lockerExternalRewards_.get(index);  } else {
+          return lockerExternalRewardsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 4 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewardsOrBuilder> 
+           getLockerExternalRewardsOrBuilderList() {
+        if (lockerExternalRewardsBuilder_ != null) {
+          return lockerExternalRewardsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(lockerExternalRewards_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 4 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards.Builder addLockerExternalRewardsBuilder() {
+        return getLockerExternalRewardsFieldBuilder().addBuilder(
+            com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 4 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards.Builder addLockerExternalRewardsBuilder(
+          int index) {
+        return getLockerExternalRewardsFieldBuilder().addBuilder(
+            index, com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LockerExternalRewards locker_external_rewards = 4 [json_name = "lockerExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"locker_external_rewards&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards.Builder> 
+           getLockerExternalRewardsBuilderList() {
+        return getLockerExternalRewardsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards, com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards.Builder, com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewardsOrBuilder> 
+          getLockerExternalRewardsFieldBuilder() {
+        if (lockerExternalRewardsBuilder_ == null) {
+          lockerExternalRewardsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards, com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewards.Builder, com.comdex.rewards.v1beta1.RewardsProto.LockerExternalRewardsOrBuilder>(
+                  lockerExternalRewards_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          lockerExternalRewards_ = null;
+        }
+        return lockerExternalRewardsBuilder_;
+      }
+
+      private java.util.List<com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards> vaultExternalRewards_ =
+        java.util.Collections.emptyList();
+      private void ensureVaultExternalRewardsIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          vaultExternalRewards_ = new java.util.ArrayList<com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards>(vaultExternalRewards_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards, com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards.Builder, com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewardsOrBuilder> vaultExternalRewardsBuilder_;
+
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 5 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards> getVaultExternalRewardsList() {
+        if (vaultExternalRewardsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(vaultExternalRewards_);
+        } else {
+          return vaultExternalRewardsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 5 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public int getVaultExternalRewardsCount() {
+        if (vaultExternalRewardsBuilder_ == null) {
+          return vaultExternalRewards_.size();
+        } else {
+          return vaultExternalRewardsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 5 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards getVaultExternalRewards(int index) {
+        if (vaultExternalRewardsBuilder_ == null) {
+          return vaultExternalRewards_.get(index);
+        } else {
+          return vaultExternalRewardsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 5 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public Builder setVaultExternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards value) {
+        if (vaultExternalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVaultExternalRewardsIsMutable();
+          vaultExternalRewards_.set(index, value);
+          onChanged();
+        } else {
+          vaultExternalRewardsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 5 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public Builder setVaultExternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards.Builder builderForValue) {
+        if (vaultExternalRewardsBuilder_ == null) {
+          ensureVaultExternalRewardsIsMutable();
+          vaultExternalRewards_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          vaultExternalRewardsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 5 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public Builder addVaultExternalRewards(com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards value) {
+        if (vaultExternalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVaultExternalRewardsIsMutable();
+          vaultExternalRewards_.add(value);
+          onChanged();
+        } else {
+          vaultExternalRewardsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 5 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public Builder addVaultExternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards value) {
+        if (vaultExternalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVaultExternalRewardsIsMutable();
+          vaultExternalRewards_.add(index, value);
+          onChanged();
+        } else {
+          vaultExternalRewardsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 5 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public Builder addVaultExternalRewards(
+          com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards.Builder builderForValue) {
+        if (vaultExternalRewardsBuilder_ == null) {
+          ensureVaultExternalRewardsIsMutable();
+          vaultExternalRewards_.add(builderForValue.build());
+          onChanged();
+        } else {
+          vaultExternalRewardsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 5 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public Builder addVaultExternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards.Builder builderForValue) {
+        if (vaultExternalRewardsBuilder_ == null) {
+          ensureVaultExternalRewardsIsMutable();
+          vaultExternalRewards_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          vaultExternalRewardsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 5 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public Builder addAllVaultExternalRewards(
+          java.lang.Iterable<? extends com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards> values) {
+        if (vaultExternalRewardsBuilder_ == null) {
+          ensureVaultExternalRewardsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, vaultExternalRewards_);
+          onChanged();
+        } else {
+          vaultExternalRewardsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 5 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public Builder clearVaultExternalRewards() {
+        if (vaultExternalRewardsBuilder_ == null) {
+          vaultExternalRewards_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          vaultExternalRewardsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 5 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public Builder removeVaultExternalRewards(int index) {
+        if (vaultExternalRewardsBuilder_ == null) {
+          ensureVaultExternalRewardsIsMutable();
+          vaultExternalRewards_.remove(index);
+          onChanged();
+        } else {
+          vaultExternalRewardsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 5 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards.Builder getVaultExternalRewardsBuilder(
+          int index) {
+        return getVaultExternalRewardsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 5 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewardsOrBuilder getVaultExternalRewardsOrBuilder(
+          int index) {
+        if (vaultExternalRewardsBuilder_ == null) {
+          return vaultExternalRewards_.get(index);  } else {
+          return vaultExternalRewardsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 5 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewardsOrBuilder> 
+           getVaultExternalRewardsOrBuilderList() {
+        if (vaultExternalRewardsBuilder_ != null) {
+          return vaultExternalRewardsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(vaultExternalRewards_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 5 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards.Builder addVaultExternalRewardsBuilder() {
+        return getVaultExternalRewardsFieldBuilder().addBuilder(
+            com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 5 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards.Builder addVaultExternalRewardsBuilder(
+          int index) {
+        return getVaultExternalRewardsFieldBuilder().addBuilder(
+            index, com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.VaultExternalRewards vault_external_rewards = 5 [json_name = "vaultExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards.Builder> 
+           getVaultExternalRewardsBuilderList() {
+        return getVaultExternalRewardsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards, com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards.Builder, com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewardsOrBuilder> 
+          getVaultExternalRewardsFieldBuilder() {
+        if (vaultExternalRewardsBuilder_ == null) {
+          vaultExternalRewardsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards, com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewards.Builder, com.comdex.rewards.v1beta1.RewardsProto.VaultExternalRewardsOrBuilder>(
+                  vaultExternalRewards_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          vaultExternalRewards_ = null;
+        }
+        return vaultExternalRewardsBuilder_;
+      }
+
+      private com.google.protobuf.Internal.LongList appIDs_ = emptyLongList();
+      private void ensureAppIDsIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          appIDs_ = mutableCopy(appIDs_);
+          bitField0_ |= 0x00000020;
+        }
+      }
+      /**
+       * <code>repeated uint64 appIDs = 6 [json_name = "appIDs", (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       * @return A list containing the appIDs.
+       */
+      public java.util.List<java.lang.Long>
+          getAppIDsList() {
+        return ((bitField0_ & 0x00000020) != 0) ?
+                 java.util.Collections.unmodifiableList(appIDs_) : appIDs_;
+      }
+      /**
+       * <code>repeated uint64 appIDs = 6 [json_name = "appIDs", (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       * @return The count of appIDs.
+       */
+      public int getAppIDsCount() {
+        return appIDs_.size();
+      }
+      /**
+       * <code>repeated uint64 appIDs = 6 [json_name = "appIDs", (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The appIDs at the given index.
+       */
+      public long getAppIDs(int index) {
+        return appIDs_.getLong(index);
+      }
+      /**
+       * <code>repeated uint64 appIDs = 6 [json_name = "appIDs", (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The appIDs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppIDs(
+          int index, long value) {
+
+        ensureAppIDsIsMutable();
+        appIDs_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 appIDs = 6 [json_name = "appIDs", (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       * @param value The appIDs to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAppIDs(long value) {
+
+        ensureAppIDsIsMutable();
+        appIDs_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 appIDs = 6 [json_name = "appIDs", (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       * @param values The appIDs to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAppIDs(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureAppIDsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, appIDs_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 appIDs = 6 [json_name = "appIDs", (.gogoproto.moretags) = "yaml:&#92;"vault_external_rewards&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppIDs() {
+        appIDs_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.comdex.rewards.v1beta1.EpochsProto.EpochInfo> epochInfo_ =
+        java.util.Collections.emptyList();
+      private void ensureEpochInfoIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          epochInfo_ = new java.util.ArrayList<com.comdex.rewards.v1beta1.EpochsProto.EpochInfo>(epochInfo_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.EpochsProto.EpochInfo, com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.Builder, com.comdex.rewards.v1beta1.EpochsProto.EpochInfoOrBuilder> epochInfoBuilder_;
+
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochInfo = 7 [json_name = "epochInfo", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochInfo&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.EpochsProto.EpochInfo> getEpochInfoList() {
+        if (epochInfoBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(epochInfo_);
+        } else {
+          return epochInfoBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochInfo = 7 [json_name = "epochInfo", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochInfo&#92;""];</code>
+       */
+      public int getEpochInfoCount() {
+        if (epochInfoBuilder_ == null) {
+          return epochInfo_.size();
+        } else {
+          return epochInfoBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochInfo = 7 [json_name = "epochInfo", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochInfo&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.EpochsProto.EpochInfo getEpochInfo(int index) {
+        if (epochInfoBuilder_ == null) {
+          return epochInfo_.get(index);
+        } else {
+          return epochInfoBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochInfo = 7 [json_name = "epochInfo", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochInfo&#92;""];</code>
+       */
+      public Builder setEpochInfo(
+          int index, com.comdex.rewards.v1beta1.EpochsProto.EpochInfo value) {
+        if (epochInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEpochInfoIsMutable();
+          epochInfo_.set(index, value);
+          onChanged();
+        } else {
+          epochInfoBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochInfo = 7 [json_name = "epochInfo", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochInfo&#92;""];</code>
+       */
+      public Builder setEpochInfo(
+          int index, com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.Builder builderForValue) {
+        if (epochInfoBuilder_ == null) {
+          ensureEpochInfoIsMutable();
+          epochInfo_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          epochInfoBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochInfo = 7 [json_name = "epochInfo", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochInfo&#92;""];</code>
+       */
+      public Builder addEpochInfo(com.comdex.rewards.v1beta1.EpochsProto.EpochInfo value) {
+        if (epochInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEpochInfoIsMutable();
+          epochInfo_.add(value);
+          onChanged();
+        } else {
+          epochInfoBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochInfo = 7 [json_name = "epochInfo", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochInfo&#92;""];</code>
+       */
+      public Builder addEpochInfo(
+          int index, com.comdex.rewards.v1beta1.EpochsProto.EpochInfo value) {
+        if (epochInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEpochInfoIsMutable();
+          epochInfo_.add(index, value);
+          onChanged();
+        } else {
+          epochInfoBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochInfo = 7 [json_name = "epochInfo", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochInfo&#92;""];</code>
+       */
+      public Builder addEpochInfo(
+          com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.Builder builderForValue) {
+        if (epochInfoBuilder_ == null) {
+          ensureEpochInfoIsMutable();
+          epochInfo_.add(builderForValue.build());
+          onChanged();
+        } else {
+          epochInfoBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochInfo = 7 [json_name = "epochInfo", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochInfo&#92;""];</code>
+       */
+      public Builder addEpochInfo(
+          int index, com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.Builder builderForValue) {
+        if (epochInfoBuilder_ == null) {
+          ensureEpochInfoIsMutable();
+          epochInfo_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          epochInfoBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochInfo = 7 [json_name = "epochInfo", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochInfo&#92;""];</code>
+       */
+      public Builder addAllEpochInfo(
+          java.lang.Iterable<? extends com.comdex.rewards.v1beta1.EpochsProto.EpochInfo> values) {
+        if (epochInfoBuilder_ == null) {
+          ensureEpochInfoIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, epochInfo_);
+          onChanged();
+        } else {
+          epochInfoBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochInfo = 7 [json_name = "epochInfo", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochInfo&#92;""];</code>
+       */
+      public Builder clearEpochInfo() {
+        if (epochInfoBuilder_ == null) {
+          epochInfo_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          epochInfoBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochInfo = 7 [json_name = "epochInfo", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochInfo&#92;""];</code>
+       */
+      public Builder removeEpochInfo(int index) {
+        if (epochInfoBuilder_ == null) {
+          ensureEpochInfoIsMutable();
+          epochInfo_.remove(index);
+          onChanged();
+        } else {
+          epochInfoBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochInfo = 7 [json_name = "epochInfo", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochInfo&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.Builder getEpochInfoBuilder(
+          int index) {
+        return getEpochInfoFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochInfo = 7 [json_name = "epochInfo", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochInfo&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.EpochsProto.EpochInfoOrBuilder getEpochInfoOrBuilder(
+          int index) {
+        if (epochInfoBuilder_ == null) {
+          return epochInfo_.get(index);  } else {
+          return epochInfoBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochInfo = 7 [json_name = "epochInfo", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochInfo&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.rewards.v1beta1.EpochsProto.EpochInfoOrBuilder> 
+           getEpochInfoOrBuilderList() {
+        if (epochInfoBuilder_ != null) {
+          return epochInfoBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(epochInfo_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochInfo = 7 [json_name = "epochInfo", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochInfo&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.Builder addEpochInfoBuilder() {
+        return getEpochInfoFieldBuilder().addBuilder(
+            com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochInfo = 7 [json_name = "epochInfo", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochInfo&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.Builder addEpochInfoBuilder(
+          int index) {
+        return getEpochInfoFieldBuilder().addBuilder(
+            index, com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.EpochInfo epochInfo = 7 [json_name = "epochInfo", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epochInfo&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.Builder> 
+           getEpochInfoBuilderList() {
+        return getEpochInfoFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.EpochsProto.EpochInfo, com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.Builder, com.comdex.rewards.v1beta1.EpochsProto.EpochInfoOrBuilder> 
+          getEpochInfoFieldBuilder() {
+        if (epochInfoBuilder_ == null) {
+          epochInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.rewards.v1beta1.EpochsProto.EpochInfo, com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.Builder, com.comdex.rewards.v1beta1.EpochsProto.EpochInfoOrBuilder>(
+                  epochInfo_,
+                  ((bitField0_ & 0x00000040) != 0),
+                  getParentForChildren(),
+                  isClean());
+          epochInfo_ = null;
+        }
+        return epochInfoBuilder_;
+      }
+
+      private java.util.List<com.comdex.rewards.v1beta1.GaugeProto.Gauge> gauge_ =
+        java.util.Collections.emptyList();
+      private void ensureGaugeIsMutable() {
+        if (!((bitField0_ & 0x00000080) != 0)) {
+          gauge_ = new java.util.ArrayList<com.comdex.rewards.v1beta1.GaugeProto.Gauge>(gauge_);
+          bitField0_ |= 0x00000080;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.GaugeProto.Gauge, com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder, com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder> gaugeBuilder_;
+
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauge = 8 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.GaugeProto.Gauge> getGaugeList() {
+        if (gaugeBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(gauge_);
+        } else {
+          return gaugeBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauge = 8 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+       */
+      public int getGaugeCount() {
+        if (gaugeBuilder_ == null) {
+          return gauge_.size();
+        } else {
+          return gaugeBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauge = 8 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.GaugeProto.Gauge getGauge(int index) {
+        if (gaugeBuilder_ == null) {
+          return gauge_.get(index);
+        } else {
+          return gaugeBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauge = 8 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+       */
+      public Builder setGauge(
+          int index, com.comdex.rewards.v1beta1.GaugeProto.Gauge value) {
+        if (gaugeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGaugeIsMutable();
+          gauge_.set(index, value);
+          onChanged();
+        } else {
+          gaugeBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauge = 8 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+       */
+      public Builder setGauge(
+          int index, com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder builderForValue) {
+        if (gaugeBuilder_ == null) {
+          ensureGaugeIsMutable();
+          gauge_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          gaugeBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauge = 8 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+       */
+      public Builder addGauge(com.comdex.rewards.v1beta1.GaugeProto.Gauge value) {
+        if (gaugeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGaugeIsMutable();
+          gauge_.add(value);
+          onChanged();
+        } else {
+          gaugeBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauge = 8 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+       */
+      public Builder addGauge(
+          int index, com.comdex.rewards.v1beta1.GaugeProto.Gauge value) {
+        if (gaugeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGaugeIsMutable();
+          gauge_.add(index, value);
+          onChanged();
+        } else {
+          gaugeBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauge = 8 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+       */
+      public Builder addGauge(
+          com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder builderForValue) {
+        if (gaugeBuilder_ == null) {
+          ensureGaugeIsMutable();
+          gauge_.add(builderForValue.build());
+          onChanged();
+        } else {
+          gaugeBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauge = 8 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+       */
+      public Builder addGauge(
+          int index, com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder builderForValue) {
+        if (gaugeBuilder_ == null) {
+          ensureGaugeIsMutable();
+          gauge_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          gaugeBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauge = 8 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+       */
+      public Builder addAllGauge(
+          java.lang.Iterable<? extends com.comdex.rewards.v1beta1.GaugeProto.Gauge> values) {
+        if (gaugeBuilder_ == null) {
+          ensureGaugeIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, gauge_);
+          onChanged();
+        } else {
+          gaugeBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauge = 8 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+       */
+      public Builder clearGauge() {
+        if (gaugeBuilder_ == null) {
+          gauge_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
+          onChanged();
+        } else {
+          gaugeBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauge = 8 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+       */
+      public Builder removeGauge(int index) {
+        if (gaugeBuilder_ == null) {
+          ensureGaugeIsMutable();
+          gauge_.remove(index);
+          onChanged();
+        } else {
+          gaugeBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauge = 8 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder getGaugeBuilder(
+          int index) {
+        return getGaugeFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauge = 8 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder getGaugeOrBuilder(
+          int index) {
+        if (gaugeBuilder_ == null) {
+          return gauge_.get(index);  } else {
+          return gaugeBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauge = 8 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder> 
+           getGaugeOrBuilderList() {
+        if (gaugeBuilder_ != null) {
+          return gaugeBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(gauge_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauge = 8 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder addGaugeBuilder() {
+        return getGaugeFieldBuilder().addBuilder(
+            com.comdex.rewards.v1beta1.GaugeProto.Gauge.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauge = 8 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder addGaugeBuilder(
+          int index) {
+        return getGaugeFieldBuilder().addBuilder(
+            index, com.comdex.rewards.v1beta1.GaugeProto.Gauge.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.Gauge gauge = 8 [json_name = "gauge", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gauge&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder> 
+           getGaugeBuilderList() {
+        return getGaugeFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.GaugeProto.Gauge, com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder, com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder> 
+          getGaugeFieldBuilder() {
+        if (gaugeBuilder_ == null) {
+          gaugeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.rewards.v1beta1.GaugeProto.Gauge, com.comdex.rewards.v1beta1.GaugeProto.Gauge.Builder, com.comdex.rewards.v1beta1.GaugeProto.GaugeOrBuilder>(
+                  gauge_,
+                  ((bitField0_ & 0x00000080) != 0),
+                  getParentForChildren(),
+                  isClean());
+          gauge_ = null;
+        }
+        return gaugeBuilder_;
+      }
+
+      private java.util.List<com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration> gaugeByTriggerDuration_ =
+        java.util.Collections.emptyList();
+      private void ensureGaugeByTriggerDurationIsMutable() {
+        if (!((bitField0_ & 0x00000100) != 0)) {
+          gaugeByTriggerDuration_ = new java.util.ArrayList<com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration>(gaugeByTriggerDuration_);
+          bitField0_ |= 0x00000100;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration, com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration.Builder, com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDurationOrBuilder> gaugeByTriggerDurationBuilder_;
+
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.GaugeByTriggerDuration gaugeByTriggerDuration = 9 [json_name = "gaugeByTriggerDuration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gaugeByTriggerDuration&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration> getGaugeByTriggerDurationList() {
+        if (gaugeByTriggerDurationBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(gaugeByTriggerDuration_);
+        } else {
+          return gaugeByTriggerDurationBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.GaugeByTriggerDuration gaugeByTriggerDuration = 9 [json_name = "gaugeByTriggerDuration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gaugeByTriggerDuration&#92;""];</code>
+       */
+      public int getGaugeByTriggerDurationCount() {
+        if (gaugeByTriggerDurationBuilder_ == null) {
+          return gaugeByTriggerDuration_.size();
+        } else {
+          return gaugeByTriggerDurationBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.GaugeByTriggerDuration gaugeByTriggerDuration = 9 [json_name = "gaugeByTriggerDuration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gaugeByTriggerDuration&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration getGaugeByTriggerDuration(int index) {
+        if (gaugeByTriggerDurationBuilder_ == null) {
+          return gaugeByTriggerDuration_.get(index);
+        } else {
+          return gaugeByTriggerDurationBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.GaugeByTriggerDuration gaugeByTriggerDuration = 9 [json_name = "gaugeByTriggerDuration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gaugeByTriggerDuration&#92;""];</code>
+       */
+      public Builder setGaugeByTriggerDuration(
+          int index, com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration value) {
+        if (gaugeByTriggerDurationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGaugeByTriggerDurationIsMutable();
+          gaugeByTriggerDuration_.set(index, value);
+          onChanged();
+        } else {
+          gaugeByTriggerDurationBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.GaugeByTriggerDuration gaugeByTriggerDuration = 9 [json_name = "gaugeByTriggerDuration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gaugeByTriggerDuration&#92;""];</code>
+       */
+      public Builder setGaugeByTriggerDuration(
+          int index, com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration.Builder builderForValue) {
+        if (gaugeByTriggerDurationBuilder_ == null) {
+          ensureGaugeByTriggerDurationIsMutable();
+          gaugeByTriggerDuration_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          gaugeByTriggerDurationBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.GaugeByTriggerDuration gaugeByTriggerDuration = 9 [json_name = "gaugeByTriggerDuration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gaugeByTriggerDuration&#92;""];</code>
+       */
+      public Builder addGaugeByTriggerDuration(com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration value) {
+        if (gaugeByTriggerDurationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGaugeByTriggerDurationIsMutable();
+          gaugeByTriggerDuration_.add(value);
+          onChanged();
+        } else {
+          gaugeByTriggerDurationBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.GaugeByTriggerDuration gaugeByTriggerDuration = 9 [json_name = "gaugeByTriggerDuration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gaugeByTriggerDuration&#92;""];</code>
+       */
+      public Builder addGaugeByTriggerDuration(
+          int index, com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration value) {
+        if (gaugeByTriggerDurationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGaugeByTriggerDurationIsMutable();
+          gaugeByTriggerDuration_.add(index, value);
+          onChanged();
+        } else {
+          gaugeByTriggerDurationBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.GaugeByTriggerDuration gaugeByTriggerDuration = 9 [json_name = "gaugeByTriggerDuration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gaugeByTriggerDuration&#92;""];</code>
+       */
+      public Builder addGaugeByTriggerDuration(
+          com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration.Builder builderForValue) {
+        if (gaugeByTriggerDurationBuilder_ == null) {
+          ensureGaugeByTriggerDurationIsMutable();
+          gaugeByTriggerDuration_.add(builderForValue.build());
+          onChanged();
+        } else {
+          gaugeByTriggerDurationBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.GaugeByTriggerDuration gaugeByTriggerDuration = 9 [json_name = "gaugeByTriggerDuration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gaugeByTriggerDuration&#92;""];</code>
+       */
+      public Builder addGaugeByTriggerDuration(
+          int index, com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration.Builder builderForValue) {
+        if (gaugeByTriggerDurationBuilder_ == null) {
+          ensureGaugeByTriggerDurationIsMutable();
+          gaugeByTriggerDuration_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          gaugeByTriggerDurationBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.GaugeByTriggerDuration gaugeByTriggerDuration = 9 [json_name = "gaugeByTriggerDuration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gaugeByTriggerDuration&#92;""];</code>
+       */
+      public Builder addAllGaugeByTriggerDuration(
+          java.lang.Iterable<? extends com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration> values) {
+        if (gaugeByTriggerDurationBuilder_ == null) {
+          ensureGaugeByTriggerDurationIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, gaugeByTriggerDuration_);
+          onChanged();
+        } else {
+          gaugeByTriggerDurationBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.GaugeByTriggerDuration gaugeByTriggerDuration = 9 [json_name = "gaugeByTriggerDuration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gaugeByTriggerDuration&#92;""];</code>
+       */
+      public Builder clearGaugeByTriggerDuration() {
+        if (gaugeByTriggerDurationBuilder_ == null) {
+          gaugeByTriggerDuration_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000100);
+          onChanged();
+        } else {
+          gaugeByTriggerDurationBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.GaugeByTriggerDuration gaugeByTriggerDuration = 9 [json_name = "gaugeByTriggerDuration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gaugeByTriggerDuration&#92;""];</code>
+       */
+      public Builder removeGaugeByTriggerDuration(int index) {
+        if (gaugeByTriggerDurationBuilder_ == null) {
+          ensureGaugeByTriggerDurationIsMutable();
+          gaugeByTriggerDuration_.remove(index);
+          onChanged();
+        } else {
+          gaugeByTriggerDurationBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.GaugeByTriggerDuration gaugeByTriggerDuration = 9 [json_name = "gaugeByTriggerDuration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gaugeByTriggerDuration&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration.Builder getGaugeByTriggerDurationBuilder(
+          int index) {
+        return getGaugeByTriggerDurationFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.GaugeByTriggerDuration gaugeByTriggerDuration = 9 [json_name = "gaugeByTriggerDuration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gaugeByTriggerDuration&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDurationOrBuilder getGaugeByTriggerDurationOrBuilder(
+          int index) {
+        if (gaugeByTriggerDurationBuilder_ == null) {
+          return gaugeByTriggerDuration_.get(index);  } else {
+          return gaugeByTriggerDurationBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.GaugeByTriggerDuration gaugeByTriggerDuration = 9 [json_name = "gaugeByTriggerDuration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gaugeByTriggerDuration&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDurationOrBuilder> 
+           getGaugeByTriggerDurationOrBuilderList() {
+        if (gaugeByTriggerDurationBuilder_ != null) {
+          return gaugeByTriggerDurationBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(gaugeByTriggerDuration_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.GaugeByTriggerDuration gaugeByTriggerDuration = 9 [json_name = "gaugeByTriggerDuration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gaugeByTriggerDuration&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration.Builder addGaugeByTriggerDurationBuilder() {
+        return getGaugeByTriggerDurationFieldBuilder().addBuilder(
+            com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.GaugeByTriggerDuration gaugeByTriggerDuration = 9 [json_name = "gaugeByTriggerDuration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gaugeByTriggerDuration&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration.Builder addGaugeByTriggerDurationBuilder(
+          int index) {
+        return getGaugeByTriggerDurationFieldBuilder().addBuilder(
+            index, com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.GaugeByTriggerDuration gaugeByTriggerDuration = 9 [json_name = "gaugeByTriggerDuration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gaugeByTriggerDuration&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration.Builder> 
+           getGaugeByTriggerDurationBuilderList() {
+        return getGaugeByTriggerDurationFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration, com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration.Builder, com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDurationOrBuilder> 
+          getGaugeByTriggerDurationFieldBuilder() {
+        if (gaugeByTriggerDurationBuilder_ == null) {
+          gaugeByTriggerDurationBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration, com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDuration.Builder, com.comdex.rewards.v1beta1.GaugeProto.GaugeByTriggerDurationOrBuilder>(
+                  gaugeByTriggerDuration_,
+                  ((bitField0_ & 0x00000100) != 0),
+                  getParentForChildren(),
+                  isClean());
+          gaugeByTriggerDuration_ = null;
+        }
+        return gaugeByTriggerDurationBuilder_;
+      }
+
+      private com.comdex.rewards.v1beta1.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.rewards.v1beta1.ParamsProto.Params, com.comdex.rewards.v1beta1.ParamsProto.Params.Builder, com.comdex.rewards.v1beta1.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.comdex.rewards.v1beta1.Params params = 10 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.Params params = 10 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       * @return The params.
+       */
+      public com.comdex.rewards.v1beta1.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.comdex.rewards.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.Params params = 10 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       */
+      public Builder setParams(com.comdex.rewards.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.Params params = 10 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       */
+      public Builder setParams(
+          com.comdex.rewards.v1beta1.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.Params params = 10 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       */
+      public Builder mergeParams(com.comdex.rewards.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) != 0) &&
+            params_ != null &&
+            params_ != com.comdex.rewards.v1beta1.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.Params params = 10 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.Params params = 10 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.Params params = 10 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.comdex.rewards.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.comdex.rewards.v1beta1.Params params = 10 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.rewards.v1beta1.ParamsProto.Params, com.comdex.rewards.v1beta1.ParamsProto.Params.Builder, com.comdex.rewards.v1beta1.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.comdex.rewards.v1beta1.ParamsProto.Params, com.comdex.rewards.v1beta1.ParamsProto.Params.Builder, com.comdex.rewards.v1beta1.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private java.util.List<com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards> lendExternalRewards_ =
+        java.util.Collections.emptyList();
+      private void ensureLendExternalRewardsIsMutable() {
+        if (!((bitField0_ & 0x00000400) != 0)) {
+          lendExternalRewards_ = new java.util.ArrayList<com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards>(lendExternalRewards_);
+          bitField0_ |= 0x00000400;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards, com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards.Builder, com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewardsOrBuilder> lendExternalRewardsBuilder_;
+
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lendExternalRewards = 11 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lendExternalRewards&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards> getLendExternalRewardsList() {
+        if (lendExternalRewardsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(lendExternalRewards_);
+        } else {
+          return lendExternalRewardsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lendExternalRewards = 11 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lendExternalRewards&#92;""];</code>
+       */
+      public int getLendExternalRewardsCount() {
+        if (lendExternalRewardsBuilder_ == null) {
+          return lendExternalRewards_.size();
+        } else {
+          return lendExternalRewardsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lendExternalRewards = 11 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lendExternalRewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards getLendExternalRewards(int index) {
+        if (lendExternalRewardsBuilder_ == null) {
+          return lendExternalRewards_.get(index);
+        } else {
+          return lendExternalRewardsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lendExternalRewards = 11 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lendExternalRewards&#92;""];</code>
+       */
+      public Builder setLendExternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards value) {
+        if (lendExternalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLendExternalRewardsIsMutable();
+          lendExternalRewards_.set(index, value);
+          onChanged();
+        } else {
+          lendExternalRewardsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lendExternalRewards = 11 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lendExternalRewards&#92;""];</code>
+       */
+      public Builder setLendExternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards.Builder builderForValue) {
+        if (lendExternalRewardsBuilder_ == null) {
+          ensureLendExternalRewardsIsMutable();
+          lendExternalRewards_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          lendExternalRewardsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lendExternalRewards = 11 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lendExternalRewards&#92;""];</code>
+       */
+      public Builder addLendExternalRewards(com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards value) {
+        if (lendExternalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLendExternalRewardsIsMutable();
+          lendExternalRewards_.add(value);
+          onChanged();
+        } else {
+          lendExternalRewardsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lendExternalRewards = 11 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lendExternalRewards&#92;""];</code>
+       */
+      public Builder addLendExternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards value) {
+        if (lendExternalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLendExternalRewardsIsMutable();
+          lendExternalRewards_.add(index, value);
+          onChanged();
+        } else {
+          lendExternalRewardsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lendExternalRewards = 11 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lendExternalRewards&#92;""];</code>
+       */
+      public Builder addLendExternalRewards(
+          com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards.Builder builderForValue) {
+        if (lendExternalRewardsBuilder_ == null) {
+          ensureLendExternalRewardsIsMutable();
+          lendExternalRewards_.add(builderForValue.build());
+          onChanged();
+        } else {
+          lendExternalRewardsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lendExternalRewards = 11 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lendExternalRewards&#92;""];</code>
+       */
+      public Builder addLendExternalRewards(
+          int index, com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards.Builder builderForValue) {
+        if (lendExternalRewardsBuilder_ == null) {
+          ensureLendExternalRewardsIsMutable();
+          lendExternalRewards_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          lendExternalRewardsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lendExternalRewards = 11 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lendExternalRewards&#92;""];</code>
+       */
+      public Builder addAllLendExternalRewards(
+          java.lang.Iterable<? extends com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards> values) {
+        if (lendExternalRewardsBuilder_ == null) {
+          ensureLendExternalRewardsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, lendExternalRewards_);
+          onChanged();
+        } else {
+          lendExternalRewardsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lendExternalRewards = 11 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lendExternalRewards&#92;""];</code>
+       */
+      public Builder clearLendExternalRewards() {
+        if (lendExternalRewardsBuilder_ == null) {
+          lendExternalRewards_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000400);
+          onChanged();
+        } else {
+          lendExternalRewardsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lendExternalRewards = 11 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lendExternalRewards&#92;""];</code>
+       */
+      public Builder removeLendExternalRewards(int index) {
+        if (lendExternalRewardsBuilder_ == null) {
+          ensureLendExternalRewardsIsMutable();
+          lendExternalRewards_.remove(index);
+          onChanged();
+        } else {
+          lendExternalRewardsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lendExternalRewards = 11 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lendExternalRewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards.Builder getLendExternalRewardsBuilder(
+          int index) {
+        return getLendExternalRewardsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lendExternalRewards = 11 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lendExternalRewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewardsOrBuilder getLendExternalRewardsOrBuilder(
+          int index) {
+        if (lendExternalRewardsBuilder_ == null) {
+          return lendExternalRewards_.get(index);  } else {
+          return lendExternalRewardsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lendExternalRewards = 11 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lendExternalRewards&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewardsOrBuilder> 
+           getLendExternalRewardsOrBuilderList() {
+        if (lendExternalRewardsBuilder_ != null) {
+          return lendExternalRewardsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(lendExternalRewards_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lendExternalRewards = 11 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lendExternalRewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards.Builder addLendExternalRewardsBuilder() {
+        return getLendExternalRewardsFieldBuilder().addBuilder(
+            com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lendExternalRewards = 11 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lendExternalRewards&#92;""];</code>
+       */
+      public com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards.Builder addLendExternalRewardsBuilder(
+          int index) {
+        return getLendExternalRewardsFieldBuilder().addBuilder(
+            index, com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.rewards.v1beta1.LendExternalRewards lendExternalRewards = 11 [json_name = "lendExternalRewards", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"lendExternalRewards&#92;""];</code>
+       */
+      public java.util.List<com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards.Builder> 
+           getLendExternalRewardsBuilderList() {
+        return getLendExternalRewardsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards, com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards.Builder, com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewardsOrBuilder> 
+          getLendExternalRewardsFieldBuilder() {
+        if (lendExternalRewardsBuilder_ == null) {
+          lendExternalRewardsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards, com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewards.Builder, com.comdex.rewards.v1beta1.RewardsProto.LendExternalRewardsOrBuilder>(
+                  lendExternalRewards_,
+                  ((bitField0_ & 0x00000400) != 0),
+                  getParentForChildren(),
+                  isClean());
+          lendExternalRewards_ = null;
+        }
+        return lendExternalRewardsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.GenesisState)
+    private static final com.comdex.rewards.v1beta1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.GenesisProto.GenesisState();
+    }
+
+    public static com.comdex.rewards.v1beta1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_GenesisState_fieldAccessorTable;
 
@@ -65,13 +4231,13 @@ public final class GenesisProto {
       "l:\"params\"R\006params\022\201\001\n\023lendExternalRewar" +
       "ds\030\013 \003(\0132+.comdex.rewards.v1beta1.LendEx" +
       "ternalRewardsB\"\310\336\037\000\362\336\037\032yaml:\"lendExterna" +
-      "lRewards\"R\023lendExternalRewardsB\327\001\n\032com.c" +
-      "omdex.rewards.v1beta1B\014GenesisProtoP\001Z1g" +
-      "ithub.com/comdex-official/comdex/x/rewar" +
-      "ds/types\242\002\003CRX\252\002\026Comdex.Rewards.V1beta1\312" +
-      "\002\026Comdex\\Rewards\\V1beta1\342\002\"Comdex\\Reward" +
-      "s\\V1beta1\\GPBMetadata\352\002\030Comdex::Rewards:" +
-      ":V1beta1b\006proto3"
+      "lRewards\"R\023lendExternalRewardsB\325\001\n\032com.c" +
+      "omdex.rewards.v1beta1B\014GenesisProtoZ1git" +
+      "hub.com/comdex-official/comdex/x/rewards" +
+      "/types\242\002\003CRX\252\002\026Comdex.Rewards.V1beta1\312\002\026" +
+      "Comdex\\Rewards\\V1beta1\342\002\"Comdex\\Rewards\\" +
+      "V1beta1\\GPBMetadata\352\002\030Comdex::Rewards::V" +
+      "1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

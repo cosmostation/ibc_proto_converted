@@ -14,9 +14,3607 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.provenance.metadata.v1.MetadataProto.Params getParams();
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.metadata.v1.MetadataProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <pre>
+     * A collection of metadata scopes and specs to create on start
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.Scope scopes = 2 [json_name = "scopes", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.provenance.metadata.v1.ScopeProto.Scope> 
+        getScopesList();
+    /**
+     * <pre>
+     * A collection of metadata scopes and specs to create on start
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.Scope scopes = 2 [json_name = "scopes", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.metadata.v1.ScopeProto.Scope getScopes(int index);
+    /**
+     * <pre>
+     * A collection of metadata scopes and specs to create on start
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.Scope scopes = 2 [json_name = "scopes", (.gogoproto.nullable) = false];</code>
+     */
+    int getScopesCount();
+    /**
+     * <pre>
+     * A collection of metadata scopes and specs to create on start
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.Scope scopes = 2 [json_name = "scopes", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.provenance.metadata.v1.ScopeProto.ScopeOrBuilder> 
+        getScopesOrBuilderList();
+    /**
+     * <pre>
+     * A collection of metadata scopes and specs to create on start
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.Scope scopes = 2 [json_name = "scopes", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.metadata.v1.ScopeProto.ScopeOrBuilder getScopesOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .provenance.metadata.v1.Session sessions = 3 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.provenance.metadata.v1.ScopeProto.Session> 
+        getSessionsList();
+    /**
+     * <code>repeated .provenance.metadata.v1.Session sessions = 3 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.metadata.v1.ScopeProto.Session getSessions(int index);
+    /**
+     * <code>repeated .provenance.metadata.v1.Session sessions = 3 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    int getSessionsCount();
+    /**
+     * <code>repeated .provenance.metadata.v1.Session sessions = 3 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.provenance.metadata.v1.ScopeProto.SessionOrBuilder> 
+        getSessionsOrBuilderList();
+    /**
+     * <code>repeated .provenance.metadata.v1.Session sessions = 3 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.metadata.v1.ScopeProto.SessionOrBuilder getSessionsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .provenance.metadata.v1.Record records = 4 [json_name = "records", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.provenance.metadata.v1.ScopeProto.Record> 
+        getRecordsList();
+    /**
+     * <code>repeated .provenance.metadata.v1.Record records = 4 [json_name = "records", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.metadata.v1.ScopeProto.Record getRecords(int index);
+    /**
+     * <code>repeated .provenance.metadata.v1.Record records = 4 [json_name = "records", (.gogoproto.nullable) = false];</code>
+     */
+    int getRecordsCount();
+    /**
+     * <code>repeated .provenance.metadata.v1.Record records = 4 [json_name = "records", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.provenance.metadata.v1.ScopeProto.RecordOrBuilder> 
+        getRecordsOrBuilderList();
+    /**
+     * <code>repeated .provenance.metadata.v1.Record records = 4 [json_name = "records", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.metadata.v1.ScopeProto.RecordOrBuilder getRecordsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .provenance.metadata.v1.ScopeSpecification scope_specifications = 5 [json_name = "scopeSpecifications", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.provenance.metadata.v1.SpecificationProto.ScopeSpecification> 
+        getScopeSpecificationsList();
+    /**
+     * <code>repeated .provenance.metadata.v1.ScopeSpecification scope_specifications = 5 [json_name = "scopeSpecifications", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.metadata.v1.SpecificationProto.ScopeSpecification getScopeSpecifications(int index);
+    /**
+     * <code>repeated .provenance.metadata.v1.ScopeSpecification scope_specifications = 5 [json_name = "scopeSpecifications", (.gogoproto.nullable) = false];</code>
+     */
+    int getScopeSpecificationsCount();
+    /**
+     * <code>repeated .provenance.metadata.v1.ScopeSpecification scope_specifications = 5 [json_name = "scopeSpecifications", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.provenance.metadata.v1.SpecificationProto.ScopeSpecificationOrBuilder> 
+        getScopeSpecificationsOrBuilderList();
+    /**
+     * <code>repeated .provenance.metadata.v1.ScopeSpecification scope_specifications = 5 [json_name = "scopeSpecifications", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.metadata.v1.SpecificationProto.ScopeSpecificationOrBuilder getScopeSpecificationsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .provenance.metadata.v1.ContractSpecification contract_specifications = 6 [json_name = "contractSpecifications", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.provenance.metadata.v1.SpecificationProto.ContractSpecification> 
+        getContractSpecificationsList();
+    /**
+     * <code>repeated .provenance.metadata.v1.ContractSpecification contract_specifications = 6 [json_name = "contractSpecifications", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.metadata.v1.SpecificationProto.ContractSpecification getContractSpecifications(int index);
+    /**
+     * <code>repeated .provenance.metadata.v1.ContractSpecification contract_specifications = 6 [json_name = "contractSpecifications", (.gogoproto.nullable) = false];</code>
+     */
+    int getContractSpecificationsCount();
+    /**
+     * <code>repeated .provenance.metadata.v1.ContractSpecification contract_specifications = 6 [json_name = "contractSpecifications", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.provenance.metadata.v1.SpecificationProto.ContractSpecificationOrBuilder> 
+        getContractSpecificationsOrBuilderList();
+    /**
+     * <code>repeated .provenance.metadata.v1.ContractSpecification contract_specifications = 6 [json_name = "contractSpecifications", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.metadata.v1.SpecificationProto.ContractSpecificationOrBuilder getContractSpecificationsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .provenance.metadata.v1.RecordSpecification record_specifications = 7 [json_name = "recordSpecifications", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.provenance.metadata.v1.SpecificationProto.RecordSpecification> 
+        getRecordSpecificationsList();
+    /**
+     * <code>repeated .provenance.metadata.v1.RecordSpecification record_specifications = 7 [json_name = "recordSpecifications", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.metadata.v1.SpecificationProto.RecordSpecification getRecordSpecifications(int index);
+    /**
+     * <code>repeated .provenance.metadata.v1.RecordSpecification record_specifications = 7 [json_name = "recordSpecifications", (.gogoproto.nullable) = false];</code>
+     */
+    int getRecordSpecificationsCount();
+    /**
+     * <code>repeated .provenance.metadata.v1.RecordSpecification record_specifications = 7 [json_name = "recordSpecifications", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.provenance.metadata.v1.SpecificationProto.RecordSpecificationOrBuilder> 
+        getRecordSpecificationsOrBuilderList();
+    /**
+     * <code>repeated .provenance.metadata.v1.RecordSpecification record_specifications = 7 [json_name = "recordSpecifications", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.metadata.v1.SpecificationProto.RecordSpecificationOrBuilder getRecordSpecificationsOrBuilder(
+        int index);
+
+    /**
+     * <code>.provenance.metadata.v1.OSLocatorParams o_s_locator_params = 8 [json_name = "oSLocatorParams", (.gogoproto.nullable) = false];</code>
+     * @return Whether the oSLocatorParams field is set.
+     */
+    boolean hasOSLocatorParams();
+    /**
+     * <code>.provenance.metadata.v1.OSLocatorParams o_s_locator_params = 8 [json_name = "oSLocatorParams", (.gogoproto.nullable) = false];</code>
+     * @return The oSLocatorParams.
+     */
+    com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams getOSLocatorParams();
+    /**
+     * <code>.provenance.metadata.v1.OSLocatorParams o_s_locator_params = 8 [json_name = "oSLocatorParams", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParamsOrBuilder getOSLocatorParamsOrBuilder();
+
+    /**
+     * <code>repeated .provenance.metadata.v1.ObjectStoreLocator object_store_locators = 9 [json_name = "objectStoreLocators", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator> 
+        getObjectStoreLocatorsList();
+    /**
+     * <code>repeated .provenance.metadata.v1.ObjectStoreLocator object_store_locators = 9 [json_name = "objectStoreLocators", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator getObjectStoreLocators(int index);
+    /**
+     * <code>repeated .provenance.metadata.v1.ObjectStoreLocator object_store_locators = 9 [json_name = "objectStoreLocators", (.gogoproto.nullable) = false];</code>
+     */
+    int getObjectStoreLocatorsCount();
+    /**
+     * <code>repeated .provenance.metadata.v1.ObjectStoreLocator object_store_locators = 9 [json_name = "objectStoreLocators", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocatorOrBuilder> 
+        getObjectStoreLocatorsOrBuilderList();
+    /**
+     * <code>repeated .provenance.metadata.v1.ObjectStoreLocator object_store_locators = 9 [json_name = "objectStoreLocators", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocatorOrBuilder getObjectStoreLocatorsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the account module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      scopes_ = java.util.Collections.emptyList();
+      sessions_ = java.util.Collections.emptyList();
+      records_ = java.util.Collections.emptyList();
+      scopeSpecifications_ = java.util.Collections.emptyList();
+      contractSpecifications_ = java.util.Collections.emptyList();
+      recordSpecifications_ = java.util.Collections.emptyList();
+      objectStoreLocators_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.GenesisProto.internal_static_provenance_metadata_v1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.GenesisProto.internal_static_provenance_metadata_v1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.GenesisProto.GenesisState.class, com.provenance.metadata.v1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.provenance.metadata.v1.MetadataProto.Params params_;
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.MetadataProto.Params getParams() {
+      return params_ == null ? com.provenance.metadata.v1.MetadataProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.MetadataProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.provenance.metadata.v1.MetadataProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int SCOPES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.metadata.v1.ScopeProto.Scope> scopes_;
+    /**
+     * <pre>
+     * A collection of metadata scopes and specs to create on start
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.Scope scopes = 2 [json_name = "scopes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.metadata.v1.ScopeProto.Scope> getScopesList() {
+      return scopes_;
+    }
+    /**
+     * <pre>
+     * A collection of metadata scopes and specs to create on start
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.Scope scopes = 2 [json_name = "scopes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.metadata.v1.ScopeProto.ScopeOrBuilder> 
+        getScopesOrBuilderList() {
+      return scopes_;
+    }
+    /**
+     * <pre>
+     * A collection of metadata scopes and specs to create on start
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.Scope scopes = 2 [json_name = "scopes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getScopesCount() {
+      return scopes_.size();
+    }
+    /**
+     * <pre>
+     * A collection of metadata scopes and specs to create on start
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.Scope scopes = 2 [json_name = "scopes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.ScopeProto.Scope getScopes(int index) {
+      return scopes_.get(index);
+    }
+    /**
+     * <pre>
+     * A collection of metadata scopes and specs to create on start
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.Scope scopes = 2 [json_name = "scopes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.ScopeProto.ScopeOrBuilder getScopesOrBuilder(
+        int index) {
+      return scopes_.get(index);
+    }
+
+    public static final int SESSIONS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.metadata.v1.ScopeProto.Session> sessions_;
+    /**
+     * <code>repeated .provenance.metadata.v1.Session sessions = 3 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.metadata.v1.ScopeProto.Session> getSessionsList() {
+      return sessions_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.Session sessions = 3 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.metadata.v1.ScopeProto.SessionOrBuilder> 
+        getSessionsOrBuilderList() {
+      return sessions_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.Session sessions = 3 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getSessionsCount() {
+      return sessions_.size();
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.Session sessions = 3 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.ScopeProto.Session getSessions(int index) {
+      return sessions_.get(index);
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.Session sessions = 3 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.ScopeProto.SessionOrBuilder getSessionsOrBuilder(
+        int index) {
+      return sessions_.get(index);
+    }
+
+    public static final int RECORDS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.metadata.v1.ScopeProto.Record> records_;
+    /**
+     * <code>repeated .provenance.metadata.v1.Record records = 4 [json_name = "records", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.metadata.v1.ScopeProto.Record> getRecordsList() {
+      return records_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.Record records = 4 [json_name = "records", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.metadata.v1.ScopeProto.RecordOrBuilder> 
+        getRecordsOrBuilderList() {
+      return records_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.Record records = 4 [json_name = "records", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getRecordsCount() {
+      return records_.size();
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.Record records = 4 [json_name = "records", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.ScopeProto.Record getRecords(int index) {
+      return records_.get(index);
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.Record records = 4 [json_name = "records", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.ScopeProto.RecordOrBuilder getRecordsOrBuilder(
+        int index) {
+      return records_.get(index);
+    }
+
+    public static final int SCOPE_SPECIFICATIONS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.metadata.v1.SpecificationProto.ScopeSpecification> scopeSpecifications_;
+    /**
+     * <code>repeated .provenance.metadata.v1.ScopeSpecification scope_specifications = 5 [json_name = "scopeSpecifications", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.metadata.v1.SpecificationProto.ScopeSpecification> getScopeSpecificationsList() {
+      return scopeSpecifications_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.ScopeSpecification scope_specifications = 5 [json_name = "scopeSpecifications", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.metadata.v1.SpecificationProto.ScopeSpecificationOrBuilder> 
+        getScopeSpecificationsOrBuilderList() {
+      return scopeSpecifications_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.ScopeSpecification scope_specifications = 5 [json_name = "scopeSpecifications", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getScopeSpecificationsCount() {
+      return scopeSpecifications_.size();
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.ScopeSpecification scope_specifications = 5 [json_name = "scopeSpecifications", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.SpecificationProto.ScopeSpecification getScopeSpecifications(int index) {
+      return scopeSpecifications_.get(index);
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.ScopeSpecification scope_specifications = 5 [json_name = "scopeSpecifications", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.SpecificationProto.ScopeSpecificationOrBuilder getScopeSpecificationsOrBuilder(
+        int index) {
+      return scopeSpecifications_.get(index);
+    }
+
+    public static final int CONTRACT_SPECIFICATIONS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.metadata.v1.SpecificationProto.ContractSpecification> contractSpecifications_;
+    /**
+     * <code>repeated .provenance.metadata.v1.ContractSpecification contract_specifications = 6 [json_name = "contractSpecifications", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.metadata.v1.SpecificationProto.ContractSpecification> getContractSpecificationsList() {
+      return contractSpecifications_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.ContractSpecification contract_specifications = 6 [json_name = "contractSpecifications", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.metadata.v1.SpecificationProto.ContractSpecificationOrBuilder> 
+        getContractSpecificationsOrBuilderList() {
+      return contractSpecifications_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.ContractSpecification contract_specifications = 6 [json_name = "contractSpecifications", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getContractSpecificationsCount() {
+      return contractSpecifications_.size();
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.ContractSpecification contract_specifications = 6 [json_name = "contractSpecifications", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.SpecificationProto.ContractSpecification getContractSpecifications(int index) {
+      return contractSpecifications_.get(index);
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.ContractSpecification contract_specifications = 6 [json_name = "contractSpecifications", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.SpecificationProto.ContractSpecificationOrBuilder getContractSpecificationsOrBuilder(
+        int index) {
+      return contractSpecifications_.get(index);
+    }
+
+    public static final int RECORD_SPECIFICATIONS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.metadata.v1.SpecificationProto.RecordSpecification> recordSpecifications_;
+    /**
+     * <code>repeated .provenance.metadata.v1.RecordSpecification record_specifications = 7 [json_name = "recordSpecifications", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.metadata.v1.SpecificationProto.RecordSpecification> getRecordSpecificationsList() {
+      return recordSpecifications_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.RecordSpecification record_specifications = 7 [json_name = "recordSpecifications", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.metadata.v1.SpecificationProto.RecordSpecificationOrBuilder> 
+        getRecordSpecificationsOrBuilderList() {
+      return recordSpecifications_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.RecordSpecification record_specifications = 7 [json_name = "recordSpecifications", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getRecordSpecificationsCount() {
+      return recordSpecifications_.size();
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.RecordSpecification record_specifications = 7 [json_name = "recordSpecifications", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.SpecificationProto.RecordSpecification getRecordSpecifications(int index) {
+      return recordSpecifications_.get(index);
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.RecordSpecification record_specifications = 7 [json_name = "recordSpecifications", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.SpecificationProto.RecordSpecificationOrBuilder getRecordSpecificationsOrBuilder(
+        int index) {
+      return recordSpecifications_.get(index);
+    }
+
+    public static final int O_S_LOCATOR_PARAMS_FIELD_NUMBER = 8;
+    private com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams oSLocatorParams_;
+    /**
+     * <code>.provenance.metadata.v1.OSLocatorParams o_s_locator_params = 8 [json_name = "oSLocatorParams", (.gogoproto.nullable) = false];</code>
+     * @return Whether the oSLocatorParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasOSLocatorParams() {
+      return oSLocatorParams_ != null;
+    }
+    /**
+     * <code>.provenance.metadata.v1.OSLocatorParams o_s_locator_params = 8 [json_name = "oSLocatorParams", (.gogoproto.nullable) = false];</code>
+     * @return The oSLocatorParams.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams getOSLocatorParams() {
+      return oSLocatorParams_ == null ? com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams.getDefaultInstance() : oSLocatorParams_;
+    }
+    /**
+     * <code>.provenance.metadata.v1.OSLocatorParams o_s_locator_params = 8 [json_name = "oSLocatorParams", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParamsOrBuilder getOSLocatorParamsOrBuilder() {
+      return oSLocatorParams_ == null ? com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams.getDefaultInstance() : oSLocatorParams_;
+    }
+
+    public static final int OBJECT_STORE_LOCATORS_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator> objectStoreLocators_;
+    /**
+     * <code>repeated .provenance.metadata.v1.ObjectStoreLocator object_store_locators = 9 [json_name = "objectStoreLocators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator> getObjectStoreLocatorsList() {
+      return objectStoreLocators_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.ObjectStoreLocator object_store_locators = 9 [json_name = "objectStoreLocators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocatorOrBuilder> 
+        getObjectStoreLocatorsOrBuilderList() {
+      return objectStoreLocators_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.ObjectStoreLocator object_store_locators = 9 [json_name = "objectStoreLocators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getObjectStoreLocatorsCount() {
+      return objectStoreLocators_.size();
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.ObjectStoreLocator object_store_locators = 9 [json_name = "objectStoreLocators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator getObjectStoreLocators(int index) {
+      return objectStoreLocators_.get(index);
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.ObjectStoreLocator object_store_locators = 9 [json_name = "objectStoreLocators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocatorOrBuilder getObjectStoreLocatorsOrBuilder(
+        int index) {
+      return objectStoreLocators_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      for (int i = 0; i < scopes_.size(); i++) {
+        output.writeMessage(2, scopes_.get(i));
+      }
+      for (int i = 0; i < sessions_.size(); i++) {
+        output.writeMessage(3, sessions_.get(i));
+      }
+      for (int i = 0; i < records_.size(); i++) {
+        output.writeMessage(4, records_.get(i));
+      }
+      for (int i = 0; i < scopeSpecifications_.size(); i++) {
+        output.writeMessage(5, scopeSpecifications_.get(i));
+      }
+      for (int i = 0; i < contractSpecifications_.size(); i++) {
+        output.writeMessage(6, contractSpecifications_.get(i));
+      }
+      for (int i = 0; i < recordSpecifications_.size(); i++) {
+        output.writeMessage(7, recordSpecifications_.get(i));
+      }
+      if (oSLocatorParams_ != null) {
+        output.writeMessage(8, getOSLocatorParams());
+      }
+      for (int i = 0; i < objectStoreLocators_.size(); i++) {
+        output.writeMessage(9, objectStoreLocators_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      for (int i = 0; i < scopes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, scopes_.get(i));
+      }
+      for (int i = 0; i < sessions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, sessions_.get(i));
+      }
+      for (int i = 0; i < records_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, records_.get(i));
+      }
+      for (int i = 0; i < scopeSpecifications_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, scopeSpecifications_.get(i));
+      }
+      for (int i = 0; i < contractSpecifications_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, contractSpecifications_.get(i));
+      }
+      for (int i = 0; i < recordSpecifications_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, recordSpecifications_.get(i));
+      }
+      if (oSLocatorParams_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getOSLocatorParams());
+      }
+      for (int i = 0; i < objectStoreLocators_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, objectStoreLocators_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.GenesisProto.GenesisState other = (com.provenance.metadata.v1.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getScopesList()
+          .equals(other.getScopesList())) return false;
+      if (!getSessionsList()
+          .equals(other.getSessionsList())) return false;
+      if (!getRecordsList()
+          .equals(other.getRecordsList())) return false;
+      if (!getScopeSpecificationsList()
+          .equals(other.getScopeSpecificationsList())) return false;
+      if (!getContractSpecificationsList()
+          .equals(other.getContractSpecificationsList())) return false;
+      if (!getRecordSpecificationsList()
+          .equals(other.getRecordSpecificationsList())) return false;
+      if (hasOSLocatorParams() != other.hasOSLocatorParams()) return false;
+      if (hasOSLocatorParams()) {
+        if (!getOSLocatorParams()
+            .equals(other.getOSLocatorParams())) return false;
+      }
+      if (!getObjectStoreLocatorsList()
+          .equals(other.getObjectStoreLocatorsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (getScopesCount() > 0) {
+        hash = (37 * hash) + SCOPES_FIELD_NUMBER;
+        hash = (53 * hash) + getScopesList().hashCode();
+      }
+      if (getSessionsCount() > 0) {
+        hash = (37 * hash) + SESSIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getSessionsList().hashCode();
+      }
+      if (getRecordsCount() > 0) {
+        hash = (37 * hash) + RECORDS_FIELD_NUMBER;
+        hash = (53 * hash) + getRecordsList().hashCode();
+      }
+      if (getScopeSpecificationsCount() > 0) {
+        hash = (37 * hash) + SCOPE_SPECIFICATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getScopeSpecificationsList().hashCode();
+      }
+      if (getContractSpecificationsCount() > 0) {
+        hash = (37 * hash) + CONTRACT_SPECIFICATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getContractSpecificationsList().hashCode();
+      }
+      if (getRecordSpecificationsCount() > 0) {
+        hash = (37 * hash) + RECORD_SPECIFICATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getRecordSpecificationsList().hashCode();
+      }
+      if (hasOSLocatorParams()) {
+        hash = (37 * hash) + O_S_LOCATOR_PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getOSLocatorParams().hashCode();
+      }
+      if (getObjectStoreLocatorsCount() > 0) {
+        hash = (37 * hash) + OBJECT_STORE_LOCATORS_FIELD_NUMBER;
+        hash = (53 * hash) + getObjectStoreLocatorsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the account module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.GenesisState)
+        com.provenance.metadata.v1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.GenesisProto.internal_static_provenance_metadata_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.GenesisProto.internal_static_provenance_metadata_v1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.GenesisProto.GenesisState.class, com.provenance.metadata.v1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        if (scopesBuilder_ == null) {
+          scopes_ = java.util.Collections.emptyList();
+        } else {
+          scopes_ = null;
+          scopesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (sessionsBuilder_ == null) {
+          sessions_ = java.util.Collections.emptyList();
+        } else {
+          sessions_ = null;
+          sessionsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (recordsBuilder_ == null) {
+          records_ = java.util.Collections.emptyList();
+        } else {
+          records_ = null;
+          recordsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (scopeSpecificationsBuilder_ == null) {
+          scopeSpecifications_ = java.util.Collections.emptyList();
+        } else {
+          scopeSpecifications_ = null;
+          scopeSpecificationsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (contractSpecificationsBuilder_ == null) {
+          contractSpecifications_ = java.util.Collections.emptyList();
+        } else {
+          contractSpecifications_ = null;
+          contractSpecificationsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        if (recordSpecificationsBuilder_ == null) {
+          recordSpecifications_ = java.util.Collections.emptyList();
+        } else {
+          recordSpecifications_ = null;
+          recordSpecificationsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        oSLocatorParams_ = null;
+        if (oSLocatorParamsBuilder_ != null) {
+          oSLocatorParamsBuilder_.dispose();
+          oSLocatorParamsBuilder_ = null;
+        }
+        if (objectStoreLocatorsBuilder_ == null) {
+          objectStoreLocators_ = java.util.Collections.emptyList();
+        } else {
+          objectStoreLocators_ = null;
+          objectStoreLocatorsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000100);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.GenesisProto.internal_static_provenance_metadata_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.GenesisProto.GenesisState build() {
+        com.provenance.metadata.v1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.GenesisProto.GenesisState buildPartial() {
+        com.provenance.metadata.v1.GenesisProto.GenesisState result = new com.provenance.metadata.v1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.provenance.metadata.v1.GenesisProto.GenesisState result) {
+        if (scopesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            scopes_ = java.util.Collections.unmodifiableList(scopes_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.scopes_ = scopes_;
+        } else {
+          result.scopes_ = scopesBuilder_.build();
+        }
+        if (sessionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            sessions_ = java.util.Collections.unmodifiableList(sessions_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.sessions_ = sessions_;
+        } else {
+          result.sessions_ = sessionsBuilder_.build();
+        }
+        if (recordsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            records_ = java.util.Collections.unmodifiableList(records_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.records_ = records_;
+        } else {
+          result.records_ = recordsBuilder_.build();
+        }
+        if (scopeSpecificationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            scopeSpecifications_ = java.util.Collections.unmodifiableList(scopeSpecifications_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.scopeSpecifications_ = scopeSpecifications_;
+        } else {
+          result.scopeSpecifications_ = scopeSpecificationsBuilder_.build();
+        }
+        if (contractSpecificationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            contractSpecifications_ = java.util.Collections.unmodifiableList(contractSpecifications_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.contractSpecifications_ = contractSpecifications_;
+        } else {
+          result.contractSpecifications_ = contractSpecificationsBuilder_.build();
+        }
+        if (recordSpecificationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0)) {
+            recordSpecifications_ = java.util.Collections.unmodifiableList(recordSpecifications_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.recordSpecifications_ = recordSpecifications_;
+        } else {
+          result.recordSpecifications_ = recordSpecificationsBuilder_.build();
+        }
+        if (objectStoreLocatorsBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0)) {
+            objectStoreLocators_ = java.util.Collections.unmodifiableList(objectStoreLocators_);
+            bitField0_ = (bitField0_ & ~0x00000100);
+          }
+          result.objectStoreLocators_ = objectStoreLocators_;
+        } else {
+          result.objectStoreLocators_ = objectStoreLocatorsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.oSLocatorParams_ = oSLocatorParamsBuilder_ == null
+              ? oSLocatorParams_
+              : oSLocatorParamsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.GenesisProto.GenesisState) {
+          return mergeFrom((com.provenance.metadata.v1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.GenesisProto.GenesisState other) {
+        if (other == com.provenance.metadata.v1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (scopesBuilder_ == null) {
+          if (!other.scopes_.isEmpty()) {
+            if (scopes_.isEmpty()) {
+              scopes_ = other.scopes_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureScopesIsMutable();
+              scopes_.addAll(other.scopes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.scopes_.isEmpty()) {
+            if (scopesBuilder_.isEmpty()) {
+              scopesBuilder_.dispose();
+              scopesBuilder_ = null;
+              scopes_ = other.scopes_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              scopesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getScopesFieldBuilder() : null;
+            } else {
+              scopesBuilder_.addAllMessages(other.scopes_);
+            }
+          }
+        }
+        if (sessionsBuilder_ == null) {
+          if (!other.sessions_.isEmpty()) {
+            if (sessions_.isEmpty()) {
+              sessions_ = other.sessions_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureSessionsIsMutable();
+              sessions_.addAll(other.sessions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.sessions_.isEmpty()) {
+            if (sessionsBuilder_.isEmpty()) {
+              sessionsBuilder_.dispose();
+              sessionsBuilder_ = null;
+              sessions_ = other.sessions_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              sessionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSessionsFieldBuilder() : null;
+            } else {
+              sessionsBuilder_.addAllMessages(other.sessions_);
+            }
+          }
+        }
+        if (recordsBuilder_ == null) {
+          if (!other.records_.isEmpty()) {
+            if (records_.isEmpty()) {
+              records_ = other.records_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureRecordsIsMutable();
+              records_.addAll(other.records_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.records_.isEmpty()) {
+            if (recordsBuilder_.isEmpty()) {
+              recordsBuilder_.dispose();
+              recordsBuilder_ = null;
+              records_ = other.records_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              recordsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRecordsFieldBuilder() : null;
+            } else {
+              recordsBuilder_.addAllMessages(other.records_);
+            }
+          }
+        }
+        if (scopeSpecificationsBuilder_ == null) {
+          if (!other.scopeSpecifications_.isEmpty()) {
+            if (scopeSpecifications_.isEmpty()) {
+              scopeSpecifications_ = other.scopeSpecifications_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureScopeSpecificationsIsMutable();
+              scopeSpecifications_.addAll(other.scopeSpecifications_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.scopeSpecifications_.isEmpty()) {
+            if (scopeSpecificationsBuilder_.isEmpty()) {
+              scopeSpecificationsBuilder_.dispose();
+              scopeSpecificationsBuilder_ = null;
+              scopeSpecifications_ = other.scopeSpecifications_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              scopeSpecificationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getScopeSpecificationsFieldBuilder() : null;
+            } else {
+              scopeSpecificationsBuilder_.addAllMessages(other.scopeSpecifications_);
+            }
+          }
+        }
+        if (contractSpecificationsBuilder_ == null) {
+          if (!other.contractSpecifications_.isEmpty()) {
+            if (contractSpecifications_.isEmpty()) {
+              contractSpecifications_ = other.contractSpecifications_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureContractSpecificationsIsMutable();
+              contractSpecifications_.addAll(other.contractSpecifications_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.contractSpecifications_.isEmpty()) {
+            if (contractSpecificationsBuilder_.isEmpty()) {
+              contractSpecificationsBuilder_.dispose();
+              contractSpecificationsBuilder_ = null;
+              contractSpecifications_ = other.contractSpecifications_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              contractSpecificationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getContractSpecificationsFieldBuilder() : null;
+            } else {
+              contractSpecificationsBuilder_.addAllMessages(other.contractSpecifications_);
+            }
+          }
+        }
+        if (recordSpecificationsBuilder_ == null) {
+          if (!other.recordSpecifications_.isEmpty()) {
+            if (recordSpecifications_.isEmpty()) {
+              recordSpecifications_ = other.recordSpecifications_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureRecordSpecificationsIsMutable();
+              recordSpecifications_.addAll(other.recordSpecifications_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.recordSpecifications_.isEmpty()) {
+            if (recordSpecificationsBuilder_.isEmpty()) {
+              recordSpecificationsBuilder_.dispose();
+              recordSpecificationsBuilder_ = null;
+              recordSpecifications_ = other.recordSpecifications_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              recordSpecificationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRecordSpecificationsFieldBuilder() : null;
+            } else {
+              recordSpecificationsBuilder_.addAllMessages(other.recordSpecifications_);
+            }
+          }
+        }
+        if (other.hasOSLocatorParams()) {
+          mergeOSLocatorParams(other.getOSLocatorParams());
+        }
+        if (objectStoreLocatorsBuilder_ == null) {
+          if (!other.objectStoreLocators_.isEmpty()) {
+            if (objectStoreLocators_.isEmpty()) {
+              objectStoreLocators_ = other.objectStoreLocators_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+            } else {
+              ensureObjectStoreLocatorsIsMutable();
+              objectStoreLocators_.addAll(other.objectStoreLocators_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.objectStoreLocators_.isEmpty()) {
+            if (objectStoreLocatorsBuilder_.isEmpty()) {
+              objectStoreLocatorsBuilder_.dispose();
+              objectStoreLocatorsBuilder_ = null;
+              objectStoreLocators_ = other.objectStoreLocators_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+              objectStoreLocatorsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getObjectStoreLocatorsFieldBuilder() : null;
+            } else {
+              objectStoreLocatorsBuilder_.addAllMessages(other.objectStoreLocators_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.provenance.metadata.v1.ScopeProto.Scope m =
+                    input.readMessage(
+                        com.provenance.metadata.v1.ScopeProto.Scope.parser(),
+                        extensionRegistry);
+                if (scopesBuilder_ == null) {
+                  ensureScopesIsMutable();
+                  scopes_.add(m);
+                } else {
+                  scopesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                com.provenance.metadata.v1.ScopeProto.Session m =
+                    input.readMessage(
+                        com.provenance.metadata.v1.ScopeProto.Session.parser(),
+                        extensionRegistry);
+                if (sessionsBuilder_ == null) {
+                  ensureSessionsIsMutable();
+                  sessions_.add(m);
+                } else {
+                  sessionsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                com.provenance.metadata.v1.ScopeProto.Record m =
+                    input.readMessage(
+                        com.provenance.metadata.v1.ScopeProto.Record.parser(),
+                        extensionRegistry);
+                if (recordsBuilder_ == null) {
+                  ensureRecordsIsMutable();
+                  records_.add(m);
+                } else {
+                  recordsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                com.provenance.metadata.v1.SpecificationProto.ScopeSpecification m =
+                    input.readMessage(
+                        com.provenance.metadata.v1.SpecificationProto.ScopeSpecification.parser(),
+                        extensionRegistry);
+                if (scopeSpecificationsBuilder_ == null) {
+                  ensureScopeSpecificationsIsMutable();
+                  scopeSpecifications_.add(m);
+                } else {
+                  scopeSpecificationsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                com.provenance.metadata.v1.SpecificationProto.ContractSpecification m =
+                    input.readMessage(
+                        com.provenance.metadata.v1.SpecificationProto.ContractSpecification.parser(),
+                        extensionRegistry);
+                if (contractSpecificationsBuilder_ == null) {
+                  ensureContractSpecificationsIsMutable();
+                  contractSpecifications_.add(m);
+                } else {
+                  contractSpecificationsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 58: {
+                com.provenance.metadata.v1.SpecificationProto.RecordSpecification m =
+                    input.readMessage(
+                        com.provenance.metadata.v1.SpecificationProto.RecordSpecification.parser(),
+                        extensionRegistry);
+                if (recordSpecificationsBuilder_ == null) {
+                  ensureRecordSpecificationsIsMutable();
+                  recordSpecifications_.add(m);
+                } else {
+                  recordSpecificationsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              case 66: {
+                input.readMessage(
+                    getOSLocatorParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator m =
+                    input.readMessage(
+                        com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator.parser(),
+                        extensionRegistry);
+                if (objectStoreLocatorsBuilder_ == null) {
+                  ensureObjectStoreLocatorsIsMutable();
+                  objectStoreLocators_.add(m);
+                } else {
+                  objectStoreLocatorsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 74
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.provenance.metadata.v1.MetadataProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.MetadataProto.Params, com.provenance.metadata.v1.MetadataProto.Params.Builder, com.provenance.metadata.v1.MetadataProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.provenance.metadata.v1.MetadataProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.provenance.metadata.v1.MetadataProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.provenance.metadata.v1.MetadataProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.provenance.metadata.v1.MetadataProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.provenance.metadata.v1.MetadataProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.provenance.metadata.v1.MetadataProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.MetadataProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.MetadataProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.provenance.metadata.v1.MetadataProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.MetadataProto.Params, com.provenance.metadata.v1.MetadataProto.Params.Builder, com.provenance.metadata.v1.MetadataProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.MetadataProto.Params, com.provenance.metadata.v1.MetadataProto.Params.Builder, com.provenance.metadata.v1.MetadataProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private java.util.List<com.provenance.metadata.v1.ScopeProto.Scope> scopes_ =
+        java.util.Collections.emptyList();
+      private void ensureScopesIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          scopes_ = new java.util.ArrayList<com.provenance.metadata.v1.ScopeProto.Scope>(scopes_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.ScopeProto.Scope, com.provenance.metadata.v1.ScopeProto.Scope.Builder, com.provenance.metadata.v1.ScopeProto.ScopeOrBuilder> scopesBuilder_;
+
+      /**
+       * <pre>
+       * A collection of metadata scopes and specs to create on start
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Scope scopes = 2 [json_name = "scopes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.ScopeProto.Scope> getScopesList() {
+        if (scopesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(scopes_);
+        } else {
+          return scopesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * A collection of metadata scopes and specs to create on start
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Scope scopes = 2 [json_name = "scopes", (.gogoproto.nullable) = false];</code>
+       */
+      public int getScopesCount() {
+        if (scopesBuilder_ == null) {
+          return scopes_.size();
+        } else {
+          return scopesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * A collection of metadata scopes and specs to create on start
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Scope scopes = 2 [json_name = "scopes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.Scope getScopes(int index) {
+        if (scopesBuilder_ == null) {
+          return scopes_.get(index);
+        } else {
+          return scopesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * A collection of metadata scopes and specs to create on start
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Scope scopes = 2 [json_name = "scopes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setScopes(
+          int index, com.provenance.metadata.v1.ScopeProto.Scope value) {
+        if (scopesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureScopesIsMutable();
+          scopes_.set(index, value);
+          onChanged();
+        } else {
+          scopesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A collection of metadata scopes and specs to create on start
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Scope scopes = 2 [json_name = "scopes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setScopes(
+          int index, com.provenance.metadata.v1.ScopeProto.Scope.Builder builderForValue) {
+        if (scopesBuilder_ == null) {
+          ensureScopesIsMutable();
+          scopes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          scopesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A collection of metadata scopes and specs to create on start
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Scope scopes = 2 [json_name = "scopes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addScopes(com.provenance.metadata.v1.ScopeProto.Scope value) {
+        if (scopesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureScopesIsMutable();
+          scopes_.add(value);
+          onChanged();
+        } else {
+          scopesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A collection of metadata scopes and specs to create on start
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Scope scopes = 2 [json_name = "scopes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addScopes(
+          int index, com.provenance.metadata.v1.ScopeProto.Scope value) {
+        if (scopesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureScopesIsMutable();
+          scopes_.add(index, value);
+          onChanged();
+        } else {
+          scopesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A collection of metadata scopes and specs to create on start
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Scope scopes = 2 [json_name = "scopes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addScopes(
+          com.provenance.metadata.v1.ScopeProto.Scope.Builder builderForValue) {
+        if (scopesBuilder_ == null) {
+          ensureScopesIsMutable();
+          scopes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          scopesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A collection of metadata scopes and specs to create on start
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Scope scopes = 2 [json_name = "scopes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addScopes(
+          int index, com.provenance.metadata.v1.ScopeProto.Scope.Builder builderForValue) {
+        if (scopesBuilder_ == null) {
+          ensureScopesIsMutable();
+          scopes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          scopesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A collection of metadata scopes and specs to create on start
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Scope scopes = 2 [json_name = "scopes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllScopes(
+          java.lang.Iterable<? extends com.provenance.metadata.v1.ScopeProto.Scope> values) {
+        if (scopesBuilder_ == null) {
+          ensureScopesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, scopes_);
+          onChanged();
+        } else {
+          scopesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A collection of metadata scopes and specs to create on start
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Scope scopes = 2 [json_name = "scopes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearScopes() {
+        if (scopesBuilder_ == null) {
+          scopes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          scopesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A collection of metadata scopes and specs to create on start
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Scope scopes = 2 [json_name = "scopes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeScopes(int index) {
+        if (scopesBuilder_ == null) {
+          ensureScopesIsMutable();
+          scopes_.remove(index);
+          onChanged();
+        } else {
+          scopesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A collection of metadata scopes and specs to create on start
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Scope scopes = 2 [json_name = "scopes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.Scope.Builder getScopesBuilder(
+          int index) {
+        return getScopesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * A collection of metadata scopes and specs to create on start
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Scope scopes = 2 [json_name = "scopes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.ScopeOrBuilder getScopesOrBuilder(
+          int index) {
+        if (scopesBuilder_ == null) {
+          return scopes_.get(index);  } else {
+          return scopesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * A collection of metadata scopes and specs to create on start
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Scope scopes = 2 [json_name = "scopes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.provenance.metadata.v1.ScopeProto.ScopeOrBuilder> 
+           getScopesOrBuilderList() {
+        if (scopesBuilder_ != null) {
+          return scopesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(scopes_);
+        }
+      }
+      /**
+       * <pre>
+       * A collection of metadata scopes and specs to create on start
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Scope scopes = 2 [json_name = "scopes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.Scope.Builder addScopesBuilder() {
+        return getScopesFieldBuilder().addBuilder(
+            com.provenance.metadata.v1.ScopeProto.Scope.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * A collection of metadata scopes and specs to create on start
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Scope scopes = 2 [json_name = "scopes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.Scope.Builder addScopesBuilder(
+          int index) {
+        return getScopesFieldBuilder().addBuilder(
+            index, com.provenance.metadata.v1.ScopeProto.Scope.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * A collection of metadata scopes and specs to create on start
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Scope scopes = 2 [json_name = "scopes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.ScopeProto.Scope.Builder> 
+           getScopesBuilderList() {
+        return getScopesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.ScopeProto.Scope, com.provenance.metadata.v1.ScopeProto.Scope.Builder, com.provenance.metadata.v1.ScopeProto.ScopeOrBuilder> 
+          getScopesFieldBuilder() {
+        if (scopesBuilder_ == null) {
+          scopesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.metadata.v1.ScopeProto.Scope, com.provenance.metadata.v1.ScopeProto.Scope.Builder, com.provenance.metadata.v1.ScopeProto.ScopeOrBuilder>(
+                  scopes_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          scopes_ = null;
+        }
+        return scopesBuilder_;
+      }
+
+      private java.util.List<com.provenance.metadata.v1.ScopeProto.Session> sessions_ =
+        java.util.Collections.emptyList();
+      private void ensureSessionsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          sessions_ = new java.util.ArrayList<com.provenance.metadata.v1.ScopeProto.Session>(sessions_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.ScopeProto.Session, com.provenance.metadata.v1.ScopeProto.Session.Builder, com.provenance.metadata.v1.ScopeProto.SessionOrBuilder> sessionsBuilder_;
+
+      /**
+       * <code>repeated .provenance.metadata.v1.Session sessions = 3 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.ScopeProto.Session> getSessionsList() {
+        if (sessionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(sessions_);
+        } else {
+          return sessionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Session sessions = 3 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public int getSessionsCount() {
+        if (sessionsBuilder_ == null) {
+          return sessions_.size();
+        } else {
+          return sessionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Session sessions = 3 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.Session getSessions(int index) {
+        if (sessionsBuilder_ == null) {
+          return sessions_.get(index);
+        } else {
+          return sessionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Session sessions = 3 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSessions(
+          int index, com.provenance.metadata.v1.ScopeProto.Session value) {
+        if (sessionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSessionsIsMutable();
+          sessions_.set(index, value);
+          onChanged();
+        } else {
+          sessionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Session sessions = 3 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSessions(
+          int index, com.provenance.metadata.v1.ScopeProto.Session.Builder builderForValue) {
+        if (sessionsBuilder_ == null) {
+          ensureSessionsIsMutable();
+          sessions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          sessionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Session sessions = 3 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSessions(com.provenance.metadata.v1.ScopeProto.Session value) {
+        if (sessionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSessionsIsMutable();
+          sessions_.add(value);
+          onChanged();
+        } else {
+          sessionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Session sessions = 3 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSessions(
+          int index, com.provenance.metadata.v1.ScopeProto.Session value) {
+        if (sessionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSessionsIsMutable();
+          sessions_.add(index, value);
+          onChanged();
+        } else {
+          sessionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Session sessions = 3 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSessions(
+          com.provenance.metadata.v1.ScopeProto.Session.Builder builderForValue) {
+        if (sessionsBuilder_ == null) {
+          ensureSessionsIsMutable();
+          sessions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          sessionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Session sessions = 3 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSessions(
+          int index, com.provenance.metadata.v1.ScopeProto.Session.Builder builderForValue) {
+        if (sessionsBuilder_ == null) {
+          ensureSessionsIsMutable();
+          sessions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          sessionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Session sessions = 3 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllSessions(
+          java.lang.Iterable<? extends com.provenance.metadata.v1.ScopeProto.Session> values) {
+        if (sessionsBuilder_ == null) {
+          ensureSessionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, sessions_);
+          onChanged();
+        } else {
+          sessionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Session sessions = 3 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearSessions() {
+        if (sessionsBuilder_ == null) {
+          sessions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          sessionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Session sessions = 3 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeSessions(int index) {
+        if (sessionsBuilder_ == null) {
+          ensureSessionsIsMutable();
+          sessions_.remove(index);
+          onChanged();
+        } else {
+          sessionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Session sessions = 3 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.Session.Builder getSessionsBuilder(
+          int index) {
+        return getSessionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Session sessions = 3 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.SessionOrBuilder getSessionsOrBuilder(
+          int index) {
+        if (sessionsBuilder_ == null) {
+          return sessions_.get(index);  } else {
+          return sessionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Session sessions = 3 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.provenance.metadata.v1.ScopeProto.SessionOrBuilder> 
+           getSessionsOrBuilderList() {
+        if (sessionsBuilder_ != null) {
+          return sessionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(sessions_);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Session sessions = 3 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.Session.Builder addSessionsBuilder() {
+        return getSessionsFieldBuilder().addBuilder(
+            com.provenance.metadata.v1.ScopeProto.Session.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Session sessions = 3 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.Session.Builder addSessionsBuilder(
+          int index) {
+        return getSessionsFieldBuilder().addBuilder(
+            index, com.provenance.metadata.v1.ScopeProto.Session.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Session sessions = 3 [json_name = "sessions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.ScopeProto.Session.Builder> 
+           getSessionsBuilderList() {
+        return getSessionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.ScopeProto.Session, com.provenance.metadata.v1.ScopeProto.Session.Builder, com.provenance.metadata.v1.ScopeProto.SessionOrBuilder> 
+          getSessionsFieldBuilder() {
+        if (sessionsBuilder_ == null) {
+          sessionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.metadata.v1.ScopeProto.Session, com.provenance.metadata.v1.ScopeProto.Session.Builder, com.provenance.metadata.v1.ScopeProto.SessionOrBuilder>(
+                  sessions_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          sessions_ = null;
+        }
+        return sessionsBuilder_;
+      }
+
+      private java.util.List<com.provenance.metadata.v1.ScopeProto.Record> records_ =
+        java.util.Collections.emptyList();
+      private void ensureRecordsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          records_ = new java.util.ArrayList<com.provenance.metadata.v1.ScopeProto.Record>(records_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.ScopeProto.Record, com.provenance.metadata.v1.ScopeProto.Record.Builder, com.provenance.metadata.v1.ScopeProto.RecordOrBuilder> recordsBuilder_;
+
+      /**
+       * <code>repeated .provenance.metadata.v1.Record records = 4 [json_name = "records", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.ScopeProto.Record> getRecordsList() {
+        if (recordsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(records_);
+        } else {
+          return recordsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Record records = 4 [json_name = "records", (.gogoproto.nullable) = false];</code>
+       */
+      public int getRecordsCount() {
+        if (recordsBuilder_ == null) {
+          return records_.size();
+        } else {
+          return recordsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Record records = 4 [json_name = "records", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.Record getRecords(int index) {
+        if (recordsBuilder_ == null) {
+          return records_.get(index);
+        } else {
+          return recordsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Record records = 4 [json_name = "records", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRecords(
+          int index, com.provenance.metadata.v1.ScopeProto.Record value) {
+        if (recordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRecordsIsMutable();
+          records_.set(index, value);
+          onChanged();
+        } else {
+          recordsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Record records = 4 [json_name = "records", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRecords(
+          int index, com.provenance.metadata.v1.ScopeProto.Record.Builder builderForValue) {
+        if (recordsBuilder_ == null) {
+          ensureRecordsIsMutable();
+          records_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          recordsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Record records = 4 [json_name = "records", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRecords(com.provenance.metadata.v1.ScopeProto.Record value) {
+        if (recordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRecordsIsMutable();
+          records_.add(value);
+          onChanged();
+        } else {
+          recordsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Record records = 4 [json_name = "records", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRecords(
+          int index, com.provenance.metadata.v1.ScopeProto.Record value) {
+        if (recordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRecordsIsMutable();
+          records_.add(index, value);
+          onChanged();
+        } else {
+          recordsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Record records = 4 [json_name = "records", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRecords(
+          com.provenance.metadata.v1.ScopeProto.Record.Builder builderForValue) {
+        if (recordsBuilder_ == null) {
+          ensureRecordsIsMutable();
+          records_.add(builderForValue.build());
+          onChanged();
+        } else {
+          recordsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Record records = 4 [json_name = "records", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRecords(
+          int index, com.provenance.metadata.v1.ScopeProto.Record.Builder builderForValue) {
+        if (recordsBuilder_ == null) {
+          ensureRecordsIsMutable();
+          records_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          recordsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Record records = 4 [json_name = "records", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllRecords(
+          java.lang.Iterable<? extends com.provenance.metadata.v1.ScopeProto.Record> values) {
+        if (recordsBuilder_ == null) {
+          ensureRecordsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, records_);
+          onChanged();
+        } else {
+          recordsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Record records = 4 [json_name = "records", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearRecords() {
+        if (recordsBuilder_ == null) {
+          records_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          recordsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Record records = 4 [json_name = "records", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeRecords(int index) {
+        if (recordsBuilder_ == null) {
+          ensureRecordsIsMutable();
+          records_.remove(index);
+          onChanged();
+        } else {
+          recordsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Record records = 4 [json_name = "records", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.Record.Builder getRecordsBuilder(
+          int index) {
+        return getRecordsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Record records = 4 [json_name = "records", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.RecordOrBuilder getRecordsOrBuilder(
+          int index) {
+        if (recordsBuilder_ == null) {
+          return records_.get(index);  } else {
+          return recordsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Record records = 4 [json_name = "records", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.provenance.metadata.v1.ScopeProto.RecordOrBuilder> 
+           getRecordsOrBuilderList() {
+        if (recordsBuilder_ != null) {
+          return recordsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(records_);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Record records = 4 [json_name = "records", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.Record.Builder addRecordsBuilder() {
+        return getRecordsFieldBuilder().addBuilder(
+            com.provenance.metadata.v1.ScopeProto.Record.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Record records = 4 [json_name = "records", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.Record.Builder addRecordsBuilder(
+          int index) {
+        return getRecordsFieldBuilder().addBuilder(
+            index, com.provenance.metadata.v1.ScopeProto.Record.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.Record records = 4 [json_name = "records", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.ScopeProto.Record.Builder> 
+           getRecordsBuilderList() {
+        return getRecordsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.ScopeProto.Record, com.provenance.metadata.v1.ScopeProto.Record.Builder, com.provenance.metadata.v1.ScopeProto.RecordOrBuilder> 
+          getRecordsFieldBuilder() {
+        if (recordsBuilder_ == null) {
+          recordsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.metadata.v1.ScopeProto.Record, com.provenance.metadata.v1.ScopeProto.Record.Builder, com.provenance.metadata.v1.ScopeProto.RecordOrBuilder>(
+                  records_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          records_ = null;
+        }
+        return recordsBuilder_;
+      }
+
+      private java.util.List<com.provenance.metadata.v1.SpecificationProto.ScopeSpecification> scopeSpecifications_ =
+        java.util.Collections.emptyList();
+      private void ensureScopeSpecificationsIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          scopeSpecifications_ = new java.util.ArrayList<com.provenance.metadata.v1.SpecificationProto.ScopeSpecification>(scopeSpecifications_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.SpecificationProto.ScopeSpecification, com.provenance.metadata.v1.SpecificationProto.ScopeSpecification.Builder, com.provenance.metadata.v1.SpecificationProto.ScopeSpecificationOrBuilder> scopeSpecificationsBuilder_;
+
+      /**
+       * <code>repeated .provenance.metadata.v1.ScopeSpecification scope_specifications = 5 [json_name = "scopeSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.SpecificationProto.ScopeSpecification> getScopeSpecificationsList() {
+        if (scopeSpecificationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(scopeSpecifications_);
+        } else {
+          return scopeSpecificationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ScopeSpecification scope_specifications = 5 [json_name = "scopeSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public int getScopeSpecificationsCount() {
+        if (scopeSpecificationsBuilder_ == null) {
+          return scopeSpecifications_.size();
+        } else {
+          return scopeSpecificationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ScopeSpecification scope_specifications = 5 [json_name = "scopeSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.SpecificationProto.ScopeSpecification getScopeSpecifications(int index) {
+        if (scopeSpecificationsBuilder_ == null) {
+          return scopeSpecifications_.get(index);
+        } else {
+          return scopeSpecificationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ScopeSpecification scope_specifications = 5 [json_name = "scopeSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setScopeSpecifications(
+          int index, com.provenance.metadata.v1.SpecificationProto.ScopeSpecification value) {
+        if (scopeSpecificationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureScopeSpecificationsIsMutable();
+          scopeSpecifications_.set(index, value);
+          onChanged();
+        } else {
+          scopeSpecificationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ScopeSpecification scope_specifications = 5 [json_name = "scopeSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setScopeSpecifications(
+          int index, com.provenance.metadata.v1.SpecificationProto.ScopeSpecification.Builder builderForValue) {
+        if (scopeSpecificationsBuilder_ == null) {
+          ensureScopeSpecificationsIsMutable();
+          scopeSpecifications_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          scopeSpecificationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ScopeSpecification scope_specifications = 5 [json_name = "scopeSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addScopeSpecifications(com.provenance.metadata.v1.SpecificationProto.ScopeSpecification value) {
+        if (scopeSpecificationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureScopeSpecificationsIsMutable();
+          scopeSpecifications_.add(value);
+          onChanged();
+        } else {
+          scopeSpecificationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ScopeSpecification scope_specifications = 5 [json_name = "scopeSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addScopeSpecifications(
+          int index, com.provenance.metadata.v1.SpecificationProto.ScopeSpecification value) {
+        if (scopeSpecificationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureScopeSpecificationsIsMutable();
+          scopeSpecifications_.add(index, value);
+          onChanged();
+        } else {
+          scopeSpecificationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ScopeSpecification scope_specifications = 5 [json_name = "scopeSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addScopeSpecifications(
+          com.provenance.metadata.v1.SpecificationProto.ScopeSpecification.Builder builderForValue) {
+        if (scopeSpecificationsBuilder_ == null) {
+          ensureScopeSpecificationsIsMutable();
+          scopeSpecifications_.add(builderForValue.build());
+          onChanged();
+        } else {
+          scopeSpecificationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ScopeSpecification scope_specifications = 5 [json_name = "scopeSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addScopeSpecifications(
+          int index, com.provenance.metadata.v1.SpecificationProto.ScopeSpecification.Builder builderForValue) {
+        if (scopeSpecificationsBuilder_ == null) {
+          ensureScopeSpecificationsIsMutable();
+          scopeSpecifications_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          scopeSpecificationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ScopeSpecification scope_specifications = 5 [json_name = "scopeSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllScopeSpecifications(
+          java.lang.Iterable<? extends com.provenance.metadata.v1.SpecificationProto.ScopeSpecification> values) {
+        if (scopeSpecificationsBuilder_ == null) {
+          ensureScopeSpecificationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, scopeSpecifications_);
+          onChanged();
+        } else {
+          scopeSpecificationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ScopeSpecification scope_specifications = 5 [json_name = "scopeSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearScopeSpecifications() {
+        if (scopeSpecificationsBuilder_ == null) {
+          scopeSpecifications_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          scopeSpecificationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ScopeSpecification scope_specifications = 5 [json_name = "scopeSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeScopeSpecifications(int index) {
+        if (scopeSpecificationsBuilder_ == null) {
+          ensureScopeSpecificationsIsMutable();
+          scopeSpecifications_.remove(index);
+          onChanged();
+        } else {
+          scopeSpecificationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ScopeSpecification scope_specifications = 5 [json_name = "scopeSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.SpecificationProto.ScopeSpecification.Builder getScopeSpecificationsBuilder(
+          int index) {
+        return getScopeSpecificationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ScopeSpecification scope_specifications = 5 [json_name = "scopeSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.SpecificationProto.ScopeSpecificationOrBuilder getScopeSpecificationsOrBuilder(
+          int index) {
+        if (scopeSpecificationsBuilder_ == null) {
+          return scopeSpecifications_.get(index);  } else {
+          return scopeSpecificationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ScopeSpecification scope_specifications = 5 [json_name = "scopeSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.provenance.metadata.v1.SpecificationProto.ScopeSpecificationOrBuilder> 
+           getScopeSpecificationsOrBuilderList() {
+        if (scopeSpecificationsBuilder_ != null) {
+          return scopeSpecificationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(scopeSpecifications_);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ScopeSpecification scope_specifications = 5 [json_name = "scopeSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.SpecificationProto.ScopeSpecification.Builder addScopeSpecificationsBuilder() {
+        return getScopeSpecificationsFieldBuilder().addBuilder(
+            com.provenance.metadata.v1.SpecificationProto.ScopeSpecification.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ScopeSpecification scope_specifications = 5 [json_name = "scopeSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.SpecificationProto.ScopeSpecification.Builder addScopeSpecificationsBuilder(
+          int index) {
+        return getScopeSpecificationsFieldBuilder().addBuilder(
+            index, com.provenance.metadata.v1.SpecificationProto.ScopeSpecification.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ScopeSpecification scope_specifications = 5 [json_name = "scopeSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.SpecificationProto.ScopeSpecification.Builder> 
+           getScopeSpecificationsBuilderList() {
+        return getScopeSpecificationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.SpecificationProto.ScopeSpecification, com.provenance.metadata.v1.SpecificationProto.ScopeSpecification.Builder, com.provenance.metadata.v1.SpecificationProto.ScopeSpecificationOrBuilder> 
+          getScopeSpecificationsFieldBuilder() {
+        if (scopeSpecificationsBuilder_ == null) {
+          scopeSpecificationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.metadata.v1.SpecificationProto.ScopeSpecification, com.provenance.metadata.v1.SpecificationProto.ScopeSpecification.Builder, com.provenance.metadata.v1.SpecificationProto.ScopeSpecificationOrBuilder>(
+                  scopeSpecifications_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          scopeSpecifications_ = null;
+        }
+        return scopeSpecificationsBuilder_;
+      }
+
+      private java.util.List<com.provenance.metadata.v1.SpecificationProto.ContractSpecification> contractSpecifications_ =
+        java.util.Collections.emptyList();
+      private void ensureContractSpecificationsIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          contractSpecifications_ = new java.util.ArrayList<com.provenance.metadata.v1.SpecificationProto.ContractSpecification>(contractSpecifications_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.SpecificationProto.ContractSpecification, com.provenance.metadata.v1.SpecificationProto.ContractSpecification.Builder, com.provenance.metadata.v1.SpecificationProto.ContractSpecificationOrBuilder> contractSpecificationsBuilder_;
+
+      /**
+       * <code>repeated .provenance.metadata.v1.ContractSpecification contract_specifications = 6 [json_name = "contractSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.SpecificationProto.ContractSpecification> getContractSpecificationsList() {
+        if (contractSpecificationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(contractSpecifications_);
+        } else {
+          return contractSpecificationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ContractSpecification contract_specifications = 6 [json_name = "contractSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public int getContractSpecificationsCount() {
+        if (contractSpecificationsBuilder_ == null) {
+          return contractSpecifications_.size();
+        } else {
+          return contractSpecificationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ContractSpecification contract_specifications = 6 [json_name = "contractSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.SpecificationProto.ContractSpecification getContractSpecifications(int index) {
+        if (contractSpecificationsBuilder_ == null) {
+          return contractSpecifications_.get(index);
+        } else {
+          return contractSpecificationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ContractSpecification contract_specifications = 6 [json_name = "contractSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setContractSpecifications(
+          int index, com.provenance.metadata.v1.SpecificationProto.ContractSpecification value) {
+        if (contractSpecificationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContractSpecificationsIsMutable();
+          contractSpecifications_.set(index, value);
+          onChanged();
+        } else {
+          contractSpecificationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ContractSpecification contract_specifications = 6 [json_name = "contractSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setContractSpecifications(
+          int index, com.provenance.metadata.v1.SpecificationProto.ContractSpecification.Builder builderForValue) {
+        if (contractSpecificationsBuilder_ == null) {
+          ensureContractSpecificationsIsMutable();
+          contractSpecifications_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          contractSpecificationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ContractSpecification contract_specifications = 6 [json_name = "contractSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addContractSpecifications(com.provenance.metadata.v1.SpecificationProto.ContractSpecification value) {
+        if (contractSpecificationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContractSpecificationsIsMutable();
+          contractSpecifications_.add(value);
+          onChanged();
+        } else {
+          contractSpecificationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ContractSpecification contract_specifications = 6 [json_name = "contractSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addContractSpecifications(
+          int index, com.provenance.metadata.v1.SpecificationProto.ContractSpecification value) {
+        if (contractSpecificationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContractSpecificationsIsMutable();
+          contractSpecifications_.add(index, value);
+          onChanged();
+        } else {
+          contractSpecificationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ContractSpecification contract_specifications = 6 [json_name = "contractSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addContractSpecifications(
+          com.provenance.metadata.v1.SpecificationProto.ContractSpecification.Builder builderForValue) {
+        if (contractSpecificationsBuilder_ == null) {
+          ensureContractSpecificationsIsMutable();
+          contractSpecifications_.add(builderForValue.build());
+          onChanged();
+        } else {
+          contractSpecificationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ContractSpecification contract_specifications = 6 [json_name = "contractSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addContractSpecifications(
+          int index, com.provenance.metadata.v1.SpecificationProto.ContractSpecification.Builder builderForValue) {
+        if (contractSpecificationsBuilder_ == null) {
+          ensureContractSpecificationsIsMutable();
+          contractSpecifications_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          contractSpecificationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ContractSpecification contract_specifications = 6 [json_name = "contractSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllContractSpecifications(
+          java.lang.Iterable<? extends com.provenance.metadata.v1.SpecificationProto.ContractSpecification> values) {
+        if (contractSpecificationsBuilder_ == null) {
+          ensureContractSpecificationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, contractSpecifications_);
+          onChanged();
+        } else {
+          contractSpecificationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ContractSpecification contract_specifications = 6 [json_name = "contractSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearContractSpecifications() {
+        if (contractSpecificationsBuilder_ == null) {
+          contractSpecifications_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          contractSpecificationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ContractSpecification contract_specifications = 6 [json_name = "contractSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeContractSpecifications(int index) {
+        if (contractSpecificationsBuilder_ == null) {
+          ensureContractSpecificationsIsMutable();
+          contractSpecifications_.remove(index);
+          onChanged();
+        } else {
+          contractSpecificationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ContractSpecification contract_specifications = 6 [json_name = "contractSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.SpecificationProto.ContractSpecification.Builder getContractSpecificationsBuilder(
+          int index) {
+        return getContractSpecificationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ContractSpecification contract_specifications = 6 [json_name = "contractSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.SpecificationProto.ContractSpecificationOrBuilder getContractSpecificationsOrBuilder(
+          int index) {
+        if (contractSpecificationsBuilder_ == null) {
+          return contractSpecifications_.get(index);  } else {
+          return contractSpecificationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ContractSpecification contract_specifications = 6 [json_name = "contractSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.provenance.metadata.v1.SpecificationProto.ContractSpecificationOrBuilder> 
+           getContractSpecificationsOrBuilderList() {
+        if (contractSpecificationsBuilder_ != null) {
+          return contractSpecificationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(contractSpecifications_);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ContractSpecification contract_specifications = 6 [json_name = "contractSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.SpecificationProto.ContractSpecification.Builder addContractSpecificationsBuilder() {
+        return getContractSpecificationsFieldBuilder().addBuilder(
+            com.provenance.metadata.v1.SpecificationProto.ContractSpecification.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ContractSpecification contract_specifications = 6 [json_name = "contractSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.SpecificationProto.ContractSpecification.Builder addContractSpecificationsBuilder(
+          int index) {
+        return getContractSpecificationsFieldBuilder().addBuilder(
+            index, com.provenance.metadata.v1.SpecificationProto.ContractSpecification.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ContractSpecification contract_specifications = 6 [json_name = "contractSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.SpecificationProto.ContractSpecification.Builder> 
+           getContractSpecificationsBuilderList() {
+        return getContractSpecificationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.SpecificationProto.ContractSpecification, com.provenance.metadata.v1.SpecificationProto.ContractSpecification.Builder, com.provenance.metadata.v1.SpecificationProto.ContractSpecificationOrBuilder> 
+          getContractSpecificationsFieldBuilder() {
+        if (contractSpecificationsBuilder_ == null) {
+          contractSpecificationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.metadata.v1.SpecificationProto.ContractSpecification, com.provenance.metadata.v1.SpecificationProto.ContractSpecification.Builder, com.provenance.metadata.v1.SpecificationProto.ContractSpecificationOrBuilder>(
+                  contractSpecifications_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          contractSpecifications_ = null;
+        }
+        return contractSpecificationsBuilder_;
+      }
+
+      private java.util.List<com.provenance.metadata.v1.SpecificationProto.RecordSpecification> recordSpecifications_ =
+        java.util.Collections.emptyList();
+      private void ensureRecordSpecificationsIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          recordSpecifications_ = new java.util.ArrayList<com.provenance.metadata.v1.SpecificationProto.RecordSpecification>(recordSpecifications_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.SpecificationProto.RecordSpecification, com.provenance.metadata.v1.SpecificationProto.RecordSpecification.Builder, com.provenance.metadata.v1.SpecificationProto.RecordSpecificationOrBuilder> recordSpecificationsBuilder_;
+
+      /**
+       * <code>repeated .provenance.metadata.v1.RecordSpecification record_specifications = 7 [json_name = "recordSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.SpecificationProto.RecordSpecification> getRecordSpecificationsList() {
+        if (recordSpecificationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(recordSpecifications_);
+        } else {
+          return recordSpecificationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.RecordSpecification record_specifications = 7 [json_name = "recordSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public int getRecordSpecificationsCount() {
+        if (recordSpecificationsBuilder_ == null) {
+          return recordSpecifications_.size();
+        } else {
+          return recordSpecificationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.RecordSpecification record_specifications = 7 [json_name = "recordSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.SpecificationProto.RecordSpecification getRecordSpecifications(int index) {
+        if (recordSpecificationsBuilder_ == null) {
+          return recordSpecifications_.get(index);
+        } else {
+          return recordSpecificationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.RecordSpecification record_specifications = 7 [json_name = "recordSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRecordSpecifications(
+          int index, com.provenance.metadata.v1.SpecificationProto.RecordSpecification value) {
+        if (recordSpecificationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRecordSpecificationsIsMutable();
+          recordSpecifications_.set(index, value);
+          onChanged();
+        } else {
+          recordSpecificationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.RecordSpecification record_specifications = 7 [json_name = "recordSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRecordSpecifications(
+          int index, com.provenance.metadata.v1.SpecificationProto.RecordSpecification.Builder builderForValue) {
+        if (recordSpecificationsBuilder_ == null) {
+          ensureRecordSpecificationsIsMutable();
+          recordSpecifications_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          recordSpecificationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.RecordSpecification record_specifications = 7 [json_name = "recordSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRecordSpecifications(com.provenance.metadata.v1.SpecificationProto.RecordSpecification value) {
+        if (recordSpecificationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRecordSpecificationsIsMutable();
+          recordSpecifications_.add(value);
+          onChanged();
+        } else {
+          recordSpecificationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.RecordSpecification record_specifications = 7 [json_name = "recordSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRecordSpecifications(
+          int index, com.provenance.metadata.v1.SpecificationProto.RecordSpecification value) {
+        if (recordSpecificationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRecordSpecificationsIsMutable();
+          recordSpecifications_.add(index, value);
+          onChanged();
+        } else {
+          recordSpecificationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.RecordSpecification record_specifications = 7 [json_name = "recordSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRecordSpecifications(
+          com.provenance.metadata.v1.SpecificationProto.RecordSpecification.Builder builderForValue) {
+        if (recordSpecificationsBuilder_ == null) {
+          ensureRecordSpecificationsIsMutable();
+          recordSpecifications_.add(builderForValue.build());
+          onChanged();
+        } else {
+          recordSpecificationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.RecordSpecification record_specifications = 7 [json_name = "recordSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRecordSpecifications(
+          int index, com.provenance.metadata.v1.SpecificationProto.RecordSpecification.Builder builderForValue) {
+        if (recordSpecificationsBuilder_ == null) {
+          ensureRecordSpecificationsIsMutable();
+          recordSpecifications_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          recordSpecificationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.RecordSpecification record_specifications = 7 [json_name = "recordSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllRecordSpecifications(
+          java.lang.Iterable<? extends com.provenance.metadata.v1.SpecificationProto.RecordSpecification> values) {
+        if (recordSpecificationsBuilder_ == null) {
+          ensureRecordSpecificationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, recordSpecifications_);
+          onChanged();
+        } else {
+          recordSpecificationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.RecordSpecification record_specifications = 7 [json_name = "recordSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearRecordSpecifications() {
+        if (recordSpecificationsBuilder_ == null) {
+          recordSpecifications_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          recordSpecificationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.RecordSpecification record_specifications = 7 [json_name = "recordSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeRecordSpecifications(int index) {
+        if (recordSpecificationsBuilder_ == null) {
+          ensureRecordSpecificationsIsMutable();
+          recordSpecifications_.remove(index);
+          onChanged();
+        } else {
+          recordSpecificationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.RecordSpecification record_specifications = 7 [json_name = "recordSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.SpecificationProto.RecordSpecification.Builder getRecordSpecificationsBuilder(
+          int index) {
+        return getRecordSpecificationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.RecordSpecification record_specifications = 7 [json_name = "recordSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.SpecificationProto.RecordSpecificationOrBuilder getRecordSpecificationsOrBuilder(
+          int index) {
+        if (recordSpecificationsBuilder_ == null) {
+          return recordSpecifications_.get(index);  } else {
+          return recordSpecificationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.RecordSpecification record_specifications = 7 [json_name = "recordSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.provenance.metadata.v1.SpecificationProto.RecordSpecificationOrBuilder> 
+           getRecordSpecificationsOrBuilderList() {
+        if (recordSpecificationsBuilder_ != null) {
+          return recordSpecificationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(recordSpecifications_);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.RecordSpecification record_specifications = 7 [json_name = "recordSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.SpecificationProto.RecordSpecification.Builder addRecordSpecificationsBuilder() {
+        return getRecordSpecificationsFieldBuilder().addBuilder(
+            com.provenance.metadata.v1.SpecificationProto.RecordSpecification.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.RecordSpecification record_specifications = 7 [json_name = "recordSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.SpecificationProto.RecordSpecification.Builder addRecordSpecificationsBuilder(
+          int index) {
+        return getRecordSpecificationsFieldBuilder().addBuilder(
+            index, com.provenance.metadata.v1.SpecificationProto.RecordSpecification.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.RecordSpecification record_specifications = 7 [json_name = "recordSpecifications", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.SpecificationProto.RecordSpecification.Builder> 
+           getRecordSpecificationsBuilderList() {
+        return getRecordSpecificationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.SpecificationProto.RecordSpecification, com.provenance.metadata.v1.SpecificationProto.RecordSpecification.Builder, com.provenance.metadata.v1.SpecificationProto.RecordSpecificationOrBuilder> 
+          getRecordSpecificationsFieldBuilder() {
+        if (recordSpecificationsBuilder_ == null) {
+          recordSpecificationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.metadata.v1.SpecificationProto.RecordSpecification, com.provenance.metadata.v1.SpecificationProto.RecordSpecification.Builder, com.provenance.metadata.v1.SpecificationProto.RecordSpecificationOrBuilder>(
+                  recordSpecifications_,
+                  ((bitField0_ & 0x00000040) != 0),
+                  getParentForChildren(),
+                  isClean());
+          recordSpecifications_ = null;
+        }
+        return recordSpecificationsBuilder_;
+      }
+
+      private com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams oSLocatorParams_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams, com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams.Builder, com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParamsOrBuilder> oSLocatorParamsBuilder_;
+      /**
+       * <code>.provenance.metadata.v1.OSLocatorParams o_s_locator_params = 8 [json_name = "oSLocatorParams", (.gogoproto.nullable) = false];</code>
+       * @return Whether the oSLocatorParams field is set.
+       */
+      public boolean hasOSLocatorParams() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>.provenance.metadata.v1.OSLocatorParams o_s_locator_params = 8 [json_name = "oSLocatorParams", (.gogoproto.nullable) = false];</code>
+       * @return The oSLocatorParams.
+       */
+      public com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams getOSLocatorParams() {
+        if (oSLocatorParamsBuilder_ == null) {
+          return oSLocatorParams_ == null ? com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams.getDefaultInstance() : oSLocatorParams_;
+        } else {
+          return oSLocatorParamsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.OSLocatorParams o_s_locator_params = 8 [json_name = "oSLocatorParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOSLocatorParams(com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams value) {
+        if (oSLocatorParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          oSLocatorParams_ = value;
+        } else {
+          oSLocatorParamsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.OSLocatorParams o_s_locator_params = 8 [json_name = "oSLocatorParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOSLocatorParams(
+          com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams.Builder builderForValue) {
+        if (oSLocatorParamsBuilder_ == null) {
+          oSLocatorParams_ = builderForValue.build();
+        } else {
+          oSLocatorParamsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.OSLocatorParams o_s_locator_params = 8 [json_name = "oSLocatorParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeOSLocatorParams(com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams value) {
+        if (oSLocatorParamsBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0) &&
+            oSLocatorParams_ != null &&
+            oSLocatorParams_ != com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams.getDefaultInstance()) {
+            getOSLocatorParamsBuilder().mergeFrom(value);
+          } else {
+            oSLocatorParams_ = value;
+          }
+        } else {
+          oSLocatorParamsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.OSLocatorParams o_s_locator_params = 8 [json_name = "oSLocatorParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearOSLocatorParams() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        oSLocatorParams_ = null;
+        if (oSLocatorParamsBuilder_ != null) {
+          oSLocatorParamsBuilder_.dispose();
+          oSLocatorParamsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.OSLocatorParams o_s_locator_params = 8 [json_name = "oSLocatorParams", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams.Builder getOSLocatorParamsBuilder() {
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return getOSLocatorParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.provenance.metadata.v1.OSLocatorParams o_s_locator_params = 8 [json_name = "oSLocatorParams", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParamsOrBuilder getOSLocatorParamsOrBuilder() {
+        if (oSLocatorParamsBuilder_ != null) {
+          return oSLocatorParamsBuilder_.getMessageOrBuilder();
+        } else {
+          return oSLocatorParams_ == null ?
+              com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams.getDefaultInstance() : oSLocatorParams_;
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.OSLocatorParams o_s_locator_params = 8 [json_name = "oSLocatorParams", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams, com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams.Builder, com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParamsOrBuilder> 
+          getOSLocatorParamsFieldBuilder() {
+        if (oSLocatorParamsBuilder_ == null) {
+          oSLocatorParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams, com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams.Builder, com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParamsOrBuilder>(
+                  getOSLocatorParams(),
+                  getParentForChildren(),
+                  isClean());
+          oSLocatorParams_ = null;
+        }
+        return oSLocatorParamsBuilder_;
+      }
+
+      private java.util.List<com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator> objectStoreLocators_ =
+        java.util.Collections.emptyList();
+      private void ensureObjectStoreLocatorsIsMutable() {
+        if (!((bitField0_ & 0x00000100) != 0)) {
+          objectStoreLocators_ = new java.util.ArrayList<com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator>(objectStoreLocators_);
+          bitField0_ |= 0x00000100;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator, com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator.Builder, com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocatorOrBuilder> objectStoreLocatorsBuilder_;
+
+      /**
+       * <code>repeated .provenance.metadata.v1.ObjectStoreLocator object_store_locators = 9 [json_name = "objectStoreLocators", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator> getObjectStoreLocatorsList() {
+        if (objectStoreLocatorsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(objectStoreLocators_);
+        } else {
+          return objectStoreLocatorsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ObjectStoreLocator object_store_locators = 9 [json_name = "objectStoreLocators", (.gogoproto.nullable) = false];</code>
+       */
+      public int getObjectStoreLocatorsCount() {
+        if (objectStoreLocatorsBuilder_ == null) {
+          return objectStoreLocators_.size();
+        } else {
+          return objectStoreLocatorsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ObjectStoreLocator object_store_locators = 9 [json_name = "objectStoreLocators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator getObjectStoreLocators(int index) {
+        if (objectStoreLocatorsBuilder_ == null) {
+          return objectStoreLocators_.get(index);
+        } else {
+          return objectStoreLocatorsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ObjectStoreLocator object_store_locators = 9 [json_name = "objectStoreLocators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setObjectStoreLocators(
+          int index, com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator value) {
+        if (objectStoreLocatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureObjectStoreLocatorsIsMutable();
+          objectStoreLocators_.set(index, value);
+          onChanged();
+        } else {
+          objectStoreLocatorsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ObjectStoreLocator object_store_locators = 9 [json_name = "objectStoreLocators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setObjectStoreLocators(
+          int index, com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator.Builder builderForValue) {
+        if (objectStoreLocatorsBuilder_ == null) {
+          ensureObjectStoreLocatorsIsMutable();
+          objectStoreLocators_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          objectStoreLocatorsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ObjectStoreLocator object_store_locators = 9 [json_name = "objectStoreLocators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addObjectStoreLocators(com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator value) {
+        if (objectStoreLocatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureObjectStoreLocatorsIsMutable();
+          objectStoreLocators_.add(value);
+          onChanged();
+        } else {
+          objectStoreLocatorsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ObjectStoreLocator object_store_locators = 9 [json_name = "objectStoreLocators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addObjectStoreLocators(
+          int index, com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator value) {
+        if (objectStoreLocatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureObjectStoreLocatorsIsMutable();
+          objectStoreLocators_.add(index, value);
+          onChanged();
+        } else {
+          objectStoreLocatorsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ObjectStoreLocator object_store_locators = 9 [json_name = "objectStoreLocators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addObjectStoreLocators(
+          com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator.Builder builderForValue) {
+        if (objectStoreLocatorsBuilder_ == null) {
+          ensureObjectStoreLocatorsIsMutable();
+          objectStoreLocators_.add(builderForValue.build());
+          onChanged();
+        } else {
+          objectStoreLocatorsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ObjectStoreLocator object_store_locators = 9 [json_name = "objectStoreLocators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addObjectStoreLocators(
+          int index, com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator.Builder builderForValue) {
+        if (objectStoreLocatorsBuilder_ == null) {
+          ensureObjectStoreLocatorsIsMutable();
+          objectStoreLocators_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          objectStoreLocatorsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ObjectStoreLocator object_store_locators = 9 [json_name = "objectStoreLocators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllObjectStoreLocators(
+          java.lang.Iterable<? extends com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator> values) {
+        if (objectStoreLocatorsBuilder_ == null) {
+          ensureObjectStoreLocatorsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, objectStoreLocators_);
+          onChanged();
+        } else {
+          objectStoreLocatorsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ObjectStoreLocator object_store_locators = 9 [json_name = "objectStoreLocators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearObjectStoreLocators() {
+        if (objectStoreLocatorsBuilder_ == null) {
+          objectStoreLocators_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000100);
+          onChanged();
+        } else {
+          objectStoreLocatorsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ObjectStoreLocator object_store_locators = 9 [json_name = "objectStoreLocators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeObjectStoreLocators(int index) {
+        if (objectStoreLocatorsBuilder_ == null) {
+          ensureObjectStoreLocatorsIsMutable();
+          objectStoreLocators_.remove(index);
+          onChanged();
+        } else {
+          objectStoreLocatorsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ObjectStoreLocator object_store_locators = 9 [json_name = "objectStoreLocators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator.Builder getObjectStoreLocatorsBuilder(
+          int index) {
+        return getObjectStoreLocatorsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ObjectStoreLocator object_store_locators = 9 [json_name = "objectStoreLocators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocatorOrBuilder getObjectStoreLocatorsOrBuilder(
+          int index) {
+        if (objectStoreLocatorsBuilder_ == null) {
+          return objectStoreLocators_.get(index);  } else {
+          return objectStoreLocatorsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ObjectStoreLocator object_store_locators = 9 [json_name = "objectStoreLocators", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocatorOrBuilder> 
+           getObjectStoreLocatorsOrBuilderList() {
+        if (objectStoreLocatorsBuilder_ != null) {
+          return objectStoreLocatorsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(objectStoreLocators_);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ObjectStoreLocator object_store_locators = 9 [json_name = "objectStoreLocators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator.Builder addObjectStoreLocatorsBuilder() {
+        return getObjectStoreLocatorsFieldBuilder().addBuilder(
+            com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ObjectStoreLocator object_store_locators = 9 [json_name = "objectStoreLocators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator.Builder addObjectStoreLocatorsBuilder(
+          int index) {
+        return getObjectStoreLocatorsFieldBuilder().addBuilder(
+            index, com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.ObjectStoreLocator object_store_locators = 9 [json_name = "objectStoreLocators", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator.Builder> 
+           getObjectStoreLocatorsBuilderList() {
+        return getObjectStoreLocatorsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator, com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator.Builder, com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocatorOrBuilder> 
+          getObjectStoreLocatorsFieldBuilder() {
+        if (objectStoreLocatorsBuilder_ == null) {
+          objectStoreLocatorsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator, com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator.Builder, com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocatorOrBuilder>(
+                  objectStoreLocators_,
+                  ((bitField0_ & 0x00000100) != 0),
+                  getParentForChildren(),
+                  isClean());
+          objectStoreLocators_ = null;
+        }
+        return objectStoreLocatorsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.GenesisState)
+    private static final com.provenance.metadata.v1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.GenesisProto.GenesisState();
+    }
+
+    public static com.provenance.metadata.v1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_GenesisState_fieldAccessorTable;
 
@@ -55,7 +3653,7 @@ public final class GenesisProto {
       "venance.metadata.v1.ObjectStoreLocatorB\004" +
       "\310\336\037\000R\023objectStoreLocators:\010\210\240\037\000\350\240\037\000B\332\001\n\032" +
       "com.provenance.metadata.v1B\014GenesisProto" +
-      "P\001Z4github.com/provenance-io/provenance/" +
+      "P\000Z4github.com/provenance-io/provenance/" +
       "x/metadata/types\242\002\003PMX\252\002\026Provenance.Meta" +
       "data.V1\312\002\026Provenance\\Metadata\\V1\342\002\"Prove" +
       "nance\\Metadata\\V1\\GPBMetadata\352\002\030Provenan" +

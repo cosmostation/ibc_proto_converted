@@ -14,14 +14,1310 @@ public final class StoreProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface StoreRecordOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.iscn.StoreRecord)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.likechain.iscn.IscnId iscn_id = 1 [json_name = "iscnId", (.gogoproto.nullable) = false];</code>
+     * @return Whether the iscnId field is set.
+     */
+    boolean hasIscnId();
+    /**
+     * <code>.likechain.iscn.IscnId iscn_id = 1 [json_name = "iscnId", (.gogoproto.nullable) = false];</code>
+     * @return The iscnId.
+     */
+    com.likechain.iscn.IscnidProto.IscnId getIscnId();
+    /**
+     * <code>.likechain.iscn.IscnId iscn_id = 1 [json_name = "iscnId", (.gogoproto.nullable) = false];</code>
+     */
+    com.likechain.iscn.IscnidProto.IscnIdOrBuilder getIscnIdOrBuilder();
+
+    /**
+     * <code>bytes cid_bytes = 2 [json_name = "cidBytes"];</code>
+     * @return The cidBytes.
+     */
+    com.google.protobuf.ByteString getCidBytes();
+
+    /**
+     * <code>bytes data = 3 [json_name = "data", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "IscnInput"];</code>
+     * @return The data.
+     */
+    com.google.protobuf.ByteString getData();
+  }
+  /**
+   * Protobuf type {@code likechain.iscn.StoreRecord}
+   */
+  public static final class StoreRecord extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.iscn.StoreRecord)
+      StoreRecordOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StoreRecord.newBuilder() to construct.
+    private StoreRecord(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StoreRecord() {
+      cidBytes_ = com.google.protobuf.ByteString.EMPTY;
+      data_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StoreRecord();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.iscn.StoreProto.internal_static_likechain_iscn_StoreRecord_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.iscn.StoreProto.internal_static_likechain_iscn_StoreRecord_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.iscn.StoreProto.StoreRecord.class, com.likechain.iscn.StoreProto.StoreRecord.Builder.class);
+    }
+
+    public static final int ISCN_ID_FIELD_NUMBER = 1;
+    private com.likechain.iscn.IscnidProto.IscnId iscnId_;
+    /**
+     * <code>.likechain.iscn.IscnId iscn_id = 1 [json_name = "iscnId", (.gogoproto.nullable) = false];</code>
+     * @return Whether the iscnId field is set.
+     */
+    @java.lang.Override
+    public boolean hasIscnId() {
+      return iscnId_ != null;
+    }
+    /**
+     * <code>.likechain.iscn.IscnId iscn_id = 1 [json_name = "iscnId", (.gogoproto.nullable) = false];</code>
+     * @return The iscnId.
+     */
+    @java.lang.Override
+    public com.likechain.iscn.IscnidProto.IscnId getIscnId() {
+      return iscnId_ == null ? com.likechain.iscn.IscnidProto.IscnId.getDefaultInstance() : iscnId_;
+    }
+    /**
+     * <code>.likechain.iscn.IscnId iscn_id = 1 [json_name = "iscnId", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.likechain.iscn.IscnidProto.IscnIdOrBuilder getIscnIdOrBuilder() {
+      return iscnId_ == null ? com.likechain.iscn.IscnidProto.IscnId.getDefaultInstance() : iscnId_;
+    }
+
+    public static final int CID_BYTES_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString cidBytes_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes cid_bytes = 2 [json_name = "cidBytes"];</code>
+     * @return The cidBytes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getCidBytes() {
+      return cidBytes_;
+    }
+
+    public static final int DATA_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes data = 3 [json_name = "data", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "IscnInput"];</code>
+     * @return The data.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getData() {
+      return data_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (iscnId_ != null) {
+        output.writeMessage(1, getIscnId());
+      }
+      if (!cidBytes_.isEmpty()) {
+        output.writeBytes(2, cidBytes_);
+      }
+      if (!data_.isEmpty()) {
+        output.writeBytes(3, data_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (iscnId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getIscnId());
+      }
+      if (!cidBytes_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, cidBytes_);
+      }
+      if (!data_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, data_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.iscn.StoreProto.StoreRecord)) {
+        return super.equals(obj);
+      }
+      com.likechain.iscn.StoreProto.StoreRecord other = (com.likechain.iscn.StoreProto.StoreRecord) obj;
+
+      if (hasIscnId() != other.hasIscnId()) return false;
+      if (hasIscnId()) {
+        if (!getIscnId()
+            .equals(other.getIscnId())) return false;
+      }
+      if (!getCidBytes()
+          .equals(other.getCidBytes())) return false;
+      if (!getData()
+          .equals(other.getData())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasIscnId()) {
+        hash = (37 * hash) + ISCN_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getIscnId().hashCode();
+      }
+      hash = (37 * hash) + CID_BYTES_FIELD_NUMBER;
+      hash = (53 * hash) + getCidBytes().hashCode();
+      hash = (37 * hash) + DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getData().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.iscn.StoreProto.StoreRecord parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.StoreProto.StoreRecord parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.StoreProto.StoreRecord parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.StoreProto.StoreRecord parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.StoreProto.StoreRecord parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.StoreProto.StoreRecord parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.StoreProto.StoreRecord parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.iscn.StoreProto.StoreRecord parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.iscn.StoreProto.StoreRecord parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.iscn.StoreProto.StoreRecord parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.iscn.StoreProto.StoreRecord parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.iscn.StoreProto.StoreRecord parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.iscn.StoreProto.StoreRecord prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.iscn.StoreRecord}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.iscn.StoreRecord)
+        com.likechain.iscn.StoreProto.StoreRecordOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.iscn.StoreProto.internal_static_likechain_iscn_StoreRecord_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.iscn.StoreProto.internal_static_likechain_iscn_StoreRecord_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.iscn.StoreProto.StoreRecord.class, com.likechain.iscn.StoreProto.StoreRecord.Builder.class);
+      }
+
+      // Construct using com.likechain.iscn.StoreProto.StoreRecord.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        iscnId_ = null;
+        if (iscnIdBuilder_ != null) {
+          iscnIdBuilder_.dispose();
+          iscnIdBuilder_ = null;
+        }
+        cidBytes_ = com.google.protobuf.ByteString.EMPTY;
+        data_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.iscn.StoreProto.internal_static_likechain_iscn_StoreRecord_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.StoreProto.StoreRecord getDefaultInstanceForType() {
+        return com.likechain.iscn.StoreProto.StoreRecord.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.StoreProto.StoreRecord build() {
+        com.likechain.iscn.StoreProto.StoreRecord result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.StoreProto.StoreRecord buildPartial() {
+        com.likechain.iscn.StoreProto.StoreRecord result = new com.likechain.iscn.StoreProto.StoreRecord(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.iscn.StoreProto.StoreRecord result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.iscnId_ = iscnIdBuilder_ == null
+              ? iscnId_
+              : iscnIdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.cidBytes_ = cidBytes_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.data_ = data_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.iscn.StoreProto.StoreRecord) {
+          return mergeFrom((com.likechain.iscn.StoreProto.StoreRecord)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.iscn.StoreProto.StoreRecord other) {
+        if (other == com.likechain.iscn.StoreProto.StoreRecord.getDefaultInstance()) return this;
+        if (other.hasIscnId()) {
+          mergeIscnId(other.getIscnId());
+        }
+        if (other.getCidBytes() != com.google.protobuf.ByteString.EMPTY) {
+          setCidBytes(other.getCidBytes());
+        }
+        if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
+          setData(other.getData());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getIscnIdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                cidBytes_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                data_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.likechain.iscn.IscnidProto.IscnId iscnId_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.likechain.iscn.IscnidProto.IscnId, com.likechain.iscn.IscnidProto.IscnId.Builder, com.likechain.iscn.IscnidProto.IscnIdOrBuilder> iscnIdBuilder_;
+      /**
+       * <code>.likechain.iscn.IscnId iscn_id = 1 [json_name = "iscnId", (.gogoproto.nullable) = false];</code>
+       * @return Whether the iscnId field is set.
+       */
+      public boolean hasIscnId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.likechain.iscn.IscnId iscn_id = 1 [json_name = "iscnId", (.gogoproto.nullable) = false];</code>
+       * @return The iscnId.
+       */
+      public com.likechain.iscn.IscnidProto.IscnId getIscnId() {
+        if (iscnIdBuilder_ == null) {
+          return iscnId_ == null ? com.likechain.iscn.IscnidProto.IscnId.getDefaultInstance() : iscnId_;
+        } else {
+          return iscnIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.likechain.iscn.IscnId iscn_id = 1 [json_name = "iscnId", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setIscnId(com.likechain.iscn.IscnidProto.IscnId value) {
+        if (iscnIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          iscnId_ = value;
+        } else {
+          iscnIdBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.iscn.IscnId iscn_id = 1 [json_name = "iscnId", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setIscnId(
+          com.likechain.iscn.IscnidProto.IscnId.Builder builderForValue) {
+        if (iscnIdBuilder_ == null) {
+          iscnId_ = builderForValue.build();
+        } else {
+          iscnIdBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.iscn.IscnId iscn_id = 1 [json_name = "iscnId", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeIscnId(com.likechain.iscn.IscnidProto.IscnId value) {
+        if (iscnIdBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            iscnId_ != null &&
+            iscnId_ != com.likechain.iscn.IscnidProto.IscnId.getDefaultInstance()) {
+            getIscnIdBuilder().mergeFrom(value);
+          } else {
+            iscnId_ = value;
+          }
+        } else {
+          iscnIdBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.iscn.IscnId iscn_id = 1 [json_name = "iscnId", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearIscnId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        iscnId_ = null;
+        if (iscnIdBuilder_ != null) {
+          iscnIdBuilder_.dispose();
+          iscnIdBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.iscn.IscnId iscn_id = 1 [json_name = "iscnId", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.iscn.IscnidProto.IscnId.Builder getIscnIdBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getIscnIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.likechain.iscn.IscnId iscn_id = 1 [json_name = "iscnId", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.iscn.IscnidProto.IscnIdOrBuilder getIscnIdOrBuilder() {
+        if (iscnIdBuilder_ != null) {
+          return iscnIdBuilder_.getMessageOrBuilder();
+        } else {
+          return iscnId_ == null ?
+              com.likechain.iscn.IscnidProto.IscnId.getDefaultInstance() : iscnId_;
+        }
+      }
+      /**
+       * <code>.likechain.iscn.IscnId iscn_id = 1 [json_name = "iscnId", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.likechain.iscn.IscnidProto.IscnId, com.likechain.iscn.IscnidProto.IscnId.Builder, com.likechain.iscn.IscnidProto.IscnIdOrBuilder> 
+          getIscnIdFieldBuilder() {
+        if (iscnIdBuilder_ == null) {
+          iscnIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.likechain.iscn.IscnidProto.IscnId, com.likechain.iscn.IscnidProto.IscnId.Builder, com.likechain.iscn.IscnidProto.IscnIdOrBuilder>(
+                  getIscnId(),
+                  getParentForChildren(),
+                  isClean());
+          iscnId_ = null;
+        }
+        return iscnIdBuilder_;
+      }
+
+      private com.google.protobuf.ByteString cidBytes_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes cid_bytes = 2 [json_name = "cidBytes"];</code>
+       * @return The cidBytes.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getCidBytes() {
+        return cidBytes_;
+      }
+      /**
+       * <code>bytes cid_bytes = 2 [json_name = "cidBytes"];</code>
+       * @param value The cidBytes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCidBytes(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        cidBytes_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes cid_bytes = 2 [json_name = "cidBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCidBytes() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        cidBytes_ = getDefaultInstance().getCidBytes();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes data = 3 [json_name = "data", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "IscnInput"];</code>
+       * @return The data.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getData() {
+        return data_;
+      }
+      /**
+       * <code>bytes data = 3 [json_name = "data", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "IscnInput"];</code>
+       * @param value The data to set.
+       * @return This builder for chaining.
+       */
+      public Builder setData(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        data_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes data = 3 [json_name = "data", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "IscnInput"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearData() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        data_ = getDefaultInstance().getData();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.iscn.StoreRecord)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.iscn.StoreRecord)
+    private static final com.likechain.iscn.StoreProto.StoreRecord DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.iscn.StoreProto.StoreRecord();
+    }
+
+    public static com.likechain.iscn.StoreProto.StoreRecord getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StoreRecord>
+        PARSER = new com.google.protobuf.AbstractParser<StoreRecord>() {
+      @java.lang.Override
+      public StoreRecord parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<StoreRecord> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StoreRecord> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.iscn.StoreProto.StoreRecord getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ContentIdRecordOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.iscn.ContentIdRecord)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes owner_address_bytes = 1 [json_name = "ownerAddressBytes"];</code>
+     * @return The ownerAddressBytes.
+     */
+    com.google.protobuf.ByteString getOwnerAddressBytes();
+
+    /**
+     * <code>uint64 latest_version = 2 [json_name = "latestVersion"];</code>
+     * @return The latestVersion.
+     */
+    long getLatestVersion();
+  }
+  /**
+   * Protobuf type {@code likechain.iscn.ContentIdRecord}
+   */
+  public static final class ContentIdRecord extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.iscn.ContentIdRecord)
+      ContentIdRecordOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ContentIdRecord.newBuilder() to construct.
+    private ContentIdRecord(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ContentIdRecord() {
+      ownerAddressBytes_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ContentIdRecord();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.iscn.StoreProto.internal_static_likechain_iscn_ContentIdRecord_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.iscn.StoreProto.internal_static_likechain_iscn_ContentIdRecord_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.iscn.StoreProto.ContentIdRecord.class, com.likechain.iscn.StoreProto.ContentIdRecord.Builder.class);
+    }
+
+    public static final int OWNER_ADDRESS_BYTES_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString ownerAddressBytes_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes owner_address_bytes = 1 [json_name = "ownerAddressBytes"];</code>
+     * @return The ownerAddressBytes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getOwnerAddressBytes() {
+      return ownerAddressBytes_;
+    }
+
+    public static final int LATEST_VERSION_FIELD_NUMBER = 2;
+    private long latestVersion_ = 0L;
+    /**
+     * <code>uint64 latest_version = 2 [json_name = "latestVersion"];</code>
+     * @return The latestVersion.
+     */
+    @java.lang.Override
+    public long getLatestVersion() {
+      return latestVersion_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!ownerAddressBytes_.isEmpty()) {
+        output.writeBytes(1, ownerAddressBytes_);
+      }
+      if (latestVersion_ != 0L) {
+        output.writeUInt64(2, latestVersion_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!ownerAddressBytes_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, ownerAddressBytes_);
+      }
+      if (latestVersion_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, latestVersion_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.iscn.StoreProto.ContentIdRecord)) {
+        return super.equals(obj);
+      }
+      com.likechain.iscn.StoreProto.ContentIdRecord other = (com.likechain.iscn.StoreProto.ContentIdRecord) obj;
+
+      if (!getOwnerAddressBytes()
+          .equals(other.getOwnerAddressBytes())) return false;
+      if (getLatestVersion()
+          != other.getLatestVersion()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_ADDRESS_BYTES_FIELD_NUMBER;
+      hash = (53 * hash) + getOwnerAddressBytes().hashCode();
+      hash = (37 * hash) + LATEST_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLatestVersion());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.iscn.StoreProto.ContentIdRecord parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.StoreProto.ContentIdRecord parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.StoreProto.ContentIdRecord parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.StoreProto.ContentIdRecord parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.StoreProto.ContentIdRecord parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.StoreProto.ContentIdRecord parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.StoreProto.ContentIdRecord parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.iscn.StoreProto.ContentIdRecord parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.iscn.StoreProto.ContentIdRecord parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.iscn.StoreProto.ContentIdRecord parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.iscn.StoreProto.ContentIdRecord parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.iscn.StoreProto.ContentIdRecord parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.iscn.StoreProto.ContentIdRecord prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.iscn.ContentIdRecord}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.iscn.ContentIdRecord)
+        com.likechain.iscn.StoreProto.ContentIdRecordOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.iscn.StoreProto.internal_static_likechain_iscn_ContentIdRecord_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.iscn.StoreProto.internal_static_likechain_iscn_ContentIdRecord_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.iscn.StoreProto.ContentIdRecord.class, com.likechain.iscn.StoreProto.ContentIdRecord.Builder.class);
+      }
+
+      // Construct using com.likechain.iscn.StoreProto.ContentIdRecord.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        ownerAddressBytes_ = com.google.protobuf.ByteString.EMPTY;
+        latestVersion_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.iscn.StoreProto.internal_static_likechain_iscn_ContentIdRecord_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.StoreProto.ContentIdRecord getDefaultInstanceForType() {
+        return com.likechain.iscn.StoreProto.ContentIdRecord.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.StoreProto.ContentIdRecord build() {
+        com.likechain.iscn.StoreProto.ContentIdRecord result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.StoreProto.ContentIdRecord buildPartial() {
+        com.likechain.iscn.StoreProto.ContentIdRecord result = new com.likechain.iscn.StoreProto.ContentIdRecord(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.iscn.StoreProto.ContentIdRecord result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.ownerAddressBytes_ = ownerAddressBytes_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.latestVersion_ = latestVersion_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.iscn.StoreProto.ContentIdRecord) {
+          return mergeFrom((com.likechain.iscn.StoreProto.ContentIdRecord)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.iscn.StoreProto.ContentIdRecord other) {
+        if (other == com.likechain.iscn.StoreProto.ContentIdRecord.getDefaultInstance()) return this;
+        if (other.getOwnerAddressBytes() != com.google.protobuf.ByteString.EMPTY) {
+          setOwnerAddressBytes(other.getOwnerAddressBytes());
+        }
+        if (other.getLatestVersion() != 0L) {
+          setLatestVersion(other.getLatestVersion());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                ownerAddressBytes_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                latestVersion_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString ownerAddressBytes_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes owner_address_bytes = 1 [json_name = "ownerAddressBytes"];</code>
+       * @return The ownerAddressBytes.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getOwnerAddressBytes() {
+        return ownerAddressBytes_;
+      }
+      /**
+       * <code>bytes owner_address_bytes = 1 [json_name = "ownerAddressBytes"];</code>
+       * @param value The ownerAddressBytes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerAddressBytes(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        ownerAddressBytes_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes owner_address_bytes = 1 [json_name = "ownerAddressBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwnerAddressBytes() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        ownerAddressBytes_ = getDefaultInstance().getOwnerAddressBytes();
+        onChanged();
+        return this;
+      }
+
+      private long latestVersion_ ;
+      /**
+       * <code>uint64 latest_version = 2 [json_name = "latestVersion"];</code>
+       * @return The latestVersion.
+       */
+      @java.lang.Override
+      public long getLatestVersion() {
+        return latestVersion_;
+      }
+      /**
+       * <code>uint64 latest_version = 2 [json_name = "latestVersion"];</code>
+       * @param value The latestVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLatestVersion(long value) {
+
+        latestVersion_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 latest_version = 2 [json_name = "latestVersion"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLatestVersion() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        latestVersion_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.iscn.ContentIdRecord)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.iscn.ContentIdRecord)
+    private static final com.likechain.iscn.StoreProto.ContentIdRecord DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.iscn.StoreProto.ContentIdRecord();
+    }
+
+    public static com.likechain.iscn.StoreProto.ContentIdRecord getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ContentIdRecord>
+        PARSER = new com.google.protobuf.AbstractParser<ContentIdRecord>() {
+      @java.lang.Override
+      public ContentIdRecord parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ContentIdRecord> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ContentIdRecord> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.iscn.StoreProto.ContentIdRecord getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_iscn_StoreRecord_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_iscn_StoreRecord_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_iscn_ContentIdRecord_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_iscn_ContentIdRecord_fieldAccessorTable;
 
@@ -41,12 +1337,12 @@ public final class StoreProto {
       "ata\030\003 \001(\014B\021\310\336\037\000\332\336\037\tIscnInputR\004data\"h\n\017Co" +
       "ntentIdRecord\022.\n\023owner_address_bytes\030\001 \001" +
       "(\014R\021ownerAddressBytes\022%\n\016latest_version\030" +
-      "\002 \001(\004R\rlatestVersionB\255\001\n\022com.likechain.i" +
-      "scnB\nStoreProtoP\001Z2github.com/likecoin/l" +
-      "ikecoin-chain/v4/x/iscn/types\242\002\003LIX\252\002\016Li" +
-      "kechain.Iscn\312\002\016Likechain\\Iscn\342\002\032Likechai" +
-      "n\\Iscn\\GPBMetadata\352\002\017Likechain::Iscnb\006pr" +
-      "oto3"
+      "\002 \001(\004R\rlatestVersionB\253\001\n\022com.likechain.i" +
+      "scnB\nStoreProtoZ2github.com/likecoin/lik" +
+      "ecoin-chain/v4/x/iscn/types\242\002\003LIX\252\002\016Like" +
+      "chain.Iscn\312\002\016Likechain\\Iscn\342\002\032Likechain\\" +
+      "Iscn\\GPBMetadata\352\002\017Likechain::Iscnb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

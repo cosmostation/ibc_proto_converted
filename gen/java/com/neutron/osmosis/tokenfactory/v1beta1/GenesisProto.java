@@ -14,14 +14,1808 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.osmosis.tokenfactory.v1beta1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * params defines the paramaters of the module.
+     * </pre>
+     *
+     * <code>.neutron.osmosis.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params defines the paramaters of the module.
+     * </pre>
+     *
+     * <code>.neutron.osmosis.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.neutron.osmosis.tokenfactory.v1beta1.ParamsProto.Params getParams();
+    /**
+     * <pre>
+     * params defines the paramaters of the module.
+     * </pre>
+     *
+     * <code>.neutron.osmosis.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.neutron.osmosis.tokenfactory.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <code>repeated .neutron.osmosis.tokenfactory.v1beta1.GenesisDenom factory_denoms = 2 [json_name = "factoryDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"factory_denoms&#92;""];</code>
+     */
+    java.util.List<com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom> 
+        getFactoryDenomsList();
+    /**
+     * <code>repeated .neutron.osmosis.tokenfactory.v1beta1.GenesisDenom factory_denoms = 2 [json_name = "factoryDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"factory_denoms&#92;""];</code>
+     */
+    com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom getFactoryDenoms(int index);
+    /**
+     * <code>repeated .neutron.osmosis.tokenfactory.v1beta1.GenesisDenom factory_denoms = 2 [json_name = "factoryDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"factory_denoms&#92;""];</code>
+     */
+    int getFactoryDenomsCount();
+    /**
+     * <code>repeated .neutron.osmosis.tokenfactory.v1beta1.GenesisDenom factory_denoms = 2 [json_name = "factoryDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"factory_denoms&#92;""];</code>
+     */
+    java.util.List<? extends com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenomOrBuilder> 
+        getFactoryDenomsOrBuilderList();
+    /**
+     * <code>repeated .neutron.osmosis.tokenfactory.v1beta1.GenesisDenom factory_denoms = 2 [json_name = "factoryDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"factory_denoms&#92;""];</code>
+     */
+    com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenomOrBuilder getFactoryDenomsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the tokenfactory module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code neutron.osmosis.tokenfactory.v1beta1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.osmosis.tokenfactory.v1beta1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      factoryDenoms_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.internal_static_neutron_osmosis_tokenfactory_v1beta1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.internal_static_neutron_osmosis_tokenfactory_v1beta1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState.class, com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.neutron.osmosis.tokenfactory.v1beta1.ParamsProto.Params params_;
+    /**
+     * <pre>
+     * params defines the paramaters of the module.
+     * </pre>
+     *
+     * <code>.neutron.osmosis.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params defines the paramaters of the module.
+     * </pre>
+     *
+     * <code>.neutron.osmosis.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.neutron.osmosis.tokenfactory.v1beta1.ParamsProto.Params getParams() {
+      return params_ == null ? com.neutron.osmosis.tokenfactory.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params defines the paramaters of the module.
+     * </pre>
+     *
+     * <code>.neutron.osmosis.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.neutron.osmosis.tokenfactory.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.neutron.osmosis.tokenfactory.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int FACTORY_DENOMS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom> factoryDenoms_;
+    /**
+     * <code>repeated .neutron.osmosis.tokenfactory.v1beta1.GenesisDenom factory_denoms = 2 [json_name = "factoryDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"factory_denoms&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom> getFactoryDenomsList() {
+      return factoryDenoms_;
+    }
+    /**
+     * <code>repeated .neutron.osmosis.tokenfactory.v1beta1.GenesisDenom factory_denoms = 2 [json_name = "factoryDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"factory_denoms&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenomOrBuilder> 
+        getFactoryDenomsOrBuilderList() {
+      return factoryDenoms_;
+    }
+    /**
+     * <code>repeated .neutron.osmosis.tokenfactory.v1beta1.GenesisDenom factory_denoms = 2 [json_name = "factoryDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"factory_denoms&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getFactoryDenomsCount() {
+      return factoryDenoms_.size();
+    }
+    /**
+     * <code>repeated .neutron.osmosis.tokenfactory.v1beta1.GenesisDenom factory_denoms = 2 [json_name = "factoryDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"factory_denoms&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom getFactoryDenoms(int index) {
+      return factoryDenoms_.get(index);
+    }
+    /**
+     * <code>repeated .neutron.osmosis.tokenfactory.v1beta1.GenesisDenom factory_denoms = 2 [json_name = "factoryDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"factory_denoms&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenomOrBuilder getFactoryDenomsOrBuilder(
+        int index) {
+      return factoryDenoms_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      for (int i = 0; i < factoryDenoms_.size(); i++) {
+        output.writeMessage(2, factoryDenoms_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      for (int i = 0; i < factoryDenoms_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, factoryDenoms_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState other = (com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getFactoryDenomsList()
+          .equals(other.getFactoryDenomsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (getFactoryDenomsCount() > 0) {
+        hash = (37 * hash) + FACTORY_DENOMS_FIELD_NUMBER;
+        hash = (53 * hash) + getFactoryDenomsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the tokenfactory module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code neutron.osmosis.tokenfactory.v1beta1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.osmosis.tokenfactory.v1beta1.GenesisState)
+        com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.internal_static_neutron_osmosis_tokenfactory_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.internal_static_neutron_osmosis_tokenfactory_v1beta1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState.class, com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        if (factoryDenomsBuilder_ == null) {
+          factoryDenoms_ = java.util.Collections.emptyList();
+        } else {
+          factoryDenoms_ = null;
+          factoryDenomsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.internal_static_neutron_osmosis_tokenfactory_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState build() {
+        com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState buildPartial() {
+        com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState result = new com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState result) {
+        if (factoryDenomsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            factoryDenoms_ = java.util.Collections.unmodifiableList(factoryDenoms_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.factoryDenoms_ = factoryDenoms_;
+        } else {
+          result.factoryDenoms_ = factoryDenomsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState) {
+          return mergeFrom((com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState other) {
+        if (other == com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (factoryDenomsBuilder_ == null) {
+          if (!other.factoryDenoms_.isEmpty()) {
+            if (factoryDenoms_.isEmpty()) {
+              factoryDenoms_ = other.factoryDenoms_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureFactoryDenomsIsMutable();
+              factoryDenoms_.addAll(other.factoryDenoms_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.factoryDenoms_.isEmpty()) {
+            if (factoryDenomsBuilder_.isEmpty()) {
+              factoryDenomsBuilder_.dispose();
+              factoryDenomsBuilder_ = null;
+              factoryDenoms_ = other.factoryDenoms_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              factoryDenomsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFactoryDenomsFieldBuilder() : null;
+            } else {
+              factoryDenomsBuilder_.addAllMessages(other.factoryDenoms_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom m =
+                    input.readMessage(
+                        com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom.parser(),
+                        extensionRegistry);
+                if (factoryDenomsBuilder_ == null) {
+                  ensureFactoryDenomsIsMutable();
+                  factoryDenoms_.add(m);
+                } else {
+                  factoryDenomsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.neutron.osmosis.tokenfactory.v1beta1.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.neutron.osmosis.tokenfactory.v1beta1.ParamsProto.Params, com.neutron.osmosis.tokenfactory.v1beta1.ParamsProto.Params.Builder, com.neutron.osmosis.tokenfactory.v1beta1.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params defines the paramaters of the module.
+       * </pre>
+       *
+       * <code>.neutron.osmosis.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * params defines the paramaters of the module.
+       * </pre>
+       *
+       * <code>.neutron.osmosis.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.neutron.osmosis.tokenfactory.v1beta1.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.neutron.osmosis.tokenfactory.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params defines the paramaters of the module.
+       * </pre>
+       *
+       * <code>.neutron.osmosis.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.neutron.osmosis.tokenfactory.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the paramaters of the module.
+       * </pre>
+       *
+       * <code>.neutron.osmosis.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.neutron.osmosis.tokenfactory.v1beta1.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the paramaters of the module.
+       * </pre>
+       *
+       * <code>.neutron.osmosis.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.neutron.osmosis.tokenfactory.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.neutron.osmosis.tokenfactory.v1beta1.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the paramaters of the module.
+       * </pre>
+       *
+       * <code>.neutron.osmosis.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the paramaters of the module.
+       * </pre>
+       *
+       * <code>.neutron.osmosis.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.neutron.osmosis.tokenfactory.v1beta1.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params defines the paramaters of the module.
+       * </pre>
+       *
+       * <code>.neutron.osmosis.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.neutron.osmosis.tokenfactory.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.neutron.osmosis.tokenfactory.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params defines the paramaters of the module.
+       * </pre>
+       *
+       * <code>.neutron.osmosis.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.neutron.osmosis.tokenfactory.v1beta1.ParamsProto.Params, com.neutron.osmosis.tokenfactory.v1beta1.ParamsProto.Params.Builder, com.neutron.osmosis.tokenfactory.v1beta1.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.neutron.osmosis.tokenfactory.v1beta1.ParamsProto.Params, com.neutron.osmosis.tokenfactory.v1beta1.ParamsProto.Params.Builder, com.neutron.osmosis.tokenfactory.v1beta1.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private java.util.List<com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom> factoryDenoms_ =
+        java.util.Collections.emptyList();
+      private void ensureFactoryDenomsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          factoryDenoms_ = new java.util.ArrayList<com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom>(factoryDenoms_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom, com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom.Builder, com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenomOrBuilder> factoryDenomsBuilder_;
+
+      /**
+       * <code>repeated .neutron.osmosis.tokenfactory.v1beta1.GenesisDenom factory_denoms = 2 [json_name = "factoryDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"factory_denoms&#92;""];</code>
+       */
+      public java.util.List<com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom> getFactoryDenomsList() {
+        if (factoryDenomsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(factoryDenoms_);
+        } else {
+          return factoryDenomsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .neutron.osmosis.tokenfactory.v1beta1.GenesisDenom factory_denoms = 2 [json_name = "factoryDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"factory_denoms&#92;""];</code>
+       */
+      public int getFactoryDenomsCount() {
+        if (factoryDenomsBuilder_ == null) {
+          return factoryDenoms_.size();
+        } else {
+          return factoryDenomsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .neutron.osmosis.tokenfactory.v1beta1.GenesisDenom factory_denoms = 2 [json_name = "factoryDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"factory_denoms&#92;""];</code>
+       */
+      public com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom getFactoryDenoms(int index) {
+        if (factoryDenomsBuilder_ == null) {
+          return factoryDenoms_.get(index);
+        } else {
+          return factoryDenomsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .neutron.osmosis.tokenfactory.v1beta1.GenesisDenom factory_denoms = 2 [json_name = "factoryDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"factory_denoms&#92;""];</code>
+       */
+      public Builder setFactoryDenoms(
+          int index, com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom value) {
+        if (factoryDenomsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFactoryDenomsIsMutable();
+          factoryDenoms_.set(index, value);
+          onChanged();
+        } else {
+          factoryDenomsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.osmosis.tokenfactory.v1beta1.GenesisDenom factory_denoms = 2 [json_name = "factoryDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"factory_denoms&#92;""];</code>
+       */
+      public Builder setFactoryDenoms(
+          int index, com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom.Builder builderForValue) {
+        if (factoryDenomsBuilder_ == null) {
+          ensureFactoryDenomsIsMutable();
+          factoryDenoms_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          factoryDenomsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.osmosis.tokenfactory.v1beta1.GenesisDenom factory_denoms = 2 [json_name = "factoryDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"factory_denoms&#92;""];</code>
+       */
+      public Builder addFactoryDenoms(com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom value) {
+        if (factoryDenomsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFactoryDenomsIsMutable();
+          factoryDenoms_.add(value);
+          onChanged();
+        } else {
+          factoryDenomsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.osmosis.tokenfactory.v1beta1.GenesisDenom factory_denoms = 2 [json_name = "factoryDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"factory_denoms&#92;""];</code>
+       */
+      public Builder addFactoryDenoms(
+          int index, com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom value) {
+        if (factoryDenomsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFactoryDenomsIsMutable();
+          factoryDenoms_.add(index, value);
+          onChanged();
+        } else {
+          factoryDenomsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.osmosis.tokenfactory.v1beta1.GenesisDenom factory_denoms = 2 [json_name = "factoryDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"factory_denoms&#92;""];</code>
+       */
+      public Builder addFactoryDenoms(
+          com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom.Builder builderForValue) {
+        if (factoryDenomsBuilder_ == null) {
+          ensureFactoryDenomsIsMutable();
+          factoryDenoms_.add(builderForValue.build());
+          onChanged();
+        } else {
+          factoryDenomsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.osmosis.tokenfactory.v1beta1.GenesisDenom factory_denoms = 2 [json_name = "factoryDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"factory_denoms&#92;""];</code>
+       */
+      public Builder addFactoryDenoms(
+          int index, com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom.Builder builderForValue) {
+        if (factoryDenomsBuilder_ == null) {
+          ensureFactoryDenomsIsMutable();
+          factoryDenoms_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          factoryDenomsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.osmosis.tokenfactory.v1beta1.GenesisDenom factory_denoms = 2 [json_name = "factoryDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"factory_denoms&#92;""];</code>
+       */
+      public Builder addAllFactoryDenoms(
+          java.lang.Iterable<? extends com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom> values) {
+        if (factoryDenomsBuilder_ == null) {
+          ensureFactoryDenomsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, factoryDenoms_);
+          onChanged();
+        } else {
+          factoryDenomsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.osmosis.tokenfactory.v1beta1.GenesisDenom factory_denoms = 2 [json_name = "factoryDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"factory_denoms&#92;""];</code>
+       */
+      public Builder clearFactoryDenoms() {
+        if (factoryDenomsBuilder_ == null) {
+          factoryDenoms_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          factoryDenomsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.osmosis.tokenfactory.v1beta1.GenesisDenom factory_denoms = 2 [json_name = "factoryDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"factory_denoms&#92;""];</code>
+       */
+      public Builder removeFactoryDenoms(int index) {
+        if (factoryDenomsBuilder_ == null) {
+          ensureFactoryDenomsIsMutable();
+          factoryDenoms_.remove(index);
+          onChanged();
+        } else {
+          factoryDenomsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.osmosis.tokenfactory.v1beta1.GenesisDenom factory_denoms = 2 [json_name = "factoryDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"factory_denoms&#92;""];</code>
+       */
+      public com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom.Builder getFactoryDenomsBuilder(
+          int index) {
+        return getFactoryDenomsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .neutron.osmosis.tokenfactory.v1beta1.GenesisDenom factory_denoms = 2 [json_name = "factoryDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"factory_denoms&#92;""];</code>
+       */
+      public com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenomOrBuilder getFactoryDenomsOrBuilder(
+          int index) {
+        if (factoryDenomsBuilder_ == null) {
+          return factoryDenoms_.get(index);  } else {
+          return factoryDenomsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .neutron.osmosis.tokenfactory.v1beta1.GenesisDenom factory_denoms = 2 [json_name = "factoryDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"factory_denoms&#92;""];</code>
+       */
+      public java.util.List<? extends com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenomOrBuilder> 
+           getFactoryDenomsOrBuilderList() {
+        if (factoryDenomsBuilder_ != null) {
+          return factoryDenomsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(factoryDenoms_);
+        }
+      }
+      /**
+       * <code>repeated .neutron.osmosis.tokenfactory.v1beta1.GenesisDenom factory_denoms = 2 [json_name = "factoryDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"factory_denoms&#92;""];</code>
+       */
+      public com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom.Builder addFactoryDenomsBuilder() {
+        return getFactoryDenomsFieldBuilder().addBuilder(
+            com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .neutron.osmosis.tokenfactory.v1beta1.GenesisDenom factory_denoms = 2 [json_name = "factoryDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"factory_denoms&#92;""];</code>
+       */
+      public com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom.Builder addFactoryDenomsBuilder(
+          int index) {
+        return getFactoryDenomsFieldBuilder().addBuilder(
+            index, com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .neutron.osmosis.tokenfactory.v1beta1.GenesisDenom factory_denoms = 2 [json_name = "factoryDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"factory_denoms&#92;""];</code>
+       */
+      public java.util.List<com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom.Builder> 
+           getFactoryDenomsBuilderList() {
+        return getFactoryDenomsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom, com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom.Builder, com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenomOrBuilder> 
+          getFactoryDenomsFieldBuilder() {
+        if (factoryDenomsBuilder_ == null) {
+          factoryDenomsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom, com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom.Builder, com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenomOrBuilder>(
+                  factoryDenoms_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          factoryDenoms_ = null;
+        }
+        return factoryDenomsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.osmosis.tokenfactory.v1beta1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.osmosis.tokenfactory.v1beta1.GenesisState)
+    private static final com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState();
+    }
+
+    public static com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GenesisDenomOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.osmosis.tokenfactory.v1beta1.GenesisDenom)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>.neutron.osmosis.tokenfactory.v1beta1.DenomAuthorityMetadata authority_metadata = 2 [json_name = "authorityMetadata", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"authority_metadata&#92;""];</code>
+     * @return Whether the authorityMetadata field is set.
+     */
+    boolean hasAuthorityMetadata();
+    /**
+     * <code>.neutron.osmosis.tokenfactory.v1beta1.DenomAuthorityMetadata authority_metadata = 2 [json_name = "authorityMetadata", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"authority_metadata&#92;""];</code>
+     * @return The authorityMetadata.
+     */
+    com.neutron.osmosis.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata getAuthorityMetadata();
+    /**
+     * <code>.neutron.osmosis.tokenfactory.v1beta1.DenomAuthorityMetadata authority_metadata = 2 [json_name = "authorityMetadata", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"authority_metadata&#92;""];</code>
+     */
+    com.neutron.osmosis.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadataOrBuilder getAuthorityMetadataOrBuilder();
+  }
+  /**
+   * Protobuf type {@code neutron.osmosis.tokenfactory.v1beta1.GenesisDenom}
+   */
+  public static final class GenesisDenom extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.osmosis.tokenfactory.v1beta1.GenesisDenom)
+      GenesisDenomOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisDenom.newBuilder() to construct.
+    private GenesisDenom(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisDenom() {
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisDenom();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.internal_static_neutron_osmosis_tokenfactory_v1beta1_GenesisDenom_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.internal_static_neutron_osmosis_tokenfactory_v1beta1_GenesisDenom_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom.class, com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AUTHORITY_METADATA_FIELD_NUMBER = 2;
+    private com.neutron.osmosis.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata authorityMetadata_;
+    /**
+     * <code>.neutron.osmosis.tokenfactory.v1beta1.DenomAuthorityMetadata authority_metadata = 2 [json_name = "authorityMetadata", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"authority_metadata&#92;""];</code>
+     * @return Whether the authorityMetadata field is set.
+     */
+    @java.lang.Override
+    public boolean hasAuthorityMetadata() {
+      return authorityMetadata_ != null;
+    }
+    /**
+     * <code>.neutron.osmosis.tokenfactory.v1beta1.DenomAuthorityMetadata authority_metadata = 2 [json_name = "authorityMetadata", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"authority_metadata&#92;""];</code>
+     * @return The authorityMetadata.
+     */
+    @java.lang.Override
+    public com.neutron.osmosis.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata getAuthorityMetadata() {
+      return authorityMetadata_ == null ? com.neutron.osmosis.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata.getDefaultInstance() : authorityMetadata_;
+    }
+    /**
+     * <code>.neutron.osmosis.tokenfactory.v1beta1.DenomAuthorityMetadata authority_metadata = 2 [json_name = "authorityMetadata", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"authority_metadata&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.neutron.osmosis.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadataOrBuilder getAuthorityMetadataOrBuilder() {
+      return authorityMetadata_ == null ? com.neutron.osmosis.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata.getDefaultInstance() : authorityMetadata_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (authorityMetadata_ != null) {
+        output.writeMessage(2, getAuthorityMetadata());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (authorityMetadata_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getAuthorityMetadata());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom)) {
+        return super.equals(obj);
+      }
+      com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom other = (com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (hasAuthorityMetadata() != other.hasAuthorityMetadata()) return false;
+      if (hasAuthorityMetadata()) {
+        if (!getAuthorityMetadata()
+            .equals(other.getAuthorityMetadata())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      if (hasAuthorityMetadata()) {
+        hash = (37 * hash) + AUTHORITY_METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getAuthorityMetadata().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code neutron.osmosis.tokenfactory.v1beta1.GenesisDenom}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.osmosis.tokenfactory.v1beta1.GenesisDenom)
+        com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenomOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.internal_static_neutron_osmosis_tokenfactory_v1beta1_GenesisDenom_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.internal_static_neutron_osmosis_tokenfactory_v1beta1_GenesisDenom_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom.class, com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom.Builder.class);
+      }
+
+      // Construct using com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        authorityMetadata_ = null;
+        if (authorityMetadataBuilder_ != null) {
+          authorityMetadataBuilder_.dispose();
+          authorityMetadataBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.internal_static_neutron_osmosis_tokenfactory_v1beta1_GenesisDenom_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom getDefaultInstanceForType() {
+        return com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom build() {
+        com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom buildPartial() {
+        com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom result = new com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.authorityMetadata_ = authorityMetadataBuilder_ == null
+              ? authorityMetadata_
+              : authorityMetadataBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom) {
+          return mergeFrom((com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom other) {
+        if (other == com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasAuthorityMetadata()) {
+          mergeAuthorityMetadata(other.getAuthorityMetadata());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getAuthorityMetadataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.neutron.osmosis.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata authorityMetadata_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.neutron.osmosis.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata, com.neutron.osmosis.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata.Builder, com.neutron.osmosis.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadataOrBuilder> authorityMetadataBuilder_;
+      /**
+       * <code>.neutron.osmosis.tokenfactory.v1beta1.DenomAuthorityMetadata authority_metadata = 2 [json_name = "authorityMetadata", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"authority_metadata&#92;""];</code>
+       * @return Whether the authorityMetadata field is set.
+       */
+      public boolean hasAuthorityMetadata() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.neutron.osmosis.tokenfactory.v1beta1.DenomAuthorityMetadata authority_metadata = 2 [json_name = "authorityMetadata", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"authority_metadata&#92;""];</code>
+       * @return The authorityMetadata.
+       */
+      public com.neutron.osmosis.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata getAuthorityMetadata() {
+        if (authorityMetadataBuilder_ == null) {
+          return authorityMetadata_ == null ? com.neutron.osmosis.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata.getDefaultInstance() : authorityMetadata_;
+        } else {
+          return authorityMetadataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.neutron.osmosis.tokenfactory.v1beta1.DenomAuthorityMetadata authority_metadata = 2 [json_name = "authorityMetadata", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"authority_metadata&#92;""];</code>
+       */
+      public Builder setAuthorityMetadata(com.neutron.osmosis.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata value) {
+        if (authorityMetadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          authorityMetadata_ = value;
+        } else {
+          authorityMetadataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.osmosis.tokenfactory.v1beta1.DenomAuthorityMetadata authority_metadata = 2 [json_name = "authorityMetadata", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"authority_metadata&#92;""];</code>
+       */
+      public Builder setAuthorityMetadata(
+          com.neutron.osmosis.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata.Builder builderForValue) {
+        if (authorityMetadataBuilder_ == null) {
+          authorityMetadata_ = builderForValue.build();
+        } else {
+          authorityMetadataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.osmosis.tokenfactory.v1beta1.DenomAuthorityMetadata authority_metadata = 2 [json_name = "authorityMetadata", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"authority_metadata&#92;""];</code>
+       */
+      public Builder mergeAuthorityMetadata(com.neutron.osmosis.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata value) {
+        if (authorityMetadataBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            authorityMetadata_ != null &&
+            authorityMetadata_ != com.neutron.osmosis.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata.getDefaultInstance()) {
+            getAuthorityMetadataBuilder().mergeFrom(value);
+          } else {
+            authorityMetadata_ = value;
+          }
+        } else {
+          authorityMetadataBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.osmosis.tokenfactory.v1beta1.DenomAuthorityMetadata authority_metadata = 2 [json_name = "authorityMetadata", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"authority_metadata&#92;""];</code>
+       */
+      public Builder clearAuthorityMetadata() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        authorityMetadata_ = null;
+        if (authorityMetadataBuilder_ != null) {
+          authorityMetadataBuilder_.dispose();
+          authorityMetadataBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.osmosis.tokenfactory.v1beta1.DenomAuthorityMetadata authority_metadata = 2 [json_name = "authorityMetadata", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"authority_metadata&#92;""];</code>
+       */
+      public com.neutron.osmosis.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata.Builder getAuthorityMetadataBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getAuthorityMetadataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.neutron.osmosis.tokenfactory.v1beta1.DenomAuthorityMetadata authority_metadata = 2 [json_name = "authorityMetadata", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"authority_metadata&#92;""];</code>
+       */
+      public com.neutron.osmosis.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadataOrBuilder getAuthorityMetadataOrBuilder() {
+        if (authorityMetadataBuilder_ != null) {
+          return authorityMetadataBuilder_.getMessageOrBuilder();
+        } else {
+          return authorityMetadata_ == null ?
+              com.neutron.osmosis.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata.getDefaultInstance() : authorityMetadata_;
+        }
+      }
+      /**
+       * <code>.neutron.osmosis.tokenfactory.v1beta1.DenomAuthorityMetadata authority_metadata = 2 [json_name = "authorityMetadata", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"authority_metadata&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.neutron.osmosis.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata, com.neutron.osmosis.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata.Builder, com.neutron.osmosis.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadataOrBuilder> 
+          getAuthorityMetadataFieldBuilder() {
+        if (authorityMetadataBuilder_ == null) {
+          authorityMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.neutron.osmosis.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata, com.neutron.osmosis.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata.Builder, com.neutron.osmosis.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadataOrBuilder>(
+                  getAuthorityMetadata(),
+                  getParentForChildren(),
+                  isClean());
+          authorityMetadata_ = null;
+        }
+        return authorityMetadataBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.osmosis.tokenfactory.v1beta1.GenesisDenom)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.osmosis.tokenfactory.v1beta1.GenesisDenom)
+    private static final com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom();
+    }
+
+    public static com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisDenom>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisDenom>() {
+      @java.lang.Override
+      public GenesisDenom parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisDenom> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisDenom> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.osmosis.tokenfactory.v1beta1.GenesisProto.GenesisDenom getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_osmosis_tokenfactory_v1beta1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_osmosis_tokenfactory_v1beta1_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_osmosis_tokenfactory_v1beta1_GenesisDenom_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_osmosis_tokenfactory_v1beta1_GenesisDenom_fieldAccessorTable;
 
@@ -49,14 +1843,14 @@ public final class GenesisProto {
       "\030\002 \001(\0132<.neutron.osmosis.tokenfactory.v1" +
       "beta1.DenomAuthorityMetadataB!\310\336\037\000\362\336\037\031ya" +
       "ml:\"authority_metadata\"R\021authorityMetada" +
-      "ta:\004\350\240\037\001B\240\002\n(com.neutron.osmosis.tokenfa" +
-      "ctory.v1beta1B\014GenesisProtoP\001Z3github.co" +
-      "m/neutron-org/neutron/x/tokenfactory/typ" +
-      "es\242\002\003NOT\252\002$Neutron.Osmosis.Tokenfactory." +
-      "V1beta1\312\002$Neutron\\Osmosis\\Tokenfactory\\V" +
-      "1beta1\342\0020Neutron\\Osmosis\\Tokenfactory\\V1" +
-      "beta1\\GPBMetadata\352\002\'Neutron::Osmosis::To" +
-      "kenfactory::V1beta1b\006proto3"
+      "ta:\004\350\240\037\001B\236\002\n(com.neutron.osmosis.tokenfa" +
+      "ctory.v1beta1B\014GenesisProtoZ3github.com/" +
+      "neutron-org/neutron/x/tokenfactory/types" +
+      "\242\002\003NOT\252\002$Neutron.Osmosis.Tokenfactory.V1" +
+      "beta1\312\002$Neutron\\Osmosis\\Tokenfactory\\V1b" +
+      "eta1\342\0020Neutron\\Osmosis\\Tokenfactory\\V1be" +
+      "ta1\\GPBMetadata\352\002\'Neutron::Osmosis::Toke" +
+      "nfactory::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

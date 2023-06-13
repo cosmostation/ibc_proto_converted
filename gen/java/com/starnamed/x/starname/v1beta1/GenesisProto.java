@@ -14,9 +14,1173 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.starname.v1beta1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .starnamed.x.starname.v1beta1.Domain domains = 1 [json_name = "domains", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "domains,omitempty"];</code>
+     */
+    java.util.List<com.starnamed.x.starname.v1beta1.TypesProto.Domain> 
+        getDomainsList();
+    /**
+     * <code>repeated .starnamed.x.starname.v1beta1.Domain domains = 1 [json_name = "domains", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "domains,omitempty"];</code>
+     */
+    com.starnamed.x.starname.v1beta1.TypesProto.Domain getDomains(int index);
+    /**
+     * <code>repeated .starnamed.x.starname.v1beta1.Domain domains = 1 [json_name = "domains", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "domains,omitempty"];</code>
+     */
+    int getDomainsCount();
+    /**
+     * <code>repeated .starnamed.x.starname.v1beta1.Domain domains = 1 [json_name = "domains", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "domains,omitempty"];</code>
+     */
+    java.util.List<? extends com.starnamed.x.starname.v1beta1.TypesProto.DomainOrBuilder> 
+        getDomainsOrBuilderList();
+    /**
+     * <code>repeated .starnamed.x.starname.v1beta1.Domain domains = 1 [json_name = "domains", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "domains,omitempty"];</code>
+     */
+    com.starnamed.x.starname.v1beta1.TypesProto.DomainOrBuilder getDomainsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .starnamed.x.starname.v1beta1.Account accounts = 2 [json_name = "accounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "accounts,omitempty"];</code>
+     */
+    java.util.List<com.starnamed.x.starname.v1beta1.TypesProto.Account> 
+        getAccountsList();
+    /**
+     * <code>repeated .starnamed.x.starname.v1beta1.Account accounts = 2 [json_name = "accounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "accounts,omitempty"];</code>
+     */
+    com.starnamed.x.starname.v1beta1.TypesProto.Account getAccounts(int index);
+    /**
+     * <code>repeated .starnamed.x.starname.v1beta1.Account accounts = 2 [json_name = "accounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "accounts,omitempty"];</code>
+     */
+    int getAccountsCount();
+    /**
+     * <code>repeated .starnamed.x.starname.v1beta1.Account accounts = 2 [json_name = "accounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "accounts,omitempty"];</code>
+     */
+    java.util.List<? extends com.starnamed.x.starname.v1beta1.TypesProto.AccountOrBuilder> 
+        getAccountsOrBuilderList();
+    /**
+     * <code>repeated .starnamed.x.starname.v1beta1.Account accounts = 2 [json_name = "accounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "accounts,omitempty"];</code>
+     */
+    com.starnamed.x.starname.v1beta1.TypesProto.AccountOrBuilder getAccountsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState - genesis state of x/starname
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.starname.v1beta1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.starname.v1beta1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      domains_ = java.util.Collections.emptyList();
+      accounts_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.starname.v1beta1.GenesisProto.internal_static_starnamed_x_starname_v1beta1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.starname.v1beta1.GenesisProto.internal_static_starnamed_x_starname_v1beta1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState.class, com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int DOMAINS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.starnamed.x.starname.v1beta1.TypesProto.Domain> domains_;
+    /**
+     * <code>repeated .starnamed.x.starname.v1beta1.Domain domains = 1 [json_name = "domains", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "domains,omitempty"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.starnamed.x.starname.v1beta1.TypesProto.Domain> getDomainsList() {
+      return domains_;
+    }
+    /**
+     * <code>repeated .starnamed.x.starname.v1beta1.Domain domains = 1 [json_name = "domains", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "domains,omitempty"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.starnamed.x.starname.v1beta1.TypesProto.DomainOrBuilder> 
+        getDomainsOrBuilderList() {
+      return domains_;
+    }
+    /**
+     * <code>repeated .starnamed.x.starname.v1beta1.Domain domains = 1 [json_name = "domains", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "domains,omitempty"];</code>
+     */
+    @java.lang.Override
+    public int getDomainsCount() {
+      return domains_.size();
+    }
+    /**
+     * <code>repeated .starnamed.x.starname.v1beta1.Domain domains = 1 [json_name = "domains", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "domains,omitempty"];</code>
+     */
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TypesProto.Domain getDomains(int index) {
+      return domains_.get(index);
+    }
+    /**
+     * <code>repeated .starnamed.x.starname.v1beta1.Domain domains = 1 [json_name = "domains", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "domains,omitempty"];</code>
+     */
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TypesProto.DomainOrBuilder getDomainsOrBuilder(
+        int index) {
+      return domains_.get(index);
+    }
+
+    public static final int ACCOUNTS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.starnamed.x.starname.v1beta1.TypesProto.Account> accounts_;
+    /**
+     * <code>repeated .starnamed.x.starname.v1beta1.Account accounts = 2 [json_name = "accounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "accounts,omitempty"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.starnamed.x.starname.v1beta1.TypesProto.Account> getAccountsList() {
+      return accounts_;
+    }
+    /**
+     * <code>repeated .starnamed.x.starname.v1beta1.Account accounts = 2 [json_name = "accounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "accounts,omitempty"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.starnamed.x.starname.v1beta1.TypesProto.AccountOrBuilder> 
+        getAccountsOrBuilderList() {
+      return accounts_;
+    }
+    /**
+     * <code>repeated .starnamed.x.starname.v1beta1.Account accounts = 2 [json_name = "accounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "accounts,omitempty"];</code>
+     */
+    @java.lang.Override
+    public int getAccountsCount() {
+      return accounts_.size();
+    }
+    /**
+     * <code>repeated .starnamed.x.starname.v1beta1.Account accounts = 2 [json_name = "accounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "accounts,omitempty"];</code>
+     */
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TypesProto.Account getAccounts(int index) {
+      return accounts_.get(index);
+    }
+    /**
+     * <code>repeated .starnamed.x.starname.v1beta1.Account accounts = 2 [json_name = "accounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "accounts,omitempty"];</code>
+     */
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.TypesProto.AccountOrBuilder getAccountsOrBuilder(
+        int index) {
+      return accounts_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < domains_.size(); i++) {
+        output.writeMessage(1, domains_.get(i));
+      }
+      for (int i = 0; i < accounts_.size(); i++) {
+        output.writeMessage(2, accounts_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < domains_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, domains_.get(i));
+      }
+      for (int i = 0; i < accounts_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, accounts_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState other = (com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState) obj;
+
+      if (!getDomainsList()
+          .equals(other.getDomainsList())) return false;
+      if (!getAccountsList()
+          .equals(other.getAccountsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getDomainsCount() > 0) {
+        hash = (37 * hash) + DOMAINS_FIELD_NUMBER;
+        hash = (53 * hash) + getDomainsList().hashCode();
+      }
+      if (getAccountsCount() > 0) {
+        hash = (37 * hash) + ACCOUNTS_FIELD_NUMBER;
+        hash = (53 * hash) + getAccountsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState - genesis state of x/starname
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.starname.v1beta1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.starname.v1beta1.GenesisState)
+        com.starnamed.x.starname.v1beta1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.starname.v1beta1.GenesisProto.internal_static_starnamed_x_starname_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.starname.v1beta1.GenesisProto.internal_static_starnamed_x_starname_v1beta1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState.class, com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (domainsBuilder_ == null) {
+          domains_ = java.util.Collections.emptyList();
+        } else {
+          domains_ = null;
+          domainsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (accountsBuilder_ == null) {
+          accounts_ = java.util.Collections.emptyList();
+        } else {
+          accounts_ = null;
+          accountsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.starname.v1beta1.GenesisProto.internal_static_starnamed_x_starname_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState build() {
+        com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState buildPartial() {
+        com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState result = new com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState result) {
+        if (domainsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            domains_ = java.util.Collections.unmodifiableList(domains_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.domains_ = domains_;
+        } else {
+          result.domains_ = domainsBuilder_.build();
+        }
+        if (accountsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            accounts_ = java.util.Collections.unmodifiableList(accounts_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.accounts_ = accounts_;
+        } else {
+          result.accounts_ = accountsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState) {
+          return mergeFrom((com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState other) {
+        if (other == com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (domainsBuilder_ == null) {
+          if (!other.domains_.isEmpty()) {
+            if (domains_.isEmpty()) {
+              domains_ = other.domains_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureDomainsIsMutable();
+              domains_.addAll(other.domains_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.domains_.isEmpty()) {
+            if (domainsBuilder_.isEmpty()) {
+              domainsBuilder_.dispose();
+              domainsBuilder_ = null;
+              domains_ = other.domains_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              domainsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDomainsFieldBuilder() : null;
+            } else {
+              domainsBuilder_.addAllMessages(other.domains_);
+            }
+          }
+        }
+        if (accountsBuilder_ == null) {
+          if (!other.accounts_.isEmpty()) {
+            if (accounts_.isEmpty()) {
+              accounts_ = other.accounts_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureAccountsIsMutable();
+              accounts_.addAll(other.accounts_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.accounts_.isEmpty()) {
+            if (accountsBuilder_.isEmpty()) {
+              accountsBuilder_.dispose();
+              accountsBuilder_ = null;
+              accounts_ = other.accounts_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              accountsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAccountsFieldBuilder() : null;
+            } else {
+              accountsBuilder_.addAllMessages(other.accounts_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.starnamed.x.starname.v1beta1.TypesProto.Domain m =
+                    input.readMessage(
+                        com.starnamed.x.starname.v1beta1.TypesProto.Domain.parser(),
+                        extensionRegistry);
+                if (domainsBuilder_ == null) {
+                  ensureDomainsIsMutable();
+                  domains_.add(m);
+                } else {
+                  domainsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                com.starnamed.x.starname.v1beta1.TypesProto.Account m =
+                    input.readMessage(
+                        com.starnamed.x.starname.v1beta1.TypesProto.Account.parser(),
+                        extensionRegistry);
+                if (accountsBuilder_ == null) {
+                  ensureAccountsIsMutable();
+                  accounts_.add(m);
+                } else {
+                  accountsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.starnamed.x.starname.v1beta1.TypesProto.Domain> domains_ =
+        java.util.Collections.emptyList();
+      private void ensureDomainsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          domains_ = new java.util.ArrayList<com.starnamed.x.starname.v1beta1.TypesProto.Domain>(domains_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.starnamed.x.starname.v1beta1.TypesProto.Domain, com.starnamed.x.starname.v1beta1.TypesProto.Domain.Builder, com.starnamed.x.starname.v1beta1.TypesProto.DomainOrBuilder> domainsBuilder_;
+
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Domain domains = 1 [json_name = "domains", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "domains,omitempty"];</code>
+       */
+      public java.util.List<com.starnamed.x.starname.v1beta1.TypesProto.Domain> getDomainsList() {
+        if (domainsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(domains_);
+        } else {
+          return domainsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Domain domains = 1 [json_name = "domains", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "domains,omitempty"];</code>
+       */
+      public int getDomainsCount() {
+        if (domainsBuilder_ == null) {
+          return domains_.size();
+        } else {
+          return domainsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Domain domains = 1 [json_name = "domains", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "domains,omitempty"];</code>
+       */
+      public com.starnamed.x.starname.v1beta1.TypesProto.Domain getDomains(int index) {
+        if (domainsBuilder_ == null) {
+          return domains_.get(index);
+        } else {
+          return domainsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Domain domains = 1 [json_name = "domains", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "domains,omitempty"];</code>
+       */
+      public Builder setDomains(
+          int index, com.starnamed.x.starname.v1beta1.TypesProto.Domain value) {
+        if (domainsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDomainsIsMutable();
+          domains_.set(index, value);
+          onChanged();
+        } else {
+          domainsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Domain domains = 1 [json_name = "domains", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "domains,omitempty"];</code>
+       */
+      public Builder setDomains(
+          int index, com.starnamed.x.starname.v1beta1.TypesProto.Domain.Builder builderForValue) {
+        if (domainsBuilder_ == null) {
+          ensureDomainsIsMutable();
+          domains_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          domainsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Domain domains = 1 [json_name = "domains", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "domains,omitempty"];</code>
+       */
+      public Builder addDomains(com.starnamed.x.starname.v1beta1.TypesProto.Domain value) {
+        if (domainsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDomainsIsMutable();
+          domains_.add(value);
+          onChanged();
+        } else {
+          domainsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Domain domains = 1 [json_name = "domains", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "domains,omitempty"];</code>
+       */
+      public Builder addDomains(
+          int index, com.starnamed.x.starname.v1beta1.TypesProto.Domain value) {
+        if (domainsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDomainsIsMutable();
+          domains_.add(index, value);
+          onChanged();
+        } else {
+          domainsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Domain domains = 1 [json_name = "domains", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "domains,omitempty"];</code>
+       */
+      public Builder addDomains(
+          com.starnamed.x.starname.v1beta1.TypesProto.Domain.Builder builderForValue) {
+        if (domainsBuilder_ == null) {
+          ensureDomainsIsMutable();
+          domains_.add(builderForValue.build());
+          onChanged();
+        } else {
+          domainsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Domain domains = 1 [json_name = "domains", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "domains,omitempty"];</code>
+       */
+      public Builder addDomains(
+          int index, com.starnamed.x.starname.v1beta1.TypesProto.Domain.Builder builderForValue) {
+        if (domainsBuilder_ == null) {
+          ensureDomainsIsMutable();
+          domains_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          domainsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Domain domains = 1 [json_name = "domains", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "domains,omitempty"];</code>
+       */
+      public Builder addAllDomains(
+          java.lang.Iterable<? extends com.starnamed.x.starname.v1beta1.TypesProto.Domain> values) {
+        if (domainsBuilder_ == null) {
+          ensureDomainsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, domains_);
+          onChanged();
+        } else {
+          domainsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Domain domains = 1 [json_name = "domains", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "domains,omitempty"];</code>
+       */
+      public Builder clearDomains() {
+        if (domainsBuilder_ == null) {
+          domains_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          domainsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Domain domains = 1 [json_name = "domains", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "domains,omitempty"];</code>
+       */
+      public Builder removeDomains(int index) {
+        if (domainsBuilder_ == null) {
+          ensureDomainsIsMutable();
+          domains_.remove(index);
+          onChanged();
+        } else {
+          domainsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Domain domains = 1 [json_name = "domains", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "domains,omitempty"];</code>
+       */
+      public com.starnamed.x.starname.v1beta1.TypesProto.Domain.Builder getDomainsBuilder(
+          int index) {
+        return getDomainsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Domain domains = 1 [json_name = "domains", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "domains,omitempty"];</code>
+       */
+      public com.starnamed.x.starname.v1beta1.TypesProto.DomainOrBuilder getDomainsOrBuilder(
+          int index) {
+        if (domainsBuilder_ == null) {
+          return domains_.get(index);  } else {
+          return domainsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Domain domains = 1 [json_name = "domains", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "domains,omitempty"];</code>
+       */
+      public java.util.List<? extends com.starnamed.x.starname.v1beta1.TypesProto.DomainOrBuilder> 
+           getDomainsOrBuilderList() {
+        if (domainsBuilder_ != null) {
+          return domainsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(domains_);
+        }
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Domain domains = 1 [json_name = "domains", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "domains,omitempty"];</code>
+       */
+      public com.starnamed.x.starname.v1beta1.TypesProto.Domain.Builder addDomainsBuilder() {
+        return getDomainsFieldBuilder().addBuilder(
+            com.starnamed.x.starname.v1beta1.TypesProto.Domain.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Domain domains = 1 [json_name = "domains", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "domains,omitempty"];</code>
+       */
+      public com.starnamed.x.starname.v1beta1.TypesProto.Domain.Builder addDomainsBuilder(
+          int index) {
+        return getDomainsFieldBuilder().addBuilder(
+            index, com.starnamed.x.starname.v1beta1.TypesProto.Domain.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Domain domains = 1 [json_name = "domains", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "domains,omitempty"];</code>
+       */
+      public java.util.List<com.starnamed.x.starname.v1beta1.TypesProto.Domain.Builder> 
+           getDomainsBuilderList() {
+        return getDomainsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.starnamed.x.starname.v1beta1.TypesProto.Domain, com.starnamed.x.starname.v1beta1.TypesProto.Domain.Builder, com.starnamed.x.starname.v1beta1.TypesProto.DomainOrBuilder> 
+          getDomainsFieldBuilder() {
+        if (domainsBuilder_ == null) {
+          domainsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.starnamed.x.starname.v1beta1.TypesProto.Domain, com.starnamed.x.starname.v1beta1.TypesProto.Domain.Builder, com.starnamed.x.starname.v1beta1.TypesProto.DomainOrBuilder>(
+                  domains_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          domains_ = null;
+        }
+        return domainsBuilder_;
+      }
+
+      private java.util.List<com.starnamed.x.starname.v1beta1.TypesProto.Account> accounts_ =
+        java.util.Collections.emptyList();
+      private void ensureAccountsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          accounts_ = new java.util.ArrayList<com.starnamed.x.starname.v1beta1.TypesProto.Account>(accounts_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.starnamed.x.starname.v1beta1.TypesProto.Account, com.starnamed.x.starname.v1beta1.TypesProto.Account.Builder, com.starnamed.x.starname.v1beta1.TypesProto.AccountOrBuilder> accountsBuilder_;
+
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Account accounts = 2 [json_name = "accounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "accounts,omitempty"];</code>
+       */
+      public java.util.List<com.starnamed.x.starname.v1beta1.TypesProto.Account> getAccountsList() {
+        if (accountsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(accounts_);
+        } else {
+          return accountsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Account accounts = 2 [json_name = "accounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "accounts,omitempty"];</code>
+       */
+      public int getAccountsCount() {
+        if (accountsBuilder_ == null) {
+          return accounts_.size();
+        } else {
+          return accountsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Account accounts = 2 [json_name = "accounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "accounts,omitempty"];</code>
+       */
+      public com.starnamed.x.starname.v1beta1.TypesProto.Account getAccounts(int index) {
+        if (accountsBuilder_ == null) {
+          return accounts_.get(index);
+        } else {
+          return accountsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Account accounts = 2 [json_name = "accounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "accounts,omitempty"];</code>
+       */
+      public Builder setAccounts(
+          int index, com.starnamed.x.starname.v1beta1.TypesProto.Account value) {
+        if (accountsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccountsIsMutable();
+          accounts_.set(index, value);
+          onChanged();
+        } else {
+          accountsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Account accounts = 2 [json_name = "accounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "accounts,omitempty"];</code>
+       */
+      public Builder setAccounts(
+          int index, com.starnamed.x.starname.v1beta1.TypesProto.Account.Builder builderForValue) {
+        if (accountsBuilder_ == null) {
+          ensureAccountsIsMutable();
+          accounts_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          accountsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Account accounts = 2 [json_name = "accounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "accounts,omitempty"];</code>
+       */
+      public Builder addAccounts(com.starnamed.x.starname.v1beta1.TypesProto.Account value) {
+        if (accountsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccountsIsMutable();
+          accounts_.add(value);
+          onChanged();
+        } else {
+          accountsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Account accounts = 2 [json_name = "accounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "accounts,omitempty"];</code>
+       */
+      public Builder addAccounts(
+          int index, com.starnamed.x.starname.v1beta1.TypesProto.Account value) {
+        if (accountsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccountsIsMutable();
+          accounts_.add(index, value);
+          onChanged();
+        } else {
+          accountsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Account accounts = 2 [json_name = "accounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "accounts,omitempty"];</code>
+       */
+      public Builder addAccounts(
+          com.starnamed.x.starname.v1beta1.TypesProto.Account.Builder builderForValue) {
+        if (accountsBuilder_ == null) {
+          ensureAccountsIsMutable();
+          accounts_.add(builderForValue.build());
+          onChanged();
+        } else {
+          accountsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Account accounts = 2 [json_name = "accounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "accounts,omitempty"];</code>
+       */
+      public Builder addAccounts(
+          int index, com.starnamed.x.starname.v1beta1.TypesProto.Account.Builder builderForValue) {
+        if (accountsBuilder_ == null) {
+          ensureAccountsIsMutable();
+          accounts_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          accountsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Account accounts = 2 [json_name = "accounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "accounts,omitempty"];</code>
+       */
+      public Builder addAllAccounts(
+          java.lang.Iterable<? extends com.starnamed.x.starname.v1beta1.TypesProto.Account> values) {
+        if (accountsBuilder_ == null) {
+          ensureAccountsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, accounts_);
+          onChanged();
+        } else {
+          accountsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Account accounts = 2 [json_name = "accounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "accounts,omitempty"];</code>
+       */
+      public Builder clearAccounts() {
+        if (accountsBuilder_ == null) {
+          accounts_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          accountsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Account accounts = 2 [json_name = "accounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "accounts,omitempty"];</code>
+       */
+      public Builder removeAccounts(int index) {
+        if (accountsBuilder_ == null) {
+          ensureAccountsIsMutable();
+          accounts_.remove(index);
+          onChanged();
+        } else {
+          accountsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Account accounts = 2 [json_name = "accounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "accounts,omitempty"];</code>
+       */
+      public com.starnamed.x.starname.v1beta1.TypesProto.Account.Builder getAccountsBuilder(
+          int index) {
+        return getAccountsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Account accounts = 2 [json_name = "accounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "accounts,omitempty"];</code>
+       */
+      public com.starnamed.x.starname.v1beta1.TypesProto.AccountOrBuilder getAccountsOrBuilder(
+          int index) {
+        if (accountsBuilder_ == null) {
+          return accounts_.get(index);  } else {
+          return accountsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Account accounts = 2 [json_name = "accounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "accounts,omitempty"];</code>
+       */
+      public java.util.List<? extends com.starnamed.x.starname.v1beta1.TypesProto.AccountOrBuilder> 
+           getAccountsOrBuilderList() {
+        if (accountsBuilder_ != null) {
+          return accountsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(accounts_);
+        }
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Account accounts = 2 [json_name = "accounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "accounts,omitempty"];</code>
+       */
+      public com.starnamed.x.starname.v1beta1.TypesProto.Account.Builder addAccountsBuilder() {
+        return getAccountsFieldBuilder().addBuilder(
+            com.starnamed.x.starname.v1beta1.TypesProto.Account.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Account accounts = 2 [json_name = "accounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "accounts,omitempty"];</code>
+       */
+      public com.starnamed.x.starname.v1beta1.TypesProto.Account.Builder addAccountsBuilder(
+          int index) {
+        return getAccountsFieldBuilder().addBuilder(
+            index, com.starnamed.x.starname.v1beta1.TypesProto.Account.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .starnamed.x.starname.v1beta1.Account accounts = 2 [json_name = "accounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "accounts,omitempty"];</code>
+       */
+      public java.util.List<com.starnamed.x.starname.v1beta1.TypesProto.Account.Builder> 
+           getAccountsBuilderList() {
+        return getAccountsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.starnamed.x.starname.v1beta1.TypesProto.Account, com.starnamed.x.starname.v1beta1.TypesProto.Account.Builder, com.starnamed.x.starname.v1beta1.TypesProto.AccountOrBuilder> 
+          getAccountsFieldBuilder() {
+        if (accountsBuilder_ == null) {
+          accountsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.starnamed.x.starname.v1beta1.TypesProto.Account, com.starnamed.x.starname.v1beta1.TypesProto.Account.Builder, com.starnamed.x.starname.v1beta1.TypesProto.AccountOrBuilder>(
+                  accounts_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          accounts_ = null;
+        }
+        return accountsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.starname.v1beta1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.starname.v1beta1.GenesisState)
+    private static final com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState();
+    }
+
+    public static com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.starname.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_starname_v1beta1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_starname_v1beta1_GenesisState_fieldAccessorTable;
 
@@ -36,13 +1200,13 @@ public final class GenesisProto {
       "\352\336\037\021domains,omitemptyR\007domains\022]\n\010accoun" +
       "ts\030\002 \003(\0132%.starnamed.x.starname.v1beta1." +
       "AccountB\032\310\336\037\000\352\336\037\022accounts,omitemptyR\010acc" +
-      "ountsB\362\001\n com.starnamed.x.starname.v1bet" +
-      "a1B\014GenesisProtoP\001Z-github.com/iov-one/s" +
-      "tarnamed/x/starname/types\242\002\003SXS\252\002\034Starna" +
-      "med.X.Starname.V1beta1\312\002\034Starnamed\\X\\Sta" +
-      "rname\\V1beta1\342\002(Starnamed\\X\\Starname\\V1b" +
-      "eta1\\GPBMetadata\352\002\037Starnamed::X::Starnam" +
-      "e::V1beta1b\006proto3"
+      "ountsB\360\001\n com.starnamed.x.starname.v1bet" +
+      "a1B\014GenesisProtoZ-github.com/iov-one/sta" +
+      "rnamed/x/starname/types\242\002\003SXS\252\002\034Starname" +
+      "d.X.Starname.V1beta1\312\002\034Starnamed\\X\\Starn" +
+      "ame\\V1beta1\342\002(Starnamed\\X\\Starname\\V1bet" +
+      "a1\\GPBMetadata\352\002\037Starnamed::X::Starname:" +
+      ":V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

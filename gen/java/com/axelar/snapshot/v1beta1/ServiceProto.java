@@ -35,13 +35,13 @@ public final class ServiceProto {
       ".v1beta1.DeactivateProxyRequest\0320.axelar" +
       ".snapshot.v1beta1.DeactivateProxyRespons" +
       "e\",\202\323\344\223\002&\"!/axelar/snapshot/deactivate_p" +
-      "roxy:\001*B\344\001\n\033com.axelar.snapshot.v1beta1B" +
-      "\014ServiceProtoP\001Z5github.com/axelarnetwor" +
-      "k/axelar-core/x/snapshot/types\242\002\003ASX\252\002\027A" +
-      "xelar.Snapshot.V1beta1\312\002\027Axelar\\Snapshot" +
-      "\\V1beta1\342\002#Axelar\\Snapshot\\V1beta1\\GPBMe" +
-      "tadata\352\002\031Axelar::Snapshot::V1beta1\300\343\036\001b\006" +
-      "proto3"
+      "roxy:\001*B\342\001\n\033com.axelar.snapshot.v1beta1B" +
+      "\014ServiceProtoZ5github.com/axelarnetwork/" +
+      "axelar-core/x/snapshot/types\242\002\003ASX\252\002\027Axe" +
+      "lar.Snapshot.V1beta1\312\002\027Axelar\\Snapshot\\V" +
+      "1beta1\342\002#Axelar\\Snapshot\\V1beta1\\GPBMeta" +
+      "data\352\002\031Axelar::Snapshot::V1beta1\300\343\036\001b\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

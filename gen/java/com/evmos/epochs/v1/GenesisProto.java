@@ -14,14 +14,2561 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface EpochInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.epochs.v1.EpochInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * identifier of the epoch
+     * </pre>
+     *
+     * <code>string identifier = 1 [json_name = "identifier"];</code>
+     * @return The identifier.
+     */
+    java.lang.String getIdentifier();
+    /**
+     * <pre>
+     * identifier of the epoch
+     * </pre>
+     *
+     * <code>string identifier = 1 [json_name = "identifier"];</code>
+     * @return The bytes for identifier.
+     */
+    com.google.protobuf.ByteString
+        getIdentifierBytes();
+
+    /**
+     * <pre>
+     * start_time of the epoch
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    boolean hasStartTime();
+    /**
+     * <pre>
+     * start_time of the epoch
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    com.google.protobuf.Timestamp getStartTime();
+    /**
+     * <pre>
+     * start_time of the epoch
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
+
+    /**
+     * <pre>
+     * duration of the epoch
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the duration field is set.
+     */
+    boolean hasDuration();
+    /**
+     * <pre>
+     * duration of the epoch
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The duration.
+     */
+    com.google.protobuf.Duration getDuration();
+    /**
+     * <pre>
+     * duration of the epoch
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getDurationOrBuilder();
+
+    /**
+     * <pre>
+     * current_epoch is the integer identifier of the epoch
+     * </pre>
+     *
+     * <code>int64 current_epoch = 4 [json_name = "currentEpoch"];</code>
+     * @return The currentEpoch.
+     */
+    long getCurrentEpoch();
+
+    /**
+     * <pre>
+     * current_epoch_start_time defines the timestamp of the start of the epoch
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp current_epoch_start_time = 5 [json_name = "currentEpochStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_epoch_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the currentEpochStartTime field is set.
+     */
+    boolean hasCurrentEpochStartTime();
+    /**
+     * <pre>
+     * current_epoch_start_time defines the timestamp of the start of the epoch
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp current_epoch_start_time = 5 [json_name = "currentEpochStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_epoch_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The currentEpochStartTime.
+     */
+    com.google.protobuf.Timestamp getCurrentEpochStartTime();
+    /**
+     * <pre>
+     * current_epoch_start_time defines the timestamp of the start of the epoch
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp current_epoch_start_time = 5 [json_name = "currentEpochStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_epoch_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCurrentEpochStartTimeOrBuilder();
+
+    /**
+     * <pre>
+     * epoch_counting_started reflects if the counting for the epoch has started
+     * </pre>
+     *
+     * <code>bool epoch_counting_started = 6 [json_name = "epochCountingStarted"];</code>
+     * @return The epochCountingStarted.
+     */
+    boolean getEpochCountingStarted();
+
+    /**
+     * <pre>
+     * current_epoch_start_height of the epoch
+     * </pre>
+     *
+     * <code>int64 current_epoch_start_height = 7 [json_name = "currentEpochStartHeight"];</code>
+     * @return The currentEpochStartHeight.
+     */
+    long getCurrentEpochStartHeight();
+  }
+  /**
+   * <pre>
+   * EpochInfo defines the message interface containing the relevant informations about
+   * an epoch.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.epochs.v1.EpochInfo}
+   */
+  public static final class EpochInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.epochs.v1.EpochInfo)
+      EpochInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EpochInfo.newBuilder() to construct.
+    private EpochInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EpochInfo() {
+      identifier_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EpochInfo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.epochs.v1.GenesisProto.internal_static_evmos_epochs_v1_EpochInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.epochs.v1.GenesisProto.internal_static_evmos_epochs_v1_EpochInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.epochs.v1.GenesisProto.EpochInfo.class, com.evmos.epochs.v1.GenesisProto.EpochInfo.Builder.class);
+    }
+
+    public static final int IDENTIFIER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object identifier_ = "";
+    /**
+     * <pre>
+     * identifier of the epoch
+     * </pre>
+     *
+     * <code>string identifier = 1 [json_name = "identifier"];</code>
+     * @return The identifier.
+     */
+    @java.lang.Override
+    public java.lang.String getIdentifier() {
+      java.lang.Object ref = identifier_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        identifier_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * identifier of the epoch
+     * </pre>
+     *
+     * <code>string identifier = 1 [json_name = "identifier"];</code>
+     * @return The bytes for identifier.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdentifierBytes() {
+      java.lang.Object ref = identifier_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        identifier_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int START_TIME_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp startTime_;
+    /**
+     * <pre>
+     * start_time of the epoch
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartTime() {
+      return startTime_ != null;
+    }
+    /**
+     * <pre>
+     * start_time of the epoch
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getStartTime() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+    /**
+     * <pre>
+     * start_time of the epoch
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+
+    public static final int DURATION_FIELD_NUMBER = 3;
+    private com.google.protobuf.Duration duration_;
+    /**
+     * <pre>
+     * duration of the epoch
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the duration field is set.
+     */
+    @java.lang.Override
+    public boolean hasDuration() {
+      return duration_ != null;
+    }
+    /**
+     * <pre>
+     * duration of the epoch
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The duration.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getDuration() {
+      return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+    }
+    /**
+     * <pre>
+     * duration of the epoch
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
+      return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+    }
+
+    public static final int CURRENT_EPOCH_FIELD_NUMBER = 4;
+    private long currentEpoch_ = 0L;
+    /**
+     * <pre>
+     * current_epoch is the integer identifier of the epoch
+     * </pre>
+     *
+     * <code>int64 current_epoch = 4 [json_name = "currentEpoch"];</code>
+     * @return The currentEpoch.
+     */
+    @java.lang.Override
+    public long getCurrentEpoch() {
+      return currentEpoch_;
+    }
+
+    public static final int CURRENT_EPOCH_START_TIME_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp currentEpochStartTime_;
+    /**
+     * <pre>
+     * current_epoch_start_time defines the timestamp of the start of the epoch
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp current_epoch_start_time = 5 [json_name = "currentEpochStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_epoch_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the currentEpochStartTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasCurrentEpochStartTime() {
+      return currentEpochStartTime_ != null;
+    }
+    /**
+     * <pre>
+     * current_epoch_start_time defines the timestamp of the start of the epoch
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp current_epoch_start_time = 5 [json_name = "currentEpochStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_epoch_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The currentEpochStartTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCurrentEpochStartTime() {
+      return currentEpochStartTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : currentEpochStartTime_;
+    }
+    /**
+     * <pre>
+     * current_epoch_start_time defines the timestamp of the start of the epoch
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp current_epoch_start_time = 5 [json_name = "currentEpochStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_epoch_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCurrentEpochStartTimeOrBuilder() {
+      return currentEpochStartTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : currentEpochStartTime_;
+    }
+
+    public static final int EPOCH_COUNTING_STARTED_FIELD_NUMBER = 6;
+    private boolean epochCountingStarted_ = false;
+    /**
+     * <pre>
+     * epoch_counting_started reflects if the counting for the epoch has started
+     * </pre>
+     *
+     * <code>bool epoch_counting_started = 6 [json_name = "epochCountingStarted"];</code>
+     * @return The epochCountingStarted.
+     */
+    @java.lang.Override
+    public boolean getEpochCountingStarted() {
+      return epochCountingStarted_;
+    }
+
+    public static final int CURRENT_EPOCH_START_HEIGHT_FIELD_NUMBER = 7;
+    private long currentEpochStartHeight_ = 0L;
+    /**
+     * <pre>
+     * current_epoch_start_height of the epoch
+     * </pre>
+     *
+     * <code>int64 current_epoch_start_height = 7 [json_name = "currentEpochStartHeight"];</code>
+     * @return The currentEpochStartHeight.
+     */
+    @java.lang.Override
+    public long getCurrentEpochStartHeight() {
+      return currentEpochStartHeight_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(identifier_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, identifier_);
+      }
+      if (startTime_ != null) {
+        output.writeMessage(2, getStartTime());
+      }
+      if (duration_ != null) {
+        output.writeMessage(3, getDuration());
+      }
+      if (currentEpoch_ != 0L) {
+        output.writeInt64(4, currentEpoch_);
+      }
+      if (currentEpochStartTime_ != null) {
+        output.writeMessage(5, getCurrentEpochStartTime());
+      }
+      if (epochCountingStarted_ != false) {
+        output.writeBool(6, epochCountingStarted_);
+      }
+      if (currentEpochStartHeight_ != 0L) {
+        output.writeInt64(7, currentEpochStartHeight_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(identifier_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, identifier_);
+      }
+      if (startTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getStartTime());
+      }
+      if (duration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getDuration());
+      }
+      if (currentEpoch_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, currentEpoch_);
+      }
+      if (currentEpochStartTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getCurrentEpochStartTime());
+      }
+      if (epochCountingStarted_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, epochCountingStarted_);
+      }
+      if (currentEpochStartHeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(7, currentEpochStartHeight_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.epochs.v1.GenesisProto.EpochInfo)) {
+        return super.equals(obj);
+      }
+      com.evmos.epochs.v1.GenesisProto.EpochInfo other = (com.evmos.epochs.v1.GenesisProto.EpochInfo) obj;
+
+      if (!getIdentifier()
+          .equals(other.getIdentifier())) return false;
+      if (hasStartTime() != other.hasStartTime()) return false;
+      if (hasStartTime()) {
+        if (!getStartTime()
+            .equals(other.getStartTime())) return false;
+      }
+      if (hasDuration() != other.hasDuration()) return false;
+      if (hasDuration()) {
+        if (!getDuration()
+            .equals(other.getDuration())) return false;
+      }
+      if (getCurrentEpoch()
+          != other.getCurrentEpoch()) return false;
+      if (hasCurrentEpochStartTime() != other.hasCurrentEpochStartTime()) return false;
+      if (hasCurrentEpochStartTime()) {
+        if (!getCurrentEpochStartTime()
+            .equals(other.getCurrentEpochStartTime())) return false;
+      }
+      if (getEpochCountingStarted()
+          != other.getEpochCountingStarted()) return false;
+      if (getCurrentEpochStartHeight()
+          != other.getCurrentEpochStartHeight()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + IDENTIFIER_FIELD_NUMBER;
+      hash = (53 * hash) + getIdentifier().hashCode();
+      if (hasStartTime()) {
+        hash = (37 * hash) + START_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getStartTime().hashCode();
+      }
+      if (hasDuration()) {
+        hash = (37 * hash) + DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getDuration().hashCode();
+      }
+      hash = (37 * hash) + CURRENT_EPOCH_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCurrentEpoch());
+      if (hasCurrentEpochStartTime()) {
+        hash = (37 * hash) + CURRENT_EPOCH_START_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getCurrentEpochStartTime().hashCode();
+      }
+      hash = (37 * hash) + EPOCH_COUNTING_STARTED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEpochCountingStarted());
+      hash = (37 * hash) + CURRENT_EPOCH_START_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCurrentEpochStartHeight());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.epochs.v1.GenesisProto.EpochInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.epochs.v1.GenesisProto.EpochInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.epochs.v1.GenesisProto.EpochInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.epochs.v1.GenesisProto.EpochInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.epochs.v1.GenesisProto.EpochInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.epochs.v1.GenesisProto.EpochInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.epochs.v1.GenesisProto.EpochInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.epochs.v1.GenesisProto.EpochInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.epochs.v1.GenesisProto.EpochInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.epochs.v1.GenesisProto.EpochInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.epochs.v1.GenesisProto.EpochInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.epochs.v1.GenesisProto.EpochInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.epochs.v1.GenesisProto.EpochInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EpochInfo defines the message interface containing the relevant informations about
+     * an epoch.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.epochs.v1.EpochInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.epochs.v1.EpochInfo)
+        com.evmos.epochs.v1.GenesisProto.EpochInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.epochs.v1.GenesisProto.internal_static_evmos_epochs_v1_EpochInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.epochs.v1.GenesisProto.internal_static_evmos_epochs_v1_EpochInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.epochs.v1.GenesisProto.EpochInfo.class, com.evmos.epochs.v1.GenesisProto.EpochInfo.Builder.class);
+      }
+
+      // Construct using com.evmos.epochs.v1.GenesisProto.EpochInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        identifier_ = "";
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        duration_ = null;
+        if (durationBuilder_ != null) {
+          durationBuilder_.dispose();
+          durationBuilder_ = null;
+        }
+        currentEpoch_ = 0L;
+        currentEpochStartTime_ = null;
+        if (currentEpochStartTimeBuilder_ != null) {
+          currentEpochStartTimeBuilder_.dispose();
+          currentEpochStartTimeBuilder_ = null;
+        }
+        epochCountingStarted_ = false;
+        currentEpochStartHeight_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.epochs.v1.GenesisProto.internal_static_evmos_epochs_v1_EpochInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.epochs.v1.GenesisProto.EpochInfo getDefaultInstanceForType() {
+        return com.evmos.epochs.v1.GenesisProto.EpochInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.epochs.v1.GenesisProto.EpochInfo build() {
+        com.evmos.epochs.v1.GenesisProto.EpochInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.epochs.v1.GenesisProto.EpochInfo buildPartial() {
+        com.evmos.epochs.v1.GenesisProto.EpochInfo result = new com.evmos.epochs.v1.GenesisProto.EpochInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.epochs.v1.GenesisProto.EpochInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.identifier_ = identifier_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.startTime_ = startTimeBuilder_ == null
+              ? startTime_
+              : startTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.duration_ = durationBuilder_ == null
+              ? duration_
+              : durationBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.currentEpoch_ = currentEpoch_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.currentEpochStartTime_ = currentEpochStartTimeBuilder_ == null
+              ? currentEpochStartTime_
+              : currentEpochStartTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.epochCountingStarted_ = epochCountingStarted_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.currentEpochStartHeight_ = currentEpochStartHeight_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.epochs.v1.GenesisProto.EpochInfo) {
+          return mergeFrom((com.evmos.epochs.v1.GenesisProto.EpochInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.epochs.v1.GenesisProto.EpochInfo other) {
+        if (other == com.evmos.epochs.v1.GenesisProto.EpochInfo.getDefaultInstance()) return this;
+        if (!other.getIdentifier().isEmpty()) {
+          identifier_ = other.identifier_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasStartTime()) {
+          mergeStartTime(other.getStartTime());
+        }
+        if (other.hasDuration()) {
+          mergeDuration(other.getDuration());
+        }
+        if (other.getCurrentEpoch() != 0L) {
+          setCurrentEpoch(other.getCurrentEpoch());
+        }
+        if (other.hasCurrentEpochStartTime()) {
+          mergeCurrentEpochStartTime(other.getCurrentEpochStartTime());
+        }
+        if (other.getEpochCountingStarted() != false) {
+          setEpochCountingStarted(other.getEpochCountingStarted());
+        }
+        if (other.getCurrentEpochStartHeight() != 0L) {
+          setCurrentEpochStartHeight(other.getCurrentEpochStartHeight());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                identifier_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getStartTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getDurationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                currentEpoch_ = input.readInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                input.readMessage(
+                    getCurrentEpochStartTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 48: {
+                epochCountingStarted_ = input.readBool();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              case 56: {
+                currentEpochStartHeight_ = input.readInt64();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object identifier_ = "";
+      /**
+       * <pre>
+       * identifier of the epoch
+       * </pre>
+       *
+       * <code>string identifier = 1 [json_name = "identifier"];</code>
+       * @return The identifier.
+       */
+      public java.lang.String getIdentifier() {
+        java.lang.Object ref = identifier_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          identifier_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * identifier of the epoch
+       * </pre>
+       *
+       * <code>string identifier = 1 [json_name = "identifier"];</code>
+       * @return The bytes for identifier.
+       */
+      public com.google.protobuf.ByteString
+          getIdentifierBytes() {
+        java.lang.Object ref = identifier_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          identifier_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * identifier of the epoch
+       * </pre>
+       *
+       * <code>string identifier = 1 [json_name = "identifier"];</code>
+       * @param value The identifier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdentifier(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        identifier_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * identifier of the epoch
+       * </pre>
+       *
+       * <code>string identifier = 1 [json_name = "identifier"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIdentifier() {
+        identifier_ = getDefaultInstance().getIdentifier();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * identifier of the epoch
+       * </pre>
+       *
+       * <code>string identifier = 1 [json_name = "identifier"];</code>
+       * @param value The bytes for identifier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdentifierBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        identifier_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp startTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
+      /**
+       * <pre>
+       * start_time of the epoch
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the startTime field is set.
+       */
+      public boolean hasStartTime() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * start_time of the epoch
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The startTime.
+       */
+      public com.google.protobuf.Timestamp getStartTime() {
+        if (startTimeBuilder_ == null) {
+          return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        } else {
+          return startTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * start_time of the epoch
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          startTime_ = value;
+        } else {
+          startTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time of the epoch
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (startTimeBuilder_ == null) {
+          startTime_ = builderForValue.build();
+        } else {
+          startTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time of the epoch
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            startTime_ != null &&
+            startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getStartTimeBuilder().mergeFrom(value);
+          } else {
+            startTime_ = value;
+          }
+        } else {
+          startTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time of the epoch
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearStartTime() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time of the epoch
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getStartTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * start_time of the epoch
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+        if (startTimeBuilder_ != null) {
+          return startTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return startTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        }
+      }
+      /**
+       * <pre>
+       * start_time of the epoch
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getStartTimeFieldBuilder() {
+        if (startTimeBuilder_ == null) {
+          startTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getStartTime(),
+                  getParentForChildren(),
+                  isClean());
+          startTime_ = null;
+        }
+        return startTimeBuilder_;
+      }
+
+      private com.google.protobuf.Duration duration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> durationBuilder_;
+      /**
+       * <pre>
+       * duration of the epoch
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return Whether the duration field is set.
+       */
+      public boolean hasDuration() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * duration of the epoch
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return The duration.
+       */
+      public com.google.protobuf.Duration getDuration() {
+        if (durationBuilder_ == null) {
+          return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+        } else {
+          return durationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * duration of the epoch
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setDuration(com.google.protobuf.Duration value) {
+        if (durationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          duration_ = value;
+        } else {
+          durationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * duration of the epoch
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (durationBuilder_ == null) {
+          duration_ = builderForValue.build();
+        } else {
+          durationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * duration of the epoch
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeDuration(com.google.protobuf.Duration value) {
+        if (durationBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            duration_ != null &&
+            duration_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getDurationBuilder().mergeFrom(value);
+          } else {
+            duration_ = value;
+          }
+        } else {
+          durationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * duration of the epoch
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearDuration() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        duration_ = null;
+        if (durationBuilder_ != null) {
+          durationBuilder_.dispose();
+          durationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * duration of the epoch
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getDurationBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * duration of the epoch
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
+        if (durationBuilder_ != null) {
+          return durationBuilder_.getMessageOrBuilder();
+        } else {
+          return duration_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : duration_;
+        }
+      }
+      /**
+       * <pre>
+       * duration of the epoch
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getDurationFieldBuilder() {
+        if (durationBuilder_ == null) {
+          durationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getDuration(),
+                  getParentForChildren(),
+                  isClean());
+          duration_ = null;
+        }
+        return durationBuilder_;
+      }
+
+      private long currentEpoch_ ;
+      /**
+       * <pre>
+       * current_epoch is the integer identifier of the epoch
+       * </pre>
+       *
+       * <code>int64 current_epoch = 4 [json_name = "currentEpoch"];</code>
+       * @return The currentEpoch.
+       */
+      @java.lang.Override
+      public long getCurrentEpoch() {
+        return currentEpoch_;
+      }
+      /**
+       * <pre>
+       * current_epoch is the integer identifier of the epoch
+       * </pre>
+       *
+       * <code>int64 current_epoch = 4 [json_name = "currentEpoch"];</code>
+       * @param value The currentEpoch to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurrentEpoch(long value) {
+
+        currentEpoch_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * current_epoch is the integer identifier of the epoch
+       * </pre>
+       *
+       * <code>int64 current_epoch = 4 [json_name = "currentEpoch"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurrentEpoch() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        currentEpoch_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp currentEpochStartTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> currentEpochStartTimeBuilder_;
+      /**
+       * <pre>
+       * current_epoch_start_time defines the timestamp of the start of the epoch
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp current_epoch_start_time = 5 [json_name = "currentEpochStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_epoch_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the currentEpochStartTime field is set.
+       */
+      public boolean hasCurrentEpochStartTime() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * current_epoch_start_time defines the timestamp of the start of the epoch
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp current_epoch_start_time = 5 [json_name = "currentEpochStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_epoch_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The currentEpochStartTime.
+       */
+      public com.google.protobuf.Timestamp getCurrentEpochStartTime() {
+        if (currentEpochStartTimeBuilder_ == null) {
+          return currentEpochStartTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : currentEpochStartTime_;
+        } else {
+          return currentEpochStartTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * current_epoch_start_time defines the timestamp of the start of the epoch
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp current_epoch_start_time = 5 [json_name = "currentEpochStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_epoch_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setCurrentEpochStartTime(com.google.protobuf.Timestamp value) {
+        if (currentEpochStartTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          currentEpochStartTime_ = value;
+        } else {
+          currentEpochStartTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * current_epoch_start_time defines the timestamp of the start of the epoch
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp current_epoch_start_time = 5 [json_name = "currentEpochStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_epoch_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setCurrentEpochStartTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (currentEpochStartTimeBuilder_ == null) {
+          currentEpochStartTime_ = builderForValue.build();
+        } else {
+          currentEpochStartTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * current_epoch_start_time defines the timestamp of the start of the epoch
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp current_epoch_start_time = 5 [json_name = "currentEpochStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_epoch_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeCurrentEpochStartTime(com.google.protobuf.Timestamp value) {
+        if (currentEpochStartTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            currentEpochStartTime_ != null &&
+            currentEpochStartTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCurrentEpochStartTimeBuilder().mergeFrom(value);
+          } else {
+            currentEpochStartTime_ = value;
+          }
+        } else {
+          currentEpochStartTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * current_epoch_start_time defines the timestamp of the start of the epoch
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp current_epoch_start_time = 5 [json_name = "currentEpochStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_epoch_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearCurrentEpochStartTime() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        currentEpochStartTime_ = null;
+        if (currentEpochStartTimeBuilder_ != null) {
+          currentEpochStartTimeBuilder_.dispose();
+          currentEpochStartTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * current_epoch_start_time defines the timestamp of the start of the epoch
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp current_epoch_start_time = 5 [json_name = "currentEpochStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_epoch_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCurrentEpochStartTimeBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getCurrentEpochStartTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * current_epoch_start_time defines the timestamp of the start of the epoch
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp current_epoch_start_time = 5 [json_name = "currentEpochStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_epoch_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCurrentEpochStartTimeOrBuilder() {
+        if (currentEpochStartTimeBuilder_ != null) {
+          return currentEpochStartTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return currentEpochStartTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : currentEpochStartTime_;
+        }
+      }
+      /**
+       * <pre>
+       * current_epoch_start_time defines the timestamp of the start of the epoch
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp current_epoch_start_time = 5 [json_name = "currentEpochStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_epoch_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCurrentEpochStartTimeFieldBuilder() {
+        if (currentEpochStartTimeBuilder_ == null) {
+          currentEpochStartTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCurrentEpochStartTime(),
+                  getParentForChildren(),
+                  isClean());
+          currentEpochStartTime_ = null;
+        }
+        return currentEpochStartTimeBuilder_;
+      }
+
+      private boolean epochCountingStarted_ ;
+      /**
+       * <pre>
+       * epoch_counting_started reflects if the counting for the epoch has started
+       * </pre>
+       *
+       * <code>bool epoch_counting_started = 6 [json_name = "epochCountingStarted"];</code>
+       * @return The epochCountingStarted.
+       */
+      @java.lang.Override
+      public boolean getEpochCountingStarted() {
+        return epochCountingStarted_;
+      }
+      /**
+       * <pre>
+       * epoch_counting_started reflects if the counting for the epoch has started
+       * </pre>
+       *
+       * <code>bool epoch_counting_started = 6 [json_name = "epochCountingStarted"];</code>
+       * @param value The epochCountingStarted to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEpochCountingStarted(boolean value) {
+
+        epochCountingStarted_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * epoch_counting_started reflects if the counting for the epoch has started
+       * </pre>
+       *
+       * <code>bool epoch_counting_started = 6 [json_name = "epochCountingStarted"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEpochCountingStarted() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        epochCountingStarted_ = false;
+        onChanged();
+        return this;
+      }
+
+      private long currentEpochStartHeight_ ;
+      /**
+       * <pre>
+       * current_epoch_start_height of the epoch
+       * </pre>
+       *
+       * <code>int64 current_epoch_start_height = 7 [json_name = "currentEpochStartHeight"];</code>
+       * @return The currentEpochStartHeight.
+       */
+      @java.lang.Override
+      public long getCurrentEpochStartHeight() {
+        return currentEpochStartHeight_;
+      }
+      /**
+       * <pre>
+       * current_epoch_start_height of the epoch
+       * </pre>
+       *
+       * <code>int64 current_epoch_start_height = 7 [json_name = "currentEpochStartHeight"];</code>
+       * @param value The currentEpochStartHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurrentEpochStartHeight(long value) {
+
+        currentEpochStartHeight_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * current_epoch_start_height of the epoch
+       * </pre>
+       *
+       * <code>int64 current_epoch_start_height = 7 [json_name = "currentEpochStartHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurrentEpochStartHeight() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        currentEpochStartHeight_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.epochs.v1.EpochInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.epochs.v1.EpochInfo)
+    private static final com.evmos.epochs.v1.GenesisProto.EpochInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.epochs.v1.GenesisProto.EpochInfo();
+    }
+
+    public static com.evmos.epochs.v1.GenesisProto.EpochInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EpochInfo>
+        PARSER = new com.google.protobuf.AbstractParser<EpochInfo>() {
+      @java.lang.Override
+      public EpochInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EpochInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EpochInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.epochs.v1.GenesisProto.EpochInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.epochs.v1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * epochs is a slice of EpochInfo that defines the epochs in the genesis state
+     * </pre>
+     *
+     * <code>repeated .evmos.epochs.v1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.evmos.epochs.v1.GenesisProto.EpochInfo> 
+        getEpochsList();
+    /**
+     * <pre>
+     * epochs is a slice of EpochInfo that defines the epochs in the genesis state
+     * </pre>
+     *
+     * <code>repeated .evmos.epochs.v1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+     */
+    com.evmos.epochs.v1.GenesisProto.EpochInfo getEpochs(int index);
+    /**
+     * <pre>
+     * epochs is a slice of EpochInfo that defines the epochs in the genesis state
+     * </pre>
+     *
+     * <code>repeated .evmos.epochs.v1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+     */
+    int getEpochsCount();
+    /**
+     * <pre>
+     * epochs is a slice of EpochInfo that defines the epochs in the genesis state
+     * </pre>
+     *
+     * <code>repeated .evmos.epochs.v1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.evmos.epochs.v1.GenesisProto.EpochInfoOrBuilder> 
+        getEpochsOrBuilderList();
+    /**
+     * <pre>
+     * epochs is a slice of EpochInfo that defines the epochs in the genesis state
+     * </pre>
+     *
+     * <code>repeated .evmos.epochs.v1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+     */
+    com.evmos.epochs.v1.GenesisProto.EpochInfoOrBuilder getEpochsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the epochs module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.epochs.v1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.epochs.v1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      epochs_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.epochs.v1.GenesisProto.internal_static_evmos_epochs_v1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.epochs.v1.GenesisProto.internal_static_evmos_epochs_v1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.epochs.v1.GenesisProto.GenesisState.class, com.evmos.epochs.v1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int EPOCHS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.evmos.epochs.v1.GenesisProto.EpochInfo> epochs_;
+    /**
+     * <pre>
+     * epochs is a slice of EpochInfo that defines the epochs in the genesis state
+     * </pre>
+     *
+     * <code>repeated .evmos.epochs.v1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.evmos.epochs.v1.GenesisProto.EpochInfo> getEpochsList() {
+      return epochs_;
+    }
+    /**
+     * <pre>
+     * epochs is a slice of EpochInfo that defines the epochs in the genesis state
+     * </pre>
+     *
+     * <code>repeated .evmos.epochs.v1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.evmos.epochs.v1.GenesisProto.EpochInfoOrBuilder> 
+        getEpochsOrBuilderList() {
+      return epochs_;
+    }
+    /**
+     * <pre>
+     * epochs is a slice of EpochInfo that defines the epochs in the genesis state
+     * </pre>
+     *
+     * <code>repeated .evmos.epochs.v1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getEpochsCount() {
+      return epochs_.size();
+    }
+    /**
+     * <pre>
+     * epochs is a slice of EpochInfo that defines the epochs in the genesis state
+     * </pre>
+     *
+     * <code>repeated .evmos.epochs.v1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.evmos.epochs.v1.GenesisProto.EpochInfo getEpochs(int index) {
+      return epochs_.get(index);
+    }
+    /**
+     * <pre>
+     * epochs is a slice of EpochInfo that defines the epochs in the genesis state
+     * </pre>
+     *
+     * <code>repeated .evmos.epochs.v1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.evmos.epochs.v1.GenesisProto.EpochInfoOrBuilder getEpochsOrBuilder(
+        int index) {
+      return epochs_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < epochs_.size(); i++) {
+        output.writeMessage(1, epochs_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < epochs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, epochs_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.epochs.v1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.evmos.epochs.v1.GenesisProto.GenesisState other = (com.evmos.epochs.v1.GenesisProto.GenesisState) obj;
+
+      if (!getEpochsList()
+          .equals(other.getEpochsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getEpochsCount() > 0) {
+        hash = (37 * hash) + EPOCHS_FIELD_NUMBER;
+        hash = (53 * hash) + getEpochsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.epochs.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.epochs.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.epochs.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.epochs.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.epochs.v1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.epochs.v1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.epochs.v1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.epochs.v1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.epochs.v1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.epochs.v1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.epochs.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.epochs.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.epochs.v1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the epochs module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.epochs.v1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.epochs.v1.GenesisState)
+        com.evmos.epochs.v1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.epochs.v1.GenesisProto.internal_static_evmos_epochs_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.epochs.v1.GenesisProto.internal_static_evmos_epochs_v1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.epochs.v1.GenesisProto.GenesisState.class, com.evmos.epochs.v1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.evmos.epochs.v1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (epochsBuilder_ == null) {
+          epochs_ = java.util.Collections.emptyList();
+        } else {
+          epochs_ = null;
+          epochsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.epochs.v1.GenesisProto.internal_static_evmos_epochs_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.epochs.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.evmos.epochs.v1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.epochs.v1.GenesisProto.GenesisState build() {
+        com.evmos.epochs.v1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.epochs.v1.GenesisProto.GenesisState buildPartial() {
+        com.evmos.epochs.v1.GenesisProto.GenesisState result = new com.evmos.epochs.v1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.evmos.epochs.v1.GenesisProto.GenesisState result) {
+        if (epochsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            epochs_ = java.util.Collections.unmodifiableList(epochs_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.epochs_ = epochs_;
+        } else {
+          result.epochs_ = epochsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.evmos.epochs.v1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.epochs.v1.GenesisProto.GenesisState) {
+          return mergeFrom((com.evmos.epochs.v1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.epochs.v1.GenesisProto.GenesisState other) {
+        if (other == com.evmos.epochs.v1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (epochsBuilder_ == null) {
+          if (!other.epochs_.isEmpty()) {
+            if (epochs_.isEmpty()) {
+              epochs_ = other.epochs_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureEpochsIsMutable();
+              epochs_.addAll(other.epochs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.epochs_.isEmpty()) {
+            if (epochsBuilder_.isEmpty()) {
+              epochsBuilder_.dispose();
+              epochsBuilder_ = null;
+              epochs_ = other.epochs_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              epochsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEpochsFieldBuilder() : null;
+            } else {
+              epochsBuilder_.addAllMessages(other.epochs_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.evmos.epochs.v1.GenesisProto.EpochInfo m =
+                    input.readMessage(
+                        com.evmos.epochs.v1.GenesisProto.EpochInfo.parser(),
+                        extensionRegistry);
+                if (epochsBuilder_ == null) {
+                  ensureEpochsIsMutable();
+                  epochs_.add(m);
+                } else {
+                  epochsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.evmos.epochs.v1.GenesisProto.EpochInfo> epochs_ =
+        java.util.Collections.emptyList();
+      private void ensureEpochsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          epochs_ = new java.util.ArrayList<com.evmos.epochs.v1.GenesisProto.EpochInfo>(epochs_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.evmos.epochs.v1.GenesisProto.EpochInfo, com.evmos.epochs.v1.GenesisProto.EpochInfo.Builder, com.evmos.epochs.v1.GenesisProto.EpochInfoOrBuilder> epochsBuilder_;
+
+      /**
+       * <pre>
+       * epochs is a slice of EpochInfo that defines the epochs in the genesis state
+       * </pre>
+       *
+       * <code>repeated .evmos.epochs.v1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.evmos.epochs.v1.GenesisProto.EpochInfo> getEpochsList() {
+        if (epochsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(epochs_);
+        } else {
+          return epochsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * epochs is a slice of EpochInfo that defines the epochs in the genesis state
+       * </pre>
+       *
+       * <code>repeated .evmos.epochs.v1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public int getEpochsCount() {
+        if (epochsBuilder_ == null) {
+          return epochs_.size();
+        } else {
+          return epochsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * epochs is a slice of EpochInfo that defines the epochs in the genesis state
+       * </pre>
+       *
+       * <code>repeated .evmos.epochs.v1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.epochs.v1.GenesisProto.EpochInfo getEpochs(int index) {
+        if (epochsBuilder_ == null) {
+          return epochs_.get(index);
+        } else {
+          return epochsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * epochs is a slice of EpochInfo that defines the epochs in the genesis state
+       * </pre>
+       *
+       * <code>repeated .evmos.epochs.v1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setEpochs(
+          int index, com.evmos.epochs.v1.GenesisProto.EpochInfo value) {
+        if (epochsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEpochsIsMutable();
+          epochs_.set(index, value);
+          onChanged();
+        } else {
+          epochsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * epochs is a slice of EpochInfo that defines the epochs in the genesis state
+       * </pre>
+       *
+       * <code>repeated .evmos.epochs.v1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setEpochs(
+          int index, com.evmos.epochs.v1.GenesisProto.EpochInfo.Builder builderForValue) {
+        if (epochsBuilder_ == null) {
+          ensureEpochsIsMutable();
+          epochs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          epochsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * epochs is a slice of EpochInfo that defines the epochs in the genesis state
+       * </pre>
+       *
+       * <code>repeated .evmos.epochs.v1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addEpochs(com.evmos.epochs.v1.GenesisProto.EpochInfo value) {
+        if (epochsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEpochsIsMutable();
+          epochs_.add(value);
+          onChanged();
+        } else {
+          epochsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * epochs is a slice of EpochInfo that defines the epochs in the genesis state
+       * </pre>
+       *
+       * <code>repeated .evmos.epochs.v1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addEpochs(
+          int index, com.evmos.epochs.v1.GenesisProto.EpochInfo value) {
+        if (epochsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEpochsIsMutable();
+          epochs_.add(index, value);
+          onChanged();
+        } else {
+          epochsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * epochs is a slice of EpochInfo that defines the epochs in the genesis state
+       * </pre>
+       *
+       * <code>repeated .evmos.epochs.v1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addEpochs(
+          com.evmos.epochs.v1.GenesisProto.EpochInfo.Builder builderForValue) {
+        if (epochsBuilder_ == null) {
+          ensureEpochsIsMutable();
+          epochs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          epochsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * epochs is a slice of EpochInfo that defines the epochs in the genesis state
+       * </pre>
+       *
+       * <code>repeated .evmos.epochs.v1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addEpochs(
+          int index, com.evmos.epochs.v1.GenesisProto.EpochInfo.Builder builderForValue) {
+        if (epochsBuilder_ == null) {
+          ensureEpochsIsMutable();
+          epochs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          epochsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * epochs is a slice of EpochInfo that defines the epochs in the genesis state
+       * </pre>
+       *
+       * <code>repeated .evmos.epochs.v1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllEpochs(
+          java.lang.Iterable<? extends com.evmos.epochs.v1.GenesisProto.EpochInfo> values) {
+        if (epochsBuilder_ == null) {
+          ensureEpochsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, epochs_);
+          onChanged();
+        } else {
+          epochsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * epochs is a slice of EpochInfo that defines the epochs in the genesis state
+       * </pre>
+       *
+       * <code>repeated .evmos.epochs.v1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearEpochs() {
+        if (epochsBuilder_ == null) {
+          epochs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          epochsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * epochs is a slice of EpochInfo that defines the epochs in the genesis state
+       * </pre>
+       *
+       * <code>repeated .evmos.epochs.v1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeEpochs(int index) {
+        if (epochsBuilder_ == null) {
+          ensureEpochsIsMutable();
+          epochs_.remove(index);
+          onChanged();
+        } else {
+          epochsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * epochs is a slice of EpochInfo that defines the epochs in the genesis state
+       * </pre>
+       *
+       * <code>repeated .evmos.epochs.v1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.epochs.v1.GenesisProto.EpochInfo.Builder getEpochsBuilder(
+          int index) {
+        return getEpochsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * epochs is a slice of EpochInfo that defines the epochs in the genesis state
+       * </pre>
+       *
+       * <code>repeated .evmos.epochs.v1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.epochs.v1.GenesisProto.EpochInfoOrBuilder getEpochsOrBuilder(
+          int index) {
+        if (epochsBuilder_ == null) {
+          return epochs_.get(index);  } else {
+          return epochsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * epochs is a slice of EpochInfo that defines the epochs in the genesis state
+       * </pre>
+       *
+       * <code>repeated .evmos.epochs.v1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.evmos.epochs.v1.GenesisProto.EpochInfoOrBuilder> 
+           getEpochsOrBuilderList() {
+        if (epochsBuilder_ != null) {
+          return epochsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(epochs_);
+        }
+      }
+      /**
+       * <pre>
+       * epochs is a slice of EpochInfo that defines the epochs in the genesis state
+       * </pre>
+       *
+       * <code>repeated .evmos.epochs.v1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.epochs.v1.GenesisProto.EpochInfo.Builder addEpochsBuilder() {
+        return getEpochsFieldBuilder().addBuilder(
+            com.evmos.epochs.v1.GenesisProto.EpochInfo.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * epochs is a slice of EpochInfo that defines the epochs in the genesis state
+       * </pre>
+       *
+       * <code>repeated .evmos.epochs.v1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.epochs.v1.GenesisProto.EpochInfo.Builder addEpochsBuilder(
+          int index) {
+        return getEpochsFieldBuilder().addBuilder(
+            index, com.evmos.epochs.v1.GenesisProto.EpochInfo.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * epochs is a slice of EpochInfo that defines the epochs in the genesis state
+       * </pre>
+       *
+       * <code>repeated .evmos.epochs.v1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.evmos.epochs.v1.GenesisProto.EpochInfo.Builder> 
+           getEpochsBuilderList() {
+        return getEpochsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.evmos.epochs.v1.GenesisProto.EpochInfo, com.evmos.epochs.v1.GenesisProto.EpochInfo.Builder, com.evmos.epochs.v1.GenesisProto.EpochInfoOrBuilder> 
+          getEpochsFieldBuilder() {
+        if (epochsBuilder_ == null) {
+          epochsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.evmos.epochs.v1.GenesisProto.EpochInfo, com.evmos.epochs.v1.GenesisProto.EpochInfo.Builder, com.evmos.epochs.v1.GenesisProto.EpochInfoOrBuilder>(
+                  epochs_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          epochs_ = null;
+        }
+        return epochsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.epochs.v1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.epochs.v1.GenesisState)
+    private static final com.evmos.epochs.v1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.epochs.v1.GenesisProto.GenesisState();
+    }
+
+    public static com.evmos.epochs.v1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.epochs.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_epochs_v1_EpochInfo_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_epochs_v1_EpochInfo_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_epochs_v1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_epochs_v1_GenesisState_fieldAccessorTable;
 
@@ -51,11 +2598,11 @@ public final class GenesisProto {
       ";\n\032current_epoch_start_height\030\007 \001(\003R\027cur" +
       "rentEpochStartHeight\"H\n\014GenesisState\0228\n\006" +
       "epochs\030\001 \003(\0132\032.evmos.epochs.v1.EpochInfo" +
-      "B\004\310\336\037\000R\006epochsB\254\001\n\023com.evmos.epochs.v1B\014" +
-      "GenesisProtoP\001Z)github.com/evmos/evmos/v" +
-      "13/x/epochs/types\242\002\003EEX\252\002\017Evmos.Epochs.V" +
-      "1\312\002\017Evmos\\Epochs\\V1\342\002\033Evmos\\Epochs\\V1\\GP" +
-      "BMetadata\352\002\021Evmos::Epochs::V1b\006proto3"
+      "B\004\310\336\037\000R\006epochsB\252\001\n\023com.evmos.epochs.v1B\014" +
+      "GenesisProtoZ)github.com/evmos/evmos/v13" +
+      "/x/epochs/types\242\002\003EEX\252\002\017Evmos.Epochs.V1\312" +
+      "\002\017Evmos\\Epochs\\V1\342\002\033Evmos\\Epochs\\V1\\GPBM" +
+      "etadata\352\002\021Evmos::Epochs::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

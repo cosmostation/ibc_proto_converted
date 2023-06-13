@@ -14,69 +14,8621 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgCreateIssuerOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.authority.v1.MsgCreateIssuer)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+     * @return The authority.
+     */
+    java.lang.String getAuthority();
+    /**
+     * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+     * @return The bytes for authority.
+     */
+    com.google.protobuf.ByteString
+        getAuthorityBytes();
+
+    /**
+     * <code>string issuer = 2 [json_name = "issuer", (.gogoproto.moretags) = "yaml:&#92;"issuer&#92;""];</code>
+     * @return The issuer.
+     */
+    java.lang.String getIssuer();
+    /**
+     * <code>string issuer = 2 [json_name = "issuer", (.gogoproto.moretags) = "yaml:&#92;"issuer&#92;""];</code>
+     * @return The bytes for issuer.
+     */
+    com.google.protobuf.ByteString
+        getIssuerBytes();
+
+    /**
+     * <code>repeated .em.authority.v1.Denomination denominations = 3 [json_name = "denominations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denominations&#92;""];</code>
+     */
+    java.util.List<com.em.authority.v1.TxProto.Denomination> 
+        getDenominationsList();
+    /**
+     * <code>repeated .em.authority.v1.Denomination denominations = 3 [json_name = "denominations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denominations&#92;""];</code>
+     */
+    com.em.authority.v1.TxProto.Denomination getDenominations(int index);
+    /**
+     * <code>repeated .em.authority.v1.Denomination denominations = 3 [json_name = "denominations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denominations&#92;""];</code>
+     */
+    int getDenominationsCount();
+    /**
+     * <code>repeated .em.authority.v1.Denomination denominations = 3 [json_name = "denominations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denominations&#92;""];</code>
+     */
+    java.util.List<? extends com.em.authority.v1.TxProto.DenominationOrBuilder> 
+        getDenominationsOrBuilderList();
+    /**
+     * <code>repeated .em.authority.v1.Denomination denominations = 3 [json_name = "denominations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denominations&#92;""];</code>
+     */
+    com.em.authority.v1.TxProto.DenominationOrBuilder getDenominationsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code em.authority.v1.MsgCreateIssuer}
+   */
+  public static final class MsgCreateIssuer extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.authority.v1.MsgCreateIssuer)
+      MsgCreateIssuerOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateIssuer.newBuilder() to construct.
+    private MsgCreateIssuer(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateIssuer() {
+      authority_ = "";
+      issuer_ = "";
+      denominations_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateIssuer();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgCreateIssuer_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgCreateIssuer_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.authority.v1.TxProto.MsgCreateIssuer.class, com.em.authority.v1.TxProto.MsgCreateIssuer.Builder.class);
+    }
+
+    public static final int AUTHORITY_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object authority_ = "";
+    /**
+     * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+     * @return The authority.
+     */
+    @java.lang.Override
+    public java.lang.String getAuthority() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        authority_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+     * @return The bytes for authority.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAuthorityBytes() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authority_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ISSUER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object issuer_ = "";
+    /**
+     * <code>string issuer = 2 [json_name = "issuer", (.gogoproto.moretags) = "yaml:&#92;"issuer&#92;""];</code>
+     * @return The issuer.
+     */
+    @java.lang.Override
+    public java.lang.String getIssuer() {
+      java.lang.Object ref = issuer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        issuer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string issuer = 2 [json_name = "issuer", (.gogoproto.moretags) = "yaml:&#92;"issuer&#92;""];</code>
+     * @return The bytes for issuer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIssuerBytes() {
+      java.lang.Object ref = issuer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        issuer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DENOMINATIONS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.em.authority.v1.TxProto.Denomination> denominations_;
+    /**
+     * <code>repeated .em.authority.v1.Denomination denominations = 3 [json_name = "denominations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denominations&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.em.authority.v1.TxProto.Denomination> getDenominationsList() {
+      return denominations_;
+    }
+    /**
+     * <code>repeated .em.authority.v1.Denomination denominations = 3 [json_name = "denominations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denominations&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.em.authority.v1.TxProto.DenominationOrBuilder> 
+        getDenominationsOrBuilderList() {
+      return denominations_;
+    }
+    /**
+     * <code>repeated .em.authority.v1.Denomination denominations = 3 [json_name = "denominations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denominations&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getDenominationsCount() {
+      return denominations_.size();
+    }
+    /**
+     * <code>repeated .em.authority.v1.Denomination denominations = 3 [json_name = "denominations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denominations&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.em.authority.v1.TxProto.Denomination getDenominations(int index) {
+      return denominations_.get(index);
+    }
+    /**
+     * <code>repeated .em.authority.v1.Denomination denominations = 3 [json_name = "denominations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denominations&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.em.authority.v1.TxProto.DenominationOrBuilder getDenominationsOrBuilder(
+        int index) {
+      return denominations_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authority_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(issuer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, issuer_);
+      }
+      for (int i = 0; i < denominations_.size(); i++) {
+        output.writeMessage(3, denominations_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authority_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(issuer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, issuer_);
+      }
+      for (int i = 0; i < denominations_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, denominations_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.authority.v1.TxProto.MsgCreateIssuer)) {
+        return super.equals(obj);
+      }
+      com.em.authority.v1.TxProto.MsgCreateIssuer other = (com.em.authority.v1.TxProto.MsgCreateIssuer) obj;
+
+      if (!getAuthority()
+          .equals(other.getAuthority())) return false;
+      if (!getIssuer()
+          .equals(other.getIssuer())) return false;
+      if (!getDenominationsList()
+          .equals(other.getDenominationsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AUTHORITY_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthority().hashCode();
+      hash = (37 * hash) + ISSUER_FIELD_NUMBER;
+      hash = (53 * hash) + getIssuer().hashCode();
+      if (getDenominationsCount() > 0) {
+        hash = (37 * hash) + DENOMINATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getDenominationsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.authority.v1.TxProto.MsgCreateIssuer parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgCreateIssuer parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgCreateIssuer parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgCreateIssuer parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgCreateIssuer parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgCreateIssuer parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgCreateIssuer parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.authority.v1.TxProto.MsgCreateIssuer parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.authority.v1.TxProto.MsgCreateIssuer parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.authority.v1.TxProto.MsgCreateIssuer parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgCreateIssuer parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.authority.v1.TxProto.MsgCreateIssuer parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.authority.v1.TxProto.MsgCreateIssuer prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.authority.v1.MsgCreateIssuer}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.authority.v1.MsgCreateIssuer)
+        com.em.authority.v1.TxProto.MsgCreateIssuerOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgCreateIssuer_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgCreateIssuer_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.authority.v1.TxProto.MsgCreateIssuer.class, com.em.authority.v1.TxProto.MsgCreateIssuer.Builder.class);
+      }
+
+      // Construct using com.em.authority.v1.TxProto.MsgCreateIssuer.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        authority_ = "";
+        issuer_ = "";
+        if (denominationsBuilder_ == null) {
+          denominations_ = java.util.Collections.emptyList();
+        } else {
+          denominations_ = null;
+          denominationsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgCreateIssuer_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgCreateIssuer getDefaultInstanceForType() {
+        return com.em.authority.v1.TxProto.MsgCreateIssuer.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgCreateIssuer build() {
+        com.em.authority.v1.TxProto.MsgCreateIssuer result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgCreateIssuer buildPartial() {
+        com.em.authority.v1.TxProto.MsgCreateIssuer result = new com.em.authority.v1.TxProto.MsgCreateIssuer(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.em.authority.v1.TxProto.MsgCreateIssuer result) {
+        if (denominationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            denominations_ = java.util.Collections.unmodifiableList(denominations_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.denominations_ = denominations_;
+        } else {
+          result.denominations_ = denominationsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.em.authority.v1.TxProto.MsgCreateIssuer result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.authority_ = authority_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.issuer_ = issuer_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.authority.v1.TxProto.MsgCreateIssuer) {
+          return mergeFrom((com.em.authority.v1.TxProto.MsgCreateIssuer)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.authority.v1.TxProto.MsgCreateIssuer other) {
+        if (other == com.em.authority.v1.TxProto.MsgCreateIssuer.getDefaultInstance()) return this;
+        if (!other.getAuthority().isEmpty()) {
+          authority_ = other.authority_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getIssuer().isEmpty()) {
+          issuer_ = other.issuer_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (denominationsBuilder_ == null) {
+          if (!other.denominations_.isEmpty()) {
+            if (denominations_.isEmpty()) {
+              denominations_ = other.denominations_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureDenominationsIsMutable();
+              denominations_.addAll(other.denominations_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.denominations_.isEmpty()) {
+            if (denominationsBuilder_.isEmpty()) {
+              denominationsBuilder_.dispose();
+              denominationsBuilder_ = null;
+              denominations_ = other.denominations_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              denominationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDenominationsFieldBuilder() : null;
+            } else {
+              denominationsBuilder_.addAllMessages(other.denominations_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                authority_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                issuer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.em.authority.v1.TxProto.Denomination m =
+                    input.readMessage(
+                        com.em.authority.v1.TxProto.Denomination.parser(),
+                        extensionRegistry);
+                if (denominationsBuilder_ == null) {
+                  ensureDenominationsIsMutable();
+                  denominations_.add(m);
+                } else {
+                  denominationsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object authority_ = "";
+      /**
+       * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+       * @return The authority.
+       */
+      public java.lang.String getAuthority() {
+        java.lang.Object ref = authority_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          authority_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+       * @return The bytes for authority.
+       */
+      public com.google.protobuf.ByteString
+          getAuthorityBytes() {
+        java.lang.Object ref = authority_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authority_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+       * @param value The authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthority(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthority() {
+        authority_ = getDefaultInstance().getAuthority();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+       * @param value The bytes for authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthorityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object issuer_ = "";
+      /**
+       * <code>string issuer = 2 [json_name = "issuer", (.gogoproto.moretags) = "yaml:&#92;"issuer&#92;""];</code>
+       * @return The issuer.
+       */
+      public java.lang.String getIssuer() {
+        java.lang.Object ref = issuer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          issuer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string issuer = 2 [json_name = "issuer", (.gogoproto.moretags) = "yaml:&#92;"issuer&#92;""];</code>
+       * @return The bytes for issuer.
+       */
+      public com.google.protobuf.ByteString
+          getIssuerBytes() {
+        java.lang.Object ref = issuer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          issuer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string issuer = 2 [json_name = "issuer", (.gogoproto.moretags) = "yaml:&#92;"issuer&#92;""];</code>
+       * @param value The issuer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssuer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        issuer_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string issuer = 2 [json_name = "issuer", (.gogoproto.moretags) = "yaml:&#92;"issuer&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIssuer() {
+        issuer_ = getDefaultInstance().getIssuer();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string issuer = 2 [json_name = "issuer", (.gogoproto.moretags) = "yaml:&#92;"issuer&#92;""];</code>
+       * @param value The bytes for issuer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssuerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        issuer_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.em.authority.v1.TxProto.Denomination> denominations_ =
+        java.util.Collections.emptyList();
+      private void ensureDenominationsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          denominations_ = new java.util.ArrayList<com.em.authority.v1.TxProto.Denomination>(denominations_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.em.authority.v1.TxProto.Denomination, com.em.authority.v1.TxProto.Denomination.Builder, com.em.authority.v1.TxProto.DenominationOrBuilder> denominationsBuilder_;
+
+      /**
+       * <code>repeated .em.authority.v1.Denomination denominations = 3 [json_name = "denominations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denominations&#92;""];</code>
+       */
+      public java.util.List<com.em.authority.v1.TxProto.Denomination> getDenominationsList() {
+        if (denominationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(denominations_);
+        } else {
+          return denominationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .em.authority.v1.Denomination denominations = 3 [json_name = "denominations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denominations&#92;""];</code>
+       */
+      public int getDenominationsCount() {
+        if (denominationsBuilder_ == null) {
+          return denominations_.size();
+        } else {
+          return denominationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .em.authority.v1.Denomination denominations = 3 [json_name = "denominations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denominations&#92;""];</code>
+       */
+      public com.em.authority.v1.TxProto.Denomination getDenominations(int index) {
+        if (denominationsBuilder_ == null) {
+          return denominations_.get(index);
+        } else {
+          return denominationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .em.authority.v1.Denomination denominations = 3 [json_name = "denominations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denominations&#92;""];</code>
+       */
+      public Builder setDenominations(
+          int index, com.em.authority.v1.TxProto.Denomination value) {
+        if (denominationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDenominationsIsMutable();
+          denominations_.set(index, value);
+          onChanged();
+        } else {
+          denominationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.authority.v1.Denomination denominations = 3 [json_name = "denominations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denominations&#92;""];</code>
+       */
+      public Builder setDenominations(
+          int index, com.em.authority.v1.TxProto.Denomination.Builder builderForValue) {
+        if (denominationsBuilder_ == null) {
+          ensureDenominationsIsMutable();
+          denominations_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          denominationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.authority.v1.Denomination denominations = 3 [json_name = "denominations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denominations&#92;""];</code>
+       */
+      public Builder addDenominations(com.em.authority.v1.TxProto.Denomination value) {
+        if (denominationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDenominationsIsMutable();
+          denominations_.add(value);
+          onChanged();
+        } else {
+          denominationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.authority.v1.Denomination denominations = 3 [json_name = "denominations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denominations&#92;""];</code>
+       */
+      public Builder addDenominations(
+          int index, com.em.authority.v1.TxProto.Denomination value) {
+        if (denominationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDenominationsIsMutable();
+          denominations_.add(index, value);
+          onChanged();
+        } else {
+          denominationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.authority.v1.Denomination denominations = 3 [json_name = "denominations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denominations&#92;""];</code>
+       */
+      public Builder addDenominations(
+          com.em.authority.v1.TxProto.Denomination.Builder builderForValue) {
+        if (denominationsBuilder_ == null) {
+          ensureDenominationsIsMutable();
+          denominations_.add(builderForValue.build());
+          onChanged();
+        } else {
+          denominationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.authority.v1.Denomination denominations = 3 [json_name = "denominations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denominations&#92;""];</code>
+       */
+      public Builder addDenominations(
+          int index, com.em.authority.v1.TxProto.Denomination.Builder builderForValue) {
+        if (denominationsBuilder_ == null) {
+          ensureDenominationsIsMutable();
+          denominations_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          denominationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.authority.v1.Denomination denominations = 3 [json_name = "denominations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denominations&#92;""];</code>
+       */
+      public Builder addAllDenominations(
+          java.lang.Iterable<? extends com.em.authority.v1.TxProto.Denomination> values) {
+        if (denominationsBuilder_ == null) {
+          ensureDenominationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, denominations_);
+          onChanged();
+        } else {
+          denominationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.authority.v1.Denomination denominations = 3 [json_name = "denominations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denominations&#92;""];</code>
+       */
+      public Builder clearDenominations() {
+        if (denominationsBuilder_ == null) {
+          denominations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          denominationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.authority.v1.Denomination denominations = 3 [json_name = "denominations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denominations&#92;""];</code>
+       */
+      public Builder removeDenominations(int index) {
+        if (denominationsBuilder_ == null) {
+          ensureDenominationsIsMutable();
+          denominations_.remove(index);
+          onChanged();
+        } else {
+          denominationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.authority.v1.Denomination denominations = 3 [json_name = "denominations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denominations&#92;""];</code>
+       */
+      public com.em.authority.v1.TxProto.Denomination.Builder getDenominationsBuilder(
+          int index) {
+        return getDenominationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .em.authority.v1.Denomination denominations = 3 [json_name = "denominations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denominations&#92;""];</code>
+       */
+      public com.em.authority.v1.TxProto.DenominationOrBuilder getDenominationsOrBuilder(
+          int index) {
+        if (denominationsBuilder_ == null) {
+          return denominations_.get(index);  } else {
+          return denominationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .em.authority.v1.Denomination denominations = 3 [json_name = "denominations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denominations&#92;""];</code>
+       */
+      public java.util.List<? extends com.em.authority.v1.TxProto.DenominationOrBuilder> 
+           getDenominationsOrBuilderList() {
+        if (denominationsBuilder_ != null) {
+          return denominationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(denominations_);
+        }
+      }
+      /**
+       * <code>repeated .em.authority.v1.Denomination denominations = 3 [json_name = "denominations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denominations&#92;""];</code>
+       */
+      public com.em.authority.v1.TxProto.Denomination.Builder addDenominationsBuilder() {
+        return getDenominationsFieldBuilder().addBuilder(
+            com.em.authority.v1.TxProto.Denomination.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .em.authority.v1.Denomination denominations = 3 [json_name = "denominations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denominations&#92;""];</code>
+       */
+      public com.em.authority.v1.TxProto.Denomination.Builder addDenominationsBuilder(
+          int index) {
+        return getDenominationsFieldBuilder().addBuilder(
+            index, com.em.authority.v1.TxProto.Denomination.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .em.authority.v1.Denomination denominations = 3 [json_name = "denominations", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denominations&#92;""];</code>
+       */
+      public java.util.List<com.em.authority.v1.TxProto.Denomination.Builder> 
+           getDenominationsBuilderList() {
+        return getDenominationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.em.authority.v1.TxProto.Denomination, com.em.authority.v1.TxProto.Denomination.Builder, com.em.authority.v1.TxProto.DenominationOrBuilder> 
+          getDenominationsFieldBuilder() {
+        if (denominationsBuilder_ == null) {
+          denominationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.em.authority.v1.TxProto.Denomination, com.em.authority.v1.TxProto.Denomination.Builder, com.em.authority.v1.TxProto.DenominationOrBuilder>(
+                  denominations_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          denominations_ = null;
+        }
+        return denominationsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.authority.v1.MsgCreateIssuer)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.authority.v1.MsgCreateIssuer)
+    private static final com.em.authority.v1.TxProto.MsgCreateIssuer DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.authority.v1.TxProto.MsgCreateIssuer();
+    }
+
+    public static com.em.authority.v1.TxProto.MsgCreateIssuer getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateIssuer>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateIssuer>() {
+      @java.lang.Override
+      public MsgCreateIssuer parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateIssuer> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateIssuer> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.authority.v1.TxProto.MsgCreateIssuer getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DenominationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.authority.v1.Denomination)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * base represents the base denom (should be the DenomUnit with exponent = 0).
+     * </pre>
+     *
+     * <code>string base = 1 [json_name = "base"];</code>
+     * @return The base.
+     */
+    java.lang.String getBase();
+    /**
+     * <pre>
+     * base represents the base denom (should be the DenomUnit with exponent = 0).
+     * </pre>
+     *
+     * <code>string base = 1 [json_name = "base"];</code>
+     * @return The bytes for base.
+     */
+    com.google.protobuf.ByteString
+        getBaseBytes();
+
+    /**
+     * <pre>
+     * display indicates the suggested denom that should be
+     * displayed in clients.
+     * </pre>
+     *
+     * <code>string display = 2 [json_name = "display"];</code>
+     * @return The display.
+     */
+    java.lang.String getDisplay();
+    /**
+     * <pre>
+     * display indicates the suggested denom that should be
+     * displayed in clients.
+     * </pre>
+     *
+     * <code>string display = 2 [json_name = "display"];</code>
+     * @return The bytes for display.
+     */
+    com.google.protobuf.ByteString
+        getDisplayBytes();
+
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+  }
+  /**
+   * Protobuf type {@code em.authority.v1.Denomination}
+   */
+  public static final class Denomination extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.authority.v1.Denomination)
+      DenominationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Denomination.newBuilder() to construct.
+    private Denomination(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Denomination() {
+      base_ = "";
+      display_ = "";
+      description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Denomination();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.authority.v1.TxProto.internal_static_em_authority_v1_Denomination_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.authority.v1.TxProto.internal_static_em_authority_v1_Denomination_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.authority.v1.TxProto.Denomination.class, com.em.authority.v1.TxProto.Denomination.Builder.class);
+    }
+
+    public static final int BASE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object base_ = "";
+    /**
+     * <pre>
+     * base represents the base denom (should be the DenomUnit with exponent = 0).
+     * </pre>
+     *
+     * <code>string base = 1 [json_name = "base"];</code>
+     * @return The base.
+     */
+    @java.lang.Override
+    public java.lang.String getBase() {
+      java.lang.Object ref = base_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        base_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * base represents the base denom (should be the DenomUnit with exponent = 0).
+     * </pre>
+     *
+     * <code>string base = 1 [json_name = "base"];</code>
+     * @return The bytes for base.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBaseBytes() {
+      java.lang.Object ref = base_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        base_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DISPLAY_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object display_ = "";
+    /**
+     * <pre>
+     * display indicates the suggested denom that should be
+     * displayed in clients.
+     * </pre>
+     *
+     * <code>string display = 2 [json_name = "display"];</code>
+     * @return The display.
+     */
+    @java.lang.Override
+    public java.lang.String getDisplay() {
+      java.lang.Object ref = display_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        display_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * display indicates the suggested denom that should be
+     * displayed in clients.
+     * </pre>
+     *
+     * <code>string display = 2 [json_name = "display"];</code>
+     * @return The bytes for display.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDisplayBytes() {
+      java.lang.Object ref = display_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        display_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(base_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, base_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(display_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, display_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(base_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, base_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(display_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, display_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.authority.v1.TxProto.Denomination)) {
+        return super.equals(obj);
+      }
+      com.em.authority.v1.TxProto.Denomination other = (com.em.authority.v1.TxProto.Denomination) obj;
+
+      if (!getBase()
+          .equals(other.getBase())) return false;
+      if (!getDisplay()
+          .equals(other.getDisplay())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BASE_FIELD_NUMBER;
+      hash = (53 * hash) + getBase().hashCode();
+      hash = (37 * hash) + DISPLAY_FIELD_NUMBER;
+      hash = (53 * hash) + getDisplay().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.authority.v1.TxProto.Denomination parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.Denomination parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.Denomination parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.Denomination parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.Denomination parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.Denomination parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.Denomination parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.authority.v1.TxProto.Denomination parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.authority.v1.TxProto.Denomination parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.authority.v1.TxProto.Denomination parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.Denomination parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.authority.v1.TxProto.Denomination parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.authority.v1.TxProto.Denomination prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.authority.v1.Denomination}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.authority.v1.Denomination)
+        com.em.authority.v1.TxProto.DenominationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_Denomination_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_Denomination_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.authority.v1.TxProto.Denomination.class, com.em.authority.v1.TxProto.Denomination.Builder.class);
+      }
+
+      // Construct using com.em.authority.v1.TxProto.Denomination.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        base_ = "";
+        display_ = "";
+        description_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_Denomination_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.Denomination getDefaultInstanceForType() {
+        return com.em.authority.v1.TxProto.Denomination.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.Denomination build() {
+        com.em.authority.v1.TxProto.Denomination result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.Denomination buildPartial() {
+        com.em.authority.v1.TxProto.Denomination result = new com.em.authority.v1.TxProto.Denomination(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.em.authority.v1.TxProto.Denomination result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.base_ = base_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.display_ = display_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.description_ = description_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.authority.v1.TxProto.Denomination) {
+          return mergeFrom((com.em.authority.v1.TxProto.Denomination)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.authority.v1.TxProto.Denomination other) {
+        if (other == com.em.authority.v1.TxProto.Denomination.getDefaultInstance()) return this;
+        if (!other.getBase().isEmpty()) {
+          base_ = other.base_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDisplay().isEmpty()) {
+          display_ = other.display_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                base_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                display_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object base_ = "";
+      /**
+       * <pre>
+       * base represents the base denom (should be the DenomUnit with exponent = 0).
+       * </pre>
+       *
+       * <code>string base = 1 [json_name = "base"];</code>
+       * @return The base.
+       */
+      public java.lang.String getBase() {
+        java.lang.Object ref = base_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          base_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * base represents the base denom (should be the DenomUnit with exponent = 0).
+       * </pre>
+       *
+       * <code>string base = 1 [json_name = "base"];</code>
+       * @return The bytes for base.
+       */
+      public com.google.protobuf.ByteString
+          getBaseBytes() {
+        java.lang.Object ref = base_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          base_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * base represents the base denom (should be the DenomUnit with exponent = 0).
+       * </pre>
+       *
+       * <code>string base = 1 [json_name = "base"];</code>
+       * @param value The base to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBase(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        base_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * base represents the base denom (should be the DenomUnit with exponent = 0).
+       * </pre>
+       *
+       * <code>string base = 1 [json_name = "base"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBase() {
+        base_ = getDefaultInstance().getBase();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * base represents the base denom (should be the DenomUnit with exponent = 0).
+       * </pre>
+       *
+       * <code>string base = 1 [json_name = "base"];</code>
+       * @param value The bytes for base to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBaseBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        base_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object display_ = "";
+      /**
+       * <pre>
+       * display indicates the suggested denom that should be
+       * displayed in clients.
+       * </pre>
+       *
+       * <code>string display = 2 [json_name = "display"];</code>
+       * @return The display.
+       */
+      public java.lang.String getDisplay() {
+        java.lang.Object ref = display_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          display_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * display indicates the suggested denom that should be
+       * displayed in clients.
+       * </pre>
+       *
+       * <code>string display = 2 [json_name = "display"];</code>
+       * @return The bytes for display.
+       */
+      public com.google.protobuf.ByteString
+          getDisplayBytes() {
+        java.lang.Object ref = display_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          display_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * display indicates the suggested denom that should be
+       * displayed in clients.
+       * </pre>
+       *
+       * <code>string display = 2 [json_name = "display"];</code>
+       * @param value The display to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDisplay(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        display_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * display indicates the suggested denom that should be
+       * displayed in clients.
+       * </pre>
+       *
+       * <code>string display = 2 [json_name = "display"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDisplay() {
+        display_ = getDefaultInstance().getDisplay();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * display indicates the suggested denom that should be
+       * displayed in clients.
+       * </pre>
+       *
+       * <code>string display = 2 [json_name = "display"];</code>
+       * @param value The bytes for display to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDisplayBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        display_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.authority.v1.Denomination)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.authority.v1.Denomination)
+    private static final com.em.authority.v1.TxProto.Denomination DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.authority.v1.TxProto.Denomination();
+    }
+
+    public static com.em.authority.v1.TxProto.Denomination getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Denomination>
+        PARSER = new com.google.protobuf.AbstractParser<Denomination>() {
+      @java.lang.Override
+      public Denomination parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Denomination> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Denomination> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.authority.v1.TxProto.Denomination getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateIssuerResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.authority.v1.MsgCreateIssuerResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code em.authority.v1.MsgCreateIssuerResponse}
+   */
+  public static final class MsgCreateIssuerResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.authority.v1.MsgCreateIssuerResponse)
+      MsgCreateIssuerResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateIssuerResponse.newBuilder() to construct.
+    private MsgCreateIssuerResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateIssuerResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateIssuerResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgCreateIssuerResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgCreateIssuerResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.authority.v1.TxProto.MsgCreateIssuerResponse.class, com.em.authority.v1.TxProto.MsgCreateIssuerResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.authority.v1.TxProto.MsgCreateIssuerResponse)) {
+        return super.equals(obj);
+      }
+      com.em.authority.v1.TxProto.MsgCreateIssuerResponse other = (com.em.authority.v1.TxProto.MsgCreateIssuerResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.authority.v1.TxProto.MsgCreateIssuerResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgCreateIssuerResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgCreateIssuerResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgCreateIssuerResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgCreateIssuerResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgCreateIssuerResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgCreateIssuerResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.authority.v1.TxProto.MsgCreateIssuerResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.authority.v1.TxProto.MsgCreateIssuerResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.authority.v1.TxProto.MsgCreateIssuerResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgCreateIssuerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.authority.v1.TxProto.MsgCreateIssuerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.authority.v1.TxProto.MsgCreateIssuerResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.authority.v1.MsgCreateIssuerResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.authority.v1.MsgCreateIssuerResponse)
+        com.em.authority.v1.TxProto.MsgCreateIssuerResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgCreateIssuerResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgCreateIssuerResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.authority.v1.TxProto.MsgCreateIssuerResponse.class, com.em.authority.v1.TxProto.MsgCreateIssuerResponse.Builder.class);
+      }
+
+      // Construct using com.em.authority.v1.TxProto.MsgCreateIssuerResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgCreateIssuerResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgCreateIssuerResponse getDefaultInstanceForType() {
+        return com.em.authority.v1.TxProto.MsgCreateIssuerResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgCreateIssuerResponse build() {
+        com.em.authority.v1.TxProto.MsgCreateIssuerResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgCreateIssuerResponse buildPartial() {
+        com.em.authority.v1.TxProto.MsgCreateIssuerResponse result = new com.em.authority.v1.TxProto.MsgCreateIssuerResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.authority.v1.TxProto.MsgCreateIssuerResponse) {
+          return mergeFrom((com.em.authority.v1.TxProto.MsgCreateIssuerResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.authority.v1.TxProto.MsgCreateIssuerResponse other) {
+        if (other == com.em.authority.v1.TxProto.MsgCreateIssuerResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.authority.v1.MsgCreateIssuerResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.authority.v1.MsgCreateIssuerResponse)
+    private static final com.em.authority.v1.TxProto.MsgCreateIssuerResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.authority.v1.TxProto.MsgCreateIssuerResponse();
+    }
+
+    public static com.em.authority.v1.TxProto.MsgCreateIssuerResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateIssuerResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateIssuerResponse>() {
+      @java.lang.Override
+      public MsgCreateIssuerResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateIssuerResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateIssuerResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.authority.v1.TxProto.MsgCreateIssuerResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDestroyIssuerOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.authority.v1.MsgDestroyIssuer)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+     * @return The authority.
+     */
+    java.lang.String getAuthority();
+    /**
+     * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+     * @return The bytes for authority.
+     */
+    com.google.protobuf.ByteString
+        getAuthorityBytes();
+
+    /**
+     * <code>string issuer = 2 [json_name = "issuer", (.gogoproto.moretags) = "yaml:&#92;"issuer&#92;""];</code>
+     * @return The issuer.
+     */
+    java.lang.String getIssuer();
+    /**
+     * <code>string issuer = 2 [json_name = "issuer", (.gogoproto.moretags) = "yaml:&#92;"issuer&#92;""];</code>
+     * @return The bytes for issuer.
+     */
+    com.google.protobuf.ByteString
+        getIssuerBytes();
+  }
+  /**
+   * Protobuf type {@code em.authority.v1.MsgDestroyIssuer}
+   */
+  public static final class MsgDestroyIssuer extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.authority.v1.MsgDestroyIssuer)
+      MsgDestroyIssuerOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDestroyIssuer.newBuilder() to construct.
+    private MsgDestroyIssuer(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDestroyIssuer() {
+      authority_ = "";
+      issuer_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDestroyIssuer();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgDestroyIssuer_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgDestroyIssuer_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.authority.v1.TxProto.MsgDestroyIssuer.class, com.em.authority.v1.TxProto.MsgDestroyIssuer.Builder.class);
+    }
+
+    public static final int AUTHORITY_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object authority_ = "";
+    /**
+     * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+     * @return The authority.
+     */
+    @java.lang.Override
+    public java.lang.String getAuthority() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        authority_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+     * @return The bytes for authority.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAuthorityBytes() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authority_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ISSUER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object issuer_ = "";
+    /**
+     * <code>string issuer = 2 [json_name = "issuer", (.gogoproto.moretags) = "yaml:&#92;"issuer&#92;""];</code>
+     * @return The issuer.
+     */
+    @java.lang.Override
+    public java.lang.String getIssuer() {
+      java.lang.Object ref = issuer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        issuer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string issuer = 2 [json_name = "issuer", (.gogoproto.moretags) = "yaml:&#92;"issuer&#92;""];</code>
+     * @return The bytes for issuer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIssuerBytes() {
+      java.lang.Object ref = issuer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        issuer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authority_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(issuer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, issuer_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authority_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(issuer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, issuer_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.authority.v1.TxProto.MsgDestroyIssuer)) {
+        return super.equals(obj);
+      }
+      com.em.authority.v1.TxProto.MsgDestroyIssuer other = (com.em.authority.v1.TxProto.MsgDestroyIssuer) obj;
+
+      if (!getAuthority()
+          .equals(other.getAuthority())) return false;
+      if (!getIssuer()
+          .equals(other.getIssuer())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AUTHORITY_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthority().hashCode();
+      hash = (37 * hash) + ISSUER_FIELD_NUMBER;
+      hash = (53 * hash) + getIssuer().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.authority.v1.TxProto.MsgDestroyIssuer parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgDestroyIssuer parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgDestroyIssuer parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgDestroyIssuer parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgDestroyIssuer parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgDestroyIssuer parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgDestroyIssuer parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.authority.v1.TxProto.MsgDestroyIssuer parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.authority.v1.TxProto.MsgDestroyIssuer parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.authority.v1.TxProto.MsgDestroyIssuer parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgDestroyIssuer parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.authority.v1.TxProto.MsgDestroyIssuer parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.authority.v1.TxProto.MsgDestroyIssuer prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.authority.v1.MsgDestroyIssuer}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.authority.v1.MsgDestroyIssuer)
+        com.em.authority.v1.TxProto.MsgDestroyIssuerOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgDestroyIssuer_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgDestroyIssuer_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.authority.v1.TxProto.MsgDestroyIssuer.class, com.em.authority.v1.TxProto.MsgDestroyIssuer.Builder.class);
+      }
+
+      // Construct using com.em.authority.v1.TxProto.MsgDestroyIssuer.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        authority_ = "";
+        issuer_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgDestroyIssuer_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgDestroyIssuer getDefaultInstanceForType() {
+        return com.em.authority.v1.TxProto.MsgDestroyIssuer.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgDestroyIssuer build() {
+        com.em.authority.v1.TxProto.MsgDestroyIssuer result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgDestroyIssuer buildPartial() {
+        com.em.authority.v1.TxProto.MsgDestroyIssuer result = new com.em.authority.v1.TxProto.MsgDestroyIssuer(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.em.authority.v1.TxProto.MsgDestroyIssuer result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.authority_ = authority_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.issuer_ = issuer_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.authority.v1.TxProto.MsgDestroyIssuer) {
+          return mergeFrom((com.em.authority.v1.TxProto.MsgDestroyIssuer)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.authority.v1.TxProto.MsgDestroyIssuer other) {
+        if (other == com.em.authority.v1.TxProto.MsgDestroyIssuer.getDefaultInstance()) return this;
+        if (!other.getAuthority().isEmpty()) {
+          authority_ = other.authority_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getIssuer().isEmpty()) {
+          issuer_ = other.issuer_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                authority_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                issuer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object authority_ = "";
+      /**
+       * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+       * @return The authority.
+       */
+      public java.lang.String getAuthority() {
+        java.lang.Object ref = authority_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          authority_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+       * @return The bytes for authority.
+       */
+      public com.google.protobuf.ByteString
+          getAuthorityBytes() {
+        java.lang.Object ref = authority_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authority_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+       * @param value The authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthority(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthority() {
+        authority_ = getDefaultInstance().getAuthority();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+       * @param value The bytes for authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthorityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object issuer_ = "";
+      /**
+       * <code>string issuer = 2 [json_name = "issuer", (.gogoproto.moretags) = "yaml:&#92;"issuer&#92;""];</code>
+       * @return The issuer.
+       */
+      public java.lang.String getIssuer() {
+        java.lang.Object ref = issuer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          issuer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string issuer = 2 [json_name = "issuer", (.gogoproto.moretags) = "yaml:&#92;"issuer&#92;""];</code>
+       * @return The bytes for issuer.
+       */
+      public com.google.protobuf.ByteString
+          getIssuerBytes() {
+        java.lang.Object ref = issuer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          issuer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string issuer = 2 [json_name = "issuer", (.gogoproto.moretags) = "yaml:&#92;"issuer&#92;""];</code>
+       * @param value The issuer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssuer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        issuer_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string issuer = 2 [json_name = "issuer", (.gogoproto.moretags) = "yaml:&#92;"issuer&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIssuer() {
+        issuer_ = getDefaultInstance().getIssuer();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string issuer = 2 [json_name = "issuer", (.gogoproto.moretags) = "yaml:&#92;"issuer&#92;""];</code>
+       * @param value The bytes for issuer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssuerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        issuer_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.authority.v1.MsgDestroyIssuer)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.authority.v1.MsgDestroyIssuer)
+    private static final com.em.authority.v1.TxProto.MsgDestroyIssuer DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.authority.v1.TxProto.MsgDestroyIssuer();
+    }
+
+    public static com.em.authority.v1.TxProto.MsgDestroyIssuer getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDestroyIssuer>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDestroyIssuer>() {
+      @java.lang.Override
+      public MsgDestroyIssuer parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDestroyIssuer> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDestroyIssuer> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.authority.v1.TxProto.MsgDestroyIssuer getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDestroyIssuerResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.authority.v1.MsgDestroyIssuerResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code em.authority.v1.MsgDestroyIssuerResponse}
+   */
+  public static final class MsgDestroyIssuerResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.authority.v1.MsgDestroyIssuerResponse)
+      MsgDestroyIssuerResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDestroyIssuerResponse.newBuilder() to construct.
+    private MsgDestroyIssuerResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDestroyIssuerResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDestroyIssuerResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgDestroyIssuerResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgDestroyIssuerResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.authority.v1.TxProto.MsgDestroyIssuerResponse.class, com.em.authority.v1.TxProto.MsgDestroyIssuerResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.authority.v1.TxProto.MsgDestroyIssuerResponse)) {
+        return super.equals(obj);
+      }
+      com.em.authority.v1.TxProto.MsgDestroyIssuerResponse other = (com.em.authority.v1.TxProto.MsgDestroyIssuerResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.authority.v1.TxProto.MsgDestroyIssuerResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgDestroyIssuerResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgDestroyIssuerResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgDestroyIssuerResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgDestroyIssuerResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgDestroyIssuerResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgDestroyIssuerResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.authority.v1.TxProto.MsgDestroyIssuerResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.authority.v1.TxProto.MsgDestroyIssuerResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.authority.v1.TxProto.MsgDestroyIssuerResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgDestroyIssuerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.authority.v1.TxProto.MsgDestroyIssuerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.authority.v1.TxProto.MsgDestroyIssuerResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.authority.v1.MsgDestroyIssuerResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.authority.v1.MsgDestroyIssuerResponse)
+        com.em.authority.v1.TxProto.MsgDestroyIssuerResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgDestroyIssuerResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgDestroyIssuerResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.authority.v1.TxProto.MsgDestroyIssuerResponse.class, com.em.authority.v1.TxProto.MsgDestroyIssuerResponse.Builder.class);
+      }
+
+      // Construct using com.em.authority.v1.TxProto.MsgDestroyIssuerResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgDestroyIssuerResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgDestroyIssuerResponse getDefaultInstanceForType() {
+        return com.em.authority.v1.TxProto.MsgDestroyIssuerResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgDestroyIssuerResponse build() {
+        com.em.authority.v1.TxProto.MsgDestroyIssuerResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgDestroyIssuerResponse buildPartial() {
+        com.em.authority.v1.TxProto.MsgDestroyIssuerResponse result = new com.em.authority.v1.TxProto.MsgDestroyIssuerResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.authority.v1.TxProto.MsgDestroyIssuerResponse) {
+          return mergeFrom((com.em.authority.v1.TxProto.MsgDestroyIssuerResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.authority.v1.TxProto.MsgDestroyIssuerResponse other) {
+        if (other == com.em.authority.v1.TxProto.MsgDestroyIssuerResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.authority.v1.MsgDestroyIssuerResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.authority.v1.MsgDestroyIssuerResponse)
+    private static final com.em.authority.v1.TxProto.MsgDestroyIssuerResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.authority.v1.TxProto.MsgDestroyIssuerResponse();
+    }
+
+    public static com.em.authority.v1.TxProto.MsgDestroyIssuerResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDestroyIssuerResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDestroyIssuerResponse>() {
+      @java.lang.Override
+      public MsgDestroyIssuerResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDestroyIssuerResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDestroyIssuerResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.authority.v1.TxProto.MsgDestroyIssuerResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSetGasPricesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.authority.v1.MsgSetGasPrices)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+     * @return The authority.
+     */
+    java.lang.String getAuthority();
+    /**
+     * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+     * @return The bytes for authority.
+     */
+    com.google.protobuf.ByteString
+        getAuthorityBytes();
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin gas_prices = 2 [json_name = "gasPrices", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> 
+        getGasPricesList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin gas_prices = 2 [json_name = "gasPrices", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getGasPrices(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin gas_prices = 2 [json_name = "gasPrices", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    int getGasPricesCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin gas_prices = 2 [json_name = "gasPrices", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getGasPricesOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin gas_prices = 2 [json_name = "gasPrices", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getGasPricesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code em.authority.v1.MsgSetGasPrices}
+   */
+  public static final class MsgSetGasPrices extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.authority.v1.MsgSetGasPrices)
+      MsgSetGasPricesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSetGasPrices.newBuilder() to construct.
+    private MsgSetGasPrices(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSetGasPrices() {
+      authority_ = "";
+      gasPrices_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSetGasPrices();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgSetGasPrices_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgSetGasPrices_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.authority.v1.TxProto.MsgSetGasPrices.class, com.em.authority.v1.TxProto.MsgSetGasPrices.Builder.class);
+    }
+
+    public static final int AUTHORITY_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object authority_ = "";
+    /**
+     * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+     * @return The authority.
+     */
+    @java.lang.Override
+    public java.lang.String getAuthority() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        authority_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+     * @return The bytes for authority.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAuthorityBytes() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authority_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GAS_PRICES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> gasPrices_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin gas_prices = 2 [json_name = "gasPrices", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getGasPricesList() {
+      return gasPrices_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin gas_prices = 2 [json_name = "gasPrices", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getGasPricesOrBuilderList() {
+      return gasPrices_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin gas_prices = 2 [json_name = "gasPrices", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public int getGasPricesCount() {
+      return gasPrices_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin gas_prices = 2 [json_name = "gasPrices", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getGasPrices(int index) {
+      return gasPrices_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin gas_prices = 2 [json_name = "gasPrices", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getGasPricesOrBuilder(
+        int index) {
+      return gasPrices_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authority_);
+      }
+      for (int i = 0; i < gasPrices_.size(); i++) {
+        output.writeMessage(2, gasPrices_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authority_);
+      }
+      for (int i = 0; i < gasPrices_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, gasPrices_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.authority.v1.TxProto.MsgSetGasPrices)) {
+        return super.equals(obj);
+      }
+      com.em.authority.v1.TxProto.MsgSetGasPrices other = (com.em.authority.v1.TxProto.MsgSetGasPrices) obj;
+
+      if (!getAuthority()
+          .equals(other.getAuthority())) return false;
+      if (!getGasPricesList()
+          .equals(other.getGasPricesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AUTHORITY_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthority().hashCode();
+      if (getGasPricesCount() > 0) {
+        hash = (37 * hash) + GAS_PRICES_FIELD_NUMBER;
+        hash = (53 * hash) + getGasPricesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.authority.v1.TxProto.MsgSetGasPrices parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetGasPrices parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetGasPrices parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetGasPrices parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetGasPrices parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetGasPrices parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetGasPrices parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetGasPrices parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.authority.v1.TxProto.MsgSetGasPrices parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.authority.v1.TxProto.MsgSetGasPrices parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetGasPrices parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetGasPrices parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.authority.v1.TxProto.MsgSetGasPrices prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.authority.v1.MsgSetGasPrices}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.authority.v1.MsgSetGasPrices)
+        com.em.authority.v1.TxProto.MsgSetGasPricesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgSetGasPrices_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgSetGasPrices_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.authority.v1.TxProto.MsgSetGasPrices.class, com.em.authority.v1.TxProto.MsgSetGasPrices.Builder.class);
+      }
+
+      // Construct using com.em.authority.v1.TxProto.MsgSetGasPrices.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        authority_ = "";
+        if (gasPricesBuilder_ == null) {
+          gasPrices_ = java.util.Collections.emptyList();
+        } else {
+          gasPrices_ = null;
+          gasPricesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgSetGasPrices_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgSetGasPrices getDefaultInstanceForType() {
+        return com.em.authority.v1.TxProto.MsgSetGasPrices.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgSetGasPrices build() {
+        com.em.authority.v1.TxProto.MsgSetGasPrices result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgSetGasPrices buildPartial() {
+        com.em.authority.v1.TxProto.MsgSetGasPrices result = new com.em.authority.v1.TxProto.MsgSetGasPrices(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.em.authority.v1.TxProto.MsgSetGasPrices result) {
+        if (gasPricesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            gasPrices_ = java.util.Collections.unmodifiableList(gasPrices_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.gasPrices_ = gasPrices_;
+        } else {
+          result.gasPrices_ = gasPricesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.em.authority.v1.TxProto.MsgSetGasPrices result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.authority_ = authority_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.authority.v1.TxProto.MsgSetGasPrices) {
+          return mergeFrom((com.em.authority.v1.TxProto.MsgSetGasPrices)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.authority.v1.TxProto.MsgSetGasPrices other) {
+        if (other == com.em.authority.v1.TxProto.MsgSetGasPrices.getDefaultInstance()) return this;
+        if (!other.getAuthority().isEmpty()) {
+          authority_ = other.authority_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (gasPricesBuilder_ == null) {
+          if (!other.gasPrices_.isEmpty()) {
+            if (gasPrices_.isEmpty()) {
+              gasPrices_ = other.gasPrices_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureGasPricesIsMutable();
+              gasPrices_.addAll(other.gasPrices_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.gasPrices_.isEmpty()) {
+            if (gasPricesBuilder_.isEmpty()) {
+              gasPricesBuilder_.dispose();
+              gasPricesBuilder_ = null;
+              gasPrices_ = other.gasPrices_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              gasPricesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getGasPricesFieldBuilder() : null;
+            } else {
+              gasPricesBuilder_.addAllMessages(other.gasPrices_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                authority_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.cosmos.base.v1beta1.CoinProto.DecCoin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.DecCoin.parser(),
+                        extensionRegistry);
+                if (gasPricesBuilder_ == null) {
+                  ensureGasPricesIsMutable();
+                  gasPrices_.add(m);
+                } else {
+                  gasPricesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object authority_ = "";
+      /**
+       * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+       * @return The authority.
+       */
+      public java.lang.String getAuthority() {
+        java.lang.Object ref = authority_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          authority_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+       * @return The bytes for authority.
+       */
+      public com.google.protobuf.ByteString
+          getAuthorityBytes() {
+        java.lang.Object ref = authority_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authority_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+       * @param value The authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthority(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthority() {
+        authority_ = getDefaultInstance().getAuthority();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+       * @param value The bytes for authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthorityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> gasPrices_ =
+        java.util.Collections.emptyList();
+      private void ensureGasPricesIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          gasPrices_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.DecCoin>(gasPrices_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> gasPricesBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin gas_prices = 2 [json_name = "gasPrices", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getGasPricesList() {
+        if (gasPricesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(gasPrices_);
+        } else {
+          return gasPricesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin gas_prices = 2 [json_name = "gasPrices", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public int getGasPricesCount() {
+        if (gasPricesBuilder_ == null) {
+          return gasPrices_.size();
+        } else {
+          return gasPricesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin gas_prices = 2 [json_name = "gasPrices", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getGasPrices(int index) {
+        if (gasPricesBuilder_ == null) {
+          return gasPrices_.get(index);
+        } else {
+          return gasPricesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin gas_prices = 2 [json_name = "gasPrices", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setGasPrices(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (gasPricesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGasPricesIsMutable();
+          gasPrices_.set(index, value);
+          onChanged();
+        } else {
+          gasPricesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin gas_prices = 2 [json_name = "gasPrices", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setGasPrices(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (gasPricesBuilder_ == null) {
+          ensureGasPricesIsMutable();
+          gasPrices_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          gasPricesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin gas_prices = 2 [json_name = "gasPrices", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addGasPrices(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (gasPricesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGasPricesIsMutable();
+          gasPrices_.add(value);
+          onChanged();
+        } else {
+          gasPricesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin gas_prices = 2 [json_name = "gasPrices", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addGasPrices(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (gasPricesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGasPricesIsMutable();
+          gasPrices_.add(index, value);
+          onChanged();
+        } else {
+          gasPricesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin gas_prices = 2 [json_name = "gasPrices", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addGasPrices(
+          com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (gasPricesBuilder_ == null) {
+          ensureGasPricesIsMutable();
+          gasPrices_.add(builderForValue.build());
+          onChanged();
+        } else {
+          gasPricesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin gas_prices = 2 [json_name = "gasPrices", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addGasPrices(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (gasPricesBuilder_ == null) {
+          ensureGasPricesIsMutable();
+          gasPrices_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          gasPricesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin gas_prices = 2 [json_name = "gasPrices", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllGasPrices(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.DecCoin> values) {
+        if (gasPricesBuilder_ == null) {
+          ensureGasPricesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, gasPrices_);
+          onChanged();
+        } else {
+          gasPricesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin gas_prices = 2 [json_name = "gasPrices", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder clearGasPrices() {
+        if (gasPricesBuilder_ == null) {
+          gasPrices_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          gasPricesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin gas_prices = 2 [json_name = "gasPrices", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder removeGasPrices(int index) {
+        if (gasPricesBuilder_ == null) {
+          ensureGasPricesIsMutable();
+          gasPrices_.remove(index);
+          onChanged();
+        } else {
+          gasPricesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin gas_prices = 2 [json_name = "gasPrices", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getGasPricesBuilder(
+          int index) {
+        return getGasPricesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin gas_prices = 2 [json_name = "gasPrices", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getGasPricesOrBuilder(
+          int index) {
+        if (gasPricesBuilder_ == null) {
+          return gasPrices_.get(index);  } else {
+          return gasPricesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin gas_prices = 2 [json_name = "gasPrices", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+           getGasPricesOrBuilderList() {
+        if (gasPricesBuilder_ != null) {
+          return gasPricesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(gasPrices_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin gas_prices = 2 [json_name = "gasPrices", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addGasPricesBuilder() {
+        return getGasPricesFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin gas_prices = 2 [json_name = "gasPrices", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addGasPricesBuilder(
+          int index) {
+        return getGasPricesFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin gas_prices = 2 [json_name = "gasPrices", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder> 
+           getGasPricesBuilderList() {
+        return getGasPricesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+          getGasPricesFieldBuilder() {
+        if (gasPricesBuilder_ == null) {
+          gasPricesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
+                  gasPrices_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          gasPrices_ = null;
+        }
+        return gasPricesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.authority.v1.MsgSetGasPrices)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.authority.v1.MsgSetGasPrices)
+    private static final com.em.authority.v1.TxProto.MsgSetGasPrices DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.authority.v1.TxProto.MsgSetGasPrices();
+    }
+
+    public static com.em.authority.v1.TxProto.MsgSetGasPrices getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSetGasPrices>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSetGasPrices>() {
+      @java.lang.Override
+      public MsgSetGasPrices parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSetGasPrices> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSetGasPrices> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.authority.v1.TxProto.MsgSetGasPrices getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSetGasPricesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.authority.v1.MsgSetGasPricesResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code em.authority.v1.MsgSetGasPricesResponse}
+   */
+  public static final class MsgSetGasPricesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.authority.v1.MsgSetGasPricesResponse)
+      MsgSetGasPricesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSetGasPricesResponse.newBuilder() to construct.
+    private MsgSetGasPricesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSetGasPricesResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSetGasPricesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgSetGasPricesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgSetGasPricesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.authority.v1.TxProto.MsgSetGasPricesResponse.class, com.em.authority.v1.TxProto.MsgSetGasPricesResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.authority.v1.TxProto.MsgSetGasPricesResponse)) {
+        return super.equals(obj);
+      }
+      com.em.authority.v1.TxProto.MsgSetGasPricesResponse other = (com.em.authority.v1.TxProto.MsgSetGasPricesResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.authority.v1.TxProto.MsgSetGasPricesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetGasPricesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetGasPricesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetGasPricesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetGasPricesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetGasPricesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetGasPricesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetGasPricesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.authority.v1.TxProto.MsgSetGasPricesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.authority.v1.TxProto.MsgSetGasPricesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetGasPricesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetGasPricesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.authority.v1.TxProto.MsgSetGasPricesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.authority.v1.MsgSetGasPricesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.authority.v1.MsgSetGasPricesResponse)
+        com.em.authority.v1.TxProto.MsgSetGasPricesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgSetGasPricesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgSetGasPricesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.authority.v1.TxProto.MsgSetGasPricesResponse.class, com.em.authority.v1.TxProto.MsgSetGasPricesResponse.Builder.class);
+      }
+
+      // Construct using com.em.authority.v1.TxProto.MsgSetGasPricesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgSetGasPricesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgSetGasPricesResponse getDefaultInstanceForType() {
+        return com.em.authority.v1.TxProto.MsgSetGasPricesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgSetGasPricesResponse build() {
+        com.em.authority.v1.TxProto.MsgSetGasPricesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgSetGasPricesResponse buildPartial() {
+        com.em.authority.v1.TxProto.MsgSetGasPricesResponse result = new com.em.authority.v1.TxProto.MsgSetGasPricesResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.authority.v1.TxProto.MsgSetGasPricesResponse) {
+          return mergeFrom((com.em.authority.v1.TxProto.MsgSetGasPricesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.authority.v1.TxProto.MsgSetGasPricesResponse other) {
+        if (other == com.em.authority.v1.TxProto.MsgSetGasPricesResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.authority.v1.MsgSetGasPricesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.authority.v1.MsgSetGasPricesResponse)
+    private static final com.em.authority.v1.TxProto.MsgSetGasPricesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.authority.v1.TxProto.MsgSetGasPricesResponse();
+    }
+
+    public static com.em.authority.v1.TxProto.MsgSetGasPricesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSetGasPricesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSetGasPricesResponse>() {
+      @java.lang.Override
+      public MsgSetGasPricesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSetGasPricesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSetGasPricesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.authority.v1.TxProto.MsgSetGasPricesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgReplaceAuthorityOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.authority.v1.MsgReplaceAuthority)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+     * @return The authority.
+     */
+    java.lang.String getAuthority();
+    /**
+     * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+     * @return The bytes for authority.
+     */
+    com.google.protobuf.ByteString
+        getAuthorityBytes();
+
+    /**
+     * <code>string new_authority = 2 [json_name = "newAuthority", (.gogoproto.moretags) = "yaml:&#92;"new_authority&#92;""];</code>
+     * @return The newAuthority.
+     */
+    java.lang.String getNewAuthority();
+    /**
+     * <code>string new_authority = 2 [json_name = "newAuthority", (.gogoproto.moretags) = "yaml:&#92;"new_authority&#92;""];</code>
+     * @return The bytes for newAuthority.
+     */
+    com.google.protobuf.ByteString
+        getNewAuthorityBytes();
+  }
+  /**
+   * Protobuf type {@code em.authority.v1.MsgReplaceAuthority}
+   */
+  public static final class MsgReplaceAuthority extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.authority.v1.MsgReplaceAuthority)
+      MsgReplaceAuthorityOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgReplaceAuthority.newBuilder() to construct.
+    private MsgReplaceAuthority(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgReplaceAuthority() {
+      authority_ = "";
+      newAuthority_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgReplaceAuthority();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgReplaceAuthority_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgReplaceAuthority_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.authority.v1.TxProto.MsgReplaceAuthority.class, com.em.authority.v1.TxProto.MsgReplaceAuthority.Builder.class);
+    }
+
+    public static final int AUTHORITY_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object authority_ = "";
+    /**
+     * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+     * @return The authority.
+     */
+    @java.lang.Override
+    public java.lang.String getAuthority() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        authority_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+     * @return The bytes for authority.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAuthorityBytes() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authority_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NEW_AUTHORITY_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object newAuthority_ = "";
+    /**
+     * <code>string new_authority = 2 [json_name = "newAuthority", (.gogoproto.moretags) = "yaml:&#92;"new_authority&#92;""];</code>
+     * @return The newAuthority.
+     */
+    @java.lang.Override
+    public java.lang.String getNewAuthority() {
+      java.lang.Object ref = newAuthority_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        newAuthority_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string new_authority = 2 [json_name = "newAuthority", (.gogoproto.moretags) = "yaml:&#92;"new_authority&#92;""];</code>
+     * @return The bytes for newAuthority.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNewAuthorityBytes() {
+      java.lang.Object ref = newAuthority_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        newAuthority_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authority_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newAuthority_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, newAuthority_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authority_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newAuthority_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, newAuthority_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.authority.v1.TxProto.MsgReplaceAuthority)) {
+        return super.equals(obj);
+      }
+      com.em.authority.v1.TxProto.MsgReplaceAuthority other = (com.em.authority.v1.TxProto.MsgReplaceAuthority) obj;
+
+      if (!getAuthority()
+          .equals(other.getAuthority())) return false;
+      if (!getNewAuthority()
+          .equals(other.getNewAuthority())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AUTHORITY_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthority().hashCode();
+      hash = (37 * hash) + NEW_AUTHORITY_FIELD_NUMBER;
+      hash = (53 * hash) + getNewAuthority().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.authority.v1.TxProto.MsgReplaceAuthority parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgReplaceAuthority parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgReplaceAuthority parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgReplaceAuthority parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgReplaceAuthority parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgReplaceAuthority parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgReplaceAuthority parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.authority.v1.TxProto.MsgReplaceAuthority parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.authority.v1.TxProto.MsgReplaceAuthority parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.authority.v1.TxProto.MsgReplaceAuthority parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgReplaceAuthority parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.authority.v1.TxProto.MsgReplaceAuthority parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.authority.v1.TxProto.MsgReplaceAuthority prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.authority.v1.MsgReplaceAuthority}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.authority.v1.MsgReplaceAuthority)
+        com.em.authority.v1.TxProto.MsgReplaceAuthorityOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgReplaceAuthority_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgReplaceAuthority_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.authority.v1.TxProto.MsgReplaceAuthority.class, com.em.authority.v1.TxProto.MsgReplaceAuthority.Builder.class);
+      }
+
+      // Construct using com.em.authority.v1.TxProto.MsgReplaceAuthority.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        authority_ = "";
+        newAuthority_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgReplaceAuthority_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgReplaceAuthority getDefaultInstanceForType() {
+        return com.em.authority.v1.TxProto.MsgReplaceAuthority.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgReplaceAuthority build() {
+        com.em.authority.v1.TxProto.MsgReplaceAuthority result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgReplaceAuthority buildPartial() {
+        com.em.authority.v1.TxProto.MsgReplaceAuthority result = new com.em.authority.v1.TxProto.MsgReplaceAuthority(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.em.authority.v1.TxProto.MsgReplaceAuthority result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.authority_ = authority_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.newAuthority_ = newAuthority_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.authority.v1.TxProto.MsgReplaceAuthority) {
+          return mergeFrom((com.em.authority.v1.TxProto.MsgReplaceAuthority)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.authority.v1.TxProto.MsgReplaceAuthority other) {
+        if (other == com.em.authority.v1.TxProto.MsgReplaceAuthority.getDefaultInstance()) return this;
+        if (!other.getAuthority().isEmpty()) {
+          authority_ = other.authority_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getNewAuthority().isEmpty()) {
+          newAuthority_ = other.newAuthority_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                authority_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                newAuthority_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object authority_ = "";
+      /**
+       * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+       * @return The authority.
+       */
+      public java.lang.String getAuthority() {
+        java.lang.Object ref = authority_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          authority_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+       * @return The bytes for authority.
+       */
+      public com.google.protobuf.ByteString
+          getAuthorityBytes() {
+        java.lang.Object ref = authority_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authority_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+       * @param value The authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthority(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthority() {
+        authority_ = getDefaultInstance().getAuthority();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+       * @param value The bytes for authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthorityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object newAuthority_ = "";
+      /**
+       * <code>string new_authority = 2 [json_name = "newAuthority", (.gogoproto.moretags) = "yaml:&#92;"new_authority&#92;""];</code>
+       * @return The newAuthority.
+       */
+      public java.lang.String getNewAuthority() {
+        java.lang.Object ref = newAuthority_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          newAuthority_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string new_authority = 2 [json_name = "newAuthority", (.gogoproto.moretags) = "yaml:&#92;"new_authority&#92;""];</code>
+       * @return The bytes for newAuthority.
+       */
+      public com.google.protobuf.ByteString
+          getNewAuthorityBytes() {
+        java.lang.Object ref = newAuthority_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          newAuthority_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string new_authority = 2 [json_name = "newAuthority", (.gogoproto.moretags) = "yaml:&#92;"new_authority&#92;""];</code>
+       * @param value The newAuthority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewAuthority(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        newAuthority_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string new_authority = 2 [json_name = "newAuthority", (.gogoproto.moretags) = "yaml:&#92;"new_authority&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewAuthority() {
+        newAuthority_ = getDefaultInstance().getNewAuthority();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string new_authority = 2 [json_name = "newAuthority", (.gogoproto.moretags) = "yaml:&#92;"new_authority&#92;""];</code>
+       * @param value The bytes for newAuthority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewAuthorityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        newAuthority_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.authority.v1.MsgReplaceAuthority)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.authority.v1.MsgReplaceAuthority)
+    private static final com.em.authority.v1.TxProto.MsgReplaceAuthority DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.authority.v1.TxProto.MsgReplaceAuthority();
+    }
+
+    public static com.em.authority.v1.TxProto.MsgReplaceAuthority getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgReplaceAuthority>
+        PARSER = new com.google.protobuf.AbstractParser<MsgReplaceAuthority>() {
+      @java.lang.Override
+      public MsgReplaceAuthority parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgReplaceAuthority> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgReplaceAuthority> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.authority.v1.TxProto.MsgReplaceAuthority getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgReplaceAuthorityResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.authority.v1.MsgReplaceAuthorityResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string new_authority_address = 1 [json_name = "newAuthorityAddress", (.gogoproto.moretags) = "yaml:&#92;"new_authority_address&#92;""];</code>
+     * @return The newAuthorityAddress.
+     */
+    java.lang.String getNewAuthorityAddress();
+    /**
+     * <code>string new_authority_address = 1 [json_name = "newAuthorityAddress", (.gogoproto.moretags) = "yaml:&#92;"new_authority_address&#92;""];</code>
+     * @return The bytes for newAuthorityAddress.
+     */
+    com.google.protobuf.ByteString
+        getNewAuthorityAddressBytes();
+  }
+  /**
+   * Protobuf type {@code em.authority.v1.MsgReplaceAuthorityResponse}
+   */
+  public static final class MsgReplaceAuthorityResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.authority.v1.MsgReplaceAuthorityResponse)
+      MsgReplaceAuthorityResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgReplaceAuthorityResponse.newBuilder() to construct.
+    private MsgReplaceAuthorityResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgReplaceAuthorityResponse() {
+      newAuthorityAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgReplaceAuthorityResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgReplaceAuthorityResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgReplaceAuthorityResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse.class, com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse.Builder.class);
+    }
+
+    public static final int NEW_AUTHORITY_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object newAuthorityAddress_ = "";
+    /**
+     * <code>string new_authority_address = 1 [json_name = "newAuthorityAddress", (.gogoproto.moretags) = "yaml:&#92;"new_authority_address&#92;""];</code>
+     * @return The newAuthorityAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getNewAuthorityAddress() {
+      java.lang.Object ref = newAuthorityAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        newAuthorityAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string new_authority_address = 1 [json_name = "newAuthorityAddress", (.gogoproto.moretags) = "yaml:&#92;"new_authority_address&#92;""];</code>
+     * @return The bytes for newAuthorityAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNewAuthorityAddressBytes() {
+      java.lang.Object ref = newAuthorityAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        newAuthorityAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newAuthorityAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, newAuthorityAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newAuthorityAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, newAuthorityAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse)) {
+        return super.equals(obj);
+      }
+      com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse other = (com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse) obj;
+
+      if (!getNewAuthorityAddress()
+          .equals(other.getNewAuthorityAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NEW_AUTHORITY_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getNewAuthorityAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.authority.v1.MsgReplaceAuthorityResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.authority.v1.MsgReplaceAuthorityResponse)
+        com.em.authority.v1.TxProto.MsgReplaceAuthorityResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgReplaceAuthorityResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgReplaceAuthorityResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse.class, com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse.Builder.class);
+      }
+
+      // Construct using com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        newAuthorityAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgReplaceAuthorityResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse getDefaultInstanceForType() {
+        return com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse build() {
+        com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse buildPartial() {
+        com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse result = new com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.newAuthorityAddress_ = newAuthorityAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse) {
+          return mergeFrom((com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse other) {
+        if (other == com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse.getDefaultInstance()) return this;
+        if (!other.getNewAuthorityAddress().isEmpty()) {
+          newAuthorityAddress_ = other.newAuthorityAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                newAuthorityAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object newAuthorityAddress_ = "";
+      /**
+       * <code>string new_authority_address = 1 [json_name = "newAuthorityAddress", (.gogoproto.moretags) = "yaml:&#92;"new_authority_address&#92;""];</code>
+       * @return The newAuthorityAddress.
+       */
+      public java.lang.String getNewAuthorityAddress() {
+        java.lang.Object ref = newAuthorityAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          newAuthorityAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string new_authority_address = 1 [json_name = "newAuthorityAddress", (.gogoproto.moretags) = "yaml:&#92;"new_authority_address&#92;""];</code>
+       * @return The bytes for newAuthorityAddress.
+       */
+      public com.google.protobuf.ByteString
+          getNewAuthorityAddressBytes() {
+        java.lang.Object ref = newAuthorityAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          newAuthorityAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string new_authority_address = 1 [json_name = "newAuthorityAddress", (.gogoproto.moretags) = "yaml:&#92;"new_authority_address&#92;""];</code>
+       * @param value The newAuthorityAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewAuthorityAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        newAuthorityAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string new_authority_address = 1 [json_name = "newAuthorityAddress", (.gogoproto.moretags) = "yaml:&#92;"new_authority_address&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewAuthorityAddress() {
+        newAuthorityAddress_ = getDefaultInstance().getNewAuthorityAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string new_authority_address = 1 [json_name = "newAuthorityAddress", (.gogoproto.moretags) = "yaml:&#92;"new_authority_address&#92;""];</code>
+       * @param value The bytes for newAuthorityAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewAuthorityAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        newAuthorityAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.authority.v1.MsgReplaceAuthorityResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.authority.v1.MsgReplaceAuthorityResponse)
+    private static final com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse();
+    }
+
+    public static com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgReplaceAuthorityResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgReplaceAuthorityResponse>() {
+      @java.lang.Override
+      public MsgReplaceAuthorityResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgReplaceAuthorityResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgReplaceAuthorityResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.authority.v1.TxProto.MsgReplaceAuthorityResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgScheduleUpgradeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.authority.v1.MsgScheduleUpgrade)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+     * @return The authority.
+     */
+    java.lang.String getAuthority();
+    /**
+     * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+     * @return The bytes for authority.
+     */
+    com.google.protobuf.ByteString
+        getAuthorityBytes();
+
+    /**
+     * <code>.cosmos.upgrade.v1beta1.Plan plan = 2 [json_name = "plan", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"plan&#92;""];</code>
+     * @return Whether the plan field is set.
+     */
+    boolean hasPlan();
+    /**
+     * <code>.cosmos.upgrade.v1beta1.Plan plan = 2 [json_name = "plan", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"plan&#92;""];</code>
+     * @return The plan.
+     */
+    com.cosmos.upgrade.v1beta1.UpgradeProto.Plan getPlan();
+    /**
+     * <code>.cosmos.upgrade.v1beta1.Plan plan = 2 [json_name = "plan", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"plan&#92;""];</code>
+     */
+    com.cosmos.upgrade.v1beta1.UpgradeProto.PlanOrBuilder getPlanOrBuilder();
+  }
+  /**
+   * Protobuf type {@code em.authority.v1.MsgScheduleUpgrade}
+   */
+  public static final class MsgScheduleUpgrade extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.authority.v1.MsgScheduleUpgrade)
+      MsgScheduleUpgradeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgScheduleUpgrade.newBuilder() to construct.
+    private MsgScheduleUpgrade(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgScheduleUpgrade() {
+      authority_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgScheduleUpgrade();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgScheduleUpgrade_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgScheduleUpgrade_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.authority.v1.TxProto.MsgScheduleUpgrade.class, com.em.authority.v1.TxProto.MsgScheduleUpgrade.Builder.class);
+    }
+
+    public static final int AUTHORITY_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object authority_ = "";
+    /**
+     * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+     * @return The authority.
+     */
+    @java.lang.Override
+    public java.lang.String getAuthority() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        authority_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+     * @return The bytes for authority.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAuthorityBytes() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authority_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PLAN_FIELD_NUMBER = 2;
+    private com.cosmos.upgrade.v1beta1.UpgradeProto.Plan plan_;
+    /**
+     * <code>.cosmos.upgrade.v1beta1.Plan plan = 2 [json_name = "plan", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"plan&#92;""];</code>
+     * @return Whether the plan field is set.
+     */
+    @java.lang.Override
+    public boolean hasPlan() {
+      return plan_ != null;
+    }
+    /**
+     * <code>.cosmos.upgrade.v1beta1.Plan plan = 2 [json_name = "plan", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"plan&#92;""];</code>
+     * @return The plan.
+     */
+    @java.lang.Override
+    public com.cosmos.upgrade.v1beta1.UpgradeProto.Plan getPlan() {
+      return plan_ == null ? com.cosmos.upgrade.v1beta1.UpgradeProto.Plan.getDefaultInstance() : plan_;
+    }
+    /**
+     * <code>.cosmos.upgrade.v1beta1.Plan plan = 2 [json_name = "plan", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"plan&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.upgrade.v1beta1.UpgradeProto.PlanOrBuilder getPlanOrBuilder() {
+      return plan_ == null ? com.cosmos.upgrade.v1beta1.UpgradeProto.Plan.getDefaultInstance() : plan_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authority_);
+      }
+      if (plan_ != null) {
+        output.writeMessage(2, getPlan());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authority_);
+      }
+      if (plan_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPlan());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.authority.v1.TxProto.MsgScheduleUpgrade)) {
+        return super.equals(obj);
+      }
+      com.em.authority.v1.TxProto.MsgScheduleUpgrade other = (com.em.authority.v1.TxProto.MsgScheduleUpgrade) obj;
+
+      if (!getAuthority()
+          .equals(other.getAuthority())) return false;
+      if (hasPlan() != other.hasPlan()) return false;
+      if (hasPlan()) {
+        if (!getPlan()
+            .equals(other.getPlan())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AUTHORITY_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthority().hashCode();
+      if (hasPlan()) {
+        hash = (37 * hash) + PLAN_FIELD_NUMBER;
+        hash = (53 * hash) + getPlan().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.authority.v1.TxProto.MsgScheduleUpgrade parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgScheduleUpgrade parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgScheduleUpgrade parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgScheduleUpgrade parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgScheduleUpgrade parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgScheduleUpgrade parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgScheduleUpgrade parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.authority.v1.TxProto.MsgScheduleUpgrade parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.authority.v1.TxProto.MsgScheduleUpgrade parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.authority.v1.TxProto.MsgScheduleUpgrade parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgScheduleUpgrade parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.authority.v1.TxProto.MsgScheduleUpgrade parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.authority.v1.TxProto.MsgScheduleUpgrade prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.authority.v1.MsgScheduleUpgrade}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.authority.v1.MsgScheduleUpgrade)
+        com.em.authority.v1.TxProto.MsgScheduleUpgradeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgScheduleUpgrade_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgScheduleUpgrade_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.authority.v1.TxProto.MsgScheduleUpgrade.class, com.em.authority.v1.TxProto.MsgScheduleUpgrade.Builder.class);
+      }
+
+      // Construct using com.em.authority.v1.TxProto.MsgScheduleUpgrade.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        authority_ = "";
+        plan_ = null;
+        if (planBuilder_ != null) {
+          planBuilder_.dispose();
+          planBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgScheduleUpgrade_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgScheduleUpgrade getDefaultInstanceForType() {
+        return com.em.authority.v1.TxProto.MsgScheduleUpgrade.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgScheduleUpgrade build() {
+        com.em.authority.v1.TxProto.MsgScheduleUpgrade result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgScheduleUpgrade buildPartial() {
+        com.em.authority.v1.TxProto.MsgScheduleUpgrade result = new com.em.authority.v1.TxProto.MsgScheduleUpgrade(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.em.authority.v1.TxProto.MsgScheduleUpgrade result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.authority_ = authority_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.plan_ = planBuilder_ == null
+              ? plan_
+              : planBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.authority.v1.TxProto.MsgScheduleUpgrade) {
+          return mergeFrom((com.em.authority.v1.TxProto.MsgScheduleUpgrade)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.authority.v1.TxProto.MsgScheduleUpgrade other) {
+        if (other == com.em.authority.v1.TxProto.MsgScheduleUpgrade.getDefaultInstance()) return this;
+        if (!other.getAuthority().isEmpty()) {
+          authority_ = other.authority_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasPlan()) {
+          mergePlan(other.getPlan());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                authority_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPlanFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object authority_ = "";
+      /**
+       * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+       * @return The authority.
+       */
+      public java.lang.String getAuthority() {
+        java.lang.Object ref = authority_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          authority_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+       * @return The bytes for authority.
+       */
+      public com.google.protobuf.ByteString
+          getAuthorityBytes() {
+        java.lang.Object ref = authority_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authority_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+       * @param value The authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthority(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthority() {
+        authority_ = getDefaultInstance().getAuthority();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+       * @param value The bytes for authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthorityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.upgrade.v1beta1.UpgradeProto.Plan plan_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.upgrade.v1beta1.UpgradeProto.Plan, com.cosmos.upgrade.v1beta1.UpgradeProto.Plan.Builder, com.cosmos.upgrade.v1beta1.UpgradeProto.PlanOrBuilder> planBuilder_;
+      /**
+       * <code>.cosmos.upgrade.v1beta1.Plan plan = 2 [json_name = "plan", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"plan&#92;""];</code>
+       * @return Whether the plan field is set.
+       */
+      public boolean hasPlan() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.upgrade.v1beta1.Plan plan = 2 [json_name = "plan", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"plan&#92;""];</code>
+       * @return The plan.
+       */
+      public com.cosmos.upgrade.v1beta1.UpgradeProto.Plan getPlan() {
+        if (planBuilder_ == null) {
+          return plan_ == null ? com.cosmos.upgrade.v1beta1.UpgradeProto.Plan.getDefaultInstance() : plan_;
+        } else {
+          return planBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.upgrade.v1beta1.Plan plan = 2 [json_name = "plan", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"plan&#92;""];</code>
+       */
+      public Builder setPlan(com.cosmos.upgrade.v1beta1.UpgradeProto.Plan value) {
+        if (planBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          plan_ = value;
+        } else {
+          planBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.upgrade.v1beta1.Plan plan = 2 [json_name = "plan", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"plan&#92;""];</code>
+       */
+      public Builder setPlan(
+          com.cosmos.upgrade.v1beta1.UpgradeProto.Plan.Builder builderForValue) {
+        if (planBuilder_ == null) {
+          plan_ = builderForValue.build();
+        } else {
+          planBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.upgrade.v1beta1.Plan plan = 2 [json_name = "plan", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"plan&#92;""];</code>
+       */
+      public Builder mergePlan(com.cosmos.upgrade.v1beta1.UpgradeProto.Plan value) {
+        if (planBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            plan_ != null &&
+            plan_ != com.cosmos.upgrade.v1beta1.UpgradeProto.Plan.getDefaultInstance()) {
+            getPlanBuilder().mergeFrom(value);
+          } else {
+            plan_ = value;
+          }
+        } else {
+          planBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.upgrade.v1beta1.Plan plan = 2 [json_name = "plan", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"plan&#92;""];</code>
+       */
+      public Builder clearPlan() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        plan_ = null;
+        if (planBuilder_ != null) {
+          planBuilder_.dispose();
+          planBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.upgrade.v1beta1.Plan plan = 2 [json_name = "plan", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"plan&#92;""];</code>
+       */
+      public com.cosmos.upgrade.v1beta1.UpgradeProto.Plan.Builder getPlanBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPlanFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.upgrade.v1beta1.Plan plan = 2 [json_name = "plan", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"plan&#92;""];</code>
+       */
+      public com.cosmos.upgrade.v1beta1.UpgradeProto.PlanOrBuilder getPlanOrBuilder() {
+        if (planBuilder_ != null) {
+          return planBuilder_.getMessageOrBuilder();
+        } else {
+          return plan_ == null ?
+              com.cosmos.upgrade.v1beta1.UpgradeProto.Plan.getDefaultInstance() : plan_;
+        }
+      }
+      /**
+       * <code>.cosmos.upgrade.v1beta1.Plan plan = 2 [json_name = "plan", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"plan&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.upgrade.v1beta1.UpgradeProto.Plan, com.cosmos.upgrade.v1beta1.UpgradeProto.Plan.Builder, com.cosmos.upgrade.v1beta1.UpgradeProto.PlanOrBuilder> 
+          getPlanFieldBuilder() {
+        if (planBuilder_ == null) {
+          planBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.upgrade.v1beta1.UpgradeProto.Plan, com.cosmos.upgrade.v1beta1.UpgradeProto.Plan.Builder, com.cosmos.upgrade.v1beta1.UpgradeProto.PlanOrBuilder>(
+                  getPlan(),
+                  getParentForChildren(),
+                  isClean());
+          plan_ = null;
+        }
+        return planBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.authority.v1.MsgScheduleUpgrade)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.authority.v1.MsgScheduleUpgrade)
+    private static final com.em.authority.v1.TxProto.MsgScheduleUpgrade DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.authority.v1.TxProto.MsgScheduleUpgrade();
+    }
+
+    public static com.em.authority.v1.TxProto.MsgScheduleUpgrade getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgScheduleUpgrade>
+        PARSER = new com.google.protobuf.AbstractParser<MsgScheduleUpgrade>() {
+      @java.lang.Override
+      public MsgScheduleUpgrade parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgScheduleUpgrade> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgScheduleUpgrade> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.authority.v1.TxProto.MsgScheduleUpgrade getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgScheduleUpgradeResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.authority.v1.MsgScheduleUpgradeResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code em.authority.v1.MsgScheduleUpgradeResponse}
+   */
+  public static final class MsgScheduleUpgradeResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.authority.v1.MsgScheduleUpgradeResponse)
+      MsgScheduleUpgradeResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgScheduleUpgradeResponse.newBuilder() to construct.
+    private MsgScheduleUpgradeResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgScheduleUpgradeResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgScheduleUpgradeResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgScheduleUpgradeResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgScheduleUpgradeResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse.class, com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse)) {
+        return super.equals(obj);
+      }
+      com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse other = (com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.authority.v1.MsgScheduleUpgradeResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.authority.v1.MsgScheduleUpgradeResponse)
+        com.em.authority.v1.TxProto.MsgScheduleUpgradeResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgScheduleUpgradeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgScheduleUpgradeResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse.class, com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse.Builder.class);
+      }
+
+      // Construct using com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgScheduleUpgradeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse getDefaultInstanceForType() {
+        return com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse build() {
+        com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse buildPartial() {
+        com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse result = new com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse) {
+          return mergeFrom((com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse other) {
+        if (other == com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.authority.v1.MsgScheduleUpgradeResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.authority.v1.MsgScheduleUpgradeResponse)
+    private static final com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse();
+    }
+
+    public static com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgScheduleUpgradeResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgScheduleUpgradeResponse>() {
+      @java.lang.Override
+      public MsgScheduleUpgradeResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgScheduleUpgradeResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgScheduleUpgradeResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.authority.v1.TxProto.MsgScheduleUpgradeResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSetParametersOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.authority.v1.MsgSetParameters)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+     * @return The authority.
+     */
+    java.lang.String getAuthority();
+    /**
+     * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+     * @return The bytes for authority.
+     */
+    com.google.protobuf.ByteString
+        getAuthorityBytes();
+
+    /**
+     * <code>repeated .cosmos.params.v1beta1.ParamChange changes = 2 [json_name = "changes", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.cosmos.params.v1beta1.ParamsProto.ParamChange> 
+        getChangesList();
+    /**
+     * <code>repeated .cosmos.params.v1beta1.ParamChange changes = 2 [json_name = "changes", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.params.v1beta1.ParamsProto.ParamChange getChanges(int index);
+    /**
+     * <code>repeated .cosmos.params.v1beta1.ParamChange changes = 2 [json_name = "changes", (.gogoproto.nullable) = false];</code>
+     */
+    int getChangesCount();
+    /**
+     * <code>repeated .cosmos.params.v1beta1.ParamChange changes = 2 [json_name = "changes", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.cosmos.params.v1beta1.ParamsProto.ParamChangeOrBuilder> 
+        getChangesOrBuilderList();
+    /**
+     * <code>repeated .cosmos.params.v1beta1.ParamChange changes = 2 [json_name = "changes", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.params.v1beta1.ParamsProto.ParamChangeOrBuilder getChangesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code em.authority.v1.MsgSetParameters}
+   */
+  public static final class MsgSetParameters extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.authority.v1.MsgSetParameters)
+      MsgSetParametersOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSetParameters.newBuilder() to construct.
+    private MsgSetParameters(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSetParameters() {
+      authority_ = "";
+      changes_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSetParameters();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgSetParameters_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgSetParameters_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.authority.v1.TxProto.MsgSetParameters.class, com.em.authority.v1.TxProto.MsgSetParameters.Builder.class);
+    }
+
+    public static final int AUTHORITY_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object authority_ = "";
+    /**
+     * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+     * @return The authority.
+     */
+    @java.lang.Override
+    public java.lang.String getAuthority() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        authority_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+     * @return The bytes for authority.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAuthorityBytes() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authority_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CHANGES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.params.v1beta1.ParamsProto.ParamChange> changes_;
+    /**
+     * <code>repeated .cosmos.params.v1beta1.ParamChange changes = 2 [json_name = "changes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.params.v1beta1.ParamsProto.ParamChange> getChangesList() {
+      return changes_;
+    }
+    /**
+     * <code>repeated .cosmos.params.v1beta1.ParamChange changes = 2 [json_name = "changes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.params.v1beta1.ParamsProto.ParamChangeOrBuilder> 
+        getChangesOrBuilderList() {
+      return changes_;
+    }
+    /**
+     * <code>repeated .cosmos.params.v1beta1.ParamChange changes = 2 [json_name = "changes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getChangesCount() {
+      return changes_.size();
+    }
+    /**
+     * <code>repeated .cosmos.params.v1beta1.ParamChange changes = 2 [json_name = "changes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.params.v1beta1.ParamsProto.ParamChange getChanges(int index) {
+      return changes_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.params.v1beta1.ParamChange changes = 2 [json_name = "changes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.params.v1beta1.ParamsProto.ParamChangeOrBuilder getChangesOrBuilder(
+        int index) {
+      return changes_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authority_);
+      }
+      for (int i = 0; i < changes_.size(); i++) {
+        output.writeMessage(2, changes_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authority_);
+      }
+      for (int i = 0; i < changes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, changes_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.authority.v1.TxProto.MsgSetParameters)) {
+        return super.equals(obj);
+      }
+      com.em.authority.v1.TxProto.MsgSetParameters other = (com.em.authority.v1.TxProto.MsgSetParameters) obj;
+
+      if (!getAuthority()
+          .equals(other.getAuthority())) return false;
+      if (!getChangesList()
+          .equals(other.getChangesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AUTHORITY_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthority().hashCode();
+      if (getChangesCount() > 0) {
+        hash = (37 * hash) + CHANGES_FIELD_NUMBER;
+        hash = (53 * hash) + getChangesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.authority.v1.TxProto.MsgSetParameters parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetParameters parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetParameters parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetParameters parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetParameters parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetParameters parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetParameters parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetParameters parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.authority.v1.TxProto.MsgSetParameters parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.authority.v1.TxProto.MsgSetParameters parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetParameters parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetParameters parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.authority.v1.TxProto.MsgSetParameters prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.authority.v1.MsgSetParameters}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.authority.v1.MsgSetParameters)
+        com.em.authority.v1.TxProto.MsgSetParametersOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgSetParameters_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgSetParameters_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.authority.v1.TxProto.MsgSetParameters.class, com.em.authority.v1.TxProto.MsgSetParameters.Builder.class);
+      }
+
+      // Construct using com.em.authority.v1.TxProto.MsgSetParameters.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        authority_ = "";
+        if (changesBuilder_ == null) {
+          changes_ = java.util.Collections.emptyList();
+        } else {
+          changes_ = null;
+          changesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgSetParameters_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgSetParameters getDefaultInstanceForType() {
+        return com.em.authority.v1.TxProto.MsgSetParameters.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgSetParameters build() {
+        com.em.authority.v1.TxProto.MsgSetParameters result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgSetParameters buildPartial() {
+        com.em.authority.v1.TxProto.MsgSetParameters result = new com.em.authority.v1.TxProto.MsgSetParameters(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.em.authority.v1.TxProto.MsgSetParameters result) {
+        if (changesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            changes_ = java.util.Collections.unmodifiableList(changes_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.changes_ = changes_;
+        } else {
+          result.changes_ = changesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.em.authority.v1.TxProto.MsgSetParameters result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.authority_ = authority_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.authority.v1.TxProto.MsgSetParameters) {
+          return mergeFrom((com.em.authority.v1.TxProto.MsgSetParameters)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.authority.v1.TxProto.MsgSetParameters other) {
+        if (other == com.em.authority.v1.TxProto.MsgSetParameters.getDefaultInstance()) return this;
+        if (!other.getAuthority().isEmpty()) {
+          authority_ = other.authority_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (changesBuilder_ == null) {
+          if (!other.changes_.isEmpty()) {
+            if (changes_.isEmpty()) {
+              changes_ = other.changes_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureChangesIsMutable();
+              changes_.addAll(other.changes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.changes_.isEmpty()) {
+            if (changesBuilder_.isEmpty()) {
+              changesBuilder_.dispose();
+              changesBuilder_ = null;
+              changes_ = other.changes_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              changesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getChangesFieldBuilder() : null;
+            } else {
+              changesBuilder_.addAllMessages(other.changes_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                authority_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.cosmos.params.v1beta1.ParamsProto.ParamChange m =
+                    input.readMessage(
+                        com.cosmos.params.v1beta1.ParamsProto.ParamChange.parser(),
+                        extensionRegistry);
+                if (changesBuilder_ == null) {
+                  ensureChangesIsMutable();
+                  changes_.add(m);
+                } else {
+                  changesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object authority_ = "";
+      /**
+       * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+       * @return The authority.
+       */
+      public java.lang.String getAuthority() {
+        java.lang.Object ref = authority_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          authority_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+       * @return The bytes for authority.
+       */
+      public com.google.protobuf.ByteString
+          getAuthorityBytes() {
+        java.lang.Object ref = authority_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authority_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+       * @param value The authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthority(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthority() {
+        authority_ = getDefaultInstance().getAuthority();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string authority = 1 [json_name = "authority", (.gogoproto.moretags) = "yaml:&#92;"authority&#92;""];</code>
+       * @param value The bytes for authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthorityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.params.v1beta1.ParamsProto.ParamChange> changes_ =
+        java.util.Collections.emptyList();
+      private void ensureChangesIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          changes_ = new java.util.ArrayList<com.cosmos.params.v1beta1.ParamsProto.ParamChange>(changes_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.params.v1beta1.ParamsProto.ParamChange, com.cosmos.params.v1beta1.ParamsProto.ParamChange.Builder, com.cosmos.params.v1beta1.ParamsProto.ParamChangeOrBuilder> changesBuilder_;
+
+      /**
+       * <code>repeated .cosmos.params.v1beta1.ParamChange changes = 2 [json_name = "changes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.params.v1beta1.ParamsProto.ParamChange> getChangesList() {
+        if (changesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(changes_);
+        } else {
+          return changesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.params.v1beta1.ParamChange changes = 2 [json_name = "changes", (.gogoproto.nullable) = false];</code>
+       */
+      public int getChangesCount() {
+        if (changesBuilder_ == null) {
+          return changes_.size();
+        } else {
+          return changesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.params.v1beta1.ParamChange changes = 2 [json_name = "changes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.params.v1beta1.ParamsProto.ParamChange getChanges(int index) {
+        if (changesBuilder_ == null) {
+          return changes_.get(index);
+        } else {
+          return changesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.params.v1beta1.ParamChange changes = 2 [json_name = "changes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setChanges(
+          int index, com.cosmos.params.v1beta1.ParamsProto.ParamChange value) {
+        if (changesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureChangesIsMutable();
+          changes_.set(index, value);
+          onChanged();
+        } else {
+          changesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.params.v1beta1.ParamChange changes = 2 [json_name = "changes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setChanges(
+          int index, com.cosmos.params.v1beta1.ParamsProto.ParamChange.Builder builderForValue) {
+        if (changesBuilder_ == null) {
+          ensureChangesIsMutable();
+          changes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          changesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.params.v1beta1.ParamChange changes = 2 [json_name = "changes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addChanges(com.cosmos.params.v1beta1.ParamsProto.ParamChange value) {
+        if (changesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureChangesIsMutable();
+          changes_.add(value);
+          onChanged();
+        } else {
+          changesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.params.v1beta1.ParamChange changes = 2 [json_name = "changes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addChanges(
+          int index, com.cosmos.params.v1beta1.ParamsProto.ParamChange value) {
+        if (changesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureChangesIsMutable();
+          changes_.add(index, value);
+          onChanged();
+        } else {
+          changesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.params.v1beta1.ParamChange changes = 2 [json_name = "changes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addChanges(
+          com.cosmos.params.v1beta1.ParamsProto.ParamChange.Builder builderForValue) {
+        if (changesBuilder_ == null) {
+          ensureChangesIsMutable();
+          changes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          changesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.params.v1beta1.ParamChange changes = 2 [json_name = "changes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addChanges(
+          int index, com.cosmos.params.v1beta1.ParamsProto.ParamChange.Builder builderForValue) {
+        if (changesBuilder_ == null) {
+          ensureChangesIsMutable();
+          changes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          changesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.params.v1beta1.ParamChange changes = 2 [json_name = "changes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllChanges(
+          java.lang.Iterable<? extends com.cosmos.params.v1beta1.ParamsProto.ParamChange> values) {
+        if (changesBuilder_ == null) {
+          ensureChangesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, changes_);
+          onChanged();
+        } else {
+          changesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.params.v1beta1.ParamChange changes = 2 [json_name = "changes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearChanges() {
+        if (changesBuilder_ == null) {
+          changes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          changesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.params.v1beta1.ParamChange changes = 2 [json_name = "changes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeChanges(int index) {
+        if (changesBuilder_ == null) {
+          ensureChangesIsMutable();
+          changes_.remove(index);
+          onChanged();
+        } else {
+          changesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.params.v1beta1.ParamChange changes = 2 [json_name = "changes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.params.v1beta1.ParamsProto.ParamChange.Builder getChangesBuilder(
+          int index) {
+        return getChangesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.params.v1beta1.ParamChange changes = 2 [json_name = "changes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.params.v1beta1.ParamsProto.ParamChangeOrBuilder getChangesOrBuilder(
+          int index) {
+        if (changesBuilder_ == null) {
+          return changes_.get(index);  } else {
+          return changesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.params.v1beta1.ParamChange changes = 2 [json_name = "changes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.cosmos.params.v1beta1.ParamsProto.ParamChangeOrBuilder> 
+           getChangesOrBuilderList() {
+        if (changesBuilder_ != null) {
+          return changesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(changes_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.params.v1beta1.ParamChange changes = 2 [json_name = "changes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.params.v1beta1.ParamsProto.ParamChange.Builder addChangesBuilder() {
+        return getChangesFieldBuilder().addBuilder(
+            com.cosmos.params.v1beta1.ParamsProto.ParamChange.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.params.v1beta1.ParamChange changes = 2 [json_name = "changes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.params.v1beta1.ParamsProto.ParamChange.Builder addChangesBuilder(
+          int index) {
+        return getChangesFieldBuilder().addBuilder(
+            index, com.cosmos.params.v1beta1.ParamsProto.ParamChange.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.params.v1beta1.ParamChange changes = 2 [json_name = "changes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.params.v1beta1.ParamsProto.ParamChange.Builder> 
+           getChangesBuilderList() {
+        return getChangesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.params.v1beta1.ParamsProto.ParamChange, com.cosmos.params.v1beta1.ParamsProto.ParamChange.Builder, com.cosmos.params.v1beta1.ParamsProto.ParamChangeOrBuilder> 
+          getChangesFieldBuilder() {
+        if (changesBuilder_ == null) {
+          changesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.params.v1beta1.ParamsProto.ParamChange, com.cosmos.params.v1beta1.ParamsProto.ParamChange.Builder, com.cosmos.params.v1beta1.ParamsProto.ParamChangeOrBuilder>(
+                  changes_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          changes_ = null;
+        }
+        return changesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.authority.v1.MsgSetParameters)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.authority.v1.MsgSetParameters)
+    private static final com.em.authority.v1.TxProto.MsgSetParameters DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.authority.v1.TxProto.MsgSetParameters();
+    }
+
+    public static com.em.authority.v1.TxProto.MsgSetParameters getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSetParameters>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSetParameters>() {
+      @java.lang.Override
+      public MsgSetParameters parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSetParameters> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSetParameters> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.authority.v1.TxProto.MsgSetParameters getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSetParametersResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.authority.v1.MsgSetParametersResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code em.authority.v1.MsgSetParametersResponse}
+   */
+  public static final class MsgSetParametersResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.authority.v1.MsgSetParametersResponse)
+      MsgSetParametersResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSetParametersResponse.newBuilder() to construct.
+    private MsgSetParametersResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSetParametersResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSetParametersResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgSetParametersResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgSetParametersResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.authority.v1.TxProto.MsgSetParametersResponse.class, com.em.authority.v1.TxProto.MsgSetParametersResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.authority.v1.TxProto.MsgSetParametersResponse)) {
+        return super.equals(obj);
+      }
+      com.em.authority.v1.TxProto.MsgSetParametersResponse other = (com.em.authority.v1.TxProto.MsgSetParametersResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.authority.v1.TxProto.MsgSetParametersResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetParametersResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetParametersResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetParametersResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetParametersResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetParametersResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetParametersResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetParametersResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.authority.v1.TxProto.MsgSetParametersResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.authority.v1.TxProto.MsgSetParametersResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetParametersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.authority.v1.TxProto.MsgSetParametersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.authority.v1.TxProto.MsgSetParametersResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.authority.v1.MsgSetParametersResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.authority.v1.MsgSetParametersResponse)
+        com.em.authority.v1.TxProto.MsgSetParametersResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgSetParametersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgSetParametersResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.authority.v1.TxProto.MsgSetParametersResponse.class, com.em.authority.v1.TxProto.MsgSetParametersResponse.Builder.class);
+      }
+
+      // Construct using com.em.authority.v1.TxProto.MsgSetParametersResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.authority.v1.TxProto.internal_static_em_authority_v1_MsgSetParametersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgSetParametersResponse getDefaultInstanceForType() {
+        return com.em.authority.v1.TxProto.MsgSetParametersResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgSetParametersResponse build() {
+        com.em.authority.v1.TxProto.MsgSetParametersResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.TxProto.MsgSetParametersResponse buildPartial() {
+        com.em.authority.v1.TxProto.MsgSetParametersResponse result = new com.em.authority.v1.TxProto.MsgSetParametersResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.authority.v1.TxProto.MsgSetParametersResponse) {
+          return mergeFrom((com.em.authority.v1.TxProto.MsgSetParametersResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.authority.v1.TxProto.MsgSetParametersResponse other) {
+        if (other == com.em.authority.v1.TxProto.MsgSetParametersResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.authority.v1.MsgSetParametersResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.authority.v1.MsgSetParametersResponse)
+    private static final com.em.authority.v1.TxProto.MsgSetParametersResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.authority.v1.TxProto.MsgSetParametersResponse();
+    }
+
+    public static com.em.authority.v1.TxProto.MsgSetParametersResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSetParametersResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSetParametersResponse>() {
+      @java.lang.Override
+      public MsgSetParametersResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSetParametersResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSetParametersResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.authority.v1.TxProto.MsgSetParametersResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_authority_v1_MsgCreateIssuer_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_authority_v1_MsgCreateIssuer_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_authority_v1_Denomination_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_authority_v1_Denomination_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_authority_v1_MsgCreateIssuerResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_authority_v1_MsgCreateIssuerResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_authority_v1_MsgDestroyIssuer_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_authority_v1_MsgDestroyIssuer_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_authority_v1_MsgDestroyIssuerResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_authority_v1_MsgDestroyIssuerResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_authority_v1_MsgSetGasPrices_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_authority_v1_MsgSetGasPrices_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_authority_v1_MsgSetGasPricesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_authority_v1_MsgSetGasPricesResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_authority_v1_MsgReplaceAuthority_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_authority_v1_MsgReplaceAuthority_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_authority_v1_MsgReplaceAuthorityResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_authority_v1_MsgReplaceAuthorityResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_authority_v1_MsgScheduleUpgrade_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_authority_v1_MsgScheduleUpgrade_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_authority_v1_MsgScheduleUpgradeResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_authority_v1_MsgScheduleUpgradeResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_authority_v1_MsgSetParameters_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_authority_v1_MsgSetParameters_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_authority_v1_MsgSetParametersResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_authority_v1_MsgSetParametersResponse_fieldAccessorTable;
 
@@ -139,12 +8691,12 @@ public final class TxProto {
       "cheduleUpgrade\032+.em.authority.v1.MsgSche" +
       "duleUpgradeResponse\022]\n\rSetParameters\022!.e" +
       "m.authority.v1.MsgSetParameters\032).em.aut" +
-      "hority.v1.MsgSetParametersResponseB\254\001\n\023c" +
-      "om.em.authority.v1B\007TxProtoP\001Z.github.co" +
-      "m/e-money/em-ledger/x/authority/types\242\002\003" +
-      "EAX\252\002\017Em.Authority.V1\312\002\017Em\\Authority\\V1\342" +
-      "\002\033Em\\Authority\\V1\\GPBMetadata\352\002\021Em::Auth" +
-      "ority::V1b\006proto3"
+      "hority.v1.MsgSetParametersResponseB\252\001\n\023c" +
+      "om.em.authority.v1B\007TxProtoZ.github.com/" +
+      "e-money/em-ledger/x/authority/types\242\002\003EA" +
+      "X\252\002\017Em.Authority.V1\312\002\017Em\\Authority\\V1\342\002\033" +
+      "Em\\Authority\\V1\\GPBMetadata\352\002\021Em::Author" +
+      "ity::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

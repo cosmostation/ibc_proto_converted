@@ -14,9 +14,982 @@ public final class ParamsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.feeburner.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Defines Neutron denom, which will be burned during fee processing, any
+     * other denom will be sent to Treasury
+     * </pre>
+     *
+     * <code>string neutron_denom = 1 [json_name = "neutronDenom"];</code>
+     * @return The neutronDenom.
+     */
+    java.lang.String getNeutronDenom();
+    /**
+     * <pre>
+     * Defines Neutron denom, which will be burned during fee processing, any
+     * other denom will be sent to Treasury
+     * </pre>
+     *
+     * <code>string neutron_denom = 1 [json_name = "neutronDenom"];</code>
+     * @return The bytes for neutronDenom.
+     */
+    com.google.protobuf.ByteString
+        getNeutronDenomBytes();
+
+    /**
+     * <pre>
+     * Deprecated in v0.4.4. Is not used anymore
+     * </pre>
+     *
+     * <code>string reserve_address = 2 [json_name = "reserveAddress"];</code>
+     * @return The reserveAddress.
+     */
+    java.lang.String getReserveAddress();
+    /**
+     * <pre>
+     * Deprecated in v0.4.4. Is not used anymore
+     * </pre>
+     *
+     * <code>string reserve_address = 2 [json_name = "reserveAddress"];</code>
+     * @return The bytes for reserveAddress.
+     */
+    com.google.protobuf.ByteString
+        getReserveAddressBytes();
+
+    /**
+     * <pre>
+     * Defines treasury address
+     * </pre>
+     *
+     * <code>string treasury_address = 3 [json_name = "treasuryAddress"];</code>
+     * @return The treasuryAddress.
+     */
+    java.lang.String getTreasuryAddress();
+    /**
+     * <pre>
+     * Defines treasury address
+     * </pre>
+     *
+     * <code>string treasury_address = 3 [json_name = "treasuryAddress"];</code>
+     * @return The bytes for treasuryAddress.
+     */
+    com.google.protobuf.ByteString
+        getTreasuryAddressBytes();
+  }
+  /**
+   * <pre>
+   * Params defines the parameters for the module.
+   * </pre>
+   *
+   * Protobuf type {@code neutron.feeburner.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.feeburner.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      neutronDenom_ = "";
+      reserveAddress_ = "";
+      treasuryAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.feeburner.ParamsProto.internal_static_neutron_feeburner_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.feeburner.ParamsProto.internal_static_neutron_feeburner_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.feeburner.ParamsProto.Params.class, com.neutron.feeburner.ParamsProto.Params.Builder.class);
+    }
+
+    public static final int NEUTRON_DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object neutronDenom_ = "";
+    /**
+     * <pre>
+     * Defines Neutron denom, which will be burned during fee processing, any
+     * other denom will be sent to Treasury
+     * </pre>
+     *
+     * <code>string neutron_denom = 1 [json_name = "neutronDenom"];</code>
+     * @return The neutronDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getNeutronDenom() {
+      java.lang.Object ref = neutronDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        neutronDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Defines Neutron denom, which will be burned during fee processing, any
+     * other denom will be sent to Treasury
+     * </pre>
+     *
+     * <code>string neutron_denom = 1 [json_name = "neutronDenom"];</code>
+     * @return The bytes for neutronDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNeutronDenomBytes() {
+      java.lang.Object ref = neutronDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        neutronDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESERVE_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object reserveAddress_ = "";
+    /**
+     * <pre>
+     * Deprecated in v0.4.4. Is not used anymore
+     * </pre>
+     *
+     * <code>string reserve_address = 2 [json_name = "reserveAddress"];</code>
+     * @return The reserveAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getReserveAddress() {
+      java.lang.Object ref = reserveAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        reserveAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Deprecated in v0.4.4. Is not used anymore
+     * </pre>
+     *
+     * <code>string reserve_address = 2 [json_name = "reserveAddress"];</code>
+     * @return The bytes for reserveAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReserveAddressBytes() {
+      java.lang.Object ref = reserveAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        reserveAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TREASURY_ADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object treasuryAddress_ = "";
+    /**
+     * <pre>
+     * Defines treasury address
+     * </pre>
+     *
+     * <code>string treasury_address = 3 [json_name = "treasuryAddress"];</code>
+     * @return The treasuryAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getTreasuryAddress() {
+      java.lang.Object ref = treasuryAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        treasuryAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Defines treasury address
+     * </pre>
+     *
+     * <code>string treasury_address = 3 [json_name = "treasuryAddress"];</code>
+     * @return The bytes for treasuryAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTreasuryAddressBytes() {
+      java.lang.Object ref = treasuryAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        treasuryAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(neutronDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, neutronDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reserveAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, reserveAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(treasuryAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, treasuryAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(neutronDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, neutronDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reserveAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, reserveAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(treasuryAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, treasuryAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.feeburner.ParamsProto.Params)) {
+        return super.equals(obj);
+      }
+      com.neutron.feeburner.ParamsProto.Params other = (com.neutron.feeburner.ParamsProto.Params) obj;
+
+      if (!getNeutronDenom()
+          .equals(other.getNeutronDenom())) return false;
+      if (!getReserveAddress()
+          .equals(other.getReserveAddress())) return false;
+      if (!getTreasuryAddress()
+          .equals(other.getTreasuryAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NEUTRON_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getNeutronDenom().hashCode();
+      hash = (37 * hash) + RESERVE_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getReserveAddress().hashCode();
+      hash = (37 * hash) + TREASURY_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getTreasuryAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.feeburner.ParamsProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.feeburner.ParamsProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.feeburner.ParamsProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.feeburner.ParamsProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.feeburner.ParamsProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.feeburner.ParamsProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.feeburner.ParamsProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.feeburner.ParamsProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.feeburner.ParamsProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.feeburner.ParamsProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.feeburner.ParamsProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.feeburner.ParamsProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.feeburner.ParamsProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params defines the parameters for the module.
+     * </pre>
+     *
+     * Protobuf type {@code neutron.feeburner.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.feeburner.Params)
+        com.neutron.feeburner.ParamsProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.feeburner.ParamsProto.internal_static_neutron_feeburner_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.feeburner.ParamsProto.internal_static_neutron_feeburner_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.feeburner.ParamsProto.Params.class, com.neutron.feeburner.ParamsProto.Params.Builder.class);
+      }
+
+      // Construct using com.neutron.feeburner.ParamsProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        neutronDenom_ = "";
+        reserveAddress_ = "";
+        treasuryAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.feeburner.ParamsProto.internal_static_neutron_feeburner_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.feeburner.ParamsProto.Params getDefaultInstanceForType() {
+        return com.neutron.feeburner.ParamsProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.feeburner.ParamsProto.Params build() {
+        com.neutron.feeburner.ParamsProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.feeburner.ParamsProto.Params buildPartial() {
+        com.neutron.feeburner.ParamsProto.Params result = new com.neutron.feeburner.ParamsProto.Params(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.neutron.feeburner.ParamsProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.neutronDenom_ = neutronDenom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.reserveAddress_ = reserveAddress_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.treasuryAddress_ = treasuryAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.feeburner.ParamsProto.Params) {
+          return mergeFrom((com.neutron.feeburner.ParamsProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.feeburner.ParamsProto.Params other) {
+        if (other == com.neutron.feeburner.ParamsProto.Params.getDefaultInstance()) return this;
+        if (!other.getNeutronDenom().isEmpty()) {
+          neutronDenom_ = other.neutronDenom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getReserveAddress().isEmpty()) {
+          reserveAddress_ = other.reserveAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getTreasuryAddress().isEmpty()) {
+          treasuryAddress_ = other.treasuryAddress_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                neutronDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                reserveAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                treasuryAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object neutronDenom_ = "";
+      /**
+       * <pre>
+       * Defines Neutron denom, which will be burned during fee processing, any
+       * other denom will be sent to Treasury
+       * </pre>
+       *
+       * <code>string neutron_denom = 1 [json_name = "neutronDenom"];</code>
+       * @return The neutronDenom.
+       */
+      public java.lang.String getNeutronDenom() {
+        java.lang.Object ref = neutronDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          neutronDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Defines Neutron denom, which will be burned during fee processing, any
+       * other denom will be sent to Treasury
+       * </pre>
+       *
+       * <code>string neutron_denom = 1 [json_name = "neutronDenom"];</code>
+       * @return The bytes for neutronDenom.
+       */
+      public com.google.protobuf.ByteString
+          getNeutronDenomBytes() {
+        java.lang.Object ref = neutronDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          neutronDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Defines Neutron denom, which will be burned during fee processing, any
+       * other denom will be sent to Treasury
+       * </pre>
+       *
+       * <code>string neutron_denom = 1 [json_name = "neutronDenom"];</code>
+       * @param value The neutronDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNeutronDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        neutronDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Defines Neutron denom, which will be burned during fee processing, any
+       * other denom will be sent to Treasury
+       * </pre>
+       *
+       * <code>string neutron_denom = 1 [json_name = "neutronDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNeutronDenom() {
+        neutronDenom_ = getDefaultInstance().getNeutronDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Defines Neutron denom, which will be burned during fee processing, any
+       * other denom will be sent to Treasury
+       * </pre>
+       *
+       * <code>string neutron_denom = 1 [json_name = "neutronDenom"];</code>
+       * @param value The bytes for neutronDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNeutronDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        neutronDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object reserveAddress_ = "";
+      /**
+       * <pre>
+       * Deprecated in v0.4.4. Is not used anymore
+       * </pre>
+       *
+       * <code>string reserve_address = 2 [json_name = "reserveAddress"];</code>
+       * @return The reserveAddress.
+       */
+      public java.lang.String getReserveAddress() {
+        java.lang.Object ref = reserveAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          reserveAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Deprecated in v0.4.4. Is not used anymore
+       * </pre>
+       *
+       * <code>string reserve_address = 2 [json_name = "reserveAddress"];</code>
+       * @return The bytes for reserveAddress.
+       */
+      public com.google.protobuf.ByteString
+          getReserveAddressBytes() {
+        java.lang.Object ref = reserveAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          reserveAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Deprecated in v0.4.4. Is not used anymore
+       * </pre>
+       *
+       * <code>string reserve_address = 2 [json_name = "reserveAddress"];</code>
+       * @param value The reserveAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReserveAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        reserveAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Deprecated in v0.4.4. Is not used anymore
+       * </pre>
+       *
+       * <code>string reserve_address = 2 [json_name = "reserveAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReserveAddress() {
+        reserveAddress_ = getDefaultInstance().getReserveAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Deprecated in v0.4.4. Is not used anymore
+       * </pre>
+       *
+       * <code>string reserve_address = 2 [json_name = "reserveAddress"];</code>
+       * @param value The bytes for reserveAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReserveAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        reserveAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object treasuryAddress_ = "";
+      /**
+       * <pre>
+       * Defines treasury address
+       * </pre>
+       *
+       * <code>string treasury_address = 3 [json_name = "treasuryAddress"];</code>
+       * @return The treasuryAddress.
+       */
+      public java.lang.String getTreasuryAddress() {
+        java.lang.Object ref = treasuryAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          treasuryAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Defines treasury address
+       * </pre>
+       *
+       * <code>string treasury_address = 3 [json_name = "treasuryAddress"];</code>
+       * @return The bytes for treasuryAddress.
+       */
+      public com.google.protobuf.ByteString
+          getTreasuryAddressBytes() {
+        java.lang.Object ref = treasuryAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          treasuryAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Defines treasury address
+       * </pre>
+       *
+       * <code>string treasury_address = 3 [json_name = "treasuryAddress"];</code>
+       * @param value The treasuryAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTreasuryAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        treasuryAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Defines treasury address
+       * </pre>
+       *
+       * <code>string treasury_address = 3 [json_name = "treasuryAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTreasuryAddress() {
+        treasuryAddress_ = getDefaultInstance().getTreasuryAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Defines treasury address
+       * </pre>
+       *
+       * <code>string treasury_address = 3 [json_name = "treasuryAddress"];</code>
+       * @param value The bytes for treasuryAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTreasuryAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        treasuryAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.feeburner.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.feeburner.Params)
+    private static final com.neutron.feeburner.ParamsProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.feeburner.ParamsProto.Params();
+    }
+
+    public static com.neutron.feeburner.ParamsProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.feeburner.ParamsProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_feeburner_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_feeburner_Params_fieldAccessorTable;
 
@@ -33,12 +1006,12 @@ public final class ParamsProto {
       "rams\022#\n\rneutron_denom\030\001 \001(\tR\014neutronDeno" +
       "m\022\'\n\017reserve_address\030\002 \001(\tR\016reserveAddre" +
       "ss\022)\n\020treasury_address\030\003 \001(\tR\017treasuryAd" +
-      "dress:\004\230\240\037\000B\273\001\n\025com.neutron.feeburnerB\013P" +
-      "aramsProtoP\001Z0github.com/neutron-org/neu" +
-      "tron/x/feeburner/types\242\002\003NFX\252\002\021Neutron.F" +
-      "eeburner\312\002\021Neutron\\Feeburner\342\002\035Neutron\\F" +
-      "eeburner\\GPBMetadata\352\002\022Neutron::Feeburne" +
-      "rb\006proto3"
+      "dress:\004\230\240\037\000B\271\001\n\025com.neutron.feeburnerB\013P" +
+      "aramsProtoZ0github.com/neutron-org/neutr" +
+      "on/x/feeburner/types\242\002\003NFX\252\002\021Neutron.Fee" +
+      "burner\312\002\021Neutron\\Feeburner\342\002\035Neutron\\Fee" +
+      "burner\\GPBMetadata\352\002\022Neutron::Feeburnerb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

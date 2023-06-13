@@ -14,69 +14,14326 @@ public final class PubsubProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * <pre>
+   * for a given PublisherIntent, whether or not it is pulled or pushed
+   * </pre>
+   *
+   * Protobuf enum {@code pubsub.v1.PublishMethod}
+   */
+  public enum PublishMethod
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * subscribers should pull from the provided URL
+     * </pre>
+     *
+     * <code>PULL = 0;</code>
+     */
+    PULL(0),
+    /**
+     * <pre>
+     * subscribers must provide a URL to receive push messages
+     * </pre>
+     *
+     * <code>PUSH = 1;</code>
+     */
+    PUSH(1),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * subscribers should pull from the provided URL
+     * </pre>
+     *
+     * <code>PULL = 0;</code>
+     */
+    public static final int PULL_VALUE = 0;
+    /**
+     * <pre>
+     * subscribers must provide a URL to receive push messages
+     * </pre>
+     *
+     * <code>PUSH = 1;</code>
+     */
+    public static final int PUSH_VALUE = 1;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static PublishMethod valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static PublishMethod forNumber(int value) {
+      switch (value) {
+        case 0: return PULL;
+        case 1: return PUSH;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<PublishMethod>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        PublishMethod> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<PublishMethod>() {
+            public PublishMethod findValueByNumber(int number) {
+              return PublishMethod.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.pubsub.v1.PubsubProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final PublishMethod[] VALUES = values();
+
+    public static PublishMethod valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private PublishMethod(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:pubsub.v1.PublishMethod)
+  }
+
+  /**
+   * <pre>
+   * for a given PublisherIntent, determines what types of subscribers may subscribe
+   * </pre>
+   *
+   * Protobuf enum {@code pubsub.v1.AllowedSubscribers}
+   */
+  public enum AllowedSubscribers
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * any valid account address
+     * </pre>
+     *
+     * <code>ANY = 0;</code>
+     */
+    ANY(0),
+    /**
+     * <pre>
+     * account address must map to a validator in the active validator set
+     * </pre>
+     *
+     * <code>VALIDATORS = 1;</code>
+     */
+    VALIDATORS(1),
+    /**
+     * <pre>
+     * a specific list of account addresses
+     * </pre>
+     *
+     * <code>LIST = 2;</code>
+     */
+    LIST(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * any valid account address
+     * </pre>
+     *
+     * <code>ANY = 0;</code>
+     */
+    public static final int ANY_VALUE = 0;
+    /**
+     * <pre>
+     * account address must map to a validator in the active validator set
+     * </pre>
+     *
+     * <code>VALIDATORS = 1;</code>
+     */
+    public static final int VALIDATORS_VALUE = 1;
+    /**
+     * <pre>
+     * a specific list of account addresses
+     * </pre>
+     *
+     * <code>LIST = 2;</code>
+     */
+    public static final int LIST_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static AllowedSubscribers valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static AllowedSubscribers forNumber(int value) {
+      switch (value) {
+        case 0: return ANY;
+        case 1: return VALIDATORS;
+        case 2: return LIST;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<AllowedSubscribers>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        AllowedSubscribers> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<AllowedSubscribers>() {
+            public AllowedSubscribers findValueByNumber(int number) {
+              return AllowedSubscribers.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.pubsub.v1.PubsubProto.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final AllowedSubscribers[] VALUES = values();
+
+    public static AllowedSubscribers valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private AllowedSubscribers(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:pubsub.v1.AllowedSubscribers)
+  }
+
+  public interface PublisherOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.Publisher)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * account address of the publisher
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <pre>
+     * account address of the publisher
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <pre>
+     * unique key, FQDN of the publisher, max length of 256
+     * </pre>
+     *
+     * <code>string domain = 2 [json_name = "domain"];</code>
+     * @return The domain.
+     */
+    java.lang.String getDomain();
+    /**
+     * <pre>
+     * unique key, FQDN of the publisher, max length of 256
+     * </pre>
+     *
+     * <code>string domain = 2 [json_name = "domain"];</code>
+     * @return The bytes for domain.
+     */
+    com.google.protobuf.ByteString
+        getDomainBytes();
+
+    /**
+     * <pre>
+     * the publisher's self-signed CA cert PEM file, expecting TLS 1.3 compatible ECDSA certificates, max length 4096
+     * </pre>
+     *
+     * <code>string ca_cert = 3 [json_name = "caCert"];</code>
+     * @return The caCert.
+     */
+    java.lang.String getCaCert();
+    /**
+     * <pre>
+     * the publisher's self-signed CA cert PEM file, expecting TLS 1.3 compatible ECDSA certificates, max length 4096
+     * </pre>
+     *
+     * <code>string ca_cert = 3 [json_name = "caCert"];</code>
+     * @return The bytes for caCert.
+     */
+    com.google.protobuf.ByteString
+        getCaCertBytes();
+  }
+  /**
+   * <pre>
+   * represents a publisher, which are added via governance
+   * </pre>
+   *
+   * Protobuf type {@code pubsub.v1.Publisher}
+   */
+  public static final class Publisher extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.Publisher)
+      PublisherOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Publisher.newBuilder() to construct.
+    private Publisher(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Publisher() {
+      address_ = "";
+      domain_ = "";
+      caCert_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Publisher();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_Publisher_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_Publisher_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.PubsubProto.Publisher.class, com.pubsub.v1.PubsubProto.Publisher.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <pre>
+     * account address of the publisher
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * account address of the publisher
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DOMAIN_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object domain_ = "";
+    /**
+     * <pre>
+     * unique key, FQDN of the publisher, max length of 256
+     * </pre>
+     *
+     * <code>string domain = 2 [json_name = "domain"];</code>
+     * @return The domain.
+     */
+    @java.lang.Override
+    public java.lang.String getDomain() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * unique key, FQDN of the publisher, max length of 256
+     * </pre>
+     *
+     * <code>string domain = 2 [json_name = "domain"];</code>
+     * @return The bytes for domain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDomainBytes() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CA_CERT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object caCert_ = "";
+    /**
+     * <pre>
+     * the publisher's self-signed CA cert PEM file, expecting TLS 1.3 compatible ECDSA certificates, max length 4096
+     * </pre>
+     *
+     * <code>string ca_cert = 3 [json_name = "caCert"];</code>
+     * @return The caCert.
+     */
+    @java.lang.Override
+    public java.lang.String getCaCert() {
+      java.lang.Object ref = caCert_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        caCert_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * the publisher's self-signed CA cert PEM file, expecting TLS 1.3 compatible ECDSA certificates, max length 4096
+     * </pre>
+     *
+     * <code>string ca_cert = 3 [json_name = "caCert"];</code>
+     * @return The bytes for caCert.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCaCertBytes() {
+      java.lang.Object ref = caCert_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        caCert_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(caCert_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, caCert_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(caCert_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, caCert_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.PubsubProto.Publisher)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.PubsubProto.Publisher other = (com.pubsub.v1.PubsubProto.Publisher) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
+      if (!getCaCert()
+          .equals(other.getCaCert())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getDomain().hashCode();
+      hash = (37 * hash) + CA_CERT_FIELD_NUMBER;
+      hash = (53 * hash) + getCaCert().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.PubsubProto.Publisher parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.Publisher parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.Publisher parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.Publisher parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.Publisher parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.Publisher parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.Publisher parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.PubsubProto.Publisher parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.PubsubProto.Publisher parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.PubsubProto.Publisher parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.Publisher parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.PubsubProto.Publisher parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.PubsubProto.Publisher prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * represents a publisher, which are added via governance
+     * </pre>
+     *
+     * Protobuf type {@code pubsub.v1.Publisher}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.Publisher)
+        com.pubsub.v1.PubsubProto.PublisherOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_Publisher_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_Publisher_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.PubsubProto.Publisher.class, com.pubsub.v1.PubsubProto.Publisher.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.PubsubProto.Publisher.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        domain_ = "";
+        caCert_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_Publisher_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.Publisher getDefaultInstanceForType() {
+        return com.pubsub.v1.PubsubProto.Publisher.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.Publisher build() {
+        com.pubsub.v1.PubsubProto.Publisher result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.Publisher buildPartial() {
+        com.pubsub.v1.PubsubProto.Publisher result = new com.pubsub.v1.PubsubProto.Publisher(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pubsub.v1.PubsubProto.Publisher result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.domain_ = domain_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.caCert_ = caCert_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.PubsubProto.Publisher) {
+          return mergeFrom((com.pubsub.v1.PubsubProto.Publisher)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.PubsubProto.Publisher other) {
+        if (other == com.pubsub.v1.PubsubProto.Publisher.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDomain().isEmpty()) {
+          domain_ = other.domain_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getCaCert().isEmpty()) {
+          caCert_ = other.caCert_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                domain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                caCert_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <pre>
+       * account address of the publisher
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * account address of the publisher
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * account address of the publisher
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * account address of the publisher
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * account address of the publisher
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object domain_ = "";
+      /**
+       * <pre>
+       * unique key, FQDN of the publisher, max length of 256
+       * </pre>
+       *
+       * <code>string domain = 2 [json_name = "domain"];</code>
+       * @return The domain.
+       */
+      public java.lang.String getDomain() {
+        java.lang.Object ref = domain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * unique key, FQDN of the publisher, max length of 256
+       * </pre>
+       *
+       * <code>string domain = 2 [json_name = "domain"];</code>
+       * @return The bytes for domain.
+       */
+      public com.google.protobuf.ByteString
+          getDomainBytes() {
+        java.lang.Object ref = domain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * unique key, FQDN of the publisher, max length of 256
+       * </pre>
+       *
+       * <code>string domain = 2 [json_name = "domain"];</code>
+       * @param value The domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        domain_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unique key, FQDN of the publisher, max length of 256
+       * </pre>
+       *
+       * <code>string domain = 2 [json_name = "domain"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDomain() {
+        domain_ = getDefaultInstance().getDomain();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unique key, FQDN of the publisher, max length of 256
+       * </pre>
+       *
+       * <code>string domain = 2 [json_name = "domain"];</code>
+       * @param value The bytes for domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        domain_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object caCert_ = "";
+      /**
+       * <pre>
+       * the publisher's self-signed CA cert PEM file, expecting TLS 1.3 compatible ECDSA certificates, max length 4096
+       * </pre>
+       *
+       * <code>string ca_cert = 3 [json_name = "caCert"];</code>
+       * @return The caCert.
+       */
+      public java.lang.String getCaCert() {
+        java.lang.Object ref = caCert_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          caCert_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the publisher's self-signed CA cert PEM file, expecting TLS 1.3 compatible ECDSA certificates, max length 4096
+       * </pre>
+       *
+       * <code>string ca_cert = 3 [json_name = "caCert"];</code>
+       * @return The bytes for caCert.
+       */
+      public com.google.protobuf.ByteString
+          getCaCertBytes() {
+        java.lang.Object ref = caCert_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          caCert_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the publisher's self-signed CA cert PEM file, expecting TLS 1.3 compatible ECDSA certificates, max length 4096
+       * </pre>
+       *
+       * <code>string ca_cert = 3 [json_name = "caCert"];</code>
+       * @param value The caCert to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCaCert(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        caCert_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the publisher's self-signed CA cert PEM file, expecting TLS 1.3 compatible ECDSA certificates, max length 4096
+       * </pre>
+       *
+       * <code>string ca_cert = 3 [json_name = "caCert"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCaCert() {
+        caCert_ = getDefaultInstance().getCaCert();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the publisher's self-signed CA cert PEM file, expecting TLS 1.3 compatible ECDSA certificates, max length 4096
+       * </pre>
+       *
+       * <code>string ca_cert = 3 [json_name = "caCert"];</code>
+       * @param value The bytes for caCert to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCaCertBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        caCert_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.Publisher)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.Publisher)
+    private static final com.pubsub.v1.PubsubProto.Publisher DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.PubsubProto.Publisher();
+    }
+
+    public static com.pubsub.v1.PubsubProto.Publisher getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Publisher>
+        PARSER = new com.google.protobuf.AbstractParser<Publisher>() {
+      @java.lang.Override
+      public Publisher parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Publisher> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Publisher> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.Publisher getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SubscriberOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.Subscriber)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * unique key, account address representation of either an account or a validator
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <pre>
+     * unique key, account address representation of either an account or a validator
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <pre>
+     * FQDN of the subscriber, max length of 256
+     * </pre>
+     *
+     * <code>string domain = 2 [json_name = "domain"];</code>
+     * @return The domain.
+     */
+    java.lang.String getDomain();
+    /**
+     * <pre>
+     * FQDN of the subscriber, max length of 256
+     * </pre>
+     *
+     * <code>string domain = 2 [json_name = "domain"];</code>
+     * @return The bytes for domain.
+     */
+    com.google.protobuf.ByteString
+        getDomainBytes();
+
+    /**
+     * <pre>
+     * the subscriber's self-signed CA cert PEM file, expecting TLS 1.3 compatible ECDSA certificates, max length 4096
+     * </pre>
+     *
+     * <code>string ca_cert = 3 [json_name = "caCert"];</code>
+     * @return The caCert.
+     */
+    java.lang.String getCaCert();
+    /**
+     * <pre>
+     * the subscriber's self-signed CA cert PEM file, expecting TLS 1.3 compatible ECDSA certificates, max length 4096
+     * </pre>
+     *
+     * <code>string ca_cert = 3 [json_name = "caCert"];</code>
+     * @return The bytes for caCert.
+     */
+    com.google.protobuf.ByteString
+        getCaCertBytes();
+  }
+  /**
+   * <pre>
+   * represents a subscriber, can be set or modified by the owner of the subscriber address
+   * </pre>
+   *
+   * Protobuf type {@code pubsub.v1.Subscriber}
+   */
+  public static final class Subscriber extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.Subscriber)
+      SubscriberOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Subscriber.newBuilder() to construct.
+    private Subscriber(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Subscriber() {
+      address_ = "";
+      domain_ = "";
+      caCert_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Subscriber();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_Subscriber_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_Subscriber_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.PubsubProto.Subscriber.class, com.pubsub.v1.PubsubProto.Subscriber.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <pre>
+     * unique key, account address representation of either an account or a validator
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * unique key, account address representation of either an account or a validator
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DOMAIN_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object domain_ = "";
+    /**
+     * <pre>
+     * FQDN of the subscriber, max length of 256
+     * </pre>
+     *
+     * <code>string domain = 2 [json_name = "domain"];</code>
+     * @return The domain.
+     */
+    @java.lang.Override
+    public java.lang.String getDomain() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * FQDN of the subscriber, max length of 256
+     * </pre>
+     *
+     * <code>string domain = 2 [json_name = "domain"];</code>
+     * @return The bytes for domain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDomainBytes() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CA_CERT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object caCert_ = "";
+    /**
+     * <pre>
+     * the subscriber's self-signed CA cert PEM file, expecting TLS 1.3 compatible ECDSA certificates, max length 4096
+     * </pre>
+     *
+     * <code>string ca_cert = 3 [json_name = "caCert"];</code>
+     * @return The caCert.
+     */
+    @java.lang.Override
+    public java.lang.String getCaCert() {
+      java.lang.Object ref = caCert_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        caCert_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * the subscriber's self-signed CA cert PEM file, expecting TLS 1.3 compatible ECDSA certificates, max length 4096
+     * </pre>
+     *
+     * <code>string ca_cert = 3 [json_name = "caCert"];</code>
+     * @return The bytes for caCert.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCaCertBytes() {
+      java.lang.Object ref = caCert_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        caCert_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(caCert_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, caCert_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(caCert_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, caCert_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.PubsubProto.Subscriber)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.PubsubProto.Subscriber other = (com.pubsub.v1.PubsubProto.Subscriber) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
+      if (!getCaCert()
+          .equals(other.getCaCert())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getDomain().hashCode();
+      hash = (37 * hash) + CA_CERT_FIELD_NUMBER;
+      hash = (53 * hash) + getCaCert().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.PubsubProto.Subscriber parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.Subscriber parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.Subscriber parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.Subscriber parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.Subscriber parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.Subscriber parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.Subscriber parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.PubsubProto.Subscriber parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.PubsubProto.Subscriber parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.PubsubProto.Subscriber parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.Subscriber parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.PubsubProto.Subscriber parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.PubsubProto.Subscriber prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * represents a subscriber, can be set or modified by the owner of the subscriber address
+     * </pre>
+     *
+     * Protobuf type {@code pubsub.v1.Subscriber}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.Subscriber)
+        com.pubsub.v1.PubsubProto.SubscriberOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_Subscriber_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_Subscriber_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.PubsubProto.Subscriber.class, com.pubsub.v1.PubsubProto.Subscriber.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.PubsubProto.Subscriber.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        domain_ = "";
+        caCert_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_Subscriber_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.Subscriber getDefaultInstanceForType() {
+        return com.pubsub.v1.PubsubProto.Subscriber.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.Subscriber build() {
+        com.pubsub.v1.PubsubProto.Subscriber result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.Subscriber buildPartial() {
+        com.pubsub.v1.PubsubProto.Subscriber result = new com.pubsub.v1.PubsubProto.Subscriber(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pubsub.v1.PubsubProto.Subscriber result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.domain_ = domain_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.caCert_ = caCert_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.PubsubProto.Subscriber) {
+          return mergeFrom((com.pubsub.v1.PubsubProto.Subscriber)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.PubsubProto.Subscriber other) {
+        if (other == com.pubsub.v1.PubsubProto.Subscriber.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDomain().isEmpty()) {
+          domain_ = other.domain_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getCaCert().isEmpty()) {
+          caCert_ = other.caCert_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                domain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                caCert_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <pre>
+       * unique key, account address representation of either an account or a validator
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * unique key, account address representation of either an account or a validator
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * unique key, account address representation of either an account or a validator
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unique key, account address representation of either an account or a validator
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unique key, account address representation of either an account or a validator
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object domain_ = "";
+      /**
+       * <pre>
+       * FQDN of the subscriber, max length of 256
+       * </pre>
+       *
+       * <code>string domain = 2 [json_name = "domain"];</code>
+       * @return The domain.
+       */
+      public java.lang.String getDomain() {
+        java.lang.Object ref = domain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * FQDN of the subscriber, max length of 256
+       * </pre>
+       *
+       * <code>string domain = 2 [json_name = "domain"];</code>
+       * @return The bytes for domain.
+       */
+      public com.google.protobuf.ByteString
+          getDomainBytes() {
+        java.lang.Object ref = domain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * FQDN of the subscriber, max length of 256
+       * </pre>
+       *
+       * <code>string domain = 2 [json_name = "domain"];</code>
+       * @param value The domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        domain_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * FQDN of the subscriber, max length of 256
+       * </pre>
+       *
+       * <code>string domain = 2 [json_name = "domain"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDomain() {
+        domain_ = getDefaultInstance().getDomain();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * FQDN of the subscriber, max length of 256
+       * </pre>
+       *
+       * <code>string domain = 2 [json_name = "domain"];</code>
+       * @param value The bytes for domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        domain_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object caCert_ = "";
+      /**
+       * <pre>
+       * the subscriber's self-signed CA cert PEM file, expecting TLS 1.3 compatible ECDSA certificates, max length 4096
+       * </pre>
+       *
+       * <code>string ca_cert = 3 [json_name = "caCert"];</code>
+       * @return The caCert.
+       */
+      public java.lang.String getCaCert() {
+        java.lang.Object ref = caCert_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          caCert_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the subscriber's self-signed CA cert PEM file, expecting TLS 1.3 compatible ECDSA certificates, max length 4096
+       * </pre>
+       *
+       * <code>string ca_cert = 3 [json_name = "caCert"];</code>
+       * @return The bytes for caCert.
+       */
+      public com.google.protobuf.ByteString
+          getCaCertBytes() {
+        java.lang.Object ref = caCert_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          caCert_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the subscriber's self-signed CA cert PEM file, expecting TLS 1.3 compatible ECDSA certificates, max length 4096
+       * </pre>
+       *
+       * <code>string ca_cert = 3 [json_name = "caCert"];</code>
+       * @param value The caCert to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCaCert(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        caCert_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the subscriber's self-signed CA cert PEM file, expecting TLS 1.3 compatible ECDSA certificates, max length 4096
+       * </pre>
+       *
+       * <code>string ca_cert = 3 [json_name = "caCert"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCaCert() {
+        caCert_ = getDefaultInstance().getCaCert();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the subscriber's self-signed CA cert PEM file, expecting TLS 1.3 compatible ECDSA certificates, max length 4096
+       * </pre>
+       *
+       * <code>string ca_cert = 3 [json_name = "caCert"];</code>
+       * @param value The bytes for caCert to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCaCertBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        caCert_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.Subscriber)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.Subscriber)
+    private static final com.pubsub.v1.PubsubProto.Subscriber DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.PubsubProto.Subscriber();
+    }
+
+    public static com.pubsub.v1.PubsubProto.Subscriber getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Subscriber>
+        PARSER = new com.google.protobuf.AbstractParser<Subscriber>() {
+      @java.lang.Override
+      public Subscriber parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Subscriber> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Subscriber> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.Subscriber getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PublisherIntentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.PublisherIntent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * arbitary string representing a subscription, max length of 128
+     * </pre>
+     *
+     * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+     * @return The subscriptionId.
+     */
+    java.lang.String getSubscriptionId();
+    /**
+     * <pre>
+     * arbitary string representing a subscription, max length of 128
+     * </pre>
+     *
+     * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+     * @return The bytes for subscriptionId.
+     */
+    com.google.protobuf.ByteString
+        getSubscriptionIdBytes();
+
+    /**
+     * <pre>
+     * FQDN of the publisher, max length of 256
+     * </pre>
+     *
+     * <code>string publisher_domain = 2 [json_name = "publisherDomain"];</code>
+     * @return The publisherDomain.
+     */
+    java.lang.String getPublisherDomain();
+    /**
+     * <pre>
+     * FQDN of the publisher, max length of 256
+     * </pre>
+     *
+     * <code>string publisher_domain = 2 [json_name = "publisherDomain"];</code>
+     * @return The bytes for publisherDomain.
+     */
+    com.google.protobuf.ByteString
+        getPublisherDomainBytes();
+
+    /**
+     * <pre>
+     * either PULL or PUSH (see enum above for details)
+     * </pre>
+     *
+     * <code>.pubsub.v1.PublishMethod method = 3 [json_name = "method"];</code>
+     * @return The enum numeric value on the wire for method.
+     */
+    int getMethodValue();
+    /**
+     * <pre>
+     * either PULL or PUSH (see enum above for details)
+     * </pre>
+     *
+     * <code>.pubsub.v1.PublishMethod method = 3 [json_name = "method"];</code>
+     * @return The method.
+     */
+    com.pubsub.v1.PubsubProto.PublishMethod getMethod();
+
+    /**
+     * <pre>
+     * optional, only needs to be set if using the PULL method, max length of 512
+     * </pre>
+     *
+     * <code>string pull_url = 4 [json_name = "pullUrl"];</code>
+     * @return The pullUrl.
+     */
+    java.lang.String getPullUrl();
+    /**
+     * <pre>
+     * optional, only needs to be set if using the PULL method, max length of 512
+     * </pre>
+     *
+     * <code>string pull_url = 4 [json_name = "pullUrl"];</code>
+     * @return The bytes for pullUrl.
+     */
+    com.google.protobuf.ByteString
+        getPullUrlBytes();
+
+    /**
+     * <pre>
+     * either ANY, VALIDATORS, or LIST (see enum above for details)
+     * </pre>
+     *
+     * <code>.pubsub.v1.AllowedSubscribers allowed_subscribers = 5 [json_name = "allowedSubscribers"];</code>
+     * @return The enum numeric value on the wire for allowedSubscribers.
+     */
+    int getAllowedSubscribersValue();
+    /**
+     * <pre>
+     * either ANY, VALIDATORS, or LIST (see enum above for details)
+     * </pre>
+     *
+     * <code>.pubsub.v1.AllowedSubscribers allowed_subscribers = 5 [json_name = "allowedSubscribers"];</code>
+     * @return The allowedSubscribers.
+     */
+    com.pubsub.v1.PubsubProto.AllowedSubscribers getAllowedSubscribers();
+
+    /**
+     * <pre>
+     * optional, must be provided if allowed_subscribers is LIST, list of account addresses, max length 256
+     * </pre>
+     *
+     * <code>repeated string allowed_addresses = 6 [json_name = "allowedAddresses"];</code>
+     * @return A list containing the allowedAddresses.
+     */
+    java.util.List<java.lang.String>
+        getAllowedAddressesList();
+    /**
+     * <pre>
+     * optional, must be provided if allowed_subscribers is LIST, list of account addresses, max length 256
+     * </pre>
+     *
+     * <code>repeated string allowed_addresses = 6 [json_name = "allowedAddresses"];</code>
+     * @return The count of allowedAddresses.
+     */
+    int getAllowedAddressesCount();
+    /**
+     * <pre>
+     * optional, must be provided if allowed_subscribers is LIST, list of account addresses, max length 256
+     * </pre>
+     *
+     * <code>repeated string allowed_addresses = 6 [json_name = "allowedAddresses"];</code>
+     * @param index The index of the element to return.
+     * @return The allowedAddresses at the given index.
+     */
+    java.lang.String getAllowedAddresses(int index);
+    /**
+     * <pre>
+     * optional, must be provided if allowed_subscribers is LIST, list of account addresses, max length 256
+     * </pre>
+     *
+     * <code>repeated string allowed_addresses = 6 [json_name = "allowedAddresses"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the allowedAddresses at the given index.
+     */
+    com.google.protobuf.ByteString
+        getAllowedAddressesBytes(int index);
+  }
+  /**
+   * <pre>
+   * represents a publisher committing to sending messages for a specific subscription ID
+   * </pre>
+   *
+   * Protobuf type {@code pubsub.v1.PublisherIntent}
+   */
+  public static final class PublisherIntent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.PublisherIntent)
+      PublisherIntentOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PublisherIntent.newBuilder() to construct.
+    private PublisherIntent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PublisherIntent() {
+      subscriptionId_ = "";
+      publisherDomain_ = "";
+      method_ = 0;
+      pullUrl_ = "";
+      allowedSubscribers_ = 0;
+      allowedAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PublisherIntent();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_PublisherIntent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_PublisherIntent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.PubsubProto.PublisherIntent.class, com.pubsub.v1.PubsubProto.PublisherIntent.Builder.class);
+    }
+
+    public static final int SUBSCRIPTION_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object subscriptionId_ = "";
+    /**
+     * <pre>
+     * arbitary string representing a subscription, max length of 128
+     * </pre>
+     *
+     * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+     * @return The subscriptionId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubscriptionId() {
+      java.lang.Object ref = subscriptionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subscriptionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * arbitary string representing a subscription, max length of 128
+     * </pre>
+     *
+     * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+     * @return The bytes for subscriptionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubscriptionIdBytes() {
+      java.lang.Object ref = subscriptionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subscriptionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PUBLISHER_DOMAIN_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object publisherDomain_ = "";
+    /**
+     * <pre>
+     * FQDN of the publisher, max length of 256
+     * </pre>
+     *
+     * <code>string publisher_domain = 2 [json_name = "publisherDomain"];</code>
+     * @return The publisherDomain.
+     */
+    @java.lang.Override
+    public java.lang.String getPublisherDomain() {
+      java.lang.Object ref = publisherDomain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        publisherDomain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * FQDN of the publisher, max length of 256
+     * </pre>
+     *
+     * <code>string publisher_domain = 2 [json_name = "publisherDomain"];</code>
+     * @return The bytes for publisherDomain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPublisherDomainBytes() {
+      java.lang.Object ref = publisherDomain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        publisherDomain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int METHOD_FIELD_NUMBER = 3;
+    private int method_ = 0;
+    /**
+     * <pre>
+     * either PULL or PUSH (see enum above for details)
+     * </pre>
+     *
+     * <code>.pubsub.v1.PublishMethod method = 3 [json_name = "method"];</code>
+     * @return The enum numeric value on the wire for method.
+     */
+    @java.lang.Override public int getMethodValue() {
+      return method_;
+    }
+    /**
+     * <pre>
+     * either PULL or PUSH (see enum above for details)
+     * </pre>
+     *
+     * <code>.pubsub.v1.PublishMethod method = 3 [json_name = "method"];</code>
+     * @return The method.
+     */
+    @java.lang.Override public com.pubsub.v1.PubsubProto.PublishMethod getMethod() {
+      com.pubsub.v1.PubsubProto.PublishMethod result = com.pubsub.v1.PubsubProto.PublishMethod.forNumber(method_);
+      return result == null ? com.pubsub.v1.PubsubProto.PublishMethod.UNRECOGNIZED : result;
+    }
+
+    public static final int PULL_URL_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object pullUrl_ = "";
+    /**
+     * <pre>
+     * optional, only needs to be set if using the PULL method, max length of 512
+     * </pre>
+     *
+     * <code>string pull_url = 4 [json_name = "pullUrl"];</code>
+     * @return The pullUrl.
+     */
+    @java.lang.Override
+    public java.lang.String getPullUrl() {
+      java.lang.Object ref = pullUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pullUrl_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * optional, only needs to be set if using the PULL method, max length of 512
+     * </pre>
+     *
+     * <code>string pull_url = 4 [json_name = "pullUrl"];</code>
+     * @return The bytes for pullUrl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPullUrlBytes() {
+      java.lang.Object ref = pullUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pullUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ALLOWED_SUBSCRIBERS_FIELD_NUMBER = 5;
+    private int allowedSubscribers_ = 0;
+    /**
+     * <pre>
+     * either ANY, VALIDATORS, or LIST (see enum above for details)
+     * </pre>
+     *
+     * <code>.pubsub.v1.AllowedSubscribers allowed_subscribers = 5 [json_name = "allowedSubscribers"];</code>
+     * @return The enum numeric value on the wire for allowedSubscribers.
+     */
+    @java.lang.Override public int getAllowedSubscribersValue() {
+      return allowedSubscribers_;
+    }
+    /**
+     * <pre>
+     * either ANY, VALIDATORS, or LIST (see enum above for details)
+     * </pre>
+     *
+     * <code>.pubsub.v1.AllowedSubscribers allowed_subscribers = 5 [json_name = "allowedSubscribers"];</code>
+     * @return The allowedSubscribers.
+     */
+    @java.lang.Override public com.pubsub.v1.PubsubProto.AllowedSubscribers getAllowedSubscribers() {
+      com.pubsub.v1.PubsubProto.AllowedSubscribers result = com.pubsub.v1.PubsubProto.AllowedSubscribers.forNumber(allowedSubscribers_);
+      return result == null ? com.pubsub.v1.PubsubProto.AllowedSubscribers.UNRECOGNIZED : result;
+    }
+
+    public static final int ALLOWED_ADDRESSES_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList allowedAddresses_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * optional, must be provided if allowed_subscribers is LIST, list of account addresses, max length 256
+     * </pre>
+     *
+     * <code>repeated string allowed_addresses = 6 [json_name = "allowedAddresses"];</code>
+     * @return A list containing the allowedAddresses.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getAllowedAddressesList() {
+      return allowedAddresses_;
+    }
+    /**
+     * <pre>
+     * optional, must be provided if allowed_subscribers is LIST, list of account addresses, max length 256
+     * </pre>
+     *
+     * <code>repeated string allowed_addresses = 6 [json_name = "allowedAddresses"];</code>
+     * @return The count of allowedAddresses.
+     */
+    public int getAllowedAddressesCount() {
+      return allowedAddresses_.size();
+    }
+    /**
+     * <pre>
+     * optional, must be provided if allowed_subscribers is LIST, list of account addresses, max length 256
+     * </pre>
+     *
+     * <code>repeated string allowed_addresses = 6 [json_name = "allowedAddresses"];</code>
+     * @param index The index of the element to return.
+     * @return The allowedAddresses at the given index.
+     */
+    public java.lang.String getAllowedAddresses(int index) {
+      return allowedAddresses_.get(index);
+    }
+    /**
+     * <pre>
+     * optional, must be provided if allowed_subscribers is LIST, list of account addresses, max length 256
+     * </pre>
+     *
+     * <code>repeated string allowed_addresses = 6 [json_name = "allowedAddresses"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the allowedAddresses at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getAllowedAddressesBytes(int index) {
+      return allowedAddresses_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriptionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subscriptionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publisherDomain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, publisherDomain_);
+      }
+      if (method_ != com.pubsub.v1.PubsubProto.PublishMethod.PULL.getNumber()) {
+        output.writeEnum(3, method_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pullUrl_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, pullUrl_);
+      }
+      if (allowedSubscribers_ != com.pubsub.v1.PubsubProto.AllowedSubscribers.ANY.getNumber()) {
+        output.writeEnum(5, allowedSubscribers_);
+      }
+      for (int i = 0; i < allowedAddresses_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, allowedAddresses_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriptionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subscriptionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publisherDomain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, publisherDomain_);
+      }
+      if (method_ != com.pubsub.v1.PubsubProto.PublishMethod.PULL.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, method_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pullUrl_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, pullUrl_);
+      }
+      if (allowedSubscribers_ != com.pubsub.v1.PubsubProto.AllowedSubscribers.ANY.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, allowedSubscribers_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < allowedAddresses_.size(); i++) {
+          dataSize += computeStringSizeNoTag(allowedAddresses_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getAllowedAddressesList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.PubsubProto.PublisherIntent)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.PubsubProto.PublisherIntent other = (com.pubsub.v1.PubsubProto.PublisherIntent) obj;
+
+      if (!getSubscriptionId()
+          .equals(other.getSubscriptionId())) return false;
+      if (!getPublisherDomain()
+          .equals(other.getPublisherDomain())) return false;
+      if (method_ != other.method_) return false;
+      if (!getPullUrl()
+          .equals(other.getPullUrl())) return false;
+      if (allowedSubscribers_ != other.allowedSubscribers_) return false;
+      if (!getAllowedAddressesList()
+          .equals(other.getAllowedAddressesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUBSCRIPTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubscriptionId().hashCode();
+      hash = (37 * hash) + PUBLISHER_DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getPublisherDomain().hashCode();
+      hash = (37 * hash) + METHOD_FIELD_NUMBER;
+      hash = (53 * hash) + method_;
+      hash = (37 * hash) + PULL_URL_FIELD_NUMBER;
+      hash = (53 * hash) + getPullUrl().hashCode();
+      hash = (37 * hash) + ALLOWED_SUBSCRIBERS_FIELD_NUMBER;
+      hash = (53 * hash) + allowedSubscribers_;
+      if (getAllowedAddressesCount() > 0) {
+        hash = (37 * hash) + ALLOWED_ADDRESSES_FIELD_NUMBER;
+        hash = (53 * hash) + getAllowedAddressesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.PubsubProto.PublisherIntent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.PublisherIntent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.PublisherIntent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.PublisherIntent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.PublisherIntent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.PublisherIntent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.PublisherIntent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.PubsubProto.PublisherIntent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.PubsubProto.PublisherIntent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.PubsubProto.PublisherIntent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.PublisherIntent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.PubsubProto.PublisherIntent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.PubsubProto.PublisherIntent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * represents a publisher committing to sending messages for a specific subscription ID
+     * </pre>
+     *
+     * Protobuf type {@code pubsub.v1.PublisherIntent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.PublisherIntent)
+        com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_PublisherIntent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_PublisherIntent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.PubsubProto.PublisherIntent.class, com.pubsub.v1.PubsubProto.PublisherIntent.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.PubsubProto.PublisherIntent.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        subscriptionId_ = "";
+        publisherDomain_ = "";
+        method_ = 0;
+        pullUrl_ = "";
+        allowedSubscribers_ = 0;
+        allowedAddresses_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_PublisherIntent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.PublisherIntent getDefaultInstanceForType() {
+        return com.pubsub.v1.PubsubProto.PublisherIntent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.PublisherIntent build() {
+        com.pubsub.v1.PubsubProto.PublisherIntent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.PublisherIntent buildPartial() {
+        com.pubsub.v1.PubsubProto.PublisherIntent result = new com.pubsub.v1.PubsubProto.PublisherIntent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pubsub.v1.PubsubProto.PublisherIntent result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.subscriptionId_ = subscriptionId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.publisherDomain_ = publisherDomain_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.method_ = method_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.pullUrl_ = pullUrl_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.allowedSubscribers_ = allowedSubscribers_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          allowedAddresses_.makeImmutable();
+          result.allowedAddresses_ = allowedAddresses_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.PubsubProto.PublisherIntent) {
+          return mergeFrom((com.pubsub.v1.PubsubProto.PublisherIntent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.PubsubProto.PublisherIntent other) {
+        if (other == com.pubsub.v1.PubsubProto.PublisherIntent.getDefaultInstance()) return this;
+        if (!other.getSubscriptionId().isEmpty()) {
+          subscriptionId_ = other.subscriptionId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getPublisherDomain().isEmpty()) {
+          publisherDomain_ = other.publisherDomain_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.method_ != 0) {
+          setMethodValue(other.getMethodValue());
+        }
+        if (!other.getPullUrl().isEmpty()) {
+          pullUrl_ = other.pullUrl_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.allowedSubscribers_ != 0) {
+          setAllowedSubscribersValue(other.getAllowedSubscribersValue());
+        }
+        if (!other.allowedAddresses_.isEmpty()) {
+          if (allowedAddresses_.isEmpty()) {
+            allowedAddresses_ = other.allowedAddresses_;
+            bitField0_ |= 0x00000020;
+          } else {
+            ensureAllowedAddressesIsMutable();
+            allowedAddresses_.addAll(other.allowedAddresses_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                subscriptionId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                publisherDomain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                method_ = input.readEnum();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                pullUrl_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                allowedSubscribers_ = input.readEnum();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 50: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureAllowedAddressesIsMutable();
+                allowedAddresses_.add(s);
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object subscriptionId_ = "";
+      /**
+       * <pre>
+       * arbitary string representing a subscription, max length of 128
+       * </pre>
+       *
+       * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+       * @return The subscriptionId.
+       */
+      public java.lang.String getSubscriptionId() {
+        java.lang.Object ref = subscriptionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subscriptionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * arbitary string representing a subscription, max length of 128
+       * </pre>
+       *
+       * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+       * @return The bytes for subscriptionId.
+       */
+      public com.google.protobuf.ByteString
+          getSubscriptionIdBytes() {
+        java.lang.Object ref = subscriptionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subscriptionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * arbitary string representing a subscription, max length of 128
+       * </pre>
+       *
+       * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+       * @param value The subscriptionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriptionId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        subscriptionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * arbitary string representing a subscription, max length of 128
+       * </pre>
+       *
+       * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubscriptionId() {
+        subscriptionId_ = getDefaultInstance().getSubscriptionId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * arbitary string representing a subscription, max length of 128
+       * </pre>
+       *
+       * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+       * @param value The bytes for subscriptionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriptionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        subscriptionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object publisherDomain_ = "";
+      /**
+       * <pre>
+       * FQDN of the publisher, max length of 256
+       * </pre>
+       *
+       * <code>string publisher_domain = 2 [json_name = "publisherDomain"];</code>
+       * @return The publisherDomain.
+       */
+      public java.lang.String getPublisherDomain() {
+        java.lang.Object ref = publisherDomain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          publisherDomain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * FQDN of the publisher, max length of 256
+       * </pre>
+       *
+       * <code>string publisher_domain = 2 [json_name = "publisherDomain"];</code>
+       * @return The bytes for publisherDomain.
+       */
+      public com.google.protobuf.ByteString
+          getPublisherDomainBytes() {
+        java.lang.Object ref = publisherDomain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          publisherDomain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * FQDN of the publisher, max length of 256
+       * </pre>
+       *
+       * <code>string publisher_domain = 2 [json_name = "publisherDomain"];</code>
+       * @param value The publisherDomain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublisherDomain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        publisherDomain_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * FQDN of the publisher, max length of 256
+       * </pre>
+       *
+       * <code>string publisher_domain = 2 [json_name = "publisherDomain"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublisherDomain() {
+        publisherDomain_ = getDefaultInstance().getPublisherDomain();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * FQDN of the publisher, max length of 256
+       * </pre>
+       *
+       * <code>string publisher_domain = 2 [json_name = "publisherDomain"];</code>
+       * @param value The bytes for publisherDomain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublisherDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        publisherDomain_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private int method_ = 0;
+      /**
+       * <pre>
+       * either PULL or PUSH (see enum above for details)
+       * </pre>
+       *
+       * <code>.pubsub.v1.PublishMethod method = 3 [json_name = "method"];</code>
+       * @return The enum numeric value on the wire for method.
+       */
+      @java.lang.Override public int getMethodValue() {
+        return method_;
+      }
+      /**
+       * <pre>
+       * either PULL or PUSH (see enum above for details)
+       * </pre>
+       *
+       * <code>.pubsub.v1.PublishMethod method = 3 [json_name = "method"];</code>
+       * @param value The enum numeric value on the wire for method to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethodValue(int value) {
+        method_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * either PULL or PUSH (see enum above for details)
+       * </pre>
+       *
+       * <code>.pubsub.v1.PublishMethod method = 3 [json_name = "method"];</code>
+       * @return The method.
+       */
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.PublishMethod getMethod() {
+        com.pubsub.v1.PubsubProto.PublishMethod result = com.pubsub.v1.PubsubProto.PublishMethod.forNumber(method_);
+        return result == null ? com.pubsub.v1.PubsubProto.PublishMethod.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * either PULL or PUSH (see enum above for details)
+       * </pre>
+       *
+       * <code>.pubsub.v1.PublishMethod method = 3 [json_name = "method"];</code>
+       * @param value The method to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethod(com.pubsub.v1.PubsubProto.PublishMethod value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        method_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * either PULL or PUSH (see enum above for details)
+       * </pre>
+       *
+       * <code>.pubsub.v1.PublishMethod method = 3 [json_name = "method"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMethod() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        method_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pullUrl_ = "";
+      /**
+       * <pre>
+       * optional, only needs to be set if using the PULL method, max length of 512
+       * </pre>
+       *
+       * <code>string pull_url = 4 [json_name = "pullUrl"];</code>
+       * @return The pullUrl.
+       */
+      public java.lang.String getPullUrl() {
+        java.lang.Object ref = pullUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pullUrl_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * optional, only needs to be set if using the PULL method, max length of 512
+       * </pre>
+       *
+       * <code>string pull_url = 4 [json_name = "pullUrl"];</code>
+       * @return The bytes for pullUrl.
+       */
+      public com.google.protobuf.ByteString
+          getPullUrlBytes() {
+        java.lang.Object ref = pullUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pullUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * optional, only needs to be set if using the PULL method, max length of 512
+       * </pre>
+       *
+       * <code>string pull_url = 4 [json_name = "pullUrl"];</code>
+       * @param value The pullUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPullUrl(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        pullUrl_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * optional, only needs to be set if using the PULL method, max length of 512
+       * </pre>
+       *
+       * <code>string pull_url = 4 [json_name = "pullUrl"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPullUrl() {
+        pullUrl_ = getDefaultInstance().getPullUrl();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * optional, only needs to be set if using the PULL method, max length of 512
+       * </pre>
+       *
+       * <code>string pull_url = 4 [json_name = "pullUrl"];</code>
+       * @param value The bytes for pullUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPullUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        pullUrl_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private int allowedSubscribers_ = 0;
+      /**
+       * <pre>
+       * either ANY, VALIDATORS, or LIST (see enum above for details)
+       * </pre>
+       *
+       * <code>.pubsub.v1.AllowedSubscribers allowed_subscribers = 5 [json_name = "allowedSubscribers"];</code>
+       * @return The enum numeric value on the wire for allowedSubscribers.
+       */
+      @java.lang.Override public int getAllowedSubscribersValue() {
+        return allowedSubscribers_;
+      }
+      /**
+       * <pre>
+       * either ANY, VALIDATORS, or LIST (see enum above for details)
+       * </pre>
+       *
+       * <code>.pubsub.v1.AllowedSubscribers allowed_subscribers = 5 [json_name = "allowedSubscribers"];</code>
+       * @param value The enum numeric value on the wire for allowedSubscribers to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllowedSubscribersValue(int value) {
+        allowedSubscribers_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * either ANY, VALIDATORS, or LIST (see enum above for details)
+       * </pre>
+       *
+       * <code>.pubsub.v1.AllowedSubscribers allowed_subscribers = 5 [json_name = "allowedSubscribers"];</code>
+       * @return The allowedSubscribers.
+       */
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.AllowedSubscribers getAllowedSubscribers() {
+        com.pubsub.v1.PubsubProto.AllowedSubscribers result = com.pubsub.v1.PubsubProto.AllowedSubscribers.forNumber(allowedSubscribers_);
+        return result == null ? com.pubsub.v1.PubsubProto.AllowedSubscribers.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * either ANY, VALIDATORS, or LIST (see enum above for details)
+       * </pre>
+       *
+       * <code>.pubsub.v1.AllowedSubscribers allowed_subscribers = 5 [json_name = "allowedSubscribers"];</code>
+       * @param value The allowedSubscribers to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllowedSubscribers(com.pubsub.v1.PubsubProto.AllowedSubscribers value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000010;
+        allowedSubscribers_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * either ANY, VALIDATORS, or LIST (see enum above for details)
+       * </pre>
+       *
+       * <code>.pubsub.v1.AllowedSubscribers allowed_subscribers = 5 [json_name = "allowedSubscribers"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllowedSubscribers() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        allowedSubscribers_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList allowedAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureAllowedAddressesIsMutable() {
+        if (!allowedAddresses_.isModifiable()) {
+          allowedAddresses_ = new com.google.protobuf.LazyStringArrayList(allowedAddresses_);
+        }
+        bitField0_ |= 0x00000020;
+      }
+      /**
+       * <pre>
+       * optional, must be provided if allowed_subscribers is LIST, list of account addresses, max length 256
+       * </pre>
+       *
+       * <code>repeated string allowed_addresses = 6 [json_name = "allowedAddresses"];</code>
+       * @return A list containing the allowedAddresses.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getAllowedAddressesList() {
+        allowedAddresses_.makeImmutable();
+        return allowedAddresses_;
+      }
+      /**
+       * <pre>
+       * optional, must be provided if allowed_subscribers is LIST, list of account addresses, max length 256
+       * </pre>
+       *
+       * <code>repeated string allowed_addresses = 6 [json_name = "allowedAddresses"];</code>
+       * @return The count of allowedAddresses.
+       */
+      public int getAllowedAddressesCount() {
+        return allowedAddresses_.size();
+      }
+      /**
+       * <pre>
+       * optional, must be provided if allowed_subscribers is LIST, list of account addresses, max length 256
+       * </pre>
+       *
+       * <code>repeated string allowed_addresses = 6 [json_name = "allowedAddresses"];</code>
+       * @param index The index of the element to return.
+       * @return The allowedAddresses at the given index.
+       */
+      public java.lang.String getAllowedAddresses(int index) {
+        return allowedAddresses_.get(index);
+      }
+      /**
+       * <pre>
+       * optional, must be provided if allowed_subscribers is LIST, list of account addresses, max length 256
+       * </pre>
+       *
+       * <code>repeated string allowed_addresses = 6 [json_name = "allowedAddresses"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the allowedAddresses at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getAllowedAddressesBytes(int index) {
+        return allowedAddresses_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * optional, must be provided if allowed_subscribers is LIST, list of account addresses, max length 256
+       * </pre>
+       *
+       * <code>repeated string allowed_addresses = 6 [json_name = "allowedAddresses"];</code>
+       * @param index The index to set the value at.
+       * @param value The allowedAddresses to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllowedAddresses(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureAllowedAddressesIsMutable();
+        allowedAddresses_.set(index, value);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * optional, must be provided if allowed_subscribers is LIST, list of account addresses, max length 256
+       * </pre>
+       *
+       * <code>repeated string allowed_addresses = 6 [json_name = "allowedAddresses"];</code>
+       * @param value The allowedAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllowedAddresses(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureAllowedAddressesIsMutable();
+        allowedAddresses_.add(value);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * optional, must be provided if allowed_subscribers is LIST, list of account addresses, max length 256
+       * </pre>
+       *
+       * <code>repeated string allowed_addresses = 6 [json_name = "allowedAddresses"];</code>
+       * @param values The allowedAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAllowedAddresses(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureAllowedAddressesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, allowedAddresses_);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * optional, must be provided if allowed_subscribers is LIST, list of account addresses, max length 256
+       * </pre>
+       *
+       * <code>repeated string allowed_addresses = 6 [json_name = "allowedAddresses"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllowedAddresses() {
+        allowedAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * optional, must be provided if allowed_subscribers is LIST, list of account addresses, max length 256
+       * </pre>
+       *
+       * <code>repeated string allowed_addresses = 6 [json_name = "allowedAddresses"];</code>
+       * @param value The bytes of the allowedAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllowedAddressesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureAllowedAddressesIsMutable();
+        allowedAddresses_.add(value);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.PublisherIntent)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.PublisherIntent)
+    private static final com.pubsub.v1.PubsubProto.PublisherIntent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.PubsubProto.PublisherIntent();
+    }
+
+    public static com.pubsub.v1.PubsubProto.PublisherIntent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PublisherIntent>
+        PARSER = new com.google.protobuf.AbstractParser<PublisherIntent>() {
+      @java.lang.Override
+      public PublisherIntent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PublisherIntent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PublisherIntent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.PublisherIntent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SubscriberIntentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.SubscriberIntent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * arbitary string representing a subscription, max length of 128
+     * </pre>
+     *
+     * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+     * @return The subscriptionId.
+     */
+    java.lang.String getSubscriptionId();
+    /**
+     * <pre>
+     * arbitary string representing a subscription, max length of 128
+     * </pre>
+     *
+     * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+     * @return The bytes for subscriptionId.
+     */
+    com.google.protobuf.ByteString
+        getSubscriptionIdBytes();
+
+    /**
+     * <pre>
+     * account address of the subscriber
+     * </pre>
+     *
+     * <code>string subscriber_address = 2 [json_name = "subscriberAddress"];</code>
+     * @return The subscriberAddress.
+     */
+    java.lang.String getSubscriberAddress();
+    /**
+     * <pre>
+     * account address of the subscriber
+     * </pre>
+     *
+     * <code>string subscriber_address = 2 [json_name = "subscriberAddress"];</code>
+     * @return The bytes for subscriberAddress.
+     */
+    com.google.protobuf.ByteString
+        getSubscriberAddressBytes();
+
+    /**
+     * <pre>
+     * FQDN of the publisher, max length of 256
+     * </pre>
+     *
+     * <code>string publisher_domain = 3 [json_name = "publisherDomain"];</code>
+     * @return The publisherDomain.
+     */
+    java.lang.String getPublisherDomain();
+    /**
+     * <pre>
+     * FQDN of the publisher, max length of 256
+     * </pre>
+     *
+     * <code>string publisher_domain = 3 [json_name = "publisherDomain"];</code>
+     * @return The bytes for publisherDomain.
+     */
+    com.google.protobuf.ByteString
+        getPublisherDomainBytes();
+
+    /**
+     * <pre>
+     * optional, only needs to be set if the PublisherIntent for this subscription uses the PUSH method, max length of 512
+     * </pre>
+     *
+     * <code>string push_url = 4 [json_name = "pushUrl"];</code>
+     * @return The pushUrl.
+     */
+    java.lang.String getPushUrl();
+    /**
+     * <pre>
+     * optional, only needs to be set if the PublisherIntent for this subscription uses the PUSH method, max length of 512
+     * </pre>
+     *
+     * <code>string push_url = 4 [json_name = "pushUrl"];</code>
+     * @return The bytes for pushUrl.
+     */
+    com.google.protobuf.ByteString
+        getPushUrlBytes();
+  }
+  /**
+   * <pre>
+   * represents a subscriber requesting messages for a specific subscription ID and publisher
+   * </pre>
+   *
+   * Protobuf type {@code pubsub.v1.SubscriberIntent}
+   */
+  public static final class SubscriberIntent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.SubscriberIntent)
+      SubscriberIntentOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SubscriberIntent.newBuilder() to construct.
+    private SubscriberIntent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SubscriberIntent() {
+      subscriptionId_ = "";
+      subscriberAddress_ = "";
+      publisherDomain_ = "";
+      pushUrl_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SubscriberIntent();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_SubscriberIntent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_SubscriberIntent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.PubsubProto.SubscriberIntent.class, com.pubsub.v1.PubsubProto.SubscriberIntent.Builder.class);
+    }
+
+    public static final int SUBSCRIPTION_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object subscriptionId_ = "";
+    /**
+     * <pre>
+     * arbitary string representing a subscription, max length of 128
+     * </pre>
+     *
+     * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+     * @return The subscriptionId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubscriptionId() {
+      java.lang.Object ref = subscriptionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subscriptionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * arbitary string representing a subscription, max length of 128
+     * </pre>
+     *
+     * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+     * @return The bytes for subscriptionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubscriptionIdBytes() {
+      java.lang.Object ref = subscriptionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subscriptionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUBSCRIBER_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object subscriberAddress_ = "";
+    /**
+     * <pre>
+     * account address of the subscriber
+     * </pre>
+     *
+     * <code>string subscriber_address = 2 [json_name = "subscriberAddress"];</code>
+     * @return The subscriberAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getSubscriberAddress() {
+      java.lang.Object ref = subscriberAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subscriberAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * account address of the subscriber
+     * </pre>
+     *
+     * <code>string subscriber_address = 2 [json_name = "subscriberAddress"];</code>
+     * @return The bytes for subscriberAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubscriberAddressBytes() {
+      java.lang.Object ref = subscriberAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subscriberAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PUBLISHER_DOMAIN_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object publisherDomain_ = "";
+    /**
+     * <pre>
+     * FQDN of the publisher, max length of 256
+     * </pre>
+     *
+     * <code>string publisher_domain = 3 [json_name = "publisherDomain"];</code>
+     * @return The publisherDomain.
+     */
+    @java.lang.Override
+    public java.lang.String getPublisherDomain() {
+      java.lang.Object ref = publisherDomain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        publisherDomain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * FQDN of the publisher, max length of 256
+     * </pre>
+     *
+     * <code>string publisher_domain = 3 [json_name = "publisherDomain"];</code>
+     * @return The bytes for publisherDomain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPublisherDomainBytes() {
+      java.lang.Object ref = publisherDomain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        publisherDomain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PUSH_URL_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object pushUrl_ = "";
+    /**
+     * <pre>
+     * optional, only needs to be set if the PublisherIntent for this subscription uses the PUSH method, max length of 512
+     * </pre>
+     *
+     * <code>string push_url = 4 [json_name = "pushUrl"];</code>
+     * @return The pushUrl.
+     */
+    @java.lang.Override
+    public java.lang.String getPushUrl() {
+      java.lang.Object ref = pushUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pushUrl_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * optional, only needs to be set if the PublisherIntent for this subscription uses the PUSH method, max length of 512
+     * </pre>
+     *
+     * <code>string push_url = 4 [json_name = "pushUrl"];</code>
+     * @return The bytes for pushUrl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPushUrlBytes() {
+      java.lang.Object ref = pushUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pushUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriptionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subscriptionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriberAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, subscriberAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publisherDomain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, publisherDomain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pushUrl_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, pushUrl_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriptionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subscriptionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriberAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, subscriberAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publisherDomain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, publisherDomain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pushUrl_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, pushUrl_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.PubsubProto.SubscriberIntent)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.PubsubProto.SubscriberIntent other = (com.pubsub.v1.PubsubProto.SubscriberIntent) obj;
+
+      if (!getSubscriptionId()
+          .equals(other.getSubscriptionId())) return false;
+      if (!getSubscriberAddress()
+          .equals(other.getSubscriberAddress())) return false;
+      if (!getPublisherDomain()
+          .equals(other.getPublisherDomain())) return false;
+      if (!getPushUrl()
+          .equals(other.getPushUrl())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUBSCRIPTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubscriptionId().hashCode();
+      hash = (37 * hash) + SUBSCRIBER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getSubscriberAddress().hashCode();
+      hash = (37 * hash) + PUBLISHER_DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getPublisherDomain().hashCode();
+      hash = (37 * hash) + PUSH_URL_FIELD_NUMBER;
+      hash = (53 * hash) + getPushUrl().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.PubsubProto.SubscriberIntent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.SubscriberIntent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.SubscriberIntent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.SubscriberIntent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.SubscriberIntent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.SubscriberIntent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.SubscriberIntent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.PubsubProto.SubscriberIntent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.PubsubProto.SubscriberIntent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.PubsubProto.SubscriberIntent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.SubscriberIntent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.PubsubProto.SubscriberIntent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.PubsubProto.SubscriberIntent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * represents a subscriber requesting messages for a specific subscription ID and publisher
+     * </pre>
+     *
+     * Protobuf type {@code pubsub.v1.SubscriberIntent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.SubscriberIntent)
+        com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_SubscriberIntent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_SubscriberIntent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.PubsubProto.SubscriberIntent.class, com.pubsub.v1.PubsubProto.SubscriberIntent.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.PubsubProto.SubscriberIntent.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        subscriptionId_ = "";
+        subscriberAddress_ = "";
+        publisherDomain_ = "";
+        pushUrl_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_SubscriberIntent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.SubscriberIntent getDefaultInstanceForType() {
+        return com.pubsub.v1.PubsubProto.SubscriberIntent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.SubscriberIntent build() {
+        com.pubsub.v1.PubsubProto.SubscriberIntent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.SubscriberIntent buildPartial() {
+        com.pubsub.v1.PubsubProto.SubscriberIntent result = new com.pubsub.v1.PubsubProto.SubscriberIntent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pubsub.v1.PubsubProto.SubscriberIntent result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.subscriptionId_ = subscriptionId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.subscriberAddress_ = subscriberAddress_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.publisherDomain_ = publisherDomain_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.pushUrl_ = pushUrl_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.PubsubProto.SubscriberIntent) {
+          return mergeFrom((com.pubsub.v1.PubsubProto.SubscriberIntent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.PubsubProto.SubscriberIntent other) {
+        if (other == com.pubsub.v1.PubsubProto.SubscriberIntent.getDefaultInstance()) return this;
+        if (!other.getSubscriptionId().isEmpty()) {
+          subscriptionId_ = other.subscriptionId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getSubscriberAddress().isEmpty()) {
+          subscriberAddress_ = other.subscriberAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getPublisherDomain().isEmpty()) {
+          publisherDomain_ = other.publisherDomain_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getPushUrl().isEmpty()) {
+          pushUrl_ = other.pushUrl_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                subscriptionId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                subscriberAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                publisherDomain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                pushUrl_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object subscriptionId_ = "";
+      /**
+       * <pre>
+       * arbitary string representing a subscription, max length of 128
+       * </pre>
+       *
+       * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+       * @return The subscriptionId.
+       */
+      public java.lang.String getSubscriptionId() {
+        java.lang.Object ref = subscriptionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subscriptionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * arbitary string representing a subscription, max length of 128
+       * </pre>
+       *
+       * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+       * @return The bytes for subscriptionId.
+       */
+      public com.google.protobuf.ByteString
+          getSubscriptionIdBytes() {
+        java.lang.Object ref = subscriptionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subscriptionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * arbitary string representing a subscription, max length of 128
+       * </pre>
+       *
+       * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+       * @param value The subscriptionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriptionId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        subscriptionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * arbitary string representing a subscription, max length of 128
+       * </pre>
+       *
+       * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubscriptionId() {
+        subscriptionId_ = getDefaultInstance().getSubscriptionId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * arbitary string representing a subscription, max length of 128
+       * </pre>
+       *
+       * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+       * @param value The bytes for subscriptionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriptionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        subscriptionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object subscriberAddress_ = "";
+      /**
+       * <pre>
+       * account address of the subscriber
+       * </pre>
+       *
+       * <code>string subscriber_address = 2 [json_name = "subscriberAddress"];</code>
+       * @return The subscriberAddress.
+       */
+      public java.lang.String getSubscriberAddress() {
+        java.lang.Object ref = subscriberAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subscriberAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * account address of the subscriber
+       * </pre>
+       *
+       * <code>string subscriber_address = 2 [json_name = "subscriberAddress"];</code>
+       * @return The bytes for subscriberAddress.
+       */
+      public com.google.protobuf.ByteString
+          getSubscriberAddressBytes() {
+        java.lang.Object ref = subscriberAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subscriberAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * account address of the subscriber
+       * </pre>
+       *
+       * <code>string subscriber_address = 2 [json_name = "subscriberAddress"];</code>
+       * @param value The subscriberAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriberAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        subscriberAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * account address of the subscriber
+       * </pre>
+       *
+       * <code>string subscriber_address = 2 [json_name = "subscriberAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubscriberAddress() {
+        subscriberAddress_ = getDefaultInstance().getSubscriberAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * account address of the subscriber
+       * </pre>
+       *
+       * <code>string subscriber_address = 2 [json_name = "subscriberAddress"];</code>
+       * @param value The bytes for subscriberAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriberAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        subscriberAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object publisherDomain_ = "";
+      /**
+       * <pre>
+       * FQDN of the publisher, max length of 256
+       * </pre>
+       *
+       * <code>string publisher_domain = 3 [json_name = "publisherDomain"];</code>
+       * @return The publisherDomain.
+       */
+      public java.lang.String getPublisherDomain() {
+        java.lang.Object ref = publisherDomain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          publisherDomain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * FQDN of the publisher, max length of 256
+       * </pre>
+       *
+       * <code>string publisher_domain = 3 [json_name = "publisherDomain"];</code>
+       * @return The bytes for publisherDomain.
+       */
+      public com.google.protobuf.ByteString
+          getPublisherDomainBytes() {
+        java.lang.Object ref = publisherDomain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          publisherDomain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * FQDN of the publisher, max length of 256
+       * </pre>
+       *
+       * <code>string publisher_domain = 3 [json_name = "publisherDomain"];</code>
+       * @param value The publisherDomain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublisherDomain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        publisherDomain_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * FQDN of the publisher, max length of 256
+       * </pre>
+       *
+       * <code>string publisher_domain = 3 [json_name = "publisherDomain"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublisherDomain() {
+        publisherDomain_ = getDefaultInstance().getPublisherDomain();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * FQDN of the publisher, max length of 256
+       * </pre>
+       *
+       * <code>string publisher_domain = 3 [json_name = "publisherDomain"];</code>
+       * @param value The bytes for publisherDomain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublisherDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        publisherDomain_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pushUrl_ = "";
+      /**
+       * <pre>
+       * optional, only needs to be set if the PublisherIntent for this subscription uses the PUSH method, max length of 512
+       * </pre>
+       *
+       * <code>string push_url = 4 [json_name = "pushUrl"];</code>
+       * @return The pushUrl.
+       */
+      public java.lang.String getPushUrl() {
+        java.lang.Object ref = pushUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pushUrl_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * optional, only needs to be set if the PublisherIntent for this subscription uses the PUSH method, max length of 512
+       * </pre>
+       *
+       * <code>string push_url = 4 [json_name = "pushUrl"];</code>
+       * @return The bytes for pushUrl.
+       */
+      public com.google.protobuf.ByteString
+          getPushUrlBytes() {
+        java.lang.Object ref = pushUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pushUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * optional, only needs to be set if the PublisherIntent for this subscription uses the PUSH method, max length of 512
+       * </pre>
+       *
+       * <code>string push_url = 4 [json_name = "pushUrl"];</code>
+       * @param value The pushUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPushUrl(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        pushUrl_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * optional, only needs to be set if the PublisherIntent for this subscription uses the PUSH method, max length of 512
+       * </pre>
+       *
+       * <code>string push_url = 4 [json_name = "pushUrl"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPushUrl() {
+        pushUrl_ = getDefaultInstance().getPushUrl();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * optional, only needs to be set if the PublisherIntent for this subscription uses the PUSH method, max length of 512
+       * </pre>
+       *
+       * <code>string push_url = 4 [json_name = "pushUrl"];</code>
+       * @param value The bytes for pushUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPushUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        pushUrl_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.SubscriberIntent)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.SubscriberIntent)
+    private static final com.pubsub.v1.PubsubProto.SubscriberIntent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.PubsubProto.SubscriberIntent();
+    }
+
+    public static com.pubsub.v1.PubsubProto.SubscriberIntent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SubscriberIntent>
+        PARSER = new com.google.protobuf.AbstractParser<SubscriberIntent>() {
+      @java.lang.Override
+      public SubscriberIntent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SubscriberIntent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SubscriberIntent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.SubscriberIntent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DefaultSubscriptionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.DefaultSubscription)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * arbitary string representing a subscription, max length of 128
+     * </pre>
+     *
+     * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+     * @return The subscriptionId.
+     */
+    java.lang.String getSubscriptionId();
+    /**
+     * <pre>
+     * arbitary string representing a subscription, max length of 128
+     * </pre>
+     *
+     * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+     * @return The bytes for subscriptionId.
+     */
+    com.google.protobuf.ByteString
+        getSubscriptionIdBytes();
+
+    /**
+     * <pre>
+     * FQDN of the publisher, max length of 256
+     * </pre>
+     *
+     * <code>string publisher_domain = 2 [json_name = "publisherDomain"];</code>
+     * @return The publisherDomain.
+     */
+    java.lang.String getPublisherDomain();
+    /**
+     * <pre>
+     * FQDN of the publisher, max length of 256
+     * </pre>
+     *
+     * <code>string publisher_domain = 2 [json_name = "publisherDomain"];</code>
+     * @return The bytes for publisherDomain.
+     */
+    com.google.protobuf.ByteString
+        getPublisherDomainBytes();
+  }
+  /**
+   * <pre>
+   * represents a default subscription voted in by governance that can be overridden by a subscriber
+   * </pre>
+   *
+   * Protobuf type {@code pubsub.v1.DefaultSubscription}
+   */
+  public static final class DefaultSubscription extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.DefaultSubscription)
+      DefaultSubscriptionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DefaultSubscription.newBuilder() to construct.
+    private DefaultSubscription(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DefaultSubscription() {
+      subscriptionId_ = "";
+      publisherDomain_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DefaultSubscription();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_DefaultSubscription_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_DefaultSubscription_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.PubsubProto.DefaultSubscription.class, com.pubsub.v1.PubsubProto.DefaultSubscription.Builder.class);
+    }
+
+    public static final int SUBSCRIPTION_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object subscriptionId_ = "";
+    /**
+     * <pre>
+     * arbitary string representing a subscription, max length of 128
+     * </pre>
+     *
+     * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+     * @return The subscriptionId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubscriptionId() {
+      java.lang.Object ref = subscriptionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subscriptionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * arbitary string representing a subscription, max length of 128
+     * </pre>
+     *
+     * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+     * @return The bytes for subscriptionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubscriptionIdBytes() {
+      java.lang.Object ref = subscriptionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subscriptionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PUBLISHER_DOMAIN_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object publisherDomain_ = "";
+    /**
+     * <pre>
+     * FQDN of the publisher, max length of 256
+     * </pre>
+     *
+     * <code>string publisher_domain = 2 [json_name = "publisherDomain"];</code>
+     * @return The publisherDomain.
+     */
+    @java.lang.Override
+    public java.lang.String getPublisherDomain() {
+      java.lang.Object ref = publisherDomain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        publisherDomain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * FQDN of the publisher, max length of 256
+     * </pre>
+     *
+     * <code>string publisher_domain = 2 [json_name = "publisherDomain"];</code>
+     * @return The bytes for publisherDomain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPublisherDomainBytes() {
+      java.lang.Object ref = publisherDomain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        publisherDomain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriptionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subscriptionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publisherDomain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, publisherDomain_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriptionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subscriptionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publisherDomain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, publisherDomain_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.PubsubProto.DefaultSubscription)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.PubsubProto.DefaultSubscription other = (com.pubsub.v1.PubsubProto.DefaultSubscription) obj;
+
+      if (!getSubscriptionId()
+          .equals(other.getSubscriptionId())) return false;
+      if (!getPublisherDomain()
+          .equals(other.getPublisherDomain())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUBSCRIPTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubscriptionId().hashCode();
+      hash = (37 * hash) + PUBLISHER_DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getPublisherDomain().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.PubsubProto.DefaultSubscription parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.DefaultSubscription parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.DefaultSubscription parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.DefaultSubscription parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.DefaultSubscription parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.DefaultSubscription parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.DefaultSubscription parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.PubsubProto.DefaultSubscription parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.PubsubProto.DefaultSubscription parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.PubsubProto.DefaultSubscription parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.DefaultSubscription parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.PubsubProto.DefaultSubscription parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.PubsubProto.DefaultSubscription prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * represents a default subscription voted in by governance that can be overridden by a subscriber
+     * </pre>
+     *
+     * Protobuf type {@code pubsub.v1.DefaultSubscription}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.DefaultSubscription)
+        com.pubsub.v1.PubsubProto.DefaultSubscriptionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_DefaultSubscription_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_DefaultSubscription_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.PubsubProto.DefaultSubscription.class, com.pubsub.v1.PubsubProto.DefaultSubscription.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.PubsubProto.DefaultSubscription.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        subscriptionId_ = "";
+        publisherDomain_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_DefaultSubscription_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.DefaultSubscription getDefaultInstanceForType() {
+        return com.pubsub.v1.PubsubProto.DefaultSubscription.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.DefaultSubscription build() {
+        com.pubsub.v1.PubsubProto.DefaultSubscription result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.DefaultSubscription buildPartial() {
+        com.pubsub.v1.PubsubProto.DefaultSubscription result = new com.pubsub.v1.PubsubProto.DefaultSubscription(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pubsub.v1.PubsubProto.DefaultSubscription result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.subscriptionId_ = subscriptionId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.publisherDomain_ = publisherDomain_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.PubsubProto.DefaultSubscription) {
+          return mergeFrom((com.pubsub.v1.PubsubProto.DefaultSubscription)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.PubsubProto.DefaultSubscription other) {
+        if (other == com.pubsub.v1.PubsubProto.DefaultSubscription.getDefaultInstance()) return this;
+        if (!other.getSubscriptionId().isEmpty()) {
+          subscriptionId_ = other.subscriptionId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getPublisherDomain().isEmpty()) {
+          publisherDomain_ = other.publisherDomain_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                subscriptionId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                publisherDomain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object subscriptionId_ = "";
+      /**
+       * <pre>
+       * arbitary string representing a subscription, max length of 128
+       * </pre>
+       *
+       * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+       * @return The subscriptionId.
+       */
+      public java.lang.String getSubscriptionId() {
+        java.lang.Object ref = subscriptionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subscriptionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * arbitary string representing a subscription, max length of 128
+       * </pre>
+       *
+       * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+       * @return The bytes for subscriptionId.
+       */
+      public com.google.protobuf.ByteString
+          getSubscriptionIdBytes() {
+        java.lang.Object ref = subscriptionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subscriptionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * arbitary string representing a subscription, max length of 128
+       * </pre>
+       *
+       * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+       * @param value The subscriptionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriptionId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        subscriptionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * arbitary string representing a subscription, max length of 128
+       * </pre>
+       *
+       * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubscriptionId() {
+        subscriptionId_ = getDefaultInstance().getSubscriptionId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * arbitary string representing a subscription, max length of 128
+       * </pre>
+       *
+       * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+       * @param value The bytes for subscriptionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriptionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        subscriptionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object publisherDomain_ = "";
+      /**
+       * <pre>
+       * FQDN of the publisher, max length of 256
+       * </pre>
+       *
+       * <code>string publisher_domain = 2 [json_name = "publisherDomain"];</code>
+       * @return The publisherDomain.
+       */
+      public java.lang.String getPublisherDomain() {
+        java.lang.Object ref = publisherDomain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          publisherDomain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * FQDN of the publisher, max length of 256
+       * </pre>
+       *
+       * <code>string publisher_domain = 2 [json_name = "publisherDomain"];</code>
+       * @return The bytes for publisherDomain.
+       */
+      public com.google.protobuf.ByteString
+          getPublisherDomainBytes() {
+        java.lang.Object ref = publisherDomain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          publisherDomain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * FQDN of the publisher, max length of 256
+       * </pre>
+       *
+       * <code>string publisher_domain = 2 [json_name = "publisherDomain"];</code>
+       * @param value The publisherDomain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublisherDomain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        publisherDomain_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * FQDN of the publisher, max length of 256
+       * </pre>
+       *
+       * <code>string publisher_domain = 2 [json_name = "publisherDomain"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublisherDomain() {
+        publisherDomain_ = getDefaultInstance().getPublisherDomain();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * FQDN of the publisher, max length of 256
+       * </pre>
+       *
+       * <code>string publisher_domain = 2 [json_name = "publisherDomain"];</code>
+       * @param value The bytes for publisherDomain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublisherDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        publisherDomain_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.DefaultSubscription)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.DefaultSubscription)
+    private static final com.pubsub.v1.PubsubProto.DefaultSubscription DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.PubsubProto.DefaultSubscription();
+    }
+
+    public static com.pubsub.v1.PubsubProto.DefaultSubscription getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DefaultSubscription>
+        PARSER = new com.google.protobuf.AbstractParser<DefaultSubscription>() {
+      @java.lang.Override
+      public DefaultSubscription parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DefaultSubscription> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DefaultSubscription> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.DefaultSubscription getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AddPublisherProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.AddPublisherProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>string domain = 3 [json_name = "domain"];</code>
+     * @return The domain.
+     */
+    java.lang.String getDomain();
+    /**
+     * <code>string domain = 3 [json_name = "domain"];</code>
+     * @return The bytes for domain.
+     */
+    com.google.protobuf.ByteString
+        getDomainBytes();
+
+    /**
+     * <code>string address = 4 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 4 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <code>string proof_url = 5 [json_name = "proofUrl"];</code>
+     * @return The proofUrl.
+     */
+    java.lang.String getProofUrl();
+    /**
+     * <code>string proof_url = 5 [json_name = "proofUrl"];</code>
+     * @return The bytes for proofUrl.
+     */
+    com.google.protobuf.ByteString
+        getProofUrlBytes();
+
+    /**
+     * <code>string ca_cert = 6 [json_name = "caCert"];</code>
+     * @return The caCert.
+     */
+    java.lang.String getCaCert();
+    /**
+     * <code>string ca_cert = 6 [json_name = "caCert"];</code>
+     * @return The bytes for caCert.
+     */
+    com.google.protobuf.ByteString
+        getCaCertBytes();
+  }
+  /**
+   * <pre>
+   * governance proposal to add a publisher, with domain, adress, and ca_cert the same as the Publisher type
+   * proof URL expected in the format: https://&lt;domain&gt;/&lt;address&gt;/cacert.pem and serving cacert.pem matching ca_cert
+   * </pre>
+   *
+   * Protobuf type {@code pubsub.v1.AddPublisherProposal}
+   */
+  public static final class AddPublisherProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.AddPublisherProposal)
+      AddPublisherProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AddPublisherProposal.newBuilder() to construct.
+    private AddPublisherProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AddPublisherProposal() {
+      title_ = "";
+      description_ = "";
+      domain_ = "";
+      address_ = "";
+      proofUrl_ = "";
+      caCert_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddPublisherProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_AddPublisherProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_AddPublisherProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.PubsubProto.AddPublisherProposal.class, com.pubsub.v1.PubsubProto.AddPublisherProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DOMAIN_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object domain_ = "";
+    /**
+     * <code>string domain = 3 [json_name = "domain"];</code>
+     * @return The domain.
+     */
+    @java.lang.Override
+    public java.lang.String getDomain() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string domain = 3 [json_name = "domain"];</code>
+     * @return The bytes for domain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDomainBytes() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 4 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 4 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROOF_URL_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object proofUrl_ = "";
+    /**
+     * <code>string proof_url = 5 [json_name = "proofUrl"];</code>
+     * @return The proofUrl.
+     */
+    @java.lang.Override
+    public java.lang.String getProofUrl() {
+      java.lang.Object ref = proofUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        proofUrl_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string proof_url = 5 [json_name = "proofUrl"];</code>
+     * @return The bytes for proofUrl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProofUrlBytes() {
+      java.lang.Object ref = proofUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        proofUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CA_CERT_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object caCert_ = "";
+    /**
+     * <code>string ca_cert = 6 [json_name = "caCert"];</code>
+     * @return The caCert.
+     */
+    @java.lang.Override
+    public java.lang.String getCaCert() {
+      java.lang.Object ref = caCert_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        caCert_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string ca_cert = 6 [json_name = "caCert"];</code>
+     * @return The bytes for caCert.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCaCertBytes() {
+      java.lang.Object ref = caCert_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        caCert_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(proofUrl_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, proofUrl_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(caCert_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, caCert_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(proofUrl_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, proofUrl_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(caCert_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, caCert_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.PubsubProto.AddPublisherProposal)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.PubsubProto.AddPublisherProposal other = (com.pubsub.v1.PubsubProto.AddPublisherProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getProofUrl()
+          .equals(other.getProofUrl())) return false;
+      if (!getCaCert()
+          .equals(other.getCaCert())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getDomain().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + PROOF_URL_FIELD_NUMBER;
+      hash = (53 * hash) + getProofUrl().hashCode();
+      hash = (37 * hash) + CA_CERT_FIELD_NUMBER;
+      hash = (53 * hash) + getCaCert().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.PubsubProto.AddPublisherProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.AddPublisherProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.AddPublisherProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.AddPublisherProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.AddPublisherProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.AddPublisherProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.AddPublisherProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.PubsubProto.AddPublisherProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.PubsubProto.AddPublisherProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.PubsubProto.AddPublisherProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.AddPublisherProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.PubsubProto.AddPublisherProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.PubsubProto.AddPublisherProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * governance proposal to add a publisher, with domain, adress, and ca_cert the same as the Publisher type
+     * proof URL expected in the format: https://&lt;domain&gt;/&lt;address&gt;/cacert.pem and serving cacert.pem matching ca_cert
+     * </pre>
+     *
+     * Protobuf type {@code pubsub.v1.AddPublisherProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.AddPublisherProposal)
+        com.pubsub.v1.PubsubProto.AddPublisherProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_AddPublisherProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_AddPublisherProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.PubsubProto.AddPublisherProposal.class, com.pubsub.v1.PubsubProto.AddPublisherProposal.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.PubsubProto.AddPublisherProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        domain_ = "";
+        address_ = "";
+        proofUrl_ = "";
+        caCert_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_AddPublisherProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.AddPublisherProposal getDefaultInstanceForType() {
+        return com.pubsub.v1.PubsubProto.AddPublisherProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.AddPublisherProposal build() {
+        com.pubsub.v1.PubsubProto.AddPublisherProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.AddPublisherProposal buildPartial() {
+        com.pubsub.v1.PubsubProto.AddPublisherProposal result = new com.pubsub.v1.PubsubProto.AddPublisherProposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pubsub.v1.PubsubProto.AddPublisherProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.domain_ = domain_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.proofUrl_ = proofUrl_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.caCert_ = caCert_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.PubsubProto.AddPublisherProposal) {
+          return mergeFrom((com.pubsub.v1.PubsubProto.AddPublisherProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.PubsubProto.AddPublisherProposal other) {
+        if (other == com.pubsub.v1.PubsubProto.AddPublisherProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getDomain().isEmpty()) {
+          domain_ = other.domain_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getProofUrl().isEmpty()) {
+          proofUrl_ = other.proofUrl_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getCaCert().isEmpty()) {
+          caCert_ = other.caCert_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                domain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                proofUrl_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                caCert_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object domain_ = "";
+      /**
+       * <code>string domain = 3 [json_name = "domain"];</code>
+       * @return The domain.
+       */
+      public java.lang.String getDomain() {
+        java.lang.Object ref = domain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string domain = 3 [json_name = "domain"];</code>
+       * @return The bytes for domain.
+       */
+      public com.google.protobuf.ByteString
+          getDomainBytes() {
+        java.lang.Object ref = domain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string domain = 3 [json_name = "domain"];</code>
+       * @param value The domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        domain_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string domain = 3 [json_name = "domain"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDomain() {
+        domain_ = getDefaultInstance().getDomain();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string domain = 3 [json_name = "domain"];</code>
+       * @param value The bytes for domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        domain_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 4 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 4 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 4 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 4 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 4 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object proofUrl_ = "";
+      /**
+       * <code>string proof_url = 5 [json_name = "proofUrl"];</code>
+       * @return The proofUrl.
+       */
+      public java.lang.String getProofUrl() {
+        java.lang.Object ref = proofUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          proofUrl_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string proof_url = 5 [json_name = "proofUrl"];</code>
+       * @return The bytes for proofUrl.
+       */
+      public com.google.protobuf.ByteString
+          getProofUrlBytes() {
+        java.lang.Object ref = proofUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          proofUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string proof_url = 5 [json_name = "proofUrl"];</code>
+       * @param value The proofUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProofUrl(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        proofUrl_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string proof_url = 5 [json_name = "proofUrl"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProofUrl() {
+        proofUrl_ = getDefaultInstance().getProofUrl();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string proof_url = 5 [json_name = "proofUrl"];</code>
+       * @param value The bytes for proofUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProofUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        proofUrl_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object caCert_ = "";
+      /**
+       * <code>string ca_cert = 6 [json_name = "caCert"];</code>
+       * @return The caCert.
+       */
+      public java.lang.String getCaCert() {
+        java.lang.Object ref = caCert_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          caCert_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string ca_cert = 6 [json_name = "caCert"];</code>
+       * @return The bytes for caCert.
+       */
+      public com.google.protobuf.ByteString
+          getCaCertBytes() {
+        java.lang.Object ref = caCert_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          caCert_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string ca_cert = 6 [json_name = "caCert"];</code>
+       * @param value The caCert to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCaCert(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        caCert_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ca_cert = 6 [json_name = "caCert"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCaCert() {
+        caCert_ = getDefaultInstance().getCaCert();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ca_cert = 6 [json_name = "caCert"];</code>
+       * @param value The bytes for caCert to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCaCertBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        caCert_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.AddPublisherProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.AddPublisherProposal)
+    private static final com.pubsub.v1.PubsubProto.AddPublisherProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.PubsubProto.AddPublisherProposal();
+    }
+
+    public static com.pubsub.v1.PubsubProto.AddPublisherProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AddPublisherProposal>
+        PARSER = new com.google.protobuf.AbstractParser<AddPublisherProposal>() {
+      @java.lang.Override
+      public AddPublisherProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddPublisherProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddPublisherProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.AddPublisherProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AddPublisherProposalWithDepositOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.AddPublisherProposalWithDeposit)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>string domain = 3 [json_name = "domain"];</code>
+     * @return The domain.
+     */
+    java.lang.String getDomain();
+    /**
+     * <code>string domain = 3 [json_name = "domain"];</code>
+     * @return The bytes for domain.
+     */
+    com.google.protobuf.ByteString
+        getDomainBytes();
+
+    /**
+     * <code>string address = 4 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 4 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <code>string proof_url = 5 [json_name = "proofUrl"];</code>
+     * @return The proofUrl.
+     */
+    java.lang.String getProofUrl();
+    /**
+     * <code>string proof_url = 5 [json_name = "proofUrl"];</code>
+     * @return The bytes for proofUrl.
+     */
+    com.google.protobuf.ByteString
+        getProofUrlBytes();
+
+    /**
+     * <code>string ca_cert = 6 [json_name = "caCert"];</code>
+     * @return The caCert.
+     */
+    java.lang.String getCaCert();
+    /**
+     * <code>string ca_cert = 6 [json_name = "caCert"];</code>
+     * @return The bytes for caCert.
+     */
+    com.google.protobuf.ByteString
+        getCaCertBytes();
+
+    /**
+     * <code>string deposit = 7 [json_name = "deposit"];</code>
+     * @return The deposit.
+     */
+    java.lang.String getDeposit();
+    /**
+     * <code>string deposit = 7 [json_name = "deposit"];</code>
+     * @return The bytes for deposit.
+     */
+    com.google.protobuf.ByteString
+        getDepositBytes();
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.AddPublisherProposalWithDeposit}
+   */
+  public static final class AddPublisherProposalWithDeposit extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.AddPublisherProposalWithDeposit)
+      AddPublisherProposalWithDepositOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AddPublisherProposalWithDeposit.newBuilder() to construct.
+    private AddPublisherProposalWithDeposit(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AddPublisherProposalWithDeposit() {
+      title_ = "";
+      description_ = "";
+      domain_ = "";
+      address_ = "";
+      proofUrl_ = "";
+      caCert_ = "";
+      deposit_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddPublisherProposalWithDeposit();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_AddPublisherProposalWithDeposit_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_AddPublisherProposalWithDeposit_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit.class, com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DOMAIN_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object domain_ = "";
+    /**
+     * <code>string domain = 3 [json_name = "domain"];</code>
+     * @return The domain.
+     */
+    @java.lang.Override
+    public java.lang.String getDomain() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string domain = 3 [json_name = "domain"];</code>
+     * @return The bytes for domain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDomainBytes() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 4 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 4 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROOF_URL_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object proofUrl_ = "";
+    /**
+     * <code>string proof_url = 5 [json_name = "proofUrl"];</code>
+     * @return The proofUrl.
+     */
+    @java.lang.Override
+    public java.lang.String getProofUrl() {
+      java.lang.Object ref = proofUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        proofUrl_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string proof_url = 5 [json_name = "proofUrl"];</code>
+     * @return The bytes for proofUrl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProofUrlBytes() {
+      java.lang.Object ref = proofUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        proofUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CA_CERT_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object caCert_ = "";
+    /**
+     * <code>string ca_cert = 6 [json_name = "caCert"];</code>
+     * @return The caCert.
+     */
+    @java.lang.Override
+    public java.lang.String getCaCert() {
+      java.lang.Object ref = caCert_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        caCert_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string ca_cert = 6 [json_name = "caCert"];</code>
+     * @return The bytes for caCert.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCaCertBytes() {
+      java.lang.Object ref = caCert_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        caCert_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEPOSIT_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object deposit_ = "";
+    /**
+     * <code>string deposit = 7 [json_name = "deposit"];</code>
+     * @return The deposit.
+     */
+    @java.lang.Override
+    public java.lang.String getDeposit() {
+      java.lang.Object ref = deposit_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        deposit_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string deposit = 7 [json_name = "deposit"];</code>
+     * @return The bytes for deposit.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDepositBytes() {
+      java.lang.Object ref = deposit_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deposit_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(proofUrl_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, proofUrl_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(caCert_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, caCert_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deposit_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, deposit_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(proofUrl_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, proofUrl_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(caCert_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, caCert_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deposit_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, deposit_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit other = (com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getProofUrl()
+          .equals(other.getProofUrl())) return false;
+      if (!getCaCert()
+          .equals(other.getCaCert())) return false;
+      if (!getDeposit()
+          .equals(other.getDeposit())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getDomain().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + PROOF_URL_FIELD_NUMBER;
+      hash = (53 * hash) + getProofUrl().hashCode();
+      hash = (37 * hash) + CA_CERT_FIELD_NUMBER;
+      hash = (53 * hash) + getCaCert().hashCode();
+      hash = (37 * hash) + DEPOSIT_FIELD_NUMBER;
+      hash = (53 * hash) + getDeposit().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.AddPublisherProposalWithDeposit}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.AddPublisherProposalWithDeposit)
+        com.pubsub.v1.PubsubProto.AddPublisherProposalWithDepositOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_AddPublisherProposalWithDeposit_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_AddPublisherProposalWithDeposit_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit.class, com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        domain_ = "";
+        address_ = "";
+        proofUrl_ = "";
+        caCert_ = "";
+        deposit_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_AddPublisherProposalWithDeposit_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit getDefaultInstanceForType() {
+        return com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit build() {
+        com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit buildPartial() {
+        com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit result = new com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.domain_ = domain_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.proofUrl_ = proofUrl_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.caCert_ = caCert_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.deposit_ = deposit_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit) {
+          return mergeFrom((com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit other) {
+        if (other == com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getDomain().isEmpty()) {
+          domain_ = other.domain_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getProofUrl().isEmpty()) {
+          proofUrl_ = other.proofUrl_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getCaCert().isEmpty()) {
+          caCert_ = other.caCert_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getDeposit().isEmpty()) {
+          deposit_ = other.deposit_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                domain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                proofUrl_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                caCert_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                deposit_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object domain_ = "";
+      /**
+       * <code>string domain = 3 [json_name = "domain"];</code>
+       * @return The domain.
+       */
+      public java.lang.String getDomain() {
+        java.lang.Object ref = domain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string domain = 3 [json_name = "domain"];</code>
+       * @return The bytes for domain.
+       */
+      public com.google.protobuf.ByteString
+          getDomainBytes() {
+        java.lang.Object ref = domain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string domain = 3 [json_name = "domain"];</code>
+       * @param value The domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        domain_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string domain = 3 [json_name = "domain"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDomain() {
+        domain_ = getDefaultInstance().getDomain();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string domain = 3 [json_name = "domain"];</code>
+       * @param value The bytes for domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        domain_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 4 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 4 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 4 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 4 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 4 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object proofUrl_ = "";
+      /**
+       * <code>string proof_url = 5 [json_name = "proofUrl"];</code>
+       * @return The proofUrl.
+       */
+      public java.lang.String getProofUrl() {
+        java.lang.Object ref = proofUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          proofUrl_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string proof_url = 5 [json_name = "proofUrl"];</code>
+       * @return The bytes for proofUrl.
+       */
+      public com.google.protobuf.ByteString
+          getProofUrlBytes() {
+        java.lang.Object ref = proofUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          proofUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string proof_url = 5 [json_name = "proofUrl"];</code>
+       * @param value The proofUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProofUrl(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        proofUrl_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string proof_url = 5 [json_name = "proofUrl"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProofUrl() {
+        proofUrl_ = getDefaultInstance().getProofUrl();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string proof_url = 5 [json_name = "proofUrl"];</code>
+       * @param value The bytes for proofUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProofUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        proofUrl_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object caCert_ = "";
+      /**
+       * <code>string ca_cert = 6 [json_name = "caCert"];</code>
+       * @return The caCert.
+       */
+      public java.lang.String getCaCert() {
+        java.lang.Object ref = caCert_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          caCert_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string ca_cert = 6 [json_name = "caCert"];</code>
+       * @return The bytes for caCert.
+       */
+      public com.google.protobuf.ByteString
+          getCaCertBytes() {
+        java.lang.Object ref = caCert_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          caCert_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string ca_cert = 6 [json_name = "caCert"];</code>
+       * @param value The caCert to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCaCert(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        caCert_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ca_cert = 6 [json_name = "caCert"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCaCert() {
+        caCert_ = getDefaultInstance().getCaCert();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ca_cert = 6 [json_name = "caCert"];</code>
+       * @param value The bytes for caCert to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCaCertBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        caCert_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object deposit_ = "";
+      /**
+       * <code>string deposit = 7 [json_name = "deposit"];</code>
+       * @return The deposit.
+       */
+      public java.lang.String getDeposit() {
+        java.lang.Object ref = deposit_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          deposit_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string deposit = 7 [json_name = "deposit"];</code>
+       * @return The bytes for deposit.
+       */
+      public com.google.protobuf.ByteString
+          getDepositBytes() {
+        java.lang.Object ref = deposit_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          deposit_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string deposit = 7 [json_name = "deposit"];</code>
+       * @param value The deposit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeposit(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        deposit_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string deposit = 7 [json_name = "deposit"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeposit() {
+        deposit_ = getDefaultInstance().getDeposit();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string deposit = 7 [json_name = "deposit"];</code>
+       * @param value The bytes for deposit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepositBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        deposit_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.AddPublisherProposalWithDeposit)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.AddPublisherProposalWithDeposit)
+    private static final com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit();
+    }
+
+    public static com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AddPublisherProposalWithDeposit>
+        PARSER = new com.google.protobuf.AbstractParser<AddPublisherProposalWithDeposit>() {
+      @java.lang.Override
+      public AddPublisherProposalWithDeposit parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddPublisherProposalWithDeposit> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddPublisherProposalWithDeposit> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.AddPublisherProposalWithDeposit getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RemovePublisherProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.RemovePublisherProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>string domain = 3 [json_name = "domain"];</code>
+     * @return The domain.
+     */
+    java.lang.String getDomain();
+    /**
+     * <code>string domain = 3 [json_name = "domain"];</code>
+     * @return The bytes for domain.
+     */
+    com.google.protobuf.ByteString
+        getDomainBytes();
+  }
+  /**
+   * <pre>
+   * governance proposal to remove a publisher (publishers can remove themselves, but this might be necessary in the
+   * event of a malicious publisher or a key compromise), since Publishers are unique by domain, it's the only
+   * necessary information to remove one
+   * </pre>
+   *
+   * Protobuf type {@code pubsub.v1.RemovePublisherProposal}
+   */
+  public static final class RemovePublisherProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.RemovePublisherProposal)
+      RemovePublisherProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RemovePublisherProposal.newBuilder() to construct.
+    private RemovePublisherProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RemovePublisherProposal() {
+      title_ = "";
+      description_ = "";
+      domain_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RemovePublisherProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_RemovePublisherProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_RemovePublisherProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.PubsubProto.RemovePublisherProposal.class, com.pubsub.v1.PubsubProto.RemovePublisherProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DOMAIN_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object domain_ = "";
+    /**
+     * <code>string domain = 3 [json_name = "domain"];</code>
+     * @return The domain.
+     */
+    @java.lang.Override
+    public java.lang.String getDomain() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string domain = 3 [json_name = "domain"];</code>
+     * @return The bytes for domain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDomainBytes() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, domain_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, domain_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.PubsubProto.RemovePublisherProposal)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.PubsubProto.RemovePublisherProposal other = (com.pubsub.v1.PubsubProto.RemovePublisherProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getDomain().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.PubsubProto.RemovePublisherProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.RemovePublisherProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.RemovePublisherProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.RemovePublisherProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.RemovePublisherProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.RemovePublisherProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.RemovePublisherProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.PubsubProto.RemovePublisherProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.PubsubProto.RemovePublisherProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.PubsubProto.RemovePublisherProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.RemovePublisherProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.PubsubProto.RemovePublisherProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.PubsubProto.RemovePublisherProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * governance proposal to remove a publisher (publishers can remove themselves, but this might be necessary in the
+     * event of a malicious publisher or a key compromise), since Publishers are unique by domain, it's the only
+     * necessary information to remove one
+     * </pre>
+     *
+     * Protobuf type {@code pubsub.v1.RemovePublisherProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.RemovePublisherProposal)
+        com.pubsub.v1.PubsubProto.RemovePublisherProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_RemovePublisherProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_RemovePublisherProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.PubsubProto.RemovePublisherProposal.class, com.pubsub.v1.PubsubProto.RemovePublisherProposal.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.PubsubProto.RemovePublisherProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        domain_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_RemovePublisherProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.RemovePublisherProposal getDefaultInstanceForType() {
+        return com.pubsub.v1.PubsubProto.RemovePublisherProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.RemovePublisherProposal build() {
+        com.pubsub.v1.PubsubProto.RemovePublisherProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.RemovePublisherProposal buildPartial() {
+        com.pubsub.v1.PubsubProto.RemovePublisherProposal result = new com.pubsub.v1.PubsubProto.RemovePublisherProposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pubsub.v1.PubsubProto.RemovePublisherProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.domain_ = domain_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.PubsubProto.RemovePublisherProposal) {
+          return mergeFrom((com.pubsub.v1.PubsubProto.RemovePublisherProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.PubsubProto.RemovePublisherProposal other) {
+        if (other == com.pubsub.v1.PubsubProto.RemovePublisherProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getDomain().isEmpty()) {
+          domain_ = other.domain_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                domain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object domain_ = "";
+      /**
+       * <code>string domain = 3 [json_name = "domain"];</code>
+       * @return The domain.
+       */
+      public java.lang.String getDomain() {
+        java.lang.Object ref = domain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string domain = 3 [json_name = "domain"];</code>
+       * @return The bytes for domain.
+       */
+      public com.google.protobuf.ByteString
+          getDomainBytes() {
+        java.lang.Object ref = domain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string domain = 3 [json_name = "domain"];</code>
+       * @param value The domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        domain_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string domain = 3 [json_name = "domain"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDomain() {
+        domain_ = getDefaultInstance().getDomain();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string domain = 3 [json_name = "domain"];</code>
+       * @param value The bytes for domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        domain_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.RemovePublisherProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.RemovePublisherProposal)
+    private static final com.pubsub.v1.PubsubProto.RemovePublisherProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.PubsubProto.RemovePublisherProposal();
+    }
+
+    public static com.pubsub.v1.PubsubProto.RemovePublisherProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RemovePublisherProposal>
+        PARSER = new com.google.protobuf.AbstractParser<RemovePublisherProposal>() {
+      @java.lang.Override
+      public RemovePublisherProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RemovePublisherProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RemovePublisherProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.RemovePublisherProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RemovePublisherProposalWithDepositOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.RemovePublisherProposalWithDeposit)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>string domain = 3 [json_name = "domain"];</code>
+     * @return The domain.
+     */
+    java.lang.String getDomain();
+    /**
+     * <code>string domain = 3 [json_name = "domain"];</code>
+     * @return The bytes for domain.
+     */
+    com.google.protobuf.ByteString
+        getDomainBytes();
+
+    /**
+     * <code>string deposit = 4 [json_name = "deposit"];</code>
+     * @return The deposit.
+     */
+    java.lang.String getDeposit();
+    /**
+     * <code>string deposit = 4 [json_name = "deposit"];</code>
+     * @return The bytes for deposit.
+     */
+    com.google.protobuf.ByteString
+        getDepositBytes();
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.RemovePublisherProposalWithDeposit}
+   */
+  public static final class RemovePublisherProposalWithDeposit extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.RemovePublisherProposalWithDeposit)
+      RemovePublisherProposalWithDepositOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RemovePublisherProposalWithDeposit.newBuilder() to construct.
+    private RemovePublisherProposalWithDeposit(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RemovePublisherProposalWithDeposit() {
+      title_ = "";
+      description_ = "";
+      domain_ = "";
+      deposit_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RemovePublisherProposalWithDeposit();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_RemovePublisherProposalWithDeposit_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_RemovePublisherProposalWithDeposit_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit.class, com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DOMAIN_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object domain_ = "";
+    /**
+     * <code>string domain = 3 [json_name = "domain"];</code>
+     * @return The domain.
+     */
+    @java.lang.Override
+    public java.lang.String getDomain() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string domain = 3 [json_name = "domain"];</code>
+     * @return The bytes for domain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDomainBytes() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEPOSIT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object deposit_ = "";
+    /**
+     * <code>string deposit = 4 [json_name = "deposit"];</code>
+     * @return The deposit.
+     */
+    @java.lang.Override
+    public java.lang.String getDeposit() {
+      java.lang.Object ref = deposit_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        deposit_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string deposit = 4 [json_name = "deposit"];</code>
+     * @return The bytes for deposit.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDepositBytes() {
+      java.lang.Object ref = deposit_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deposit_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deposit_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, deposit_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(domain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, domain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deposit_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, deposit_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit other = (com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
+      if (!getDeposit()
+          .equals(other.getDeposit())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getDomain().hashCode();
+      hash = (37 * hash) + DEPOSIT_FIELD_NUMBER;
+      hash = (53 * hash) + getDeposit().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.RemovePublisherProposalWithDeposit}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.RemovePublisherProposalWithDeposit)
+        com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDepositOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_RemovePublisherProposalWithDeposit_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_RemovePublisherProposalWithDeposit_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit.class, com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        domain_ = "";
+        deposit_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_RemovePublisherProposalWithDeposit_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit getDefaultInstanceForType() {
+        return com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit build() {
+        com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit buildPartial() {
+        com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit result = new com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.domain_ = domain_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.deposit_ = deposit_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit) {
+          return mergeFrom((com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit other) {
+        if (other == com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getDomain().isEmpty()) {
+          domain_ = other.domain_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getDeposit().isEmpty()) {
+          deposit_ = other.deposit_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                domain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                deposit_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object domain_ = "";
+      /**
+       * <code>string domain = 3 [json_name = "domain"];</code>
+       * @return The domain.
+       */
+      public java.lang.String getDomain() {
+        java.lang.Object ref = domain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string domain = 3 [json_name = "domain"];</code>
+       * @return The bytes for domain.
+       */
+      public com.google.protobuf.ByteString
+          getDomainBytes() {
+        java.lang.Object ref = domain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string domain = 3 [json_name = "domain"];</code>
+       * @param value The domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        domain_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string domain = 3 [json_name = "domain"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDomain() {
+        domain_ = getDefaultInstance().getDomain();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string domain = 3 [json_name = "domain"];</code>
+       * @param value The bytes for domain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        domain_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object deposit_ = "";
+      /**
+       * <code>string deposit = 4 [json_name = "deposit"];</code>
+       * @return The deposit.
+       */
+      public java.lang.String getDeposit() {
+        java.lang.Object ref = deposit_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          deposit_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string deposit = 4 [json_name = "deposit"];</code>
+       * @return The bytes for deposit.
+       */
+      public com.google.protobuf.ByteString
+          getDepositBytes() {
+        java.lang.Object ref = deposit_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          deposit_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string deposit = 4 [json_name = "deposit"];</code>
+       * @param value The deposit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeposit(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        deposit_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string deposit = 4 [json_name = "deposit"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeposit() {
+        deposit_ = getDefaultInstance().getDeposit();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string deposit = 4 [json_name = "deposit"];</code>
+       * @param value The bytes for deposit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepositBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        deposit_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.RemovePublisherProposalWithDeposit)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.RemovePublisherProposalWithDeposit)
+    private static final com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit();
+    }
+
+    public static com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RemovePublisherProposalWithDeposit>
+        PARSER = new com.google.protobuf.AbstractParser<RemovePublisherProposalWithDeposit>() {
+      @java.lang.Override
+      public RemovePublisherProposalWithDeposit parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RemovePublisherProposalWithDeposit> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RemovePublisherProposalWithDeposit> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.RemovePublisherProposalWithDeposit getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AddDefaultSubscriptionProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.AddDefaultSubscriptionProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+     * @return The subscriptionId.
+     */
+    java.lang.String getSubscriptionId();
+    /**
+     * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+     * @return The bytes for subscriptionId.
+     */
+    com.google.protobuf.ByteString
+        getSubscriptionIdBytes();
+
+    /**
+     * <code>string publisher_domain = 4 [json_name = "publisherDomain"];</code>
+     * @return The publisherDomain.
+     */
+    java.lang.String getPublisherDomain();
+    /**
+     * <code>string publisher_domain = 4 [json_name = "publisherDomain"];</code>
+     * @return The bytes for publisherDomain.
+     */
+    com.google.protobuf.ByteString
+        getPublisherDomainBytes();
+  }
+  /**
+   * <pre>
+   * set the default publisher for a given subscription ID
+   * these can be overridden by the client
+   * </pre>
+   *
+   * Protobuf type {@code pubsub.v1.AddDefaultSubscriptionProposal}
+   */
+  public static final class AddDefaultSubscriptionProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.AddDefaultSubscriptionProposal)
+      AddDefaultSubscriptionProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AddDefaultSubscriptionProposal.newBuilder() to construct.
+    private AddDefaultSubscriptionProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AddDefaultSubscriptionProposal() {
+      title_ = "";
+      description_ = "";
+      subscriptionId_ = "";
+      publisherDomain_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddDefaultSubscriptionProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_AddDefaultSubscriptionProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_AddDefaultSubscriptionProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal.class, com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUBSCRIPTION_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object subscriptionId_ = "";
+    /**
+     * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+     * @return The subscriptionId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubscriptionId() {
+      java.lang.Object ref = subscriptionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subscriptionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+     * @return The bytes for subscriptionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubscriptionIdBytes() {
+      java.lang.Object ref = subscriptionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subscriptionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PUBLISHER_DOMAIN_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object publisherDomain_ = "";
+    /**
+     * <code>string publisher_domain = 4 [json_name = "publisherDomain"];</code>
+     * @return The publisherDomain.
+     */
+    @java.lang.Override
+    public java.lang.String getPublisherDomain() {
+      java.lang.Object ref = publisherDomain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        publisherDomain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string publisher_domain = 4 [json_name = "publisherDomain"];</code>
+     * @return The bytes for publisherDomain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPublisherDomainBytes() {
+      java.lang.Object ref = publisherDomain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        publisherDomain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriptionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, subscriptionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publisherDomain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, publisherDomain_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriptionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, subscriptionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publisherDomain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, publisherDomain_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal other = (com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getSubscriptionId()
+          .equals(other.getSubscriptionId())) return false;
+      if (!getPublisherDomain()
+          .equals(other.getPublisherDomain())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + SUBSCRIPTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubscriptionId().hashCode();
+      hash = (37 * hash) + PUBLISHER_DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getPublisherDomain().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * set the default publisher for a given subscription ID
+     * these can be overridden by the client
+     * </pre>
+     *
+     * Protobuf type {@code pubsub.v1.AddDefaultSubscriptionProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.AddDefaultSubscriptionProposal)
+        com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_AddDefaultSubscriptionProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_AddDefaultSubscriptionProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal.class, com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        subscriptionId_ = "";
+        publisherDomain_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_AddDefaultSubscriptionProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal getDefaultInstanceForType() {
+        return com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal build() {
+        com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal buildPartial() {
+        com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal result = new com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.subscriptionId_ = subscriptionId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.publisherDomain_ = publisherDomain_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal) {
+          return mergeFrom((com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal other) {
+        if (other == com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getSubscriptionId().isEmpty()) {
+          subscriptionId_ = other.subscriptionId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getPublisherDomain().isEmpty()) {
+          publisherDomain_ = other.publisherDomain_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                subscriptionId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                publisherDomain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object subscriptionId_ = "";
+      /**
+       * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+       * @return The subscriptionId.
+       */
+      public java.lang.String getSubscriptionId() {
+        java.lang.Object ref = subscriptionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subscriptionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+       * @return The bytes for subscriptionId.
+       */
+      public com.google.protobuf.ByteString
+          getSubscriptionIdBytes() {
+        java.lang.Object ref = subscriptionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subscriptionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+       * @param value The subscriptionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriptionId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        subscriptionId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubscriptionId() {
+        subscriptionId_ = getDefaultInstance().getSubscriptionId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+       * @param value The bytes for subscriptionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriptionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        subscriptionId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object publisherDomain_ = "";
+      /**
+       * <code>string publisher_domain = 4 [json_name = "publisherDomain"];</code>
+       * @return The publisherDomain.
+       */
+      public java.lang.String getPublisherDomain() {
+        java.lang.Object ref = publisherDomain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          publisherDomain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string publisher_domain = 4 [json_name = "publisherDomain"];</code>
+       * @return The bytes for publisherDomain.
+       */
+      public com.google.protobuf.ByteString
+          getPublisherDomainBytes() {
+        java.lang.Object ref = publisherDomain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          publisherDomain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string publisher_domain = 4 [json_name = "publisherDomain"];</code>
+       * @param value The publisherDomain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublisherDomain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        publisherDomain_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string publisher_domain = 4 [json_name = "publisherDomain"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublisherDomain() {
+        publisherDomain_ = getDefaultInstance().getPublisherDomain();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string publisher_domain = 4 [json_name = "publisherDomain"];</code>
+       * @param value The bytes for publisherDomain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublisherDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        publisherDomain_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.AddDefaultSubscriptionProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.AddDefaultSubscriptionProposal)
+    private static final com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal();
+    }
+
+    public static com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AddDefaultSubscriptionProposal>
+        PARSER = new com.google.protobuf.AbstractParser<AddDefaultSubscriptionProposal>() {
+      @java.lang.Override
+      public AddDefaultSubscriptionProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddDefaultSubscriptionProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddDefaultSubscriptionProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AddDefaultSubscriptionProposalWithDepositOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.AddDefaultSubscriptionProposalWithDeposit)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+     * @return The subscriptionId.
+     */
+    java.lang.String getSubscriptionId();
+    /**
+     * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+     * @return The bytes for subscriptionId.
+     */
+    com.google.protobuf.ByteString
+        getSubscriptionIdBytes();
+
+    /**
+     * <code>string publisher_domain = 4 [json_name = "publisherDomain"];</code>
+     * @return The publisherDomain.
+     */
+    java.lang.String getPublisherDomain();
+    /**
+     * <code>string publisher_domain = 4 [json_name = "publisherDomain"];</code>
+     * @return The bytes for publisherDomain.
+     */
+    com.google.protobuf.ByteString
+        getPublisherDomainBytes();
+
+    /**
+     * <code>string deposit = 5 [json_name = "deposit"];</code>
+     * @return The deposit.
+     */
+    java.lang.String getDeposit();
+    /**
+     * <code>string deposit = 5 [json_name = "deposit"];</code>
+     * @return The bytes for deposit.
+     */
+    com.google.protobuf.ByteString
+        getDepositBytes();
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.AddDefaultSubscriptionProposalWithDeposit}
+   */
+  public static final class AddDefaultSubscriptionProposalWithDeposit extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.AddDefaultSubscriptionProposalWithDeposit)
+      AddDefaultSubscriptionProposalWithDepositOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AddDefaultSubscriptionProposalWithDeposit.newBuilder() to construct.
+    private AddDefaultSubscriptionProposalWithDeposit(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AddDefaultSubscriptionProposalWithDeposit() {
+      title_ = "";
+      description_ = "";
+      subscriptionId_ = "";
+      publisherDomain_ = "";
+      deposit_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddDefaultSubscriptionProposalWithDeposit();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_AddDefaultSubscriptionProposalWithDeposit_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_AddDefaultSubscriptionProposalWithDeposit_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit.class, com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUBSCRIPTION_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object subscriptionId_ = "";
+    /**
+     * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+     * @return The subscriptionId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubscriptionId() {
+      java.lang.Object ref = subscriptionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subscriptionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+     * @return The bytes for subscriptionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubscriptionIdBytes() {
+      java.lang.Object ref = subscriptionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subscriptionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PUBLISHER_DOMAIN_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object publisherDomain_ = "";
+    /**
+     * <code>string publisher_domain = 4 [json_name = "publisherDomain"];</code>
+     * @return The publisherDomain.
+     */
+    @java.lang.Override
+    public java.lang.String getPublisherDomain() {
+      java.lang.Object ref = publisherDomain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        publisherDomain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string publisher_domain = 4 [json_name = "publisherDomain"];</code>
+     * @return The bytes for publisherDomain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPublisherDomainBytes() {
+      java.lang.Object ref = publisherDomain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        publisherDomain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEPOSIT_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object deposit_ = "";
+    /**
+     * <code>string deposit = 5 [json_name = "deposit"];</code>
+     * @return The deposit.
+     */
+    @java.lang.Override
+    public java.lang.String getDeposit() {
+      java.lang.Object ref = deposit_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        deposit_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string deposit = 5 [json_name = "deposit"];</code>
+     * @return The bytes for deposit.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDepositBytes() {
+      java.lang.Object ref = deposit_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deposit_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriptionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, subscriptionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publisherDomain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, publisherDomain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deposit_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, deposit_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriptionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, subscriptionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publisherDomain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, publisherDomain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deposit_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, deposit_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit other = (com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getSubscriptionId()
+          .equals(other.getSubscriptionId())) return false;
+      if (!getPublisherDomain()
+          .equals(other.getPublisherDomain())) return false;
+      if (!getDeposit()
+          .equals(other.getDeposit())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + SUBSCRIPTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubscriptionId().hashCode();
+      hash = (37 * hash) + PUBLISHER_DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getPublisherDomain().hashCode();
+      hash = (37 * hash) + DEPOSIT_FIELD_NUMBER;
+      hash = (53 * hash) + getDeposit().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.AddDefaultSubscriptionProposalWithDeposit}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.AddDefaultSubscriptionProposalWithDeposit)
+        com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDepositOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_AddDefaultSubscriptionProposalWithDeposit_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_AddDefaultSubscriptionProposalWithDeposit_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit.class, com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        subscriptionId_ = "";
+        publisherDomain_ = "";
+        deposit_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_AddDefaultSubscriptionProposalWithDeposit_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit getDefaultInstanceForType() {
+        return com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit build() {
+        com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit buildPartial() {
+        com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit result = new com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.subscriptionId_ = subscriptionId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.publisherDomain_ = publisherDomain_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.deposit_ = deposit_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit) {
+          return mergeFrom((com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit other) {
+        if (other == com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getSubscriptionId().isEmpty()) {
+          subscriptionId_ = other.subscriptionId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getPublisherDomain().isEmpty()) {
+          publisherDomain_ = other.publisherDomain_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getDeposit().isEmpty()) {
+          deposit_ = other.deposit_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                subscriptionId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                publisherDomain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                deposit_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object subscriptionId_ = "";
+      /**
+       * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+       * @return The subscriptionId.
+       */
+      public java.lang.String getSubscriptionId() {
+        java.lang.Object ref = subscriptionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subscriptionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+       * @return The bytes for subscriptionId.
+       */
+      public com.google.protobuf.ByteString
+          getSubscriptionIdBytes() {
+        java.lang.Object ref = subscriptionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subscriptionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+       * @param value The subscriptionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriptionId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        subscriptionId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubscriptionId() {
+        subscriptionId_ = getDefaultInstance().getSubscriptionId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+       * @param value The bytes for subscriptionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriptionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        subscriptionId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object publisherDomain_ = "";
+      /**
+       * <code>string publisher_domain = 4 [json_name = "publisherDomain"];</code>
+       * @return The publisherDomain.
+       */
+      public java.lang.String getPublisherDomain() {
+        java.lang.Object ref = publisherDomain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          publisherDomain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string publisher_domain = 4 [json_name = "publisherDomain"];</code>
+       * @return The bytes for publisherDomain.
+       */
+      public com.google.protobuf.ByteString
+          getPublisherDomainBytes() {
+        java.lang.Object ref = publisherDomain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          publisherDomain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string publisher_domain = 4 [json_name = "publisherDomain"];</code>
+       * @param value The publisherDomain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublisherDomain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        publisherDomain_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string publisher_domain = 4 [json_name = "publisherDomain"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublisherDomain() {
+        publisherDomain_ = getDefaultInstance().getPublisherDomain();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string publisher_domain = 4 [json_name = "publisherDomain"];</code>
+       * @param value The bytes for publisherDomain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublisherDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        publisherDomain_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object deposit_ = "";
+      /**
+       * <code>string deposit = 5 [json_name = "deposit"];</code>
+       * @return The deposit.
+       */
+      public java.lang.String getDeposit() {
+        java.lang.Object ref = deposit_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          deposit_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string deposit = 5 [json_name = "deposit"];</code>
+       * @return The bytes for deposit.
+       */
+      public com.google.protobuf.ByteString
+          getDepositBytes() {
+        java.lang.Object ref = deposit_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          deposit_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string deposit = 5 [json_name = "deposit"];</code>
+       * @param value The deposit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeposit(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        deposit_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string deposit = 5 [json_name = "deposit"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeposit() {
+        deposit_ = getDefaultInstance().getDeposit();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string deposit = 5 [json_name = "deposit"];</code>
+       * @param value The bytes for deposit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepositBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        deposit_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.AddDefaultSubscriptionProposalWithDeposit)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.AddDefaultSubscriptionProposalWithDeposit)
+    private static final com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit();
+    }
+
+    public static com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AddDefaultSubscriptionProposalWithDeposit>
+        PARSER = new com.google.protobuf.AbstractParser<AddDefaultSubscriptionProposalWithDeposit>() {
+      @java.lang.Override
+      public AddDefaultSubscriptionProposalWithDeposit parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddDefaultSubscriptionProposalWithDeposit> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddDefaultSubscriptionProposalWithDeposit> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.AddDefaultSubscriptionProposalWithDeposit getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RemoveDefaultSubscriptionProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.RemoveDefaultSubscriptionProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+     * @return The subscriptionId.
+     */
+    java.lang.String getSubscriptionId();
+    /**
+     * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+     * @return The bytes for subscriptionId.
+     */
+    com.google.protobuf.ByteString
+        getSubscriptionIdBytes();
+  }
+  /**
+   * <pre>
+   * remove a default subscription
+   * </pre>
+   *
+   * Protobuf type {@code pubsub.v1.RemoveDefaultSubscriptionProposal}
+   */
+  public static final class RemoveDefaultSubscriptionProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.RemoveDefaultSubscriptionProposal)
+      RemoveDefaultSubscriptionProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RemoveDefaultSubscriptionProposal.newBuilder() to construct.
+    private RemoveDefaultSubscriptionProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RemoveDefaultSubscriptionProposal() {
+      title_ = "";
+      description_ = "";
+      subscriptionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RemoveDefaultSubscriptionProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_RemoveDefaultSubscriptionProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_RemoveDefaultSubscriptionProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal.class, com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUBSCRIPTION_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object subscriptionId_ = "";
+    /**
+     * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+     * @return The subscriptionId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubscriptionId() {
+      java.lang.Object ref = subscriptionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subscriptionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+     * @return The bytes for subscriptionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubscriptionIdBytes() {
+      java.lang.Object ref = subscriptionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subscriptionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriptionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, subscriptionId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriptionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, subscriptionId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal other = (com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getSubscriptionId()
+          .equals(other.getSubscriptionId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + SUBSCRIPTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubscriptionId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * remove a default subscription
+     * </pre>
+     *
+     * Protobuf type {@code pubsub.v1.RemoveDefaultSubscriptionProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.RemoveDefaultSubscriptionProposal)
+        com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_RemoveDefaultSubscriptionProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_RemoveDefaultSubscriptionProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal.class, com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        subscriptionId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_RemoveDefaultSubscriptionProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal getDefaultInstanceForType() {
+        return com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal build() {
+        com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal buildPartial() {
+        com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal result = new com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.subscriptionId_ = subscriptionId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal) {
+          return mergeFrom((com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal other) {
+        if (other == com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getSubscriptionId().isEmpty()) {
+          subscriptionId_ = other.subscriptionId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                subscriptionId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object subscriptionId_ = "";
+      /**
+       * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+       * @return The subscriptionId.
+       */
+      public java.lang.String getSubscriptionId() {
+        java.lang.Object ref = subscriptionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subscriptionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+       * @return The bytes for subscriptionId.
+       */
+      public com.google.protobuf.ByteString
+          getSubscriptionIdBytes() {
+        java.lang.Object ref = subscriptionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subscriptionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+       * @param value The subscriptionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriptionId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        subscriptionId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubscriptionId() {
+        subscriptionId_ = getDefaultInstance().getSubscriptionId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+       * @param value The bytes for subscriptionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriptionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        subscriptionId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.RemoveDefaultSubscriptionProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.RemoveDefaultSubscriptionProposal)
+    private static final com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal();
+    }
+
+    public static com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RemoveDefaultSubscriptionProposal>
+        PARSER = new com.google.protobuf.AbstractParser<RemoveDefaultSubscriptionProposal>() {
+      @java.lang.Override
+      public RemoveDefaultSubscriptionProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RemoveDefaultSubscriptionProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RemoveDefaultSubscriptionProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RemoveDefaultSubscriptionProposalWithDepositOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.RemoveDefaultSubscriptionProposalWithDeposit)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+     * @return The subscriptionId.
+     */
+    java.lang.String getSubscriptionId();
+    /**
+     * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+     * @return The bytes for subscriptionId.
+     */
+    com.google.protobuf.ByteString
+        getSubscriptionIdBytes();
+
+    /**
+     * <code>string deposit = 4 [json_name = "deposit"];</code>
+     * @return The deposit.
+     */
+    java.lang.String getDeposit();
+    /**
+     * <code>string deposit = 4 [json_name = "deposit"];</code>
+     * @return The bytes for deposit.
+     */
+    com.google.protobuf.ByteString
+        getDepositBytes();
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.RemoveDefaultSubscriptionProposalWithDeposit}
+   */
+  public static final class RemoveDefaultSubscriptionProposalWithDeposit extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.RemoveDefaultSubscriptionProposalWithDeposit)
+      RemoveDefaultSubscriptionProposalWithDepositOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RemoveDefaultSubscriptionProposalWithDeposit.newBuilder() to construct.
+    private RemoveDefaultSubscriptionProposalWithDeposit(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RemoveDefaultSubscriptionProposalWithDeposit() {
+      title_ = "";
+      description_ = "";
+      subscriptionId_ = "";
+      deposit_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RemoveDefaultSubscriptionProposalWithDeposit();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_RemoveDefaultSubscriptionProposalWithDeposit_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_RemoveDefaultSubscriptionProposalWithDeposit_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit.class, com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUBSCRIPTION_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object subscriptionId_ = "";
+    /**
+     * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+     * @return The subscriptionId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubscriptionId() {
+      java.lang.Object ref = subscriptionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subscriptionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+     * @return The bytes for subscriptionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubscriptionIdBytes() {
+      java.lang.Object ref = subscriptionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subscriptionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEPOSIT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object deposit_ = "";
+    /**
+     * <code>string deposit = 4 [json_name = "deposit"];</code>
+     * @return The deposit.
+     */
+    @java.lang.Override
+    public java.lang.String getDeposit() {
+      java.lang.Object ref = deposit_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        deposit_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string deposit = 4 [json_name = "deposit"];</code>
+     * @return The bytes for deposit.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDepositBytes() {
+      java.lang.Object ref = deposit_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deposit_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriptionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, subscriptionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deposit_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, deposit_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriptionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, subscriptionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deposit_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, deposit_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit other = (com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getSubscriptionId()
+          .equals(other.getSubscriptionId())) return false;
+      if (!getDeposit()
+          .equals(other.getDeposit())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + SUBSCRIPTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubscriptionId().hashCode();
+      hash = (37 * hash) + DEPOSIT_FIELD_NUMBER;
+      hash = (53 * hash) + getDeposit().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.RemoveDefaultSubscriptionProposalWithDeposit}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.RemoveDefaultSubscriptionProposalWithDeposit)
+        com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDepositOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_RemoveDefaultSubscriptionProposalWithDeposit_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_RemoveDefaultSubscriptionProposalWithDeposit_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit.class, com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        subscriptionId_ = "";
+        deposit_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.PubsubProto.internal_static_pubsub_v1_RemoveDefaultSubscriptionProposalWithDeposit_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit getDefaultInstanceForType() {
+        return com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit build() {
+        com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit buildPartial() {
+        com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit result = new com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.subscriptionId_ = subscriptionId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.deposit_ = deposit_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit) {
+          return mergeFrom((com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit other) {
+        if (other == com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getSubscriptionId().isEmpty()) {
+          subscriptionId_ = other.subscriptionId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getDeposit().isEmpty()) {
+          deposit_ = other.deposit_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                subscriptionId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                deposit_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object subscriptionId_ = "";
+      /**
+       * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+       * @return The subscriptionId.
+       */
+      public java.lang.String getSubscriptionId() {
+        java.lang.Object ref = subscriptionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subscriptionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+       * @return The bytes for subscriptionId.
+       */
+      public com.google.protobuf.ByteString
+          getSubscriptionIdBytes() {
+        java.lang.Object ref = subscriptionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subscriptionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+       * @param value The subscriptionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriptionId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        subscriptionId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubscriptionId() {
+        subscriptionId_ = getDefaultInstance().getSubscriptionId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subscription_id = 3 [json_name = "subscriptionId"];</code>
+       * @param value The bytes for subscriptionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriptionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        subscriptionId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object deposit_ = "";
+      /**
+       * <code>string deposit = 4 [json_name = "deposit"];</code>
+       * @return The deposit.
+       */
+      public java.lang.String getDeposit() {
+        java.lang.Object ref = deposit_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          deposit_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string deposit = 4 [json_name = "deposit"];</code>
+       * @return The bytes for deposit.
+       */
+      public com.google.protobuf.ByteString
+          getDepositBytes() {
+        java.lang.Object ref = deposit_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          deposit_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string deposit = 4 [json_name = "deposit"];</code>
+       * @param value The deposit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeposit(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        deposit_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string deposit = 4 [json_name = "deposit"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeposit() {
+        deposit_ = getDefaultInstance().getDeposit();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string deposit = 4 [json_name = "deposit"];</code>
+       * @param value The bytes for deposit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepositBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        deposit_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.RemoveDefaultSubscriptionProposalWithDeposit)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.RemoveDefaultSubscriptionProposalWithDeposit)
+    private static final com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit();
+    }
+
+    public static com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RemoveDefaultSubscriptionProposalWithDeposit>
+        PARSER = new com.google.protobuf.AbstractParser<RemoveDefaultSubscriptionProposalWithDeposit>() {
+      @java.lang.Override
+      public RemoveDefaultSubscriptionProposalWithDeposit parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RemoveDefaultSubscriptionProposalWithDeposit> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RemoveDefaultSubscriptionProposalWithDeposit> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.RemoveDefaultSubscriptionProposalWithDeposit getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_Publisher_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_Publisher_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_Subscriber_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_Subscriber_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_PublisherIntent_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_PublisherIntent_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_SubscriberIntent_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_SubscriberIntent_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_DefaultSubscription_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_DefaultSubscription_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_AddPublisherProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_AddPublisherProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_AddPublisherProposalWithDeposit_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_AddPublisherProposalWithDeposit_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_RemovePublisherProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_RemovePublisherProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_RemovePublisherProposalWithDeposit_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_RemovePublisherProposalWithDeposit_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_AddDefaultSubscriptionProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_AddDefaultSubscriptionProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_AddDefaultSubscriptionProposalWithDeposit_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_AddDefaultSubscriptionProposalWithDeposit_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_RemoveDefaultSubscriptionProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_RemoveDefaultSubscriptionProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_RemoveDefaultSubscriptionProposalWithDeposit_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_RemoveDefaultSubscriptionProposalWithDeposit_fieldAccessorTable;
 
@@ -144,11 +14401,11 @@ public final class PubsubProto {
       "\003 \001(\tR\016subscriptionId\022\030\n\007deposit\030\004 \001(\tR\007" +
       "deposit*#\n\rPublishMethod\022\010\n\004PULL\020\000\022\010\n\004PU" +
       "SH\020\001*7\n\022AllowedSubscribers\022\007\n\003ANY\020\000\022\016\n\nV" +
-      "ALIDATORS\020\001\022\010\n\004LIST\020\002B\221\001\n\rcom.pubsub.v1B" +
-      "\013PubsubProtoP\001Z.github.com/peggyjv/somme" +
-      "lier/v4/x/pubsub/types\242\002\003PXX\252\002\tPubsub.V1" +
-      "\312\002\tPubsub\\V1\342\002\025Pubsub\\V1\\GPBMetadata\352\002\nP" +
-      "ubsub::V1b\006proto3"
+      "ALIDATORS\020\001\022\010\n\004LIST\020\002B\217\001\n\rcom.pubsub.v1B" +
+      "\013PubsubProtoZ.github.com/peggyjv/sommeli" +
+      "er/v4/x/pubsub/types\242\002\003PXX\252\002\tPubsub.V1\312\002" +
+      "\tPubsub\\V1\342\002\025Pubsub\\V1\\GPBMetadata\352\002\nPub" +
+      "sub::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

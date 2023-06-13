@@ -14,9 +14,1055 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.liquidstaking.v1beta1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * params defines all the parameters for the liquidstaking module
+     * </pre>
+     *
+     * <code>.crescent.liquidstaking.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params defines all the parameters for the liquidstaking module
+     * </pre>
+     *
+     * <code>.crescent.liquidstaking.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params getParams();
+    /**
+     * <pre>
+     * params defines all the parameters for the liquidstaking module
+     * </pre>
+     *
+     * <code>.crescent.liquidstaking.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.liquidstaking.v1beta1.LiquidstakingProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidator liquid_validators = 2 [json_name = "liquidValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquid_validators&#92;""];</code>
+     */
+    java.util.List<com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator> 
+        getLiquidValidatorsList();
+    /**
+     * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidator liquid_validators = 2 [json_name = "liquidValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquid_validators&#92;""];</code>
+     */
+    com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator getLiquidValidators(int index);
+    /**
+     * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidator liquid_validators = 2 [json_name = "liquidValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquid_validators&#92;""];</code>
+     */
+    int getLiquidValidatorsCount();
+    /**
+     * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidator liquid_validators = 2 [json_name = "liquidValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquid_validators&#92;""];</code>
+     */
+    java.util.List<? extends com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorOrBuilder> 
+        getLiquidValidatorsOrBuilderList();
+    /**
+     * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidator liquid_validators = 2 [json_name = "liquidValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquid_validators&#92;""];</code>
+     */
+    com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorOrBuilder getLiquidValidatorsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the liquidstaking module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.liquidstaking.v1beta1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.liquidstaking.v1beta1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      liquidValidators_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.liquidstaking.v1beta1.GenesisProto.internal_static_crescent_liquidstaking_v1beta1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.liquidstaking.v1beta1.GenesisProto.internal_static_crescent_liquidstaking_v1beta1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState.class, com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params params_;
+    /**
+     * <pre>
+     * params defines all the parameters for the liquidstaking module
+     * </pre>
+     *
+     * <code>.crescent.liquidstaking.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params defines all the parameters for the liquidstaking module
+     * </pre>
+     *
+     * <code>.crescent.liquidstaking.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params getParams() {
+      return params_ == null ? com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params defines all the parameters for the liquidstaking module
+     * </pre>
+     *
+     * <code>.crescent.liquidstaking.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int LIQUID_VALIDATORS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator> liquidValidators_;
+    /**
+     * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidator liquid_validators = 2 [json_name = "liquidValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquid_validators&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator> getLiquidValidatorsList() {
+      return liquidValidators_;
+    }
+    /**
+     * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidator liquid_validators = 2 [json_name = "liquidValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquid_validators&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorOrBuilder> 
+        getLiquidValidatorsOrBuilderList() {
+      return liquidValidators_;
+    }
+    /**
+     * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidator liquid_validators = 2 [json_name = "liquidValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquid_validators&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getLiquidValidatorsCount() {
+      return liquidValidators_.size();
+    }
+    /**
+     * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidator liquid_validators = 2 [json_name = "liquidValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquid_validators&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator getLiquidValidators(int index) {
+      return liquidValidators_.get(index);
+    }
+    /**
+     * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidator liquid_validators = 2 [json_name = "liquidValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquid_validators&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorOrBuilder getLiquidValidatorsOrBuilder(
+        int index) {
+      return liquidValidators_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      for (int i = 0; i < liquidValidators_.size(); i++) {
+        output.writeMessage(2, liquidValidators_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      for (int i = 0; i < liquidValidators_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, liquidValidators_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState other = (com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getLiquidValidatorsList()
+          .equals(other.getLiquidValidatorsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (getLiquidValidatorsCount() > 0) {
+        hash = (37 * hash) + LIQUID_VALIDATORS_FIELD_NUMBER;
+        hash = (53 * hash) + getLiquidValidatorsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the liquidstaking module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.liquidstaking.v1beta1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.liquidstaking.v1beta1.GenesisState)
+        com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.liquidstaking.v1beta1.GenesisProto.internal_static_crescent_liquidstaking_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.liquidstaking.v1beta1.GenesisProto.internal_static_crescent_liquidstaking_v1beta1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState.class, com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        if (liquidValidatorsBuilder_ == null) {
+          liquidValidators_ = java.util.Collections.emptyList();
+        } else {
+          liquidValidators_ = null;
+          liquidValidatorsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.liquidstaking.v1beta1.GenesisProto.internal_static_crescent_liquidstaking_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState build() {
+        com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState buildPartial() {
+        com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState result = new com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState result) {
+        if (liquidValidatorsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            liquidValidators_ = java.util.Collections.unmodifiableList(liquidValidators_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.liquidValidators_ = liquidValidators_;
+        } else {
+          result.liquidValidators_ = liquidValidatorsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState) {
+          return mergeFrom((com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState other) {
+        if (other == com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (liquidValidatorsBuilder_ == null) {
+          if (!other.liquidValidators_.isEmpty()) {
+            if (liquidValidators_.isEmpty()) {
+              liquidValidators_ = other.liquidValidators_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureLiquidValidatorsIsMutable();
+              liquidValidators_.addAll(other.liquidValidators_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.liquidValidators_.isEmpty()) {
+            if (liquidValidatorsBuilder_.isEmpty()) {
+              liquidValidatorsBuilder_.dispose();
+              liquidValidatorsBuilder_ = null;
+              liquidValidators_ = other.liquidValidators_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              liquidValidatorsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLiquidValidatorsFieldBuilder() : null;
+            } else {
+              liquidValidatorsBuilder_.addAllMessages(other.liquidValidators_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator m =
+                    input.readMessage(
+                        com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator.parser(),
+                        extensionRegistry);
+                if (liquidValidatorsBuilder_ == null) {
+                  ensureLiquidValidatorsIsMutable();
+                  liquidValidators_.add(m);
+                } else {
+                  liquidValidatorsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params.Builder, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params defines all the parameters for the liquidstaking module
+       * </pre>
+       *
+       * <code>.crescent.liquidstaking.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * params defines all the parameters for the liquidstaking module
+       * </pre>
+       *
+       * <code>.crescent.liquidstaking.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameters for the liquidstaking module
+       * </pre>
+       *
+       * <code>.crescent.liquidstaking.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters for the liquidstaking module
+       * </pre>
+       *
+       * <code>.crescent.liquidstaking.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters for the liquidstaking module
+       * </pre>
+       *
+       * <code>.crescent.liquidstaking.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters for the liquidstaking module
+       * </pre>
+       *
+       * <code>.crescent.liquidstaking.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters for the liquidstaking module
+       * </pre>
+       *
+       * <code>.crescent.liquidstaking.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params defines all the parameters for the liquidstaking module
+       * </pre>
+       *
+       * <code>.crescent.liquidstaking.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameters for the liquidstaking module
+       * </pre>
+       *
+       * <code>.crescent.liquidstaking.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params.Builder, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.Params.Builder, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private java.util.List<com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator> liquidValidators_ =
+        java.util.Collections.emptyList();
+      private void ensureLiquidValidatorsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          liquidValidators_ = new java.util.ArrayList<com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator>(liquidValidators_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator.Builder, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorOrBuilder> liquidValidatorsBuilder_;
+
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidator liquid_validators = 2 [json_name = "liquidValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquid_validators&#92;""];</code>
+       */
+      public java.util.List<com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator> getLiquidValidatorsList() {
+        if (liquidValidatorsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(liquidValidators_);
+        } else {
+          return liquidValidatorsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidator liquid_validators = 2 [json_name = "liquidValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquid_validators&#92;""];</code>
+       */
+      public int getLiquidValidatorsCount() {
+        if (liquidValidatorsBuilder_ == null) {
+          return liquidValidators_.size();
+        } else {
+          return liquidValidatorsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidator liquid_validators = 2 [json_name = "liquidValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquid_validators&#92;""];</code>
+       */
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator getLiquidValidators(int index) {
+        if (liquidValidatorsBuilder_ == null) {
+          return liquidValidators_.get(index);
+        } else {
+          return liquidValidatorsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidator liquid_validators = 2 [json_name = "liquidValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquid_validators&#92;""];</code>
+       */
+      public Builder setLiquidValidators(
+          int index, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator value) {
+        if (liquidValidatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLiquidValidatorsIsMutable();
+          liquidValidators_.set(index, value);
+          onChanged();
+        } else {
+          liquidValidatorsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidator liquid_validators = 2 [json_name = "liquidValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquid_validators&#92;""];</code>
+       */
+      public Builder setLiquidValidators(
+          int index, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator.Builder builderForValue) {
+        if (liquidValidatorsBuilder_ == null) {
+          ensureLiquidValidatorsIsMutable();
+          liquidValidators_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          liquidValidatorsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidator liquid_validators = 2 [json_name = "liquidValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquid_validators&#92;""];</code>
+       */
+      public Builder addLiquidValidators(com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator value) {
+        if (liquidValidatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLiquidValidatorsIsMutable();
+          liquidValidators_.add(value);
+          onChanged();
+        } else {
+          liquidValidatorsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidator liquid_validators = 2 [json_name = "liquidValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquid_validators&#92;""];</code>
+       */
+      public Builder addLiquidValidators(
+          int index, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator value) {
+        if (liquidValidatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLiquidValidatorsIsMutable();
+          liquidValidators_.add(index, value);
+          onChanged();
+        } else {
+          liquidValidatorsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidator liquid_validators = 2 [json_name = "liquidValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquid_validators&#92;""];</code>
+       */
+      public Builder addLiquidValidators(
+          com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator.Builder builderForValue) {
+        if (liquidValidatorsBuilder_ == null) {
+          ensureLiquidValidatorsIsMutable();
+          liquidValidators_.add(builderForValue.build());
+          onChanged();
+        } else {
+          liquidValidatorsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidator liquid_validators = 2 [json_name = "liquidValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquid_validators&#92;""];</code>
+       */
+      public Builder addLiquidValidators(
+          int index, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator.Builder builderForValue) {
+        if (liquidValidatorsBuilder_ == null) {
+          ensureLiquidValidatorsIsMutable();
+          liquidValidators_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          liquidValidatorsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidator liquid_validators = 2 [json_name = "liquidValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquid_validators&#92;""];</code>
+       */
+      public Builder addAllLiquidValidators(
+          java.lang.Iterable<? extends com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator> values) {
+        if (liquidValidatorsBuilder_ == null) {
+          ensureLiquidValidatorsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, liquidValidators_);
+          onChanged();
+        } else {
+          liquidValidatorsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidator liquid_validators = 2 [json_name = "liquidValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquid_validators&#92;""];</code>
+       */
+      public Builder clearLiquidValidators() {
+        if (liquidValidatorsBuilder_ == null) {
+          liquidValidators_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          liquidValidatorsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidator liquid_validators = 2 [json_name = "liquidValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquid_validators&#92;""];</code>
+       */
+      public Builder removeLiquidValidators(int index) {
+        if (liquidValidatorsBuilder_ == null) {
+          ensureLiquidValidatorsIsMutable();
+          liquidValidators_.remove(index);
+          onChanged();
+        } else {
+          liquidValidatorsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidator liquid_validators = 2 [json_name = "liquidValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquid_validators&#92;""];</code>
+       */
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator.Builder getLiquidValidatorsBuilder(
+          int index) {
+        return getLiquidValidatorsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidator liquid_validators = 2 [json_name = "liquidValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquid_validators&#92;""];</code>
+       */
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorOrBuilder getLiquidValidatorsOrBuilder(
+          int index) {
+        if (liquidValidatorsBuilder_ == null) {
+          return liquidValidators_.get(index);  } else {
+          return liquidValidatorsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidator liquid_validators = 2 [json_name = "liquidValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquid_validators&#92;""];</code>
+       */
+      public java.util.List<? extends com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorOrBuilder> 
+           getLiquidValidatorsOrBuilderList() {
+        if (liquidValidatorsBuilder_ != null) {
+          return liquidValidatorsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(liquidValidators_);
+        }
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidator liquid_validators = 2 [json_name = "liquidValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquid_validators&#92;""];</code>
+       */
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator.Builder addLiquidValidatorsBuilder() {
+        return getLiquidValidatorsFieldBuilder().addBuilder(
+            com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidator liquid_validators = 2 [json_name = "liquidValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquid_validators&#92;""];</code>
+       */
+      public com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator.Builder addLiquidValidatorsBuilder(
+          int index) {
+        return getLiquidValidatorsFieldBuilder().addBuilder(
+            index, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.liquidstaking.v1beta1.LiquidValidator liquid_validators = 2 [json_name = "liquidValidators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"liquid_validators&#92;""];</code>
+       */
+      public java.util.List<com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator.Builder> 
+           getLiquidValidatorsBuilderList() {
+        return getLiquidValidatorsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator.Builder, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorOrBuilder> 
+          getLiquidValidatorsFieldBuilder() {
+        if (liquidValidatorsBuilder_ == null) {
+          liquidValidatorsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidator.Builder, com.crescent.liquidstaking.v1beta1.LiquidstakingProto.LiquidValidatorOrBuilder>(
+                  liquidValidators_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          liquidValidators_ = null;
+        }
+        return liquidValidatorsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.liquidstaking.v1beta1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.liquidstaking.v1beta1.GenesisState)
+    private static final com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState();
+    }
+
+    public static com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.liquidstaking.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_liquidstaking_v1beta1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_liquidstaking_v1beta1_GenesisState_fieldAccessorTable;
 
@@ -37,14 +1083,14 @@ public final class GenesisProto {
       "~\n\021liquid_validators\030\002 \003(\0132/.crescent.li" +
       "quidstaking.v1beta1.LiquidValidatorB \310\336\037" +
       "\000\362\336\037\030yaml:\"liquid_validators\"R\020liquidVal" +
-      "idators:\010\210\240\037\000\350\240\037\000B\217\002\n\"com.crescent.liqui" +
-      "dstaking.v1beta1B\014GenesisProtoP\001Z=github" +
-      ".com/crescent-network/crescent/v5/x/liqu" +
-      "idstaking/types\242\002\003CLX\252\002\036Crescent.Liquids" +
-      "taking.V1beta1\312\002\036Crescent\\Liquidstaking\\" +
-      "V1beta1\342\002*Crescent\\Liquidstaking\\V1beta1" +
-      "\\GPBMetadata\352\002 Crescent::Liquidstaking::" +
-      "V1beta1\250\342\036\001b\006proto3"
+      "idators:\010\210\240\037\000\350\240\037\000B\215\002\n\"com.crescent.liqui" +
+      "dstaking.v1beta1B\014GenesisProtoZ=github.c" +
+      "om/crescent-network/crescent/v5/x/liquid" +
+      "staking/types\242\002\003CLX\252\002\036Crescent.Liquidsta" +
+      "king.V1beta1\312\002\036Crescent\\Liquidstaking\\V1" +
+      "beta1\342\002*Crescent\\Liquidstaking\\V1beta1\\G" +
+      "PBMetadata\352\002 Crescent::Liquidstaking::V1" +
+      "beta1\250\342\036\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,134 +14,14814 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.QueryParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryParamsRequest is request type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code stafihub.stafihub.mining.QueryParamsRequest}
+   */
+  public static final class QueryParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.QueryParamsRequest)
+      QueryParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsRequest.newBuilder() to construct.
+    private QueryParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest.class, com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest other = (com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsRequest is request type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code stafihub.stafihub.mining.QueryParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.QueryParamsRequest)
+        com.stafihub.stafihub.mining.QueryProto.QueryParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest.class, com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest build() {
+        com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest buildPartial() {
+        com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest result = new com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest) {
+          return mergeFrom((com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest other) {
+        if (other == com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.QueryParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.QueryParamsRequest)
+    private static final com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest();
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsRequest>() {
+      @java.lang.Override
+      public QueryParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.stafihub.stafihub.mining.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.stafihub.stafihub.mining.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.stafihub.stafihub.mining.ParamsProto.Params getParams();
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.stafihub.stafihub.mining.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.stafihub.stafihub.mining.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryParamsResponse is response type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code stafihub.stafihub.mining.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse.class, com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.stafihub.stafihub.mining.ParamsProto.Params params_;
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.stafihub.stafihub.mining.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.stafihub.stafihub.mining.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.ParamsProto.Params getParams() {
+      return params_ == null ? com.stafihub.stafihub.mining.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.stafihub.stafihub.mining.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.stafihub.stafihub.mining.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse other = (com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsResponse is response type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code stafihub.stafihub.mining.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.QueryParamsResponse)
+        com.stafihub.stafihub.mining.QueryProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse.class, com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse build() {
+        com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse buildPartial() {
+        com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse result = new com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse) {
+          return mergeFrom((com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse other) {
+        if (other == com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.stafihub.stafihub.mining.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.stafihub.stafihub.mining.ParamsProto.Params, com.stafihub.stafihub.mining.ParamsProto.Params.Builder, com.stafihub.stafihub.mining.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.stafihub.stafihub.mining.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.stafihub.stafihub.mining.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.stafihub.stafihub.mining.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.stafihub.stafihub.mining.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.stafihub.stafihub.mining.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.stafihub.stafihub.mining.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.stafihub.stafihub.mining.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.stafihub.stafihub.mining.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.stafihub.stafihub.mining.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.stafihub.stafihub.mining.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.stafihub.stafihub.mining.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.stafihub.stafihub.mining.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.stafihub.stafihub.mining.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.stafihub.stafihub.mining.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.stafihub.stafihub.mining.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.stafihub.stafihub.mining.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.stafihub.stafihub.mining.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.stafihub.stafihub.mining.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.stafihub.stafihub.mining.ParamsProto.Params, com.stafihub.stafihub.mining.ParamsProto.Params.Builder, com.stafihub.stafihub.mining.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.stafihub.stafihub.mining.ParamsProto.Params, com.stafihub.stafihub.mining.ParamsProto.Params.Builder, com.stafihub.stafihub.mining.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.QueryParamsResponse)
+    private static final com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse();
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryStakePoolInfoRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.QueryStakePoolInfoRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint32 stakePoolIndex = 1 [json_name = "stakePoolIndex"];</code>
+     * @return The stakePoolIndex.
+     */
+    int getStakePoolIndex();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.mining.QueryStakePoolInfoRequest}
+   */
+  public static final class QueryStakePoolInfoRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.QueryStakePoolInfoRequest)
+      QueryStakePoolInfoRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryStakePoolInfoRequest.newBuilder() to construct.
+    private QueryStakePoolInfoRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryStakePoolInfoRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryStakePoolInfoRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakePoolInfoRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakePoolInfoRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest.class, com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest.Builder.class);
+    }
+
+    public static final int STAKEPOOLINDEX_FIELD_NUMBER = 1;
+    private int stakePoolIndex_ = 0;
+    /**
+     * <code>uint32 stakePoolIndex = 1 [json_name = "stakePoolIndex"];</code>
+     * @return The stakePoolIndex.
+     */
+    @java.lang.Override
+    public int getStakePoolIndex() {
+      return stakePoolIndex_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (stakePoolIndex_ != 0) {
+        output.writeUInt32(1, stakePoolIndex_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (stakePoolIndex_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, stakePoolIndex_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest other = (com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest) obj;
+
+      if (getStakePoolIndex()
+          != other.getStakePoolIndex()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STAKEPOOLINDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getStakePoolIndex();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.mining.QueryStakePoolInfoRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.QueryStakePoolInfoRequest)
+        com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakePoolInfoRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakePoolInfoRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest.class, com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        stakePoolIndex_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakePoolInfoRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest build() {
+        com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest buildPartial() {
+        com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest result = new com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.stakePoolIndex_ = stakePoolIndex_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest) {
+          return mergeFrom((com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest other) {
+        if (other == com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest.getDefaultInstance()) return this;
+        if (other.getStakePoolIndex() != 0) {
+          setStakePoolIndex(other.getStakePoolIndex());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                stakePoolIndex_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int stakePoolIndex_ ;
+      /**
+       * <code>uint32 stakePoolIndex = 1 [json_name = "stakePoolIndex"];</code>
+       * @return The stakePoolIndex.
+       */
+      @java.lang.Override
+      public int getStakePoolIndex() {
+        return stakePoolIndex_;
+      }
+      /**
+       * <code>uint32 stakePoolIndex = 1 [json_name = "stakePoolIndex"];</code>
+       * @param value The stakePoolIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakePoolIndex(int value) {
+
+        stakePoolIndex_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 stakePoolIndex = 1 [json_name = "stakePoolIndex"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakePoolIndex() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        stakePoolIndex_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.QueryStakePoolInfoRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.QueryStakePoolInfoRequest)
+    private static final com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest();
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryStakePoolInfoRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryStakePoolInfoRequest>() {
+      @java.lang.Override
+      public QueryStakePoolInfoRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryStakePoolInfoRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryStakePoolInfoRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryStakePoolInfoResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.QueryStakePoolInfoResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.stafihub.stafihub.mining.StakePool stakePool = 1 [json_name = "stakePool"];</code>
+     * @return Whether the stakePool field is set.
+     */
+    boolean hasStakePool();
+    /**
+     * <code>.stafihub.stafihub.mining.StakePool stakePool = 1 [json_name = "stakePool"];</code>
+     * @return The stakePool.
+     */
+    com.stafihub.stafihub.mining.ModelsProto.StakePool getStakePool();
+    /**
+     * <code>.stafihub.stafihub.mining.StakePool stakePool = 1 [json_name = "stakePool"];</code>
+     */
+    com.stafihub.stafihub.mining.ModelsProto.StakePoolOrBuilder getStakePoolOrBuilder();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.mining.QueryStakePoolInfoResponse}
+   */
+  public static final class QueryStakePoolInfoResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.QueryStakePoolInfoResponse)
+      QueryStakePoolInfoResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryStakePoolInfoResponse.newBuilder() to construct.
+    private QueryStakePoolInfoResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryStakePoolInfoResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryStakePoolInfoResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakePoolInfoResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakePoolInfoResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse.class, com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse.Builder.class);
+    }
+
+    public static final int STAKEPOOL_FIELD_NUMBER = 1;
+    private com.stafihub.stafihub.mining.ModelsProto.StakePool stakePool_;
+    /**
+     * <code>.stafihub.stafihub.mining.StakePool stakePool = 1 [json_name = "stakePool"];</code>
+     * @return Whether the stakePool field is set.
+     */
+    @java.lang.Override
+    public boolean hasStakePool() {
+      return stakePool_ != null;
+    }
+    /**
+     * <code>.stafihub.stafihub.mining.StakePool stakePool = 1 [json_name = "stakePool"];</code>
+     * @return The stakePool.
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.ModelsProto.StakePool getStakePool() {
+      return stakePool_ == null ? com.stafihub.stafihub.mining.ModelsProto.StakePool.getDefaultInstance() : stakePool_;
+    }
+    /**
+     * <code>.stafihub.stafihub.mining.StakePool stakePool = 1 [json_name = "stakePool"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.ModelsProto.StakePoolOrBuilder getStakePoolOrBuilder() {
+      return stakePool_ == null ? com.stafihub.stafihub.mining.ModelsProto.StakePool.getDefaultInstance() : stakePool_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (stakePool_ != null) {
+        output.writeMessage(1, getStakePool());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (stakePool_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getStakePool());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse other = (com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse) obj;
+
+      if (hasStakePool() != other.hasStakePool()) return false;
+      if (hasStakePool()) {
+        if (!getStakePool()
+            .equals(other.getStakePool())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasStakePool()) {
+        hash = (37 * hash) + STAKEPOOL_FIELD_NUMBER;
+        hash = (53 * hash) + getStakePool().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.mining.QueryStakePoolInfoResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.QueryStakePoolInfoResponse)
+        com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakePoolInfoResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakePoolInfoResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse.class, com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        stakePool_ = null;
+        if (stakePoolBuilder_ != null) {
+          stakePoolBuilder_.dispose();
+          stakePoolBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakePoolInfoResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse build() {
+        com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse buildPartial() {
+        com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse result = new com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.stakePool_ = stakePoolBuilder_ == null
+              ? stakePool_
+              : stakePoolBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse) {
+          return mergeFrom((com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse other) {
+        if (other == com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse.getDefaultInstance()) return this;
+        if (other.hasStakePool()) {
+          mergeStakePool(other.getStakePool());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getStakePoolFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.stafihub.stafihub.mining.ModelsProto.StakePool stakePool_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.stafihub.stafihub.mining.ModelsProto.StakePool, com.stafihub.stafihub.mining.ModelsProto.StakePool.Builder, com.stafihub.stafihub.mining.ModelsProto.StakePoolOrBuilder> stakePoolBuilder_;
+      /**
+       * <code>.stafihub.stafihub.mining.StakePool stakePool = 1 [json_name = "stakePool"];</code>
+       * @return Whether the stakePool field is set.
+       */
+      public boolean hasStakePool() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.stafihub.stafihub.mining.StakePool stakePool = 1 [json_name = "stakePool"];</code>
+       * @return The stakePool.
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.StakePool getStakePool() {
+        if (stakePoolBuilder_ == null) {
+          return stakePool_ == null ? com.stafihub.stafihub.mining.ModelsProto.StakePool.getDefaultInstance() : stakePool_;
+        } else {
+          return stakePoolBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.stafihub.stafihub.mining.StakePool stakePool = 1 [json_name = "stakePool"];</code>
+       */
+      public Builder setStakePool(com.stafihub.stafihub.mining.ModelsProto.StakePool value) {
+        if (stakePoolBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          stakePool_ = value;
+        } else {
+          stakePoolBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.mining.StakePool stakePool = 1 [json_name = "stakePool"];</code>
+       */
+      public Builder setStakePool(
+          com.stafihub.stafihub.mining.ModelsProto.StakePool.Builder builderForValue) {
+        if (stakePoolBuilder_ == null) {
+          stakePool_ = builderForValue.build();
+        } else {
+          stakePoolBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.mining.StakePool stakePool = 1 [json_name = "stakePool"];</code>
+       */
+      public Builder mergeStakePool(com.stafihub.stafihub.mining.ModelsProto.StakePool value) {
+        if (stakePoolBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            stakePool_ != null &&
+            stakePool_ != com.stafihub.stafihub.mining.ModelsProto.StakePool.getDefaultInstance()) {
+            getStakePoolBuilder().mergeFrom(value);
+          } else {
+            stakePool_ = value;
+          }
+        } else {
+          stakePoolBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.mining.StakePool stakePool = 1 [json_name = "stakePool"];</code>
+       */
+      public Builder clearStakePool() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        stakePool_ = null;
+        if (stakePoolBuilder_ != null) {
+          stakePoolBuilder_.dispose();
+          stakePoolBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.mining.StakePool stakePool = 1 [json_name = "stakePool"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.StakePool.Builder getStakePoolBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getStakePoolFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.stafihub.stafihub.mining.StakePool stakePool = 1 [json_name = "stakePool"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.StakePoolOrBuilder getStakePoolOrBuilder() {
+        if (stakePoolBuilder_ != null) {
+          return stakePoolBuilder_.getMessageOrBuilder();
+        } else {
+          return stakePool_ == null ?
+              com.stafihub.stafihub.mining.ModelsProto.StakePool.getDefaultInstance() : stakePool_;
+        }
+      }
+      /**
+       * <code>.stafihub.stafihub.mining.StakePool stakePool = 1 [json_name = "stakePool"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.stafihub.stafihub.mining.ModelsProto.StakePool, com.stafihub.stafihub.mining.ModelsProto.StakePool.Builder, com.stafihub.stafihub.mining.ModelsProto.StakePoolOrBuilder> 
+          getStakePoolFieldBuilder() {
+        if (stakePoolBuilder_ == null) {
+          stakePoolBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.stafihub.stafihub.mining.ModelsProto.StakePool, com.stafihub.stafihub.mining.ModelsProto.StakePool.Builder, com.stafihub.stafihub.mining.ModelsProto.StakePoolOrBuilder>(
+                  getStakePool(),
+                  getParentForChildren(),
+                  isClean());
+          stakePool_ = null;
+        }
+        return stakePoolBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.QueryStakePoolInfoResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.QueryStakePoolInfoResponse)
+    private static final com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse();
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryStakePoolInfoResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryStakePoolInfoResponse>() {
+      @java.lang.Override
+      public QueryStakePoolInfoResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryStakePoolInfoResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryStakePoolInfoResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.QueryProto.QueryStakePoolInfoResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryStakeItemListRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.QueryStakeItemListRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint32 stakePoolIndex = 1 [json_name = "stakePoolIndex"];</code>
+     * @return The stakePoolIndex.
+     */
+    int getStakePoolIndex();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.mining.QueryStakeItemListRequest}
+   */
+  public static final class QueryStakeItemListRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.QueryStakeItemListRequest)
+      QueryStakeItemListRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryStakeItemListRequest.newBuilder() to construct.
+    private QueryStakeItemListRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryStakeItemListRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryStakeItemListRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeItemListRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeItemListRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest.class, com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest.Builder.class);
+    }
+
+    public static final int STAKEPOOLINDEX_FIELD_NUMBER = 1;
+    private int stakePoolIndex_ = 0;
+    /**
+     * <code>uint32 stakePoolIndex = 1 [json_name = "stakePoolIndex"];</code>
+     * @return The stakePoolIndex.
+     */
+    @java.lang.Override
+    public int getStakePoolIndex() {
+      return stakePoolIndex_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (stakePoolIndex_ != 0) {
+        output.writeUInt32(1, stakePoolIndex_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (stakePoolIndex_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, stakePoolIndex_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest other = (com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest) obj;
+
+      if (getStakePoolIndex()
+          != other.getStakePoolIndex()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STAKEPOOLINDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getStakePoolIndex();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.mining.QueryStakeItemListRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.QueryStakeItemListRequest)
+        com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeItemListRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeItemListRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest.class, com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        stakePoolIndex_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeItemListRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest build() {
+        com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest buildPartial() {
+        com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest result = new com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.stakePoolIndex_ = stakePoolIndex_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest) {
+          return mergeFrom((com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest other) {
+        if (other == com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest.getDefaultInstance()) return this;
+        if (other.getStakePoolIndex() != 0) {
+          setStakePoolIndex(other.getStakePoolIndex());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                stakePoolIndex_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int stakePoolIndex_ ;
+      /**
+       * <code>uint32 stakePoolIndex = 1 [json_name = "stakePoolIndex"];</code>
+       * @return The stakePoolIndex.
+       */
+      @java.lang.Override
+      public int getStakePoolIndex() {
+        return stakePoolIndex_;
+      }
+      /**
+       * <code>uint32 stakePoolIndex = 1 [json_name = "stakePoolIndex"];</code>
+       * @param value The stakePoolIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakePoolIndex(int value) {
+
+        stakePoolIndex_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 stakePoolIndex = 1 [json_name = "stakePoolIndex"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakePoolIndex() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        stakePoolIndex_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.QueryStakeItemListRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.QueryStakeItemListRequest)
+    private static final com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest();
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryStakeItemListRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryStakeItemListRequest>() {
+      @java.lang.Override
+      public QueryStakeItemListRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryStakeItemListRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryStakeItemListRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryStakeItemListResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.QueryStakeItemListResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .stafihub.stafihub.mining.StakeItem stakeItemList = 1 [json_name = "stakeItemList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.mining.ModelsProto.StakeItem> 
+        getStakeItemListList();
+    /**
+     * <code>repeated .stafihub.stafihub.mining.StakeItem stakeItemList = 1 [json_name = "stakeItemList"];</code>
+     */
+    com.stafihub.stafihub.mining.ModelsProto.StakeItem getStakeItemList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.mining.StakeItem stakeItemList = 1 [json_name = "stakeItemList"];</code>
+     */
+    int getStakeItemListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.mining.StakeItem stakeItemList = 1 [json_name = "stakeItemList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.mining.ModelsProto.StakeItemOrBuilder> 
+        getStakeItemListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.mining.StakeItem stakeItemList = 1 [json_name = "stakeItemList"];</code>
+     */
+    com.stafihub.stafihub.mining.ModelsProto.StakeItemOrBuilder getStakeItemListOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.mining.QueryStakeItemListResponse}
+   */
+  public static final class QueryStakeItemListResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.QueryStakeItemListResponse)
+      QueryStakeItemListResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryStakeItemListResponse.newBuilder() to construct.
+    private QueryStakeItemListResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryStakeItemListResponse() {
+      stakeItemList_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryStakeItemListResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeItemListResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeItemListResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse.class, com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse.Builder.class);
+    }
+
+    public static final int STAKEITEMLIST_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.mining.ModelsProto.StakeItem> stakeItemList_;
+    /**
+     * <code>repeated .stafihub.stafihub.mining.StakeItem stakeItemList = 1 [json_name = "stakeItemList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.mining.ModelsProto.StakeItem> getStakeItemListList() {
+      return stakeItemList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.mining.StakeItem stakeItemList = 1 [json_name = "stakeItemList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.mining.ModelsProto.StakeItemOrBuilder> 
+        getStakeItemListOrBuilderList() {
+      return stakeItemList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.mining.StakeItem stakeItemList = 1 [json_name = "stakeItemList"];</code>
+     */
+    @java.lang.Override
+    public int getStakeItemListCount() {
+      return stakeItemList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.mining.StakeItem stakeItemList = 1 [json_name = "stakeItemList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.ModelsProto.StakeItem getStakeItemList(int index) {
+      return stakeItemList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.mining.StakeItem stakeItemList = 1 [json_name = "stakeItemList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.ModelsProto.StakeItemOrBuilder getStakeItemListOrBuilder(
+        int index) {
+      return stakeItemList_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < stakeItemList_.size(); i++) {
+        output.writeMessage(1, stakeItemList_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < stakeItemList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, stakeItemList_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse other = (com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse) obj;
+
+      if (!getStakeItemListList()
+          .equals(other.getStakeItemListList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getStakeItemListCount() > 0) {
+        hash = (37 * hash) + STAKEITEMLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getStakeItemListList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.mining.QueryStakeItemListResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.QueryStakeItemListResponse)
+        com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeItemListResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeItemListResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse.class, com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (stakeItemListBuilder_ == null) {
+          stakeItemList_ = java.util.Collections.emptyList();
+        } else {
+          stakeItemList_ = null;
+          stakeItemListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeItemListResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse build() {
+        com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse buildPartial() {
+        com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse result = new com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse result) {
+        if (stakeItemListBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            stakeItemList_ = java.util.Collections.unmodifiableList(stakeItemList_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.stakeItemList_ = stakeItemList_;
+        } else {
+          result.stakeItemList_ = stakeItemListBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse) {
+          return mergeFrom((com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse other) {
+        if (other == com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse.getDefaultInstance()) return this;
+        if (stakeItemListBuilder_ == null) {
+          if (!other.stakeItemList_.isEmpty()) {
+            if (stakeItemList_.isEmpty()) {
+              stakeItemList_ = other.stakeItemList_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureStakeItemListIsMutable();
+              stakeItemList_.addAll(other.stakeItemList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.stakeItemList_.isEmpty()) {
+            if (stakeItemListBuilder_.isEmpty()) {
+              stakeItemListBuilder_.dispose();
+              stakeItemListBuilder_ = null;
+              stakeItemList_ = other.stakeItemList_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              stakeItemListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getStakeItemListFieldBuilder() : null;
+            } else {
+              stakeItemListBuilder_.addAllMessages(other.stakeItemList_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.stafihub.stafihub.mining.ModelsProto.StakeItem m =
+                    input.readMessage(
+                        com.stafihub.stafihub.mining.ModelsProto.StakeItem.parser(),
+                        extensionRegistry);
+                if (stakeItemListBuilder_ == null) {
+                  ensureStakeItemListIsMutable();
+                  stakeItemList_.add(m);
+                } else {
+                  stakeItemListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.stafihub.stafihub.mining.ModelsProto.StakeItem> stakeItemList_ =
+        java.util.Collections.emptyList();
+      private void ensureStakeItemListIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          stakeItemList_ = new java.util.ArrayList<com.stafihub.stafihub.mining.ModelsProto.StakeItem>(stakeItemList_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.mining.ModelsProto.StakeItem, com.stafihub.stafihub.mining.ModelsProto.StakeItem.Builder, com.stafihub.stafihub.mining.ModelsProto.StakeItemOrBuilder> stakeItemListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakeItem stakeItemList = 1 [json_name = "stakeItemList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.mining.ModelsProto.StakeItem> getStakeItemListList() {
+        if (stakeItemListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(stakeItemList_);
+        } else {
+          return stakeItemListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakeItem stakeItemList = 1 [json_name = "stakeItemList"];</code>
+       */
+      public int getStakeItemListCount() {
+        if (stakeItemListBuilder_ == null) {
+          return stakeItemList_.size();
+        } else {
+          return stakeItemListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakeItem stakeItemList = 1 [json_name = "stakeItemList"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.StakeItem getStakeItemList(int index) {
+        if (stakeItemListBuilder_ == null) {
+          return stakeItemList_.get(index);
+        } else {
+          return stakeItemListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakeItem stakeItemList = 1 [json_name = "stakeItemList"];</code>
+       */
+      public Builder setStakeItemList(
+          int index, com.stafihub.stafihub.mining.ModelsProto.StakeItem value) {
+        if (stakeItemListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakeItemListIsMutable();
+          stakeItemList_.set(index, value);
+          onChanged();
+        } else {
+          stakeItemListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakeItem stakeItemList = 1 [json_name = "stakeItemList"];</code>
+       */
+      public Builder setStakeItemList(
+          int index, com.stafihub.stafihub.mining.ModelsProto.StakeItem.Builder builderForValue) {
+        if (stakeItemListBuilder_ == null) {
+          ensureStakeItemListIsMutable();
+          stakeItemList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          stakeItemListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakeItem stakeItemList = 1 [json_name = "stakeItemList"];</code>
+       */
+      public Builder addStakeItemList(com.stafihub.stafihub.mining.ModelsProto.StakeItem value) {
+        if (stakeItemListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakeItemListIsMutable();
+          stakeItemList_.add(value);
+          onChanged();
+        } else {
+          stakeItemListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakeItem stakeItemList = 1 [json_name = "stakeItemList"];</code>
+       */
+      public Builder addStakeItemList(
+          int index, com.stafihub.stafihub.mining.ModelsProto.StakeItem value) {
+        if (stakeItemListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakeItemListIsMutable();
+          stakeItemList_.add(index, value);
+          onChanged();
+        } else {
+          stakeItemListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakeItem stakeItemList = 1 [json_name = "stakeItemList"];</code>
+       */
+      public Builder addStakeItemList(
+          com.stafihub.stafihub.mining.ModelsProto.StakeItem.Builder builderForValue) {
+        if (stakeItemListBuilder_ == null) {
+          ensureStakeItemListIsMutable();
+          stakeItemList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          stakeItemListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakeItem stakeItemList = 1 [json_name = "stakeItemList"];</code>
+       */
+      public Builder addStakeItemList(
+          int index, com.stafihub.stafihub.mining.ModelsProto.StakeItem.Builder builderForValue) {
+        if (stakeItemListBuilder_ == null) {
+          ensureStakeItemListIsMutable();
+          stakeItemList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          stakeItemListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakeItem stakeItemList = 1 [json_name = "stakeItemList"];</code>
+       */
+      public Builder addAllStakeItemList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.mining.ModelsProto.StakeItem> values) {
+        if (stakeItemListBuilder_ == null) {
+          ensureStakeItemListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, stakeItemList_);
+          onChanged();
+        } else {
+          stakeItemListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakeItem stakeItemList = 1 [json_name = "stakeItemList"];</code>
+       */
+      public Builder clearStakeItemList() {
+        if (stakeItemListBuilder_ == null) {
+          stakeItemList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          stakeItemListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakeItem stakeItemList = 1 [json_name = "stakeItemList"];</code>
+       */
+      public Builder removeStakeItemList(int index) {
+        if (stakeItemListBuilder_ == null) {
+          ensureStakeItemListIsMutable();
+          stakeItemList_.remove(index);
+          onChanged();
+        } else {
+          stakeItemListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakeItem stakeItemList = 1 [json_name = "stakeItemList"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.StakeItem.Builder getStakeItemListBuilder(
+          int index) {
+        return getStakeItemListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakeItem stakeItemList = 1 [json_name = "stakeItemList"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.StakeItemOrBuilder getStakeItemListOrBuilder(
+          int index) {
+        if (stakeItemListBuilder_ == null) {
+          return stakeItemList_.get(index);  } else {
+          return stakeItemListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakeItem stakeItemList = 1 [json_name = "stakeItemList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.mining.ModelsProto.StakeItemOrBuilder> 
+           getStakeItemListOrBuilderList() {
+        if (stakeItemListBuilder_ != null) {
+          return stakeItemListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(stakeItemList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakeItem stakeItemList = 1 [json_name = "stakeItemList"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.StakeItem.Builder addStakeItemListBuilder() {
+        return getStakeItemListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.mining.ModelsProto.StakeItem.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakeItem stakeItemList = 1 [json_name = "stakeItemList"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.StakeItem.Builder addStakeItemListBuilder(
+          int index) {
+        return getStakeItemListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.mining.ModelsProto.StakeItem.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakeItem stakeItemList = 1 [json_name = "stakeItemList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.mining.ModelsProto.StakeItem.Builder> 
+           getStakeItemListBuilderList() {
+        return getStakeItemListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.mining.ModelsProto.StakeItem, com.stafihub.stafihub.mining.ModelsProto.StakeItem.Builder, com.stafihub.stafihub.mining.ModelsProto.StakeItemOrBuilder> 
+          getStakeItemListFieldBuilder() {
+        if (stakeItemListBuilder_ == null) {
+          stakeItemListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.mining.ModelsProto.StakeItem, com.stafihub.stafihub.mining.ModelsProto.StakeItem.Builder, com.stafihub.stafihub.mining.ModelsProto.StakeItemOrBuilder>(
+                  stakeItemList_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          stakeItemList_ = null;
+        }
+        return stakeItemListBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.QueryStakeItemListResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.QueryStakeItemListResponse)
+    private static final com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse();
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryStakeItemListResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryStakeItemListResponse>() {
+      @java.lang.Override
+      public QueryStakeItemListResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryStakeItemListResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryStakeItemListResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.QueryProto.QueryStakeItemListResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryStakeRewardRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.QueryStakeRewardRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string stakeUserAddress = 1 [json_name = "stakeUserAddress"];</code>
+     * @return The stakeUserAddress.
+     */
+    java.lang.String getStakeUserAddress();
+    /**
+     * <code>string stakeUserAddress = 1 [json_name = "stakeUserAddress"];</code>
+     * @return The bytes for stakeUserAddress.
+     */
+    com.google.protobuf.ByteString
+        getStakeUserAddressBytes();
+
+    /**
+     * <code>uint32 stakePoolIndex = 2 [json_name = "stakePoolIndex"];</code>
+     * @return The stakePoolIndex.
+     */
+    int getStakePoolIndex();
+
+    /**
+     * <code>uint32 stakeRecordIndex = 3 [json_name = "stakeRecordIndex"];</code>
+     * @return The stakeRecordIndex.
+     */
+    int getStakeRecordIndex();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.mining.QueryStakeRewardRequest}
+   */
+  public static final class QueryStakeRewardRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.QueryStakeRewardRequest)
+      QueryStakeRewardRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryStakeRewardRequest.newBuilder() to construct.
+    private QueryStakeRewardRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryStakeRewardRequest() {
+      stakeUserAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryStakeRewardRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRewardRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRewardRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest.class, com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest.Builder.class);
+    }
+
+    public static final int STAKEUSERADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakeUserAddress_ = "";
+    /**
+     * <code>string stakeUserAddress = 1 [json_name = "stakeUserAddress"];</code>
+     * @return The stakeUserAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getStakeUserAddress() {
+      java.lang.Object ref = stakeUserAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakeUserAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string stakeUserAddress = 1 [json_name = "stakeUserAddress"];</code>
+     * @return The bytes for stakeUserAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakeUserAddressBytes() {
+      java.lang.Object ref = stakeUserAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakeUserAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STAKEPOOLINDEX_FIELD_NUMBER = 2;
+    private int stakePoolIndex_ = 0;
+    /**
+     * <code>uint32 stakePoolIndex = 2 [json_name = "stakePoolIndex"];</code>
+     * @return The stakePoolIndex.
+     */
+    @java.lang.Override
+    public int getStakePoolIndex() {
+      return stakePoolIndex_;
+    }
+
+    public static final int STAKERECORDINDEX_FIELD_NUMBER = 3;
+    private int stakeRecordIndex_ = 0;
+    /**
+     * <code>uint32 stakeRecordIndex = 3 [json_name = "stakeRecordIndex"];</code>
+     * @return The stakeRecordIndex.
+     */
+    @java.lang.Override
+    public int getStakeRecordIndex() {
+      return stakeRecordIndex_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakeUserAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, stakeUserAddress_);
+      }
+      if (stakePoolIndex_ != 0) {
+        output.writeUInt32(2, stakePoolIndex_);
+      }
+      if (stakeRecordIndex_ != 0) {
+        output.writeUInt32(3, stakeRecordIndex_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakeUserAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, stakeUserAddress_);
+      }
+      if (stakePoolIndex_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, stakePoolIndex_);
+      }
+      if (stakeRecordIndex_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, stakeRecordIndex_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest other = (com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest) obj;
+
+      if (!getStakeUserAddress()
+          .equals(other.getStakeUserAddress())) return false;
+      if (getStakePoolIndex()
+          != other.getStakePoolIndex()) return false;
+      if (getStakeRecordIndex()
+          != other.getStakeRecordIndex()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STAKEUSERADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getStakeUserAddress().hashCode();
+      hash = (37 * hash) + STAKEPOOLINDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getStakePoolIndex();
+      hash = (37 * hash) + STAKERECORDINDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getStakeRecordIndex();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.mining.QueryStakeRewardRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.QueryStakeRewardRequest)
+        com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRewardRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRewardRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest.class, com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        stakeUserAddress_ = "";
+        stakePoolIndex_ = 0;
+        stakeRecordIndex_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRewardRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest build() {
+        com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest buildPartial() {
+        com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest result = new com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.stakeUserAddress_ = stakeUserAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.stakePoolIndex_ = stakePoolIndex_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.stakeRecordIndex_ = stakeRecordIndex_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest) {
+          return mergeFrom((com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest other) {
+        if (other == com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest.getDefaultInstance()) return this;
+        if (!other.getStakeUserAddress().isEmpty()) {
+          stakeUserAddress_ = other.stakeUserAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getStakePoolIndex() != 0) {
+          setStakePoolIndex(other.getStakePoolIndex());
+        }
+        if (other.getStakeRecordIndex() != 0) {
+          setStakeRecordIndex(other.getStakeRecordIndex());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                stakeUserAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                stakePoolIndex_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                stakeRecordIndex_ = input.readUInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object stakeUserAddress_ = "";
+      /**
+       * <code>string stakeUserAddress = 1 [json_name = "stakeUserAddress"];</code>
+       * @return The stakeUserAddress.
+       */
+      public java.lang.String getStakeUserAddress() {
+        java.lang.Object ref = stakeUserAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakeUserAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string stakeUserAddress = 1 [json_name = "stakeUserAddress"];</code>
+       * @return The bytes for stakeUserAddress.
+       */
+      public com.google.protobuf.ByteString
+          getStakeUserAddressBytes() {
+        java.lang.Object ref = stakeUserAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakeUserAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string stakeUserAddress = 1 [json_name = "stakeUserAddress"];</code>
+       * @param value The stakeUserAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakeUserAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakeUserAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string stakeUserAddress = 1 [json_name = "stakeUserAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakeUserAddress() {
+        stakeUserAddress_ = getDefaultInstance().getStakeUserAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string stakeUserAddress = 1 [json_name = "stakeUserAddress"];</code>
+       * @param value The bytes for stakeUserAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakeUserAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakeUserAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int stakePoolIndex_ ;
+      /**
+       * <code>uint32 stakePoolIndex = 2 [json_name = "stakePoolIndex"];</code>
+       * @return The stakePoolIndex.
+       */
+      @java.lang.Override
+      public int getStakePoolIndex() {
+        return stakePoolIndex_;
+      }
+      /**
+       * <code>uint32 stakePoolIndex = 2 [json_name = "stakePoolIndex"];</code>
+       * @param value The stakePoolIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakePoolIndex(int value) {
+
+        stakePoolIndex_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 stakePoolIndex = 2 [json_name = "stakePoolIndex"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakePoolIndex() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        stakePoolIndex_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int stakeRecordIndex_ ;
+      /**
+       * <code>uint32 stakeRecordIndex = 3 [json_name = "stakeRecordIndex"];</code>
+       * @return The stakeRecordIndex.
+       */
+      @java.lang.Override
+      public int getStakeRecordIndex() {
+        return stakeRecordIndex_;
+      }
+      /**
+       * <code>uint32 stakeRecordIndex = 3 [json_name = "stakeRecordIndex"];</code>
+       * @param value The stakeRecordIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakeRecordIndex(int value) {
+
+        stakeRecordIndex_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 stakeRecordIndex = 3 [json_name = "stakeRecordIndex"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakeRecordIndex() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        stakeRecordIndex_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.QueryStakeRewardRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.QueryStakeRewardRequest)
+    private static final com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest();
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryStakeRewardRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryStakeRewardRequest>() {
+      @java.lang.Override
+      public QueryStakeRewardRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryStakeRewardRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryStakeRewardRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryStakeRewardResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.QueryStakeRewardResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewardTokens = 1 [json_name = "rewardTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getRewardTokensList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewardTokens = 1 [json_name = "rewardTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getRewardTokens(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewardTokens = 1 [json_name = "rewardTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    int getRewardTokensCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewardTokens = 1 [json_name = "rewardTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getRewardTokensOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewardTokens = 1 [json_name = "rewardTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRewardTokensOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.mining.QueryStakeRewardResponse}
+   */
+  public static final class QueryStakeRewardResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.QueryStakeRewardResponse)
+      QueryStakeRewardResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryStakeRewardResponse.newBuilder() to construct.
+    private QueryStakeRewardResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryStakeRewardResponse() {
+      rewardTokens_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryStakeRewardResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRewardResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRewardResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse.class, com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse.Builder.class);
+    }
+
+    public static final int REWARDTOKENS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> rewardTokens_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewardTokens = 1 [json_name = "rewardTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getRewardTokensList() {
+      return rewardTokens_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewardTokens = 1 [json_name = "rewardTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getRewardTokensOrBuilderList() {
+      return rewardTokens_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewardTokens = 1 [json_name = "rewardTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public int getRewardTokensCount() {
+      return rewardTokens_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewardTokens = 1 [json_name = "rewardTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getRewardTokens(int index) {
+      return rewardTokens_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewardTokens = 1 [json_name = "rewardTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRewardTokensOrBuilder(
+        int index) {
+      return rewardTokens_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < rewardTokens_.size(); i++) {
+        output.writeMessage(1, rewardTokens_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < rewardTokens_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, rewardTokens_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse other = (com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse) obj;
+
+      if (!getRewardTokensList()
+          .equals(other.getRewardTokensList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getRewardTokensCount() > 0) {
+        hash = (37 * hash) + REWARDTOKENS_FIELD_NUMBER;
+        hash = (53 * hash) + getRewardTokensList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.mining.QueryStakeRewardResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.QueryStakeRewardResponse)
+        com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRewardResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRewardResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse.class, com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (rewardTokensBuilder_ == null) {
+          rewardTokens_ = java.util.Collections.emptyList();
+        } else {
+          rewardTokens_ = null;
+          rewardTokensBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRewardResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse build() {
+        com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse buildPartial() {
+        com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse result = new com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse result) {
+        if (rewardTokensBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            rewardTokens_ = java.util.Collections.unmodifiableList(rewardTokens_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.rewardTokens_ = rewardTokens_;
+        } else {
+          result.rewardTokens_ = rewardTokensBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse) {
+          return mergeFrom((com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse other) {
+        if (other == com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse.getDefaultInstance()) return this;
+        if (rewardTokensBuilder_ == null) {
+          if (!other.rewardTokens_.isEmpty()) {
+            if (rewardTokens_.isEmpty()) {
+              rewardTokens_ = other.rewardTokens_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRewardTokensIsMutable();
+              rewardTokens_.addAll(other.rewardTokens_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.rewardTokens_.isEmpty()) {
+            if (rewardTokensBuilder_.isEmpty()) {
+              rewardTokensBuilder_.dispose();
+              rewardTokensBuilder_ = null;
+              rewardTokens_ = other.rewardTokens_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              rewardTokensBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRewardTokensFieldBuilder() : null;
+            } else {
+              rewardTokensBuilder_.addAllMessages(other.rewardTokens_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (rewardTokensBuilder_ == null) {
+                  ensureRewardTokensIsMutable();
+                  rewardTokens_.add(m);
+                } else {
+                  rewardTokensBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> rewardTokens_ =
+        java.util.Collections.emptyList();
+      private void ensureRewardTokensIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          rewardTokens_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(rewardTokens_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> rewardTokensBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewardTokens = 1 [json_name = "rewardTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getRewardTokensList() {
+        if (rewardTokensBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(rewardTokens_);
+        } else {
+          return rewardTokensBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewardTokens = 1 [json_name = "rewardTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public int getRewardTokensCount() {
+        if (rewardTokensBuilder_ == null) {
+          return rewardTokens_.size();
+        } else {
+          return rewardTokensBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewardTokens = 1 [json_name = "rewardTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getRewardTokens(int index) {
+        if (rewardTokensBuilder_ == null) {
+          return rewardTokens_.get(index);
+        } else {
+          return rewardTokensBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewardTokens = 1 [json_name = "rewardTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setRewardTokens(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (rewardTokensBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardTokensIsMutable();
+          rewardTokens_.set(index, value);
+          onChanged();
+        } else {
+          rewardTokensBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewardTokens = 1 [json_name = "rewardTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setRewardTokens(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (rewardTokensBuilder_ == null) {
+          ensureRewardTokensIsMutable();
+          rewardTokens_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardTokensBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewardTokens = 1 [json_name = "rewardTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder addRewardTokens(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (rewardTokensBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardTokensIsMutable();
+          rewardTokens_.add(value);
+          onChanged();
+        } else {
+          rewardTokensBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewardTokens = 1 [json_name = "rewardTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder addRewardTokens(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (rewardTokensBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardTokensIsMutable();
+          rewardTokens_.add(index, value);
+          onChanged();
+        } else {
+          rewardTokensBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewardTokens = 1 [json_name = "rewardTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder addRewardTokens(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (rewardTokensBuilder_ == null) {
+          ensureRewardTokensIsMutable();
+          rewardTokens_.add(builderForValue.build());
+          onChanged();
+        } else {
+          rewardTokensBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewardTokens = 1 [json_name = "rewardTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder addRewardTokens(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (rewardTokensBuilder_ == null) {
+          ensureRewardTokensIsMutable();
+          rewardTokens_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardTokensBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewardTokens = 1 [json_name = "rewardTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder addAllRewardTokens(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (rewardTokensBuilder_ == null) {
+          ensureRewardTokensIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, rewardTokens_);
+          onChanged();
+        } else {
+          rewardTokensBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewardTokens = 1 [json_name = "rewardTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearRewardTokens() {
+        if (rewardTokensBuilder_ == null) {
+          rewardTokens_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          rewardTokensBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewardTokens = 1 [json_name = "rewardTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder removeRewardTokens(int index) {
+        if (rewardTokensBuilder_ == null) {
+          ensureRewardTokensIsMutable();
+          rewardTokens_.remove(index);
+          onChanged();
+        } else {
+          rewardTokensBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewardTokens = 1 [json_name = "rewardTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getRewardTokensBuilder(
+          int index) {
+        return getRewardTokensFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewardTokens = 1 [json_name = "rewardTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRewardTokensOrBuilder(
+          int index) {
+        if (rewardTokensBuilder_ == null) {
+          return rewardTokens_.get(index);  } else {
+          return rewardTokensBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewardTokens = 1 [json_name = "rewardTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getRewardTokensOrBuilderList() {
+        if (rewardTokensBuilder_ != null) {
+          return rewardTokensBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(rewardTokens_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewardTokens = 1 [json_name = "rewardTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addRewardTokensBuilder() {
+        return getRewardTokensFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewardTokens = 1 [json_name = "rewardTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addRewardTokensBuilder(
+          int index) {
+        return getRewardTokensFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewardTokens = 1 [json_name = "rewardTokens", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getRewardTokensBuilderList() {
+        return getRewardTokensFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getRewardTokensFieldBuilder() {
+        if (rewardTokensBuilder_ == null) {
+          rewardTokensBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  rewardTokens_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          rewardTokens_ = null;
+        }
+        return rewardTokensBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.QueryStakeRewardResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.QueryStakeRewardResponse)
+    private static final com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse();
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryStakeRewardResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryStakeRewardResponse>() {
+      @java.lang.Override
+      public QueryStakeRewardResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryStakeRewardResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryStakeRewardResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.QueryProto.QueryStakeRewardResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryStakeRecordCountRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.QueryStakeRecordCountRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+     * @return The userAddress.
+     */
+    java.lang.String getUserAddress();
+    /**
+     * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+     * @return The bytes for userAddress.
+     */
+    com.google.protobuf.ByteString
+        getUserAddressBytes();
+
+    /**
+     * <code>uint32 stakePoolIndex = 2 [json_name = "stakePoolIndex"];</code>
+     * @return The stakePoolIndex.
+     */
+    int getStakePoolIndex();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.mining.QueryStakeRecordCountRequest}
+   */
+  public static final class QueryStakeRecordCountRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.QueryStakeRecordCountRequest)
+      QueryStakeRecordCountRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryStakeRecordCountRequest.newBuilder() to construct.
+    private QueryStakeRecordCountRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryStakeRecordCountRequest() {
+      userAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryStakeRecordCountRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRecordCountRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRecordCountRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest.class, com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest.Builder.class);
+    }
+
+    public static final int USERADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object userAddress_ = "";
+    /**
+     * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+     * @return The userAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getUserAddress() {
+      java.lang.Object ref = userAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        userAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+     * @return The bytes for userAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUserAddressBytes() {
+      java.lang.Object ref = userAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STAKEPOOLINDEX_FIELD_NUMBER = 2;
+    private int stakePoolIndex_ = 0;
+    /**
+     * <code>uint32 stakePoolIndex = 2 [json_name = "stakePoolIndex"];</code>
+     * @return The stakePoolIndex.
+     */
+    @java.lang.Override
+    public int getStakePoolIndex() {
+      return stakePoolIndex_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userAddress_);
+      }
+      if (stakePoolIndex_ != 0) {
+        output.writeUInt32(2, stakePoolIndex_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userAddress_);
+      }
+      if (stakePoolIndex_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, stakePoolIndex_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest other = (com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest) obj;
+
+      if (!getUserAddress()
+          .equals(other.getUserAddress())) return false;
+      if (getStakePoolIndex()
+          != other.getStakePoolIndex()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + USERADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getUserAddress().hashCode();
+      hash = (37 * hash) + STAKEPOOLINDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getStakePoolIndex();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.mining.QueryStakeRecordCountRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.QueryStakeRecordCountRequest)
+        com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRecordCountRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRecordCountRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest.class, com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        userAddress_ = "";
+        stakePoolIndex_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRecordCountRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest build() {
+        com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest buildPartial() {
+        com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest result = new com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.userAddress_ = userAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.stakePoolIndex_ = stakePoolIndex_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest) {
+          return mergeFrom((com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest other) {
+        if (other == com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest.getDefaultInstance()) return this;
+        if (!other.getUserAddress().isEmpty()) {
+          userAddress_ = other.userAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getStakePoolIndex() != 0) {
+          setStakePoolIndex(other.getStakePoolIndex());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                userAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                stakePoolIndex_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object userAddress_ = "";
+      /**
+       * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+       * @return The userAddress.
+       */
+      public java.lang.String getUserAddress() {
+        java.lang.Object ref = userAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          userAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+       * @return The bytes for userAddress.
+       */
+      public com.google.protobuf.ByteString
+          getUserAddressBytes() {
+        java.lang.Object ref = userAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+       * @param value The userAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        userAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserAddress() {
+        userAddress_ = getDefaultInstance().getUserAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+       * @param value The bytes for userAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        userAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int stakePoolIndex_ ;
+      /**
+       * <code>uint32 stakePoolIndex = 2 [json_name = "stakePoolIndex"];</code>
+       * @return The stakePoolIndex.
+       */
+      @java.lang.Override
+      public int getStakePoolIndex() {
+        return stakePoolIndex_;
+      }
+      /**
+       * <code>uint32 stakePoolIndex = 2 [json_name = "stakePoolIndex"];</code>
+       * @param value The stakePoolIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakePoolIndex(int value) {
+
+        stakePoolIndex_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 stakePoolIndex = 2 [json_name = "stakePoolIndex"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakePoolIndex() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        stakePoolIndex_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.QueryStakeRecordCountRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.QueryStakeRecordCountRequest)
+    private static final com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest();
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryStakeRecordCountRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryStakeRecordCountRequest>() {
+      @java.lang.Override
+      public QueryStakeRecordCountRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryStakeRecordCountRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryStakeRecordCountRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryStakeRecordCountResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.QueryStakeRecordCountResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint32 count = 1 [json_name = "count"];</code>
+     * @return The count.
+     */
+    int getCount();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.mining.QueryStakeRecordCountResponse}
+   */
+  public static final class QueryStakeRecordCountResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.QueryStakeRecordCountResponse)
+      QueryStakeRecordCountResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryStakeRecordCountResponse.newBuilder() to construct.
+    private QueryStakeRecordCountResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryStakeRecordCountResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryStakeRecordCountResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRecordCountResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRecordCountResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse.class, com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse.Builder.class);
+    }
+
+    public static final int COUNT_FIELD_NUMBER = 1;
+    private int count_ = 0;
+    /**
+     * <code>uint32 count = 1 [json_name = "count"];</code>
+     * @return The count.
+     */
+    @java.lang.Override
+    public int getCount() {
+      return count_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (count_ != 0) {
+        output.writeUInt32(1, count_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (count_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, count_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse other = (com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse) obj;
+
+      if (getCount()
+          != other.getCount()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getCount();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.mining.QueryStakeRecordCountResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.QueryStakeRecordCountResponse)
+        com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRecordCountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRecordCountResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse.class, com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        count_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRecordCountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse build() {
+        com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse buildPartial() {
+        com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse result = new com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.count_ = count_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse) {
+          return mergeFrom((com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse other) {
+        if (other == com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse.getDefaultInstance()) return this;
+        if (other.getCount() != 0) {
+          setCount(other.getCount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                count_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int count_ ;
+      /**
+       * <code>uint32 count = 1 [json_name = "count"];</code>
+       * @return The count.
+       */
+      @java.lang.Override
+      public int getCount() {
+        return count_;
+      }
+      /**
+       * <code>uint32 count = 1 [json_name = "count"];</code>
+       * @param value The count to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCount(int value) {
+
+        count_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 count = 1 [json_name = "count"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCount() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        count_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.QueryStakeRecordCountResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.QueryStakeRecordCountResponse)
+    private static final com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse();
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryStakeRecordCountResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryStakeRecordCountResponse>() {
+      @java.lang.Override
+      public QueryStakeRecordCountResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryStakeRecordCountResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryStakeRecordCountResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordCountResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryStakeRecordRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.QueryStakeRecordRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+     * @return The userAddress.
+     */
+    java.lang.String getUserAddress();
+    /**
+     * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+     * @return The bytes for userAddress.
+     */
+    com.google.protobuf.ByteString
+        getUserAddressBytes();
+
+    /**
+     * <code>uint32 stakePoolIndex = 2 [json_name = "stakePoolIndex"];</code>
+     * @return The stakePoolIndex.
+     */
+    int getStakePoolIndex();
+
+    /**
+     * <code>uint32 stakeRecordIndex = 3 [json_name = "stakeRecordIndex"];</code>
+     * @return The stakeRecordIndex.
+     */
+    int getStakeRecordIndex();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.mining.QueryStakeRecordRequest}
+   */
+  public static final class QueryStakeRecordRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.QueryStakeRecordRequest)
+      QueryStakeRecordRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryStakeRecordRequest.newBuilder() to construct.
+    private QueryStakeRecordRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryStakeRecordRequest() {
+      userAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryStakeRecordRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRecordRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRecordRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest.class, com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest.Builder.class);
+    }
+
+    public static final int USERADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object userAddress_ = "";
+    /**
+     * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+     * @return The userAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getUserAddress() {
+      java.lang.Object ref = userAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        userAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+     * @return The bytes for userAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUserAddressBytes() {
+      java.lang.Object ref = userAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STAKEPOOLINDEX_FIELD_NUMBER = 2;
+    private int stakePoolIndex_ = 0;
+    /**
+     * <code>uint32 stakePoolIndex = 2 [json_name = "stakePoolIndex"];</code>
+     * @return The stakePoolIndex.
+     */
+    @java.lang.Override
+    public int getStakePoolIndex() {
+      return stakePoolIndex_;
+    }
+
+    public static final int STAKERECORDINDEX_FIELD_NUMBER = 3;
+    private int stakeRecordIndex_ = 0;
+    /**
+     * <code>uint32 stakeRecordIndex = 3 [json_name = "stakeRecordIndex"];</code>
+     * @return The stakeRecordIndex.
+     */
+    @java.lang.Override
+    public int getStakeRecordIndex() {
+      return stakeRecordIndex_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userAddress_);
+      }
+      if (stakePoolIndex_ != 0) {
+        output.writeUInt32(2, stakePoolIndex_);
+      }
+      if (stakeRecordIndex_ != 0) {
+        output.writeUInt32(3, stakeRecordIndex_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userAddress_);
+      }
+      if (stakePoolIndex_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, stakePoolIndex_);
+      }
+      if (stakeRecordIndex_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, stakeRecordIndex_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest other = (com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest) obj;
+
+      if (!getUserAddress()
+          .equals(other.getUserAddress())) return false;
+      if (getStakePoolIndex()
+          != other.getStakePoolIndex()) return false;
+      if (getStakeRecordIndex()
+          != other.getStakeRecordIndex()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + USERADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getUserAddress().hashCode();
+      hash = (37 * hash) + STAKEPOOLINDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getStakePoolIndex();
+      hash = (37 * hash) + STAKERECORDINDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getStakeRecordIndex();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.mining.QueryStakeRecordRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.QueryStakeRecordRequest)
+        com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRecordRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRecordRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest.class, com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        userAddress_ = "";
+        stakePoolIndex_ = 0;
+        stakeRecordIndex_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRecordRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest build() {
+        com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest buildPartial() {
+        com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest result = new com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.userAddress_ = userAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.stakePoolIndex_ = stakePoolIndex_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.stakeRecordIndex_ = stakeRecordIndex_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest) {
+          return mergeFrom((com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest other) {
+        if (other == com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest.getDefaultInstance()) return this;
+        if (!other.getUserAddress().isEmpty()) {
+          userAddress_ = other.userAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getStakePoolIndex() != 0) {
+          setStakePoolIndex(other.getStakePoolIndex());
+        }
+        if (other.getStakeRecordIndex() != 0) {
+          setStakeRecordIndex(other.getStakeRecordIndex());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                userAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                stakePoolIndex_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                stakeRecordIndex_ = input.readUInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object userAddress_ = "";
+      /**
+       * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+       * @return The userAddress.
+       */
+      public java.lang.String getUserAddress() {
+        java.lang.Object ref = userAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          userAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+       * @return The bytes for userAddress.
+       */
+      public com.google.protobuf.ByteString
+          getUserAddressBytes() {
+        java.lang.Object ref = userAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+       * @param value The userAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        userAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserAddress() {
+        userAddress_ = getDefaultInstance().getUserAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+       * @param value The bytes for userAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        userAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int stakePoolIndex_ ;
+      /**
+       * <code>uint32 stakePoolIndex = 2 [json_name = "stakePoolIndex"];</code>
+       * @return The stakePoolIndex.
+       */
+      @java.lang.Override
+      public int getStakePoolIndex() {
+        return stakePoolIndex_;
+      }
+      /**
+       * <code>uint32 stakePoolIndex = 2 [json_name = "stakePoolIndex"];</code>
+       * @param value The stakePoolIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakePoolIndex(int value) {
+
+        stakePoolIndex_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 stakePoolIndex = 2 [json_name = "stakePoolIndex"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakePoolIndex() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        stakePoolIndex_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int stakeRecordIndex_ ;
+      /**
+       * <code>uint32 stakeRecordIndex = 3 [json_name = "stakeRecordIndex"];</code>
+       * @return The stakeRecordIndex.
+       */
+      @java.lang.Override
+      public int getStakeRecordIndex() {
+        return stakeRecordIndex_;
+      }
+      /**
+       * <code>uint32 stakeRecordIndex = 3 [json_name = "stakeRecordIndex"];</code>
+       * @param value The stakeRecordIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakeRecordIndex(int value) {
+
+        stakeRecordIndex_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 stakeRecordIndex = 3 [json_name = "stakeRecordIndex"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakeRecordIndex() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        stakeRecordIndex_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.QueryStakeRecordRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.QueryStakeRecordRequest)
+    private static final com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest();
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryStakeRecordRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryStakeRecordRequest>() {
+      @java.lang.Override
+      public QueryStakeRecordRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryStakeRecordRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryStakeRecordRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryStakeRecordResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.QueryStakeRecordResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.stafihub.stafihub.mining.UserStakeRecord stakeRecord = 1 [json_name = "stakeRecord"];</code>
+     * @return Whether the stakeRecord field is set.
+     */
+    boolean hasStakeRecord();
+    /**
+     * <code>.stafihub.stafihub.mining.UserStakeRecord stakeRecord = 1 [json_name = "stakeRecord"];</code>
+     * @return The stakeRecord.
+     */
+    com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord getStakeRecord();
+    /**
+     * <code>.stafihub.stafihub.mining.UserStakeRecord stakeRecord = 1 [json_name = "stakeRecord"];</code>
+     */
+    com.stafihub.stafihub.mining.ModelsProto.UserStakeRecordOrBuilder getStakeRecordOrBuilder();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.mining.QueryStakeRecordResponse}
+   */
+  public static final class QueryStakeRecordResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.QueryStakeRecordResponse)
+      QueryStakeRecordResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryStakeRecordResponse.newBuilder() to construct.
+    private QueryStakeRecordResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryStakeRecordResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryStakeRecordResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRecordResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRecordResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse.class, com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse.Builder.class);
+    }
+
+    public static final int STAKERECORD_FIELD_NUMBER = 1;
+    private com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord stakeRecord_;
+    /**
+     * <code>.stafihub.stafihub.mining.UserStakeRecord stakeRecord = 1 [json_name = "stakeRecord"];</code>
+     * @return Whether the stakeRecord field is set.
+     */
+    @java.lang.Override
+    public boolean hasStakeRecord() {
+      return stakeRecord_ != null;
+    }
+    /**
+     * <code>.stafihub.stafihub.mining.UserStakeRecord stakeRecord = 1 [json_name = "stakeRecord"];</code>
+     * @return The stakeRecord.
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord getStakeRecord() {
+      return stakeRecord_ == null ? com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord.getDefaultInstance() : stakeRecord_;
+    }
+    /**
+     * <code>.stafihub.stafihub.mining.UserStakeRecord stakeRecord = 1 [json_name = "stakeRecord"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.ModelsProto.UserStakeRecordOrBuilder getStakeRecordOrBuilder() {
+      return stakeRecord_ == null ? com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord.getDefaultInstance() : stakeRecord_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (stakeRecord_ != null) {
+        output.writeMessage(1, getStakeRecord());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (stakeRecord_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getStakeRecord());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse other = (com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse) obj;
+
+      if (hasStakeRecord() != other.hasStakeRecord()) return false;
+      if (hasStakeRecord()) {
+        if (!getStakeRecord()
+            .equals(other.getStakeRecord())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasStakeRecord()) {
+        hash = (37 * hash) + STAKERECORD_FIELD_NUMBER;
+        hash = (53 * hash) + getStakeRecord().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.mining.QueryStakeRecordResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.QueryStakeRecordResponse)
+        com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRecordResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRecordResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse.class, com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        stakeRecord_ = null;
+        if (stakeRecordBuilder_ != null) {
+          stakeRecordBuilder_.dispose();
+          stakeRecordBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRecordResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse build() {
+        com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse buildPartial() {
+        com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse result = new com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.stakeRecord_ = stakeRecordBuilder_ == null
+              ? stakeRecord_
+              : stakeRecordBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse) {
+          return mergeFrom((com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse other) {
+        if (other == com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse.getDefaultInstance()) return this;
+        if (other.hasStakeRecord()) {
+          mergeStakeRecord(other.getStakeRecord());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getStakeRecordFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord stakeRecord_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord, com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord.Builder, com.stafihub.stafihub.mining.ModelsProto.UserStakeRecordOrBuilder> stakeRecordBuilder_;
+      /**
+       * <code>.stafihub.stafihub.mining.UserStakeRecord stakeRecord = 1 [json_name = "stakeRecord"];</code>
+       * @return Whether the stakeRecord field is set.
+       */
+      public boolean hasStakeRecord() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.stafihub.stafihub.mining.UserStakeRecord stakeRecord = 1 [json_name = "stakeRecord"];</code>
+       * @return The stakeRecord.
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord getStakeRecord() {
+        if (stakeRecordBuilder_ == null) {
+          return stakeRecord_ == null ? com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord.getDefaultInstance() : stakeRecord_;
+        } else {
+          return stakeRecordBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.stafihub.stafihub.mining.UserStakeRecord stakeRecord = 1 [json_name = "stakeRecord"];</code>
+       */
+      public Builder setStakeRecord(com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord value) {
+        if (stakeRecordBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          stakeRecord_ = value;
+        } else {
+          stakeRecordBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.mining.UserStakeRecord stakeRecord = 1 [json_name = "stakeRecord"];</code>
+       */
+      public Builder setStakeRecord(
+          com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord.Builder builderForValue) {
+        if (stakeRecordBuilder_ == null) {
+          stakeRecord_ = builderForValue.build();
+        } else {
+          stakeRecordBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.mining.UserStakeRecord stakeRecord = 1 [json_name = "stakeRecord"];</code>
+       */
+      public Builder mergeStakeRecord(com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord value) {
+        if (stakeRecordBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            stakeRecord_ != null &&
+            stakeRecord_ != com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord.getDefaultInstance()) {
+            getStakeRecordBuilder().mergeFrom(value);
+          } else {
+            stakeRecord_ = value;
+          }
+        } else {
+          stakeRecordBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.mining.UserStakeRecord stakeRecord = 1 [json_name = "stakeRecord"];</code>
+       */
+      public Builder clearStakeRecord() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        stakeRecord_ = null;
+        if (stakeRecordBuilder_ != null) {
+          stakeRecordBuilder_.dispose();
+          stakeRecordBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.mining.UserStakeRecord stakeRecord = 1 [json_name = "stakeRecord"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord.Builder getStakeRecordBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getStakeRecordFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.stafihub.stafihub.mining.UserStakeRecord stakeRecord = 1 [json_name = "stakeRecord"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.UserStakeRecordOrBuilder getStakeRecordOrBuilder() {
+        if (stakeRecordBuilder_ != null) {
+          return stakeRecordBuilder_.getMessageOrBuilder();
+        } else {
+          return stakeRecord_ == null ?
+              com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord.getDefaultInstance() : stakeRecord_;
+        }
+      }
+      /**
+       * <code>.stafihub.stafihub.mining.UserStakeRecord stakeRecord = 1 [json_name = "stakeRecord"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord, com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord.Builder, com.stafihub.stafihub.mining.ModelsProto.UserStakeRecordOrBuilder> 
+          getStakeRecordFieldBuilder() {
+        if (stakeRecordBuilder_ == null) {
+          stakeRecordBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord, com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord.Builder, com.stafihub.stafihub.mining.ModelsProto.UserStakeRecordOrBuilder>(
+                  getStakeRecord(),
+                  getParentForChildren(),
+                  isClean());
+          stakeRecord_ = null;
+        }
+        return stakeRecordBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.QueryStakeRecordResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.QueryStakeRecordResponse)
+    private static final com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse();
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryStakeRecordResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryStakeRecordResponse>() {
+      @java.lang.Override
+      public QueryStakeRecordResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryStakeRecordResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryStakeRecordResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryStakeRecordListRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.QueryStakeRecordListRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+     * @return The userAddress.
+     */
+    java.lang.String getUserAddress();
+    /**
+     * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+     * @return The bytes for userAddress.
+     */
+    com.google.protobuf.ByteString
+        getUserAddressBytes();
+
+    /**
+     * <code>uint32 stakePoolIndex = 2 [json_name = "stakePoolIndex"];</code>
+     * @return The stakePoolIndex.
+     */
+    int getStakePoolIndex();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.mining.QueryStakeRecordListRequest}
+   */
+  public static final class QueryStakeRecordListRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.QueryStakeRecordListRequest)
+      QueryStakeRecordListRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryStakeRecordListRequest.newBuilder() to construct.
+    private QueryStakeRecordListRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryStakeRecordListRequest() {
+      userAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryStakeRecordListRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRecordListRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRecordListRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest.class, com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest.Builder.class);
+    }
+
+    public static final int USERADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object userAddress_ = "";
+    /**
+     * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+     * @return The userAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getUserAddress() {
+      java.lang.Object ref = userAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        userAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+     * @return The bytes for userAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUserAddressBytes() {
+      java.lang.Object ref = userAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STAKEPOOLINDEX_FIELD_NUMBER = 2;
+    private int stakePoolIndex_ = 0;
+    /**
+     * <code>uint32 stakePoolIndex = 2 [json_name = "stakePoolIndex"];</code>
+     * @return The stakePoolIndex.
+     */
+    @java.lang.Override
+    public int getStakePoolIndex() {
+      return stakePoolIndex_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userAddress_);
+      }
+      if (stakePoolIndex_ != 0) {
+        output.writeUInt32(2, stakePoolIndex_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userAddress_);
+      }
+      if (stakePoolIndex_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, stakePoolIndex_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest other = (com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest) obj;
+
+      if (!getUserAddress()
+          .equals(other.getUserAddress())) return false;
+      if (getStakePoolIndex()
+          != other.getStakePoolIndex()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + USERADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getUserAddress().hashCode();
+      hash = (37 * hash) + STAKEPOOLINDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getStakePoolIndex();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.mining.QueryStakeRecordListRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.QueryStakeRecordListRequest)
+        com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRecordListRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRecordListRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest.class, com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        userAddress_ = "";
+        stakePoolIndex_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRecordListRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest build() {
+        com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest buildPartial() {
+        com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest result = new com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.userAddress_ = userAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.stakePoolIndex_ = stakePoolIndex_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest) {
+          return mergeFrom((com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest other) {
+        if (other == com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest.getDefaultInstance()) return this;
+        if (!other.getUserAddress().isEmpty()) {
+          userAddress_ = other.userAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getStakePoolIndex() != 0) {
+          setStakePoolIndex(other.getStakePoolIndex());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                userAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                stakePoolIndex_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object userAddress_ = "";
+      /**
+       * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+       * @return The userAddress.
+       */
+      public java.lang.String getUserAddress() {
+        java.lang.Object ref = userAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          userAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+       * @return The bytes for userAddress.
+       */
+      public com.google.protobuf.ByteString
+          getUserAddressBytes() {
+        java.lang.Object ref = userAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+       * @param value The userAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        userAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserAddress() {
+        userAddress_ = getDefaultInstance().getUserAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+       * @param value The bytes for userAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        userAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int stakePoolIndex_ ;
+      /**
+       * <code>uint32 stakePoolIndex = 2 [json_name = "stakePoolIndex"];</code>
+       * @return The stakePoolIndex.
+       */
+      @java.lang.Override
+      public int getStakePoolIndex() {
+        return stakePoolIndex_;
+      }
+      /**
+       * <code>uint32 stakePoolIndex = 2 [json_name = "stakePoolIndex"];</code>
+       * @param value The stakePoolIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakePoolIndex(int value) {
+
+        stakePoolIndex_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 stakePoolIndex = 2 [json_name = "stakePoolIndex"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakePoolIndex() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        stakePoolIndex_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.QueryStakeRecordListRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.QueryStakeRecordListRequest)
+    private static final com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest();
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryStakeRecordListRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryStakeRecordListRequest>() {
+      @java.lang.Override
+      public QueryStakeRecordListRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryStakeRecordListRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryStakeRecordListRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryStakeRecordListResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.QueryStakeRecordListResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .stafihub.stafihub.mining.UserStakeRecord stakeRecordList = 1 [json_name = "stakeRecordList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord> 
+        getStakeRecordListList();
+    /**
+     * <code>repeated .stafihub.stafihub.mining.UserStakeRecord stakeRecordList = 1 [json_name = "stakeRecordList"];</code>
+     */
+    com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord getStakeRecordList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.mining.UserStakeRecord stakeRecordList = 1 [json_name = "stakeRecordList"];</code>
+     */
+    int getStakeRecordListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.mining.UserStakeRecord stakeRecordList = 1 [json_name = "stakeRecordList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.mining.ModelsProto.UserStakeRecordOrBuilder> 
+        getStakeRecordListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.mining.UserStakeRecord stakeRecordList = 1 [json_name = "stakeRecordList"];</code>
+     */
+    com.stafihub.stafihub.mining.ModelsProto.UserStakeRecordOrBuilder getStakeRecordListOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.mining.QueryStakeRecordListResponse}
+   */
+  public static final class QueryStakeRecordListResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.QueryStakeRecordListResponse)
+      QueryStakeRecordListResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryStakeRecordListResponse.newBuilder() to construct.
+    private QueryStakeRecordListResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryStakeRecordListResponse() {
+      stakeRecordList_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryStakeRecordListResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRecordListResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRecordListResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse.class, com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse.Builder.class);
+    }
+
+    public static final int STAKERECORDLIST_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord> stakeRecordList_;
+    /**
+     * <code>repeated .stafihub.stafihub.mining.UserStakeRecord stakeRecordList = 1 [json_name = "stakeRecordList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord> getStakeRecordListList() {
+      return stakeRecordList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.mining.UserStakeRecord stakeRecordList = 1 [json_name = "stakeRecordList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.mining.ModelsProto.UserStakeRecordOrBuilder> 
+        getStakeRecordListOrBuilderList() {
+      return stakeRecordList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.mining.UserStakeRecord stakeRecordList = 1 [json_name = "stakeRecordList"];</code>
+     */
+    @java.lang.Override
+    public int getStakeRecordListCount() {
+      return stakeRecordList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.mining.UserStakeRecord stakeRecordList = 1 [json_name = "stakeRecordList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord getStakeRecordList(int index) {
+      return stakeRecordList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.mining.UserStakeRecord stakeRecordList = 1 [json_name = "stakeRecordList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.ModelsProto.UserStakeRecordOrBuilder getStakeRecordListOrBuilder(
+        int index) {
+      return stakeRecordList_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < stakeRecordList_.size(); i++) {
+        output.writeMessage(1, stakeRecordList_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < stakeRecordList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, stakeRecordList_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse other = (com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse) obj;
+
+      if (!getStakeRecordListList()
+          .equals(other.getStakeRecordListList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getStakeRecordListCount() > 0) {
+        hash = (37 * hash) + STAKERECORDLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getStakeRecordListList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.mining.QueryStakeRecordListResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.QueryStakeRecordListResponse)
+        com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRecordListResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRecordListResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse.class, com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (stakeRecordListBuilder_ == null) {
+          stakeRecordList_ = java.util.Collections.emptyList();
+        } else {
+          stakeRecordList_ = null;
+          stakeRecordListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakeRecordListResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse build() {
+        com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse buildPartial() {
+        com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse result = new com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse result) {
+        if (stakeRecordListBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            stakeRecordList_ = java.util.Collections.unmodifiableList(stakeRecordList_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.stakeRecordList_ = stakeRecordList_;
+        } else {
+          result.stakeRecordList_ = stakeRecordListBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse) {
+          return mergeFrom((com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse other) {
+        if (other == com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse.getDefaultInstance()) return this;
+        if (stakeRecordListBuilder_ == null) {
+          if (!other.stakeRecordList_.isEmpty()) {
+            if (stakeRecordList_.isEmpty()) {
+              stakeRecordList_ = other.stakeRecordList_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureStakeRecordListIsMutable();
+              stakeRecordList_.addAll(other.stakeRecordList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.stakeRecordList_.isEmpty()) {
+            if (stakeRecordListBuilder_.isEmpty()) {
+              stakeRecordListBuilder_.dispose();
+              stakeRecordListBuilder_ = null;
+              stakeRecordList_ = other.stakeRecordList_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              stakeRecordListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getStakeRecordListFieldBuilder() : null;
+            } else {
+              stakeRecordListBuilder_.addAllMessages(other.stakeRecordList_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord m =
+                    input.readMessage(
+                        com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord.parser(),
+                        extensionRegistry);
+                if (stakeRecordListBuilder_ == null) {
+                  ensureStakeRecordListIsMutable();
+                  stakeRecordList_.add(m);
+                } else {
+                  stakeRecordListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord> stakeRecordList_ =
+        java.util.Collections.emptyList();
+      private void ensureStakeRecordListIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          stakeRecordList_ = new java.util.ArrayList<com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord>(stakeRecordList_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord, com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord.Builder, com.stafihub.stafihub.mining.ModelsProto.UserStakeRecordOrBuilder> stakeRecordListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserStakeRecord stakeRecordList = 1 [json_name = "stakeRecordList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord> getStakeRecordListList() {
+        if (stakeRecordListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(stakeRecordList_);
+        } else {
+          return stakeRecordListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserStakeRecord stakeRecordList = 1 [json_name = "stakeRecordList"];</code>
+       */
+      public int getStakeRecordListCount() {
+        if (stakeRecordListBuilder_ == null) {
+          return stakeRecordList_.size();
+        } else {
+          return stakeRecordListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserStakeRecord stakeRecordList = 1 [json_name = "stakeRecordList"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord getStakeRecordList(int index) {
+        if (stakeRecordListBuilder_ == null) {
+          return stakeRecordList_.get(index);
+        } else {
+          return stakeRecordListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserStakeRecord stakeRecordList = 1 [json_name = "stakeRecordList"];</code>
+       */
+      public Builder setStakeRecordList(
+          int index, com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord value) {
+        if (stakeRecordListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakeRecordListIsMutable();
+          stakeRecordList_.set(index, value);
+          onChanged();
+        } else {
+          stakeRecordListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserStakeRecord stakeRecordList = 1 [json_name = "stakeRecordList"];</code>
+       */
+      public Builder setStakeRecordList(
+          int index, com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord.Builder builderForValue) {
+        if (stakeRecordListBuilder_ == null) {
+          ensureStakeRecordListIsMutable();
+          stakeRecordList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          stakeRecordListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserStakeRecord stakeRecordList = 1 [json_name = "stakeRecordList"];</code>
+       */
+      public Builder addStakeRecordList(com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord value) {
+        if (stakeRecordListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakeRecordListIsMutable();
+          stakeRecordList_.add(value);
+          onChanged();
+        } else {
+          stakeRecordListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserStakeRecord stakeRecordList = 1 [json_name = "stakeRecordList"];</code>
+       */
+      public Builder addStakeRecordList(
+          int index, com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord value) {
+        if (stakeRecordListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakeRecordListIsMutable();
+          stakeRecordList_.add(index, value);
+          onChanged();
+        } else {
+          stakeRecordListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserStakeRecord stakeRecordList = 1 [json_name = "stakeRecordList"];</code>
+       */
+      public Builder addStakeRecordList(
+          com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord.Builder builderForValue) {
+        if (stakeRecordListBuilder_ == null) {
+          ensureStakeRecordListIsMutable();
+          stakeRecordList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          stakeRecordListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserStakeRecord stakeRecordList = 1 [json_name = "stakeRecordList"];</code>
+       */
+      public Builder addStakeRecordList(
+          int index, com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord.Builder builderForValue) {
+        if (stakeRecordListBuilder_ == null) {
+          ensureStakeRecordListIsMutable();
+          stakeRecordList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          stakeRecordListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserStakeRecord stakeRecordList = 1 [json_name = "stakeRecordList"];</code>
+       */
+      public Builder addAllStakeRecordList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord> values) {
+        if (stakeRecordListBuilder_ == null) {
+          ensureStakeRecordListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, stakeRecordList_);
+          onChanged();
+        } else {
+          stakeRecordListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserStakeRecord stakeRecordList = 1 [json_name = "stakeRecordList"];</code>
+       */
+      public Builder clearStakeRecordList() {
+        if (stakeRecordListBuilder_ == null) {
+          stakeRecordList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          stakeRecordListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserStakeRecord stakeRecordList = 1 [json_name = "stakeRecordList"];</code>
+       */
+      public Builder removeStakeRecordList(int index) {
+        if (stakeRecordListBuilder_ == null) {
+          ensureStakeRecordListIsMutable();
+          stakeRecordList_.remove(index);
+          onChanged();
+        } else {
+          stakeRecordListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserStakeRecord stakeRecordList = 1 [json_name = "stakeRecordList"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord.Builder getStakeRecordListBuilder(
+          int index) {
+        return getStakeRecordListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserStakeRecord stakeRecordList = 1 [json_name = "stakeRecordList"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.UserStakeRecordOrBuilder getStakeRecordListOrBuilder(
+          int index) {
+        if (stakeRecordListBuilder_ == null) {
+          return stakeRecordList_.get(index);  } else {
+          return stakeRecordListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserStakeRecord stakeRecordList = 1 [json_name = "stakeRecordList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.mining.ModelsProto.UserStakeRecordOrBuilder> 
+           getStakeRecordListOrBuilderList() {
+        if (stakeRecordListBuilder_ != null) {
+          return stakeRecordListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(stakeRecordList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserStakeRecord stakeRecordList = 1 [json_name = "stakeRecordList"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord.Builder addStakeRecordListBuilder() {
+        return getStakeRecordListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserStakeRecord stakeRecordList = 1 [json_name = "stakeRecordList"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord.Builder addStakeRecordListBuilder(
+          int index) {
+        return getStakeRecordListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserStakeRecord stakeRecordList = 1 [json_name = "stakeRecordList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord.Builder> 
+           getStakeRecordListBuilderList() {
+        return getStakeRecordListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord, com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord.Builder, com.stafihub.stafihub.mining.ModelsProto.UserStakeRecordOrBuilder> 
+          getStakeRecordListFieldBuilder() {
+        if (stakeRecordListBuilder_ == null) {
+          stakeRecordListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord, com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord.Builder, com.stafihub.stafihub.mining.ModelsProto.UserStakeRecordOrBuilder>(
+                  stakeRecordList_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          stakeRecordList_ = null;
+        }
+        return stakeRecordListBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.QueryStakeRecordListResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.QueryStakeRecordListResponse)
+    private static final com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse();
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryStakeRecordListResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryStakeRecordListResponse>() {
+      @java.lang.Override
+      public QueryStakeRecordListResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryStakeRecordListResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryStakeRecordListResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.QueryProto.QueryStakeRecordListResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryStakePoolListRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.QueryStakePoolListRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.mining.QueryStakePoolListRequest}
+   */
+  public static final class QueryStakePoolListRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.QueryStakePoolListRequest)
+      QueryStakePoolListRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryStakePoolListRequest.newBuilder() to construct.
+    private QueryStakePoolListRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryStakePoolListRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryStakePoolListRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakePoolListRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakePoolListRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest.class, com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest other = (com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.mining.QueryStakePoolListRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.QueryStakePoolListRequest)
+        com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakePoolListRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakePoolListRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest.class, com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakePoolListRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest build() {
+        com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest buildPartial() {
+        com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest result = new com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest) {
+          return mergeFrom((com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest other) {
+        if (other == com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.QueryStakePoolListRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.QueryStakePoolListRequest)
+    private static final com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest();
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryStakePoolListRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryStakePoolListRequest>() {
+      @java.lang.Override
+      public QueryStakePoolListRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryStakePoolListRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryStakePoolListRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryStakePoolListResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.QueryStakePoolListResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .stafihub.stafihub.mining.StakePool stakePoolList = 1 [json_name = "stakePoolList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.mining.ModelsProto.StakePool> 
+        getStakePoolListList();
+    /**
+     * <code>repeated .stafihub.stafihub.mining.StakePool stakePoolList = 1 [json_name = "stakePoolList"];</code>
+     */
+    com.stafihub.stafihub.mining.ModelsProto.StakePool getStakePoolList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.mining.StakePool stakePoolList = 1 [json_name = "stakePoolList"];</code>
+     */
+    int getStakePoolListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.mining.StakePool stakePoolList = 1 [json_name = "stakePoolList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.mining.ModelsProto.StakePoolOrBuilder> 
+        getStakePoolListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.mining.StakePool stakePoolList = 1 [json_name = "stakePoolList"];</code>
+     */
+    com.stafihub.stafihub.mining.ModelsProto.StakePoolOrBuilder getStakePoolListOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.mining.QueryStakePoolListResponse}
+   */
+  public static final class QueryStakePoolListResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.QueryStakePoolListResponse)
+      QueryStakePoolListResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryStakePoolListResponse.newBuilder() to construct.
+    private QueryStakePoolListResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryStakePoolListResponse() {
+      stakePoolList_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryStakePoolListResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakePoolListResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakePoolListResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse.class, com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse.Builder.class);
+    }
+
+    public static final int STAKEPOOLLIST_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.mining.ModelsProto.StakePool> stakePoolList_;
+    /**
+     * <code>repeated .stafihub.stafihub.mining.StakePool stakePoolList = 1 [json_name = "stakePoolList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.mining.ModelsProto.StakePool> getStakePoolListList() {
+      return stakePoolList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.mining.StakePool stakePoolList = 1 [json_name = "stakePoolList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.mining.ModelsProto.StakePoolOrBuilder> 
+        getStakePoolListOrBuilderList() {
+      return stakePoolList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.mining.StakePool stakePoolList = 1 [json_name = "stakePoolList"];</code>
+     */
+    @java.lang.Override
+    public int getStakePoolListCount() {
+      return stakePoolList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.mining.StakePool stakePoolList = 1 [json_name = "stakePoolList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.ModelsProto.StakePool getStakePoolList(int index) {
+      return stakePoolList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.mining.StakePool stakePoolList = 1 [json_name = "stakePoolList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.ModelsProto.StakePoolOrBuilder getStakePoolListOrBuilder(
+        int index) {
+      return stakePoolList_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < stakePoolList_.size(); i++) {
+        output.writeMessage(1, stakePoolList_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < stakePoolList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, stakePoolList_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse other = (com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse) obj;
+
+      if (!getStakePoolListList()
+          .equals(other.getStakePoolListList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getStakePoolListCount() > 0) {
+        hash = (37 * hash) + STAKEPOOLLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getStakePoolListList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.mining.QueryStakePoolListResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.QueryStakePoolListResponse)
+        com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakePoolListResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakePoolListResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse.class, com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (stakePoolListBuilder_ == null) {
+          stakePoolList_ = java.util.Collections.emptyList();
+        } else {
+          stakePoolList_ = null;
+          stakePoolListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryStakePoolListResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse build() {
+        com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse buildPartial() {
+        com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse result = new com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse result) {
+        if (stakePoolListBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            stakePoolList_ = java.util.Collections.unmodifiableList(stakePoolList_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.stakePoolList_ = stakePoolList_;
+        } else {
+          result.stakePoolList_ = stakePoolListBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse) {
+          return mergeFrom((com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse other) {
+        if (other == com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse.getDefaultInstance()) return this;
+        if (stakePoolListBuilder_ == null) {
+          if (!other.stakePoolList_.isEmpty()) {
+            if (stakePoolList_.isEmpty()) {
+              stakePoolList_ = other.stakePoolList_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureStakePoolListIsMutable();
+              stakePoolList_.addAll(other.stakePoolList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.stakePoolList_.isEmpty()) {
+            if (stakePoolListBuilder_.isEmpty()) {
+              stakePoolListBuilder_.dispose();
+              stakePoolListBuilder_ = null;
+              stakePoolList_ = other.stakePoolList_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              stakePoolListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getStakePoolListFieldBuilder() : null;
+            } else {
+              stakePoolListBuilder_.addAllMessages(other.stakePoolList_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.stafihub.stafihub.mining.ModelsProto.StakePool m =
+                    input.readMessage(
+                        com.stafihub.stafihub.mining.ModelsProto.StakePool.parser(),
+                        extensionRegistry);
+                if (stakePoolListBuilder_ == null) {
+                  ensureStakePoolListIsMutable();
+                  stakePoolList_.add(m);
+                } else {
+                  stakePoolListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.stafihub.stafihub.mining.ModelsProto.StakePool> stakePoolList_ =
+        java.util.Collections.emptyList();
+      private void ensureStakePoolListIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          stakePoolList_ = new java.util.ArrayList<com.stafihub.stafihub.mining.ModelsProto.StakePool>(stakePoolList_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.mining.ModelsProto.StakePool, com.stafihub.stafihub.mining.ModelsProto.StakePool.Builder, com.stafihub.stafihub.mining.ModelsProto.StakePoolOrBuilder> stakePoolListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakePool stakePoolList = 1 [json_name = "stakePoolList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.mining.ModelsProto.StakePool> getStakePoolListList() {
+        if (stakePoolListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(stakePoolList_);
+        } else {
+          return stakePoolListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakePool stakePoolList = 1 [json_name = "stakePoolList"];</code>
+       */
+      public int getStakePoolListCount() {
+        if (stakePoolListBuilder_ == null) {
+          return stakePoolList_.size();
+        } else {
+          return stakePoolListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakePool stakePoolList = 1 [json_name = "stakePoolList"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.StakePool getStakePoolList(int index) {
+        if (stakePoolListBuilder_ == null) {
+          return stakePoolList_.get(index);
+        } else {
+          return stakePoolListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakePool stakePoolList = 1 [json_name = "stakePoolList"];</code>
+       */
+      public Builder setStakePoolList(
+          int index, com.stafihub.stafihub.mining.ModelsProto.StakePool value) {
+        if (stakePoolListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakePoolListIsMutable();
+          stakePoolList_.set(index, value);
+          onChanged();
+        } else {
+          stakePoolListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakePool stakePoolList = 1 [json_name = "stakePoolList"];</code>
+       */
+      public Builder setStakePoolList(
+          int index, com.stafihub.stafihub.mining.ModelsProto.StakePool.Builder builderForValue) {
+        if (stakePoolListBuilder_ == null) {
+          ensureStakePoolListIsMutable();
+          stakePoolList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          stakePoolListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakePool stakePoolList = 1 [json_name = "stakePoolList"];</code>
+       */
+      public Builder addStakePoolList(com.stafihub.stafihub.mining.ModelsProto.StakePool value) {
+        if (stakePoolListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakePoolListIsMutable();
+          stakePoolList_.add(value);
+          onChanged();
+        } else {
+          stakePoolListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakePool stakePoolList = 1 [json_name = "stakePoolList"];</code>
+       */
+      public Builder addStakePoolList(
+          int index, com.stafihub.stafihub.mining.ModelsProto.StakePool value) {
+        if (stakePoolListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakePoolListIsMutable();
+          stakePoolList_.add(index, value);
+          onChanged();
+        } else {
+          stakePoolListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakePool stakePoolList = 1 [json_name = "stakePoolList"];</code>
+       */
+      public Builder addStakePoolList(
+          com.stafihub.stafihub.mining.ModelsProto.StakePool.Builder builderForValue) {
+        if (stakePoolListBuilder_ == null) {
+          ensureStakePoolListIsMutable();
+          stakePoolList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          stakePoolListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakePool stakePoolList = 1 [json_name = "stakePoolList"];</code>
+       */
+      public Builder addStakePoolList(
+          int index, com.stafihub.stafihub.mining.ModelsProto.StakePool.Builder builderForValue) {
+        if (stakePoolListBuilder_ == null) {
+          ensureStakePoolListIsMutable();
+          stakePoolList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          stakePoolListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakePool stakePoolList = 1 [json_name = "stakePoolList"];</code>
+       */
+      public Builder addAllStakePoolList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.mining.ModelsProto.StakePool> values) {
+        if (stakePoolListBuilder_ == null) {
+          ensureStakePoolListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, stakePoolList_);
+          onChanged();
+        } else {
+          stakePoolListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakePool stakePoolList = 1 [json_name = "stakePoolList"];</code>
+       */
+      public Builder clearStakePoolList() {
+        if (stakePoolListBuilder_ == null) {
+          stakePoolList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          stakePoolListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakePool stakePoolList = 1 [json_name = "stakePoolList"];</code>
+       */
+      public Builder removeStakePoolList(int index) {
+        if (stakePoolListBuilder_ == null) {
+          ensureStakePoolListIsMutable();
+          stakePoolList_.remove(index);
+          onChanged();
+        } else {
+          stakePoolListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakePool stakePoolList = 1 [json_name = "stakePoolList"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.StakePool.Builder getStakePoolListBuilder(
+          int index) {
+        return getStakePoolListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakePool stakePoolList = 1 [json_name = "stakePoolList"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.StakePoolOrBuilder getStakePoolListOrBuilder(
+          int index) {
+        if (stakePoolListBuilder_ == null) {
+          return stakePoolList_.get(index);  } else {
+          return stakePoolListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakePool stakePoolList = 1 [json_name = "stakePoolList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.mining.ModelsProto.StakePoolOrBuilder> 
+           getStakePoolListOrBuilderList() {
+        if (stakePoolListBuilder_ != null) {
+          return stakePoolListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(stakePoolList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakePool stakePoolList = 1 [json_name = "stakePoolList"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.StakePool.Builder addStakePoolListBuilder() {
+        return getStakePoolListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.mining.ModelsProto.StakePool.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakePool stakePoolList = 1 [json_name = "stakePoolList"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.StakePool.Builder addStakePoolListBuilder(
+          int index) {
+        return getStakePoolListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.mining.ModelsProto.StakePool.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.StakePool stakePoolList = 1 [json_name = "stakePoolList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.mining.ModelsProto.StakePool.Builder> 
+           getStakePoolListBuilderList() {
+        return getStakePoolListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.mining.ModelsProto.StakePool, com.stafihub.stafihub.mining.ModelsProto.StakePool.Builder, com.stafihub.stafihub.mining.ModelsProto.StakePoolOrBuilder> 
+          getStakePoolListFieldBuilder() {
+        if (stakePoolListBuilder_ == null) {
+          stakePoolListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.mining.ModelsProto.StakePool, com.stafihub.stafihub.mining.ModelsProto.StakePool.Builder, com.stafihub.stafihub.mining.ModelsProto.StakePoolOrBuilder>(
+                  stakePoolList_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          stakePoolList_ = null;
+        }
+        return stakePoolListBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.QueryStakePoolListResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.QueryStakePoolListResponse)
+    private static final com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse();
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryStakePoolListResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryStakePoolListResponse>() {
+      @java.lang.Override
+      public QueryStakePoolListResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryStakePoolListResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryStakePoolListResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.QueryProto.QueryStakePoolListResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryMiningProviderListRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.QueryMiningProviderListRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.mining.QueryMiningProviderListRequest}
+   */
+  public static final class QueryMiningProviderListRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.QueryMiningProviderListRequest)
+      QueryMiningProviderListRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryMiningProviderListRequest.newBuilder() to construct.
+    private QueryMiningProviderListRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryMiningProviderListRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryMiningProviderListRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryMiningProviderListRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryMiningProviderListRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest.class, com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest other = (com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.mining.QueryMiningProviderListRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.QueryMiningProviderListRequest)
+        com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryMiningProviderListRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryMiningProviderListRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest.class, com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryMiningProviderListRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest build() {
+        com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest buildPartial() {
+        com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest result = new com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest) {
+          return mergeFrom((com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest other) {
+        if (other == com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.QueryMiningProviderListRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.QueryMiningProviderListRequest)
+    private static final com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest();
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryMiningProviderListRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryMiningProviderListRequest>() {
+      @java.lang.Override
+      public QueryMiningProviderListRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryMiningProviderListRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryMiningProviderListRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryMiningProviderListResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.QueryMiningProviderListResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string miningProviderList = 1 [json_name = "miningProviderList"];</code>
+     * @return A list containing the miningProviderList.
+     */
+    java.util.List<java.lang.String>
+        getMiningProviderListList();
+    /**
+     * <code>repeated string miningProviderList = 1 [json_name = "miningProviderList"];</code>
+     * @return The count of miningProviderList.
+     */
+    int getMiningProviderListCount();
+    /**
+     * <code>repeated string miningProviderList = 1 [json_name = "miningProviderList"];</code>
+     * @param index The index of the element to return.
+     * @return The miningProviderList at the given index.
+     */
+    java.lang.String getMiningProviderList(int index);
+    /**
+     * <code>repeated string miningProviderList = 1 [json_name = "miningProviderList"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the miningProviderList at the given index.
+     */
+    com.google.protobuf.ByteString
+        getMiningProviderListBytes(int index);
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.mining.QueryMiningProviderListResponse}
+   */
+  public static final class QueryMiningProviderListResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.QueryMiningProviderListResponse)
+      QueryMiningProviderListResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryMiningProviderListResponse.newBuilder() to construct.
+    private QueryMiningProviderListResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryMiningProviderListResponse() {
+      miningProviderList_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryMiningProviderListResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryMiningProviderListResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryMiningProviderListResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse.class, com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse.Builder.class);
+    }
+
+    public static final int MININGPROVIDERLIST_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList miningProviderList_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string miningProviderList = 1 [json_name = "miningProviderList"];</code>
+     * @return A list containing the miningProviderList.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getMiningProviderListList() {
+      return miningProviderList_;
+    }
+    /**
+     * <code>repeated string miningProviderList = 1 [json_name = "miningProviderList"];</code>
+     * @return The count of miningProviderList.
+     */
+    public int getMiningProviderListCount() {
+      return miningProviderList_.size();
+    }
+    /**
+     * <code>repeated string miningProviderList = 1 [json_name = "miningProviderList"];</code>
+     * @param index The index of the element to return.
+     * @return The miningProviderList at the given index.
+     */
+    public java.lang.String getMiningProviderList(int index) {
+      return miningProviderList_.get(index);
+    }
+    /**
+     * <code>repeated string miningProviderList = 1 [json_name = "miningProviderList"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the miningProviderList at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getMiningProviderListBytes(int index) {
+      return miningProviderList_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < miningProviderList_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, miningProviderList_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < miningProviderList_.size(); i++) {
+          dataSize += computeStringSizeNoTag(miningProviderList_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getMiningProviderListList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse other = (com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse) obj;
+
+      if (!getMiningProviderListList()
+          .equals(other.getMiningProviderListList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getMiningProviderListCount() > 0) {
+        hash = (37 * hash) + MININGPROVIDERLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getMiningProviderListList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.mining.QueryMiningProviderListResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.QueryMiningProviderListResponse)
+        com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryMiningProviderListResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryMiningProviderListResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse.class, com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        miningProviderList_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryMiningProviderListResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse build() {
+        com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse buildPartial() {
+        com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse result = new com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          miningProviderList_.makeImmutable();
+          result.miningProviderList_ = miningProviderList_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse) {
+          return mergeFrom((com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse other) {
+        if (other == com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse.getDefaultInstance()) return this;
+        if (!other.miningProviderList_.isEmpty()) {
+          if (miningProviderList_.isEmpty()) {
+            miningProviderList_ = other.miningProviderList_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureMiningProviderListIsMutable();
+            miningProviderList_.addAll(other.miningProviderList_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureMiningProviderListIsMutable();
+                miningProviderList_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList miningProviderList_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureMiningProviderListIsMutable() {
+        if (!miningProviderList_.isModifiable()) {
+          miningProviderList_ = new com.google.protobuf.LazyStringArrayList(miningProviderList_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <code>repeated string miningProviderList = 1 [json_name = "miningProviderList"];</code>
+       * @return A list containing the miningProviderList.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getMiningProviderListList() {
+        miningProviderList_.makeImmutable();
+        return miningProviderList_;
+      }
+      /**
+       * <code>repeated string miningProviderList = 1 [json_name = "miningProviderList"];</code>
+       * @return The count of miningProviderList.
+       */
+      public int getMiningProviderListCount() {
+        return miningProviderList_.size();
+      }
+      /**
+       * <code>repeated string miningProviderList = 1 [json_name = "miningProviderList"];</code>
+       * @param index The index of the element to return.
+       * @return The miningProviderList at the given index.
+       */
+      public java.lang.String getMiningProviderList(int index) {
+        return miningProviderList_.get(index);
+      }
+      /**
+       * <code>repeated string miningProviderList = 1 [json_name = "miningProviderList"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the miningProviderList at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getMiningProviderListBytes(int index) {
+        return miningProviderList_.getByteString(index);
+      }
+      /**
+       * <code>repeated string miningProviderList = 1 [json_name = "miningProviderList"];</code>
+       * @param index The index to set the value at.
+       * @param value The miningProviderList to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMiningProviderList(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureMiningProviderListIsMutable();
+        miningProviderList_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string miningProviderList = 1 [json_name = "miningProviderList"];</code>
+       * @param value The miningProviderList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMiningProviderList(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureMiningProviderListIsMutable();
+        miningProviderList_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string miningProviderList = 1 [json_name = "miningProviderList"];</code>
+       * @param values The miningProviderList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllMiningProviderList(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureMiningProviderListIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, miningProviderList_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string miningProviderList = 1 [json_name = "miningProviderList"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMiningProviderList() {
+        miningProviderList_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string miningProviderList = 1 [json_name = "miningProviderList"];</code>
+       * @param value The bytes of the miningProviderList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMiningProviderListBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureMiningProviderListIsMutable();
+        miningProviderList_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.QueryMiningProviderListResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.QueryMiningProviderListResponse)
+    private static final com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse();
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryMiningProviderListResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryMiningProviderListResponse>() {
+      @java.lang.Override
+      public QueryMiningProviderListResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryMiningProviderListResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryMiningProviderListResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.QueryProto.QueryMiningProviderListResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRewardTokenListRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.QueryRewardTokenListRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.mining.QueryRewardTokenListRequest}
+   */
+  public static final class QueryRewardTokenListRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.QueryRewardTokenListRequest)
+      QueryRewardTokenListRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRewardTokenListRequest.newBuilder() to construct.
+    private QueryRewardTokenListRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRewardTokenListRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRewardTokenListRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryRewardTokenListRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryRewardTokenListRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest.class, com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest other = (com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.mining.QueryRewardTokenListRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.QueryRewardTokenListRequest)
+        com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryRewardTokenListRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryRewardTokenListRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest.class, com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryRewardTokenListRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest build() {
+        com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest buildPartial() {
+        com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest result = new com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest) {
+          return mergeFrom((com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest other) {
+        if (other == com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.QueryRewardTokenListRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.QueryRewardTokenListRequest)
+    private static final com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest();
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRewardTokenListRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRewardTokenListRequest>() {
+      @java.lang.Override
+      public QueryRewardTokenListRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRewardTokenListRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRewardTokenListRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRewardTokenListResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.QueryRewardTokenListResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .stafihub.stafihub.mining.RewardToken rewardTokenList = 1 [json_name = "rewardTokenList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.mining.ModelsProto.RewardToken> 
+        getRewardTokenListList();
+    /**
+     * <code>repeated .stafihub.stafihub.mining.RewardToken rewardTokenList = 1 [json_name = "rewardTokenList"];</code>
+     */
+    com.stafihub.stafihub.mining.ModelsProto.RewardToken getRewardTokenList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.mining.RewardToken rewardTokenList = 1 [json_name = "rewardTokenList"];</code>
+     */
+    int getRewardTokenListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.mining.RewardToken rewardTokenList = 1 [json_name = "rewardTokenList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.mining.ModelsProto.RewardTokenOrBuilder> 
+        getRewardTokenListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.mining.RewardToken rewardTokenList = 1 [json_name = "rewardTokenList"];</code>
+     */
+    com.stafihub.stafihub.mining.ModelsProto.RewardTokenOrBuilder getRewardTokenListOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.mining.QueryRewardTokenListResponse}
+   */
+  public static final class QueryRewardTokenListResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.QueryRewardTokenListResponse)
+      QueryRewardTokenListResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRewardTokenListResponse.newBuilder() to construct.
+    private QueryRewardTokenListResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRewardTokenListResponse() {
+      rewardTokenList_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRewardTokenListResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryRewardTokenListResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryRewardTokenListResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse.class, com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse.Builder.class);
+    }
+
+    public static final int REWARDTOKENLIST_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.mining.ModelsProto.RewardToken> rewardTokenList_;
+    /**
+     * <code>repeated .stafihub.stafihub.mining.RewardToken rewardTokenList = 1 [json_name = "rewardTokenList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.mining.ModelsProto.RewardToken> getRewardTokenListList() {
+      return rewardTokenList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.mining.RewardToken rewardTokenList = 1 [json_name = "rewardTokenList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.mining.ModelsProto.RewardTokenOrBuilder> 
+        getRewardTokenListOrBuilderList() {
+      return rewardTokenList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.mining.RewardToken rewardTokenList = 1 [json_name = "rewardTokenList"];</code>
+     */
+    @java.lang.Override
+    public int getRewardTokenListCount() {
+      return rewardTokenList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.mining.RewardToken rewardTokenList = 1 [json_name = "rewardTokenList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.ModelsProto.RewardToken getRewardTokenList(int index) {
+      return rewardTokenList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.mining.RewardToken rewardTokenList = 1 [json_name = "rewardTokenList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.ModelsProto.RewardTokenOrBuilder getRewardTokenListOrBuilder(
+        int index) {
+      return rewardTokenList_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < rewardTokenList_.size(); i++) {
+        output.writeMessage(1, rewardTokenList_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < rewardTokenList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, rewardTokenList_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse other = (com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse) obj;
+
+      if (!getRewardTokenListList()
+          .equals(other.getRewardTokenListList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getRewardTokenListCount() > 0) {
+        hash = (37 * hash) + REWARDTOKENLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getRewardTokenListList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.mining.QueryRewardTokenListResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.QueryRewardTokenListResponse)
+        com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryRewardTokenListResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryRewardTokenListResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse.class, com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (rewardTokenListBuilder_ == null) {
+          rewardTokenList_ = java.util.Collections.emptyList();
+        } else {
+          rewardTokenList_ = null;
+          rewardTokenListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryRewardTokenListResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse build() {
+        com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse buildPartial() {
+        com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse result = new com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse result) {
+        if (rewardTokenListBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            rewardTokenList_ = java.util.Collections.unmodifiableList(rewardTokenList_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.rewardTokenList_ = rewardTokenList_;
+        } else {
+          result.rewardTokenList_ = rewardTokenListBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse) {
+          return mergeFrom((com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse other) {
+        if (other == com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse.getDefaultInstance()) return this;
+        if (rewardTokenListBuilder_ == null) {
+          if (!other.rewardTokenList_.isEmpty()) {
+            if (rewardTokenList_.isEmpty()) {
+              rewardTokenList_ = other.rewardTokenList_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRewardTokenListIsMutable();
+              rewardTokenList_.addAll(other.rewardTokenList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.rewardTokenList_.isEmpty()) {
+            if (rewardTokenListBuilder_.isEmpty()) {
+              rewardTokenListBuilder_.dispose();
+              rewardTokenListBuilder_ = null;
+              rewardTokenList_ = other.rewardTokenList_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              rewardTokenListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRewardTokenListFieldBuilder() : null;
+            } else {
+              rewardTokenListBuilder_.addAllMessages(other.rewardTokenList_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.stafihub.stafihub.mining.ModelsProto.RewardToken m =
+                    input.readMessage(
+                        com.stafihub.stafihub.mining.ModelsProto.RewardToken.parser(),
+                        extensionRegistry);
+                if (rewardTokenListBuilder_ == null) {
+                  ensureRewardTokenListIsMutable();
+                  rewardTokenList_.add(m);
+                } else {
+                  rewardTokenListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.stafihub.stafihub.mining.ModelsProto.RewardToken> rewardTokenList_ =
+        java.util.Collections.emptyList();
+      private void ensureRewardTokenListIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          rewardTokenList_ = new java.util.ArrayList<com.stafihub.stafihub.mining.ModelsProto.RewardToken>(rewardTokenList_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.mining.ModelsProto.RewardToken, com.stafihub.stafihub.mining.ModelsProto.RewardToken.Builder, com.stafihub.stafihub.mining.ModelsProto.RewardTokenOrBuilder> rewardTokenListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardToken rewardTokenList = 1 [json_name = "rewardTokenList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.mining.ModelsProto.RewardToken> getRewardTokenListList() {
+        if (rewardTokenListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(rewardTokenList_);
+        } else {
+          return rewardTokenListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardToken rewardTokenList = 1 [json_name = "rewardTokenList"];</code>
+       */
+      public int getRewardTokenListCount() {
+        if (rewardTokenListBuilder_ == null) {
+          return rewardTokenList_.size();
+        } else {
+          return rewardTokenListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardToken rewardTokenList = 1 [json_name = "rewardTokenList"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.RewardToken getRewardTokenList(int index) {
+        if (rewardTokenListBuilder_ == null) {
+          return rewardTokenList_.get(index);
+        } else {
+          return rewardTokenListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardToken rewardTokenList = 1 [json_name = "rewardTokenList"];</code>
+       */
+      public Builder setRewardTokenList(
+          int index, com.stafihub.stafihub.mining.ModelsProto.RewardToken value) {
+        if (rewardTokenListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardTokenListIsMutable();
+          rewardTokenList_.set(index, value);
+          onChanged();
+        } else {
+          rewardTokenListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardToken rewardTokenList = 1 [json_name = "rewardTokenList"];</code>
+       */
+      public Builder setRewardTokenList(
+          int index, com.stafihub.stafihub.mining.ModelsProto.RewardToken.Builder builderForValue) {
+        if (rewardTokenListBuilder_ == null) {
+          ensureRewardTokenListIsMutable();
+          rewardTokenList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardTokenListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardToken rewardTokenList = 1 [json_name = "rewardTokenList"];</code>
+       */
+      public Builder addRewardTokenList(com.stafihub.stafihub.mining.ModelsProto.RewardToken value) {
+        if (rewardTokenListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardTokenListIsMutable();
+          rewardTokenList_.add(value);
+          onChanged();
+        } else {
+          rewardTokenListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardToken rewardTokenList = 1 [json_name = "rewardTokenList"];</code>
+       */
+      public Builder addRewardTokenList(
+          int index, com.stafihub.stafihub.mining.ModelsProto.RewardToken value) {
+        if (rewardTokenListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardTokenListIsMutable();
+          rewardTokenList_.add(index, value);
+          onChanged();
+        } else {
+          rewardTokenListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardToken rewardTokenList = 1 [json_name = "rewardTokenList"];</code>
+       */
+      public Builder addRewardTokenList(
+          com.stafihub.stafihub.mining.ModelsProto.RewardToken.Builder builderForValue) {
+        if (rewardTokenListBuilder_ == null) {
+          ensureRewardTokenListIsMutable();
+          rewardTokenList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          rewardTokenListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardToken rewardTokenList = 1 [json_name = "rewardTokenList"];</code>
+       */
+      public Builder addRewardTokenList(
+          int index, com.stafihub.stafihub.mining.ModelsProto.RewardToken.Builder builderForValue) {
+        if (rewardTokenListBuilder_ == null) {
+          ensureRewardTokenListIsMutable();
+          rewardTokenList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardTokenListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardToken rewardTokenList = 1 [json_name = "rewardTokenList"];</code>
+       */
+      public Builder addAllRewardTokenList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.mining.ModelsProto.RewardToken> values) {
+        if (rewardTokenListBuilder_ == null) {
+          ensureRewardTokenListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, rewardTokenList_);
+          onChanged();
+        } else {
+          rewardTokenListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardToken rewardTokenList = 1 [json_name = "rewardTokenList"];</code>
+       */
+      public Builder clearRewardTokenList() {
+        if (rewardTokenListBuilder_ == null) {
+          rewardTokenList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          rewardTokenListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardToken rewardTokenList = 1 [json_name = "rewardTokenList"];</code>
+       */
+      public Builder removeRewardTokenList(int index) {
+        if (rewardTokenListBuilder_ == null) {
+          ensureRewardTokenListIsMutable();
+          rewardTokenList_.remove(index);
+          onChanged();
+        } else {
+          rewardTokenListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardToken rewardTokenList = 1 [json_name = "rewardTokenList"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.RewardToken.Builder getRewardTokenListBuilder(
+          int index) {
+        return getRewardTokenListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardToken rewardTokenList = 1 [json_name = "rewardTokenList"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.RewardTokenOrBuilder getRewardTokenListOrBuilder(
+          int index) {
+        if (rewardTokenListBuilder_ == null) {
+          return rewardTokenList_.get(index);  } else {
+          return rewardTokenListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardToken rewardTokenList = 1 [json_name = "rewardTokenList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.mining.ModelsProto.RewardTokenOrBuilder> 
+           getRewardTokenListOrBuilderList() {
+        if (rewardTokenListBuilder_ != null) {
+          return rewardTokenListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(rewardTokenList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardToken rewardTokenList = 1 [json_name = "rewardTokenList"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.RewardToken.Builder addRewardTokenListBuilder() {
+        return getRewardTokenListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.mining.ModelsProto.RewardToken.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardToken rewardTokenList = 1 [json_name = "rewardTokenList"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.RewardToken.Builder addRewardTokenListBuilder(
+          int index) {
+        return getRewardTokenListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.mining.ModelsProto.RewardToken.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardToken rewardTokenList = 1 [json_name = "rewardTokenList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.mining.ModelsProto.RewardToken.Builder> 
+           getRewardTokenListBuilderList() {
+        return getRewardTokenListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.mining.ModelsProto.RewardToken, com.stafihub.stafihub.mining.ModelsProto.RewardToken.Builder, com.stafihub.stafihub.mining.ModelsProto.RewardTokenOrBuilder> 
+          getRewardTokenListFieldBuilder() {
+        if (rewardTokenListBuilder_ == null) {
+          rewardTokenListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.mining.ModelsProto.RewardToken, com.stafihub.stafihub.mining.ModelsProto.RewardToken.Builder, com.stafihub.stafihub.mining.ModelsProto.RewardTokenOrBuilder>(
+                  rewardTokenList_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          rewardTokenList_ = null;
+        }
+        return rewardTokenListBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.QueryRewardTokenListResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.QueryRewardTokenListResponse)
+    private static final com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse();
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRewardTokenListResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRewardTokenListResponse>() {
+      @java.lang.Override
+      public QueryRewardTokenListResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRewardTokenListResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRewardTokenListResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.QueryProto.QueryRewardTokenListResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryMaxRewardPoolNumberRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.QueryMaxRewardPoolNumberRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.mining.QueryMaxRewardPoolNumberRequest}
+   */
+  public static final class QueryMaxRewardPoolNumberRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.QueryMaxRewardPoolNumberRequest)
+      QueryMaxRewardPoolNumberRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryMaxRewardPoolNumberRequest.newBuilder() to construct.
+    private QueryMaxRewardPoolNumberRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryMaxRewardPoolNumberRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryMaxRewardPoolNumberRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryMaxRewardPoolNumberRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryMaxRewardPoolNumberRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest.class, com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest other = (com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.mining.QueryMaxRewardPoolNumberRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.QueryMaxRewardPoolNumberRequest)
+        com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryMaxRewardPoolNumberRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryMaxRewardPoolNumberRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest.class, com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryMaxRewardPoolNumberRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest build() {
+        com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest buildPartial() {
+        com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest result = new com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest) {
+          return mergeFrom((com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest other) {
+        if (other == com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.QueryMaxRewardPoolNumberRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.QueryMaxRewardPoolNumberRequest)
+    private static final com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest();
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryMaxRewardPoolNumberRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryMaxRewardPoolNumberRequest>() {
+      @java.lang.Override
+      public QueryMaxRewardPoolNumberRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryMaxRewardPoolNumberRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryMaxRewardPoolNumberRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryMaxRewardPoolNumberResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.QueryMaxRewardPoolNumberResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint32 number = 1 [json_name = "number"];</code>
+     * @return The number.
+     */
+    int getNumber();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.mining.QueryMaxRewardPoolNumberResponse}
+   */
+  public static final class QueryMaxRewardPoolNumberResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.QueryMaxRewardPoolNumberResponse)
+      QueryMaxRewardPoolNumberResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryMaxRewardPoolNumberResponse.newBuilder() to construct.
+    private QueryMaxRewardPoolNumberResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryMaxRewardPoolNumberResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryMaxRewardPoolNumberResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryMaxRewardPoolNumberResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryMaxRewardPoolNumberResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse.class, com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse.Builder.class);
+    }
+
+    public static final int NUMBER_FIELD_NUMBER = 1;
+    private int number_ = 0;
+    /**
+     * <code>uint32 number = 1 [json_name = "number"];</code>
+     * @return The number.
+     */
+    @java.lang.Override
+    public int getNumber() {
+      return number_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (number_ != 0) {
+        output.writeUInt32(1, number_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (number_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, number_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse other = (com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse) obj;
+
+      if (getNumber()
+          != other.getNumber()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getNumber();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.mining.QueryMaxRewardPoolNumberResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.QueryMaxRewardPoolNumberResponse)
+        com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryMaxRewardPoolNumberResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryMaxRewardPoolNumberResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse.class, com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        number_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryMaxRewardPoolNumberResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse build() {
+        com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse buildPartial() {
+        com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse result = new com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.number_ = number_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse) {
+          return mergeFrom((com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse other) {
+        if (other == com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse.getDefaultInstance()) return this;
+        if (other.getNumber() != 0) {
+          setNumber(other.getNumber());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                number_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int number_ ;
+      /**
+       * <code>uint32 number = 1 [json_name = "number"];</code>
+       * @return The number.
+       */
+      @java.lang.Override
+      public int getNumber() {
+        return number_;
+      }
+      /**
+       * <code>uint32 number = 1 [json_name = "number"];</code>
+       * @param value The number to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumber(int value) {
+
+        number_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 number = 1 [json_name = "number"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumber() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        number_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.QueryMaxRewardPoolNumberResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.QueryMaxRewardPoolNumberResponse)
+    private static final com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse();
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryMaxRewardPoolNumberResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryMaxRewardPoolNumberResponse>() {
+      @java.lang.Override
+      public QueryMaxRewardPoolNumberResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryMaxRewardPoolNumberResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryMaxRewardPoolNumberResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.QueryProto.QueryMaxRewardPoolNumberResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryMaxStakeItemNumberRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.QueryMaxStakeItemNumberRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.mining.QueryMaxStakeItemNumberRequest}
+   */
+  public static final class QueryMaxStakeItemNumberRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.QueryMaxStakeItemNumberRequest)
+      QueryMaxStakeItemNumberRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryMaxStakeItemNumberRequest.newBuilder() to construct.
+    private QueryMaxStakeItemNumberRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryMaxStakeItemNumberRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryMaxStakeItemNumberRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryMaxStakeItemNumberRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryMaxStakeItemNumberRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest.class, com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest other = (com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.mining.QueryMaxStakeItemNumberRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.QueryMaxStakeItemNumberRequest)
+        com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryMaxStakeItemNumberRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryMaxStakeItemNumberRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest.class, com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryMaxStakeItemNumberRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest build() {
+        com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest buildPartial() {
+        com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest result = new com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest) {
+          return mergeFrom((com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest other) {
+        if (other == com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.QueryMaxStakeItemNumberRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.QueryMaxStakeItemNumberRequest)
+    private static final com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest();
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryMaxStakeItemNumberRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryMaxStakeItemNumberRequest>() {
+      @java.lang.Override
+      public QueryMaxStakeItemNumberRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryMaxStakeItemNumberRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryMaxStakeItemNumberRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryMaxStakeItemNumberResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.QueryMaxStakeItemNumberResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint32 number = 1 [json_name = "number"];</code>
+     * @return The number.
+     */
+    int getNumber();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.mining.QueryMaxStakeItemNumberResponse}
+   */
+  public static final class QueryMaxStakeItemNumberResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.QueryMaxStakeItemNumberResponse)
+      QueryMaxStakeItemNumberResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryMaxStakeItemNumberResponse.newBuilder() to construct.
+    private QueryMaxStakeItemNumberResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryMaxStakeItemNumberResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryMaxStakeItemNumberResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryMaxStakeItemNumberResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryMaxStakeItemNumberResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse.class, com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse.Builder.class);
+    }
+
+    public static final int NUMBER_FIELD_NUMBER = 1;
+    private int number_ = 0;
+    /**
+     * <code>uint32 number = 1 [json_name = "number"];</code>
+     * @return The number.
+     */
+    @java.lang.Override
+    public int getNumber() {
+      return number_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (number_ != 0) {
+        output.writeUInt32(1, number_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (number_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, number_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse other = (com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse) obj;
+
+      if (getNumber()
+          != other.getNumber()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getNumber();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.mining.QueryMaxStakeItemNumberResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.QueryMaxStakeItemNumberResponse)
+        com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryMaxStakeItemNumberResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryMaxStakeItemNumberResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse.class, com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        number_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryMaxStakeItemNumberResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse build() {
+        com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse buildPartial() {
+        com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse result = new com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.number_ = number_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse) {
+          return mergeFrom((com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse other) {
+        if (other == com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse.getDefaultInstance()) return this;
+        if (other.getNumber() != 0) {
+          setNumber(other.getNumber());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                number_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int number_ ;
+      /**
+       * <code>uint32 number = 1 [json_name = "number"];</code>
+       * @return The number.
+       */
+      @java.lang.Override
+      public int getNumber() {
+        return number_;
+      }
+      /**
+       * <code>uint32 number = 1 [json_name = "number"];</code>
+       * @param value The number to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumber(int value) {
+
+        number_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 number = 1 [json_name = "number"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumber() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        number_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.QueryMaxStakeItemNumberResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.QueryMaxStakeItemNumberResponse)
+    private static final com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse();
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryMaxStakeItemNumberResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryMaxStakeItemNumberResponse>() {
+      @java.lang.Override
+      public QueryMaxStakeItemNumberResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryMaxStakeItemNumberResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryMaxStakeItemNumberResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.QueryProto.QueryMaxStakeItemNumberResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryProviderSwitchRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.QueryProviderSwitchRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.mining.QueryProviderSwitchRequest}
+   */
+  public static final class QueryProviderSwitchRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.QueryProviderSwitchRequest)
+      QueryProviderSwitchRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryProviderSwitchRequest.newBuilder() to construct.
+    private QueryProviderSwitchRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryProviderSwitchRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryProviderSwitchRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryProviderSwitchRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryProviderSwitchRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest.class, com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest other = (com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.mining.QueryProviderSwitchRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.QueryProviderSwitchRequest)
+        com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryProviderSwitchRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryProviderSwitchRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest.class, com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryProviderSwitchRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest build() {
+        com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest buildPartial() {
+        com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest result = new com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest) {
+          return mergeFrom((com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest other) {
+        if (other == com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.QueryProviderSwitchRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.QueryProviderSwitchRequest)
+    private static final com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest();
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryProviderSwitchRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryProviderSwitchRequest>() {
+      @java.lang.Override
+      public QueryProviderSwitchRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryProviderSwitchRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryProviderSwitchRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryProviderSwitchResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.QueryProviderSwitchResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bool providerSwitch = 1 [json_name = "providerSwitch"];</code>
+     * @return The providerSwitch.
+     */
+    boolean getProviderSwitch();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.mining.QueryProviderSwitchResponse}
+   */
+  public static final class QueryProviderSwitchResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.QueryProviderSwitchResponse)
+      QueryProviderSwitchResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryProviderSwitchResponse.newBuilder() to construct.
+    private QueryProviderSwitchResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryProviderSwitchResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryProviderSwitchResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryProviderSwitchResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryProviderSwitchResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse.class, com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse.Builder.class);
+    }
+
+    public static final int PROVIDERSWITCH_FIELD_NUMBER = 1;
+    private boolean providerSwitch_ = false;
+    /**
+     * <code>bool providerSwitch = 1 [json_name = "providerSwitch"];</code>
+     * @return The providerSwitch.
+     */
+    @java.lang.Override
+    public boolean getProviderSwitch() {
+      return providerSwitch_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (providerSwitch_ != false) {
+        output.writeBool(1, providerSwitch_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (providerSwitch_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, providerSwitch_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse other = (com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse) obj;
+
+      if (getProviderSwitch()
+          != other.getProviderSwitch()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROVIDERSWITCH_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getProviderSwitch());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.mining.QueryProviderSwitchResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.QueryProviderSwitchResponse)
+        com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryProviderSwitchResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryProviderSwitchResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse.class, com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        providerSwitch_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.QueryProto.internal_static_stafihub_stafihub_mining_QueryProviderSwitchResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse build() {
+        com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse buildPartial() {
+        com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse result = new com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.providerSwitch_ = providerSwitch_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse) {
+          return mergeFrom((com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse other) {
+        if (other == com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse.getDefaultInstance()) return this;
+        if (other.getProviderSwitch() != false) {
+          setProviderSwitch(other.getProviderSwitch());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                providerSwitch_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean providerSwitch_ ;
+      /**
+       * <code>bool providerSwitch = 1 [json_name = "providerSwitch"];</code>
+       * @return The providerSwitch.
+       */
+      @java.lang.Override
+      public boolean getProviderSwitch() {
+        return providerSwitch_;
+      }
+      /**
+       * <code>bool providerSwitch = 1 [json_name = "providerSwitch"];</code>
+       * @param value The providerSwitch to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviderSwitch(boolean value) {
+
+        providerSwitch_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool providerSwitch = 1 [json_name = "providerSwitch"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProviderSwitch() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        providerSwitch_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.QueryProviderSwitchResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.QueryProviderSwitchResponse)
+    private static final com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse();
+    }
+
+    public static com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryProviderSwitchResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryProviderSwitchResponse>() {
+      @java.lang.Override
+      public QueryProviderSwitchResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryProviderSwitchResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryProviderSwitchResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.QueryProto.QueryProviderSwitchResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_QueryParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_QueryParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_QueryParamsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_QueryStakePoolInfoRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_QueryStakePoolInfoRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_QueryStakePoolInfoResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_QueryStakePoolInfoResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_QueryStakeItemListRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_QueryStakeItemListRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_QueryStakeItemListResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_QueryStakeItemListResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_QueryStakeRewardRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_QueryStakeRewardRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_QueryStakeRewardResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_QueryStakeRewardResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_QueryStakeRecordCountRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_QueryStakeRecordCountRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_QueryStakeRecordCountResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_QueryStakeRecordCountResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_QueryStakeRecordRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_QueryStakeRecordRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_QueryStakeRecordResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_QueryStakeRecordResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_QueryStakeRecordListRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_QueryStakeRecordListRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_QueryStakeRecordListResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_QueryStakeRecordListResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_QueryStakePoolListRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_QueryStakePoolListRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_QueryStakePoolListResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_QueryStakePoolListResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_QueryMiningProviderListRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_QueryMiningProviderListRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_QueryMiningProviderListResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_QueryMiningProviderListResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_QueryRewardTokenListRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_QueryRewardTokenListRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_QueryRewardTokenListResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_QueryRewardTokenListResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_QueryMaxRewardPoolNumberRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_QueryMaxRewardPoolNumberRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_QueryMaxRewardPoolNumberResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_QueryMaxRewardPoolNumberResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_QueryMaxStakeItemNumberRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_QueryMaxStakeItemNumberRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_QueryMaxStakeItemNumberResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_QueryMaxStakeItemNumberResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_QueryProviderSwitchRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_QueryProviderSwitchRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_QueryProviderSwitchResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_QueryProviderSwitchResponse_fieldAccessorTable;
 
@@ -273,13 +14953,13 @@ public final class QueryProto {
       ".stafihub.stafihub.mining.QueryProviderS" +
       "witchRequest\0325.stafihub.stafihub.mining." +
       "QueryProviderSwitchResponse\"1\202\323\344\223\002+\022)/st" +
-      "afihub/stafihub/mining/provider_switchB\331" +
+      "afihub/stafihub/mining/provider_switchB\327" +
       "\001\n\034com.stafihub.stafihub.miningB\nQueryPr" +
-      "otoP\001Z+github.com/stafihub/stafihub/x/mi" +
-      "ning/types\242\002\003SSM\252\002\030Stafihub.Stafihub.Min" +
-      "ing\312\002\030Stafihub\\Stafihub\\Mining\342\002$Stafihu" +
-      "b\\Stafihub\\Mining\\GPBMetadata\352\002\032Stafihub" +
-      "::Stafihub::Miningb\006proto3"
+      "otoZ+github.com/stafihub/stafihub/x/mini" +
+      "ng/types\242\002\003SSM\252\002\030Stafihub.Stafihub.Minin" +
+      "g\312\002\030Stafihub\\Stafihub\\Mining\342\002$Stafihub\\" +
+      "Stafihub\\Mining\\GPBMetadata\352\002\032Stafihub::" +
+      "Stafihub::Miningb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

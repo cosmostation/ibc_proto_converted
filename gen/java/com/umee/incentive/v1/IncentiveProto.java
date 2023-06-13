@@ -14,14 +14,2438 @@ public final class IncentiveProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.incentive.v1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * max_unbondings is the maximum amount of concurrent unbondings an address can have
+     * of each bonded uToken denom. Zero is interpreted as no limit.
+     * </pre>
+     *
+     * <code>uint32 max_unbondings = 1 [json_name = "maxUnbondings"];</code>
+     * @return The maxUnbondings.
+     */
+    int getMaxUnbondings();
+
+    /**
+     * <pre>
+     * unbonding_duration is the unbonding duration (in seconds).
+     * </pre>
+     *
+     * <code>int64 unbonding_duration = 2 [json_name = "unbondingDuration"];</code>
+     * @return The unbondingDuration.
+     */
+    long getUnbondingDuration();
+
+    /**
+     * <pre>
+     * emergency_unbond_fee is the portion of a bond that is paid when it is instantly
+     * released using MsgEmergencyUnbond. For example, 0.01 is a 1% fee. Ranges 0-1.
+     * </pre>
+     *
+     * <code>string emergency_unbond_fee = 3 [json_name = "emergencyUnbondFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The emergencyUnbondFee.
+     */
+    java.lang.String getEmergencyUnbondFee();
+    /**
+     * <pre>
+     * emergency_unbond_fee is the portion of a bond that is paid when it is instantly
+     * released using MsgEmergencyUnbond. For example, 0.01 is a 1% fee. Ranges 0-1.
+     * </pre>
+     *
+     * <code>string emergency_unbond_fee = 3 [json_name = "emergencyUnbondFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for emergencyUnbondFee.
+     */
+    com.google.protobuf.ByteString
+        getEmergencyUnbondFeeBytes();
+  }
+  /**
+   * <pre>
+   * Params defines the parameters for the incentive module.
+   * </pre>
+   *
+   * Protobuf type {@code umee.incentive.v1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.incentive.v1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      emergencyUnbondFee_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.incentive.v1.IncentiveProto.internal_static_umee_incentive_v1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.incentive.v1.IncentiveProto.internal_static_umee_incentive_v1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.incentive.v1.IncentiveProto.Params.class, com.umee.incentive.v1.IncentiveProto.Params.Builder.class);
+    }
+
+    public static final int MAX_UNBONDINGS_FIELD_NUMBER = 1;
+    private int maxUnbondings_ = 0;
+    /**
+     * <pre>
+     * max_unbondings is the maximum amount of concurrent unbondings an address can have
+     * of each bonded uToken denom. Zero is interpreted as no limit.
+     * </pre>
+     *
+     * <code>uint32 max_unbondings = 1 [json_name = "maxUnbondings"];</code>
+     * @return The maxUnbondings.
+     */
+    @java.lang.Override
+    public int getMaxUnbondings() {
+      return maxUnbondings_;
+    }
+
+    public static final int UNBONDING_DURATION_FIELD_NUMBER = 2;
+    private long unbondingDuration_ = 0L;
+    /**
+     * <pre>
+     * unbonding_duration is the unbonding duration (in seconds).
+     * </pre>
+     *
+     * <code>int64 unbonding_duration = 2 [json_name = "unbondingDuration"];</code>
+     * @return The unbondingDuration.
+     */
+    @java.lang.Override
+    public long getUnbondingDuration() {
+      return unbondingDuration_;
+    }
+
+    public static final int EMERGENCY_UNBOND_FEE_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object emergencyUnbondFee_ = "";
+    /**
+     * <pre>
+     * emergency_unbond_fee is the portion of a bond that is paid when it is instantly
+     * released using MsgEmergencyUnbond. For example, 0.01 is a 1% fee. Ranges 0-1.
+     * </pre>
+     *
+     * <code>string emergency_unbond_fee = 3 [json_name = "emergencyUnbondFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The emergencyUnbondFee.
+     */
+    @java.lang.Override
+    public java.lang.String getEmergencyUnbondFee() {
+      java.lang.Object ref = emergencyUnbondFee_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        emergencyUnbondFee_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * emergency_unbond_fee is the portion of a bond that is paid when it is instantly
+     * released using MsgEmergencyUnbond. For example, 0.01 is a 1% fee. Ranges 0-1.
+     * </pre>
+     *
+     * <code>string emergency_unbond_fee = 3 [json_name = "emergencyUnbondFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for emergencyUnbondFee.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEmergencyUnbondFeeBytes() {
+      java.lang.Object ref = emergencyUnbondFee_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        emergencyUnbondFee_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (maxUnbondings_ != 0) {
+        output.writeUInt32(1, maxUnbondings_);
+      }
+      if (unbondingDuration_ != 0L) {
+        output.writeInt64(2, unbondingDuration_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emergencyUnbondFee_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, emergencyUnbondFee_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (maxUnbondings_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, maxUnbondings_);
+      }
+      if (unbondingDuration_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, unbondingDuration_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emergencyUnbondFee_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, emergencyUnbondFee_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.incentive.v1.IncentiveProto.Params)) {
+        return super.equals(obj);
+      }
+      com.umee.incentive.v1.IncentiveProto.Params other = (com.umee.incentive.v1.IncentiveProto.Params) obj;
+
+      if (getMaxUnbondings()
+          != other.getMaxUnbondings()) return false;
+      if (getUnbondingDuration()
+          != other.getUnbondingDuration()) return false;
+      if (!getEmergencyUnbondFee()
+          .equals(other.getEmergencyUnbondFee())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MAX_UNBONDINGS_FIELD_NUMBER;
+      hash = (53 * hash) + getMaxUnbondings();
+      hash = (37 * hash) + UNBONDING_DURATION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getUnbondingDuration());
+      hash = (37 * hash) + EMERGENCY_UNBOND_FEE_FIELD_NUMBER;
+      hash = (53 * hash) + getEmergencyUnbondFee().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.incentive.v1.IncentiveProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.incentive.v1.IncentiveProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.IncentiveProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.incentive.v1.IncentiveProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.IncentiveProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.incentive.v1.IncentiveProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.IncentiveProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.incentive.v1.IncentiveProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.incentive.v1.IncentiveProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.incentive.v1.IncentiveProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.IncentiveProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.incentive.v1.IncentiveProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.incentive.v1.IncentiveProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params defines the parameters for the incentive module.
+     * </pre>
+     *
+     * Protobuf type {@code umee.incentive.v1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.incentive.v1.Params)
+        com.umee.incentive.v1.IncentiveProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.incentive.v1.IncentiveProto.internal_static_umee_incentive_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.incentive.v1.IncentiveProto.internal_static_umee_incentive_v1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.incentive.v1.IncentiveProto.Params.class, com.umee.incentive.v1.IncentiveProto.Params.Builder.class);
+      }
+
+      // Construct using com.umee.incentive.v1.IncentiveProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        maxUnbondings_ = 0;
+        unbondingDuration_ = 0L;
+        emergencyUnbondFee_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.incentive.v1.IncentiveProto.internal_static_umee_incentive_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.incentive.v1.IncentiveProto.Params getDefaultInstanceForType() {
+        return com.umee.incentive.v1.IncentiveProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.incentive.v1.IncentiveProto.Params build() {
+        com.umee.incentive.v1.IncentiveProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.incentive.v1.IncentiveProto.Params buildPartial() {
+        com.umee.incentive.v1.IncentiveProto.Params result = new com.umee.incentive.v1.IncentiveProto.Params(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.incentive.v1.IncentiveProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.maxUnbondings_ = maxUnbondings_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.unbondingDuration_ = unbondingDuration_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.emergencyUnbondFee_ = emergencyUnbondFee_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.incentive.v1.IncentiveProto.Params) {
+          return mergeFrom((com.umee.incentive.v1.IncentiveProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.incentive.v1.IncentiveProto.Params other) {
+        if (other == com.umee.incentive.v1.IncentiveProto.Params.getDefaultInstance()) return this;
+        if (other.getMaxUnbondings() != 0) {
+          setMaxUnbondings(other.getMaxUnbondings());
+        }
+        if (other.getUnbondingDuration() != 0L) {
+          setUnbondingDuration(other.getUnbondingDuration());
+        }
+        if (!other.getEmergencyUnbondFee().isEmpty()) {
+          emergencyUnbondFee_ = other.emergencyUnbondFee_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                maxUnbondings_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                unbondingDuration_ = input.readInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                emergencyUnbondFee_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int maxUnbondings_ ;
+      /**
+       * <pre>
+       * max_unbondings is the maximum amount of concurrent unbondings an address can have
+       * of each bonded uToken denom. Zero is interpreted as no limit.
+       * </pre>
+       *
+       * <code>uint32 max_unbondings = 1 [json_name = "maxUnbondings"];</code>
+       * @return The maxUnbondings.
+       */
+      @java.lang.Override
+      public int getMaxUnbondings() {
+        return maxUnbondings_;
+      }
+      /**
+       * <pre>
+       * max_unbondings is the maximum amount of concurrent unbondings an address can have
+       * of each bonded uToken denom. Zero is interpreted as no limit.
+       * </pre>
+       *
+       * <code>uint32 max_unbondings = 1 [json_name = "maxUnbondings"];</code>
+       * @param value The maxUnbondings to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxUnbondings(int value) {
+
+        maxUnbondings_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * max_unbondings is the maximum amount of concurrent unbondings an address can have
+       * of each bonded uToken denom. Zero is interpreted as no limit.
+       * </pre>
+       *
+       * <code>uint32 max_unbondings = 1 [json_name = "maxUnbondings"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxUnbondings() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        maxUnbondings_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long unbondingDuration_ ;
+      /**
+       * <pre>
+       * unbonding_duration is the unbonding duration (in seconds).
+       * </pre>
+       *
+       * <code>int64 unbonding_duration = 2 [json_name = "unbondingDuration"];</code>
+       * @return The unbondingDuration.
+       */
+      @java.lang.Override
+      public long getUnbondingDuration() {
+        return unbondingDuration_;
+      }
+      /**
+       * <pre>
+       * unbonding_duration is the unbonding duration (in seconds).
+       * </pre>
+       *
+       * <code>int64 unbonding_duration = 2 [json_name = "unbondingDuration"];</code>
+       * @param value The unbondingDuration to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnbondingDuration(long value) {
+
+        unbondingDuration_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unbonding_duration is the unbonding duration (in seconds).
+       * </pre>
+       *
+       * <code>int64 unbonding_duration = 2 [json_name = "unbondingDuration"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUnbondingDuration() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        unbondingDuration_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object emergencyUnbondFee_ = "";
+      /**
+       * <pre>
+       * emergency_unbond_fee is the portion of a bond that is paid when it is instantly
+       * released using MsgEmergencyUnbond. For example, 0.01 is a 1% fee. Ranges 0-1.
+       * </pre>
+       *
+       * <code>string emergency_unbond_fee = 3 [json_name = "emergencyUnbondFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The emergencyUnbondFee.
+       */
+      public java.lang.String getEmergencyUnbondFee() {
+        java.lang.Object ref = emergencyUnbondFee_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          emergencyUnbondFee_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * emergency_unbond_fee is the portion of a bond that is paid when it is instantly
+       * released using MsgEmergencyUnbond. For example, 0.01 is a 1% fee. Ranges 0-1.
+       * </pre>
+       *
+       * <code>string emergency_unbond_fee = 3 [json_name = "emergencyUnbondFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for emergencyUnbondFee.
+       */
+      public com.google.protobuf.ByteString
+          getEmergencyUnbondFeeBytes() {
+        java.lang.Object ref = emergencyUnbondFee_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          emergencyUnbondFee_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * emergency_unbond_fee is the portion of a bond that is paid when it is instantly
+       * released using MsgEmergencyUnbond. For example, 0.01 is a 1% fee. Ranges 0-1.
+       * </pre>
+       *
+       * <code>string emergency_unbond_fee = 3 [json_name = "emergencyUnbondFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The emergencyUnbondFee to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmergencyUnbondFee(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        emergencyUnbondFee_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * emergency_unbond_fee is the portion of a bond that is paid when it is instantly
+       * released using MsgEmergencyUnbond. For example, 0.01 is a 1% fee. Ranges 0-1.
+       * </pre>
+       *
+       * <code>string emergency_unbond_fee = 3 [json_name = "emergencyUnbondFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEmergencyUnbondFee() {
+        emergencyUnbondFee_ = getDefaultInstance().getEmergencyUnbondFee();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * emergency_unbond_fee is the portion of a bond that is paid when it is instantly
+       * released using MsgEmergencyUnbond. For example, 0.01 is a 1% fee. Ranges 0-1.
+       * </pre>
+       *
+       * <code>string emergency_unbond_fee = 3 [json_name = "emergencyUnbondFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for emergencyUnbondFee to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmergencyUnbondFeeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        emergencyUnbondFee_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.incentive.v1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.incentive.v1.Params)
+    private static final com.umee.incentive.v1.IncentiveProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.incentive.v1.IncentiveProto.Params();
+    }
+
+    public static com.umee.incentive.v1.IncentiveProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.incentive.v1.IncentiveProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface IncentiveProgramOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.incentive.v1.IncentiveProgram)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID uniquely identifies the incentive program after it has been created.
+     * It is zero when the program is being proposed by governance, and is set
+     * to its final value when the proposal passes.
+     * </pre>
+     *
+     * <code>uint32 ID = 1 [json_name = "ID"];</code>
+     * @return The iD.
+     */
+    int getID();
+
+    /**
+     * <pre>
+     * start_time is the unix time (in seconds) at which the incentives begin.
+     * If a program is passed after its intended start time, its start time
+     * will be increased to the current time, with program duration unchanged.
+     * </pre>
+     *
+     * <code>int64 start_time = 2 [json_name = "startTime"];</code>
+     * @return The startTime.
+     */
+    long getStartTime();
+
+    /**
+     * <pre>
+     * duration is the length of the incentive program from start time to
+     * completion in seconds.
+     * </pre>
+     *
+     * <code>int64 duration = 3 [json_name = "duration"];</code>
+     * @return The duration.
+     */
+    long getDuration();
+
+    /**
+     * <pre>
+     * uToken is the incentivized uToken collateral denom. Suppliers who collateralize
+     * this asset then bond it to the incentive module are eligible for this program's
+     * rewards.
+     * </pre>
+     *
+     * <code>string uToken = 4 [json_name = "uToken"];</code>
+     * @return The uToken.
+     */
+    java.lang.String getUToken();
+    /**
+     * <pre>
+     * uToken is the incentivized uToken collateral denom. Suppliers who collateralize
+     * this asset then bond it to the incentive module are eligible for this program's
+     * rewards.
+     * </pre>
+     *
+     * <code>string uToken = 4 [json_name = "uToken"];</code>
+     * @return The bytes for uToken.
+     */
+    com.google.protobuf.ByteString
+        getUTokenBytes();
+
+    /**
+     * <pre>
+     * funded indicates whether a program bas been funded. This can happen when
+     * a program passes if funding from community fund, or any time before the
+     * program's start time if funding with MsgSponsor. A program that reaches
+     * its start time without being funded is cancelled.
+     * </pre>
+     *
+     * <code>bool funded = 5 [json_name = "funded"];</code>
+     * @return The funded.
+     */
+    boolean getFunded();
+
+    /**
+     * <pre>
+     * total_rewards are total amount of rewards which can be distributed to
+     * suppliers by this program. This is set to its final value when the program
+     * is proposed by governance.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin total_rewards = 6 [json_name = "totalRewards", (.gogoproto.nullable) = false];</code>
+     * @return Whether the totalRewards field is set.
+     */
+    boolean hasTotalRewards();
+    /**
+     * <pre>
+     * total_rewards are total amount of rewards which can be distributed to
+     * suppliers by this program. This is set to its final value when the program
+     * is proposed by governance.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin total_rewards = 6 [json_name = "totalRewards", (.gogoproto.nullable) = false];</code>
+     * @return The totalRewards.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getTotalRewards();
+    /**
+     * <pre>
+     * total_rewards are total amount of rewards which can be distributed to
+     * suppliers by this program. This is set to its final value when the program
+     * is proposed by governance.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin total_rewards = 6 [json_name = "totalRewards", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTotalRewardsOrBuilder();
+
+    /**
+     * <pre>
+     * remaining_rewards are total amount of this program's funded rewards
+     * which have not yet been allocated to suppliers. This is zero until the
+     * program is both passed by governance and funded, at which point it
+     * starts at the same value as total_rewards then begins decreasing
+     * to zero as the program runs to completion.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin remaining_rewards = 7 [json_name = "remainingRewards", (.gogoproto.nullable) = false];</code>
+     * @return Whether the remainingRewards field is set.
+     */
+    boolean hasRemainingRewards();
+    /**
+     * <pre>
+     * remaining_rewards are total amount of this program's funded rewards
+     * which have not yet been allocated to suppliers. This is zero until the
+     * program is both passed by governance and funded, at which point it
+     * starts at the same value as total_rewards then begins decreasing
+     * to zero as the program runs to completion.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin remaining_rewards = 7 [json_name = "remainingRewards", (.gogoproto.nullable) = false];</code>
+     * @return The remainingRewards.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getRemainingRewards();
+    /**
+     * <pre>
+     * remaining_rewards are total amount of this program's funded rewards
+     * which have not yet been allocated to suppliers. This is zero until the
+     * program is both passed by governance and funded, at which point it
+     * starts at the same value as total_rewards then begins decreasing
+     * to zero as the program runs to completion.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin remaining_rewards = 7 [json_name = "remainingRewards", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRemainingRewardsOrBuilder();
+  }
+  /**
+   * <pre>
+   * IncentiveProgram defines a liquidity mining incentive program on a single
+   * locked uToken denom that will run for a set amount of time.
+   * </pre>
+   *
+   * Protobuf type {@code umee.incentive.v1.IncentiveProgram}
+   */
+  public static final class IncentiveProgram extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.incentive.v1.IncentiveProgram)
+      IncentiveProgramOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IncentiveProgram.newBuilder() to construct.
+    private IncentiveProgram(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IncentiveProgram() {
+      uToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IncentiveProgram();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.incentive.v1.IncentiveProto.internal_static_umee_incentive_v1_IncentiveProgram_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.incentive.v1.IncentiveProto.internal_static_umee_incentive_v1_IncentiveProgram_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.incentive.v1.IncentiveProto.IncentiveProgram.class, com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private int iD_ = 0;
+    /**
+     * <pre>
+     * ID uniquely identifies the incentive program after it has been created.
+     * It is zero when the program is being proposed by governance, and is set
+     * to its final value when the proposal passes.
+     * </pre>
+     *
+     * <code>uint32 ID = 1 [json_name = "ID"];</code>
+     * @return The iD.
+     */
+    @java.lang.Override
+    public int getID() {
+      return iD_;
+    }
+
+    public static final int START_TIME_FIELD_NUMBER = 2;
+    private long startTime_ = 0L;
+    /**
+     * <pre>
+     * start_time is the unix time (in seconds) at which the incentives begin.
+     * If a program is passed after its intended start time, its start time
+     * will be increased to the current time, with program duration unchanged.
+     * </pre>
+     *
+     * <code>int64 start_time = 2 [json_name = "startTime"];</code>
+     * @return The startTime.
+     */
+    @java.lang.Override
+    public long getStartTime() {
+      return startTime_;
+    }
+
+    public static final int DURATION_FIELD_NUMBER = 3;
+    private long duration_ = 0L;
+    /**
+     * <pre>
+     * duration is the length of the incentive program from start time to
+     * completion in seconds.
+     * </pre>
+     *
+     * <code>int64 duration = 3 [json_name = "duration"];</code>
+     * @return The duration.
+     */
+    @java.lang.Override
+    public long getDuration() {
+      return duration_;
+    }
+
+    public static final int UTOKEN_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object uToken_ = "";
+    /**
+     * <pre>
+     * uToken is the incentivized uToken collateral denom. Suppliers who collateralize
+     * this asset then bond it to the incentive module are eligible for this program's
+     * rewards.
+     * </pre>
+     *
+     * <code>string uToken = 4 [json_name = "uToken"];</code>
+     * @return The uToken.
+     */
+    @java.lang.Override
+    public java.lang.String getUToken() {
+      java.lang.Object ref = uToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * uToken is the incentivized uToken collateral denom. Suppliers who collateralize
+     * this asset then bond it to the incentive module are eligible for this program's
+     * rewards.
+     * </pre>
+     *
+     * <code>string uToken = 4 [json_name = "uToken"];</code>
+     * @return The bytes for uToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUTokenBytes() {
+      java.lang.Object ref = uToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FUNDED_FIELD_NUMBER = 5;
+    private boolean funded_ = false;
+    /**
+     * <pre>
+     * funded indicates whether a program bas been funded. This can happen when
+     * a program passes if funding from community fund, or any time before the
+     * program's start time if funding with MsgSponsor. A program that reaches
+     * its start time without being funded is cancelled.
+     * </pre>
+     *
+     * <code>bool funded = 5 [json_name = "funded"];</code>
+     * @return The funded.
+     */
+    @java.lang.Override
+    public boolean getFunded() {
+      return funded_;
+    }
+
+    public static final int TOTAL_REWARDS_FIELD_NUMBER = 6;
+    private com.cosmos.base.v1beta1.CoinProto.Coin totalRewards_;
+    /**
+     * <pre>
+     * total_rewards are total amount of rewards which can be distributed to
+     * suppliers by this program. This is set to its final value when the program
+     * is proposed by governance.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin total_rewards = 6 [json_name = "totalRewards", (.gogoproto.nullable) = false];</code>
+     * @return Whether the totalRewards field is set.
+     */
+    @java.lang.Override
+    public boolean hasTotalRewards() {
+      return totalRewards_ != null;
+    }
+    /**
+     * <pre>
+     * total_rewards are total amount of rewards which can be distributed to
+     * suppliers by this program. This is set to its final value when the program
+     * is proposed by governance.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin total_rewards = 6 [json_name = "totalRewards", (.gogoproto.nullable) = false];</code>
+     * @return The totalRewards.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getTotalRewards() {
+      return totalRewards_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : totalRewards_;
+    }
+    /**
+     * <pre>
+     * total_rewards are total amount of rewards which can be distributed to
+     * suppliers by this program. This is set to its final value when the program
+     * is proposed by governance.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin total_rewards = 6 [json_name = "totalRewards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTotalRewardsOrBuilder() {
+      return totalRewards_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : totalRewards_;
+    }
+
+    public static final int REMAINING_REWARDS_FIELD_NUMBER = 7;
+    private com.cosmos.base.v1beta1.CoinProto.Coin remainingRewards_;
+    /**
+     * <pre>
+     * remaining_rewards are total amount of this program's funded rewards
+     * which have not yet been allocated to suppliers. This is zero until the
+     * program is both passed by governance and funded, at which point it
+     * starts at the same value as total_rewards then begins decreasing
+     * to zero as the program runs to completion.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin remaining_rewards = 7 [json_name = "remainingRewards", (.gogoproto.nullable) = false];</code>
+     * @return Whether the remainingRewards field is set.
+     */
+    @java.lang.Override
+    public boolean hasRemainingRewards() {
+      return remainingRewards_ != null;
+    }
+    /**
+     * <pre>
+     * remaining_rewards are total amount of this program's funded rewards
+     * which have not yet been allocated to suppliers. This is zero until the
+     * program is both passed by governance and funded, at which point it
+     * starts at the same value as total_rewards then begins decreasing
+     * to zero as the program runs to completion.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin remaining_rewards = 7 [json_name = "remainingRewards", (.gogoproto.nullable) = false];</code>
+     * @return The remainingRewards.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getRemainingRewards() {
+      return remainingRewards_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : remainingRewards_;
+    }
+    /**
+     * <pre>
+     * remaining_rewards are total amount of this program's funded rewards
+     * which have not yet been allocated to suppliers. This is zero until the
+     * program is both passed by governance and funded, at which point it
+     * starts at the same value as total_rewards then begins decreasing
+     * to zero as the program runs to completion.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin remaining_rewards = 7 [json_name = "remainingRewards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRemainingRewardsOrBuilder() {
+      return remainingRewards_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : remainingRewards_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (iD_ != 0) {
+        output.writeUInt32(1, iD_);
+      }
+      if (startTime_ != 0L) {
+        output.writeInt64(2, startTime_);
+      }
+      if (duration_ != 0L) {
+        output.writeInt64(3, duration_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, uToken_);
+      }
+      if (funded_ != false) {
+        output.writeBool(5, funded_);
+      }
+      if (totalRewards_ != null) {
+        output.writeMessage(6, getTotalRewards());
+      }
+      if (remainingRewards_ != null) {
+        output.writeMessage(7, getRemainingRewards());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (iD_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, iD_);
+      }
+      if (startTime_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, startTime_);
+      }
+      if (duration_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, duration_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, uToken_);
+      }
+      if (funded_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, funded_);
+      }
+      if (totalRewards_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getTotalRewards());
+      }
+      if (remainingRewards_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getRemainingRewards());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.incentive.v1.IncentiveProto.IncentiveProgram)) {
+        return super.equals(obj);
+      }
+      com.umee.incentive.v1.IncentiveProto.IncentiveProgram other = (com.umee.incentive.v1.IncentiveProto.IncentiveProgram) obj;
+
+      if (getID()
+          != other.getID()) return false;
+      if (getStartTime()
+          != other.getStartTime()) return false;
+      if (getDuration()
+          != other.getDuration()) return false;
+      if (!getUToken()
+          .equals(other.getUToken())) return false;
+      if (getFunded()
+          != other.getFunded()) return false;
+      if (hasTotalRewards() != other.hasTotalRewards()) return false;
+      if (hasTotalRewards()) {
+        if (!getTotalRewards()
+            .equals(other.getTotalRewards())) return false;
+      }
+      if (hasRemainingRewards() != other.hasRemainingRewards()) return false;
+      if (hasRemainingRewards()) {
+        if (!getRemainingRewards()
+            .equals(other.getRemainingRewards())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getID();
+      hash = (37 * hash) + START_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getStartTime());
+      hash = (37 * hash) + DURATION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDuration());
+      hash = (37 * hash) + UTOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getUToken().hashCode();
+      hash = (37 * hash) + FUNDED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getFunded());
+      if (hasTotalRewards()) {
+        hash = (37 * hash) + TOTAL_REWARDS_FIELD_NUMBER;
+        hash = (53 * hash) + getTotalRewards().hashCode();
+      }
+      if (hasRemainingRewards()) {
+        hash = (37 * hash) + REMAINING_REWARDS_FIELD_NUMBER;
+        hash = (53 * hash) + getRemainingRewards().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.incentive.v1.IncentiveProto.IncentiveProgram parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.incentive.v1.IncentiveProto.IncentiveProgram parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.IncentiveProto.IncentiveProgram parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.incentive.v1.IncentiveProto.IncentiveProgram parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.IncentiveProto.IncentiveProgram parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.incentive.v1.IncentiveProto.IncentiveProgram parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.IncentiveProto.IncentiveProgram parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.incentive.v1.IncentiveProto.IncentiveProgram parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.incentive.v1.IncentiveProto.IncentiveProgram parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.incentive.v1.IncentiveProto.IncentiveProgram parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.IncentiveProto.IncentiveProgram parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.incentive.v1.IncentiveProto.IncentiveProgram parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.incentive.v1.IncentiveProto.IncentiveProgram prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * IncentiveProgram defines a liquidity mining incentive program on a single
+     * locked uToken denom that will run for a set amount of time.
+     * </pre>
+     *
+     * Protobuf type {@code umee.incentive.v1.IncentiveProgram}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.incentive.v1.IncentiveProgram)
+        com.umee.incentive.v1.IncentiveProto.IncentiveProgramOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.incentive.v1.IncentiveProto.internal_static_umee_incentive_v1_IncentiveProgram_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.incentive.v1.IncentiveProto.internal_static_umee_incentive_v1_IncentiveProgram_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.incentive.v1.IncentiveProto.IncentiveProgram.class, com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder.class);
+      }
+
+      // Construct using com.umee.incentive.v1.IncentiveProto.IncentiveProgram.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        iD_ = 0;
+        startTime_ = 0L;
+        duration_ = 0L;
+        uToken_ = "";
+        funded_ = false;
+        totalRewards_ = null;
+        if (totalRewardsBuilder_ != null) {
+          totalRewardsBuilder_.dispose();
+          totalRewardsBuilder_ = null;
+        }
+        remainingRewards_ = null;
+        if (remainingRewardsBuilder_ != null) {
+          remainingRewardsBuilder_.dispose();
+          remainingRewardsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.incentive.v1.IncentiveProto.internal_static_umee_incentive_v1_IncentiveProgram_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.incentive.v1.IncentiveProto.IncentiveProgram getDefaultInstanceForType() {
+        return com.umee.incentive.v1.IncentiveProto.IncentiveProgram.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.incentive.v1.IncentiveProto.IncentiveProgram build() {
+        com.umee.incentive.v1.IncentiveProto.IncentiveProgram result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.incentive.v1.IncentiveProto.IncentiveProgram buildPartial() {
+        com.umee.incentive.v1.IncentiveProto.IncentiveProgram result = new com.umee.incentive.v1.IncentiveProto.IncentiveProgram(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.incentive.v1.IncentiveProto.IncentiveProgram result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.iD_ = iD_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.startTime_ = startTime_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.duration_ = duration_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.uToken_ = uToken_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.funded_ = funded_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.totalRewards_ = totalRewardsBuilder_ == null
+              ? totalRewards_
+              : totalRewardsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.remainingRewards_ = remainingRewardsBuilder_ == null
+              ? remainingRewards_
+              : remainingRewardsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.incentive.v1.IncentiveProto.IncentiveProgram) {
+          return mergeFrom((com.umee.incentive.v1.IncentiveProto.IncentiveProgram)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.incentive.v1.IncentiveProto.IncentiveProgram other) {
+        if (other == com.umee.incentive.v1.IncentiveProto.IncentiveProgram.getDefaultInstance()) return this;
+        if (other.getID() != 0) {
+          setID(other.getID());
+        }
+        if (other.getStartTime() != 0L) {
+          setStartTime(other.getStartTime());
+        }
+        if (other.getDuration() != 0L) {
+          setDuration(other.getDuration());
+        }
+        if (!other.getUToken().isEmpty()) {
+          uToken_ = other.uToken_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.getFunded() != false) {
+          setFunded(other.getFunded());
+        }
+        if (other.hasTotalRewards()) {
+          mergeTotalRewards(other.getTotalRewards());
+        }
+        if (other.hasRemainingRewards()) {
+          mergeRemainingRewards(other.getRemainingRewards());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                iD_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                startTime_ = input.readInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                duration_ = input.readInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                uToken_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                funded_ = input.readBool();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 50: {
+                input.readMessage(
+                    getTotalRewardsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                input.readMessage(
+                    getRemainingRewardsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int iD_ ;
+      /**
+       * <pre>
+       * ID uniquely identifies the incentive program after it has been created.
+       * It is zero when the program is being proposed by governance, and is set
+       * to its final value when the proposal passes.
+       * </pre>
+       *
+       * <code>uint32 ID = 1 [json_name = "ID"];</code>
+       * @return The iD.
+       */
+      @java.lang.Override
+      public int getID() {
+        return iD_;
+      }
+      /**
+       * <pre>
+       * ID uniquely identifies the incentive program after it has been created.
+       * It is zero when the program is being proposed by governance, and is set
+       * to its final value when the proposal passes.
+       * </pre>
+       *
+       * <code>uint32 ID = 1 [json_name = "ID"];</code>
+       * @param value The iD to set.
+       * @return This builder for chaining.
+       */
+      public Builder setID(int value) {
+
+        iD_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID uniquely identifies the incentive program after it has been created.
+       * It is zero when the program is being proposed by governance, and is set
+       * to its final value when the proposal passes.
+       * </pre>
+       *
+       * <code>uint32 ID = 1 [json_name = "ID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearID() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        iD_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long startTime_ ;
+      /**
+       * <pre>
+       * start_time is the unix time (in seconds) at which the incentives begin.
+       * If a program is passed after its intended start time, its start time
+       * will be increased to the current time, with program duration unchanged.
+       * </pre>
+       *
+       * <code>int64 start_time = 2 [json_name = "startTime"];</code>
+       * @return The startTime.
+       */
+      @java.lang.Override
+      public long getStartTime() {
+        return startTime_;
+      }
+      /**
+       * <pre>
+       * start_time is the unix time (in seconds) at which the incentives begin.
+       * If a program is passed after its intended start time, its start time
+       * will be increased to the current time, with program duration unchanged.
+       * </pre>
+       *
+       * <code>int64 start_time = 2 [json_name = "startTime"];</code>
+       * @param value The startTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartTime(long value) {
+
+        startTime_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time is the unix time (in seconds) at which the incentives begin.
+       * If a program is passed after its intended start time, its start time
+       * will be increased to the current time, with program duration unchanged.
+       * </pre>
+       *
+       * <code>int64 start_time = 2 [json_name = "startTime"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStartTime() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        startTime_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long duration_ ;
+      /**
+       * <pre>
+       * duration is the length of the incentive program from start time to
+       * completion in seconds.
+       * </pre>
+       *
+       * <code>int64 duration = 3 [json_name = "duration"];</code>
+       * @return The duration.
+       */
+      @java.lang.Override
+      public long getDuration() {
+        return duration_;
+      }
+      /**
+       * <pre>
+       * duration is the length of the incentive program from start time to
+       * completion in seconds.
+       * </pre>
+       *
+       * <code>int64 duration = 3 [json_name = "duration"];</code>
+       * @param value The duration to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDuration(long value) {
+
+        duration_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * duration is the length of the incentive program from start time to
+       * completion in seconds.
+       * </pre>
+       *
+       * <code>int64 duration = 3 [json_name = "duration"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDuration() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        duration_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object uToken_ = "";
+      /**
+       * <pre>
+       * uToken is the incentivized uToken collateral denom. Suppliers who collateralize
+       * this asset then bond it to the incentive module are eligible for this program's
+       * rewards.
+       * </pre>
+       *
+       * <code>string uToken = 4 [json_name = "uToken"];</code>
+       * @return The uToken.
+       */
+      public java.lang.String getUToken() {
+        java.lang.Object ref = uToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * uToken is the incentivized uToken collateral denom. Suppliers who collateralize
+       * this asset then bond it to the incentive module are eligible for this program's
+       * rewards.
+       * </pre>
+       *
+       * <code>string uToken = 4 [json_name = "uToken"];</code>
+       * @return The bytes for uToken.
+       */
+      public com.google.protobuf.ByteString
+          getUTokenBytes() {
+        java.lang.Object ref = uToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * uToken is the incentivized uToken collateral denom. Suppliers who collateralize
+       * this asset then bond it to the incentive module are eligible for this program's
+       * rewards.
+       * </pre>
+       *
+       * <code>string uToken = 4 [json_name = "uToken"];</code>
+       * @param value The uToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUToken(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        uToken_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * uToken is the incentivized uToken collateral denom. Suppliers who collateralize
+       * this asset then bond it to the incentive module are eligible for this program's
+       * rewards.
+       * </pre>
+       *
+       * <code>string uToken = 4 [json_name = "uToken"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUToken() {
+        uToken_ = getDefaultInstance().getUToken();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * uToken is the incentivized uToken collateral denom. Suppliers who collateralize
+       * this asset then bond it to the incentive module are eligible for this program's
+       * rewards.
+       * </pre>
+       *
+       * <code>string uToken = 4 [json_name = "uToken"];</code>
+       * @param value The bytes for uToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        uToken_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private boolean funded_ ;
+      /**
+       * <pre>
+       * funded indicates whether a program bas been funded. This can happen when
+       * a program passes if funding from community fund, or any time before the
+       * program's start time if funding with MsgSponsor. A program that reaches
+       * its start time without being funded is cancelled.
+       * </pre>
+       *
+       * <code>bool funded = 5 [json_name = "funded"];</code>
+       * @return The funded.
+       */
+      @java.lang.Override
+      public boolean getFunded() {
+        return funded_;
+      }
+      /**
+       * <pre>
+       * funded indicates whether a program bas been funded. This can happen when
+       * a program passes if funding from community fund, or any time before the
+       * program's start time if funding with MsgSponsor. A program that reaches
+       * its start time without being funded is cancelled.
+       * </pre>
+       *
+       * <code>bool funded = 5 [json_name = "funded"];</code>
+       * @param value The funded to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFunded(boolean value) {
+
+        funded_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * funded indicates whether a program bas been funded. This can happen when
+       * a program passes if funding from community fund, or any time before the
+       * program's start time if funding with MsgSponsor. A program that reaches
+       * its start time without being funded is cancelled.
+       * </pre>
+       *
+       * <code>bool funded = 5 [json_name = "funded"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFunded() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        funded_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin totalRewards_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> totalRewardsBuilder_;
+      /**
+       * <pre>
+       * total_rewards are total amount of rewards which can be distributed to
+       * suppliers by this program. This is set to its final value when the program
+       * is proposed by governance.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_rewards = 6 [json_name = "totalRewards", (.gogoproto.nullable) = false];</code>
+       * @return Whether the totalRewards field is set.
+       */
+      public boolean hasTotalRewards() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * total_rewards are total amount of rewards which can be distributed to
+       * suppliers by this program. This is set to its final value when the program
+       * is proposed by governance.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_rewards = 6 [json_name = "totalRewards", (.gogoproto.nullable) = false];</code>
+       * @return The totalRewards.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getTotalRewards() {
+        if (totalRewardsBuilder_ == null) {
+          return totalRewards_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : totalRewards_;
+        } else {
+          return totalRewardsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * total_rewards are total amount of rewards which can be distributed to
+       * suppliers by this program. This is set to its final value when the program
+       * is proposed by governance.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_rewards = 6 [json_name = "totalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTotalRewards(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (totalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          totalRewards_ = value;
+        } else {
+          totalRewardsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_rewards are total amount of rewards which can be distributed to
+       * suppliers by this program. This is set to its final value when the program
+       * is proposed by governance.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_rewards = 6 [json_name = "totalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTotalRewards(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (totalRewardsBuilder_ == null) {
+          totalRewards_ = builderForValue.build();
+        } else {
+          totalRewardsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_rewards are total amount of rewards which can be distributed to
+       * suppliers by this program. This is set to its final value when the program
+       * is proposed by governance.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_rewards = 6 [json_name = "totalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeTotalRewards(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (totalRewardsBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            totalRewards_ != null &&
+            totalRewards_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getTotalRewardsBuilder().mergeFrom(value);
+          } else {
+            totalRewards_ = value;
+          }
+        } else {
+          totalRewardsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_rewards are total amount of rewards which can be distributed to
+       * suppliers by this program. This is set to its final value when the program
+       * is proposed by governance.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_rewards = 6 [json_name = "totalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearTotalRewards() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        totalRewards_ = null;
+        if (totalRewardsBuilder_ != null) {
+          totalRewardsBuilder_.dispose();
+          totalRewardsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_rewards are total amount of rewards which can be distributed to
+       * suppliers by this program. This is set to its final value when the program
+       * is proposed by governance.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_rewards = 6 [json_name = "totalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getTotalRewardsBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getTotalRewardsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * total_rewards are total amount of rewards which can be distributed to
+       * suppliers by this program. This is set to its final value when the program
+       * is proposed by governance.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_rewards = 6 [json_name = "totalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTotalRewardsOrBuilder() {
+        if (totalRewardsBuilder_ != null) {
+          return totalRewardsBuilder_.getMessageOrBuilder();
+        } else {
+          return totalRewards_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : totalRewards_;
+        }
+      }
+      /**
+       * <pre>
+       * total_rewards are total amount of rewards which can be distributed to
+       * suppliers by this program. This is set to its final value when the program
+       * is proposed by governance.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_rewards = 6 [json_name = "totalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getTotalRewardsFieldBuilder() {
+        if (totalRewardsBuilder_ == null) {
+          totalRewardsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getTotalRewards(),
+                  getParentForChildren(),
+                  isClean());
+          totalRewards_ = null;
+        }
+        return totalRewardsBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin remainingRewards_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> remainingRewardsBuilder_;
+      /**
+       * <pre>
+       * remaining_rewards are total amount of this program's funded rewards
+       * which have not yet been allocated to suppliers. This is zero until the
+       * program is both passed by governance and funded, at which point it
+       * starts at the same value as total_rewards then begins decreasing
+       * to zero as the program runs to completion.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin remaining_rewards = 7 [json_name = "remainingRewards", (.gogoproto.nullable) = false];</code>
+       * @return Whether the remainingRewards field is set.
+       */
+      public boolean hasRemainingRewards() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <pre>
+       * remaining_rewards are total amount of this program's funded rewards
+       * which have not yet been allocated to suppliers. This is zero until the
+       * program is both passed by governance and funded, at which point it
+       * starts at the same value as total_rewards then begins decreasing
+       * to zero as the program runs to completion.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin remaining_rewards = 7 [json_name = "remainingRewards", (.gogoproto.nullable) = false];</code>
+       * @return The remainingRewards.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getRemainingRewards() {
+        if (remainingRewardsBuilder_ == null) {
+          return remainingRewards_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : remainingRewards_;
+        } else {
+          return remainingRewardsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * remaining_rewards are total amount of this program's funded rewards
+       * which have not yet been allocated to suppliers. This is zero until the
+       * program is both passed by governance and funded, at which point it
+       * starts at the same value as total_rewards then begins decreasing
+       * to zero as the program runs to completion.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin remaining_rewards = 7 [json_name = "remainingRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRemainingRewards(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (remainingRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          remainingRewards_ = value;
+        } else {
+          remainingRewardsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * remaining_rewards are total amount of this program's funded rewards
+       * which have not yet been allocated to suppliers. This is zero until the
+       * program is both passed by governance and funded, at which point it
+       * starts at the same value as total_rewards then begins decreasing
+       * to zero as the program runs to completion.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin remaining_rewards = 7 [json_name = "remainingRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRemainingRewards(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (remainingRewardsBuilder_ == null) {
+          remainingRewards_ = builderForValue.build();
+        } else {
+          remainingRewardsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * remaining_rewards are total amount of this program's funded rewards
+       * which have not yet been allocated to suppliers. This is zero until the
+       * program is both passed by governance and funded, at which point it
+       * starts at the same value as total_rewards then begins decreasing
+       * to zero as the program runs to completion.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin remaining_rewards = 7 [json_name = "remainingRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeRemainingRewards(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (remainingRewardsBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0) &&
+            remainingRewards_ != null &&
+            remainingRewards_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getRemainingRewardsBuilder().mergeFrom(value);
+          } else {
+            remainingRewards_ = value;
+          }
+        } else {
+          remainingRewardsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * remaining_rewards are total amount of this program's funded rewards
+       * which have not yet been allocated to suppliers. This is zero until the
+       * program is both passed by governance and funded, at which point it
+       * starts at the same value as total_rewards then begins decreasing
+       * to zero as the program runs to completion.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin remaining_rewards = 7 [json_name = "remainingRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearRemainingRewards() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        remainingRewards_ = null;
+        if (remainingRewardsBuilder_ != null) {
+          remainingRewardsBuilder_.dispose();
+          remainingRewardsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * remaining_rewards are total amount of this program's funded rewards
+       * which have not yet been allocated to suppliers. This is zero until the
+       * program is both passed by governance and funded, at which point it
+       * starts at the same value as total_rewards then begins decreasing
+       * to zero as the program runs to completion.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin remaining_rewards = 7 [json_name = "remainingRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getRemainingRewardsBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return getRemainingRewardsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * remaining_rewards are total amount of this program's funded rewards
+       * which have not yet been allocated to suppliers. This is zero until the
+       * program is both passed by governance and funded, at which point it
+       * starts at the same value as total_rewards then begins decreasing
+       * to zero as the program runs to completion.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin remaining_rewards = 7 [json_name = "remainingRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRemainingRewardsOrBuilder() {
+        if (remainingRewardsBuilder_ != null) {
+          return remainingRewardsBuilder_.getMessageOrBuilder();
+        } else {
+          return remainingRewards_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : remainingRewards_;
+        }
+      }
+      /**
+       * <pre>
+       * remaining_rewards are total amount of this program's funded rewards
+       * which have not yet been allocated to suppliers. This is zero until the
+       * program is both passed by governance and funded, at which point it
+       * starts at the same value as total_rewards then begins decreasing
+       * to zero as the program runs to completion.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin remaining_rewards = 7 [json_name = "remainingRewards", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getRemainingRewardsFieldBuilder() {
+        if (remainingRewardsBuilder_ == null) {
+          remainingRewardsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getRemainingRewards(),
+                  getParentForChildren(),
+                  isClean());
+          remainingRewards_ = null;
+        }
+        return remainingRewardsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.incentive.v1.IncentiveProgram)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.incentive.v1.IncentiveProgram)
+    private static final com.umee.incentive.v1.IncentiveProto.IncentiveProgram DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.incentive.v1.IncentiveProto.IncentiveProgram();
+    }
+
+    public static com.umee.incentive.v1.IncentiveProto.IncentiveProgram getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<IncentiveProgram>
+        PARSER = new com.google.protobuf.AbstractParser<IncentiveProgram>() {
+      @java.lang.Override
+      public IncentiveProgram parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<IncentiveProgram> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IncentiveProgram> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.incentive.v1.IncentiveProto.IncentiveProgram getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_incentive_v1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_incentive_v1_Params_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_incentive_v1_IncentiveProgram_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_incentive_v1_IncentiveProgram_fieldAccessorTable;
 
@@ -48,12 +2472,12 @@ public final class IncentiveProto {
       "osmos.base.v1beta1.CoinB\004\310\336\037\000R\014totalRewa" +
       "rds\022L\n\021remaining_rewards\030\007 \001(\0132\031.cosmos." +
       "base.v1beta1.CoinB\004\310\336\037\000R\020remainingReward" +
-      "s:\004\350\240\037\001B\272\001\n\025com.umee.incentive.v1B\016Incen" +
-      "tiveProtoP\001Z+github.com/umee-network/ume" +
-      "e/v5/x/incentive\242\002\003UIX\252\002\021Umee.Incentive." +
-      "V1\312\002\021Umee\\Incentive\\V1\342\002\035Umee\\Incentive\\" +
-      "V1\\GPBMetadata\352\002\023Umee::Incentive::V1b\006pr" +
-      "oto3"
+      "s:\004\350\240\037\001B\270\001\n\025com.umee.incentive.v1B\016Incen" +
+      "tiveProtoZ+github.com/umee-network/umee/" +
+      "v5/x/incentive\242\002\003UIX\252\002\021Umee.Incentive.V1" +
+      "\312\002\021Umee\\Incentive\\V1\342\002\035Umee\\Incentive\\V1" +
+      "\\GPBMetadata\352\002\023Umee::Incentive::V1b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,64 +14,15420 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgCreateEntityOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.entity.v1beta1.MsgCreateEntity)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * An Entity Type as defined by the implementer
+     * </pre>
+     *
+     * <code>string entity_type = 1 [json_name = "entityType"];</code>
+     * @return The entityType.
+     */
+    java.lang.String getEntityType();
+    /**
+     * <pre>
+     * An Entity Type as defined by the implementer
+     * </pre>
+     *
+     * <code>string entity_type = 1 [json_name = "entityType"];</code>
+     * @return The bytes for entityType.
+     */
+    com.google.protobuf.ByteString
+        getEntityTypeBytes();
+
+    /**
+     * <pre>
+     * Status of the Entity as defined by the implementer and interpreted by
+     * Client applications
+     * </pre>
+     *
+     * <code>int32 entity_status = 2 [json_name = "entityStatus"];</code>
+     * @return The entityStatus.
+     */
+    int getEntityStatus();
+
+    /**
+     * <pre>
+     * the list of controller DIDs
+     * </pre>
+     *
+     * <code>repeated string controller = 3 [json_name = "controller"];</code>
+     * @return A list containing the controller.
+     */
+    java.util.List<java.lang.String>
+        getControllerList();
+    /**
+     * <pre>
+     * the list of controller DIDs
+     * </pre>
+     *
+     * <code>repeated string controller = 3 [json_name = "controller"];</code>
+     * @return The count of controller.
+     */
+    int getControllerCount();
+    /**
+     * <pre>
+     * the list of controller DIDs
+     * </pre>
+     *
+     * <code>repeated string controller = 3 [json_name = "controller"];</code>
+     * @param index The index of the element to return.
+     * @return The controller at the given index.
+     */
+    java.lang.String getController(int index);
+    /**
+     * <pre>
+     * the list of controller DIDs
+     * </pre>
+     *
+     * <code>repeated string controller = 3 [json_name = "controller"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the controller at the given index.
+     */
+    com.google.protobuf.ByteString
+        getControllerBytes(int index);
+
+    /**
+     * <pre>
+     * JSON-LD contexts
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.Context context = 4 [json_name = "context"];</code>
+     */
+    java.util.List<com.ixo.iid.v1beta1.TypesProto.Context> 
+        getContextList();
+    /**
+     * <pre>
+     * JSON-LD contexts
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.Context context = 4 [json_name = "context"];</code>
+     */
+    com.ixo.iid.v1beta1.TypesProto.Context getContext(int index);
+    /**
+     * <pre>
+     * JSON-LD contexts
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.Context context = 4 [json_name = "context"];</code>
+     */
+    int getContextCount();
+    /**
+     * <pre>
+     * JSON-LD contexts
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.Context context = 4 [json_name = "context"];</code>
+     */
+    java.util.List<? extends com.ixo.iid.v1beta1.TypesProto.ContextOrBuilder> 
+        getContextOrBuilderList();
+    /**
+     * <pre>
+     * JSON-LD contexts
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.Context context = 4 [json_name = "context"];</code>
+     */
+    com.ixo.iid.v1beta1.TypesProto.ContextOrBuilder getContextOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Verification Methods and Verification Relationships
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.Verification verification = 5 [json_name = "verification"];</code>
+     */
+    java.util.List<com.ixo.iid.v1beta1.TxProto.Verification> 
+        getVerificationList();
+    /**
+     * <pre>
+     * Verification Methods and Verification Relationships
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.Verification verification = 5 [json_name = "verification"];</code>
+     */
+    com.ixo.iid.v1beta1.TxProto.Verification getVerification(int index);
+    /**
+     * <pre>
+     * Verification Methods and Verification Relationships
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.Verification verification = 5 [json_name = "verification"];</code>
+     */
+    int getVerificationCount();
+    /**
+     * <pre>
+     * Verification Methods and Verification Relationships
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.Verification verification = 5 [json_name = "verification"];</code>
+     */
+    java.util.List<? extends com.ixo.iid.v1beta1.TxProto.VerificationOrBuilder> 
+        getVerificationOrBuilderList();
+    /**
+     * <pre>
+     * Verification Methods and Verification Relationships
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.Verification verification = 5 [json_name = "verification"];</code>
+     */
+    com.ixo.iid.v1beta1.TxProto.VerificationOrBuilder getVerificationOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Service endpoints
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.Service service = 6 [json_name = "service"];</code>
+     */
+    java.util.List<com.ixo.iid.v1beta1.TypesProto.Service> 
+        getServiceList();
+    /**
+     * <pre>
+     * Service endpoints
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.Service service = 6 [json_name = "service"];</code>
+     */
+    com.ixo.iid.v1beta1.TypesProto.Service getService(int index);
+    /**
+     * <pre>
+     * Service endpoints
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.Service service = 6 [json_name = "service"];</code>
+     */
+    int getServiceCount();
+    /**
+     * <pre>
+     * Service endpoints
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.Service service = 6 [json_name = "service"];</code>
+     */
+    java.util.List<? extends com.ixo.iid.v1beta1.TypesProto.ServiceOrBuilder> 
+        getServiceOrBuilderList();
+    /**
+     * <pre>
+     * Service endpoints
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.Service service = 6 [json_name = "service"];</code>
+     */
+    com.ixo.iid.v1beta1.TypesProto.ServiceOrBuilder getServiceOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Legal or Electronic Rights and associated Object Capabilities
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.AccordedRight accorded_right = 7 [json_name = "accordedRight"];</code>
+     */
+    java.util.List<com.ixo.iid.v1beta1.TypesProto.AccordedRight> 
+        getAccordedRightList();
+    /**
+     * <pre>
+     * Legal or Electronic Rights and associated Object Capabilities
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.AccordedRight accorded_right = 7 [json_name = "accordedRight"];</code>
+     */
+    com.ixo.iid.v1beta1.TypesProto.AccordedRight getAccordedRight(int index);
+    /**
+     * <pre>
+     * Legal or Electronic Rights and associated Object Capabilities
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.AccordedRight accorded_right = 7 [json_name = "accordedRight"];</code>
+     */
+    int getAccordedRightCount();
+    /**
+     * <pre>
+     * Legal or Electronic Rights and associated Object Capabilities
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.AccordedRight accorded_right = 7 [json_name = "accordedRight"];</code>
+     */
+    java.util.List<? extends com.ixo.iid.v1beta1.TypesProto.AccordedRightOrBuilder> 
+        getAccordedRightOrBuilderList();
+    /**
+     * <pre>
+     * Legal or Electronic Rights and associated Object Capabilities
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.AccordedRight accorded_right = 7 [json_name = "accordedRight"];</code>
+     */
+    com.ixo.iid.v1beta1.TypesProto.AccordedRightOrBuilder getAccordedRightOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Digital resources associated with the Subject
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.LinkedResource linked_resource = 8 [json_name = "linkedResource"];</code>
+     */
+    java.util.List<com.ixo.iid.v1beta1.TypesProto.LinkedResource> 
+        getLinkedResourceList();
+    /**
+     * <pre>
+     * Digital resources associated with the Subject
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.LinkedResource linked_resource = 8 [json_name = "linkedResource"];</code>
+     */
+    com.ixo.iid.v1beta1.TypesProto.LinkedResource getLinkedResource(int index);
+    /**
+     * <pre>
+     * Digital resources associated with the Subject
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.LinkedResource linked_resource = 8 [json_name = "linkedResource"];</code>
+     */
+    int getLinkedResourceCount();
+    /**
+     * <pre>
+     * Digital resources associated with the Subject
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.LinkedResource linked_resource = 8 [json_name = "linkedResource"];</code>
+     */
+    java.util.List<? extends com.ixo.iid.v1beta1.TypesProto.LinkedResourceOrBuilder> 
+        getLinkedResourceOrBuilderList();
+    /**
+     * <pre>
+     * Digital resources associated with the Subject
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.LinkedResource linked_resource = 8 [json_name = "linkedResource"];</code>
+     */
+    com.ixo.iid.v1beta1.TypesProto.LinkedResourceOrBuilder getLinkedResourceOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * DID of a linked Entity and its relationship with the Subject
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.LinkedEntity linked_entity = 9 [json_name = "linkedEntity"];</code>
+     */
+    java.util.List<com.ixo.iid.v1beta1.TypesProto.LinkedEntity> 
+        getLinkedEntityList();
+    /**
+     * <pre>
+     * DID of a linked Entity and its relationship with the Subject
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.LinkedEntity linked_entity = 9 [json_name = "linkedEntity"];</code>
+     */
+    com.ixo.iid.v1beta1.TypesProto.LinkedEntity getLinkedEntity(int index);
+    /**
+     * <pre>
+     * DID of a linked Entity and its relationship with the Subject
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.LinkedEntity linked_entity = 9 [json_name = "linkedEntity"];</code>
+     */
+    int getLinkedEntityCount();
+    /**
+     * <pre>
+     * DID of a linked Entity and its relationship with the Subject
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.LinkedEntity linked_entity = 9 [json_name = "linkedEntity"];</code>
+     */
+    java.util.List<? extends com.ixo.iid.v1beta1.TypesProto.LinkedEntityOrBuilder> 
+        getLinkedEntityOrBuilderList();
+    /**
+     * <pre>
+     * DID of a linked Entity and its relationship with the Subject
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.LinkedEntity linked_entity = 9 [json_name = "linkedEntity"];</code>
+     */
+    com.ixo.iid.v1beta1.TypesProto.LinkedEntityOrBuilder getLinkedEntityOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Start Date of the Entity as defined by the implementer and interpreted by
+     * Client applications
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_date = 10 [json_name = "startDate", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startDate field is set.
+     */
+    boolean hasStartDate();
+    /**
+     * <pre>
+     * Start Date of the Entity as defined by the implementer and interpreted by
+     * Client applications
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_date = 10 [json_name = "startDate", (.gogoproto.stdtime) = true];</code>
+     * @return The startDate.
+     */
+    com.google.protobuf.Timestamp getStartDate();
+    /**
+     * <pre>
+     * Start Date of the Entity as defined by the implementer and interpreted by
+     * Client applications
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_date = 10 [json_name = "startDate", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getStartDateOrBuilder();
+
+    /**
+     * <pre>
+     * End Date of the Entity as defined by the implementer and interpreted by
+     * Client applications
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_date = 11 [json_name = "endDate", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the endDate field is set.
+     */
+    boolean hasEndDate();
+    /**
+     * <pre>
+     * End Date of the Entity as defined by the implementer and interpreted by
+     * Client applications
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_date = 11 [json_name = "endDate", (.gogoproto.stdtime) = true];</code>
+     * @return The endDate.
+     */
+    com.google.protobuf.Timestamp getEndDate();
+    /**
+     * <pre>
+     * End Date of the Entity as defined by the implementer and interpreted by
+     * Client applications
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_date = 11 [json_name = "endDate", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getEndDateOrBuilder();
+
+    /**
+     * <pre>
+     * Address of the operator through which the Entity was created
+     * </pre>
+     *
+     * <code>string relayer_node = 12 [json_name = "relayerNode"];</code>
+     * @return The relayerNode.
+     */
+    java.lang.String getRelayerNode();
+    /**
+     * <pre>
+     * Address of the operator through which the Entity was created
+     * </pre>
+     *
+     * <code>string relayer_node = 12 [json_name = "relayerNode"];</code>
+     * @return The bytes for relayerNode.
+     */
+    com.google.protobuf.ByteString
+        getRelayerNodeBytes();
+
+    /**
+     * <pre>
+     * Content ID or Hash of public Verifiable Credentials associated with the
+     * subject
+     * </pre>
+     *
+     * <code>repeated string credentials = 13 [json_name = "credentials"];</code>
+     * @return A list containing the credentials.
+     */
+    java.util.List<java.lang.String>
+        getCredentialsList();
+    /**
+     * <pre>
+     * Content ID or Hash of public Verifiable Credentials associated with the
+     * subject
+     * </pre>
+     *
+     * <code>repeated string credentials = 13 [json_name = "credentials"];</code>
+     * @return The count of credentials.
+     */
+    int getCredentialsCount();
+    /**
+     * <pre>
+     * Content ID or Hash of public Verifiable Credentials associated with the
+     * subject
+     * </pre>
+     *
+     * <code>repeated string credentials = 13 [json_name = "credentials"];</code>
+     * @param index The index of the element to return.
+     * @return The credentials at the given index.
+     */
+    java.lang.String getCredentials(int index);
+    /**
+     * <pre>
+     * Content ID or Hash of public Verifiable Credentials associated with the
+     * subject
+     * </pre>
+     *
+     * <code>repeated string credentials = 13 [json_name = "credentials"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the credentials at the given index.
+     */
+    com.google.protobuf.ByteString
+        getCredentialsBytes(int index);
+
+    /**
+     * <pre>
+     * Owner of the Entity NFT | The ownersdid used to sign this transaction.
+     * </pre>
+     *
+     * <code>string owner_did = 14 [json_name = "ownerDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+     * @return The ownerDid.
+     */
+    java.lang.String getOwnerDid();
+    /**
+     * <pre>
+     * Owner of the Entity NFT | The ownersdid used to sign this transaction.
+     * </pre>
+     *
+     * <code>string owner_did = 14 [json_name = "ownerDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+     * @return The bytes for ownerDid.
+     */
+    com.google.protobuf.ByteString
+        getOwnerDidBytes();
+
+    /**
+     * <pre>
+     * The ownersdid address used to sign this transaction.
+     * </pre>
+     *
+     * <code>string owner_address = 15 [json_name = "ownerAddress"];</code>
+     * @return The ownerAddress.
+     */
+    java.lang.String getOwnerAddress();
+    /**
+     * <pre>
+     * The ownersdid address used to sign this transaction.
+     * </pre>
+     *
+     * <code>string owner_address = 15 [json_name = "ownerAddress"];</code>
+     * @return The bytes for ownerAddress.
+     */
+    com.google.protobuf.ByteString
+        getOwnerAddressBytes();
+
+    /**
+     * <pre>
+     * Extention data
+     * </pre>
+     *
+     * <code>bytes data = 16 [json_name = "data", (.gogoproto.casttype) = "encoding/json.RawMessage"];</code>
+     * @return The data.
+     */
+    com.google.protobuf.ByteString getData();
+
+    /**
+     * <code>string alsoKnownAs = 17 [json_name = "alsoKnownAs"];</code>
+     * @return The alsoKnownAs.
+     */
+    java.lang.String getAlsoKnownAs();
+    /**
+     * <code>string alsoKnownAs = 17 [json_name = "alsoKnownAs"];</code>
+     * @return The bytes for alsoKnownAs.
+     */
+    com.google.protobuf.ByteString
+        getAlsoKnownAsBytes();
+
+    /**
+     * <pre>
+     * Digital claims associated with the Subject
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.LinkedClaim linked_claim = 18 [json_name = "linkedClaim"];</code>
+     */
+    java.util.List<com.ixo.iid.v1beta1.TypesProto.LinkedClaim> 
+        getLinkedClaimList();
+    /**
+     * <pre>
+     * Digital claims associated with the Subject
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.LinkedClaim linked_claim = 18 [json_name = "linkedClaim"];</code>
+     */
+    com.ixo.iid.v1beta1.TypesProto.LinkedClaim getLinkedClaim(int index);
+    /**
+     * <pre>
+     * Digital claims associated with the Subject
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.LinkedClaim linked_claim = 18 [json_name = "linkedClaim"];</code>
+     */
+    int getLinkedClaimCount();
+    /**
+     * <pre>
+     * Digital claims associated with the Subject
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.LinkedClaim linked_claim = 18 [json_name = "linkedClaim"];</code>
+     */
+    java.util.List<? extends com.ixo.iid.v1beta1.TypesProto.LinkedClaimOrBuilder> 
+        getLinkedClaimOrBuilderList();
+    /**
+     * <pre>
+     * Digital claims associated with the Subject
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.LinkedClaim linked_claim = 18 [json_name = "linkedClaim"];</code>
+     */
+    com.ixo.iid.v1beta1.TypesProto.LinkedClaimOrBuilder getLinkedClaimOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code ixo.entity.v1beta1.MsgCreateEntity}
+   */
+  public static final class MsgCreateEntity extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.entity.v1beta1.MsgCreateEntity)
+      MsgCreateEntityOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateEntity.newBuilder() to construct.
+    private MsgCreateEntity(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateEntity() {
+      entityType_ = "";
+      controller_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      context_ = java.util.Collections.emptyList();
+      verification_ = java.util.Collections.emptyList();
+      service_ = java.util.Collections.emptyList();
+      accordedRight_ = java.util.Collections.emptyList();
+      linkedResource_ = java.util.Collections.emptyList();
+      linkedEntity_ = java.util.Collections.emptyList();
+      relayerNode_ = "";
+      credentials_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      ownerDid_ = "";
+      ownerAddress_ = "";
+      data_ = com.google.protobuf.ByteString.EMPTY;
+      alsoKnownAs_ = "";
+      linkedClaim_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateEntity();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgCreateEntity_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgCreateEntity_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.entity.v1beta1.TxProto.MsgCreateEntity.class, com.ixo.entity.v1beta1.TxProto.MsgCreateEntity.Builder.class);
+    }
+
+    public static final int ENTITY_TYPE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object entityType_ = "";
+    /**
+     * <pre>
+     * An Entity Type as defined by the implementer
+     * </pre>
+     *
+     * <code>string entity_type = 1 [json_name = "entityType"];</code>
+     * @return The entityType.
+     */
+    @java.lang.Override
+    public java.lang.String getEntityType() {
+      java.lang.Object ref = entityType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        entityType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * An Entity Type as defined by the implementer
+     * </pre>
+     *
+     * <code>string entity_type = 1 [json_name = "entityType"];</code>
+     * @return The bytes for entityType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEntityTypeBytes() {
+      java.lang.Object ref = entityType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        entityType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENTITY_STATUS_FIELD_NUMBER = 2;
+    private int entityStatus_ = 0;
+    /**
+     * <pre>
+     * Status of the Entity as defined by the implementer and interpreted by
+     * Client applications
+     * </pre>
+     *
+     * <code>int32 entity_status = 2 [json_name = "entityStatus"];</code>
+     * @return The entityStatus.
+     */
+    @java.lang.Override
+    public int getEntityStatus() {
+      return entityStatus_;
+    }
+
+    public static final int CONTROLLER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList controller_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * the list of controller DIDs
+     * </pre>
+     *
+     * <code>repeated string controller = 3 [json_name = "controller"];</code>
+     * @return A list containing the controller.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getControllerList() {
+      return controller_;
+    }
+    /**
+     * <pre>
+     * the list of controller DIDs
+     * </pre>
+     *
+     * <code>repeated string controller = 3 [json_name = "controller"];</code>
+     * @return The count of controller.
+     */
+    public int getControllerCount() {
+      return controller_.size();
+    }
+    /**
+     * <pre>
+     * the list of controller DIDs
+     * </pre>
+     *
+     * <code>repeated string controller = 3 [json_name = "controller"];</code>
+     * @param index The index of the element to return.
+     * @return The controller at the given index.
+     */
+    public java.lang.String getController(int index) {
+      return controller_.get(index);
+    }
+    /**
+     * <pre>
+     * the list of controller DIDs
+     * </pre>
+     *
+     * <code>repeated string controller = 3 [json_name = "controller"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the controller at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getControllerBytes(int index) {
+      return controller_.getByteString(index);
+    }
+
+    public static final int CONTEXT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.ixo.iid.v1beta1.TypesProto.Context> context_;
+    /**
+     * <pre>
+     * JSON-LD contexts
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.Context context = 4 [json_name = "context"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.ixo.iid.v1beta1.TypesProto.Context> getContextList() {
+      return context_;
+    }
+    /**
+     * <pre>
+     * JSON-LD contexts
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.Context context = 4 [json_name = "context"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.ixo.iid.v1beta1.TypesProto.ContextOrBuilder> 
+        getContextOrBuilderList() {
+      return context_;
+    }
+    /**
+     * <pre>
+     * JSON-LD contexts
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.Context context = 4 [json_name = "context"];</code>
+     */
+    @java.lang.Override
+    public int getContextCount() {
+      return context_.size();
+    }
+    /**
+     * <pre>
+     * JSON-LD contexts
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.Context context = 4 [json_name = "context"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.iid.v1beta1.TypesProto.Context getContext(int index) {
+      return context_.get(index);
+    }
+    /**
+     * <pre>
+     * JSON-LD contexts
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.Context context = 4 [json_name = "context"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.iid.v1beta1.TypesProto.ContextOrBuilder getContextOrBuilder(
+        int index) {
+      return context_.get(index);
+    }
+
+    public static final int VERIFICATION_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.ixo.iid.v1beta1.TxProto.Verification> verification_;
+    /**
+     * <pre>
+     * Verification Methods and Verification Relationships
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.Verification verification = 5 [json_name = "verification"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.ixo.iid.v1beta1.TxProto.Verification> getVerificationList() {
+      return verification_;
+    }
+    /**
+     * <pre>
+     * Verification Methods and Verification Relationships
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.Verification verification = 5 [json_name = "verification"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.ixo.iid.v1beta1.TxProto.VerificationOrBuilder> 
+        getVerificationOrBuilderList() {
+      return verification_;
+    }
+    /**
+     * <pre>
+     * Verification Methods and Verification Relationships
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.Verification verification = 5 [json_name = "verification"];</code>
+     */
+    @java.lang.Override
+    public int getVerificationCount() {
+      return verification_.size();
+    }
+    /**
+     * <pre>
+     * Verification Methods and Verification Relationships
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.Verification verification = 5 [json_name = "verification"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.iid.v1beta1.TxProto.Verification getVerification(int index) {
+      return verification_.get(index);
+    }
+    /**
+     * <pre>
+     * Verification Methods and Verification Relationships
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.Verification verification = 5 [json_name = "verification"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.iid.v1beta1.TxProto.VerificationOrBuilder getVerificationOrBuilder(
+        int index) {
+      return verification_.get(index);
+    }
+
+    public static final int SERVICE_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.ixo.iid.v1beta1.TypesProto.Service> service_;
+    /**
+     * <pre>
+     * Service endpoints
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.Service service = 6 [json_name = "service"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.ixo.iid.v1beta1.TypesProto.Service> getServiceList() {
+      return service_;
+    }
+    /**
+     * <pre>
+     * Service endpoints
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.Service service = 6 [json_name = "service"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.ixo.iid.v1beta1.TypesProto.ServiceOrBuilder> 
+        getServiceOrBuilderList() {
+      return service_;
+    }
+    /**
+     * <pre>
+     * Service endpoints
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.Service service = 6 [json_name = "service"];</code>
+     */
+    @java.lang.Override
+    public int getServiceCount() {
+      return service_.size();
+    }
+    /**
+     * <pre>
+     * Service endpoints
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.Service service = 6 [json_name = "service"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.iid.v1beta1.TypesProto.Service getService(int index) {
+      return service_.get(index);
+    }
+    /**
+     * <pre>
+     * Service endpoints
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.Service service = 6 [json_name = "service"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.iid.v1beta1.TypesProto.ServiceOrBuilder getServiceOrBuilder(
+        int index) {
+      return service_.get(index);
+    }
+
+    public static final int ACCORDED_RIGHT_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private java.util.List<com.ixo.iid.v1beta1.TypesProto.AccordedRight> accordedRight_;
+    /**
+     * <pre>
+     * Legal or Electronic Rights and associated Object Capabilities
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.AccordedRight accorded_right = 7 [json_name = "accordedRight"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.ixo.iid.v1beta1.TypesProto.AccordedRight> getAccordedRightList() {
+      return accordedRight_;
+    }
+    /**
+     * <pre>
+     * Legal or Electronic Rights and associated Object Capabilities
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.AccordedRight accorded_right = 7 [json_name = "accordedRight"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.ixo.iid.v1beta1.TypesProto.AccordedRightOrBuilder> 
+        getAccordedRightOrBuilderList() {
+      return accordedRight_;
+    }
+    /**
+     * <pre>
+     * Legal or Electronic Rights and associated Object Capabilities
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.AccordedRight accorded_right = 7 [json_name = "accordedRight"];</code>
+     */
+    @java.lang.Override
+    public int getAccordedRightCount() {
+      return accordedRight_.size();
+    }
+    /**
+     * <pre>
+     * Legal or Electronic Rights and associated Object Capabilities
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.AccordedRight accorded_right = 7 [json_name = "accordedRight"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.iid.v1beta1.TypesProto.AccordedRight getAccordedRight(int index) {
+      return accordedRight_.get(index);
+    }
+    /**
+     * <pre>
+     * Legal or Electronic Rights and associated Object Capabilities
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.AccordedRight accorded_right = 7 [json_name = "accordedRight"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.iid.v1beta1.TypesProto.AccordedRightOrBuilder getAccordedRightOrBuilder(
+        int index) {
+      return accordedRight_.get(index);
+    }
+
+    public static final int LINKED_RESOURCE_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private java.util.List<com.ixo.iid.v1beta1.TypesProto.LinkedResource> linkedResource_;
+    /**
+     * <pre>
+     * Digital resources associated with the Subject
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.LinkedResource linked_resource = 8 [json_name = "linkedResource"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.ixo.iid.v1beta1.TypesProto.LinkedResource> getLinkedResourceList() {
+      return linkedResource_;
+    }
+    /**
+     * <pre>
+     * Digital resources associated with the Subject
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.LinkedResource linked_resource = 8 [json_name = "linkedResource"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.ixo.iid.v1beta1.TypesProto.LinkedResourceOrBuilder> 
+        getLinkedResourceOrBuilderList() {
+      return linkedResource_;
+    }
+    /**
+     * <pre>
+     * Digital resources associated with the Subject
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.LinkedResource linked_resource = 8 [json_name = "linkedResource"];</code>
+     */
+    @java.lang.Override
+    public int getLinkedResourceCount() {
+      return linkedResource_.size();
+    }
+    /**
+     * <pre>
+     * Digital resources associated with the Subject
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.LinkedResource linked_resource = 8 [json_name = "linkedResource"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.iid.v1beta1.TypesProto.LinkedResource getLinkedResource(int index) {
+      return linkedResource_.get(index);
+    }
+    /**
+     * <pre>
+     * Digital resources associated with the Subject
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.LinkedResource linked_resource = 8 [json_name = "linkedResource"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.iid.v1beta1.TypesProto.LinkedResourceOrBuilder getLinkedResourceOrBuilder(
+        int index) {
+      return linkedResource_.get(index);
+    }
+
+    public static final int LINKED_ENTITY_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private java.util.List<com.ixo.iid.v1beta1.TypesProto.LinkedEntity> linkedEntity_;
+    /**
+     * <pre>
+     * DID of a linked Entity and its relationship with the Subject
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.LinkedEntity linked_entity = 9 [json_name = "linkedEntity"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.ixo.iid.v1beta1.TypesProto.LinkedEntity> getLinkedEntityList() {
+      return linkedEntity_;
+    }
+    /**
+     * <pre>
+     * DID of a linked Entity and its relationship with the Subject
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.LinkedEntity linked_entity = 9 [json_name = "linkedEntity"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.ixo.iid.v1beta1.TypesProto.LinkedEntityOrBuilder> 
+        getLinkedEntityOrBuilderList() {
+      return linkedEntity_;
+    }
+    /**
+     * <pre>
+     * DID of a linked Entity and its relationship with the Subject
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.LinkedEntity linked_entity = 9 [json_name = "linkedEntity"];</code>
+     */
+    @java.lang.Override
+    public int getLinkedEntityCount() {
+      return linkedEntity_.size();
+    }
+    /**
+     * <pre>
+     * DID of a linked Entity and its relationship with the Subject
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.LinkedEntity linked_entity = 9 [json_name = "linkedEntity"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.iid.v1beta1.TypesProto.LinkedEntity getLinkedEntity(int index) {
+      return linkedEntity_.get(index);
+    }
+    /**
+     * <pre>
+     * DID of a linked Entity and its relationship with the Subject
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.LinkedEntity linked_entity = 9 [json_name = "linkedEntity"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.iid.v1beta1.TypesProto.LinkedEntityOrBuilder getLinkedEntityOrBuilder(
+        int index) {
+      return linkedEntity_.get(index);
+    }
+
+    public static final int START_DATE_FIELD_NUMBER = 10;
+    private com.google.protobuf.Timestamp startDate_;
+    /**
+     * <pre>
+     * Start Date of the Entity as defined by the implementer and interpreted by
+     * Client applications
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_date = 10 [json_name = "startDate", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startDate field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartDate() {
+      return startDate_ != null;
+    }
+    /**
+     * <pre>
+     * Start Date of the Entity as defined by the implementer and interpreted by
+     * Client applications
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_date = 10 [json_name = "startDate", (.gogoproto.stdtime) = true];</code>
+     * @return The startDate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getStartDate() {
+      return startDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startDate_;
+    }
+    /**
+     * <pre>
+     * Start Date of the Entity as defined by the implementer and interpreted by
+     * Client applications
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_date = 10 [json_name = "startDate", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getStartDateOrBuilder() {
+      return startDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startDate_;
+    }
+
+    public static final int END_DATE_FIELD_NUMBER = 11;
+    private com.google.protobuf.Timestamp endDate_;
+    /**
+     * <pre>
+     * End Date of the Entity as defined by the implementer and interpreted by
+     * Client applications
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_date = 11 [json_name = "endDate", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the endDate field is set.
+     */
+    @java.lang.Override
+    public boolean hasEndDate() {
+      return endDate_ != null;
+    }
+    /**
+     * <pre>
+     * End Date of the Entity as defined by the implementer and interpreted by
+     * Client applications
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_date = 11 [json_name = "endDate", (.gogoproto.stdtime) = true];</code>
+     * @return The endDate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getEndDate() {
+      return endDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endDate_;
+    }
+    /**
+     * <pre>
+     * End Date of the Entity as defined by the implementer and interpreted by
+     * Client applications
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_date = 11 [json_name = "endDate", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getEndDateOrBuilder() {
+      return endDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endDate_;
+    }
+
+    public static final int RELAYER_NODE_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object relayerNode_ = "";
+    /**
+     * <pre>
+     * Address of the operator through which the Entity was created
+     * </pre>
+     *
+     * <code>string relayer_node = 12 [json_name = "relayerNode"];</code>
+     * @return The relayerNode.
+     */
+    @java.lang.Override
+    public java.lang.String getRelayerNode() {
+      java.lang.Object ref = relayerNode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        relayerNode_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Address of the operator through which the Entity was created
+     * </pre>
+     *
+     * <code>string relayer_node = 12 [json_name = "relayerNode"];</code>
+     * @return The bytes for relayerNode.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRelayerNodeBytes() {
+      java.lang.Object ref = relayerNode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        relayerNode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CREDENTIALS_FIELD_NUMBER = 13;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList credentials_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * Content ID or Hash of public Verifiable Credentials associated with the
+     * subject
+     * </pre>
+     *
+     * <code>repeated string credentials = 13 [json_name = "credentials"];</code>
+     * @return A list containing the credentials.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getCredentialsList() {
+      return credentials_;
+    }
+    /**
+     * <pre>
+     * Content ID or Hash of public Verifiable Credentials associated with the
+     * subject
+     * </pre>
+     *
+     * <code>repeated string credentials = 13 [json_name = "credentials"];</code>
+     * @return The count of credentials.
+     */
+    public int getCredentialsCount() {
+      return credentials_.size();
+    }
+    /**
+     * <pre>
+     * Content ID or Hash of public Verifiable Credentials associated with the
+     * subject
+     * </pre>
+     *
+     * <code>repeated string credentials = 13 [json_name = "credentials"];</code>
+     * @param index The index of the element to return.
+     * @return The credentials at the given index.
+     */
+    public java.lang.String getCredentials(int index) {
+      return credentials_.get(index);
+    }
+    /**
+     * <pre>
+     * Content ID or Hash of public Verifiable Credentials associated with the
+     * subject
+     * </pre>
+     *
+     * <code>repeated string credentials = 13 [json_name = "credentials"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the credentials at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getCredentialsBytes(int index) {
+      return credentials_.getByteString(index);
+    }
+
+    public static final int OWNER_DID_FIELD_NUMBER = 14;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ownerDid_ = "";
+    /**
+     * <pre>
+     * Owner of the Entity NFT | The ownersdid used to sign this transaction.
+     * </pre>
+     *
+     * <code>string owner_did = 14 [json_name = "ownerDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+     * @return The ownerDid.
+     */
+    @java.lang.Override
+    public java.lang.String getOwnerDid() {
+      java.lang.Object ref = ownerDid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ownerDid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Owner of the Entity NFT | The ownersdid used to sign this transaction.
+     * </pre>
+     *
+     * <code>string owner_did = 14 [json_name = "ownerDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+     * @return The bytes for ownerDid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerDidBytes() {
+      java.lang.Object ref = ownerDid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ownerDid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_ADDRESS_FIELD_NUMBER = 15;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ownerAddress_ = "";
+    /**
+     * <pre>
+     * The ownersdid address used to sign this transaction.
+     * </pre>
+     *
+     * <code>string owner_address = 15 [json_name = "ownerAddress"];</code>
+     * @return The ownerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getOwnerAddress() {
+      java.lang.Object ref = ownerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ownerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The ownersdid address used to sign this transaction.
+     * </pre>
+     *
+     * <code>string owner_address = 15 [json_name = "ownerAddress"];</code>
+     * @return The bytes for ownerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerAddressBytes() {
+      java.lang.Object ref = ownerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ownerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATA_FIELD_NUMBER = 16;
+    private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * Extention data
+     * </pre>
+     *
+     * <code>bytes data = 16 [json_name = "data", (.gogoproto.casttype) = "encoding/json.RawMessage"];</code>
+     * @return The data.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getData() {
+      return data_;
+    }
+
+    public static final int ALSOKNOWNAS_FIELD_NUMBER = 17;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object alsoKnownAs_ = "";
+    /**
+     * <code>string alsoKnownAs = 17 [json_name = "alsoKnownAs"];</code>
+     * @return The alsoKnownAs.
+     */
+    @java.lang.Override
+    public java.lang.String getAlsoKnownAs() {
+      java.lang.Object ref = alsoKnownAs_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        alsoKnownAs_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string alsoKnownAs = 17 [json_name = "alsoKnownAs"];</code>
+     * @return The bytes for alsoKnownAs.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAlsoKnownAsBytes() {
+      java.lang.Object ref = alsoKnownAs_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        alsoKnownAs_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LINKED_CLAIM_FIELD_NUMBER = 18;
+    @SuppressWarnings("serial")
+    private java.util.List<com.ixo.iid.v1beta1.TypesProto.LinkedClaim> linkedClaim_;
+    /**
+     * <pre>
+     * Digital claims associated with the Subject
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.LinkedClaim linked_claim = 18 [json_name = "linkedClaim"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.ixo.iid.v1beta1.TypesProto.LinkedClaim> getLinkedClaimList() {
+      return linkedClaim_;
+    }
+    /**
+     * <pre>
+     * Digital claims associated with the Subject
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.LinkedClaim linked_claim = 18 [json_name = "linkedClaim"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.ixo.iid.v1beta1.TypesProto.LinkedClaimOrBuilder> 
+        getLinkedClaimOrBuilderList() {
+      return linkedClaim_;
+    }
+    /**
+     * <pre>
+     * Digital claims associated with the Subject
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.LinkedClaim linked_claim = 18 [json_name = "linkedClaim"];</code>
+     */
+    @java.lang.Override
+    public int getLinkedClaimCount() {
+      return linkedClaim_.size();
+    }
+    /**
+     * <pre>
+     * Digital claims associated with the Subject
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.LinkedClaim linked_claim = 18 [json_name = "linkedClaim"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.iid.v1beta1.TypesProto.LinkedClaim getLinkedClaim(int index) {
+      return linkedClaim_.get(index);
+    }
+    /**
+     * <pre>
+     * Digital claims associated with the Subject
+     * </pre>
+     *
+     * <code>repeated .ixo.iid.v1beta1.LinkedClaim linked_claim = 18 [json_name = "linkedClaim"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.iid.v1beta1.TypesProto.LinkedClaimOrBuilder getLinkedClaimOrBuilder(
+        int index) {
+      return linkedClaim_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entityType_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, entityType_);
+      }
+      if (entityStatus_ != 0) {
+        output.writeInt32(2, entityStatus_);
+      }
+      for (int i = 0; i < controller_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, controller_.getRaw(i));
+      }
+      for (int i = 0; i < context_.size(); i++) {
+        output.writeMessage(4, context_.get(i));
+      }
+      for (int i = 0; i < verification_.size(); i++) {
+        output.writeMessage(5, verification_.get(i));
+      }
+      for (int i = 0; i < service_.size(); i++) {
+        output.writeMessage(6, service_.get(i));
+      }
+      for (int i = 0; i < accordedRight_.size(); i++) {
+        output.writeMessage(7, accordedRight_.get(i));
+      }
+      for (int i = 0; i < linkedResource_.size(); i++) {
+        output.writeMessage(8, linkedResource_.get(i));
+      }
+      for (int i = 0; i < linkedEntity_.size(); i++) {
+        output.writeMessage(9, linkedEntity_.get(i));
+      }
+      if (startDate_ != null) {
+        output.writeMessage(10, getStartDate());
+      }
+      if (endDate_ != null) {
+        output.writeMessage(11, getEndDate());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(relayerNode_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, relayerNode_);
+      }
+      for (int i = 0; i < credentials_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, credentials_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerDid_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, ownerDid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, ownerAddress_);
+      }
+      if (!data_.isEmpty()) {
+        output.writeBytes(16, data_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(alsoKnownAs_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 17, alsoKnownAs_);
+      }
+      for (int i = 0; i < linkedClaim_.size(); i++) {
+        output.writeMessage(18, linkedClaim_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entityType_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, entityType_);
+      }
+      if (entityStatus_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, entityStatus_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < controller_.size(); i++) {
+          dataSize += computeStringSizeNoTag(controller_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getControllerList().size();
+      }
+      for (int i = 0; i < context_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, context_.get(i));
+      }
+      for (int i = 0; i < verification_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, verification_.get(i));
+      }
+      for (int i = 0; i < service_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, service_.get(i));
+      }
+      for (int i = 0; i < accordedRight_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, accordedRight_.get(i));
+      }
+      for (int i = 0; i < linkedResource_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, linkedResource_.get(i));
+      }
+      for (int i = 0; i < linkedEntity_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, linkedEntity_.get(i));
+      }
+      if (startDate_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getStartDate());
+      }
+      if (endDate_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getEndDate());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(relayerNode_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, relayerNode_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < credentials_.size(); i++) {
+          dataSize += computeStringSizeNoTag(credentials_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getCredentialsList().size();
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerDid_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, ownerDid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, ownerAddress_);
+      }
+      if (!data_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(16, data_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(alsoKnownAs_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, alsoKnownAs_);
+      }
+      for (int i = 0; i < linkedClaim_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(18, linkedClaim_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.entity.v1beta1.TxProto.MsgCreateEntity)) {
+        return super.equals(obj);
+      }
+      com.ixo.entity.v1beta1.TxProto.MsgCreateEntity other = (com.ixo.entity.v1beta1.TxProto.MsgCreateEntity) obj;
+
+      if (!getEntityType()
+          .equals(other.getEntityType())) return false;
+      if (getEntityStatus()
+          != other.getEntityStatus()) return false;
+      if (!getControllerList()
+          .equals(other.getControllerList())) return false;
+      if (!getContextList()
+          .equals(other.getContextList())) return false;
+      if (!getVerificationList()
+          .equals(other.getVerificationList())) return false;
+      if (!getServiceList()
+          .equals(other.getServiceList())) return false;
+      if (!getAccordedRightList()
+          .equals(other.getAccordedRightList())) return false;
+      if (!getLinkedResourceList()
+          .equals(other.getLinkedResourceList())) return false;
+      if (!getLinkedEntityList()
+          .equals(other.getLinkedEntityList())) return false;
+      if (hasStartDate() != other.hasStartDate()) return false;
+      if (hasStartDate()) {
+        if (!getStartDate()
+            .equals(other.getStartDate())) return false;
+      }
+      if (hasEndDate() != other.hasEndDate()) return false;
+      if (hasEndDate()) {
+        if (!getEndDate()
+            .equals(other.getEndDate())) return false;
+      }
+      if (!getRelayerNode()
+          .equals(other.getRelayerNode())) return false;
+      if (!getCredentialsList()
+          .equals(other.getCredentialsList())) return false;
+      if (!getOwnerDid()
+          .equals(other.getOwnerDid())) return false;
+      if (!getOwnerAddress()
+          .equals(other.getOwnerAddress())) return false;
+      if (!getData()
+          .equals(other.getData())) return false;
+      if (!getAlsoKnownAs()
+          .equals(other.getAlsoKnownAs())) return false;
+      if (!getLinkedClaimList()
+          .equals(other.getLinkedClaimList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENTITY_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getEntityType().hashCode();
+      hash = (37 * hash) + ENTITY_STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + getEntityStatus();
+      if (getControllerCount() > 0) {
+        hash = (37 * hash) + CONTROLLER_FIELD_NUMBER;
+        hash = (53 * hash) + getControllerList().hashCode();
+      }
+      if (getContextCount() > 0) {
+        hash = (37 * hash) + CONTEXT_FIELD_NUMBER;
+        hash = (53 * hash) + getContextList().hashCode();
+      }
+      if (getVerificationCount() > 0) {
+        hash = (37 * hash) + VERIFICATION_FIELD_NUMBER;
+        hash = (53 * hash) + getVerificationList().hashCode();
+      }
+      if (getServiceCount() > 0) {
+        hash = (37 * hash) + SERVICE_FIELD_NUMBER;
+        hash = (53 * hash) + getServiceList().hashCode();
+      }
+      if (getAccordedRightCount() > 0) {
+        hash = (37 * hash) + ACCORDED_RIGHT_FIELD_NUMBER;
+        hash = (53 * hash) + getAccordedRightList().hashCode();
+      }
+      if (getLinkedResourceCount() > 0) {
+        hash = (37 * hash) + LINKED_RESOURCE_FIELD_NUMBER;
+        hash = (53 * hash) + getLinkedResourceList().hashCode();
+      }
+      if (getLinkedEntityCount() > 0) {
+        hash = (37 * hash) + LINKED_ENTITY_FIELD_NUMBER;
+        hash = (53 * hash) + getLinkedEntityList().hashCode();
+      }
+      if (hasStartDate()) {
+        hash = (37 * hash) + START_DATE_FIELD_NUMBER;
+        hash = (53 * hash) + getStartDate().hashCode();
+      }
+      if (hasEndDate()) {
+        hash = (37 * hash) + END_DATE_FIELD_NUMBER;
+        hash = (53 * hash) + getEndDate().hashCode();
+      }
+      hash = (37 * hash) + RELAYER_NODE_FIELD_NUMBER;
+      hash = (53 * hash) + getRelayerNode().hashCode();
+      if (getCredentialsCount() > 0) {
+        hash = (37 * hash) + CREDENTIALS_FIELD_NUMBER;
+        hash = (53 * hash) + getCredentialsList().hashCode();
+      }
+      hash = (37 * hash) + OWNER_DID_FIELD_NUMBER;
+      hash = (53 * hash) + getOwnerDid().hashCode();
+      hash = (37 * hash) + OWNER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getOwnerAddress().hashCode();
+      hash = (37 * hash) + DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getData().hashCode();
+      hash = (37 * hash) + ALSOKNOWNAS_FIELD_NUMBER;
+      hash = (53 * hash) + getAlsoKnownAs().hashCode();
+      if (getLinkedClaimCount() > 0) {
+        hash = (37 * hash) + LINKED_CLAIM_FIELD_NUMBER;
+        hash = (53 * hash) + getLinkedClaimList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntity parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntity parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntity parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntity parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntity parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntity parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntity parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntity parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntity parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntity parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntity parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntity parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.entity.v1beta1.TxProto.MsgCreateEntity prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.entity.v1beta1.MsgCreateEntity}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.entity.v1beta1.MsgCreateEntity)
+        com.ixo.entity.v1beta1.TxProto.MsgCreateEntityOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgCreateEntity_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgCreateEntity_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.entity.v1beta1.TxProto.MsgCreateEntity.class, com.ixo.entity.v1beta1.TxProto.MsgCreateEntity.Builder.class);
+      }
+
+      // Construct using com.ixo.entity.v1beta1.TxProto.MsgCreateEntity.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        entityType_ = "";
+        entityStatus_ = 0;
+        controller_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        if (contextBuilder_ == null) {
+          context_ = java.util.Collections.emptyList();
+        } else {
+          context_ = null;
+          contextBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (verificationBuilder_ == null) {
+          verification_ = java.util.Collections.emptyList();
+        } else {
+          verification_ = null;
+          verificationBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (serviceBuilder_ == null) {
+          service_ = java.util.Collections.emptyList();
+        } else {
+          service_ = null;
+          serviceBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        if (accordedRightBuilder_ == null) {
+          accordedRight_ = java.util.Collections.emptyList();
+        } else {
+          accordedRight_ = null;
+          accordedRightBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        if (linkedResourceBuilder_ == null) {
+          linkedResource_ = java.util.Collections.emptyList();
+        } else {
+          linkedResource_ = null;
+          linkedResourceBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        if (linkedEntityBuilder_ == null) {
+          linkedEntity_ = java.util.Collections.emptyList();
+        } else {
+          linkedEntity_ = null;
+          linkedEntityBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000100);
+        startDate_ = null;
+        if (startDateBuilder_ != null) {
+          startDateBuilder_.dispose();
+          startDateBuilder_ = null;
+        }
+        endDate_ = null;
+        if (endDateBuilder_ != null) {
+          endDateBuilder_.dispose();
+          endDateBuilder_ = null;
+        }
+        relayerNode_ = "";
+        credentials_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        ownerDid_ = "";
+        ownerAddress_ = "";
+        data_ = com.google.protobuf.ByteString.EMPTY;
+        alsoKnownAs_ = "";
+        if (linkedClaimBuilder_ == null) {
+          linkedClaim_ = java.util.Collections.emptyList();
+        } else {
+          linkedClaim_ = null;
+          linkedClaimBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00020000);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgCreateEntity_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgCreateEntity getDefaultInstanceForType() {
+        return com.ixo.entity.v1beta1.TxProto.MsgCreateEntity.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgCreateEntity build() {
+        com.ixo.entity.v1beta1.TxProto.MsgCreateEntity result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgCreateEntity buildPartial() {
+        com.ixo.entity.v1beta1.TxProto.MsgCreateEntity result = new com.ixo.entity.v1beta1.TxProto.MsgCreateEntity(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.ixo.entity.v1beta1.TxProto.MsgCreateEntity result) {
+        if (contextBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            context_ = java.util.Collections.unmodifiableList(context_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.context_ = context_;
+        } else {
+          result.context_ = contextBuilder_.build();
+        }
+        if (verificationBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            verification_ = java.util.Collections.unmodifiableList(verification_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.verification_ = verification_;
+        } else {
+          result.verification_ = verificationBuilder_.build();
+        }
+        if (serviceBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            service_ = java.util.Collections.unmodifiableList(service_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.service_ = service_;
+        } else {
+          result.service_ = serviceBuilder_.build();
+        }
+        if (accordedRightBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0)) {
+            accordedRight_ = java.util.Collections.unmodifiableList(accordedRight_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.accordedRight_ = accordedRight_;
+        } else {
+          result.accordedRight_ = accordedRightBuilder_.build();
+        }
+        if (linkedResourceBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0)) {
+            linkedResource_ = java.util.Collections.unmodifiableList(linkedResource_);
+            bitField0_ = (bitField0_ & ~0x00000080);
+          }
+          result.linkedResource_ = linkedResource_;
+        } else {
+          result.linkedResource_ = linkedResourceBuilder_.build();
+        }
+        if (linkedEntityBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0)) {
+            linkedEntity_ = java.util.Collections.unmodifiableList(linkedEntity_);
+            bitField0_ = (bitField0_ & ~0x00000100);
+          }
+          result.linkedEntity_ = linkedEntity_;
+        } else {
+          result.linkedEntity_ = linkedEntityBuilder_.build();
+        }
+        if (linkedClaimBuilder_ == null) {
+          if (((bitField0_ & 0x00020000) != 0)) {
+            linkedClaim_ = java.util.Collections.unmodifiableList(linkedClaim_);
+            bitField0_ = (bitField0_ & ~0x00020000);
+          }
+          result.linkedClaim_ = linkedClaim_;
+        } else {
+          result.linkedClaim_ = linkedClaimBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.ixo.entity.v1beta1.TxProto.MsgCreateEntity result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.entityType_ = entityType_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.entityStatus_ = entityStatus_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          controller_.makeImmutable();
+          result.controller_ = controller_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.startDate_ = startDateBuilder_ == null
+              ? startDate_
+              : startDateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.endDate_ = endDateBuilder_ == null
+              ? endDate_
+              : endDateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.relayerNode_ = relayerNode_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          credentials_.makeImmutable();
+          result.credentials_ = credentials_;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.ownerDid_ = ownerDid_;
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.ownerAddress_ = ownerAddress_;
+        }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          result.data_ = data_;
+        }
+        if (((from_bitField0_ & 0x00010000) != 0)) {
+          result.alsoKnownAs_ = alsoKnownAs_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.entity.v1beta1.TxProto.MsgCreateEntity) {
+          return mergeFrom((com.ixo.entity.v1beta1.TxProto.MsgCreateEntity)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.entity.v1beta1.TxProto.MsgCreateEntity other) {
+        if (other == com.ixo.entity.v1beta1.TxProto.MsgCreateEntity.getDefaultInstance()) return this;
+        if (!other.getEntityType().isEmpty()) {
+          entityType_ = other.entityType_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getEntityStatus() != 0) {
+          setEntityStatus(other.getEntityStatus());
+        }
+        if (!other.controller_.isEmpty()) {
+          if (controller_.isEmpty()) {
+            controller_ = other.controller_;
+            bitField0_ |= 0x00000004;
+          } else {
+            ensureControllerIsMutable();
+            controller_.addAll(other.controller_);
+          }
+          onChanged();
+        }
+        if (contextBuilder_ == null) {
+          if (!other.context_.isEmpty()) {
+            if (context_.isEmpty()) {
+              context_ = other.context_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureContextIsMutable();
+              context_.addAll(other.context_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.context_.isEmpty()) {
+            if (contextBuilder_.isEmpty()) {
+              contextBuilder_.dispose();
+              contextBuilder_ = null;
+              context_ = other.context_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              contextBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getContextFieldBuilder() : null;
+            } else {
+              contextBuilder_.addAllMessages(other.context_);
+            }
+          }
+        }
+        if (verificationBuilder_ == null) {
+          if (!other.verification_.isEmpty()) {
+            if (verification_.isEmpty()) {
+              verification_ = other.verification_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureVerificationIsMutable();
+              verification_.addAll(other.verification_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.verification_.isEmpty()) {
+            if (verificationBuilder_.isEmpty()) {
+              verificationBuilder_.dispose();
+              verificationBuilder_ = null;
+              verification_ = other.verification_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              verificationBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getVerificationFieldBuilder() : null;
+            } else {
+              verificationBuilder_.addAllMessages(other.verification_);
+            }
+          }
+        }
+        if (serviceBuilder_ == null) {
+          if (!other.service_.isEmpty()) {
+            if (service_.isEmpty()) {
+              service_ = other.service_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureServiceIsMutable();
+              service_.addAll(other.service_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.service_.isEmpty()) {
+            if (serviceBuilder_.isEmpty()) {
+              serviceBuilder_.dispose();
+              serviceBuilder_ = null;
+              service_ = other.service_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              serviceBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getServiceFieldBuilder() : null;
+            } else {
+              serviceBuilder_.addAllMessages(other.service_);
+            }
+          }
+        }
+        if (accordedRightBuilder_ == null) {
+          if (!other.accordedRight_.isEmpty()) {
+            if (accordedRight_.isEmpty()) {
+              accordedRight_ = other.accordedRight_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureAccordedRightIsMutable();
+              accordedRight_.addAll(other.accordedRight_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.accordedRight_.isEmpty()) {
+            if (accordedRightBuilder_.isEmpty()) {
+              accordedRightBuilder_.dispose();
+              accordedRightBuilder_ = null;
+              accordedRight_ = other.accordedRight_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              accordedRightBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAccordedRightFieldBuilder() : null;
+            } else {
+              accordedRightBuilder_.addAllMessages(other.accordedRight_);
+            }
+          }
+        }
+        if (linkedResourceBuilder_ == null) {
+          if (!other.linkedResource_.isEmpty()) {
+            if (linkedResource_.isEmpty()) {
+              linkedResource_ = other.linkedResource_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+            } else {
+              ensureLinkedResourceIsMutable();
+              linkedResource_.addAll(other.linkedResource_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.linkedResource_.isEmpty()) {
+            if (linkedResourceBuilder_.isEmpty()) {
+              linkedResourceBuilder_.dispose();
+              linkedResourceBuilder_ = null;
+              linkedResource_ = other.linkedResource_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+              linkedResourceBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLinkedResourceFieldBuilder() : null;
+            } else {
+              linkedResourceBuilder_.addAllMessages(other.linkedResource_);
+            }
+          }
+        }
+        if (linkedEntityBuilder_ == null) {
+          if (!other.linkedEntity_.isEmpty()) {
+            if (linkedEntity_.isEmpty()) {
+              linkedEntity_ = other.linkedEntity_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+            } else {
+              ensureLinkedEntityIsMutable();
+              linkedEntity_.addAll(other.linkedEntity_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.linkedEntity_.isEmpty()) {
+            if (linkedEntityBuilder_.isEmpty()) {
+              linkedEntityBuilder_.dispose();
+              linkedEntityBuilder_ = null;
+              linkedEntity_ = other.linkedEntity_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+              linkedEntityBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLinkedEntityFieldBuilder() : null;
+            } else {
+              linkedEntityBuilder_.addAllMessages(other.linkedEntity_);
+            }
+          }
+        }
+        if (other.hasStartDate()) {
+          mergeStartDate(other.getStartDate());
+        }
+        if (other.hasEndDate()) {
+          mergeEndDate(other.getEndDate());
+        }
+        if (!other.getRelayerNode().isEmpty()) {
+          relayerNode_ = other.relayerNode_;
+          bitField0_ |= 0x00000800;
+          onChanged();
+        }
+        if (!other.credentials_.isEmpty()) {
+          if (credentials_.isEmpty()) {
+            credentials_ = other.credentials_;
+            bitField0_ |= 0x00001000;
+          } else {
+            ensureCredentialsIsMutable();
+            credentials_.addAll(other.credentials_);
+          }
+          onChanged();
+        }
+        if (!other.getOwnerDid().isEmpty()) {
+          ownerDid_ = other.ownerDid_;
+          bitField0_ |= 0x00002000;
+          onChanged();
+        }
+        if (!other.getOwnerAddress().isEmpty()) {
+          ownerAddress_ = other.ownerAddress_;
+          bitField0_ |= 0x00004000;
+          onChanged();
+        }
+        if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
+          setData(other.getData());
+        }
+        if (!other.getAlsoKnownAs().isEmpty()) {
+          alsoKnownAs_ = other.alsoKnownAs_;
+          bitField0_ |= 0x00010000;
+          onChanged();
+        }
+        if (linkedClaimBuilder_ == null) {
+          if (!other.linkedClaim_.isEmpty()) {
+            if (linkedClaim_.isEmpty()) {
+              linkedClaim_ = other.linkedClaim_;
+              bitField0_ = (bitField0_ & ~0x00020000);
+            } else {
+              ensureLinkedClaimIsMutable();
+              linkedClaim_.addAll(other.linkedClaim_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.linkedClaim_.isEmpty()) {
+            if (linkedClaimBuilder_.isEmpty()) {
+              linkedClaimBuilder_.dispose();
+              linkedClaimBuilder_ = null;
+              linkedClaim_ = other.linkedClaim_;
+              bitField0_ = (bitField0_ & ~0x00020000);
+              linkedClaimBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLinkedClaimFieldBuilder() : null;
+            } else {
+              linkedClaimBuilder_.addAllMessages(other.linkedClaim_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                entityType_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                entityStatus_ = input.readInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureControllerIsMutable();
+                controller_.add(s);
+                break;
+              } // case 26
+              case 34: {
+                com.ixo.iid.v1beta1.TypesProto.Context m =
+                    input.readMessage(
+                        com.ixo.iid.v1beta1.TypesProto.Context.parser(),
+                        extensionRegistry);
+                if (contextBuilder_ == null) {
+                  ensureContextIsMutable();
+                  context_.add(m);
+                } else {
+                  contextBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                com.ixo.iid.v1beta1.TxProto.Verification m =
+                    input.readMessage(
+                        com.ixo.iid.v1beta1.TxProto.Verification.parser(),
+                        extensionRegistry);
+                if (verificationBuilder_ == null) {
+                  ensureVerificationIsMutable();
+                  verification_.add(m);
+                } else {
+                  verificationBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                com.ixo.iid.v1beta1.TypesProto.Service m =
+                    input.readMessage(
+                        com.ixo.iid.v1beta1.TypesProto.Service.parser(),
+                        extensionRegistry);
+                if (serviceBuilder_ == null) {
+                  ensureServiceIsMutable();
+                  service_.add(m);
+                } else {
+                  serviceBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 58: {
+                com.ixo.iid.v1beta1.TypesProto.AccordedRight m =
+                    input.readMessage(
+                        com.ixo.iid.v1beta1.TypesProto.AccordedRight.parser(),
+                        extensionRegistry);
+                if (accordedRightBuilder_ == null) {
+                  ensureAccordedRightIsMutable();
+                  accordedRight_.add(m);
+                } else {
+                  accordedRightBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              case 66: {
+                com.ixo.iid.v1beta1.TypesProto.LinkedResource m =
+                    input.readMessage(
+                        com.ixo.iid.v1beta1.TypesProto.LinkedResource.parser(),
+                        extensionRegistry);
+                if (linkedResourceBuilder_ == null) {
+                  ensureLinkedResourceIsMutable();
+                  linkedResource_.add(m);
+                } else {
+                  linkedResourceBuilder_.addMessage(m);
+                }
+                break;
+              } // case 66
+              case 74: {
+                com.ixo.iid.v1beta1.TypesProto.LinkedEntity m =
+                    input.readMessage(
+                        com.ixo.iid.v1beta1.TypesProto.LinkedEntity.parser(),
+                        extensionRegistry);
+                if (linkedEntityBuilder_ == null) {
+                  ensureLinkedEntityIsMutable();
+                  linkedEntity_.add(m);
+                } else {
+                  linkedEntityBuilder_.addMessage(m);
+                }
+                break;
+              } // case 74
+              case 82: {
+                input.readMessage(
+                    getStartDateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+              case 90: {
+                input.readMessage(
+                    getEndDateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
+              case 98: {
+                relayerNode_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 98
+              case 106: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureCredentialsIsMutable();
+                credentials_.add(s);
+                break;
+              } // case 106
+              case 114: {
+                ownerDid_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 114
+              case 122: {
+                ownerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00004000;
+                break;
+              } // case 122
+              case 130: {
+                data_ = input.readBytes();
+                bitField0_ |= 0x00008000;
+                break;
+              } // case 130
+              case 138: {
+                alsoKnownAs_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00010000;
+                break;
+              } // case 138
+              case 146: {
+                com.ixo.iid.v1beta1.TypesProto.LinkedClaim m =
+                    input.readMessage(
+                        com.ixo.iid.v1beta1.TypesProto.LinkedClaim.parser(),
+                        extensionRegistry);
+                if (linkedClaimBuilder_ == null) {
+                  ensureLinkedClaimIsMutable();
+                  linkedClaim_.add(m);
+                } else {
+                  linkedClaimBuilder_.addMessage(m);
+                }
+                break;
+              } // case 146
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object entityType_ = "";
+      /**
+       * <pre>
+       * An Entity Type as defined by the implementer
+       * </pre>
+       *
+       * <code>string entity_type = 1 [json_name = "entityType"];</code>
+       * @return The entityType.
+       */
+      public java.lang.String getEntityType() {
+        java.lang.Object ref = entityType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          entityType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * An Entity Type as defined by the implementer
+       * </pre>
+       *
+       * <code>string entity_type = 1 [json_name = "entityType"];</code>
+       * @return The bytes for entityType.
+       */
+      public com.google.protobuf.ByteString
+          getEntityTypeBytes() {
+        java.lang.Object ref = entityType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          entityType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * An Entity Type as defined by the implementer
+       * </pre>
+       *
+       * <code>string entity_type = 1 [json_name = "entityType"];</code>
+       * @param value The entityType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEntityType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        entityType_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * An Entity Type as defined by the implementer
+       * </pre>
+       *
+       * <code>string entity_type = 1 [json_name = "entityType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEntityType() {
+        entityType_ = getDefaultInstance().getEntityType();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * An Entity Type as defined by the implementer
+       * </pre>
+       *
+       * <code>string entity_type = 1 [json_name = "entityType"];</code>
+       * @param value The bytes for entityType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEntityTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        entityType_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int entityStatus_ ;
+      /**
+       * <pre>
+       * Status of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>int32 entity_status = 2 [json_name = "entityStatus"];</code>
+       * @return The entityStatus.
+       */
+      @java.lang.Override
+      public int getEntityStatus() {
+        return entityStatus_;
+      }
+      /**
+       * <pre>
+       * Status of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>int32 entity_status = 2 [json_name = "entityStatus"];</code>
+       * @param value The entityStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEntityStatus(int value) {
+
+        entityStatus_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Status of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>int32 entity_status = 2 [json_name = "entityStatus"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEntityStatus() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        entityStatus_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList controller_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureControllerIsMutable() {
+        if (!controller_.isModifiable()) {
+          controller_ = new com.google.protobuf.LazyStringArrayList(controller_);
+        }
+        bitField0_ |= 0x00000004;
+      }
+      /**
+       * <pre>
+       * the list of controller DIDs
+       * </pre>
+       *
+       * <code>repeated string controller = 3 [json_name = "controller"];</code>
+       * @return A list containing the controller.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getControllerList() {
+        controller_.makeImmutable();
+        return controller_;
+      }
+      /**
+       * <pre>
+       * the list of controller DIDs
+       * </pre>
+       *
+       * <code>repeated string controller = 3 [json_name = "controller"];</code>
+       * @return The count of controller.
+       */
+      public int getControllerCount() {
+        return controller_.size();
+      }
+      /**
+       * <pre>
+       * the list of controller DIDs
+       * </pre>
+       *
+       * <code>repeated string controller = 3 [json_name = "controller"];</code>
+       * @param index The index of the element to return.
+       * @return The controller at the given index.
+       */
+      public java.lang.String getController(int index) {
+        return controller_.get(index);
+      }
+      /**
+       * <pre>
+       * the list of controller DIDs
+       * </pre>
+       *
+       * <code>repeated string controller = 3 [json_name = "controller"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the controller at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getControllerBytes(int index) {
+        return controller_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * the list of controller DIDs
+       * </pre>
+       *
+       * <code>repeated string controller = 3 [json_name = "controller"];</code>
+       * @param index The index to set the value at.
+       * @param value The controller to set.
+       * @return This builder for chaining.
+       */
+      public Builder setController(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureControllerIsMutable();
+        controller_.set(index, value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the list of controller DIDs
+       * </pre>
+       *
+       * <code>repeated string controller = 3 [json_name = "controller"];</code>
+       * @param value The controller to add.
+       * @return This builder for chaining.
+       */
+      public Builder addController(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureControllerIsMutable();
+        controller_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the list of controller DIDs
+       * </pre>
+       *
+       * <code>repeated string controller = 3 [json_name = "controller"];</code>
+       * @param values The controller to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllController(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureControllerIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, controller_);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the list of controller DIDs
+       * </pre>
+       *
+       * <code>repeated string controller = 3 [json_name = "controller"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearController() {
+        controller_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the list of controller DIDs
+       * </pre>
+       *
+       * <code>repeated string controller = 3 [json_name = "controller"];</code>
+       * @param value The bytes of the controller to add.
+       * @return This builder for chaining.
+       */
+      public Builder addControllerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureControllerIsMutable();
+        controller_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.ixo.iid.v1beta1.TypesProto.Context> context_ =
+        java.util.Collections.emptyList();
+      private void ensureContextIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          context_ = new java.util.ArrayList<com.ixo.iid.v1beta1.TypesProto.Context>(context_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.iid.v1beta1.TypesProto.Context, com.ixo.iid.v1beta1.TypesProto.Context.Builder, com.ixo.iid.v1beta1.TypesProto.ContextOrBuilder> contextBuilder_;
+
+      /**
+       * <pre>
+       * JSON-LD contexts
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Context context = 4 [json_name = "context"];</code>
+       */
+      public java.util.List<com.ixo.iid.v1beta1.TypesProto.Context> getContextList() {
+        if (contextBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(context_);
+        } else {
+          return contextBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * JSON-LD contexts
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Context context = 4 [json_name = "context"];</code>
+       */
+      public int getContextCount() {
+        if (contextBuilder_ == null) {
+          return context_.size();
+        } else {
+          return contextBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * JSON-LD contexts
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Context context = 4 [json_name = "context"];</code>
+       */
+      public com.ixo.iid.v1beta1.TypesProto.Context getContext(int index) {
+        if (contextBuilder_ == null) {
+          return context_.get(index);
+        } else {
+          return contextBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * JSON-LD contexts
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Context context = 4 [json_name = "context"];</code>
+       */
+      public Builder setContext(
+          int index, com.ixo.iid.v1beta1.TypesProto.Context value) {
+        if (contextBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContextIsMutable();
+          context_.set(index, value);
+          onChanged();
+        } else {
+          contextBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * JSON-LD contexts
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Context context = 4 [json_name = "context"];</code>
+       */
+      public Builder setContext(
+          int index, com.ixo.iid.v1beta1.TypesProto.Context.Builder builderForValue) {
+        if (contextBuilder_ == null) {
+          ensureContextIsMutable();
+          context_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          contextBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * JSON-LD contexts
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Context context = 4 [json_name = "context"];</code>
+       */
+      public Builder addContext(com.ixo.iid.v1beta1.TypesProto.Context value) {
+        if (contextBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContextIsMutable();
+          context_.add(value);
+          onChanged();
+        } else {
+          contextBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * JSON-LD contexts
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Context context = 4 [json_name = "context"];</code>
+       */
+      public Builder addContext(
+          int index, com.ixo.iid.v1beta1.TypesProto.Context value) {
+        if (contextBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContextIsMutable();
+          context_.add(index, value);
+          onChanged();
+        } else {
+          contextBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * JSON-LD contexts
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Context context = 4 [json_name = "context"];</code>
+       */
+      public Builder addContext(
+          com.ixo.iid.v1beta1.TypesProto.Context.Builder builderForValue) {
+        if (contextBuilder_ == null) {
+          ensureContextIsMutable();
+          context_.add(builderForValue.build());
+          onChanged();
+        } else {
+          contextBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * JSON-LD contexts
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Context context = 4 [json_name = "context"];</code>
+       */
+      public Builder addContext(
+          int index, com.ixo.iid.v1beta1.TypesProto.Context.Builder builderForValue) {
+        if (contextBuilder_ == null) {
+          ensureContextIsMutable();
+          context_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          contextBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * JSON-LD contexts
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Context context = 4 [json_name = "context"];</code>
+       */
+      public Builder addAllContext(
+          java.lang.Iterable<? extends com.ixo.iid.v1beta1.TypesProto.Context> values) {
+        if (contextBuilder_ == null) {
+          ensureContextIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, context_);
+          onChanged();
+        } else {
+          contextBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * JSON-LD contexts
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Context context = 4 [json_name = "context"];</code>
+       */
+      public Builder clearContext() {
+        if (contextBuilder_ == null) {
+          context_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          contextBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * JSON-LD contexts
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Context context = 4 [json_name = "context"];</code>
+       */
+      public Builder removeContext(int index) {
+        if (contextBuilder_ == null) {
+          ensureContextIsMutable();
+          context_.remove(index);
+          onChanged();
+        } else {
+          contextBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * JSON-LD contexts
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Context context = 4 [json_name = "context"];</code>
+       */
+      public com.ixo.iid.v1beta1.TypesProto.Context.Builder getContextBuilder(
+          int index) {
+        return getContextFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * JSON-LD contexts
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Context context = 4 [json_name = "context"];</code>
+       */
+      public com.ixo.iid.v1beta1.TypesProto.ContextOrBuilder getContextOrBuilder(
+          int index) {
+        if (contextBuilder_ == null) {
+          return context_.get(index);  } else {
+          return contextBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * JSON-LD contexts
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Context context = 4 [json_name = "context"];</code>
+       */
+      public java.util.List<? extends com.ixo.iid.v1beta1.TypesProto.ContextOrBuilder> 
+           getContextOrBuilderList() {
+        if (contextBuilder_ != null) {
+          return contextBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(context_);
+        }
+      }
+      /**
+       * <pre>
+       * JSON-LD contexts
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Context context = 4 [json_name = "context"];</code>
+       */
+      public com.ixo.iid.v1beta1.TypesProto.Context.Builder addContextBuilder() {
+        return getContextFieldBuilder().addBuilder(
+            com.ixo.iid.v1beta1.TypesProto.Context.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * JSON-LD contexts
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Context context = 4 [json_name = "context"];</code>
+       */
+      public com.ixo.iid.v1beta1.TypesProto.Context.Builder addContextBuilder(
+          int index) {
+        return getContextFieldBuilder().addBuilder(
+            index, com.ixo.iid.v1beta1.TypesProto.Context.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * JSON-LD contexts
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Context context = 4 [json_name = "context"];</code>
+       */
+      public java.util.List<com.ixo.iid.v1beta1.TypesProto.Context.Builder> 
+           getContextBuilderList() {
+        return getContextFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.iid.v1beta1.TypesProto.Context, com.ixo.iid.v1beta1.TypesProto.Context.Builder, com.ixo.iid.v1beta1.TypesProto.ContextOrBuilder> 
+          getContextFieldBuilder() {
+        if (contextBuilder_ == null) {
+          contextBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.ixo.iid.v1beta1.TypesProto.Context, com.ixo.iid.v1beta1.TypesProto.Context.Builder, com.ixo.iid.v1beta1.TypesProto.ContextOrBuilder>(
+                  context_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          context_ = null;
+        }
+        return contextBuilder_;
+      }
+
+      private java.util.List<com.ixo.iid.v1beta1.TxProto.Verification> verification_ =
+        java.util.Collections.emptyList();
+      private void ensureVerificationIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          verification_ = new java.util.ArrayList<com.ixo.iid.v1beta1.TxProto.Verification>(verification_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.iid.v1beta1.TxProto.Verification, com.ixo.iid.v1beta1.TxProto.Verification.Builder, com.ixo.iid.v1beta1.TxProto.VerificationOrBuilder> verificationBuilder_;
+
+      /**
+       * <pre>
+       * Verification Methods and Verification Relationships
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Verification verification = 5 [json_name = "verification"];</code>
+       */
+      public java.util.List<com.ixo.iid.v1beta1.TxProto.Verification> getVerificationList() {
+        if (verificationBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(verification_);
+        } else {
+          return verificationBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Verification Methods and Verification Relationships
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Verification verification = 5 [json_name = "verification"];</code>
+       */
+      public int getVerificationCount() {
+        if (verificationBuilder_ == null) {
+          return verification_.size();
+        } else {
+          return verificationBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Verification Methods and Verification Relationships
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Verification verification = 5 [json_name = "verification"];</code>
+       */
+      public com.ixo.iid.v1beta1.TxProto.Verification getVerification(int index) {
+        if (verificationBuilder_ == null) {
+          return verification_.get(index);
+        } else {
+          return verificationBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Verification Methods and Verification Relationships
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Verification verification = 5 [json_name = "verification"];</code>
+       */
+      public Builder setVerification(
+          int index, com.ixo.iid.v1beta1.TxProto.Verification value) {
+        if (verificationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVerificationIsMutable();
+          verification_.set(index, value);
+          onChanged();
+        } else {
+          verificationBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Verification Methods and Verification Relationships
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Verification verification = 5 [json_name = "verification"];</code>
+       */
+      public Builder setVerification(
+          int index, com.ixo.iid.v1beta1.TxProto.Verification.Builder builderForValue) {
+        if (verificationBuilder_ == null) {
+          ensureVerificationIsMutable();
+          verification_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          verificationBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Verification Methods and Verification Relationships
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Verification verification = 5 [json_name = "verification"];</code>
+       */
+      public Builder addVerification(com.ixo.iid.v1beta1.TxProto.Verification value) {
+        if (verificationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVerificationIsMutable();
+          verification_.add(value);
+          onChanged();
+        } else {
+          verificationBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Verification Methods and Verification Relationships
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Verification verification = 5 [json_name = "verification"];</code>
+       */
+      public Builder addVerification(
+          int index, com.ixo.iid.v1beta1.TxProto.Verification value) {
+        if (verificationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVerificationIsMutable();
+          verification_.add(index, value);
+          onChanged();
+        } else {
+          verificationBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Verification Methods and Verification Relationships
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Verification verification = 5 [json_name = "verification"];</code>
+       */
+      public Builder addVerification(
+          com.ixo.iid.v1beta1.TxProto.Verification.Builder builderForValue) {
+        if (verificationBuilder_ == null) {
+          ensureVerificationIsMutable();
+          verification_.add(builderForValue.build());
+          onChanged();
+        } else {
+          verificationBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Verification Methods and Verification Relationships
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Verification verification = 5 [json_name = "verification"];</code>
+       */
+      public Builder addVerification(
+          int index, com.ixo.iid.v1beta1.TxProto.Verification.Builder builderForValue) {
+        if (verificationBuilder_ == null) {
+          ensureVerificationIsMutable();
+          verification_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          verificationBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Verification Methods and Verification Relationships
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Verification verification = 5 [json_name = "verification"];</code>
+       */
+      public Builder addAllVerification(
+          java.lang.Iterable<? extends com.ixo.iid.v1beta1.TxProto.Verification> values) {
+        if (verificationBuilder_ == null) {
+          ensureVerificationIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, verification_);
+          onChanged();
+        } else {
+          verificationBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Verification Methods and Verification Relationships
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Verification verification = 5 [json_name = "verification"];</code>
+       */
+      public Builder clearVerification() {
+        if (verificationBuilder_ == null) {
+          verification_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          verificationBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Verification Methods and Verification Relationships
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Verification verification = 5 [json_name = "verification"];</code>
+       */
+      public Builder removeVerification(int index) {
+        if (verificationBuilder_ == null) {
+          ensureVerificationIsMutable();
+          verification_.remove(index);
+          onChanged();
+        } else {
+          verificationBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Verification Methods and Verification Relationships
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Verification verification = 5 [json_name = "verification"];</code>
+       */
+      public com.ixo.iid.v1beta1.TxProto.Verification.Builder getVerificationBuilder(
+          int index) {
+        return getVerificationFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Verification Methods and Verification Relationships
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Verification verification = 5 [json_name = "verification"];</code>
+       */
+      public com.ixo.iid.v1beta1.TxProto.VerificationOrBuilder getVerificationOrBuilder(
+          int index) {
+        if (verificationBuilder_ == null) {
+          return verification_.get(index);  } else {
+          return verificationBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Verification Methods and Verification Relationships
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Verification verification = 5 [json_name = "verification"];</code>
+       */
+      public java.util.List<? extends com.ixo.iid.v1beta1.TxProto.VerificationOrBuilder> 
+           getVerificationOrBuilderList() {
+        if (verificationBuilder_ != null) {
+          return verificationBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(verification_);
+        }
+      }
+      /**
+       * <pre>
+       * Verification Methods and Verification Relationships
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Verification verification = 5 [json_name = "verification"];</code>
+       */
+      public com.ixo.iid.v1beta1.TxProto.Verification.Builder addVerificationBuilder() {
+        return getVerificationFieldBuilder().addBuilder(
+            com.ixo.iid.v1beta1.TxProto.Verification.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Verification Methods and Verification Relationships
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Verification verification = 5 [json_name = "verification"];</code>
+       */
+      public com.ixo.iid.v1beta1.TxProto.Verification.Builder addVerificationBuilder(
+          int index) {
+        return getVerificationFieldBuilder().addBuilder(
+            index, com.ixo.iid.v1beta1.TxProto.Verification.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Verification Methods and Verification Relationships
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Verification verification = 5 [json_name = "verification"];</code>
+       */
+      public java.util.List<com.ixo.iid.v1beta1.TxProto.Verification.Builder> 
+           getVerificationBuilderList() {
+        return getVerificationFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.iid.v1beta1.TxProto.Verification, com.ixo.iid.v1beta1.TxProto.Verification.Builder, com.ixo.iid.v1beta1.TxProto.VerificationOrBuilder> 
+          getVerificationFieldBuilder() {
+        if (verificationBuilder_ == null) {
+          verificationBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.ixo.iid.v1beta1.TxProto.Verification, com.ixo.iid.v1beta1.TxProto.Verification.Builder, com.ixo.iid.v1beta1.TxProto.VerificationOrBuilder>(
+                  verification_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          verification_ = null;
+        }
+        return verificationBuilder_;
+      }
+
+      private java.util.List<com.ixo.iid.v1beta1.TypesProto.Service> service_ =
+        java.util.Collections.emptyList();
+      private void ensureServiceIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          service_ = new java.util.ArrayList<com.ixo.iid.v1beta1.TypesProto.Service>(service_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.iid.v1beta1.TypesProto.Service, com.ixo.iid.v1beta1.TypesProto.Service.Builder, com.ixo.iid.v1beta1.TypesProto.ServiceOrBuilder> serviceBuilder_;
+
+      /**
+       * <pre>
+       * Service endpoints
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Service service = 6 [json_name = "service"];</code>
+       */
+      public java.util.List<com.ixo.iid.v1beta1.TypesProto.Service> getServiceList() {
+        if (serviceBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(service_);
+        } else {
+          return serviceBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Service endpoints
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Service service = 6 [json_name = "service"];</code>
+       */
+      public int getServiceCount() {
+        if (serviceBuilder_ == null) {
+          return service_.size();
+        } else {
+          return serviceBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Service endpoints
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Service service = 6 [json_name = "service"];</code>
+       */
+      public com.ixo.iid.v1beta1.TypesProto.Service getService(int index) {
+        if (serviceBuilder_ == null) {
+          return service_.get(index);
+        } else {
+          return serviceBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Service endpoints
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Service service = 6 [json_name = "service"];</code>
+       */
+      public Builder setService(
+          int index, com.ixo.iid.v1beta1.TypesProto.Service value) {
+        if (serviceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureServiceIsMutable();
+          service_.set(index, value);
+          onChanged();
+        } else {
+          serviceBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Service endpoints
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Service service = 6 [json_name = "service"];</code>
+       */
+      public Builder setService(
+          int index, com.ixo.iid.v1beta1.TypesProto.Service.Builder builderForValue) {
+        if (serviceBuilder_ == null) {
+          ensureServiceIsMutable();
+          service_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          serviceBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Service endpoints
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Service service = 6 [json_name = "service"];</code>
+       */
+      public Builder addService(com.ixo.iid.v1beta1.TypesProto.Service value) {
+        if (serviceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureServiceIsMutable();
+          service_.add(value);
+          onChanged();
+        } else {
+          serviceBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Service endpoints
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Service service = 6 [json_name = "service"];</code>
+       */
+      public Builder addService(
+          int index, com.ixo.iid.v1beta1.TypesProto.Service value) {
+        if (serviceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureServiceIsMutable();
+          service_.add(index, value);
+          onChanged();
+        } else {
+          serviceBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Service endpoints
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Service service = 6 [json_name = "service"];</code>
+       */
+      public Builder addService(
+          com.ixo.iid.v1beta1.TypesProto.Service.Builder builderForValue) {
+        if (serviceBuilder_ == null) {
+          ensureServiceIsMutable();
+          service_.add(builderForValue.build());
+          onChanged();
+        } else {
+          serviceBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Service endpoints
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Service service = 6 [json_name = "service"];</code>
+       */
+      public Builder addService(
+          int index, com.ixo.iid.v1beta1.TypesProto.Service.Builder builderForValue) {
+        if (serviceBuilder_ == null) {
+          ensureServiceIsMutable();
+          service_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          serviceBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Service endpoints
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Service service = 6 [json_name = "service"];</code>
+       */
+      public Builder addAllService(
+          java.lang.Iterable<? extends com.ixo.iid.v1beta1.TypesProto.Service> values) {
+        if (serviceBuilder_ == null) {
+          ensureServiceIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, service_);
+          onChanged();
+        } else {
+          serviceBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Service endpoints
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Service service = 6 [json_name = "service"];</code>
+       */
+      public Builder clearService() {
+        if (serviceBuilder_ == null) {
+          service_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          serviceBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Service endpoints
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Service service = 6 [json_name = "service"];</code>
+       */
+      public Builder removeService(int index) {
+        if (serviceBuilder_ == null) {
+          ensureServiceIsMutable();
+          service_.remove(index);
+          onChanged();
+        } else {
+          serviceBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Service endpoints
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Service service = 6 [json_name = "service"];</code>
+       */
+      public com.ixo.iid.v1beta1.TypesProto.Service.Builder getServiceBuilder(
+          int index) {
+        return getServiceFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Service endpoints
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Service service = 6 [json_name = "service"];</code>
+       */
+      public com.ixo.iid.v1beta1.TypesProto.ServiceOrBuilder getServiceOrBuilder(
+          int index) {
+        if (serviceBuilder_ == null) {
+          return service_.get(index);  } else {
+          return serviceBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Service endpoints
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Service service = 6 [json_name = "service"];</code>
+       */
+      public java.util.List<? extends com.ixo.iid.v1beta1.TypesProto.ServiceOrBuilder> 
+           getServiceOrBuilderList() {
+        if (serviceBuilder_ != null) {
+          return serviceBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(service_);
+        }
+      }
+      /**
+       * <pre>
+       * Service endpoints
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Service service = 6 [json_name = "service"];</code>
+       */
+      public com.ixo.iid.v1beta1.TypesProto.Service.Builder addServiceBuilder() {
+        return getServiceFieldBuilder().addBuilder(
+            com.ixo.iid.v1beta1.TypesProto.Service.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Service endpoints
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Service service = 6 [json_name = "service"];</code>
+       */
+      public com.ixo.iid.v1beta1.TypesProto.Service.Builder addServiceBuilder(
+          int index) {
+        return getServiceFieldBuilder().addBuilder(
+            index, com.ixo.iid.v1beta1.TypesProto.Service.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Service endpoints
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.Service service = 6 [json_name = "service"];</code>
+       */
+      public java.util.List<com.ixo.iid.v1beta1.TypesProto.Service.Builder> 
+           getServiceBuilderList() {
+        return getServiceFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.iid.v1beta1.TypesProto.Service, com.ixo.iid.v1beta1.TypesProto.Service.Builder, com.ixo.iid.v1beta1.TypesProto.ServiceOrBuilder> 
+          getServiceFieldBuilder() {
+        if (serviceBuilder_ == null) {
+          serviceBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.ixo.iid.v1beta1.TypesProto.Service, com.ixo.iid.v1beta1.TypesProto.Service.Builder, com.ixo.iid.v1beta1.TypesProto.ServiceOrBuilder>(
+                  service_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          service_ = null;
+        }
+        return serviceBuilder_;
+      }
+
+      private java.util.List<com.ixo.iid.v1beta1.TypesProto.AccordedRight> accordedRight_ =
+        java.util.Collections.emptyList();
+      private void ensureAccordedRightIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          accordedRight_ = new java.util.ArrayList<com.ixo.iid.v1beta1.TypesProto.AccordedRight>(accordedRight_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.iid.v1beta1.TypesProto.AccordedRight, com.ixo.iid.v1beta1.TypesProto.AccordedRight.Builder, com.ixo.iid.v1beta1.TypesProto.AccordedRightOrBuilder> accordedRightBuilder_;
+
+      /**
+       * <pre>
+       * Legal or Electronic Rights and associated Object Capabilities
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.AccordedRight accorded_right = 7 [json_name = "accordedRight"];</code>
+       */
+      public java.util.List<com.ixo.iid.v1beta1.TypesProto.AccordedRight> getAccordedRightList() {
+        if (accordedRightBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(accordedRight_);
+        } else {
+          return accordedRightBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Legal or Electronic Rights and associated Object Capabilities
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.AccordedRight accorded_right = 7 [json_name = "accordedRight"];</code>
+       */
+      public int getAccordedRightCount() {
+        if (accordedRightBuilder_ == null) {
+          return accordedRight_.size();
+        } else {
+          return accordedRightBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Legal or Electronic Rights and associated Object Capabilities
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.AccordedRight accorded_right = 7 [json_name = "accordedRight"];</code>
+       */
+      public com.ixo.iid.v1beta1.TypesProto.AccordedRight getAccordedRight(int index) {
+        if (accordedRightBuilder_ == null) {
+          return accordedRight_.get(index);
+        } else {
+          return accordedRightBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Legal or Electronic Rights and associated Object Capabilities
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.AccordedRight accorded_right = 7 [json_name = "accordedRight"];</code>
+       */
+      public Builder setAccordedRight(
+          int index, com.ixo.iid.v1beta1.TypesProto.AccordedRight value) {
+        if (accordedRightBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccordedRightIsMutable();
+          accordedRight_.set(index, value);
+          onChanged();
+        } else {
+          accordedRightBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Legal or Electronic Rights and associated Object Capabilities
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.AccordedRight accorded_right = 7 [json_name = "accordedRight"];</code>
+       */
+      public Builder setAccordedRight(
+          int index, com.ixo.iid.v1beta1.TypesProto.AccordedRight.Builder builderForValue) {
+        if (accordedRightBuilder_ == null) {
+          ensureAccordedRightIsMutable();
+          accordedRight_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          accordedRightBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Legal or Electronic Rights and associated Object Capabilities
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.AccordedRight accorded_right = 7 [json_name = "accordedRight"];</code>
+       */
+      public Builder addAccordedRight(com.ixo.iid.v1beta1.TypesProto.AccordedRight value) {
+        if (accordedRightBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccordedRightIsMutable();
+          accordedRight_.add(value);
+          onChanged();
+        } else {
+          accordedRightBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Legal or Electronic Rights and associated Object Capabilities
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.AccordedRight accorded_right = 7 [json_name = "accordedRight"];</code>
+       */
+      public Builder addAccordedRight(
+          int index, com.ixo.iid.v1beta1.TypesProto.AccordedRight value) {
+        if (accordedRightBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccordedRightIsMutable();
+          accordedRight_.add(index, value);
+          onChanged();
+        } else {
+          accordedRightBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Legal or Electronic Rights and associated Object Capabilities
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.AccordedRight accorded_right = 7 [json_name = "accordedRight"];</code>
+       */
+      public Builder addAccordedRight(
+          com.ixo.iid.v1beta1.TypesProto.AccordedRight.Builder builderForValue) {
+        if (accordedRightBuilder_ == null) {
+          ensureAccordedRightIsMutable();
+          accordedRight_.add(builderForValue.build());
+          onChanged();
+        } else {
+          accordedRightBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Legal or Electronic Rights and associated Object Capabilities
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.AccordedRight accorded_right = 7 [json_name = "accordedRight"];</code>
+       */
+      public Builder addAccordedRight(
+          int index, com.ixo.iid.v1beta1.TypesProto.AccordedRight.Builder builderForValue) {
+        if (accordedRightBuilder_ == null) {
+          ensureAccordedRightIsMutable();
+          accordedRight_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          accordedRightBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Legal or Electronic Rights and associated Object Capabilities
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.AccordedRight accorded_right = 7 [json_name = "accordedRight"];</code>
+       */
+      public Builder addAllAccordedRight(
+          java.lang.Iterable<? extends com.ixo.iid.v1beta1.TypesProto.AccordedRight> values) {
+        if (accordedRightBuilder_ == null) {
+          ensureAccordedRightIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, accordedRight_);
+          onChanged();
+        } else {
+          accordedRightBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Legal or Electronic Rights and associated Object Capabilities
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.AccordedRight accorded_right = 7 [json_name = "accordedRight"];</code>
+       */
+      public Builder clearAccordedRight() {
+        if (accordedRightBuilder_ == null) {
+          accordedRight_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          accordedRightBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Legal or Electronic Rights and associated Object Capabilities
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.AccordedRight accorded_right = 7 [json_name = "accordedRight"];</code>
+       */
+      public Builder removeAccordedRight(int index) {
+        if (accordedRightBuilder_ == null) {
+          ensureAccordedRightIsMutable();
+          accordedRight_.remove(index);
+          onChanged();
+        } else {
+          accordedRightBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Legal or Electronic Rights and associated Object Capabilities
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.AccordedRight accorded_right = 7 [json_name = "accordedRight"];</code>
+       */
+      public com.ixo.iid.v1beta1.TypesProto.AccordedRight.Builder getAccordedRightBuilder(
+          int index) {
+        return getAccordedRightFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Legal or Electronic Rights and associated Object Capabilities
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.AccordedRight accorded_right = 7 [json_name = "accordedRight"];</code>
+       */
+      public com.ixo.iid.v1beta1.TypesProto.AccordedRightOrBuilder getAccordedRightOrBuilder(
+          int index) {
+        if (accordedRightBuilder_ == null) {
+          return accordedRight_.get(index);  } else {
+          return accordedRightBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Legal or Electronic Rights and associated Object Capabilities
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.AccordedRight accorded_right = 7 [json_name = "accordedRight"];</code>
+       */
+      public java.util.List<? extends com.ixo.iid.v1beta1.TypesProto.AccordedRightOrBuilder> 
+           getAccordedRightOrBuilderList() {
+        if (accordedRightBuilder_ != null) {
+          return accordedRightBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(accordedRight_);
+        }
+      }
+      /**
+       * <pre>
+       * Legal or Electronic Rights and associated Object Capabilities
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.AccordedRight accorded_right = 7 [json_name = "accordedRight"];</code>
+       */
+      public com.ixo.iid.v1beta1.TypesProto.AccordedRight.Builder addAccordedRightBuilder() {
+        return getAccordedRightFieldBuilder().addBuilder(
+            com.ixo.iid.v1beta1.TypesProto.AccordedRight.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Legal or Electronic Rights and associated Object Capabilities
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.AccordedRight accorded_right = 7 [json_name = "accordedRight"];</code>
+       */
+      public com.ixo.iid.v1beta1.TypesProto.AccordedRight.Builder addAccordedRightBuilder(
+          int index) {
+        return getAccordedRightFieldBuilder().addBuilder(
+            index, com.ixo.iid.v1beta1.TypesProto.AccordedRight.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Legal or Electronic Rights and associated Object Capabilities
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.AccordedRight accorded_right = 7 [json_name = "accordedRight"];</code>
+       */
+      public java.util.List<com.ixo.iid.v1beta1.TypesProto.AccordedRight.Builder> 
+           getAccordedRightBuilderList() {
+        return getAccordedRightFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.iid.v1beta1.TypesProto.AccordedRight, com.ixo.iid.v1beta1.TypesProto.AccordedRight.Builder, com.ixo.iid.v1beta1.TypesProto.AccordedRightOrBuilder> 
+          getAccordedRightFieldBuilder() {
+        if (accordedRightBuilder_ == null) {
+          accordedRightBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.ixo.iid.v1beta1.TypesProto.AccordedRight, com.ixo.iid.v1beta1.TypesProto.AccordedRight.Builder, com.ixo.iid.v1beta1.TypesProto.AccordedRightOrBuilder>(
+                  accordedRight_,
+                  ((bitField0_ & 0x00000040) != 0),
+                  getParentForChildren(),
+                  isClean());
+          accordedRight_ = null;
+        }
+        return accordedRightBuilder_;
+      }
+
+      private java.util.List<com.ixo.iid.v1beta1.TypesProto.LinkedResource> linkedResource_ =
+        java.util.Collections.emptyList();
+      private void ensureLinkedResourceIsMutable() {
+        if (!((bitField0_ & 0x00000080) != 0)) {
+          linkedResource_ = new java.util.ArrayList<com.ixo.iid.v1beta1.TypesProto.LinkedResource>(linkedResource_);
+          bitField0_ |= 0x00000080;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.iid.v1beta1.TypesProto.LinkedResource, com.ixo.iid.v1beta1.TypesProto.LinkedResource.Builder, com.ixo.iid.v1beta1.TypesProto.LinkedResourceOrBuilder> linkedResourceBuilder_;
+
+      /**
+       * <pre>
+       * Digital resources associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedResource linked_resource = 8 [json_name = "linkedResource"];</code>
+       */
+      public java.util.List<com.ixo.iid.v1beta1.TypesProto.LinkedResource> getLinkedResourceList() {
+        if (linkedResourceBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(linkedResource_);
+        } else {
+          return linkedResourceBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Digital resources associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedResource linked_resource = 8 [json_name = "linkedResource"];</code>
+       */
+      public int getLinkedResourceCount() {
+        if (linkedResourceBuilder_ == null) {
+          return linkedResource_.size();
+        } else {
+          return linkedResourceBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Digital resources associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedResource linked_resource = 8 [json_name = "linkedResource"];</code>
+       */
+      public com.ixo.iid.v1beta1.TypesProto.LinkedResource getLinkedResource(int index) {
+        if (linkedResourceBuilder_ == null) {
+          return linkedResource_.get(index);
+        } else {
+          return linkedResourceBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Digital resources associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedResource linked_resource = 8 [json_name = "linkedResource"];</code>
+       */
+      public Builder setLinkedResource(
+          int index, com.ixo.iid.v1beta1.TypesProto.LinkedResource value) {
+        if (linkedResourceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinkedResourceIsMutable();
+          linkedResource_.set(index, value);
+          onChanged();
+        } else {
+          linkedResourceBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Digital resources associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedResource linked_resource = 8 [json_name = "linkedResource"];</code>
+       */
+      public Builder setLinkedResource(
+          int index, com.ixo.iid.v1beta1.TypesProto.LinkedResource.Builder builderForValue) {
+        if (linkedResourceBuilder_ == null) {
+          ensureLinkedResourceIsMutable();
+          linkedResource_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          linkedResourceBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Digital resources associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedResource linked_resource = 8 [json_name = "linkedResource"];</code>
+       */
+      public Builder addLinkedResource(com.ixo.iid.v1beta1.TypesProto.LinkedResource value) {
+        if (linkedResourceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinkedResourceIsMutable();
+          linkedResource_.add(value);
+          onChanged();
+        } else {
+          linkedResourceBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Digital resources associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedResource linked_resource = 8 [json_name = "linkedResource"];</code>
+       */
+      public Builder addLinkedResource(
+          int index, com.ixo.iid.v1beta1.TypesProto.LinkedResource value) {
+        if (linkedResourceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinkedResourceIsMutable();
+          linkedResource_.add(index, value);
+          onChanged();
+        } else {
+          linkedResourceBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Digital resources associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedResource linked_resource = 8 [json_name = "linkedResource"];</code>
+       */
+      public Builder addLinkedResource(
+          com.ixo.iid.v1beta1.TypesProto.LinkedResource.Builder builderForValue) {
+        if (linkedResourceBuilder_ == null) {
+          ensureLinkedResourceIsMutable();
+          linkedResource_.add(builderForValue.build());
+          onChanged();
+        } else {
+          linkedResourceBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Digital resources associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedResource linked_resource = 8 [json_name = "linkedResource"];</code>
+       */
+      public Builder addLinkedResource(
+          int index, com.ixo.iid.v1beta1.TypesProto.LinkedResource.Builder builderForValue) {
+        if (linkedResourceBuilder_ == null) {
+          ensureLinkedResourceIsMutable();
+          linkedResource_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          linkedResourceBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Digital resources associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedResource linked_resource = 8 [json_name = "linkedResource"];</code>
+       */
+      public Builder addAllLinkedResource(
+          java.lang.Iterable<? extends com.ixo.iid.v1beta1.TypesProto.LinkedResource> values) {
+        if (linkedResourceBuilder_ == null) {
+          ensureLinkedResourceIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, linkedResource_);
+          onChanged();
+        } else {
+          linkedResourceBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Digital resources associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedResource linked_resource = 8 [json_name = "linkedResource"];</code>
+       */
+      public Builder clearLinkedResource() {
+        if (linkedResourceBuilder_ == null) {
+          linkedResource_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
+          onChanged();
+        } else {
+          linkedResourceBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Digital resources associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedResource linked_resource = 8 [json_name = "linkedResource"];</code>
+       */
+      public Builder removeLinkedResource(int index) {
+        if (linkedResourceBuilder_ == null) {
+          ensureLinkedResourceIsMutable();
+          linkedResource_.remove(index);
+          onChanged();
+        } else {
+          linkedResourceBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Digital resources associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedResource linked_resource = 8 [json_name = "linkedResource"];</code>
+       */
+      public com.ixo.iid.v1beta1.TypesProto.LinkedResource.Builder getLinkedResourceBuilder(
+          int index) {
+        return getLinkedResourceFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Digital resources associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedResource linked_resource = 8 [json_name = "linkedResource"];</code>
+       */
+      public com.ixo.iid.v1beta1.TypesProto.LinkedResourceOrBuilder getLinkedResourceOrBuilder(
+          int index) {
+        if (linkedResourceBuilder_ == null) {
+          return linkedResource_.get(index);  } else {
+          return linkedResourceBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Digital resources associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedResource linked_resource = 8 [json_name = "linkedResource"];</code>
+       */
+      public java.util.List<? extends com.ixo.iid.v1beta1.TypesProto.LinkedResourceOrBuilder> 
+           getLinkedResourceOrBuilderList() {
+        if (linkedResourceBuilder_ != null) {
+          return linkedResourceBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(linkedResource_);
+        }
+      }
+      /**
+       * <pre>
+       * Digital resources associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedResource linked_resource = 8 [json_name = "linkedResource"];</code>
+       */
+      public com.ixo.iid.v1beta1.TypesProto.LinkedResource.Builder addLinkedResourceBuilder() {
+        return getLinkedResourceFieldBuilder().addBuilder(
+            com.ixo.iid.v1beta1.TypesProto.LinkedResource.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Digital resources associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedResource linked_resource = 8 [json_name = "linkedResource"];</code>
+       */
+      public com.ixo.iid.v1beta1.TypesProto.LinkedResource.Builder addLinkedResourceBuilder(
+          int index) {
+        return getLinkedResourceFieldBuilder().addBuilder(
+            index, com.ixo.iid.v1beta1.TypesProto.LinkedResource.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Digital resources associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedResource linked_resource = 8 [json_name = "linkedResource"];</code>
+       */
+      public java.util.List<com.ixo.iid.v1beta1.TypesProto.LinkedResource.Builder> 
+           getLinkedResourceBuilderList() {
+        return getLinkedResourceFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.iid.v1beta1.TypesProto.LinkedResource, com.ixo.iid.v1beta1.TypesProto.LinkedResource.Builder, com.ixo.iid.v1beta1.TypesProto.LinkedResourceOrBuilder> 
+          getLinkedResourceFieldBuilder() {
+        if (linkedResourceBuilder_ == null) {
+          linkedResourceBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.ixo.iid.v1beta1.TypesProto.LinkedResource, com.ixo.iid.v1beta1.TypesProto.LinkedResource.Builder, com.ixo.iid.v1beta1.TypesProto.LinkedResourceOrBuilder>(
+                  linkedResource_,
+                  ((bitField0_ & 0x00000080) != 0),
+                  getParentForChildren(),
+                  isClean());
+          linkedResource_ = null;
+        }
+        return linkedResourceBuilder_;
+      }
+
+      private java.util.List<com.ixo.iid.v1beta1.TypesProto.LinkedEntity> linkedEntity_ =
+        java.util.Collections.emptyList();
+      private void ensureLinkedEntityIsMutable() {
+        if (!((bitField0_ & 0x00000100) != 0)) {
+          linkedEntity_ = new java.util.ArrayList<com.ixo.iid.v1beta1.TypesProto.LinkedEntity>(linkedEntity_);
+          bitField0_ |= 0x00000100;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.iid.v1beta1.TypesProto.LinkedEntity, com.ixo.iid.v1beta1.TypesProto.LinkedEntity.Builder, com.ixo.iid.v1beta1.TypesProto.LinkedEntityOrBuilder> linkedEntityBuilder_;
+
+      /**
+       * <pre>
+       * DID of a linked Entity and its relationship with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedEntity linked_entity = 9 [json_name = "linkedEntity"];</code>
+       */
+      public java.util.List<com.ixo.iid.v1beta1.TypesProto.LinkedEntity> getLinkedEntityList() {
+        if (linkedEntityBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(linkedEntity_);
+        } else {
+          return linkedEntityBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * DID of a linked Entity and its relationship with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedEntity linked_entity = 9 [json_name = "linkedEntity"];</code>
+       */
+      public int getLinkedEntityCount() {
+        if (linkedEntityBuilder_ == null) {
+          return linkedEntity_.size();
+        } else {
+          return linkedEntityBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * DID of a linked Entity and its relationship with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedEntity linked_entity = 9 [json_name = "linkedEntity"];</code>
+       */
+      public com.ixo.iid.v1beta1.TypesProto.LinkedEntity getLinkedEntity(int index) {
+        if (linkedEntityBuilder_ == null) {
+          return linkedEntity_.get(index);
+        } else {
+          return linkedEntityBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * DID of a linked Entity and its relationship with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedEntity linked_entity = 9 [json_name = "linkedEntity"];</code>
+       */
+      public Builder setLinkedEntity(
+          int index, com.ixo.iid.v1beta1.TypesProto.LinkedEntity value) {
+        if (linkedEntityBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinkedEntityIsMutable();
+          linkedEntity_.set(index, value);
+          onChanged();
+        } else {
+          linkedEntityBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * DID of a linked Entity and its relationship with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedEntity linked_entity = 9 [json_name = "linkedEntity"];</code>
+       */
+      public Builder setLinkedEntity(
+          int index, com.ixo.iid.v1beta1.TypesProto.LinkedEntity.Builder builderForValue) {
+        if (linkedEntityBuilder_ == null) {
+          ensureLinkedEntityIsMutable();
+          linkedEntity_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          linkedEntityBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * DID of a linked Entity and its relationship with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedEntity linked_entity = 9 [json_name = "linkedEntity"];</code>
+       */
+      public Builder addLinkedEntity(com.ixo.iid.v1beta1.TypesProto.LinkedEntity value) {
+        if (linkedEntityBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinkedEntityIsMutable();
+          linkedEntity_.add(value);
+          onChanged();
+        } else {
+          linkedEntityBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * DID of a linked Entity and its relationship with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedEntity linked_entity = 9 [json_name = "linkedEntity"];</code>
+       */
+      public Builder addLinkedEntity(
+          int index, com.ixo.iid.v1beta1.TypesProto.LinkedEntity value) {
+        if (linkedEntityBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinkedEntityIsMutable();
+          linkedEntity_.add(index, value);
+          onChanged();
+        } else {
+          linkedEntityBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * DID of a linked Entity and its relationship with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedEntity linked_entity = 9 [json_name = "linkedEntity"];</code>
+       */
+      public Builder addLinkedEntity(
+          com.ixo.iid.v1beta1.TypesProto.LinkedEntity.Builder builderForValue) {
+        if (linkedEntityBuilder_ == null) {
+          ensureLinkedEntityIsMutable();
+          linkedEntity_.add(builderForValue.build());
+          onChanged();
+        } else {
+          linkedEntityBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * DID of a linked Entity and its relationship with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedEntity linked_entity = 9 [json_name = "linkedEntity"];</code>
+       */
+      public Builder addLinkedEntity(
+          int index, com.ixo.iid.v1beta1.TypesProto.LinkedEntity.Builder builderForValue) {
+        if (linkedEntityBuilder_ == null) {
+          ensureLinkedEntityIsMutable();
+          linkedEntity_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          linkedEntityBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * DID of a linked Entity and its relationship with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedEntity linked_entity = 9 [json_name = "linkedEntity"];</code>
+       */
+      public Builder addAllLinkedEntity(
+          java.lang.Iterable<? extends com.ixo.iid.v1beta1.TypesProto.LinkedEntity> values) {
+        if (linkedEntityBuilder_ == null) {
+          ensureLinkedEntityIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, linkedEntity_);
+          onChanged();
+        } else {
+          linkedEntityBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * DID of a linked Entity and its relationship with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedEntity linked_entity = 9 [json_name = "linkedEntity"];</code>
+       */
+      public Builder clearLinkedEntity() {
+        if (linkedEntityBuilder_ == null) {
+          linkedEntity_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000100);
+          onChanged();
+        } else {
+          linkedEntityBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * DID of a linked Entity and its relationship with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedEntity linked_entity = 9 [json_name = "linkedEntity"];</code>
+       */
+      public Builder removeLinkedEntity(int index) {
+        if (linkedEntityBuilder_ == null) {
+          ensureLinkedEntityIsMutable();
+          linkedEntity_.remove(index);
+          onChanged();
+        } else {
+          linkedEntityBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * DID of a linked Entity and its relationship with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedEntity linked_entity = 9 [json_name = "linkedEntity"];</code>
+       */
+      public com.ixo.iid.v1beta1.TypesProto.LinkedEntity.Builder getLinkedEntityBuilder(
+          int index) {
+        return getLinkedEntityFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * DID of a linked Entity and its relationship with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedEntity linked_entity = 9 [json_name = "linkedEntity"];</code>
+       */
+      public com.ixo.iid.v1beta1.TypesProto.LinkedEntityOrBuilder getLinkedEntityOrBuilder(
+          int index) {
+        if (linkedEntityBuilder_ == null) {
+          return linkedEntity_.get(index);  } else {
+          return linkedEntityBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * DID of a linked Entity and its relationship with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedEntity linked_entity = 9 [json_name = "linkedEntity"];</code>
+       */
+      public java.util.List<? extends com.ixo.iid.v1beta1.TypesProto.LinkedEntityOrBuilder> 
+           getLinkedEntityOrBuilderList() {
+        if (linkedEntityBuilder_ != null) {
+          return linkedEntityBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(linkedEntity_);
+        }
+      }
+      /**
+       * <pre>
+       * DID of a linked Entity and its relationship with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedEntity linked_entity = 9 [json_name = "linkedEntity"];</code>
+       */
+      public com.ixo.iid.v1beta1.TypesProto.LinkedEntity.Builder addLinkedEntityBuilder() {
+        return getLinkedEntityFieldBuilder().addBuilder(
+            com.ixo.iid.v1beta1.TypesProto.LinkedEntity.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * DID of a linked Entity and its relationship with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedEntity linked_entity = 9 [json_name = "linkedEntity"];</code>
+       */
+      public com.ixo.iid.v1beta1.TypesProto.LinkedEntity.Builder addLinkedEntityBuilder(
+          int index) {
+        return getLinkedEntityFieldBuilder().addBuilder(
+            index, com.ixo.iid.v1beta1.TypesProto.LinkedEntity.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * DID of a linked Entity and its relationship with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedEntity linked_entity = 9 [json_name = "linkedEntity"];</code>
+       */
+      public java.util.List<com.ixo.iid.v1beta1.TypesProto.LinkedEntity.Builder> 
+           getLinkedEntityBuilderList() {
+        return getLinkedEntityFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.iid.v1beta1.TypesProto.LinkedEntity, com.ixo.iid.v1beta1.TypesProto.LinkedEntity.Builder, com.ixo.iid.v1beta1.TypesProto.LinkedEntityOrBuilder> 
+          getLinkedEntityFieldBuilder() {
+        if (linkedEntityBuilder_ == null) {
+          linkedEntityBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.ixo.iid.v1beta1.TypesProto.LinkedEntity, com.ixo.iid.v1beta1.TypesProto.LinkedEntity.Builder, com.ixo.iid.v1beta1.TypesProto.LinkedEntityOrBuilder>(
+                  linkedEntity_,
+                  ((bitField0_ & 0x00000100) != 0),
+                  getParentForChildren(),
+                  isClean());
+          linkedEntity_ = null;
+        }
+        return linkedEntityBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp startDate_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startDateBuilder_;
+      /**
+       * <pre>
+       * Start Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_date = 10 [json_name = "startDate", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the startDate field is set.
+       */
+      public boolean hasStartDate() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <pre>
+       * Start Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_date = 10 [json_name = "startDate", (.gogoproto.stdtime) = true];</code>
+       * @return The startDate.
+       */
+      public com.google.protobuf.Timestamp getStartDate() {
+        if (startDateBuilder_ == null) {
+          return startDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startDate_;
+        } else {
+          return startDateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Start Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_date = 10 [json_name = "startDate", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartDate(com.google.protobuf.Timestamp value) {
+        if (startDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          startDate_ = value;
+        } else {
+          startDateBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Start Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_date = 10 [json_name = "startDate", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartDate(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (startDateBuilder_ == null) {
+          startDate_ = builderForValue.build();
+        } else {
+          startDateBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Start Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_date = 10 [json_name = "startDate", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeStartDate(com.google.protobuf.Timestamp value) {
+        if (startDateBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) != 0) &&
+            startDate_ != null &&
+            startDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getStartDateBuilder().mergeFrom(value);
+          } else {
+            startDate_ = value;
+          }
+        } else {
+          startDateBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Start Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_date = 10 [json_name = "startDate", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearStartDate() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        startDate_ = null;
+        if (startDateBuilder_ != null) {
+          startDateBuilder_.dispose();
+          startDateBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Start Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_date = 10 [json_name = "startDate", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getStartDateBuilder() {
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return getStartDateFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Start Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_date = 10 [json_name = "startDate", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getStartDateOrBuilder() {
+        if (startDateBuilder_ != null) {
+          return startDateBuilder_.getMessageOrBuilder();
+        } else {
+          return startDate_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : startDate_;
+        }
+      }
+      /**
+       * <pre>
+       * Start Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_date = 10 [json_name = "startDate", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getStartDateFieldBuilder() {
+        if (startDateBuilder_ == null) {
+          startDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getStartDate(),
+                  getParentForChildren(),
+                  isClean());
+          startDate_ = null;
+        }
+        return startDateBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp endDate_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endDateBuilder_;
+      /**
+       * <pre>
+       * End Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_date = 11 [json_name = "endDate", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the endDate field is set.
+       */
+      public boolean hasEndDate() {
+        return ((bitField0_ & 0x00000400) != 0);
+      }
+      /**
+       * <pre>
+       * End Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_date = 11 [json_name = "endDate", (.gogoproto.stdtime) = true];</code>
+       * @return The endDate.
+       */
+      public com.google.protobuf.Timestamp getEndDate() {
+        if (endDateBuilder_ == null) {
+          return endDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endDate_;
+        } else {
+          return endDateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * End Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_date = 11 [json_name = "endDate", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setEndDate(com.google.protobuf.Timestamp value) {
+        if (endDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          endDate_ = value;
+        } else {
+          endDateBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * End Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_date = 11 [json_name = "endDate", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setEndDate(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (endDateBuilder_ == null) {
+          endDate_ = builderForValue.build();
+        } else {
+          endDateBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * End Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_date = 11 [json_name = "endDate", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeEndDate(com.google.protobuf.Timestamp value) {
+        if (endDateBuilder_ == null) {
+          if (((bitField0_ & 0x00000400) != 0) &&
+            endDate_ != null &&
+            endDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getEndDateBuilder().mergeFrom(value);
+          } else {
+            endDate_ = value;
+          }
+        } else {
+          endDateBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * End Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_date = 11 [json_name = "endDate", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearEndDate() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        endDate_ = null;
+        if (endDateBuilder_ != null) {
+          endDateBuilder_.dispose();
+          endDateBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * End Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_date = 11 [json_name = "endDate", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getEndDateBuilder() {
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return getEndDateFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * End Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_date = 11 [json_name = "endDate", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getEndDateOrBuilder() {
+        if (endDateBuilder_ != null) {
+          return endDateBuilder_.getMessageOrBuilder();
+        } else {
+          return endDate_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : endDate_;
+        }
+      }
+      /**
+       * <pre>
+       * End Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_date = 11 [json_name = "endDate", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getEndDateFieldBuilder() {
+        if (endDateBuilder_ == null) {
+          endDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getEndDate(),
+                  getParentForChildren(),
+                  isClean());
+          endDate_ = null;
+        }
+        return endDateBuilder_;
+      }
+
+      private java.lang.Object relayerNode_ = "";
+      /**
+       * <pre>
+       * Address of the operator through which the Entity was created
+       * </pre>
+       *
+       * <code>string relayer_node = 12 [json_name = "relayerNode"];</code>
+       * @return The relayerNode.
+       */
+      public java.lang.String getRelayerNode() {
+        java.lang.Object ref = relayerNode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          relayerNode_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Address of the operator through which the Entity was created
+       * </pre>
+       *
+       * <code>string relayer_node = 12 [json_name = "relayerNode"];</code>
+       * @return The bytes for relayerNode.
+       */
+      public com.google.protobuf.ByteString
+          getRelayerNodeBytes() {
+        java.lang.Object ref = relayerNode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          relayerNode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Address of the operator through which the Entity was created
+       * </pre>
+       *
+       * <code>string relayer_node = 12 [json_name = "relayerNode"];</code>
+       * @param value The relayerNode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRelayerNode(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        relayerNode_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Address of the operator through which the Entity was created
+       * </pre>
+       *
+       * <code>string relayer_node = 12 [json_name = "relayerNode"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRelayerNode() {
+        relayerNode_ = getDefaultInstance().getRelayerNode();
+        bitField0_ = (bitField0_ & ~0x00000800);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Address of the operator through which the Entity was created
+       * </pre>
+       *
+       * <code>string relayer_node = 12 [json_name = "relayerNode"];</code>
+       * @param value The bytes for relayerNode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRelayerNodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        relayerNode_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList credentials_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureCredentialsIsMutable() {
+        if (!credentials_.isModifiable()) {
+          credentials_ = new com.google.protobuf.LazyStringArrayList(credentials_);
+        }
+        bitField0_ |= 0x00001000;
+      }
+      /**
+       * <pre>
+       * Content ID or Hash of public Verifiable Credentials associated with the
+       * subject
+       * </pre>
+       *
+       * <code>repeated string credentials = 13 [json_name = "credentials"];</code>
+       * @return A list containing the credentials.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getCredentialsList() {
+        credentials_.makeImmutable();
+        return credentials_;
+      }
+      /**
+       * <pre>
+       * Content ID or Hash of public Verifiable Credentials associated with the
+       * subject
+       * </pre>
+       *
+       * <code>repeated string credentials = 13 [json_name = "credentials"];</code>
+       * @return The count of credentials.
+       */
+      public int getCredentialsCount() {
+        return credentials_.size();
+      }
+      /**
+       * <pre>
+       * Content ID or Hash of public Verifiable Credentials associated with the
+       * subject
+       * </pre>
+       *
+       * <code>repeated string credentials = 13 [json_name = "credentials"];</code>
+       * @param index The index of the element to return.
+       * @return The credentials at the given index.
+       */
+      public java.lang.String getCredentials(int index) {
+        return credentials_.get(index);
+      }
+      /**
+       * <pre>
+       * Content ID or Hash of public Verifiable Credentials associated with the
+       * subject
+       * </pre>
+       *
+       * <code>repeated string credentials = 13 [json_name = "credentials"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the credentials at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getCredentialsBytes(int index) {
+        return credentials_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Content ID or Hash of public Verifiable Credentials associated with the
+       * subject
+       * </pre>
+       *
+       * <code>repeated string credentials = 13 [json_name = "credentials"];</code>
+       * @param index The index to set the value at.
+       * @param value The credentials to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCredentials(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureCredentialsIsMutable();
+        credentials_.set(index, value);
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Content ID or Hash of public Verifiable Credentials associated with the
+       * subject
+       * </pre>
+       *
+       * <code>repeated string credentials = 13 [json_name = "credentials"];</code>
+       * @param value The credentials to add.
+       * @return This builder for chaining.
+       */
+      public Builder addCredentials(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureCredentialsIsMutable();
+        credentials_.add(value);
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Content ID or Hash of public Verifiable Credentials associated with the
+       * subject
+       * </pre>
+       *
+       * <code>repeated string credentials = 13 [json_name = "credentials"];</code>
+       * @param values The credentials to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllCredentials(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureCredentialsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, credentials_);
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Content ID or Hash of public Verifiable Credentials associated with the
+       * subject
+       * </pre>
+       *
+       * <code>repeated string credentials = 13 [json_name = "credentials"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCredentials() {
+        credentials_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00001000);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Content ID or Hash of public Verifiable Credentials associated with the
+       * subject
+       * </pre>
+       *
+       * <code>repeated string credentials = 13 [json_name = "credentials"];</code>
+       * @param value The bytes of the credentials to add.
+       * @return This builder for chaining.
+       */
+      public Builder addCredentialsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureCredentialsIsMutable();
+        credentials_.add(value);
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object ownerDid_ = "";
+      /**
+       * <pre>
+       * Owner of the Entity NFT | The ownersdid used to sign this transaction.
+       * </pre>
+       *
+       * <code>string owner_did = 14 [json_name = "ownerDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+       * @return The ownerDid.
+       */
+      public java.lang.String getOwnerDid() {
+        java.lang.Object ref = ownerDid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ownerDid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Owner of the Entity NFT | The ownersdid used to sign this transaction.
+       * </pre>
+       *
+       * <code>string owner_did = 14 [json_name = "ownerDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+       * @return The bytes for ownerDid.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerDidBytes() {
+        java.lang.Object ref = ownerDid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ownerDid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Owner of the Entity NFT | The ownersdid used to sign this transaction.
+       * </pre>
+       *
+       * <code>string owner_did = 14 [json_name = "ownerDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+       * @param value The ownerDid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerDid(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ownerDid_ = value;
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Owner of the Entity NFT | The ownersdid used to sign this transaction.
+       * </pre>
+       *
+       * <code>string owner_did = 14 [json_name = "ownerDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwnerDid() {
+        ownerDid_ = getDefaultInstance().getOwnerDid();
+        bitField0_ = (bitField0_ & ~0x00002000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Owner of the Entity NFT | The ownersdid used to sign this transaction.
+       * </pre>
+       *
+       * <code>string owner_did = 14 [json_name = "ownerDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+       * @param value The bytes for ownerDid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerDidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ownerDid_ = value;
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object ownerAddress_ = "";
+      /**
+       * <pre>
+       * The ownersdid address used to sign this transaction.
+       * </pre>
+       *
+       * <code>string owner_address = 15 [json_name = "ownerAddress"];</code>
+       * @return The ownerAddress.
+       */
+      public java.lang.String getOwnerAddress() {
+        java.lang.Object ref = ownerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ownerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The ownersdid address used to sign this transaction.
+       * </pre>
+       *
+       * <code>string owner_address = 15 [json_name = "ownerAddress"];</code>
+       * @return The bytes for ownerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerAddressBytes() {
+        java.lang.Object ref = ownerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ownerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The ownersdid address used to sign this transaction.
+       * </pre>
+       *
+       * <code>string owner_address = 15 [json_name = "ownerAddress"];</code>
+       * @param value The ownerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ownerAddress_ = value;
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ownersdid address used to sign this transaction.
+       * </pre>
+       *
+       * <code>string owner_address = 15 [json_name = "ownerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwnerAddress() {
+        ownerAddress_ = getDefaultInstance().getOwnerAddress();
+        bitField0_ = (bitField0_ & ~0x00004000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ownersdid address used to sign this transaction.
+       * </pre>
+       *
+       * <code>string owner_address = 15 [json_name = "ownerAddress"];</code>
+       * @param value The bytes for ownerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ownerAddress_ = value;
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * Extention data
+       * </pre>
+       *
+       * <code>bytes data = 16 [json_name = "data", (.gogoproto.casttype) = "encoding/json.RawMessage"];</code>
+       * @return The data.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getData() {
+        return data_;
+      }
+      /**
+       * <pre>
+       * Extention data
+       * </pre>
+       *
+       * <code>bytes data = 16 [json_name = "data", (.gogoproto.casttype) = "encoding/json.RawMessage"];</code>
+       * @param value The data to set.
+       * @return This builder for chaining.
+       */
+      public Builder setData(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        data_ = value;
+        bitField0_ |= 0x00008000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Extention data
+       * </pre>
+       *
+       * <code>bytes data = 16 [json_name = "data", (.gogoproto.casttype) = "encoding/json.RawMessage"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearData() {
+        bitField0_ = (bitField0_ & ~0x00008000);
+        data_ = getDefaultInstance().getData();
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object alsoKnownAs_ = "";
+      /**
+       * <code>string alsoKnownAs = 17 [json_name = "alsoKnownAs"];</code>
+       * @return The alsoKnownAs.
+       */
+      public java.lang.String getAlsoKnownAs() {
+        java.lang.Object ref = alsoKnownAs_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          alsoKnownAs_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string alsoKnownAs = 17 [json_name = "alsoKnownAs"];</code>
+       * @return The bytes for alsoKnownAs.
+       */
+      public com.google.protobuf.ByteString
+          getAlsoKnownAsBytes() {
+        java.lang.Object ref = alsoKnownAs_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          alsoKnownAs_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string alsoKnownAs = 17 [json_name = "alsoKnownAs"];</code>
+       * @param value The alsoKnownAs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAlsoKnownAs(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        alsoKnownAs_ = value;
+        bitField0_ |= 0x00010000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string alsoKnownAs = 17 [json_name = "alsoKnownAs"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAlsoKnownAs() {
+        alsoKnownAs_ = getDefaultInstance().getAlsoKnownAs();
+        bitField0_ = (bitField0_ & ~0x00010000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string alsoKnownAs = 17 [json_name = "alsoKnownAs"];</code>
+       * @param value The bytes for alsoKnownAs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAlsoKnownAsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        alsoKnownAs_ = value;
+        bitField0_ |= 0x00010000;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.ixo.iid.v1beta1.TypesProto.LinkedClaim> linkedClaim_ =
+        java.util.Collections.emptyList();
+      private void ensureLinkedClaimIsMutable() {
+        if (!((bitField0_ & 0x00020000) != 0)) {
+          linkedClaim_ = new java.util.ArrayList<com.ixo.iid.v1beta1.TypesProto.LinkedClaim>(linkedClaim_);
+          bitField0_ |= 0x00020000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.iid.v1beta1.TypesProto.LinkedClaim, com.ixo.iid.v1beta1.TypesProto.LinkedClaim.Builder, com.ixo.iid.v1beta1.TypesProto.LinkedClaimOrBuilder> linkedClaimBuilder_;
+
+      /**
+       * <pre>
+       * Digital claims associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedClaim linked_claim = 18 [json_name = "linkedClaim"];</code>
+       */
+      public java.util.List<com.ixo.iid.v1beta1.TypesProto.LinkedClaim> getLinkedClaimList() {
+        if (linkedClaimBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(linkedClaim_);
+        } else {
+          return linkedClaimBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Digital claims associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedClaim linked_claim = 18 [json_name = "linkedClaim"];</code>
+       */
+      public int getLinkedClaimCount() {
+        if (linkedClaimBuilder_ == null) {
+          return linkedClaim_.size();
+        } else {
+          return linkedClaimBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Digital claims associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedClaim linked_claim = 18 [json_name = "linkedClaim"];</code>
+       */
+      public com.ixo.iid.v1beta1.TypesProto.LinkedClaim getLinkedClaim(int index) {
+        if (linkedClaimBuilder_ == null) {
+          return linkedClaim_.get(index);
+        } else {
+          return linkedClaimBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Digital claims associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedClaim linked_claim = 18 [json_name = "linkedClaim"];</code>
+       */
+      public Builder setLinkedClaim(
+          int index, com.ixo.iid.v1beta1.TypesProto.LinkedClaim value) {
+        if (linkedClaimBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinkedClaimIsMutable();
+          linkedClaim_.set(index, value);
+          onChanged();
+        } else {
+          linkedClaimBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Digital claims associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedClaim linked_claim = 18 [json_name = "linkedClaim"];</code>
+       */
+      public Builder setLinkedClaim(
+          int index, com.ixo.iid.v1beta1.TypesProto.LinkedClaim.Builder builderForValue) {
+        if (linkedClaimBuilder_ == null) {
+          ensureLinkedClaimIsMutable();
+          linkedClaim_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          linkedClaimBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Digital claims associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedClaim linked_claim = 18 [json_name = "linkedClaim"];</code>
+       */
+      public Builder addLinkedClaim(com.ixo.iid.v1beta1.TypesProto.LinkedClaim value) {
+        if (linkedClaimBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinkedClaimIsMutable();
+          linkedClaim_.add(value);
+          onChanged();
+        } else {
+          linkedClaimBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Digital claims associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedClaim linked_claim = 18 [json_name = "linkedClaim"];</code>
+       */
+      public Builder addLinkedClaim(
+          int index, com.ixo.iid.v1beta1.TypesProto.LinkedClaim value) {
+        if (linkedClaimBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinkedClaimIsMutable();
+          linkedClaim_.add(index, value);
+          onChanged();
+        } else {
+          linkedClaimBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Digital claims associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedClaim linked_claim = 18 [json_name = "linkedClaim"];</code>
+       */
+      public Builder addLinkedClaim(
+          com.ixo.iid.v1beta1.TypesProto.LinkedClaim.Builder builderForValue) {
+        if (linkedClaimBuilder_ == null) {
+          ensureLinkedClaimIsMutable();
+          linkedClaim_.add(builderForValue.build());
+          onChanged();
+        } else {
+          linkedClaimBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Digital claims associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedClaim linked_claim = 18 [json_name = "linkedClaim"];</code>
+       */
+      public Builder addLinkedClaim(
+          int index, com.ixo.iid.v1beta1.TypesProto.LinkedClaim.Builder builderForValue) {
+        if (linkedClaimBuilder_ == null) {
+          ensureLinkedClaimIsMutable();
+          linkedClaim_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          linkedClaimBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Digital claims associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedClaim linked_claim = 18 [json_name = "linkedClaim"];</code>
+       */
+      public Builder addAllLinkedClaim(
+          java.lang.Iterable<? extends com.ixo.iid.v1beta1.TypesProto.LinkedClaim> values) {
+        if (linkedClaimBuilder_ == null) {
+          ensureLinkedClaimIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, linkedClaim_);
+          onChanged();
+        } else {
+          linkedClaimBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Digital claims associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedClaim linked_claim = 18 [json_name = "linkedClaim"];</code>
+       */
+      public Builder clearLinkedClaim() {
+        if (linkedClaimBuilder_ == null) {
+          linkedClaim_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00020000);
+          onChanged();
+        } else {
+          linkedClaimBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Digital claims associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedClaim linked_claim = 18 [json_name = "linkedClaim"];</code>
+       */
+      public Builder removeLinkedClaim(int index) {
+        if (linkedClaimBuilder_ == null) {
+          ensureLinkedClaimIsMutable();
+          linkedClaim_.remove(index);
+          onChanged();
+        } else {
+          linkedClaimBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Digital claims associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedClaim linked_claim = 18 [json_name = "linkedClaim"];</code>
+       */
+      public com.ixo.iid.v1beta1.TypesProto.LinkedClaim.Builder getLinkedClaimBuilder(
+          int index) {
+        return getLinkedClaimFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Digital claims associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedClaim linked_claim = 18 [json_name = "linkedClaim"];</code>
+       */
+      public com.ixo.iid.v1beta1.TypesProto.LinkedClaimOrBuilder getLinkedClaimOrBuilder(
+          int index) {
+        if (linkedClaimBuilder_ == null) {
+          return linkedClaim_.get(index);  } else {
+          return linkedClaimBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Digital claims associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedClaim linked_claim = 18 [json_name = "linkedClaim"];</code>
+       */
+      public java.util.List<? extends com.ixo.iid.v1beta1.TypesProto.LinkedClaimOrBuilder> 
+           getLinkedClaimOrBuilderList() {
+        if (linkedClaimBuilder_ != null) {
+          return linkedClaimBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(linkedClaim_);
+        }
+      }
+      /**
+       * <pre>
+       * Digital claims associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedClaim linked_claim = 18 [json_name = "linkedClaim"];</code>
+       */
+      public com.ixo.iid.v1beta1.TypesProto.LinkedClaim.Builder addLinkedClaimBuilder() {
+        return getLinkedClaimFieldBuilder().addBuilder(
+            com.ixo.iid.v1beta1.TypesProto.LinkedClaim.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Digital claims associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedClaim linked_claim = 18 [json_name = "linkedClaim"];</code>
+       */
+      public com.ixo.iid.v1beta1.TypesProto.LinkedClaim.Builder addLinkedClaimBuilder(
+          int index) {
+        return getLinkedClaimFieldBuilder().addBuilder(
+            index, com.ixo.iid.v1beta1.TypesProto.LinkedClaim.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Digital claims associated with the Subject
+       * </pre>
+       *
+       * <code>repeated .ixo.iid.v1beta1.LinkedClaim linked_claim = 18 [json_name = "linkedClaim"];</code>
+       */
+      public java.util.List<com.ixo.iid.v1beta1.TypesProto.LinkedClaim.Builder> 
+           getLinkedClaimBuilderList() {
+        return getLinkedClaimFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.iid.v1beta1.TypesProto.LinkedClaim, com.ixo.iid.v1beta1.TypesProto.LinkedClaim.Builder, com.ixo.iid.v1beta1.TypesProto.LinkedClaimOrBuilder> 
+          getLinkedClaimFieldBuilder() {
+        if (linkedClaimBuilder_ == null) {
+          linkedClaimBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.ixo.iid.v1beta1.TypesProto.LinkedClaim, com.ixo.iid.v1beta1.TypesProto.LinkedClaim.Builder, com.ixo.iid.v1beta1.TypesProto.LinkedClaimOrBuilder>(
+                  linkedClaim_,
+                  ((bitField0_ & 0x00020000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          linkedClaim_ = null;
+        }
+        return linkedClaimBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.entity.v1beta1.MsgCreateEntity)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.entity.v1beta1.MsgCreateEntity)
+    private static final com.ixo.entity.v1beta1.TxProto.MsgCreateEntity DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.entity.v1beta1.TxProto.MsgCreateEntity();
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntity getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateEntity>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateEntity>() {
+      @java.lang.Override
+      public MsgCreateEntity parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateEntity> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateEntity> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.entity.v1beta1.TxProto.MsgCreateEntity getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateEntityResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.entity.v1beta1.MsgCreateEntityResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string entity_id = 1 [json_name = "entityId"];</code>
+     * @return The entityId.
+     */
+    java.lang.String getEntityId();
+    /**
+     * <code>string entity_id = 1 [json_name = "entityId"];</code>
+     * @return The bytes for entityId.
+     */
+    com.google.protobuf.ByteString
+        getEntityIdBytes();
+
+    /**
+     * <code>string entity_type = 2 [json_name = "entityType"];</code>
+     * @return The entityType.
+     */
+    java.lang.String getEntityType();
+    /**
+     * <code>string entity_type = 2 [json_name = "entityType"];</code>
+     * @return The bytes for entityType.
+     */
+    com.google.protobuf.ByteString
+        getEntityTypeBytes();
+
+    /**
+     * <code>int32 entity_status = 3 [json_name = "entityStatus"];</code>
+     * @return The entityStatus.
+     */
+    int getEntityStatus();
+  }
+  /**
+   * Protobuf type {@code ixo.entity.v1beta1.MsgCreateEntityResponse}
+   */
+  public static final class MsgCreateEntityResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.entity.v1beta1.MsgCreateEntityResponse)
+      MsgCreateEntityResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateEntityResponse.newBuilder() to construct.
+    private MsgCreateEntityResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateEntityResponse() {
+      entityId_ = "";
+      entityType_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateEntityResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgCreateEntityResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgCreateEntityResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse.class, com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse.Builder.class);
+    }
+
+    public static final int ENTITY_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object entityId_ = "";
+    /**
+     * <code>string entity_id = 1 [json_name = "entityId"];</code>
+     * @return The entityId.
+     */
+    @java.lang.Override
+    public java.lang.String getEntityId() {
+      java.lang.Object ref = entityId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        entityId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string entity_id = 1 [json_name = "entityId"];</code>
+     * @return The bytes for entityId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEntityIdBytes() {
+      java.lang.Object ref = entityId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        entityId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENTITY_TYPE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object entityType_ = "";
+    /**
+     * <code>string entity_type = 2 [json_name = "entityType"];</code>
+     * @return The entityType.
+     */
+    @java.lang.Override
+    public java.lang.String getEntityType() {
+      java.lang.Object ref = entityType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        entityType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string entity_type = 2 [json_name = "entityType"];</code>
+     * @return The bytes for entityType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEntityTypeBytes() {
+      java.lang.Object ref = entityType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        entityType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENTITY_STATUS_FIELD_NUMBER = 3;
+    private int entityStatus_ = 0;
+    /**
+     * <code>int32 entity_status = 3 [json_name = "entityStatus"];</code>
+     * @return The entityStatus.
+     */
+    @java.lang.Override
+    public int getEntityStatus() {
+      return entityStatus_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entityId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, entityId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entityType_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, entityType_);
+      }
+      if (entityStatus_ != 0) {
+        output.writeInt32(3, entityStatus_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entityId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, entityId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entityType_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, entityType_);
+      }
+      if (entityStatus_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, entityStatus_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse)) {
+        return super.equals(obj);
+      }
+      com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse other = (com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse) obj;
+
+      if (!getEntityId()
+          .equals(other.getEntityId())) return false;
+      if (!getEntityType()
+          .equals(other.getEntityType())) return false;
+      if (getEntityStatus()
+          != other.getEntityStatus()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENTITY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getEntityId().hashCode();
+      hash = (37 * hash) + ENTITY_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getEntityType().hashCode();
+      hash = (37 * hash) + ENTITY_STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + getEntityStatus();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.entity.v1beta1.MsgCreateEntityResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.entity.v1beta1.MsgCreateEntityResponse)
+        com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgCreateEntityResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgCreateEntityResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse.class, com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse.Builder.class);
+      }
+
+      // Construct using com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        entityId_ = "";
+        entityType_ = "";
+        entityStatus_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgCreateEntityResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse getDefaultInstanceForType() {
+        return com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse build() {
+        com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse buildPartial() {
+        com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse result = new com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.entityId_ = entityId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.entityType_ = entityType_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.entityStatus_ = entityStatus_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse) {
+          return mergeFrom((com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse other) {
+        if (other == com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse.getDefaultInstance()) return this;
+        if (!other.getEntityId().isEmpty()) {
+          entityId_ = other.entityId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getEntityType().isEmpty()) {
+          entityType_ = other.entityType_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getEntityStatus() != 0) {
+          setEntityStatus(other.getEntityStatus());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                entityId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                entityType_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                entityStatus_ = input.readInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object entityId_ = "";
+      /**
+       * <code>string entity_id = 1 [json_name = "entityId"];</code>
+       * @return The entityId.
+       */
+      public java.lang.String getEntityId() {
+        java.lang.Object ref = entityId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          entityId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string entity_id = 1 [json_name = "entityId"];</code>
+       * @return The bytes for entityId.
+       */
+      public com.google.protobuf.ByteString
+          getEntityIdBytes() {
+        java.lang.Object ref = entityId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          entityId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string entity_id = 1 [json_name = "entityId"];</code>
+       * @param value The entityId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEntityId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        entityId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string entity_id = 1 [json_name = "entityId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEntityId() {
+        entityId_ = getDefaultInstance().getEntityId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string entity_id = 1 [json_name = "entityId"];</code>
+       * @param value The bytes for entityId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEntityIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        entityId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object entityType_ = "";
+      /**
+       * <code>string entity_type = 2 [json_name = "entityType"];</code>
+       * @return The entityType.
+       */
+      public java.lang.String getEntityType() {
+        java.lang.Object ref = entityType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          entityType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string entity_type = 2 [json_name = "entityType"];</code>
+       * @return The bytes for entityType.
+       */
+      public com.google.protobuf.ByteString
+          getEntityTypeBytes() {
+        java.lang.Object ref = entityType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          entityType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string entity_type = 2 [json_name = "entityType"];</code>
+       * @param value The entityType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEntityType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        entityType_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string entity_type = 2 [json_name = "entityType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEntityType() {
+        entityType_ = getDefaultInstance().getEntityType();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string entity_type = 2 [json_name = "entityType"];</code>
+       * @param value The bytes for entityType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEntityTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        entityType_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private int entityStatus_ ;
+      /**
+       * <code>int32 entity_status = 3 [json_name = "entityStatus"];</code>
+       * @return The entityStatus.
+       */
+      @java.lang.Override
+      public int getEntityStatus() {
+        return entityStatus_;
+      }
+      /**
+       * <code>int32 entity_status = 3 [json_name = "entityStatus"];</code>
+       * @param value The entityStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEntityStatus(int value) {
+
+        entityStatus_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 entity_status = 3 [json_name = "entityStatus"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEntityStatus() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        entityStatus_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.entity.v1beta1.MsgCreateEntityResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.entity.v1beta1.MsgCreateEntityResponse)
+    private static final com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse();
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateEntityResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateEntityResponse>() {
+      @java.lang.Override
+      public MsgCreateEntityResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateEntityResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateEntityResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.entity.v1beta1.TxProto.MsgCreateEntityResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUpdateEntityOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.entity.v1beta1.MsgUpdateEntity)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Id of entity to be updated
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * Id of entity to be updated
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * Status of the Entity as defined by the implementer and interpreted by
+     * Client applications
+     * </pre>
+     *
+     * <code>int32 entity_status = 2 [json_name = "entityStatus"];</code>
+     * @return The entityStatus.
+     */
+    int getEntityStatus();
+
+    /**
+     * <pre>
+     * Start Date of the Entity as defined by the implementer and interpreted by
+     * Client applications
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_date = 3 [json_name = "startDate", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startDate field is set.
+     */
+    boolean hasStartDate();
+    /**
+     * <pre>
+     * Start Date of the Entity as defined by the implementer and interpreted by
+     * Client applications
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_date = 3 [json_name = "startDate", (.gogoproto.stdtime) = true];</code>
+     * @return The startDate.
+     */
+    com.google.protobuf.Timestamp getStartDate();
+    /**
+     * <pre>
+     * Start Date of the Entity as defined by the implementer and interpreted by
+     * Client applications
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_date = 3 [json_name = "startDate", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getStartDateOrBuilder();
+
+    /**
+     * <pre>
+     * End Date of the Entity as defined by the implementer and interpreted by
+     * Client applications
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_date = 4 [json_name = "endDate", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the endDate field is set.
+     */
+    boolean hasEndDate();
+    /**
+     * <pre>
+     * End Date of the Entity as defined by the implementer and interpreted by
+     * Client applications
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_date = 4 [json_name = "endDate", (.gogoproto.stdtime) = true];</code>
+     * @return The endDate.
+     */
+    com.google.protobuf.Timestamp getEndDate();
+    /**
+     * <pre>
+     * End Date of the Entity as defined by the implementer and interpreted by
+     * Client applications
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_date = 4 [json_name = "endDate", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getEndDateOrBuilder();
+
+    /**
+     * <pre>
+     * Content ID or Hash of public Verifiable Credentials associated with the
+     * subject
+     * </pre>
+     *
+     * <code>repeated string credentials = 5 [json_name = "credentials"];</code>
+     * @return A list containing the credentials.
+     */
+    java.util.List<java.lang.String>
+        getCredentialsList();
+    /**
+     * <pre>
+     * Content ID or Hash of public Verifiable Credentials associated with the
+     * subject
+     * </pre>
+     *
+     * <code>repeated string credentials = 5 [json_name = "credentials"];</code>
+     * @return The count of credentials.
+     */
+    int getCredentialsCount();
+    /**
+     * <pre>
+     * Content ID or Hash of public Verifiable Credentials associated with the
+     * subject
+     * </pre>
+     *
+     * <code>repeated string credentials = 5 [json_name = "credentials"];</code>
+     * @param index The index of the element to return.
+     * @return The credentials at the given index.
+     */
+    java.lang.String getCredentials(int index);
+    /**
+     * <pre>
+     * Content ID or Hash of public Verifiable Credentials associated with the
+     * subject
+     * </pre>
+     *
+     * <code>repeated string credentials = 5 [json_name = "credentials"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the credentials at the given index.
+     */
+    com.google.protobuf.ByteString
+        getCredentialsBytes(int index);
+
+    /**
+     * <pre>
+     * The controllerDid used to sign this transaction.
+     * </pre>
+     *
+     * <code>string controller_did = 6 [json_name = "controllerDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+     * @return The controllerDid.
+     */
+    java.lang.String getControllerDid();
+    /**
+     * <pre>
+     * The controllerDid used to sign this transaction.
+     * </pre>
+     *
+     * <code>string controller_did = 6 [json_name = "controllerDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+     * @return The bytes for controllerDid.
+     */
+    com.google.protobuf.ByteString
+        getControllerDidBytes();
+
+    /**
+     * <pre>
+     * The controllerAddress used to sign this transaction.
+     * </pre>
+     *
+     * <code>string controller_address = 7 [json_name = "controllerAddress"];</code>
+     * @return The controllerAddress.
+     */
+    java.lang.String getControllerAddress();
+    /**
+     * <pre>
+     * The controllerAddress used to sign this transaction.
+     * </pre>
+     *
+     * <code>string controller_address = 7 [json_name = "controllerAddress"];</code>
+     * @return The bytes for controllerAddress.
+     */
+    com.google.protobuf.ByteString
+        getControllerAddressBytes();
+  }
+  /**
+   * <pre>
+   * Updates the entity with all the fields, so if field empty will be updated
+   * with default go type, aka never null
+   * </pre>
+   *
+   * Protobuf type {@code ixo.entity.v1beta1.MsgUpdateEntity}
+   */
+  public static final class MsgUpdateEntity extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.entity.v1beta1.MsgUpdateEntity)
+      MsgUpdateEntityOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdateEntity.newBuilder() to construct.
+    private MsgUpdateEntity(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdateEntity() {
+      id_ = "";
+      credentials_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      controllerDid_ = "";
+      controllerAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdateEntity();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgUpdateEntity_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgUpdateEntity_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity.class, com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <pre>
+     * Id of entity to be updated
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Id of entity to be updated
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENTITY_STATUS_FIELD_NUMBER = 2;
+    private int entityStatus_ = 0;
+    /**
+     * <pre>
+     * Status of the Entity as defined by the implementer and interpreted by
+     * Client applications
+     * </pre>
+     *
+     * <code>int32 entity_status = 2 [json_name = "entityStatus"];</code>
+     * @return The entityStatus.
+     */
+    @java.lang.Override
+    public int getEntityStatus() {
+      return entityStatus_;
+    }
+
+    public static final int START_DATE_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp startDate_;
+    /**
+     * <pre>
+     * Start Date of the Entity as defined by the implementer and interpreted by
+     * Client applications
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_date = 3 [json_name = "startDate", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startDate field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartDate() {
+      return startDate_ != null;
+    }
+    /**
+     * <pre>
+     * Start Date of the Entity as defined by the implementer and interpreted by
+     * Client applications
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_date = 3 [json_name = "startDate", (.gogoproto.stdtime) = true];</code>
+     * @return The startDate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getStartDate() {
+      return startDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startDate_;
+    }
+    /**
+     * <pre>
+     * Start Date of the Entity as defined by the implementer and interpreted by
+     * Client applications
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_date = 3 [json_name = "startDate", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getStartDateOrBuilder() {
+      return startDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startDate_;
+    }
+
+    public static final int END_DATE_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp endDate_;
+    /**
+     * <pre>
+     * End Date of the Entity as defined by the implementer and interpreted by
+     * Client applications
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_date = 4 [json_name = "endDate", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the endDate field is set.
+     */
+    @java.lang.Override
+    public boolean hasEndDate() {
+      return endDate_ != null;
+    }
+    /**
+     * <pre>
+     * End Date of the Entity as defined by the implementer and interpreted by
+     * Client applications
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_date = 4 [json_name = "endDate", (.gogoproto.stdtime) = true];</code>
+     * @return The endDate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getEndDate() {
+      return endDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endDate_;
+    }
+    /**
+     * <pre>
+     * End Date of the Entity as defined by the implementer and interpreted by
+     * Client applications
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_date = 4 [json_name = "endDate", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getEndDateOrBuilder() {
+      return endDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endDate_;
+    }
+
+    public static final int CREDENTIALS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList credentials_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * Content ID or Hash of public Verifiable Credentials associated with the
+     * subject
+     * </pre>
+     *
+     * <code>repeated string credentials = 5 [json_name = "credentials"];</code>
+     * @return A list containing the credentials.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getCredentialsList() {
+      return credentials_;
+    }
+    /**
+     * <pre>
+     * Content ID or Hash of public Verifiable Credentials associated with the
+     * subject
+     * </pre>
+     *
+     * <code>repeated string credentials = 5 [json_name = "credentials"];</code>
+     * @return The count of credentials.
+     */
+    public int getCredentialsCount() {
+      return credentials_.size();
+    }
+    /**
+     * <pre>
+     * Content ID or Hash of public Verifiable Credentials associated with the
+     * subject
+     * </pre>
+     *
+     * <code>repeated string credentials = 5 [json_name = "credentials"];</code>
+     * @param index The index of the element to return.
+     * @return The credentials at the given index.
+     */
+    public java.lang.String getCredentials(int index) {
+      return credentials_.get(index);
+    }
+    /**
+     * <pre>
+     * Content ID or Hash of public Verifiable Credentials associated with the
+     * subject
+     * </pre>
+     *
+     * <code>repeated string credentials = 5 [json_name = "credentials"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the credentials at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getCredentialsBytes(int index) {
+      return credentials_.getByteString(index);
+    }
+
+    public static final int CONTROLLER_DID_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object controllerDid_ = "";
+    /**
+     * <pre>
+     * The controllerDid used to sign this transaction.
+     * </pre>
+     *
+     * <code>string controller_did = 6 [json_name = "controllerDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+     * @return The controllerDid.
+     */
+    @java.lang.Override
+    public java.lang.String getControllerDid() {
+      java.lang.Object ref = controllerDid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        controllerDid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The controllerDid used to sign this transaction.
+     * </pre>
+     *
+     * <code>string controller_did = 6 [json_name = "controllerDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+     * @return The bytes for controllerDid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getControllerDidBytes() {
+      java.lang.Object ref = controllerDid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        controllerDid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTROLLER_ADDRESS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object controllerAddress_ = "";
+    /**
+     * <pre>
+     * The controllerAddress used to sign this transaction.
+     * </pre>
+     *
+     * <code>string controller_address = 7 [json_name = "controllerAddress"];</code>
+     * @return The controllerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getControllerAddress() {
+      java.lang.Object ref = controllerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        controllerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The controllerAddress used to sign this transaction.
+     * </pre>
+     *
+     * <code>string controller_address = 7 [json_name = "controllerAddress"];</code>
+     * @return The bytes for controllerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getControllerAddressBytes() {
+      java.lang.Object ref = controllerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        controllerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (entityStatus_ != 0) {
+        output.writeInt32(2, entityStatus_);
+      }
+      if (startDate_ != null) {
+        output.writeMessage(3, getStartDate());
+      }
+      if (endDate_ != null) {
+        output.writeMessage(4, getEndDate());
+      }
+      for (int i = 0; i < credentials_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, credentials_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(controllerDid_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, controllerDid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(controllerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, controllerAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (entityStatus_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, entityStatus_);
+      }
+      if (startDate_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getStartDate());
+      }
+      if (endDate_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getEndDate());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < credentials_.size(); i++) {
+          dataSize += computeStringSizeNoTag(credentials_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getCredentialsList().size();
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(controllerDid_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, controllerDid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(controllerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, controllerAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity)) {
+        return super.equals(obj);
+      }
+      com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity other = (com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (getEntityStatus()
+          != other.getEntityStatus()) return false;
+      if (hasStartDate() != other.hasStartDate()) return false;
+      if (hasStartDate()) {
+        if (!getStartDate()
+            .equals(other.getStartDate())) return false;
+      }
+      if (hasEndDate() != other.hasEndDate()) return false;
+      if (hasEndDate()) {
+        if (!getEndDate()
+            .equals(other.getEndDate())) return false;
+      }
+      if (!getCredentialsList()
+          .equals(other.getCredentialsList())) return false;
+      if (!getControllerDid()
+          .equals(other.getControllerDid())) return false;
+      if (!getControllerAddress()
+          .equals(other.getControllerAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + ENTITY_STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + getEntityStatus();
+      if (hasStartDate()) {
+        hash = (37 * hash) + START_DATE_FIELD_NUMBER;
+        hash = (53 * hash) + getStartDate().hashCode();
+      }
+      if (hasEndDate()) {
+        hash = (37 * hash) + END_DATE_FIELD_NUMBER;
+        hash = (53 * hash) + getEndDate().hashCode();
+      }
+      if (getCredentialsCount() > 0) {
+        hash = (37 * hash) + CREDENTIALS_FIELD_NUMBER;
+        hash = (53 * hash) + getCredentialsList().hashCode();
+      }
+      hash = (37 * hash) + CONTROLLER_DID_FIELD_NUMBER;
+      hash = (53 * hash) + getControllerDid().hashCode();
+      hash = (37 * hash) + CONTROLLER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getControllerAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Updates the entity with all the fields, so if field empty will be updated
+     * with default go type, aka never null
+     * </pre>
+     *
+     * Protobuf type {@code ixo.entity.v1beta1.MsgUpdateEntity}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.entity.v1beta1.MsgUpdateEntity)
+        com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgUpdateEntity_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgUpdateEntity_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity.class, com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity.Builder.class);
+      }
+
+      // Construct using com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = "";
+        entityStatus_ = 0;
+        startDate_ = null;
+        if (startDateBuilder_ != null) {
+          startDateBuilder_.dispose();
+          startDateBuilder_ = null;
+        }
+        endDate_ = null;
+        if (endDateBuilder_ != null) {
+          endDateBuilder_.dispose();
+          endDateBuilder_ = null;
+        }
+        credentials_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        controllerDid_ = "";
+        controllerAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgUpdateEntity_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity getDefaultInstanceForType() {
+        return com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity build() {
+        com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity buildPartial() {
+        com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity result = new com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.entityStatus_ = entityStatus_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.startDate_ = startDateBuilder_ == null
+              ? startDate_
+              : startDateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.endDate_ = endDateBuilder_ == null
+              ? endDate_
+              : endDateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          credentials_.makeImmutable();
+          result.credentials_ = credentials_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.controllerDid_ = controllerDid_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.controllerAddress_ = controllerAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity) {
+          return mergeFrom((com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity other) {
+        if (other == com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getEntityStatus() != 0) {
+          setEntityStatus(other.getEntityStatus());
+        }
+        if (other.hasStartDate()) {
+          mergeStartDate(other.getStartDate());
+        }
+        if (other.hasEndDate()) {
+          mergeEndDate(other.getEndDate());
+        }
+        if (!other.credentials_.isEmpty()) {
+          if (credentials_.isEmpty()) {
+            credentials_ = other.credentials_;
+            bitField0_ |= 0x00000010;
+          } else {
+            ensureCredentialsIsMutable();
+            credentials_.addAll(other.credentials_);
+          }
+          onChanged();
+        }
+        if (!other.getControllerDid().isEmpty()) {
+          controllerDid_ = other.controllerDid_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getControllerAddress().isEmpty()) {
+          controllerAddress_ = other.controllerAddress_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                entityStatus_ = input.readInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                input.readMessage(
+                    getStartDateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getEndDateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureCredentialsIsMutable();
+                credentials_.add(s);
+                break;
+              } // case 42
+              case 50: {
+                controllerDid_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                controllerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * Id of entity to be updated
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of entity to be updated
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of entity to be updated
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of entity to be updated
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of entity to be updated
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int entityStatus_ ;
+      /**
+       * <pre>
+       * Status of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>int32 entity_status = 2 [json_name = "entityStatus"];</code>
+       * @return The entityStatus.
+       */
+      @java.lang.Override
+      public int getEntityStatus() {
+        return entityStatus_;
+      }
+      /**
+       * <pre>
+       * Status of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>int32 entity_status = 2 [json_name = "entityStatus"];</code>
+       * @param value The entityStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEntityStatus(int value) {
+
+        entityStatus_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Status of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>int32 entity_status = 2 [json_name = "entityStatus"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEntityStatus() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        entityStatus_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp startDate_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startDateBuilder_;
+      /**
+       * <pre>
+       * Start Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_date = 3 [json_name = "startDate", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the startDate field is set.
+       */
+      public boolean hasStartDate() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Start Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_date = 3 [json_name = "startDate", (.gogoproto.stdtime) = true];</code>
+       * @return The startDate.
+       */
+      public com.google.protobuf.Timestamp getStartDate() {
+        if (startDateBuilder_ == null) {
+          return startDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startDate_;
+        } else {
+          return startDateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Start Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_date = 3 [json_name = "startDate", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartDate(com.google.protobuf.Timestamp value) {
+        if (startDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          startDate_ = value;
+        } else {
+          startDateBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Start Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_date = 3 [json_name = "startDate", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartDate(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (startDateBuilder_ == null) {
+          startDate_ = builderForValue.build();
+        } else {
+          startDateBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Start Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_date = 3 [json_name = "startDate", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeStartDate(com.google.protobuf.Timestamp value) {
+        if (startDateBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            startDate_ != null &&
+            startDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getStartDateBuilder().mergeFrom(value);
+          } else {
+            startDate_ = value;
+          }
+        } else {
+          startDateBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Start Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_date = 3 [json_name = "startDate", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearStartDate() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        startDate_ = null;
+        if (startDateBuilder_ != null) {
+          startDateBuilder_.dispose();
+          startDateBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Start Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_date = 3 [json_name = "startDate", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getStartDateBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getStartDateFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Start Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_date = 3 [json_name = "startDate", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getStartDateOrBuilder() {
+        if (startDateBuilder_ != null) {
+          return startDateBuilder_.getMessageOrBuilder();
+        } else {
+          return startDate_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : startDate_;
+        }
+      }
+      /**
+       * <pre>
+       * Start Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_date = 3 [json_name = "startDate", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getStartDateFieldBuilder() {
+        if (startDateBuilder_ == null) {
+          startDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getStartDate(),
+                  getParentForChildren(),
+                  isClean());
+          startDate_ = null;
+        }
+        return startDateBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp endDate_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endDateBuilder_;
+      /**
+       * <pre>
+       * End Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_date = 4 [json_name = "endDate", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the endDate field is set.
+       */
+      public boolean hasEndDate() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * End Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_date = 4 [json_name = "endDate", (.gogoproto.stdtime) = true];</code>
+       * @return The endDate.
+       */
+      public com.google.protobuf.Timestamp getEndDate() {
+        if (endDateBuilder_ == null) {
+          return endDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endDate_;
+        } else {
+          return endDateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * End Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_date = 4 [json_name = "endDate", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setEndDate(com.google.protobuf.Timestamp value) {
+        if (endDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          endDate_ = value;
+        } else {
+          endDateBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * End Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_date = 4 [json_name = "endDate", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setEndDate(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (endDateBuilder_ == null) {
+          endDate_ = builderForValue.build();
+        } else {
+          endDateBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * End Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_date = 4 [json_name = "endDate", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeEndDate(com.google.protobuf.Timestamp value) {
+        if (endDateBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            endDate_ != null &&
+            endDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getEndDateBuilder().mergeFrom(value);
+          } else {
+            endDate_ = value;
+          }
+        } else {
+          endDateBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * End Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_date = 4 [json_name = "endDate", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearEndDate() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        endDate_ = null;
+        if (endDateBuilder_ != null) {
+          endDateBuilder_.dispose();
+          endDateBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * End Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_date = 4 [json_name = "endDate", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getEndDateBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getEndDateFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * End Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_date = 4 [json_name = "endDate", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getEndDateOrBuilder() {
+        if (endDateBuilder_ != null) {
+          return endDateBuilder_.getMessageOrBuilder();
+        } else {
+          return endDate_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : endDate_;
+        }
+      }
+      /**
+       * <pre>
+       * End Date of the Entity as defined by the implementer and interpreted by
+       * Client applications
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_date = 4 [json_name = "endDate", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getEndDateFieldBuilder() {
+        if (endDateBuilder_ == null) {
+          endDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getEndDate(),
+                  getParentForChildren(),
+                  isClean());
+          endDate_ = null;
+        }
+        return endDateBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringArrayList credentials_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureCredentialsIsMutable() {
+        if (!credentials_.isModifiable()) {
+          credentials_ = new com.google.protobuf.LazyStringArrayList(credentials_);
+        }
+        bitField0_ |= 0x00000010;
+      }
+      /**
+       * <pre>
+       * Content ID or Hash of public Verifiable Credentials associated with the
+       * subject
+       * </pre>
+       *
+       * <code>repeated string credentials = 5 [json_name = "credentials"];</code>
+       * @return A list containing the credentials.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getCredentialsList() {
+        credentials_.makeImmutable();
+        return credentials_;
+      }
+      /**
+       * <pre>
+       * Content ID or Hash of public Verifiable Credentials associated with the
+       * subject
+       * </pre>
+       *
+       * <code>repeated string credentials = 5 [json_name = "credentials"];</code>
+       * @return The count of credentials.
+       */
+      public int getCredentialsCount() {
+        return credentials_.size();
+      }
+      /**
+       * <pre>
+       * Content ID or Hash of public Verifiable Credentials associated with the
+       * subject
+       * </pre>
+       *
+       * <code>repeated string credentials = 5 [json_name = "credentials"];</code>
+       * @param index The index of the element to return.
+       * @return The credentials at the given index.
+       */
+      public java.lang.String getCredentials(int index) {
+        return credentials_.get(index);
+      }
+      /**
+       * <pre>
+       * Content ID or Hash of public Verifiable Credentials associated with the
+       * subject
+       * </pre>
+       *
+       * <code>repeated string credentials = 5 [json_name = "credentials"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the credentials at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getCredentialsBytes(int index) {
+        return credentials_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Content ID or Hash of public Verifiable Credentials associated with the
+       * subject
+       * </pre>
+       *
+       * <code>repeated string credentials = 5 [json_name = "credentials"];</code>
+       * @param index The index to set the value at.
+       * @param value The credentials to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCredentials(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureCredentialsIsMutable();
+        credentials_.set(index, value);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Content ID or Hash of public Verifiable Credentials associated with the
+       * subject
+       * </pre>
+       *
+       * <code>repeated string credentials = 5 [json_name = "credentials"];</code>
+       * @param value The credentials to add.
+       * @return This builder for chaining.
+       */
+      public Builder addCredentials(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureCredentialsIsMutable();
+        credentials_.add(value);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Content ID or Hash of public Verifiable Credentials associated with the
+       * subject
+       * </pre>
+       *
+       * <code>repeated string credentials = 5 [json_name = "credentials"];</code>
+       * @param values The credentials to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllCredentials(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureCredentialsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, credentials_);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Content ID or Hash of public Verifiable Credentials associated with the
+       * subject
+       * </pre>
+       *
+       * <code>repeated string credentials = 5 [json_name = "credentials"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCredentials() {
+        credentials_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Content ID or Hash of public Verifiable Credentials associated with the
+       * subject
+       * </pre>
+       *
+       * <code>repeated string credentials = 5 [json_name = "credentials"];</code>
+       * @param value The bytes of the credentials to add.
+       * @return This builder for chaining.
+       */
+      public Builder addCredentialsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureCredentialsIsMutable();
+        credentials_.add(value);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object controllerDid_ = "";
+      /**
+       * <pre>
+       * The controllerDid used to sign this transaction.
+       * </pre>
+       *
+       * <code>string controller_did = 6 [json_name = "controllerDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+       * @return The controllerDid.
+       */
+      public java.lang.String getControllerDid() {
+        java.lang.Object ref = controllerDid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          controllerDid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The controllerDid used to sign this transaction.
+       * </pre>
+       *
+       * <code>string controller_did = 6 [json_name = "controllerDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+       * @return The bytes for controllerDid.
+       */
+      public com.google.protobuf.ByteString
+          getControllerDidBytes() {
+        java.lang.Object ref = controllerDid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          controllerDid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The controllerDid used to sign this transaction.
+       * </pre>
+       *
+       * <code>string controller_did = 6 [json_name = "controllerDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+       * @param value The controllerDid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setControllerDid(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        controllerDid_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The controllerDid used to sign this transaction.
+       * </pre>
+       *
+       * <code>string controller_did = 6 [json_name = "controllerDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearControllerDid() {
+        controllerDid_ = getDefaultInstance().getControllerDid();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The controllerDid used to sign this transaction.
+       * </pre>
+       *
+       * <code>string controller_did = 6 [json_name = "controllerDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+       * @param value The bytes for controllerDid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setControllerDidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        controllerDid_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object controllerAddress_ = "";
+      /**
+       * <pre>
+       * The controllerAddress used to sign this transaction.
+       * </pre>
+       *
+       * <code>string controller_address = 7 [json_name = "controllerAddress"];</code>
+       * @return The controllerAddress.
+       */
+      public java.lang.String getControllerAddress() {
+        java.lang.Object ref = controllerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          controllerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The controllerAddress used to sign this transaction.
+       * </pre>
+       *
+       * <code>string controller_address = 7 [json_name = "controllerAddress"];</code>
+       * @return The bytes for controllerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getControllerAddressBytes() {
+        java.lang.Object ref = controllerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          controllerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The controllerAddress used to sign this transaction.
+       * </pre>
+       *
+       * <code>string controller_address = 7 [json_name = "controllerAddress"];</code>
+       * @param value The controllerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setControllerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        controllerAddress_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The controllerAddress used to sign this transaction.
+       * </pre>
+       *
+       * <code>string controller_address = 7 [json_name = "controllerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearControllerAddress() {
+        controllerAddress_ = getDefaultInstance().getControllerAddress();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The controllerAddress used to sign this transaction.
+       * </pre>
+       *
+       * <code>string controller_address = 7 [json_name = "controllerAddress"];</code>
+       * @param value The bytes for controllerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setControllerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        controllerAddress_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.entity.v1beta1.MsgUpdateEntity)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.entity.v1beta1.MsgUpdateEntity)
+    private static final com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity();
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdateEntity>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdateEntity>() {
+      @java.lang.Override
+      public MsgUpdateEntity parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdateEntity> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdateEntity> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.entity.v1beta1.TxProto.MsgUpdateEntity getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUpdateEntityResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.entity.v1beta1.MsgUpdateEntityResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code ixo.entity.v1beta1.MsgUpdateEntityResponse}
+   */
+  public static final class MsgUpdateEntityResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.entity.v1beta1.MsgUpdateEntityResponse)
+      MsgUpdateEntityResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdateEntityResponse.newBuilder() to construct.
+    private MsgUpdateEntityResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdateEntityResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdateEntityResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgUpdateEntityResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgUpdateEntityResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse.class, com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse)) {
+        return super.equals(obj);
+      }
+      com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse other = (com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.entity.v1beta1.MsgUpdateEntityResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.entity.v1beta1.MsgUpdateEntityResponse)
+        com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgUpdateEntityResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgUpdateEntityResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse.class, com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse.Builder.class);
+      }
+
+      // Construct using com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgUpdateEntityResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse getDefaultInstanceForType() {
+        return com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse build() {
+        com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse buildPartial() {
+        com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse result = new com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse) {
+          return mergeFrom((com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse other) {
+        if (other == com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.entity.v1beta1.MsgUpdateEntityResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.entity.v1beta1.MsgUpdateEntityResponse)
+    private static final com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse();
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdateEntityResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdateEntityResponse>() {
+      @java.lang.Override
+      public MsgUpdateEntityResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdateEntityResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdateEntityResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUpdateEntityVerifiedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.entity.v1beta1.MsgUpdateEntityVerified)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Id of entity to be updated
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * Id of entity to be updated
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * Whether entity is verified or not based on credentials
+     * </pre>
+     *
+     * <code>bool entity_verified = 2 [json_name = "entityVerified"];</code>
+     * @return The entityVerified.
+     */
+    boolean getEntityVerified();
+
+    /**
+     * <pre>
+     * The relayer node's did used to sign this transaction.
+     * </pre>
+     *
+     * <code>string relayer_node_did = 3 [json_name = "relayerNodeDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+     * @return The relayerNodeDid.
+     */
+    java.lang.String getRelayerNodeDid();
+    /**
+     * <pre>
+     * The relayer node's did used to sign this transaction.
+     * </pre>
+     *
+     * <code>string relayer_node_did = 3 [json_name = "relayerNodeDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+     * @return The bytes for relayerNodeDid.
+     */
+    com.google.protobuf.ByteString
+        getRelayerNodeDidBytes();
+
+    /**
+     * <pre>
+     * The relayer node's address used to sign this transaction.
+     * </pre>
+     *
+     * <code>string relayer_node_address = 4 [json_name = "relayerNodeAddress"];</code>
+     * @return The relayerNodeAddress.
+     */
+    java.lang.String getRelayerNodeAddress();
+    /**
+     * <pre>
+     * The relayer node's address used to sign this transaction.
+     * </pre>
+     *
+     * <code>string relayer_node_address = 4 [json_name = "relayerNodeAddress"];</code>
+     * @return The bytes for relayerNodeAddress.
+     */
+    com.google.protobuf.ByteString
+        getRelayerNodeAddressBytes();
+  }
+  /**
+   * <pre>
+   * Only relayer nodes can update entity field 'entityVerified'
+   * </pre>
+   *
+   * Protobuf type {@code ixo.entity.v1beta1.MsgUpdateEntityVerified}
+   */
+  public static final class MsgUpdateEntityVerified extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.entity.v1beta1.MsgUpdateEntityVerified)
+      MsgUpdateEntityVerifiedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdateEntityVerified.newBuilder() to construct.
+    private MsgUpdateEntityVerified(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdateEntityVerified() {
+      id_ = "";
+      relayerNodeDid_ = "";
+      relayerNodeAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdateEntityVerified();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgUpdateEntityVerified_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgUpdateEntityVerified_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified.class, com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <pre>
+     * Id of entity to be updated
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Id of entity to be updated
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENTITY_VERIFIED_FIELD_NUMBER = 2;
+    private boolean entityVerified_ = false;
+    /**
+     * <pre>
+     * Whether entity is verified or not based on credentials
+     * </pre>
+     *
+     * <code>bool entity_verified = 2 [json_name = "entityVerified"];</code>
+     * @return The entityVerified.
+     */
+    @java.lang.Override
+    public boolean getEntityVerified() {
+      return entityVerified_;
+    }
+
+    public static final int RELAYER_NODE_DID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object relayerNodeDid_ = "";
+    /**
+     * <pre>
+     * The relayer node's did used to sign this transaction.
+     * </pre>
+     *
+     * <code>string relayer_node_did = 3 [json_name = "relayerNodeDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+     * @return The relayerNodeDid.
+     */
+    @java.lang.Override
+    public java.lang.String getRelayerNodeDid() {
+      java.lang.Object ref = relayerNodeDid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        relayerNodeDid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The relayer node's did used to sign this transaction.
+     * </pre>
+     *
+     * <code>string relayer_node_did = 3 [json_name = "relayerNodeDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+     * @return The bytes for relayerNodeDid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRelayerNodeDidBytes() {
+      java.lang.Object ref = relayerNodeDid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        relayerNodeDid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RELAYER_NODE_ADDRESS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object relayerNodeAddress_ = "";
+    /**
+     * <pre>
+     * The relayer node's address used to sign this transaction.
+     * </pre>
+     *
+     * <code>string relayer_node_address = 4 [json_name = "relayerNodeAddress"];</code>
+     * @return The relayerNodeAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getRelayerNodeAddress() {
+      java.lang.Object ref = relayerNodeAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        relayerNodeAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The relayer node's address used to sign this transaction.
+     * </pre>
+     *
+     * <code>string relayer_node_address = 4 [json_name = "relayerNodeAddress"];</code>
+     * @return The bytes for relayerNodeAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRelayerNodeAddressBytes() {
+      java.lang.Object ref = relayerNodeAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        relayerNodeAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (entityVerified_ != false) {
+        output.writeBool(2, entityVerified_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(relayerNodeDid_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, relayerNodeDid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(relayerNodeAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, relayerNodeAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (entityVerified_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, entityVerified_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(relayerNodeDid_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, relayerNodeDid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(relayerNodeAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, relayerNodeAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified)) {
+        return super.equals(obj);
+      }
+      com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified other = (com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (getEntityVerified()
+          != other.getEntityVerified()) return false;
+      if (!getRelayerNodeDid()
+          .equals(other.getRelayerNodeDid())) return false;
+      if (!getRelayerNodeAddress()
+          .equals(other.getRelayerNodeAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + ENTITY_VERIFIED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEntityVerified());
+      hash = (37 * hash) + RELAYER_NODE_DID_FIELD_NUMBER;
+      hash = (53 * hash) + getRelayerNodeDid().hashCode();
+      hash = (37 * hash) + RELAYER_NODE_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getRelayerNodeAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Only relayer nodes can update entity field 'entityVerified'
+     * </pre>
+     *
+     * Protobuf type {@code ixo.entity.v1beta1.MsgUpdateEntityVerified}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.entity.v1beta1.MsgUpdateEntityVerified)
+        com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgUpdateEntityVerified_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgUpdateEntityVerified_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified.class, com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified.Builder.class);
+      }
+
+      // Construct using com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = "";
+        entityVerified_ = false;
+        relayerNodeDid_ = "";
+        relayerNodeAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgUpdateEntityVerified_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified getDefaultInstanceForType() {
+        return com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified build() {
+        com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified buildPartial() {
+        com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified result = new com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.entityVerified_ = entityVerified_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.relayerNodeDid_ = relayerNodeDid_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.relayerNodeAddress_ = relayerNodeAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified) {
+          return mergeFrom((com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified other) {
+        if (other == com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getEntityVerified() != false) {
+          setEntityVerified(other.getEntityVerified());
+        }
+        if (!other.getRelayerNodeDid().isEmpty()) {
+          relayerNodeDid_ = other.relayerNodeDid_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getRelayerNodeAddress().isEmpty()) {
+          relayerNodeAddress_ = other.relayerNodeAddress_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                entityVerified_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                relayerNodeDid_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                relayerNodeAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * Id of entity to be updated
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of entity to be updated
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of entity to be updated
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of entity to be updated
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of entity to be updated
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private boolean entityVerified_ ;
+      /**
+       * <pre>
+       * Whether entity is verified or not based on credentials
+       * </pre>
+       *
+       * <code>bool entity_verified = 2 [json_name = "entityVerified"];</code>
+       * @return The entityVerified.
+       */
+      @java.lang.Override
+      public boolean getEntityVerified() {
+        return entityVerified_;
+      }
+      /**
+       * <pre>
+       * Whether entity is verified or not based on credentials
+       * </pre>
+       *
+       * <code>bool entity_verified = 2 [json_name = "entityVerified"];</code>
+       * @param value The entityVerified to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEntityVerified(boolean value) {
+
+        entityVerified_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether entity is verified or not based on credentials
+       * </pre>
+       *
+       * <code>bool entity_verified = 2 [json_name = "entityVerified"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEntityVerified() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        entityVerified_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object relayerNodeDid_ = "";
+      /**
+       * <pre>
+       * The relayer node's did used to sign this transaction.
+       * </pre>
+       *
+       * <code>string relayer_node_did = 3 [json_name = "relayerNodeDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+       * @return The relayerNodeDid.
+       */
+      public java.lang.String getRelayerNodeDid() {
+        java.lang.Object ref = relayerNodeDid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          relayerNodeDid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The relayer node's did used to sign this transaction.
+       * </pre>
+       *
+       * <code>string relayer_node_did = 3 [json_name = "relayerNodeDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+       * @return The bytes for relayerNodeDid.
+       */
+      public com.google.protobuf.ByteString
+          getRelayerNodeDidBytes() {
+        java.lang.Object ref = relayerNodeDid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          relayerNodeDid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The relayer node's did used to sign this transaction.
+       * </pre>
+       *
+       * <code>string relayer_node_did = 3 [json_name = "relayerNodeDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+       * @param value The relayerNodeDid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRelayerNodeDid(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        relayerNodeDid_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The relayer node's did used to sign this transaction.
+       * </pre>
+       *
+       * <code>string relayer_node_did = 3 [json_name = "relayerNodeDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRelayerNodeDid() {
+        relayerNodeDid_ = getDefaultInstance().getRelayerNodeDid();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The relayer node's did used to sign this transaction.
+       * </pre>
+       *
+       * <code>string relayer_node_did = 3 [json_name = "relayerNodeDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+       * @param value The bytes for relayerNodeDid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRelayerNodeDidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        relayerNodeDid_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object relayerNodeAddress_ = "";
+      /**
+       * <pre>
+       * The relayer node's address used to sign this transaction.
+       * </pre>
+       *
+       * <code>string relayer_node_address = 4 [json_name = "relayerNodeAddress"];</code>
+       * @return The relayerNodeAddress.
+       */
+      public java.lang.String getRelayerNodeAddress() {
+        java.lang.Object ref = relayerNodeAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          relayerNodeAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The relayer node's address used to sign this transaction.
+       * </pre>
+       *
+       * <code>string relayer_node_address = 4 [json_name = "relayerNodeAddress"];</code>
+       * @return The bytes for relayerNodeAddress.
+       */
+      public com.google.protobuf.ByteString
+          getRelayerNodeAddressBytes() {
+        java.lang.Object ref = relayerNodeAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          relayerNodeAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The relayer node's address used to sign this transaction.
+       * </pre>
+       *
+       * <code>string relayer_node_address = 4 [json_name = "relayerNodeAddress"];</code>
+       * @param value The relayerNodeAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRelayerNodeAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        relayerNodeAddress_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The relayer node's address used to sign this transaction.
+       * </pre>
+       *
+       * <code>string relayer_node_address = 4 [json_name = "relayerNodeAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRelayerNodeAddress() {
+        relayerNodeAddress_ = getDefaultInstance().getRelayerNodeAddress();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The relayer node's address used to sign this transaction.
+       * </pre>
+       *
+       * <code>string relayer_node_address = 4 [json_name = "relayerNodeAddress"];</code>
+       * @param value The bytes for relayerNodeAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRelayerNodeAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        relayerNodeAddress_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.entity.v1beta1.MsgUpdateEntityVerified)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.entity.v1beta1.MsgUpdateEntityVerified)
+    private static final com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified();
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdateEntityVerified>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdateEntityVerified>() {
+      @java.lang.Override
+      public MsgUpdateEntityVerified parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdateEntityVerified> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdateEntityVerified> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerified getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUpdateEntityVerifiedResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.entity.v1beta1.MsgUpdateEntityVerifiedResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code ixo.entity.v1beta1.MsgUpdateEntityVerifiedResponse}
+   */
+  public static final class MsgUpdateEntityVerifiedResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.entity.v1beta1.MsgUpdateEntityVerifiedResponse)
+      MsgUpdateEntityVerifiedResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdateEntityVerifiedResponse.newBuilder() to construct.
+    private MsgUpdateEntityVerifiedResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdateEntityVerifiedResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdateEntityVerifiedResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgUpdateEntityVerifiedResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgUpdateEntityVerifiedResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse.class, com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse)) {
+        return super.equals(obj);
+      }
+      com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse other = (com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.entity.v1beta1.MsgUpdateEntityVerifiedResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.entity.v1beta1.MsgUpdateEntityVerifiedResponse)
+        com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgUpdateEntityVerifiedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgUpdateEntityVerifiedResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse.class, com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse.Builder.class);
+      }
+
+      // Construct using com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgUpdateEntityVerifiedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse getDefaultInstanceForType() {
+        return com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse build() {
+        com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse buildPartial() {
+        com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse result = new com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse) {
+          return mergeFrom((com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse other) {
+        if (other == com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.entity.v1beta1.MsgUpdateEntityVerifiedResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.entity.v1beta1.MsgUpdateEntityVerifiedResponse)
+    private static final com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse();
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdateEntityVerifiedResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdateEntityVerifiedResponse>() {
+      @java.lang.Override
+      public MsgUpdateEntityVerifiedResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdateEntityVerifiedResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdateEntityVerifiedResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.entity.v1beta1.TxProto.MsgUpdateEntityVerifiedResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgTransferEntityOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.entity.v1beta1.MsgTransferEntity)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * The owner_did used to sign this transaction.
+     * </pre>
+     *
+     * <code>string owner_did = 2 [json_name = "ownerDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+     * @return The ownerDid.
+     */
+    java.lang.String getOwnerDid();
+    /**
+     * <pre>
+     * The owner_did used to sign this transaction.
+     * </pre>
+     *
+     * <code>string owner_did = 2 [json_name = "ownerDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+     * @return The bytes for ownerDid.
+     */
+    com.google.protobuf.ByteString
+        getOwnerDidBytes();
+
+    /**
+     * <pre>
+     * The owner_address used to sign this transaction.
+     * </pre>
+     *
+     * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+     * @return The ownerAddress.
+     */
+    java.lang.String getOwnerAddress();
+    /**
+     * <pre>
+     * The owner_address used to sign this transaction.
+     * </pre>
+     *
+     * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+     * @return The bytes for ownerAddress.
+     */
+    com.google.protobuf.ByteString
+        getOwnerAddressBytes();
+
+    /**
+     * <code>string recipient_did = 4 [json_name = "recipientDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+     * @return The recipientDid.
+     */
+    java.lang.String getRecipientDid();
+    /**
+     * <code>string recipient_did = 4 [json_name = "recipientDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+     * @return The bytes for recipientDid.
+     */
+    com.google.protobuf.ByteString
+        getRecipientDidBytes();
+  }
+  /**
+   * Protobuf type {@code ixo.entity.v1beta1.MsgTransferEntity}
+   */
+  public static final class MsgTransferEntity extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.entity.v1beta1.MsgTransferEntity)
+      MsgTransferEntityOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgTransferEntity.newBuilder() to construct.
+    private MsgTransferEntity(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgTransferEntity() {
+      id_ = "";
+      ownerDid_ = "";
+      ownerAddress_ = "";
+      recipientDid_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgTransferEntity();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgTransferEntity_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgTransferEntity_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.entity.v1beta1.TxProto.MsgTransferEntity.class, com.ixo.entity.v1beta1.TxProto.MsgTransferEntity.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_DID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ownerDid_ = "";
+    /**
+     * <pre>
+     * The owner_did used to sign this transaction.
+     * </pre>
+     *
+     * <code>string owner_did = 2 [json_name = "ownerDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+     * @return The ownerDid.
+     */
+    @java.lang.Override
+    public java.lang.String getOwnerDid() {
+      java.lang.Object ref = ownerDid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ownerDid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The owner_did used to sign this transaction.
+     * </pre>
+     *
+     * <code>string owner_did = 2 [json_name = "ownerDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+     * @return The bytes for ownerDid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerDidBytes() {
+      java.lang.Object ref = ownerDid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ownerDid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_ADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ownerAddress_ = "";
+    /**
+     * <pre>
+     * The owner_address used to sign this transaction.
+     * </pre>
+     *
+     * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+     * @return The ownerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getOwnerAddress() {
+      java.lang.Object ref = ownerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ownerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The owner_address used to sign this transaction.
+     * </pre>
+     *
+     * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+     * @return The bytes for ownerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerAddressBytes() {
+      java.lang.Object ref = ownerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ownerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RECIPIENT_DID_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object recipientDid_ = "";
+    /**
+     * <code>string recipient_did = 4 [json_name = "recipientDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+     * @return The recipientDid.
+     */
+    @java.lang.Override
+    public java.lang.String getRecipientDid() {
+      java.lang.Object ref = recipientDid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recipientDid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string recipient_did = 4 [json_name = "recipientDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+     * @return The bytes for recipientDid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRecipientDidBytes() {
+      java.lang.Object ref = recipientDid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recipientDid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerDid_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, ownerDid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, ownerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipientDid_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, recipientDid_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerDid_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, ownerDid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, ownerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipientDid_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, recipientDid_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.entity.v1beta1.TxProto.MsgTransferEntity)) {
+        return super.equals(obj);
+      }
+      com.ixo.entity.v1beta1.TxProto.MsgTransferEntity other = (com.ixo.entity.v1beta1.TxProto.MsgTransferEntity) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getOwnerDid()
+          .equals(other.getOwnerDid())) return false;
+      if (!getOwnerAddress()
+          .equals(other.getOwnerAddress())) return false;
+      if (!getRecipientDid()
+          .equals(other.getRecipientDid())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + OWNER_DID_FIELD_NUMBER;
+      hash = (53 * hash) + getOwnerDid().hashCode();
+      hash = (37 * hash) + OWNER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getOwnerAddress().hashCode();
+      hash = (37 * hash) + RECIPIENT_DID_FIELD_NUMBER;
+      hash = (53 * hash) + getRecipientDid().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgTransferEntity parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgTransferEntity parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgTransferEntity parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgTransferEntity parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgTransferEntity parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgTransferEntity parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgTransferEntity parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgTransferEntity parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgTransferEntity parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgTransferEntity parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgTransferEntity parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgTransferEntity parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.entity.v1beta1.TxProto.MsgTransferEntity prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.entity.v1beta1.MsgTransferEntity}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.entity.v1beta1.MsgTransferEntity)
+        com.ixo.entity.v1beta1.TxProto.MsgTransferEntityOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgTransferEntity_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgTransferEntity_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.entity.v1beta1.TxProto.MsgTransferEntity.class, com.ixo.entity.v1beta1.TxProto.MsgTransferEntity.Builder.class);
+      }
+
+      // Construct using com.ixo.entity.v1beta1.TxProto.MsgTransferEntity.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = "";
+        ownerDid_ = "";
+        ownerAddress_ = "";
+        recipientDid_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgTransferEntity_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgTransferEntity getDefaultInstanceForType() {
+        return com.ixo.entity.v1beta1.TxProto.MsgTransferEntity.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgTransferEntity build() {
+        com.ixo.entity.v1beta1.TxProto.MsgTransferEntity result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgTransferEntity buildPartial() {
+        com.ixo.entity.v1beta1.TxProto.MsgTransferEntity result = new com.ixo.entity.v1beta1.TxProto.MsgTransferEntity(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.ixo.entity.v1beta1.TxProto.MsgTransferEntity result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.ownerDid_ = ownerDid_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.ownerAddress_ = ownerAddress_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.recipientDid_ = recipientDid_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.entity.v1beta1.TxProto.MsgTransferEntity) {
+          return mergeFrom((com.ixo.entity.v1beta1.TxProto.MsgTransferEntity)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.entity.v1beta1.TxProto.MsgTransferEntity other) {
+        if (other == com.ixo.entity.v1beta1.TxProto.MsgTransferEntity.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getOwnerDid().isEmpty()) {
+          ownerDid_ = other.ownerDid_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getOwnerAddress().isEmpty()) {
+          ownerAddress_ = other.ownerAddress_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getRecipientDid().isEmpty()) {
+          recipientDid_ = other.recipientDid_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                ownerDid_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                ownerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                recipientDid_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object ownerDid_ = "";
+      /**
+       * <pre>
+       * The owner_did used to sign this transaction.
+       * </pre>
+       *
+       * <code>string owner_did = 2 [json_name = "ownerDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+       * @return The ownerDid.
+       */
+      public java.lang.String getOwnerDid() {
+        java.lang.Object ref = ownerDid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ownerDid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The owner_did used to sign this transaction.
+       * </pre>
+       *
+       * <code>string owner_did = 2 [json_name = "ownerDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+       * @return The bytes for ownerDid.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerDidBytes() {
+        java.lang.Object ref = ownerDid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ownerDid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The owner_did used to sign this transaction.
+       * </pre>
+       *
+       * <code>string owner_did = 2 [json_name = "ownerDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+       * @param value The ownerDid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerDid(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ownerDid_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The owner_did used to sign this transaction.
+       * </pre>
+       *
+       * <code>string owner_did = 2 [json_name = "ownerDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwnerDid() {
+        ownerDid_ = getDefaultInstance().getOwnerDid();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The owner_did used to sign this transaction.
+       * </pre>
+       *
+       * <code>string owner_did = 2 [json_name = "ownerDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+       * @param value The bytes for ownerDid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerDidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ownerDid_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object ownerAddress_ = "";
+      /**
+       * <pre>
+       * The owner_address used to sign this transaction.
+       * </pre>
+       *
+       * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+       * @return The ownerAddress.
+       */
+      public java.lang.String getOwnerAddress() {
+        java.lang.Object ref = ownerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ownerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The owner_address used to sign this transaction.
+       * </pre>
+       *
+       * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+       * @return The bytes for ownerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerAddressBytes() {
+        java.lang.Object ref = ownerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ownerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The owner_address used to sign this transaction.
+       * </pre>
+       *
+       * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+       * @param value The ownerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ownerAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The owner_address used to sign this transaction.
+       * </pre>
+       *
+       * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwnerAddress() {
+        ownerAddress_ = getDefaultInstance().getOwnerAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The owner_address used to sign this transaction.
+       * </pre>
+       *
+       * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+       * @param value The bytes for ownerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ownerAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object recipientDid_ = "";
+      /**
+       * <code>string recipient_did = 4 [json_name = "recipientDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+       * @return The recipientDid.
+       */
+      public java.lang.String getRecipientDid() {
+        java.lang.Object ref = recipientDid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          recipientDid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string recipient_did = 4 [json_name = "recipientDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+       * @return The bytes for recipientDid.
+       */
+      public com.google.protobuf.ByteString
+          getRecipientDidBytes() {
+        java.lang.Object ref = recipientDid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          recipientDid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string recipient_did = 4 [json_name = "recipientDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+       * @param value The recipientDid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipientDid(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        recipientDid_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string recipient_did = 4 [json_name = "recipientDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecipientDid() {
+        recipientDid_ = getDefaultInstance().getRecipientDid();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string recipient_did = 4 [json_name = "recipientDid", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+       * @param value The bytes for recipientDid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipientDidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        recipientDid_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.entity.v1beta1.MsgTransferEntity)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.entity.v1beta1.MsgTransferEntity)
+    private static final com.ixo.entity.v1beta1.TxProto.MsgTransferEntity DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.entity.v1beta1.TxProto.MsgTransferEntity();
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgTransferEntity getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgTransferEntity>
+        PARSER = new com.google.protobuf.AbstractParser<MsgTransferEntity>() {
+      @java.lang.Override
+      public MsgTransferEntity parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgTransferEntity> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgTransferEntity> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.entity.v1beta1.TxProto.MsgTransferEntity getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgTransferEntityResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.entity.v1beta1.MsgTransferEntityResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code ixo.entity.v1beta1.MsgTransferEntityResponse}
+   */
+  public static final class MsgTransferEntityResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.entity.v1beta1.MsgTransferEntityResponse)
+      MsgTransferEntityResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgTransferEntityResponse.newBuilder() to construct.
+    private MsgTransferEntityResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgTransferEntityResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgTransferEntityResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgTransferEntityResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgTransferEntityResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse.class, com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse)) {
+        return super.equals(obj);
+      }
+      com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse other = (com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.entity.v1beta1.MsgTransferEntityResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.entity.v1beta1.MsgTransferEntityResponse)
+        com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgTransferEntityResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgTransferEntityResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse.class, com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse.Builder.class);
+      }
+
+      // Construct using com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgTransferEntityResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse getDefaultInstanceForType() {
+        return com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse build() {
+        com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse buildPartial() {
+        com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse result = new com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse) {
+          return mergeFrom((com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse other) {
+        if (other == com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.entity.v1beta1.MsgTransferEntityResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.entity.v1beta1.MsgTransferEntityResponse)
+    private static final com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse();
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgTransferEntityResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgTransferEntityResponse>() {
+      @java.lang.Override
+      public MsgTransferEntityResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgTransferEntityResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgTransferEntityResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.entity.v1beta1.TxProto.MsgTransferEntityResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateEntityAccountOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.entity.v1beta1.MsgCreateEntityAccount)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * entity id (did) to create account for
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * entity id (did) to create account for
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * name of account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * name of account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * The owner_address used to sign this transaction.
+     * </pre>
+     *
+     * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+     * @return The ownerAddress.
+     */
+    java.lang.String getOwnerAddress();
+    /**
+     * <pre>
+     * The owner_address used to sign this transaction.
+     * </pre>
+     *
+     * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+     * @return The bytes for ownerAddress.
+     */
+    com.google.protobuf.ByteString
+        getOwnerAddressBytes();
+  }
+  /**
+   * <pre>
+   * create a module account for an entity, account details will be added as a
+   * linkedEntity on entity iid doc where linkedEntity id is didfragment: did#name
+   * </pre>
+   *
+   * Protobuf type {@code ixo.entity.v1beta1.MsgCreateEntityAccount}
+   */
+  public static final class MsgCreateEntityAccount extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.entity.v1beta1.MsgCreateEntityAccount)
+      MsgCreateEntityAccountOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateEntityAccount.newBuilder() to construct.
+    private MsgCreateEntityAccount(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateEntityAccount() {
+      id_ = "";
+      name_ = "";
+      ownerAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateEntityAccount();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgCreateEntityAccount_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgCreateEntityAccount_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount.class, com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <pre>
+     * entity id (did) to create account for
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * entity id (did) to create account for
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * name of account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * name of account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_ADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ownerAddress_ = "";
+    /**
+     * <pre>
+     * The owner_address used to sign this transaction.
+     * </pre>
+     *
+     * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+     * @return The ownerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getOwnerAddress() {
+      java.lang.Object ref = ownerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ownerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The owner_address used to sign this transaction.
+     * </pre>
+     *
+     * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+     * @return The bytes for ownerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerAddressBytes() {
+      java.lang.Object ref = ownerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ownerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, ownerAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, ownerAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount)) {
+        return super.equals(obj);
+      }
+      com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount other = (com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getOwnerAddress()
+          .equals(other.getOwnerAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + OWNER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getOwnerAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * create a module account for an entity, account details will be added as a
+     * linkedEntity on entity iid doc where linkedEntity id is didfragment: did#name
+     * </pre>
+     *
+     * Protobuf type {@code ixo.entity.v1beta1.MsgCreateEntityAccount}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.entity.v1beta1.MsgCreateEntityAccount)
+        com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgCreateEntityAccount_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgCreateEntityAccount_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount.class, com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount.Builder.class);
+      }
+
+      // Construct using com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = "";
+        name_ = "";
+        ownerAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgCreateEntityAccount_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount getDefaultInstanceForType() {
+        return com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount build() {
+        com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount buildPartial() {
+        com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount result = new com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.ownerAddress_ = ownerAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount) {
+          return mergeFrom((com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount other) {
+        if (other == com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getOwnerAddress().isEmpty()) {
+          ownerAddress_ = other.ownerAddress_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                ownerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * entity id (did) to create account for
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * entity id (did) to create account for
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * entity id (did) to create account for
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * entity id (did) to create account for
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * entity id (did) to create account for
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * name of account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * name of account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * name of account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * name of account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * name of account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object ownerAddress_ = "";
+      /**
+       * <pre>
+       * The owner_address used to sign this transaction.
+       * </pre>
+       *
+       * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+       * @return The ownerAddress.
+       */
+      public java.lang.String getOwnerAddress() {
+        java.lang.Object ref = ownerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ownerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The owner_address used to sign this transaction.
+       * </pre>
+       *
+       * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+       * @return The bytes for ownerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerAddressBytes() {
+        java.lang.Object ref = ownerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ownerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The owner_address used to sign this transaction.
+       * </pre>
+       *
+       * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+       * @param value The ownerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ownerAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The owner_address used to sign this transaction.
+       * </pre>
+       *
+       * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwnerAddress() {
+        ownerAddress_ = getDefaultInstance().getOwnerAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The owner_address used to sign this transaction.
+       * </pre>
+       *
+       * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+       * @param value The bytes for ownerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ownerAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.entity.v1beta1.MsgCreateEntityAccount)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.entity.v1beta1.MsgCreateEntityAccount)
+    private static final com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount();
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateEntityAccount>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateEntityAccount>() {
+      @java.lang.Override
+      public MsgCreateEntityAccount parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateEntityAccount> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateEntityAccount> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccount getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateEntityAccountResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.entity.v1beta1.MsgCreateEntityAccountResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * account address that was created for specific entity and account name
+     * </pre>
+     *
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The account.
+     */
+    java.lang.String getAccount();
+    /**
+     * <pre>
+     * account address that was created for specific entity and account name
+     * </pre>
+     *
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    com.google.protobuf.ByteString
+        getAccountBytes();
+  }
+  /**
+   * Protobuf type {@code ixo.entity.v1beta1.MsgCreateEntityAccountResponse}
+   */
+  public static final class MsgCreateEntityAccountResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.entity.v1beta1.MsgCreateEntityAccountResponse)
+      MsgCreateEntityAccountResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateEntityAccountResponse.newBuilder() to construct.
+    private MsgCreateEntityAccountResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateEntityAccountResponse() {
+      account_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateEntityAccountResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgCreateEntityAccountResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgCreateEntityAccountResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse.class, com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse.Builder.class);
+    }
+
+    public static final int ACCOUNT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object account_ = "";
+    /**
+     * <pre>
+     * account address that was created for specific entity and account name
+     * </pre>
+     *
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The account.
+     */
+    @java.lang.Override
+    public java.lang.String getAccount() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        account_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * account address that was created for specific entity and account name
+     * </pre>
+     *
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccountBytes() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        account_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, account_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, account_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse)) {
+        return super.equals(obj);
+      }
+      com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse other = (com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse) obj;
+
+      if (!getAccount()
+          .equals(other.getAccount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAccount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.entity.v1beta1.MsgCreateEntityAccountResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.entity.v1beta1.MsgCreateEntityAccountResponse)
+        com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgCreateEntityAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgCreateEntityAccountResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse.class, com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse.Builder.class);
+      }
+
+      // Construct using com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        account_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgCreateEntityAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse getDefaultInstanceForType() {
+        return com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse build() {
+        com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse buildPartial() {
+        com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse result = new com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.account_ = account_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse) {
+          return mergeFrom((com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse other) {
+        if (other == com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse.getDefaultInstance()) return this;
+        if (!other.getAccount().isEmpty()) {
+          account_ = other.account_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                account_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object account_ = "";
+      /**
+       * <pre>
+       * account address that was created for specific entity and account name
+       * </pre>
+       *
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @return The account.
+       */
+      public java.lang.String getAccount() {
+        java.lang.Object ref = account_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          account_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * account address that was created for specific entity and account name
+       * </pre>
+       *
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @return The bytes for account.
+       */
+      public com.google.protobuf.ByteString
+          getAccountBytes() {
+        java.lang.Object ref = account_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          account_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * account address that was created for specific entity and account name
+       * </pre>
+       *
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @param value The account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        account_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * account address that was created for specific entity and account name
+       * </pre>
+       *
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccount() {
+        account_ = getDefaultInstance().getAccount();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * account address that was created for specific entity and account name
+       * </pre>
+       *
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @param value The bytes for account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        account_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.entity.v1beta1.MsgCreateEntityAccountResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.entity.v1beta1.MsgCreateEntityAccountResponse)
+    private static final com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse();
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateEntityAccountResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateEntityAccountResponse>() {
+      @java.lang.Override
+      public MsgCreateEntityAccountResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateEntityAccountResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateEntityAccountResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.entity.v1beta1.TxProto.MsgCreateEntityAccountResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgGrantEntityAccountAuthzOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.entity.v1beta1.MsgGrantEntityAccountAuthz)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * entity id (did) to create account for
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * entity id (did) to create account for
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * name of account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * name of account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * the grantee address that will be able to execute the authz authorization
+     * </pre>
+     *
+     * <code>string grantee_address = 3 [json_name = "granteeAddress"];</code>
+     * @return The granteeAddress.
+     */
+    java.lang.String getGranteeAddress();
+    /**
+     * <pre>
+     * the grantee address that will be able to execute the authz authorization
+     * </pre>
+     *
+     * <code>string grantee_address = 3 [json_name = "granteeAddress"];</code>
+     * @return The bytes for granteeAddress.
+     */
+    com.google.protobuf.ByteString
+        getGranteeAddressBytes();
+
+    /**
+     * <pre>
+     * grant to be Authorized in authz grant
+     * </pre>
+     *
+     * <code>.ixo.entity.v1beta1.Grant grant = 4 [json_name = "grant", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/x/authz.Grant"];</code>
+     * @return Whether the grant field is set.
+     */
+    boolean hasGrant();
+    /**
+     * <pre>
+     * grant to be Authorized in authz grant
+     * </pre>
+     *
+     * <code>.ixo.entity.v1beta1.Grant grant = 4 [json_name = "grant", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/x/authz.Grant"];</code>
+     * @return The grant.
+     */
+    com.ixo.entity.v1beta1.CosmosProto.Grant getGrant();
+    /**
+     * <pre>
+     * grant to be Authorized in authz grant
+     * </pre>
+     *
+     * <code>.ixo.entity.v1beta1.Grant grant = 4 [json_name = "grant", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/x/authz.Grant"];</code>
+     */
+    com.ixo.entity.v1beta1.CosmosProto.GrantOrBuilder getGrantOrBuilder();
+
+    /**
+     * <pre>
+     * the owner_address used to sign this transaction.
+     * </pre>
+     *
+     * <code>string owner_address = 5 [json_name = "ownerAddress"];</code>
+     * @return The ownerAddress.
+     */
+    java.lang.String getOwnerAddress();
+    /**
+     * <pre>
+     * the owner_address used to sign this transaction.
+     * </pre>
+     *
+     * <code>string owner_address = 5 [json_name = "ownerAddress"];</code>
+     * @return The bytes for ownerAddress.
+     */
+    com.google.protobuf.ByteString
+        getOwnerAddressBytes();
+  }
+  /**
+   * <pre>
+   * Create a authz grant from entity account (as grantor) to recipient in msg as
+   * grantee for the specific authorization
+   * </pre>
+   *
+   * Protobuf type {@code ixo.entity.v1beta1.MsgGrantEntityAccountAuthz}
+   */
+  public static final class MsgGrantEntityAccountAuthz extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.entity.v1beta1.MsgGrantEntityAccountAuthz)
+      MsgGrantEntityAccountAuthzOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgGrantEntityAccountAuthz.newBuilder() to construct.
+    private MsgGrantEntityAccountAuthz(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgGrantEntityAccountAuthz() {
+      id_ = "";
+      name_ = "";
+      granteeAddress_ = "";
+      ownerAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgGrantEntityAccountAuthz();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgGrantEntityAccountAuthz_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgGrantEntityAccountAuthz_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz.class, com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <pre>
+     * entity id (did) to create account for
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * entity id (did) to create account for
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * name of account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * name of account
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GRANTEE_ADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object granteeAddress_ = "";
+    /**
+     * <pre>
+     * the grantee address that will be able to execute the authz authorization
+     * </pre>
+     *
+     * <code>string grantee_address = 3 [json_name = "granteeAddress"];</code>
+     * @return The granteeAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getGranteeAddress() {
+      java.lang.Object ref = granteeAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        granteeAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * the grantee address that will be able to execute the authz authorization
+     * </pre>
+     *
+     * <code>string grantee_address = 3 [json_name = "granteeAddress"];</code>
+     * @return The bytes for granteeAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGranteeAddressBytes() {
+      java.lang.Object ref = granteeAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        granteeAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GRANT_FIELD_NUMBER = 4;
+    private com.ixo.entity.v1beta1.CosmosProto.Grant grant_;
+    /**
+     * <pre>
+     * grant to be Authorized in authz grant
+     * </pre>
+     *
+     * <code>.ixo.entity.v1beta1.Grant grant = 4 [json_name = "grant", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/x/authz.Grant"];</code>
+     * @return Whether the grant field is set.
+     */
+    @java.lang.Override
+    public boolean hasGrant() {
+      return grant_ != null;
+    }
+    /**
+     * <pre>
+     * grant to be Authorized in authz grant
+     * </pre>
+     *
+     * <code>.ixo.entity.v1beta1.Grant grant = 4 [json_name = "grant", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/x/authz.Grant"];</code>
+     * @return The grant.
+     */
+    @java.lang.Override
+    public com.ixo.entity.v1beta1.CosmosProto.Grant getGrant() {
+      return grant_ == null ? com.ixo.entity.v1beta1.CosmosProto.Grant.getDefaultInstance() : grant_;
+    }
+    /**
+     * <pre>
+     * grant to be Authorized in authz grant
+     * </pre>
+     *
+     * <code>.ixo.entity.v1beta1.Grant grant = 4 [json_name = "grant", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/x/authz.Grant"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.entity.v1beta1.CosmosProto.GrantOrBuilder getGrantOrBuilder() {
+      return grant_ == null ? com.ixo.entity.v1beta1.CosmosProto.Grant.getDefaultInstance() : grant_;
+    }
+
+    public static final int OWNER_ADDRESS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ownerAddress_ = "";
+    /**
+     * <pre>
+     * the owner_address used to sign this transaction.
+     * </pre>
+     *
+     * <code>string owner_address = 5 [json_name = "ownerAddress"];</code>
+     * @return The ownerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getOwnerAddress() {
+      java.lang.Object ref = ownerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ownerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * the owner_address used to sign this transaction.
+     * </pre>
+     *
+     * <code>string owner_address = 5 [json_name = "ownerAddress"];</code>
+     * @return The bytes for ownerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerAddressBytes() {
+      java.lang.Object ref = ownerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ownerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(granteeAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, granteeAddress_);
+      }
+      if (grant_ != null) {
+        output.writeMessage(4, getGrant());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, ownerAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(granteeAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, granteeAddress_);
+      }
+      if (grant_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getGrant());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, ownerAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz)) {
+        return super.equals(obj);
+      }
+      com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz other = (com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getGranteeAddress()
+          .equals(other.getGranteeAddress())) return false;
+      if (hasGrant() != other.hasGrant()) return false;
+      if (hasGrant()) {
+        if (!getGrant()
+            .equals(other.getGrant())) return false;
+      }
+      if (!getOwnerAddress()
+          .equals(other.getOwnerAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + GRANTEE_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getGranteeAddress().hashCode();
+      if (hasGrant()) {
+        hash = (37 * hash) + GRANT_FIELD_NUMBER;
+        hash = (53 * hash) + getGrant().hashCode();
+      }
+      hash = (37 * hash) + OWNER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getOwnerAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Create a authz grant from entity account (as grantor) to recipient in msg as
+     * grantee for the specific authorization
+     * </pre>
+     *
+     * Protobuf type {@code ixo.entity.v1beta1.MsgGrantEntityAccountAuthz}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.entity.v1beta1.MsgGrantEntityAccountAuthz)
+        com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgGrantEntityAccountAuthz_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgGrantEntityAccountAuthz_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz.class, com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz.Builder.class);
+      }
+
+      // Construct using com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = "";
+        name_ = "";
+        granteeAddress_ = "";
+        grant_ = null;
+        if (grantBuilder_ != null) {
+          grantBuilder_.dispose();
+          grantBuilder_ = null;
+        }
+        ownerAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgGrantEntityAccountAuthz_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz getDefaultInstanceForType() {
+        return com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz build() {
+        com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz buildPartial() {
+        com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz result = new com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.granteeAddress_ = granteeAddress_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.grant_ = grantBuilder_ == null
+              ? grant_
+              : grantBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.ownerAddress_ = ownerAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz) {
+          return mergeFrom((com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz other) {
+        if (other == com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getGranteeAddress().isEmpty()) {
+          granteeAddress_ = other.granteeAddress_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.hasGrant()) {
+          mergeGrant(other.getGrant());
+        }
+        if (!other.getOwnerAddress().isEmpty()) {
+          ownerAddress_ = other.ownerAddress_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                granteeAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getGrantFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                ownerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * entity id (did) to create account for
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * entity id (did) to create account for
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * entity id (did) to create account for
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * entity id (did) to create account for
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * entity id (did) to create account for
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * name of account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * name of account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * name of account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * name of account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * name of account
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object granteeAddress_ = "";
+      /**
+       * <pre>
+       * the grantee address that will be able to execute the authz authorization
+       * </pre>
+       *
+       * <code>string grantee_address = 3 [json_name = "granteeAddress"];</code>
+       * @return The granteeAddress.
+       */
+      public java.lang.String getGranteeAddress() {
+        java.lang.Object ref = granteeAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          granteeAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the grantee address that will be able to execute the authz authorization
+       * </pre>
+       *
+       * <code>string grantee_address = 3 [json_name = "granteeAddress"];</code>
+       * @return The bytes for granteeAddress.
+       */
+      public com.google.protobuf.ByteString
+          getGranteeAddressBytes() {
+        java.lang.Object ref = granteeAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          granteeAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the grantee address that will be able to execute the authz authorization
+       * </pre>
+       *
+       * <code>string grantee_address = 3 [json_name = "granteeAddress"];</code>
+       * @param value The granteeAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGranteeAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        granteeAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the grantee address that will be able to execute the authz authorization
+       * </pre>
+       *
+       * <code>string grantee_address = 3 [json_name = "granteeAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGranteeAddress() {
+        granteeAddress_ = getDefaultInstance().getGranteeAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the grantee address that will be able to execute the authz authorization
+       * </pre>
+       *
+       * <code>string grantee_address = 3 [json_name = "granteeAddress"];</code>
+       * @param value The bytes for granteeAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGranteeAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        granteeAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.ixo.entity.v1beta1.CosmosProto.Grant grant_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.ixo.entity.v1beta1.CosmosProto.Grant, com.ixo.entity.v1beta1.CosmosProto.Grant.Builder, com.ixo.entity.v1beta1.CosmosProto.GrantOrBuilder> grantBuilder_;
+      /**
+       * <pre>
+       * grant to be Authorized in authz grant
+       * </pre>
+       *
+       * <code>.ixo.entity.v1beta1.Grant grant = 4 [json_name = "grant", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/x/authz.Grant"];</code>
+       * @return Whether the grant field is set.
+       */
+      public boolean hasGrant() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * grant to be Authorized in authz grant
+       * </pre>
+       *
+       * <code>.ixo.entity.v1beta1.Grant grant = 4 [json_name = "grant", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/x/authz.Grant"];</code>
+       * @return The grant.
+       */
+      public com.ixo.entity.v1beta1.CosmosProto.Grant getGrant() {
+        if (grantBuilder_ == null) {
+          return grant_ == null ? com.ixo.entity.v1beta1.CosmosProto.Grant.getDefaultInstance() : grant_;
+        } else {
+          return grantBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * grant to be Authorized in authz grant
+       * </pre>
+       *
+       * <code>.ixo.entity.v1beta1.Grant grant = 4 [json_name = "grant", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/x/authz.Grant"];</code>
+       */
+      public Builder setGrant(com.ixo.entity.v1beta1.CosmosProto.Grant value) {
+        if (grantBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          grant_ = value;
+        } else {
+          grantBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * grant to be Authorized in authz grant
+       * </pre>
+       *
+       * <code>.ixo.entity.v1beta1.Grant grant = 4 [json_name = "grant", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/x/authz.Grant"];</code>
+       */
+      public Builder setGrant(
+          com.ixo.entity.v1beta1.CosmosProto.Grant.Builder builderForValue) {
+        if (grantBuilder_ == null) {
+          grant_ = builderForValue.build();
+        } else {
+          grantBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * grant to be Authorized in authz grant
+       * </pre>
+       *
+       * <code>.ixo.entity.v1beta1.Grant grant = 4 [json_name = "grant", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/x/authz.Grant"];</code>
+       */
+      public Builder mergeGrant(com.ixo.entity.v1beta1.CosmosProto.Grant value) {
+        if (grantBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            grant_ != null &&
+            grant_ != com.ixo.entity.v1beta1.CosmosProto.Grant.getDefaultInstance()) {
+            getGrantBuilder().mergeFrom(value);
+          } else {
+            grant_ = value;
+          }
+        } else {
+          grantBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * grant to be Authorized in authz grant
+       * </pre>
+       *
+       * <code>.ixo.entity.v1beta1.Grant grant = 4 [json_name = "grant", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/x/authz.Grant"];</code>
+       */
+      public Builder clearGrant() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        grant_ = null;
+        if (grantBuilder_ != null) {
+          grantBuilder_.dispose();
+          grantBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * grant to be Authorized in authz grant
+       * </pre>
+       *
+       * <code>.ixo.entity.v1beta1.Grant grant = 4 [json_name = "grant", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/x/authz.Grant"];</code>
+       */
+      public com.ixo.entity.v1beta1.CosmosProto.Grant.Builder getGrantBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getGrantFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * grant to be Authorized in authz grant
+       * </pre>
+       *
+       * <code>.ixo.entity.v1beta1.Grant grant = 4 [json_name = "grant", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/x/authz.Grant"];</code>
+       */
+      public com.ixo.entity.v1beta1.CosmosProto.GrantOrBuilder getGrantOrBuilder() {
+        if (grantBuilder_ != null) {
+          return grantBuilder_.getMessageOrBuilder();
+        } else {
+          return grant_ == null ?
+              com.ixo.entity.v1beta1.CosmosProto.Grant.getDefaultInstance() : grant_;
+        }
+      }
+      /**
+       * <pre>
+       * grant to be Authorized in authz grant
+       * </pre>
+       *
+       * <code>.ixo.entity.v1beta1.Grant grant = 4 [json_name = "grant", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/x/authz.Grant"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.ixo.entity.v1beta1.CosmosProto.Grant, com.ixo.entity.v1beta1.CosmosProto.Grant.Builder, com.ixo.entity.v1beta1.CosmosProto.GrantOrBuilder> 
+          getGrantFieldBuilder() {
+        if (grantBuilder_ == null) {
+          grantBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.ixo.entity.v1beta1.CosmosProto.Grant, com.ixo.entity.v1beta1.CosmosProto.Grant.Builder, com.ixo.entity.v1beta1.CosmosProto.GrantOrBuilder>(
+                  getGrant(),
+                  getParentForChildren(),
+                  isClean());
+          grant_ = null;
+        }
+        return grantBuilder_;
+      }
+
+      private java.lang.Object ownerAddress_ = "";
+      /**
+       * <pre>
+       * the owner_address used to sign this transaction.
+       * </pre>
+       *
+       * <code>string owner_address = 5 [json_name = "ownerAddress"];</code>
+       * @return The ownerAddress.
+       */
+      public java.lang.String getOwnerAddress() {
+        java.lang.Object ref = ownerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ownerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the owner_address used to sign this transaction.
+       * </pre>
+       *
+       * <code>string owner_address = 5 [json_name = "ownerAddress"];</code>
+       * @return The bytes for ownerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerAddressBytes() {
+        java.lang.Object ref = ownerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ownerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the owner_address used to sign this transaction.
+       * </pre>
+       *
+       * <code>string owner_address = 5 [json_name = "ownerAddress"];</code>
+       * @param value The ownerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ownerAddress_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the owner_address used to sign this transaction.
+       * </pre>
+       *
+       * <code>string owner_address = 5 [json_name = "ownerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwnerAddress() {
+        ownerAddress_ = getDefaultInstance().getOwnerAddress();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the owner_address used to sign this transaction.
+       * </pre>
+       *
+       * <code>string owner_address = 5 [json_name = "ownerAddress"];</code>
+       * @param value The bytes for ownerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ownerAddress_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.entity.v1beta1.MsgGrantEntityAccountAuthz)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.entity.v1beta1.MsgGrantEntityAccountAuthz)
+    private static final com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz();
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgGrantEntityAccountAuthz>
+        PARSER = new com.google.protobuf.AbstractParser<MsgGrantEntityAccountAuthz>() {
+      @java.lang.Override
+      public MsgGrantEntityAccountAuthz parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgGrantEntityAccountAuthz> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgGrantEntityAccountAuthz> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthz getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgGrantEntityAccountAuthzResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.entity.v1beta1.MsgGrantEntityAccountAuthzResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code ixo.entity.v1beta1.MsgGrantEntityAccountAuthzResponse}
+   */
+  public static final class MsgGrantEntityAccountAuthzResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.entity.v1beta1.MsgGrantEntityAccountAuthzResponse)
+      MsgGrantEntityAccountAuthzResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgGrantEntityAccountAuthzResponse.newBuilder() to construct.
+    private MsgGrantEntityAccountAuthzResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgGrantEntityAccountAuthzResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgGrantEntityAccountAuthzResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgGrantEntityAccountAuthzResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgGrantEntityAccountAuthzResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse.class, com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse)) {
+        return super.equals(obj);
+      }
+      com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse other = (com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.entity.v1beta1.MsgGrantEntityAccountAuthzResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.entity.v1beta1.MsgGrantEntityAccountAuthzResponse)
+        com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgGrantEntityAccountAuthzResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgGrantEntityAccountAuthzResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse.class, com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse.Builder.class);
+      }
+
+      // Construct using com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.entity.v1beta1.TxProto.internal_static_ixo_entity_v1beta1_MsgGrantEntityAccountAuthzResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse getDefaultInstanceForType() {
+        return com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse build() {
+        com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse buildPartial() {
+        com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse result = new com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse) {
+          return mergeFrom((com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse other) {
+        if (other == com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.entity.v1beta1.MsgGrantEntityAccountAuthzResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.entity.v1beta1.MsgGrantEntityAccountAuthzResponse)
+    private static final com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse();
+    }
+
+    public static com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgGrantEntityAccountAuthzResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgGrantEntityAccountAuthzResponse>() {
+      @java.lang.Override
+      public MsgGrantEntityAccountAuthzResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgGrantEntityAccountAuthzResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgGrantEntityAccountAuthzResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.entity.v1beta1.TxProto.MsgGrantEntityAccountAuthzResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_entity_v1beta1_MsgCreateEntity_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_entity_v1beta1_MsgCreateEntity_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_entity_v1beta1_MsgCreateEntityResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_entity_v1beta1_MsgCreateEntityResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_entity_v1beta1_MsgUpdateEntity_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_entity_v1beta1_MsgUpdateEntity_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_entity_v1beta1_MsgUpdateEntityResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_entity_v1beta1_MsgUpdateEntityResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_entity_v1beta1_MsgUpdateEntityVerified_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_entity_v1beta1_MsgUpdateEntityVerified_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_entity_v1beta1_MsgUpdateEntityVerifiedResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_entity_v1beta1_MsgUpdateEntityVerifiedResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_entity_v1beta1_MsgTransferEntity_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_entity_v1beta1_MsgTransferEntity_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_entity_v1beta1_MsgTransferEntityResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_entity_v1beta1_MsgTransferEntityResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_entity_v1beta1_MsgCreateEntityAccount_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_entity_v1beta1_MsgCreateEntityAccount_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_entity_v1beta1_MsgCreateEntityAccountResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_entity_v1beta1_MsgCreateEntityAccountResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_entity_v1beta1_MsgGrantEntityAccountAuthz_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_entity_v1beta1_MsgGrantEntityAccountAuthz_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_entity_v1beta1_MsgGrantEntityAccountAuthzResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_entity_v1beta1_MsgGrantEntityAccountAuthzResponse_fieldAccessorTable;
 
@@ -170,12 +15526,12 @@ public final class TxProto {
       "\201\001\n\027GrantEntityAccountAuthz\022..ixo.entity" +
       ".v1beta1.MsgGrantEntityAccountAuthz\0326.ix" +
       "o.entity.v1beta1.MsgGrantEntityAccountAu" +
-      "thzResponseB\303\001\n\026com.ixo.entity.v1beta1B\007" +
-      "TxProtoP\001Z6github.com/ixofoundation/ixo-" +
-      "blockchain/x/entity/types\242\002\003IEX\252\002\022Ixo.En" +
-      "tity.V1beta1\312\002\022Ixo\\Entity\\V1beta1\342\002\036Ixo\\" +
-      "Entity\\V1beta1\\GPBMetadata\352\002\024Ixo::Entity" +
-      "::V1beta1b\006proto3"
+      "thzResponseB\301\001\n\026com.ixo.entity.v1beta1B\007" +
+      "TxProtoZ6github.com/ixofoundation/ixo-bl" +
+      "ockchain/x/entity/types\242\002\003IEX\252\002\022Ixo.Enti" +
+      "ty.V1beta1\312\002\022Ixo\\Entity\\V1beta1\342\002\036Ixo\\En" +
+      "tity\\V1beta1\\GPBMetadata\352\002\024Ixo::Entity::" +
+      "V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

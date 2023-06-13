@@ -14,19 +14,5736 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.ecocredit.v1alpha2.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Params contains the updateable global parameters for use with the x/params
+     * module
+     * </pre>
+     *
+     * <code>.regen.ecocredit.v1alpha2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * Params contains the updateable global parameters for use with the x/params
+     * module
+     * </pre>
+     *
+     * <code>.regen.ecocredit.v1alpha2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.regen.ecocredit.v1alpha2.TypesProto.Params getParams();
+    /**
+     * <pre>
+     * Params contains the updateable global parameters for use with the x/params
+     * module
+     * </pre>
+     *
+     * <code>.regen.ecocredit.v1alpha2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.regen.ecocredit.v1alpha2.TypesProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <pre>
+     * class_info is the list of credit class info.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.ClassInfo class_info = 2 [json_name = "classInfo"];</code>
+     */
+    java.util.List<com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo> 
+        getClassInfoList();
+    /**
+     * <pre>
+     * class_info is the list of credit class info.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.ClassInfo class_info = 2 [json_name = "classInfo"];</code>
+     */
+    com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo getClassInfo(int index);
+    /**
+     * <pre>
+     * class_info is the list of credit class info.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.ClassInfo class_info = 2 [json_name = "classInfo"];</code>
+     */
+    int getClassInfoCount();
+    /**
+     * <pre>
+     * class_info is the list of credit class info.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.ClassInfo class_info = 2 [json_name = "classInfo"];</code>
+     */
+    java.util.List<? extends com.regen.ecocredit.v1alpha2.TypesProto.ClassInfoOrBuilder> 
+        getClassInfoOrBuilderList();
+    /**
+     * <pre>
+     * class_info is the list of credit class info.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.ClassInfo class_info = 2 [json_name = "classInfo"];</code>
+     */
+    com.regen.ecocredit.v1alpha2.TypesProto.ClassInfoOrBuilder getClassInfoOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * batch_info is the list of credit batch info.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.BatchInfo batch_info = 3 [json_name = "batchInfo"];</code>
+     */
+    java.util.List<com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo> 
+        getBatchInfoList();
+    /**
+     * <pre>
+     * batch_info is the list of credit batch info.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.BatchInfo batch_info = 3 [json_name = "batchInfo"];</code>
+     */
+    com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo getBatchInfo(int index);
+    /**
+     * <pre>
+     * batch_info is the list of credit batch info.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.BatchInfo batch_info = 3 [json_name = "batchInfo"];</code>
+     */
+    int getBatchInfoCount();
+    /**
+     * <pre>
+     * batch_info is the list of credit batch info.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.BatchInfo batch_info = 3 [json_name = "batchInfo"];</code>
+     */
+    java.util.List<? extends com.regen.ecocredit.v1alpha2.TypesProto.BatchInfoOrBuilder> 
+        getBatchInfoOrBuilderList();
+    /**
+     * <pre>
+     * batch_info is the list of credit batch info.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.BatchInfo batch_info = 3 [json_name = "batchInfo"];</code>
+     */
+    com.regen.ecocredit.v1alpha2.TypesProto.BatchInfoOrBuilder getBatchInfoOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * sequences is the list of credit type sequence.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.CreditTypeSeq sequences = 4 [json_name = "sequences"];</code>
+     */
+    java.util.List<com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeq> 
+        getSequencesList();
+    /**
+     * <pre>
+     * sequences is the list of credit type sequence.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.CreditTypeSeq sequences = 4 [json_name = "sequences"];</code>
+     */
+    com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeq getSequences(int index);
+    /**
+     * <pre>
+     * sequences is the list of credit type sequence.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.CreditTypeSeq sequences = 4 [json_name = "sequences"];</code>
+     */
+    int getSequencesCount();
+    /**
+     * <pre>
+     * sequences is the list of credit type sequence.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.CreditTypeSeq sequences = 4 [json_name = "sequences"];</code>
+     */
+    java.util.List<? extends com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeqOrBuilder> 
+        getSequencesOrBuilderList();
+    /**
+     * <pre>
+     * sequences is the list of credit type sequence.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.CreditTypeSeq sequences = 4 [json_name = "sequences"];</code>
+     */
+    com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeqOrBuilder getSequencesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * balances is the list of credit batch tradable/retired units.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.Balance balances = 5 [json_name = "balances"];</code>
+     */
+    java.util.List<com.regen.ecocredit.v1alpha2.GenesisProto.Balance> 
+        getBalancesList();
+    /**
+     * <pre>
+     * balances is the list of credit batch tradable/retired units.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.Balance balances = 5 [json_name = "balances"];</code>
+     */
+    com.regen.ecocredit.v1alpha2.GenesisProto.Balance getBalances(int index);
+    /**
+     * <pre>
+     * balances is the list of credit batch tradable/retired units.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.Balance balances = 5 [json_name = "balances"];</code>
+     */
+    int getBalancesCount();
+    /**
+     * <pre>
+     * balances is the list of credit batch tradable/retired units.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.Balance balances = 5 [json_name = "balances"];</code>
+     */
+    java.util.List<? extends com.regen.ecocredit.v1alpha2.GenesisProto.BalanceOrBuilder> 
+        getBalancesOrBuilderList();
+    /**
+     * <pre>
+     * balances is the list of credit batch tradable/retired units.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.Balance balances = 5 [json_name = "balances"];</code>
+     */
+    com.regen.ecocredit.v1alpha2.GenesisProto.BalanceOrBuilder getBalancesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * supplies is the list of credit batch tradable/retired supply.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.Supply supplies = 6 [json_name = "supplies"];</code>
+     */
+    java.util.List<com.regen.ecocredit.v1alpha2.GenesisProto.Supply> 
+        getSuppliesList();
+    /**
+     * <pre>
+     * supplies is the list of credit batch tradable/retired supply.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.Supply supplies = 6 [json_name = "supplies"];</code>
+     */
+    com.regen.ecocredit.v1alpha2.GenesisProto.Supply getSupplies(int index);
+    /**
+     * <pre>
+     * supplies is the list of credit batch tradable/retired supply.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.Supply supplies = 6 [json_name = "supplies"];</code>
+     */
+    int getSuppliesCount();
+    /**
+     * <pre>
+     * supplies is the list of credit batch tradable/retired supply.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.Supply supplies = 6 [json_name = "supplies"];</code>
+     */
+    java.util.List<? extends com.regen.ecocredit.v1alpha2.GenesisProto.SupplyOrBuilder> 
+        getSuppliesOrBuilderList();
+    /**
+     * <pre>
+     * supplies is the list of credit batch tradable/retired supply.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.Supply supplies = 6 [json_name = "supplies"];</code>
+     */
+    com.regen.ecocredit.v1alpha2.GenesisProto.SupplyOrBuilder getSuppliesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * project_info is the list of projects.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.ProjectInfo project_info = 7 [json_name = "projectInfo"];</code>
+     */
+    java.util.List<com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfo> 
+        getProjectInfoList();
+    /**
+     * <pre>
+     * project_info is the list of projects.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.ProjectInfo project_info = 7 [json_name = "projectInfo"];</code>
+     */
+    com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfo getProjectInfo(int index);
+    /**
+     * <pre>
+     * project_info is the list of projects.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.ProjectInfo project_info = 7 [json_name = "projectInfo"];</code>
+     */
+    int getProjectInfoCount();
+    /**
+     * <pre>
+     * project_info is the list of projects.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.ProjectInfo project_info = 7 [json_name = "projectInfo"];</code>
+     */
+    java.util.List<? extends com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfoOrBuilder> 
+        getProjectInfoOrBuilderList();
+    /**
+     * <pre>
+     * project_info is the list of projects.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.ProjectInfo project_info = 7 [json_name = "projectInfo"];</code>
+     */
+    com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfoOrBuilder getProjectInfoOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines ecocredit module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code regen.ecocredit.v1alpha2.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.ecocredit.v1alpha2.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      classInfo_ = java.util.Collections.emptyList();
+      batchInfo_ = java.util.Collections.emptyList();
+      sequences_ = java.util.Collections.emptyList();
+      balances_ = java.util.Collections.emptyList();
+      supplies_ = java.util.Collections.emptyList();
+      projectInfo_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.ecocredit.v1alpha2.GenesisProto.internal_static_regen_ecocredit_v1alpha2_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.ecocredit.v1alpha2.GenesisProto.internal_static_regen_ecocredit_v1alpha2_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState.class, com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.regen.ecocredit.v1alpha2.TypesProto.Params params_;
+    /**
+     * <pre>
+     * Params contains the updateable global parameters for use with the x/params
+     * module
+     * </pre>
+     *
+     * <code>.regen.ecocredit.v1alpha2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * Params contains the updateable global parameters for use with the x/params
+     * module
+     * </pre>
+     *
+     * <code>.regen.ecocredit.v1alpha2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.regen.ecocredit.v1alpha2.TypesProto.Params getParams() {
+      return params_ == null ? com.regen.ecocredit.v1alpha2.TypesProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * Params contains the updateable global parameters for use with the x/params
+     * module
+     * </pre>
+     *
+     * <code>.regen.ecocredit.v1alpha2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.regen.ecocredit.v1alpha2.TypesProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.regen.ecocredit.v1alpha2.TypesProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int CLASS_INFO_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo> classInfo_;
+    /**
+     * <pre>
+     * class_info is the list of credit class info.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.ClassInfo class_info = 2 [json_name = "classInfo"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo> getClassInfoList() {
+      return classInfo_;
+    }
+    /**
+     * <pre>
+     * class_info is the list of credit class info.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.ClassInfo class_info = 2 [json_name = "classInfo"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.regen.ecocredit.v1alpha2.TypesProto.ClassInfoOrBuilder> 
+        getClassInfoOrBuilderList() {
+      return classInfo_;
+    }
+    /**
+     * <pre>
+     * class_info is the list of credit class info.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.ClassInfo class_info = 2 [json_name = "classInfo"];</code>
+     */
+    @java.lang.Override
+    public int getClassInfoCount() {
+      return classInfo_.size();
+    }
+    /**
+     * <pre>
+     * class_info is the list of credit class info.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.ClassInfo class_info = 2 [json_name = "classInfo"];</code>
+     */
+    @java.lang.Override
+    public com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo getClassInfo(int index) {
+      return classInfo_.get(index);
+    }
+    /**
+     * <pre>
+     * class_info is the list of credit class info.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.ClassInfo class_info = 2 [json_name = "classInfo"];</code>
+     */
+    @java.lang.Override
+    public com.regen.ecocredit.v1alpha2.TypesProto.ClassInfoOrBuilder getClassInfoOrBuilder(
+        int index) {
+      return classInfo_.get(index);
+    }
+
+    public static final int BATCH_INFO_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo> batchInfo_;
+    /**
+     * <pre>
+     * batch_info is the list of credit batch info.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.BatchInfo batch_info = 3 [json_name = "batchInfo"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo> getBatchInfoList() {
+      return batchInfo_;
+    }
+    /**
+     * <pre>
+     * batch_info is the list of credit batch info.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.BatchInfo batch_info = 3 [json_name = "batchInfo"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.regen.ecocredit.v1alpha2.TypesProto.BatchInfoOrBuilder> 
+        getBatchInfoOrBuilderList() {
+      return batchInfo_;
+    }
+    /**
+     * <pre>
+     * batch_info is the list of credit batch info.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.BatchInfo batch_info = 3 [json_name = "batchInfo"];</code>
+     */
+    @java.lang.Override
+    public int getBatchInfoCount() {
+      return batchInfo_.size();
+    }
+    /**
+     * <pre>
+     * batch_info is the list of credit batch info.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.BatchInfo batch_info = 3 [json_name = "batchInfo"];</code>
+     */
+    @java.lang.Override
+    public com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo getBatchInfo(int index) {
+      return batchInfo_.get(index);
+    }
+    /**
+     * <pre>
+     * batch_info is the list of credit batch info.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.BatchInfo batch_info = 3 [json_name = "batchInfo"];</code>
+     */
+    @java.lang.Override
+    public com.regen.ecocredit.v1alpha2.TypesProto.BatchInfoOrBuilder getBatchInfoOrBuilder(
+        int index) {
+      return batchInfo_.get(index);
+    }
+
+    public static final int SEQUENCES_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeq> sequences_;
+    /**
+     * <pre>
+     * sequences is the list of credit type sequence.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.CreditTypeSeq sequences = 4 [json_name = "sequences"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeq> getSequencesList() {
+      return sequences_;
+    }
+    /**
+     * <pre>
+     * sequences is the list of credit type sequence.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.CreditTypeSeq sequences = 4 [json_name = "sequences"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeqOrBuilder> 
+        getSequencesOrBuilderList() {
+      return sequences_;
+    }
+    /**
+     * <pre>
+     * sequences is the list of credit type sequence.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.CreditTypeSeq sequences = 4 [json_name = "sequences"];</code>
+     */
+    @java.lang.Override
+    public int getSequencesCount() {
+      return sequences_.size();
+    }
+    /**
+     * <pre>
+     * sequences is the list of credit type sequence.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.CreditTypeSeq sequences = 4 [json_name = "sequences"];</code>
+     */
+    @java.lang.Override
+    public com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeq getSequences(int index) {
+      return sequences_.get(index);
+    }
+    /**
+     * <pre>
+     * sequences is the list of credit type sequence.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.CreditTypeSeq sequences = 4 [json_name = "sequences"];</code>
+     */
+    @java.lang.Override
+    public com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeqOrBuilder getSequencesOrBuilder(
+        int index) {
+      return sequences_.get(index);
+    }
+
+    public static final int BALANCES_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.regen.ecocredit.v1alpha2.GenesisProto.Balance> balances_;
+    /**
+     * <pre>
+     * balances is the list of credit batch tradable/retired units.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.Balance balances = 5 [json_name = "balances"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.regen.ecocredit.v1alpha2.GenesisProto.Balance> getBalancesList() {
+      return balances_;
+    }
+    /**
+     * <pre>
+     * balances is the list of credit batch tradable/retired units.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.Balance balances = 5 [json_name = "balances"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.regen.ecocredit.v1alpha2.GenesisProto.BalanceOrBuilder> 
+        getBalancesOrBuilderList() {
+      return balances_;
+    }
+    /**
+     * <pre>
+     * balances is the list of credit batch tradable/retired units.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.Balance balances = 5 [json_name = "balances"];</code>
+     */
+    @java.lang.Override
+    public int getBalancesCount() {
+      return balances_.size();
+    }
+    /**
+     * <pre>
+     * balances is the list of credit batch tradable/retired units.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.Balance balances = 5 [json_name = "balances"];</code>
+     */
+    @java.lang.Override
+    public com.regen.ecocredit.v1alpha2.GenesisProto.Balance getBalances(int index) {
+      return balances_.get(index);
+    }
+    /**
+     * <pre>
+     * balances is the list of credit batch tradable/retired units.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.Balance balances = 5 [json_name = "balances"];</code>
+     */
+    @java.lang.Override
+    public com.regen.ecocredit.v1alpha2.GenesisProto.BalanceOrBuilder getBalancesOrBuilder(
+        int index) {
+      return balances_.get(index);
+    }
+
+    public static final int SUPPLIES_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.regen.ecocredit.v1alpha2.GenesisProto.Supply> supplies_;
+    /**
+     * <pre>
+     * supplies is the list of credit batch tradable/retired supply.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.Supply supplies = 6 [json_name = "supplies"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.regen.ecocredit.v1alpha2.GenesisProto.Supply> getSuppliesList() {
+      return supplies_;
+    }
+    /**
+     * <pre>
+     * supplies is the list of credit batch tradable/retired supply.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.Supply supplies = 6 [json_name = "supplies"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.regen.ecocredit.v1alpha2.GenesisProto.SupplyOrBuilder> 
+        getSuppliesOrBuilderList() {
+      return supplies_;
+    }
+    /**
+     * <pre>
+     * supplies is the list of credit batch tradable/retired supply.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.Supply supplies = 6 [json_name = "supplies"];</code>
+     */
+    @java.lang.Override
+    public int getSuppliesCount() {
+      return supplies_.size();
+    }
+    /**
+     * <pre>
+     * supplies is the list of credit batch tradable/retired supply.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.Supply supplies = 6 [json_name = "supplies"];</code>
+     */
+    @java.lang.Override
+    public com.regen.ecocredit.v1alpha2.GenesisProto.Supply getSupplies(int index) {
+      return supplies_.get(index);
+    }
+    /**
+     * <pre>
+     * supplies is the list of credit batch tradable/retired supply.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.Supply supplies = 6 [json_name = "supplies"];</code>
+     */
+    @java.lang.Override
+    public com.regen.ecocredit.v1alpha2.GenesisProto.SupplyOrBuilder getSuppliesOrBuilder(
+        int index) {
+      return supplies_.get(index);
+    }
+
+    public static final int PROJECT_INFO_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private java.util.List<com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfo> projectInfo_;
+    /**
+     * <pre>
+     * project_info is the list of projects.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.ProjectInfo project_info = 7 [json_name = "projectInfo"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfo> getProjectInfoList() {
+      return projectInfo_;
+    }
+    /**
+     * <pre>
+     * project_info is the list of projects.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.ProjectInfo project_info = 7 [json_name = "projectInfo"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfoOrBuilder> 
+        getProjectInfoOrBuilderList() {
+      return projectInfo_;
+    }
+    /**
+     * <pre>
+     * project_info is the list of projects.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.ProjectInfo project_info = 7 [json_name = "projectInfo"];</code>
+     */
+    @java.lang.Override
+    public int getProjectInfoCount() {
+      return projectInfo_.size();
+    }
+    /**
+     * <pre>
+     * project_info is the list of projects.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.ProjectInfo project_info = 7 [json_name = "projectInfo"];</code>
+     */
+    @java.lang.Override
+    public com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfo getProjectInfo(int index) {
+      return projectInfo_.get(index);
+    }
+    /**
+     * <pre>
+     * project_info is the list of projects.
+     * </pre>
+     *
+     * <code>repeated .regen.ecocredit.v1alpha2.ProjectInfo project_info = 7 [json_name = "projectInfo"];</code>
+     */
+    @java.lang.Override
+    public com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfoOrBuilder getProjectInfoOrBuilder(
+        int index) {
+      return projectInfo_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      for (int i = 0; i < classInfo_.size(); i++) {
+        output.writeMessage(2, classInfo_.get(i));
+      }
+      for (int i = 0; i < batchInfo_.size(); i++) {
+        output.writeMessage(3, batchInfo_.get(i));
+      }
+      for (int i = 0; i < sequences_.size(); i++) {
+        output.writeMessage(4, sequences_.get(i));
+      }
+      for (int i = 0; i < balances_.size(); i++) {
+        output.writeMessage(5, balances_.get(i));
+      }
+      for (int i = 0; i < supplies_.size(); i++) {
+        output.writeMessage(6, supplies_.get(i));
+      }
+      for (int i = 0; i < projectInfo_.size(); i++) {
+        output.writeMessage(7, projectInfo_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      for (int i = 0; i < classInfo_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, classInfo_.get(i));
+      }
+      for (int i = 0; i < batchInfo_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, batchInfo_.get(i));
+      }
+      for (int i = 0; i < sequences_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, sequences_.get(i));
+      }
+      for (int i = 0; i < balances_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, balances_.get(i));
+      }
+      for (int i = 0; i < supplies_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, supplies_.get(i));
+      }
+      for (int i = 0; i < projectInfo_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, projectInfo_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState other = (com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getClassInfoList()
+          .equals(other.getClassInfoList())) return false;
+      if (!getBatchInfoList()
+          .equals(other.getBatchInfoList())) return false;
+      if (!getSequencesList()
+          .equals(other.getSequencesList())) return false;
+      if (!getBalancesList()
+          .equals(other.getBalancesList())) return false;
+      if (!getSuppliesList()
+          .equals(other.getSuppliesList())) return false;
+      if (!getProjectInfoList()
+          .equals(other.getProjectInfoList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (getClassInfoCount() > 0) {
+        hash = (37 * hash) + CLASS_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getClassInfoList().hashCode();
+      }
+      if (getBatchInfoCount() > 0) {
+        hash = (37 * hash) + BATCH_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getBatchInfoList().hashCode();
+      }
+      if (getSequencesCount() > 0) {
+        hash = (37 * hash) + SEQUENCES_FIELD_NUMBER;
+        hash = (53 * hash) + getSequencesList().hashCode();
+      }
+      if (getBalancesCount() > 0) {
+        hash = (37 * hash) + BALANCES_FIELD_NUMBER;
+        hash = (53 * hash) + getBalancesList().hashCode();
+      }
+      if (getSuppliesCount() > 0) {
+        hash = (37 * hash) + SUPPLIES_FIELD_NUMBER;
+        hash = (53 * hash) + getSuppliesList().hashCode();
+      }
+      if (getProjectInfoCount() > 0) {
+        hash = (37 * hash) + PROJECT_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getProjectInfoList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines ecocredit module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code regen.ecocredit.v1alpha2.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.ecocredit.v1alpha2.GenesisState)
+        com.regen.ecocredit.v1alpha2.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.ecocredit.v1alpha2.GenesisProto.internal_static_regen_ecocredit_v1alpha2_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.ecocredit.v1alpha2.GenesisProto.internal_static_regen_ecocredit_v1alpha2_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState.class, com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        if (classInfoBuilder_ == null) {
+          classInfo_ = java.util.Collections.emptyList();
+        } else {
+          classInfo_ = null;
+          classInfoBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (batchInfoBuilder_ == null) {
+          batchInfo_ = java.util.Collections.emptyList();
+        } else {
+          batchInfo_ = null;
+          batchInfoBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (sequencesBuilder_ == null) {
+          sequences_ = java.util.Collections.emptyList();
+        } else {
+          sequences_ = null;
+          sequencesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (balancesBuilder_ == null) {
+          balances_ = java.util.Collections.emptyList();
+        } else {
+          balances_ = null;
+          balancesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (suppliesBuilder_ == null) {
+          supplies_ = java.util.Collections.emptyList();
+        } else {
+          supplies_ = null;
+          suppliesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        if (projectInfoBuilder_ == null) {
+          projectInfo_ = java.util.Collections.emptyList();
+        } else {
+          projectInfo_ = null;
+          projectInfoBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.ecocredit.v1alpha2.GenesisProto.internal_static_regen_ecocredit_v1alpha2_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState build() {
+        com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState buildPartial() {
+        com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState result = new com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState result) {
+        if (classInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            classInfo_ = java.util.Collections.unmodifiableList(classInfo_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.classInfo_ = classInfo_;
+        } else {
+          result.classInfo_ = classInfoBuilder_.build();
+        }
+        if (batchInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            batchInfo_ = java.util.Collections.unmodifiableList(batchInfo_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.batchInfo_ = batchInfo_;
+        } else {
+          result.batchInfo_ = batchInfoBuilder_.build();
+        }
+        if (sequencesBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            sequences_ = java.util.Collections.unmodifiableList(sequences_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.sequences_ = sequences_;
+        } else {
+          result.sequences_ = sequencesBuilder_.build();
+        }
+        if (balancesBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            balances_ = java.util.Collections.unmodifiableList(balances_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.balances_ = balances_;
+        } else {
+          result.balances_ = balancesBuilder_.build();
+        }
+        if (suppliesBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            supplies_ = java.util.Collections.unmodifiableList(supplies_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.supplies_ = supplies_;
+        } else {
+          result.supplies_ = suppliesBuilder_.build();
+        }
+        if (projectInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0)) {
+            projectInfo_ = java.util.Collections.unmodifiableList(projectInfo_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.projectInfo_ = projectInfo_;
+        } else {
+          result.projectInfo_ = projectInfoBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState) {
+          return mergeFrom((com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState other) {
+        if (other == com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (classInfoBuilder_ == null) {
+          if (!other.classInfo_.isEmpty()) {
+            if (classInfo_.isEmpty()) {
+              classInfo_ = other.classInfo_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureClassInfoIsMutable();
+              classInfo_.addAll(other.classInfo_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.classInfo_.isEmpty()) {
+            if (classInfoBuilder_.isEmpty()) {
+              classInfoBuilder_.dispose();
+              classInfoBuilder_ = null;
+              classInfo_ = other.classInfo_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              classInfoBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getClassInfoFieldBuilder() : null;
+            } else {
+              classInfoBuilder_.addAllMessages(other.classInfo_);
+            }
+          }
+        }
+        if (batchInfoBuilder_ == null) {
+          if (!other.batchInfo_.isEmpty()) {
+            if (batchInfo_.isEmpty()) {
+              batchInfo_ = other.batchInfo_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureBatchInfoIsMutable();
+              batchInfo_.addAll(other.batchInfo_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.batchInfo_.isEmpty()) {
+            if (batchInfoBuilder_.isEmpty()) {
+              batchInfoBuilder_.dispose();
+              batchInfoBuilder_ = null;
+              batchInfo_ = other.batchInfo_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              batchInfoBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBatchInfoFieldBuilder() : null;
+            } else {
+              batchInfoBuilder_.addAllMessages(other.batchInfo_);
+            }
+          }
+        }
+        if (sequencesBuilder_ == null) {
+          if (!other.sequences_.isEmpty()) {
+            if (sequences_.isEmpty()) {
+              sequences_ = other.sequences_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureSequencesIsMutable();
+              sequences_.addAll(other.sequences_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.sequences_.isEmpty()) {
+            if (sequencesBuilder_.isEmpty()) {
+              sequencesBuilder_.dispose();
+              sequencesBuilder_ = null;
+              sequences_ = other.sequences_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              sequencesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSequencesFieldBuilder() : null;
+            } else {
+              sequencesBuilder_.addAllMessages(other.sequences_);
+            }
+          }
+        }
+        if (balancesBuilder_ == null) {
+          if (!other.balances_.isEmpty()) {
+            if (balances_.isEmpty()) {
+              balances_ = other.balances_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureBalancesIsMutable();
+              balances_.addAll(other.balances_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.balances_.isEmpty()) {
+            if (balancesBuilder_.isEmpty()) {
+              balancesBuilder_.dispose();
+              balancesBuilder_ = null;
+              balances_ = other.balances_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              balancesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBalancesFieldBuilder() : null;
+            } else {
+              balancesBuilder_.addAllMessages(other.balances_);
+            }
+          }
+        }
+        if (suppliesBuilder_ == null) {
+          if (!other.supplies_.isEmpty()) {
+            if (supplies_.isEmpty()) {
+              supplies_ = other.supplies_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureSuppliesIsMutable();
+              supplies_.addAll(other.supplies_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.supplies_.isEmpty()) {
+            if (suppliesBuilder_.isEmpty()) {
+              suppliesBuilder_.dispose();
+              suppliesBuilder_ = null;
+              supplies_ = other.supplies_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              suppliesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSuppliesFieldBuilder() : null;
+            } else {
+              suppliesBuilder_.addAllMessages(other.supplies_);
+            }
+          }
+        }
+        if (projectInfoBuilder_ == null) {
+          if (!other.projectInfo_.isEmpty()) {
+            if (projectInfo_.isEmpty()) {
+              projectInfo_ = other.projectInfo_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureProjectInfoIsMutable();
+              projectInfo_.addAll(other.projectInfo_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.projectInfo_.isEmpty()) {
+            if (projectInfoBuilder_.isEmpty()) {
+              projectInfoBuilder_.dispose();
+              projectInfoBuilder_ = null;
+              projectInfo_ = other.projectInfo_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              projectInfoBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getProjectInfoFieldBuilder() : null;
+            } else {
+              projectInfoBuilder_.addAllMessages(other.projectInfo_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo m =
+                    input.readMessage(
+                        com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo.parser(),
+                        extensionRegistry);
+                if (classInfoBuilder_ == null) {
+                  ensureClassInfoIsMutable();
+                  classInfo_.add(m);
+                } else {
+                  classInfoBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo m =
+                    input.readMessage(
+                        com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo.parser(),
+                        extensionRegistry);
+                if (batchInfoBuilder_ == null) {
+                  ensureBatchInfoIsMutable();
+                  batchInfo_.add(m);
+                } else {
+                  batchInfoBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeq m =
+                    input.readMessage(
+                        com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeq.parser(),
+                        extensionRegistry);
+                if (sequencesBuilder_ == null) {
+                  ensureSequencesIsMutable();
+                  sequences_.add(m);
+                } else {
+                  sequencesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                com.regen.ecocredit.v1alpha2.GenesisProto.Balance m =
+                    input.readMessage(
+                        com.regen.ecocredit.v1alpha2.GenesisProto.Balance.parser(),
+                        extensionRegistry);
+                if (balancesBuilder_ == null) {
+                  ensureBalancesIsMutable();
+                  balances_.add(m);
+                } else {
+                  balancesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                com.regen.ecocredit.v1alpha2.GenesisProto.Supply m =
+                    input.readMessage(
+                        com.regen.ecocredit.v1alpha2.GenesisProto.Supply.parser(),
+                        extensionRegistry);
+                if (suppliesBuilder_ == null) {
+                  ensureSuppliesIsMutable();
+                  supplies_.add(m);
+                } else {
+                  suppliesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 58: {
+                com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfo m =
+                    input.readMessage(
+                        com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfo.parser(),
+                        extensionRegistry);
+                if (projectInfoBuilder_ == null) {
+                  ensureProjectInfoIsMutable();
+                  projectInfo_.add(m);
+                } else {
+                  projectInfoBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.regen.ecocredit.v1alpha2.TypesProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.regen.ecocredit.v1alpha2.TypesProto.Params, com.regen.ecocredit.v1alpha2.TypesProto.Params.Builder, com.regen.ecocredit.v1alpha2.TypesProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * Params contains the updateable global parameters for use with the x/params
+       * module
+       * </pre>
+       *
+       * <code>.regen.ecocredit.v1alpha2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Params contains the updateable global parameters for use with the x/params
+       * module
+       * </pre>
+       *
+       * <code>.regen.ecocredit.v1alpha2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.regen.ecocredit.v1alpha2.TypesProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.regen.ecocredit.v1alpha2.TypesProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Params contains the updateable global parameters for use with the x/params
+       * module
+       * </pre>
+       *
+       * <code>.regen.ecocredit.v1alpha2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.regen.ecocredit.v1alpha2.TypesProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Params contains the updateable global parameters for use with the x/params
+       * module
+       * </pre>
+       *
+       * <code>.regen.ecocredit.v1alpha2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.regen.ecocredit.v1alpha2.TypesProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Params contains the updateable global parameters for use with the x/params
+       * module
+       * </pre>
+       *
+       * <code>.regen.ecocredit.v1alpha2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.regen.ecocredit.v1alpha2.TypesProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.regen.ecocredit.v1alpha2.TypesProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Params contains the updateable global parameters for use with the x/params
+       * module
+       * </pre>
+       *
+       * <code>.regen.ecocredit.v1alpha2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Params contains the updateable global parameters for use with the x/params
+       * module
+       * </pre>
+       *
+       * <code>.regen.ecocredit.v1alpha2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.TypesProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Params contains the updateable global parameters for use with the x/params
+       * module
+       * </pre>
+       *
+       * <code>.regen.ecocredit.v1alpha2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.TypesProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.regen.ecocredit.v1alpha2.TypesProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * Params contains the updateable global parameters for use with the x/params
+       * module
+       * </pre>
+       *
+       * <code>.regen.ecocredit.v1alpha2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.regen.ecocredit.v1alpha2.TypesProto.Params, com.regen.ecocredit.v1alpha2.TypesProto.Params.Builder, com.regen.ecocredit.v1alpha2.TypesProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.regen.ecocredit.v1alpha2.TypesProto.Params, com.regen.ecocredit.v1alpha2.TypesProto.Params.Builder, com.regen.ecocredit.v1alpha2.TypesProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private java.util.List<com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo> classInfo_ =
+        java.util.Collections.emptyList();
+      private void ensureClassInfoIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          classInfo_ = new java.util.ArrayList<com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo>(classInfo_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo, com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo.Builder, com.regen.ecocredit.v1alpha2.TypesProto.ClassInfoOrBuilder> classInfoBuilder_;
+
+      /**
+       * <pre>
+       * class_info is the list of credit class info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ClassInfo class_info = 2 [json_name = "classInfo"];</code>
+       */
+      public java.util.List<com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo> getClassInfoList() {
+        if (classInfoBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(classInfo_);
+        } else {
+          return classInfoBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * class_info is the list of credit class info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ClassInfo class_info = 2 [json_name = "classInfo"];</code>
+       */
+      public int getClassInfoCount() {
+        if (classInfoBuilder_ == null) {
+          return classInfo_.size();
+        } else {
+          return classInfoBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * class_info is the list of credit class info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ClassInfo class_info = 2 [json_name = "classInfo"];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo getClassInfo(int index) {
+        if (classInfoBuilder_ == null) {
+          return classInfo_.get(index);
+        } else {
+          return classInfoBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * class_info is the list of credit class info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ClassInfo class_info = 2 [json_name = "classInfo"];</code>
+       */
+      public Builder setClassInfo(
+          int index, com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo value) {
+        if (classInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClassInfoIsMutable();
+          classInfo_.set(index, value);
+          onChanged();
+        } else {
+          classInfoBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * class_info is the list of credit class info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ClassInfo class_info = 2 [json_name = "classInfo"];</code>
+       */
+      public Builder setClassInfo(
+          int index, com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo.Builder builderForValue) {
+        if (classInfoBuilder_ == null) {
+          ensureClassInfoIsMutable();
+          classInfo_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          classInfoBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * class_info is the list of credit class info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ClassInfo class_info = 2 [json_name = "classInfo"];</code>
+       */
+      public Builder addClassInfo(com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo value) {
+        if (classInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClassInfoIsMutable();
+          classInfo_.add(value);
+          onChanged();
+        } else {
+          classInfoBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * class_info is the list of credit class info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ClassInfo class_info = 2 [json_name = "classInfo"];</code>
+       */
+      public Builder addClassInfo(
+          int index, com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo value) {
+        if (classInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClassInfoIsMutable();
+          classInfo_.add(index, value);
+          onChanged();
+        } else {
+          classInfoBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * class_info is the list of credit class info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ClassInfo class_info = 2 [json_name = "classInfo"];</code>
+       */
+      public Builder addClassInfo(
+          com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo.Builder builderForValue) {
+        if (classInfoBuilder_ == null) {
+          ensureClassInfoIsMutable();
+          classInfo_.add(builderForValue.build());
+          onChanged();
+        } else {
+          classInfoBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * class_info is the list of credit class info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ClassInfo class_info = 2 [json_name = "classInfo"];</code>
+       */
+      public Builder addClassInfo(
+          int index, com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo.Builder builderForValue) {
+        if (classInfoBuilder_ == null) {
+          ensureClassInfoIsMutable();
+          classInfo_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          classInfoBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * class_info is the list of credit class info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ClassInfo class_info = 2 [json_name = "classInfo"];</code>
+       */
+      public Builder addAllClassInfo(
+          java.lang.Iterable<? extends com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo> values) {
+        if (classInfoBuilder_ == null) {
+          ensureClassInfoIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, classInfo_);
+          onChanged();
+        } else {
+          classInfoBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * class_info is the list of credit class info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ClassInfo class_info = 2 [json_name = "classInfo"];</code>
+       */
+      public Builder clearClassInfo() {
+        if (classInfoBuilder_ == null) {
+          classInfo_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          classInfoBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * class_info is the list of credit class info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ClassInfo class_info = 2 [json_name = "classInfo"];</code>
+       */
+      public Builder removeClassInfo(int index) {
+        if (classInfoBuilder_ == null) {
+          ensureClassInfoIsMutable();
+          classInfo_.remove(index);
+          onChanged();
+        } else {
+          classInfoBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * class_info is the list of credit class info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ClassInfo class_info = 2 [json_name = "classInfo"];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo.Builder getClassInfoBuilder(
+          int index) {
+        return getClassInfoFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * class_info is the list of credit class info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ClassInfo class_info = 2 [json_name = "classInfo"];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.TypesProto.ClassInfoOrBuilder getClassInfoOrBuilder(
+          int index) {
+        if (classInfoBuilder_ == null) {
+          return classInfo_.get(index);  } else {
+          return classInfoBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * class_info is the list of credit class info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ClassInfo class_info = 2 [json_name = "classInfo"];</code>
+       */
+      public java.util.List<? extends com.regen.ecocredit.v1alpha2.TypesProto.ClassInfoOrBuilder> 
+           getClassInfoOrBuilderList() {
+        if (classInfoBuilder_ != null) {
+          return classInfoBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(classInfo_);
+        }
+      }
+      /**
+       * <pre>
+       * class_info is the list of credit class info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ClassInfo class_info = 2 [json_name = "classInfo"];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo.Builder addClassInfoBuilder() {
+        return getClassInfoFieldBuilder().addBuilder(
+            com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * class_info is the list of credit class info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ClassInfo class_info = 2 [json_name = "classInfo"];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo.Builder addClassInfoBuilder(
+          int index) {
+        return getClassInfoFieldBuilder().addBuilder(
+            index, com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * class_info is the list of credit class info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ClassInfo class_info = 2 [json_name = "classInfo"];</code>
+       */
+      public java.util.List<com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo.Builder> 
+           getClassInfoBuilderList() {
+        return getClassInfoFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo, com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo.Builder, com.regen.ecocredit.v1alpha2.TypesProto.ClassInfoOrBuilder> 
+          getClassInfoFieldBuilder() {
+        if (classInfoBuilder_ == null) {
+          classInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo, com.regen.ecocredit.v1alpha2.TypesProto.ClassInfo.Builder, com.regen.ecocredit.v1alpha2.TypesProto.ClassInfoOrBuilder>(
+                  classInfo_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          classInfo_ = null;
+        }
+        return classInfoBuilder_;
+      }
+
+      private java.util.List<com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo> batchInfo_ =
+        java.util.Collections.emptyList();
+      private void ensureBatchInfoIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          batchInfo_ = new java.util.ArrayList<com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo>(batchInfo_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo, com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo.Builder, com.regen.ecocredit.v1alpha2.TypesProto.BatchInfoOrBuilder> batchInfoBuilder_;
+
+      /**
+       * <pre>
+       * batch_info is the list of credit batch info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.BatchInfo batch_info = 3 [json_name = "batchInfo"];</code>
+       */
+      public java.util.List<com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo> getBatchInfoList() {
+        if (batchInfoBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(batchInfo_);
+        } else {
+          return batchInfoBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * batch_info is the list of credit batch info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.BatchInfo batch_info = 3 [json_name = "batchInfo"];</code>
+       */
+      public int getBatchInfoCount() {
+        if (batchInfoBuilder_ == null) {
+          return batchInfo_.size();
+        } else {
+          return batchInfoBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * batch_info is the list of credit batch info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.BatchInfo batch_info = 3 [json_name = "batchInfo"];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo getBatchInfo(int index) {
+        if (batchInfoBuilder_ == null) {
+          return batchInfo_.get(index);
+        } else {
+          return batchInfoBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * batch_info is the list of credit batch info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.BatchInfo batch_info = 3 [json_name = "batchInfo"];</code>
+       */
+      public Builder setBatchInfo(
+          int index, com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo value) {
+        if (batchInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBatchInfoIsMutable();
+          batchInfo_.set(index, value);
+          onChanged();
+        } else {
+          batchInfoBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * batch_info is the list of credit batch info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.BatchInfo batch_info = 3 [json_name = "batchInfo"];</code>
+       */
+      public Builder setBatchInfo(
+          int index, com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo.Builder builderForValue) {
+        if (batchInfoBuilder_ == null) {
+          ensureBatchInfoIsMutable();
+          batchInfo_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          batchInfoBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * batch_info is the list of credit batch info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.BatchInfo batch_info = 3 [json_name = "batchInfo"];</code>
+       */
+      public Builder addBatchInfo(com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo value) {
+        if (batchInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBatchInfoIsMutable();
+          batchInfo_.add(value);
+          onChanged();
+        } else {
+          batchInfoBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * batch_info is the list of credit batch info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.BatchInfo batch_info = 3 [json_name = "batchInfo"];</code>
+       */
+      public Builder addBatchInfo(
+          int index, com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo value) {
+        if (batchInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBatchInfoIsMutable();
+          batchInfo_.add(index, value);
+          onChanged();
+        } else {
+          batchInfoBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * batch_info is the list of credit batch info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.BatchInfo batch_info = 3 [json_name = "batchInfo"];</code>
+       */
+      public Builder addBatchInfo(
+          com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo.Builder builderForValue) {
+        if (batchInfoBuilder_ == null) {
+          ensureBatchInfoIsMutable();
+          batchInfo_.add(builderForValue.build());
+          onChanged();
+        } else {
+          batchInfoBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * batch_info is the list of credit batch info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.BatchInfo batch_info = 3 [json_name = "batchInfo"];</code>
+       */
+      public Builder addBatchInfo(
+          int index, com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo.Builder builderForValue) {
+        if (batchInfoBuilder_ == null) {
+          ensureBatchInfoIsMutable();
+          batchInfo_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          batchInfoBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * batch_info is the list of credit batch info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.BatchInfo batch_info = 3 [json_name = "batchInfo"];</code>
+       */
+      public Builder addAllBatchInfo(
+          java.lang.Iterable<? extends com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo> values) {
+        if (batchInfoBuilder_ == null) {
+          ensureBatchInfoIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, batchInfo_);
+          onChanged();
+        } else {
+          batchInfoBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * batch_info is the list of credit batch info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.BatchInfo batch_info = 3 [json_name = "batchInfo"];</code>
+       */
+      public Builder clearBatchInfo() {
+        if (batchInfoBuilder_ == null) {
+          batchInfo_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          batchInfoBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * batch_info is the list of credit batch info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.BatchInfo batch_info = 3 [json_name = "batchInfo"];</code>
+       */
+      public Builder removeBatchInfo(int index) {
+        if (batchInfoBuilder_ == null) {
+          ensureBatchInfoIsMutable();
+          batchInfo_.remove(index);
+          onChanged();
+        } else {
+          batchInfoBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * batch_info is the list of credit batch info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.BatchInfo batch_info = 3 [json_name = "batchInfo"];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo.Builder getBatchInfoBuilder(
+          int index) {
+        return getBatchInfoFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * batch_info is the list of credit batch info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.BatchInfo batch_info = 3 [json_name = "batchInfo"];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.TypesProto.BatchInfoOrBuilder getBatchInfoOrBuilder(
+          int index) {
+        if (batchInfoBuilder_ == null) {
+          return batchInfo_.get(index);  } else {
+          return batchInfoBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * batch_info is the list of credit batch info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.BatchInfo batch_info = 3 [json_name = "batchInfo"];</code>
+       */
+      public java.util.List<? extends com.regen.ecocredit.v1alpha2.TypesProto.BatchInfoOrBuilder> 
+           getBatchInfoOrBuilderList() {
+        if (batchInfoBuilder_ != null) {
+          return batchInfoBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(batchInfo_);
+        }
+      }
+      /**
+       * <pre>
+       * batch_info is the list of credit batch info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.BatchInfo batch_info = 3 [json_name = "batchInfo"];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo.Builder addBatchInfoBuilder() {
+        return getBatchInfoFieldBuilder().addBuilder(
+            com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * batch_info is the list of credit batch info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.BatchInfo batch_info = 3 [json_name = "batchInfo"];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo.Builder addBatchInfoBuilder(
+          int index) {
+        return getBatchInfoFieldBuilder().addBuilder(
+            index, com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * batch_info is the list of credit batch info.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.BatchInfo batch_info = 3 [json_name = "batchInfo"];</code>
+       */
+      public java.util.List<com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo.Builder> 
+           getBatchInfoBuilderList() {
+        return getBatchInfoFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo, com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo.Builder, com.regen.ecocredit.v1alpha2.TypesProto.BatchInfoOrBuilder> 
+          getBatchInfoFieldBuilder() {
+        if (batchInfoBuilder_ == null) {
+          batchInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo, com.regen.ecocredit.v1alpha2.TypesProto.BatchInfo.Builder, com.regen.ecocredit.v1alpha2.TypesProto.BatchInfoOrBuilder>(
+                  batchInfo_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          batchInfo_ = null;
+        }
+        return batchInfoBuilder_;
+      }
+
+      private java.util.List<com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeq> sequences_ =
+        java.util.Collections.emptyList();
+      private void ensureSequencesIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          sequences_ = new java.util.ArrayList<com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeq>(sequences_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeq, com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeq.Builder, com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeqOrBuilder> sequencesBuilder_;
+
+      /**
+       * <pre>
+       * sequences is the list of credit type sequence.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.CreditTypeSeq sequences = 4 [json_name = "sequences"];</code>
+       */
+      public java.util.List<com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeq> getSequencesList() {
+        if (sequencesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(sequences_);
+        } else {
+          return sequencesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * sequences is the list of credit type sequence.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.CreditTypeSeq sequences = 4 [json_name = "sequences"];</code>
+       */
+      public int getSequencesCount() {
+        if (sequencesBuilder_ == null) {
+          return sequences_.size();
+        } else {
+          return sequencesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * sequences is the list of credit type sequence.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.CreditTypeSeq sequences = 4 [json_name = "sequences"];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeq getSequences(int index) {
+        if (sequencesBuilder_ == null) {
+          return sequences_.get(index);
+        } else {
+          return sequencesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * sequences is the list of credit type sequence.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.CreditTypeSeq sequences = 4 [json_name = "sequences"];</code>
+       */
+      public Builder setSequences(
+          int index, com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeq value) {
+        if (sequencesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSequencesIsMutable();
+          sequences_.set(index, value);
+          onChanged();
+        } else {
+          sequencesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * sequences is the list of credit type sequence.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.CreditTypeSeq sequences = 4 [json_name = "sequences"];</code>
+       */
+      public Builder setSequences(
+          int index, com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeq.Builder builderForValue) {
+        if (sequencesBuilder_ == null) {
+          ensureSequencesIsMutable();
+          sequences_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          sequencesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * sequences is the list of credit type sequence.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.CreditTypeSeq sequences = 4 [json_name = "sequences"];</code>
+       */
+      public Builder addSequences(com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeq value) {
+        if (sequencesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSequencesIsMutable();
+          sequences_.add(value);
+          onChanged();
+        } else {
+          sequencesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * sequences is the list of credit type sequence.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.CreditTypeSeq sequences = 4 [json_name = "sequences"];</code>
+       */
+      public Builder addSequences(
+          int index, com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeq value) {
+        if (sequencesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSequencesIsMutable();
+          sequences_.add(index, value);
+          onChanged();
+        } else {
+          sequencesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * sequences is the list of credit type sequence.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.CreditTypeSeq sequences = 4 [json_name = "sequences"];</code>
+       */
+      public Builder addSequences(
+          com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeq.Builder builderForValue) {
+        if (sequencesBuilder_ == null) {
+          ensureSequencesIsMutable();
+          sequences_.add(builderForValue.build());
+          onChanged();
+        } else {
+          sequencesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * sequences is the list of credit type sequence.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.CreditTypeSeq sequences = 4 [json_name = "sequences"];</code>
+       */
+      public Builder addSequences(
+          int index, com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeq.Builder builderForValue) {
+        if (sequencesBuilder_ == null) {
+          ensureSequencesIsMutable();
+          sequences_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          sequencesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * sequences is the list of credit type sequence.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.CreditTypeSeq sequences = 4 [json_name = "sequences"];</code>
+       */
+      public Builder addAllSequences(
+          java.lang.Iterable<? extends com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeq> values) {
+        if (sequencesBuilder_ == null) {
+          ensureSequencesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, sequences_);
+          onChanged();
+        } else {
+          sequencesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * sequences is the list of credit type sequence.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.CreditTypeSeq sequences = 4 [json_name = "sequences"];</code>
+       */
+      public Builder clearSequences() {
+        if (sequencesBuilder_ == null) {
+          sequences_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          sequencesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * sequences is the list of credit type sequence.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.CreditTypeSeq sequences = 4 [json_name = "sequences"];</code>
+       */
+      public Builder removeSequences(int index) {
+        if (sequencesBuilder_ == null) {
+          ensureSequencesIsMutable();
+          sequences_.remove(index);
+          onChanged();
+        } else {
+          sequencesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * sequences is the list of credit type sequence.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.CreditTypeSeq sequences = 4 [json_name = "sequences"];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeq.Builder getSequencesBuilder(
+          int index) {
+        return getSequencesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * sequences is the list of credit type sequence.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.CreditTypeSeq sequences = 4 [json_name = "sequences"];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeqOrBuilder getSequencesOrBuilder(
+          int index) {
+        if (sequencesBuilder_ == null) {
+          return sequences_.get(index);  } else {
+          return sequencesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * sequences is the list of credit type sequence.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.CreditTypeSeq sequences = 4 [json_name = "sequences"];</code>
+       */
+      public java.util.List<? extends com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeqOrBuilder> 
+           getSequencesOrBuilderList() {
+        if (sequencesBuilder_ != null) {
+          return sequencesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(sequences_);
+        }
+      }
+      /**
+       * <pre>
+       * sequences is the list of credit type sequence.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.CreditTypeSeq sequences = 4 [json_name = "sequences"];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeq.Builder addSequencesBuilder() {
+        return getSequencesFieldBuilder().addBuilder(
+            com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeq.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * sequences is the list of credit type sequence.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.CreditTypeSeq sequences = 4 [json_name = "sequences"];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeq.Builder addSequencesBuilder(
+          int index) {
+        return getSequencesFieldBuilder().addBuilder(
+            index, com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeq.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * sequences is the list of credit type sequence.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.CreditTypeSeq sequences = 4 [json_name = "sequences"];</code>
+       */
+      public java.util.List<com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeq.Builder> 
+           getSequencesBuilderList() {
+        return getSequencesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeq, com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeq.Builder, com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeqOrBuilder> 
+          getSequencesFieldBuilder() {
+        if (sequencesBuilder_ == null) {
+          sequencesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeq, com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeq.Builder, com.regen.ecocredit.v1alpha2.TypesProto.CreditTypeSeqOrBuilder>(
+                  sequences_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          sequences_ = null;
+        }
+        return sequencesBuilder_;
+      }
+
+      private java.util.List<com.regen.ecocredit.v1alpha2.GenesisProto.Balance> balances_ =
+        java.util.Collections.emptyList();
+      private void ensureBalancesIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          balances_ = new java.util.ArrayList<com.regen.ecocredit.v1alpha2.GenesisProto.Balance>(balances_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.regen.ecocredit.v1alpha2.GenesisProto.Balance, com.regen.ecocredit.v1alpha2.GenesisProto.Balance.Builder, com.regen.ecocredit.v1alpha2.GenesisProto.BalanceOrBuilder> balancesBuilder_;
+
+      /**
+       * <pre>
+       * balances is the list of credit batch tradable/retired units.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Balance balances = 5 [json_name = "balances"];</code>
+       */
+      public java.util.List<com.regen.ecocredit.v1alpha2.GenesisProto.Balance> getBalancesList() {
+        if (balancesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(balances_);
+        } else {
+          return balancesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * balances is the list of credit batch tradable/retired units.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Balance balances = 5 [json_name = "balances"];</code>
+       */
+      public int getBalancesCount() {
+        if (balancesBuilder_ == null) {
+          return balances_.size();
+        } else {
+          return balancesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * balances is the list of credit batch tradable/retired units.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Balance balances = 5 [json_name = "balances"];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.GenesisProto.Balance getBalances(int index) {
+        if (balancesBuilder_ == null) {
+          return balances_.get(index);
+        } else {
+          return balancesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * balances is the list of credit batch tradable/retired units.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Balance balances = 5 [json_name = "balances"];</code>
+       */
+      public Builder setBalances(
+          int index, com.regen.ecocredit.v1alpha2.GenesisProto.Balance value) {
+        if (balancesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBalancesIsMutable();
+          balances_.set(index, value);
+          onChanged();
+        } else {
+          balancesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * balances is the list of credit batch tradable/retired units.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Balance balances = 5 [json_name = "balances"];</code>
+       */
+      public Builder setBalances(
+          int index, com.regen.ecocredit.v1alpha2.GenesisProto.Balance.Builder builderForValue) {
+        if (balancesBuilder_ == null) {
+          ensureBalancesIsMutable();
+          balances_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          balancesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * balances is the list of credit batch tradable/retired units.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Balance balances = 5 [json_name = "balances"];</code>
+       */
+      public Builder addBalances(com.regen.ecocredit.v1alpha2.GenesisProto.Balance value) {
+        if (balancesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBalancesIsMutable();
+          balances_.add(value);
+          onChanged();
+        } else {
+          balancesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * balances is the list of credit batch tradable/retired units.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Balance balances = 5 [json_name = "balances"];</code>
+       */
+      public Builder addBalances(
+          int index, com.regen.ecocredit.v1alpha2.GenesisProto.Balance value) {
+        if (balancesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBalancesIsMutable();
+          balances_.add(index, value);
+          onChanged();
+        } else {
+          balancesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * balances is the list of credit batch tradable/retired units.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Balance balances = 5 [json_name = "balances"];</code>
+       */
+      public Builder addBalances(
+          com.regen.ecocredit.v1alpha2.GenesisProto.Balance.Builder builderForValue) {
+        if (balancesBuilder_ == null) {
+          ensureBalancesIsMutable();
+          balances_.add(builderForValue.build());
+          onChanged();
+        } else {
+          balancesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * balances is the list of credit batch tradable/retired units.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Balance balances = 5 [json_name = "balances"];</code>
+       */
+      public Builder addBalances(
+          int index, com.regen.ecocredit.v1alpha2.GenesisProto.Balance.Builder builderForValue) {
+        if (balancesBuilder_ == null) {
+          ensureBalancesIsMutable();
+          balances_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          balancesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * balances is the list of credit batch tradable/retired units.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Balance balances = 5 [json_name = "balances"];</code>
+       */
+      public Builder addAllBalances(
+          java.lang.Iterable<? extends com.regen.ecocredit.v1alpha2.GenesisProto.Balance> values) {
+        if (balancesBuilder_ == null) {
+          ensureBalancesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, balances_);
+          onChanged();
+        } else {
+          balancesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * balances is the list of credit batch tradable/retired units.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Balance balances = 5 [json_name = "balances"];</code>
+       */
+      public Builder clearBalances() {
+        if (balancesBuilder_ == null) {
+          balances_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          balancesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * balances is the list of credit batch tradable/retired units.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Balance balances = 5 [json_name = "balances"];</code>
+       */
+      public Builder removeBalances(int index) {
+        if (balancesBuilder_ == null) {
+          ensureBalancesIsMutable();
+          balances_.remove(index);
+          onChanged();
+        } else {
+          balancesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * balances is the list of credit batch tradable/retired units.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Balance balances = 5 [json_name = "balances"];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.GenesisProto.Balance.Builder getBalancesBuilder(
+          int index) {
+        return getBalancesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * balances is the list of credit batch tradable/retired units.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Balance balances = 5 [json_name = "balances"];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.GenesisProto.BalanceOrBuilder getBalancesOrBuilder(
+          int index) {
+        if (balancesBuilder_ == null) {
+          return balances_.get(index);  } else {
+          return balancesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * balances is the list of credit batch tradable/retired units.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Balance balances = 5 [json_name = "balances"];</code>
+       */
+      public java.util.List<? extends com.regen.ecocredit.v1alpha2.GenesisProto.BalanceOrBuilder> 
+           getBalancesOrBuilderList() {
+        if (balancesBuilder_ != null) {
+          return balancesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(balances_);
+        }
+      }
+      /**
+       * <pre>
+       * balances is the list of credit batch tradable/retired units.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Balance balances = 5 [json_name = "balances"];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.GenesisProto.Balance.Builder addBalancesBuilder() {
+        return getBalancesFieldBuilder().addBuilder(
+            com.regen.ecocredit.v1alpha2.GenesisProto.Balance.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * balances is the list of credit batch tradable/retired units.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Balance balances = 5 [json_name = "balances"];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.GenesisProto.Balance.Builder addBalancesBuilder(
+          int index) {
+        return getBalancesFieldBuilder().addBuilder(
+            index, com.regen.ecocredit.v1alpha2.GenesisProto.Balance.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * balances is the list of credit batch tradable/retired units.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Balance balances = 5 [json_name = "balances"];</code>
+       */
+      public java.util.List<com.regen.ecocredit.v1alpha2.GenesisProto.Balance.Builder> 
+           getBalancesBuilderList() {
+        return getBalancesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.regen.ecocredit.v1alpha2.GenesisProto.Balance, com.regen.ecocredit.v1alpha2.GenesisProto.Balance.Builder, com.regen.ecocredit.v1alpha2.GenesisProto.BalanceOrBuilder> 
+          getBalancesFieldBuilder() {
+        if (balancesBuilder_ == null) {
+          balancesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.regen.ecocredit.v1alpha2.GenesisProto.Balance, com.regen.ecocredit.v1alpha2.GenesisProto.Balance.Builder, com.regen.ecocredit.v1alpha2.GenesisProto.BalanceOrBuilder>(
+                  balances_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          balances_ = null;
+        }
+        return balancesBuilder_;
+      }
+
+      private java.util.List<com.regen.ecocredit.v1alpha2.GenesisProto.Supply> supplies_ =
+        java.util.Collections.emptyList();
+      private void ensureSuppliesIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          supplies_ = new java.util.ArrayList<com.regen.ecocredit.v1alpha2.GenesisProto.Supply>(supplies_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.regen.ecocredit.v1alpha2.GenesisProto.Supply, com.regen.ecocredit.v1alpha2.GenesisProto.Supply.Builder, com.regen.ecocredit.v1alpha2.GenesisProto.SupplyOrBuilder> suppliesBuilder_;
+
+      /**
+       * <pre>
+       * supplies is the list of credit batch tradable/retired supply.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Supply supplies = 6 [json_name = "supplies"];</code>
+       */
+      public java.util.List<com.regen.ecocredit.v1alpha2.GenesisProto.Supply> getSuppliesList() {
+        if (suppliesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(supplies_);
+        } else {
+          return suppliesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * supplies is the list of credit batch tradable/retired supply.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Supply supplies = 6 [json_name = "supplies"];</code>
+       */
+      public int getSuppliesCount() {
+        if (suppliesBuilder_ == null) {
+          return supplies_.size();
+        } else {
+          return suppliesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * supplies is the list of credit batch tradable/retired supply.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Supply supplies = 6 [json_name = "supplies"];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.GenesisProto.Supply getSupplies(int index) {
+        if (suppliesBuilder_ == null) {
+          return supplies_.get(index);
+        } else {
+          return suppliesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * supplies is the list of credit batch tradable/retired supply.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Supply supplies = 6 [json_name = "supplies"];</code>
+       */
+      public Builder setSupplies(
+          int index, com.regen.ecocredit.v1alpha2.GenesisProto.Supply value) {
+        if (suppliesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSuppliesIsMutable();
+          supplies_.set(index, value);
+          onChanged();
+        } else {
+          suppliesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * supplies is the list of credit batch tradable/retired supply.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Supply supplies = 6 [json_name = "supplies"];</code>
+       */
+      public Builder setSupplies(
+          int index, com.regen.ecocredit.v1alpha2.GenesisProto.Supply.Builder builderForValue) {
+        if (suppliesBuilder_ == null) {
+          ensureSuppliesIsMutable();
+          supplies_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          suppliesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * supplies is the list of credit batch tradable/retired supply.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Supply supplies = 6 [json_name = "supplies"];</code>
+       */
+      public Builder addSupplies(com.regen.ecocredit.v1alpha2.GenesisProto.Supply value) {
+        if (suppliesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSuppliesIsMutable();
+          supplies_.add(value);
+          onChanged();
+        } else {
+          suppliesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * supplies is the list of credit batch tradable/retired supply.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Supply supplies = 6 [json_name = "supplies"];</code>
+       */
+      public Builder addSupplies(
+          int index, com.regen.ecocredit.v1alpha2.GenesisProto.Supply value) {
+        if (suppliesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSuppliesIsMutable();
+          supplies_.add(index, value);
+          onChanged();
+        } else {
+          suppliesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * supplies is the list of credit batch tradable/retired supply.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Supply supplies = 6 [json_name = "supplies"];</code>
+       */
+      public Builder addSupplies(
+          com.regen.ecocredit.v1alpha2.GenesisProto.Supply.Builder builderForValue) {
+        if (suppliesBuilder_ == null) {
+          ensureSuppliesIsMutable();
+          supplies_.add(builderForValue.build());
+          onChanged();
+        } else {
+          suppliesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * supplies is the list of credit batch tradable/retired supply.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Supply supplies = 6 [json_name = "supplies"];</code>
+       */
+      public Builder addSupplies(
+          int index, com.regen.ecocredit.v1alpha2.GenesisProto.Supply.Builder builderForValue) {
+        if (suppliesBuilder_ == null) {
+          ensureSuppliesIsMutable();
+          supplies_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          suppliesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * supplies is the list of credit batch tradable/retired supply.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Supply supplies = 6 [json_name = "supplies"];</code>
+       */
+      public Builder addAllSupplies(
+          java.lang.Iterable<? extends com.regen.ecocredit.v1alpha2.GenesisProto.Supply> values) {
+        if (suppliesBuilder_ == null) {
+          ensureSuppliesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, supplies_);
+          onChanged();
+        } else {
+          suppliesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * supplies is the list of credit batch tradable/retired supply.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Supply supplies = 6 [json_name = "supplies"];</code>
+       */
+      public Builder clearSupplies() {
+        if (suppliesBuilder_ == null) {
+          supplies_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          suppliesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * supplies is the list of credit batch tradable/retired supply.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Supply supplies = 6 [json_name = "supplies"];</code>
+       */
+      public Builder removeSupplies(int index) {
+        if (suppliesBuilder_ == null) {
+          ensureSuppliesIsMutable();
+          supplies_.remove(index);
+          onChanged();
+        } else {
+          suppliesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * supplies is the list of credit batch tradable/retired supply.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Supply supplies = 6 [json_name = "supplies"];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.GenesisProto.Supply.Builder getSuppliesBuilder(
+          int index) {
+        return getSuppliesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * supplies is the list of credit batch tradable/retired supply.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Supply supplies = 6 [json_name = "supplies"];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.GenesisProto.SupplyOrBuilder getSuppliesOrBuilder(
+          int index) {
+        if (suppliesBuilder_ == null) {
+          return supplies_.get(index);  } else {
+          return suppliesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * supplies is the list of credit batch tradable/retired supply.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Supply supplies = 6 [json_name = "supplies"];</code>
+       */
+      public java.util.List<? extends com.regen.ecocredit.v1alpha2.GenesisProto.SupplyOrBuilder> 
+           getSuppliesOrBuilderList() {
+        if (suppliesBuilder_ != null) {
+          return suppliesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(supplies_);
+        }
+      }
+      /**
+       * <pre>
+       * supplies is the list of credit batch tradable/retired supply.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Supply supplies = 6 [json_name = "supplies"];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.GenesisProto.Supply.Builder addSuppliesBuilder() {
+        return getSuppliesFieldBuilder().addBuilder(
+            com.regen.ecocredit.v1alpha2.GenesisProto.Supply.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * supplies is the list of credit batch tradable/retired supply.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Supply supplies = 6 [json_name = "supplies"];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.GenesisProto.Supply.Builder addSuppliesBuilder(
+          int index) {
+        return getSuppliesFieldBuilder().addBuilder(
+            index, com.regen.ecocredit.v1alpha2.GenesisProto.Supply.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * supplies is the list of credit batch tradable/retired supply.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.Supply supplies = 6 [json_name = "supplies"];</code>
+       */
+      public java.util.List<com.regen.ecocredit.v1alpha2.GenesisProto.Supply.Builder> 
+           getSuppliesBuilderList() {
+        return getSuppliesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.regen.ecocredit.v1alpha2.GenesisProto.Supply, com.regen.ecocredit.v1alpha2.GenesisProto.Supply.Builder, com.regen.ecocredit.v1alpha2.GenesisProto.SupplyOrBuilder> 
+          getSuppliesFieldBuilder() {
+        if (suppliesBuilder_ == null) {
+          suppliesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.regen.ecocredit.v1alpha2.GenesisProto.Supply, com.regen.ecocredit.v1alpha2.GenesisProto.Supply.Builder, com.regen.ecocredit.v1alpha2.GenesisProto.SupplyOrBuilder>(
+                  supplies_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          supplies_ = null;
+        }
+        return suppliesBuilder_;
+      }
+
+      private java.util.List<com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfo> projectInfo_ =
+        java.util.Collections.emptyList();
+      private void ensureProjectInfoIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          projectInfo_ = new java.util.ArrayList<com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfo>(projectInfo_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfo, com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfo.Builder, com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfoOrBuilder> projectInfoBuilder_;
+
+      /**
+       * <pre>
+       * project_info is the list of projects.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ProjectInfo project_info = 7 [json_name = "projectInfo"];</code>
+       */
+      public java.util.List<com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfo> getProjectInfoList() {
+        if (projectInfoBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(projectInfo_);
+        } else {
+          return projectInfoBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * project_info is the list of projects.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ProjectInfo project_info = 7 [json_name = "projectInfo"];</code>
+       */
+      public int getProjectInfoCount() {
+        if (projectInfoBuilder_ == null) {
+          return projectInfo_.size();
+        } else {
+          return projectInfoBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * project_info is the list of projects.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ProjectInfo project_info = 7 [json_name = "projectInfo"];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfo getProjectInfo(int index) {
+        if (projectInfoBuilder_ == null) {
+          return projectInfo_.get(index);
+        } else {
+          return projectInfoBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * project_info is the list of projects.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ProjectInfo project_info = 7 [json_name = "projectInfo"];</code>
+       */
+      public Builder setProjectInfo(
+          int index, com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfo value) {
+        if (projectInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProjectInfoIsMutable();
+          projectInfo_.set(index, value);
+          onChanged();
+        } else {
+          projectInfoBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * project_info is the list of projects.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ProjectInfo project_info = 7 [json_name = "projectInfo"];</code>
+       */
+      public Builder setProjectInfo(
+          int index, com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfo.Builder builderForValue) {
+        if (projectInfoBuilder_ == null) {
+          ensureProjectInfoIsMutable();
+          projectInfo_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          projectInfoBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * project_info is the list of projects.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ProjectInfo project_info = 7 [json_name = "projectInfo"];</code>
+       */
+      public Builder addProjectInfo(com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfo value) {
+        if (projectInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProjectInfoIsMutable();
+          projectInfo_.add(value);
+          onChanged();
+        } else {
+          projectInfoBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * project_info is the list of projects.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ProjectInfo project_info = 7 [json_name = "projectInfo"];</code>
+       */
+      public Builder addProjectInfo(
+          int index, com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfo value) {
+        if (projectInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProjectInfoIsMutable();
+          projectInfo_.add(index, value);
+          onChanged();
+        } else {
+          projectInfoBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * project_info is the list of projects.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ProjectInfo project_info = 7 [json_name = "projectInfo"];</code>
+       */
+      public Builder addProjectInfo(
+          com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfo.Builder builderForValue) {
+        if (projectInfoBuilder_ == null) {
+          ensureProjectInfoIsMutable();
+          projectInfo_.add(builderForValue.build());
+          onChanged();
+        } else {
+          projectInfoBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * project_info is the list of projects.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ProjectInfo project_info = 7 [json_name = "projectInfo"];</code>
+       */
+      public Builder addProjectInfo(
+          int index, com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfo.Builder builderForValue) {
+        if (projectInfoBuilder_ == null) {
+          ensureProjectInfoIsMutable();
+          projectInfo_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          projectInfoBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * project_info is the list of projects.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ProjectInfo project_info = 7 [json_name = "projectInfo"];</code>
+       */
+      public Builder addAllProjectInfo(
+          java.lang.Iterable<? extends com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfo> values) {
+        if (projectInfoBuilder_ == null) {
+          ensureProjectInfoIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, projectInfo_);
+          onChanged();
+        } else {
+          projectInfoBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * project_info is the list of projects.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ProjectInfo project_info = 7 [json_name = "projectInfo"];</code>
+       */
+      public Builder clearProjectInfo() {
+        if (projectInfoBuilder_ == null) {
+          projectInfo_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          projectInfoBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * project_info is the list of projects.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ProjectInfo project_info = 7 [json_name = "projectInfo"];</code>
+       */
+      public Builder removeProjectInfo(int index) {
+        if (projectInfoBuilder_ == null) {
+          ensureProjectInfoIsMutable();
+          projectInfo_.remove(index);
+          onChanged();
+        } else {
+          projectInfoBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * project_info is the list of projects.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ProjectInfo project_info = 7 [json_name = "projectInfo"];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfo.Builder getProjectInfoBuilder(
+          int index) {
+        return getProjectInfoFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * project_info is the list of projects.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ProjectInfo project_info = 7 [json_name = "projectInfo"];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfoOrBuilder getProjectInfoOrBuilder(
+          int index) {
+        if (projectInfoBuilder_ == null) {
+          return projectInfo_.get(index);  } else {
+          return projectInfoBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * project_info is the list of projects.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ProjectInfo project_info = 7 [json_name = "projectInfo"];</code>
+       */
+      public java.util.List<? extends com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfoOrBuilder> 
+           getProjectInfoOrBuilderList() {
+        if (projectInfoBuilder_ != null) {
+          return projectInfoBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(projectInfo_);
+        }
+      }
+      /**
+       * <pre>
+       * project_info is the list of projects.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ProjectInfo project_info = 7 [json_name = "projectInfo"];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfo.Builder addProjectInfoBuilder() {
+        return getProjectInfoFieldBuilder().addBuilder(
+            com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfo.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * project_info is the list of projects.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ProjectInfo project_info = 7 [json_name = "projectInfo"];</code>
+       */
+      public com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfo.Builder addProjectInfoBuilder(
+          int index) {
+        return getProjectInfoFieldBuilder().addBuilder(
+            index, com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfo.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * project_info is the list of projects.
+       * </pre>
+       *
+       * <code>repeated .regen.ecocredit.v1alpha2.ProjectInfo project_info = 7 [json_name = "projectInfo"];</code>
+       */
+      public java.util.List<com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfo.Builder> 
+           getProjectInfoBuilderList() {
+        return getProjectInfoFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfo, com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfo.Builder, com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfoOrBuilder> 
+          getProjectInfoFieldBuilder() {
+        if (projectInfoBuilder_ == null) {
+          projectInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfo, com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfo.Builder, com.regen.ecocredit.v1alpha2.TypesProto.ProjectInfoOrBuilder>(
+                  projectInfo_,
+                  ((bitField0_ & 0x00000040) != 0),
+                  getParentForChildren(),
+                  isClean());
+          projectInfo_ = null;
+        }
+        return projectInfoBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.ecocredit.v1alpha2.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.ecocredit.v1alpha2.GenesisState)
+    private static final com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState();
+    }
+
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.ecocredit.v1alpha2.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BalanceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.ecocredit.v1alpha2.Balance)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * address is the account address of the account holding credits.
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <pre>
+     * address is the account address of the account holding credits.
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <pre>
+     * batch_denom is the unique ID of the credit batch.
+     * </pre>
+     *
+     * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+     * @return The batchDenom.
+     */
+    java.lang.String getBatchDenom();
+    /**
+     * <pre>
+     * batch_denom is the unique ID of the credit batch.
+     * </pre>
+     *
+     * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+     * @return The bytes for batchDenom.
+     */
+    com.google.protobuf.ByteString
+        getBatchDenomBytes();
+
+    /**
+     * <pre>
+     * tradable_balance is the tradable balance of the credit batch.
+     * </pre>
+     *
+     * <code>string tradable_balance = 3 [json_name = "tradableBalance"];</code>
+     * @return The tradableBalance.
+     */
+    java.lang.String getTradableBalance();
+    /**
+     * <pre>
+     * tradable_balance is the tradable balance of the credit batch.
+     * </pre>
+     *
+     * <code>string tradable_balance = 3 [json_name = "tradableBalance"];</code>
+     * @return The bytes for tradableBalance.
+     */
+    com.google.protobuf.ByteString
+        getTradableBalanceBytes();
+
+    /**
+     * <pre>
+     * retired_balance is the retired balance of the credit batch.
+     * </pre>
+     *
+     * <code>string retired_balance = 4 [json_name = "retiredBalance"];</code>
+     * @return The retiredBalance.
+     */
+    java.lang.String getRetiredBalance();
+    /**
+     * <pre>
+     * retired_balance is the retired balance of the credit batch.
+     * </pre>
+     *
+     * <code>string retired_balance = 4 [json_name = "retiredBalance"];</code>
+     * @return The bytes for retiredBalance.
+     */
+    com.google.protobuf.ByteString
+        getRetiredBalanceBytes();
+  }
+  /**
+   * <pre>
+   * Balance represents tradable or retired units of a credit batch with an
+   * account address, batch_denom, and balance.
+   * </pre>
+   *
+   * Protobuf type {@code regen.ecocredit.v1alpha2.Balance}
+   */
+  public static final class Balance extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.ecocredit.v1alpha2.Balance)
+      BalanceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Balance.newBuilder() to construct.
+    private Balance(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Balance() {
+      address_ = "";
+      batchDenom_ = "";
+      tradableBalance_ = "";
+      retiredBalance_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Balance();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.ecocredit.v1alpha2.GenesisProto.internal_static_regen_ecocredit_v1alpha2_Balance_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.ecocredit.v1alpha2.GenesisProto.internal_static_regen_ecocredit_v1alpha2_Balance_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.ecocredit.v1alpha2.GenesisProto.Balance.class, com.regen.ecocredit.v1alpha2.GenesisProto.Balance.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <pre>
+     * address is the account address of the account holding credits.
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * address is the account address of the account holding credits.
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BATCH_DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object batchDenom_ = "";
+    /**
+     * <pre>
+     * batch_denom is the unique ID of the credit batch.
+     * </pre>
+     *
+     * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+     * @return The batchDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getBatchDenom() {
+      java.lang.Object ref = batchDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        batchDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * batch_denom is the unique ID of the credit batch.
+     * </pre>
+     *
+     * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+     * @return The bytes for batchDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBatchDenomBytes() {
+      java.lang.Object ref = batchDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        batchDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRADABLE_BALANCE_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object tradableBalance_ = "";
+    /**
+     * <pre>
+     * tradable_balance is the tradable balance of the credit batch.
+     * </pre>
+     *
+     * <code>string tradable_balance = 3 [json_name = "tradableBalance"];</code>
+     * @return The tradableBalance.
+     */
+    @java.lang.Override
+    public java.lang.String getTradableBalance() {
+      java.lang.Object ref = tradableBalance_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tradableBalance_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * tradable_balance is the tradable balance of the credit batch.
+     * </pre>
+     *
+     * <code>string tradable_balance = 3 [json_name = "tradableBalance"];</code>
+     * @return The bytes for tradableBalance.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTradableBalanceBytes() {
+      java.lang.Object ref = tradableBalance_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tradableBalance_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RETIRED_BALANCE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object retiredBalance_ = "";
+    /**
+     * <pre>
+     * retired_balance is the retired balance of the credit batch.
+     * </pre>
+     *
+     * <code>string retired_balance = 4 [json_name = "retiredBalance"];</code>
+     * @return The retiredBalance.
+     */
+    @java.lang.Override
+    public java.lang.String getRetiredBalance() {
+      java.lang.Object ref = retiredBalance_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        retiredBalance_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * retired_balance is the retired balance of the credit batch.
+     * </pre>
+     *
+     * <code>string retired_balance = 4 [json_name = "retiredBalance"];</code>
+     * @return The bytes for retiredBalance.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRetiredBalanceBytes() {
+      java.lang.Object ref = retiredBalance_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        retiredBalance_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(batchDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, batchDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tradableBalance_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, tradableBalance_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(retiredBalance_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, retiredBalance_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(batchDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, batchDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tradableBalance_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, tradableBalance_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(retiredBalance_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, retiredBalance_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.ecocredit.v1alpha2.GenesisProto.Balance)) {
+        return super.equals(obj);
+      }
+      com.regen.ecocredit.v1alpha2.GenesisProto.Balance other = (com.regen.ecocredit.v1alpha2.GenesisProto.Balance) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getBatchDenom()
+          .equals(other.getBatchDenom())) return false;
+      if (!getTradableBalance()
+          .equals(other.getTradableBalance())) return false;
+      if (!getRetiredBalance()
+          .equals(other.getRetiredBalance())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + BATCH_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getBatchDenom().hashCode();
+      hash = (37 * hash) + TRADABLE_BALANCE_FIELD_NUMBER;
+      hash = (53 * hash) + getTradableBalance().hashCode();
+      hash = (37 * hash) + RETIRED_BALANCE_FIELD_NUMBER;
+      hash = (53 * hash) + getRetiredBalance().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.Balance parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.Balance parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.Balance parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.Balance parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.Balance parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.Balance parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.Balance parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.Balance parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.Balance parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.Balance parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.Balance parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.Balance parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.ecocredit.v1alpha2.GenesisProto.Balance prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Balance represents tradable or retired units of a credit batch with an
+     * account address, batch_denom, and balance.
+     * </pre>
+     *
+     * Protobuf type {@code regen.ecocredit.v1alpha2.Balance}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.ecocredit.v1alpha2.Balance)
+        com.regen.ecocredit.v1alpha2.GenesisProto.BalanceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.ecocredit.v1alpha2.GenesisProto.internal_static_regen_ecocredit_v1alpha2_Balance_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.ecocredit.v1alpha2.GenesisProto.internal_static_regen_ecocredit_v1alpha2_Balance_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.ecocredit.v1alpha2.GenesisProto.Balance.class, com.regen.ecocredit.v1alpha2.GenesisProto.Balance.Builder.class);
+      }
+
+      // Construct using com.regen.ecocredit.v1alpha2.GenesisProto.Balance.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        batchDenom_ = "";
+        tradableBalance_ = "";
+        retiredBalance_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.ecocredit.v1alpha2.GenesisProto.internal_static_regen_ecocredit_v1alpha2_Balance_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.GenesisProto.Balance getDefaultInstanceForType() {
+        return com.regen.ecocredit.v1alpha2.GenesisProto.Balance.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.GenesisProto.Balance build() {
+        com.regen.ecocredit.v1alpha2.GenesisProto.Balance result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.GenesisProto.Balance buildPartial() {
+        com.regen.ecocredit.v1alpha2.GenesisProto.Balance result = new com.regen.ecocredit.v1alpha2.GenesisProto.Balance(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.ecocredit.v1alpha2.GenesisProto.Balance result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.batchDenom_ = batchDenom_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.tradableBalance_ = tradableBalance_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.retiredBalance_ = retiredBalance_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.ecocredit.v1alpha2.GenesisProto.Balance) {
+          return mergeFrom((com.regen.ecocredit.v1alpha2.GenesisProto.Balance)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.ecocredit.v1alpha2.GenesisProto.Balance other) {
+        if (other == com.regen.ecocredit.v1alpha2.GenesisProto.Balance.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getBatchDenom().isEmpty()) {
+          batchDenom_ = other.batchDenom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getTradableBalance().isEmpty()) {
+          tradableBalance_ = other.tradableBalance_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getRetiredBalance().isEmpty()) {
+          retiredBalance_ = other.retiredBalance_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                batchDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                tradableBalance_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                retiredBalance_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <pre>
+       * address is the account address of the account holding credits.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address is the account address of the account holding credits.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address is the account address of the account holding credits.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address is the account address of the account holding credits.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address is the account address of the account holding credits.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object batchDenom_ = "";
+      /**
+       * <pre>
+       * batch_denom is the unique ID of the credit batch.
+       * </pre>
+       *
+       * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+       * @return The batchDenom.
+       */
+      public java.lang.String getBatchDenom() {
+        java.lang.Object ref = batchDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          batchDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * batch_denom is the unique ID of the credit batch.
+       * </pre>
+       *
+       * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+       * @return The bytes for batchDenom.
+       */
+      public com.google.protobuf.ByteString
+          getBatchDenomBytes() {
+        java.lang.Object ref = batchDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          batchDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * batch_denom is the unique ID of the credit batch.
+       * </pre>
+       *
+       * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+       * @param value The batchDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBatchDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        batchDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * batch_denom is the unique ID of the credit batch.
+       * </pre>
+       *
+       * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBatchDenom() {
+        batchDenom_ = getDefaultInstance().getBatchDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * batch_denom is the unique ID of the credit batch.
+       * </pre>
+       *
+       * <code>string batch_denom = 2 [json_name = "batchDenom"];</code>
+       * @param value The bytes for batchDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBatchDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        batchDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object tradableBalance_ = "";
+      /**
+       * <pre>
+       * tradable_balance is the tradable balance of the credit batch.
+       * </pre>
+       *
+       * <code>string tradable_balance = 3 [json_name = "tradableBalance"];</code>
+       * @return The tradableBalance.
+       */
+      public java.lang.String getTradableBalance() {
+        java.lang.Object ref = tradableBalance_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tradableBalance_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * tradable_balance is the tradable balance of the credit batch.
+       * </pre>
+       *
+       * <code>string tradable_balance = 3 [json_name = "tradableBalance"];</code>
+       * @return The bytes for tradableBalance.
+       */
+      public com.google.protobuf.ByteString
+          getTradableBalanceBytes() {
+        java.lang.Object ref = tradableBalance_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tradableBalance_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * tradable_balance is the tradable balance of the credit batch.
+       * </pre>
+       *
+       * <code>string tradable_balance = 3 [json_name = "tradableBalance"];</code>
+       * @param value The tradableBalance to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTradableBalance(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        tradableBalance_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * tradable_balance is the tradable balance of the credit batch.
+       * </pre>
+       *
+       * <code>string tradable_balance = 3 [json_name = "tradableBalance"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTradableBalance() {
+        tradableBalance_ = getDefaultInstance().getTradableBalance();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * tradable_balance is the tradable balance of the credit batch.
+       * </pre>
+       *
+       * <code>string tradable_balance = 3 [json_name = "tradableBalance"];</code>
+       * @param value The bytes for tradableBalance to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTradableBalanceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        tradableBalance_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object retiredBalance_ = "";
+      /**
+       * <pre>
+       * retired_balance is the retired balance of the credit batch.
+       * </pre>
+       *
+       * <code>string retired_balance = 4 [json_name = "retiredBalance"];</code>
+       * @return The retiredBalance.
+       */
+      public java.lang.String getRetiredBalance() {
+        java.lang.Object ref = retiredBalance_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          retiredBalance_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * retired_balance is the retired balance of the credit batch.
+       * </pre>
+       *
+       * <code>string retired_balance = 4 [json_name = "retiredBalance"];</code>
+       * @return The bytes for retiredBalance.
+       */
+      public com.google.protobuf.ByteString
+          getRetiredBalanceBytes() {
+        java.lang.Object ref = retiredBalance_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          retiredBalance_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * retired_balance is the retired balance of the credit batch.
+       * </pre>
+       *
+       * <code>string retired_balance = 4 [json_name = "retiredBalance"];</code>
+       * @param value The retiredBalance to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRetiredBalance(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        retiredBalance_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * retired_balance is the retired balance of the credit batch.
+       * </pre>
+       *
+       * <code>string retired_balance = 4 [json_name = "retiredBalance"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRetiredBalance() {
+        retiredBalance_ = getDefaultInstance().getRetiredBalance();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * retired_balance is the retired balance of the credit batch.
+       * </pre>
+       *
+       * <code>string retired_balance = 4 [json_name = "retiredBalance"];</code>
+       * @param value The bytes for retiredBalance to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRetiredBalanceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        retiredBalance_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.ecocredit.v1alpha2.Balance)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.ecocredit.v1alpha2.Balance)
+    private static final com.regen.ecocredit.v1alpha2.GenesisProto.Balance DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.ecocredit.v1alpha2.GenesisProto.Balance();
+    }
+
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.Balance getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Balance>
+        PARSER = new com.google.protobuf.AbstractParser<Balance>() {
+      @java.lang.Override
+      public Balance parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Balance> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Balance> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.ecocredit.v1alpha2.GenesisProto.Balance getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SupplyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.ecocredit.v1alpha2.Supply)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * batch_denom is the unique ID of the credit batch.
+     * </pre>
+     *
+     * <code>string batch_denom = 1 [json_name = "batchDenom"];</code>
+     * @return The batchDenom.
+     */
+    java.lang.String getBatchDenom();
+    /**
+     * <pre>
+     * batch_denom is the unique ID of the credit batch.
+     * </pre>
+     *
+     * <code>string batch_denom = 1 [json_name = "batchDenom"];</code>
+     * @return The bytes for batchDenom.
+     */
+    com.google.protobuf.ByteString
+        getBatchDenomBytes();
+
+    /**
+     * <pre>
+     * tradable_supply is the tradable supply of the credit batch.
+     * </pre>
+     *
+     * <code>string tradable_supply = 2 [json_name = "tradableSupply"];</code>
+     * @return The tradableSupply.
+     */
+    java.lang.String getTradableSupply();
+    /**
+     * <pre>
+     * tradable_supply is the tradable supply of the credit batch.
+     * </pre>
+     *
+     * <code>string tradable_supply = 2 [json_name = "tradableSupply"];</code>
+     * @return The bytes for tradableSupply.
+     */
+    com.google.protobuf.ByteString
+        getTradableSupplyBytes();
+
+    /**
+     * <pre>
+     * retired_supply is the retired supply of the credit batch.
+     * </pre>
+     *
+     * <code>string retired_supply = 3 [json_name = "retiredSupply"];</code>
+     * @return The retiredSupply.
+     */
+    java.lang.String getRetiredSupply();
+    /**
+     * <pre>
+     * retired_supply is the retired supply of the credit batch.
+     * </pre>
+     *
+     * <code>string retired_supply = 3 [json_name = "retiredSupply"];</code>
+     * @return The bytes for retiredSupply.
+     */
+    com.google.protobuf.ByteString
+        getRetiredSupplyBytes();
+  }
+  /**
+   * <pre>
+   * Supply represents a tradable or retired supply of a credit batch.
+   * </pre>
+   *
+   * Protobuf type {@code regen.ecocredit.v1alpha2.Supply}
+   */
+  public static final class Supply extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.ecocredit.v1alpha2.Supply)
+      SupplyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Supply.newBuilder() to construct.
+    private Supply(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Supply() {
+      batchDenom_ = "";
+      tradableSupply_ = "";
+      retiredSupply_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Supply();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.ecocredit.v1alpha2.GenesisProto.internal_static_regen_ecocredit_v1alpha2_Supply_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.ecocredit.v1alpha2.GenesisProto.internal_static_regen_ecocredit_v1alpha2_Supply_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.ecocredit.v1alpha2.GenesisProto.Supply.class, com.regen.ecocredit.v1alpha2.GenesisProto.Supply.Builder.class);
+    }
+
+    public static final int BATCH_DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object batchDenom_ = "";
+    /**
+     * <pre>
+     * batch_denom is the unique ID of the credit batch.
+     * </pre>
+     *
+     * <code>string batch_denom = 1 [json_name = "batchDenom"];</code>
+     * @return The batchDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getBatchDenom() {
+      java.lang.Object ref = batchDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        batchDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * batch_denom is the unique ID of the credit batch.
+     * </pre>
+     *
+     * <code>string batch_denom = 1 [json_name = "batchDenom"];</code>
+     * @return The bytes for batchDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBatchDenomBytes() {
+      java.lang.Object ref = batchDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        batchDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRADABLE_SUPPLY_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object tradableSupply_ = "";
+    /**
+     * <pre>
+     * tradable_supply is the tradable supply of the credit batch.
+     * </pre>
+     *
+     * <code>string tradable_supply = 2 [json_name = "tradableSupply"];</code>
+     * @return The tradableSupply.
+     */
+    @java.lang.Override
+    public java.lang.String getTradableSupply() {
+      java.lang.Object ref = tradableSupply_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tradableSupply_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * tradable_supply is the tradable supply of the credit batch.
+     * </pre>
+     *
+     * <code>string tradable_supply = 2 [json_name = "tradableSupply"];</code>
+     * @return The bytes for tradableSupply.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTradableSupplyBytes() {
+      java.lang.Object ref = tradableSupply_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tradableSupply_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RETIRED_SUPPLY_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object retiredSupply_ = "";
+    /**
+     * <pre>
+     * retired_supply is the retired supply of the credit batch.
+     * </pre>
+     *
+     * <code>string retired_supply = 3 [json_name = "retiredSupply"];</code>
+     * @return The retiredSupply.
+     */
+    @java.lang.Override
+    public java.lang.String getRetiredSupply() {
+      java.lang.Object ref = retiredSupply_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        retiredSupply_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * retired_supply is the retired supply of the credit batch.
+     * </pre>
+     *
+     * <code>string retired_supply = 3 [json_name = "retiredSupply"];</code>
+     * @return The bytes for retiredSupply.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRetiredSupplyBytes() {
+      java.lang.Object ref = retiredSupply_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        retiredSupply_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(batchDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, batchDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tradableSupply_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tradableSupply_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(retiredSupply_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, retiredSupply_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(batchDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, batchDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tradableSupply_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, tradableSupply_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(retiredSupply_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, retiredSupply_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.ecocredit.v1alpha2.GenesisProto.Supply)) {
+        return super.equals(obj);
+      }
+      com.regen.ecocredit.v1alpha2.GenesisProto.Supply other = (com.regen.ecocredit.v1alpha2.GenesisProto.Supply) obj;
+
+      if (!getBatchDenom()
+          .equals(other.getBatchDenom())) return false;
+      if (!getTradableSupply()
+          .equals(other.getTradableSupply())) return false;
+      if (!getRetiredSupply()
+          .equals(other.getRetiredSupply())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BATCH_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getBatchDenom().hashCode();
+      hash = (37 * hash) + TRADABLE_SUPPLY_FIELD_NUMBER;
+      hash = (53 * hash) + getTradableSupply().hashCode();
+      hash = (37 * hash) + RETIRED_SUPPLY_FIELD_NUMBER;
+      hash = (53 * hash) + getRetiredSupply().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.Supply parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.Supply parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.Supply parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.Supply parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.Supply parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.Supply parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.Supply parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.Supply parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.Supply parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.Supply parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.Supply parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.Supply parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.ecocredit.v1alpha2.GenesisProto.Supply prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Supply represents a tradable or retired supply of a credit batch.
+     * </pre>
+     *
+     * Protobuf type {@code regen.ecocredit.v1alpha2.Supply}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.ecocredit.v1alpha2.Supply)
+        com.regen.ecocredit.v1alpha2.GenesisProto.SupplyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.ecocredit.v1alpha2.GenesisProto.internal_static_regen_ecocredit_v1alpha2_Supply_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.ecocredit.v1alpha2.GenesisProto.internal_static_regen_ecocredit_v1alpha2_Supply_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.ecocredit.v1alpha2.GenesisProto.Supply.class, com.regen.ecocredit.v1alpha2.GenesisProto.Supply.Builder.class);
+      }
+
+      // Construct using com.regen.ecocredit.v1alpha2.GenesisProto.Supply.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        batchDenom_ = "";
+        tradableSupply_ = "";
+        retiredSupply_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.ecocredit.v1alpha2.GenesisProto.internal_static_regen_ecocredit_v1alpha2_Supply_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.GenesisProto.Supply getDefaultInstanceForType() {
+        return com.regen.ecocredit.v1alpha2.GenesisProto.Supply.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.GenesisProto.Supply build() {
+        com.regen.ecocredit.v1alpha2.GenesisProto.Supply result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.ecocredit.v1alpha2.GenesisProto.Supply buildPartial() {
+        com.regen.ecocredit.v1alpha2.GenesisProto.Supply result = new com.regen.ecocredit.v1alpha2.GenesisProto.Supply(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.ecocredit.v1alpha2.GenesisProto.Supply result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.batchDenom_ = batchDenom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.tradableSupply_ = tradableSupply_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.retiredSupply_ = retiredSupply_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.ecocredit.v1alpha2.GenesisProto.Supply) {
+          return mergeFrom((com.regen.ecocredit.v1alpha2.GenesisProto.Supply)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.ecocredit.v1alpha2.GenesisProto.Supply other) {
+        if (other == com.regen.ecocredit.v1alpha2.GenesisProto.Supply.getDefaultInstance()) return this;
+        if (!other.getBatchDenom().isEmpty()) {
+          batchDenom_ = other.batchDenom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getTradableSupply().isEmpty()) {
+          tradableSupply_ = other.tradableSupply_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getRetiredSupply().isEmpty()) {
+          retiredSupply_ = other.retiredSupply_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                batchDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                tradableSupply_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                retiredSupply_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object batchDenom_ = "";
+      /**
+       * <pre>
+       * batch_denom is the unique ID of the credit batch.
+       * </pre>
+       *
+       * <code>string batch_denom = 1 [json_name = "batchDenom"];</code>
+       * @return The batchDenom.
+       */
+      public java.lang.String getBatchDenom() {
+        java.lang.Object ref = batchDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          batchDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * batch_denom is the unique ID of the credit batch.
+       * </pre>
+       *
+       * <code>string batch_denom = 1 [json_name = "batchDenom"];</code>
+       * @return The bytes for batchDenom.
+       */
+      public com.google.protobuf.ByteString
+          getBatchDenomBytes() {
+        java.lang.Object ref = batchDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          batchDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * batch_denom is the unique ID of the credit batch.
+       * </pre>
+       *
+       * <code>string batch_denom = 1 [json_name = "batchDenom"];</code>
+       * @param value The batchDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBatchDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        batchDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * batch_denom is the unique ID of the credit batch.
+       * </pre>
+       *
+       * <code>string batch_denom = 1 [json_name = "batchDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBatchDenom() {
+        batchDenom_ = getDefaultInstance().getBatchDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * batch_denom is the unique ID of the credit batch.
+       * </pre>
+       *
+       * <code>string batch_denom = 1 [json_name = "batchDenom"];</code>
+       * @param value The bytes for batchDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBatchDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        batchDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object tradableSupply_ = "";
+      /**
+       * <pre>
+       * tradable_supply is the tradable supply of the credit batch.
+       * </pre>
+       *
+       * <code>string tradable_supply = 2 [json_name = "tradableSupply"];</code>
+       * @return The tradableSupply.
+       */
+      public java.lang.String getTradableSupply() {
+        java.lang.Object ref = tradableSupply_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tradableSupply_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * tradable_supply is the tradable supply of the credit batch.
+       * </pre>
+       *
+       * <code>string tradable_supply = 2 [json_name = "tradableSupply"];</code>
+       * @return The bytes for tradableSupply.
+       */
+      public com.google.protobuf.ByteString
+          getTradableSupplyBytes() {
+        java.lang.Object ref = tradableSupply_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tradableSupply_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * tradable_supply is the tradable supply of the credit batch.
+       * </pre>
+       *
+       * <code>string tradable_supply = 2 [json_name = "tradableSupply"];</code>
+       * @param value The tradableSupply to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTradableSupply(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        tradableSupply_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * tradable_supply is the tradable supply of the credit batch.
+       * </pre>
+       *
+       * <code>string tradable_supply = 2 [json_name = "tradableSupply"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTradableSupply() {
+        tradableSupply_ = getDefaultInstance().getTradableSupply();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * tradable_supply is the tradable supply of the credit batch.
+       * </pre>
+       *
+       * <code>string tradable_supply = 2 [json_name = "tradableSupply"];</code>
+       * @param value The bytes for tradableSupply to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTradableSupplyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        tradableSupply_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object retiredSupply_ = "";
+      /**
+       * <pre>
+       * retired_supply is the retired supply of the credit batch.
+       * </pre>
+       *
+       * <code>string retired_supply = 3 [json_name = "retiredSupply"];</code>
+       * @return The retiredSupply.
+       */
+      public java.lang.String getRetiredSupply() {
+        java.lang.Object ref = retiredSupply_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          retiredSupply_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * retired_supply is the retired supply of the credit batch.
+       * </pre>
+       *
+       * <code>string retired_supply = 3 [json_name = "retiredSupply"];</code>
+       * @return The bytes for retiredSupply.
+       */
+      public com.google.protobuf.ByteString
+          getRetiredSupplyBytes() {
+        java.lang.Object ref = retiredSupply_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          retiredSupply_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * retired_supply is the retired supply of the credit batch.
+       * </pre>
+       *
+       * <code>string retired_supply = 3 [json_name = "retiredSupply"];</code>
+       * @param value The retiredSupply to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRetiredSupply(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        retiredSupply_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * retired_supply is the retired supply of the credit batch.
+       * </pre>
+       *
+       * <code>string retired_supply = 3 [json_name = "retiredSupply"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRetiredSupply() {
+        retiredSupply_ = getDefaultInstance().getRetiredSupply();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * retired_supply is the retired supply of the credit batch.
+       * </pre>
+       *
+       * <code>string retired_supply = 3 [json_name = "retiredSupply"];</code>
+       * @param value The bytes for retiredSupply to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRetiredSupplyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        retiredSupply_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.ecocredit.v1alpha2.Supply)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.ecocredit.v1alpha2.Supply)
+    private static final com.regen.ecocredit.v1alpha2.GenesisProto.Supply DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.ecocredit.v1alpha2.GenesisProto.Supply();
+    }
+
+    public static com.regen.ecocredit.v1alpha2.GenesisProto.Supply getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Supply>
+        PARSER = new com.google.protobuf.AbstractParser<Supply>() {
+      @java.lang.Override
+      public Supply parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Supply> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Supply> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.ecocredit.v1alpha2.GenesisProto.Supply getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_ecocredit_v1alpha2_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_ecocredit_v1alpha2_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_ecocredit_v1alpha2_Balance_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_ecocredit_v1alpha2_Balance_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_ecocredit_v1alpha2_Supply_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_ecocredit_v1alpha2_Supply_fieldAccessorTable;
 
@@ -60,13 +5777,13 @@ public final class GenesisProto {
       "dBalance\"y\n\006Supply\022\037\n\013batch_denom\030\001 \001(\tR" +
       "\nbatchDenom\022\'\n\017tradable_supply\030\002 \001(\tR\016tr" +
       "adableSupply\022%\n\016retired_supply\030\003 \001(\tR\rre" +
-      "tiredSupplyB\341\001\n\034com.regen.ecocredit.v1al" +
-      "pha2B\014GenesisProtoP\001Z1github.com/regen-n" +
-      "etwork/regen-ledger/x/ecocredit\242\002\003REX\252\002\030" +
-      "Regen.Ecocredit.V1alpha2\312\002\030Regen\\Ecocred" +
-      "it\\V1alpha2\342\002$Regen\\Ecocredit\\V1alpha2\\G" +
-      "PBMetadata\352\002\032Regen::Ecocredit::V1alpha2b" +
-      "\006proto3"
+      "tiredSupplyB\337\001\n\034com.regen.ecocredit.v1al" +
+      "pha2B\014GenesisProtoZ1github.com/regen-net" +
+      "work/regen-ledger/x/ecocredit\242\002\003REX\252\002\030Re" +
+      "gen.Ecocredit.V1alpha2\312\002\030Regen\\Ecocredit" +
+      "\\V1alpha2\342\002$Regen\\Ecocredit\\V1alpha2\\GPB" +
+      "Metadata\352\002\032Regen::Ecocredit::V1alpha2b\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

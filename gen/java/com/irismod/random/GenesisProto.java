@@ -14,19 +14,1534 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.random.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>map&lt;string, .irismod.random.Requests&gt; pending_random_requests = 1 [json_name = "pendingRandomRequests", (.gogoproto.nullable) = false];</code>
+     */
+    int getPendingRandomRequestsCount();
+    /**
+     * <code>map&lt;string, .irismod.random.Requests&gt; pending_random_requests = 1 [json_name = "pendingRandomRequests", (.gogoproto.nullable) = false];</code>
+     */
+    boolean containsPendingRandomRequests(
+        java.lang.String key);
+    /**
+     * Use {@link #getPendingRandomRequestsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, com.irismod.random.GenesisProto.Requests>
+    getPendingRandomRequests();
+    /**
+     * <code>map&lt;string, .irismod.random.Requests&gt; pending_random_requests = 1 [json_name = "pendingRandomRequests", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.Map<java.lang.String, com.irismod.random.GenesisProto.Requests>
+    getPendingRandomRequestsMap();
+    /**
+     * <code>map&lt;string, .irismod.random.Requests&gt; pending_random_requests = 1 [json_name = "pendingRandomRequests", (.gogoproto.nullable) = false];</code>
+     */
+    /* nullable */
+com.irismod.random.GenesisProto.Requests getPendingRandomRequestsOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.irismod.random.GenesisProto.Requests defaultValue);
+    /**
+     * <code>map&lt;string, .irismod.random.Requests&gt; pending_random_requests = 1 [json_name = "pendingRandomRequests", (.gogoproto.nullable) = false];</code>
+     */
+    com.irismod.random.GenesisProto.Requests getPendingRandomRequestsOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the random module's genesis state
+   * </pre>
+   *
+   * Protobuf type {@code irismod.random.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.random.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.random.GenesisProto.internal_static_irismod_random_GenesisState_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 1:
+          return internalGetPendingRandomRequests();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.random.GenesisProto.internal_static_irismod_random_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.random.GenesisProto.GenesisState.class, com.irismod.random.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PENDING_RANDOM_REQUESTS_FIELD_NUMBER = 1;
+    private static final class PendingRandomRequestsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, com.irismod.random.GenesisProto.Requests> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, com.irismod.random.GenesisProto.Requests>newDefaultInstance(
+                  com.irismod.random.GenesisProto.internal_static_irismod_random_GenesisState_PendingRandomRequestsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  com.irismod.random.GenesisProto.Requests.getDefaultInstance());
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.String, com.irismod.random.GenesisProto.Requests> pendingRandomRequests_;
+    private com.google.protobuf.MapField<java.lang.String, com.irismod.random.GenesisProto.Requests>
+    internalGetPendingRandomRequests() {
+      if (pendingRandomRequests_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            PendingRandomRequestsDefaultEntryHolder.defaultEntry);
+      }
+      return pendingRandomRequests_;
+    }
+    public int getPendingRandomRequestsCount() {
+      return internalGetPendingRandomRequests().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, .irismod.random.Requests&gt; pending_random_requests = 1 [json_name = "pendingRandomRequests", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public boolean containsPendingRandomRequests(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetPendingRandomRequests().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getPendingRandomRequestsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.irismod.random.GenesisProto.Requests> getPendingRandomRequests() {
+      return getPendingRandomRequestsMap();
+    }
+    /**
+     * <code>map&lt;string, .irismod.random.Requests&gt; pending_random_requests = 1 [json_name = "pendingRandomRequests", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.String, com.irismod.random.GenesisProto.Requests> getPendingRandomRequestsMap() {
+      return internalGetPendingRandomRequests().getMap();
+    }
+    /**
+     * <code>map&lt;string, .irismod.random.Requests&gt; pending_random_requests = 1 [json_name = "pendingRandomRequests", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.irismod.random.GenesisProto.Requests getPendingRandomRequestsOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.irismod.random.GenesisProto.Requests defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.irismod.random.GenesisProto.Requests> map =
+          internalGetPendingRandomRequests().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, .irismod.random.Requests&gt; pending_random_requests = 1 [json_name = "pendingRandomRequests", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.irismod.random.GenesisProto.Requests getPendingRandomRequestsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.irismod.random.GenesisProto.Requests> map =
+          internalGetPendingRandomRequests().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetPendingRandomRequests(),
+          PendingRandomRequestsDefaultEntryHolder.defaultEntry,
+          1);
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (java.util.Map.Entry<java.lang.String, com.irismod.random.GenesisProto.Requests> entry
+           : internalGetPendingRandomRequests().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, com.irismod.random.GenesisProto.Requests>
+        pendingRandomRequests__ = PendingRandomRequestsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, pendingRandomRequests__);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.random.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.irismod.random.GenesisProto.GenesisState other = (com.irismod.random.GenesisProto.GenesisState) obj;
+
+      if (!internalGetPendingRandomRequests().equals(
+          other.internalGetPendingRandomRequests())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (!internalGetPendingRandomRequests().getMap().isEmpty()) {
+        hash = (37 * hash) + PENDING_RANDOM_REQUESTS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetPendingRandomRequests().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.random.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.random.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.random.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.random.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.random.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.random.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.random.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.random.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.random.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.random.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.random.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.random.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.random.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the random module's genesis state
+     * </pre>
+     *
+     * Protobuf type {@code irismod.random.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.random.GenesisState)
+        com.irismod.random.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.random.GenesisProto.internal_static_irismod_random_GenesisState_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetPendingRandomRequests();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetMutablePendingRandomRequests();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.random.GenesisProto.internal_static_irismod_random_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.random.GenesisProto.GenesisState.class, com.irismod.random.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.irismod.random.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        internalGetMutablePendingRandomRequests().clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.random.GenesisProto.internal_static_irismod_random_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.random.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.irismod.random.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.random.GenesisProto.GenesisState build() {
+        com.irismod.random.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.random.GenesisProto.GenesisState buildPartial() {
+        com.irismod.random.GenesisProto.GenesisState result = new com.irismod.random.GenesisProto.GenesisState(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.random.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pendingRandomRequests_ = internalGetPendingRandomRequests();
+          result.pendingRandomRequests_.makeImmutable();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.random.GenesisProto.GenesisState) {
+          return mergeFrom((com.irismod.random.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.random.GenesisProto.GenesisState other) {
+        if (other == com.irismod.random.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        internalGetMutablePendingRandomRequests().mergeFrom(
+            other.internalGetPendingRandomRequests());
+        bitField0_ |= 0x00000001;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.protobuf.MapEntry<java.lang.String, com.irismod.random.GenesisProto.Requests>
+                pendingRandomRequests__ = input.readMessage(
+                    PendingRandomRequestsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutablePendingRandomRequests().getMutableMap().put(
+                    pendingRandomRequests__.getKey(), pendingRandomRequests__.getValue());
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.MapField<
+          java.lang.String, com.irismod.random.GenesisProto.Requests> pendingRandomRequests_;
+      private com.google.protobuf.MapField<java.lang.String, com.irismod.random.GenesisProto.Requests>
+          internalGetPendingRandomRequests() {
+        if (pendingRandomRequests_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              PendingRandomRequestsDefaultEntryHolder.defaultEntry);
+        }
+        return pendingRandomRequests_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, com.irismod.random.GenesisProto.Requests>
+          internalGetMutablePendingRandomRequests() {
+        if (pendingRandomRequests_ == null) {
+          pendingRandomRequests_ = com.google.protobuf.MapField.newMapField(
+              PendingRandomRequestsDefaultEntryHolder.defaultEntry);
+        }
+        if (!pendingRandomRequests_.isMutable()) {
+          pendingRandomRequests_ = pendingRandomRequests_.copy();
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return pendingRandomRequests_;
+      }
+      public int getPendingRandomRequestsCount() {
+        return internalGetPendingRandomRequests().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, .irismod.random.Requests&gt; pending_random_requests = 1 [json_name = "pendingRandomRequests", (.gogoproto.nullable) = false];</code>
+       */
+      @java.lang.Override
+      public boolean containsPendingRandomRequests(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetPendingRandomRequests().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getPendingRandomRequestsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.irismod.random.GenesisProto.Requests> getPendingRandomRequests() {
+        return getPendingRandomRequestsMap();
+      }
+      /**
+       * <code>map&lt;string, .irismod.random.Requests&gt; pending_random_requests = 1 [json_name = "pendingRandomRequests", (.gogoproto.nullable) = false];</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, com.irismod.random.GenesisProto.Requests> getPendingRandomRequestsMap() {
+        return internalGetPendingRandomRequests().getMap();
+      }
+      /**
+       * <code>map&lt;string, .irismod.random.Requests&gt; pending_random_requests = 1 [json_name = "pendingRandomRequests", (.gogoproto.nullable) = false];</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.irismod.random.GenesisProto.Requests getPendingRandomRequestsOrDefault(
+          java.lang.String key,
+          /* nullable */
+com.irismod.random.GenesisProto.Requests defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, com.irismod.random.GenesisProto.Requests> map =
+            internalGetPendingRandomRequests().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, .irismod.random.Requests&gt; pending_random_requests = 1 [json_name = "pendingRandomRequests", (.gogoproto.nullable) = false];</code>
+       */
+      @java.lang.Override
+      public com.irismod.random.GenesisProto.Requests getPendingRandomRequestsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, com.irismod.random.GenesisProto.Requests> map =
+            internalGetPendingRandomRequests().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearPendingRandomRequests() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        internalGetMutablePendingRandomRequests().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .irismod.random.Requests&gt; pending_random_requests = 1 [json_name = "pendingRandomRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removePendingRandomRequests(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutablePendingRandomRequests().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.irismod.random.GenesisProto.Requests>
+          getMutablePendingRandomRequests() {
+        bitField0_ |= 0x00000001;
+        return internalGetMutablePendingRandomRequests().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, .irismod.random.Requests&gt; pending_random_requests = 1 [json_name = "pendingRandomRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder putPendingRandomRequests(
+          java.lang.String key,
+          com.irismod.random.GenesisProto.Requests value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutablePendingRandomRequests().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .irismod.random.Requests&gt; pending_random_requests = 1 [json_name = "pendingRandomRequests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder putAllPendingRandomRequests(
+          java.util.Map<java.lang.String, com.irismod.random.GenesisProto.Requests> values) {
+        internalGetMutablePendingRandomRequests().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.random.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.random.GenesisState)
+    private static final com.irismod.random.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.random.GenesisProto.GenesisState();
+    }
+
+    public static com.irismod.random.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.random.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RequestsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.random.Requests)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.irismod.random.RandomProto.Request> 
+        getRequestsList();
+    /**
+     * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+     */
+    com.irismod.random.RandomProto.Request getRequests(int index);
+    /**
+     * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+     */
+    int getRequestsCount();
+    /**
+     * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.irismod.random.RandomProto.RequestOrBuilder> 
+        getRequestsOrBuilderList();
+    /**
+     * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+     */
+    com.irismod.random.RandomProto.RequestOrBuilder getRequestsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Requests defines the random requests
+   * </pre>
+   *
+   * Protobuf type {@code irismod.random.Requests}
+   */
+  public static final class Requests extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.random.Requests)
+      RequestsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Requests.newBuilder() to construct.
+    private Requests(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Requests() {
+      requests_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Requests();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.random.GenesisProto.internal_static_irismod_random_Requests_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.random.GenesisProto.internal_static_irismod_random_Requests_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.random.GenesisProto.Requests.class, com.irismod.random.GenesisProto.Requests.Builder.class);
+    }
+
+    public static final int REQUESTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.irismod.random.RandomProto.Request> requests_;
+    /**
+     * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.irismod.random.RandomProto.Request> getRequestsList() {
+      return requests_;
+    }
+    /**
+     * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.irismod.random.RandomProto.RequestOrBuilder> 
+        getRequestsOrBuilderList() {
+      return requests_;
+    }
+    /**
+     * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getRequestsCount() {
+      return requests_.size();
+    }
+    /**
+     * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.irismod.random.RandomProto.Request getRequests(int index) {
+      return requests_.get(index);
+    }
+    /**
+     * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.irismod.random.RandomProto.RequestOrBuilder getRequestsOrBuilder(
+        int index) {
+      return requests_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < requests_.size(); i++) {
+        output.writeMessage(1, requests_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < requests_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, requests_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.random.GenesisProto.Requests)) {
+        return super.equals(obj);
+      }
+      com.irismod.random.GenesisProto.Requests other = (com.irismod.random.GenesisProto.Requests) obj;
+
+      if (!getRequestsList()
+          .equals(other.getRequestsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getRequestsCount() > 0) {
+        hash = (37 * hash) + REQUESTS_FIELD_NUMBER;
+        hash = (53 * hash) + getRequestsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.random.GenesisProto.Requests parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.random.GenesisProto.Requests parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.random.GenesisProto.Requests parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.random.GenesisProto.Requests parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.random.GenesisProto.Requests parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.random.GenesisProto.Requests parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.random.GenesisProto.Requests parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.random.GenesisProto.Requests parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.random.GenesisProto.Requests parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.random.GenesisProto.Requests parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.random.GenesisProto.Requests parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.random.GenesisProto.Requests parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.random.GenesisProto.Requests prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Requests defines the random requests
+     * </pre>
+     *
+     * Protobuf type {@code irismod.random.Requests}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.random.Requests)
+        com.irismod.random.GenesisProto.RequestsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.random.GenesisProto.internal_static_irismod_random_Requests_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.random.GenesisProto.internal_static_irismod_random_Requests_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.random.GenesisProto.Requests.class, com.irismod.random.GenesisProto.Requests.Builder.class);
+      }
+
+      // Construct using com.irismod.random.GenesisProto.Requests.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (requestsBuilder_ == null) {
+          requests_ = java.util.Collections.emptyList();
+        } else {
+          requests_ = null;
+          requestsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.random.GenesisProto.internal_static_irismod_random_Requests_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.random.GenesisProto.Requests getDefaultInstanceForType() {
+        return com.irismod.random.GenesisProto.Requests.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.random.GenesisProto.Requests build() {
+        com.irismod.random.GenesisProto.Requests result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.random.GenesisProto.Requests buildPartial() {
+        com.irismod.random.GenesisProto.Requests result = new com.irismod.random.GenesisProto.Requests(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.irismod.random.GenesisProto.Requests result) {
+        if (requestsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            requests_ = java.util.Collections.unmodifiableList(requests_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.requests_ = requests_;
+        } else {
+          result.requests_ = requestsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.irismod.random.GenesisProto.Requests result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.random.GenesisProto.Requests) {
+          return mergeFrom((com.irismod.random.GenesisProto.Requests)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.random.GenesisProto.Requests other) {
+        if (other == com.irismod.random.GenesisProto.Requests.getDefaultInstance()) return this;
+        if (requestsBuilder_ == null) {
+          if (!other.requests_.isEmpty()) {
+            if (requests_.isEmpty()) {
+              requests_ = other.requests_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRequestsIsMutable();
+              requests_.addAll(other.requests_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.requests_.isEmpty()) {
+            if (requestsBuilder_.isEmpty()) {
+              requestsBuilder_.dispose();
+              requestsBuilder_ = null;
+              requests_ = other.requests_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              requestsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRequestsFieldBuilder() : null;
+            } else {
+              requestsBuilder_.addAllMessages(other.requests_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.irismod.random.RandomProto.Request m =
+                    input.readMessage(
+                        com.irismod.random.RandomProto.Request.parser(),
+                        extensionRegistry);
+                if (requestsBuilder_ == null) {
+                  ensureRequestsIsMutable();
+                  requests_.add(m);
+                } else {
+                  requestsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.irismod.random.RandomProto.Request> requests_ =
+        java.util.Collections.emptyList();
+      private void ensureRequestsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          requests_ = new java.util.ArrayList<com.irismod.random.RandomProto.Request>(requests_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.irismod.random.RandomProto.Request, com.irismod.random.RandomProto.Request.Builder, com.irismod.random.RandomProto.RequestOrBuilder> requestsBuilder_;
+
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.irismod.random.RandomProto.Request> getRequestsList() {
+        if (requestsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(requests_);
+        } else {
+          return requestsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public int getRequestsCount() {
+        if (requestsBuilder_ == null) {
+          return requests_.size();
+        } else {
+          return requestsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.random.RandomProto.Request getRequests(int index) {
+        if (requestsBuilder_ == null) {
+          return requests_.get(index);
+        } else {
+          return requestsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRequests(
+          int index, com.irismod.random.RandomProto.Request value) {
+        if (requestsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRequestsIsMutable();
+          requests_.set(index, value);
+          onChanged();
+        } else {
+          requestsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRequests(
+          int index, com.irismod.random.RandomProto.Request.Builder builderForValue) {
+        if (requestsBuilder_ == null) {
+          ensureRequestsIsMutable();
+          requests_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          requestsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRequests(com.irismod.random.RandomProto.Request value) {
+        if (requestsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRequestsIsMutable();
+          requests_.add(value);
+          onChanged();
+        } else {
+          requestsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRequests(
+          int index, com.irismod.random.RandomProto.Request value) {
+        if (requestsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRequestsIsMutable();
+          requests_.add(index, value);
+          onChanged();
+        } else {
+          requestsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRequests(
+          com.irismod.random.RandomProto.Request.Builder builderForValue) {
+        if (requestsBuilder_ == null) {
+          ensureRequestsIsMutable();
+          requests_.add(builderForValue.build());
+          onChanged();
+        } else {
+          requestsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRequests(
+          int index, com.irismod.random.RandomProto.Request.Builder builderForValue) {
+        if (requestsBuilder_ == null) {
+          ensureRequestsIsMutable();
+          requests_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          requestsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllRequests(
+          java.lang.Iterable<? extends com.irismod.random.RandomProto.Request> values) {
+        if (requestsBuilder_ == null) {
+          ensureRequestsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, requests_);
+          onChanged();
+        } else {
+          requestsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearRequests() {
+        if (requestsBuilder_ == null) {
+          requests_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          requestsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeRequests(int index) {
+        if (requestsBuilder_ == null) {
+          ensureRequestsIsMutable();
+          requests_.remove(index);
+          onChanged();
+        } else {
+          requestsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.random.RandomProto.Request.Builder getRequestsBuilder(
+          int index) {
+        return getRequestsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.random.RandomProto.RequestOrBuilder getRequestsOrBuilder(
+          int index) {
+        if (requestsBuilder_ == null) {
+          return requests_.get(index);  } else {
+          return requestsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.irismod.random.RandomProto.RequestOrBuilder> 
+           getRequestsOrBuilderList() {
+        if (requestsBuilder_ != null) {
+          return requestsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(requests_);
+        }
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.random.RandomProto.Request.Builder addRequestsBuilder() {
+        return getRequestsFieldBuilder().addBuilder(
+            com.irismod.random.RandomProto.Request.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.random.RandomProto.Request.Builder addRequestsBuilder(
+          int index) {
+        return getRequestsFieldBuilder().addBuilder(
+            index, com.irismod.random.RandomProto.Request.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .irismod.random.Request requests = 1 [json_name = "requests", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.irismod.random.RandomProto.Request.Builder> 
+           getRequestsBuilderList() {
+        return getRequestsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.irismod.random.RandomProto.Request, com.irismod.random.RandomProto.Request.Builder, com.irismod.random.RandomProto.RequestOrBuilder> 
+          getRequestsFieldBuilder() {
+        if (requestsBuilder_ == null) {
+          requestsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.irismod.random.RandomProto.Request, com.irismod.random.RandomProto.Request.Builder, com.irismod.random.RandomProto.RequestOrBuilder>(
+                  requests_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          requests_ = null;
+        }
+        return requestsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.random.Requests)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.random.Requests)
+    private static final com.irismod.random.GenesisProto.Requests DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.random.GenesisProto.Requests();
+    }
+
+    public static com.irismod.random.GenesisProto.Requests getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Requests>
+        PARSER = new com.google.protobuf.AbstractParser<Requests>() {
+      @java.lang.Override
+      public Requests parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Requests> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Requests> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.random.GenesisProto.Requests getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_random_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_random_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_random_GenesisState_PendingRandomRequestsEntry_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_random_GenesisState_PendingRandomRequestsEntry_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_random_Requests_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_random_Requests_fieldAccessorTable;
 
@@ -48,11 +1563,11 @@ public final class GenesisProto {
       "y\022.\n\005value\030\002 \001(\0132\030.irismod.random.Reques" +
       "tsR\005value:\0028\001\"E\n\010Requests\0229\n\010requests\030\001 " +
       "\003(\0132\027.irismod.random.RequestB\004\310\336\037\000R\010requ" +
-      "estsB\254\001\n\022com.irismod.randomB\014GenesisProt" +
-      "oP\001Z/github.com/irisnet/irismod/modules/" +
-      "random/types\242\002\003IRX\252\002\016Irismod.Random\312\002\016Ir" +
-      "ismod\\Random\342\002\032Irismod\\Random\\GPBMetadat" +
-      "a\352\002\017Irismod::Randomb\006proto3"
+      "estsB\252\001\n\022com.irismod.randomB\014GenesisProt" +
+      "oZ/github.com/irisnet/irismod/modules/ra" +
+      "ndom/types\242\002\003IRX\252\002\016Irismod.Random\312\002\016Iris" +
+      "mod\\Random\342\002\032Irismod\\Random\\GPBMetadata\352" +
+      "\002\017Irismod::Randomb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,14 +14,2108 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface IndexesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bitsong.merkledrop.v1beta1.Indexes)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 merkledrop_id = 1 [json_name = "merkledropId", (.gogoproto.moretags) = "yaml:&#92;"mdi&#92;""];</code>
+     * @return The merkledropId.
+     */
+    long getMerkledropId();
+
+    /**
+     * <code>repeated uint64 index = 2 [json_name = "index", (.gogoproto.moretags) = "yaml:&#92;"i&#92;""];</code>
+     * @return A list containing the index.
+     */
+    java.util.List<java.lang.Long> getIndexList();
+    /**
+     * <code>repeated uint64 index = 2 [json_name = "index", (.gogoproto.moretags) = "yaml:&#92;"i&#92;""];</code>
+     * @return The count of index.
+     */
+    int getIndexCount();
+    /**
+     * <code>repeated uint64 index = 2 [json_name = "index", (.gogoproto.moretags) = "yaml:&#92;"i&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The index at the given index.
+     */
+    long getIndex(int index);
+  }
+  /**
+   * Protobuf type {@code bitsong.merkledrop.v1beta1.Indexes}
+   */
+  public static final class Indexes extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bitsong.merkledrop.v1beta1.Indexes)
+      IndexesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Indexes.newBuilder() to construct.
+    private Indexes(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Indexes() {
+      index_ = emptyLongList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Indexes();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bitsong.merkledrop.v1beta1.GenesisProto.internal_static_bitsong_merkledrop_v1beta1_Indexes_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bitsong.merkledrop.v1beta1.GenesisProto.internal_static_bitsong_merkledrop_v1beta1_Indexes_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes.class, com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes.Builder.class);
+    }
+
+    public static final int MERKLEDROP_ID_FIELD_NUMBER = 1;
+    private long merkledropId_ = 0L;
+    /**
+     * <code>uint64 merkledrop_id = 1 [json_name = "merkledropId", (.gogoproto.moretags) = "yaml:&#92;"mdi&#92;""];</code>
+     * @return The merkledropId.
+     */
+    @java.lang.Override
+    public long getMerkledropId() {
+      return merkledropId_;
+    }
+
+    public static final int INDEX_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.LongList index_;
+    /**
+     * <code>repeated uint64 index = 2 [json_name = "index", (.gogoproto.moretags) = "yaml:&#92;"i&#92;""];</code>
+     * @return A list containing the index.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Long>
+        getIndexList() {
+      return index_;
+    }
+    /**
+     * <code>repeated uint64 index = 2 [json_name = "index", (.gogoproto.moretags) = "yaml:&#92;"i&#92;""];</code>
+     * @return The count of index.
+     */
+    public int getIndexCount() {
+      return index_.size();
+    }
+    /**
+     * <code>repeated uint64 index = 2 [json_name = "index", (.gogoproto.moretags) = "yaml:&#92;"i&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The index at the given index.
+     */
+    public long getIndex(int index) {
+      return index_.getLong(index);
+    }
+    private int indexMemoizedSerializedSize = -1;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (merkledropId_ != 0L) {
+        output.writeUInt64(1, merkledropId_);
+      }
+      if (getIndexList().size() > 0) {
+        output.writeUInt32NoTag(18);
+        output.writeUInt32NoTag(indexMemoizedSerializedSize);
+      }
+      for (int i = 0; i < index_.size(); i++) {
+        output.writeUInt64NoTag(index_.getLong(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (merkledropId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, merkledropId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < index_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt64SizeNoTag(index_.getLong(i));
+        }
+        size += dataSize;
+        if (!getIndexList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        indexMemoizedSerializedSize = dataSize;
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes)) {
+        return super.equals(obj);
+      }
+      com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes other = (com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes) obj;
+
+      if (getMerkledropId()
+          != other.getMerkledropId()) return false;
+      if (!getIndexList()
+          .equals(other.getIndexList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MERKLEDROP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMerkledropId());
+      if (getIndexCount() > 0) {
+        hash = (37 * hash) + INDEX_FIELD_NUMBER;
+        hash = (53 * hash) + getIndexList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bitsong.merkledrop.v1beta1.Indexes}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bitsong.merkledrop.v1beta1.Indexes)
+        com.bitsong.merkledrop.v1beta1.GenesisProto.IndexesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bitsong.merkledrop.v1beta1.GenesisProto.internal_static_bitsong_merkledrop_v1beta1_Indexes_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bitsong.merkledrop.v1beta1.GenesisProto.internal_static_bitsong_merkledrop_v1beta1_Indexes_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes.class, com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes.Builder.class);
+      }
+
+      // Construct using com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        merkledropId_ = 0L;
+        index_ = emptyLongList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bitsong.merkledrop.v1beta1.GenesisProto.internal_static_bitsong_merkledrop_v1beta1_Indexes_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes getDefaultInstanceForType() {
+        return com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes build() {
+        com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes buildPartial() {
+        com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes result = new com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes result) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          index_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.index_ = index_;
+      }
+
+      private void buildPartial0(com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.merkledropId_ = merkledropId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes) {
+          return mergeFrom((com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes other) {
+        if (other == com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes.getDefaultInstance()) return this;
+        if (other.getMerkledropId() != 0L) {
+          setMerkledropId(other.getMerkledropId());
+        }
+        if (!other.index_.isEmpty()) {
+          if (index_.isEmpty()) {
+            index_ = other.index_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureIndexIsMutable();
+            index_.addAll(other.index_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                merkledropId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                long v = input.readUInt64();
+                ensureIndexIsMutable();
+                index_.addLong(v);
+                break;
+              } // case 16
+              case 18: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureIndexIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  index_.addLong(input.readUInt64());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long merkledropId_ ;
+      /**
+       * <code>uint64 merkledrop_id = 1 [json_name = "merkledropId", (.gogoproto.moretags) = "yaml:&#92;"mdi&#92;""];</code>
+       * @return The merkledropId.
+       */
+      @java.lang.Override
+      public long getMerkledropId() {
+        return merkledropId_;
+      }
+      /**
+       * <code>uint64 merkledrop_id = 1 [json_name = "merkledropId", (.gogoproto.moretags) = "yaml:&#92;"mdi&#92;""];</code>
+       * @param value The merkledropId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMerkledropId(long value) {
+
+        merkledropId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 merkledrop_id = 1 [json_name = "merkledropId", (.gogoproto.moretags) = "yaml:&#92;"mdi&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMerkledropId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        merkledropId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.LongList index_ = emptyLongList();
+      private void ensureIndexIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          index_ = mutableCopy(index_);
+          bitField0_ |= 0x00000002;
+        }
+      }
+      /**
+       * <code>repeated uint64 index = 2 [json_name = "index", (.gogoproto.moretags) = "yaml:&#92;"i&#92;""];</code>
+       * @return A list containing the index.
+       */
+      public java.util.List<java.lang.Long>
+          getIndexList() {
+        return ((bitField0_ & 0x00000002) != 0) ?
+                 java.util.Collections.unmodifiableList(index_) : index_;
+      }
+      /**
+       * <code>repeated uint64 index = 2 [json_name = "index", (.gogoproto.moretags) = "yaml:&#92;"i&#92;""];</code>
+       * @return The count of index.
+       */
+      public int getIndexCount() {
+        return index_.size();
+      }
+      /**
+       * <code>repeated uint64 index = 2 [json_name = "index", (.gogoproto.moretags) = "yaml:&#92;"i&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The index at the given index.
+       */
+      public long getIndex(int index) {
+        return index_.getLong(index);
+      }
+      /**
+       * <code>repeated uint64 index = 2 [json_name = "index", (.gogoproto.moretags) = "yaml:&#92;"i&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The index to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndex(
+          int index, long value) {
+
+        ensureIndexIsMutable();
+        index_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 index = 2 [json_name = "index", (.gogoproto.moretags) = "yaml:&#92;"i&#92;""];</code>
+       * @param value The index to add.
+       * @return This builder for chaining.
+       */
+      public Builder addIndex(long value) {
+
+        ensureIndexIsMutable();
+        index_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 index = 2 [json_name = "index", (.gogoproto.moretags) = "yaml:&#92;"i&#92;""];</code>
+       * @param values The index to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllIndex(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureIndexIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, index_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 index = 2 [json_name = "index", (.gogoproto.moretags) = "yaml:&#92;"i&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIndex() {
+        index_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bitsong.merkledrop.v1beta1.Indexes)
+    }
+
+    // @@protoc_insertion_point(class_scope:bitsong.merkledrop.v1beta1.Indexes)
+    private static final com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes();
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Indexes>
+        PARSER = new com.google.protobuf.AbstractParser<Indexes>() {
+      @java.lang.Override
+      public Indexes parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Indexes> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Indexes> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bitsong.merkledrop.v1beta1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 last_merkledrop_id = 1 [json_name = "lastMerkledropId"];</code>
+     * @return The lastMerkledropId.
+     */
+    long getLastMerkledropId();
+
+    /**
+     * <code>repeated .bitsong.merkledrop.v1beta1.Merkledrop merkledrops = 2 [json_name = "merkledrops", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop> 
+        getMerkledropsList();
+    /**
+     * <code>repeated .bitsong.merkledrop.v1beta1.Merkledrop merkledrops = 2 [json_name = "merkledrops", (.gogoproto.nullable) = false];</code>
+     */
+    com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop getMerkledrops(int index);
+    /**
+     * <code>repeated .bitsong.merkledrop.v1beta1.Merkledrop merkledrops = 2 [json_name = "merkledrops", (.gogoproto.nullable) = false];</code>
+     */
+    int getMerkledropsCount();
+    /**
+     * <code>repeated .bitsong.merkledrop.v1beta1.Merkledrop merkledrops = 2 [json_name = "merkledrops", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.bitsong.merkledrop.v1beta1.MerkledropProto.MerkledropOrBuilder> 
+        getMerkledropsOrBuilderList();
+    /**
+     * <code>repeated .bitsong.merkledrop.v1beta1.Merkledrop merkledrops = 2 [json_name = "merkledrops", (.gogoproto.nullable) = false];</code>
+     */
+    com.bitsong.merkledrop.v1beta1.MerkledropProto.MerkledropOrBuilder getMerkledropsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .bitsong.merkledrop.v1beta1.Indexes indexes = 3 [json_name = "indexes"];</code>
+     */
+    java.util.List<com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes> 
+        getIndexesList();
+    /**
+     * <code>repeated .bitsong.merkledrop.v1beta1.Indexes indexes = 3 [json_name = "indexes"];</code>
+     */
+    com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes getIndexes(int index);
+    /**
+     * <code>repeated .bitsong.merkledrop.v1beta1.Indexes indexes = 3 [json_name = "indexes"];</code>
+     */
+    int getIndexesCount();
+    /**
+     * <code>repeated .bitsong.merkledrop.v1beta1.Indexes indexes = 3 [json_name = "indexes"];</code>
+     */
+    java.util.List<? extends com.bitsong.merkledrop.v1beta1.GenesisProto.IndexesOrBuilder> 
+        getIndexesOrBuilderList();
+    /**
+     * <code>repeated .bitsong.merkledrop.v1beta1.Indexes indexes = 3 [json_name = "indexes"];</code>
+     */
+    com.bitsong.merkledrop.v1beta1.GenesisProto.IndexesOrBuilder getIndexesOrBuilder(
+        int index);
+
+    /**
+     * <code>.bitsong.merkledrop.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.bitsong.merkledrop.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.bitsong.merkledrop.v1beta1.ParamsProto.Params getParams();
+    /**
+     * <code>.bitsong.merkledrop.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.bitsong.merkledrop.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code bitsong.merkledrop.v1beta1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bitsong.merkledrop.v1beta1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      merkledrops_ = java.util.Collections.emptyList();
+      indexes_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bitsong.merkledrop.v1beta1.GenesisProto.internal_static_bitsong_merkledrop_v1beta1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bitsong.merkledrop.v1beta1.GenesisProto.internal_static_bitsong_merkledrop_v1beta1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState.class, com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int LAST_MERKLEDROP_ID_FIELD_NUMBER = 1;
+    private long lastMerkledropId_ = 0L;
+    /**
+     * <code>uint64 last_merkledrop_id = 1 [json_name = "lastMerkledropId"];</code>
+     * @return The lastMerkledropId.
+     */
+    @java.lang.Override
+    public long getLastMerkledropId() {
+      return lastMerkledropId_;
+    }
+
+    public static final int MERKLEDROPS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop> merkledrops_;
+    /**
+     * <code>repeated .bitsong.merkledrop.v1beta1.Merkledrop merkledrops = 2 [json_name = "merkledrops", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop> getMerkledropsList() {
+      return merkledrops_;
+    }
+    /**
+     * <code>repeated .bitsong.merkledrop.v1beta1.Merkledrop merkledrops = 2 [json_name = "merkledrops", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.bitsong.merkledrop.v1beta1.MerkledropProto.MerkledropOrBuilder> 
+        getMerkledropsOrBuilderList() {
+      return merkledrops_;
+    }
+    /**
+     * <code>repeated .bitsong.merkledrop.v1beta1.Merkledrop merkledrops = 2 [json_name = "merkledrops", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getMerkledropsCount() {
+      return merkledrops_.size();
+    }
+    /**
+     * <code>repeated .bitsong.merkledrop.v1beta1.Merkledrop merkledrops = 2 [json_name = "merkledrops", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop getMerkledrops(int index) {
+      return merkledrops_.get(index);
+    }
+    /**
+     * <code>repeated .bitsong.merkledrop.v1beta1.Merkledrop merkledrops = 2 [json_name = "merkledrops", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bitsong.merkledrop.v1beta1.MerkledropProto.MerkledropOrBuilder getMerkledropsOrBuilder(
+        int index) {
+      return merkledrops_.get(index);
+    }
+
+    public static final int INDEXES_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes> indexes_;
+    /**
+     * <code>repeated .bitsong.merkledrop.v1beta1.Indexes indexes = 3 [json_name = "indexes"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes> getIndexesList() {
+      return indexes_;
+    }
+    /**
+     * <code>repeated .bitsong.merkledrop.v1beta1.Indexes indexes = 3 [json_name = "indexes"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.bitsong.merkledrop.v1beta1.GenesisProto.IndexesOrBuilder> 
+        getIndexesOrBuilderList() {
+      return indexes_;
+    }
+    /**
+     * <code>repeated .bitsong.merkledrop.v1beta1.Indexes indexes = 3 [json_name = "indexes"];</code>
+     */
+    @java.lang.Override
+    public int getIndexesCount() {
+      return indexes_.size();
+    }
+    /**
+     * <code>repeated .bitsong.merkledrop.v1beta1.Indexes indexes = 3 [json_name = "indexes"];</code>
+     */
+    @java.lang.Override
+    public com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes getIndexes(int index) {
+      return indexes_.get(index);
+    }
+    /**
+     * <code>repeated .bitsong.merkledrop.v1beta1.Indexes indexes = 3 [json_name = "indexes"];</code>
+     */
+    @java.lang.Override
+    public com.bitsong.merkledrop.v1beta1.GenesisProto.IndexesOrBuilder getIndexesOrBuilder(
+        int index) {
+      return indexes_.get(index);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 4;
+    private com.bitsong.merkledrop.v1beta1.ParamsProto.Params params_;
+    /**
+     * <code>.bitsong.merkledrop.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.bitsong.merkledrop.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.bitsong.merkledrop.v1beta1.ParamsProto.Params getParams() {
+      return params_ == null ? com.bitsong.merkledrop.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.bitsong.merkledrop.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bitsong.merkledrop.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.bitsong.merkledrop.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (lastMerkledropId_ != 0L) {
+        output.writeUInt64(1, lastMerkledropId_);
+      }
+      for (int i = 0; i < merkledrops_.size(); i++) {
+        output.writeMessage(2, merkledrops_.get(i));
+      }
+      for (int i = 0; i < indexes_.size(); i++) {
+        output.writeMessage(3, indexes_.get(i));
+      }
+      if (params_ != null) {
+        output.writeMessage(4, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (lastMerkledropId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, lastMerkledropId_);
+      }
+      for (int i = 0; i < merkledrops_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, merkledrops_.get(i));
+      }
+      for (int i = 0; i < indexes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, indexes_.get(i));
+      }
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState other = (com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState) obj;
+
+      if (getLastMerkledropId()
+          != other.getLastMerkledropId()) return false;
+      if (!getMerkledropsList()
+          .equals(other.getMerkledropsList())) return false;
+      if (!getIndexesList()
+          .equals(other.getIndexesList())) return false;
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LAST_MERKLEDROP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLastMerkledropId());
+      if (getMerkledropsCount() > 0) {
+        hash = (37 * hash) + MERKLEDROPS_FIELD_NUMBER;
+        hash = (53 * hash) + getMerkledropsList().hashCode();
+      }
+      if (getIndexesCount() > 0) {
+        hash = (37 * hash) + INDEXES_FIELD_NUMBER;
+        hash = (53 * hash) + getIndexesList().hashCode();
+      }
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bitsong.merkledrop.v1beta1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bitsong.merkledrop.v1beta1.GenesisState)
+        com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bitsong.merkledrop.v1beta1.GenesisProto.internal_static_bitsong_merkledrop_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bitsong.merkledrop.v1beta1.GenesisProto.internal_static_bitsong_merkledrop_v1beta1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState.class, com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        lastMerkledropId_ = 0L;
+        if (merkledropsBuilder_ == null) {
+          merkledrops_ = java.util.Collections.emptyList();
+        } else {
+          merkledrops_ = null;
+          merkledropsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (indexesBuilder_ == null) {
+          indexes_ = java.util.Collections.emptyList();
+        } else {
+          indexes_ = null;
+          indexesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bitsong.merkledrop.v1beta1.GenesisProto.internal_static_bitsong_merkledrop_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState build() {
+        com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState buildPartial() {
+        com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState result = new com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState result) {
+        if (merkledropsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            merkledrops_ = java.util.Collections.unmodifiableList(merkledrops_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.merkledrops_ = merkledrops_;
+        } else {
+          result.merkledrops_ = merkledropsBuilder_.build();
+        }
+        if (indexesBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            indexes_ = java.util.Collections.unmodifiableList(indexes_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.indexes_ = indexes_;
+        } else {
+          result.indexes_ = indexesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.lastMerkledropId_ = lastMerkledropId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState) {
+          return mergeFrom((com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState other) {
+        if (other == com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.getLastMerkledropId() != 0L) {
+          setLastMerkledropId(other.getLastMerkledropId());
+        }
+        if (merkledropsBuilder_ == null) {
+          if (!other.merkledrops_.isEmpty()) {
+            if (merkledrops_.isEmpty()) {
+              merkledrops_ = other.merkledrops_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureMerkledropsIsMutable();
+              merkledrops_.addAll(other.merkledrops_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.merkledrops_.isEmpty()) {
+            if (merkledropsBuilder_.isEmpty()) {
+              merkledropsBuilder_.dispose();
+              merkledropsBuilder_ = null;
+              merkledrops_ = other.merkledrops_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              merkledropsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMerkledropsFieldBuilder() : null;
+            } else {
+              merkledropsBuilder_.addAllMessages(other.merkledrops_);
+            }
+          }
+        }
+        if (indexesBuilder_ == null) {
+          if (!other.indexes_.isEmpty()) {
+            if (indexes_.isEmpty()) {
+              indexes_ = other.indexes_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureIndexesIsMutable();
+              indexes_.addAll(other.indexes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.indexes_.isEmpty()) {
+            if (indexesBuilder_.isEmpty()) {
+              indexesBuilder_.dispose();
+              indexesBuilder_ = null;
+              indexes_ = other.indexes_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              indexesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getIndexesFieldBuilder() : null;
+            } else {
+              indexesBuilder_.addAllMessages(other.indexes_);
+            }
+          }
+        }
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                lastMerkledropId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop m =
+                    input.readMessage(
+                        com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop.parser(),
+                        extensionRegistry);
+                if (merkledropsBuilder_ == null) {
+                  ensureMerkledropsIsMutable();
+                  merkledrops_.add(m);
+                } else {
+                  merkledropsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes m =
+                    input.readMessage(
+                        com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes.parser(),
+                        extensionRegistry);
+                if (indexesBuilder_ == null) {
+                  ensureIndexesIsMutable();
+                  indexes_.add(m);
+                } else {
+                  indexesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long lastMerkledropId_ ;
+      /**
+       * <code>uint64 last_merkledrop_id = 1 [json_name = "lastMerkledropId"];</code>
+       * @return The lastMerkledropId.
+       */
+      @java.lang.Override
+      public long getLastMerkledropId() {
+        return lastMerkledropId_;
+      }
+      /**
+       * <code>uint64 last_merkledrop_id = 1 [json_name = "lastMerkledropId"];</code>
+       * @param value The lastMerkledropId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastMerkledropId(long value) {
+
+        lastMerkledropId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 last_merkledrop_id = 1 [json_name = "lastMerkledropId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastMerkledropId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        lastMerkledropId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop> merkledrops_ =
+        java.util.Collections.emptyList();
+      private void ensureMerkledropsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          merkledrops_ = new java.util.ArrayList<com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop>(merkledrops_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop, com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop.Builder, com.bitsong.merkledrop.v1beta1.MerkledropProto.MerkledropOrBuilder> merkledropsBuilder_;
+
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Merkledrop merkledrops = 2 [json_name = "merkledrops", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop> getMerkledropsList() {
+        if (merkledropsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(merkledrops_);
+        } else {
+          return merkledropsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Merkledrop merkledrops = 2 [json_name = "merkledrops", (.gogoproto.nullable) = false];</code>
+       */
+      public int getMerkledropsCount() {
+        if (merkledropsBuilder_ == null) {
+          return merkledrops_.size();
+        } else {
+          return merkledropsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Merkledrop merkledrops = 2 [json_name = "merkledrops", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop getMerkledrops(int index) {
+        if (merkledropsBuilder_ == null) {
+          return merkledrops_.get(index);
+        } else {
+          return merkledropsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Merkledrop merkledrops = 2 [json_name = "merkledrops", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMerkledrops(
+          int index, com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop value) {
+        if (merkledropsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMerkledropsIsMutable();
+          merkledrops_.set(index, value);
+          onChanged();
+        } else {
+          merkledropsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Merkledrop merkledrops = 2 [json_name = "merkledrops", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMerkledrops(
+          int index, com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop.Builder builderForValue) {
+        if (merkledropsBuilder_ == null) {
+          ensureMerkledropsIsMutable();
+          merkledrops_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          merkledropsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Merkledrop merkledrops = 2 [json_name = "merkledrops", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMerkledrops(com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop value) {
+        if (merkledropsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMerkledropsIsMutable();
+          merkledrops_.add(value);
+          onChanged();
+        } else {
+          merkledropsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Merkledrop merkledrops = 2 [json_name = "merkledrops", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMerkledrops(
+          int index, com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop value) {
+        if (merkledropsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMerkledropsIsMutable();
+          merkledrops_.add(index, value);
+          onChanged();
+        } else {
+          merkledropsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Merkledrop merkledrops = 2 [json_name = "merkledrops", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMerkledrops(
+          com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop.Builder builderForValue) {
+        if (merkledropsBuilder_ == null) {
+          ensureMerkledropsIsMutable();
+          merkledrops_.add(builderForValue.build());
+          onChanged();
+        } else {
+          merkledropsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Merkledrop merkledrops = 2 [json_name = "merkledrops", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMerkledrops(
+          int index, com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop.Builder builderForValue) {
+        if (merkledropsBuilder_ == null) {
+          ensureMerkledropsIsMutable();
+          merkledrops_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          merkledropsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Merkledrop merkledrops = 2 [json_name = "merkledrops", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllMerkledrops(
+          java.lang.Iterable<? extends com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop> values) {
+        if (merkledropsBuilder_ == null) {
+          ensureMerkledropsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, merkledrops_);
+          onChanged();
+        } else {
+          merkledropsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Merkledrop merkledrops = 2 [json_name = "merkledrops", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMerkledrops() {
+        if (merkledropsBuilder_ == null) {
+          merkledrops_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          merkledropsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Merkledrop merkledrops = 2 [json_name = "merkledrops", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeMerkledrops(int index) {
+        if (merkledropsBuilder_ == null) {
+          ensureMerkledropsIsMutable();
+          merkledrops_.remove(index);
+          onChanged();
+        } else {
+          merkledropsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Merkledrop merkledrops = 2 [json_name = "merkledrops", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop.Builder getMerkledropsBuilder(
+          int index) {
+        return getMerkledropsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Merkledrop merkledrops = 2 [json_name = "merkledrops", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bitsong.merkledrop.v1beta1.MerkledropProto.MerkledropOrBuilder getMerkledropsOrBuilder(
+          int index) {
+        if (merkledropsBuilder_ == null) {
+          return merkledrops_.get(index);  } else {
+          return merkledropsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Merkledrop merkledrops = 2 [json_name = "merkledrops", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.bitsong.merkledrop.v1beta1.MerkledropProto.MerkledropOrBuilder> 
+           getMerkledropsOrBuilderList() {
+        if (merkledropsBuilder_ != null) {
+          return merkledropsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(merkledrops_);
+        }
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Merkledrop merkledrops = 2 [json_name = "merkledrops", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop.Builder addMerkledropsBuilder() {
+        return getMerkledropsFieldBuilder().addBuilder(
+            com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Merkledrop merkledrops = 2 [json_name = "merkledrops", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop.Builder addMerkledropsBuilder(
+          int index) {
+        return getMerkledropsFieldBuilder().addBuilder(
+            index, com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Merkledrop merkledrops = 2 [json_name = "merkledrops", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop.Builder> 
+           getMerkledropsBuilderList() {
+        return getMerkledropsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop, com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop.Builder, com.bitsong.merkledrop.v1beta1.MerkledropProto.MerkledropOrBuilder> 
+          getMerkledropsFieldBuilder() {
+        if (merkledropsBuilder_ == null) {
+          merkledropsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop, com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop.Builder, com.bitsong.merkledrop.v1beta1.MerkledropProto.MerkledropOrBuilder>(
+                  merkledrops_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          merkledrops_ = null;
+        }
+        return merkledropsBuilder_;
+      }
+
+      private java.util.List<com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes> indexes_ =
+        java.util.Collections.emptyList();
+      private void ensureIndexesIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          indexes_ = new java.util.ArrayList<com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes>(indexes_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes, com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes.Builder, com.bitsong.merkledrop.v1beta1.GenesisProto.IndexesOrBuilder> indexesBuilder_;
+
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Indexes indexes = 3 [json_name = "indexes"];</code>
+       */
+      public java.util.List<com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes> getIndexesList() {
+        if (indexesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(indexes_);
+        } else {
+          return indexesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Indexes indexes = 3 [json_name = "indexes"];</code>
+       */
+      public int getIndexesCount() {
+        if (indexesBuilder_ == null) {
+          return indexes_.size();
+        } else {
+          return indexesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Indexes indexes = 3 [json_name = "indexes"];</code>
+       */
+      public com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes getIndexes(int index) {
+        if (indexesBuilder_ == null) {
+          return indexes_.get(index);
+        } else {
+          return indexesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Indexes indexes = 3 [json_name = "indexes"];</code>
+       */
+      public Builder setIndexes(
+          int index, com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes value) {
+        if (indexesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIndexesIsMutable();
+          indexes_.set(index, value);
+          onChanged();
+        } else {
+          indexesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Indexes indexes = 3 [json_name = "indexes"];</code>
+       */
+      public Builder setIndexes(
+          int index, com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes.Builder builderForValue) {
+        if (indexesBuilder_ == null) {
+          ensureIndexesIsMutable();
+          indexes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          indexesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Indexes indexes = 3 [json_name = "indexes"];</code>
+       */
+      public Builder addIndexes(com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes value) {
+        if (indexesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIndexesIsMutable();
+          indexes_.add(value);
+          onChanged();
+        } else {
+          indexesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Indexes indexes = 3 [json_name = "indexes"];</code>
+       */
+      public Builder addIndexes(
+          int index, com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes value) {
+        if (indexesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIndexesIsMutable();
+          indexes_.add(index, value);
+          onChanged();
+        } else {
+          indexesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Indexes indexes = 3 [json_name = "indexes"];</code>
+       */
+      public Builder addIndexes(
+          com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes.Builder builderForValue) {
+        if (indexesBuilder_ == null) {
+          ensureIndexesIsMutable();
+          indexes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          indexesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Indexes indexes = 3 [json_name = "indexes"];</code>
+       */
+      public Builder addIndexes(
+          int index, com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes.Builder builderForValue) {
+        if (indexesBuilder_ == null) {
+          ensureIndexesIsMutable();
+          indexes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          indexesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Indexes indexes = 3 [json_name = "indexes"];</code>
+       */
+      public Builder addAllIndexes(
+          java.lang.Iterable<? extends com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes> values) {
+        if (indexesBuilder_ == null) {
+          ensureIndexesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, indexes_);
+          onChanged();
+        } else {
+          indexesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Indexes indexes = 3 [json_name = "indexes"];</code>
+       */
+      public Builder clearIndexes() {
+        if (indexesBuilder_ == null) {
+          indexes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          indexesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Indexes indexes = 3 [json_name = "indexes"];</code>
+       */
+      public Builder removeIndexes(int index) {
+        if (indexesBuilder_ == null) {
+          ensureIndexesIsMutable();
+          indexes_.remove(index);
+          onChanged();
+        } else {
+          indexesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Indexes indexes = 3 [json_name = "indexes"];</code>
+       */
+      public com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes.Builder getIndexesBuilder(
+          int index) {
+        return getIndexesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Indexes indexes = 3 [json_name = "indexes"];</code>
+       */
+      public com.bitsong.merkledrop.v1beta1.GenesisProto.IndexesOrBuilder getIndexesOrBuilder(
+          int index) {
+        if (indexesBuilder_ == null) {
+          return indexes_.get(index);  } else {
+          return indexesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Indexes indexes = 3 [json_name = "indexes"];</code>
+       */
+      public java.util.List<? extends com.bitsong.merkledrop.v1beta1.GenesisProto.IndexesOrBuilder> 
+           getIndexesOrBuilderList() {
+        if (indexesBuilder_ != null) {
+          return indexesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(indexes_);
+        }
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Indexes indexes = 3 [json_name = "indexes"];</code>
+       */
+      public com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes.Builder addIndexesBuilder() {
+        return getIndexesFieldBuilder().addBuilder(
+            com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Indexes indexes = 3 [json_name = "indexes"];</code>
+       */
+      public com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes.Builder addIndexesBuilder(
+          int index) {
+        return getIndexesFieldBuilder().addBuilder(
+            index, com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bitsong.merkledrop.v1beta1.Indexes indexes = 3 [json_name = "indexes"];</code>
+       */
+      public java.util.List<com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes.Builder> 
+           getIndexesBuilderList() {
+        return getIndexesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes, com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes.Builder, com.bitsong.merkledrop.v1beta1.GenesisProto.IndexesOrBuilder> 
+          getIndexesFieldBuilder() {
+        if (indexesBuilder_ == null) {
+          indexesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes, com.bitsong.merkledrop.v1beta1.GenesisProto.Indexes.Builder, com.bitsong.merkledrop.v1beta1.GenesisProto.IndexesOrBuilder>(
+                  indexes_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          indexes_ = null;
+        }
+        return indexesBuilder_;
+      }
+
+      private com.bitsong.merkledrop.v1beta1.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bitsong.merkledrop.v1beta1.ParamsProto.Params, com.bitsong.merkledrop.v1beta1.ParamsProto.Params.Builder, com.bitsong.merkledrop.v1beta1.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.bitsong.merkledrop.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.bitsong.merkledrop.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.bitsong.merkledrop.v1beta1.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.bitsong.merkledrop.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.bitsong.merkledrop.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.bitsong.merkledrop.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bitsong.merkledrop.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.bitsong.merkledrop.v1beta1.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bitsong.merkledrop.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.bitsong.merkledrop.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            params_ != null &&
+            params_ != com.bitsong.merkledrop.v1beta1.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bitsong.merkledrop.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bitsong.merkledrop.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bitsong.merkledrop.v1beta1.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.bitsong.merkledrop.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bitsong.merkledrop.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.bitsong.merkledrop.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.bitsong.merkledrop.v1beta1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bitsong.merkledrop.v1beta1.ParamsProto.Params, com.bitsong.merkledrop.v1beta1.ParamsProto.Params.Builder, com.bitsong.merkledrop.v1beta1.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.bitsong.merkledrop.v1beta1.ParamsProto.Params, com.bitsong.merkledrop.v1beta1.ParamsProto.Params.Builder, com.bitsong.merkledrop.v1beta1.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bitsong.merkledrop.v1beta1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:bitsong.merkledrop.v1beta1.GenesisState)
+    private static final com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState();
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bitsong.merkledrop.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bitsong_merkledrop_v1beta1_Indexes_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bitsong_merkledrop_v1beta1_Indexes_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bitsong_merkledrop_v1beta1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bitsong_merkledrop_v1beta1_GenesisState_fieldAccessorTable;
 
@@ -47,13 +2141,13 @@ public final class GenesisProto {
       "R\013merkledrops\022=\n\007indexes\030\003 \003(\0132#.bitsong" +
       ".merkledrop.v1beta1.IndexesR\007indexes\022@\n\006" +
       "params\030\004 \001(\0132\".bitsong.merkledrop.v1beta" +
-      "1.ParamsB\004\310\336\037\000R\006paramsB\366\001\n\036com.bitsong.m" +
-      "erkledrop.v1beta1B\014GenesisProtoP\001Z8githu" +
-      "b.com/bitsongofficial/go-bitsong/x/merkl" +
-      "edrop/types\242\002\003BMX\252\002\032Bitsong.Merkledrop.V" +
-      "1beta1\312\002\032Bitsong\\Merkledrop\\V1beta1\342\002&Bi" +
-      "tsong\\Merkledrop\\V1beta1\\GPBMetadata\352\002\034B" +
-      "itsong::Merkledrop::V1beta1\310\341\036\000b\006proto3"
+      "1.ParamsB\004\310\336\037\000R\006paramsB\364\001\n\036com.bitsong.m" +
+      "erkledrop.v1beta1B\014GenesisProtoZ8github." +
+      "com/bitsongofficial/go-bitsong/x/merkled" +
+      "rop/types\242\002\003BMX\252\002\032Bitsong.Merkledrop.V1b" +
+      "eta1\312\002\032Bitsong\\Merkledrop\\V1beta1\342\002&Bits" +
+      "ong\\Merkledrop\\V1beta1\\GPBMetadata\352\002\034Bit" +
+      "song::Merkledrop::V1beta1\310\341\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

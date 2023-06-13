@@ -14,24 +14,3393 @@ public final class PoolProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface IDSetOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:gravity.v1.IDSet)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
+     * @return A list containing the ids.
+     */
+    java.util.List<java.lang.Long> getIdsList();
+    /**
+     * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
+     * @return The count of ids.
+     */
+    int getIdsCount();
+    /**
+     * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
+     * @param index The index of the element to return.
+     * @return The ids at the given index.
+     */
+    long getIds(int index);
+  }
+  /**
+   * <pre>
+   * IDSet represents a set of IDs
+   * </pre>
+   *
+   * Protobuf type {@code gravity.v1.IDSet}
+   */
+  public static final class IDSet extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:gravity.v1.IDSet)
+      IDSetOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IDSet.newBuilder() to construct.
+    private IDSet(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IDSet() {
+      ids_ = emptyLongList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IDSet();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.gravity.v1.PoolProto.internal_static_gravity_v1_IDSet_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.gravity.v1.PoolProto.internal_static_gravity_v1_IDSet_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.gravity.v1.PoolProto.IDSet.class, com.gravity.v1.PoolProto.IDSet.Builder.class);
+    }
+
+    public static final int IDS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.LongList ids_;
+    /**
+     * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
+     * @return A list containing the ids.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Long>
+        getIdsList() {
+      return ids_;
+    }
+    /**
+     * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
+     * @return The count of ids.
+     */
+    public int getIdsCount() {
+      return ids_.size();
+    }
+    /**
+     * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
+     * @param index The index of the element to return.
+     * @return The ids at the given index.
+     */
+    public long getIds(int index) {
+      return ids_.getLong(index);
+    }
+    private int idsMemoizedSerializedSize = -1;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (getIdsList().size() > 0) {
+        output.writeUInt32NoTag(10);
+        output.writeUInt32NoTag(idsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < ids_.size(); i++) {
+        output.writeUInt64NoTag(ids_.getLong(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < ids_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt64SizeNoTag(ids_.getLong(i));
+        }
+        size += dataSize;
+        if (!getIdsList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        idsMemoizedSerializedSize = dataSize;
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.gravity.v1.PoolProto.IDSet)) {
+        return super.equals(obj);
+      }
+      com.gravity.v1.PoolProto.IDSet other = (com.gravity.v1.PoolProto.IDSet) obj;
+
+      if (!getIdsList()
+          .equals(other.getIdsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getIdsCount() > 0) {
+        hash = (37 * hash) + IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getIdsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.gravity.v1.PoolProto.IDSet parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.PoolProto.IDSet parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.PoolProto.IDSet parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.PoolProto.IDSet parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.PoolProto.IDSet parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.PoolProto.IDSet parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.PoolProto.IDSet parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gravity.v1.PoolProto.IDSet parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.gravity.v1.PoolProto.IDSet parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.gravity.v1.PoolProto.IDSet parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.gravity.v1.PoolProto.IDSet parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gravity.v1.PoolProto.IDSet parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.gravity.v1.PoolProto.IDSet prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * IDSet represents a set of IDs
+     * </pre>
+     *
+     * Protobuf type {@code gravity.v1.IDSet}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:gravity.v1.IDSet)
+        com.gravity.v1.PoolProto.IDSetOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.gravity.v1.PoolProto.internal_static_gravity_v1_IDSet_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.gravity.v1.PoolProto.internal_static_gravity_v1_IDSet_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.gravity.v1.PoolProto.IDSet.class, com.gravity.v1.PoolProto.IDSet.Builder.class);
+      }
+
+      // Construct using com.gravity.v1.PoolProto.IDSet.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        ids_ = emptyLongList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.gravity.v1.PoolProto.internal_static_gravity_v1_IDSet_descriptor;
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.PoolProto.IDSet getDefaultInstanceForType() {
+        return com.gravity.v1.PoolProto.IDSet.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.PoolProto.IDSet build() {
+        com.gravity.v1.PoolProto.IDSet result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.PoolProto.IDSet buildPartial() {
+        com.gravity.v1.PoolProto.IDSet result = new com.gravity.v1.PoolProto.IDSet(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.gravity.v1.PoolProto.IDSet result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          ids_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.ids_ = ids_;
+      }
+
+      private void buildPartial0(com.gravity.v1.PoolProto.IDSet result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.gravity.v1.PoolProto.IDSet) {
+          return mergeFrom((com.gravity.v1.PoolProto.IDSet)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.gravity.v1.PoolProto.IDSet other) {
+        if (other == com.gravity.v1.PoolProto.IDSet.getDefaultInstance()) return this;
+        if (!other.ids_.isEmpty()) {
+          if (ids_.isEmpty()) {
+            ids_ = other.ids_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureIdsIsMutable();
+            ids_.addAll(other.ids_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                long v = input.readUInt64();
+                ensureIdsIsMutable();
+                ids_.addLong(v);
+                break;
+              } // case 8
+              case 10: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureIdsIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  ids_.addLong(input.readUInt64());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Internal.LongList ids_ = emptyLongList();
+      private void ensureIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          ids_ = mutableCopy(ids_);
+          bitField0_ |= 0x00000001;
+        }
+      }
+      /**
+       * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
+       * @return A list containing the ids.
+       */
+      public java.util.List<java.lang.Long>
+          getIdsList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(ids_) : ids_;
+      }
+      /**
+       * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
+       * @return The count of ids.
+       */
+      public int getIdsCount() {
+        return ids_.size();
+      }
+      /**
+       * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
+       * @param index The index of the element to return.
+       * @return The ids at the given index.
+       */
+      public long getIds(int index) {
+        return ids_.getLong(index);
+      }
+      /**
+       * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
+       * @param index The index to set the value at.
+       * @param value The ids to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIds(
+          int index, long value) {
+
+        ensureIdsIsMutable();
+        ids_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
+       * @param value The ids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addIds(long value) {
+
+        ensureIdsIsMutable();
+        ids_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
+       * @param values The ids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllIds(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, ids_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 ids = 1 [json_name = "ids"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIds() {
+        ids_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:gravity.v1.IDSet)
+    }
+
+    // @@protoc_insertion_point(class_scope:gravity.v1.IDSet)
+    private static final com.gravity.v1.PoolProto.IDSet DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.gravity.v1.PoolProto.IDSet();
+    }
+
+    public static com.gravity.v1.PoolProto.IDSet getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<IDSet>
+        PARSER = new com.google.protobuf.AbstractParser<IDSet>() {
+      @java.lang.Override
+      public IDSet parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<IDSet> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IDSet> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.gravity.v1.PoolProto.IDSet getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BatchFeesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:gravity.v1.BatchFees)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string token = 1 [json_name = "token"];</code>
+     * @return The token.
+     */
+    java.lang.String getToken();
+    /**
+     * <code>string token = 1 [json_name = "token"];</code>
+     * @return The bytes for token.
+     */
+    com.google.protobuf.ByteString
+        getTokenBytes();
+
+    /**
+     * <code>string total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The totalFees.
+     */
+    java.lang.String getTotalFees();
+    /**
+     * <code>string total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for totalFees.
+     */
+    com.google.protobuf.ByteString
+        getTotalFeesBytes();
+
+    /**
+     * <code>uint64 tx_count = 3 [json_name = "txCount"];</code>
+     * @return The txCount.
+     */
+    long getTxCount();
+  }
+  /**
+   * Protobuf type {@code gravity.v1.BatchFees}
+   */
+  public static final class BatchFees extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:gravity.v1.BatchFees)
+      BatchFeesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BatchFees.newBuilder() to construct.
+    private BatchFees(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BatchFees() {
+      token_ = "";
+      totalFees_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BatchFees();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.gravity.v1.PoolProto.internal_static_gravity_v1_BatchFees_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.gravity.v1.PoolProto.internal_static_gravity_v1_BatchFees_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.gravity.v1.PoolProto.BatchFees.class, com.gravity.v1.PoolProto.BatchFees.Builder.class);
+    }
+
+    public static final int TOKEN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object token_ = "";
+    /**
+     * <code>string token = 1 [json_name = "token"];</code>
+     * @return The token.
+     */
+    @java.lang.Override
+    public java.lang.String getToken() {
+      java.lang.Object ref = token_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        token_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string token = 1 [json_name = "token"];</code>
+     * @return The bytes for token.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTokenBytes() {
+      java.lang.Object ref = token_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        token_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOTAL_FEES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object totalFees_ = "";
+    /**
+     * <code>string total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The totalFees.
+     */
+    @java.lang.Override
+    public java.lang.String getTotalFees() {
+      java.lang.Object ref = totalFees_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        totalFees_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for totalFees.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTotalFeesBytes() {
+      java.lang.Object ref = totalFees_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        totalFees_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TX_COUNT_FIELD_NUMBER = 3;
+    private long txCount_ = 0L;
+    /**
+     * <code>uint64 tx_count = 3 [json_name = "txCount"];</code>
+     * @return The txCount.
+     */
+    @java.lang.Override
+    public long getTxCount() {
+      return txCount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, token_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalFees_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, totalFees_);
+      }
+      if (txCount_ != 0L) {
+        output.writeUInt64(3, txCount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, token_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalFees_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, totalFees_);
+      }
+      if (txCount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, txCount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.gravity.v1.PoolProto.BatchFees)) {
+        return super.equals(obj);
+      }
+      com.gravity.v1.PoolProto.BatchFees other = (com.gravity.v1.PoolProto.BatchFees) obj;
+
+      if (!getToken()
+          .equals(other.getToken())) return false;
+      if (!getTotalFees()
+          .equals(other.getTotalFees())) return false;
+      if (getTxCount()
+          != other.getTxCount()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getToken().hashCode();
+      hash = (37 * hash) + TOTAL_FEES_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalFees().hashCode();
+      hash = (37 * hash) + TX_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTxCount());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.gravity.v1.PoolProto.BatchFees parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.PoolProto.BatchFees parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.PoolProto.BatchFees parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.PoolProto.BatchFees parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.PoolProto.BatchFees parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.PoolProto.BatchFees parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.PoolProto.BatchFees parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gravity.v1.PoolProto.BatchFees parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.gravity.v1.PoolProto.BatchFees parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.gravity.v1.PoolProto.BatchFees parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.gravity.v1.PoolProto.BatchFees parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gravity.v1.PoolProto.BatchFees parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.gravity.v1.PoolProto.BatchFees prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code gravity.v1.BatchFees}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:gravity.v1.BatchFees)
+        com.gravity.v1.PoolProto.BatchFeesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.gravity.v1.PoolProto.internal_static_gravity_v1_BatchFees_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.gravity.v1.PoolProto.internal_static_gravity_v1_BatchFees_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.gravity.v1.PoolProto.BatchFees.class, com.gravity.v1.PoolProto.BatchFees.Builder.class);
+      }
+
+      // Construct using com.gravity.v1.PoolProto.BatchFees.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        token_ = "";
+        totalFees_ = "";
+        txCount_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.gravity.v1.PoolProto.internal_static_gravity_v1_BatchFees_descriptor;
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.PoolProto.BatchFees getDefaultInstanceForType() {
+        return com.gravity.v1.PoolProto.BatchFees.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.PoolProto.BatchFees build() {
+        com.gravity.v1.PoolProto.BatchFees result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.PoolProto.BatchFees buildPartial() {
+        com.gravity.v1.PoolProto.BatchFees result = new com.gravity.v1.PoolProto.BatchFees(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.gravity.v1.PoolProto.BatchFees result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.token_ = token_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.totalFees_ = totalFees_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.txCount_ = txCount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.gravity.v1.PoolProto.BatchFees) {
+          return mergeFrom((com.gravity.v1.PoolProto.BatchFees)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.gravity.v1.PoolProto.BatchFees other) {
+        if (other == com.gravity.v1.PoolProto.BatchFees.getDefaultInstance()) return this;
+        if (!other.getToken().isEmpty()) {
+          token_ = other.token_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getTotalFees().isEmpty()) {
+          totalFees_ = other.totalFees_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getTxCount() != 0L) {
+          setTxCount(other.getTxCount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                token_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                totalFees_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                txCount_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object token_ = "";
+      /**
+       * <code>string token = 1 [json_name = "token"];</code>
+       * @return The token.
+       */
+      public java.lang.String getToken() {
+        java.lang.Object ref = token_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          token_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string token = 1 [json_name = "token"];</code>
+       * @return The bytes for token.
+       */
+      public com.google.protobuf.ByteString
+          getTokenBytes() {
+        java.lang.Object ref = token_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          token_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string token = 1 [json_name = "token"];</code>
+       * @param value The token to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToken(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        token_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string token = 1 [json_name = "token"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearToken() {
+        token_ = getDefaultInstance().getToken();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string token = 1 [json_name = "token"];</code>
+       * @param value The bytes for token to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        token_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object totalFees_ = "";
+      /**
+       * <code>string total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The totalFees.
+       */
+      public java.lang.String getTotalFees() {
+        java.lang.Object ref = totalFees_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          totalFees_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for totalFees.
+       */
+      public com.google.protobuf.ByteString
+          getTotalFeesBytes() {
+        java.lang.Object ref = totalFees_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          totalFees_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The totalFees to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalFees(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        totalFees_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalFees() {
+        totalFees_ = getDefaultInstance().getTotalFees();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string total_fees = 2 [json_name = "totalFees", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for totalFees to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalFeesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        totalFees_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long txCount_ ;
+      /**
+       * <code>uint64 tx_count = 3 [json_name = "txCount"];</code>
+       * @return The txCount.
+       */
+      @java.lang.Override
+      public long getTxCount() {
+        return txCount_;
+      }
+      /**
+       * <code>uint64 tx_count = 3 [json_name = "txCount"];</code>
+       * @param value The txCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTxCount(long value) {
+
+        txCount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 tx_count = 3 [json_name = "txCount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTxCount() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        txCount_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:gravity.v1.BatchFees)
+    }
+
+    // @@protoc_insertion_point(class_scope:gravity.v1.BatchFees)
+    private static final com.gravity.v1.PoolProto.BatchFees DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.gravity.v1.PoolProto.BatchFees();
+    }
+
+    public static com.gravity.v1.PoolProto.BatchFees getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BatchFees>
+        PARSER = new com.google.protobuf.AbstractParser<BatchFees>() {
+      @java.lang.Override
+      public BatchFees parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<BatchFees> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BatchFees> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.gravity.v1.PoolProto.BatchFees getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventWithdrawalReceivedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:gravity.v1.EventWithdrawalReceived)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string bridge_contract = 1 [json_name = "bridgeContract"];</code>
+     * @return The bridgeContract.
+     */
+    java.lang.String getBridgeContract();
+    /**
+     * <code>string bridge_contract = 1 [json_name = "bridgeContract"];</code>
+     * @return The bytes for bridgeContract.
+     */
+    com.google.protobuf.ByteString
+        getBridgeContractBytes();
+
+    /**
+     * <code>string bridge_chain_id = 2 [json_name = "bridgeChainId"];</code>
+     * @return The bridgeChainId.
+     */
+    java.lang.String getBridgeChainId();
+    /**
+     * <code>string bridge_chain_id = 2 [json_name = "bridgeChainId"];</code>
+     * @return The bytes for bridgeChainId.
+     */
+    com.google.protobuf.ByteString
+        getBridgeChainIdBytes();
+
+    /**
+     * <code>string outgoing_tx_id = 3 [json_name = "outgoingTxId"];</code>
+     * @return The outgoingTxId.
+     */
+    java.lang.String getOutgoingTxId();
+    /**
+     * <code>string outgoing_tx_id = 3 [json_name = "outgoingTxId"];</code>
+     * @return The bytes for outgoingTxId.
+     */
+    com.google.protobuf.ByteString
+        getOutgoingTxIdBytes();
+
+    /**
+     * <code>string nonce = 4 [json_name = "nonce"];</code>
+     * @return The nonce.
+     */
+    java.lang.String getNonce();
+    /**
+     * <code>string nonce = 4 [json_name = "nonce"];</code>
+     * @return The bytes for nonce.
+     */
+    com.google.protobuf.ByteString
+        getNonceBytes();
+  }
+  /**
+   * Protobuf type {@code gravity.v1.EventWithdrawalReceived}
+   */
+  public static final class EventWithdrawalReceived extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:gravity.v1.EventWithdrawalReceived)
+      EventWithdrawalReceivedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventWithdrawalReceived.newBuilder() to construct.
+    private EventWithdrawalReceived(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventWithdrawalReceived() {
+      bridgeContract_ = "";
+      bridgeChainId_ = "";
+      outgoingTxId_ = "";
+      nonce_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventWithdrawalReceived();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.gravity.v1.PoolProto.internal_static_gravity_v1_EventWithdrawalReceived_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.gravity.v1.PoolProto.internal_static_gravity_v1_EventWithdrawalReceived_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.gravity.v1.PoolProto.EventWithdrawalReceived.class, com.gravity.v1.PoolProto.EventWithdrawalReceived.Builder.class);
+    }
+
+    public static final int BRIDGE_CONTRACT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object bridgeContract_ = "";
+    /**
+     * <code>string bridge_contract = 1 [json_name = "bridgeContract"];</code>
+     * @return The bridgeContract.
+     */
+    @java.lang.Override
+    public java.lang.String getBridgeContract() {
+      java.lang.Object ref = bridgeContract_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bridgeContract_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string bridge_contract = 1 [json_name = "bridgeContract"];</code>
+     * @return The bytes for bridgeContract.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBridgeContractBytes() {
+      java.lang.Object ref = bridgeContract_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bridgeContract_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BRIDGE_CHAIN_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object bridgeChainId_ = "";
+    /**
+     * <code>string bridge_chain_id = 2 [json_name = "bridgeChainId"];</code>
+     * @return The bridgeChainId.
+     */
+    @java.lang.Override
+    public java.lang.String getBridgeChainId() {
+      java.lang.Object ref = bridgeChainId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bridgeChainId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string bridge_chain_id = 2 [json_name = "bridgeChainId"];</code>
+     * @return The bytes for bridgeChainId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBridgeChainIdBytes() {
+      java.lang.Object ref = bridgeChainId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bridgeChainId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OUTGOING_TX_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object outgoingTxId_ = "";
+    /**
+     * <code>string outgoing_tx_id = 3 [json_name = "outgoingTxId"];</code>
+     * @return The outgoingTxId.
+     */
+    @java.lang.Override
+    public java.lang.String getOutgoingTxId() {
+      java.lang.Object ref = outgoingTxId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        outgoingTxId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string outgoing_tx_id = 3 [json_name = "outgoingTxId"];</code>
+     * @return The bytes for outgoingTxId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOutgoingTxIdBytes() {
+      java.lang.Object ref = outgoingTxId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        outgoingTxId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NONCE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object nonce_ = "";
+    /**
+     * <code>string nonce = 4 [json_name = "nonce"];</code>
+     * @return The nonce.
+     */
+    @java.lang.Override
+    public java.lang.String getNonce() {
+      java.lang.Object ref = nonce_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nonce_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string nonce = 4 [json_name = "nonce"];</code>
+     * @return The bytes for nonce.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNonceBytes() {
+      java.lang.Object ref = nonce_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nonce_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bridgeContract_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, bridgeContract_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bridgeChainId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, bridgeChainId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(outgoingTxId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, outgoingTxId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nonce_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, nonce_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bridgeContract_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, bridgeContract_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bridgeChainId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, bridgeChainId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(outgoingTxId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, outgoingTxId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nonce_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, nonce_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.gravity.v1.PoolProto.EventWithdrawalReceived)) {
+        return super.equals(obj);
+      }
+      com.gravity.v1.PoolProto.EventWithdrawalReceived other = (com.gravity.v1.PoolProto.EventWithdrawalReceived) obj;
+
+      if (!getBridgeContract()
+          .equals(other.getBridgeContract())) return false;
+      if (!getBridgeChainId()
+          .equals(other.getBridgeChainId())) return false;
+      if (!getOutgoingTxId()
+          .equals(other.getOutgoingTxId())) return false;
+      if (!getNonce()
+          .equals(other.getNonce())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BRIDGE_CONTRACT_FIELD_NUMBER;
+      hash = (53 * hash) + getBridgeContract().hashCode();
+      hash = (37 * hash) + BRIDGE_CHAIN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getBridgeChainId().hashCode();
+      hash = (37 * hash) + OUTGOING_TX_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getOutgoingTxId().hashCode();
+      hash = (37 * hash) + NONCE_FIELD_NUMBER;
+      hash = (53 * hash) + getNonce().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.gravity.v1.PoolProto.EventWithdrawalReceived parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.PoolProto.EventWithdrawalReceived parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.PoolProto.EventWithdrawalReceived parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.PoolProto.EventWithdrawalReceived parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.PoolProto.EventWithdrawalReceived parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.PoolProto.EventWithdrawalReceived parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.PoolProto.EventWithdrawalReceived parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gravity.v1.PoolProto.EventWithdrawalReceived parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.gravity.v1.PoolProto.EventWithdrawalReceived parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.gravity.v1.PoolProto.EventWithdrawalReceived parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.gravity.v1.PoolProto.EventWithdrawalReceived parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gravity.v1.PoolProto.EventWithdrawalReceived parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.gravity.v1.PoolProto.EventWithdrawalReceived prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code gravity.v1.EventWithdrawalReceived}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:gravity.v1.EventWithdrawalReceived)
+        com.gravity.v1.PoolProto.EventWithdrawalReceivedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.gravity.v1.PoolProto.internal_static_gravity_v1_EventWithdrawalReceived_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.gravity.v1.PoolProto.internal_static_gravity_v1_EventWithdrawalReceived_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.gravity.v1.PoolProto.EventWithdrawalReceived.class, com.gravity.v1.PoolProto.EventWithdrawalReceived.Builder.class);
+      }
+
+      // Construct using com.gravity.v1.PoolProto.EventWithdrawalReceived.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        bridgeContract_ = "";
+        bridgeChainId_ = "";
+        outgoingTxId_ = "";
+        nonce_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.gravity.v1.PoolProto.internal_static_gravity_v1_EventWithdrawalReceived_descriptor;
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.PoolProto.EventWithdrawalReceived getDefaultInstanceForType() {
+        return com.gravity.v1.PoolProto.EventWithdrawalReceived.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.PoolProto.EventWithdrawalReceived build() {
+        com.gravity.v1.PoolProto.EventWithdrawalReceived result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.PoolProto.EventWithdrawalReceived buildPartial() {
+        com.gravity.v1.PoolProto.EventWithdrawalReceived result = new com.gravity.v1.PoolProto.EventWithdrawalReceived(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.gravity.v1.PoolProto.EventWithdrawalReceived result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.bridgeContract_ = bridgeContract_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.bridgeChainId_ = bridgeChainId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.outgoingTxId_ = outgoingTxId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.nonce_ = nonce_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.gravity.v1.PoolProto.EventWithdrawalReceived) {
+          return mergeFrom((com.gravity.v1.PoolProto.EventWithdrawalReceived)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.gravity.v1.PoolProto.EventWithdrawalReceived other) {
+        if (other == com.gravity.v1.PoolProto.EventWithdrawalReceived.getDefaultInstance()) return this;
+        if (!other.getBridgeContract().isEmpty()) {
+          bridgeContract_ = other.bridgeContract_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getBridgeChainId().isEmpty()) {
+          bridgeChainId_ = other.bridgeChainId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getOutgoingTxId().isEmpty()) {
+          outgoingTxId_ = other.outgoingTxId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getNonce().isEmpty()) {
+          nonce_ = other.nonce_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                bridgeContract_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                bridgeChainId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                outgoingTxId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                nonce_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object bridgeContract_ = "";
+      /**
+       * <code>string bridge_contract = 1 [json_name = "bridgeContract"];</code>
+       * @return The bridgeContract.
+       */
+      public java.lang.String getBridgeContract() {
+        java.lang.Object ref = bridgeContract_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bridgeContract_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string bridge_contract = 1 [json_name = "bridgeContract"];</code>
+       * @return The bytes for bridgeContract.
+       */
+      public com.google.protobuf.ByteString
+          getBridgeContractBytes() {
+        java.lang.Object ref = bridgeContract_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bridgeContract_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string bridge_contract = 1 [json_name = "bridgeContract"];</code>
+       * @param value The bridgeContract to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBridgeContract(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        bridgeContract_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bridge_contract = 1 [json_name = "bridgeContract"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBridgeContract() {
+        bridgeContract_ = getDefaultInstance().getBridgeContract();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bridge_contract = 1 [json_name = "bridgeContract"];</code>
+       * @param value The bytes for bridgeContract to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBridgeContractBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        bridgeContract_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object bridgeChainId_ = "";
+      /**
+       * <code>string bridge_chain_id = 2 [json_name = "bridgeChainId"];</code>
+       * @return The bridgeChainId.
+       */
+      public java.lang.String getBridgeChainId() {
+        java.lang.Object ref = bridgeChainId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bridgeChainId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string bridge_chain_id = 2 [json_name = "bridgeChainId"];</code>
+       * @return The bytes for bridgeChainId.
+       */
+      public com.google.protobuf.ByteString
+          getBridgeChainIdBytes() {
+        java.lang.Object ref = bridgeChainId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bridgeChainId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string bridge_chain_id = 2 [json_name = "bridgeChainId"];</code>
+       * @param value The bridgeChainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBridgeChainId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        bridgeChainId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bridge_chain_id = 2 [json_name = "bridgeChainId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBridgeChainId() {
+        bridgeChainId_ = getDefaultInstance().getBridgeChainId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bridge_chain_id = 2 [json_name = "bridgeChainId"];</code>
+       * @param value The bytes for bridgeChainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBridgeChainIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        bridgeChainId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object outgoingTxId_ = "";
+      /**
+       * <code>string outgoing_tx_id = 3 [json_name = "outgoingTxId"];</code>
+       * @return The outgoingTxId.
+       */
+      public java.lang.String getOutgoingTxId() {
+        java.lang.Object ref = outgoingTxId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          outgoingTxId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string outgoing_tx_id = 3 [json_name = "outgoingTxId"];</code>
+       * @return The bytes for outgoingTxId.
+       */
+      public com.google.protobuf.ByteString
+          getOutgoingTxIdBytes() {
+        java.lang.Object ref = outgoingTxId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          outgoingTxId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string outgoing_tx_id = 3 [json_name = "outgoingTxId"];</code>
+       * @param value The outgoingTxId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOutgoingTxId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        outgoingTxId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string outgoing_tx_id = 3 [json_name = "outgoingTxId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOutgoingTxId() {
+        outgoingTxId_ = getDefaultInstance().getOutgoingTxId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string outgoing_tx_id = 3 [json_name = "outgoingTxId"];</code>
+       * @param value The bytes for outgoingTxId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOutgoingTxIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        outgoingTxId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nonce_ = "";
+      /**
+       * <code>string nonce = 4 [json_name = "nonce"];</code>
+       * @return The nonce.
+       */
+      public java.lang.String getNonce() {
+        java.lang.Object ref = nonce_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nonce_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string nonce = 4 [json_name = "nonce"];</code>
+       * @return The bytes for nonce.
+       */
+      public com.google.protobuf.ByteString
+          getNonceBytes() {
+        java.lang.Object ref = nonce_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nonce_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string nonce = 4 [json_name = "nonce"];</code>
+       * @param value The nonce to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNonce(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        nonce_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nonce = 4 [json_name = "nonce"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNonce() {
+        nonce_ = getDefaultInstance().getNonce();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nonce = 4 [json_name = "nonce"];</code>
+       * @param value The bytes for nonce to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNonceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        nonce_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:gravity.v1.EventWithdrawalReceived)
+    }
+
+    // @@protoc_insertion_point(class_scope:gravity.v1.EventWithdrawalReceived)
+    private static final com.gravity.v1.PoolProto.EventWithdrawalReceived DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.gravity.v1.PoolProto.EventWithdrawalReceived();
+    }
+
+    public static com.gravity.v1.PoolProto.EventWithdrawalReceived getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventWithdrawalReceived>
+        PARSER = new com.google.protobuf.AbstractParser<EventWithdrawalReceived>() {
+      @java.lang.Override
+      public EventWithdrawalReceived parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventWithdrawalReceived> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventWithdrawalReceived> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.gravity.v1.PoolProto.EventWithdrawalReceived getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventWithdrawCanceledOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:gravity.v1.EventWithdrawCanceled)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+
+    /**
+     * <code>string tx_id = 2 [json_name = "txId"];</code>
+     * @return The txId.
+     */
+    java.lang.String getTxId();
+    /**
+     * <code>string tx_id = 2 [json_name = "txId"];</code>
+     * @return The bytes for txId.
+     */
+    com.google.protobuf.ByteString
+        getTxIdBytes();
+
+    /**
+     * <code>string bridge_contract = 3 [json_name = "bridgeContract"];</code>
+     * @return The bridgeContract.
+     */
+    java.lang.String getBridgeContract();
+    /**
+     * <code>string bridge_contract = 3 [json_name = "bridgeContract"];</code>
+     * @return The bytes for bridgeContract.
+     */
+    com.google.protobuf.ByteString
+        getBridgeContractBytes();
+
+    /**
+     * <code>string bridge_chain_id = 4 [json_name = "bridgeChainId"];</code>
+     * @return The bridgeChainId.
+     */
+    java.lang.String getBridgeChainId();
+    /**
+     * <code>string bridge_chain_id = 4 [json_name = "bridgeChainId"];</code>
+     * @return The bytes for bridgeChainId.
+     */
+    com.google.protobuf.ByteString
+        getBridgeChainIdBytes();
+  }
+  /**
+   * Protobuf type {@code gravity.v1.EventWithdrawCanceled}
+   */
+  public static final class EventWithdrawCanceled extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:gravity.v1.EventWithdrawCanceled)
+      EventWithdrawCanceledOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventWithdrawCanceled.newBuilder() to construct.
+    private EventWithdrawCanceled(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventWithdrawCanceled() {
+      sender_ = "";
+      txId_ = "";
+      bridgeContract_ = "";
+      bridgeChainId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventWithdrawCanceled();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.gravity.v1.PoolProto.internal_static_gravity_v1_EventWithdrawCanceled_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.gravity.v1.PoolProto.internal_static_gravity_v1_EventWithdrawCanceled_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.gravity.v1.PoolProto.EventWithdrawCanceled.class, com.gravity.v1.PoolProto.EventWithdrawCanceled.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TX_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object txId_ = "";
+    /**
+     * <code>string tx_id = 2 [json_name = "txId"];</code>
+     * @return The txId.
+     */
+    @java.lang.Override
+    public java.lang.String getTxId() {
+      java.lang.Object ref = txId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        txId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string tx_id = 2 [json_name = "txId"];</code>
+     * @return The bytes for txId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTxIdBytes() {
+      java.lang.Object ref = txId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        txId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BRIDGE_CONTRACT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object bridgeContract_ = "";
+    /**
+     * <code>string bridge_contract = 3 [json_name = "bridgeContract"];</code>
+     * @return The bridgeContract.
+     */
+    @java.lang.Override
+    public java.lang.String getBridgeContract() {
+      java.lang.Object ref = bridgeContract_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bridgeContract_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string bridge_contract = 3 [json_name = "bridgeContract"];</code>
+     * @return The bytes for bridgeContract.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBridgeContractBytes() {
+      java.lang.Object ref = bridgeContract_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bridgeContract_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BRIDGE_CHAIN_ID_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object bridgeChainId_ = "";
+    /**
+     * <code>string bridge_chain_id = 4 [json_name = "bridgeChainId"];</code>
+     * @return The bridgeChainId.
+     */
+    @java.lang.Override
+    public java.lang.String getBridgeChainId() {
+      java.lang.Object ref = bridgeChainId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bridgeChainId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string bridge_chain_id = 4 [json_name = "bridgeChainId"];</code>
+     * @return The bytes for bridgeChainId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBridgeChainIdBytes() {
+      java.lang.Object ref = bridgeChainId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bridgeChainId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(txId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, txId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bridgeContract_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, bridgeContract_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bridgeChainId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, bridgeChainId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(txId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, txId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bridgeContract_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, bridgeContract_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bridgeChainId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, bridgeChainId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.gravity.v1.PoolProto.EventWithdrawCanceled)) {
+        return super.equals(obj);
+      }
+      com.gravity.v1.PoolProto.EventWithdrawCanceled other = (com.gravity.v1.PoolProto.EventWithdrawCanceled) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getTxId()
+          .equals(other.getTxId())) return false;
+      if (!getBridgeContract()
+          .equals(other.getBridgeContract())) return false;
+      if (!getBridgeChainId()
+          .equals(other.getBridgeChainId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (37 * hash) + TX_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTxId().hashCode();
+      hash = (37 * hash) + BRIDGE_CONTRACT_FIELD_NUMBER;
+      hash = (53 * hash) + getBridgeContract().hashCode();
+      hash = (37 * hash) + BRIDGE_CHAIN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getBridgeChainId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.gravity.v1.PoolProto.EventWithdrawCanceled parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.PoolProto.EventWithdrawCanceled parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.PoolProto.EventWithdrawCanceled parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.PoolProto.EventWithdrawCanceled parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.PoolProto.EventWithdrawCanceled parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.PoolProto.EventWithdrawCanceled parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.PoolProto.EventWithdrawCanceled parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gravity.v1.PoolProto.EventWithdrawCanceled parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.gravity.v1.PoolProto.EventWithdrawCanceled parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.gravity.v1.PoolProto.EventWithdrawCanceled parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.gravity.v1.PoolProto.EventWithdrawCanceled parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gravity.v1.PoolProto.EventWithdrawCanceled parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.gravity.v1.PoolProto.EventWithdrawCanceled prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code gravity.v1.EventWithdrawCanceled}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:gravity.v1.EventWithdrawCanceled)
+        com.gravity.v1.PoolProto.EventWithdrawCanceledOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.gravity.v1.PoolProto.internal_static_gravity_v1_EventWithdrawCanceled_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.gravity.v1.PoolProto.internal_static_gravity_v1_EventWithdrawCanceled_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.gravity.v1.PoolProto.EventWithdrawCanceled.class, com.gravity.v1.PoolProto.EventWithdrawCanceled.Builder.class);
+      }
+
+      // Construct using com.gravity.v1.PoolProto.EventWithdrawCanceled.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = "";
+        txId_ = "";
+        bridgeContract_ = "";
+        bridgeChainId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.gravity.v1.PoolProto.internal_static_gravity_v1_EventWithdrawCanceled_descriptor;
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.PoolProto.EventWithdrawCanceled getDefaultInstanceForType() {
+        return com.gravity.v1.PoolProto.EventWithdrawCanceled.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.PoolProto.EventWithdrawCanceled build() {
+        com.gravity.v1.PoolProto.EventWithdrawCanceled result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.PoolProto.EventWithdrawCanceled buildPartial() {
+        com.gravity.v1.PoolProto.EventWithdrawCanceled result = new com.gravity.v1.PoolProto.EventWithdrawCanceled(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.gravity.v1.PoolProto.EventWithdrawCanceled result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.txId_ = txId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.bridgeContract_ = bridgeContract_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.bridgeChainId_ = bridgeChainId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.gravity.v1.PoolProto.EventWithdrawCanceled) {
+          return mergeFrom((com.gravity.v1.PoolProto.EventWithdrawCanceled)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.gravity.v1.PoolProto.EventWithdrawCanceled other) {
+        if (other == com.gravity.v1.PoolProto.EventWithdrawCanceled.getDefaultInstance()) return this;
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getTxId().isEmpty()) {
+          txId_ = other.txId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getBridgeContract().isEmpty()) {
+          bridgeContract_ = other.bridgeContract_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getBridgeChainId().isEmpty()) {
+          bridgeChainId_ = other.bridgeChainId_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                txId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                bridgeContract_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                bridgeChainId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object txId_ = "";
+      /**
+       * <code>string tx_id = 2 [json_name = "txId"];</code>
+       * @return The txId.
+       */
+      public java.lang.String getTxId() {
+        java.lang.Object ref = txId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          txId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string tx_id = 2 [json_name = "txId"];</code>
+       * @return The bytes for txId.
+       */
+      public com.google.protobuf.ByteString
+          getTxIdBytes() {
+        java.lang.Object ref = txId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          txId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string tx_id = 2 [json_name = "txId"];</code>
+       * @param value The txId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTxId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        txId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tx_id = 2 [json_name = "txId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTxId() {
+        txId_ = getDefaultInstance().getTxId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tx_id = 2 [json_name = "txId"];</code>
+       * @param value The bytes for txId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTxIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        txId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object bridgeContract_ = "";
+      /**
+       * <code>string bridge_contract = 3 [json_name = "bridgeContract"];</code>
+       * @return The bridgeContract.
+       */
+      public java.lang.String getBridgeContract() {
+        java.lang.Object ref = bridgeContract_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bridgeContract_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string bridge_contract = 3 [json_name = "bridgeContract"];</code>
+       * @return The bytes for bridgeContract.
+       */
+      public com.google.protobuf.ByteString
+          getBridgeContractBytes() {
+        java.lang.Object ref = bridgeContract_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bridgeContract_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string bridge_contract = 3 [json_name = "bridgeContract"];</code>
+       * @param value The bridgeContract to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBridgeContract(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        bridgeContract_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bridge_contract = 3 [json_name = "bridgeContract"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBridgeContract() {
+        bridgeContract_ = getDefaultInstance().getBridgeContract();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bridge_contract = 3 [json_name = "bridgeContract"];</code>
+       * @param value The bytes for bridgeContract to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBridgeContractBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        bridgeContract_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object bridgeChainId_ = "";
+      /**
+       * <code>string bridge_chain_id = 4 [json_name = "bridgeChainId"];</code>
+       * @return The bridgeChainId.
+       */
+      public java.lang.String getBridgeChainId() {
+        java.lang.Object ref = bridgeChainId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bridgeChainId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string bridge_chain_id = 4 [json_name = "bridgeChainId"];</code>
+       * @return The bytes for bridgeChainId.
+       */
+      public com.google.protobuf.ByteString
+          getBridgeChainIdBytes() {
+        java.lang.Object ref = bridgeChainId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bridgeChainId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string bridge_chain_id = 4 [json_name = "bridgeChainId"];</code>
+       * @param value The bridgeChainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBridgeChainId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        bridgeChainId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bridge_chain_id = 4 [json_name = "bridgeChainId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBridgeChainId() {
+        bridgeChainId_ = getDefaultInstance().getBridgeChainId();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bridge_chain_id = 4 [json_name = "bridgeChainId"];</code>
+       * @param value The bytes for bridgeChainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBridgeChainIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        bridgeChainId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:gravity.v1.EventWithdrawCanceled)
+    }
+
+    // @@protoc_insertion_point(class_scope:gravity.v1.EventWithdrawCanceled)
+    private static final com.gravity.v1.PoolProto.EventWithdrawCanceled DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.gravity.v1.PoolProto.EventWithdrawCanceled();
+    }
+
+    public static com.gravity.v1.PoolProto.EventWithdrawCanceled getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventWithdrawCanceled>
+        PARSER = new com.google.protobuf.AbstractParser<EventWithdrawCanceled>() {
+      @java.lang.Override
+      public EventWithdrawCanceled parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventWithdrawCanceled> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventWithdrawCanceled> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.gravity.v1.PoolProto.EventWithdrawCanceled getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_gravity_v1_IDSet_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_gravity_v1_IDSet_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_gravity_v1_BatchFees_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_gravity_v1_BatchFees_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_gravity_v1_EventWithdrawalReceived_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_gravity_v1_EventWithdrawalReceived_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_gravity_v1_EventWithdrawCanceled_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_gravity_v1_EventWithdrawCanceled_fieldAccessorTable;
 
@@ -56,12 +3425,12 @@ public final class PoolProto {
       "EventWithdrawCanceled\022\026\n\006sender\030\001 \001(\tR\006s" +
       "ender\022\023\n\005tx_id\030\002 \001(\tR\004txId\022\'\n\017bridge_con" +
       "tract\030\003 \001(\tR\016bridgeContract\022&\n\017bridge_ch" +
-      "ain_id\030\004 \001(\tR\rbridgeChainIdB\245\001\n\016com.grav" +
-      "ity.v1B\tPoolProtoP\001Z?github.com/Gravity-" +
-      "Bridge/Gravity-Bridge/module/x/gravity/t" +
-      "ypes\242\002\003GXX\252\002\nGravity.V1\312\002\nGravity\\V1\342\002\026G" +
-      "ravity\\V1\\GPBMetadata\352\002\013Gravity::V1b\006pro" +
-      "to3"
+      "ain_id\030\004 \001(\tR\rbridgeChainIdB\243\001\n\016com.grav" +
+      "ity.v1B\tPoolProtoZ?github.com/Gravity-Br" +
+      "idge/Gravity-Bridge/module/x/gravity/typ" +
+      "es\242\002\003GXX\252\002\nGravity.V1\312\002\nGravity\\V1\342\002\026Gra" +
+      "vity\\V1\\GPBMetadata\352\002\013Gravity::V1b\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

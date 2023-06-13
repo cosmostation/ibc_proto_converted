@@ -14,44 +14,5695 @@ public final class CallbacksProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * Protobuf enum {@code lum.network.millions.TransferType}
+   */
+  public enum TransferType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>TRANSFER_TYPE_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "Unspecified"];</code>
+     */
+    TRANSFER_TYPE_UNSPECIFIED(0),
+    /**
+     * <code>TRANSFER_TYPE_CLAIM = 1 [(.gogoproto.enumvalue_customname) = "Claim"];</code>
+     */
+    TRANSFER_TYPE_CLAIM(1),
+    /**
+     * <code>TRANSFER_TYPE_WITHDRAW = 2 [(.gogoproto.enumvalue_customname) = "Withdraw"];</code>
+     */
+    TRANSFER_TYPE_WITHDRAW(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>TRANSFER_TYPE_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "Unspecified"];</code>
+     */
+    public static final int TRANSFER_TYPE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>TRANSFER_TYPE_CLAIM = 1 [(.gogoproto.enumvalue_customname) = "Claim"];</code>
+     */
+    public static final int TRANSFER_TYPE_CLAIM_VALUE = 1;
+    /**
+     * <code>TRANSFER_TYPE_WITHDRAW = 2 [(.gogoproto.enumvalue_customname) = "Withdraw"];</code>
+     */
+    public static final int TRANSFER_TYPE_WITHDRAW_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static TransferType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static TransferType forNumber(int value) {
+      switch (value) {
+        case 0: return TRANSFER_TYPE_UNSPECIFIED;
+        case 1: return TRANSFER_TYPE_CLAIM;
+        case 2: return TRANSFER_TYPE_WITHDRAW;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<TransferType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        TransferType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<TransferType>() {
+            public TransferType findValueByNumber(int number) {
+              return TransferType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.lum.network.millions.CallbacksProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final TransferType[] VALUES = values();
+
+    public static TransferType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private TransferType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:lum.network.millions.TransferType)
+  }
+
+  public interface SplitDelegationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.millions.SplitDelegation)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+     * @return The validatorAddress.
+     */
+    java.lang.String getValidatorAddress();
+    /**
+     * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+     * @return The bytes for validatorAddress.
+     */
+    com.google.protobuf.ByteString
+        getValidatorAddressBytes();
+
+    /**
+     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The amount.
+     */
+    java.lang.String getAmount();
+    /**
+     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for amount.
+     */
+    com.google.protobuf.ByteString
+        getAmountBytes();
+  }
+  /**
+   * Protobuf type {@code lum.network.millions.SplitDelegation}
+   */
+  public static final class SplitDelegation extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.millions.SplitDelegation)
+      SplitDelegationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SplitDelegation.newBuilder() to construct.
+    private SplitDelegation(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SplitDelegation() {
+      validatorAddress_ = "";
+      amount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SplitDelegation();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_SplitDelegation_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_SplitDelegation_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.millions.CallbacksProto.SplitDelegation.class, com.lum.network.millions.CallbacksProto.SplitDelegation.Builder.class);
+    }
+
+    public static final int VALIDATOR_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object validatorAddress_ = "";
+    /**
+     * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+     * @return The validatorAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getValidatorAddress() {
+      java.lang.Object ref = validatorAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        validatorAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+     * @return The bytes for validatorAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValidatorAddressBytes() {
+      java.lang.Object ref = validatorAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        validatorAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object amount_ = "";
+    /**
+     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public java.lang.String getAmount() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        amount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for amount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAmountBytes() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        amount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, validatorAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, amount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, validatorAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, amount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.millions.CallbacksProto.SplitDelegation)) {
+        return super.equals(obj);
+      }
+      com.lum.network.millions.CallbacksProto.SplitDelegation other = (com.lum.network.millions.CallbacksProto.SplitDelegation) obj;
+
+      if (!getValidatorAddress()
+          .equals(other.getValidatorAddress())) return false;
+      if (!getAmount()
+          .equals(other.getAmount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VALIDATOR_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getValidatorAddress().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAmount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.millions.CallbacksProto.SplitDelegation parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.CallbacksProto.SplitDelegation parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.SplitDelegation parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.CallbacksProto.SplitDelegation parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.SplitDelegation parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.CallbacksProto.SplitDelegation parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.SplitDelegation parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.millions.CallbacksProto.SplitDelegation parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.millions.CallbacksProto.SplitDelegation parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.millions.CallbacksProto.SplitDelegation parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.SplitDelegation parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.millions.CallbacksProto.SplitDelegation parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.millions.CallbacksProto.SplitDelegation prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.millions.SplitDelegation}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.millions.SplitDelegation)
+        com.lum.network.millions.CallbacksProto.SplitDelegationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_SplitDelegation_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_SplitDelegation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.millions.CallbacksProto.SplitDelegation.class, com.lum.network.millions.CallbacksProto.SplitDelegation.Builder.class);
+      }
+
+      // Construct using com.lum.network.millions.CallbacksProto.SplitDelegation.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        validatorAddress_ = "";
+        amount_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_SplitDelegation_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.CallbacksProto.SplitDelegation getDefaultInstanceForType() {
+        return com.lum.network.millions.CallbacksProto.SplitDelegation.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.CallbacksProto.SplitDelegation build() {
+        com.lum.network.millions.CallbacksProto.SplitDelegation result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.CallbacksProto.SplitDelegation buildPartial() {
+        com.lum.network.millions.CallbacksProto.SplitDelegation result = new com.lum.network.millions.CallbacksProto.SplitDelegation(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.lum.network.millions.CallbacksProto.SplitDelegation result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.validatorAddress_ = validatorAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.amount_ = amount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.millions.CallbacksProto.SplitDelegation) {
+          return mergeFrom((com.lum.network.millions.CallbacksProto.SplitDelegation)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.millions.CallbacksProto.SplitDelegation other) {
+        if (other == com.lum.network.millions.CallbacksProto.SplitDelegation.getDefaultInstance()) return this;
+        if (!other.getValidatorAddress().isEmpty()) {
+          validatorAddress_ = other.validatorAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getAmount().isEmpty()) {
+          amount_ = other.amount_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                validatorAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                amount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object validatorAddress_ = "";
+      /**
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @return The validatorAddress.
+       */
+      public java.lang.String getValidatorAddress() {
+        java.lang.Object ref = validatorAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          validatorAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @return The bytes for validatorAddress.
+       */
+      public com.google.protobuf.ByteString
+          getValidatorAddressBytes() {
+        java.lang.Object ref = validatorAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          validatorAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @param value The validatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        validatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidatorAddress() {
+        validatorAddress_ = getDefaultInstance().getValidatorAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @param value The bytes for validatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        validatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object amount_ = "";
+      /**
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The amount.
+       */
+      public java.lang.String getAmount() {
+        java.lang.Object ref = amount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          amount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for amount.
+       */
+      public com.google.protobuf.ByteString
+          getAmountBytes() {
+        java.lang.Object ref = amount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        amount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        amount_ = getDefaultInstance().getAmount();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        amount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.millions.SplitDelegation)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.millions.SplitDelegation)
+    private static final com.lum.network.millions.CallbacksProto.SplitDelegation DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.millions.CallbacksProto.SplitDelegation();
+    }
+
+    public static com.lum.network.millions.CallbacksProto.SplitDelegation getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SplitDelegation>
+        PARSER = new com.google.protobuf.AbstractParser<SplitDelegation>() {
+      @java.lang.Override
+      public SplitDelegation parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SplitDelegation> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SplitDelegation> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.millions.CallbacksProto.SplitDelegation getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DelegateCallbackOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.millions.DelegateCallback)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <code>uint64 deposit_id = 2 [json_name = "depositId"];</code>
+     * @return The depositId.
+     */
+    long getDepositId();
+
+    /**
+     * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+     */
+    java.util.List<com.lum.network.millions.CallbacksProto.SplitDelegation> 
+        getSplitDelegationsList();
+    /**
+     * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+     */
+    com.lum.network.millions.CallbacksProto.SplitDelegation getSplitDelegations(int index);
+    /**
+     * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+     */
+    int getSplitDelegationsCount();
+    /**
+     * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+     */
+    java.util.List<? extends com.lum.network.millions.CallbacksProto.SplitDelegationOrBuilder> 
+        getSplitDelegationsOrBuilderList();
+    /**
+     * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+     */
+    com.lum.network.millions.CallbacksProto.SplitDelegationOrBuilder getSplitDelegationsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code lum.network.millions.DelegateCallback}
+   */
+  public static final class DelegateCallback extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.millions.DelegateCallback)
+      DelegateCallbackOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DelegateCallback.newBuilder() to construct.
+    private DelegateCallback(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DelegateCallback() {
+      splitDelegations_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DelegateCallback();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_DelegateCallback_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_DelegateCallback_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.millions.CallbacksProto.DelegateCallback.class, com.lum.network.millions.CallbacksProto.DelegateCallback.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int DEPOSIT_ID_FIELD_NUMBER = 2;
+    private long depositId_ = 0L;
+    /**
+     * <code>uint64 deposit_id = 2 [json_name = "depositId"];</code>
+     * @return The depositId.
+     */
+    @java.lang.Override
+    public long getDepositId() {
+      return depositId_;
+    }
+
+    public static final int SPLIT_DELEGATIONS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.lum.network.millions.CallbacksProto.SplitDelegation> splitDelegations_;
+    /**
+     * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.lum.network.millions.CallbacksProto.SplitDelegation> getSplitDelegationsList() {
+      return splitDelegations_;
+    }
+    /**
+     * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.lum.network.millions.CallbacksProto.SplitDelegationOrBuilder> 
+        getSplitDelegationsOrBuilderList() {
+      return splitDelegations_;
+    }
+    /**
+     * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+     */
+    @java.lang.Override
+    public int getSplitDelegationsCount() {
+      return splitDelegations_.size();
+    }
+    /**
+     * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+     */
+    @java.lang.Override
+    public com.lum.network.millions.CallbacksProto.SplitDelegation getSplitDelegations(int index) {
+      return splitDelegations_.get(index);
+    }
+    /**
+     * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+     */
+    @java.lang.Override
+    public com.lum.network.millions.CallbacksProto.SplitDelegationOrBuilder getSplitDelegationsOrBuilder(
+        int index) {
+      return splitDelegations_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (depositId_ != 0L) {
+        output.writeUInt64(2, depositId_);
+      }
+      for (int i = 0; i < splitDelegations_.size(); i++) {
+        output.writeMessage(3, splitDelegations_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (depositId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, depositId_);
+      }
+      for (int i = 0; i < splitDelegations_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, splitDelegations_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.millions.CallbacksProto.DelegateCallback)) {
+        return super.equals(obj);
+      }
+      com.lum.network.millions.CallbacksProto.DelegateCallback other = (com.lum.network.millions.CallbacksProto.DelegateCallback) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (getDepositId()
+          != other.getDepositId()) return false;
+      if (!getSplitDelegationsList()
+          .equals(other.getSplitDelegationsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + DEPOSIT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDepositId());
+      if (getSplitDelegationsCount() > 0) {
+        hash = (37 * hash) + SPLIT_DELEGATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getSplitDelegationsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.millions.CallbacksProto.DelegateCallback parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.CallbacksProto.DelegateCallback parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.DelegateCallback parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.CallbacksProto.DelegateCallback parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.DelegateCallback parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.CallbacksProto.DelegateCallback parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.DelegateCallback parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.millions.CallbacksProto.DelegateCallback parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.millions.CallbacksProto.DelegateCallback parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.millions.CallbacksProto.DelegateCallback parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.DelegateCallback parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.millions.CallbacksProto.DelegateCallback parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.millions.CallbacksProto.DelegateCallback prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.millions.DelegateCallback}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.millions.DelegateCallback)
+        com.lum.network.millions.CallbacksProto.DelegateCallbackOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_DelegateCallback_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_DelegateCallback_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.millions.CallbacksProto.DelegateCallback.class, com.lum.network.millions.CallbacksProto.DelegateCallback.Builder.class);
+      }
+
+      // Construct using com.lum.network.millions.CallbacksProto.DelegateCallback.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        depositId_ = 0L;
+        if (splitDelegationsBuilder_ == null) {
+          splitDelegations_ = java.util.Collections.emptyList();
+        } else {
+          splitDelegations_ = null;
+          splitDelegationsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_DelegateCallback_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.CallbacksProto.DelegateCallback getDefaultInstanceForType() {
+        return com.lum.network.millions.CallbacksProto.DelegateCallback.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.CallbacksProto.DelegateCallback build() {
+        com.lum.network.millions.CallbacksProto.DelegateCallback result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.CallbacksProto.DelegateCallback buildPartial() {
+        com.lum.network.millions.CallbacksProto.DelegateCallback result = new com.lum.network.millions.CallbacksProto.DelegateCallback(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.lum.network.millions.CallbacksProto.DelegateCallback result) {
+        if (splitDelegationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            splitDelegations_ = java.util.Collections.unmodifiableList(splitDelegations_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.splitDelegations_ = splitDelegations_;
+        } else {
+          result.splitDelegations_ = splitDelegationsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.lum.network.millions.CallbacksProto.DelegateCallback result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.depositId_ = depositId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.millions.CallbacksProto.DelegateCallback) {
+          return mergeFrom((com.lum.network.millions.CallbacksProto.DelegateCallback)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.millions.CallbacksProto.DelegateCallback other) {
+        if (other == com.lum.network.millions.CallbacksProto.DelegateCallback.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (other.getDepositId() != 0L) {
+          setDepositId(other.getDepositId());
+        }
+        if (splitDelegationsBuilder_ == null) {
+          if (!other.splitDelegations_.isEmpty()) {
+            if (splitDelegations_.isEmpty()) {
+              splitDelegations_ = other.splitDelegations_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureSplitDelegationsIsMutable();
+              splitDelegations_.addAll(other.splitDelegations_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.splitDelegations_.isEmpty()) {
+            if (splitDelegationsBuilder_.isEmpty()) {
+              splitDelegationsBuilder_.dispose();
+              splitDelegationsBuilder_ = null;
+              splitDelegations_ = other.splitDelegations_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              splitDelegationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSplitDelegationsFieldBuilder() : null;
+            } else {
+              splitDelegationsBuilder_.addAllMessages(other.splitDelegations_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                depositId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                com.lum.network.millions.CallbacksProto.SplitDelegation m =
+                    input.readMessage(
+                        com.lum.network.millions.CallbacksProto.SplitDelegation.parser(),
+                        extensionRegistry);
+                if (splitDelegationsBuilder_ == null) {
+                  ensureSplitDelegationsIsMutable();
+                  splitDelegations_.add(m);
+                } else {
+                  splitDelegationsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long depositId_ ;
+      /**
+       * <code>uint64 deposit_id = 2 [json_name = "depositId"];</code>
+       * @return The depositId.
+       */
+      @java.lang.Override
+      public long getDepositId() {
+        return depositId_;
+      }
+      /**
+       * <code>uint64 deposit_id = 2 [json_name = "depositId"];</code>
+       * @param value The depositId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepositId(long value) {
+
+        depositId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 deposit_id = 2 [json_name = "depositId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDepositId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        depositId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.lum.network.millions.CallbacksProto.SplitDelegation> splitDelegations_ =
+        java.util.Collections.emptyList();
+      private void ensureSplitDelegationsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          splitDelegations_ = new java.util.ArrayList<com.lum.network.millions.CallbacksProto.SplitDelegation>(splitDelegations_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.lum.network.millions.CallbacksProto.SplitDelegation, com.lum.network.millions.CallbacksProto.SplitDelegation.Builder, com.lum.network.millions.CallbacksProto.SplitDelegationOrBuilder> splitDelegationsBuilder_;
+
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public java.util.List<com.lum.network.millions.CallbacksProto.SplitDelegation> getSplitDelegationsList() {
+        if (splitDelegationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(splitDelegations_);
+        } else {
+          return splitDelegationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public int getSplitDelegationsCount() {
+        if (splitDelegationsBuilder_ == null) {
+          return splitDelegations_.size();
+        } else {
+          return splitDelegationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public com.lum.network.millions.CallbacksProto.SplitDelegation getSplitDelegations(int index) {
+        if (splitDelegationsBuilder_ == null) {
+          return splitDelegations_.get(index);
+        } else {
+          return splitDelegationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public Builder setSplitDelegations(
+          int index, com.lum.network.millions.CallbacksProto.SplitDelegation value) {
+        if (splitDelegationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSplitDelegationsIsMutable();
+          splitDelegations_.set(index, value);
+          onChanged();
+        } else {
+          splitDelegationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public Builder setSplitDelegations(
+          int index, com.lum.network.millions.CallbacksProto.SplitDelegation.Builder builderForValue) {
+        if (splitDelegationsBuilder_ == null) {
+          ensureSplitDelegationsIsMutable();
+          splitDelegations_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          splitDelegationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public Builder addSplitDelegations(com.lum.network.millions.CallbacksProto.SplitDelegation value) {
+        if (splitDelegationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSplitDelegationsIsMutable();
+          splitDelegations_.add(value);
+          onChanged();
+        } else {
+          splitDelegationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public Builder addSplitDelegations(
+          int index, com.lum.network.millions.CallbacksProto.SplitDelegation value) {
+        if (splitDelegationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSplitDelegationsIsMutable();
+          splitDelegations_.add(index, value);
+          onChanged();
+        } else {
+          splitDelegationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public Builder addSplitDelegations(
+          com.lum.network.millions.CallbacksProto.SplitDelegation.Builder builderForValue) {
+        if (splitDelegationsBuilder_ == null) {
+          ensureSplitDelegationsIsMutable();
+          splitDelegations_.add(builderForValue.build());
+          onChanged();
+        } else {
+          splitDelegationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public Builder addSplitDelegations(
+          int index, com.lum.network.millions.CallbacksProto.SplitDelegation.Builder builderForValue) {
+        if (splitDelegationsBuilder_ == null) {
+          ensureSplitDelegationsIsMutable();
+          splitDelegations_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          splitDelegationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public Builder addAllSplitDelegations(
+          java.lang.Iterable<? extends com.lum.network.millions.CallbacksProto.SplitDelegation> values) {
+        if (splitDelegationsBuilder_ == null) {
+          ensureSplitDelegationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, splitDelegations_);
+          onChanged();
+        } else {
+          splitDelegationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public Builder clearSplitDelegations() {
+        if (splitDelegationsBuilder_ == null) {
+          splitDelegations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          splitDelegationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public Builder removeSplitDelegations(int index) {
+        if (splitDelegationsBuilder_ == null) {
+          ensureSplitDelegationsIsMutable();
+          splitDelegations_.remove(index);
+          onChanged();
+        } else {
+          splitDelegationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public com.lum.network.millions.CallbacksProto.SplitDelegation.Builder getSplitDelegationsBuilder(
+          int index) {
+        return getSplitDelegationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public com.lum.network.millions.CallbacksProto.SplitDelegationOrBuilder getSplitDelegationsOrBuilder(
+          int index) {
+        if (splitDelegationsBuilder_ == null) {
+          return splitDelegations_.get(index);  } else {
+          return splitDelegationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public java.util.List<? extends com.lum.network.millions.CallbacksProto.SplitDelegationOrBuilder> 
+           getSplitDelegationsOrBuilderList() {
+        if (splitDelegationsBuilder_ != null) {
+          return splitDelegationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(splitDelegations_);
+        }
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public com.lum.network.millions.CallbacksProto.SplitDelegation.Builder addSplitDelegationsBuilder() {
+        return getSplitDelegationsFieldBuilder().addBuilder(
+            com.lum.network.millions.CallbacksProto.SplitDelegation.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public com.lum.network.millions.CallbacksProto.SplitDelegation.Builder addSplitDelegationsBuilder(
+          int index) {
+        return getSplitDelegationsFieldBuilder().addBuilder(
+            index, com.lum.network.millions.CallbacksProto.SplitDelegation.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public java.util.List<com.lum.network.millions.CallbacksProto.SplitDelegation.Builder> 
+           getSplitDelegationsBuilderList() {
+        return getSplitDelegationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.lum.network.millions.CallbacksProto.SplitDelegation, com.lum.network.millions.CallbacksProto.SplitDelegation.Builder, com.lum.network.millions.CallbacksProto.SplitDelegationOrBuilder> 
+          getSplitDelegationsFieldBuilder() {
+        if (splitDelegationsBuilder_ == null) {
+          splitDelegationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.lum.network.millions.CallbacksProto.SplitDelegation, com.lum.network.millions.CallbacksProto.SplitDelegation.Builder, com.lum.network.millions.CallbacksProto.SplitDelegationOrBuilder>(
+                  splitDelegations_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          splitDelegations_ = null;
+        }
+        return splitDelegationsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.millions.DelegateCallback)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.millions.DelegateCallback)
+    private static final com.lum.network.millions.CallbacksProto.DelegateCallback DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.millions.CallbacksProto.DelegateCallback();
+    }
+
+    public static com.lum.network.millions.CallbacksProto.DelegateCallback getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DelegateCallback>
+        PARSER = new com.google.protobuf.AbstractParser<DelegateCallback>() {
+      @java.lang.Override
+      public DelegateCallback parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DelegateCallback> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DelegateCallback> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.millions.CallbacksProto.DelegateCallback getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UndelegateCallbackOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.millions.UndelegateCallback)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <code>uint64 withdrawal_id = 2 [json_name = "withdrawalId"];</code>
+     * @return The withdrawalId.
+     */
+    long getWithdrawalId();
+
+    /**
+     * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+     */
+    java.util.List<com.lum.network.millions.CallbacksProto.SplitDelegation> 
+        getSplitDelegationsList();
+    /**
+     * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+     */
+    com.lum.network.millions.CallbacksProto.SplitDelegation getSplitDelegations(int index);
+    /**
+     * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+     */
+    int getSplitDelegationsCount();
+    /**
+     * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+     */
+    java.util.List<? extends com.lum.network.millions.CallbacksProto.SplitDelegationOrBuilder> 
+        getSplitDelegationsOrBuilderList();
+    /**
+     * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+     */
+    com.lum.network.millions.CallbacksProto.SplitDelegationOrBuilder getSplitDelegationsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code lum.network.millions.UndelegateCallback}
+   */
+  public static final class UndelegateCallback extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.millions.UndelegateCallback)
+      UndelegateCallbackOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UndelegateCallback.newBuilder() to construct.
+    private UndelegateCallback(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UndelegateCallback() {
+      splitDelegations_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UndelegateCallback();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_UndelegateCallback_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_UndelegateCallback_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.millions.CallbacksProto.UndelegateCallback.class, com.lum.network.millions.CallbacksProto.UndelegateCallback.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int WITHDRAWAL_ID_FIELD_NUMBER = 2;
+    private long withdrawalId_ = 0L;
+    /**
+     * <code>uint64 withdrawal_id = 2 [json_name = "withdrawalId"];</code>
+     * @return The withdrawalId.
+     */
+    @java.lang.Override
+    public long getWithdrawalId() {
+      return withdrawalId_;
+    }
+
+    public static final int SPLIT_DELEGATIONS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.lum.network.millions.CallbacksProto.SplitDelegation> splitDelegations_;
+    /**
+     * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.lum.network.millions.CallbacksProto.SplitDelegation> getSplitDelegationsList() {
+      return splitDelegations_;
+    }
+    /**
+     * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.lum.network.millions.CallbacksProto.SplitDelegationOrBuilder> 
+        getSplitDelegationsOrBuilderList() {
+      return splitDelegations_;
+    }
+    /**
+     * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+     */
+    @java.lang.Override
+    public int getSplitDelegationsCount() {
+      return splitDelegations_.size();
+    }
+    /**
+     * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+     */
+    @java.lang.Override
+    public com.lum.network.millions.CallbacksProto.SplitDelegation getSplitDelegations(int index) {
+      return splitDelegations_.get(index);
+    }
+    /**
+     * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+     */
+    @java.lang.Override
+    public com.lum.network.millions.CallbacksProto.SplitDelegationOrBuilder getSplitDelegationsOrBuilder(
+        int index) {
+      return splitDelegations_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (withdrawalId_ != 0L) {
+        output.writeUInt64(2, withdrawalId_);
+      }
+      for (int i = 0; i < splitDelegations_.size(); i++) {
+        output.writeMessage(3, splitDelegations_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (withdrawalId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, withdrawalId_);
+      }
+      for (int i = 0; i < splitDelegations_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, splitDelegations_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.millions.CallbacksProto.UndelegateCallback)) {
+        return super.equals(obj);
+      }
+      com.lum.network.millions.CallbacksProto.UndelegateCallback other = (com.lum.network.millions.CallbacksProto.UndelegateCallback) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (getWithdrawalId()
+          != other.getWithdrawalId()) return false;
+      if (!getSplitDelegationsList()
+          .equals(other.getSplitDelegationsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + WITHDRAWAL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getWithdrawalId());
+      if (getSplitDelegationsCount() > 0) {
+        hash = (37 * hash) + SPLIT_DELEGATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getSplitDelegationsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.millions.CallbacksProto.UndelegateCallback parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.CallbacksProto.UndelegateCallback parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.UndelegateCallback parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.CallbacksProto.UndelegateCallback parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.UndelegateCallback parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.CallbacksProto.UndelegateCallback parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.UndelegateCallback parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.millions.CallbacksProto.UndelegateCallback parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.millions.CallbacksProto.UndelegateCallback parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.millions.CallbacksProto.UndelegateCallback parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.UndelegateCallback parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.millions.CallbacksProto.UndelegateCallback parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.millions.CallbacksProto.UndelegateCallback prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.millions.UndelegateCallback}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.millions.UndelegateCallback)
+        com.lum.network.millions.CallbacksProto.UndelegateCallbackOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_UndelegateCallback_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_UndelegateCallback_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.millions.CallbacksProto.UndelegateCallback.class, com.lum.network.millions.CallbacksProto.UndelegateCallback.Builder.class);
+      }
+
+      // Construct using com.lum.network.millions.CallbacksProto.UndelegateCallback.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        withdrawalId_ = 0L;
+        if (splitDelegationsBuilder_ == null) {
+          splitDelegations_ = java.util.Collections.emptyList();
+        } else {
+          splitDelegations_ = null;
+          splitDelegationsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_UndelegateCallback_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.CallbacksProto.UndelegateCallback getDefaultInstanceForType() {
+        return com.lum.network.millions.CallbacksProto.UndelegateCallback.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.CallbacksProto.UndelegateCallback build() {
+        com.lum.network.millions.CallbacksProto.UndelegateCallback result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.CallbacksProto.UndelegateCallback buildPartial() {
+        com.lum.network.millions.CallbacksProto.UndelegateCallback result = new com.lum.network.millions.CallbacksProto.UndelegateCallback(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.lum.network.millions.CallbacksProto.UndelegateCallback result) {
+        if (splitDelegationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            splitDelegations_ = java.util.Collections.unmodifiableList(splitDelegations_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.splitDelegations_ = splitDelegations_;
+        } else {
+          result.splitDelegations_ = splitDelegationsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.lum.network.millions.CallbacksProto.UndelegateCallback result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.withdrawalId_ = withdrawalId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.millions.CallbacksProto.UndelegateCallback) {
+          return mergeFrom((com.lum.network.millions.CallbacksProto.UndelegateCallback)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.millions.CallbacksProto.UndelegateCallback other) {
+        if (other == com.lum.network.millions.CallbacksProto.UndelegateCallback.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (other.getWithdrawalId() != 0L) {
+          setWithdrawalId(other.getWithdrawalId());
+        }
+        if (splitDelegationsBuilder_ == null) {
+          if (!other.splitDelegations_.isEmpty()) {
+            if (splitDelegations_.isEmpty()) {
+              splitDelegations_ = other.splitDelegations_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureSplitDelegationsIsMutable();
+              splitDelegations_.addAll(other.splitDelegations_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.splitDelegations_.isEmpty()) {
+            if (splitDelegationsBuilder_.isEmpty()) {
+              splitDelegationsBuilder_.dispose();
+              splitDelegationsBuilder_ = null;
+              splitDelegations_ = other.splitDelegations_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              splitDelegationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSplitDelegationsFieldBuilder() : null;
+            } else {
+              splitDelegationsBuilder_.addAllMessages(other.splitDelegations_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                withdrawalId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                com.lum.network.millions.CallbacksProto.SplitDelegation m =
+                    input.readMessage(
+                        com.lum.network.millions.CallbacksProto.SplitDelegation.parser(),
+                        extensionRegistry);
+                if (splitDelegationsBuilder_ == null) {
+                  ensureSplitDelegationsIsMutable();
+                  splitDelegations_.add(m);
+                } else {
+                  splitDelegationsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long withdrawalId_ ;
+      /**
+       * <code>uint64 withdrawal_id = 2 [json_name = "withdrawalId"];</code>
+       * @return The withdrawalId.
+       */
+      @java.lang.Override
+      public long getWithdrawalId() {
+        return withdrawalId_;
+      }
+      /**
+       * <code>uint64 withdrawal_id = 2 [json_name = "withdrawalId"];</code>
+       * @param value The withdrawalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWithdrawalId(long value) {
+
+        withdrawalId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 withdrawal_id = 2 [json_name = "withdrawalId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWithdrawalId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        withdrawalId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.lum.network.millions.CallbacksProto.SplitDelegation> splitDelegations_ =
+        java.util.Collections.emptyList();
+      private void ensureSplitDelegationsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          splitDelegations_ = new java.util.ArrayList<com.lum.network.millions.CallbacksProto.SplitDelegation>(splitDelegations_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.lum.network.millions.CallbacksProto.SplitDelegation, com.lum.network.millions.CallbacksProto.SplitDelegation.Builder, com.lum.network.millions.CallbacksProto.SplitDelegationOrBuilder> splitDelegationsBuilder_;
+
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public java.util.List<com.lum.network.millions.CallbacksProto.SplitDelegation> getSplitDelegationsList() {
+        if (splitDelegationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(splitDelegations_);
+        } else {
+          return splitDelegationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public int getSplitDelegationsCount() {
+        if (splitDelegationsBuilder_ == null) {
+          return splitDelegations_.size();
+        } else {
+          return splitDelegationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public com.lum.network.millions.CallbacksProto.SplitDelegation getSplitDelegations(int index) {
+        if (splitDelegationsBuilder_ == null) {
+          return splitDelegations_.get(index);
+        } else {
+          return splitDelegationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public Builder setSplitDelegations(
+          int index, com.lum.network.millions.CallbacksProto.SplitDelegation value) {
+        if (splitDelegationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSplitDelegationsIsMutable();
+          splitDelegations_.set(index, value);
+          onChanged();
+        } else {
+          splitDelegationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public Builder setSplitDelegations(
+          int index, com.lum.network.millions.CallbacksProto.SplitDelegation.Builder builderForValue) {
+        if (splitDelegationsBuilder_ == null) {
+          ensureSplitDelegationsIsMutable();
+          splitDelegations_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          splitDelegationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public Builder addSplitDelegations(com.lum.network.millions.CallbacksProto.SplitDelegation value) {
+        if (splitDelegationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSplitDelegationsIsMutable();
+          splitDelegations_.add(value);
+          onChanged();
+        } else {
+          splitDelegationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public Builder addSplitDelegations(
+          int index, com.lum.network.millions.CallbacksProto.SplitDelegation value) {
+        if (splitDelegationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSplitDelegationsIsMutable();
+          splitDelegations_.add(index, value);
+          onChanged();
+        } else {
+          splitDelegationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public Builder addSplitDelegations(
+          com.lum.network.millions.CallbacksProto.SplitDelegation.Builder builderForValue) {
+        if (splitDelegationsBuilder_ == null) {
+          ensureSplitDelegationsIsMutable();
+          splitDelegations_.add(builderForValue.build());
+          onChanged();
+        } else {
+          splitDelegationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public Builder addSplitDelegations(
+          int index, com.lum.network.millions.CallbacksProto.SplitDelegation.Builder builderForValue) {
+        if (splitDelegationsBuilder_ == null) {
+          ensureSplitDelegationsIsMutable();
+          splitDelegations_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          splitDelegationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public Builder addAllSplitDelegations(
+          java.lang.Iterable<? extends com.lum.network.millions.CallbacksProto.SplitDelegation> values) {
+        if (splitDelegationsBuilder_ == null) {
+          ensureSplitDelegationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, splitDelegations_);
+          onChanged();
+        } else {
+          splitDelegationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public Builder clearSplitDelegations() {
+        if (splitDelegationsBuilder_ == null) {
+          splitDelegations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          splitDelegationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public Builder removeSplitDelegations(int index) {
+        if (splitDelegationsBuilder_ == null) {
+          ensureSplitDelegationsIsMutable();
+          splitDelegations_.remove(index);
+          onChanged();
+        } else {
+          splitDelegationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public com.lum.network.millions.CallbacksProto.SplitDelegation.Builder getSplitDelegationsBuilder(
+          int index) {
+        return getSplitDelegationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public com.lum.network.millions.CallbacksProto.SplitDelegationOrBuilder getSplitDelegationsOrBuilder(
+          int index) {
+        if (splitDelegationsBuilder_ == null) {
+          return splitDelegations_.get(index);  } else {
+          return splitDelegationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public java.util.List<? extends com.lum.network.millions.CallbacksProto.SplitDelegationOrBuilder> 
+           getSplitDelegationsOrBuilderList() {
+        if (splitDelegationsBuilder_ != null) {
+          return splitDelegationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(splitDelegations_);
+        }
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public com.lum.network.millions.CallbacksProto.SplitDelegation.Builder addSplitDelegationsBuilder() {
+        return getSplitDelegationsFieldBuilder().addBuilder(
+            com.lum.network.millions.CallbacksProto.SplitDelegation.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public com.lum.network.millions.CallbacksProto.SplitDelegation.Builder addSplitDelegationsBuilder(
+          int index) {
+        return getSplitDelegationsFieldBuilder().addBuilder(
+            index, com.lum.network.millions.CallbacksProto.SplitDelegation.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .lum.network.millions.SplitDelegation split_delegations = 3 [json_name = "splitDelegations"];</code>
+       */
+      public java.util.List<com.lum.network.millions.CallbacksProto.SplitDelegation.Builder> 
+           getSplitDelegationsBuilderList() {
+        return getSplitDelegationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.lum.network.millions.CallbacksProto.SplitDelegation, com.lum.network.millions.CallbacksProto.SplitDelegation.Builder, com.lum.network.millions.CallbacksProto.SplitDelegationOrBuilder> 
+          getSplitDelegationsFieldBuilder() {
+        if (splitDelegationsBuilder_ == null) {
+          splitDelegationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.lum.network.millions.CallbacksProto.SplitDelegation, com.lum.network.millions.CallbacksProto.SplitDelegation.Builder, com.lum.network.millions.CallbacksProto.SplitDelegationOrBuilder>(
+                  splitDelegations_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          splitDelegations_ = null;
+        }
+        return splitDelegationsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.millions.UndelegateCallback)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.millions.UndelegateCallback)
+    private static final com.lum.network.millions.CallbacksProto.UndelegateCallback DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.millions.CallbacksProto.UndelegateCallback();
+    }
+
+    public static com.lum.network.millions.CallbacksProto.UndelegateCallback getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UndelegateCallback>
+        PARSER = new com.google.protobuf.AbstractParser<UndelegateCallback>() {
+      @java.lang.Override
+      public UndelegateCallback parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UndelegateCallback> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UndelegateCallback> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.millions.CallbacksProto.UndelegateCallback getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RedelegateCallbackOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.millions.RedelegateCallback)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <code>.lum.network.millions.SplitDelegation split_delegation = 2 [json_name = "splitDelegation"];</code>
+     * @return Whether the splitDelegation field is set.
+     */
+    boolean hasSplitDelegation();
+    /**
+     * <code>.lum.network.millions.SplitDelegation split_delegation = 2 [json_name = "splitDelegation"];</code>
+     * @return The splitDelegation.
+     */
+    com.lum.network.millions.CallbacksProto.SplitDelegation getSplitDelegation();
+    /**
+     * <code>.lum.network.millions.SplitDelegation split_delegation = 2 [json_name = "splitDelegation"];</code>
+     */
+    com.lum.network.millions.CallbacksProto.SplitDelegationOrBuilder getSplitDelegationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code lum.network.millions.RedelegateCallback}
+   */
+  public static final class RedelegateCallback extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.millions.RedelegateCallback)
+      RedelegateCallbackOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RedelegateCallback.newBuilder() to construct.
+    private RedelegateCallback(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RedelegateCallback() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RedelegateCallback();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_RedelegateCallback_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_RedelegateCallback_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.millions.CallbacksProto.RedelegateCallback.class, com.lum.network.millions.CallbacksProto.RedelegateCallback.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int SPLIT_DELEGATION_FIELD_NUMBER = 2;
+    private com.lum.network.millions.CallbacksProto.SplitDelegation splitDelegation_;
+    /**
+     * <code>.lum.network.millions.SplitDelegation split_delegation = 2 [json_name = "splitDelegation"];</code>
+     * @return Whether the splitDelegation field is set.
+     */
+    @java.lang.Override
+    public boolean hasSplitDelegation() {
+      return splitDelegation_ != null;
+    }
+    /**
+     * <code>.lum.network.millions.SplitDelegation split_delegation = 2 [json_name = "splitDelegation"];</code>
+     * @return The splitDelegation.
+     */
+    @java.lang.Override
+    public com.lum.network.millions.CallbacksProto.SplitDelegation getSplitDelegation() {
+      return splitDelegation_ == null ? com.lum.network.millions.CallbacksProto.SplitDelegation.getDefaultInstance() : splitDelegation_;
+    }
+    /**
+     * <code>.lum.network.millions.SplitDelegation split_delegation = 2 [json_name = "splitDelegation"];</code>
+     */
+    @java.lang.Override
+    public com.lum.network.millions.CallbacksProto.SplitDelegationOrBuilder getSplitDelegationOrBuilder() {
+      return splitDelegation_ == null ? com.lum.network.millions.CallbacksProto.SplitDelegation.getDefaultInstance() : splitDelegation_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (splitDelegation_ != null) {
+        output.writeMessage(2, getSplitDelegation());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (splitDelegation_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getSplitDelegation());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.millions.CallbacksProto.RedelegateCallback)) {
+        return super.equals(obj);
+      }
+      com.lum.network.millions.CallbacksProto.RedelegateCallback other = (com.lum.network.millions.CallbacksProto.RedelegateCallback) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (hasSplitDelegation() != other.hasSplitDelegation()) return false;
+      if (hasSplitDelegation()) {
+        if (!getSplitDelegation()
+            .equals(other.getSplitDelegation())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      if (hasSplitDelegation()) {
+        hash = (37 * hash) + SPLIT_DELEGATION_FIELD_NUMBER;
+        hash = (53 * hash) + getSplitDelegation().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.millions.CallbacksProto.RedelegateCallback parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.CallbacksProto.RedelegateCallback parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.RedelegateCallback parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.CallbacksProto.RedelegateCallback parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.RedelegateCallback parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.CallbacksProto.RedelegateCallback parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.RedelegateCallback parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.millions.CallbacksProto.RedelegateCallback parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.millions.CallbacksProto.RedelegateCallback parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.millions.CallbacksProto.RedelegateCallback parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.RedelegateCallback parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.millions.CallbacksProto.RedelegateCallback parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.millions.CallbacksProto.RedelegateCallback prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.millions.RedelegateCallback}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.millions.RedelegateCallback)
+        com.lum.network.millions.CallbacksProto.RedelegateCallbackOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_RedelegateCallback_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_RedelegateCallback_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.millions.CallbacksProto.RedelegateCallback.class, com.lum.network.millions.CallbacksProto.RedelegateCallback.Builder.class);
+      }
+
+      // Construct using com.lum.network.millions.CallbacksProto.RedelegateCallback.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        splitDelegation_ = null;
+        if (splitDelegationBuilder_ != null) {
+          splitDelegationBuilder_.dispose();
+          splitDelegationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_RedelegateCallback_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.CallbacksProto.RedelegateCallback getDefaultInstanceForType() {
+        return com.lum.network.millions.CallbacksProto.RedelegateCallback.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.CallbacksProto.RedelegateCallback build() {
+        com.lum.network.millions.CallbacksProto.RedelegateCallback result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.CallbacksProto.RedelegateCallback buildPartial() {
+        com.lum.network.millions.CallbacksProto.RedelegateCallback result = new com.lum.network.millions.CallbacksProto.RedelegateCallback(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.lum.network.millions.CallbacksProto.RedelegateCallback result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.splitDelegation_ = splitDelegationBuilder_ == null
+              ? splitDelegation_
+              : splitDelegationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.millions.CallbacksProto.RedelegateCallback) {
+          return mergeFrom((com.lum.network.millions.CallbacksProto.RedelegateCallback)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.millions.CallbacksProto.RedelegateCallback other) {
+        if (other == com.lum.network.millions.CallbacksProto.RedelegateCallback.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (other.hasSplitDelegation()) {
+          mergeSplitDelegation(other.getSplitDelegation());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getSplitDelegationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.lum.network.millions.CallbacksProto.SplitDelegation splitDelegation_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lum.network.millions.CallbacksProto.SplitDelegation, com.lum.network.millions.CallbacksProto.SplitDelegation.Builder, com.lum.network.millions.CallbacksProto.SplitDelegationOrBuilder> splitDelegationBuilder_;
+      /**
+       * <code>.lum.network.millions.SplitDelegation split_delegation = 2 [json_name = "splitDelegation"];</code>
+       * @return Whether the splitDelegation field is set.
+       */
+      public boolean hasSplitDelegation() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.lum.network.millions.SplitDelegation split_delegation = 2 [json_name = "splitDelegation"];</code>
+       * @return The splitDelegation.
+       */
+      public com.lum.network.millions.CallbacksProto.SplitDelegation getSplitDelegation() {
+        if (splitDelegationBuilder_ == null) {
+          return splitDelegation_ == null ? com.lum.network.millions.CallbacksProto.SplitDelegation.getDefaultInstance() : splitDelegation_;
+        } else {
+          return splitDelegationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.lum.network.millions.SplitDelegation split_delegation = 2 [json_name = "splitDelegation"];</code>
+       */
+      public Builder setSplitDelegation(com.lum.network.millions.CallbacksProto.SplitDelegation value) {
+        if (splitDelegationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          splitDelegation_ = value;
+        } else {
+          splitDelegationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.millions.SplitDelegation split_delegation = 2 [json_name = "splitDelegation"];</code>
+       */
+      public Builder setSplitDelegation(
+          com.lum.network.millions.CallbacksProto.SplitDelegation.Builder builderForValue) {
+        if (splitDelegationBuilder_ == null) {
+          splitDelegation_ = builderForValue.build();
+        } else {
+          splitDelegationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.millions.SplitDelegation split_delegation = 2 [json_name = "splitDelegation"];</code>
+       */
+      public Builder mergeSplitDelegation(com.lum.network.millions.CallbacksProto.SplitDelegation value) {
+        if (splitDelegationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            splitDelegation_ != null &&
+            splitDelegation_ != com.lum.network.millions.CallbacksProto.SplitDelegation.getDefaultInstance()) {
+            getSplitDelegationBuilder().mergeFrom(value);
+          } else {
+            splitDelegation_ = value;
+          }
+        } else {
+          splitDelegationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.millions.SplitDelegation split_delegation = 2 [json_name = "splitDelegation"];</code>
+       */
+      public Builder clearSplitDelegation() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        splitDelegation_ = null;
+        if (splitDelegationBuilder_ != null) {
+          splitDelegationBuilder_.dispose();
+          splitDelegationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.millions.SplitDelegation split_delegation = 2 [json_name = "splitDelegation"];</code>
+       */
+      public com.lum.network.millions.CallbacksProto.SplitDelegation.Builder getSplitDelegationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getSplitDelegationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.lum.network.millions.SplitDelegation split_delegation = 2 [json_name = "splitDelegation"];</code>
+       */
+      public com.lum.network.millions.CallbacksProto.SplitDelegationOrBuilder getSplitDelegationOrBuilder() {
+        if (splitDelegationBuilder_ != null) {
+          return splitDelegationBuilder_.getMessageOrBuilder();
+        } else {
+          return splitDelegation_ == null ?
+              com.lum.network.millions.CallbacksProto.SplitDelegation.getDefaultInstance() : splitDelegation_;
+        }
+      }
+      /**
+       * <code>.lum.network.millions.SplitDelegation split_delegation = 2 [json_name = "splitDelegation"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lum.network.millions.CallbacksProto.SplitDelegation, com.lum.network.millions.CallbacksProto.SplitDelegation.Builder, com.lum.network.millions.CallbacksProto.SplitDelegationOrBuilder> 
+          getSplitDelegationFieldBuilder() {
+        if (splitDelegationBuilder_ == null) {
+          splitDelegationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.lum.network.millions.CallbacksProto.SplitDelegation, com.lum.network.millions.CallbacksProto.SplitDelegation.Builder, com.lum.network.millions.CallbacksProto.SplitDelegationOrBuilder>(
+                  getSplitDelegation(),
+                  getParentForChildren(),
+                  isClean());
+          splitDelegation_ = null;
+        }
+        return splitDelegationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.millions.RedelegateCallback)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.millions.RedelegateCallback)
+    private static final com.lum.network.millions.CallbacksProto.RedelegateCallback DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.millions.CallbacksProto.RedelegateCallback();
+    }
+
+    public static com.lum.network.millions.CallbacksProto.RedelegateCallback getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RedelegateCallback>
+        PARSER = new com.google.protobuf.AbstractParser<RedelegateCallback>() {
+      @java.lang.Override
+      public RedelegateCallback parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RedelegateCallback> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RedelegateCallback> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.millions.CallbacksProto.RedelegateCallback getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ClaimRewardsCallbackOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.millions.ClaimRewardsCallback)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <code>uint64 draw_id = 2 [json_name = "drawId"];</code>
+     * @return The drawId.
+     */
+    long getDrawId();
+  }
+  /**
+   * Protobuf type {@code lum.network.millions.ClaimRewardsCallback}
+   */
+  public static final class ClaimRewardsCallback extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.millions.ClaimRewardsCallback)
+      ClaimRewardsCallbackOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ClaimRewardsCallback.newBuilder() to construct.
+    private ClaimRewardsCallback(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ClaimRewardsCallback() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ClaimRewardsCallback();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_ClaimRewardsCallback_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_ClaimRewardsCallback_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.millions.CallbacksProto.ClaimRewardsCallback.class, com.lum.network.millions.CallbacksProto.ClaimRewardsCallback.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int DRAW_ID_FIELD_NUMBER = 2;
+    private long drawId_ = 0L;
+    /**
+     * <code>uint64 draw_id = 2 [json_name = "drawId"];</code>
+     * @return The drawId.
+     */
+    @java.lang.Override
+    public long getDrawId() {
+      return drawId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (drawId_ != 0L) {
+        output.writeUInt64(2, drawId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (drawId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, drawId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.millions.CallbacksProto.ClaimRewardsCallback)) {
+        return super.equals(obj);
+      }
+      com.lum.network.millions.CallbacksProto.ClaimRewardsCallback other = (com.lum.network.millions.CallbacksProto.ClaimRewardsCallback) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (getDrawId()
+          != other.getDrawId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + DRAW_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDrawId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.millions.CallbacksProto.ClaimRewardsCallback parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.CallbacksProto.ClaimRewardsCallback parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.ClaimRewardsCallback parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.CallbacksProto.ClaimRewardsCallback parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.ClaimRewardsCallback parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.CallbacksProto.ClaimRewardsCallback parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.ClaimRewardsCallback parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.millions.CallbacksProto.ClaimRewardsCallback parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.millions.CallbacksProto.ClaimRewardsCallback parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.millions.CallbacksProto.ClaimRewardsCallback parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.ClaimRewardsCallback parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.millions.CallbacksProto.ClaimRewardsCallback parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.millions.CallbacksProto.ClaimRewardsCallback prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.millions.ClaimRewardsCallback}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.millions.ClaimRewardsCallback)
+        com.lum.network.millions.CallbacksProto.ClaimRewardsCallbackOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_ClaimRewardsCallback_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_ClaimRewardsCallback_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.millions.CallbacksProto.ClaimRewardsCallback.class, com.lum.network.millions.CallbacksProto.ClaimRewardsCallback.Builder.class);
+      }
+
+      // Construct using com.lum.network.millions.CallbacksProto.ClaimRewardsCallback.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        drawId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_ClaimRewardsCallback_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.CallbacksProto.ClaimRewardsCallback getDefaultInstanceForType() {
+        return com.lum.network.millions.CallbacksProto.ClaimRewardsCallback.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.CallbacksProto.ClaimRewardsCallback build() {
+        com.lum.network.millions.CallbacksProto.ClaimRewardsCallback result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.CallbacksProto.ClaimRewardsCallback buildPartial() {
+        com.lum.network.millions.CallbacksProto.ClaimRewardsCallback result = new com.lum.network.millions.CallbacksProto.ClaimRewardsCallback(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.lum.network.millions.CallbacksProto.ClaimRewardsCallback result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.drawId_ = drawId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.millions.CallbacksProto.ClaimRewardsCallback) {
+          return mergeFrom((com.lum.network.millions.CallbacksProto.ClaimRewardsCallback)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.millions.CallbacksProto.ClaimRewardsCallback other) {
+        if (other == com.lum.network.millions.CallbacksProto.ClaimRewardsCallback.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (other.getDrawId() != 0L) {
+          setDrawId(other.getDrawId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                drawId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long drawId_ ;
+      /**
+       * <code>uint64 draw_id = 2 [json_name = "drawId"];</code>
+       * @return The drawId.
+       */
+      @java.lang.Override
+      public long getDrawId() {
+        return drawId_;
+      }
+      /**
+       * <code>uint64 draw_id = 2 [json_name = "drawId"];</code>
+       * @param value The drawId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDrawId(long value) {
+
+        drawId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 draw_id = 2 [json_name = "drawId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDrawId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        drawId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.millions.ClaimRewardsCallback)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.millions.ClaimRewardsCallback)
+    private static final com.lum.network.millions.CallbacksProto.ClaimRewardsCallback DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.millions.CallbacksProto.ClaimRewardsCallback();
+    }
+
+    public static com.lum.network.millions.CallbacksProto.ClaimRewardsCallback getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ClaimRewardsCallback>
+        PARSER = new com.google.protobuf.AbstractParser<ClaimRewardsCallback>() {
+      @java.lang.Override
+      public ClaimRewardsCallback parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ClaimRewardsCallback> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ClaimRewardsCallback> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.millions.CallbacksProto.ClaimRewardsCallback getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TransferToNativeCallbackOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.millions.TransferToNativeCallback)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <code>uint64 deposit_id = 2 [json_name = "depositId"];</code>
+     * @return The depositId.
+     */
+    long getDepositId();
+  }
+  /**
+   * Protobuf type {@code lum.network.millions.TransferToNativeCallback}
+   */
+  public static final class TransferToNativeCallback extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.millions.TransferToNativeCallback)
+      TransferToNativeCallbackOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TransferToNativeCallback.newBuilder() to construct.
+    private TransferToNativeCallback(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TransferToNativeCallback() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TransferToNativeCallback();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_TransferToNativeCallback_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_TransferToNativeCallback_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.millions.CallbacksProto.TransferToNativeCallback.class, com.lum.network.millions.CallbacksProto.TransferToNativeCallback.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int DEPOSIT_ID_FIELD_NUMBER = 2;
+    private long depositId_ = 0L;
+    /**
+     * <code>uint64 deposit_id = 2 [json_name = "depositId"];</code>
+     * @return The depositId.
+     */
+    @java.lang.Override
+    public long getDepositId() {
+      return depositId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (depositId_ != 0L) {
+        output.writeUInt64(2, depositId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (depositId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, depositId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.millions.CallbacksProto.TransferToNativeCallback)) {
+        return super.equals(obj);
+      }
+      com.lum.network.millions.CallbacksProto.TransferToNativeCallback other = (com.lum.network.millions.CallbacksProto.TransferToNativeCallback) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (getDepositId()
+          != other.getDepositId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + DEPOSIT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDepositId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.millions.CallbacksProto.TransferToNativeCallback parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.CallbacksProto.TransferToNativeCallback parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.TransferToNativeCallback parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.CallbacksProto.TransferToNativeCallback parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.TransferToNativeCallback parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.CallbacksProto.TransferToNativeCallback parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.TransferToNativeCallback parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.millions.CallbacksProto.TransferToNativeCallback parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.millions.CallbacksProto.TransferToNativeCallback parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.millions.CallbacksProto.TransferToNativeCallback parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.TransferToNativeCallback parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.millions.CallbacksProto.TransferToNativeCallback parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.millions.CallbacksProto.TransferToNativeCallback prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.millions.TransferToNativeCallback}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.millions.TransferToNativeCallback)
+        com.lum.network.millions.CallbacksProto.TransferToNativeCallbackOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_TransferToNativeCallback_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_TransferToNativeCallback_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.millions.CallbacksProto.TransferToNativeCallback.class, com.lum.network.millions.CallbacksProto.TransferToNativeCallback.Builder.class);
+      }
+
+      // Construct using com.lum.network.millions.CallbacksProto.TransferToNativeCallback.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        depositId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_TransferToNativeCallback_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.CallbacksProto.TransferToNativeCallback getDefaultInstanceForType() {
+        return com.lum.network.millions.CallbacksProto.TransferToNativeCallback.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.CallbacksProto.TransferToNativeCallback build() {
+        com.lum.network.millions.CallbacksProto.TransferToNativeCallback result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.CallbacksProto.TransferToNativeCallback buildPartial() {
+        com.lum.network.millions.CallbacksProto.TransferToNativeCallback result = new com.lum.network.millions.CallbacksProto.TransferToNativeCallback(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.lum.network.millions.CallbacksProto.TransferToNativeCallback result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.depositId_ = depositId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.millions.CallbacksProto.TransferToNativeCallback) {
+          return mergeFrom((com.lum.network.millions.CallbacksProto.TransferToNativeCallback)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.millions.CallbacksProto.TransferToNativeCallback other) {
+        if (other == com.lum.network.millions.CallbacksProto.TransferToNativeCallback.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (other.getDepositId() != 0L) {
+          setDepositId(other.getDepositId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                depositId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long depositId_ ;
+      /**
+       * <code>uint64 deposit_id = 2 [json_name = "depositId"];</code>
+       * @return The depositId.
+       */
+      @java.lang.Override
+      public long getDepositId() {
+        return depositId_;
+      }
+      /**
+       * <code>uint64 deposit_id = 2 [json_name = "depositId"];</code>
+       * @param value The depositId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepositId(long value) {
+
+        depositId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 deposit_id = 2 [json_name = "depositId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDepositId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        depositId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.millions.TransferToNativeCallback)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.millions.TransferToNativeCallback)
+    private static final com.lum.network.millions.CallbacksProto.TransferToNativeCallback DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.millions.CallbacksProto.TransferToNativeCallback();
+    }
+
+    public static com.lum.network.millions.CallbacksProto.TransferToNativeCallback getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TransferToNativeCallback>
+        PARSER = new com.google.protobuf.AbstractParser<TransferToNativeCallback>() {
+      @java.lang.Override
+      public TransferToNativeCallback parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TransferToNativeCallback> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TransferToNativeCallback> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.millions.CallbacksProto.TransferToNativeCallback getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TransferFromNativeCallbackOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.millions.TransferFromNativeCallback)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.lum.network.millions.TransferType type = 1 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <code>.lum.network.millions.TransferType type = 1 [json_name = "type"];</code>
+     * @return The type.
+     */
+    com.lum.network.millions.CallbacksProto.TransferType getType();
+
+    /**
+     * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <code>uint64 draw_id = 3 [json_name = "drawId"];</code>
+     * @return The drawId.
+     */
+    long getDrawId();
+
+    /**
+     * <code>uint64 withdrawal_id = 4 [json_name = "withdrawalId"];</code>
+     * @return The withdrawalId.
+     */
+    long getWithdrawalId();
+  }
+  /**
+   * Protobuf type {@code lum.network.millions.TransferFromNativeCallback}
+   */
+  public static final class TransferFromNativeCallback extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.millions.TransferFromNativeCallback)
+      TransferFromNativeCallbackOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TransferFromNativeCallback.newBuilder() to construct.
+    private TransferFromNativeCallback(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TransferFromNativeCallback() {
+      type_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TransferFromNativeCallback();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_TransferFromNativeCallback_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_TransferFromNativeCallback_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.millions.CallbacksProto.TransferFromNativeCallback.class, com.lum.network.millions.CallbacksProto.TransferFromNativeCallback.Builder.class);
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private int type_ = 0;
+    /**
+     * <code>.lum.network.millions.TransferType type = 1 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <code>.lum.network.millions.TransferType type = 1 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override public com.lum.network.millions.CallbacksProto.TransferType getType() {
+      com.lum.network.millions.CallbacksProto.TransferType result = com.lum.network.millions.CallbacksProto.TransferType.forNumber(type_);
+      return result == null ? com.lum.network.millions.CallbacksProto.TransferType.UNRECOGNIZED : result;
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 2;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int DRAW_ID_FIELD_NUMBER = 3;
+    private long drawId_ = 0L;
+    /**
+     * <code>uint64 draw_id = 3 [json_name = "drawId"];</code>
+     * @return The drawId.
+     */
+    @java.lang.Override
+    public long getDrawId() {
+      return drawId_;
+    }
+
+    public static final int WITHDRAWAL_ID_FIELD_NUMBER = 4;
+    private long withdrawalId_ = 0L;
+    /**
+     * <code>uint64 withdrawal_id = 4 [json_name = "withdrawalId"];</code>
+     * @return The withdrawalId.
+     */
+    @java.lang.Override
+    public long getWithdrawalId() {
+      return withdrawalId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (type_ != com.lum.network.millions.CallbacksProto.TransferType.TRANSFER_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, type_);
+      }
+      if (poolId_ != 0L) {
+        output.writeUInt64(2, poolId_);
+      }
+      if (drawId_ != 0L) {
+        output.writeUInt64(3, drawId_);
+      }
+      if (withdrawalId_ != 0L) {
+        output.writeUInt64(4, withdrawalId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (type_ != com.lum.network.millions.CallbacksProto.TransferType.TRANSFER_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, type_);
+      }
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, poolId_);
+      }
+      if (drawId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, drawId_);
+      }
+      if (withdrawalId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, withdrawalId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.millions.CallbacksProto.TransferFromNativeCallback)) {
+        return super.equals(obj);
+      }
+      com.lum.network.millions.CallbacksProto.TransferFromNativeCallback other = (com.lum.network.millions.CallbacksProto.TransferFromNativeCallback) obj;
+
+      if (type_ != other.type_) return false;
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (getDrawId()
+          != other.getDrawId()) return false;
+      if (getWithdrawalId()
+          != other.getWithdrawalId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + DRAW_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDrawId());
+      hash = (37 * hash) + WITHDRAWAL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getWithdrawalId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.millions.CallbacksProto.TransferFromNativeCallback parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.CallbacksProto.TransferFromNativeCallback parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.TransferFromNativeCallback parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.CallbacksProto.TransferFromNativeCallback parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.TransferFromNativeCallback parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.CallbacksProto.TransferFromNativeCallback parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.TransferFromNativeCallback parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.millions.CallbacksProto.TransferFromNativeCallback parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.millions.CallbacksProto.TransferFromNativeCallback parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.millions.CallbacksProto.TransferFromNativeCallback parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.TransferFromNativeCallback parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.millions.CallbacksProto.TransferFromNativeCallback parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.millions.CallbacksProto.TransferFromNativeCallback prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.millions.TransferFromNativeCallback}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.millions.TransferFromNativeCallback)
+        com.lum.network.millions.CallbacksProto.TransferFromNativeCallbackOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_TransferFromNativeCallback_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_TransferFromNativeCallback_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.millions.CallbacksProto.TransferFromNativeCallback.class, com.lum.network.millions.CallbacksProto.TransferFromNativeCallback.Builder.class);
+      }
+
+      // Construct using com.lum.network.millions.CallbacksProto.TransferFromNativeCallback.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        type_ = 0;
+        poolId_ = 0L;
+        drawId_ = 0L;
+        withdrawalId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_TransferFromNativeCallback_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.CallbacksProto.TransferFromNativeCallback getDefaultInstanceForType() {
+        return com.lum.network.millions.CallbacksProto.TransferFromNativeCallback.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.CallbacksProto.TransferFromNativeCallback build() {
+        com.lum.network.millions.CallbacksProto.TransferFromNativeCallback result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.CallbacksProto.TransferFromNativeCallback buildPartial() {
+        com.lum.network.millions.CallbacksProto.TransferFromNativeCallback result = new com.lum.network.millions.CallbacksProto.TransferFromNativeCallback(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.lum.network.millions.CallbacksProto.TransferFromNativeCallback result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.type_ = type_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.drawId_ = drawId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.withdrawalId_ = withdrawalId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.millions.CallbacksProto.TransferFromNativeCallback) {
+          return mergeFrom((com.lum.network.millions.CallbacksProto.TransferFromNativeCallback)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.millions.CallbacksProto.TransferFromNativeCallback other) {
+        if (other == com.lum.network.millions.CallbacksProto.TransferFromNativeCallback.getDefaultInstance()) return this;
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
+        }
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (other.getDrawId() != 0L) {
+          setDrawId(other.getDrawId());
+        }
+        if (other.getWithdrawalId() != 0L) {
+          setWithdrawalId(other.getWithdrawalId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                type_ = input.readEnum();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                drawId_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                withdrawalId_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int type_ = 0;
+      /**
+       * <code>.lum.network.millions.TransferType type = 1 [json_name = "type"];</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <code>.lum.network.millions.TransferType type = 1 [json_name = "type"];</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        type_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.millions.TransferType type = 1 [json_name = "type"];</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public com.lum.network.millions.CallbacksProto.TransferType getType() {
+        com.lum.network.millions.CallbacksProto.TransferType result = com.lum.network.millions.CallbacksProto.TransferType.forNumber(type_);
+        return result == null ? com.lum.network.millions.CallbacksProto.TransferType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.lum.network.millions.TransferType type = 1 [json_name = "type"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(com.lum.network.millions.CallbacksProto.TransferType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.millions.TransferType type = 1 [json_name = "type"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long drawId_ ;
+      /**
+       * <code>uint64 draw_id = 3 [json_name = "drawId"];</code>
+       * @return The drawId.
+       */
+      @java.lang.Override
+      public long getDrawId() {
+        return drawId_;
+      }
+      /**
+       * <code>uint64 draw_id = 3 [json_name = "drawId"];</code>
+       * @param value The drawId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDrawId(long value) {
+
+        drawId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 draw_id = 3 [json_name = "drawId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDrawId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        drawId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long withdrawalId_ ;
+      /**
+       * <code>uint64 withdrawal_id = 4 [json_name = "withdrawalId"];</code>
+       * @return The withdrawalId.
+       */
+      @java.lang.Override
+      public long getWithdrawalId() {
+        return withdrawalId_;
+      }
+      /**
+       * <code>uint64 withdrawal_id = 4 [json_name = "withdrawalId"];</code>
+       * @param value The withdrawalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWithdrawalId(long value) {
+
+        withdrawalId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 withdrawal_id = 4 [json_name = "withdrawalId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWithdrawalId() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        withdrawalId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.millions.TransferFromNativeCallback)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.millions.TransferFromNativeCallback)
+    private static final com.lum.network.millions.CallbacksProto.TransferFromNativeCallback DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.millions.CallbacksProto.TransferFromNativeCallback();
+    }
+
+    public static com.lum.network.millions.CallbacksProto.TransferFromNativeCallback getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TransferFromNativeCallback>
+        PARSER = new com.google.protobuf.AbstractParser<TransferFromNativeCallback>() {
+      @java.lang.Override
+      public TransferFromNativeCallback parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TransferFromNativeCallback> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TransferFromNativeCallback> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.millions.CallbacksProto.TransferFromNativeCallback getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SetWithdrawAddressCallbackOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.millions.SetWithdrawAddressCallback)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+  }
+  /**
+   * Protobuf type {@code lum.network.millions.SetWithdrawAddressCallback}
+   */
+  public static final class SetWithdrawAddressCallback extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.millions.SetWithdrawAddressCallback)
+      SetWithdrawAddressCallbackOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SetWithdrawAddressCallback.newBuilder() to construct.
+    private SetWithdrawAddressCallback(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SetWithdrawAddressCallback() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SetWithdrawAddressCallback();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_SetWithdrawAddressCallback_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_SetWithdrawAddressCallback_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback.class, com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback)) {
+        return super.equals(obj);
+      }
+      com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback other = (com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.millions.SetWithdrawAddressCallback}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.millions.SetWithdrawAddressCallback)
+        com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallbackOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_SetWithdrawAddressCallback_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_SetWithdrawAddressCallback_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback.class, com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback.Builder.class);
+      }
+
+      // Construct using com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.millions.CallbacksProto.internal_static_lum_network_millions_SetWithdrawAddressCallback_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback getDefaultInstanceForType() {
+        return com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback build() {
+        com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback buildPartial() {
+        com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback result = new com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback) {
+          return mergeFrom((com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback other) {
+        if (other == com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.millions.SetWithdrawAddressCallback)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.millions.SetWithdrawAddressCallback)
+    private static final com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback();
+    }
+
+    public static com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SetWithdrawAddressCallback>
+        PARSER = new com.google.protobuf.AbstractParser<SetWithdrawAddressCallback>() {
+      @java.lang.Override
+      public SetWithdrawAddressCallback parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SetWithdrawAddressCallback> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SetWithdrawAddressCallback> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.millions.CallbacksProto.SetWithdrawAddressCallback getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_millions_SplitDelegation_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_millions_SplitDelegation_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_millions_DelegateCallback_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_millions_DelegateCallback_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_millions_UndelegateCallback_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_millions_UndelegateCallback_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_millions_RedelegateCallback_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_millions_RedelegateCallback_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_millions_ClaimRewardsCallback_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_millions_ClaimRewardsCallback_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_millions_TransferToNativeCallback_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_millions_TransferToNativeCallback_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_millions_TransferFromNativeCallback_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_millions_TransferFromNativeCallback_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_millions_SetWithdrawAddressCallback_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_millions_SetWithdrawAddressCallback_fieldAccessorTable;
 
@@ -93,12 +5744,12 @@ public final class CallbacksProto {
       "pe\022.\n\031TRANSFER_TYPE_UNSPECIFIED\020\000\032\017\212\235 \013U" +
       "nspecified\022\"\n\023TRANSFER_TYPE_CLAIM\020\001\032\t\212\235 " +
       "\005Claim\022(\n\026TRANSFER_TYPE_WITHDRAW\020\002\032\014\212\235 \010" +
-      "Withdraw\032\004\210\243\036\001B\313\001\n\030com.lum.network.milli" +
-      "onsB\016CallbacksProtoP\001Z-github.com/lum-ne" +
-      "twork/chain/x/millions/types\242\002\003LNM\252\002\024Lum" +
-      ".Network.Millions\312\002\024Lum\\Network\\Millions" +
-      "\342\002 Lum\\Network\\Millions\\GPBMetadata\352\002\026Lu" +
-      "m::Network::Millionsb\006proto3"
+      "Withdraw\032\004\210\243\036\001B\311\001\n\030com.lum.network.milli" +
+      "onsB\016CallbacksProtoZ-github.com/lum-netw" +
+      "ork/chain/x/millions/types\242\002\003LNM\252\002\024Lum.N" +
+      "etwork.Millions\312\002\024Lum\\Network\\Millions\342\002" +
+      " Lum\\Network\\Millions\\GPBMetadata\352\002\026Lum:" +
+      ":Network::Millionsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

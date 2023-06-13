@@ -14,29 +14,7801 @@ public final class HtlcProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * <pre>
+   * HTLCState defines the state of an HTLC
+   * </pre>
+   *
+   * Protobuf enum {@code irismod.htlc.HTLCState}
+   */
+  public enum HTLCState
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * HTLC_STATE_OPEN defines an open state.
+     * </pre>
+     *
+     * <code>HTLC_STATE_OPEN = 0 [(.gogoproto.enumvalue_customname) = "Open"];</code>
+     */
+    HTLC_STATE_OPEN(0),
+    /**
+     * <pre>
+     * HTLC_STATE_COMPLETED defines a completed state.
+     * </pre>
+     *
+     * <code>HTLC_STATE_COMPLETED = 1 [(.gogoproto.enumvalue_customname) = "Completed"];</code>
+     */
+    HTLC_STATE_COMPLETED(1),
+    /**
+     * <pre>
+     * HTLC_STATE_REFUNDED defines a refunded state.
+     * </pre>
+     *
+     * <code>HTLC_STATE_REFUNDED = 2 [(.gogoproto.enumvalue_customname) = "Refunded"];</code>
+     */
+    HTLC_STATE_REFUNDED(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * HTLC_STATE_OPEN defines an open state.
+     * </pre>
+     *
+     * <code>HTLC_STATE_OPEN = 0 [(.gogoproto.enumvalue_customname) = "Open"];</code>
+     */
+    public static final int HTLC_STATE_OPEN_VALUE = 0;
+    /**
+     * <pre>
+     * HTLC_STATE_COMPLETED defines a completed state.
+     * </pre>
+     *
+     * <code>HTLC_STATE_COMPLETED = 1 [(.gogoproto.enumvalue_customname) = "Completed"];</code>
+     */
+    public static final int HTLC_STATE_COMPLETED_VALUE = 1;
+    /**
+     * <pre>
+     * HTLC_STATE_REFUNDED defines a refunded state.
+     * </pre>
+     *
+     * <code>HTLC_STATE_REFUNDED = 2 [(.gogoproto.enumvalue_customname) = "Refunded"];</code>
+     */
+    public static final int HTLC_STATE_REFUNDED_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static HTLCState valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static HTLCState forNumber(int value) {
+      switch (value) {
+        case 0: return HTLC_STATE_OPEN;
+        case 1: return HTLC_STATE_COMPLETED;
+        case 2: return HTLC_STATE_REFUNDED;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<HTLCState>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        HTLCState> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<HTLCState>() {
+            public HTLCState findValueByNumber(int number) {
+              return HTLCState.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.irismod.htlc.HtlcProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final HTLCState[] VALUES = values();
+
+    public static HTLCState valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private HTLCState(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:irismod.htlc.HTLCState)
+  }
+
+  /**
+   * <pre>
+   * SwapDirection defines the direction of an HTLT
+   * </pre>
+   *
+   * Protobuf enum {@code irismod.htlc.SwapDirection}
+   */
+  public enum SwapDirection
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * NONE defines an htlt none direction.
+     * </pre>
+     *
+     * <code>NONE = 0 [(.gogoproto.enumvalue_customname) = "None"];</code>
+     */
+    NONE(0),
+    /**
+     * <pre>
+     * INCOMING defines an htlt incoming direction.
+     * </pre>
+     *
+     * <code>INCOMING = 1 [(.gogoproto.enumvalue_customname) = "Incoming"];</code>
+     */
+    INCOMING(1),
+    /**
+     * <pre>
+     * OUTGOING defines an htlt outgoing direction.
+     * </pre>
+     *
+     * <code>OUTGOING = 2 [(.gogoproto.enumvalue_customname) = "Outgoing"];</code>
+     */
+    OUTGOING(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * NONE defines an htlt none direction.
+     * </pre>
+     *
+     * <code>NONE = 0 [(.gogoproto.enumvalue_customname) = "None"];</code>
+     */
+    public static final int NONE_VALUE = 0;
+    /**
+     * <pre>
+     * INCOMING defines an htlt incoming direction.
+     * </pre>
+     *
+     * <code>INCOMING = 1 [(.gogoproto.enumvalue_customname) = "Incoming"];</code>
+     */
+    public static final int INCOMING_VALUE = 1;
+    /**
+     * <pre>
+     * OUTGOING defines an htlt outgoing direction.
+     * </pre>
+     *
+     * <code>OUTGOING = 2 [(.gogoproto.enumvalue_customname) = "Outgoing"];</code>
+     */
+    public static final int OUTGOING_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static SwapDirection valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static SwapDirection forNumber(int value) {
+      switch (value) {
+        case 0: return NONE;
+        case 1: return INCOMING;
+        case 2: return OUTGOING;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<SwapDirection>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        SwapDirection> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<SwapDirection>() {
+            public SwapDirection findValueByNumber(int number) {
+              return SwapDirection.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.irismod.htlc.HtlcProto.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final SwapDirection[] VALUES = values();
+
+    public static SwapDirection valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private SwapDirection(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:irismod.htlc.SwapDirection)
+  }
+
+  public interface HTLCOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.htlc.HTLC)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string sender = 2 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <code>string sender = 2 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+
+    /**
+     * <code>string to = 3 [json_name = "to"];</code>
+     * @return The to.
+     */
+    java.lang.String getTo();
+    /**
+     * <code>string to = 3 [json_name = "to"];</code>
+     * @return The bytes for to.
+     */
+    com.google.protobuf.ByteString
+        getToBytes();
+
+    /**
+     * <code>string receiver_on_other_chain = 4 [json_name = "receiverOnOtherChain", (.gogoproto.moretags) = "yaml:&#92;"receiver_on_other_chain&#92;""];</code>
+     * @return The receiverOnOtherChain.
+     */
+    java.lang.String getReceiverOnOtherChain();
+    /**
+     * <code>string receiver_on_other_chain = 4 [json_name = "receiverOnOtherChain", (.gogoproto.moretags) = "yaml:&#92;"receiver_on_other_chain&#92;""];</code>
+     * @return The bytes for receiverOnOtherChain.
+     */
+    com.google.protobuf.ByteString
+        getReceiverOnOtherChainBytes();
+
+    /**
+     * <code>string sender_on_other_chain = 5 [json_name = "senderOnOtherChain", (.gogoproto.moretags) = "yaml:&#92;"sender_on_other_chain&#92;""];</code>
+     * @return The senderOnOtherChain.
+     */
+    java.lang.String getSenderOnOtherChain();
+    /**
+     * <code>string sender_on_other_chain = 5 [json_name = "senderOnOtherChain", (.gogoproto.moretags) = "yaml:&#92;"sender_on_other_chain&#92;""];</code>
+     * @return The bytes for senderOnOtherChain.
+     */
+    com.google.protobuf.ByteString
+        getSenderOnOtherChainBytes();
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getAmountList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getAmount(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getAmountCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getAmountOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder(
+        int index);
+
+    /**
+     * <code>string hash_lock = 7 [json_name = "hashLock", (.gogoproto.moretags) = "yaml:&#92;"hash_lock&#92;""];</code>
+     * @return The hashLock.
+     */
+    java.lang.String getHashLock();
+    /**
+     * <code>string hash_lock = 7 [json_name = "hashLock", (.gogoproto.moretags) = "yaml:&#92;"hash_lock&#92;""];</code>
+     * @return The bytes for hashLock.
+     */
+    com.google.protobuf.ByteString
+        getHashLockBytes();
+
+    /**
+     * <code>string secret = 8 [json_name = "secret"];</code>
+     * @return The secret.
+     */
+    java.lang.String getSecret();
+    /**
+     * <code>string secret = 8 [json_name = "secret"];</code>
+     * @return The bytes for secret.
+     */
+    com.google.protobuf.ByteString
+        getSecretBytes();
+
+    /**
+     * <code>uint64 timestamp = 9 [json_name = "timestamp"];</code>
+     * @return The timestamp.
+     */
+    long getTimestamp();
+
+    /**
+     * <code>uint64 expiration_height = 10 [json_name = "expirationHeight", (.gogoproto.moretags) = "yaml:&#92;"expiration_height&#92;""];</code>
+     * @return The expirationHeight.
+     */
+    long getExpirationHeight();
+
+    /**
+     * <code>.irismod.htlc.HTLCState state = 11 [json_name = "state"];</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    int getStateValue();
+    /**
+     * <code>.irismod.htlc.HTLCState state = 11 [json_name = "state"];</code>
+     * @return The state.
+     */
+    com.irismod.htlc.HtlcProto.HTLCState getState();
+
+    /**
+     * <code>uint64 closed_block = 12 [json_name = "closedBlock", (.gogoproto.moretags) = "yaml:&#92;"closed_block&#92;""];</code>
+     * @return The closedBlock.
+     */
+    long getClosedBlock();
+
+    /**
+     * <code>bool transfer = 13 [json_name = "transfer"];</code>
+     * @return The transfer.
+     */
+    boolean getTransfer();
+
+    /**
+     * <code>.irismod.htlc.SwapDirection direction = 14 [json_name = "direction"];</code>
+     * @return The enum numeric value on the wire for direction.
+     */
+    int getDirectionValue();
+    /**
+     * <code>.irismod.htlc.SwapDirection direction = 14 [json_name = "direction"];</code>
+     * @return The direction.
+     */
+    com.irismod.htlc.HtlcProto.SwapDirection getDirection();
+  }
+  /**
+   * <pre>
+   * HTLC defines the struct of an HTLC
+   * </pre>
+   *
+   * Protobuf type {@code irismod.htlc.HTLC}
+   */
+  public static final class HTLC extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.htlc.HTLC)
+      HTLCOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use HTLC.newBuilder() to construct.
+    private HTLC(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private HTLC() {
+      id_ = "";
+      sender_ = "";
+      to_ = "";
+      receiverOnOtherChain_ = "";
+      senderOnOtherChain_ = "";
+      amount_ = java.util.Collections.emptyList();
+      hashLock_ = "";
+      secret_ = "";
+      state_ = 0;
+      direction_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HTLC();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.htlc.HtlcProto.internal_static_irismod_htlc_HTLC_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.htlc.HtlcProto.internal_static_irismod_htlc_HTLC_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.htlc.HtlcProto.HTLC.class, com.irismod.htlc.HtlcProto.HTLC.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <code>string sender = 2 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string sender = 2 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TO_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object to_ = "";
+    /**
+     * <code>string to = 3 [json_name = "to"];</code>
+     * @return The to.
+     */
+    @java.lang.Override
+    public java.lang.String getTo() {
+      java.lang.Object ref = to_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        to_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string to = 3 [json_name = "to"];</code>
+     * @return The bytes for to.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getToBytes() {
+      java.lang.Object ref = to_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        to_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RECEIVER_ON_OTHER_CHAIN_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object receiverOnOtherChain_ = "";
+    /**
+     * <code>string receiver_on_other_chain = 4 [json_name = "receiverOnOtherChain", (.gogoproto.moretags) = "yaml:&#92;"receiver_on_other_chain&#92;""];</code>
+     * @return The receiverOnOtherChain.
+     */
+    @java.lang.Override
+    public java.lang.String getReceiverOnOtherChain() {
+      java.lang.Object ref = receiverOnOtherChain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        receiverOnOtherChain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string receiver_on_other_chain = 4 [json_name = "receiverOnOtherChain", (.gogoproto.moretags) = "yaml:&#92;"receiver_on_other_chain&#92;""];</code>
+     * @return The bytes for receiverOnOtherChain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReceiverOnOtherChainBytes() {
+      java.lang.Object ref = receiverOnOtherChain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        receiverOnOtherChain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SENDER_ON_OTHER_CHAIN_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object senderOnOtherChain_ = "";
+    /**
+     * <code>string sender_on_other_chain = 5 [json_name = "senderOnOtherChain", (.gogoproto.moretags) = "yaml:&#92;"sender_on_other_chain&#92;""];</code>
+     * @return The senderOnOtherChain.
+     */
+    @java.lang.Override
+    public java.lang.String getSenderOnOtherChain() {
+      java.lang.Object ref = senderOnOtherChain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        senderOnOtherChain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string sender_on_other_chain = 5 [json_name = "senderOnOtherChain", (.gogoproto.moretags) = "yaml:&#92;"sender_on_other_chain&#92;""];</code>
+     * @return The bytes for senderOnOtherChain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderOnOtherChainBytes() {
+      java.lang.Object ref = senderOnOtherChain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        senderOnOtherChain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> amount_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getAmountList() {
+      return amount_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getAmountOrBuilderList() {
+      return amount_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getAmountCount() {
+      return amount_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getAmount(int index) {
+      return amount_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder(
+        int index) {
+      return amount_.get(index);
+    }
+
+    public static final int HASH_LOCK_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object hashLock_ = "";
+    /**
+     * <code>string hash_lock = 7 [json_name = "hashLock", (.gogoproto.moretags) = "yaml:&#92;"hash_lock&#92;""];</code>
+     * @return The hashLock.
+     */
+    @java.lang.Override
+    public java.lang.String getHashLock() {
+      java.lang.Object ref = hashLock_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hashLock_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string hash_lock = 7 [json_name = "hashLock", (.gogoproto.moretags) = "yaml:&#92;"hash_lock&#92;""];</code>
+     * @return The bytes for hashLock.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHashLockBytes() {
+      java.lang.Object ref = hashLock_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        hashLock_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SECRET_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object secret_ = "";
+    /**
+     * <code>string secret = 8 [json_name = "secret"];</code>
+     * @return The secret.
+     */
+    @java.lang.Override
+    public java.lang.String getSecret() {
+      java.lang.Object ref = secret_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secret_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string secret = 8 [json_name = "secret"];</code>
+     * @return The bytes for secret.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretBytes() {
+      java.lang.Object ref = secret_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secret_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TIMESTAMP_FIELD_NUMBER = 9;
+    private long timestamp_ = 0L;
+    /**
+     * <code>uint64 timestamp = 9 [json_name = "timestamp"];</code>
+     * @return The timestamp.
+     */
+    @java.lang.Override
+    public long getTimestamp() {
+      return timestamp_;
+    }
+
+    public static final int EXPIRATION_HEIGHT_FIELD_NUMBER = 10;
+    private long expirationHeight_ = 0L;
+    /**
+     * <code>uint64 expiration_height = 10 [json_name = "expirationHeight", (.gogoproto.moretags) = "yaml:&#92;"expiration_height&#92;""];</code>
+     * @return The expirationHeight.
+     */
+    @java.lang.Override
+    public long getExpirationHeight() {
+      return expirationHeight_;
+    }
+
+    public static final int STATE_FIELD_NUMBER = 11;
+    private int state_ = 0;
+    /**
+     * <code>.irismod.htlc.HTLCState state = 11 [json_name = "state"];</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    @java.lang.Override public int getStateValue() {
+      return state_;
+    }
+    /**
+     * <code>.irismod.htlc.HTLCState state = 11 [json_name = "state"];</code>
+     * @return The state.
+     */
+    @java.lang.Override public com.irismod.htlc.HtlcProto.HTLCState getState() {
+      com.irismod.htlc.HtlcProto.HTLCState result = com.irismod.htlc.HtlcProto.HTLCState.forNumber(state_);
+      return result == null ? com.irismod.htlc.HtlcProto.HTLCState.UNRECOGNIZED : result;
+    }
+
+    public static final int CLOSED_BLOCK_FIELD_NUMBER = 12;
+    private long closedBlock_ = 0L;
+    /**
+     * <code>uint64 closed_block = 12 [json_name = "closedBlock", (.gogoproto.moretags) = "yaml:&#92;"closed_block&#92;""];</code>
+     * @return The closedBlock.
+     */
+    @java.lang.Override
+    public long getClosedBlock() {
+      return closedBlock_;
+    }
+
+    public static final int TRANSFER_FIELD_NUMBER = 13;
+    private boolean transfer_ = false;
+    /**
+     * <code>bool transfer = 13 [json_name = "transfer"];</code>
+     * @return The transfer.
+     */
+    @java.lang.Override
+    public boolean getTransfer() {
+      return transfer_;
+    }
+
+    public static final int DIRECTION_FIELD_NUMBER = 14;
+    private int direction_ = 0;
+    /**
+     * <code>.irismod.htlc.SwapDirection direction = 14 [json_name = "direction"];</code>
+     * @return The enum numeric value on the wire for direction.
+     */
+    @java.lang.Override public int getDirectionValue() {
+      return direction_;
+    }
+    /**
+     * <code>.irismod.htlc.SwapDirection direction = 14 [json_name = "direction"];</code>
+     * @return The direction.
+     */
+    @java.lang.Override public com.irismod.htlc.HtlcProto.SwapDirection getDirection() {
+      com.irismod.htlc.HtlcProto.SwapDirection result = com.irismod.htlc.HtlcProto.SwapDirection.forNumber(direction_);
+      return result == null ? com.irismod.htlc.HtlcProto.SwapDirection.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(to_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, to_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiverOnOtherChain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, receiverOnOtherChain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(senderOnOtherChain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, senderOnOtherChain_);
+      }
+      for (int i = 0; i < amount_.size(); i++) {
+        output.writeMessage(6, amount_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hashLock_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, hashLock_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secret_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, secret_);
+      }
+      if (timestamp_ != 0L) {
+        output.writeUInt64(9, timestamp_);
+      }
+      if (expirationHeight_ != 0L) {
+        output.writeUInt64(10, expirationHeight_);
+      }
+      if (state_ != com.irismod.htlc.HtlcProto.HTLCState.HTLC_STATE_OPEN.getNumber()) {
+        output.writeEnum(11, state_);
+      }
+      if (closedBlock_ != 0L) {
+        output.writeUInt64(12, closedBlock_);
+      }
+      if (transfer_ != false) {
+        output.writeBool(13, transfer_);
+      }
+      if (direction_ != com.irismod.htlc.HtlcProto.SwapDirection.NONE.getNumber()) {
+        output.writeEnum(14, direction_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(to_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, to_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiverOnOtherChain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, receiverOnOtherChain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(senderOnOtherChain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, senderOnOtherChain_);
+      }
+      for (int i = 0; i < amount_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, amount_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hashLock_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, hashLock_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secret_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, secret_);
+      }
+      if (timestamp_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(9, timestamp_);
+      }
+      if (expirationHeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(10, expirationHeight_);
+      }
+      if (state_ != com.irismod.htlc.HtlcProto.HTLCState.HTLC_STATE_OPEN.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(11, state_);
+      }
+      if (closedBlock_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(12, closedBlock_);
+      }
+      if (transfer_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(13, transfer_);
+      }
+      if (direction_ != com.irismod.htlc.HtlcProto.SwapDirection.NONE.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(14, direction_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.htlc.HtlcProto.HTLC)) {
+        return super.equals(obj);
+      }
+      com.irismod.htlc.HtlcProto.HTLC other = (com.irismod.htlc.HtlcProto.HTLC) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getTo()
+          .equals(other.getTo())) return false;
+      if (!getReceiverOnOtherChain()
+          .equals(other.getReceiverOnOtherChain())) return false;
+      if (!getSenderOnOtherChain()
+          .equals(other.getSenderOnOtherChain())) return false;
+      if (!getAmountList()
+          .equals(other.getAmountList())) return false;
+      if (!getHashLock()
+          .equals(other.getHashLock())) return false;
+      if (!getSecret()
+          .equals(other.getSecret())) return false;
+      if (getTimestamp()
+          != other.getTimestamp()) return false;
+      if (getExpirationHeight()
+          != other.getExpirationHeight()) return false;
+      if (state_ != other.state_) return false;
+      if (getClosedBlock()
+          != other.getClosedBlock()) return false;
+      if (getTransfer()
+          != other.getTransfer()) return false;
+      if (direction_ != other.direction_) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (37 * hash) + TO_FIELD_NUMBER;
+      hash = (53 * hash) + getTo().hashCode();
+      hash = (37 * hash) + RECEIVER_ON_OTHER_CHAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getReceiverOnOtherChain().hashCode();
+      hash = (37 * hash) + SENDER_ON_OTHER_CHAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getSenderOnOtherChain().hashCode();
+      if (getAmountCount() > 0) {
+        hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getAmountList().hashCode();
+      }
+      hash = (37 * hash) + HASH_LOCK_FIELD_NUMBER;
+      hash = (53 * hash) + getHashLock().hashCode();
+      hash = (37 * hash) + SECRET_FIELD_NUMBER;
+      hash = (53 * hash) + getSecret().hashCode();
+      hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTimestamp());
+      hash = (37 * hash) + EXPIRATION_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getExpirationHeight());
+      hash = (37 * hash) + STATE_FIELD_NUMBER;
+      hash = (53 * hash) + state_;
+      hash = (37 * hash) + CLOSED_BLOCK_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getClosedBlock());
+      hash = (37 * hash) + TRANSFER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getTransfer());
+      hash = (37 * hash) + DIRECTION_FIELD_NUMBER;
+      hash = (53 * hash) + direction_;
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.htlc.HtlcProto.HTLC parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.HtlcProto.HTLC parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.HtlcProto.HTLC parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.HtlcProto.HTLC parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.HtlcProto.HTLC parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.HtlcProto.HTLC parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.HtlcProto.HTLC parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.htlc.HtlcProto.HTLC parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.htlc.HtlcProto.HTLC parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.htlc.HtlcProto.HTLC parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.htlc.HtlcProto.HTLC parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.htlc.HtlcProto.HTLC parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.htlc.HtlcProto.HTLC prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * HTLC defines the struct of an HTLC
+     * </pre>
+     *
+     * Protobuf type {@code irismod.htlc.HTLC}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.htlc.HTLC)
+        com.irismod.htlc.HtlcProto.HTLCOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.htlc.HtlcProto.internal_static_irismod_htlc_HTLC_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.htlc.HtlcProto.internal_static_irismod_htlc_HTLC_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.htlc.HtlcProto.HTLC.class, com.irismod.htlc.HtlcProto.HTLC.Builder.class);
+      }
+
+      // Construct using com.irismod.htlc.HtlcProto.HTLC.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = "";
+        sender_ = "";
+        to_ = "";
+        receiverOnOtherChain_ = "";
+        senderOnOtherChain_ = "";
+        if (amountBuilder_ == null) {
+          amount_ = java.util.Collections.emptyList();
+        } else {
+          amount_ = null;
+          amountBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        hashLock_ = "";
+        secret_ = "";
+        timestamp_ = 0L;
+        expirationHeight_ = 0L;
+        state_ = 0;
+        closedBlock_ = 0L;
+        transfer_ = false;
+        direction_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.htlc.HtlcProto.internal_static_irismod_htlc_HTLC_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.HtlcProto.HTLC getDefaultInstanceForType() {
+        return com.irismod.htlc.HtlcProto.HTLC.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.HtlcProto.HTLC build() {
+        com.irismod.htlc.HtlcProto.HTLC result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.HtlcProto.HTLC buildPartial() {
+        com.irismod.htlc.HtlcProto.HTLC result = new com.irismod.htlc.HtlcProto.HTLC(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.irismod.htlc.HtlcProto.HTLC result) {
+        if (amountBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            amount_ = java.util.Collections.unmodifiableList(amount_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.amount_ = amount_;
+        } else {
+          result.amount_ = amountBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.irismod.htlc.HtlcProto.HTLC result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.to_ = to_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.receiverOnOtherChain_ = receiverOnOtherChain_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.senderOnOtherChain_ = senderOnOtherChain_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.hashLock_ = hashLock_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.secret_ = secret_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.timestamp_ = timestamp_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.expirationHeight_ = expirationHeight_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.state_ = state_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.closedBlock_ = closedBlock_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.transfer_ = transfer_;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.direction_ = direction_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.htlc.HtlcProto.HTLC) {
+          return mergeFrom((com.irismod.htlc.HtlcProto.HTLC)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.htlc.HtlcProto.HTLC other) {
+        if (other == com.irismod.htlc.HtlcProto.HTLC.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getTo().isEmpty()) {
+          to_ = other.to_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getReceiverOnOtherChain().isEmpty()) {
+          receiverOnOtherChain_ = other.receiverOnOtherChain_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getSenderOnOtherChain().isEmpty()) {
+          senderOnOtherChain_ = other.senderOnOtherChain_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (amountBuilder_ == null) {
+          if (!other.amount_.isEmpty()) {
+            if (amount_.isEmpty()) {
+              amount_ = other.amount_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureAmountIsMutable();
+              amount_.addAll(other.amount_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.amount_.isEmpty()) {
+            if (amountBuilder_.isEmpty()) {
+              amountBuilder_.dispose();
+              amountBuilder_ = null;
+              amount_ = other.amount_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              amountBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAmountFieldBuilder() : null;
+            } else {
+              amountBuilder_.addAllMessages(other.amount_);
+            }
+          }
+        }
+        if (!other.getHashLock().isEmpty()) {
+          hashLock_ = other.hashLock_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (!other.getSecret().isEmpty()) {
+          secret_ = other.secret_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        if (other.getTimestamp() != 0L) {
+          setTimestamp(other.getTimestamp());
+        }
+        if (other.getExpirationHeight() != 0L) {
+          setExpirationHeight(other.getExpirationHeight());
+        }
+        if (other.state_ != 0) {
+          setStateValue(other.getStateValue());
+        }
+        if (other.getClosedBlock() != 0L) {
+          setClosedBlock(other.getClosedBlock());
+        }
+        if (other.getTransfer() != false) {
+          setTransfer(other.getTransfer());
+        }
+        if (other.direction_ != 0) {
+          setDirectionValue(other.getDirectionValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                to_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                receiverOnOtherChain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                senderOnOtherChain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (amountBuilder_ == null) {
+                  ensureAmountIsMutable();
+                  amount_.add(m);
+                } else {
+                  amountBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 58: {
+                hashLock_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                secret_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 72: {
+                timestamp_ = input.readUInt64();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 72
+              case 80: {
+                expirationHeight_ = input.readUInt64();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 80
+              case 88: {
+                state_ = input.readEnum();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 88
+              case 96: {
+                closedBlock_ = input.readUInt64();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 96
+              case 104: {
+                transfer_ = input.readBool();
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 104
+              case 112: {
+                direction_ = input.readEnum();
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 112
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <code>string sender = 2 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string sender = 2 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string sender = 2 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 2 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 2 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object to_ = "";
+      /**
+       * <code>string to = 3 [json_name = "to"];</code>
+       * @return The to.
+       */
+      public java.lang.String getTo() {
+        java.lang.Object ref = to_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          to_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string to = 3 [json_name = "to"];</code>
+       * @return The bytes for to.
+       */
+      public com.google.protobuf.ByteString
+          getToBytes() {
+        java.lang.Object ref = to_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          to_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string to = 3 [json_name = "to"];</code>
+       * @param value The to to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTo(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        to_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string to = 3 [json_name = "to"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTo() {
+        to_ = getDefaultInstance().getTo();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string to = 3 [json_name = "to"];</code>
+       * @param value The bytes for to to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        to_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object receiverOnOtherChain_ = "";
+      /**
+       * <code>string receiver_on_other_chain = 4 [json_name = "receiverOnOtherChain", (.gogoproto.moretags) = "yaml:&#92;"receiver_on_other_chain&#92;""];</code>
+       * @return The receiverOnOtherChain.
+       */
+      public java.lang.String getReceiverOnOtherChain() {
+        java.lang.Object ref = receiverOnOtherChain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          receiverOnOtherChain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string receiver_on_other_chain = 4 [json_name = "receiverOnOtherChain", (.gogoproto.moretags) = "yaml:&#92;"receiver_on_other_chain&#92;""];</code>
+       * @return The bytes for receiverOnOtherChain.
+       */
+      public com.google.protobuf.ByteString
+          getReceiverOnOtherChainBytes() {
+        java.lang.Object ref = receiverOnOtherChain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          receiverOnOtherChain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string receiver_on_other_chain = 4 [json_name = "receiverOnOtherChain", (.gogoproto.moretags) = "yaml:&#92;"receiver_on_other_chain&#92;""];</code>
+       * @param value The receiverOnOtherChain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReceiverOnOtherChain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        receiverOnOtherChain_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string receiver_on_other_chain = 4 [json_name = "receiverOnOtherChain", (.gogoproto.moretags) = "yaml:&#92;"receiver_on_other_chain&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReceiverOnOtherChain() {
+        receiverOnOtherChain_ = getDefaultInstance().getReceiverOnOtherChain();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string receiver_on_other_chain = 4 [json_name = "receiverOnOtherChain", (.gogoproto.moretags) = "yaml:&#92;"receiver_on_other_chain&#92;""];</code>
+       * @param value The bytes for receiverOnOtherChain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReceiverOnOtherChainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        receiverOnOtherChain_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object senderOnOtherChain_ = "";
+      /**
+       * <code>string sender_on_other_chain = 5 [json_name = "senderOnOtherChain", (.gogoproto.moretags) = "yaml:&#92;"sender_on_other_chain&#92;""];</code>
+       * @return The senderOnOtherChain.
+       */
+      public java.lang.String getSenderOnOtherChain() {
+        java.lang.Object ref = senderOnOtherChain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          senderOnOtherChain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string sender_on_other_chain = 5 [json_name = "senderOnOtherChain", (.gogoproto.moretags) = "yaml:&#92;"sender_on_other_chain&#92;""];</code>
+       * @return The bytes for senderOnOtherChain.
+       */
+      public com.google.protobuf.ByteString
+          getSenderOnOtherChainBytes() {
+        java.lang.Object ref = senderOnOtherChain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          senderOnOtherChain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string sender_on_other_chain = 5 [json_name = "senderOnOtherChain", (.gogoproto.moretags) = "yaml:&#92;"sender_on_other_chain&#92;""];</code>
+       * @param value The senderOnOtherChain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderOnOtherChain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        senderOnOtherChain_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender_on_other_chain = 5 [json_name = "senderOnOtherChain", (.gogoproto.moretags) = "yaml:&#92;"sender_on_other_chain&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSenderOnOtherChain() {
+        senderOnOtherChain_ = getDefaultInstance().getSenderOnOtherChain();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender_on_other_chain = 5 [json_name = "senderOnOtherChain", (.gogoproto.moretags) = "yaml:&#92;"sender_on_other_chain&#92;""];</code>
+       * @param value The bytes for senderOnOtherChain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderOnOtherChainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        senderOnOtherChain_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> amount_ =
+        java.util.Collections.emptyList();
+      private void ensureAmountIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          amount_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(amount_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> amountBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getAmountList() {
+        if (amountBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(amount_);
+        } else {
+          return amountBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getAmountCount() {
+        if (amountBuilder_ == null) {
+          return amount_.size();
+        } else {
+          return amountBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getAmount(int index) {
+        if (amountBuilder_ == null) {
+          return amount_.get(index);
+        } else {
+          return amountBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setAmount(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (amountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAmountIsMutable();
+          amount_.set(index, value);
+          onChanged();
+        } else {
+          amountBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setAmount(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (amountBuilder_ == null) {
+          ensureAmountIsMutable();
+          amount_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          amountBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (amountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAmountIsMutable();
+          amount_.add(value);
+          onChanged();
+        } else {
+          amountBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAmount(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (amountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAmountIsMutable();
+          amount_.add(index, value);
+          onChanged();
+        } else {
+          amountBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAmount(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (amountBuilder_ == null) {
+          ensureAmountIsMutable();
+          amount_.add(builderForValue.build());
+          onChanged();
+        } else {
+          amountBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAmount(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (amountBuilder_ == null) {
+          ensureAmountIsMutable();
+          amount_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          amountBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllAmount(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (amountBuilder_ == null) {
+          ensureAmountIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, amount_);
+          onChanged();
+        } else {
+          amountBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearAmount() {
+        if (amountBuilder_ == null) {
+          amount_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          amountBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeAmount(int index) {
+        if (amountBuilder_ == null) {
+          ensureAmountIsMutable();
+          amount_.remove(index);
+          onChanged();
+        } else {
+          amountBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getAmountBuilder(
+          int index) {
+        return getAmountFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder(
+          int index) {
+        if (amountBuilder_ == null) {
+          return amount_.get(index);  } else {
+          return amountBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getAmountOrBuilderList() {
+        if (amountBuilder_ != null) {
+          return amountBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(amount_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addAmountBuilder() {
+        return getAmountFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addAmountBuilder(
+          int index) {
+        return getAmountFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getAmountBuilderList() {
+        return getAmountFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getAmountFieldBuilder() {
+        if (amountBuilder_ == null) {
+          amountBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  amount_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          amount_ = null;
+        }
+        return amountBuilder_;
+      }
+
+      private java.lang.Object hashLock_ = "";
+      /**
+       * <code>string hash_lock = 7 [json_name = "hashLock", (.gogoproto.moretags) = "yaml:&#92;"hash_lock&#92;""];</code>
+       * @return The hashLock.
+       */
+      public java.lang.String getHashLock() {
+        java.lang.Object ref = hashLock_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hashLock_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string hash_lock = 7 [json_name = "hashLock", (.gogoproto.moretags) = "yaml:&#92;"hash_lock&#92;""];</code>
+       * @return The bytes for hashLock.
+       */
+      public com.google.protobuf.ByteString
+          getHashLockBytes() {
+        java.lang.Object ref = hashLock_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          hashLock_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string hash_lock = 7 [json_name = "hashLock", (.gogoproto.moretags) = "yaml:&#92;"hash_lock&#92;""];</code>
+       * @param value The hashLock to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHashLock(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        hashLock_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hash_lock = 7 [json_name = "hashLock", (.gogoproto.moretags) = "yaml:&#92;"hash_lock&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHashLock() {
+        hashLock_ = getDefaultInstance().getHashLock();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hash_lock = 7 [json_name = "hashLock", (.gogoproto.moretags) = "yaml:&#92;"hash_lock&#92;""];</code>
+       * @param value The bytes for hashLock to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHashLockBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        hashLock_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object secret_ = "";
+      /**
+       * <code>string secret = 8 [json_name = "secret"];</code>
+       * @return The secret.
+       */
+      public java.lang.String getSecret() {
+        java.lang.Object ref = secret_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secret_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string secret = 8 [json_name = "secret"];</code>
+       * @return The bytes for secret.
+       */
+      public com.google.protobuf.ByteString
+          getSecretBytes() {
+        java.lang.Object ref = secret_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secret_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string secret = 8 [json_name = "secret"];</code>
+       * @param value The secret to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecret(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        secret_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string secret = 8 [json_name = "secret"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecret() {
+        secret_ = getDefaultInstance().getSecret();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string secret = 8 [json_name = "secret"];</code>
+       * @param value The bytes for secret to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        secret_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+
+      private long timestamp_ ;
+      /**
+       * <code>uint64 timestamp = 9 [json_name = "timestamp"];</code>
+       * @return The timestamp.
+       */
+      @java.lang.Override
+      public long getTimestamp() {
+        return timestamp_;
+      }
+      /**
+       * <code>uint64 timestamp = 9 [json_name = "timestamp"];</code>
+       * @param value The timestamp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimestamp(long value) {
+
+        timestamp_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 timestamp = 9 [json_name = "timestamp"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimestamp() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        timestamp_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long expirationHeight_ ;
+      /**
+       * <code>uint64 expiration_height = 10 [json_name = "expirationHeight", (.gogoproto.moretags) = "yaml:&#92;"expiration_height&#92;""];</code>
+       * @return The expirationHeight.
+       */
+      @java.lang.Override
+      public long getExpirationHeight() {
+        return expirationHeight_;
+      }
+      /**
+       * <code>uint64 expiration_height = 10 [json_name = "expirationHeight", (.gogoproto.moretags) = "yaml:&#92;"expiration_height&#92;""];</code>
+       * @param value The expirationHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExpirationHeight(long value) {
+
+        expirationHeight_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 expiration_height = 10 [json_name = "expirationHeight", (.gogoproto.moretags) = "yaml:&#92;"expiration_height&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExpirationHeight() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        expirationHeight_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int state_ = 0;
+      /**
+       * <code>.irismod.htlc.HTLCState state = 11 [json_name = "state"];</code>
+       * @return The enum numeric value on the wire for state.
+       */
+      @java.lang.Override public int getStateValue() {
+        return state_;
+      }
+      /**
+       * <code>.irismod.htlc.HTLCState state = 11 [json_name = "state"];</code>
+       * @param value The enum numeric value on the wire for state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStateValue(int value) {
+        state_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.htlc.HTLCState state = 11 [json_name = "state"];</code>
+       * @return The state.
+       */
+      @java.lang.Override
+      public com.irismod.htlc.HtlcProto.HTLCState getState() {
+        com.irismod.htlc.HtlcProto.HTLCState result = com.irismod.htlc.HtlcProto.HTLCState.forNumber(state_);
+        return result == null ? com.irismod.htlc.HtlcProto.HTLCState.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.irismod.htlc.HTLCState state = 11 [json_name = "state"];</code>
+       * @param value The state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setState(com.irismod.htlc.HtlcProto.HTLCState value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000400;
+        state_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.htlc.HTLCState state = 11 [json_name = "state"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearState() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        state_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long closedBlock_ ;
+      /**
+       * <code>uint64 closed_block = 12 [json_name = "closedBlock", (.gogoproto.moretags) = "yaml:&#92;"closed_block&#92;""];</code>
+       * @return The closedBlock.
+       */
+      @java.lang.Override
+      public long getClosedBlock() {
+        return closedBlock_;
+      }
+      /**
+       * <code>uint64 closed_block = 12 [json_name = "closedBlock", (.gogoproto.moretags) = "yaml:&#92;"closed_block&#92;""];</code>
+       * @param value The closedBlock to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClosedBlock(long value) {
+
+        closedBlock_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 closed_block = 12 [json_name = "closedBlock", (.gogoproto.moretags) = "yaml:&#92;"closed_block&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClosedBlock() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        closedBlock_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private boolean transfer_ ;
+      /**
+       * <code>bool transfer = 13 [json_name = "transfer"];</code>
+       * @return The transfer.
+       */
+      @java.lang.Override
+      public boolean getTransfer() {
+        return transfer_;
+      }
+      /**
+       * <code>bool transfer = 13 [json_name = "transfer"];</code>
+       * @param value The transfer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransfer(boolean value) {
+
+        transfer_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool transfer = 13 [json_name = "transfer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTransfer() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        transfer_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int direction_ = 0;
+      /**
+       * <code>.irismod.htlc.SwapDirection direction = 14 [json_name = "direction"];</code>
+       * @return The enum numeric value on the wire for direction.
+       */
+      @java.lang.Override public int getDirectionValue() {
+        return direction_;
+      }
+      /**
+       * <code>.irismod.htlc.SwapDirection direction = 14 [json_name = "direction"];</code>
+       * @param value The enum numeric value on the wire for direction to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDirectionValue(int value) {
+        direction_ = value;
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.htlc.SwapDirection direction = 14 [json_name = "direction"];</code>
+       * @return The direction.
+       */
+      @java.lang.Override
+      public com.irismod.htlc.HtlcProto.SwapDirection getDirection() {
+        com.irismod.htlc.HtlcProto.SwapDirection result = com.irismod.htlc.HtlcProto.SwapDirection.forNumber(direction_);
+        return result == null ? com.irismod.htlc.HtlcProto.SwapDirection.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.irismod.htlc.SwapDirection direction = 14 [json_name = "direction"];</code>
+       * @param value The direction to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDirection(com.irismod.htlc.HtlcProto.SwapDirection value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00002000;
+        direction_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.htlc.SwapDirection direction = 14 [json_name = "direction"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDirection() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        direction_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.htlc.HTLC)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.htlc.HTLC)
+    private static final com.irismod.htlc.HtlcProto.HTLC DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.htlc.HtlcProto.HTLC();
+    }
+
+    public static com.irismod.htlc.HtlcProto.HTLC getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<HTLC>
+        PARSER = new com.google.protobuf.AbstractParser<HTLC>() {
+      @java.lang.Override
+      public HTLC parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<HTLC> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<HTLC> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.htlc.HtlcProto.HTLC getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AssetSupplyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.htlc.AssetSupply)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin incoming_supply = 1 [json_name = "incomingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"incoming_supply&#92;""];</code>
+     * @return Whether the incomingSupply field is set.
+     */
+    boolean hasIncomingSupply();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin incoming_supply = 1 [json_name = "incomingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"incoming_supply&#92;""];</code>
+     * @return The incomingSupply.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getIncomingSupply();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin incoming_supply = 1 [json_name = "incomingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"incoming_supply&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getIncomingSupplyOrBuilder();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin outgoing_supply = 2 [json_name = "outgoingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assetoutgoing_supply_params&#92;""];</code>
+     * @return Whether the outgoingSupply field is set.
+     */
+    boolean hasOutgoingSupply();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin outgoing_supply = 2 [json_name = "outgoingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assetoutgoing_supply_params&#92;""];</code>
+     * @return The outgoingSupply.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getOutgoingSupply();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin outgoing_supply = 2 [json_name = "outgoingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assetoutgoing_supply_params&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getOutgoingSupplyOrBuilder();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin current_supply = 3 [json_name = "currentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_supply&#92;""];</code>
+     * @return Whether the currentSupply field is set.
+     */
+    boolean hasCurrentSupply();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin current_supply = 3 [json_name = "currentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_supply&#92;""];</code>
+     * @return The currentSupply.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getCurrentSupply();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin current_supply = 3 [json_name = "currentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_supply&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCurrentSupplyOrBuilder();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin time_limited_current_supply = 4 [json_name = "timeLimitedCurrentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_limited_current_supply&#92;""];</code>
+     * @return Whether the timeLimitedCurrentSupply field is set.
+     */
+    boolean hasTimeLimitedCurrentSupply();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin time_limited_current_supply = 4 [json_name = "timeLimitedCurrentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_limited_current_supply&#92;""];</code>
+     * @return The timeLimitedCurrentSupply.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getTimeLimitedCurrentSupply();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin time_limited_current_supply = 4 [json_name = "timeLimitedCurrentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_limited_current_supply&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTimeLimitedCurrentSupplyOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Duration time_elapsed = 5 [json_name = "timeElapsed", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_elapsed&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the timeElapsed field is set.
+     */
+    boolean hasTimeElapsed();
+    /**
+     * <code>.google.protobuf.Duration time_elapsed = 5 [json_name = "timeElapsed", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_elapsed&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The timeElapsed.
+     */
+    com.google.protobuf.Duration getTimeElapsed();
+    /**
+     * <code>.google.protobuf.Duration time_elapsed = 5 [json_name = "timeElapsed", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_elapsed&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getTimeElapsedOrBuilder();
+  }
+  /**
+   * Protobuf type {@code irismod.htlc.AssetSupply}
+   */
+  public static final class AssetSupply extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.htlc.AssetSupply)
+      AssetSupplyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AssetSupply.newBuilder() to construct.
+    private AssetSupply(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AssetSupply() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AssetSupply();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.htlc.HtlcProto.internal_static_irismod_htlc_AssetSupply_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.htlc.HtlcProto.internal_static_irismod_htlc_AssetSupply_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.htlc.HtlcProto.AssetSupply.class, com.irismod.htlc.HtlcProto.AssetSupply.Builder.class);
+    }
+
+    public static final int INCOMING_SUPPLY_FIELD_NUMBER = 1;
+    private com.cosmos.base.v1beta1.CoinProto.Coin incomingSupply_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin incoming_supply = 1 [json_name = "incomingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"incoming_supply&#92;""];</code>
+     * @return Whether the incomingSupply field is set.
+     */
+    @java.lang.Override
+    public boolean hasIncomingSupply() {
+      return incomingSupply_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin incoming_supply = 1 [json_name = "incomingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"incoming_supply&#92;""];</code>
+     * @return The incomingSupply.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getIncomingSupply() {
+      return incomingSupply_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : incomingSupply_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin incoming_supply = 1 [json_name = "incomingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"incoming_supply&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getIncomingSupplyOrBuilder() {
+      return incomingSupply_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : incomingSupply_;
+    }
+
+    public static final int OUTGOING_SUPPLY_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin outgoingSupply_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin outgoing_supply = 2 [json_name = "outgoingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assetoutgoing_supply_params&#92;""];</code>
+     * @return Whether the outgoingSupply field is set.
+     */
+    @java.lang.Override
+    public boolean hasOutgoingSupply() {
+      return outgoingSupply_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin outgoing_supply = 2 [json_name = "outgoingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assetoutgoing_supply_params&#92;""];</code>
+     * @return The outgoingSupply.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getOutgoingSupply() {
+      return outgoingSupply_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : outgoingSupply_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin outgoing_supply = 2 [json_name = "outgoingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assetoutgoing_supply_params&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getOutgoingSupplyOrBuilder() {
+      return outgoingSupply_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : outgoingSupply_;
+    }
+
+    public static final int CURRENT_SUPPLY_FIELD_NUMBER = 3;
+    private com.cosmos.base.v1beta1.CoinProto.Coin currentSupply_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin current_supply = 3 [json_name = "currentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_supply&#92;""];</code>
+     * @return Whether the currentSupply field is set.
+     */
+    @java.lang.Override
+    public boolean hasCurrentSupply() {
+      return currentSupply_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin current_supply = 3 [json_name = "currentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_supply&#92;""];</code>
+     * @return The currentSupply.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getCurrentSupply() {
+      return currentSupply_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : currentSupply_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin current_supply = 3 [json_name = "currentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_supply&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCurrentSupplyOrBuilder() {
+      return currentSupply_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : currentSupply_;
+    }
+
+    public static final int TIME_LIMITED_CURRENT_SUPPLY_FIELD_NUMBER = 4;
+    private com.cosmos.base.v1beta1.CoinProto.Coin timeLimitedCurrentSupply_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin time_limited_current_supply = 4 [json_name = "timeLimitedCurrentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_limited_current_supply&#92;""];</code>
+     * @return Whether the timeLimitedCurrentSupply field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimeLimitedCurrentSupply() {
+      return timeLimitedCurrentSupply_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin time_limited_current_supply = 4 [json_name = "timeLimitedCurrentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_limited_current_supply&#92;""];</code>
+     * @return The timeLimitedCurrentSupply.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getTimeLimitedCurrentSupply() {
+      return timeLimitedCurrentSupply_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : timeLimitedCurrentSupply_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin time_limited_current_supply = 4 [json_name = "timeLimitedCurrentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_limited_current_supply&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTimeLimitedCurrentSupplyOrBuilder() {
+      return timeLimitedCurrentSupply_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : timeLimitedCurrentSupply_;
+    }
+
+    public static final int TIME_ELAPSED_FIELD_NUMBER = 5;
+    private com.google.protobuf.Duration timeElapsed_;
+    /**
+     * <code>.google.protobuf.Duration time_elapsed = 5 [json_name = "timeElapsed", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_elapsed&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the timeElapsed field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimeElapsed() {
+      return timeElapsed_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Duration time_elapsed = 5 [json_name = "timeElapsed", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_elapsed&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The timeElapsed.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getTimeElapsed() {
+      return timeElapsed_ == null ? com.google.protobuf.Duration.getDefaultInstance() : timeElapsed_;
+    }
+    /**
+     * <code>.google.protobuf.Duration time_elapsed = 5 [json_name = "timeElapsed", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_elapsed&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getTimeElapsedOrBuilder() {
+      return timeElapsed_ == null ? com.google.protobuf.Duration.getDefaultInstance() : timeElapsed_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (incomingSupply_ != null) {
+        output.writeMessage(1, getIncomingSupply());
+      }
+      if (outgoingSupply_ != null) {
+        output.writeMessage(2, getOutgoingSupply());
+      }
+      if (currentSupply_ != null) {
+        output.writeMessage(3, getCurrentSupply());
+      }
+      if (timeLimitedCurrentSupply_ != null) {
+        output.writeMessage(4, getTimeLimitedCurrentSupply());
+      }
+      if (timeElapsed_ != null) {
+        output.writeMessage(5, getTimeElapsed());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (incomingSupply_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getIncomingSupply());
+      }
+      if (outgoingSupply_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getOutgoingSupply());
+      }
+      if (currentSupply_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getCurrentSupply());
+      }
+      if (timeLimitedCurrentSupply_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getTimeLimitedCurrentSupply());
+      }
+      if (timeElapsed_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getTimeElapsed());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.htlc.HtlcProto.AssetSupply)) {
+        return super.equals(obj);
+      }
+      com.irismod.htlc.HtlcProto.AssetSupply other = (com.irismod.htlc.HtlcProto.AssetSupply) obj;
+
+      if (hasIncomingSupply() != other.hasIncomingSupply()) return false;
+      if (hasIncomingSupply()) {
+        if (!getIncomingSupply()
+            .equals(other.getIncomingSupply())) return false;
+      }
+      if (hasOutgoingSupply() != other.hasOutgoingSupply()) return false;
+      if (hasOutgoingSupply()) {
+        if (!getOutgoingSupply()
+            .equals(other.getOutgoingSupply())) return false;
+      }
+      if (hasCurrentSupply() != other.hasCurrentSupply()) return false;
+      if (hasCurrentSupply()) {
+        if (!getCurrentSupply()
+            .equals(other.getCurrentSupply())) return false;
+      }
+      if (hasTimeLimitedCurrentSupply() != other.hasTimeLimitedCurrentSupply()) return false;
+      if (hasTimeLimitedCurrentSupply()) {
+        if (!getTimeLimitedCurrentSupply()
+            .equals(other.getTimeLimitedCurrentSupply())) return false;
+      }
+      if (hasTimeElapsed() != other.hasTimeElapsed()) return false;
+      if (hasTimeElapsed()) {
+        if (!getTimeElapsed()
+            .equals(other.getTimeElapsed())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasIncomingSupply()) {
+        hash = (37 * hash) + INCOMING_SUPPLY_FIELD_NUMBER;
+        hash = (53 * hash) + getIncomingSupply().hashCode();
+      }
+      if (hasOutgoingSupply()) {
+        hash = (37 * hash) + OUTGOING_SUPPLY_FIELD_NUMBER;
+        hash = (53 * hash) + getOutgoingSupply().hashCode();
+      }
+      if (hasCurrentSupply()) {
+        hash = (37 * hash) + CURRENT_SUPPLY_FIELD_NUMBER;
+        hash = (53 * hash) + getCurrentSupply().hashCode();
+      }
+      if (hasTimeLimitedCurrentSupply()) {
+        hash = (37 * hash) + TIME_LIMITED_CURRENT_SUPPLY_FIELD_NUMBER;
+        hash = (53 * hash) + getTimeLimitedCurrentSupply().hashCode();
+      }
+      if (hasTimeElapsed()) {
+        hash = (37 * hash) + TIME_ELAPSED_FIELD_NUMBER;
+        hash = (53 * hash) + getTimeElapsed().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.htlc.HtlcProto.AssetSupply parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.HtlcProto.AssetSupply parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.HtlcProto.AssetSupply parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.HtlcProto.AssetSupply parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.HtlcProto.AssetSupply parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.HtlcProto.AssetSupply parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.HtlcProto.AssetSupply parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.htlc.HtlcProto.AssetSupply parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.htlc.HtlcProto.AssetSupply parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.htlc.HtlcProto.AssetSupply parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.htlc.HtlcProto.AssetSupply parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.htlc.HtlcProto.AssetSupply parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.htlc.HtlcProto.AssetSupply prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code irismod.htlc.AssetSupply}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.htlc.AssetSupply)
+        com.irismod.htlc.HtlcProto.AssetSupplyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.htlc.HtlcProto.internal_static_irismod_htlc_AssetSupply_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.htlc.HtlcProto.internal_static_irismod_htlc_AssetSupply_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.htlc.HtlcProto.AssetSupply.class, com.irismod.htlc.HtlcProto.AssetSupply.Builder.class);
+      }
+
+      // Construct using com.irismod.htlc.HtlcProto.AssetSupply.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        incomingSupply_ = null;
+        if (incomingSupplyBuilder_ != null) {
+          incomingSupplyBuilder_.dispose();
+          incomingSupplyBuilder_ = null;
+        }
+        outgoingSupply_ = null;
+        if (outgoingSupplyBuilder_ != null) {
+          outgoingSupplyBuilder_.dispose();
+          outgoingSupplyBuilder_ = null;
+        }
+        currentSupply_ = null;
+        if (currentSupplyBuilder_ != null) {
+          currentSupplyBuilder_.dispose();
+          currentSupplyBuilder_ = null;
+        }
+        timeLimitedCurrentSupply_ = null;
+        if (timeLimitedCurrentSupplyBuilder_ != null) {
+          timeLimitedCurrentSupplyBuilder_.dispose();
+          timeLimitedCurrentSupplyBuilder_ = null;
+        }
+        timeElapsed_ = null;
+        if (timeElapsedBuilder_ != null) {
+          timeElapsedBuilder_.dispose();
+          timeElapsedBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.htlc.HtlcProto.internal_static_irismod_htlc_AssetSupply_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.HtlcProto.AssetSupply getDefaultInstanceForType() {
+        return com.irismod.htlc.HtlcProto.AssetSupply.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.HtlcProto.AssetSupply build() {
+        com.irismod.htlc.HtlcProto.AssetSupply result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.HtlcProto.AssetSupply buildPartial() {
+        com.irismod.htlc.HtlcProto.AssetSupply result = new com.irismod.htlc.HtlcProto.AssetSupply(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.htlc.HtlcProto.AssetSupply result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.incomingSupply_ = incomingSupplyBuilder_ == null
+              ? incomingSupply_
+              : incomingSupplyBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.outgoingSupply_ = outgoingSupplyBuilder_ == null
+              ? outgoingSupply_
+              : outgoingSupplyBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.currentSupply_ = currentSupplyBuilder_ == null
+              ? currentSupply_
+              : currentSupplyBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.timeLimitedCurrentSupply_ = timeLimitedCurrentSupplyBuilder_ == null
+              ? timeLimitedCurrentSupply_
+              : timeLimitedCurrentSupplyBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.timeElapsed_ = timeElapsedBuilder_ == null
+              ? timeElapsed_
+              : timeElapsedBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.htlc.HtlcProto.AssetSupply) {
+          return mergeFrom((com.irismod.htlc.HtlcProto.AssetSupply)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.htlc.HtlcProto.AssetSupply other) {
+        if (other == com.irismod.htlc.HtlcProto.AssetSupply.getDefaultInstance()) return this;
+        if (other.hasIncomingSupply()) {
+          mergeIncomingSupply(other.getIncomingSupply());
+        }
+        if (other.hasOutgoingSupply()) {
+          mergeOutgoingSupply(other.getOutgoingSupply());
+        }
+        if (other.hasCurrentSupply()) {
+          mergeCurrentSupply(other.getCurrentSupply());
+        }
+        if (other.hasTimeLimitedCurrentSupply()) {
+          mergeTimeLimitedCurrentSupply(other.getTimeLimitedCurrentSupply());
+        }
+        if (other.hasTimeElapsed()) {
+          mergeTimeElapsed(other.getTimeElapsed());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getIncomingSupplyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getOutgoingSupplyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getCurrentSupplyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getTimeLimitedCurrentSupplyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getTimeElapsedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin incomingSupply_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> incomingSupplyBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin incoming_supply = 1 [json_name = "incomingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"incoming_supply&#92;""];</code>
+       * @return Whether the incomingSupply field is set.
+       */
+      public boolean hasIncomingSupply() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin incoming_supply = 1 [json_name = "incomingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"incoming_supply&#92;""];</code>
+       * @return The incomingSupply.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getIncomingSupply() {
+        if (incomingSupplyBuilder_ == null) {
+          return incomingSupply_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : incomingSupply_;
+        } else {
+          return incomingSupplyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin incoming_supply = 1 [json_name = "incomingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"incoming_supply&#92;""];</code>
+       */
+      public Builder setIncomingSupply(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (incomingSupplyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          incomingSupply_ = value;
+        } else {
+          incomingSupplyBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin incoming_supply = 1 [json_name = "incomingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"incoming_supply&#92;""];</code>
+       */
+      public Builder setIncomingSupply(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (incomingSupplyBuilder_ == null) {
+          incomingSupply_ = builderForValue.build();
+        } else {
+          incomingSupplyBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin incoming_supply = 1 [json_name = "incomingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"incoming_supply&#92;""];</code>
+       */
+      public Builder mergeIncomingSupply(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (incomingSupplyBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            incomingSupply_ != null &&
+            incomingSupply_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getIncomingSupplyBuilder().mergeFrom(value);
+          } else {
+            incomingSupply_ = value;
+          }
+        } else {
+          incomingSupplyBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin incoming_supply = 1 [json_name = "incomingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"incoming_supply&#92;""];</code>
+       */
+      public Builder clearIncomingSupply() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        incomingSupply_ = null;
+        if (incomingSupplyBuilder_ != null) {
+          incomingSupplyBuilder_.dispose();
+          incomingSupplyBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin incoming_supply = 1 [json_name = "incomingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"incoming_supply&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getIncomingSupplyBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getIncomingSupplyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin incoming_supply = 1 [json_name = "incomingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"incoming_supply&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getIncomingSupplyOrBuilder() {
+        if (incomingSupplyBuilder_ != null) {
+          return incomingSupplyBuilder_.getMessageOrBuilder();
+        } else {
+          return incomingSupply_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : incomingSupply_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin incoming_supply = 1 [json_name = "incomingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"incoming_supply&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getIncomingSupplyFieldBuilder() {
+        if (incomingSupplyBuilder_ == null) {
+          incomingSupplyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getIncomingSupply(),
+                  getParentForChildren(),
+                  isClean());
+          incomingSupply_ = null;
+        }
+        return incomingSupplyBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin outgoingSupply_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> outgoingSupplyBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin outgoing_supply = 2 [json_name = "outgoingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assetoutgoing_supply_params&#92;""];</code>
+       * @return Whether the outgoingSupply field is set.
+       */
+      public boolean hasOutgoingSupply() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin outgoing_supply = 2 [json_name = "outgoingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assetoutgoing_supply_params&#92;""];</code>
+       * @return The outgoingSupply.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getOutgoingSupply() {
+        if (outgoingSupplyBuilder_ == null) {
+          return outgoingSupply_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : outgoingSupply_;
+        } else {
+          return outgoingSupplyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin outgoing_supply = 2 [json_name = "outgoingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assetoutgoing_supply_params&#92;""];</code>
+       */
+      public Builder setOutgoingSupply(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (outgoingSupplyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          outgoingSupply_ = value;
+        } else {
+          outgoingSupplyBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin outgoing_supply = 2 [json_name = "outgoingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assetoutgoing_supply_params&#92;""];</code>
+       */
+      public Builder setOutgoingSupply(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (outgoingSupplyBuilder_ == null) {
+          outgoingSupply_ = builderForValue.build();
+        } else {
+          outgoingSupplyBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin outgoing_supply = 2 [json_name = "outgoingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assetoutgoing_supply_params&#92;""];</code>
+       */
+      public Builder mergeOutgoingSupply(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (outgoingSupplyBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            outgoingSupply_ != null &&
+            outgoingSupply_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getOutgoingSupplyBuilder().mergeFrom(value);
+          } else {
+            outgoingSupply_ = value;
+          }
+        } else {
+          outgoingSupplyBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin outgoing_supply = 2 [json_name = "outgoingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assetoutgoing_supply_params&#92;""];</code>
+       */
+      public Builder clearOutgoingSupply() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        outgoingSupply_ = null;
+        if (outgoingSupplyBuilder_ != null) {
+          outgoingSupplyBuilder_.dispose();
+          outgoingSupplyBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin outgoing_supply = 2 [json_name = "outgoingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assetoutgoing_supply_params&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getOutgoingSupplyBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getOutgoingSupplyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin outgoing_supply = 2 [json_name = "outgoingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assetoutgoing_supply_params&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getOutgoingSupplyOrBuilder() {
+        if (outgoingSupplyBuilder_ != null) {
+          return outgoingSupplyBuilder_.getMessageOrBuilder();
+        } else {
+          return outgoingSupply_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : outgoingSupply_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin outgoing_supply = 2 [json_name = "outgoingSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"assetoutgoing_supply_params&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getOutgoingSupplyFieldBuilder() {
+        if (outgoingSupplyBuilder_ == null) {
+          outgoingSupplyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getOutgoingSupply(),
+                  getParentForChildren(),
+                  isClean());
+          outgoingSupply_ = null;
+        }
+        return outgoingSupplyBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin currentSupply_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> currentSupplyBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin current_supply = 3 [json_name = "currentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_supply&#92;""];</code>
+       * @return Whether the currentSupply field is set.
+       */
+      public boolean hasCurrentSupply() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin current_supply = 3 [json_name = "currentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_supply&#92;""];</code>
+       * @return The currentSupply.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getCurrentSupply() {
+        if (currentSupplyBuilder_ == null) {
+          return currentSupply_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : currentSupply_;
+        } else {
+          return currentSupplyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin current_supply = 3 [json_name = "currentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_supply&#92;""];</code>
+       */
+      public Builder setCurrentSupply(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (currentSupplyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          currentSupply_ = value;
+        } else {
+          currentSupplyBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin current_supply = 3 [json_name = "currentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_supply&#92;""];</code>
+       */
+      public Builder setCurrentSupply(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (currentSupplyBuilder_ == null) {
+          currentSupply_ = builderForValue.build();
+        } else {
+          currentSupplyBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin current_supply = 3 [json_name = "currentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_supply&#92;""];</code>
+       */
+      public Builder mergeCurrentSupply(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (currentSupplyBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            currentSupply_ != null &&
+            currentSupply_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getCurrentSupplyBuilder().mergeFrom(value);
+          } else {
+            currentSupply_ = value;
+          }
+        } else {
+          currentSupplyBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin current_supply = 3 [json_name = "currentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_supply&#92;""];</code>
+       */
+      public Builder clearCurrentSupply() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        currentSupply_ = null;
+        if (currentSupplyBuilder_ != null) {
+          currentSupplyBuilder_.dispose();
+          currentSupplyBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin current_supply = 3 [json_name = "currentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_supply&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getCurrentSupplyBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getCurrentSupplyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin current_supply = 3 [json_name = "currentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_supply&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCurrentSupplyOrBuilder() {
+        if (currentSupplyBuilder_ != null) {
+          return currentSupplyBuilder_.getMessageOrBuilder();
+        } else {
+          return currentSupply_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : currentSupply_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin current_supply = 3 [json_name = "currentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_supply&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getCurrentSupplyFieldBuilder() {
+        if (currentSupplyBuilder_ == null) {
+          currentSupplyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getCurrentSupply(),
+                  getParentForChildren(),
+                  isClean());
+          currentSupply_ = null;
+        }
+        return currentSupplyBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin timeLimitedCurrentSupply_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> timeLimitedCurrentSupplyBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin time_limited_current_supply = 4 [json_name = "timeLimitedCurrentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_limited_current_supply&#92;""];</code>
+       * @return Whether the timeLimitedCurrentSupply field is set.
+       */
+      public boolean hasTimeLimitedCurrentSupply() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin time_limited_current_supply = 4 [json_name = "timeLimitedCurrentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_limited_current_supply&#92;""];</code>
+       * @return The timeLimitedCurrentSupply.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getTimeLimitedCurrentSupply() {
+        if (timeLimitedCurrentSupplyBuilder_ == null) {
+          return timeLimitedCurrentSupply_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : timeLimitedCurrentSupply_;
+        } else {
+          return timeLimitedCurrentSupplyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin time_limited_current_supply = 4 [json_name = "timeLimitedCurrentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_limited_current_supply&#92;""];</code>
+       */
+      public Builder setTimeLimitedCurrentSupply(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (timeLimitedCurrentSupplyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          timeLimitedCurrentSupply_ = value;
+        } else {
+          timeLimitedCurrentSupplyBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin time_limited_current_supply = 4 [json_name = "timeLimitedCurrentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_limited_current_supply&#92;""];</code>
+       */
+      public Builder setTimeLimitedCurrentSupply(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (timeLimitedCurrentSupplyBuilder_ == null) {
+          timeLimitedCurrentSupply_ = builderForValue.build();
+        } else {
+          timeLimitedCurrentSupplyBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin time_limited_current_supply = 4 [json_name = "timeLimitedCurrentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_limited_current_supply&#92;""];</code>
+       */
+      public Builder mergeTimeLimitedCurrentSupply(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (timeLimitedCurrentSupplyBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            timeLimitedCurrentSupply_ != null &&
+            timeLimitedCurrentSupply_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getTimeLimitedCurrentSupplyBuilder().mergeFrom(value);
+          } else {
+            timeLimitedCurrentSupply_ = value;
+          }
+        } else {
+          timeLimitedCurrentSupplyBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin time_limited_current_supply = 4 [json_name = "timeLimitedCurrentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_limited_current_supply&#92;""];</code>
+       */
+      public Builder clearTimeLimitedCurrentSupply() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        timeLimitedCurrentSupply_ = null;
+        if (timeLimitedCurrentSupplyBuilder_ != null) {
+          timeLimitedCurrentSupplyBuilder_.dispose();
+          timeLimitedCurrentSupplyBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin time_limited_current_supply = 4 [json_name = "timeLimitedCurrentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_limited_current_supply&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getTimeLimitedCurrentSupplyBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getTimeLimitedCurrentSupplyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin time_limited_current_supply = 4 [json_name = "timeLimitedCurrentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_limited_current_supply&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTimeLimitedCurrentSupplyOrBuilder() {
+        if (timeLimitedCurrentSupplyBuilder_ != null) {
+          return timeLimitedCurrentSupplyBuilder_.getMessageOrBuilder();
+        } else {
+          return timeLimitedCurrentSupply_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : timeLimitedCurrentSupply_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin time_limited_current_supply = 4 [json_name = "timeLimitedCurrentSupply", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_limited_current_supply&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getTimeLimitedCurrentSupplyFieldBuilder() {
+        if (timeLimitedCurrentSupplyBuilder_ == null) {
+          timeLimitedCurrentSupplyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getTimeLimitedCurrentSupply(),
+                  getParentForChildren(),
+                  isClean());
+          timeLimitedCurrentSupply_ = null;
+        }
+        return timeLimitedCurrentSupplyBuilder_;
+      }
+
+      private com.google.protobuf.Duration timeElapsed_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> timeElapsedBuilder_;
+      /**
+       * <code>.google.protobuf.Duration time_elapsed = 5 [json_name = "timeElapsed", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_elapsed&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return Whether the timeElapsed field is set.
+       */
+      public boolean hasTimeElapsed() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Duration time_elapsed = 5 [json_name = "timeElapsed", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_elapsed&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return The timeElapsed.
+       */
+      public com.google.protobuf.Duration getTimeElapsed() {
+        if (timeElapsedBuilder_ == null) {
+          return timeElapsed_ == null ? com.google.protobuf.Duration.getDefaultInstance() : timeElapsed_;
+        } else {
+          return timeElapsedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration time_elapsed = 5 [json_name = "timeElapsed", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_elapsed&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setTimeElapsed(com.google.protobuf.Duration value) {
+        if (timeElapsedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          timeElapsed_ = value;
+        } else {
+          timeElapsedBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration time_elapsed = 5 [json_name = "timeElapsed", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_elapsed&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setTimeElapsed(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (timeElapsedBuilder_ == null) {
+          timeElapsed_ = builderForValue.build();
+        } else {
+          timeElapsedBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration time_elapsed = 5 [json_name = "timeElapsed", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_elapsed&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeTimeElapsed(com.google.protobuf.Duration value) {
+        if (timeElapsedBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            timeElapsed_ != null &&
+            timeElapsed_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getTimeElapsedBuilder().mergeFrom(value);
+          } else {
+            timeElapsed_ = value;
+          }
+        } else {
+          timeElapsedBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration time_elapsed = 5 [json_name = "timeElapsed", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_elapsed&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearTimeElapsed() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        timeElapsed_ = null;
+        if (timeElapsedBuilder_ != null) {
+          timeElapsedBuilder_.dispose();
+          timeElapsedBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration time_elapsed = 5 [json_name = "timeElapsed", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_elapsed&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getTimeElapsedBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getTimeElapsedFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Duration time_elapsed = 5 [json_name = "timeElapsed", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_elapsed&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getTimeElapsedOrBuilder() {
+        if (timeElapsedBuilder_ != null) {
+          return timeElapsedBuilder_.getMessageOrBuilder();
+        } else {
+          return timeElapsed_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : timeElapsed_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration time_elapsed = 5 [json_name = "timeElapsed", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_elapsed&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getTimeElapsedFieldBuilder() {
+        if (timeElapsedBuilder_ == null) {
+          timeElapsedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getTimeElapsed(),
+                  getParentForChildren(),
+                  isClean());
+          timeElapsed_ = null;
+        }
+        return timeElapsedBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.htlc.AssetSupply)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.htlc.AssetSupply)
+    private static final com.irismod.htlc.HtlcProto.AssetSupply DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.htlc.HtlcProto.AssetSupply();
+    }
+
+    public static com.irismod.htlc.HtlcProto.AssetSupply getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AssetSupply>
+        PARSER = new com.google.protobuf.AbstractParser<AssetSupply>() {
+      @java.lang.Override
+      public AssetSupply parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AssetSupply> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AssetSupply> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.htlc.HtlcProto.AssetSupply getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.htlc.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .irismod.htlc.AssetParam asset_params = 1 [json_name = "assetParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_params&#92;""];</code>
+     */
+    java.util.List<com.irismod.htlc.HtlcProto.AssetParam> 
+        getAssetParamsList();
+    /**
+     * <code>repeated .irismod.htlc.AssetParam asset_params = 1 [json_name = "assetParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_params&#92;""];</code>
+     */
+    com.irismod.htlc.HtlcProto.AssetParam getAssetParams(int index);
+    /**
+     * <code>repeated .irismod.htlc.AssetParam asset_params = 1 [json_name = "assetParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_params&#92;""];</code>
+     */
+    int getAssetParamsCount();
+    /**
+     * <code>repeated .irismod.htlc.AssetParam asset_params = 1 [json_name = "assetParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_params&#92;""];</code>
+     */
+    java.util.List<? extends com.irismod.htlc.HtlcProto.AssetParamOrBuilder> 
+        getAssetParamsOrBuilderList();
+    /**
+     * <code>repeated .irismod.htlc.AssetParam asset_params = 1 [json_name = "assetParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_params&#92;""];</code>
+     */
+    com.irismod.htlc.HtlcProto.AssetParamOrBuilder getAssetParamsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Params defines token module's parameters
+   * </pre>
+   *
+   * Protobuf type {@code irismod.htlc.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.htlc.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      assetParams_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.htlc.HtlcProto.internal_static_irismod_htlc_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.htlc.HtlcProto.internal_static_irismod_htlc_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.htlc.HtlcProto.Params.class, com.irismod.htlc.HtlcProto.Params.Builder.class);
+    }
+
+    public static final int ASSET_PARAMS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.irismod.htlc.HtlcProto.AssetParam> assetParams_;
+    /**
+     * <code>repeated .irismod.htlc.AssetParam asset_params = 1 [json_name = "assetParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_params&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.irismod.htlc.HtlcProto.AssetParam> getAssetParamsList() {
+      return assetParams_;
+    }
+    /**
+     * <code>repeated .irismod.htlc.AssetParam asset_params = 1 [json_name = "assetParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_params&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.irismod.htlc.HtlcProto.AssetParamOrBuilder> 
+        getAssetParamsOrBuilderList() {
+      return assetParams_;
+    }
+    /**
+     * <code>repeated .irismod.htlc.AssetParam asset_params = 1 [json_name = "assetParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_params&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getAssetParamsCount() {
+      return assetParams_.size();
+    }
+    /**
+     * <code>repeated .irismod.htlc.AssetParam asset_params = 1 [json_name = "assetParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_params&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.irismod.htlc.HtlcProto.AssetParam getAssetParams(int index) {
+      return assetParams_.get(index);
+    }
+    /**
+     * <code>repeated .irismod.htlc.AssetParam asset_params = 1 [json_name = "assetParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_params&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.irismod.htlc.HtlcProto.AssetParamOrBuilder getAssetParamsOrBuilder(
+        int index) {
+      return assetParams_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < assetParams_.size(); i++) {
+        output.writeMessage(1, assetParams_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < assetParams_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, assetParams_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.htlc.HtlcProto.Params)) {
+        return super.equals(obj);
+      }
+      com.irismod.htlc.HtlcProto.Params other = (com.irismod.htlc.HtlcProto.Params) obj;
+
+      if (!getAssetParamsList()
+          .equals(other.getAssetParamsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAssetParamsCount() > 0) {
+        hash = (37 * hash) + ASSET_PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getAssetParamsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.htlc.HtlcProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.HtlcProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.HtlcProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.HtlcProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.HtlcProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.HtlcProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.HtlcProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.htlc.HtlcProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.htlc.HtlcProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.htlc.HtlcProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.htlc.HtlcProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.htlc.HtlcProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.htlc.HtlcProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params defines token module's parameters
+     * </pre>
+     *
+     * Protobuf type {@code irismod.htlc.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.htlc.Params)
+        com.irismod.htlc.HtlcProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.htlc.HtlcProto.internal_static_irismod_htlc_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.htlc.HtlcProto.internal_static_irismod_htlc_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.htlc.HtlcProto.Params.class, com.irismod.htlc.HtlcProto.Params.Builder.class);
+      }
+
+      // Construct using com.irismod.htlc.HtlcProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (assetParamsBuilder_ == null) {
+          assetParams_ = java.util.Collections.emptyList();
+        } else {
+          assetParams_ = null;
+          assetParamsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.htlc.HtlcProto.internal_static_irismod_htlc_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.HtlcProto.Params getDefaultInstanceForType() {
+        return com.irismod.htlc.HtlcProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.HtlcProto.Params build() {
+        com.irismod.htlc.HtlcProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.HtlcProto.Params buildPartial() {
+        com.irismod.htlc.HtlcProto.Params result = new com.irismod.htlc.HtlcProto.Params(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.irismod.htlc.HtlcProto.Params result) {
+        if (assetParamsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            assetParams_ = java.util.Collections.unmodifiableList(assetParams_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.assetParams_ = assetParams_;
+        } else {
+          result.assetParams_ = assetParamsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.irismod.htlc.HtlcProto.Params result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.htlc.HtlcProto.Params) {
+          return mergeFrom((com.irismod.htlc.HtlcProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.htlc.HtlcProto.Params other) {
+        if (other == com.irismod.htlc.HtlcProto.Params.getDefaultInstance()) return this;
+        if (assetParamsBuilder_ == null) {
+          if (!other.assetParams_.isEmpty()) {
+            if (assetParams_.isEmpty()) {
+              assetParams_ = other.assetParams_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAssetParamsIsMutable();
+              assetParams_.addAll(other.assetParams_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.assetParams_.isEmpty()) {
+            if (assetParamsBuilder_.isEmpty()) {
+              assetParamsBuilder_.dispose();
+              assetParamsBuilder_ = null;
+              assetParams_ = other.assetParams_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              assetParamsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAssetParamsFieldBuilder() : null;
+            } else {
+              assetParamsBuilder_.addAllMessages(other.assetParams_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.irismod.htlc.HtlcProto.AssetParam m =
+                    input.readMessage(
+                        com.irismod.htlc.HtlcProto.AssetParam.parser(),
+                        extensionRegistry);
+                if (assetParamsBuilder_ == null) {
+                  ensureAssetParamsIsMutable();
+                  assetParams_.add(m);
+                } else {
+                  assetParamsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.irismod.htlc.HtlcProto.AssetParam> assetParams_ =
+        java.util.Collections.emptyList();
+      private void ensureAssetParamsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          assetParams_ = new java.util.ArrayList<com.irismod.htlc.HtlcProto.AssetParam>(assetParams_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.irismod.htlc.HtlcProto.AssetParam, com.irismod.htlc.HtlcProto.AssetParam.Builder, com.irismod.htlc.HtlcProto.AssetParamOrBuilder> assetParamsBuilder_;
+
+      /**
+       * <code>repeated .irismod.htlc.AssetParam asset_params = 1 [json_name = "assetParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_params&#92;""];</code>
+       */
+      public java.util.List<com.irismod.htlc.HtlcProto.AssetParam> getAssetParamsList() {
+        if (assetParamsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(assetParams_);
+        } else {
+          return assetParamsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetParam asset_params = 1 [json_name = "assetParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_params&#92;""];</code>
+       */
+      public int getAssetParamsCount() {
+        if (assetParamsBuilder_ == null) {
+          return assetParams_.size();
+        } else {
+          return assetParamsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetParam asset_params = 1 [json_name = "assetParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_params&#92;""];</code>
+       */
+      public com.irismod.htlc.HtlcProto.AssetParam getAssetParams(int index) {
+        if (assetParamsBuilder_ == null) {
+          return assetParams_.get(index);
+        } else {
+          return assetParamsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetParam asset_params = 1 [json_name = "assetParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_params&#92;""];</code>
+       */
+      public Builder setAssetParams(
+          int index, com.irismod.htlc.HtlcProto.AssetParam value) {
+        if (assetParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetParamsIsMutable();
+          assetParams_.set(index, value);
+          onChanged();
+        } else {
+          assetParamsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetParam asset_params = 1 [json_name = "assetParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_params&#92;""];</code>
+       */
+      public Builder setAssetParams(
+          int index, com.irismod.htlc.HtlcProto.AssetParam.Builder builderForValue) {
+        if (assetParamsBuilder_ == null) {
+          ensureAssetParamsIsMutable();
+          assetParams_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          assetParamsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetParam asset_params = 1 [json_name = "assetParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_params&#92;""];</code>
+       */
+      public Builder addAssetParams(com.irismod.htlc.HtlcProto.AssetParam value) {
+        if (assetParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetParamsIsMutable();
+          assetParams_.add(value);
+          onChanged();
+        } else {
+          assetParamsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetParam asset_params = 1 [json_name = "assetParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_params&#92;""];</code>
+       */
+      public Builder addAssetParams(
+          int index, com.irismod.htlc.HtlcProto.AssetParam value) {
+        if (assetParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetParamsIsMutable();
+          assetParams_.add(index, value);
+          onChanged();
+        } else {
+          assetParamsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetParam asset_params = 1 [json_name = "assetParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_params&#92;""];</code>
+       */
+      public Builder addAssetParams(
+          com.irismod.htlc.HtlcProto.AssetParam.Builder builderForValue) {
+        if (assetParamsBuilder_ == null) {
+          ensureAssetParamsIsMutable();
+          assetParams_.add(builderForValue.build());
+          onChanged();
+        } else {
+          assetParamsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetParam asset_params = 1 [json_name = "assetParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_params&#92;""];</code>
+       */
+      public Builder addAssetParams(
+          int index, com.irismod.htlc.HtlcProto.AssetParam.Builder builderForValue) {
+        if (assetParamsBuilder_ == null) {
+          ensureAssetParamsIsMutable();
+          assetParams_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          assetParamsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetParam asset_params = 1 [json_name = "assetParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_params&#92;""];</code>
+       */
+      public Builder addAllAssetParams(
+          java.lang.Iterable<? extends com.irismod.htlc.HtlcProto.AssetParam> values) {
+        if (assetParamsBuilder_ == null) {
+          ensureAssetParamsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, assetParams_);
+          onChanged();
+        } else {
+          assetParamsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetParam asset_params = 1 [json_name = "assetParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_params&#92;""];</code>
+       */
+      public Builder clearAssetParams() {
+        if (assetParamsBuilder_ == null) {
+          assetParams_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          assetParamsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetParam asset_params = 1 [json_name = "assetParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_params&#92;""];</code>
+       */
+      public Builder removeAssetParams(int index) {
+        if (assetParamsBuilder_ == null) {
+          ensureAssetParamsIsMutable();
+          assetParams_.remove(index);
+          onChanged();
+        } else {
+          assetParamsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetParam asset_params = 1 [json_name = "assetParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_params&#92;""];</code>
+       */
+      public com.irismod.htlc.HtlcProto.AssetParam.Builder getAssetParamsBuilder(
+          int index) {
+        return getAssetParamsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetParam asset_params = 1 [json_name = "assetParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_params&#92;""];</code>
+       */
+      public com.irismod.htlc.HtlcProto.AssetParamOrBuilder getAssetParamsOrBuilder(
+          int index) {
+        if (assetParamsBuilder_ == null) {
+          return assetParams_.get(index);  } else {
+          return assetParamsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetParam asset_params = 1 [json_name = "assetParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_params&#92;""];</code>
+       */
+      public java.util.List<? extends com.irismod.htlc.HtlcProto.AssetParamOrBuilder> 
+           getAssetParamsOrBuilderList() {
+        if (assetParamsBuilder_ != null) {
+          return assetParamsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(assetParams_);
+        }
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetParam asset_params = 1 [json_name = "assetParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_params&#92;""];</code>
+       */
+      public com.irismod.htlc.HtlcProto.AssetParam.Builder addAssetParamsBuilder() {
+        return getAssetParamsFieldBuilder().addBuilder(
+            com.irismod.htlc.HtlcProto.AssetParam.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetParam asset_params = 1 [json_name = "assetParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_params&#92;""];</code>
+       */
+      public com.irismod.htlc.HtlcProto.AssetParam.Builder addAssetParamsBuilder(
+          int index) {
+        return getAssetParamsFieldBuilder().addBuilder(
+            index, com.irismod.htlc.HtlcProto.AssetParam.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetParam asset_params = 1 [json_name = "assetParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_params&#92;""];</code>
+       */
+      public java.util.List<com.irismod.htlc.HtlcProto.AssetParam.Builder> 
+           getAssetParamsBuilderList() {
+        return getAssetParamsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.irismod.htlc.HtlcProto.AssetParam, com.irismod.htlc.HtlcProto.AssetParam.Builder, com.irismod.htlc.HtlcProto.AssetParamOrBuilder> 
+          getAssetParamsFieldBuilder() {
+        if (assetParamsBuilder_ == null) {
+          assetParamsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.irismod.htlc.HtlcProto.AssetParam, com.irismod.htlc.HtlcProto.AssetParam.Builder, com.irismod.htlc.HtlcProto.AssetParamOrBuilder>(
+                  assetParams_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          assetParams_ = null;
+        }
+        return assetParamsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.htlc.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.htlc.Params)
+    private static final com.irismod.htlc.HtlcProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.htlc.HtlcProto.Params();
+    }
+
+    public static com.irismod.htlc.HtlcProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.htlc.HtlcProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AssetParamOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.htlc.AssetParam)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * name of the asset
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <pre>
+     * name of the asset
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <pre>
+     * asset supply limit
+     * </pre>
+     *
+     * <code>.irismod.htlc.SupplyLimit supply_limit = 2 [json_name = "supplyLimit", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"supply_limit&#92;""];</code>
+     * @return Whether the supplyLimit field is set.
+     */
+    boolean hasSupplyLimit();
+    /**
+     * <pre>
+     * asset supply limit
+     * </pre>
+     *
+     * <code>.irismod.htlc.SupplyLimit supply_limit = 2 [json_name = "supplyLimit", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"supply_limit&#92;""];</code>
+     * @return The supplyLimit.
+     */
+    com.irismod.htlc.HtlcProto.SupplyLimit getSupplyLimit();
+    /**
+     * <pre>
+     * asset supply limit
+     * </pre>
+     *
+     * <code>.irismod.htlc.SupplyLimit supply_limit = 2 [json_name = "supplyLimit", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"supply_limit&#92;""];</code>
+     */
+    com.irismod.htlc.HtlcProto.SupplyLimitOrBuilder getSupplyLimitOrBuilder();
+
+    /**
+     * <pre>
+     * denotes if asset is available or paused
+     * </pre>
+     *
+     * <code>bool active = 3 [json_name = "active"];</code>
+     * @return The active.
+     */
+    boolean getActive();
+
+    /**
+     * <pre>
+     * the address of the relayer process
+     * </pre>
+     *
+     * <code>string deputy_address = 4 [json_name = "deputyAddress", (.gogoproto.moretags) = "yaml:&#92;"deputy_address&#92;""];</code>
+     * @return The deputyAddress.
+     */
+    java.lang.String getDeputyAddress();
+    /**
+     * <pre>
+     * the address of the relayer process
+     * </pre>
+     *
+     * <code>string deputy_address = 4 [json_name = "deputyAddress", (.gogoproto.moretags) = "yaml:&#92;"deputy_address&#92;""];</code>
+     * @return The bytes for deputyAddress.
+     */
+    com.google.protobuf.ByteString
+        getDeputyAddressBytes();
+
+    /**
+     * <pre>
+     * the fixed fee charged by the relayer process for outgoing swaps
+     * </pre>
+     *
+     * <code>string fixed_fee = 5 [json_name = "fixedFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The fixedFee.
+     */
+    java.lang.String getFixedFee();
+    /**
+     * <pre>
+     * the fixed fee charged by the relayer process for outgoing swaps
+     * </pre>
+     *
+     * <code>string fixed_fee = 5 [json_name = "fixedFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for fixedFee.
+     */
+    com.google.protobuf.ByteString
+        getFixedFeeBytes();
+
+    /**
+     * <pre>
+     * Minimum swap amount
+     * </pre>
+     *
+     * <code>string min_swap_amount = 6 [json_name = "minSwapAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The minSwapAmount.
+     */
+    java.lang.String getMinSwapAmount();
+    /**
+     * <pre>
+     * Minimum swap amount
+     * </pre>
+     *
+     * <code>string min_swap_amount = 6 [json_name = "minSwapAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for minSwapAmount.
+     */
+    com.google.protobuf.ByteString
+        getMinSwapAmountBytes();
+
+    /**
+     * <pre>
+     * Maximum swap amount
+     * </pre>
+     *
+     * <code>string max_swap_amount = 7 [json_name = "maxSwapAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The maxSwapAmount.
+     */
+    java.lang.String getMaxSwapAmount();
+    /**
+     * <pre>
+     * Maximum swap amount
+     * </pre>
+     *
+     * <code>string max_swap_amount = 7 [json_name = "maxSwapAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for maxSwapAmount.
+     */
+    com.google.protobuf.ByteString
+        getMaxSwapAmountBytes();
+
+    /**
+     * <pre>
+     * Minimum swap block lock
+     * </pre>
+     *
+     * <code>uint64 min_block_lock = 8 [json_name = "minBlockLock", (.gogoproto.moretags) = "yaml:&#92;"min_block_lock&#92;""];</code>
+     * @return The minBlockLock.
+     */
+    long getMinBlockLock();
+
+    /**
+     * <pre>
+     * Maximum swap block lock
+     * </pre>
+     *
+     * <code>uint64 max_block_lock = 9 [json_name = "maxBlockLock", (.gogoproto.moretags) = "yaml:&#92;"max_block_lock&#92;""];</code>
+     * @return The maxBlockLock.
+     */
+    long getMaxBlockLock();
+  }
+  /**
+   * Protobuf type {@code irismod.htlc.AssetParam}
+   */
+  public static final class AssetParam extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.htlc.AssetParam)
+      AssetParamOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AssetParam.newBuilder() to construct.
+    private AssetParam(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AssetParam() {
+      denom_ = "";
+      deputyAddress_ = "";
+      fixedFee_ = "";
+      minSwapAmount_ = "";
+      maxSwapAmount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AssetParam();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.htlc.HtlcProto.internal_static_irismod_htlc_AssetParam_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.htlc.HtlcProto.internal_static_irismod_htlc_AssetParam_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.htlc.HtlcProto.AssetParam.class, com.irismod.htlc.HtlcProto.AssetParam.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <pre>
+     * name of the asset
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * name of the asset
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUPPLY_LIMIT_FIELD_NUMBER = 2;
+    private com.irismod.htlc.HtlcProto.SupplyLimit supplyLimit_;
+    /**
+     * <pre>
+     * asset supply limit
+     * </pre>
+     *
+     * <code>.irismod.htlc.SupplyLimit supply_limit = 2 [json_name = "supplyLimit", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"supply_limit&#92;""];</code>
+     * @return Whether the supplyLimit field is set.
+     */
+    @java.lang.Override
+    public boolean hasSupplyLimit() {
+      return supplyLimit_ != null;
+    }
+    /**
+     * <pre>
+     * asset supply limit
+     * </pre>
+     *
+     * <code>.irismod.htlc.SupplyLimit supply_limit = 2 [json_name = "supplyLimit", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"supply_limit&#92;""];</code>
+     * @return The supplyLimit.
+     */
+    @java.lang.Override
+    public com.irismod.htlc.HtlcProto.SupplyLimit getSupplyLimit() {
+      return supplyLimit_ == null ? com.irismod.htlc.HtlcProto.SupplyLimit.getDefaultInstance() : supplyLimit_;
+    }
+    /**
+     * <pre>
+     * asset supply limit
+     * </pre>
+     *
+     * <code>.irismod.htlc.SupplyLimit supply_limit = 2 [json_name = "supplyLimit", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"supply_limit&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.irismod.htlc.HtlcProto.SupplyLimitOrBuilder getSupplyLimitOrBuilder() {
+      return supplyLimit_ == null ? com.irismod.htlc.HtlcProto.SupplyLimit.getDefaultInstance() : supplyLimit_;
+    }
+
+    public static final int ACTIVE_FIELD_NUMBER = 3;
+    private boolean active_ = false;
+    /**
+     * <pre>
+     * denotes if asset is available or paused
+     * </pre>
+     *
+     * <code>bool active = 3 [json_name = "active"];</code>
+     * @return The active.
+     */
+    @java.lang.Override
+    public boolean getActive() {
+      return active_;
+    }
+
+    public static final int DEPUTY_ADDRESS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object deputyAddress_ = "";
+    /**
+     * <pre>
+     * the address of the relayer process
+     * </pre>
+     *
+     * <code>string deputy_address = 4 [json_name = "deputyAddress", (.gogoproto.moretags) = "yaml:&#92;"deputy_address&#92;""];</code>
+     * @return The deputyAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getDeputyAddress() {
+      java.lang.Object ref = deputyAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        deputyAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * the address of the relayer process
+     * </pre>
+     *
+     * <code>string deputy_address = 4 [json_name = "deputyAddress", (.gogoproto.moretags) = "yaml:&#92;"deputy_address&#92;""];</code>
+     * @return The bytes for deputyAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDeputyAddressBytes() {
+      java.lang.Object ref = deputyAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deputyAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FIXED_FEE_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object fixedFee_ = "";
+    /**
+     * <pre>
+     * the fixed fee charged by the relayer process for outgoing swaps
+     * </pre>
+     *
+     * <code>string fixed_fee = 5 [json_name = "fixedFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The fixedFee.
+     */
+    @java.lang.Override
+    public java.lang.String getFixedFee() {
+      java.lang.Object ref = fixedFee_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fixedFee_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * the fixed fee charged by the relayer process for outgoing swaps
+     * </pre>
+     *
+     * <code>string fixed_fee = 5 [json_name = "fixedFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for fixedFee.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFixedFeeBytes() {
+      java.lang.Object ref = fixedFee_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fixedFee_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MIN_SWAP_AMOUNT_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object minSwapAmount_ = "";
+    /**
+     * <pre>
+     * Minimum swap amount
+     * </pre>
+     *
+     * <code>string min_swap_amount = 6 [json_name = "minSwapAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The minSwapAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getMinSwapAmount() {
+      java.lang.Object ref = minSwapAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        minSwapAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Minimum swap amount
+     * </pre>
+     *
+     * <code>string min_swap_amount = 6 [json_name = "minSwapAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for minSwapAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMinSwapAmountBytes() {
+      java.lang.Object ref = minSwapAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        minSwapAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MAX_SWAP_AMOUNT_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object maxSwapAmount_ = "";
+    /**
+     * <pre>
+     * Maximum swap amount
+     * </pre>
+     *
+     * <code>string max_swap_amount = 7 [json_name = "maxSwapAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The maxSwapAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getMaxSwapAmount() {
+      java.lang.Object ref = maxSwapAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        maxSwapAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Maximum swap amount
+     * </pre>
+     *
+     * <code>string max_swap_amount = 7 [json_name = "maxSwapAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for maxSwapAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMaxSwapAmountBytes() {
+      java.lang.Object ref = maxSwapAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        maxSwapAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MIN_BLOCK_LOCK_FIELD_NUMBER = 8;
+    private long minBlockLock_ = 0L;
+    /**
+     * <pre>
+     * Minimum swap block lock
+     * </pre>
+     *
+     * <code>uint64 min_block_lock = 8 [json_name = "minBlockLock", (.gogoproto.moretags) = "yaml:&#92;"min_block_lock&#92;""];</code>
+     * @return The minBlockLock.
+     */
+    @java.lang.Override
+    public long getMinBlockLock() {
+      return minBlockLock_;
+    }
+
+    public static final int MAX_BLOCK_LOCK_FIELD_NUMBER = 9;
+    private long maxBlockLock_ = 0L;
+    /**
+     * <pre>
+     * Maximum swap block lock
+     * </pre>
+     *
+     * <code>uint64 max_block_lock = 9 [json_name = "maxBlockLock", (.gogoproto.moretags) = "yaml:&#92;"max_block_lock&#92;""];</code>
+     * @return The maxBlockLock.
+     */
+    @java.lang.Override
+    public long getMaxBlockLock() {
+      return maxBlockLock_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (supplyLimit_ != null) {
+        output.writeMessage(2, getSupplyLimit());
+      }
+      if (active_ != false) {
+        output.writeBool(3, active_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deputyAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, deputyAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fixedFee_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, fixedFee_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minSwapAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, minSwapAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxSwapAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, maxSwapAmount_);
+      }
+      if (minBlockLock_ != 0L) {
+        output.writeUInt64(8, minBlockLock_);
+      }
+      if (maxBlockLock_ != 0L) {
+        output.writeUInt64(9, maxBlockLock_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (supplyLimit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getSupplyLimit());
+      }
+      if (active_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, active_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deputyAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, deputyAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fixedFee_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, fixedFee_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minSwapAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, minSwapAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxSwapAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, maxSwapAmount_);
+      }
+      if (minBlockLock_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(8, minBlockLock_);
+      }
+      if (maxBlockLock_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(9, maxBlockLock_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.htlc.HtlcProto.AssetParam)) {
+        return super.equals(obj);
+      }
+      com.irismod.htlc.HtlcProto.AssetParam other = (com.irismod.htlc.HtlcProto.AssetParam) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (hasSupplyLimit() != other.hasSupplyLimit()) return false;
+      if (hasSupplyLimit()) {
+        if (!getSupplyLimit()
+            .equals(other.getSupplyLimit())) return false;
+      }
+      if (getActive()
+          != other.getActive()) return false;
+      if (!getDeputyAddress()
+          .equals(other.getDeputyAddress())) return false;
+      if (!getFixedFee()
+          .equals(other.getFixedFee())) return false;
+      if (!getMinSwapAmount()
+          .equals(other.getMinSwapAmount())) return false;
+      if (!getMaxSwapAmount()
+          .equals(other.getMaxSwapAmount())) return false;
+      if (getMinBlockLock()
+          != other.getMinBlockLock()) return false;
+      if (getMaxBlockLock()
+          != other.getMaxBlockLock()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      if (hasSupplyLimit()) {
+        hash = (37 * hash) + SUPPLY_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getSupplyLimit().hashCode();
+      }
+      hash = (37 * hash) + ACTIVE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getActive());
+      hash = (37 * hash) + DEPUTY_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getDeputyAddress().hashCode();
+      hash = (37 * hash) + FIXED_FEE_FIELD_NUMBER;
+      hash = (53 * hash) + getFixedFee().hashCode();
+      hash = (37 * hash) + MIN_SWAP_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getMinSwapAmount().hashCode();
+      hash = (37 * hash) + MAX_SWAP_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getMaxSwapAmount().hashCode();
+      hash = (37 * hash) + MIN_BLOCK_LOCK_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMinBlockLock());
+      hash = (37 * hash) + MAX_BLOCK_LOCK_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMaxBlockLock());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.htlc.HtlcProto.AssetParam parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.HtlcProto.AssetParam parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.HtlcProto.AssetParam parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.HtlcProto.AssetParam parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.HtlcProto.AssetParam parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.HtlcProto.AssetParam parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.HtlcProto.AssetParam parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.htlc.HtlcProto.AssetParam parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.htlc.HtlcProto.AssetParam parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.htlc.HtlcProto.AssetParam parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.htlc.HtlcProto.AssetParam parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.htlc.HtlcProto.AssetParam parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.htlc.HtlcProto.AssetParam prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code irismod.htlc.AssetParam}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.htlc.AssetParam)
+        com.irismod.htlc.HtlcProto.AssetParamOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.htlc.HtlcProto.internal_static_irismod_htlc_AssetParam_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.htlc.HtlcProto.internal_static_irismod_htlc_AssetParam_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.htlc.HtlcProto.AssetParam.class, com.irismod.htlc.HtlcProto.AssetParam.Builder.class);
+      }
+
+      // Construct using com.irismod.htlc.HtlcProto.AssetParam.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        supplyLimit_ = null;
+        if (supplyLimitBuilder_ != null) {
+          supplyLimitBuilder_.dispose();
+          supplyLimitBuilder_ = null;
+        }
+        active_ = false;
+        deputyAddress_ = "";
+        fixedFee_ = "";
+        minSwapAmount_ = "";
+        maxSwapAmount_ = "";
+        minBlockLock_ = 0L;
+        maxBlockLock_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.htlc.HtlcProto.internal_static_irismod_htlc_AssetParam_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.HtlcProto.AssetParam getDefaultInstanceForType() {
+        return com.irismod.htlc.HtlcProto.AssetParam.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.HtlcProto.AssetParam build() {
+        com.irismod.htlc.HtlcProto.AssetParam result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.HtlcProto.AssetParam buildPartial() {
+        com.irismod.htlc.HtlcProto.AssetParam result = new com.irismod.htlc.HtlcProto.AssetParam(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.htlc.HtlcProto.AssetParam result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.supplyLimit_ = supplyLimitBuilder_ == null
+              ? supplyLimit_
+              : supplyLimitBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.active_ = active_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.deputyAddress_ = deputyAddress_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.fixedFee_ = fixedFee_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.minSwapAmount_ = minSwapAmount_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.maxSwapAmount_ = maxSwapAmount_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.minBlockLock_ = minBlockLock_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.maxBlockLock_ = maxBlockLock_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.htlc.HtlcProto.AssetParam) {
+          return mergeFrom((com.irismod.htlc.HtlcProto.AssetParam)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.htlc.HtlcProto.AssetParam other) {
+        if (other == com.irismod.htlc.HtlcProto.AssetParam.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasSupplyLimit()) {
+          mergeSupplyLimit(other.getSupplyLimit());
+        }
+        if (other.getActive() != false) {
+          setActive(other.getActive());
+        }
+        if (!other.getDeputyAddress().isEmpty()) {
+          deputyAddress_ = other.deputyAddress_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getFixedFee().isEmpty()) {
+          fixedFee_ = other.fixedFee_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getMinSwapAmount().isEmpty()) {
+          minSwapAmount_ = other.minSwapAmount_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getMaxSwapAmount().isEmpty()) {
+          maxSwapAmount_ = other.maxSwapAmount_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (other.getMinBlockLock() != 0L) {
+          setMinBlockLock(other.getMinBlockLock());
+        }
+        if (other.getMaxBlockLock() != 0L) {
+          setMaxBlockLock(other.getMaxBlockLock());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getSupplyLimitFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                active_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                deputyAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                fixedFee_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                minSwapAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                maxSwapAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 64: {
+                minBlockLock_ = input.readUInt64();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              case 72: {
+                maxBlockLock_ = input.readUInt64();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 72
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <pre>
+       * name of the asset
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * name of the asset
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * name of the asset
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * name of the asset
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * name of the asset
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.irismod.htlc.HtlcProto.SupplyLimit supplyLimit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.irismod.htlc.HtlcProto.SupplyLimit, com.irismod.htlc.HtlcProto.SupplyLimit.Builder, com.irismod.htlc.HtlcProto.SupplyLimitOrBuilder> supplyLimitBuilder_;
+      /**
+       * <pre>
+       * asset supply limit
+       * </pre>
+       *
+       * <code>.irismod.htlc.SupplyLimit supply_limit = 2 [json_name = "supplyLimit", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"supply_limit&#92;""];</code>
+       * @return Whether the supplyLimit field is set.
+       */
+      public boolean hasSupplyLimit() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * asset supply limit
+       * </pre>
+       *
+       * <code>.irismod.htlc.SupplyLimit supply_limit = 2 [json_name = "supplyLimit", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"supply_limit&#92;""];</code>
+       * @return The supplyLimit.
+       */
+      public com.irismod.htlc.HtlcProto.SupplyLimit getSupplyLimit() {
+        if (supplyLimitBuilder_ == null) {
+          return supplyLimit_ == null ? com.irismod.htlc.HtlcProto.SupplyLimit.getDefaultInstance() : supplyLimit_;
+        } else {
+          return supplyLimitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * asset supply limit
+       * </pre>
+       *
+       * <code>.irismod.htlc.SupplyLimit supply_limit = 2 [json_name = "supplyLimit", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"supply_limit&#92;""];</code>
+       */
+      public Builder setSupplyLimit(com.irismod.htlc.HtlcProto.SupplyLimit value) {
+        if (supplyLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          supplyLimit_ = value;
+        } else {
+          supplyLimitBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * asset supply limit
+       * </pre>
+       *
+       * <code>.irismod.htlc.SupplyLimit supply_limit = 2 [json_name = "supplyLimit", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"supply_limit&#92;""];</code>
+       */
+      public Builder setSupplyLimit(
+          com.irismod.htlc.HtlcProto.SupplyLimit.Builder builderForValue) {
+        if (supplyLimitBuilder_ == null) {
+          supplyLimit_ = builderForValue.build();
+        } else {
+          supplyLimitBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * asset supply limit
+       * </pre>
+       *
+       * <code>.irismod.htlc.SupplyLimit supply_limit = 2 [json_name = "supplyLimit", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"supply_limit&#92;""];</code>
+       */
+      public Builder mergeSupplyLimit(com.irismod.htlc.HtlcProto.SupplyLimit value) {
+        if (supplyLimitBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            supplyLimit_ != null &&
+            supplyLimit_ != com.irismod.htlc.HtlcProto.SupplyLimit.getDefaultInstance()) {
+            getSupplyLimitBuilder().mergeFrom(value);
+          } else {
+            supplyLimit_ = value;
+          }
+        } else {
+          supplyLimitBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * asset supply limit
+       * </pre>
+       *
+       * <code>.irismod.htlc.SupplyLimit supply_limit = 2 [json_name = "supplyLimit", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"supply_limit&#92;""];</code>
+       */
+      public Builder clearSupplyLimit() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        supplyLimit_ = null;
+        if (supplyLimitBuilder_ != null) {
+          supplyLimitBuilder_.dispose();
+          supplyLimitBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * asset supply limit
+       * </pre>
+       *
+       * <code>.irismod.htlc.SupplyLimit supply_limit = 2 [json_name = "supplyLimit", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"supply_limit&#92;""];</code>
+       */
+      public com.irismod.htlc.HtlcProto.SupplyLimit.Builder getSupplyLimitBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getSupplyLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * asset supply limit
+       * </pre>
+       *
+       * <code>.irismod.htlc.SupplyLimit supply_limit = 2 [json_name = "supplyLimit", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"supply_limit&#92;""];</code>
+       */
+      public com.irismod.htlc.HtlcProto.SupplyLimitOrBuilder getSupplyLimitOrBuilder() {
+        if (supplyLimitBuilder_ != null) {
+          return supplyLimitBuilder_.getMessageOrBuilder();
+        } else {
+          return supplyLimit_ == null ?
+              com.irismod.htlc.HtlcProto.SupplyLimit.getDefaultInstance() : supplyLimit_;
+        }
+      }
+      /**
+       * <pre>
+       * asset supply limit
+       * </pre>
+       *
+       * <code>.irismod.htlc.SupplyLimit supply_limit = 2 [json_name = "supplyLimit", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"supply_limit&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.irismod.htlc.HtlcProto.SupplyLimit, com.irismod.htlc.HtlcProto.SupplyLimit.Builder, com.irismod.htlc.HtlcProto.SupplyLimitOrBuilder> 
+          getSupplyLimitFieldBuilder() {
+        if (supplyLimitBuilder_ == null) {
+          supplyLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.irismod.htlc.HtlcProto.SupplyLimit, com.irismod.htlc.HtlcProto.SupplyLimit.Builder, com.irismod.htlc.HtlcProto.SupplyLimitOrBuilder>(
+                  getSupplyLimit(),
+                  getParentForChildren(),
+                  isClean());
+          supplyLimit_ = null;
+        }
+        return supplyLimitBuilder_;
+      }
+
+      private boolean active_ ;
+      /**
+       * <pre>
+       * denotes if asset is available or paused
+       * </pre>
+       *
+       * <code>bool active = 3 [json_name = "active"];</code>
+       * @return The active.
+       */
+      @java.lang.Override
+      public boolean getActive() {
+        return active_;
+      }
+      /**
+       * <pre>
+       * denotes if asset is available or paused
+       * </pre>
+       *
+       * <code>bool active = 3 [json_name = "active"];</code>
+       * @param value The active to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActive(boolean value) {
+
+        active_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * denotes if asset is available or paused
+       * </pre>
+       *
+       * <code>bool active = 3 [json_name = "active"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearActive() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        active_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object deputyAddress_ = "";
+      /**
+       * <pre>
+       * the address of the relayer process
+       * </pre>
+       *
+       * <code>string deputy_address = 4 [json_name = "deputyAddress", (.gogoproto.moretags) = "yaml:&#92;"deputy_address&#92;""];</code>
+       * @return The deputyAddress.
+       */
+      public java.lang.String getDeputyAddress() {
+        java.lang.Object ref = deputyAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          deputyAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the address of the relayer process
+       * </pre>
+       *
+       * <code>string deputy_address = 4 [json_name = "deputyAddress", (.gogoproto.moretags) = "yaml:&#92;"deputy_address&#92;""];</code>
+       * @return The bytes for deputyAddress.
+       */
+      public com.google.protobuf.ByteString
+          getDeputyAddressBytes() {
+        java.lang.Object ref = deputyAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          deputyAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the address of the relayer process
+       * </pre>
+       *
+       * <code>string deputy_address = 4 [json_name = "deputyAddress", (.gogoproto.moretags) = "yaml:&#92;"deputy_address&#92;""];</code>
+       * @param value The deputyAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeputyAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        deputyAddress_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the address of the relayer process
+       * </pre>
+       *
+       * <code>string deputy_address = 4 [json_name = "deputyAddress", (.gogoproto.moretags) = "yaml:&#92;"deputy_address&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeputyAddress() {
+        deputyAddress_ = getDefaultInstance().getDeputyAddress();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the address of the relayer process
+       * </pre>
+       *
+       * <code>string deputy_address = 4 [json_name = "deputyAddress", (.gogoproto.moretags) = "yaml:&#92;"deputy_address&#92;""];</code>
+       * @param value The bytes for deputyAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeputyAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        deputyAddress_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object fixedFee_ = "";
+      /**
+       * <pre>
+       * the fixed fee charged by the relayer process for outgoing swaps
+       * </pre>
+       *
+       * <code>string fixed_fee = 5 [json_name = "fixedFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The fixedFee.
+       */
+      public java.lang.String getFixedFee() {
+        java.lang.Object ref = fixedFee_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          fixedFee_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the fixed fee charged by the relayer process for outgoing swaps
+       * </pre>
+       *
+       * <code>string fixed_fee = 5 [json_name = "fixedFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for fixedFee.
+       */
+      public com.google.protobuf.ByteString
+          getFixedFeeBytes() {
+        java.lang.Object ref = fixedFee_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fixedFee_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the fixed fee charged by the relayer process for outgoing swaps
+       * </pre>
+       *
+       * <code>string fixed_fee = 5 [json_name = "fixedFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The fixedFee to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFixedFee(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        fixedFee_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the fixed fee charged by the relayer process for outgoing swaps
+       * </pre>
+       *
+       * <code>string fixed_fee = 5 [json_name = "fixedFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFixedFee() {
+        fixedFee_ = getDefaultInstance().getFixedFee();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the fixed fee charged by the relayer process for outgoing swaps
+       * </pre>
+       *
+       * <code>string fixed_fee = 5 [json_name = "fixedFee", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for fixedFee to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFixedFeeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        fixedFee_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object minSwapAmount_ = "";
+      /**
+       * <pre>
+       * Minimum swap amount
+       * </pre>
+       *
+       * <code>string min_swap_amount = 6 [json_name = "minSwapAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The minSwapAmount.
+       */
+      public java.lang.String getMinSwapAmount() {
+        java.lang.Object ref = minSwapAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          minSwapAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Minimum swap amount
+       * </pre>
+       *
+       * <code>string min_swap_amount = 6 [json_name = "minSwapAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for minSwapAmount.
+       */
+      public com.google.protobuf.ByteString
+          getMinSwapAmountBytes() {
+        java.lang.Object ref = minSwapAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          minSwapAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Minimum swap amount
+       * </pre>
+       *
+       * <code>string min_swap_amount = 6 [json_name = "minSwapAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The minSwapAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinSwapAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        minSwapAmount_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum swap amount
+       * </pre>
+       *
+       * <code>string min_swap_amount = 6 [json_name = "minSwapAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinSwapAmount() {
+        minSwapAmount_ = getDefaultInstance().getMinSwapAmount();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum swap amount
+       * </pre>
+       *
+       * <code>string min_swap_amount = 6 [json_name = "minSwapAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for minSwapAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinSwapAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        minSwapAmount_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object maxSwapAmount_ = "";
+      /**
+       * <pre>
+       * Maximum swap amount
+       * </pre>
+       *
+       * <code>string max_swap_amount = 7 [json_name = "maxSwapAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The maxSwapAmount.
+       */
+      public java.lang.String getMaxSwapAmount() {
+        java.lang.Object ref = maxSwapAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          maxSwapAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Maximum swap amount
+       * </pre>
+       *
+       * <code>string max_swap_amount = 7 [json_name = "maxSwapAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for maxSwapAmount.
+       */
+      public com.google.protobuf.ByteString
+          getMaxSwapAmountBytes() {
+        java.lang.Object ref = maxSwapAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          maxSwapAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Maximum swap amount
+       * </pre>
+       *
+       * <code>string max_swap_amount = 7 [json_name = "maxSwapAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The maxSwapAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxSwapAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        maxSwapAmount_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum swap amount
+       * </pre>
+       *
+       * <code>string max_swap_amount = 7 [json_name = "maxSwapAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxSwapAmount() {
+        maxSwapAmount_ = getDefaultInstance().getMaxSwapAmount();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum swap amount
+       * </pre>
+       *
+       * <code>string max_swap_amount = 7 [json_name = "maxSwapAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for maxSwapAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxSwapAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        maxSwapAmount_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private long minBlockLock_ ;
+      /**
+       * <pre>
+       * Minimum swap block lock
+       * </pre>
+       *
+       * <code>uint64 min_block_lock = 8 [json_name = "minBlockLock", (.gogoproto.moretags) = "yaml:&#92;"min_block_lock&#92;""];</code>
+       * @return The minBlockLock.
+       */
+      @java.lang.Override
+      public long getMinBlockLock() {
+        return minBlockLock_;
+      }
+      /**
+       * <pre>
+       * Minimum swap block lock
+       * </pre>
+       *
+       * <code>uint64 min_block_lock = 8 [json_name = "minBlockLock", (.gogoproto.moretags) = "yaml:&#92;"min_block_lock&#92;""];</code>
+       * @param value The minBlockLock to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinBlockLock(long value) {
+
+        minBlockLock_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum swap block lock
+       * </pre>
+       *
+       * <code>uint64 min_block_lock = 8 [json_name = "minBlockLock", (.gogoproto.moretags) = "yaml:&#92;"min_block_lock&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinBlockLock() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        minBlockLock_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long maxBlockLock_ ;
+      /**
+       * <pre>
+       * Maximum swap block lock
+       * </pre>
+       *
+       * <code>uint64 max_block_lock = 9 [json_name = "maxBlockLock", (.gogoproto.moretags) = "yaml:&#92;"max_block_lock&#92;""];</code>
+       * @return The maxBlockLock.
+       */
+      @java.lang.Override
+      public long getMaxBlockLock() {
+        return maxBlockLock_;
+      }
+      /**
+       * <pre>
+       * Maximum swap block lock
+       * </pre>
+       *
+       * <code>uint64 max_block_lock = 9 [json_name = "maxBlockLock", (.gogoproto.moretags) = "yaml:&#92;"max_block_lock&#92;""];</code>
+       * @param value The maxBlockLock to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxBlockLock(long value) {
+
+        maxBlockLock_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum swap block lock
+       * </pre>
+       *
+       * <code>uint64 max_block_lock = 9 [json_name = "maxBlockLock", (.gogoproto.moretags) = "yaml:&#92;"max_block_lock&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxBlockLock() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        maxBlockLock_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.htlc.AssetParam)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.htlc.AssetParam)
+    private static final com.irismod.htlc.HtlcProto.AssetParam DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.htlc.HtlcProto.AssetParam();
+    }
+
+    public static com.irismod.htlc.HtlcProto.AssetParam getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AssetParam>
+        PARSER = new com.google.protobuf.AbstractParser<AssetParam>() {
+      @java.lang.Override
+      public AssetParam parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AssetParam> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AssetParam> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.htlc.HtlcProto.AssetParam getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SupplyLimitOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.htlc.SupplyLimit)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * the absolute supply limit for an asset
+     * </pre>
+     *
+     * <code>string limit = 1 [json_name = "limit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The limit.
+     */
+    java.lang.String getLimit();
+    /**
+     * <pre>
+     * the absolute supply limit for an asset
+     * </pre>
+     *
+     * <code>string limit = 1 [json_name = "limit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for limit.
+     */
+    com.google.protobuf.ByteString
+        getLimitBytes();
+
+    /**
+     * <pre>
+     * boolean for if the supply is also limited by time
+     * </pre>
+     *
+     * <code>bool time_limited = 2 [json_name = "timeLimited", (.gogoproto.moretags) = "yaml:&#92;"time_limited&#92;""];</code>
+     * @return The timeLimited.
+     */
+    boolean getTimeLimited();
+
+    /**
+     * <pre>
+     * the duration for which the supply time limit applies
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration time_period = 3 [json_name = "timePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the timePeriod field is set.
+     */
+    boolean hasTimePeriod();
+    /**
+     * <pre>
+     * the duration for which the supply time limit applies
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration time_period = 3 [json_name = "timePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The timePeriod.
+     */
+    com.google.protobuf.Duration getTimePeriod();
+    /**
+     * <pre>
+     * the duration for which the supply time limit applies
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration time_period = 3 [json_name = "timePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getTimePeriodOrBuilder();
+
+    /**
+     * <pre>
+     * the supply limit for an asset for each time period
+     * </pre>
+     *
+     * <code>string time_based_limit = 4 [json_name = "timeBasedLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The timeBasedLimit.
+     */
+    java.lang.String getTimeBasedLimit();
+    /**
+     * <pre>
+     * the supply limit for an asset for each time period
+     * </pre>
+     *
+     * <code>string time_based_limit = 4 [json_name = "timeBasedLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for timeBasedLimit.
+     */
+    com.google.protobuf.ByteString
+        getTimeBasedLimitBytes();
+  }
+  /**
+   * Protobuf type {@code irismod.htlc.SupplyLimit}
+   */
+  public static final class SupplyLimit extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.htlc.SupplyLimit)
+      SupplyLimitOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SupplyLimit.newBuilder() to construct.
+    private SupplyLimit(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SupplyLimit() {
+      limit_ = "";
+      timeBasedLimit_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SupplyLimit();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.htlc.HtlcProto.internal_static_irismod_htlc_SupplyLimit_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.htlc.HtlcProto.internal_static_irismod_htlc_SupplyLimit_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.htlc.HtlcProto.SupplyLimit.class, com.irismod.htlc.HtlcProto.SupplyLimit.Builder.class);
+    }
+
+    public static final int LIMIT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object limit_ = "";
+    /**
+     * <pre>
+     * the absolute supply limit for an asset
+     * </pre>
+     *
+     * <code>string limit = 1 [json_name = "limit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The limit.
+     */
+    @java.lang.Override
+    public java.lang.String getLimit() {
+      java.lang.Object ref = limit_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        limit_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * the absolute supply limit for an asset
+     * </pre>
+     *
+     * <code>string limit = 1 [json_name = "limit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for limit.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLimitBytes() {
+      java.lang.Object ref = limit_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        limit_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TIME_LIMITED_FIELD_NUMBER = 2;
+    private boolean timeLimited_ = false;
+    /**
+     * <pre>
+     * boolean for if the supply is also limited by time
+     * </pre>
+     *
+     * <code>bool time_limited = 2 [json_name = "timeLimited", (.gogoproto.moretags) = "yaml:&#92;"time_limited&#92;""];</code>
+     * @return The timeLimited.
+     */
+    @java.lang.Override
+    public boolean getTimeLimited() {
+      return timeLimited_;
+    }
+
+    public static final int TIME_PERIOD_FIELD_NUMBER = 3;
+    private com.google.protobuf.Duration timePeriod_;
+    /**
+     * <pre>
+     * the duration for which the supply time limit applies
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration time_period = 3 [json_name = "timePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the timePeriod field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimePeriod() {
+      return timePeriod_ != null;
+    }
+    /**
+     * <pre>
+     * the duration for which the supply time limit applies
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration time_period = 3 [json_name = "timePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The timePeriod.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getTimePeriod() {
+      return timePeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : timePeriod_;
+    }
+    /**
+     * <pre>
+     * the duration for which the supply time limit applies
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration time_period = 3 [json_name = "timePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getTimePeriodOrBuilder() {
+      return timePeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : timePeriod_;
+    }
+
+    public static final int TIME_BASED_LIMIT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object timeBasedLimit_ = "";
+    /**
+     * <pre>
+     * the supply limit for an asset for each time period
+     * </pre>
+     *
+     * <code>string time_based_limit = 4 [json_name = "timeBasedLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The timeBasedLimit.
+     */
+    @java.lang.Override
+    public java.lang.String getTimeBasedLimit() {
+      java.lang.Object ref = timeBasedLimit_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        timeBasedLimit_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * the supply limit for an asset for each time period
+     * </pre>
+     *
+     * <code>string time_based_limit = 4 [json_name = "timeBasedLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for timeBasedLimit.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTimeBasedLimitBytes() {
+      java.lang.Object ref = timeBasedLimit_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        timeBasedLimit_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(limit_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, limit_);
+      }
+      if (timeLimited_ != false) {
+        output.writeBool(2, timeLimited_);
+      }
+      if (timePeriod_ != null) {
+        output.writeMessage(3, getTimePeriod());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timeBasedLimit_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, timeBasedLimit_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(limit_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, limit_);
+      }
+      if (timeLimited_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, timeLimited_);
+      }
+      if (timePeriod_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getTimePeriod());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timeBasedLimit_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, timeBasedLimit_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.htlc.HtlcProto.SupplyLimit)) {
+        return super.equals(obj);
+      }
+      com.irismod.htlc.HtlcProto.SupplyLimit other = (com.irismod.htlc.HtlcProto.SupplyLimit) obj;
+
+      if (!getLimit()
+          .equals(other.getLimit())) return false;
+      if (getTimeLimited()
+          != other.getTimeLimited()) return false;
+      if (hasTimePeriod() != other.hasTimePeriod()) return false;
+      if (hasTimePeriod()) {
+        if (!getTimePeriod()
+            .equals(other.getTimePeriod())) return false;
+      }
+      if (!getTimeBasedLimit()
+          .equals(other.getTimeBasedLimit())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + getLimit().hashCode();
+      hash = (37 * hash) + TIME_LIMITED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getTimeLimited());
+      if (hasTimePeriod()) {
+        hash = (37 * hash) + TIME_PERIOD_FIELD_NUMBER;
+        hash = (53 * hash) + getTimePeriod().hashCode();
+      }
+      hash = (37 * hash) + TIME_BASED_LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + getTimeBasedLimit().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.htlc.HtlcProto.SupplyLimit parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.HtlcProto.SupplyLimit parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.HtlcProto.SupplyLimit parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.HtlcProto.SupplyLimit parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.HtlcProto.SupplyLimit parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.HtlcProto.SupplyLimit parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.HtlcProto.SupplyLimit parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.htlc.HtlcProto.SupplyLimit parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.htlc.HtlcProto.SupplyLimit parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.htlc.HtlcProto.SupplyLimit parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.htlc.HtlcProto.SupplyLimit parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.htlc.HtlcProto.SupplyLimit parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.htlc.HtlcProto.SupplyLimit prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code irismod.htlc.SupplyLimit}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.htlc.SupplyLimit)
+        com.irismod.htlc.HtlcProto.SupplyLimitOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.htlc.HtlcProto.internal_static_irismod_htlc_SupplyLimit_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.htlc.HtlcProto.internal_static_irismod_htlc_SupplyLimit_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.htlc.HtlcProto.SupplyLimit.class, com.irismod.htlc.HtlcProto.SupplyLimit.Builder.class);
+      }
+
+      // Construct using com.irismod.htlc.HtlcProto.SupplyLimit.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        limit_ = "";
+        timeLimited_ = false;
+        timePeriod_ = null;
+        if (timePeriodBuilder_ != null) {
+          timePeriodBuilder_.dispose();
+          timePeriodBuilder_ = null;
+        }
+        timeBasedLimit_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.htlc.HtlcProto.internal_static_irismod_htlc_SupplyLimit_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.HtlcProto.SupplyLimit getDefaultInstanceForType() {
+        return com.irismod.htlc.HtlcProto.SupplyLimit.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.HtlcProto.SupplyLimit build() {
+        com.irismod.htlc.HtlcProto.SupplyLimit result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.HtlcProto.SupplyLimit buildPartial() {
+        com.irismod.htlc.HtlcProto.SupplyLimit result = new com.irismod.htlc.HtlcProto.SupplyLimit(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.htlc.HtlcProto.SupplyLimit result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.limit_ = limit_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.timeLimited_ = timeLimited_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.timePeriod_ = timePeriodBuilder_ == null
+              ? timePeriod_
+              : timePeriodBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.timeBasedLimit_ = timeBasedLimit_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.htlc.HtlcProto.SupplyLimit) {
+          return mergeFrom((com.irismod.htlc.HtlcProto.SupplyLimit)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.htlc.HtlcProto.SupplyLimit other) {
+        if (other == com.irismod.htlc.HtlcProto.SupplyLimit.getDefaultInstance()) return this;
+        if (!other.getLimit().isEmpty()) {
+          limit_ = other.limit_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getTimeLimited() != false) {
+          setTimeLimited(other.getTimeLimited());
+        }
+        if (other.hasTimePeriod()) {
+          mergeTimePeriod(other.getTimePeriod());
+        }
+        if (!other.getTimeBasedLimit().isEmpty()) {
+          timeBasedLimit_ = other.timeBasedLimit_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                limit_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                timeLimited_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                input.readMessage(
+                    getTimePeriodFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                timeBasedLimit_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object limit_ = "";
+      /**
+       * <pre>
+       * the absolute supply limit for an asset
+       * </pre>
+       *
+       * <code>string limit = 1 [json_name = "limit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The limit.
+       */
+      public java.lang.String getLimit() {
+        java.lang.Object ref = limit_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          limit_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the absolute supply limit for an asset
+       * </pre>
+       *
+       * <code>string limit = 1 [json_name = "limit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for limit.
+       */
+      public com.google.protobuf.ByteString
+          getLimitBytes() {
+        java.lang.Object ref = limit_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          limit_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the absolute supply limit for an asset
+       * </pre>
+       *
+       * <code>string limit = 1 [json_name = "limit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The limit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLimit(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        limit_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the absolute supply limit for an asset
+       * </pre>
+       *
+       * <code>string limit = 1 [json_name = "limit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLimit() {
+        limit_ = getDefaultInstance().getLimit();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the absolute supply limit for an asset
+       * </pre>
+       *
+       * <code>string limit = 1 [json_name = "limit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for limit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLimitBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        limit_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private boolean timeLimited_ ;
+      /**
+       * <pre>
+       * boolean for if the supply is also limited by time
+       * </pre>
+       *
+       * <code>bool time_limited = 2 [json_name = "timeLimited", (.gogoproto.moretags) = "yaml:&#92;"time_limited&#92;""];</code>
+       * @return The timeLimited.
+       */
+      @java.lang.Override
+      public boolean getTimeLimited() {
+        return timeLimited_;
+      }
+      /**
+       * <pre>
+       * boolean for if the supply is also limited by time
+       * </pre>
+       *
+       * <code>bool time_limited = 2 [json_name = "timeLimited", (.gogoproto.moretags) = "yaml:&#92;"time_limited&#92;""];</code>
+       * @param value The timeLimited to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimeLimited(boolean value) {
+
+        timeLimited_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * boolean for if the supply is also limited by time
+       * </pre>
+       *
+       * <code>bool time_limited = 2 [json_name = "timeLimited", (.gogoproto.moretags) = "yaml:&#92;"time_limited&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimeLimited() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        timeLimited_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration timePeriod_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> timePeriodBuilder_;
+      /**
+       * <pre>
+       * the duration for which the supply time limit applies
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration time_period = 3 [json_name = "timePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return Whether the timePeriod field is set.
+       */
+      public boolean hasTimePeriod() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * the duration for which the supply time limit applies
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration time_period = 3 [json_name = "timePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return The timePeriod.
+       */
+      public com.google.protobuf.Duration getTimePeriod() {
+        if (timePeriodBuilder_ == null) {
+          return timePeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : timePeriod_;
+        } else {
+          return timePeriodBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * the duration for which the supply time limit applies
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration time_period = 3 [json_name = "timePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setTimePeriod(com.google.protobuf.Duration value) {
+        if (timePeriodBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          timePeriod_ = value;
+        } else {
+          timePeriodBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the duration for which the supply time limit applies
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration time_period = 3 [json_name = "timePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setTimePeriod(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (timePeriodBuilder_ == null) {
+          timePeriod_ = builderForValue.build();
+        } else {
+          timePeriodBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the duration for which the supply time limit applies
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration time_period = 3 [json_name = "timePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeTimePeriod(com.google.protobuf.Duration value) {
+        if (timePeriodBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            timePeriod_ != null &&
+            timePeriod_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getTimePeriodBuilder().mergeFrom(value);
+          } else {
+            timePeriod_ = value;
+          }
+        } else {
+          timePeriodBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the duration for which the supply time limit applies
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration time_period = 3 [json_name = "timePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearTimePeriod() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        timePeriod_ = null;
+        if (timePeriodBuilder_ != null) {
+          timePeriodBuilder_.dispose();
+          timePeriodBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the duration for which the supply time limit applies
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration time_period = 3 [json_name = "timePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getTimePeriodBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getTimePeriodFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * the duration for which the supply time limit applies
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration time_period = 3 [json_name = "timePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getTimePeriodOrBuilder() {
+        if (timePeriodBuilder_ != null) {
+          return timePeriodBuilder_.getMessageOrBuilder();
+        } else {
+          return timePeriod_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : timePeriod_;
+        }
+      }
+      /**
+       * <pre>
+       * the duration for which the supply time limit applies
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration time_period = 3 [json_name = "timePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getTimePeriodFieldBuilder() {
+        if (timePeriodBuilder_ == null) {
+          timePeriodBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getTimePeriod(),
+                  getParentForChildren(),
+                  isClean());
+          timePeriod_ = null;
+        }
+        return timePeriodBuilder_;
+      }
+
+      private java.lang.Object timeBasedLimit_ = "";
+      /**
+       * <pre>
+       * the supply limit for an asset for each time period
+       * </pre>
+       *
+       * <code>string time_based_limit = 4 [json_name = "timeBasedLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The timeBasedLimit.
+       */
+      public java.lang.String getTimeBasedLimit() {
+        java.lang.Object ref = timeBasedLimit_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          timeBasedLimit_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the supply limit for an asset for each time period
+       * </pre>
+       *
+       * <code>string time_based_limit = 4 [json_name = "timeBasedLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for timeBasedLimit.
+       */
+      public com.google.protobuf.ByteString
+          getTimeBasedLimitBytes() {
+        java.lang.Object ref = timeBasedLimit_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          timeBasedLimit_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the supply limit for an asset for each time period
+       * </pre>
+       *
+       * <code>string time_based_limit = 4 [json_name = "timeBasedLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The timeBasedLimit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimeBasedLimit(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        timeBasedLimit_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the supply limit for an asset for each time period
+       * </pre>
+       *
+       * <code>string time_based_limit = 4 [json_name = "timeBasedLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimeBasedLimit() {
+        timeBasedLimit_ = getDefaultInstance().getTimeBasedLimit();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the supply limit for an asset for each time period
+       * </pre>
+       *
+       * <code>string time_based_limit = 4 [json_name = "timeBasedLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for timeBasedLimit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimeBasedLimitBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        timeBasedLimit_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.htlc.SupplyLimit)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.htlc.SupplyLimit)
+    private static final com.irismod.htlc.HtlcProto.SupplyLimit DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.htlc.HtlcProto.SupplyLimit();
+    }
+
+    public static com.irismod.htlc.HtlcProto.SupplyLimit getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SupplyLimit>
+        PARSER = new com.google.protobuf.AbstractParser<SupplyLimit>() {
+      @java.lang.Override
+      public SupplyLimit parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SupplyLimit> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SupplyLimit> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.htlc.HtlcProto.SupplyLimit getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_htlc_HTLC_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_htlc_HTLC_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_htlc_AssetSupply_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_htlc_AssetSupply_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_htlc_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_htlc_Params_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_htlc_AssetParam_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_htlc_AssetParam_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_htlc_SupplyLimit_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_htlc_SupplyLimit_fieldAccessorTable;
 
@@ -115,11 +7887,11 @@ public final class HtlcProto {
       "E_REFUNDED\020\002\032\014\212\235 \010Refunded\032\004\210\243\036\000*a\n\rSwap" +
       "Direction\022\022\n\004NONE\020\000\032\010\212\235 \004None\022\032\n\010INCOMIN" +
       "G\020\001\032\014\212\235 \010Incoming\022\032\n\010OUTGOING\020\002\032\014\212\235 \010Out" +
-      "going\032\004\210\243\036\000B\241\001\n\020com.irismod.htlcB\tHtlcPr" +
-      "otoP\001Z-github.com/irisnet/irismod/module" +
-      "s/htlc/types\242\002\003IHX\252\002\014Irismod.Htlc\312\002\014Iris" +
-      "mod\\Htlc\342\002\030Irismod\\Htlc\\GPBMetadata\352\002\rIr" +
-      "ismod::Htlc\310\341\036\000b\006proto3"
+      "going\032\004\210\243\036\000B\237\001\n\020com.irismod.htlcB\tHtlcPr" +
+      "otoZ-github.com/irisnet/irismod/modules/" +
+      "htlc/types\242\002\003IHX\252\002\014Irismod.Htlc\312\002\014Irismo" +
+      "d\\Htlc\342\002\030Irismod\\Htlc\\GPBMetadata\352\002\rIris" +
+      "mod::Htlc\310\341\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

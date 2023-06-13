@@ -14,39 +14,8187 @@ public final class ModelsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface StakePoolOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.StakePool)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint32 index = 1 [json_name = "index"];</code>
+     * @return The index.
+     */
+    int getIndex();
+
+    /**
+     * <pre>
+     * staked token denom
+     * </pre>
+     *
+     * <code>string stakeTokenDenom = 2 [json_name = "stakeTokenDenom"];</code>
+     * @return The stakeTokenDenom.
+     */
+    java.lang.String getStakeTokenDenom();
+    /**
+     * <pre>
+     * staked token denom
+     * </pre>
+     *
+     * <code>string stakeTokenDenom = 2 [json_name = "stakeTokenDenom"];</code>
+     * @return The bytes for stakeTokenDenom.
+     */
+    com.google.protobuf.ByteString
+        getStakeTokenDenomBytes();
+
+    /**
+     * <code>repeated .stafihub.stafihub.mining.RewardPool rewardPools = 3 [json_name = "rewardPools"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.mining.ModelsProto.RewardPool> 
+        getRewardPoolsList();
+    /**
+     * <code>repeated .stafihub.stafihub.mining.RewardPool rewardPools = 3 [json_name = "rewardPools"];</code>
+     */
+    com.stafihub.stafihub.mining.ModelsProto.RewardPool getRewardPools(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.mining.RewardPool rewardPools = 3 [json_name = "rewardPools"];</code>
+     */
+    int getRewardPoolsCount();
+    /**
+     * <code>repeated .stafihub.stafihub.mining.RewardPool rewardPools = 3 [json_name = "rewardPools"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.mining.ModelsProto.RewardPoolOrBuilder> 
+        getRewardPoolsOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.mining.RewardPool rewardPools = 3 [json_name = "rewardPools"];</code>
+     */
+    com.stafihub.stafihub.mining.ModelsProto.RewardPoolOrBuilder getRewardPoolsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * total (staked) balance of staked token
+     * </pre>
+     *
+     * <code>string totalStakedAmount = 4 [json_name = "totalStakedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The totalStakedAmount.
+     */
+    java.lang.String getTotalStakedAmount();
+    /**
+     * <pre>
+     * total (staked) balance of staked token
+     * </pre>
+     *
+     * <code>string totalStakedAmount = 4 [json_name = "totalStakedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for totalStakedAmount.
+     */
+    com.google.protobuf.ByteString
+        getTotalStakedAmountBytes();
+
+    /**
+     * <code>string totalStakedPower = 5 [json_name = "totalStakedPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The totalStakedPower.
+     */
+    java.lang.String getTotalStakedPower();
+    /**
+     * <code>string totalStakedPower = 5 [json_name = "totalStakedPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for totalStakedPower.
+     */
+    com.google.protobuf.ByteString
+        getTotalStakedPowerBytes();
+
+    /**
+     * <code>bool emergencySwitch = 6 [json_name = "emergencySwitch"];</code>
+     * @return The emergencySwitch.
+     */
+    boolean getEmergencySwitch();
+
+    /**
+     * <code>string creator = 7 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 7 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.mining.StakePool}
+   */
+  public static final class StakePool extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.StakePool)
+      StakePoolOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StakePool.newBuilder() to construct.
+    private StakePool(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StakePool() {
+      stakeTokenDenom_ = "";
+      rewardPools_ = java.util.Collections.emptyList();
+      totalStakedAmount_ = "";
+      totalStakedPower_ = "";
+      creator_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StakePool();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_StakePool_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_StakePool_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.ModelsProto.StakePool.class, com.stafihub.stafihub.mining.ModelsProto.StakePool.Builder.class);
+    }
+
+    public static final int INDEX_FIELD_NUMBER = 1;
+    private int index_ = 0;
+    /**
+     * <code>uint32 index = 1 [json_name = "index"];</code>
+     * @return The index.
+     */
+    @java.lang.Override
+    public int getIndex() {
+      return index_;
+    }
+
+    public static final int STAKETOKENDENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakeTokenDenom_ = "";
+    /**
+     * <pre>
+     * staked token denom
+     * </pre>
+     *
+     * <code>string stakeTokenDenom = 2 [json_name = "stakeTokenDenom"];</code>
+     * @return The stakeTokenDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getStakeTokenDenom() {
+      java.lang.Object ref = stakeTokenDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakeTokenDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staked token denom
+     * </pre>
+     *
+     * <code>string stakeTokenDenom = 2 [json_name = "stakeTokenDenom"];</code>
+     * @return The bytes for stakeTokenDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakeTokenDenomBytes() {
+      java.lang.Object ref = stakeTokenDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakeTokenDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REWARDPOOLS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.mining.ModelsProto.RewardPool> rewardPools_;
+    /**
+     * <code>repeated .stafihub.stafihub.mining.RewardPool rewardPools = 3 [json_name = "rewardPools"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.mining.ModelsProto.RewardPool> getRewardPoolsList() {
+      return rewardPools_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.mining.RewardPool rewardPools = 3 [json_name = "rewardPools"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.mining.ModelsProto.RewardPoolOrBuilder> 
+        getRewardPoolsOrBuilderList() {
+      return rewardPools_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.mining.RewardPool rewardPools = 3 [json_name = "rewardPools"];</code>
+     */
+    @java.lang.Override
+    public int getRewardPoolsCount() {
+      return rewardPools_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.mining.RewardPool rewardPools = 3 [json_name = "rewardPools"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.ModelsProto.RewardPool getRewardPools(int index) {
+      return rewardPools_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.mining.RewardPool rewardPools = 3 [json_name = "rewardPools"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.ModelsProto.RewardPoolOrBuilder getRewardPoolsOrBuilder(
+        int index) {
+      return rewardPools_.get(index);
+    }
+
+    public static final int TOTALSTAKEDAMOUNT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object totalStakedAmount_ = "";
+    /**
+     * <pre>
+     * total (staked) balance of staked token
+     * </pre>
+     *
+     * <code>string totalStakedAmount = 4 [json_name = "totalStakedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The totalStakedAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getTotalStakedAmount() {
+      java.lang.Object ref = totalStakedAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        totalStakedAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * total (staked) balance of staked token
+     * </pre>
+     *
+     * <code>string totalStakedAmount = 4 [json_name = "totalStakedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for totalStakedAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTotalStakedAmountBytes() {
+      java.lang.Object ref = totalStakedAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        totalStakedAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOTALSTAKEDPOWER_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object totalStakedPower_ = "";
+    /**
+     * <code>string totalStakedPower = 5 [json_name = "totalStakedPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The totalStakedPower.
+     */
+    @java.lang.Override
+    public java.lang.String getTotalStakedPower() {
+      java.lang.Object ref = totalStakedPower_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        totalStakedPower_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string totalStakedPower = 5 [json_name = "totalStakedPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for totalStakedPower.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTotalStakedPowerBytes() {
+      java.lang.Object ref = totalStakedPower_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        totalStakedPower_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EMERGENCYSWITCH_FIELD_NUMBER = 6;
+    private boolean emergencySwitch_ = false;
+    /**
+     * <code>bool emergencySwitch = 6 [json_name = "emergencySwitch"];</code>
+     * @return The emergencySwitch.
+     */
+    @java.lang.Override
+    public boolean getEmergencySwitch() {
+      return emergencySwitch_;
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 7 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 7 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (index_ != 0) {
+        output.writeUInt32(1, index_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakeTokenDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, stakeTokenDenom_);
+      }
+      for (int i = 0; i < rewardPools_.size(); i++) {
+        output.writeMessage(3, rewardPools_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalStakedAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, totalStakedAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalStakedPower_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, totalStakedPower_);
+      }
+      if (emergencySwitch_ != false) {
+        output.writeBool(6, emergencySwitch_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, creator_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (index_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, index_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakeTokenDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, stakeTokenDenom_);
+      }
+      for (int i = 0; i < rewardPools_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, rewardPools_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalStakedAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, totalStakedAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalStakedPower_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, totalStakedPower_);
+      }
+      if (emergencySwitch_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, emergencySwitch_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, creator_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.ModelsProto.StakePool)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.ModelsProto.StakePool other = (com.stafihub.stafihub.mining.ModelsProto.StakePool) obj;
+
+      if (getIndex()
+          != other.getIndex()) return false;
+      if (!getStakeTokenDenom()
+          .equals(other.getStakeTokenDenom())) return false;
+      if (!getRewardPoolsList()
+          .equals(other.getRewardPoolsList())) return false;
+      if (!getTotalStakedAmount()
+          .equals(other.getTotalStakedAmount())) return false;
+      if (!getTotalStakedPower()
+          .equals(other.getTotalStakedPower())) return false;
+      if (getEmergencySwitch()
+          != other.getEmergencySwitch()) return false;
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getIndex();
+      hash = (37 * hash) + STAKETOKENDENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getStakeTokenDenom().hashCode();
+      if (getRewardPoolsCount() > 0) {
+        hash = (37 * hash) + REWARDPOOLS_FIELD_NUMBER;
+        hash = (53 * hash) + getRewardPoolsList().hashCode();
+      }
+      hash = (37 * hash) + TOTALSTAKEDAMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalStakedAmount().hashCode();
+      hash = (37 * hash) + TOTALSTAKEDPOWER_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalStakedPower().hashCode();
+      hash = (37 * hash) + EMERGENCYSWITCH_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEmergencySwitch());
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.ModelsProto.StakePool parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.StakePool parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.StakePool parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.StakePool parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.StakePool parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.StakePool parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.StakePool parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.StakePool parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.ModelsProto.StakePool parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.ModelsProto.StakePool parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.StakePool parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.StakePool parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.ModelsProto.StakePool prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.mining.StakePool}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.StakePool)
+        com.stafihub.stafihub.mining.ModelsProto.StakePoolOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_StakePool_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_StakePool_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.ModelsProto.StakePool.class, com.stafihub.stafihub.mining.ModelsProto.StakePool.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.ModelsProto.StakePool.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        index_ = 0;
+        stakeTokenDenom_ = "";
+        if (rewardPoolsBuilder_ == null) {
+          rewardPools_ = java.util.Collections.emptyList();
+        } else {
+          rewardPools_ = null;
+          rewardPoolsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        totalStakedAmount_ = "";
+        totalStakedPower_ = "";
+        emergencySwitch_ = false;
+        creator_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_StakePool_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.ModelsProto.StakePool getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.ModelsProto.StakePool.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.ModelsProto.StakePool build() {
+        com.stafihub.stafihub.mining.ModelsProto.StakePool result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.ModelsProto.StakePool buildPartial() {
+        com.stafihub.stafihub.mining.ModelsProto.StakePool result = new com.stafihub.stafihub.mining.ModelsProto.StakePool(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.stafihub.stafihub.mining.ModelsProto.StakePool result) {
+        if (rewardPoolsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            rewardPools_ = java.util.Collections.unmodifiableList(rewardPools_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.rewardPools_ = rewardPools_;
+        } else {
+          result.rewardPools_ = rewardPoolsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.mining.ModelsProto.StakePool result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.index_ = index_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.stakeTokenDenom_ = stakeTokenDenom_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.totalStakedAmount_ = totalStakedAmount_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.totalStakedPower_ = totalStakedPower_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.emergencySwitch_ = emergencySwitch_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.creator_ = creator_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.ModelsProto.StakePool) {
+          return mergeFrom((com.stafihub.stafihub.mining.ModelsProto.StakePool)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.ModelsProto.StakePool other) {
+        if (other == com.stafihub.stafihub.mining.ModelsProto.StakePool.getDefaultInstance()) return this;
+        if (other.getIndex() != 0) {
+          setIndex(other.getIndex());
+        }
+        if (!other.getStakeTokenDenom().isEmpty()) {
+          stakeTokenDenom_ = other.stakeTokenDenom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (rewardPoolsBuilder_ == null) {
+          if (!other.rewardPools_.isEmpty()) {
+            if (rewardPools_.isEmpty()) {
+              rewardPools_ = other.rewardPools_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureRewardPoolsIsMutable();
+              rewardPools_.addAll(other.rewardPools_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.rewardPools_.isEmpty()) {
+            if (rewardPoolsBuilder_.isEmpty()) {
+              rewardPoolsBuilder_.dispose();
+              rewardPoolsBuilder_ = null;
+              rewardPools_ = other.rewardPools_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              rewardPoolsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRewardPoolsFieldBuilder() : null;
+            } else {
+              rewardPoolsBuilder_.addAllMessages(other.rewardPools_);
+            }
+          }
+        }
+        if (!other.getTotalStakedAmount().isEmpty()) {
+          totalStakedAmount_ = other.totalStakedAmount_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getTotalStakedPower().isEmpty()) {
+          totalStakedPower_ = other.totalStakedPower_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (other.getEmergencySwitch() != false) {
+          setEmergencySwitch(other.getEmergencySwitch());
+        }
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                index_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                stakeTokenDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.stafihub.stafihub.mining.ModelsProto.RewardPool m =
+                    input.readMessage(
+                        com.stafihub.stafihub.mining.ModelsProto.RewardPool.parser(),
+                        extensionRegistry);
+                if (rewardPoolsBuilder_ == null) {
+                  ensureRewardPoolsIsMutable();
+                  rewardPools_.add(m);
+                } else {
+                  rewardPoolsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                totalStakedAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                totalStakedPower_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 48: {
+                emergencySwitch_ = input.readBool();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              case 58: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int index_ ;
+      /**
+       * <code>uint32 index = 1 [json_name = "index"];</code>
+       * @return The index.
+       */
+      @java.lang.Override
+      public int getIndex() {
+        return index_;
+      }
+      /**
+       * <code>uint32 index = 1 [json_name = "index"];</code>
+       * @param value The index to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndex(int value) {
+
+        index_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 index = 1 [json_name = "index"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIndex() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        index_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object stakeTokenDenom_ = "";
+      /**
+       * <pre>
+       * staked token denom
+       * </pre>
+       *
+       * <code>string stakeTokenDenom = 2 [json_name = "stakeTokenDenom"];</code>
+       * @return The stakeTokenDenom.
+       */
+      public java.lang.String getStakeTokenDenom() {
+        java.lang.Object ref = stakeTokenDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakeTokenDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staked token denom
+       * </pre>
+       *
+       * <code>string stakeTokenDenom = 2 [json_name = "stakeTokenDenom"];</code>
+       * @return The bytes for stakeTokenDenom.
+       */
+      public com.google.protobuf.ByteString
+          getStakeTokenDenomBytes() {
+        java.lang.Object ref = stakeTokenDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakeTokenDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staked token denom
+       * </pre>
+       *
+       * <code>string stakeTokenDenom = 2 [json_name = "stakeTokenDenom"];</code>
+       * @param value The stakeTokenDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakeTokenDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakeTokenDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staked token denom
+       * </pre>
+       *
+       * <code>string stakeTokenDenom = 2 [json_name = "stakeTokenDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakeTokenDenom() {
+        stakeTokenDenom_ = getDefaultInstance().getStakeTokenDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staked token denom
+       * </pre>
+       *
+       * <code>string stakeTokenDenom = 2 [json_name = "stakeTokenDenom"];</code>
+       * @param value The bytes for stakeTokenDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakeTokenDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakeTokenDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.stafihub.stafihub.mining.ModelsProto.RewardPool> rewardPools_ =
+        java.util.Collections.emptyList();
+      private void ensureRewardPoolsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          rewardPools_ = new java.util.ArrayList<com.stafihub.stafihub.mining.ModelsProto.RewardPool>(rewardPools_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.mining.ModelsProto.RewardPool, com.stafihub.stafihub.mining.ModelsProto.RewardPool.Builder, com.stafihub.stafihub.mining.ModelsProto.RewardPoolOrBuilder> rewardPoolsBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardPool rewardPools = 3 [json_name = "rewardPools"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.mining.ModelsProto.RewardPool> getRewardPoolsList() {
+        if (rewardPoolsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(rewardPools_);
+        } else {
+          return rewardPoolsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardPool rewardPools = 3 [json_name = "rewardPools"];</code>
+       */
+      public int getRewardPoolsCount() {
+        if (rewardPoolsBuilder_ == null) {
+          return rewardPools_.size();
+        } else {
+          return rewardPoolsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardPool rewardPools = 3 [json_name = "rewardPools"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.RewardPool getRewardPools(int index) {
+        if (rewardPoolsBuilder_ == null) {
+          return rewardPools_.get(index);
+        } else {
+          return rewardPoolsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardPool rewardPools = 3 [json_name = "rewardPools"];</code>
+       */
+      public Builder setRewardPools(
+          int index, com.stafihub.stafihub.mining.ModelsProto.RewardPool value) {
+        if (rewardPoolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardPoolsIsMutable();
+          rewardPools_.set(index, value);
+          onChanged();
+        } else {
+          rewardPoolsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardPool rewardPools = 3 [json_name = "rewardPools"];</code>
+       */
+      public Builder setRewardPools(
+          int index, com.stafihub.stafihub.mining.ModelsProto.RewardPool.Builder builderForValue) {
+        if (rewardPoolsBuilder_ == null) {
+          ensureRewardPoolsIsMutable();
+          rewardPools_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardPoolsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardPool rewardPools = 3 [json_name = "rewardPools"];</code>
+       */
+      public Builder addRewardPools(com.stafihub.stafihub.mining.ModelsProto.RewardPool value) {
+        if (rewardPoolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardPoolsIsMutable();
+          rewardPools_.add(value);
+          onChanged();
+        } else {
+          rewardPoolsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardPool rewardPools = 3 [json_name = "rewardPools"];</code>
+       */
+      public Builder addRewardPools(
+          int index, com.stafihub.stafihub.mining.ModelsProto.RewardPool value) {
+        if (rewardPoolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardPoolsIsMutable();
+          rewardPools_.add(index, value);
+          onChanged();
+        } else {
+          rewardPoolsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardPool rewardPools = 3 [json_name = "rewardPools"];</code>
+       */
+      public Builder addRewardPools(
+          com.stafihub.stafihub.mining.ModelsProto.RewardPool.Builder builderForValue) {
+        if (rewardPoolsBuilder_ == null) {
+          ensureRewardPoolsIsMutable();
+          rewardPools_.add(builderForValue.build());
+          onChanged();
+        } else {
+          rewardPoolsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardPool rewardPools = 3 [json_name = "rewardPools"];</code>
+       */
+      public Builder addRewardPools(
+          int index, com.stafihub.stafihub.mining.ModelsProto.RewardPool.Builder builderForValue) {
+        if (rewardPoolsBuilder_ == null) {
+          ensureRewardPoolsIsMutable();
+          rewardPools_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardPoolsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardPool rewardPools = 3 [json_name = "rewardPools"];</code>
+       */
+      public Builder addAllRewardPools(
+          java.lang.Iterable<? extends com.stafihub.stafihub.mining.ModelsProto.RewardPool> values) {
+        if (rewardPoolsBuilder_ == null) {
+          ensureRewardPoolsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, rewardPools_);
+          onChanged();
+        } else {
+          rewardPoolsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardPool rewardPools = 3 [json_name = "rewardPools"];</code>
+       */
+      public Builder clearRewardPools() {
+        if (rewardPoolsBuilder_ == null) {
+          rewardPools_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          rewardPoolsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardPool rewardPools = 3 [json_name = "rewardPools"];</code>
+       */
+      public Builder removeRewardPools(int index) {
+        if (rewardPoolsBuilder_ == null) {
+          ensureRewardPoolsIsMutable();
+          rewardPools_.remove(index);
+          onChanged();
+        } else {
+          rewardPoolsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardPool rewardPools = 3 [json_name = "rewardPools"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.RewardPool.Builder getRewardPoolsBuilder(
+          int index) {
+        return getRewardPoolsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardPool rewardPools = 3 [json_name = "rewardPools"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.RewardPoolOrBuilder getRewardPoolsOrBuilder(
+          int index) {
+        if (rewardPoolsBuilder_ == null) {
+          return rewardPools_.get(index);  } else {
+          return rewardPoolsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardPool rewardPools = 3 [json_name = "rewardPools"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.mining.ModelsProto.RewardPoolOrBuilder> 
+           getRewardPoolsOrBuilderList() {
+        if (rewardPoolsBuilder_ != null) {
+          return rewardPoolsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(rewardPools_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardPool rewardPools = 3 [json_name = "rewardPools"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.RewardPool.Builder addRewardPoolsBuilder() {
+        return getRewardPoolsFieldBuilder().addBuilder(
+            com.stafihub.stafihub.mining.ModelsProto.RewardPool.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardPool rewardPools = 3 [json_name = "rewardPools"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.RewardPool.Builder addRewardPoolsBuilder(
+          int index) {
+        return getRewardPoolsFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.mining.ModelsProto.RewardPool.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.RewardPool rewardPools = 3 [json_name = "rewardPools"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.mining.ModelsProto.RewardPool.Builder> 
+           getRewardPoolsBuilderList() {
+        return getRewardPoolsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.mining.ModelsProto.RewardPool, com.stafihub.stafihub.mining.ModelsProto.RewardPool.Builder, com.stafihub.stafihub.mining.ModelsProto.RewardPoolOrBuilder> 
+          getRewardPoolsFieldBuilder() {
+        if (rewardPoolsBuilder_ == null) {
+          rewardPoolsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.mining.ModelsProto.RewardPool, com.stafihub.stafihub.mining.ModelsProto.RewardPool.Builder, com.stafihub.stafihub.mining.ModelsProto.RewardPoolOrBuilder>(
+                  rewardPools_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          rewardPools_ = null;
+        }
+        return rewardPoolsBuilder_;
+      }
+
+      private java.lang.Object totalStakedAmount_ = "";
+      /**
+       * <pre>
+       * total (staked) balance of staked token
+       * </pre>
+       *
+       * <code>string totalStakedAmount = 4 [json_name = "totalStakedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The totalStakedAmount.
+       */
+      public java.lang.String getTotalStakedAmount() {
+        java.lang.Object ref = totalStakedAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          totalStakedAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * total (staked) balance of staked token
+       * </pre>
+       *
+       * <code>string totalStakedAmount = 4 [json_name = "totalStakedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for totalStakedAmount.
+       */
+      public com.google.protobuf.ByteString
+          getTotalStakedAmountBytes() {
+        java.lang.Object ref = totalStakedAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          totalStakedAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * total (staked) balance of staked token
+       * </pre>
+       *
+       * <code>string totalStakedAmount = 4 [json_name = "totalStakedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The totalStakedAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalStakedAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        totalStakedAmount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total (staked) balance of staked token
+       * </pre>
+       *
+       * <code>string totalStakedAmount = 4 [json_name = "totalStakedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalStakedAmount() {
+        totalStakedAmount_ = getDefaultInstance().getTotalStakedAmount();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total (staked) balance of staked token
+       * </pre>
+       *
+       * <code>string totalStakedAmount = 4 [json_name = "totalStakedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for totalStakedAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalStakedAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        totalStakedAmount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object totalStakedPower_ = "";
+      /**
+       * <code>string totalStakedPower = 5 [json_name = "totalStakedPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The totalStakedPower.
+       */
+      public java.lang.String getTotalStakedPower() {
+        java.lang.Object ref = totalStakedPower_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          totalStakedPower_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string totalStakedPower = 5 [json_name = "totalStakedPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for totalStakedPower.
+       */
+      public com.google.protobuf.ByteString
+          getTotalStakedPowerBytes() {
+        java.lang.Object ref = totalStakedPower_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          totalStakedPower_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string totalStakedPower = 5 [json_name = "totalStakedPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The totalStakedPower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalStakedPower(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        totalStakedPower_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string totalStakedPower = 5 [json_name = "totalStakedPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalStakedPower() {
+        totalStakedPower_ = getDefaultInstance().getTotalStakedPower();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string totalStakedPower = 5 [json_name = "totalStakedPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for totalStakedPower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalStakedPowerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        totalStakedPower_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private boolean emergencySwitch_ ;
+      /**
+       * <code>bool emergencySwitch = 6 [json_name = "emergencySwitch"];</code>
+       * @return The emergencySwitch.
+       */
+      @java.lang.Override
+      public boolean getEmergencySwitch() {
+        return emergencySwitch_;
+      }
+      /**
+       * <code>bool emergencySwitch = 6 [json_name = "emergencySwitch"];</code>
+       * @param value The emergencySwitch to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmergencySwitch(boolean value) {
+
+        emergencySwitch_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool emergencySwitch = 6 [json_name = "emergencySwitch"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEmergencySwitch() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        emergencySwitch_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 7 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 7 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 7 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 7 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 7 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.StakePool)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.StakePool)
+    private static final com.stafihub.stafihub.mining.ModelsProto.StakePool DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.ModelsProto.StakePool();
+    }
+
+    public static com.stafihub.stafihub.mining.ModelsProto.StakePool getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StakePool>
+        PARSER = new com.google.protobuf.AbstractParser<StakePool>() {
+      @java.lang.Override
+      public StakePool parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<StakePool> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StakePool> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.ModelsProto.StakePool getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RewardPoolOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.RewardPool)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint32 index = 1 [json_name = "index"];</code>
+     * @return The index.
+     */
+    int getIndex();
+
+    /**
+     * <code>string rewardTokenDenom = 2 [json_name = "rewardTokenDenom"];</code>
+     * @return The rewardTokenDenom.
+     */
+    java.lang.String getRewardTokenDenom();
+    /**
+     * <code>string rewardTokenDenom = 2 [json_name = "rewardTokenDenom"];</code>
+     * @return The bytes for rewardTokenDenom.
+     */
+    com.google.protobuf.ByteString
+        getRewardTokenDenomBytes();
+
+    /**
+     * <code>string totalRewardAmount = 3 [json_name = "totalRewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The totalRewardAmount.
+     */
+    java.lang.String getTotalRewardAmount();
+    /**
+     * <code>string totalRewardAmount = 3 [json_name = "totalRewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for totalRewardAmount.
+     */
+    com.google.protobuf.ByteString
+        getTotalRewardAmountBytes();
+
+    /**
+     * <code>string leftRewardAmount = 4 [json_name = "leftRewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The leftRewardAmount.
+     */
+    java.lang.String getLeftRewardAmount();
+    /**
+     * <code>string leftRewardAmount = 4 [json_name = "leftRewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for leftRewardAmount.
+     */
+    com.google.protobuf.ByteString
+        getLeftRewardAmountBytes();
+
+    /**
+     * <code>string rewardPerSecond = 5 [json_name = "rewardPerSecond", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The rewardPerSecond.
+     */
+    java.lang.String getRewardPerSecond();
+    /**
+     * <code>string rewardPerSecond = 5 [json_name = "rewardPerSecond", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for rewardPerSecond.
+     */
+    com.google.protobuf.ByteString
+        getRewardPerSecondBytes();
+
+    /**
+     * <code>uint64 startTimestamp = 6 [json_name = "startTimestamp"];</code>
+     * @return The startTimestamp.
+     */
+    long getStartTimestamp();
+
+    /**
+     * <code>string rewardPerPower = 7 [json_name = "rewardPerPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The rewardPerPower.
+     */
+    java.lang.String getRewardPerPower();
+    /**
+     * <code>string rewardPerPower = 7 [json_name = "rewardPerPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for rewardPerPower.
+     */
+    com.google.protobuf.ByteString
+        getRewardPerPowerBytes();
+
+    /**
+     * <code>uint64 lastRewardTimestamp = 8 [json_name = "lastRewardTimestamp"];</code>
+     * @return The lastRewardTimestamp.
+     */
+    long getLastRewardTimestamp();
+
+    /**
+     * <code>string creator = 9 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 9 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+
+    /**
+     * <code>string totalClaimedAmount = 10 [json_name = "totalClaimedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The totalClaimedAmount.
+     */
+    java.lang.String getTotalClaimedAmount();
+    /**
+     * <code>string totalClaimedAmount = 10 [json_name = "totalClaimedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for totalClaimedAmount.
+     */
+    com.google.protobuf.ByteString
+        getTotalClaimedAmountBytes();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.mining.RewardPool}
+   */
+  public static final class RewardPool extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.RewardPool)
+      RewardPoolOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RewardPool.newBuilder() to construct.
+    private RewardPool(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RewardPool() {
+      rewardTokenDenom_ = "";
+      totalRewardAmount_ = "";
+      leftRewardAmount_ = "";
+      rewardPerSecond_ = "";
+      rewardPerPower_ = "";
+      creator_ = "";
+      totalClaimedAmount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RewardPool();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_RewardPool_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_RewardPool_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.ModelsProto.RewardPool.class, com.stafihub.stafihub.mining.ModelsProto.RewardPool.Builder.class);
+    }
+
+    public static final int INDEX_FIELD_NUMBER = 1;
+    private int index_ = 0;
+    /**
+     * <code>uint32 index = 1 [json_name = "index"];</code>
+     * @return The index.
+     */
+    @java.lang.Override
+    public int getIndex() {
+      return index_;
+    }
+
+    public static final int REWARDTOKENDENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object rewardTokenDenom_ = "";
+    /**
+     * <code>string rewardTokenDenom = 2 [json_name = "rewardTokenDenom"];</code>
+     * @return The rewardTokenDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getRewardTokenDenom() {
+      java.lang.Object ref = rewardTokenDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        rewardTokenDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string rewardTokenDenom = 2 [json_name = "rewardTokenDenom"];</code>
+     * @return The bytes for rewardTokenDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRewardTokenDenomBytes() {
+      java.lang.Object ref = rewardTokenDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        rewardTokenDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOTALREWARDAMOUNT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object totalRewardAmount_ = "";
+    /**
+     * <code>string totalRewardAmount = 3 [json_name = "totalRewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The totalRewardAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getTotalRewardAmount() {
+      java.lang.Object ref = totalRewardAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        totalRewardAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string totalRewardAmount = 3 [json_name = "totalRewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for totalRewardAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTotalRewardAmountBytes() {
+      java.lang.Object ref = totalRewardAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        totalRewardAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LEFTREWARDAMOUNT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object leftRewardAmount_ = "";
+    /**
+     * <code>string leftRewardAmount = 4 [json_name = "leftRewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The leftRewardAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getLeftRewardAmount() {
+      java.lang.Object ref = leftRewardAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        leftRewardAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string leftRewardAmount = 4 [json_name = "leftRewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for leftRewardAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLeftRewardAmountBytes() {
+      java.lang.Object ref = leftRewardAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        leftRewardAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REWARDPERSECOND_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object rewardPerSecond_ = "";
+    /**
+     * <code>string rewardPerSecond = 5 [json_name = "rewardPerSecond", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The rewardPerSecond.
+     */
+    @java.lang.Override
+    public java.lang.String getRewardPerSecond() {
+      java.lang.Object ref = rewardPerSecond_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        rewardPerSecond_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string rewardPerSecond = 5 [json_name = "rewardPerSecond", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for rewardPerSecond.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRewardPerSecondBytes() {
+      java.lang.Object ref = rewardPerSecond_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        rewardPerSecond_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STARTTIMESTAMP_FIELD_NUMBER = 6;
+    private long startTimestamp_ = 0L;
+    /**
+     * <code>uint64 startTimestamp = 6 [json_name = "startTimestamp"];</code>
+     * @return The startTimestamp.
+     */
+    @java.lang.Override
+    public long getStartTimestamp() {
+      return startTimestamp_;
+    }
+
+    public static final int REWARDPERPOWER_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object rewardPerPower_ = "";
+    /**
+     * <code>string rewardPerPower = 7 [json_name = "rewardPerPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The rewardPerPower.
+     */
+    @java.lang.Override
+    public java.lang.String getRewardPerPower() {
+      java.lang.Object ref = rewardPerPower_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        rewardPerPower_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string rewardPerPower = 7 [json_name = "rewardPerPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for rewardPerPower.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRewardPerPowerBytes() {
+      java.lang.Object ref = rewardPerPower_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        rewardPerPower_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LASTREWARDTIMESTAMP_FIELD_NUMBER = 8;
+    private long lastRewardTimestamp_ = 0L;
+    /**
+     * <code>uint64 lastRewardTimestamp = 8 [json_name = "lastRewardTimestamp"];</code>
+     * @return The lastRewardTimestamp.
+     */
+    @java.lang.Override
+    public long getLastRewardTimestamp() {
+      return lastRewardTimestamp_;
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 9 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 9 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOTALCLAIMEDAMOUNT_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object totalClaimedAmount_ = "";
+    /**
+     * <code>string totalClaimedAmount = 10 [json_name = "totalClaimedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The totalClaimedAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getTotalClaimedAmount() {
+      java.lang.Object ref = totalClaimedAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        totalClaimedAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string totalClaimedAmount = 10 [json_name = "totalClaimedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for totalClaimedAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTotalClaimedAmountBytes() {
+      java.lang.Object ref = totalClaimedAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        totalClaimedAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (index_ != 0) {
+        output.writeUInt32(1, index_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardTokenDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, rewardTokenDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalRewardAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, totalRewardAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(leftRewardAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, leftRewardAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardPerSecond_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, rewardPerSecond_);
+      }
+      if (startTimestamp_ != 0L) {
+        output.writeUInt64(6, startTimestamp_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardPerPower_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, rewardPerPower_);
+      }
+      if (lastRewardTimestamp_ != 0L) {
+        output.writeUInt64(8, lastRewardTimestamp_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, creator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalClaimedAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, totalClaimedAmount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (index_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, index_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardTokenDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, rewardTokenDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalRewardAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, totalRewardAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(leftRewardAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, leftRewardAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardPerSecond_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, rewardPerSecond_);
+      }
+      if (startTimestamp_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(6, startTimestamp_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardPerPower_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, rewardPerPower_);
+      }
+      if (lastRewardTimestamp_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(8, lastRewardTimestamp_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, creator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalClaimedAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, totalClaimedAmount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.ModelsProto.RewardPool)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.ModelsProto.RewardPool other = (com.stafihub.stafihub.mining.ModelsProto.RewardPool) obj;
+
+      if (getIndex()
+          != other.getIndex()) return false;
+      if (!getRewardTokenDenom()
+          .equals(other.getRewardTokenDenom())) return false;
+      if (!getTotalRewardAmount()
+          .equals(other.getTotalRewardAmount())) return false;
+      if (!getLeftRewardAmount()
+          .equals(other.getLeftRewardAmount())) return false;
+      if (!getRewardPerSecond()
+          .equals(other.getRewardPerSecond())) return false;
+      if (getStartTimestamp()
+          != other.getStartTimestamp()) return false;
+      if (!getRewardPerPower()
+          .equals(other.getRewardPerPower())) return false;
+      if (getLastRewardTimestamp()
+          != other.getLastRewardTimestamp()) return false;
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (!getTotalClaimedAmount()
+          .equals(other.getTotalClaimedAmount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getIndex();
+      hash = (37 * hash) + REWARDTOKENDENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getRewardTokenDenom().hashCode();
+      hash = (37 * hash) + TOTALREWARDAMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalRewardAmount().hashCode();
+      hash = (37 * hash) + LEFTREWARDAMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getLeftRewardAmount().hashCode();
+      hash = (37 * hash) + REWARDPERSECOND_FIELD_NUMBER;
+      hash = (53 * hash) + getRewardPerSecond().hashCode();
+      hash = (37 * hash) + STARTTIMESTAMP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getStartTimestamp());
+      hash = (37 * hash) + REWARDPERPOWER_FIELD_NUMBER;
+      hash = (53 * hash) + getRewardPerPower().hashCode();
+      hash = (37 * hash) + LASTREWARDTIMESTAMP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLastRewardTimestamp());
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (37 * hash) + TOTALCLAIMEDAMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalClaimedAmount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.ModelsProto.RewardPool parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.RewardPool parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.RewardPool parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.RewardPool parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.RewardPool parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.RewardPool parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.RewardPool parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.RewardPool parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.ModelsProto.RewardPool parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.ModelsProto.RewardPool parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.RewardPool parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.RewardPool parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.ModelsProto.RewardPool prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.mining.RewardPool}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.RewardPool)
+        com.stafihub.stafihub.mining.ModelsProto.RewardPoolOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_RewardPool_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_RewardPool_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.ModelsProto.RewardPool.class, com.stafihub.stafihub.mining.ModelsProto.RewardPool.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.ModelsProto.RewardPool.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        index_ = 0;
+        rewardTokenDenom_ = "";
+        totalRewardAmount_ = "";
+        leftRewardAmount_ = "";
+        rewardPerSecond_ = "";
+        startTimestamp_ = 0L;
+        rewardPerPower_ = "";
+        lastRewardTimestamp_ = 0L;
+        creator_ = "";
+        totalClaimedAmount_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_RewardPool_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.ModelsProto.RewardPool getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.ModelsProto.RewardPool.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.ModelsProto.RewardPool build() {
+        com.stafihub.stafihub.mining.ModelsProto.RewardPool result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.ModelsProto.RewardPool buildPartial() {
+        com.stafihub.stafihub.mining.ModelsProto.RewardPool result = new com.stafihub.stafihub.mining.ModelsProto.RewardPool(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.mining.ModelsProto.RewardPool result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.index_ = index_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.rewardTokenDenom_ = rewardTokenDenom_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.totalRewardAmount_ = totalRewardAmount_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.leftRewardAmount_ = leftRewardAmount_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.rewardPerSecond_ = rewardPerSecond_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.startTimestamp_ = startTimestamp_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.rewardPerPower_ = rewardPerPower_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.lastRewardTimestamp_ = lastRewardTimestamp_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.creator_ = creator_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.totalClaimedAmount_ = totalClaimedAmount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.ModelsProto.RewardPool) {
+          return mergeFrom((com.stafihub.stafihub.mining.ModelsProto.RewardPool)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.ModelsProto.RewardPool other) {
+        if (other == com.stafihub.stafihub.mining.ModelsProto.RewardPool.getDefaultInstance()) return this;
+        if (other.getIndex() != 0) {
+          setIndex(other.getIndex());
+        }
+        if (!other.getRewardTokenDenom().isEmpty()) {
+          rewardTokenDenom_ = other.rewardTokenDenom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getTotalRewardAmount().isEmpty()) {
+          totalRewardAmount_ = other.totalRewardAmount_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getLeftRewardAmount().isEmpty()) {
+          leftRewardAmount_ = other.leftRewardAmount_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getRewardPerSecond().isEmpty()) {
+          rewardPerSecond_ = other.rewardPerSecond_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (other.getStartTimestamp() != 0L) {
+          setStartTimestamp(other.getStartTimestamp());
+        }
+        if (!other.getRewardPerPower().isEmpty()) {
+          rewardPerPower_ = other.rewardPerPower_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (other.getLastRewardTimestamp() != 0L) {
+          setLastRewardTimestamp(other.getLastRewardTimestamp());
+        }
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
+        if (!other.getTotalClaimedAmount().isEmpty()) {
+          totalClaimedAmount_ = other.totalClaimedAmount_;
+          bitField0_ |= 0x00000200;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                index_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                rewardTokenDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                totalRewardAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                leftRewardAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                rewardPerSecond_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 48: {
+                startTimestamp_ = input.readUInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              case 58: {
+                rewardPerPower_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 64: {
+                lastRewardTimestamp_ = input.readUInt64();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              case 74: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              case 82: {
+                totalClaimedAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int index_ ;
+      /**
+       * <code>uint32 index = 1 [json_name = "index"];</code>
+       * @return The index.
+       */
+      @java.lang.Override
+      public int getIndex() {
+        return index_;
+      }
+      /**
+       * <code>uint32 index = 1 [json_name = "index"];</code>
+       * @param value The index to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndex(int value) {
+
+        index_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 index = 1 [json_name = "index"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIndex() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        index_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object rewardTokenDenom_ = "";
+      /**
+       * <code>string rewardTokenDenom = 2 [json_name = "rewardTokenDenom"];</code>
+       * @return The rewardTokenDenom.
+       */
+      public java.lang.String getRewardTokenDenom() {
+        java.lang.Object ref = rewardTokenDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          rewardTokenDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string rewardTokenDenom = 2 [json_name = "rewardTokenDenom"];</code>
+       * @return The bytes for rewardTokenDenom.
+       */
+      public com.google.protobuf.ByteString
+          getRewardTokenDenomBytes() {
+        java.lang.Object ref = rewardTokenDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          rewardTokenDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string rewardTokenDenom = 2 [json_name = "rewardTokenDenom"];</code>
+       * @param value The rewardTokenDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardTokenDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        rewardTokenDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string rewardTokenDenom = 2 [json_name = "rewardTokenDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRewardTokenDenom() {
+        rewardTokenDenom_ = getDefaultInstance().getRewardTokenDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string rewardTokenDenom = 2 [json_name = "rewardTokenDenom"];</code>
+       * @param value The bytes for rewardTokenDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardTokenDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        rewardTokenDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object totalRewardAmount_ = "";
+      /**
+       * <code>string totalRewardAmount = 3 [json_name = "totalRewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The totalRewardAmount.
+       */
+      public java.lang.String getTotalRewardAmount() {
+        java.lang.Object ref = totalRewardAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          totalRewardAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string totalRewardAmount = 3 [json_name = "totalRewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for totalRewardAmount.
+       */
+      public com.google.protobuf.ByteString
+          getTotalRewardAmountBytes() {
+        java.lang.Object ref = totalRewardAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          totalRewardAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string totalRewardAmount = 3 [json_name = "totalRewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The totalRewardAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalRewardAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        totalRewardAmount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string totalRewardAmount = 3 [json_name = "totalRewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalRewardAmount() {
+        totalRewardAmount_ = getDefaultInstance().getTotalRewardAmount();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string totalRewardAmount = 3 [json_name = "totalRewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for totalRewardAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalRewardAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        totalRewardAmount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object leftRewardAmount_ = "";
+      /**
+       * <code>string leftRewardAmount = 4 [json_name = "leftRewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The leftRewardAmount.
+       */
+      public java.lang.String getLeftRewardAmount() {
+        java.lang.Object ref = leftRewardAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          leftRewardAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string leftRewardAmount = 4 [json_name = "leftRewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for leftRewardAmount.
+       */
+      public com.google.protobuf.ByteString
+          getLeftRewardAmountBytes() {
+        java.lang.Object ref = leftRewardAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          leftRewardAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string leftRewardAmount = 4 [json_name = "leftRewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The leftRewardAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLeftRewardAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        leftRewardAmount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string leftRewardAmount = 4 [json_name = "leftRewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLeftRewardAmount() {
+        leftRewardAmount_ = getDefaultInstance().getLeftRewardAmount();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string leftRewardAmount = 4 [json_name = "leftRewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for leftRewardAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLeftRewardAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        leftRewardAmount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object rewardPerSecond_ = "";
+      /**
+       * <code>string rewardPerSecond = 5 [json_name = "rewardPerSecond", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The rewardPerSecond.
+       */
+      public java.lang.String getRewardPerSecond() {
+        java.lang.Object ref = rewardPerSecond_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          rewardPerSecond_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string rewardPerSecond = 5 [json_name = "rewardPerSecond", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for rewardPerSecond.
+       */
+      public com.google.protobuf.ByteString
+          getRewardPerSecondBytes() {
+        java.lang.Object ref = rewardPerSecond_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          rewardPerSecond_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string rewardPerSecond = 5 [json_name = "rewardPerSecond", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The rewardPerSecond to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardPerSecond(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        rewardPerSecond_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string rewardPerSecond = 5 [json_name = "rewardPerSecond", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRewardPerSecond() {
+        rewardPerSecond_ = getDefaultInstance().getRewardPerSecond();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string rewardPerSecond = 5 [json_name = "rewardPerSecond", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for rewardPerSecond to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardPerSecondBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        rewardPerSecond_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private long startTimestamp_ ;
+      /**
+       * <code>uint64 startTimestamp = 6 [json_name = "startTimestamp"];</code>
+       * @return The startTimestamp.
+       */
+      @java.lang.Override
+      public long getStartTimestamp() {
+        return startTimestamp_;
+      }
+      /**
+       * <code>uint64 startTimestamp = 6 [json_name = "startTimestamp"];</code>
+       * @param value The startTimestamp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartTimestamp(long value) {
+
+        startTimestamp_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 startTimestamp = 6 [json_name = "startTimestamp"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStartTimestamp() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        startTimestamp_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object rewardPerPower_ = "";
+      /**
+       * <code>string rewardPerPower = 7 [json_name = "rewardPerPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The rewardPerPower.
+       */
+      public java.lang.String getRewardPerPower() {
+        java.lang.Object ref = rewardPerPower_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          rewardPerPower_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string rewardPerPower = 7 [json_name = "rewardPerPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for rewardPerPower.
+       */
+      public com.google.protobuf.ByteString
+          getRewardPerPowerBytes() {
+        java.lang.Object ref = rewardPerPower_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          rewardPerPower_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string rewardPerPower = 7 [json_name = "rewardPerPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The rewardPerPower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardPerPower(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        rewardPerPower_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string rewardPerPower = 7 [json_name = "rewardPerPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRewardPerPower() {
+        rewardPerPower_ = getDefaultInstance().getRewardPerPower();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string rewardPerPower = 7 [json_name = "rewardPerPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for rewardPerPower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardPerPowerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        rewardPerPower_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private long lastRewardTimestamp_ ;
+      /**
+       * <code>uint64 lastRewardTimestamp = 8 [json_name = "lastRewardTimestamp"];</code>
+       * @return The lastRewardTimestamp.
+       */
+      @java.lang.Override
+      public long getLastRewardTimestamp() {
+        return lastRewardTimestamp_;
+      }
+      /**
+       * <code>uint64 lastRewardTimestamp = 8 [json_name = "lastRewardTimestamp"];</code>
+       * @param value The lastRewardTimestamp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastRewardTimestamp(long value) {
+
+        lastRewardTimestamp_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 lastRewardTimestamp = 8 [json_name = "lastRewardTimestamp"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastRewardTimestamp() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        lastRewardTimestamp_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 9 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 9 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 9 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 9 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 9 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object totalClaimedAmount_ = "";
+      /**
+       * <code>string totalClaimedAmount = 10 [json_name = "totalClaimedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The totalClaimedAmount.
+       */
+      public java.lang.String getTotalClaimedAmount() {
+        java.lang.Object ref = totalClaimedAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          totalClaimedAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string totalClaimedAmount = 10 [json_name = "totalClaimedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for totalClaimedAmount.
+       */
+      public com.google.protobuf.ByteString
+          getTotalClaimedAmountBytes() {
+        java.lang.Object ref = totalClaimedAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          totalClaimedAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string totalClaimedAmount = 10 [json_name = "totalClaimedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The totalClaimedAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalClaimedAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        totalClaimedAmount_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string totalClaimedAmount = 10 [json_name = "totalClaimedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalClaimedAmount() {
+        totalClaimedAmount_ = getDefaultInstance().getTotalClaimedAmount();
+        bitField0_ = (bitField0_ & ~0x00000200);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string totalClaimedAmount = 10 [json_name = "totalClaimedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for totalClaimedAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalClaimedAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        totalClaimedAmount_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.RewardPool)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.RewardPool)
+    private static final com.stafihub.stafihub.mining.ModelsProto.RewardPool DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.ModelsProto.RewardPool();
+    }
+
+    public static com.stafihub.stafihub.mining.ModelsProto.RewardPool getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RewardPool>
+        PARSER = new com.google.protobuf.AbstractParser<RewardPool>() {
+      @java.lang.Override
+      public RewardPool parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RewardPool> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RewardPool> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.ModelsProto.RewardPool getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UserStakeRecordOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.UserStakeRecord)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+     * @return The userAddress.
+     */
+    java.lang.String getUserAddress();
+    /**
+     * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+     * @return The bytes for userAddress.
+     */
+    com.google.protobuf.ByteString
+        getUserAddressBytes();
+
+    /**
+     * <code>uint32 stakePoolIndex = 2 [json_name = "stakePoolIndex"];</code>
+     * @return The stakePoolIndex.
+     */
+    int getStakePoolIndex();
+
+    /**
+     * <code>uint32 index = 3 [json_name = "index"];</code>
+     * @return The index.
+     */
+    int getIndex();
+
+    /**
+     * <code>string stakedAmount = 4 [json_name = "stakedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The stakedAmount.
+     */
+    java.lang.String getStakedAmount();
+    /**
+     * <code>string stakedAmount = 4 [json_name = "stakedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for stakedAmount.
+     */
+    com.google.protobuf.ByteString
+        getStakedAmountBytes();
+
+    /**
+     * <code>string stakedPower = 5 [json_name = "stakedPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The stakedPower.
+     */
+    java.lang.String getStakedPower();
+    /**
+     * <code>string stakedPower = 5 [json_name = "stakedPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for stakedPower.
+     */
+    com.google.protobuf.ByteString
+        getStakedPowerBytes();
+
+    /**
+     * <pre>
+     * the begin timestamp
+     * </pre>
+     *
+     * <code>uint64 startTimestamp = 6 [json_name = "startTimestamp"];</code>
+     * @return The startTimestamp.
+     */
+    long getStartTimestamp();
+
+    /**
+     * <pre>
+     * promise not unstake before this timestamp
+     * </pre>
+     *
+     * <code>uint64 lockEndTimestamp = 7 [json_name = "lockEndTimestamp"];</code>
+     * @return The lockEndTimestamp.
+     */
+    long getLockEndTimestamp();
+
+    /**
+     * <code>repeated .stafihub.stafihub.mining.UserRewardInfo userRewardInfos = 8 [json_name = "userRewardInfos"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo> 
+        getUserRewardInfosList();
+    /**
+     * <code>repeated .stafihub.stafihub.mining.UserRewardInfo userRewardInfos = 8 [json_name = "userRewardInfos"];</code>
+     */
+    com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo getUserRewardInfos(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.mining.UserRewardInfo userRewardInfos = 8 [json_name = "userRewardInfos"];</code>
+     */
+    int getUserRewardInfosCount();
+    /**
+     * <code>repeated .stafihub.stafihub.mining.UserRewardInfo userRewardInfos = 8 [json_name = "userRewardInfos"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.mining.ModelsProto.UserRewardInfoOrBuilder> 
+        getUserRewardInfosOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.mining.UserRewardInfo userRewardInfos = 8 [json_name = "userRewardInfos"];</code>
+     */
+    com.stafihub.stafihub.mining.ModelsProto.UserRewardInfoOrBuilder getUserRewardInfosOrBuilder(
+        int index);
+
+    /**
+     * <code>uint32 stakeItemIndex = 9 [json_name = "stakeItemIndex"];</code>
+     * @return The stakeItemIndex.
+     */
+    int getStakeItemIndex();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.mining.UserStakeRecord}
+   */
+  public static final class UserStakeRecord extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.UserStakeRecord)
+      UserStakeRecordOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UserStakeRecord.newBuilder() to construct.
+    private UserStakeRecord(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UserStakeRecord() {
+      userAddress_ = "";
+      stakedAmount_ = "";
+      stakedPower_ = "";
+      userRewardInfos_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UserStakeRecord();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_UserStakeRecord_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_UserStakeRecord_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord.class, com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord.Builder.class);
+    }
+
+    public static final int USERADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object userAddress_ = "";
+    /**
+     * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+     * @return The userAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getUserAddress() {
+      java.lang.Object ref = userAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        userAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+     * @return The bytes for userAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUserAddressBytes() {
+      java.lang.Object ref = userAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STAKEPOOLINDEX_FIELD_NUMBER = 2;
+    private int stakePoolIndex_ = 0;
+    /**
+     * <code>uint32 stakePoolIndex = 2 [json_name = "stakePoolIndex"];</code>
+     * @return The stakePoolIndex.
+     */
+    @java.lang.Override
+    public int getStakePoolIndex() {
+      return stakePoolIndex_;
+    }
+
+    public static final int INDEX_FIELD_NUMBER = 3;
+    private int index_ = 0;
+    /**
+     * <code>uint32 index = 3 [json_name = "index"];</code>
+     * @return The index.
+     */
+    @java.lang.Override
+    public int getIndex() {
+      return index_;
+    }
+
+    public static final int STAKEDAMOUNT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakedAmount_ = "";
+    /**
+     * <code>string stakedAmount = 4 [json_name = "stakedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The stakedAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getStakedAmount() {
+      java.lang.Object ref = stakedAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakedAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string stakedAmount = 4 [json_name = "stakedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for stakedAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakedAmountBytes() {
+      java.lang.Object ref = stakedAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakedAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STAKEDPOWER_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakedPower_ = "";
+    /**
+     * <code>string stakedPower = 5 [json_name = "stakedPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The stakedPower.
+     */
+    @java.lang.Override
+    public java.lang.String getStakedPower() {
+      java.lang.Object ref = stakedPower_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakedPower_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string stakedPower = 5 [json_name = "stakedPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for stakedPower.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakedPowerBytes() {
+      java.lang.Object ref = stakedPower_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakedPower_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STARTTIMESTAMP_FIELD_NUMBER = 6;
+    private long startTimestamp_ = 0L;
+    /**
+     * <pre>
+     * the begin timestamp
+     * </pre>
+     *
+     * <code>uint64 startTimestamp = 6 [json_name = "startTimestamp"];</code>
+     * @return The startTimestamp.
+     */
+    @java.lang.Override
+    public long getStartTimestamp() {
+      return startTimestamp_;
+    }
+
+    public static final int LOCKENDTIMESTAMP_FIELD_NUMBER = 7;
+    private long lockEndTimestamp_ = 0L;
+    /**
+     * <pre>
+     * promise not unstake before this timestamp
+     * </pre>
+     *
+     * <code>uint64 lockEndTimestamp = 7 [json_name = "lockEndTimestamp"];</code>
+     * @return The lockEndTimestamp.
+     */
+    @java.lang.Override
+    public long getLockEndTimestamp() {
+      return lockEndTimestamp_;
+    }
+
+    public static final int USERREWARDINFOS_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo> userRewardInfos_;
+    /**
+     * <code>repeated .stafihub.stafihub.mining.UserRewardInfo userRewardInfos = 8 [json_name = "userRewardInfos"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo> getUserRewardInfosList() {
+      return userRewardInfos_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.mining.UserRewardInfo userRewardInfos = 8 [json_name = "userRewardInfos"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.mining.ModelsProto.UserRewardInfoOrBuilder> 
+        getUserRewardInfosOrBuilderList() {
+      return userRewardInfos_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.mining.UserRewardInfo userRewardInfos = 8 [json_name = "userRewardInfos"];</code>
+     */
+    @java.lang.Override
+    public int getUserRewardInfosCount() {
+      return userRewardInfos_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.mining.UserRewardInfo userRewardInfos = 8 [json_name = "userRewardInfos"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo getUserRewardInfos(int index) {
+      return userRewardInfos_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.mining.UserRewardInfo userRewardInfos = 8 [json_name = "userRewardInfos"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.ModelsProto.UserRewardInfoOrBuilder getUserRewardInfosOrBuilder(
+        int index) {
+      return userRewardInfos_.get(index);
+    }
+
+    public static final int STAKEITEMINDEX_FIELD_NUMBER = 9;
+    private int stakeItemIndex_ = 0;
+    /**
+     * <code>uint32 stakeItemIndex = 9 [json_name = "stakeItemIndex"];</code>
+     * @return The stakeItemIndex.
+     */
+    @java.lang.Override
+    public int getStakeItemIndex() {
+      return stakeItemIndex_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userAddress_);
+      }
+      if (stakePoolIndex_ != 0) {
+        output.writeUInt32(2, stakePoolIndex_);
+      }
+      if (index_ != 0) {
+        output.writeUInt32(3, index_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakedAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, stakedAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakedPower_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, stakedPower_);
+      }
+      if (startTimestamp_ != 0L) {
+        output.writeUInt64(6, startTimestamp_);
+      }
+      if (lockEndTimestamp_ != 0L) {
+        output.writeUInt64(7, lockEndTimestamp_);
+      }
+      for (int i = 0; i < userRewardInfos_.size(); i++) {
+        output.writeMessage(8, userRewardInfos_.get(i));
+      }
+      if (stakeItemIndex_ != 0) {
+        output.writeUInt32(9, stakeItemIndex_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userAddress_);
+      }
+      if (stakePoolIndex_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, stakePoolIndex_);
+      }
+      if (index_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, index_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakedAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, stakedAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakedPower_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, stakedPower_);
+      }
+      if (startTimestamp_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(6, startTimestamp_);
+      }
+      if (lockEndTimestamp_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(7, lockEndTimestamp_);
+      }
+      for (int i = 0; i < userRewardInfos_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, userRewardInfos_.get(i));
+      }
+      if (stakeItemIndex_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(9, stakeItemIndex_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord other = (com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord) obj;
+
+      if (!getUserAddress()
+          .equals(other.getUserAddress())) return false;
+      if (getStakePoolIndex()
+          != other.getStakePoolIndex()) return false;
+      if (getIndex()
+          != other.getIndex()) return false;
+      if (!getStakedAmount()
+          .equals(other.getStakedAmount())) return false;
+      if (!getStakedPower()
+          .equals(other.getStakedPower())) return false;
+      if (getStartTimestamp()
+          != other.getStartTimestamp()) return false;
+      if (getLockEndTimestamp()
+          != other.getLockEndTimestamp()) return false;
+      if (!getUserRewardInfosList()
+          .equals(other.getUserRewardInfosList())) return false;
+      if (getStakeItemIndex()
+          != other.getStakeItemIndex()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + USERADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getUserAddress().hashCode();
+      hash = (37 * hash) + STAKEPOOLINDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getStakePoolIndex();
+      hash = (37 * hash) + INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getIndex();
+      hash = (37 * hash) + STAKEDAMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getStakedAmount().hashCode();
+      hash = (37 * hash) + STAKEDPOWER_FIELD_NUMBER;
+      hash = (53 * hash) + getStakedPower().hashCode();
+      hash = (37 * hash) + STARTTIMESTAMP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getStartTimestamp());
+      hash = (37 * hash) + LOCKENDTIMESTAMP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLockEndTimestamp());
+      if (getUserRewardInfosCount() > 0) {
+        hash = (37 * hash) + USERREWARDINFOS_FIELD_NUMBER;
+        hash = (53 * hash) + getUserRewardInfosList().hashCode();
+      }
+      hash = (37 * hash) + STAKEITEMINDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getStakeItemIndex();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.mining.UserStakeRecord}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.UserStakeRecord)
+        com.stafihub.stafihub.mining.ModelsProto.UserStakeRecordOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_UserStakeRecord_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_UserStakeRecord_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord.class, com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        userAddress_ = "";
+        stakePoolIndex_ = 0;
+        index_ = 0;
+        stakedAmount_ = "";
+        stakedPower_ = "";
+        startTimestamp_ = 0L;
+        lockEndTimestamp_ = 0L;
+        if (userRewardInfosBuilder_ == null) {
+          userRewardInfos_ = java.util.Collections.emptyList();
+        } else {
+          userRewardInfos_ = null;
+          userRewardInfosBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        stakeItemIndex_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_UserStakeRecord_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord build() {
+        com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord buildPartial() {
+        com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord result = new com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord result) {
+        if (userRewardInfosBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0)) {
+            userRewardInfos_ = java.util.Collections.unmodifiableList(userRewardInfos_);
+            bitField0_ = (bitField0_ & ~0x00000080);
+          }
+          result.userRewardInfos_ = userRewardInfos_;
+        } else {
+          result.userRewardInfos_ = userRewardInfosBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.userAddress_ = userAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.stakePoolIndex_ = stakePoolIndex_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.index_ = index_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.stakedAmount_ = stakedAmount_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.stakedPower_ = stakedPower_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.startTimestamp_ = startTimestamp_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.lockEndTimestamp_ = lockEndTimestamp_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.stakeItemIndex_ = stakeItemIndex_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord) {
+          return mergeFrom((com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord other) {
+        if (other == com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord.getDefaultInstance()) return this;
+        if (!other.getUserAddress().isEmpty()) {
+          userAddress_ = other.userAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getStakePoolIndex() != 0) {
+          setStakePoolIndex(other.getStakePoolIndex());
+        }
+        if (other.getIndex() != 0) {
+          setIndex(other.getIndex());
+        }
+        if (!other.getStakedAmount().isEmpty()) {
+          stakedAmount_ = other.stakedAmount_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getStakedPower().isEmpty()) {
+          stakedPower_ = other.stakedPower_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (other.getStartTimestamp() != 0L) {
+          setStartTimestamp(other.getStartTimestamp());
+        }
+        if (other.getLockEndTimestamp() != 0L) {
+          setLockEndTimestamp(other.getLockEndTimestamp());
+        }
+        if (userRewardInfosBuilder_ == null) {
+          if (!other.userRewardInfos_.isEmpty()) {
+            if (userRewardInfos_.isEmpty()) {
+              userRewardInfos_ = other.userRewardInfos_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+            } else {
+              ensureUserRewardInfosIsMutable();
+              userRewardInfos_.addAll(other.userRewardInfos_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.userRewardInfos_.isEmpty()) {
+            if (userRewardInfosBuilder_.isEmpty()) {
+              userRewardInfosBuilder_.dispose();
+              userRewardInfosBuilder_ = null;
+              userRewardInfos_ = other.userRewardInfos_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+              userRewardInfosBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getUserRewardInfosFieldBuilder() : null;
+            } else {
+              userRewardInfosBuilder_.addAllMessages(other.userRewardInfos_);
+            }
+          }
+        }
+        if (other.getStakeItemIndex() != 0) {
+          setStakeItemIndex(other.getStakeItemIndex());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                userAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                stakePoolIndex_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                index_ = input.readUInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                stakedAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                stakedPower_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 48: {
+                startTimestamp_ = input.readUInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              case 56: {
+                lockEndTimestamp_ = input.readUInt64();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              case 66: {
+                com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo m =
+                    input.readMessage(
+                        com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo.parser(),
+                        extensionRegistry);
+                if (userRewardInfosBuilder_ == null) {
+                  ensureUserRewardInfosIsMutable();
+                  userRewardInfos_.add(m);
+                } else {
+                  userRewardInfosBuilder_.addMessage(m);
+                }
+                break;
+              } // case 66
+              case 72: {
+                stakeItemIndex_ = input.readUInt32();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 72
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object userAddress_ = "";
+      /**
+       * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+       * @return The userAddress.
+       */
+      public java.lang.String getUserAddress() {
+        java.lang.Object ref = userAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          userAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+       * @return The bytes for userAddress.
+       */
+      public com.google.protobuf.ByteString
+          getUserAddressBytes() {
+        java.lang.Object ref = userAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+       * @param value The userAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        userAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserAddress() {
+        userAddress_ = getDefaultInstance().getUserAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string userAddress = 1 [json_name = "userAddress"];</code>
+       * @param value The bytes for userAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        userAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int stakePoolIndex_ ;
+      /**
+       * <code>uint32 stakePoolIndex = 2 [json_name = "stakePoolIndex"];</code>
+       * @return The stakePoolIndex.
+       */
+      @java.lang.Override
+      public int getStakePoolIndex() {
+        return stakePoolIndex_;
+      }
+      /**
+       * <code>uint32 stakePoolIndex = 2 [json_name = "stakePoolIndex"];</code>
+       * @param value The stakePoolIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakePoolIndex(int value) {
+
+        stakePoolIndex_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 stakePoolIndex = 2 [json_name = "stakePoolIndex"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakePoolIndex() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        stakePoolIndex_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int index_ ;
+      /**
+       * <code>uint32 index = 3 [json_name = "index"];</code>
+       * @return The index.
+       */
+      @java.lang.Override
+      public int getIndex() {
+        return index_;
+      }
+      /**
+       * <code>uint32 index = 3 [json_name = "index"];</code>
+       * @param value The index to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndex(int value) {
+
+        index_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 index = 3 [json_name = "index"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIndex() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        index_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object stakedAmount_ = "";
+      /**
+       * <code>string stakedAmount = 4 [json_name = "stakedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The stakedAmount.
+       */
+      public java.lang.String getStakedAmount() {
+        java.lang.Object ref = stakedAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakedAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string stakedAmount = 4 [json_name = "stakedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for stakedAmount.
+       */
+      public com.google.protobuf.ByteString
+          getStakedAmountBytes() {
+        java.lang.Object ref = stakedAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakedAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string stakedAmount = 4 [json_name = "stakedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The stakedAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakedAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakedAmount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string stakedAmount = 4 [json_name = "stakedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakedAmount() {
+        stakedAmount_ = getDefaultInstance().getStakedAmount();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string stakedAmount = 4 [json_name = "stakedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for stakedAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakedAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakedAmount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object stakedPower_ = "";
+      /**
+       * <code>string stakedPower = 5 [json_name = "stakedPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The stakedPower.
+       */
+      public java.lang.String getStakedPower() {
+        java.lang.Object ref = stakedPower_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakedPower_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string stakedPower = 5 [json_name = "stakedPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for stakedPower.
+       */
+      public com.google.protobuf.ByteString
+          getStakedPowerBytes() {
+        java.lang.Object ref = stakedPower_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakedPower_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string stakedPower = 5 [json_name = "stakedPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The stakedPower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakedPower(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakedPower_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string stakedPower = 5 [json_name = "stakedPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakedPower() {
+        stakedPower_ = getDefaultInstance().getStakedPower();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string stakedPower = 5 [json_name = "stakedPower", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for stakedPower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakedPowerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakedPower_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private long startTimestamp_ ;
+      /**
+       * <pre>
+       * the begin timestamp
+       * </pre>
+       *
+       * <code>uint64 startTimestamp = 6 [json_name = "startTimestamp"];</code>
+       * @return The startTimestamp.
+       */
+      @java.lang.Override
+      public long getStartTimestamp() {
+        return startTimestamp_;
+      }
+      /**
+       * <pre>
+       * the begin timestamp
+       * </pre>
+       *
+       * <code>uint64 startTimestamp = 6 [json_name = "startTimestamp"];</code>
+       * @param value The startTimestamp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartTimestamp(long value) {
+
+        startTimestamp_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the begin timestamp
+       * </pre>
+       *
+       * <code>uint64 startTimestamp = 6 [json_name = "startTimestamp"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStartTimestamp() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        startTimestamp_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long lockEndTimestamp_ ;
+      /**
+       * <pre>
+       * promise not unstake before this timestamp
+       * </pre>
+       *
+       * <code>uint64 lockEndTimestamp = 7 [json_name = "lockEndTimestamp"];</code>
+       * @return The lockEndTimestamp.
+       */
+      @java.lang.Override
+      public long getLockEndTimestamp() {
+        return lockEndTimestamp_;
+      }
+      /**
+       * <pre>
+       * promise not unstake before this timestamp
+       * </pre>
+       *
+       * <code>uint64 lockEndTimestamp = 7 [json_name = "lockEndTimestamp"];</code>
+       * @param value The lockEndTimestamp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLockEndTimestamp(long value) {
+
+        lockEndTimestamp_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * promise not unstake before this timestamp
+       * </pre>
+       *
+       * <code>uint64 lockEndTimestamp = 7 [json_name = "lockEndTimestamp"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLockEndTimestamp() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        lockEndTimestamp_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo> userRewardInfos_ =
+        java.util.Collections.emptyList();
+      private void ensureUserRewardInfosIsMutable() {
+        if (!((bitField0_ & 0x00000080) != 0)) {
+          userRewardInfos_ = new java.util.ArrayList<com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo>(userRewardInfos_);
+          bitField0_ |= 0x00000080;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo, com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo.Builder, com.stafihub.stafihub.mining.ModelsProto.UserRewardInfoOrBuilder> userRewardInfosBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserRewardInfo userRewardInfos = 8 [json_name = "userRewardInfos"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo> getUserRewardInfosList() {
+        if (userRewardInfosBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(userRewardInfos_);
+        } else {
+          return userRewardInfosBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserRewardInfo userRewardInfos = 8 [json_name = "userRewardInfos"];</code>
+       */
+      public int getUserRewardInfosCount() {
+        if (userRewardInfosBuilder_ == null) {
+          return userRewardInfos_.size();
+        } else {
+          return userRewardInfosBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserRewardInfo userRewardInfos = 8 [json_name = "userRewardInfos"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo getUserRewardInfos(int index) {
+        if (userRewardInfosBuilder_ == null) {
+          return userRewardInfos_.get(index);
+        } else {
+          return userRewardInfosBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserRewardInfo userRewardInfos = 8 [json_name = "userRewardInfos"];</code>
+       */
+      public Builder setUserRewardInfos(
+          int index, com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo value) {
+        if (userRewardInfosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUserRewardInfosIsMutable();
+          userRewardInfos_.set(index, value);
+          onChanged();
+        } else {
+          userRewardInfosBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserRewardInfo userRewardInfos = 8 [json_name = "userRewardInfos"];</code>
+       */
+      public Builder setUserRewardInfos(
+          int index, com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo.Builder builderForValue) {
+        if (userRewardInfosBuilder_ == null) {
+          ensureUserRewardInfosIsMutable();
+          userRewardInfos_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          userRewardInfosBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserRewardInfo userRewardInfos = 8 [json_name = "userRewardInfos"];</code>
+       */
+      public Builder addUserRewardInfos(com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo value) {
+        if (userRewardInfosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUserRewardInfosIsMutable();
+          userRewardInfos_.add(value);
+          onChanged();
+        } else {
+          userRewardInfosBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserRewardInfo userRewardInfos = 8 [json_name = "userRewardInfos"];</code>
+       */
+      public Builder addUserRewardInfos(
+          int index, com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo value) {
+        if (userRewardInfosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUserRewardInfosIsMutable();
+          userRewardInfos_.add(index, value);
+          onChanged();
+        } else {
+          userRewardInfosBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserRewardInfo userRewardInfos = 8 [json_name = "userRewardInfos"];</code>
+       */
+      public Builder addUserRewardInfos(
+          com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo.Builder builderForValue) {
+        if (userRewardInfosBuilder_ == null) {
+          ensureUserRewardInfosIsMutable();
+          userRewardInfos_.add(builderForValue.build());
+          onChanged();
+        } else {
+          userRewardInfosBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserRewardInfo userRewardInfos = 8 [json_name = "userRewardInfos"];</code>
+       */
+      public Builder addUserRewardInfos(
+          int index, com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo.Builder builderForValue) {
+        if (userRewardInfosBuilder_ == null) {
+          ensureUserRewardInfosIsMutable();
+          userRewardInfos_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          userRewardInfosBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserRewardInfo userRewardInfos = 8 [json_name = "userRewardInfos"];</code>
+       */
+      public Builder addAllUserRewardInfos(
+          java.lang.Iterable<? extends com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo> values) {
+        if (userRewardInfosBuilder_ == null) {
+          ensureUserRewardInfosIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, userRewardInfos_);
+          onChanged();
+        } else {
+          userRewardInfosBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserRewardInfo userRewardInfos = 8 [json_name = "userRewardInfos"];</code>
+       */
+      public Builder clearUserRewardInfos() {
+        if (userRewardInfosBuilder_ == null) {
+          userRewardInfos_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
+          onChanged();
+        } else {
+          userRewardInfosBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserRewardInfo userRewardInfos = 8 [json_name = "userRewardInfos"];</code>
+       */
+      public Builder removeUserRewardInfos(int index) {
+        if (userRewardInfosBuilder_ == null) {
+          ensureUserRewardInfosIsMutable();
+          userRewardInfos_.remove(index);
+          onChanged();
+        } else {
+          userRewardInfosBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserRewardInfo userRewardInfos = 8 [json_name = "userRewardInfos"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo.Builder getUserRewardInfosBuilder(
+          int index) {
+        return getUserRewardInfosFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserRewardInfo userRewardInfos = 8 [json_name = "userRewardInfos"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.UserRewardInfoOrBuilder getUserRewardInfosOrBuilder(
+          int index) {
+        if (userRewardInfosBuilder_ == null) {
+          return userRewardInfos_.get(index);  } else {
+          return userRewardInfosBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserRewardInfo userRewardInfos = 8 [json_name = "userRewardInfos"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.mining.ModelsProto.UserRewardInfoOrBuilder> 
+           getUserRewardInfosOrBuilderList() {
+        if (userRewardInfosBuilder_ != null) {
+          return userRewardInfosBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(userRewardInfos_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserRewardInfo userRewardInfos = 8 [json_name = "userRewardInfos"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo.Builder addUserRewardInfosBuilder() {
+        return getUserRewardInfosFieldBuilder().addBuilder(
+            com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserRewardInfo userRewardInfos = 8 [json_name = "userRewardInfos"];</code>
+       */
+      public com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo.Builder addUserRewardInfosBuilder(
+          int index) {
+        return getUserRewardInfosFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.mining.UserRewardInfo userRewardInfos = 8 [json_name = "userRewardInfos"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo.Builder> 
+           getUserRewardInfosBuilderList() {
+        return getUserRewardInfosFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo, com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo.Builder, com.stafihub.stafihub.mining.ModelsProto.UserRewardInfoOrBuilder> 
+          getUserRewardInfosFieldBuilder() {
+        if (userRewardInfosBuilder_ == null) {
+          userRewardInfosBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo, com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo.Builder, com.stafihub.stafihub.mining.ModelsProto.UserRewardInfoOrBuilder>(
+                  userRewardInfos_,
+                  ((bitField0_ & 0x00000080) != 0),
+                  getParentForChildren(),
+                  isClean());
+          userRewardInfos_ = null;
+        }
+        return userRewardInfosBuilder_;
+      }
+
+      private int stakeItemIndex_ ;
+      /**
+       * <code>uint32 stakeItemIndex = 9 [json_name = "stakeItemIndex"];</code>
+       * @return The stakeItemIndex.
+       */
+      @java.lang.Override
+      public int getStakeItemIndex() {
+        return stakeItemIndex_;
+      }
+      /**
+       * <code>uint32 stakeItemIndex = 9 [json_name = "stakeItemIndex"];</code>
+       * @param value The stakeItemIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakeItemIndex(int value) {
+
+        stakeItemIndex_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 stakeItemIndex = 9 [json_name = "stakeItemIndex"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakeItemIndex() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        stakeItemIndex_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.UserStakeRecord)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.UserStakeRecord)
+    private static final com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord();
+    }
+
+    public static com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UserStakeRecord>
+        PARSER = new com.google.protobuf.AbstractParser<UserStakeRecord>() {
+      @java.lang.Override
+      public UserStakeRecord parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UserStakeRecord> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UserStakeRecord> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.ModelsProto.UserStakeRecord getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UserRewardInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.UserRewardInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint32 rewardPoolIndex = 1 [json_name = "rewardPoolIndex"];</code>
+     * @return The rewardPoolIndex.
+     */
+    int getRewardPoolIndex();
+
+    /**
+     * <code>string rewardTokenDenom = 2 [json_name = "rewardTokenDenom"];</code>
+     * @return The rewardTokenDenom.
+     */
+    java.lang.String getRewardTokenDenom();
+    /**
+     * <code>string rewardTokenDenom = 2 [json_name = "rewardTokenDenom"];</code>
+     * @return The bytes for rewardTokenDenom.
+     */
+    com.google.protobuf.ByteString
+        getRewardTokenDenomBytes();
+
+    /**
+     * <code>string rewardDebt = 3 [json_name = "rewardDebt", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The rewardDebt.
+     */
+    java.lang.String getRewardDebt();
+    /**
+     * <code>string rewardDebt = 3 [json_name = "rewardDebt", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for rewardDebt.
+     */
+    com.google.protobuf.ByteString
+        getRewardDebtBytes();
+
+    /**
+     * <code>string claimedAmount = 4 [json_name = "claimedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The claimedAmount.
+     */
+    java.lang.String getClaimedAmount();
+    /**
+     * <code>string claimedAmount = 4 [json_name = "claimedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for claimedAmount.
+     */
+    com.google.protobuf.ByteString
+        getClaimedAmountBytes();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.mining.UserRewardInfo}
+   */
+  public static final class UserRewardInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.UserRewardInfo)
+      UserRewardInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UserRewardInfo.newBuilder() to construct.
+    private UserRewardInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UserRewardInfo() {
+      rewardTokenDenom_ = "";
+      rewardDebt_ = "";
+      claimedAmount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UserRewardInfo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_UserRewardInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_UserRewardInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo.class, com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo.Builder.class);
+    }
+
+    public static final int REWARDPOOLINDEX_FIELD_NUMBER = 1;
+    private int rewardPoolIndex_ = 0;
+    /**
+     * <code>uint32 rewardPoolIndex = 1 [json_name = "rewardPoolIndex"];</code>
+     * @return The rewardPoolIndex.
+     */
+    @java.lang.Override
+    public int getRewardPoolIndex() {
+      return rewardPoolIndex_;
+    }
+
+    public static final int REWARDTOKENDENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object rewardTokenDenom_ = "";
+    /**
+     * <code>string rewardTokenDenom = 2 [json_name = "rewardTokenDenom"];</code>
+     * @return The rewardTokenDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getRewardTokenDenom() {
+      java.lang.Object ref = rewardTokenDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        rewardTokenDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string rewardTokenDenom = 2 [json_name = "rewardTokenDenom"];</code>
+     * @return The bytes for rewardTokenDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRewardTokenDenomBytes() {
+      java.lang.Object ref = rewardTokenDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        rewardTokenDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REWARDDEBT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object rewardDebt_ = "";
+    /**
+     * <code>string rewardDebt = 3 [json_name = "rewardDebt", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The rewardDebt.
+     */
+    @java.lang.Override
+    public java.lang.String getRewardDebt() {
+      java.lang.Object ref = rewardDebt_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        rewardDebt_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string rewardDebt = 3 [json_name = "rewardDebt", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for rewardDebt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRewardDebtBytes() {
+      java.lang.Object ref = rewardDebt_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        rewardDebt_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLAIMEDAMOUNT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object claimedAmount_ = "";
+    /**
+     * <code>string claimedAmount = 4 [json_name = "claimedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The claimedAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getClaimedAmount() {
+      java.lang.Object ref = claimedAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        claimedAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string claimedAmount = 4 [json_name = "claimedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for claimedAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClaimedAmountBytes() {
+      java.lang.Object ref = claimedAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        claimedAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (rewardPoolIndex_ != 0) {
+        output.writeUInt32(1, rewardPoolIndex_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardTokenDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, rewardTokenDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardDebt_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, rewardDebt_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(claimedAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, claimedAmount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (rewardPoolIndex_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, rewardPoolIndex_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardTokenDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, rewardTokenDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardDebt_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, rewardDebt_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(claimedAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, claimedAmount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo other = (com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo) obj;
+
+      if (getRewardPoolIndex()
+          != other.getRewardPoolIndex()) return false;
+      if (!getRewardTokenDenom()
+          .equals(other.getRewardTokenDenom())) return false;
+      if (!getRewardDebt()
+          .equals(other.getRewardDebt())) return false;
+      if (!getClaimedAmount()
+          .equals(other.getClaimedAmount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REWARDPOOLINDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getRewardPoolIndex();
+      hash = (37 * hash) + REWARDTOKENDENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getRewardTokenDenom().hashCode();
+      hash = (37 * hash) + REWARDDEBT_FIELD_NUMBER;
+      hash = (53 * hash) + getRewardDebt().hashCode();
+      hash = (37 * hash) + CLAIMEDAMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getClaimedAmount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.mining.UserRewardInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.UserRewardInfo)
+        com.stafihub.stafihub.mining.ModelsProto.UserRewardInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_UserRewardInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_UserRewardInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo.class, com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        rewardPoolIndex_ = 0;
+        rewardTokenDenom_ = "";
+        rewardDebt_ = "";
+        claimedAmount_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_UserRewardInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo build() {
+        com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo buildPartial() {
+        com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo result = new com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.rewardPoolIndex_ = rewardPoolIndex_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.rewardTokenDenom_ = rewardTokenDenom_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.rewardDebt_ = rewardDebt_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.claimedAmount_ = claimedAmount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo) {
+          return mergeFrom((com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo other) {
+        if (other == com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo.getDefaultInstance()) return this;
+        if (other.getRewardPoolIndex() != 0) {
+          setRewardPoolIndex(other.getRewardPoolIndex());
+        }
+        if (!other.getRewardTokenDenom().isEmpty()) {
+          rewardTokenDenom_ = other.rewardTokenDenom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getRewardDebt().isEmpty()) {
+          rewardDebt_ = other.rewardDebt_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getClaimedAmount().isEmpty()) {
+          claimedAmount_ = other.claimedAmount_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                rewardPoolIndex_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                rewardTokenDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                rewardDebt_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                claimedAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int rewardPoolIndex_ ;
+      /**
+       * <code>uint32 rewardPoolIndex = 1 [json_name = "rewardPoolIndex"];</code>
+       * @return The rewardPoolIndex.
+       */
+      @java.lang.Override
+      public int getRewardPoolIndex() {
+        return rewardPoolIndex_;
+      }
+      /**
+       * <code>uint32 rewardPoolIndex = 1 [json_name = "rewardPoolIndex"];</code>
+       * @param value The rewardPoolIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardPoolIndex(int value) {
+
+        rewardPoolIndex_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 rewardPoolIndex = 1 [json_name = "rewardPoolIndex"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRewardPoolIndex() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        rewardPoolIndex_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object rewardTokenDenom_ = "";
+      /**
+       * <code>string rewardTokenDenom = 2 [json_name = "rewardTokenDenom"];</code>
+       * @return The rewardTokenDenom.
+       */
+      public java.lang.String getRewardTokenDenom() {
+        java.lang.Object ref = rewardTokenDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          rewardTokenDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string rewardTokenDenom = 2 [json_name = "rewardTokenDenom"];</code>
+       * @return The bytes for rewardTokenDenom.
+       */
+      public com.google.protobuf.ByteString
+          getRewardTokenDenomBytes() {
+        java.lang.Object ref = rewardTokenDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          rewardTokenDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string rewardTokenDenom = 2 [json_name = "rewardTokenDenom"];</code>
+       * @param value The rewardTokenDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardTokenDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        rewardTokenDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string rewardTokenDenom = 2 [json_name = "rewardTokenDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRewardTokenDenom() {
+        rewardTokenDenom_ = getDefaultInstance().getRewardTokenDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string rewardTokenDenom = 2 [json_name = "rewardTokenDenom"];</code>
+       * @param value The bytes for rewardTokenDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardTokenDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        rewardTokenDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object rewardDebt_ = "";
+      /**
+       * <code>string rewardDebt = 3 [json_name = "rewardDebt", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The rewardDebt.
+       */
+      public java.lang.String getRewardDebt() {
+        java.lang.Object ref = rewardDebt_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          rewardDebt_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string rewardDebt = 3 [json_name = "rewardDebt", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for rewardDebt.
+       */
+      public com.google.protobuf.ByteString
+          getRewardDebtBytes() {
+        java.lang.Object ref = rewardDebt_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          rewardDebt_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string rewardDebt = 3 [json_name = "rewardDebt", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The rewardDebt to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardDebt(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        rewardDebt_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string rewardDebt = 3 [json_name = "rewardDebt", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRewardDebt() {
+        rewardDebt_ = getDefaultInstance().getRewardDebt();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string rewardDebt = 3 [json_name = "rewardDebt", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for rewardDebt to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardDebtBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        rewardDebt_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object claimedAmount_ = "";
+      /**
+       * <code>string claimedAmount = 4 [json_name = "claimedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The claimedAmount.
+       */
+      public java.lang.String getClaimedAmount() {
+        java.lang.Object ref = claimedAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          claimedAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string claimedAmount = 4 [json_name = "claimedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for claimedAmount.
+       */
+      public com.google.protobuf.ByteString
+          getClaimedAmountBytes() {
+        java.lang.Object ref = claimedAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          claimedAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string claimedAmount = 4 [json_name = "claimedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The claimedAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimedAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        claimedAmount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string claimedAmount = 4 [json_name = "claimedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClaimedAmount() {
+        claimedAmount_ = getDefaultInstance().getClaimedAmount();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string claimedAmount = 4 [json_name = "claimedAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for claimedAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimedAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        claimedAmount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.UserRewardInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.UserRewardInfo)
+    private static final com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo();
+    }
+
+    public static com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UserRewardInfo>
+        PARSER = new com.google.protobuf.AbstractParser<UserRewardInfo>() {
+      @java.lang.Override
+      public UserRewardInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UserRewardInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UserRewardInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.ModelsProto.UserRewardInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RewardTokenOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.RewardToken)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string rewardTokenDenom = 1 [json_name = "rewardTokenDenom"];</code>
+     * @return The rewardTokenDenom.
+     */
+    java.lang.String getRewardTokenDenom();
+    /**
+     * <code>string rewardTokenDenom = 1 [json_name = "rewardTokenDenom"];</code>
+     * @return The bytes for rewardTokenDenom.
+     */
+    com.google.protobuf.ByteString
+        getRewardTokenDenomBytes();
+
+    /**
+     * <code>string minTotalRewardAmount = 2 [json_name = "minTotalRewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The minTotalRewardAmount.
+     */
+    java.lang.String getMinTotalRewardAmount();
+    /**
+     * <code>string minTotalRewardAmount = 2 [json_name = "minTotalRewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for minTotalRewardAmount.
+     */
+    com.google.protobuf.ByteString
+        getMinTotalRewardAmountBytes();
+
+    /**
+     * <code>string minRewardPerSecond = 3 [json_name = "minRewardPerSecond", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The minRewardPerSecond.
+     */
+    java.lang.String getMinRewardPerSecond();
+    /**
+     * <code>string minRewardPerSecond = 3 [json_name = "minRewardPerSecond", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for minRewardPerSecond.
+     */
+    com.google.protobuf.ByteString
+        getMinRewardPerSecondBytes();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.mining.RewardToken}
+   */
+  public static final class RewardToken extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.RewardToken)
+      RewardTokenOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RewardToken.newBuilder() to construct.
+    private RewardToken(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RewardToken() {
+      rewardTokenDenom_ = "";
+      minTotalRewardAmount_ = "";
+      minRewardPerSecond_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RewardToken();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_RewardToken_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_RewardToken_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.ModelsProto.RewardToken.class, com.stafihub.stafihub.mining.ModelsProto.RewardToken.Builder.class);
+    }
+
+    public static final int REWARDTOKENDENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object rewardTokenDenom_ = "";
+    /**
+     * <code>string rewardTokenDenom = 1 [json_name = "rewardTokenDenom"];</code>
+     * @return The rewardTokenDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getRewardTokenDenom() {
+      java.lang.Object ref = rewardTokenDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        rewardTokenDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string rewardTokenDenom = 1 [json_name = "rewardTokenDenom"];</code>
+     * @return The bytes for rewardTokenDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRewardTokenDenomBytes() {
+      java.lang.Object ref = rewardTokenDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        rewardTokenDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MINTOTALREWARDAMOUNT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object minTotalRewardAmount_ = "";
+    /**
+     * <code>string minTotalRewardAmount = 2 [json_name = "minTotalRewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The minTotalRewardAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getMinTotalRewardAmount() {
+      java.lang.Object ref = minTotalRewardAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        minTotalRewardAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string minTotalRewardAmount = 2 [json_name = "minTotalRewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for minTotalRewardAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMinTotalRewardAmountBytes() {
+      java.lang.Object ref = minTotalRewardAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        minTotalRewardAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MINREWARDPERSECOND_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object minRewardPerSecond_ = "";
+    /**
+     * <code>string minRewardPerSecond = 3 [json_name = "minRewardPerSecond", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The minRewardPerSecond.
+     */
+    @java.lang.Override
+    public java.lang.String getMinRewardPerSecond() {
+      java.lang.Object ref = minRewardPerSecond_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        minRewardPerSecond_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string minRewardPerSecond = 3 [json_name = "minRewardPerSecond", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for minRewardPerSecond.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMinRewardPerSecondBytes() {
+      java.lang.Object ref = minRewardPerSecond_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        minRewardPerSecond_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardTokenDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, rewardTokenDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minTotalRewardAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, minTotalRewardAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minRewardPerSecond_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, minRewardPerSecond_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardTokenDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, rewardTokenDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minTotalRewardAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, minTotalRewardAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minRewardPerSecond_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, minRewardPerSecond_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.ModelsProto.RewardToken)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.ModelsProto.RewardToken other = (com.stafihub.stafihub.mining.ModelsProto.RewardToken) obj;
+
+      if (!getRewardTokenDenom()
+          .equals(other.getRewardTokenDenom())) return false;
+      if (!getMinTotalRewardAmount()
+          .equals(other.getMinTotalRewardAmount())) return false;
+      if (!getMinRewardPerSecond()
+          .equals(other.getMinRewardPerSecond())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REWARDTOKENDENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getRewardTokenDenom().hashCode();
+      hash = (37 * hash) + MINTOTALREWARDAMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getMinTotalRewardAmount().hashCode();
+      hash = (37 * hash) + MINREWARDPERSECOND_FIELD_NUMBER;
+      hash = (53 * hash) + getMinRewardPerSecond().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.ModelsProto.RewardToken parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.RewardToken parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.RewardToken parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.RewardToken parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.RewardToken parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.RewardToken parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.RewardToken parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.RewardToken parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.ModelsProto.RewardToken parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.ModelsProto.RewardToken parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.RewardToken parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.RewardToken parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.ModelsProto.RewardToken prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.mining.RewardToken}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.RewardToken)
+        com.stafihub.stafihub.mining.ModelsProto.RewardTokenOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_RewardToken_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_RewardToken_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.ModelsProto.RewardToken.class, com.stafihub.stafihub.mining.ModelsProto.RewardToken.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.ModelsProto.RewardToken.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        rewardTokenDenom_ = "";
+        minTotalRewardAmount_ = "";
+        minRewardPerSecond_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_RewardToken_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.ModelsProto.RewardToken getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.ModelsProto.RewardToken.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.ModelsProto.RewardToken build() {
+        com.stafihub.stafihub.mining.ModelsProto.RewardToken result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.ModelsProto.RewardToken buildPartial() {
+        com.stafihub.stafihub.mining.ModelsProto.RewardToken result = new com.stafihub.stafihub.mining.ModelsProto.RewardToken(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.mining.ModelsProto.RewardToken result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.rewardTokenDenom_ = rewardTokenDenom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.minTotalRewardAmount_ = minTotalRewardAmount_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.minRewardPerSecond_ = minRewardPerSecond_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.ModelsProto.RewardToken) {
+          return mergeFrom((com.stafihub.stafihub.mining.ModelsProto.RewardToken)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.ModelsProto.RewardToken other) {
+        if (other == com.stafihub.stafihub.mining.ModelsProto.RewardToken.getDefaultInstance()) return this;
+        if (!other.getRewardTokenDenom().isEmpty()) {
+          rewardTokenDenom_ = other.rewardTokenDenom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getMinTotalRewardAmount().isEmpty()) {
+          minTotalRewardAmount_ = other.minTotalRewardAmount_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getMinRewardPerSecond().isEmpty()) {
+          minRewardPerSecond_ = other.minRewardPerSecond_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                rewardTokenDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                minTotalRewardAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                minRewardPerSecond_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object rewardTokenDenom_ = "";
+      /**
+       * <code>string rewardTokenDenom = 1 [json_name = "rewardTokenDenom"];</code>
+       * @return The rewardTokenDenom.
+       */
+      public java.lang.String getRewardTokenDenom() {
+        java.lang.Object ref = rewardTokenDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          rewardTokenDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string rewardTokenDenom = 1 [json_name = "rewardTokenDenom"];</code>
+       * @return The bytes for rewardTokenDenom.
+       */
+      public com.google.protobuf.ByteString
+          getRewardTokenDenomBytes() {
+        java.lang.Object ref = rewardTokenDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          rewardTokenDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string rewardTokenDenom = 1 [json_name = "rewardTokenDenom"];</code>
+       * @param value The rewardTokenDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardTokenDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        rewardTokenDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string rewardTokenDenom = 1 [json_name = "rewardTokenDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRewardTokenDenom() {
+        rewardTokenDenom_ = getDefaultInstance().getRewardTokenDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string rewardTokenDenom = 1 [json_name = "rewardTokenDenom"];</code>
+       * @param value The bytes for rewardTokenDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardTokenDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        rewardTokenDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object minTotalRewardAmount_ = "";
+      /**
+       * <code>string minTotalRewardAmount = 2 [json_name = "minTotalRewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The minTotalRewardAmount.
+       */
+      public java.lang.String getMinTotalRewardAmount() {
+        java.lang.Object ref = minTotalRewardAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          minTotalRewardAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string minTotalRewardAmount = 2 [json_name = "minTotalRewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for minTotalRewardAmount.
+       */
+      public com.google.protobuf.ByteString
+          getMinTotalRewardAmountBytes() {
+        java.lang.Object ref = minTotalRewardAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          minTotalRewardAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string minTotalRewardAmount = 2 [json_name = "minTotalRewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The minTotalRewardAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinTotalRewardAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        minTotalRewardAmount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string minTotalRewardAmount = 2 [json_name = "minTotalRewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinTotalRewardAmount() {
+        minTotalRewardAmount_ = getDefaultInstance().getMinTotalRewardAmount();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string minTotalRewardAmount = 2 [json_name = "minTotalRewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for minTotalRewardAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinTotalRewardAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        minTotalRewardAmount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object minRewardPerSecond_ = "";
+      /**
+       * <code>string minRewardPerSecond = 3 [json_name = "minRewardPerSecond", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The minRewardPerSecond.
+       */
+      public java.lang.String getMinRewardPerSecond() {
+        java.lang.Object ref = minRewardPerSecond_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          minRewardPerSecond_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string minRewardPerSecond = 3 [json_name = "minRewardPerSecond", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for minRewardPerSecond.
+       */
+      public com.google.protobuf.ByteString
+          getMinRewardPerSecondBytes() {
+        java.lang.Object ref = minRewardPerSecond_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          minRewardPerSecond_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string minRewardPerSecond = 3 [json_name = "minRewardPerSecond", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The minRewardPerSecond to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinRewardPerSecond(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        minRewardPerSecond_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string minRewardPerSecond = 3 [json_name = "minRewardPerSecond", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinRewardPerSecond() {
+        minRewardPerSecond_ = getDefaultInstance().getMinRewardPerSecond();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string minRewardPerSecond = 3 [json_name = "minRewardPerSecond", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for minRewardPerSecond to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinRewardPerSecondBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        minRewardPerSecond_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.RewardToken)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.RewardToken)
+    private static final com.stafihub.stafihub.mining.ModelsProto.RewardToken DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.ModelsProto.RewardToken();
+    }
+
+    public static com.stafihub.stafihub.mining.ModelsProto.RewardToken getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RewardToken>
+        PARSER = new com.google.protobuf.AbstractParser<RewardToken>() {
+      @java.lang.Override
+      public RewardToken parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RewardToken> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RewardToken> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.ModelsProto.RewardToken getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StakeItemOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.StakeItem)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint32 index = 1 [json_name = "index"];</code>
+     * @return The index.
+     */
+    int getIndex();
+
+    /**
+     * <code>uint32 stakePoolIndex = 2 [json_name = "stakePoolIndex"];</code>
+     * @return The stakePoolIndex.
+     */
+    int getStakePoolIndex();
+
+    /**
+     * <code>uint64 lockSecond = 3 [json_name = "lockSecond"];</code>
+     * @return The lockSecond.
+     */
+    long getLockSecond();
+
+    /**
+     * <pre>
+     * user stakedPower = powerRewardRate * stakedAmount
+     * </pre>
+     *
+     * <code>string powerRewardRate = 4 [json_name = "powerRewardRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+     * @return The powerRewardRate.
+     */
+    java.lang.String getPowerRewardRate();
+    /**
+     * <pre>
+     * user stakedPower = powerRewardRate * stakedAmount
+     * </pre>
+     *
+     * <code>string powerRewardRate = 4 [json_name = "powerRewardRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+     * @return The bytes for powerRewardRate.
+     */
+    com.google.protobuf.ByteString
+        getPowerRewardRateBytes();
+
+    /**
+     * <code>bool enable = 5 [json_name = "enable"];</code>
+     * @return The enable.
+     */
+    boolean getEnable();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.mining.StakeItem}
+   */
+  public static final class StakeItem extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.StakeItem)
+      StakeItemOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StakeItem.newBuilder() to construct.
+    private StakeItem(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StakeItem() {
+      powerRewardRate_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StakeItem();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_StakeItem_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_StakeItem_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.ModelsProto.StakeItem.class, com.stafihub.stafihub.mining.ModelsProto.StakeItem.Builder.class);
+    }
+
+    public static final int INDEX_FIELD_NUMBER = 1;
+    private int index_ = 0;
+    /**
+     * <code>uint32 index = 1 [json_name = "index"];</code>
+     * @return The index.
+     */
+    @java.lang.Override
+    public int getIndex() {
+      return index_;
+    }
+
+    public static final int STAKEPOOLINDEX_FIELD_NUMBER = 2;
+    private int stakePoolIndex_ = 0;
+    /**
+     * <code>uint32 stakePoolIndex = 2 [json_name = "stakePoolIndex"];</code>
+     * @return The stakePoolIndex.
+     */
+    @java.lang.Override
+    public int getStakePoolIndex() {
+      return stakePoolIndex_;
+    }
+
+    public static final int LOCKSECOND_FIELD_NUMBER = 3;
+    private long lockSecond_ = 0L;
+    /**
+     * <code>uint64 lockSecond = 3 [json_name = "lockSecond"];</code>
+     * @return The lockSecond.
+     */
+    @java.lang.Override
+    public long getLockSecond() {
+      return lockSecond_;
+    }
+
+    public static final int POWERREWARDRATE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object powerRewardRate_ = "";
+    /**
+     * <pre>
+     * user stakedPower = powerRewardRate * stakedAmount
+     * </pre>
+     *
+     * <code>string powerRewardRate = 4 [json_name = "powerRewardRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+     * @return The powerRewardRate.
+     */
+    @java.lang.Override
+    public java.lang.String getPowerRewardRate() {
+      java.lang.Object ref = powerRewardRate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        powerRewardRate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * user stakedPower = powerRewardRate * stakedAmount
+     * </pre>
+     *
+     * <code>string powerRewardRate = 4 [json_name = "powerRewardRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+     * @return The bytes for powerRewardRate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPowerRewardRateBytes() {
+      java.lang.Object ref = powerRewardRate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        powerRewardRate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENABLE_FIELD_NUMBER = 5;
+    private boolean enable_ = false;
+    /**
+     * <code>bool enable = 5 [json_name = "enable"];</code>
+     * @return The enable.
+     */
+    @java.lang.Override
+    public boolean getEnable() {
+      return enable_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (index_ != 0) {
+        output.writeUInt32(1, index_);
+      }
+      if (stakePoolIndex_ != 0) {
+        output.writeUInt32(2, stakePoolIndex_);
+      }
+      if (lockSecond_ != 0L) {
+        output.writeUInt64(3, lockSecond_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(powerRewardRate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, powerRewardRate_);
+      }
+      if (enable_ != false) {
+        output.writeBool(5, enable_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (index_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, index_);
+      }
+      if (stakePoolIndex_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, stakePoolIndex_);
+      }
+      if (lockSecond_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, lockSecond_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(powerRewardRate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, powerRewardRate_);
+      }
+      if (enable_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, enable_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.ModelsProto.StakeItem)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.ModelsProto.StakeItem other = (com.stafihub.stafihub.mining.ModelsProto.StakeItem) obj;
+
+      if (getIndex()
+          != other.getIndex()) return false;
+      if (getStakePoolIndex()
+          != other.getStakePoolIndex()) return false;
+      if (getLockSecond()
+          != other.getLockSecond()) return false;
+      if (!getPowerRewardRate()
+          .equals(other.getPowerRewardRate())) return false;
+      if (getEnable()
+          != other.getEnable()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getIndex();
+      hash = (37 * hash) + STAKEPOOLINDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getStakePoolIndex();
+      hash = (37 * hash) + LOCKSECOND_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLockSecond());
+      hash = (37 * hash) + POWERREWARDRATE_FIELD_NUMBER;
+      hash = (53 * hash) + getPowerRewardRate().hashCode();
+      hash = (37 * hash) + ENABLE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnable());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.ModelsProto.StakeItem parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.StakeItem parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.StakeItem parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.StakeItem parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.StakeItem parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.StakeItem parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.StakeItem parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.StakeItem parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.ModelsProto.StakeItem parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.ModelsProto.StakeItem parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.StakeItem parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.StakeItem parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.ModelsProto.StakeItem prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.mining.StakeItem}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.StakeItem)
+        com.stafihub.stafihub.mining.ModelsProto.StakeItemOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_StakeItem_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_StakeItem_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.ModelsProto.StakeItem.class, com.stafihub.stafihub.mining.ModelsProto.StakeItem.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.ModelsProto.StakeItem.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        index_ = 0;
+        stakePoolIndex_ = 0;
+        lockSecond_ = 0L;
+        powerRewardRate_ = "";
+        enable_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_StakeItem_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.ModelsProto.StakeItem getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.ModelsProto.StakeItem.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.ModelsProto.StakeItem build() {
+        com.stafihub.stafihub.mining.ModelsProto.StakeItem result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.ModelsProto.StakeItem buildPartial() {
+        com.stafihub.stafihub.mining.ModelsProto.StakeItem result = new com.stafihub.stafihub.mining.ModelsProto.StakeItem(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.mining.ModelsProto.StakeItem result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.index_ = index_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.stakePoolIndex_ = stakePoolIndex_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.lockSecond_ = lockSecond_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.powerRewardRate_ = powerRewardRate_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.enable_ = enable_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.ModelsProto.StakeItem) {
+          return mergeFrom((com.stafihub.stafihub.mining.ModelsProto.StakeItem)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.ModelsProto.StakeItem other) {
+        if (other == com.stafihub.stafihub.mining.ModelsProto.StakeItem.getDefaultInstance()) return this;
+        if (other.getIndex() != 0) {
+          setIndex(other.getIndex());
+        }
+        if (other.getStakePoolIndex() != 0) {
+          setStakePoolIndex(other.getStakePoolIndex());
+        }
+        if (other.getLockSecond() != 0L) {
+          setLockSecond(other.getLockSecond());
+        }
+        if (!other.getPowerRewardRate().isEmpty()) {
+          powerRewardRate_ = other.powerRewardRate_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.getEnable() != false) {
+          setEnable(other.getEnable());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                index_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                stakePoolIndex_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                lockSecond_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                powerRewardRate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                enable_ = input.readBool();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int index_ ;
+      /**
+       * <code>uint32 index = 1 [json_name = "index"];</code>
+       * @return The index.
+       */
+      @java.lang.Override
+      public int getIndex() {
+        return index_;
+      }
+      /**
+       * <code>uint32 index = 1 [json_name = "index"];</code>
+       * @param value The index to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndex(int value) {
+
+        index_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 index = 1 [json_name = "index"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIndex() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        index_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int stakePoolIndex_ ;
+      /**
+       * <code>uint32 stakePoolIndex = 2 [json_name = "stakePoolIndex"];</code>
+       * @return The stakePoolIndex.
+       */
+      @java.lang.Override
+      public int getStakePoolIndex() {
+        return stakePoolIndex_;
+      }
+      /**
+       * <code>uint32 stakePoolIndex = 2 [json_name = "stakePoolIndex"];</code>
+       * @param value The stakePoolIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakePoolIndex(int value) {
+
+        stakePoolIndex_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 stakePoolIndex = 2 [json_name = "stakePoolIndex"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakePoolIndex() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        stakePoolIndex_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long lockSecond_ ;
+      /**
+       * <code>uint64 lockSecond = 3 [json_name = "lockSecond"];</code>
+       * @return The lockSecond.
+       */
+      @java.lang.Override
+      public long getLockSecond() {
+        return lockSecond_;
+      }
+      /**
+       * <code>uint64 lockSecond = 3 [json_name = "lockSecond"];</code>
+       * @param value The lockSecond to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLockSecond(long value) {
+
+        lockSecond_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 lockSecond = 3 [json_name = "lockSecond"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLockSecond() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        lockSecond_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object powerRewardRate_ = "";
+      /**
+       * <pre>
+       * user stakedPower = powerRewardRate * stakedAmount
+       * </pre>
+       *
+       * <code>string powerRewardRate = 4 [json_name = "powerRewardRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+       * @return The powerRewardRate.
+       */
+      public java.lang.String getPowerRewardRate() {
+        java.lang.Object ref = powerRewardRate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          powerRewardRate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * user stakedPower = powerRewardRate * stakedAmount
+       * </pre>
+       *
+       * <code>string powerRewardRate = 4 [json_name = "powerRewardRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+       * @return The bytes for powerRewardRate.
+       */
+      public com.google.protobuf.ByteString
+          getPowerRewardRateBytes() {
+        java.lang.Object ref = powerRewardRate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          powerRewardRate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * user stakedPower = powerRewardRate * stakedAmount
+       * </pre>
+       *
+       * <code>string powerRewardRate = 4 [json_name = "powerRewardRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+       * @param value The powerRewardRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPowerRewardRate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        powerRewardRate_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * user stakedPower = powerRewardRate * stakedAmount
+       * </pre>
+       *
+       * <code>string powerRewardRate = 4 [json_name = "powerRewardRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPowerRewardRate() {
+        powerRewardRate_ = getDefaultInstance().getPowerRewardRate();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * user stakedPower = powerRewardRate * stakedAmount
+       * </pre>
+       *
+       * <code>string powerRewardRate = 4 [json_name = "powerRewardRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+       * @param value The bytes for powerRewardRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPowerRewardRateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        powerRewardRate_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private boolean enable_ ;
+      /**
+       * <code>bool enable = 5 [json_name = "enable"];</code>
+       * @return The enable.
+       */
+      @java.lang.Override
+      public boolean getEnable() {
+        return enable_;
+      }
+      /**
+       * <code>bool enable = 5 [json_name = "enable"];</code>
+       * @param value The enable to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnable(boolean value) {
+
+        enable_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool enable = 5 [json_name = "enable"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnable() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        enable_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.StakeItem)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.StakeItem)
+    private static final com.stafihub.stafihub.mining.ModelsProto.StakeItem DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.ModelsProto.StakeItem();
+    }
+
+    public static com.stafihub.stafihub.mining.ModelsProto.StakeItem getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StakeItem>
+        PARSER = new com.google.protobuf.AbstractParser<StakeItem>() {
+      @java.lang.Override
+      public StakeItem parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<StakeItem> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StakeItem> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.ModelsProto.StakeItem getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StakeItemLimitOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.mining.StakeItemLimit)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string maxPowerRewardRate = 1 [json_name = "maxPowerRewardRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+     * @return The maxPowerRewardRate.
+     */
+    java.lang.String getMaxPowerRewardRate();
+    /**
+     * <code>string maxPowerRewardRate = 1 [json_name = "maxPowerRewardRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+     * @return The bytes for maxPowerRewardRate.
+     */
+    com.google.protobuf.ByteString
+        getMaxPowerRewardRateBytes();
+
+    /**
+     * <code>uint64 maxLockSecond = 2 [json_name = "maxLockSecond"];</code>
+     * @return The maxLockSecond.
+     */
+    long getMaxLockSecond();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.mining.StakeItemLimit}
+   */
+  public static final class StakeItemLimit extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.mining.StakeItemLimit)
+      StakeItemLimitOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StakeItemLimit.newBuilder() to construct.
+    private StakeItemLimit(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StakeItemLimit() {
+      maxPowerRewardRate_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StakeItemLimit();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_StakeItemLimit_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_StakeItemLimit_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit.class, com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit.Builder.class);
+    }
+
+    public static final int MAXPOWERREWARDRATE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object maxPowerRewardRate_ = "";
+    /**
+     * <code>string maxPowerRewardRate = 1 [json_name = "maxPowerRewardRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+     * @return The maxPowerRewardRate.
+     */
+    @java.lang.Override
+    public java.lang.String getMaxPowerRewardRate() {
+      java.lang.Object ref = maxPowerRewardRate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        maxPowerRewardRate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string maxPowerRewardRate = 1 [json_name = "maxPowerRewardRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+     * @return The bytes for maxPowerRewardRate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMaxPowerRewardRateBytes() {
+      java.lang.Object ref = maxPowerRewardRate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        maxPowerRewardRate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MAXLOCKSECOND_FIELD_NUMBER = 2;
+    private long maxLockSecond_ = 0L;
+    /**
+     * <code>uint64 maxLockSecond = 2 [json_name = "maxLockSecond"];</code>
+     * @return The maxLockSecond.
+     */
+    @java.lang.Override
+    public long getMaxLockSecond() {
+      return maxLockSecond_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxPowerRewardRate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, maxPowerRewardRate_);
+      }
+      if (maxLockSecond_ != 0L) {
+        output.writeUInt64(2, maxLockSecond_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxPowerRewardRate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, maxPowerRewardRate_);
+      }
+      if (maxLockSecond_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, maxLockSecond_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit other = (com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit) obj;
+
+      if (!getMaxPowerRewardRate()
+          .equals(other.getMaxPowerRewardRate())) return false;
+      if (getMaxLockSecond()
+          != other.getMaxLockSecond()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MAXPOWERREWARDRATE_FIELD_NUMBER;
+      hash = (53 * hash) + getMaxPowerRewardRate().hashCode();
+      hash = (37 * hash) + MAXLOCKSECOND_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMaxLockSecond());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.mining.StakeItemLimit}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.mining.StakeItemLimit)
+        com.stafihub.stafihub.mining.ModelsProto.StakeItemLimitOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_StakeItemLimit_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_StakeItemLimit_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit.class, com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        maxPowerRewardRate_ = "";
+        maxLockSecond_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.mining.ModelsProto.internal_static_stafihub_stafihub_mining_StakeItemLimit_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit getDefaultInstanceForType() {
+        return com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit build() {
+        com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit buildPartial() {
+        com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit result = new com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.maxPowerRewardRate_ = maxPowerRewardRate_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.maxLockSecond_ = maxLockSecond_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit) {
+          return mergeFrom((com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit other) {
+        if (other == com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit.getDefaultInstance()) return this;
+        if (!other.getMaxPowerRewardRate().isEmpty()) {
+          maxPowerRewardRate_ = other.maxPowerRewardRate_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getMaxLockSecond() != 0L) {
+          setMaxLockSecond(other.getMaxLockSecond());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                maxPowerRewardRate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                maxLockSecond_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object maxPowerRewardRate_ = "";
+      /**
+       * <code>string maxPowerRewardRate = 1 [json_name = "maxPowerRewardRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+       * @return The maxPowerRewardRate.
+       */
+      public java.lang.String getMaxPowerRewardRate() {
+        java.lang.Object ref = maxPowerRewardRate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          maxPowerRewardRate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string maxPowerRewardRate = 1 [json_name = "maxPowerRewardRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+       * @return The bytes for maxPowerRewardRate.
+       */
+      public com.google.protobuf.ByteString
+          getMaxPowerRewardRateBytes() {
+        java.lang.Object ref = maxPowerRewardRate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          maxPowerRewardRate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string maxPowerRewardRate = 1 [json_name = "maxPowerRewardRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+       * @param value The maxPowerRewardRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxPowerRewardRate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        maxPowerRewardRate_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string maxPowerRewardRate = 1 [json_name = "maxPowerRewardRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxPowerRewardRate() {
+        maxPowerRewardRate_ = getDefaultInstance().getMaxPowerRewardRate();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string maxPowerRewardRate = 1 [json_name = "maxPowerRewardRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/stafihub/stafihub/utils.Dec"];</code>
+       * @param value The bytes for maxPowerRewardRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxPowerRewardRateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        maxPowerRewardRate_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long maxLockSecond_ ;
+      /**
+       * <code>uint64 maxLockSecond = 2 [json_name = "maxLockSecond"];</code>
+       * @return The maxLockSecond.
+       */
+      @java.lang.Override
+      public long getMaxLockSecond() {
+        return maxLockSecond_;
+      }
+      /**
+       * <code>uint64 maxLockSecond = 2 [json_name = "maxLockSecond"];</code>
+       * @param value The maxLockSecond to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxLockSecond(long value) {
+
+        maxLockSecond_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 maxLockSecond = 2 [json_name = "maxLockSecond"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxLockSecond() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        maxLockSecond_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.mining.StakeItemLimit)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.mining.StakeItemLimit)
+    private static final com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit();
+    }
+
+    public static com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StakeItemLimit>
+        PARSER = new com.google.protobuf.AbstractParser<StakeItemLimit>() {
+      @java.lang.Override
+      public StakeItemLimit parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<StakeItemLimit> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StakeItemLimit> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.mining.ModelsProto.StakeItemLimit getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_StakePool_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_StakePool_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_RewardPool_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_RewardPool_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_UserStakeRecord_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_UserStakeRecord_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_UserRewardInfo_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_UserRewardInfo_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_RewardToken_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_RewardToken_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_StakeItem_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_StakeItem_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_mining_StakeItemLimit_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_mining_StakeItemLimit_fieldAccessorTable;
 
@@ -121,12 +8269,12 @@ public final class ModelsProto {
       "\022maxPowerRewardRate\030\001 \001(\tB.\310\336\037\000\332\336\037&githu" +
       "b.com/stafihub/stafihub/utils.DecR\022maxPo" +
       "werRewardRate\022$\n\rmaxLockSecond\030\002 \001(\004R\rma" +
-      "xLockSecondB\332\001\n\034com.stafihub.stafihub.mi" +
-      "ningB\013ModelsProtoP\001Z+github.com/stafihub" +
-      "/stafihub/x/mining/types\242\002\003SSM\252\002\030Stafihu" +
-      "b.Stafihub.Mining\312\002\030Stafihub\\Stafihub\\Mi" +
-      "ning\342\002$Stafihub\\Stafihub\\Mining\\GPBMetad" +
-      "ata\352\002\032Stafihub::Stafihub::Miningb\006proto3"
+      "xLockSecondB\330\001\n\034com.stafihub.stafihub.mi" +
+      "ningB\013ModelsProtoZ+github.com/stafihub/s" +
+      "tafihub/x/mining/types\242\002\003SSM\252\002\030Stafihub." +
+      "Stafihub.Mining\312\002\030Stafihub\\Stafihub\\Mini" +
+      "ng\342\002$Stafihub\\Stafihub\\Mining\\GPBMetadat" +
+      "a\352\002\032Stafihub::Stafihub::Miningb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,34 +14,6129 @@ public final class ProtorevProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface TokenPairArbRoutesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.protorev.v1beta1.TokenPairArbRoutes)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Stores all of the possible hot paths for a given pair of tokens
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.Route arb_routes = 1 [json_name = "arbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"arb_routes&#92;""];</code>
+     */
+    java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.Route> 
+        getArbRoutesList();
+    /**
+     * <pre>
+     * Stores all of the possible hot paths for a given pair of tokens
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.Route arb_routes = 1 [json_name = "arbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"arb_routes&#92;""];</code>
+     */
+    com.osmosis.protorev.v1beta1.ProtorevProto.Route getArbRoutes(int index);
+    /**
+     * <pre>
+     * Stores all of the possible hot paths for a given pair of tokens
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.Route arb_routes = 1 [json_name = "arbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"arb_routes&#92;""];</code>
+     */
+    int getArbRoutesCount();
+    /**
+     * <pre>
+     * Stores all of the possible hot paths for a given pair of tokens
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.Route arb_routes = 1 [json_name = "arbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"arb_routes&#92;""];</code>
+     */
+    java.util.List<? extends com.osmosis.protorev.v1beta1.ProtorevProto.RouteOrBuilder> 
+        getArbRoutesOrBuilderList();
+    /**
+     * <pre>
+     * Stores all of the possible hot paths for a given pair of tokens
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.Route arb_routes = 1 [json_name = "arbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"arb_routes&#92;""];</code>
+     */
+    com.osmosis.protorev.v1beta1.ProtorevProto.RouteOrBuilder getArbRoutesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Token denomination of the first asset
+     * </pre>
+     *
+     * <code>string token_in = 2 [json_name = "tokenIn", (.gogoproto.moretags) = "yaml:&#92;"token_in&#92;""];</code>
+     * @return The tokenIn.
+     */
+    java.lang.String getTokenIn();
+    /**
+     * <pre>
+     * Token denomination of the first asset
+     * </pre>
+     *
+     * <code>string token_in = 2 [json_name = "tokenIn", (.gogoproto.moretags) = "yaml:&#92;"token_in&#92;""];</code>
+     * @return The bytes for tokenIn.
+     */
+    com.google.protobuf.ByteString
+        getTokenInBytes();
+
+    /**
+     * <pre>
+     * Token denomination of the second asset
+     * </pre>
+     *
+     * <code>string token_out = 3 [json_name = "tokenOut", (.gogoproto.moretags) = "yaml:&#92;"token_out&#92;""];</code>
+     * @return The tokenOut.
+     */
+    java.lang.String getTokenOut();
+    /**
+     * <pre>
+     * Token denomination of the second asset
+     * </pre>
+     *
+     * <code>string token_out = 3 [json_name = "tokenOut", (.gogoproto.moretags) = "yaml:&#92;"token_out&#92;""];</code>
+     * @return The bytes for tokenOut.
+     */
+    com.google.protobuf.ByteString
+        getTokenOutBytes();
+  }
+  /**
+   * <pre>
+   * TokenPairArbRoutes tracks all of the hot routes for a given pair of tokens
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.protorev.v1beta1.TokenPairArbRoutes}
+   */
+  public static final class TokenPairArbRoutes extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.protorev.v1beta1.TokenPairArbRoutes)
+      TokenPairArbRoutesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TokenPairArbRoutes.newBuilder() to construct.
+    private TokenPairArbRoutes(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TokenPairArbRoutes() {
+      arbRoutes_ = java.util.Collections.emptyList();
+      tokenIn_ = "";
+      tokenOut_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TokenPairArbRoutes();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.protorev.v1beta1.ProtorevProto.internal_static_osmosis_protorev_v1beta1_TokenPairArbRoutes_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.protorev.v1beta1.ProtorevProto.internal_static_osmosis_protorev_v1beta1_TokenPairArbRoutes_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.class, com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.Builder.class);
+    }
+
+    public static final int ARB_ROUTES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.Route> arbRoutes_;
+    /**
+     * <pre>
+     * Stores all of the possible hot paths for a given pair of tokens
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.Route arb_routes = 1 [json_name = "arbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"arb_routes&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.Route> getArbRoutesList() {
+      return arbRoutes_;
+    }
+    /**
+     * <pre>
+     * Stores all of the possible hot paths for a given pair of tokens
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.Route arb_routes = 1 [json_name = "arbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"arb_routes&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.osmosis.protorev.v1beta1.ProtorevProto.RouteOrBuilder> 
+        getArbRoutesOrBuilderList() {
+      return arbRoutes_;
+    }
+    /**
+     * <pre>
+     * Stores all of the possible hot paths for a given pair of tokens
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.Route arb_routes = 1 [json_name = "arbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"arb_routes&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getArbRoutesCount() {
+      return arbRoutes_.size();
+    }
+    /**
+     * <pre>
+     * Stores all of the possible hot paths for a given pair of tokens
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.Route arb_routes = 1 [json_name = "arbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"arb_routes&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.ProtorevProto.Route getArbRoutes(int index) {
+      return arbRoutes_.get(index);
+    }
+    /**
+     * <pre>
+     * Stores all of the possible hot paths for a given pair of tokens
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.Route arb_routes = 1 [json_name = "arbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"arb_routes&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.ProtorevProto.RouteOrBuilder getArbRoutesOrBuilder(
+        int index) {
+      return arbRoutes_.get(index);
+    }
+
+    public static final int TOKEN_IN_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object tokenIn_ = "";
+    /**
+     * <pre>
+     * Token denomination of the first asset
+     * </pre>
+     *
+     * <code>string token_in = 2 [json_name = "tokenIn", (.gogoproto.moretags) = "yaml:&#92;"token_in&#92;""];</code>
+     * @return The tokenIn.
+     */
+    @java.lang.Override
+    public java.lang.String getTokenIn() {
+      java.lang.Object ref = tokenIn_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tokenIn_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Token denomination of the first asset
+     * </pre>
+     *
+     * <code>string token_in = 2 [json_name = "tokenIn", (.gogoproto.moretags) = "yaml:&#92;"token_in&#92;""];</code>
+     * @return The bytes for tokenIn.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTokenInBytes() {
+      java.lang.Object ref = tokenIn_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tokenIn_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOKEN_OUT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object tokenOut_ = "";
+    /**
+     * <pre>
+     * Token denomination of the second asset
+     * </pre>
+     *
+     * <code>string token_out = 3 [json_name = "tokenOut", (.gogoproto.moretags) = "yaml:&#92;"token_out&#92;""];</code>
+     * @return The tokenOut.
+     */
+    @java.lang.Override
+    public java.lang.String getTokenOut() {
+      java.lang.Object ref = tokenOut_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tokenOut_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Token denomination of the second asset
+     * </pre>
+     *
+     * <code>string token_out = 3 [json_name = "tokenOut", (.gogoproto.moretags) = "yaml:&#92;"token_out&#92;""];</code>
+     * @return The bytes for tokenOut.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTokenOutBytes() {
+      java.lang.Object ref = tokenOut_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tokenOut_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < arbRoutes_.size(); i++) {
+        output.writeMessage(1, arbRoutes_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenIn_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tokenIn_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenOut_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, tokenOut_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < arbRoutes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, arbRoutes_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenIn_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, tokenIn_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenOut_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, tokenOut_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes)) {
+        return super.equals(obj);
+      }
+      com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes other = (com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes) obj;
+
+      if (!getArbRoutesList()
+          .equals(other.getArbRoutesList())) return false;
+      if (!getTokenIn()
+          .equals(other.getTokenIn())) return false;
+      if (!getTokenOut()
+          .equals(other.getTokenOut())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getArbRoutesCount() > 0) {
+        hash = (37 * hash) + ARB_ROUTES_FIELD_NUMBER;
+        hash = (53 * hash) + getArbRoutesList().hashCode();
+      }
+      hash = (37 * hash) + TOKEN_IN_FIELD_NUMBER;
+      hash = (53 * hash) + getTokenIn().hashCode();
+      hash = (37 * hash) + TOKEN_OUT_FIELD_NUMBER;
+      hash = (53 * hash) + getTokenOut().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * TokenPairArbRoutes tracks all of the hot routes for a given pair of tokens
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.protorev.v1beta1.TokenPairArbRoutes}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.protorev.v1beta1.TokenPairArbRoutes)
+        com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.protorev.v1beta1.ProtorevProto.internal_static_osmosis_protorev_v1beta1_TokenPairArbRoutes_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.protorev.v1beta1.ProtorevProto.internal_static_osmosis_protorev_v1beta1_TokenPairArbRoutes_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.class, com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.Builder.class);
+      }
+
+      // Construct using com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (arbRoutesBuilder_ == null) {
+          arbRoutes_ = java.util.Collections.emptyList();
+        } else {
+          arbRoutes_ = null;
+          arbRoutesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        tokenIn_ = "";
+        tokenOut_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.protorev.v1beta1.ProtorevProto.internal_static_osmosis_protorev_v1beta1_TokenPairArbRoutes_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes getDefaultInstanceForType() {
+        return com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes build() {
+        com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes buildPartial() {
+        com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes result = new com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes result) {
+        if (arbRoutesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            arbRoutes_ = java.util.Collections.unmodifiableList(arbRoutes_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.arbRoutes_ = arbRoutes_;
+        } else {
+          result.arbRoutes_ = arbRoutesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.tokenIn_ = tokenIn_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.tokenOut_ = tokenOut_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes) {
+          return mergeFrom((com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes other) {
+        if (other == com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.getDefaultInstance()) return this;
+        if (arbRoutesBuilder_ == null) {
+          if (!other.arbRoutes_.isEmpty()) {
+            if (arbRoutes_.isEmpty()) {
+              arbRoutes_ = other.arbRoutes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureArbRoutesIsMutable();
+              arbRoutes_.addAll(other.arbRoutes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.arbRoutes_.isEmpty()) {
+            if (arbRoutesBuilder_.isEmpty()) {
+              arbRoutesBuilder_.dispose();
+              arbRoutesBuilder_ = null;
+              arbRoutes_ = other.arbRoutes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              arbRoutesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getArbRoutesFieldBuilder() : null;
+            } else {
+              arbRoutesBuilder_.addAllMessages(other.arbRoutes_);
+            }
+          }
+        }
+        if (!other.getTokenIn().isEmpty()) {
+          tokenIn_ = other.tokenIn_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getTokenOut().isEmpty()) {
+          tokenOut_ = other.tokenOut_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.osmosis.protorev.v1beta1.ProtorevProto.Route m =
+                    input.readMessage(
+                        com.osmosis.protorev.v1beta1.ProtorevProto.Route.parser(),
+                        extensionRegistry);
+                if (arbRoutesBuilder_ == null) {
+                  ensureArbRoutesIsMutable();
+                  arbRoutes_.add(m);
+                } else {
+                  arbRoutesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                tokenIn_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                tokenOut_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.Route> arbRoutes_ =
+        java.util.Collections.emptyList();
+      private void ensureArbRoutesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          arbRoutes_ = new java.util.ArrayList<com.osmosis.protorev.v1beta1.ProtorevProto.Route>(arbRoutes_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.protorev.v1beta1.ProtorevProto.Route, com.osmosis.protorev.v1beta1.ProtorevProto.Route.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.RouteOrBuilder> arbRoutesBuilder_;
+
+      /**
+       * <pre>
+       * Stores all of the possible hot paths for a given pair of tokens
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Route arb_routes = 1 [json_name = "arbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"arb_routes&#92;""];</code>
+       */
+      public java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.Route> getArbRoutesList() {
+        if (arbRoutesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(arbRoutes_);
+        } else {
+          return arbRoutesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Stores all of the possible hot paths for a given pair of tokens
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Route arb_routes = 1 [json_name = "arbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"arb_routes&#92;""];</code>
+       */
+      public int getArbRoutesCount() {
+        if (arbRoutesBuilder_ == null) {
+          return arbRoutes_.size();
+        } else {
+          return arbRoutesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Stores all of the possible hot paths for a given pair of tokens
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Route arb_routes = 1 [json_name = "arbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"arb_routes&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.Route getArbRoutes(int index) {
+        if (arbRoutesBuilder_ == null) {
+          return arbRoutes_.get(index);
+        } else {
+          return arbRoutesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Stores all of the possible hot paths for a given pair of tokens
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Route arb_routes = 1 [json_name = "arbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"arb_routes&#92;""];</code>
+       */
+      public Builder setArbRoutes(
+          int index, com.osmosis.protorev.v1beta1.ProtorevProto.Route value) {
+        if (arbRoutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureArbRoutesIsMutable();
+          arbRoutes_.set(index, value);
+          onChanged();
+        } else {
+          arbRoutesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Stores all of the possible hot paths for a given pair of tokens
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Route arb_routes = 1 [json_name = "arbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"arb_routes&#92;""];</code>
+       */
+      public Builder setArbRoutes(
+          int index, com.osmosis.protorev.v1beta1.ProtorevProto.Route.Builder builderForValue) {
+        if (arbRoutesBuilder_ == null) {
+          ensureArbRoutesIsMutable();
+          arbRoutes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          arbRoutesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Stores all of the possible hot paths for a given pair of tokens
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Route arb_routes = 1 [json_name = "arbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"arb_routes&#92;""];</code>
+       */
+      public Builder addArbRoutes(com.osmosis.protorev.v1beta1.ProtorevProto.Route value) {
+        if (arbRoutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureArbRoutesIsMutable();
+          arbRoutes_.add(value);
+          onChanged();
+        } else {
+          arbRoutesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Stores all of the possible hot paths for a given pair of tokens
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Route arb_routes = 1 [json_name = "arbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"arb_routes&#92;""];</code>
+       */
+      public Builder addArbRoutes(
+          int index, com.osmosis.protorev.v1beta1.ProtorevProto.Route value) {
+        if (arbRoutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureArbRoutesIsMutable();
+          arbRoutes_.add(index, value);
+          onChanged();
+        } else {
+          arbRoutesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Stores all of the possible hot paths for a given pair of tokens
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Route arb_routes = 1 [json_name = "arbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"arb_routes&#92;""];</code>
+       */
+      public Builder addArbRoutes(
+          com.osmosis.protorev.v1beta1.ProtorevProto.Route.Builder builderForValue) {
+        if (arbRoutesBuilder_ == null) {
+          ensureArbRoutesIsMutable();
+          arbRoutes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          arbRoutesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Stores all of the possible hot paths for a given pair of tokens
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Route arb_routes = 1 [json_name = "arbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"arb_routes&#92;""];</code>
+       */
+      public Builder addArbRoutes(
+          int index, com.osmosis.protorev.v1beta1.ProtorevProto.Route.Builder builderForValue) {
+        if (arbRoutesBuilder_ == null) {
+          ensureArbRoutesIsMutable();
+          arbRoutes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          arbRoutesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Stores all of the possible hot paths for a given pair of tokens
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Route arb_routes = 1 [json_name = "arbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"arb_routes&#92;""];</code>
+       */
+      public Builder addAllArbRoutes(
+          java.lang.Iterable<? extends com.osmosis.protorev.v1beta1.ProtorevProto.Route> values) {
+        if (arbRoutesBuilder_ == null) {
+          ensureArbRoutesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, arbRoutes_);
+          onChanged();
+        } else {
+          arbRoutesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Stores all of the possible hot paths for a given pair of tokens
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Route arb_routes = 1 [json_name = "arbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"arb_routes&#92;""];</code>
+       */
+      public Builder clearArbRoutes() {
+        if (arbRoutesBuilder_ == null) {
+          arbRoutes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          arbRoutesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Stores all of the possible hot paths for a given pair of tokens
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Route arb_routes = 1 [json_name = "arbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"arb_routes&#92;""];</code>
+       */
+      public Builder removeArbRoutes(int index) {
+        if (arbRoutesBuilder_ == null) {
+          ensureArbRoutesIsMutable();
+          arbRoutes_.remove(index);
+          onChanged();
+        } else {
+          arbRoutesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Stores all of the possible hot paths for a given pair of tokens
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Route arb_routes = 1 [json_name = "arbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"arb_routes&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.Route.Builder getArbRoutesBuilder(
+          int index) {
+        return getArbRoutesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Stores all of the possible hot paths for a given pair of tokens
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Route arb_routes = 1 [json_name = "arbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"arb_routes&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.RouteOrBuilder getArbRoutesOrBuilder(
+          int index) {
+        if (arbRoutesBuilder_ == null) {
+          return arbRoutes_.get(index);  } else {
+          return arbRoutesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Stores all of the possible hot paths for a given pair of tokens
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Route arb_routes = 1 [json_name = "arbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"arb_routes&#92;""];</code>
+       */
+      public java.util.List<? extends com.osmosis.protorev.v1beta1.ProtorevProto.RouteOrBuilder> 
+           getArbRoutesOrBuilderList() {
+        if (arbRoutesBuilder_ != null) {
+          return arbRoutesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(arbRoutes_);
+        }
+      }
+      /**
+       * <pre>
+       * Stores all of the possible hot paths for a given pair of tokens
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Route arb_routes = 1 [json_name = "arbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"arb_routes&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.Route.Builder addArbRoutesBuilder() {
+        return getArbRoutesFieldBuilder().addBuilder(
+            com.osmosis.protorev.v1beta1.ProtorevProto.Route.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Stores all of the possible hot paths for a given pair of tokens
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Route arb_routes = 1 [json_name = "arbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"arb_routes&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.Route.Builder addArbRoutesBuilder(
+          int index) {
+        return getArbRoutesFieldBuilder().addBuilder(
+            index, com.osmosis.protorev.v1beta1.ProtorevProto.Route.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Stores all of the possible hot paths for a given pair of tokens
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Route arb_routes = 1 [json_name = "arbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"arb_routes&#92;""];</code>
+       */
+      public java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.Route.Builder> 
+           getArbRoutesBuilderList() {
+        return getArbRoutesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.protorev.v1beta1.ProtorevProto.Route, com.osmosis.protorev.v1beta1.ProtorevProto.Route.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.RouteOrBuilder> 
+          getArbRoutesFieldBuilder() {
+        if (arbRoutesBuilder_ == null) {
+          arbRoutesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.osmosis.protorev.v1beta1.ProtorevProto.Route, com.osmosis.protorev.v1beta1.ProtorevProto.Route.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.RouteOrBuilder>(
+                  arbRoutes_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          arbRoutes_ = null;
+        }
+        return arbRoutesBuilder_;
+      }
+
+      private java.lang.Object tokenIn_ = "";
+      /**
+       * <pre>
+       * Token denomination of the first asset
+       * </pre>
+       *
+       * <code>string token_in = 2 [json_name = "tokenIn", (.gogoproto.moretags) = "yaml:&#92;"token_in&#92;""];</code>
+       * @return The tokenIn.
+       */
+      public java.lang.String getTokenIn() {
+        java.lang.Object ref = tokenIn_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tokenIn_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Token denomination of the first asset
+       * </pre>
+       *
+       * <code>string token_in = 2 [json_name = "tokenIn", (.gogoproto.moretags) = "yaml:&#92;"token_in&#92;""];</code>
+       * @return The bytes for tokenIn.
+       */
+      public com.google.protobuf.ByteString
+          getTokenInBytes() {
+        java.lang.Object ref = tokenIn_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tokenIn_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Token denomination of the first asset
+       * </pre>
+       *
+       * <code>string token_in = 2 [json_name = "tokenIn", (.gogoproto.moretags) = "yaml:&#92;"token_in&#92;""];</code>
+       * @param value The tokenIn to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenIn(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        tokenIn_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Token denomination of the first asset
+       * </pre>
+       *
+       * <code>string token_in = 2 [json_name = "tokenIn", (.gogoproto.moretags) = "yaml:&#92;"token_in&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTokenIn() {
+        tokenIn_ = getDefaultInstance().getTokenIn();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Token denomination of the first asset
+       * </pre>
+       *
+       * <code>string token_in = 2 [json_name = "tokenIn", (.gogoproto.moretags) = "yaml:&#92;"token_in&#92;""];</code>
+       * @param value The bytes for tokenIn to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenInBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        tokenIn_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object tokenOut_ = "";
+      /**
+       * <pre>
+       * Token denomination of the second asset
+       * </pre>
+       *
+       * <code>string token_out = 3 [json_name = "tokenOut", (.gogoproto.moretags) = "yaml:&#92;"token_out&#92;""];</code>
+       * @return The tokenOut.
+       */
+      public java.lang.String getTokenOut() {
+        java.lang.Object ref = tokenOut_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tokenOut_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Token denomination of the second asset
+       * </pre>
+       *
+       * <code>string token_out = 3 [json_name = "tokenOut", (.gogoproto.moretags) = "yaml:&#92;"token_out&#92;""];</code>
+       * @return The bytes for tokenOut.
+       */
+      public com.google.protobuf.ByteString
+          getTokenOutBytes() {
+        java.lang.Object ref = tokenOut_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tokenOut_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Token denomination of the second asset
+       * </pre>
+       *
+       * <code>string token_out = 3 [json_name = "tokenOut", (.gogoproto.moretags) = "yaml:&#92;"token_out&#92;""];</code>
+       * @param value The tokenOut to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenOut(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        tokenOut_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Token denomination of the second asset
+       * </pre>
+       *
+       * <code>string token_out = 3 [json_name = "tokenOut", (.gogoproto.moretags) = "yaml:&#92;"token_out&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTokenOut() {
+        tokenOut_ = getDefaultInstance().getTokenOut();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Token denomination of the second asset
+       * </pre>
+       *
+       * <code>string token_out = 3 [json_name = "tokenOut", (.gogoproto.moretags) = "yaml:&#92;"token_out&#92;""];</code>
+       * @param value The bytes for tokenOut to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenOutBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        tokenOut_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.protorev.v1beta1.TokenPairArbRoutes)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.protorev.v1beta1.TokenPairArbRoutes)
+    private static final com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes();
+    }
+
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TokenPairArbRoutes>
+        PARSER = new com.google.protobuf.AbstractParser<TokenPairArbRoutes>() {
+      @java.lang.Override
+      public TokenPairArbRoutes parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TokenPairArbRoutes> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TokenPairArbRoutes> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RouteOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.protorev.v1beta1.Route)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The pool IDs that are travered in the directed cyclic graph (traversed left
+     * -&gt; right)
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.Trade trades = 1 [json_name = "trades", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"trades&#92;""];</code>
+     */
+    java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.Trade> 
+        getTradesList();
+    /**
+     * <pre>
+     * The pool IDs that are travered in the directed cyclic graph (traversed left
+     * -&gt; right)
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.Trade trades = 1 [json_name = "trades", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"trades&#92;""];</code>
+     */
+    com.osmosis.protorev.v1beta1.ProtorevProto.Trade getTrades(int index);
+    /**
+     * <pre>
+     * The pool IDs that are travered in the directed cyclic graph (traversed left
+     * -&gt; right)
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.Trade trades = 1 [json_name = "trades", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"trades&#92;""];</code>
+     */
+    int getTradesCount();
+    /**
+     * <pre>
+     * The pool IDs that are travered in the directed cyclic graph (traversed left
+     * -&gt; right)
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.Trade trades = 1 [json_name = "trades", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"trades&#92;""];</code>
+     */
+    java.util.List<? extends com.osmosis.protorev.v1beta1.ProtorevProto.TradeOrBuilder> 
+        getTradesOrBuilderList();
+    /**
+     * <pre>
+     * The pool IDs that are travered in the directed cyclic graph (traversed left
+     * -&gt; right)
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.Trade trades = 1 [json_name = "trades", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"trades&#92;""];</code>
+     */
+    com.osmosis.protorev.v1beta1.ProtorevProto.TradeOrBuilder getTradesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * The step size that will be used to find the optimal swap amount in the
+     * binary search
+     * </pre>
+     *
+     * <code>string step_size = 2 [json_name = "stepSize", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"step_size&#92;""];</code>
+     * @return The stepSize.
+     */
+    java.lang.String getStepSize();
+    /**
+     * <pre>
+     * The step size that will be used to find the optimal swap amount in the
+     * binary search
+     * </pre>
+     *
+     * <code>string step_size = 2 [json_name = "stepSize", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"step_size&#92;""];</code>
+     * @return The bytes for stepSize.
+     */
+    com.google.protobuf.ByteString
+        getStepSizeBytes();
+  }
+  /**
+   * <pre>
+   * Route is a hot route for a given pair of tokens
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.protorev.v1beta1.Route}
+   */
+  public static final class Route extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.protorev.v1beta1.Route)
+      RouteOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Route.newBuilder() to construct.
+    private Route(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Route() {
+      trades_ = java.util.Collections.emptyList();
+      stepSize_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Route();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.protorev.v1beta1.ProtorevProto.internal_static_osmosis_protorev_v1beta1_Route_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.protorev.v1beta1.ProtorevProto.internal_static_osmosis_protorev_v1beta1_Route_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.protorev.v1beta1.ProtorevProto.Route.class, com.osmosis.protorev.v1beta1.ProtorevProto.Route.Builder.class);
+    }
+
+    public static final int TRADES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.Trade> trades_;
+    /**
+     * <pre>
+     * The pool IDs that are travered in the directed cyclic graph (traversed left
+     * -&gt; right)
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.Trade trades = 1 [json_name = "trades", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"trades&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.Trade> getTradesList() {
+      return trades_;
+    }
+    /**
+     * <pre>
+     * The pool IDs that are travered in the directed cyclic graph (traversed left
+     * -&gt; right)
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.Trade trades = 1 [json_name = "trades", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"trades&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.osmosis.protorev.v1beta1.ProtorevProto.TradeOrBuilder> 
+        getTradesOrBuilderList() {
+      return trades_;
+    }
+    /**
+     * <pre>
+     * The pool IDs that are travered in the directed cyclic graph (traversed left
+     * -&gt; right)
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.Trade trades = 1 [json_name = "trades", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"trades&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getTradesCount() {
+      return trades_.size();
+    }
+    /**
+     * <pre>
+     * The pool IDs that are travered in the directed cyclic graph (traversed left
+     * -&gt; right)
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.Trade trades = 1 [json_name = "trades", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"trades&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.ProtorevProto.Trade getTrades(int index) {
+      return trades_.get(index);
+    }
+    /**
+     * <pre>
+     * The pool IDs that are travered in the directed cyclic graph (traversed left
+     * -&gt; right)
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.Trade trades = 1 [json_name = "trades", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"trades&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.ProtorevProto.TradeOrBuilder getTradesOrBuilder(
+        int index) {
+      return trades_.get(index);
+    }
+
+    public static final int STEP_SIZE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stepSize_ = "";
+    /**
+     * <pre>
+     * The step size that will be used to find the optimal swap amount in the
+     * binary search
+     * </pre>
+     *
+     * <code>string step_size = 2 [json_name = "stepSize", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"step_size&#92;""];</code>
+     * @return The stepSize.
+     */
+    @java.lang.Override
+    public java.lang.String getStepSize() {
+      java.lang.Object ref = stepSize_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stepSize_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The step size that will be used to find the optimal swap amount in the
+     * binary search
+     * </pre>
+     *
+     * <code>string step_size = 2 [json_name = "stepSize", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"step_size&#92;""];</code>
+     * @return The bytes for stepSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStepSizeBytes() {
+      java.lang.Object ref = stepSize_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stepSize_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < trades_.size(); i++) {
+        output.writeMessage(1, trades_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stepSize_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, stepSize_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < trades_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, trades_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stepSize_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, stepSize_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.protorev.v1beta1.ProtorevProto.Route)) {
+        return super.equals(obj);
+      }
+      com.osmosis.protorev.v1beta1.ProtorevProto.Route other = (com.osmosis.protorev.v1beta1.ProtorevProto.Route) obj;
+
+      if (!getTradesList()
+          .equals(other.getTradesList())) return false;
+      if (!getStepSize()
+          .equals(other.getStepSize())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getTradesCount() > 0) {
+        hash = (37 * hash) + TRADES_FIELD_NUMBER;
+        hash = (53 * hash) + getTradesList().hashCode();
+      }
+      hash = (37 * hash) + STEP_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + getStepSize().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.Route parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.Route parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.Route parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.Route parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.Route parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.Route parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.Route parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.Route parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.Route parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.Route parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.Route parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.Route parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.protorev.v1beta1.ProtorevProto.Route prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Route is a hot route for a given pair of tokens
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.protorev.v1beta1.Route}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.protorev.v1beta1.Route)
+        com.osmosis.protorev.v1beta1.ProtorevProto.RouteOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.protorev.v1beta1.ProtorevProto.internal_static_osmosis_protorev_v1beta1_Route_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.protorev.v1beta1.ProtorevProto.internal_static_osmosis_protorev_v1beta1_Route_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.protorev.v1beta1.ProtorevProto.Route.class, com.osmosis.protorev.v1beta1.ProtorevProto.Route.Builder.class);
+      }
+
+      // Construct using com.osmosis.protorev.v1beta1.ProtorevProto.Route.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (tradesBuilder_ == null) {
+          trades_ = java.util.Collections.emptyList();
+        } else {
+          trades_ = null;
+          tradesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        stepSize_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.protorev.v1beta1.ProtorevProto.internal_static_osmosis_protorev_v1beta1_Route_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.ProtorevProto.Route getDefaultInstanceForType() {
+        return com.osmosis.protorev.v1beta1.ProtorevProto.Route.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.ProtorevProto.Route build() {
+        com.osmosis.protorev.v1beta1.ProtorevProto.Route result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.ProtorevProto.Route buildPartial() {
+        com.osmosis.protorev.v1beta1.ProtorevProto.Route result = new com.osmosis.protorev.v1beta1.ProtorevProto.Route(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.protorev.v1beta1.ProtorevProto.Route result) {
+        if (tradesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            trades_ = java.util.Collections.unmodifiableList(trades_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.trades_ = trades_;
+        } else {
+          result.trades_ = tradesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.protorev.v1beta1.ProtorevProto.Route result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.stepSize_ = stepSize_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.protorev.v1beta1.ProtorevProto.Route) {
+          return mergeFrom((com.osmosis.protorev.v1beta1.ProtorevProto.Route)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.protorev.v1beta1.ProtorevProto.Route other) {
+        if (other == com.osmosis.protorev.v1beta1.ProtorevProto.Route.getDefaultInstance()) return this;
+        if (tradesBuilder_ == null) {
+          if (!other.trades_.isEmpty()) {
+            if (trades_.isEmpty()) {
+              trades_ = other.trades_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTradesIsMutable();
+              trades_.addAll(other.trades_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.trades_.isEmpty()) {
+            if (tradesBuilder_.isEmpty()) {
+              tradesBuilder_.dispose();
+              tradesBuilder_ = null;
+              trades_ = other.trades_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              tradesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTradesFieldBuilder() : null;
+            } else {
+              tradesBuilder_.addAllMessages(other.trades_);
+            }
+          }
+        }
+        if (!other.getStepSize().isEmpty()) {
+          stepSize_ = other.stepSize_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.osmosis.protorev.v1beta1.ProtorevProto.Trade m =
+                    input.readMessage(
+                        com.osmosis.protorev.v1beta1.ProtorevProto.Trade.parser(),
+                        extensionRegistry);
+                if (tradesBuilder_ == null) {
+                  ensureTradesIsMutable();
+                  trades_.add(m);
+                } else {
+                  tradesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                stepSize_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.Trade> trades_ =
+        java.util.Collections.emptyList();
+      private void ensureTradesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          trades_ = new java.util.ArrayList<com.osmosis.protorev.v1beta1.ProtorevProto.Trade>(trades_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.protorev.v1beta1.ProtorevProto.Trade, com.osmosis.protorev.v1beta1.ProtorevProto.Trade.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.TradeOrBuilder> tradesBuilder_;
+
+      /**
+       * <pre>
+       * The pool IDs that are travered in the directed cyclic graph (traversed left
+       * -&gt; right)
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Trade trades = 1 [json_name = "trades", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"trades&#92;""];</code>
+       */
+      public java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.Trade> getTradesList() {
+        if (tradesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(trades_);
+        } else {
+          return tradesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * The pool IDs that are travered in the directed cyclic graph (traversed left
+       * -&gt; right)
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Trade trades = 1 [json_name = "trades", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"trades&#92;""];</code>
+       */
+      public int getTradesCount() {
+        if (tradesBuilder_ == null) {
+          return trades_.size();
+        } else {
+          return tradesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * The pool IDs that are travered in the directed cyclic graph (traversed left
+       * -&gt; right)
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Trade trades = 1 [json_name = "trades", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"trades&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.Trade getTrades(int index) {
+        if (tradesBuilder_ == null) {
+          return trades_.get(index);
+        } else {
+          return tradesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * The pool IDs that are travered in the directed cyclic graph (traversed left
+       * -&gt; right)
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Trade trades = 1 [json_name = "trades", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"trades&#92;""];</code>
+       */
+      public Builder setTrades(
+          int index, com.osmosis.protorev.v1beta1.ProtorevProto.Trade value) {
+        if (tradesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTradesIsMutable();
+          trades_.set(index, value);
+          onChanged();
+        } else {
+          tradesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The pool IDs that are travered in the directed cyclic graph (traversed left
+       * -&gt; right)
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Trade trades = 1 [json_name = "trades", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"trades&#92;""];</code>
+       */
+      public Builder setTrades(
+          int index, com.osmosis.protorev.v1beta1.ProtorevProto.Trade.Builder builderForValue) {
+        if (tradesBuilder_ == null) {
+          ensureTradesIsMutable();
+          trades_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          tradesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The pool IDs that are travered in the directed cyclic graph (traversed left
+       * -&gt; right)
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Trade trades = 1 [json_name = "trades", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"trades&#92;""];</code>
+       */
+      public Builder addTrades(com.osmosis.protorev.v1beta1.ProtorevProto.Trade value) {
+        if (tradesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTradesIsMutable();
+          trades_.add(value);
+          onChanged();
+        } else {
+          tradesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The pool IDs that are travered in the directed cyclic graph (traversed left
+       * -&gt; right)
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Trade trades = 1 [json_name = "trades", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"trades&#92;""];</code>
+       */
+      public Builder addTrades(
+          int index, com.osmosis.protorev.v1beta1.ProtorevProto.Trade value) {
+        if (tradesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTradesIsMutable();
+          trades_.add(index, value);
+          onChanged();
+        } else {
+          tradesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The pool IDs that are travered in the directed cyclic graph (traversed left
+       * -&gt; right)
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Trade trades = 1 [json_name = "trades", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"trades&#92;""];</code>
+       */
+      public Builder addTrades(
+          com.osmosis.protorev.v1beta1.ProtorevProto.Trade.Builder builderForValue) {
+        if (tradesBuilder_ == null) {
+          ensureTradesIsMutable();
+          trades_.add(builderForValue.build());
+          onChanged();
+        } else {
+          tradesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The pool IDs that are travered in the directed cyclic graph (traversed left
+       * -&gt; right)
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Trade trades = 1 [json_name = "trades", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"trades&#92;""];</code>
+       */
+      public Builder addTrades(
+          int index, com.osmosis.protorev.v1beta1.ProtorevProto.Trade.Builder builderForValue) {
+        if (tradesBuilder_ == null) {
+          ensureTradesIsMutable();
+          trades_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          tradesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The pool IDs that are travered in the directed cyclic graph (traversed left
+       * -&gt; right)
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Trade trades = 1 [json_name = "trades", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"trades&#92;""];</code>
+       */
+      public Builder addAllTrades(
+          java.lang.Iterable<? extends com.osmosis.protorev.v1beta1.ProtorevProto.Trade> values) {
+        if (tradesBuilder_ == null) {
+          ensureTradesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, trades_);
+          onChanged();
+        } else {
+          tradesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The pool IDs that are travered in the directed cyclic graph (traversed left
+       * -&gt; right)
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Trade trades = 1 [json_name = "trades", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"trades&#92;""];</code>
+       */
+      public Builder clearTrades() {
+        if (tradesBuilder_ == null) {
+          trades_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          tradesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The pool IDs that are travered in the directed cyclic graph (traversed left
+       * -&gt; right)
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Trade trades = 1 [json_name = "trades", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"trades&#92;""];</code>
+       */
+      public Builder removeTrades(int index) {
+        if (tradesBuilder_ == null) {
+          ensureTradesIsMutable();
+          trades_.remove(index);
+          onChanged();
+        } else {
+          tradesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The pool IDs that are travered in the directed cyclic graph (traversed left
+       * -&gt; right)
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Trade trades = 1 [json_name = "trades", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"trades&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.Trade.Builder getTradesBuilder(
+          int index) {
+        return getTradesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * The pool IDs that are travered in the directed cyclic graph (traversed left
+       * -&gt; right)
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Trade trades = 1 [json_name = "trades", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"trades&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.TradeOrBuilder getTradesOrBuilder(
+          int index) {
+        if (tradesBuilder_ == null) {
+          return trades_.get(index);  } else {
+          return tradesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * The pool IDs that are travered in the directed cyclic graph (traversed left
+       * -&gt; right)
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Trade trades = 1 [json_name = "trades", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"trades&#92;""];</code>
+       */
+      public java.util.List<? extends com.osmosis.protorev.v1beta1.ProtorevProto.TradeOrBuilder> 
+           getTradesOrBuilderList() {
+        if (tradesBuilder_ != null) {
+          return tradesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(trades_);
+        }
+      }
+      /**
+       * <pre>
+       * The pool IDs that are travered in the directed cyclic graph (traversed left
+       * -&gt; right)
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Trade trades = 1 [json_name = "trades", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"trades&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.Trade.Builder addTradesBuilder() {
+        return getTradesFieldBuilder().addBuilder(
+            com.osmosis.protorev.v1beta1.ProtorevProto.Trade.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * The pool IDs that are travered in the directed cyclic graph (traversed left
+       * -&gt; right)
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Trade trades = 1 [json_name = "trades", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"trades&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.Trade.Builder addTradesBuilder(
+          int index) {
+        return getTradesFieldBuilder().addBuilder(
+            index, com.osmosis.protorev.v1beta1.ProtorevProto.Trade.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * The pool IDs that are travered in the directed cyclic graph (traversed left
+       * -&gt; right)
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.Trade trades = 1 [json_name = "trades", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"trades&#92;""];</code>
+       */
+      public java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.Trade.Builder> 
+           getTradesBuilderList() {
+        return getTradesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.protorev.v1beta1.ProtorevProto.Trade, com.osmosis.protorev.v1beta1.ProtorevProto.Trade.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.TradeOrBuilder> 
+          getTradesFieldBuilder() {
+        if (tradesBuilder_ == null) {
+          tradesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.osmosis.protorev.v1beta1.ProtorevProto.Trade, com.osmosis.protorev.v1beta1.ProtorevProto.Trade.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.TradeOrBuilder>(
+                  trades_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          trades_ = null;
+        }
+        return tradesBuilder_;
+      }
+
+      private java.lang.Object stepSize_ = "";
+      /**
+       * <pre>
+       * The step size that will be used to find the optimal swap amount in the
+       * binary search
+       * </pre>
+       *
+       * <code>string step_size = 2 [json_name = "stepSize", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"step_size&#92;""];</code>
+       * @return The stepSize.
+       */
+      public java.lang.String getStepSize() {
+        java.lang.Object ref = stepSize_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stepSize_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The step size that will be used to find the optimal swap amount in the
+       * binary search
+       * </pre>
+       *
+       * <code>string step_size = 2 [json_name = "stepSize", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"step_size&#92;""];</code>
+       * @return The bytes for stepSize.
+       */
+      public com.google.protobuf.ByteString
+          getStepSizeBytes() {
+        java.lang.Object ref = stepSize_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stepSize_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The step size that will be used to find the optimal swap amount in the
+       * binary search
+       * </pre>
+       *
+       * <code>string step_size = 2 [json_name = "stepSize", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"step_size&#92;""];</code>
+       * @param value The stepSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStepSize(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stepSize_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The step size that will be used to find the optimal swap amount in the
+       * binary search
+       * </pre>
+       *
+       * <code>string step_size = 2 [json_name = "stepSize", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"step_size&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStepSize() {
+        stepSize_ = getDefaultInstance().getStepSize();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The step size that will be used to find the optimal swap amount in the
+       * binary search
+       * </pre>
+       *
+       * <code>string step_size = 2 [json_name = "stepSize", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"step_size&#92;""];</code>
+       * @param value The bytes for stepSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStepSizeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stepSize_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.protorev.v1beta1.Route)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.protorev.v1beta1.Route)
+    private static final com.osmosis.protorev.v1beta1.ProtorevProto.Route DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.protorev.v1beta1.ProtorevProto.Route();
+    }
+
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.Route getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Route>
+        PARSER = new com.google.protobuf.AbstractParser<Route>() {
+      @java.lang.Override
+      public Route parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Route> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Route> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.ProtorevProto.Route getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TradeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.protorev.v1beta1.Trade)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The pool id of the pool that is traded on
+     * </pre>
+     *
+     * <code>uint64 pool = 1 [json_name = "pool", (.gogoproto.moretags) = "yaml:&#92;"pool&#92;""];</code>
+     * @return The pool.
+     */
+    long getPool();
+
+    /**
+     * <pre>
+     * The denom of the token that is traded
+     * </pre>
+     *
+     * <code>string token_in = 2 [json_name = "tokenIn", (.gogoproto.moretags) = "yaml:&#92;"token_in&#92;""];</code>
+     * @return The tokenIn.
+     */
+    java.lang.String getTokenIn();
+    /**
+     * <pre>
+     * The denom of the token that is traded
+     * </pre>
+     *
+     * <code>string token_in = 2 [json_name = "tokenIn", (.gogoproto.moretags) = "yaml:&#92;"token_in&#92;""];</code>
+     * @return The bytes for tokenIn.
+     */
+    com.google.protobuf.ByteString
+        getTokenInBytes();
+
+    /**
+     * <pre>
+     * The denom of the token that is received
+     * </pre>
+     *
+     * <code>string token_out = 3 [json_name = "tokenOut", (.gogoproto.moretags) = "yaml:&#92;"token_out&#92;""];</code>
+     * @return The tokenOut.
+     */
+    java.lang.String getTokenOut();
+    /**
+     * <pre>
+     * The denom of the token that is received
+     * </pre>
+     *
+     * <code>string token_out = 3 [json_name = "tokenOut", (.gogoproto.moretags) = "yaml:&#92;"token_out&#92;""];</code>
+     * @return The bytes for tokenOut.
+     */
+    com.google.protobuf.ByteString
+        getTokenOutBytes();
+  }
+  /**
+   * <pre>
+   * Trade is a single trade in a route
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.protorev.v1beta1.Trade}
+   */
+  public static final class Trade extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.protorev.v1beta1.Trade)
+      TradeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Trade.newBuilder() to construct.
+    private Trade(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Trade() {
+      tokenIn_ = "";
+      tokenOut_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Trade();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.protorev.v1beta1.ProtorevProto.internal_static_osmosis_protorev_v1beta1_Trade_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.protorev.v1beta1.ProtorevProto.internal_static_osmosis_protorev_v1beta1_Trade_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.protorev.v1beta1.ProtorevProto.Trade.class, com.osmosis.protorev.v1beta1.ProtorevProto.Trade.Builder.class);
+    }
+
+    public static final int POOL_FIELD_NUMBER = 1;
+    private long pool_ = 0L;
+    /**
+     * <pre>
+     * The pool id of the pool that is traded on
+     * </pre>
+     *
+     * <code>uint64 pool = 1 [json_name = "pool", (.gogoproto.moretags) = "yaml:&#92;"pool&#92;""];</code>
+     * @return The pool.
+     */
+    @java.lang.Override
+    public long getPool() {
+      return pool_;
+    }
+
+    public static final int TOKEN_IN_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object tokenIn_ = "";
+    /**
+     * <pre>
+     * The denom of the token that is traded
+     * </pre>
+     *
+     * <code>string token_in = 2 [json_name = "tokenIn", (.gogoproto.moretags) = "yaml:&#92;"token_in&#92;""];</code>
+     * @return The tokenIn.
+     */
+    @java.lang.Override
+    public java.lang.String getTokenIn() {
+      java.lang.Object ref = tokenIn_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tokenIn_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The denom of the token that is traded
+     * </pre>
+     *
+     * <code>string token_in = 2 [json_name = "tokenIn", (.gogoproto.moretags) = "yaml:&#92;"token_in&#92;""];</code>
+     * @return The bytes for tokenIn.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTokenInBytes() {
+      java.lang.Object ref = tokenIn_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tokenIn_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOKEN_OUT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object tokenOut_ = "";
+    /**
+     * <pre>
+     * The denom of the token that is received
+     * </pre>
+     *
+     * <code>string token_out = 3 [json_name = "tokenOut", (.gogoproto.moretags) = "yaml:&#92;"token_out&#92;""];</code>
+     * @return The tokenOut.
+     */
+    @java.lang.Override
+    public java.lang.String getTokenOut() {
+      java.lang.Object ref = tokenOut_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tokenOut_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The denom of the token that is received
+     * </pre>
+     *
+     * <code>string token_out = 3 [json_name = "tokenOut", (.gogoproto.moretags) = "yaml:&#92;"token_out&#92;""];</code>
+     * @return The bytes for tokenOut.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTokenOutBytes() {
+      java.lang.Object ref = tokenOut_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tokenOut_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pool_ != 0L) {
+        output.writeUInt64(1, pool_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenIn_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tokenIn_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenOut_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, tokenOut_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pool_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, pool_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenIn_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, tokenIn_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenOut_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, tokenOut_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.protorev.v1beta1.ProtorevProto.Trade)) {
+        return super.equals(obj);
+      }
+      com.osmosis.protorev.v1beta1.ProtorevProto.Trade other = (com.osmosis.protorev.v1beta1.ProtorevProto.Trade) obj;
+
+      if (getPool()
+          != other.getPool()) return false;
+      if (!getTokenIn()
+          .equals(other.getTokenIn())) return false;
+      if (!getTokenOut()
+          .equals(other.getTokenOut())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPool());
+      hash = (37 * hash) + TOKEN_IN_FIELD_NUMBER;
+      hash = (53 * hash) + getTokenIn().hashCode();
+      hash = (37 * hash) + TOKEN_OUT_FIELD_NUMBER;
+      hash = (53 * hash) + getTokenOut().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.Trade parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.Trade parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.Trade parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.Trade parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.Trade parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.Trade parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.Trade parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.Trade parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.Trade parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.Trade parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.Trade parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.Trade parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.protorev.v1beta1.ProtorevProto.Trade prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Trade is a single trade in a route
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.protorev.v1beta1.Trade}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.protorev.v1beta1.Trade)
+        com.osmosis.protorev.v1beta1.ProtorevProto.TradeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.protorev.v1beta1.ProtorevProto.internal_static_osmosis_protorev_v1beta1_Trade_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.protorev.v1beta1.ProtorevProto.internal_static_osmosis_protorev_v1beta1_Trade_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.protorev.v1beta1.ProtorevProto.Trade.class, com.osmosis.protorev.v1beta1.ProtorevProto.Trade.Builder.class);
+      }
+
+      // Construct using com.osmosis.protorev.v1beta1.ProtorevProto.Trade.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pool_ = 0L;
+        tokenIn_ = "";
+        tokenOut_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.protorev.v1beta1.ProtorevProto.internal_static_osmosis_protorev_v1beta1_Trade_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.ProtorevProto.Trade getDefaultInstanceForType() {
+        return com.osmosis.protorev.v1beta1.ProtorevProto.Trade.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.ProtorevProto.Trade build() {
+        com.osmosis.protorev.v1beta1.ProtorevProto.Trade result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.ProtorevProto.Trade buildPartial() {
+        com.osmosis.protorev.v1beta1.ProtorevProto.Trade result = new com.osmosis.protorev.v1beta1.ProtorevProto.Trade(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.protorev.v1beta1.ProtorevProto.Trade result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pool_ = pool_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.tokenIn_ = tokenIn_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.tokenOut_ = tokenOut_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.protorev.v1beta1.ProtorevProto.Trade) {
+          return mergeFrom((com.osmosis.protorev.v1beta1.ProtorevProto.Trade)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.protorev.v1beta1.ProtorevProto.Trade other) {
+        if (other == com.osmosis.protorev.v1beta1.ProtorevProto.Trade.getDefaultInstance()) return this;
+        if (other.getPool() != 0L) {
+          setPool(other.getPool());
+        }
+        if (!other.getTokenIn().isEmpty()) {
+          tokenIn_ = other.tokenIn_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getTokenOut().isEmpty()) {
+          tokenOut_ = other.tokenOut_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                pool_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                tokenIn_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                tokenOut_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long pool_ ;
+      /**
+       * <pre>
+       * The pool id of the pool that is traded on
+       * </pre>
+       *
+       * <code>uint64 pool = 1 [json_name = "pool", (.gogoproto.moretags) = "yaml:&#92;"pool&#92;""];</code>
+       * @return The pool.
+       */
+      @java.lang.Override
+      public long getPool() {
+        return pool_;
+      }
+      /**
+       * <pre>
+       * The pool id of the pool that is traded on
+       * </pre>
+       *
+       * <code>uint64 pool = 1 [json_name = "pool", (.gogoproto.moretags) = "yaml:&#92;"pool&#92;""];</code>
+       * @param value The pool to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPool(long value) {
+
+        pool_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The pool id of the pool that is traded on
+       * </pre>
+       *
+       * <code>uint64 pool = 1 [json_name = "pool", (.gogoproto.moretags) = "yaml:&#92;"pool&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPool() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pool_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object tokenIn_ = "";
+      /**
+       * <pre>
+       * The denom of the token that is traded
+       * </pre>
+       *
+       * <code>string token_in = 2 [json_name = "tokenIn", (.gogoproto.moretags) = "yaml:&#92;"token_in&#92;""];</code>
+       * @return The tokenIn.
+       */
+      public java.lang.String getTokenIn() {
+        java.lang.Object ref = tokenIn_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tokenIn_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The denom of the token that is traded
+       * </pre>
+       *
+       * <code>string token_in = 2 [json_name = "tokenIn", (.gogoproto.moretags) = "yaml:&#92;"token_in&#92;""];</code>
+       * @return The bytes for tokenIn.
+       */
+      public com.google.protobuf.ByteString
+          getTokenInBytes() {
+        java.lang.Object ref = tokenIn_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tokenIn_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The denom of the token that is traded
+       * </pre>
+       *
+       * <code>string token_in = 2 [json_name = "tokenIn", (.gogoproto.moretags) = "yaml:&#92;"token_in&#92;""];</code>
+       * @param value The tokenIn to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenIn(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        tokenIn_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The denom of the token that is traded
+       * </pre>
+       *
+       * <code>string token_in = 2 [json_name = "tokenIn", (.gogoproto.moretags) = "yaml:&#92;"token_in&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTokenIn() {
+        tokenIn_ = getDefaultInstance().getTokenIn();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The denom of the token that is traded
+       * </pre>
+       *
+       * <code>string token_in = 2 [json_name = "tokenIn", (.gogoproto.moretags) = "yaml:&#92;"token_in&#92;""];</code>
+       * @param value The bytes for tokenIn to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenInBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        tokenIn_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object tokenOut_ = "";
+      /**
+       * <pre>
+       * The denom of the token that is received
+       * </pre>
+       *
+       * <code>string token_out = 3 [json_name = "tokenOut", (.gogoproto.moretags) = "yaml:&#92;"token_out&#92;""];</code>
+       * @return The tokenOut.
+       */
+      public java.lang.String getTokenOut() {
+        java.lang.Object ref = tokenOut_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tokenOut_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The denom of the token that is received
+       * </pre>
+       *
+       * <code>string token_out = 3 [json_name = "tokenOut", (.gogoproto.moretags) = "yaml:&#92;"token_out&#92;""];</code>
+       * @return The bytes for tokenOut.
+       */
+      public com.google.protobuf.ByteString
+          getTokenOutBytes() {
+        java.lang.Object ref = tokenOut_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tokenOut_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The denom of the token that is received
+       * </pre>
+       *
+       * <code>string token_out = 3 [json_name = "tokenOut", (.gogoproto.moretags) = "yaml:&#92;"token_out&#92;""];</code>
+       * @param value The tokenOut to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenOut(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        tokenOut_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The denom of the token that is received
+       * </pre>
+       *
+       * <code>string token_out = 3 [json_name = "tokenOut", (.gogoproto.moretags) = "yaml:&#92;"token_out&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTokenOut() {
+        tokenOut_ = getDefaultInstance().getTokenOut();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The denom of the token that is received
+       * </pre>
+       *
+       * <code>string token_out = 3 [json_name = "tokenOut", (.gogoproto.moretags) = "yaml:&#92;"token_out&#92;""];</code>
+       * @param value The bytes for tokenOut to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenOutBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        tokenOut_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.protorev.v1beta1.Trade)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.protorev.v1beta1.Trade)
+    private static final com.osmosis.protorev.v1beta1.ProtorevProto.Trade DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.protorev.v1beta1.ProtorevProto.Trade();
+    }
+
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.Trade getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Trade>
+        PARSER = new com.google.protobuf.AbstractParser<Trade>() {
+      @java.lang.Override
+      public Trade parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Trade> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Trade> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.ProtorevProto.Trade getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RouteStatisticsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.protorev.v1beta1.RouteStatistics)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * profits is the total profit from all trades on this route
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin profits = 1 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getProfitsList();
+    /**
+     * <pre>
+     * profits is the total profit from all trades on this route
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin profits = 1 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getProfits(int index);
+    /**
+     * <pre>
+     * profits is the total profit from all trades on this route
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin profits = 1 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+     */
+    int getProfitsCount();
+    /**
+     * <pre>
+     * profits is the total profit from all trades on this route
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin profits = 1 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getProfitsOrBuilderList();
+    /**
+     * <pre>
+     * profits is the total profit from all trades on this route
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin profits = 1 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getProfitsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * number_of_trades is the number of trades the module has executed using this
+     * route
+     * </pre>
+     *
+     * <code>string number_of_trades = 2 [json_name = "numberOfTrades", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"number_of_trades&#92;""];</code>
+     * @return The numberOfTrades.
+     */
+    java.lang.String getNumberOfTrades();
+    /**
+     * <pre>
+     * number_of_trades is the number of trades the module has executed using this
+     * route
+     * </pre>
+     *
+     * <code>string number_of_trades = 2 [json_name = "numberOfTrades", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"number_of_trades&#92;""];</code>
+     * @return The bytes for numberOfTrades.
+     */
+    com.google.protobuf.ByteString
+        getNumberOfTradesBytes();
+
+    /**
+     * <pre>
+     * route is the route that was used (pool ids along the arbitrage route)
+     * </pre>
+     *
+     * <code>repeated uint64 route = 3 [json_name = "route", (.gogoproto.moretags) = "yaml:&#92;"route&#92;""];</code>
+     * @return A list containing the route.
+     */
+    java.util.List<java.lang.Long> getRouteList();
+    /**
+     * <pre>
+     * route is the route that was used (pool ids along the arbitrage route)
+     * </pre>
+     *
+     * <code>repeated uint64 route = 3 [json_name = "route", (.gogoproto.moretags) = "yaml:&#92;"route&#92;""];</code>
+     * @return The count of route.
+     */
+    int getRouteCount();
+    /**
+     * <pre>
+     * route is the route that was used (pool ids along the arbitrage route)
+     * </pre>
+     *
+     * <code>repeated uint64 route = 3 [json_name = "route", (.gogoproto.moretags) = "yaml:&#92;"route&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The route at the given index.
+     */
+    long getRoute(int index);
+  }
+  /**
+   * <pre>
+   * RouteStatistics contains the number of trades the module has executed after a
+   * swap on a given route and the profits from the trades
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.protorev.v1beta1.RouteStatistics}
+   */
+  public static final class RouteStatistics extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.protorev.v1beta1.RouteStatistics)
+      RouteStatisticsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RouteStatistics.newBuilder() to construct.
+    private RouteStatistics(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RouteStatistics() {
+      profits_ = java.util.Collections.emptyList();
+      numberOfTrades_ = "";
+      route_ = emptyLongList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RouteStatistics();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.protorev.v1beta1.ProtorevProto.internal_static_osmosis_protorev_v1beta1_RouteStatistics_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.protorev.v1beta1.ProtorevProto.internal_static_osmosis_protorev_v1beta1_RouteStatistics_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics.class, com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics.Builder.class);
+    }
+
+    public static final int PROFITS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> profits_;
+    /**
+     * <pre>
+     * profits is the total profit from all trades on this route
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin profits = 1 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getProfitsList() {
+      return profits_;
+    }
+    /**
+     * <pre>
+     * profits is the total profit from all trades on this route
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin profits = 1 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getProfitsOrBuilderList() {
+      return profits_;
+    }
+    /**
+     * <pre>
+     * profits is the total profit from all trades on this route
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin profits = 1 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getProfitsCount() {
+      return profits_.size();
+    }
+    /**
+     * <pre>
+     * profits is the total profit from all trades on this route
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin profits = 1 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getProfits(int index) {
+      return profits_.get(index);
+    }
+    /**
+     * <pre>
+     * profits is the total profit from all trades on this route
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin profits = 1 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getProfitsOrBuilder(
+        int index) {
+      return profits_.get(index);
+    }
+
+    public static final int NUMBER_OF_TRADES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object numberOfTrades_ = "";
+    /**
+     * <pre>
+     * number_of_trades is the number of trades the module has executed using this
+     * route
+     * </pre>
+     *
+     * <code>string number_of_trades = 2 [json_name = "numberOfTrades", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"number_of_trades&#92;""];</code>
+     * @return The numberOfTrades.
+     */
+    @java.lang.Override
+    public java.lang.String getNumberOfTrades() {
+      java.lang.Object ref = numberOfTrades_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        numberOfTrades_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * number_of_trades is the number of trades the module has executed using this
+     * route
+     * </pre>
+     *
+     * <code>string number_of_trades = 2 [json_name = "numberOfTrades", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"number_of_trades&#92;""];</code>
+     * @return The bytes for numberOfTrades.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNumberOfTradesBytes() {
+      java.lang.Object ref = numberOfTrades_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        numberOfTrades_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ROUTE_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.LongList route_;
+    /**
+     * <pre>
+     * route is the route that was used (pool ids along the arbitrage route)
+     * </pre>
+     *
+     * <code>repeated uint64 route = 3 [json_name = "route", (.gogoproto.moretags) = "yaml:&#92;"route&#92;""];</code>
+     * @return A list containing the route.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Long>
+        getRouteList() {
+      return route_;
+    }
+    /**
+     * <pre>
+     * route is the route that was used (pool ids along the arbitrage route)
+     * </pre>
+     *
+     * <code>repeated uint64 route = 3 [json_name = "route", (.gogoproto.moretags) = "yaml:&#92;"route&#92;""];</code>
+     * @return The count of route.
+     */
+    public int getRouteCount() {
+      return route_.size();
+    }
+    /**
+     * <pre>
+     * route is the route that was used (pool ids along the arbitrage route)
+     * </pre>
+     *
+     * <code>repeated uint64 route = 3 [json_name = "route", (.gogoproto.moretags) = "yaml:&#92;"route&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The route at the given index.
+     */
+    public long getRoute(int index) {
+      return route_.getLong(index);
+    }
+    private int routeMemoizedSerializedSize = -1;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < profits_.size(); i++) {
+        output.writeMessage(1, profits_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(numberOfTrades_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, numberOfTrades_);
+      }
+      if (getRouteList().size() > 0) {
+        output.writeUInt32NoTag(26);
+        output.writeUInt32NoTag(routeMemoizedSerializedSize);
+      }
+      for (int i = 0; i < route_.size(); i++) {
+        output.writeUInt64NoTag(route_.getLong(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < profits_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, profits_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(numberOfTrades_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, numberOfTrades_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < route_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt64SizeNoTag(route_.getLong(i));
+        }
+        size += dataSize;
+        if (!getRouteList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        routeMemoizedSerializedSize = dataSize;
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics)) {
+        return super.equals(obj);
+      }
+      com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics other = (com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics) obj;
+
+      if (!getProfitsList()
+          .equals(other.getProfitsList())) return false;
+      if (!getNumberOfTrades()
+          .equals(other.getNumberOfTrades())) return false;
+      if (!getRouteList()
+          .equals(other.getRouteList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getProfitsCount() > 0) {
+        hash = (37 * hash) + PROFITS_FIELD_NUMBER;
+        hash = (53 * hash) + getProfitsList().hashCode();
+      }
+      hash = (37 * hash) + NUMBER_OF_TRADES_FIELD_NUMBER;
+      hash = (53 * hash) + getNumberOfTrades().hashCode();
+      if (getRouteCount() > 0) {
+        hash = (37 * hash) + ROUTE_FIELD_NUMBER;
+        hash = (53 * hash) + getRouteList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * RouteStatistics contains the number of trades the module has executed after a
+     * swap on a given route and the profits from the trades
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.protorev.v1beta1.RouteStatistics}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.protorev.v1beta1.RouteStatistics)
+        com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatisticsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.protorev.v1beta1.ProtorevProto.internal_static_osmosis_protorev_v1beta1_RouteStatistics_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.protorev.v1beta1.ProtorevProto.internal_static_osmosis_protorev_v1beta1_RouteStatistics_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics.class, com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics.Builder.class);
+      }
+
+      // Construct using com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (profitsBuilder_ == null) {
+          profits_ = java.util.Collections.emptyList();
+        } else {
+          profits_ = null;
+          profitsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        numberOfTrades_ = "";
+        route_ = emptyLongList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.protorev.v1beta1.ProtorevProto.internal_static_osmosis_protorev_v1beta1_RouteStatistics_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics getDefaultInstanceForType() {
+        return com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics build() {
+        com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics buildPartial() {
+        com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics result = new com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics result) {
+        if (profitsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            profits_ = java.util.Collections.unmodifiableList(profits_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.profits_ = profits_;
+        } else {
+          result.profits_ = profitsBuilder_.build();
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          route_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.route_ = route_;
+      }
+
+      private void buildPartial0(com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.numberOfTrades_ = numberOfTrades_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics) {
+          return mergeFrom((com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics other) {
+        if (other == com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics.getDefaultInstance()) return this;
+        if (profitsBuilder_ == null) {
+          if (!other.profits_.isEmpty()) {
+            if (profits_.isEmpty()) {
+              profits_ = other.profits_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureProfitsIsMutable();
+              profits_.addAll(other.profits_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.profits_.isEmpty()) {
+            if (profitsBuilder_.isEmpty()) {
+              profitsBuilder_.dispose();
+              profitsBuilder_ = null;
+              profits_ = other.profits_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              profitsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getProfitsFieldBuilder() : null;
+            } else {
+              profitsBuilder_.addAllMessages(other.profits_);
+            }
+          }
+        }
+        if (!other.getNumberOfTrades().isEmpty()) {
+          numberOfTrades_ = other.numberOfTrades_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.route_.isEmpty()) {
+          if (route_.isEmpty()) {
+            route_ = other.route_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureRouteIsMutable();
+            route_.addAll(other.route_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (profitsBuilder_ == null) {
+                  ensureProfitsIsMutable();
+                  profits_.add(m);
+                } else {
+                  profitsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                numberOfTrades_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                long v = input.readUInt64();
+                ensureRouteIsMutable();
+                route_.addLong(v);
+                break;
+              } // case 24
+              case 26: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureRouteIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  route_.addLong(input.readUInt64());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> profits_ =
+        java.util.Collections.emptyList();
+      private void ensureProfitsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          profits_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(profits_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> profitsBuilder_;
+
+      /**
+       * <pre>
+       * profits is the total profit from all trades on this route
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 1 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getProfitsList() {
+        if (profitsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(profits_);
+        } else {
+          return profitsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * profits is the total profit from all trades on this route
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 1 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public int getProfitsCount() {
+        if (profitsBuilder_ == null) {
+          return profits_.size();
+        } else {
+          return profitsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * profits is the total profit from all trades on this route
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 1 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getProfits(int index) {
+        if (profitsBuilder_ == null) {
+          return profits_.get(index);
+        } else {
+          return profitsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * profits is the total profit from all trades on this route
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 1 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public Builder setProfits(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (profitsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProfitsIsMutable();
+          profits_.set(index, value);
+          onChanged();
+        } else {
+          profitsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * profits is the total profit from all trades on this route
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 1 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public Builder setProfits(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (profitsBuilder_ == null) {
+          ensureProfitsIsMutable();
+          profits_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          profitsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * profits is the total profit from all trades on this route
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 1 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public Builder addProfits(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (profitsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProfitsIsMutable();
+          profits_.add(value);
+          onChanged();
+        } else {
+          profitsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * profits is the total profit from all trades on this route
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 1 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public Builder addProfits(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (profitsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProfitsIsMutable();
+          profits_.add(index, value);
+          onChanged();
+        } else {
+          profitsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * profits is the total profit from all trades on this route
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 1 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public Builder addProfits(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (profitsBuilder_ == null) {
+          ensureProfitsIsMutable();
+          profits_.add(builderForValue.build());
+          onChanged();
+        } else {
+          profitsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * profits is the total profit from all trades on this route
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 1 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public Builder addProfits(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (profitsBuilder_ == null) {
+          ensureProfitsIsMutable();
+          profits_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          profitsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * profits is the total profit from all trades on this route
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 1 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public Builder addAllProfits(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (profitsBuilder_ == null) {
+          ensureProfitsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, profits_);
+          onChanged();
+        } else {
+          profitsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * profits is the total profit from all trades on this route
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 1 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public Builder clearProfits() {
+        if (profitsBuilder_ == null) {
+          profits_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          profitsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * profits is the total profit from all trades on this route
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 1 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public Builder removeProfits(int index) {
+        if (profitsBuilder_ == null) {
+          ensureProfitsIsMutable();
+          profits_.remove(index);
+          onChanged();
+        } else {
+          profitsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * profits is the total profit from all trades on this route
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 1 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getProfitsBuilder(
+          int index) {
+        return getProfitsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * profits is the total profit from all trades on this route
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 1 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getProfitsOrBuilder(
+          int index) {
+        if (profitsBuilder_ == null) {
+          return profits_.get(index);  } else {
+          return profitsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * profits is the total profit from all trades on this route
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 1 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getProfitsOrBuilderList() {
+        if (profitsBuilder_ != null) {
+          return profitsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(profits_);
+        }
+      }
+      /**
+       * <pre>
+       * profits is the total profit from all trades on this route
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 1 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addProfitsBuilder() {
+        return getProfitsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * profits is the total profit from all trades on this route
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 1 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addProfitsBuilder(
+          int index) {
+        return getProfitsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * profits is the total profit from all trades on this route
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin profits = 1 [json_name = "profits", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"profits&#92;""];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getProfitsBuilderList() {
+        return getProfitsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getProfitsFieldBuilder() {
+        if (profitsBuilder_ == null) {
+          profitsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  profits_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          profits_ = null;
+        }
+        return profitsBuilder_;
+      }
+
+      private java.lang.Object numberOfTrades_ = "";
+      /**
+       * <pre>
+       * number_of_trades is the number of trades the module has executed using this
+       * route
+       * </pre>
+       *
+       * <code>string number_of_trades = 2 [json_name = "numberOfTrades", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"number_of_trades&#92;""];</code>
+       * @return The numberOfTrades.
+       */
+      public java.lang.String getNumberOfTrades() {
+        java.lang.Object ref = numberOfTrades_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          numberOfTrades_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * number_of_trades is the number of trades the module has executed using this
+       * route
+       * </pre>
+       *
+       * <code>string number_of_trades = 2 [json_name = "numberOfTrades", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"number_of_trades&#92;""];</code>
+       * @return The bytes for numberOfTrades.
+       */
+      public com.google.protobuf.ByteString
+          getNumberOfTradesBytes() {
+        java.lang.Object ref = numberOfTrades_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          numberOfTrades_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * number_of_trades is the number of trades the module has executed using this
+       * route
+       * </pre>
+       *
+       * <code>string number_of_trades = 2 [json_name = "numberOfTrades", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"number_of_trades&#92;""];</code>
+       * @param value The numberOfTrades to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumberOfTrades(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        numberOfTrades_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * number_of_trades is the number of trades the module has executed using this
+       * route
+       * </pre>
+       *
+       * <code>string number_of_trades = 2 [json_name = "numberOfTrades", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"number_of_trades&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumberOfTrades() {
+        numberOfTrades_ = getDefaultInstance().getNumberOfTrades();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * number_of_trades is the number of trades the module has executed using this
+       * route
+       * </pre>
+       *
+       * <code>string number_of_trades = 2 [json_name = "numberOfTrades", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"number_of_trades&#92;""];</code>
+       * @param value The bytes for numberOfTrades to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumberOfTradesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        numberOfTrades_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.LongList route_ = emptyLongList();
+      private void ensureRouteIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          route_ = mutableCopy(route_);
+          bitField0_ |= 0x00000004;
+        }
+      }
+      /**
+       * <pre>
+       * route is the route that was used (pool ids along the arbitrage route)
+       * </pre>
+       *
+       * <code>repeated uint64 route = 3 [json_name = "route", (.gogoproto.moretags) = "yaml:&#92;"route&#92;""];</code>
+       * @return A list containing the route.
+       */
+      public java.util.List<java.lang.Long>
+          getRouteList() {
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(route_) : route_;
+      }
+      /**
+       * <pre>
+       * route is the route that was used (pool ids along the arbitrage route)
+       * </pre>
+       *
+       * <code>repeated uint64 route = 3 [json_name = "route", (.gogoproto.moretags) = "yaml:&#92;"route&#92;""];</code>
+       * @return The count of route.
+       */
+      public int getRouteCount() {
+        return route_.size();
+      }
+      /**
+       * <pre>
+       * route is the route that was used (pool ids along the arbitrage route)
+       * </pre>
+       *
+       * <code>repeated uint64 route = 3 [json_name = "route", (.gogoproto.moretags) = "yaml:&#92;"route&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The route at the given index.
+       */
+      public long getRoute(int index) {
+        return route_.getLong(index);
+      }
+      /**
+       * <pre>
+       * route is the route that was used (pool ids along the arbitrage route)
+       * </pre>
+       *
+       * <code>repeated uint64 route = 3 [json_name = "route", (.gogoproto.moretags) = "yaml:&#92;"route&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The route to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoute(
+          int index, long value) {
+
+        ensureRouteIsMutable();
+        route_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * route is the route that was used (pool ids along the arbitrage route)
+       * </pre>
+       *
+       * <code>repeated uint64 route = 3 [json_name = "route", (.gogoproto.moretags) = "yaml:&#92;"route&#92;""];</code>
+       * @param value The route to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRoute(long value) {
+
+        ensureRouteIsMutable();
+        route_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * route is the route that was used (pool ids along the arbitrage route)
+       * </pre>
+       *
+       * <code>repeated uint64 route = 3 [json_name = "route", (.gogoproto.moretags) = "yaml:&#92;"route&#92;""];</code>
+       * @param values The route to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllRoute(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureRouteIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, route_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * route is the route that was used (pool ids along the arbitrage route)
+       * </pre>
+       *
+       * <code>repeated uint64 route = 3 [json_name = "route", (.gogoproto.moretags) = "yaml:&#92;"route&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRoute() {
+        route_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.protorev.v1beta1.RouteStatistics)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.protorev.v1beta1.RouteStatistics)
+    private static final com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics();
+    }
+
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RouteStatistics>
+        PARSER = new com.google.protobuf.AbstractParser<RouteStatistics>() {
+      @java.lang.Override
+      public RouteStatistics parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RouteStatistics> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RouteStatistics> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.ProtorevProto.RouteStatistics getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PoolWeightsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.protorev.v1beta1.PoolWeights)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The weight of a stableswap pool
+     * </pre>
+     *
+     * <code>uint64 stable_weight = 1 [json_name = "stableWeight", (.gogoproto.moretags) = "yaml:&#92;"stable_weight&#92;""];</code>
+     * @return The stableWeight.
+     */
+    long getStableWeight();
+
+    /**
+     * <pre>
+     * The weight of a balancer pool
+     * </pre>
+     *
+     * <code>uint64 balancer_weight = 2 [json_name = "balancerWeight", (.gogoproto.moretags) = "yaml:&#92;"balancer_weight&#92;""];</code>
+     * @return The balancerWeight.
+     */
+    long getBalancerWeight();
+
+    /**
+     * <pre>
+     * The weight of a concentrated pool
+     * </pre>
+     *
+     * <code>uint64 concentrated_weight = 3 [json_name = "concentratedWeight", (.gogoproto.moretags) = "yaml:&#92;"concentrated_weight&#92;""];</code>
+     * @return The concentratedWeight.
+     */
+    long getConcentratedWeight();
+  }
+  /**
+   * <pre>
+   * PoolWeights contains the weights of all of the different pool types. This
+   * distinction is made and necessary because the execution time ranges
+   * significantly between the different pool types. Each weight roughly
+   * corresponds to the amount of time (in ms) it takes to execute a swap on that
+   * pool type.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.protorev.v1beta1.PoolWeights}
+   */
+  public static final class PoolWeights extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.protorev.v1beta1.PoolWeights)
+      PoolWeightsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PoolWeights.newBuilder() to construct.
+    private PoolWeights(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PoolWeights() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PoolWeights();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.protorev.v1beta1.ProtorevProto.internal_static_osmosis_protorev_v1beta1_PoolWeights_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.protorev.v1beta1.ProtorevProto.internal_static_osmosis_protorev_v1beta1_PoolWeights_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.class, com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.Builder.class);
+    }
+
+    public static final int STABLE_WEIGHT_FIELD_NUMBER = 1;
+    private long stableWeight_ = 0L;
+    /**
+     * <pre>
+     * The weight of a stableswap pool
+     * </pre>
+     *
+     * <code>uint64 stable_weight = 1 [json_name = "stableWeight", (.gogoproto.moretags) = "yaml:&#92;"stable_weight&#92;""];</code>
+     * @return The stableWeight.
+     */
+    @java.lang.Override
+    public long getStableWeight() {
+      return stableWeight_;
+    }
+
+    public static final int BALANCER_WEIGHT_FIELD_NUMBER = 2;
+    private long balancerWeight_ = 0L;
+    /**
+     * <pre>
+     * The weight of a balancer pool
+     * </pre>
+     *
+     * <code>uint64 balancer_weight = 2 [json_name = "balancerWeight", (.gogoproto.moretags) = "yaml:&#92;"balancer_weight&#92;""];</code>
+     * @return The balancerWeight.
+     */
+    @java.lang.Override
+    public long getBalancerWeight() {
+      return balancerWeight_;
+    }
+
+    public static final int CONCENTRATED_WEIGHT_FIELD_NUMBER = 3;
+    private long concentratedWeight_ = 0L;
+    /**
+     * <pre>
+     * The weight of a concentrated pool
+     * </pre>
+     *
+     * <code>uint64 concentrated_weight = 3 [json_name = "concentratedWeight", (.gogoproto.moretags) = "yaml:&#92;"concentrated_weight&#92;""];</code>
+     * @return The concentratedWeight.
+     */
+    @java.lang.Override
+    public long getConcentratedWeight() {
+      return concentratedWeight_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (stableWeight_ != 0L) {
+        output.writeUInt64(1, stableWeight_);
+      }
+      if (balancerWeight_ != 0L) {
+        output.writeUInt64(2, balancerWeight_);
+      }
+      if (concentratedWeight_ != 0L) {
+        output.writeUInt64(3, concentratedWeight_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (stableWeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, stableWeight_);
+      }
+      if (balancerWeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, balancerWeight_);
+      }
+      if (concentratedWeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, concentratedWeight_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights)) {
+        return super.equals(obj);
+      }
+      com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights other = (com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights) obj;
+
+      if (getStableWeight()
+          != other.getStableWeight()) return false;
+      if (getBalancerWeight()
+          != other.getBalancerWeight()) return false;
+      if (getConcentratedWeight()
+          != other.getConcentratedWeight()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STABLE_WEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getStableWeight());
+      hash = (37 * hash) + BALANCER_WEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getBalancerWeight());
+      hash = (37 * hash) + CONCENTRATED_WEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getConcentratedWeight());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * PoolWeights contains the weights of all of the different pool types. This
+     * distinction is made and necessary because the execution time ranges
+     * significantly between the different pool types. Each weight roughly
+     * corresponds to the amount of time (in ms) it takes to execute a swap on that
+     * pool type.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.protorev.v1beta1.PoolWeights}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.protorev.v1beta1.PoolWeights)
+        com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.protorev.v1beta1.ProtorevProto.internal_static_osmosis_protorev_v1beta1_PoolWeights_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.protorev.v1beta1.ProtorevProto.internal_static_osmosis_protorev_v1beta1_PoolWeights_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.class, com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.Builder.class);
+      }
+
+      // Construct using com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        stableWeight_ = 0L;
+        balancerWeight_ = 0L;
+        concentratedWeight_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.protorev.v1beta1.ProtorevProto.internal_static_osmosis_protorev_v1beta1_PoolWeights_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights getDefaultInstanceForType() {
+        return com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights build() {
+        com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights buildPartial() {
+        com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights result = new com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.stableWeight_ = stableWeight_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.balancerWeight_ = balancerWeight_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.concentratedWeight_ = concentratedWeight_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights) {
+          return mergeFrom((com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights other) {
+        if (other == com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.getDefaultInstance()) return this;
+        if (other.getStableWeight() != 0L) {
+          setStableWeight(other.getStableWeight());
+        }
+        if (other.getBalancerWeight() != 0L) {
+          setBalancerWeight(other.getBalancerWeight());
+        }
+        if (other.getConcentratedWeight() != 0L) {
+          setConcentratedWeight(other.getConcentratedWeight());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                stableWeight_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                balancerWeight_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                concentratedWeight_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long stableWeight_ ;
+      /**
+       * <pre>
+       * The weight of a stableswap pool
+       * </pre>
+       *
+       * <code>uint64 stable_weight = 1 [json_name = "stableWeight", (.gogoproto.moretags) = "yaml:&#92;"stable_weight&#92;""];</code>
+       * @return The stableWeight.
+       */
+      @java.lang.Override
+      public long getStableWeight() {
+        return stableWeight_;
+      }
+      /**
+       * <pre>
+       * The weight of a stableswap pool
+       * </pre>
+       *
+       * <code>uint64 stable_weight = 1 [json_name = "stableWeight", (.gogoproto.moretags) = "yaml:&#92;"stable_weight&#92;""];</code>
+       * @param value The stableWeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStableWeight(long value) {
+
+        stableWeight_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The weight of a stableswap pool
+       * </pre>
+       *
+       * <code>uint64 stable_weight = 1 [json_name = "stableWeight", (.gogoproto.moretags) = "yaml:&#92;"stable_weight&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStableWeight() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        stableWeight_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long balancerWeight_ ;
+      /**
+       * <pre>
+       * The weight of a balancer pool
+       * </pre>
+       *
+       * <code>uint64 balancer_weight = 2 [json_name = "balancerWeight", (.gogoproto.moretags) = "yaml:&#92;"balancer_weight&#92;""];</code>
+       * @return The balancerWeight.
+       */
+      @java.lang.Override
+      public long getBalancerWeight() {
+        return balancerWeight_;
+      }
+      /**
+       * <pre>
+       * The weight of a balancer pool
+       * </pre>
+       *
+       * <code>uint64 balancer_weight = 2 [json_name = "balancerWeight", (.gogoproto.moretags) = "yaml:&#92;"balancer_weight&#92;""];</code>
+       * @param value The balancerWeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBalancerWeight(long value) {
+
+        balancerWeight_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The weight of a balancer pool
+       * </pre>
+       *
+       * <code>uint64 balancer_weight = 2 [json_name = "balancerWeight", (.gogoproto.moretags) = "yaml:&#92;"balancer_weight&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBalancerWeight() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        balancerWeight_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long concentratedWeight_ ;
+      /**
+       * <pre>
+       * The weight of a concentrated pool
+       * </pre>
+       *
+       * <code>uint64 concentrated_weight = 3 [json_name = "concentratedWeight", (.gogoproto.moretags) = "yaml:&#92;"concentrated_weight&#92;""];</code>
+       * @return The concentratedWeight.
+       */
+      @java.lang.Override
+      public long getConcentratedWeight() {
+        return concentratedWeight_;
+      }
+      /**
+       * <pre>
+       * The weight of a concentrated pool
+       * </pre>
+       *
+       * <code>uint64 concentrated_weight = 3 [json_name = "concentratedWeight", (.gogoproto.moretags) = "yaml:&#92;"concentrated_weight&#92;""];</code>
+       * @param value The concentratedWeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConcentratedWeight(long value) {
+
+        concentratedWeight_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The weight of a concentrated pool
+       * </pre>
+       *
+       * <code>uint64 concentrated_weight = 3 [json_name = "concentratedWeight", (.gogoproto.moretags) = "yaml:&#92;"concentrated_weight&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConcentratedWeight() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        concentratedWeight_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.protorev.v1beta1.PoolWeights)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.protorev.v1beta1.PoolWeights)
+    private static final com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights();
+    }
+
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PoolWeights>
+        PARSER = new com.google.protobuf.AbstractParser<PoolWeights>() {
+      @java.lang.Override
+      public PoolWeights parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PoolWeights> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PoolWeights> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BaseDenomOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.protorev.v1beta1.BaseDenom)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The denom i.e. name of the base denom (ex. uosmo)
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <pre>
+     * The denom i.e. name of the base denom (ex. uosmo)
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <pre>
+     * The step size of the binary search that is used to find the optimal swap
+     * amount
+     * </pre>
+     *
+     * <code>string step_size = 2 [json_name = "stepSize", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"step_size&#92;""];</code>
+     * @return The stepSize.
+     */
+    java.lang.String getStepSize();
+    /**
+     * <pre>
+     * The step size of the binary search that is used to find the optimal swap
+     * amount
+     * </pre>
+     *
+     * <code>string step_size = 2 [json_name = "stepSize", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"step_size&#92;""];</code>
+     * @return The bytes for stepSize.
+     */
+    com.google.protobuf.ByteString
+        getStepSizeBytes();
+  }
+  /**
+   * <pre>
+   * BaseDenom represents a single base denom that the module uses for its
+   * arbitrage trades. It contains the denom name alongside the step size of the
+   * binary search that is used to find the optimal swap amount
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.protorev.v1beta1.BaseDenom}
+   */
+  public static final class BaseDenom extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.protorev.v1beta1.BaseDenom)
+      BaseDenomOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BaseDenom.newBuilder() to construct.
+    private BaseDenom(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BaseDenom() {
+      denom_ = "";
+      stepSize_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BaseDenom();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.protorev.v1beta1.ProtorevProto.internal_static_osmosis_protorev_v1beta1_BaseDenom_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.protorev.v1beta1.ProtorevProto.internal_static_osmosis_protorev_v1beta1_BaseDenom_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.class, com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <pre>
+     * The denom i.e. name of the base denom (ex. uosmo)
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The denom i.e. name of the base denom (ex. uosmo)
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STEP_SIZE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stepSize_ = "";
+    /**
+     * <pre>
+     * The step size of the binary search that is used to find the optimal swap
+     * amount
+     * </pre>
+     *
+     * <code>string step_size = 2 [json_name = "stepSize", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"step_size&#92;""];</code>
+     * @return The stepSize.
+     */
+    @java.lang.Override
+    public java.lang.String getStepSize() {
+      java.lang.Object ref = stepSize_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stepSize_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The step size of the binary search that is used to find the optimal swap
+     * amount
+     * </pre>
+     *
+     * <code>string step_size = 2 [json_name = "stepSize", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"step_size&#92;""];</code>
+     * @return The bytes for stepSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStepSizeBytes() {
+      java.lang.Object ref = stepSize_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stepSize_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stepSize_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, stepSize_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stepSize_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, stepSize_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom)) {
+        return super.equals(obj);
+      }
+      com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom other = (com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getStepSize()
+          .equals(other.getStepSize())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + STEP_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + getStepSize().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * BaseDenom represents a single base denom that the module uses for its
+     * arbitrage trades. It contains the denom name alongside the step size of the
+     * binary search that is used to find the optimal swap amount
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.protorev.v1beta1.BaseDenom}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.protorev.v1beta1.BaseDenom)
+        com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenomOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.protorev.v1beta1.ProtorevProto.internal_static_osmosis_protorev_v1beta1_BaseDenom_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.protorev.v1beta1.ProtorevProto.internal_static_osmosis_protorev_v1beta1_BaseDenom_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.class, com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.Builder.class);
+      }
+
+      // Construct using com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        stepSize_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.protorev.v1beta1.ProtorevProto.internal_static_osmosis_protorev_v1beta1_BaseDenom_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom getDefaultInstanceForType() {
+        return com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom build() {
+        com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom buildPartial() {
+        com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom result = new com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.stepSize_ = stepSize_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom) {
+          return mergeFrom((com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom other) {
+        if (other == com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getStepSize().isEmpty()) {
+          stepSize_ = other.stepSize_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                stepSize_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <pre>
+       * The denom i.e. name of the base denom (ex. uosmo)
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The denom i.e. name of the base denom (ex. uosmo)
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The denom i.e. name of the base denom (ex. uosmo)
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The denom i.e. name of the base denom (ex. uosmo)
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The denom i.e. name of the base denom (ex. uosmo)
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object stepSize_ = "";
+      /**
+       * <pre>
+       * The step size of the binary search that is used to find the optimal swap
+       * amount
+       * </pre>
+       *
+       * <code>string step_size = 2 [json_name = "stepSize", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"step_size&#92;""];</code>
+       * @return The stepSize.
+       */
+      public java.lang.String getStepSize() {
+        java.lang.Object ref = stepSize_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stepSize_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The step size of the binary search that is used to find the optimal swap
+       * amount
+       * </pre>
+       *
+       * <code>string step_size = 2 [json_name = "stepSize", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"step_size&#92;""];</code>
+       * @return The bytes for stepSize.
+       */
+      public com.google.protobuf.ByteString
+          getStepSizeBytes() {
+        java.lang.Object ref = stepSize_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stepSize_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The step size of the binary search that is used to find the optimal swap
+       * amount
+       * </pre>
+       *
+       * <code>string step_size = 2 [json_name = "stepSize", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"step_size&#92;""];</code>
+       * @param value The stepSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStepSize(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stepSize_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The step size of the binary search that is used to find the optimal swap
+       * amount
+       * </pre>
+       *
+       * <code>string step_size = 2 [json_name = "stepSize", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"step_size&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStepSize() {
+        stepSize_ = getDefaultInstance().getStepSize();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The step size of the binary search that is used to find the optimal swap
+       * amount
+       * </pre>
+       *
+       * <code>string step_size = 2 [json_name = "stepSize", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"step_size&#92;""];</code>
+       * @param value The bytes for stepSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStepSizeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stepSize_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.protorev.v1beta1.BaseDenom)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.protorev.v1beta1.BaseDenom)
+    private static final com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom();
+    }
+
+    public static com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BaseDenom>
+        PARSER = new com.google.protobuf.AbstractParser<BaseDenom>() {
+      @java.lang.Override
+      public BaseDenom parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<BaseDenom> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BaseDenom> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_protorev_v1beta1_TokenPairArbRoutes_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_protorev_v1beta1_TokenPairArbRoutes_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_protorev_v1beta1_Route_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_protorev_v1beta1_Route_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_protorev_v1beta1_Trade_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_protorev_v1beta1_Trade_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_protorev_v1beta1_RouteStatistics_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_protorev_v1beta1_RouteStatistics_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_protorev_v1beta1_PoolWeights_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_protorev_v1beta1_PoolWeights_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_protorev_v1beta1_BaseDenom_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_protorev_v1beta1_BaseDenom_fieldAccessorTable;
 
@@ -86,13 +6181,13 @@ public final class ProtorevProto {
       "BaseDenom\022&\n\005denom\030\001 \001(\tB\020\362\336\037\014yaml:\"deno" +
       "m\"R\005denom\022_\n\tstep_size\030\002 \001(\tBB\310\336\037\000\332\336\037&gi" +
       "thub.com/cosmos/cosmos-sdk/types.Int\362\336\037\020" +
-      "yaml:\"step_size\"R\010stepSizeB\345\001\n\034com.osmos" +
-      "is.protorev.v1beta1B\rProtorevProtoP\001Z4gi" +
-      "thub.com/osmosis-labs/osmosis/v15/x/prot" +
-      "orev/types\242\002\003OPX\252\002\030Osmosis.Protorev.V1be" +
-      "ta1\312\002\030Osmosis\\Protorev\\V1beta1\342\002$Osmosis" +
-      "\\Protorev\\V1beta1\\GPBMetadata\352\002\032Osmosis:" +
-      ":Protorev::V1beta1b\006proto3"
+      "yaml:\"step_size\"R\010stepSizeB\343\001\n\034com.osmos" +
+      "is.protorev.v1beta1B\rProtorevProtoZ4gith" +
+      "ub.com/osmosis-labs/osmosis/v15/x/protor" +
+      "ev/types\242\002\003OPX\252\002\030Osmosis.Protorev.V1beta" +
+      "1\312\002\030Osmosis\\Protorev\\V1beta1\342\002$Osmosis\\P" +
+      "rotorev\\V1beta1\\GPBMetadata\352\002\032Osmosis::P" +
+      "rotorev::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

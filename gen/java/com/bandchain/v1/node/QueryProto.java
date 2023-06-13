@@ -14,29 +14,3027 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryChainIDRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bandchain.v1.node.QueryChainIDRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryChainIDRequest is request type for the Service/ChainID RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code bandchain.v1.node.QueryChainIDRequest}
+   */
+  public static final class QueryChainIDRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bandchain.v1.node.QueryChainIDRequest)
+      QueryChainIDRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryChainIDRequest.newBuilder() to construct.
+    private QueryChainIDRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryChainIDRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryChainIDRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bandchain.v1.node.QueryProto.internal_static_bandchain_v1_node_QueryChainIDRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bandchain.v1.node.QueryProto.internal_static_bandchain_v1_node_QueryChainIDRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bandchain.v1.node.QueryProto.QueryChainIDRequest.class, com.bandchain.v1.node.QueryProto.QueryChainIDRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bandchain.v1.node.QueryProto.QueryChainIDRequest)) {
+        return super.equals(obj);
+      }
+      com.bandchain.v1.node.QueryProto.QueryChainIDRequest other = (com.bandchain.v1.node.QueryProto.QueryChainIDRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bandchain.v1.node.QueryProto.QueryChainIDRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryChainIDRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryChainIDRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryChainIDRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryChainIDRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryChainIDRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryChainIDRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryChainIDRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bandchain.v1.node.QueryProto.QueryChainIDRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bandchain.v1.node.QueryProto.QueryChainIDRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryChainIDRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryChainIDRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bandchain.v1.node.QueryProto.QueryChainIDRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryChainIDRequest is request type for the Service/ChainID RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code bandchain.v1.node.QueryChainIDRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bandchain.v1.node.QueryChainIDRequest)
+        com.bandchain.v1.node.QueryProto.QueryChainIDRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bandchain.v1.node.QueryProto.internal_static_bandchain_v1_node_QueryChainIDRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bandchain.v1.node.QueryProto.internal_static_bandchain_v1_node_QueryChainIDRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bandchain.v1.node.QueryProto.QueryChainIDRequest.class, com.bandchain.v1.node.QueryProto.QueryChainIDRequest.Builder.class);
+      }
+
+      // Construct using com.bandchain.v1.node.QueryProto.QueryChainIDRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bandchain.v1.node.QueryProto.internal_static_bandchain_v1_node_QueryChainIDRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.node.QueryProto.QueryChainIDRequest getDefaultInstanceForType() {
+        return com.bandchain.v1.node.QueryProto.QueryChainIDRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.node.QueryProto.QueryChainIDRequest build() {
+        com.bandchain.v1.node.QueryProto.QueryChainIDRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.node.QueryProto.QueryChainIDRequest buildPartial() {
+        com.bandchain.v1.node.QueryProto.QueryChainIDRequest result = new com.bandchain.v1.node.QueryProto.QueryChainIDRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bandchain.v1.node.QueryProto.QueryChainIDRequest) {
+          return mergeFrom((com.bandchain.v1.node.QueryProto.QueryChainIDRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bandchain.v1.node.QueryProto.QueryChainIDRequest other) {
+        if (other == com.bandchain.v1.node.QueryProto.QueryChainIDRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bandchain.v1.node.QueryChainIDRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:bandchain.v1.node.QueryChainIDRequest)
+    private static final com.bandchain.v1.node.QueryProto.QueryChainIDRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bandchain.v1.node.QueryProto.QueryChainIDRequest();
+    }
+
+    public static com.bandchain.v1.node.QueryProto.QueryChainIDRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryChainIDRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryChainIDRequest>() {
+      @java.lang.Override
+      public QueryChainIDRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryChainIDRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryChainIDRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bandchain.v1.node.QueryProto.QueryChainIDRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryChainIDResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bandchain.v1.node.QueryChainIDResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.customname) = "ChainID"];</code>
+     * @return The chainId.
+     */
+    java.lang.String getChainId();
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.customname) = "ChainID"];</code>
+     * @return The bytes for chainId.
+     */
+    com.google.protobuf.ByteString
+        getChainIdBytes();
+  }
+  /**
+   * <pre>
+   * QueryChainIDResponse is response type for the Service/ChainID RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code bandchain.v1.node.QueryChainIDResponse}
+   */
+  public static final class QueryChainIDResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bandchain.v1.node.QueryChainIDResponse)
+      QueryChainIDResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryChainIDResponse.newBuilder() to construct.
+    private QueryChainIDResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryChainIDResponse() {
+      chainId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryChainIDResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bandchain.v1.node.QueryProto.internal_static_bandchain_v1_node_QueryChainIDResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bandchain.v1.node.QueryProto.internal_static_bandchain_v1_node_QueryChainIDResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bandchain.v1.node.QueryProto.QueryChainIDResponse.class, com.bandchain.v1.node.QueryProto.QueryChainIDResponse.Builder.class);
+    }
+
+    public static final int CHAIN_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object chainId_ = "";
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.customname) = "ChainID"];</code>
+     * @return The chainId.
+     */
+    @java.lang.Override
+    public java.lang.String getChainId() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        chainId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.customname) = "ChainID"];</code>
+     * @return The bytes for chainId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChainIdBytes() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        chainId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, chainId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, chainId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bandchain.v1.node.QueryProto.QueryChainIDResponse)) {
+        return super.equals(obj);
+      }
+      com.bandchain.v1.node.QueryProto.QueryChainIDResponse other = (com.bandchain.v1.node.QueryProto.QueryChainIDResponse) obj;
+
+      if (!getChainId()
+          .equals(other.getChainId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CHAIN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getChainId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bandchain.v1.node.QueryProto.QueryChainIDResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryChainIDResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryChainIDResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryChainIDResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryChainIDResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryChainIDResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryChainIDResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryChainIDResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bandchain.v1.node.QueryProto.QueryChainIDResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bandchain.v1.node.QueryProto.QueryChainIDResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryChainIDResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryChainIDResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bandchain.v1.node.QueryProto.QueryChainIDResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryChainIDResponse is response type for the Service/ChainID RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code bandchain.v1.node.QueryChainIDResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bandchain.v1.node.QueryChainIDResponse)
+        com.bandchain.v1.node.QueryProto.QueryChainIDResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bandchain.v1.node.QueryProto.internal_static_bandchain_v1_node_QueryChainIDResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bandchain.v1.node.QueryProto.internal_static_bandchain_v1_node_QueryChainIDResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bandchain.v1.node.QueryProto.QueryChainIDResponse.class, com.bandchain.v1.node.QueryProto.QueryChainIDResponse.Builder.class);
+      }
+
+      // Construct using com.bandchain.v1.node.QueryProto.QueryChainIDResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        chainId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bandchain.v1.node.QueryProto.internal_static_bandchain_v1_node_QueryChainIDResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.node.QueryProto.QueryChainIDResponse getDefaultInstanceForType() {
+        return com.bandchain.v1.node.QueryProto.QueryChainIDResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.node.QueryProto.QueryChainIDResponse build() {
+        com.bandchain.v1.node.QueryProto.QueryChainIDResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.node.QueryProto.QueryChainIDResponse buildPartial() {
+        com.bandchain.v1.node.QueryProto.QueryChainIDResponse result = new com.bandchain.v1.node.QueryProto.QueryChainIDResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bandchain.v1.node.QueryProto.QueryChainIDResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.chainId_ = chainId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bandchain.v1.node.QueryProto.QueryChainIDResponse) {
+          return mergeFrom((com.bandchain.v1.node.QueryProto.QueryChainIDResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bandchain.v1.node.QueryProto.QueryChainIDResponse other) {
+        if (other == com.bandchain.v1.node.QueryProto.QueryChainIDResponse.getDefaultInstance()) return this;
+        if (!other.getChainId().isEmpty()) {
+          chainId_ = other.chainId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                chainId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object chainId_ = "";
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.customname) = "ChainID"];</code>
+       * @return The chainId.
+       */
+      public java.lang.String getChainId() {
+        java.lang.Object ref = chainId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          chainId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.customname) = "ChainID"];</code>
+       * @return The bytes for chainId.
+       */
+      public com.google.protobuf.ByteString
+          getChainIdBytes() {
+        java.lang.Object ref = chainId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          chainId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.customname) = "ChainID"];</code>
+       * @param value The chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        chainId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.customname) = "ChainID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChainId() {
+        chainId_ = getDefaultInstance().getChainId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.customname) = "ChainID"];</code>
+       * @param value The bytes for chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        chainId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bandchain.v1.node.QueryChainIDResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:bandchain.v1.node.QueryChainIDResponse)
+    private static final com.bandchain.v1.node.QueryProto.QueryChainIDResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bandchain.v1.node.QueryProto.QueryChainIDResponse();
+    }
+
+    public static com.bandchain.v1.node.QueryProto.QueryChainIDResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryChainIDResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryChainIDResponse>() {
+      @java.lang.Override
+      public QueryChainIDResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryChainIDResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryChainIDResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bandchain.v1.node.QueryProto.QueryChainIDResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryEVMValidatorsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bandchain.v1.node.QueryEVMValidatorsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryEVMValidatorsRequest is request type for the Service/EVMValidators RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code bandchain.v1.node.QueryEVMValidatorsRequest}
+   */
+  public static final class QueryEVMValidatorsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bandchain.v1.node.QueryEVMValidatorsRequest)
+      QueryEVMValidatorsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryEVMValidatorsRequest.newBuilder() to construct.
+    private QueryEVMValidatorsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryEVMValidatorsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryEVMValidatorsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bandchain.v1.node.QueryProto.internal_static_bandchain_v1_node_QueryEVMValidatorsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bandchain.v1.node.QueryProto.internal_static_bandchain_v1_node_QueryEVMValidatorsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest.class, com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest)) {
+        return super.equals(obj);
+      }
+      com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest other = (com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryEVMValidatorsRequest is request type for the Service/EVMValidators RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code bandchain.v1.node.QueryEVMValidatorsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bandchain.v1.node.QueryEVMValidatorsRequest)
+        com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bandchain.v1.node.QueryProto.internal_static_bandchain_v1_node_QueryEVMValidatorsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bandchain.v1.node.QueryProto.internal_static_bandchain_v1_node_QueryEVMValidatorsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest.class, com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest.Builder.class);
+      }
+
+      // Construct using com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bandchain.v1.node.QueryProto.internal_static_bandchain_v1_node_QueryEVMValidatorsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest getDefaultInstanceForType() {
+        return com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest build() {
+        com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest buildPartial() {
+        com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest result = new com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest) {
+          return mergeFrom((com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest other) {
+        if (other == com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bandchain.v1.node.QueryEVMValidatorsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:bandchain.v1.node.QueryEVMValidatorsRequest)
+    private static final com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest();
+    }
+
+    public static com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryEVMValidatorsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryEVMValidatorsRequest>() {
+      @java.lang.Override
+      public QueryEVMValidatorsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryEVMValidatorsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryEVMValidatorsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bandchain.v1.node.QueryProto.QueryEVMValidatorsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryEVMValidatorsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bandchain.v1.node.QueryEVMValidatorsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * BlockHeight is the latest block height
+     * </pre>
+     *
+     * <code>int64 block_height = 1 [json_name = "blockHeight"];</code>
+     * @return The blockHeight.
+     */
+    long getBlockHeight();
+
+    /**
+     * <pre>
+     * Validators is list of validator's addresss and voting power
+     * </pre>
+     *
+     * <code>repeated .bandchain.v1.node.ValidatorMinimal validators = 2 [json_name = "validators", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.bandchain.v1.node.QueryProto.ValidatorMinimal> 
+        getValidatorsList();
+    /**
+     * <pre>
+     * Validators is list of validator's addresss and voting power
+     * </pre>
+     *
+     * <code>repeated .bandchain.v1.node.ValidatorMinimal validators = 2 [json_name = "validators", (.gogoproto.nullable) = false];</code>
+     */
+    com.bandchain.v1.node.QueryProto.ValidatorMinimal getValidators(int index);
+    /**
+     * <pre>
+     * Validators is list of validator's addresss and voting power
+     * </pre>
+     *
+     * <code>repeated .bandchain.v1.node.ValidatorMinimal validators = 2 [json_name = "validators", (.gogoproto.nullable) = false];</code>
+     */
+    int getValidatorsCount();
+    /**
+     * <pre>
+     * Validators is list of validator's addresss and voting power
+     * </pre>
+     *
+     * <code>repeated .bandchain.v1.node.ValidatorMinimal validators = 2 [json_name = "validators", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.bandchain.v1.node.QueryProto.ValidatorMinimalOrBuilder> 
+        getValidatorsOrBuilderList();
+    /**
+     * <pre>
+     * Validators is list of validator's addresss and voting power
+     * </pre>
+     *
+     * <code>repeated .bandchain.v1.node.ValidatorMinimal validators = 2 [json_name = "validators", (.gogoproto.nullable) = false];</code>
+     */
+    com.bandchain.v1.node.QueryProto.ValidatorMinimalOrBuilder getValidatorsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * QueryEVMValidatorsResponse is response type for the Service/EVMValidators RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code bandchain.v1.node.QueryEVMValidatorsResponse}
+   */
+  public static final class QueryEVMValidatorsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bandchain.v1.node.QueryEVMValidatorsResponse)
+      QueryEVMValidatorsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryEVMValidatorsResponse.newBuilder() to construct.
+    private QueryEVMValidatorsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryEVMValidatorsResponse() {
+      validators_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryEVMValidatorsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bandchain.v1.node.QueryProto.internal_static_bandchain_v1_node_QueryEVMValidatorsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bandchain.v1.node.QueryProto.internal_static_bandchain_v1_node_QueryEVMValidatorsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse.class, com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse.Builder.class);
+    }
+
+    public static final int BLOCK_HEIGHT_FIELD_NUMBER = 1;
+    private long blockHeight_ = 0L;
+    /**
+     * <pre>
+     * BlockHeight is the latest block height
+     * </pre>
+     *
+     * <code>int64 block_height = 1 [json_name = "blockHeight"];</code>
+     * @return The blockHeight.
+     */
+    @java.lang.Override
+    public long getBlockHeight() {
+      return blockHeight_;
+    }
+
+    public static final int VALIDATORS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.bandchain.v1.node.QueryProto.ValidatorMinimal> validators_;
+    /**
+     * <pre>
+     * Validators is list of validator's addresss and voting power
+     * </pre>
+     *
+     * <code>repeated .bandchain.v1.node.ValidatorMinimal validators = 2 [json_name = "validators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.bandchain.v1.node.QueryProto.ValidatorMinimal> getValidatorsList() {
+      return validators_;
+    }
+    /**
+     * <pre>
+     * Validators is list of validator's addresss and voting power
+     * </pre>
+     *
+     * <code>repeated .bandchain.v1.node.ValidatorMinimal validators = 2 [json_name = "validators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.bandchain.v1.node.QueryProto.ValidatorMinimalOrBuilder> 
+        getValidatorsOrBuilderList() {
+      return validators_;
+    }
+    /**
+     * <pre>
+     * Validators is list of validator's addresss and voting power
+     * </pre>
+     *
+     * <code>repeated .bandchain.v1.node.ValidatorMinimal validators = 2 [json_name = "validators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getValidatorsCount() {
+      return validators_.size();
+    }
+    /**
+     * <pre>
+     * Validators is list of validator's addresss and voting power
+     * </pre>
+     *
+     * <code>repeated .bandchain.v1.node.ValidatorMinimal validators = 2 [json_name = "validators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bandchain.v1.node.QueryProto.ValidatorMinimal getValidators(int index) {
+      return validators_.get(index);
+    }
+    /**
+     * <pre>
+     * Validators is list of validator's addresss and voting power
+     * </pre>
+     *
+     * <code>repeated .bandchain.v1.node.ValidatorMinimal validators = 2 [json_name = "validators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bandchain.v1.node.QueryProto.ValidatorMinimalOrBuilder getValidatorsOrBuilder(
+        int index) {
+      return validators_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (blockHeight_ != 0L) {
+        output.writeInt64(1, blockHeight_);
+      }
+      for (int i = 0; i < validators_.size(); i++) {
+        output.writeMessage(2, validators_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (blockHeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, blockHeight_);
+      }
+      for (int i = 0; i < validators_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, validators_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse)) {
+        return super.equals(obj);
+      }
+      com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse other = (com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse) obj;
+
+      if (getBlockHeight()
+          != other.getBlockHeight()) return false;
+      if (!getValidatorsList()
+          .equals(other.getValidatorsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BLOCK_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getBlockHeight());
+      if (getValidatorsCount() > 0) {
+        hash = (37 * hash) + VALIDATORS_FIELD_NUMBER;
+        hash = (53 * hash) + getValidatorsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryEVMValidatorsResponse is response type for the Service/EVMValidators RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code bandchain.v1.node.QueryEVMValidatorsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bandchain.v1.node.QueryEVMValidatorsResponse)
+        com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bandchain.v1.node.QueryProto.internal_static_bandchain_v1_node_QueryEVMValidatorsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bandchain.v1.node.QueryProto.internal_static_bandchain_v1_node_QueryEVMValidatorsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse.class, com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse.Builder.class);
+      }
+
+      // Construct using com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        blockHeight_ = 0L;
+        if (validatorsBuilder_ == null) {
+          validators_ = java.util.Collections.emptyList();
+        } else {
+          validators_ = null;
+          validatorsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bandchain.v1.node.QueryProto.internal_static_bandchain_v1_node_QueryEVMValidatorsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse getDefaultInstanceForType() {
+        return com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse build() {
+        com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse buildPartial() {
+        com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse result = new com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse result) {
+        if (validatorsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            validators_ = java.util.Collections.unmodifiableList(validators_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.validators_ = validators_;
+        } else {
+          result.validators_ = validatorsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.blockHeight_ = blockHeight_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse) {
+          return mergeFrom((com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse other) {
+        if (other == com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse.getDefaultInstance()) return this;
+        if (other.getBlockHeight() != 0L) {
+          setBlockHeight(other.getBlockHeight());
+        }
+        if (validatorsBuilder_ == null) {
+          if (!other.validators_.isEmpty()) {
+            if (validators_.isEmpty()) {
+              validators_ = other.validators_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureValidatorsIsMutable();
+              validators_.addAll(other.validators_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.validators_.isEmpty()) {
+            if (validatorsBuilder_.isEmpty()) {
+              validatorsBuilder_.dispose();
+              validatorsBuilder_ = null;
+              validators_ = other.validators_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              validatorsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getValidatorsFieldBuilder() : null;
+            } else {
+              validatorsBuilder_.addAllMessages(other.validators_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                blockHeight_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                com.bandchain.v1.node.QueryProto.ValidatorMinimal m =
+                    input.readMessage(
+                        com.bandchain.v1.node.QueryProto.ValidatorMinimal.parser(),
+                        extensionRegistry);
+                if (validatorsBuilder_ == null) {
+                  ensureValidatorsIsMutable();
+                  validators_.add(m);
+                } else {
+                  validatorsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long blockHeight_ ;
+      /**
+       * <pre>
+       * BlockHeight is the latest block height
+       * </pre>
+       *
+       * <code>int64 block_height = 1 [json_name = "blockHeight"];</code>
+       * @return The blockHeight.
+       */
+      @java.lang.Override
+      public long getBlockHeight() {
+        return blockHeight_;
+      }
+      /**
+       * <pre>
+       * BlockHeight is the latest block height
+       * </pre>
+       *
+       * <code>int64 block_height = 1 [json_name = "blockHeight"];</code>
+       * @param value The blockHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBlockHeight(long value) {
+
+        blockHeight_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * BlockHeight is the latest block height
+       * </pre>
+       *
+       * <code>int64 block_height = 1 [json_name = "blockHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBlockHeight() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        blockHeight_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.bandchain.v1.node.QueryProto.ValidatorMinimal> validators_ =
+        java.util.Collections.emptyList();
+      private void ensureValidatorsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          validators_ = new java.util.ArrayList<com.bandchain.v1.node.QueryProto.ValidatorMinimal>(validators_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.bandchain.v1.node.QueryProto.ValidatorMinimal, com.bandchain.v1.node.QueryProto.ValidatorMinimal.Builder, com.bandchain.v1.node.QueryProto.ValidatorMinimalOrBuilder> validatorsBuilder_;
+
+      /**
+       * <pre>
+       * Validators is list of validator's addresss and voting power
+       * </pre>
+       *
+       * <code>repeated .bandchain.v1.node.ValidatorMinimal validators = 2 [json_name = "validators", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.bandchain.v1.node.QueryProto.ValidatorMinimal> getValidatorsList() {
+        if (validatorsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(validators_);
+        } else {
+          return validatorsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Validators is list of validator's addresss and voting power
+       * </pre>
+       *
+       * <code>repeated .bandchain.v1.node.ValidatorMinimal validators = 2 [json_name = "validators", (.gogoproto.nullable) = false];</code>
+       */
+      public int getValidatorsCount() {
+        if (validatorsBuilder_ == null) {
+          return validators_.size();
+        } else {
+          return validatorsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Validators is list of validator's addresss and voting power
+       * </pre>
+       *
+       * <code>repeated .bandchain.v1.node.ValidatorMinimal validators = 2 [json_name = "validators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.node.QueryProto.ValidatorMinimal getValidators(int index) {
+        if (validatorsBuilder_ == null) {
+          return validators_.get(index);
+        } else {
+          return validatorsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Validators is list of validator's addresss and voting power
+       * </pre>
+       *
+       * <code>repeated .bandchain.v1.node.ValidatorMinimal validators = 2 [json_name = "validators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setValidators(
+          int index, com.bandchain.v1.node.QueryProto.ValidatorMinimal value) {
+        if (validatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValidatorsIsMutable();
+          validators_.set(index, value);
+          onChanged();
+        } else {
+          validatorsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Validators is list of validator's addresss and voting power
+       * </pre>
+       *
+       * <code>repeated .bandchain.v1.node.ValidatorMinimal validators = 2 [json_name = "validators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setValidators(
+          int index, com.bandchain.v1.node.QueryProto.ValidatorMinimal.Builder builderForValue) {
+        if (validatorsBuilder_ == null) {
+          ensureValidatorsIsMutable();
+          validators_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          validatorsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Validators is list of validator's addresss and voting power
+       * </pre>
+       *
+       * <code>repeated .bandchain.v1.node.ValidatorMinimal validators = 2 [json_name = "validators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addValidators(com.bandchain.v1.node.QueryProto.ValidatorMinimal value) {
+        if (validatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValidatorsIsMutable();
+          validators_.add(value);
+          onChanged();
+        } else {
+          validatorsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Validators is list of validator's addresss and voting power
+       * </pre>
+       *
+       * <code>repeated .bandchain.v1.node.ValidatorMinimal validators = 2 [json_name = "validators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addValidators(
+          int index, com.bandchain.v1.node.QueryProto.ValidatorMinimal value) {
+        if (validatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValidatorsIsMutable();
+          validators_.add(index, value);
+          onChanged();
+        } else {
+          validatorsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Validators is list of validator's addresss and voting power
+       * </pre>
+       *
+       * <code>repeated .bandchain.v1.node.ValidatorMinimal validators = 2 [json_name = "validators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addValidators(
+          com.bandchain.v1.node.QueryProto.ValidatorMinimal.Builder builderForValue) {
+        if (validatorsBuilder_ == null) {
+          ensureValidatorsIsMutable();
+          validators_.add(builderForValue.build());
+          onChanged();
+        } else {
+          validatorsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Validators is list of validator's addresss and voting power
+       * </pre>
+       *
+       * <code>repeated .bandchain.v1.node.ValidatorMinimal validators = 2 [json_name = "validators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addValidators(
+          int index, com.bandchain.v1.node.QueryProto.ValidatorMinimal.Builder builderForValue) {
+        if (validatorsBuilder_ == null) {
+          ensureValidatorsIsMutable();
+          validators_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          validatorsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Validators is list of validator's addresss and voting power
+       * </pre>
+       *
+       * <code>repeated .bandchain.v1.node.ValidatorMinimal validators = 2 [json_name = "validators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllValidators(
+          java.lang.Iterable<? extends com.bandchain.v1.node.QueryProto.ValidatorMinimal> values) {
+        if (validatorsBuilder_ == null) {
+          ensureValidatorsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, validators_);
+          onChanged();
+        } else {
+          validatorsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Validators is list of validator's addresss and voting power
+       * </pre>
+       *
+       * <code>repeated .bandchain.v1.node.ValidatorMinimal validators = 2 [json_name = "validators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearValidators() {
+        if (validatorsBuilder_ == null) {
+          validators_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          validatorsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Validators is list of validator's addresss and voting power
+       * </pre>
+       *
+       * <code>repeated .bandchain.v1.node.ValidatorMinimal validators = 2 [json_name = "validators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeValidators(int index) {
+        if (validatorsBuilder_ == null) {
+          ensureValidatorsIsMutable();
+          validators_.remove(index);
+          onChanged();
+        } else {
+          validatorsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Validators is list of validator's addresss and voting power
+       * </pre>
+       *
+       * <code>repeated .bandchain.v1.node.ValidatorMinimal validators = 2 [json_name = "validators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.node.QueryProto.ValidatorMinimal.Builder getValidatorsBuilder(
+          int index) {
+        return getValidatorsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Validators is list of validator's addresss and voting power
+       * </pre>
+       *
+       * <code>repeated .bandchain.v1.node.ValidatorMinimal validators = 2 [json_name = "validators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.node.QueryProto.ValidatorMinimalOrBuilder getValidatorsOrBuilder(
+          int index) {
+        if (validatorsBuilder_ == null) {
+          return validators_.get(index);  } else {
+          return validatorsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Validators is list of validator's addresss and voting power
+       * </pre>
+       *
+       * <code>repeated .bandchain.v1.node.ValidatorMinimal validators = 2 [json_name = "validators", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.bandchain.v1.node.QueryProto.ValidatorMinimalOrBuilder> 
+           getValidatorsOrBuilderList() {
+        if (validatorsBuilder_ != null) {
+          return validatorsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(validators_);
+        }
+      }
+      /**
+       * <pre>
+       * Validators is list of validator's addresss and voting power
+       * </pre>
+       *
+       * <code>repeated .bandchain.v1.node.ValidatorMinimal validators = 2 [json_name = "validators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.node.QueryProto.ValidatorMinimal.Builder addValidatorsBuilder() {
+        return getValidatorsFieldBuilder().addBuilder(
+            com.bandchain.v1.node.QueryProto.ValidatorMinimal.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Validators is list of validator's addresss and voting power
+       * </pre>
+       *
+       * <code>repeated .bandchain.v1.node.ValidatorMinimal validators = 2 [json_name = "validators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.node.QueryProto.ValidatorMinimal.Builder addValidatorsBuilder(
+          int index) {
+        return getValidatorsFieldBuilder().addBuilder(
+            index, com.bandchain.v1.node.QueryProto.ValidatorMinimal.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Validators is list of validator's addresss and voting power
+       * </pre>
+       *
+       * <code>repeated .bandchain.v1.node.ValidatorMinimal validators = 2 [json_name = "validators", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.bandchain.v1.node.QueryProto.ValidatorMinimal.Builder> 
+           getValidatorsBuilderList() {
+        return getValidatorsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.bandchain.v1.node.QueryProto.ValidatorMinimal, com.bandchain.v1.node.QueryProto.ValidatorMinimal.Builder, com.bandchain.v1.node.QueryProto.ValidatorMinimalOrBuilder> 
+          getValidatorsFieldBuilder() {
+        if (validatorsBuilder_ == null) {
+          validatorsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.bandchain.v1.node.QueryProto.ValidatorMinimal, com.bandchain.v1.node.QueryProto.ValidatorMinimal.Builder, com.bandchain.v1.node.QueryProto.ValidatorMinimalOrBuilder>(
+                  validators_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          validators_ = null;
+        }
+        return validatorsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bandchain.v1.node.QueryEVMValidatorsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:bandchain.v1.node.QueryEVMValidatorsResponse)
+    private static final com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse();
+    }
+
+    public static com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryEVMValidatorsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryEVMValidatorsResponse>() {
+      @java.lang.Override
+      public QueryEVMValidatorsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryEVMValidatorsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryEVMValidatorsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bandchain.v1.node.QueryProto.QueryEVMValidatorsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ValidatorMinimalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bandchain.v1.node.ValidatorMinimal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <code>int64 voting_power = 2 [json_name = "votingPower"];</code>
+     * @return The votingPower.
+     */
+    long getVotingPower();
+  }
+  /**
+   * <pre>
+   * ValidatorMinimal is the data structure for storing validator's address and voting power
+   * </pre>
+   *
+   * Protobuf type {@code bandchain.v1.node.ValidatorMinimal}
+   */
+  public static final class ValidatorMinimal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bandchain.v1.node.ValidatorMinimal)
+      ValidatorMinimalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ValidatorMinimal.newBuilder() to construct.
+    private ValidatorMinimal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ValidatorMinimal() {
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ValidatorMinimal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bandchain.v1.node.QueryProto.internal_static_bandchain_v1_node_ValidatorMinimal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bandchain.v1.node.QueryProto.internal_static_bandchain_v1_node_ValidatorMinimal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bandchain.v1.node.QueryProto.ValidatorMinimal.class, com.bandchain.v1.node.QueryProto.ValidatorMinimal.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VOTING_POWER_FIELD_NUMBER = 2;
+    private long votingPower_ = 0L;
+    /**
+     * <code>int64 voting_power = 2 [json_name = "votingPower"];</code>
+     * @return The votingPower.
+     */
+    @java.lang.Override
+    public long getVotingPower() {
+      return votingPower_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      if (votingPower_ != 0L) {
+        output.writeInt64(2, votingPower_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      if (votingPower_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, votingPower_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bandchain.v1.node.QueryProto.ValidatorMinimal)) {
+        return super.equals(obj);
+      }
+      com.bandchain.v1.node.QueryProto.ValidatorMinimal other = (com.bandchain.v1.node.QueryProto.ValidatorMinimal) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (getVotingPower()
+          != other.getVotingPower()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + VOTING_POWER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getVotingPower());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bandchain.v1.node.QueryProto.ValidatorMinimal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.node.QueryProto.ValidatorMinimal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.node.QueryProto.ValidatorMinimal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.node.QueryProto.ValidatorMinimal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.node.QueryProto.ValidatorMinimal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.node.QueryProto.ValidatorMinimal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.node.QueryProto.ValidatorMinimal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.node.QueryProto.ValidatorMinimal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bandchain.v1.node.QueryProto.ValidatorMinimal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bandchain.v1.node.QueryProto.ValidatorMinimal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bandchain.v1.node.QueryProto.ValidatorMinimal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.node.QueryProto.ValidatorMinimal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bandchain.v1.node.QueryProto.ValidatorMinimal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ValidatorMinimal is the data structure for storing validator's address and voting power
+     * </pre>
+     *
+     * Protobuf type {@code bandchain.v1.node.ValidatorMinimal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bandchain.v1.node.ValidatorMinimal)
+        com.bandchain.v1.node.QueryProto.ValidatorMinimalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bandchain.v1.node.QueryProto.internal_static_bandchain_v1_node_ValidatorMinimal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bandchain.v1.node.QueryProto.internal_static_bandchain_v1_node_ValidatorMinimal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bandchain.v1.node.QueryProto.ValidatorMinimal.class, com.bandchain.v1.node.QueryProto.ValidatorMinimal.Builder.class);
+      }
+
+      // Construct using com.bandchain.v1.node.QueryProto.ValidatorMinimal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        votingPower_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bandchain.v1.node.QueryProto.internal_static_bandchain_v1_node_ValidatorMinimal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.node.QueryProto.ValidatorMinimal getDefaultInstanceForType() {
+        return com.bandchain.v1.node.QueryProto.ValidatorMinimal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.node.QueryProto.ValidatorMinimal build() {
+        com.bandchain.v1.node.QueryProto.ValidatorMinimal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.node.QueryProto.ValidatorMinimal buildPartial() {
+        com.bandchain.v1.node.QueryProto.ValidatorMinimal result = new com.bandchain.v1.node.QueryProto.ValidatorMinimal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bandchain.v1.node.QueryProto.ValidatorMinimal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.votingPower_ = votingPower_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bandchain.v1.node.QueryProto.ValidatorMinimal) {
+          return mergeFrom((com.bandchain.v1.node.QueryProto.ValidatorMinimal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bandchain.v1.node.QueryProto.ValidatorMinimal other) {
+        if (other == com.bandchain.v1.node.QueryProto.ValidatorMinimal.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getVotingPower() != 0L) {
+          setVotingPower(other.getVotingPower());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                votingPower_ = input.readInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long votingPower_ ;
+      /**
+       * <code>int64 voting_power = 2 [json_name = "votingPower"];</code>
+       * @return The votingPower.
+       */
+      @java.lang.Override
+      public long getVotingPower() {
+        return votingPower_;
+      }
+      /**
+       * <code>int64 voting_power = 2 [json_name = "votingPower"];</code>
+       * @param value The votingPower to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVotingPower(long value) {
+
+        votingPower_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 voting_power = 2 [json_name = "votingPower"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVotingPower() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        votingPower_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bandchain.v1.node.ValidatorMinimal)
+    }
+
+    // @@protoc_insertion_point(class_scope:bandchain.v1.node.ValidatorMinimal)
+    private static final com.bandchain.v1.node.QueryProto.ValidatorMinimal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bandchain.v1.node.QueryProto.ValidatorMinimal();
+    }
+
+    public static com.bandchain.v1.node.QueryProto.ValidatorMinimal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ValidatorMinimal>
+        PARSER = new com.google.protobuf.AbstractParser<ValidatorMinimal>() {
+      @java.lang.Override
+      public ValidatorMinimal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ValidatorMinimal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ValidatorMinimal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bandchain.v1.node.QueryProto.ValidatorMinimal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bandchain_v1_node_QueryChainIDRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bandchain_v1_node_QueryChainIDRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bandchain_v1_node_QueryChainIDResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bandchain_v1_node_QueryChainIDResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bandchain_v1_node_QueryEVMValidatorsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bandchain_v1_node_QueryEVMValidatorsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bandchain_v1_node_QueryEVMValidatorsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bandchain_v1_node_QueryEVMValidatorsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bandchain_v1_node_ValidatorMinimal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bandchain_v1_node_ValidatorMinimal_fieldAccessorTable;
 
@@ -66,12 +3064,12 @@ public final class QueryProto {
       ",.bandchain.v1.node.QueryEVMValidatorsRe" +
       "quest\032-.bandchain.v1.node.QueryEVMValida" +
       "torsResponse\"$\202\323\344\223\002\036\022\034/bandchain/v1/evm-" +
-      "validatorsB\274\001\n\025com.bandchain.v1.nodeB\nQu" +
-      "eryProtoP\001Z1github.com/bandprotocol/chai" +
-      "n/v2/client/grpc/node\242\002\003BVN\252\002\021Bandchain." +
-      "V1.Node\312\002\021Bandchain\\V1\\Node\342\002\035Bandchain\\" +
-      "V1\\Node\\GPBMetadata\352\002\023Bandchain::V1::Nod" +
-      "eb\006proto3"
+      "validatorsB\272\001\n\025com.bandchain.v1.nodeB\nQu" +
+      "eryProtoZ1github.com/bandprotocol/chain/" +
+      "v2/client/grpc/node\242\002\003BVN\252\002\021Bandchain.V1" +
+      ".Node\312\002\021Bandchain\\V1\\Node\342\002\035Bandchain\\V1" +
+      "\\Node\\GPBMetadata\352\002\023Bandchain::V1::Nodeb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

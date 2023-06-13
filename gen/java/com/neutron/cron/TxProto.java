@@ -24,11 +24,11 @@ public final class TxProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\025neutron/cron/tx.proto\022\014neutron.cron2\005\n" +
-      "\003MsgB\231\001\n\020com.neutron.cronB\007TxProtoP\001Z+gi" +
-      "thub.com/neutron-org/neutron/x/cron/type" +
-      "s\242\002\003NCX\252\002\014Neutron.Cron\312\002\014Neutron\\Cron\342\002\030" +
-      "Neutron\\Cron\\GPBMetadata\352\002\rNeutron::Cron" +
-      "b\006proto3"
+      "\003MsgB\227\001\n\020com.neutron.cronB\007TxProtoZ+gith" +
+      "ub.com/neutron-org/neutron/x/cron/types\242" +
+      "\002\003NCX\252\002\014Neutron.Cron\312\002\014Neutron\\Cron\342\002\030Ne" +
+      "utron\\Cron\\GPBMetadata\352\002\rNeutron::Cronb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

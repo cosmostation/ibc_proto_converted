@@ -14,24 +14,3874 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgCreateScheduleOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mars.incentives.v1beta1.MsgCreateSchedule)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Authority is the account executing the safety fund spend.
+     * It should be the gov module account.
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The authority.
+     */
+    java.lang.String getAuthority();
+    /**
+     * <pre>
+     * Authority is the account executing the safety fund spend.
+     * It should be the gov module account.
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for authority.
+     */
+    com.google.protobuf.ByteString
+        getAuthorityBytes();
+
+    /**
+     * <pre>
+     * StartTime is the timestamp at which this incentives schedule shall begin.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    boolean hasStartTime();
+    /**
+     * <pre>
+     * StartTime is the timestamp at which this incentives schedule shall begin.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    com.google.protobuf.Timestamp getStartTime();
+    /**
+     * <pre>
+     * StartTime is the timestamp at which this incentives schedule shall begin.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
+
+    /**
+     * <pre>
+     * EndTime is the timestamp at which this incentives schedule shall finish.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the endTime field is set.
+     */
+    boolean hasEndTime();
+    /**
+     * <pre>
+     * EndTime is the timestamp at which this incentives schedule shall finish.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The endTime.
+     */
+    com.google.protobuf.Timestamp getEndTime();
+    /**
+     * <pre>
+     * EndTime is the timestamp at which this incentives schedule shall finish.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder();
+
+    /**
+     * <pre>
+     * Amount is the total amount of coins that shall be released to stakers
+     * throughout the span of this incentives schedule.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getAmountList();
+    /**
+     * <pre>
+     * Amount is the total amount of coins that shall be released to stakers
+     * throughout the span of this incentives schedule.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getAmount(int index);
+    /**
+     * <pre>
+     * Amount is the total amount of coins that shall be released to stakers
+     * throughout the span of this incentives schedule.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getAmountCount();
+    /**
+     * <pre>
+     * Amount is the total amount of coins that shall be released to stakers
+     * throughout the span of this incentives schedule.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getAmountOrBuilderList();
+    /**
+     * <pre>
+     * Amount is the total amount of coins that shall be released to stakers
+     * throughout the span of this incentives schedule.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * MsgCreateSchedule defines the message for creating a new incentives schedule.
+   *
+   * This message is typically executed via a governance proposal with the gov
+   * module being the executing authority.
+   * </pre>
+   *
+   * Protobuf type {@code mars.incentives.v1beta1.MsgCreateSchedule}
+   */
+  public static final class MsgCreateSchedule extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:mars.incentives.v1beta1.MsgCreateSchedule)
+      MsgCreateScheduleOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateSchedule.newBuilder() to construct.
+    private MsgCreateSchedule(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateSchedule() {
+      authority_ = "";
+      amount_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateSchedule();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.mars.incentives.v1beta1.TxProto.internal_static_mars_incentives_v1beta1_MsgCreateSchedule_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.mars.incentives.v1beta1.TxProto.internal_static_mars_incentives_v1beta1_MsgCreateSchedule_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule.class, com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule.Builder.class);
+    }
+
+    public static final int AUTHORITY_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object authority_ = "";
+    /**
+     * <pre>
+     * Authority is the account executing the safety fund spend.
+     * It should be the gov module account.
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The authority.
+     */
+    @java.lang.Override
+    public java.lang.String getAuthority() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        authority_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Authority is the account executing the safety fund spend.
+     * It should be the gov module account.
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for authority.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAuthorityBytes() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authority_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int START_TIME_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp startTime_;
+    /**
+     * <pre>
+     * StartTime is the timestamp at which this incentives schedule shall begin.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartTime() {
+      return startTime_ != null;
+    }
+    /**
+     * <pre>
+     * StartTime is the timestamp at which this incentives schedule shall begin.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getStartTime() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+    /**
+     * <pre>
+     * StartTime is the timestamp at which this incentives schedule shall begin.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+
+    public static final int END_TIME_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp endTime_;
+    /**
+     * <pre>
+     * EndTime is the timestamp at which this incentives schedule shall finish.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the endTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasEndTime() {
+      return endTime_ != null;
+    }
+    /**
+     * <pre>
+     * EndTime is the timestamp at which this incentives schedule shall finish.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The endTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getEndTime() {
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    }
+    /**
+     * <pre>
+     * EndTime is the timestamp at which this incentives schedule shall finish.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> amount_;
+    /**
+     * <pre>
+     * Amount is the total amount of coins that shall be released to stakers
+     * throughout the span of this incentives schedule.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getAmountList() {
+      return amount_;
+    }
+    /**
+     * <pre>
+     * Amount is the total amount of coins that shall be released to stakers
+     * throughout the span of this incentives schedule.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getAmountOrBuilderList() {
+      return amount_;
+    }
+    /**
+     * <pre>
+     * Amount is the total amount of coins that shall be released to stakers
+     * throughout the span of this incentives schedule.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getAmountCount() {
+      return amount_.size();
+    }
+    /**
+     * <pre>
+     * Amount is the total amount of coins that shall be released to stakers
+     * throughout the span of this incentives schedule.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getAmount(int index) {
+      return amount_.get(index);
+    }
+    /**
+     * <pre>
+     * Amount is the total amount of coins that shall be released to stakers
+     * throughout the span of this incentives schedule.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder(
+        int index) {
+      return amount_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authority_);
+      }
+      if (startTime_ != null) {
+        output.writeMessage(2, getStartTime());
+      }
+      if (endTime_ != null) {
+        output.writeMessage(3, getEndTime());
+      }
+      for (int i = 0; i < amount_.size(); i++) {
+        output.writeMessage(4, amount_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authority_);
+      }
+      if (startTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getStartTime());
+      }
+      if (endTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getEndTime());
+      }
+      for (int i = 0; i < amount_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, amount_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule)) {
+        return super.equals(obj);
+      }
+      com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule other = (com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule) obj;
+
+      if (!getAuthority()
+          .equals(other.getAuthority())) return false;
+      if (hasStartTime() != other.hasStartTime()) return false;
+      if (hasStartTime()) {
+        if (!getStartTime()
+            .equals(other.getStartTime())) return false;
+      }
+      if (hasEndTime() != other.hasEndTime()) return false;
+      if (hasEndTime()) {
+        if (!getEndTime()
+            .equals(other.getEndTime())) return false;
+      }
+      if (!getAmountList()
+          .equals(other.getAmountList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AUTHORITY_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthority().hashCode();
+      if (hasStartTime()) {
+        hash = (37 * hash) + START_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getStartTime().hashCode();
+      }
+      if (hasEndTime()) {
+        hash = (37 * hash) + END_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getEndTime().hashCode();
+      }
+      if (getAmountCount() > 0) {
+        hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getAmountList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateSchedule defines the message for creating a new incentives schedule.
+     *
+     * This message is typically executed via a governance proposal with the gov
+     * module being the executing authority.
+     * </pre>
+     *
+     * Protobuf type {@code mars.incentives.v1beta1.MsgCreateSchedule}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mars.incentives.v1beta1.MsgCreateSchedule)
+        com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.mars.incentives.v1beta1.TxProto.internal_static_mars_incentives_v1beta1_MsgCreateSchedule_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.mars.incentives.v1beta1.TxProto.internal_static_mars_incentives_v1beta1_MsgCreateSchedule_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule.class, com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule.Builder.class);
+      }
+
+      // Construct using com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        authority_ = "";
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        endTime_ = null;
+        if (endTimeBuilder_ != null) {
+          endTimeBuilder_.dispose();
+          endTimeBuilder_ = null;
+        }
+        if (amountBuilder_ == null) {
+          amount_ = java.util.Collections.emptyList();
+        } else {
+          amount_ = null;
+          amountBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.mars.incentives.v1beta1.TxProto.internal_static_mars_incentives_v1beta1_MsgCreateSchedule_descriptor;
+      }
+
+      @java.lang.Override
+      public com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule getDefaultInstanceForType() {
+        return com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule build() {
+        com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule buildPartial() {
+        com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule result = new com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule result) {
+        if (amountBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            amount_ = java.util.Collections.unmodifiableList(amount_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.amount_ = amount_;
+        } else {
+          result.amount_ = amountBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.authority_ = authority_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.startTime_ = startTimeBuilder_ == null
+              ? startTime_
+              : startTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.endTime_ = endTimeBuilder_ == null
+              ? endTime_
+              : endTimeBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule) {
+          return mergeFrom((com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule other) {
+        if (other == com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule.getDefaultInstance()) return this;
+        if (!other.getAuthority().isEmpty()) {
+          authority_ = other.authority_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasStartTime()) {
+          mergeStartTime(other.getStartTime());
+        }
+        if (other.hasEndTime()) {
+          mergeEndTime(other.getEndTime());
+        }
+        if (amountBuilder_ == null) {
+          if (!other.amount_.isEmpty()) {
+            if (amount_.isEmpty()) {
+              amount_ = other.amount_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureAmountIsMutable();
+              amount_.addAll(other.amount_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.amount_.isEmpty()) {
+            if (amountBuilder_.isEmpty()) {
+              amountBuilder_.dispose();
+              amountBuilder_ = null;
+              amount_ = other.amount_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              amountBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAmountFieldBuilder() : null;
+            } else {
+              amountBuilder_.addAllMessages(other.amount_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                authority_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getStartTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getEndTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (amountBuilder_ == null) {
+                  ensureAmountIsMutable();
+                  amount_.add(m);
+                } else {
+                  amountBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object authority_ = "";
+      /**
+       * <pre>
+       * Authority is the account executing the safety fund spend.
+       * It should be the gov module account.
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The authority.
+       */
+      public java.lang.String getAuthority() {
+        java.lang.Object ref = authority_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          authority_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Authority is the account executing the safety fund spend.
+       * It should be the gov module account.
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for authority.
+       */
+      public com.google.protobuf.ByteString
+          getAuthorityBytes() {
+        java.lang.Object ref = authority_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authority_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Authority is the account executing the safety fund spend.
+       * It should be the gov module account.
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthority(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Authority is the account executing the safety fund spend.
+       * It should be the gov module account.
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthority() {
+        authority_ = getDefaultInstance().getAuthority();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Authority is the account executing the safety fund spend.
+       * It should be the gov module account.
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthorityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp startTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
+      /**
+       * <pre>
+       * StartTime is the timestamp at which this incentives schedule shall begin.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the startTime field is set.
+       */
+      public boolean hasStartTime() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * StartTime is the timestamp at which this incentives schedule shall begin.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The startTime.
+       */
+      public com.google.protobuf.Timestamp getStartTime() {
+        if (startTimeBuilder_ == null) {
+          return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        } else {
+          return startTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * StartTime is the timestamp at which this incentives schedule shall begin.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          startTime_ = value;
+        } else {
+          startTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * StartTime is the timestamp at which this incentives schedule shall begin.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (startTimeBuilder_ == null) {
+          startTime_ = builderForValue.build();
+        } else {
+          startTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * StartTime is the timestamp at which this incentives schedule shall begin.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            startTime_ != null &&
+            startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getStartTimeBuilder().mergeFrom(value);
+          } else {
+            startTime_ = value;
+          }
+        } else {
+          startTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * StartTime is the timestamp at which this incentives schedule shall begin.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearStartTime() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * StartTime is the timestamp at which this incentives schedule shall begin.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getStartTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * StartTime is the timestamp at which this incentives schedule shall begin.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+        if (startTimeBuilder_ != null) {
+          return startTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return startTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        }
+      }
+      /**
+       * <pre>
+       * StartTime is the timestamp at which this incentives schedule shall begin.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getStartTimeFieldBuilder() {
+        if (startTimeBuilder_ == null) {
+          startTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getStartTime(),
+                  getParentForChildren(),
+                  isClean());
+          startTime_ = null;
+        }
+        return startTimeBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp endTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endTimeBuilder_;
+      /**
+       * <pre>
+       * EndTime is the timestamp at which this incentives schedule shall finish.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the endTime field is set.
+       */
+      public boolean hasEndTime() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * EndTime is the timestamp at which this incentives schedule shall finish.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The endTime.
+       */
+      public com.google.protobuf.Timestamp getEndTime() {
+        if (endTimeBuilder_ == null) {
+          return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+        } else {
+          return endTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * EndTime is the timestamp at which this incentives schedule shall finish.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setEndTime(com.google.protobuf.Timestamp value) {
+        if (endTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          endTime_ = value;
+        } else {
+          endTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EndTime is the timestamp at which this incentives schedule shall finish.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setEndTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (endTimeBuilder_ == null) {
+          endTime_ = builderForValue.build();
+        } else {
+          endTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EndTime is the timestamp at which this incentives schedule shall finish.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeEndTime(com.google.protobuf.Timestamp value) {
+        if (endTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            endTime_ != null &&
+            endTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getEndTimeBuilder().mergeFrom(value);
+          } else {
+            endTime_ = value;
+          }
+        } else {
+          endTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EndTime is the timestamp at which this incentives schedule shall finish.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearEndTime() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        endTime_ = null;
+        if (endTimeBuilder_ != null) {
+          endTimeBuilder_.dispose();
+          endTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EndTime is the timestamp at which this incentives schedule shall finish.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getEndTimeBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getEndTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * EndTime is the timestamp at which this incentives schedule shall finish.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+        if (endTimeBuilder_ != null) {
+          return endTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return endTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+        }
+      }
+      /**
+       * <pre>
+       * EndTime is the timestamp at which this incentives schedule shall finish.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getEndTimeFieldBuilder() {
+        if (endTimeBuilder_ == null) {
+          endTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getEndTime(),
+                  getParentForChildren(),
+                  isClean());
+          endTime_ = null;
+        }
+        return endTimeBuilder_;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> amount_ =
+        java.util.Collections.emptyList();
+      private void ensureAmountIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          amount_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(amount_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> amountBuilder_;
+
+      /**
+       * <pre>
+       * Amount is the total amount of coins that shall be released to stakers
+       * throughout the span of this incentives schedule.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getAmountList() {
+        if (amountBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(amount_);
+        } else {
+          return amountBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Amount is the total amount of coins that shall be released to stakers
+       * throughout the span of this incentives schedule.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getAmountCount() {
+        if (amountBuilder_ == null) {
+          return amount_.size();
+        } else {
+          return amountBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Amount is the total amount of coins that shall be released to stakers
+       * throughout the span of this incentives schedule.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getAmount(int index) {
+        if (amountBuilder_ == null) {
+          return amount_.get(index);
+        } else {
+          return amountBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Amount is the total amount of coins that shall be released to stakers
+       * throughout the span of this incentives schedule.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setAmount(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (amountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAmountIsMutable();
+          amount_.set(index, value);
+          onChanged();
+        } else {
+          amountBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount is the total amount of coins that shall be released to stakers
+       * throughout the span of this incentives schedule.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setAmount(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (amountBuilder_ == null) {
+          ensureAmountIsMutable();
+          amount_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          amountBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount is the total amount of coins that shall be released to stakers
+       * throughout the span of this incentives schedule.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (amountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAmountIsMutable();
+          amount_.add(value);
+          onChanged();
+        } else {
+          amountBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount is the total amount of coins that shall be released to stakers
+       * throughout the span of this incentives schedule.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAmount(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (amountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAmountIsMutable();
+          amount_.add(index, value);
+          onChanged();
+        } else {
+          amountBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount is the total amount of coins that shall be released to stakers
+       * throughout the span of this incentives schedule.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAmount(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (amountBuilder_ == null) {
+          ensureAmountIsMutable();
+          amount_.add(builderForValue.build());
+          onChanged();
+        } else {
+          amountBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount is the total amount of coins that shall be released to stakers
+       * throughout the span of this incentives schedule.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAmount(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (amountBuilder_ == null) {
+          ensureAmountIsMutable();
+          amount_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          amountBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount is the total amount of coins that shall be released to stakers
+       * throughout the span of this incentives schedule.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllAmount(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (amountBuilder_ == null) {
+          ensureAmountIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, amount_);
+          onChanged();
+        } else {
+          amountBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount is the total amount of coins that shall be released to stakers
+       * throughout the span of this incentives schedule.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearAmount() {
+        if (amountBuilder_ == null) {
+          amount_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          amountBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount is the total amount of coins that shall be released to stakers
+       * throughout the span of this incentives schedule.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeAmount(int index) {
+        if (amountBuilder_ == null) {
+          ensureAmountIsMutable();
+          amount_.remove(index);
+          onChanged();
+        } else {
+          amountBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount is the total amount of coins that shall be released to stakers
+       * throughout the span of this incentives schedule.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getAmountBuilder(
+          int index) {
+        return getAmountFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Amount is the total amount of coins that shall be released to stakers
+       * throughout the span of this incentives schedule.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder(
+          int index) {
+        if (amountBuilder_ == null) {
+          return amount_.get(index);  } else {
+          return amountBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Amount is the total amount of coins that shall be released to stakers
+       * throughout the span of this incentives schedule.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getAmountOrBuilderList() {
+        if (amountBuilder_ != null) {
+          return amountBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(amount_);
+        }
+      }
+      /**
+       * <pre>
+       * Amount is the total amount of coins that shall be released to stakers
+       * throughout the span of this incentives schedule.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addAmountBuilder() {
+        return getAmountFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Amount is the total amount of coins that shall be released to stakers
+       * throughout the span of this incentives schedule.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addAmountBuilder(
+          int index) {
+        return getAmountFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Amount is the total amount of coins that shall be released to stakers
+       * throughout the span of this incentives schedule.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getAmountBuilderList() {
+        return getAmountFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getAmountFieldBuilder() {
+        if (amountBuilder_ == null) {
+          amountBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  amount_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          amount_ = null;
+        }
+        return amountBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:mars.incentives.v1beta1.MsgCreateSchedule)
+    }
+
+    // @@protoc_insertion_point(class_scope:mars.incentives.v1beta1.MsgCreateSchedule)
+    private static final com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule();
+    }
+
+    public static com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateSchedule>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateSchedule>() {
+      @java.lang.Override
+      public MsgCreateSchedule parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateSchedule> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateSchedule> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.mars.incentives.v1beta1.TxProto.MsgCreateSchedule getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateScheduleResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mars.incentives.v1beta1.MsgCreateScheduleResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgCreateScheduleResponse defines the response to executing a
+   * MsgCreateSchedule message.
+   * </pre>
+   *
+   * Protobuf type {@code mars.incentives.v1beta1.MsgCreateScheduleResponse}
+   */
+  public static final class MsgCreateScheduleResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:mars.incentives.v1beta1.MsgCreateScheduleResponse)
+      MsgCreateScheduleResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateScheduleResponse.newBuilder() to construct.
+    private MsgCreateScheduleResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateScheduleResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateScheduleResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.mars.incentives.v1beta1.TxProto.internal_static_mars_incentives_v1beta1_MsgCreateScheduleResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.mars.incentives.v1beta1.TxProto.internal_static_mars_incentives_v1beta1_MsgCreateScheduleResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse.class, com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse)) {
+        return super.equals(obj);
+      }
+      com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse other = (com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateScheduleResponse defines the response to executing a
+     * MsgCreateSchedule message.
+     * </pre>
+     *
+     * Protobuf type {@code mars.incentives.v1beta1.MsgCreateScheduleResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mars.incentives.v1beta1.MsgCreateScheduleResponse)
+        com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.mars.incentives.v1beta1.TxProto.internal_static_mars_incentives_v1beta1_MsgCreateScheduleResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.mars.incentives.v1beta1.TxProto.internal_static_mars_incentives_v1beta1_MsgCreateScheduleResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse.class, com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse.Builder.class);
+      }
+
+      // Construct using com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.mars.incentives.v1beta1.TxProto.internal_static_mars_incentives_v1beta1_MsgCreateScheduleResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse getDefaultInstanceForType() {
+        return com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse build() {
+        com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse buildPartial() {
+        com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse result = new com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse) {
+          return mergeFrom((com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse other) {
+        if (other == com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:mars.incentives.v1beta1.MsgCreateScheduleResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:mars.incentives.v1beta1.MsgCreateScheduleResponse)
+    private static final com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse();
+    }
+
+    public static com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateScheduleResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateScheduleResponse>() {
+      @java.lang.Override
+      public MsgCreateScheduleResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateScheduleResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateScheduleResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.mars.incentives.v1beta1.TxProto.MsgCreateScheduleResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgTerminateSchedulesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mars.incentives.v1beta1.MsgTerminateSchedules)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Authority is the account executing the safety fund spend.
+     * It should be the gov module account.
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The authority.
+     */
+    java.lang.String getAuthority();
+    /**
+     * <pre>
+     * Authority is the account executing the safety fund spend.
+     * It should be the gov module account.
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for authority.
+     */
+    com.google.protobuf.ByteString
+        getAuthorityBytes();
+
+    /**
+     * <pre>
+     * Ids is the array of identifiers of the incentives schedules which are to be
+     * terminated.
+     * </pre>
+     *
+     * <code>repeated uint64 ids = 2 [json_name = "ids"];</code>
+     * @return A list containing the ids.
+     */
+    java.util.List<java.lang.Long> getIdsList();
+    /**
+     * <pre>
+     * Ids is the array of identifiers of the incentives schedules which are to be
+     * terminated.
+     * </pre>
+     *
+     * <code>repeated uint64 ids = 2 [json_name = "ids"];</code>
+     * @return The count of ids.
+     */
+    int getIdsCount();
+    /**
+     * <pre>
+     * Ids is the array of identifiers of the incentives schedules which are to be
+     * terminated.
+     * </pre>
+     *
+     * <code>repeated uint64 ids = 2 [json_name = "ids"];</code>
+     * @param index The index of the element to return.
+     * @return The ids at the given index.
+     */
+    long getIds(int index);
+  }
+  /**
+   * <pre>
+   * MsgTerminateSchedules defines the message for terminating one or more
+   * existing incentives schedules.
+   *
+   * This message is typically executed via a governance proposal with the gov
+   * module being the executing authority.
+   * </pre>
+   *
+   * Protobuf type {@code mars.incentives.v1beta1.MsgTerminateSchedules}
+   */
+  public static final class MsgTerminateSchedules extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:mars.incentives.v1beta1.MsgTerminateSchedules)
+      MsgTerminateSchedulesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgTerminateSchedules.newBuilder() to construct.
+    private MsgTerminateSchedules(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgTerminateSchedules() {
+      authority_ = "";
+      ids_ = emptyLongList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgTerminateSchedules();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.mars.incentives.v1beta1.TxProto.internal_static_mars_incentives_v1beta1_MsgTerminateSchedules_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.mars.incentives.v1beta1.TxProto.internal_static_mars_incentives_v1beta1_MsgTerminateSchedules_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules.class, com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules.Builder.class);
+    }
+
+    public static final int AUTHORITY_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object authority_ = "";
+    /**
+     * <pre>
+     * Authority is the account executing the safety fund spend.
+     * It should be the gov module account.
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The authority.
+     */
+    @java.lang.Override
+    public java.lang.String getAuthority() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        authority_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Authority is the account executing the safety fund spend.
+     * It should be the gov module account.
+     * </pre>
+     *
+     * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for authority.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAuthorityBytes() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authority_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IDS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.LongList ids_;
+    /**
+     * <pre>
+     * Ids is the array of identifiers of the incentives schedules which are to be
+     * terminated.
+     * </pre>
+     *
+     * <code>repeated uint64 ids = 2 [json_name = "ids"];</code>
+     * @return A list containing the ids.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Long>
+        getIdsList() {
+      return ids_;
+    }
+    /**
+     * <pre>
+     * Ids is the array of identifiers of the incentives schedules which are to be
+     * terminated.
+     * </pre>
+     *
+     * <code>repeated uint64 ids = 2 [json_name = "ids"];</code>
+     * @return The count of ids.
+     */
+    public int getIdsCount() {
+      return ids_.size();
+    }
+    /**
+     * <pre>
+     * Ids is the array of identifiers of the incentives schedules which are to be
+     * terminated.
+     * </pre>
+     *
+     * <code>repeated uint64 ids = 2 [json_name = "ids"];</code>
+     * @param index The index of the element to return.
+     * @return The ids at the given index.
+     */
+    public long getIds(int index) {
+      return ids_.getLong(index);
+    }
+    private int idsMemoizedSerializedSize = -1;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authority_);
+      }
+      if (getIdsList().size() > 0) {
+        output.writeUInt32NoTag(18);
+        output.writeUInt32NoTag(idsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < ids_.size(); i++) {
+        output.writeUInt64NoTag(ids_.getLong(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authority_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < ids_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt64SizeNoTag(ids_.getLong(i));
+        }
+        size += dataSize;
+        if (!getIdsList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        idsMemoizedSerializedSize = dataSize;
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules)) {
+        return super.equals(obj);
+      }
+      com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules other = (com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules) obj;
+
+      if (!getAuthority()
+          .equals(other.getAuthority())) return false;
+      if (!getIdsList()
+          .equals(other.getIdsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AUTHORITY_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthority().hashCode();
+      if (getIdsCount() > 0) {
+        hash = (37 * hash) + IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getIdsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgTerminateSchedules defines the message for terminating one or more
+     * existing incentives schedules.
+     *
+     * This message is typically executed via a governance proposal with the gov
+     * module being the executing authority.
+     * </pre>
+     *
+     * Protobuf type {@code mars.incentives.v1beta1.MsgTerminateSchedules}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mars.incentives.v1beta1.MsgTerminateSchedules)
+        com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.mars.incentives.v1beta1.TxProto.internal_static_mars_incentives_v1beta1_MsgTerminateSchedules_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.mars.incentives.v1beta1.TxProto.internal_static_mars_incentives_v1beta1_MsgTerminateSchedules_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules.class, com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules.Builder.class);
+      }
+
+      // Construct using com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        authority_ = "";
+        ids_ = emptyLongList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.mars.incentives.v1beta1.TxProto.internal_static_mars_incentives_v1beta1_MsgTerminateSchedules_descriptor;
+      }
+
+      @java.lang.Override
+      public com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules getDefaultInstanceForType() {
+        return com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules build() {
+        com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules buildPartial() {
+        com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules result = new com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules result) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          ids_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.ids_ = ids_;
+      }
+
+      private void buildPartial0(com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.authority_ = authority_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules) {
+          return mergeFrom((com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules other) {
+        if (other == com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules.getDefaultInstance()) return this;
+        if (!other.getAuthority().isEmpty()) {
+          authority_ = other.authority_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.ids_.isEmpty()) {
+          if (ids_.isEmpty()) {
+            ids_ = other.ids_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureIdsIsMutable();
+            ids_.addAll(other.ids_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                authority_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                long v = input.readUInt64();
+                ensureIdsIsMutable();
+                ids_.addLong(v);
+                break;
+              } // case 16
+              case 18: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureIdsIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  ids_.addLong(input.readUInt64());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object authority_ = "";
+      /**
+       * <pre>
+       * Authority is the account executing the safety fund spend.
+       * It should be the gov module account.
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The authority.
+       */
+      public java.lang.String getAuthority() {
+        java.lang.Object ref = authority_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          authority_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Authority is the account executing the safety fund spend.
+       * It should be the gov module account.
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for authority.
+       */
+      public com.google.protobuf.ByteString
+          getAuthorityBytes() {
+        java.lang.Object ref = authority_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authority_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Authority is the account executing the safety fund spend.
+       * It should be the gov module account.
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthority(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Authority is the account executing the safety fund spend.
+       * It should be the gov module account.
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthority() {
+        authority_ = getDefaultInstance().getAuthority();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Authority is the account executing the safety fund spend.
+       * It should be the gov module account.
+       * </pre>
+       *
+       * <code>string authority = 1 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthorityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        authority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.LongList ids_ = emptyLongList();
+      private void ensureIdsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          ids_ = mutableCopy(ids_);
+          bitField0_ |= 0x00000002;
+        }
+      }
+      /**
+       * <pre>
+       * Ids is the array of identifiers of the incentives schedules which are to be
+       * terminated.
+       * </pre>
+       *
+       * <code>repeated uint64 ids = 2 [json_name = "ids"];</code>
+       * @return A list containing the ids.
+       */
+      public java.util.List<java.lang.Long>
+          getIdsList() {
+        return ((bitField0_ & 0x00000002) != 0) ?
+                 java.util.Collections.unmodifiableList(ids_) : ids_;
+      }
+      /**
+       * <pre>
+       * Ids is the array of identifiers of the incentives schedules which are to be
+       * terminated.
+       * </pre>
+       *
+       * <code>repeated uint64 ids = 2 [json_name = "ids"];</code>
+       * @return The count of ids.
+       */
+      public int getIdsCount() {
+        return ids_.size();
+      }
+      /**
+       * <pre>
+       * Ids is the array of identifiers of the incentives schedules which are to be
+       * terminated.
+       * </pre>
+       *
+       * <code>repeated uint64 ids = 2 [json_name = "ids"];</code>
+       * @param index The index of the element to return.
+       * @return The ids at the given index.
+       */
+      public long getIds(int index) {
+        return ids_.getLong(index);
+      }
+      /**
+       * <pre>
+       * Ids is the array of identifiers of the incentives schedules which are to be
+       * terminated.
+       * </pre>
+       *
+       * <code>repeated uint64 ids = 2 [json_name = "ids"];</code>
+       * @param index The index to set the value at.
+       * @param value The ids to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIds(
+          int index, long value) {
+
+        ensureIdsIsMutable();
+        ids_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Ids is the array of identifiers of the incentives schedules which are to be
+       * terminated.
+       * </pre>
+       *
+       * <code>repeated uint64 ids = 2 [json_name = "ids"];</code>
+       * @param value The ids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addIds(long value) {
+
+        ensureIdsIsMutable();
+        ids_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Ids is the array of identifiers of the incentives schedules which are to be
+       * terminated.
+       * </pre>
+       *
+       * <code>repeated uint64 ids = 2 [json_name = "ids"];</code>
+       * @param values The ids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllIds(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, ids_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Ids is the array of identifiers of the incentives schedules which are to be
+       * terminated.
+       * </pre>
+       *
+       * <code>repeated uint64 ids = 2 [json_name = "ids"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIds() {
+        ids_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:mars.incentives.v1beta1.MsgTerminateSchedules)
+    }
+
+    // @@protoc_insertion_point(class_scope:mars.incentives.v1beta1.MsgTerminateSchedules)
+    private static final com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules();
+    }
+
+    public static com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgTerminateSchedules>
+        PARSER = new com.google.protobuf.AbstractParser<MsgTerminateSchedules>() {
+      @java.lang.Override
+      public MsgTerminateSchedules parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgTerminateSchedules> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgTerminateSchedules> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedules getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgTerminateSchedulesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mars.incentives.v1beta1.MsgTerminateSchedulesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * RefundedAmount is the unreleased incentives that were refunded to the
+     * community pool.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin refunded_amount = 5 [json_name = "refundedAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getRefundedAmountList();
+    /**
+     * <pre>
+     * RefundedAmount is the unreleased incentives that were refunded to the
+     * community pool.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin refunded_amount = 5 [json_name = "refundedAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getRefundedAmount(int index);
+    /**
+     * <pre>
+     * RefundedAmount is the unreleased incentives that were refunded to the
+     * community pool.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin refunded_amount = 5 [json_name = "refundedAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getRefundedAmountCount();
+    /**
+     * <pre>
+     * RefundedAmount is the unreleased incentives that were refunded to the
+     * community pool.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin refunded_amount = 5 [json_name = "refundedAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getRefundedAmountOrBuilderList();
+    /**
+     * <pre>
+     * RefundedAmount is the unreleased incentives that were refunded to the
+     * community pool.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin refunded_amount = 5 [json_name = "refundedAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRefundedAmountOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * MsgTerminateSchedulesResponse defines the response to executing a
+   * MsgTerminateSchedules message.
+   * </pre>
+   *
+   * Protobuf type {@code mars.incentives.v1beta1.MsgTerminateSchedulesResponse}
+   */
+  public static final class MsgTerminateSchedulesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:mars.incentives.v1beta1.MsgTerminateSchedulesResponse)
+      MsgTerminateSchedulesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgTerminateSchedulesResponse.newBuilder() to construct.
+    private MsgTerminateSchedulesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgTerminateSchedulesResponse() {
+      refundedAmount_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgTerminateSchedulesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.mars.incentives.v1beta1.TxProto.internal_static_mars_incentives_v1beta1_MsgTerminateSchedulesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.mars.incentives.v1beta1.TxProto.internal_static_mars_incentives_v1beta1_MsgTerminateSchedulesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse.class, com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse.Builder.class);
+    }
+
+    public static final int REFUNDED_AMOUNT_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> refundedAmount_;
+    /**
+     * <pre>
+     * RefundedAmount is the unreleased incentives that were refunded to the
+     * community pool.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin refunded_amount = 5 [json_name = "refundedAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getRefundedAmountList() {
+      return refundedAmount_;
+    }
+    /**
+     * <pre>
+     * RefundedAmount is the unreleased incentives that were refunded to the
+     * community pool.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin refunded_amount = 5 [json_name = "refundedAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getRefundedAmountOrBuilderList() {
+      return refundedAmount_;
+    }
+    /**
+     * <pre>
+     * RefundedAmount is the unreleased incentives that were refunded to the
+     * community pool.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin refunded_amount = 5 [json_name = "refundedAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getRefundedAmountCount() {
+      return refundedAmount_.size();
+    }
+    /**
+     * <pre>
+     * RefundedAmount is the unreleased incentives that were refunded to the
+     * community pool.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin refunded_amount = 5 [json_name = "refundedAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getRefundedAmount(int index) {
+      return refundedAmount_.get(index);
+    }
+    /**
+     * <pre>
+     * RefundedAmount is the unreleased incentives that were refunded to the
+     * community pool.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin refunded_amount = 5 [json_name = "refundedAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRefundedAmountOrBuilder(
+        int index) {
+      return refundedAmount_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < refundedAmount_.size(); i++) {
+        output.writeMessage(5, refundedAmount_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < refundedAmount_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, refundedAmount_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse)) {
+        return super.equals(obj);
+      }
+      com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse other = (com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse) obj;
+
+      if (!getRefundedAmountList()
+          .equals(other.getRefundedAmountList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getRefundedAmountCount() > 0) {
+        hash = (37 * hash) + REFUNDED_AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getRefundedAmountList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgTerminateSchedulesResponse defines the response to executing a
+     * MsgTerminateSchedules message.
+     * </pre>
+     *
+     * Protobuf type {@code mars.incentives.v1beta1.MsgTerminateSchedulesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mars.incentives.v1beta1.MsgTerminateSchedulesResponse)
+        com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.mars.incentives.v1beta1.TxProto.internal_static_mars_incentives_v1beta1_MsgTerminateSchedulesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.mars.incentives.v1beta1.TxProto.internal_static_mars_incentives_v1beta1_MsgTerminateSchedulesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse.class, com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse.Builder.class);
+      }
+
+      // Construct using com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (refundedAmountBuilder_ == null) {
+          refundedAmount_ = java.util.Collections.emptyList();
+        } else {
+          refundedAmount_ = null;
+          refundedAmountBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.mars.incentives.v1beta1.TxProto.internal_static_mars_incentives_v1beta1_MsgTerminateSchedulesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse getDefaultInstanceForType() {
+        return com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse build() {
+        com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse buildPartial() {
+        com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse result = new com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse result) {
+        if (refundedAmountBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            refundedAmount_ = java.util.Collections.unmodifiableList(refundedAmount_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.refundedAmount_ = refundedAmount_;
+        } else {
+          result.refundedAmount_ = refundedAmountBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse) {
+          return mergeFrom((com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse other) {
+        if (other == com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse.getDefaultInstance()) return this;
+        if (refundedAmountBuilder_ == null) {
+          if (!other.refundedAmount_.isEmpty()) {
+            if (refundedAmount_.isEmpty()) {
+              refundedAmount_ = other.refundedAmount_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRefundedAmountIsMutable();
+              refundedAmount_.addAll(other.refundedAmount_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.refundedAmount_.isEmpty()) {
+            if (refundedAmountBuilder_.isEmpty()) {
+              refundedAmountBuilder_.dispose();
+              refundedAmountBuilder_ = null;
+              refundedAmount_ = other.refundedAmount_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              refundedAmountBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRefundedAmountFieldBuilder() : null;
+            } else {
+              refundedAmountBuilder_.addAllMessages(other.refundedAmount_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 42: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (refundedAmountBuilder_ == null) {
+                  ensureRefundedAmountIsMutable();
+                  refundedAmount_.add(m);
+                } else {
+                  refundedAmountBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> refundedAmount_ =
+        java.util.Collections.emptyList();
+      private void ensureRefundedAmountIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          refundedAmount_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(refundedAmount_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> refundedAmountBuilder_;
+
+      /**
+       * <pre>
+       * RefundedAmount is the unreleased incentives that were refunded to the
+       * community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin refunded_amount = 5 [json_name = "refundedAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getRefundedAmountList() {
+        if (refundedAmountBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(refundedAmount_);
+        } else {
+          return refundedAmountBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * RefundedAmount is the unreleased incentives that were refunded to the
+       * community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin refunded_amount = 5 [json_name = "refundedAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getRefundedAmountCount() {
+        if (refundedAmountBuilder_ == null) {
+          return refundedAmount_.size();
+        } else {
+          return refundedAmountBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * RefundedAmount is the unreleased incentives that were refunded to the
+       * community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin refunded_amount = 5 [json_name = "refundedAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getRefundedAmount(int index) {
+        if (refundedAmountBuilder_ == null) {
+          return refundedAmount_.get(index);
+        } else {
+          return refundedAmountBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * RefundedAmount is the unreleased incentives that were refunded to the
+       * community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin refunded_amount = 5 [json_name = "refundedAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setRefundedAmount(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (refundedAmountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRefundedAmountIsMutable();
+          refundedAmount_.set(index, value);
+          onChanged();
+        } else {
+          refundedAmountBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * RefundedAmount is the unreleased incentives that were refunded to the
+       * community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin refunded_amount = 5 [json_name = "refundedAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setRefundedAmount(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (refundedAmountBuilder_ == null) {
+          ensureRefundedAmountIsMutable();
+          refundedAmount_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          refundedAmountBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * RefundedAmount is the unreleased incentives that were refunded to the
+       * community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin refunded_amount = 5 [json_name = "refundedAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addRefundedAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (refundedAmountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRefundedAmountIsMutable();
+          refundedAmount_.add(value);
+          onChanged();
+        } else {
+          refundedAmountBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * RefundedAmount is the unreleased incentives that were refunded to the
+       * community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin refunded_amount = 5 [json_name = "refundedAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addRefundedAmount(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (refundedAmountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRefundedAmountIsMutable();
+          refundedAmount_.add(index, value);
+          onChanged();
+        } else {
+          refundedAmountBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * RefundedAmount is the unreleased incentives that were refunded to the
+       * community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin refunded_amount = 5 [json_name = "refundedAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addRefundedAmount(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (refundedAmountBuilder_ == null) {
+          ensureRefundedAmountIsMutable();
+          refundedAmount_.add(builderForValue.build());
+          onChanged();
+        } else {
+          refundedAmountBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * RefundedAmount is the unreleased incentives that were refunded to the
+       * community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin refunded_amount = 5 [json_name = "refundedAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addRefundedAmount(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (refundedAmountBuilder_ == null) {
+          ensureRefundedAmountIsMutable();
+          refundedAmount_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          refundedAmountBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * RefundedAmount is the unreleased incentives that were refunded to the
+       * community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin refunded_amount = 5 [json_name = "refundedAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllRefundedAmount(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (refundedAmountBuilder_ == null) {
+          ensureRefundedAmountIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, refundedAmount_);
+          onChanged();
+        } else {
+          refundedAmountBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * RefundedAmount is the unreleased incentives that were refunded to the
+       * community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin refunded_amount = 5 [json_name = "refundedAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearRefundedAmount() {
+        if (refundedAmountBuilder_ == null) {
+          refundedAmount_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          refundedAmountBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * RefundedAmount is the unreleased incentives that were refunded to the
+       * community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin refunded_amount = 5 [json_name = "refundedAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeRefundedAmount(int index) {
+        if (refundedAmountBuilder_ == null) {
+          ensureRefundedAmountIsMutable();
+          refundedAmount_.remove(index);
+          onChanged();
+        } else {
+          refundedAmountBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * RefundedAmount is the unreleased incentives that were refunded to the
+       * community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin refunded_amount = 5 [json_name = "refundedAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getRefundedAmountBuilder(
+          int index) {
+        return getRefundedAmountFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * RefundedAmount is the unreleased incentives that were refunded to the
+       * community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin refunded_amount = 5 [json_name = "refundedAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRefundedAmountOrBuilder(
+          int index) {
+        if (refundedAmountBuilder_ == null) {
+          return refundedAmount_.get(index);  } else {
+          return refundedAmountBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * RefundedAmount is the unreleased incentives that were refunded to the
+       * community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin refunded_amount = 5 [json_name = "refundedAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getRefundedAmountOrBuilderList() {
+        if (refundedAmountBuilder_ != null) {
+          return refundedAmountBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(refundedAmount_);
+        }
+      }
+      /**
+       * <pre>
+       * RefundedAmount is the unreleased incentives that were refunded to the
+       * community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin refunded_amount = 5 [json_name = "refundedAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addRefundedAmountBuilder() {
+        return getRefundedAmountFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * RefundedAmount is the unreleased incentives that were refunded to the
+       * community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin refunded_amount = 5 [json_name = "refundedAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addRefundedAmountBuilder(
+          int index) {
+        return getRefundedAmountFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * RefundedAmount is the unreleased incentives that were refunded to the
+       * community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin refunded_amount = 5 [json_name = "refundedAmount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getRefundedAmountBuilderList() {
+        return getRefundedAmountFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getRefundedAmountFieldBuilder() {
+        if (refundedAmountBuilder_ == null) {
+          refundedAmountBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  refundedAmount_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          refundedAmount_ = null;
+        }
+        return refundedAmountBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:mars.incentives.v1beta1.MsgTerminateSchedulesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:mars.incentives.v1beta1.MsgTerminateSchedulesResponse)
+    private static final com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse();
+    }
+
+    public static com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgTerminateSchedulesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgTerminateSchedulesResponse>() {
+      @java.lang.Override
+      public MsgTerminateSchedulesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgTerminateSchedulesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgTerminateSchedulesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.mars.incentives.v1beta1.TxProto.MsgTerminateSchedulesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mars_incentives_v1beta1_MsgCreateSchedule_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_mars_incentives_v1beta1_MsgCreateSchedule_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mars_incentives_v1beta1_MsgCreateScheduleResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_mars_incentives_v1beta1_MsgCreateScheduleResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mars_incentives_v1beta1_MsgTerminateSchedules_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_mars_incentives_v1beta1_MsgTerminateSchedules_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mars_incentives_v1beta1_MsgTerminateSchedulesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_mars_incentives_v1beta1_MsgTerminateSchedulesResponse_fieldAccessorTable;
 
@@ -70,13 +3920,13 @@ public final class TxProto {
       "MsgCreateScheduleResponse\022|\n\022TerminateSc" +
       "hedules\022..mars.incentives.v1beta1.MsgTer" +
       "minateSchedules\0326.mars.incentives.v1beta" +
-      "1.MsgTerminateSchedulesResponse\032\005\200\347\260*\001B\325" +
-      "\001\n\033com.mars.incentives.v1beta1B\007TxProtoP" +
-      "\001Z/github.com/mars-protocol/hub/x/incent" +
-      "ives/types\242\002\003MIX\252\002\027Mars.Incentives.V1bet" +
-      "a1\312\002\027Mars\\Incentives\\V1beta1\342\002#Mars\\Ince" +
-      "ntives\\V1beta1\\GPBMetadata\352\002\031Mars::Incen" +
-      "tives::V1beta1b\006proto3"
+      "1.MsgTerminateSchedulesResponse\032\005\200\347\260*\001B\323" +
+      "\001\n\033com.mars.incentives.v1beta1B\007TxProtoZ" +
+      "/github.com/mars-protocol/hub/x/incentiv" +
+      "es/types\242\002\003MIX\252\002\027Mars.Incentives.V1beta1" +
+      "\312\002\027Mars\\Incentives\\V1beta1\342\002#Mars\\Incent" +
+      "ives\\V1beta1\\GPBMetadata\352\002\031Mars::Incenti" +
+      "ves::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

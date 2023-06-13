@@ -14,14 +14,1775 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.erc20.v1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * params are the erc20 module parameters at genesis
+     * </pre>
+     *
+     * <code>.evmos.erc20.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params are the erc20 module parameters at genesis
+     * </pre>
+     *
+     * <code>.evmos.erc20.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.evmos.erc20.v1.GenesisProto.Params getParams();
+    /**
+     * <pre>
+     * params are the erc20 module parameters at genesis
+     * </pre>
+     *
+     * <code>.evmos.erc20.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.evmos.erc20.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <pre>
+     * token_pairs is a slice of the registered token pairs at genesis
+     * </pre>
+     *
+     * <code>repeated .evmos.erc20.v1.TokenPair token_pairs = 2 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.evmos.erc20.v1.Erc20Proto.TokenPair> 
+        getTokenPairsList();
+    /**
+     * <pre>
+     * token_pairs is a slice of the registered token pairs at genesis
+     * </pre>
+     *
+     * <code>repeated .evmos.erc20.v1.TokenPair token_pairs = 2 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+     */
+    com.evmos.erc20.v1.Erc20Proto.TokenPair getTokenPairs(int index);
+    /**
+     * <pre>
+     * token_pairs is a slice of the registered token pairs at genesis
+     * </pre>
+     *
+     * <code>repeated .evmos.erc20.v1.TokenPair token_pairs = 2 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+     */
+    int getTokenPairsCount();
+    /**
+     * <pre>
+     * token_pairs is a slice of the registered token pairs at genesis
+     * </pre>
+     *
+     * <code>repeated .evmos.erc20.v1.TokenPair token_pairs = 2 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.evmos.erc20.v1.Erc20Proto.TokenPairOrBuilder> 
+        getTokenPairsOrBuilderList();
+    /**
+     * <pre>
+     * token_pairs is a slice of the registered token pairs at genesis
+     * </pre>
+     *
+     * <code>repeated .evmos.erc20.v1.TokenPair token_pairs = 2 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+     */
+    com.evmos.erc20.v1.Erc20Proto.TokenPairOrBuilder getTokenPairsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.erc20.v1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.erc20.v1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      tokenPairs_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.erc20.v1.GenesisProto.internal_static_evmos_erc20_v1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.erc20.v1.GenesisProto.internal_static_evmos_erc20_v1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.erc20.v1.GenesisProto.GenesisState.class, com.evmos.erc20.v1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.evmos.erc20.v1.GenesisProto.Params params_;
+    /**
+     * <pre>
+     * params are the erc20 module parameters at genesis
+     * </pre>
+     *
+     * <code>.evmos.erc20.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params are the erc20 module parameters at genesis
+     * </pre>
+     *
+     * <code>.evmos.erc20.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.evmos.erc20.v1.GenesisProto.Params getParams() {
+      return params_ == null ? com.evmos.erc20.v1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params are the erc20 module parameters at genesis
+     * </pre>
+     *
+     * <code>.evmos.erc20.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.evmos.erc20.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.evmos.erc20.v1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int TOKEN_PAIRS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.evmos.erc20.v1.Erc20Proto.TokenPair> tokenPairs_;
+    /**
+     * <pre>
+     * token_pairs is a slice of the registered token pairs at genesis
+     * </pre>
+     *
+     * <code>repeated .evmos.erc20.v1.TokenPair token_pairs = 2 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.evmos.erc20.v1.Erc20Proto.TokenPair> getTokenPairsList() {
+      return tokenPairs_;
+    }
+    /**
+     * <pre>
+     * token_pairs is a slice of the registered token pairs at genesis
+     * </pre>
+     *
+     * <code>repeated .evmos.erc20.v1.TokenPair token_pairs = 2 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.evmos.erc20.v1.Erc20Proto.TokenPairOrBuilder> 
+        getTokenPairsOrBuilderList() {
+      return tokenPairs_;
+    }
+    /**
+     * <pre>
+     * token_pairs is a slice of the registered token pairs at genesis
+     * </pre>
+     *
+     * <code>repeated .evmos.erc20.v1.TokenPair token_pairs = 2 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getTokenPairsCount() {
+      return tokenPairs_.size();
+    }
+    /**
+     * <pre>
+     * token_pairs is a slice of the registered token pairs at genesis
+     * </pre>
+     *
+     * <code>repeated .evmos.erc20.v1.TokenPair token_pairs = 2 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.evmos.erc20.v1.Erc20Proto.TokenPair getTokenPairs(int index) {
+      return tokenPairs_.get(index);
+    }
+    /**
+     * <pre>
+     * token_pairs is a slice of the registered token pairs at genesis
+     * </pre>
+     *
+     * <code>repeated .evmos.erc20.v1.TokenPair token_pairs = 2 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.evmos.erc20.v1.Erc20Proto.TokenPairOrBuilder getTokenPairsOrBuilder(
+        int index) {
+      return tokenPairs_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      for (int i = 0; i < tokenPairs_.size(); i++) {
+        output.writeMessage(2, tokenPairs_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      for (int i = 0; i < tokenPairs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, tokenPairs_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.erc20.v1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.evmos.erc20.v1.GenesisProto.GenesisState other = (com.evmos.erc20.v1.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getTokenPairsList()
+          .equals(other.getTokenPairsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (getTokenPairsCount() > 0) {
+        hash = (37 * hash) + TOKEN_PAIRS_FIELD_NUMBER;
+        hash = (53 * hash) + getTokenPairsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.erc20.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.erc20.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.erc20.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.erc20.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.erc20.v1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.erc20.v1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.erc20.v1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.erc20.v1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.erc20.v1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.erc20.v1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.erc20.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.erc20.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.erc20.v1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.erc20.v1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.erc20.v1.GenesisState)
+        com.evmos.erc20.v1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.erc20.v1.GenesisProto.internal_static_evmos_erc20_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.erc20.v1.GenesisProto.internal_static_evmos_erc20_v1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.erc20.v1.GenesisProto.GenesisState.class, com.evmos.erc20.v1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.evmos.erc20.v1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        if (tokenPairsBuilder_ == null) {
+          tokenPairs_ = java.util.Collections.emptyList();
+        } else {
+          tokenPairs_ = null;
+          tokenPairsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.erc20.v1.GenesisProto.internal_static_evmos_erc20_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.erc20.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.evmos.erc20.v1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.erc20.v1.GenesisProto.GenesisState build() {
+        com.evmos.erc20.v1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.erc20.v1.GenesisProto.GenesisState buildPartial() {
+        com.evmos.erc20.v1.GenesisProto.GenesisState result = new com.evmos.erc20.v1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.evmos.erc20.v1.GenesisProto.GenesisState result) {
+        if (tokenPairsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            tokenPairs_ = java.util.Collections.unmodifiableList(tokenPairs_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.tokenPairs_ = tokenPairs_;
+        } else {
+          result.tokenPairs_ = tokenPairsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.evmos.erc20.v1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.erc20.v1.GenesisProto.GenesisState) {
+          return mergeFrom((com.evmos.erc20.v1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.erc20.v1.GenesisProto.GenesisState other) {
+        if (other == com.evmos.erc20.v1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (tokenPairsBuilder_ == null) {
+          if (!other.tokenPairs_.isEmpty()) {
+            if (tokenPairs_.isEmpty()) {
+              tokenPairs_ = other.tokenPairs_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureTokenPairsIsMutable();
+              tokenPairs_.addAll(other.tokenPairs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.tokenPairs_.isEmpty()) {
+            if (tokenPairsBuilder_.isEmpty()) {
+              tokenPairsBuilder_.dispose();
+              tokenPairsBuilder_ = null;
+              tokenPairs_ = other.tokenPairs_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              tokenPairsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTokenPairsFieldBuilder() : null;
+            } else {
+              tokenPairsBuilder_.addAllMessages(other.tokenPairs_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.evmos.erc20.v1.Erc20Proto.TokenPair m =
+                    input.readMessage(
+                        com.evmos.erc20.v1.Erc20Proto.TokenPair.parser(),
+                        extensionRegistry);
+                if (tokenPairsBuilder_ == null) {
+                  ensureTokenPairsIsMutable();
+                  tokenPairs_.add(m);
+                } else {
+                  tokenPairsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.evmos.erc20.v1.GenesisProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.evmos.erc20.v1.GenesisProto.Params, com.evmos.erc20.v1.GenesisProto.Params.Builder, com.evmos.erc20.v1.GenesisProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params are the erc20 module parameters at genesis
+       * </pre>
+       *
+       * <code>.evmos.erc20.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * params are the erc20 module parameters at genesis
+       * </pre>
+       *
+       * <code>.evmos.erc20.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.evmos.erc20.v1.GenesisProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.evmos.erc20.v1.GenesisProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params are the erc20 module parameters at genesis
+       * </pre>
+       *
+       * <code>.evmos.erc20.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.evmos.erc20.v1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params are the erc20 module parameters at genesis
+       * </pre>
+       *
+       * <code>.evmos.erc20.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.evmos.erc20.v1.GenesisProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params are the erc20 module parameters at genesis
+       * </pre>
+       *
+       * <code>.evmos.erc20.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.evmos.erc20.v1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.evmos.erc20.v1.GenesisProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params are the erc20 module parameters at genesis
+       * </pre>
+       *
+       * <code>.evmos.erc20.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params are the erc20 module parameters at genesis
+       * </pre>
+       *
+       * <code>.evmos.erc20.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.erc20.v1.GenesisProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params are the erc20 module parameters at genesis
+       * </pre>
+       *
+       * <code>.evmos.erc20.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.erc20.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.evmos.erc20.v1.GenesisProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params are the erc20 module parameters at genesis
+       * </pre>
+       *
+       * <code>.evmos.erc20.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.evmos.erc20.v1.GenesisProto.Params, com.evmos.erc20.v1.GenesisProto.Params.Builder, com.evmos.erc20.v1.GenesisProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.evmos.erc20.v1.GenesisProto.Params, com.evmos.erc20.v1.GenesisProto.Params.Builder, com.evmos.erc20.v1.GenesisProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private java.util.List<com.evmos.erc20.v1.Erc20Proto.TokenPair> tokenPairs_ =
+        java.util.Collections.emptyList();
+      private void ensureTokenPairsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          tokenPairs_ = new java.util.ArrayList<com.evmos.erc20.v1.Erc20Proto.TokenPair>(tokenPairs_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.evmos.erc20.v1.Erc20Proto.TokenPair, com.evmos.erc20.v1.Erc20Proto.TokenPair.Builder, com.evmos.erc20.v1.Erc20Proto.TokenPairOrBuilder> tokenPairsBuilder_;
+
+      /**
+       * <pre>
+       * token_pairs is a slice of the registered token pairs at genesis
+       * </pre>
+       *
+       * <code>repeated .evmos.erc20.v1.TokenPair token_pairs = 2 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.evmos.erc20.v1.Erc20Proto.TokenPair> getTokenPairsList() {
+        if (tokenPairsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(tokenPairs_);
+        } else {
+          return tokenPairsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * token_pairs is a slice of the registered token pairs at genesis
+       * </pre>
+       *
+       * <code>repeated .evmos.erc20.v1.TokenPair token_pairs = 2 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public int getTokenPairsCount() {
+        if (tokenPairsBuilder_ == null) {
+          return tokenPairs_.size();
+        } else {
+          return tokenPairsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * token_pairs is a slice of the registered token pairs at genesis
+       * </pre>
+       *
+       * <code>repeated .evmos.erc20.v1.TokenPair token_pairs = 2 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.erc20.v1.Erc20Proto.TokenPair getTokenPairs(int index) {
+        if (tokenPairsBuilder_ == null) {
+          return tokenPairs_.get(index);
+        } else {
+          return tokenPairsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * token_pairs is a slice of the registered token pairs at genesis
+       * </pre>
+       *
+       * <code>repeated .evmos.erc20.v1.TokenPair token_pairs = 2 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTokenPairs(
+          int index, com.evmos.erc20.v1.Erc20Proto.TokenPair value) {
+        if (tokenPairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenPairsIsMutable();
+          tokenPairs_.set(index, value);
+          onChanged();
+        } else {
+          tokenPairsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * token_pairs is a slice of the registered token pairs at genesis
+       * </pre>
+       *
+       * <code>repeated .evmos.erc20.v1.TokenPair token_pairs = 2 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTokenPairs(
+          int index, com.evmos.erc20.v1.Erc20Proto.TokenPair.Builder builderForValue) {
+        if (tokenPairsBuilder_ == null) {
+          ensureTokenPairsIsMutable();
+          tokenPairs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokenPairsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * token_pairs is a slice of the registered token pairs at genesis
+       * </pre>
+       *
+       * <code>repeated .evmos.erc20.v1.TokenPair token_pairs = 2 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTokenPairs(com.evmos.erc20.v1.Erc20Proto.TokenPair value) {
+        if (tokenPairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenPairsIsMutable();
+          tokenPairs_.add(value);
+          onChanged();
+        } else {
+          tokenPairsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * token_pairs is a slice of the registered token pairs at genesis
+       * </pre>
+       *
+       * <code>repeated .evmos.erc20.v1.TokenPair token_pairs = 2 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTokenPairs(
+          int index, com.evmos.erc20.v1.Erc20Proto.TokenPair value) {
+        if (tokenPairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenPairsIsMutable();
+          tokenPairs_.add(index, value);
+          onChanged();
+        } else {
+          tokenPairsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * token_pairs is a slice of the registered token pairs at genesis
+       * </pre>
+       *
+       * <code>repeated .evmos.erc20.v1.TokenPair token_pairs = 2 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTokenPairs(
+          com.evmos.erc20.v1.Erc20Proto.TokenPair.Builder builderForValue) {
+        if (tokenPairsBuilder_ == null) {
+          ensureTokenPairsIsMutable();
+          tokenPairs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          tokenPairsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * token_pairs is a slice of the registered token pairs at genesis
+       * </pre>
+       *
+       * <code>repeated .evmos.erc20.v1.TokenPair token_pairs = 2 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTokenPairs(
+          int index, com.evmos.erc20.v1.Erc20Proto.TokenPair.Builder builderForValue) {
+        if (tokenPairsBuilder_ == null) {
+          ensureTokenPairsIsMutable();
+          tokenPairs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokenPairsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * token_pairs is a slice of the registered token pairs at genesis
+       * </pre>
+       *
+       * <code>repeated .evmos.erc20.v1.TokenPair token_pairs = 2 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllTokenPairs(
+          java.lang.Iterable<? extends com.evmos.erc20.v1.Erc20Proto.TokenPair> values) {
+        if (tokenPairsBuilder_ == null) {
+          ensureTokenPairsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tokenPairs_);
+          onChanged();
+        } else {
+          tokenPairsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * token_pairs is a slice of the registered token pairs at genesis
+       * </pre>
+       *
+       * <code>repeated .evmos.erc20.v1.TokenPair token_pairs = 2 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearTokenPairs() {
+        if (tokenPairsBuilder_ == null) {
+          tokenPairs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          tokenPairsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * token_pairs is a slice of the registered token pairs at genesis
+       * </pre>
+       *
+       * <code>repeated .evmos.erc20.v1.TokenPair token_pairs = 2 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeTokenPairs(int index) {
+        if (tokenPairsBuilder_ == null) {
+          ensureTokenPairsIsMutable();
+          tokenPairs_.remove(index);
+          onChanged();
+        } else {
+          tokenPairsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * token_pairs is a slice of the registered token pairs at genesis
+       * </pre>
+       *
+       * <code>repeated .evmos.erc20.v1.TokenPair token_pairs = 2 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.erc20.v1.Erc20Proto.TokenPair.Builder getTokenPairsBuilder(
+          int index) {
+        return getTokenPairsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * token_pairs is a slice of the registered token pairs at genesis
+       * </pre>
+       *
+       * <code>repeated .evmos.erc20.v1.TokenPair token_pairs = 2 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.erc20.v1.Erc20Proto.TokenPairOrBuilder getTokenPairsOrBuilder(
+          int index) {
+        if (tokenPairsBuilder_ == null) {
+          return tokenPairs_.get(index);  } else {
+          return tokenPairsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * token_pairs is a slice of the registered token pairs at genesis
+       * </pre>
+       *
+       * <code>repeated .evmos.erc20.v1.TokenPair token_pairs = 2 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.evmos.erc20.v1.Erc20Proto.TokenPairOrBuilder> 
+           getTokenPairsOrBuilderList() {
+        if (tokenPairsBuilder_ != null) {
+          return tokenPairsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(tokenPairs_);
+        }
+      }
+      /**
+       * <pre>
+       * token_pairs is a slice of the registered token pairs at genesis
+       * </pre>
+       *
+       * <code>repeated .evmos.erc20.v1.TokenPair token_pairs = 2 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.erc20.v1.Erc20Proto.TokenPair.Builder addTokenPairsBuilder() {
+        return getTokenPairsFieldBuilder().addBuilder(
+            com.evmos.erc20.v1.Erc20Proto.TokenPair.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * token_pairs is a slice of the registered token pairs at genesis
+       * </pre>
+       *
+       * <code>repeated .evmos.erc20.v1.TokenPair token_pairs = 2 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.erc20.v1.Erc20Proto.TokenPair.Builder addTokenPairsBuilder(
+          int index) {
+        return getTokenPairsFieldBuilder().addBuilder(
+            index, com.evmos.erc20.v1.Erc20Proto.TokenPair.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * token_pairs is a slice of the registered token pairs at genesis
+       * </pre>
+       *
+       * <code>repeated .evmos.erc20.v1.TokenPair token_pairs = 2 [json_name = "tokenPairs", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.evmos.erc20.v1.Erc20Proto.TokenPair.Builder> 
+           getTokenPairsBuilderList() {
+        return getTokenPairsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.evmos.erc20.v1.Erc20Proto.TokenPair, com.evmos.erc20.v1.Erc20Proto.TokenPair.Builder, com.evmos.erc20.v1.Erc20Proto.TokenPairOrBuilder> 
+          getTokenPairsFieldBuilder() {
+        if (tokenPairsBuilder_ == null) {
+          tokenPairsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.evmos.erc20.v1.Erc20Proto.TokenPair, com.evmos.erc20.v1.Erc20Proto.TokenPair.Builder, com.evmos.erc20.v1.Erc20Proto.TokenPairOrBuilder>(
+                  tokenPairs_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          tokenPairs_ = null;
+        }
+        return tokenPairsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.erc20.v1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.erc20.v1.GenesisState)
+    private static final com.evmos.erc20.v1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.erc20.v1.GenesisProto.GenesisState();
+    }
+
+    public static com.evmos.erc20.v1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.erc20.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.erc20.v1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * enable_erc20 is the parameter to enable the conversion of Cosmos coins &lt;--&gt; ERC20 tokens.
+     * </pre>
+     *
+     * <code>bool enable_erc20 = 1 [json_name = "enableErc20"];</code>
+     * @return The enableErc20.
+     */
+    boolean getEnableErc20();
+
+    /**
+     * <pre>
+     * enable_evm_hook is the parameter to enable the EVM hook that converts an ERC20 token to a Cosmos
+     * Coin by transferring the Tokens through a MsgEthereumTx to the ModuleAddress Ethereum address.
+     * </pre>
+     *
+     * <code>bool enable_evm_hook = 2 [json_name = "enableEvmHook", (.gogoproto.customname) = "EnableEVMHook"];</code>
+     * @return The enableEvmHook.
+     */
+    boolean getEnableEvmHook();
+  }
+  /**
+   * <pre>
+   * Params defines the erc20 module params
+   * </pre>
+   *
+   * Protobuf type {@code evmos.erc20.v1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.erc20.v1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.erc20.v1.GenesisProto.internal_static_evmos_erc20_v1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.erc20.v1.GenesisProto.internal_static_evmos_erc20_v1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.erc20.v1.GenesisProto.Params.class, com.evmos.erc20.v1.GenesisProto.Params.Builder.class);
+    }
+
+    public static final int ENABLE_ERC20_FIELD_NUMBER = 1;
+    private boolean enableErc20_ = false;
+    /**
+     * <pre>
+     * enable_erc20 is the parameter to enable the conversion of Cosmos coins &lt;--&gt; ERC20 tokens.
+     * </pre>
+     *
+     * <code>bool enable_erc20 = 1 [json_name = "enableErc20"];</code>
+     * @return The enableErc20.
+     */
+    @java.lang.Override
+    public boolean getEnableErc20() {
+      return enableErc20_;
+    }
+
+    public static final int ENABLE_EVM_HOOK_FIELD_NUMBER = 2;
+    private boolean enableEvmHook_ = false;
+    /**
+     * <pre>
+     * enable_evm_hook is the parameter to enable the EVM hook that converts an ERC20 token to a Cosmos
+     * Coin by transferring the Tokens through a MsgEthereumTx to the ModuleAddress Ethereum address.
+     * </pre>
+     *
+     * <code>bool enable_evm_hook = 2 [json_name = "enableEvmHook", (.gogoproto.customname) = "EnableEVMHook"];</code>
+     * @return The enableEvmHook.
+     */
+    @java.lang.Override
+    public boolean getEnableEvmHook() {
+      return enableEvmHook_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (enableErc20_ != false) {
+        output.writeBool(1, enableErc20_);
+      }
+      if (enableEvmHook_ != false) {
+        output.writeBool(2, enableEvmHook_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (enableErc20_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, enableErc20_);
+      }
+      if (enableEvmHook_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, enableEvmHook_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.erc20.v1.GenesisProto.Params)) {
+        return super.equals(obj);
+      }
+      com.evmos.erc20.v1.GenesisProto.Params other = (com.evmos.erc20.v1.GenesisProto.Params) obj;
+
+      if (getEnableErc20()
+          != other.getEnableErc20()) return false;
+      if (getEnableEvmHook()
+          != other.getEnableEvmHook()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENABLE_ERC20_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnableErc20());
+      hash = (37 * hash) + ENABLE_EVM_HOOK_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnableEvmHook());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.erc20.v1.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.erc20.v1.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.erc20.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.erc20.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.erc20.v1.GenesisProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.erc20.v1.GenesisProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.erc20.v1.GenesisProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.erc20.v1.GenesisProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.erc20.v1.GenesisProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.erc20.v1.GenesisProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.erc20.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.erc20.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.erc20.v1.GenesisProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params defines the erc20 module params
+     * </pre>
+     *
+     * Protobuf type {@code evmos.erc20.v1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.erc20.v1.Params)
+        com.evmos.erc20.v1.GenesisProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.erc20.v1.GenesisProto.internal_static_evmos_erc20_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.erc20.v1.GenesisProto.internal_static_evmos_erc20_v1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.erc20.v1.GenesisProto.Params.class, com.evmos.erc20.v1.GenesisProto.Params.Builder.class);
+      }
+
+      // Construct using com.evmos.erc20.v1.GenesisProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        enableErc20_ = false;
+        enableEvmHook_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.erc20.v1.GenesisProto.internal_static_evmos_erc20_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.erc20.v1.GenesisProto.Params getDefaultInstanceForType() {
+        return com.evmos.erc20.v1.GenesisProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.erc20.v1.GenesisProto.Params build() {
+        com.evmos.erc20.v1.GenesisProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.erc20.v1.GenesisProto.Params buildPartial() {
+        com.evmos.erc20.v1.GenesisProto.Params result = new com.evmos.erc20.v1.GenesisProto.Params(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.erc20.v1.GenesisProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.enableErc20_ = enableErc20_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.enableEvmHook_ = enableEvmHook_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.erc20.v1.GenesisProto.Params) {
+          return mergeFrom((com.evmos.erc20.v1.GenesisProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.erc20.v1.GenesisProto.Params other) {
+        if (other == com.evmos.erc20.v1.GenesisProto.Params.getDefaultInstance()) return this;
+        if (other.getEnableErc20() != false) {
+          setEnableErc20(other.getEnableErc20());
+        }
+        if (other.getEnableEvmHook() != false) {
+          setEnableEvmHook(other.getEnableEvmHook());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                enableErc20_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                enableEvmHook_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean enableErc20_ ;
+      /**
+       * <pre>
+       * enable_erc20 is the parameter to enable the conversion of Cosmos coins &lt;--&gt; ERC20 tokens.
+       * </pre>
+       *
+       * <code>bool enable_erc20 = 1 [json_name = "enableErc20"];</code>
+       * @return The enableErc20.
+       */
+      @java.lang.Override
+      public boolean getEnableErc20() {
+        return enableErc20_;
+      }
+      /**
+       * <pre>
+       * enable_erc20 is the parameter to enable the conversion of Cosmos coins &lt;--&gt; ERC20 tokens.
+       * </pre>
+       *
+       * <code>bool enable_erc20 = 1 [json_name = "enableErc20"];</code>
+       * @param value The enableErc20 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnableErc20(boolean value) {
+
+        enableErc20_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * enable_erc20 is the parameter to enable the conversion of Cosmos coins &lt;--&gt; ERC20 tokens.
+       * </pre>
+       *
+       * <code>bool enable_erc20 = 1 [json_name = "enableErc20"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnableErc20() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        enableErc20_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean enableEvmHook_ ;
+      /**
+       * <pre>
+       * enable_evm_hook is the parameter to enable the EVM hook that converts an ERC20 token to a Cosmos
+       * Coin by transferring the Tokens through a MsgEthereumTx to the ModuleAddress Ethereum address.
+       * </pre>
+       *
+       * <code>bool enable_evm_hook = 2 [json_name = "enableEvmHook", (.gogoproto.customname) = "EnableEVMHook"];</code>
+       * @return The enableEvmHook.
+       */
+      @java.lang.Override
+      public boolean getEnableEvmHook() {
+        return enableEvmHook_;
+      }
+      /**
+       * <pre>
+       * enable_evm_hook is the parameter to enable the EVM hook that converts an ERC20 token to a Cosmos
+       * Coin by transferring the Tokens through a MsgEthereumTx to the ModuleAddress Ethereum address.
+       * </pre>
+       *
+       * <code>bool enable_evm_hook = 2 [json_name = "enableEvmHook", (.gogoproto.customname) = "EnableEVMHook"];</code>
+       * @param value The enableEvmHook to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnableEvmHook(boolean value) {
+
+        enableEvmHook_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * enable_evm_hook is the parameter to enable the EVM hook that converts an ERC20 token to a Cosmos
+       * Coin by transferring the Tokens through a MsgEthereumTx to the ModuleAddress Ethereum address.
+       * </pre>
+       *
+       * <code>bool enable_evm_hook = 2 [json_name = "enableEvmHook", (.gogoproto.customname) = "EnableEVMHook"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnableEvmHook() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        enableEvmHook_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.erc20.v1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.erc20.v1.Params)
+    private static final com.evmos.erc20.v1.GenesisProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.erc20.v1.GenesisProto.Params();
+    }
+
+    public static com.evmos.erc20.v1.GenesisProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.erc20.v1.GenesisProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_erc20_v1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_erc20_v1_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_erc20_v1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_erc20_v1_Params_fieldAccessorTable;
 
@@ -41,11 +1802,11 @@ public final class GenesisProto {
       "20.v1.TokenPairB\004\310\336\037\000R\ntokenPairs\"f\n\006Par" +
       "ams\022!\n\014enable_erc20\030\001 \001(\010R\013enableErc20\0229" +
       "\n\017enable_evm_hook\030\002 \001(\010B\021\342\336\037\rEnableEVMHo" +
-      "okR\renableEvmHookB\246\001\n\022com.evmos.erc20.v1" +
-      "B\014GenesisProtoP\001Z(github.com/evmos/evmos" +
-      "/v13/x/erc20/types\242\002\003EEX\252\002\016Evmos.Erc20.V" +
-      "1\312\002\016Evmos\\Erc20\\V1\342\002\032Evmos\\Erc20\\V1\\GPBM" +
-      "etadata\352\002\020Evmos::Erc20::V1b\006proto3"
+      "okR\renableEvmHookB\244\001\n\022com.evmos.erc20.v1" +
+      "B\014GenesisProtoZ(github.com/evmos/evmos/v" +
+      "13/x/erc20/types\242\002\003EEX\252\002\016Evmos.Erc20.V1\312" +
+      "\002\016Evmos\\Erc20\\V1\342\002\032Evmos\\Erc20\\V1\\GPBMet" +
+      "adata\352\002\020Evmos::Erc20::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,14 +14,3210 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.claims.v1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.evmos.claims.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.evmos.claims.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.evmos.claims.v1.GenesisProto.Params getParams();
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.evmos.claims.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.evmos.claims.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <pre>
+     * claims_records is a list of claim records with the corresponding airdrop recipient
+     * </pre>
+     *
+     * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims_records = 2 [json_name = "claimsRecords", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress> 
+        getClaimsRecordsList();
+    /**
+     * <pre>
+     * claims_records is a list of claim records with the corresponding airdrop recipient
+     * </pre>
+     *
+     * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims_records = 2 [json_name = "claimsRecords", (.gogoproto.nullable) = false];</code>
+     */
+    com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress getClaimsRecords(int index);
+    /**
+     * <pre>
+     * claims_records is a list of claim records with the corresponding airdrop recipient
+     * </pre>
+     *
+     * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims_records = 2 [json_name = "claimsRecords", (.gogoproto.nullable) = false];</code>
+     */
+    int getClaimsRecordsCount();
+    /**
+     * <pre>
+     * claims_records is a list of claim records with the corresponding airdrop recipient
+     * </pre>
+     *
+     * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims_records = 2 [json_name = "claimsRecords", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddressOrBuilder> 
+        getClaimsRecordsOrBuilderList();
+    /**
+     * <pre>
+     * claims_records is a list of claim records with the corresponding airdrop recipient
+     * </pre>
+     *
+     * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims_records = 2 [json_name = "claimsRecords", (.gogoproto.nullable) = false];</code>
+     */
+    com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddressOrBuilder getClaimsRecordsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState define the claims module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.claims.v1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.claims.v1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      claimsRecords_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.claims.v1.GenesisProto.internal_static_evmos_claims_v1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.claims.v1.GenesisProto.internal_static_evmos_claims_v1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.claims.v1.GenesisProto.GenesisState.class, com.evmos.claims.v1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.evmos.claims.v1.GenesisProto.Params params_;
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.evmos.claims.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.evmos.claims.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.evmos.claims.v1.GenesisProto.Params getParams() {
+      return params_ == null ? com.evmos.claims.v1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.evmos.claims.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.evmos.claims.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.evmos.claims.v1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int CLAIMS_RECORDS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress> claimsRecords_;
+    /**
+     * <pre>
+     * claims_records is a list of claim records with the corresponding airdrop recipient
+     * </pre>
+     *
+     * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims_records = 2 [json_name = "claimsRecords", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress> getClaimsRecordsList() {
+      return claimsRecords_;
+    }
+    /**
+     * <pre>
+     * claims_records is a list of claim records with the corresponding airdrop recipient
+     * </pre>
+     *
+     * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims_records = 2 [json_name = "claimsRecords", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddressOrBuilder> 
+        getClaimsRecordsOrBuilderList() {
+      return claimsRecords_;
+    }
+    /**
+     * <pre>
+     * claims_records is a list of claim records with the corresponding airdrop recipient
+     * </pre>
+     *
+     * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims_records = 2 [json_name = "claimsRecords", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getClaimsRecordsCount() {
+      return claimsRecords_.size();
+    }
+    /**
+     * <pre>
+     * claims_records is a list of claim records with the corresponding airdrop recipient
+     * </pre>
+     *
+     * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims_records = 2 [json_name = "claimsRecords", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress getClaimsRecords(int index) {
+      return claimsRecords_.get(index);
+    }
+    /**
+     * <pre>
+     * claims_records is a list of claim records with the corresponding airdrop recipient
+     * </pre>
+     *
+     * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims_records = 2 [json_name = "claimsRecords", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddressOrBuilder getClaimsRecordsOrBuilder(
+        int index) {
+      return claimsRecords_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      for (int i = 0; i < claimsRecords_.size(); i++) {
+        output.writeMessage(2, claimsRecords_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      for (int i = 0; i < claimsRecords_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, claimsRecords_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.claims.v1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.evmos.claims.v1.GenesisProto.GenesisState other = (com.evmos.claims.v1.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getClaimsRecordsList()
+          .equals(other.getClaimsRecordsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (getClaimsRecordsCount() > 0) {
+        hash = (37 * hash) + CLAIMS_RECORDS_FIELD_NUMBER;
+        hash = (53 * hash) + getClaimsRecordsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.claims.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.claims.v1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.claims.v1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.claims.v1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.claims.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.claims.v1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState define the claims module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.claims.v1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.claims.v1.GenesisState)
+        com.evmos.claims.v1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.claims.v1.GenesisProto.internal_static_evmos_claims_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.claims.v1.GenesisProto.internal_static_evmos_claims_v1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.claims.v1.GenesisProto.GenesisState.class, com.evmos.claims.v1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.evmos.claims.v1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        if (claimsRecordsBuilder_ == null) {
+          claimsRecords_ = java.util.Collections.emptyList();
+        } else {
+          claimsRecords_ = null;
+          claimsRecordsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.claims.v1.GenesisProto.internal_static_evmos_claims_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.evmos.claims.v1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.GenesisProto.GenesisState build() {
+        com.evmos.claims.v1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.GenesisProto.GenesisState buildPartial() {
+        com.evmos.claims.v1.GenesisProto.GenesisState result = new com.evmos.claims.v1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.evmos.claims.v1.GenesisProto.GenesisState result) {
+        if (claimsRecordsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            claimsRecords_ = java.util.Collections.unmodifiableList(claimsRecords_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.claimsRecords_ = claimsRecords_;
+        } else {
+          result.claimsRecords_ = claimsRecordsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.evmos.claims.v1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.claims.v1.GenesisProto.GenesisState) {
+          return mergeFrom((com.evmos.claims.v1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.claims.v1.GenesisProto.GenesisState other) {
+        if (other == com.evmos.claims.v1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (claimsRecordsBuilder_ == null) {
+          if (!other.claimsRecords_.isEmpty()) {
+            if (claimsRecords_.isEmpty()) {
+              claimsRecords_ = other.claimsRecords_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureClaimsRecordsIsMutable();
+              claimsRecords_.addAll(other.claimsRecords_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.claimsRecords_.isEmpty()) {
+            if (claimsRecordsBuilder_.isEmpty()) {
+              claimsRecordsBuilder_.dispose();
+              claimsRecordsBuilder_ = null;
+              claimsRecords_ = other.claimsRecords_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              claimsRecordsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getClaimsRecordsFieldBuilder() : null;
+            } else {
+              claimsRecordsBuilder_.addAllMessages(other.claimsRecords_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress m =
+                    input.readMessage(
+                        com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.parser(),
+                        extensionRegistry);
+                if (claimsRecordsBuilder_ == null) {
+                  ensureClaimsRecordsIsMutable();
+                  claimsRecords_.add(m);
+                } else {
+                  claimsRecordsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.evmos.claims.v1.GenesisProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.evmos.claims.v1.GenesisProto.Params, com.evmos.claims.v1.GenesisProto.Params.Builder, com.evmos.claims.v1.GenesisProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.evmos.claims.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.evmos.claims.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.evmos.claims.v1.GenesisProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.evmos.claims.v1.GenesisProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.evmos.claims.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.evmos.claims.v1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.evmos.claims.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.evmos.claims.v1.GenesisProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.evmos.claims.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.evmos.claims.v1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.evmos.claims.v1.GenesisProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.evmos.claims.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.evmos.claims.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.claims.v1.GenesisProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.evmos.claims.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.claims.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.evmos.claims.v1.GenesisProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.evmos.claims.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.evmos.claims.v1.GenesisProto.Params, com.evmos.claims.v1.GenesisProto.Params.Builder, com.evmos.claims.v1.GenesisProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.evmos.claims.v1.GenesisProto.Params, com.evmos.claims.v1.GenesisProto.Params.Builder, com.evmos.claims.v1.GenesisProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private java.util.List<com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress> claimsRecords_ =
+        java.util.Collections.emptyList();
+      private void ensureClaimsRecordsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          claimsRecords_ = new java.util.ArrayList<com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress>(claimsRecords_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress, com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.Builder, com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddressOrBuilder> claimsRecordsBuilder_;
+
+      /**
+       * <pre>
+       * claims_records is a list of claim records with the corresponding airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims_records = 2 [json_name = "claimsRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress> getClaimsRecordsList() {
+        if (claimsRecordsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(claimsRecords_);
+        } else {
+          return claimsRecordsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * claims_records is a list of claim records with the corresponding airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims_records = 2 [json_name = "claimsRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public int getClaimsRecordsCount() {
+        if (claimsRecordsBuilder_ == null) {
+          return claimsRecords_.size();
+        } else {
+          return claimsRecordsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * claims_records is a list of claim records with the corresponding airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims_records = 2 [json_name = "claimsRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress getClaimsRecords(int index) {
+        if (claimsRecordsBuilder_ == null) {
+          return claimsRecords_.get(index);
+        } else {
+          return claimsRecordsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * claims_records is a list of claim records with the corresponding airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims_records = 2 [json_name = "claimsRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setClaimsRecords(
+          int index, com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress value) {
+        if (claimsRecordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimsRecordsIsMutable();
+          claimsRecords_.set(index, value);
+          onChanged();
+        } else {
+          claimsRecordsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claims_records is a list of claim records with the corresponding airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims_records = 2 [json_name = "claimsRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setClaimsRecords(
+          int index, com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.Builder builderForValue) {
+        if (claimsRecordsBuilder_ == null) {
+          ensureClaimsRecordsIsMutable();
+          claimsRecords_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          claimsRecordsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claims_records is a list of claim records with the corresponding airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims_records = 2 [json_name = "claimsRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClaimsRecords(com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress value) {
+        if (claimsRecordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimsRecordsIsMutable();
+          claimsRecords_.add(value);
+          onChanged();
+        } else {
+          claimsRecordsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claims_records is a list of claim records with the corresponding airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims_records = 2 [json_name = "claimsRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClaimsRecords(
+          int index, com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress value) {
+        if (claimsRecordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimsRecordsIsMutable();
+          claimsRecords_.add(index, value);
+          onChanged();
+        } else {
+          claimsRecordsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claims_records is a list of claim records with the corresponding airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims_records = 2 [json_name = "claimsRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClaimsRecords(
+          com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.Builder builderForValue) {
+        if (claimsRecordsBuilder_ == null) {
+          ensureClaimsRecordsIsMutable();
+          claimsRecords_.add(builderForValue.build());
+          onChanged();
+        } else {
+          claimsRecordsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claims_records is a list of claim records with the corresponding airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims_records = 2 [json_name = "claimsRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClaimsRecords(
+          int index, com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.Builder builderForValue) {
+        if (claimsRecordsBuilder_ == null) {
+          ensureClaimsRecordsIsMutable();
+          claimsRecords_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          claimsRecordsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claims_records is a list of claim records with the corresponding airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims_records = 2 [json_name = "claimsRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllClaimsRecords(
+          java.lang.Iterable<? extends com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress> values) {
+        if (claimsRecordsBuilder_ == null) {
+          ensureClaimsRecordsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, claimsRecords_);
+          onChanged();
+        } else {
+          claimsRecordsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claims_records is a list of claim records with the corresponding airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims_records = 2 [json_name = "claimsRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearClaimsRecords() {
+        if (claimsRecordsBuilder_ == null) {
+          claimsRecords_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          claimsRecordsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claims_records is a list of claim records with the corresponding airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims_records = 2 [json_name = "claimsRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeClaimsRecords(int index) {
+        if (claimsRecordsBuilder_ == null) {
+          ensureClaimsRecordsIsMutable();
+          claimsRecords_.remove(index);
+          onChanged();
+        } else {
+          claimsRecordsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claims_records is a list of claim records with the corresponding airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims_records = 2 [json_name = "claimsRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.Builder getClaimsRecordsBuilder(
+          int index) {
+        return getClaimsRecordsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * claims_records is a list of claim records with the corresponding airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims_records = 2 [json_name = "claimsRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddressOrBuilder getClaimsRecordsOrBuilder(
+          int index) {
+        if (claimsRecordsBuilder_ == null) {
+          return claimsRecords_.get(index);  } else {
+          return claimsRecordsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * claims_records is a list of claim records with the corresponding airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims_records = 2 [json_name = "claimsRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddressOrBuilder> 
+           getClaimsRecordsOrBuilderList() {
+        if (claimsRecordsBuilder_ != null) {
+          return claimsRecordsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(claimsRecords_);
+        }
+      }
+      /**
+       * <pre>
+       * claims_records is a list of claim records with the corresponding airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims_records = 2 [json_name = "claimsRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.Builder addClaimsRecordsBuilder() {
+        return getClaimsRecordsFieldBuilder().addBuilder(
+            com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * claims_records is a list of claim records with the corresponding airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims_records = 2 [json_name = "claimsRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.Builder addClaimsRecordsBuilder(
+          int index) {
+        return getClaimsRecordsFieldBuilder().addBuilder(
+            index, com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * claims_records is a list of claim records with the corresponding airdrop recipient
+       * </pre>
+       *
+       * <code>repeated .evmos.claims.v1.ClaimsRecordAddress claims_records = 2 [json_name = "claimsRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.Builder> 
+           getClaimsRecordsBuilderList() {
+        return getClaimsRecordsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress, com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.Builder, com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddressOrBuilder> 
+          getClaimsRecordsFieldBuilder() {
+        if (claimsRecordsBuilder_ == null) {
+          claimsRecordsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress, com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.Builder, com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddressOrBuilder>(
+                  claimsRecords_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          claimsRecords_ = null;
+        }
+        return claimsRecordsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.claims.v1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.claims.v1.GenesisState)
+    private static final com.evmos.claims.v1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.claims.v1.GenesisProto.GenesisState();
+    }
+
+    public static com.evmos.claims.v1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.claims.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.claims.v1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * enable_claims is the parameter to enable the claiming process
+     * </pre>
+     *
+     * <code>bool enable_claims = 1 [json_name = "enableClaims"];</code>
+     * @return The enableClaims.
+     */
+    boolean getEnableClaims();
+
+    /**
+     * <pre>
+     * airdrop_start_time defines the timestamp of the airdrop start
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp airdrop_start_time = 2 [json_name = "airdropStartTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the airdropStartTime field is set.
+     */
+    boolean hasAirdropStartTime();
+    /**
+     * <pre>
+     * airdrop_start_time defines the timestamp of the airdrop start
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp airdrop_start_time = 2 [json_name = "airdropStartTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The airdropStartTime.
+     */
+    com.google.protobuf.Timestamp getAirdropStartTime();
+    /**
+     * <pre>
+     * airdrop_start_time defines the timestamp of the airdrop start
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp airdrop_start_time = 2 [json_name = "airdropStartTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getAirdropStartTimeOrBuilder();
+
+    /**
+     * <pre>
+     * duration_until_decay of claimable tokens begin
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration_until_decay = 3 [json_name = "durationUntilDecay", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the durationUntilDecay field is set.
+     */
+    boolean hasDurationUntilDecay();
+    /**
+     * <pre>
+     * duration_until_decay of claimable tokens begin
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration_until_decay = 3 [json_name = "durationUntilDecay", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return The durationUntilDecay.
+     */
+    com.google.protobuf.Duration getDurationUntilDecay();
+    /**
+     * <pre>
+     * duration_until_decay of claimable tokens begin
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration_until_decay = 3 [json_name = "durationUntilDecay", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getDurationUntilDecayOrBuilder();
+
+    /**
+     * <pre>
+     * duration_of_decay for token claim decay period
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration_of_decay = 4 [json_name = "durationOfDecay", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the durationOfDecay field is set.
+     */
+    boolean hasDurationOfDecay();
+    /**
+     * <pre>
+     * duration_of_decay for token claim decay period
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration_of_decay = 4 [json_name = "durationOfDecay", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return The durationOfDecay.
+     */
+    com.google.protobuf.Duration getDurationOfDecay();
+    /**
+     * <pre>
+     * duration_of_decay for token claim decay period
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration_of_decay = 4 [json_name = "durationOfDecay", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getDurationOfDecayOrBuilder();
+
+    /**
+     * <pre>
+     * claims_denom is the denomination of the claimable coin
+     * </pre>
+     *
+     * <code>string claims_denom = 5 [json_name = "claimsDenom"];</code>
+     * @return The claimsDenom.
+     */
+    java.lang.String getClaimsDenom();
+    /**
+     * <pre>
+     * claims_denom is the denomination of the claimable coin
+     * </pre>
+     *
+     * <code>string claims_denom = 5 [json_name = "claimsDenom"];</code>
+     * @return The bytes for claimsDenom.
+     */
+    com.google.protobuf.ByteString
+        getClaimsDenomBytes();
+
+    /**
+     * <pre>
+     * authorized_channels is the list of authorized channel identifiers that can perform address
+     * attestations via IBC.
+     * </pre>
+     *
+     * <code>repeated string authorized_channels = 6 [json_name = "authorizedChannels"];</code>
+     * @return A list containing the authorizedChannels.
+     */
+    java.util.List<java.lang.String>
+        getAuthorizedChannelsList();
+    /**
+     * <pre>
+     * authorized_channels is the list of authorized channel identifiers that can perform address
+     * attestations via IBC.
+     * </pre>
+     *
+     * <code>repeated string authorized_channels = 6 [json_name = "authorizedChannels"];</code>
+     * @return The count of authorizedChannels.
+     */
+    int getAuthorizedChannelsCount();
+    /**
+     * <pre>
+     * authorized_channels is the list of authorized channel identifiers that can perform address
+     * attestations via IBC.
+     * </pre>
+     *
+     * <code>repeated string authorized_channels = 6 [json_name = "authorizedChannels"];</code>
+     * @param index The index of the element to return.
+     * @return The authorizedChannels at the given index.
+     */
+    java.lang.String getAuthorizedChannels(int index);
+    /**
+     * <pre>
+     * authorized_channels is the list of authorized channel identifiers that can perform address
+     * attestations via IBC.
+     * </pre>
+     *
+     * <code>repeated string authorized_channels = 6 [json_name = "authorizedChannels"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the authorizedChannels at the given index.
+     */
+    com.google.protobuf.ByteString
+        getAuthorizedChannelsBytes(int index);
+
+    /**
+     * <pre>
+     * evm_channels is the list of channel identifiers from EVM compatible chains
+     * </pre>
+     *
+     * <code>repeated string evm_channels = 7 [json_name = "evmChannels", (.gogoproto.customname) = "EVMChannels"];</code>
+     * @return A list containing the evmChannels.
+     */
+    java.util.List<java.lang.String>
+        getEvmChannelsList();
+    /**
+     * <pre>
+     * evm_channels is the list of channel identifiers from EVM compatible chains
+     * </pre>
+     *
+     * <code>repeated string evm_channels = 7 [json_name = "evmChannels", (.gogoproto.customname) = "EVMChannels"];</code>
+     * @return The count of evmChannels.
+     */
+    int getEvmChannelsCount();
+    /**
+     * <pre>
+     * evm_channels is the list of channel identifiers from EVM compatible chains
+     * </pre>
+     *
+     * <code>repeated string evm_channels = 7 [json_name = "evmChannels", (.gogoproto.customname) = "EVMChannels"];</code>
+     * @param index The index of the element to return.
+     * @return The evmChannels at the given index.
+     */
+    java.lang.String getEvmChannels(int index);
+    /**
+     * <pre>
+     * evm_channels is the list of channel identifiers from EVM compatible chains
+     * </pre>
+     *
+     * <code>repeated string evm_channels = 7 [json_name = "evmChannels", (.gogoproto.customname) = "EVMChannels"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the evmChannels at the given index.
+     */
+    com.google.protobuf.ByteString
+        getEvmChannelsBytes(int index);
+  }
+  /**
+   * <pre>
+   * Params defines the claims module's parameters.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.claims.v1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.claims.v1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      claimsDenom_ = "";
+      authorizedChannels_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      evmChannels_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.claims.v1.GenesisProto.internal_static_evmos_claims_v1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.claims.v1.GenesisProto.internal_static_evmos_claims_v1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.claims.v1.GenesisProto.Params.class, com.evmos.claims.v1.GenesisProto.Params.Builder.class);
+    }
+
+    public static final int ENABLE_CLAIMS_FIELD_NUMBER = 1;
+    private boolean enableClaims_ = false;
+    /**
+     * <pre>
+     * enable_claims is the parameter to enable the claiming process
+     * </pre>
+     *
+     * <code>bool enable_claims = 1 [json_name = "enableClaims"];</code>
+     * @return The enableClaims.
+     */
+    @java.lang.Override
+    public boolean getEnableClaims() {
+      return enableClaims_;
+    }
+
+    public static final int AIRDROP_START_TIME_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp airdropStartTime_;
+    /**
+     * <pre>
+     * airdrop_start_time defines the timestamp of the airdrop start
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp airdrop_start_time = 2 [json_name = "airdropStartTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the airdropStartTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasAirdropStartTime() {
+      return airdropStartTime_ != null;
+    }
+    /**
+     * <pre>
+     * airdrop_start_time defines the timestamp of the airdrop start
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp airdrop_start_time = 2 [json_name = "airdropStartTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The airdropStartTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getAirdropStartTime() {
+      return airdropStartTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : airdropStartTime_;
+    }
+    /**
+     * <pre>
+     * airdrop_start_time defines the timestamp of the airdrop start
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp airdrop_start_time = 2 [json_name = "airdropStartTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getAirdropStartTimeOrBuilder() {
+      return airdropStartTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : airdropStartTime_;
+    }
+
+    public static final int DURATION_UNTIL_DECAY_FIELD_NUMBER = 3;
+    private com.google.protobuf.Duration durationUntilDecay_;
+    /**
+     * <pre>
+     * duration_until_decay of claimable tokens begin
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration_until_decay = 3 [json_name = "durationUntilDecay", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the durationUntilDecay field is set.
+     */
+    @java.lang.Override
+    public boolean hasDurationUntilDecay() {
+      return durationUntilDecay_ != null;
+    }
+    /**
+     * <pre>
+     * duration_until_decay of claimable tokens begin
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration_until_decay = 3 [json_name = "durationUntilDecay", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return The durationUntilDecay.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getDurationUntilDecay() {
+      return durationUntilDecay_ == null ? com.google.protobuf.Duration.getDefaultInstance() : durationUntilDecay_;
+    }
+    /**
+     * <pre>
+     * duration_until_decay of claimable tokens begin
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration_until_decay = 3 [json_name = "durationUntilDecay", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getDurationUntilDecayOrBuilder() {
+      return durationUntilDecay_ == null ? com.google.protobuf.Duration.getDefaultInstance() : durationUntilDecay_;
+    }
+
+    public static final int DURATION_OF_DECAY_FIELD_NUMBER = 4;
+    private com.google.protobuf.Duration durationOfDecay_;
+    /**
+     * <pre>
+     * duration_of_decay for token claim decay period
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration_of_decay = 4 [json_name = "durationOfDecay", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the durationOfDecay field is set.
+     */
+    @java.lang.Override
+    public boolean hasDurationOfDecay() {
+      return durationOfDecay_ != null;
+    }
+    /**
+     * <pre>
+     * duration_of_decay for token claim decay period
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration_of_decay = 4 [json_name = "durationOfDecay", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return The durationOfDecay.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getDurationOfDecay() {
+      return durationOfDecay_ == null ? com.google.protobuf.Duration.getDefaultInstance() : durationOfDecay_;
+    }
+    /**
+     * <pre>
+     * duration_of_decay for token claim decay period
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration_of_decay = 4 [json_name = "durationOfDecay", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getDurationOfDecayOrBuilder() {
+      return durationOfDecay_ == null ? com.google.protobuf.Duration.getDefaultInstance() : durationOfDecay_;
+    }
+
+    public static final int CLAIMS_DENOM_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object claimsDenom_ = "";
+    /**
+     * <pre>
+     * claims_denom is the denomination of the claimable coin
+     * </pre>
+     *
+     * <code>string claims_denom = 5 [json_name = "claimsDenom"];</code>
+     * @return The claimsDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getClaimsDenom() {
+      java.lang.Object ref = claimsDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        claimsDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * claims_denom is the denomination of the claimable coin
+     * </pre>
+     *
+     * <code>string claims_denom = 5 [json_name = "claimsDenom"];</code>
+     * @return The bytes for claimsDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClaimsDenomBytes() {
+      java.lang.Object ref = claimsDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        claimsDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AUTHORIZED_CHANNELS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList authorizedChannels_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * authorized_channels is the list of authorized channel identifiers that can perform address
+     * attestations via IBC.
+     * </pre>
+     *
+     * <code>repeated string authorized_channels = 6 [json_name = "authorizedChannels"];</code>
+     * @return A list containing the authorizedChannels.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getAuthorizedChannelsList() {
+      return authorizedChannels_;
+    }
+    /**
+     * <pre>
+     * authorized_channels is the list of authorized channel identifiers that can perform address
+     * attestations via IBC.
+     * </pre>
+     *
+     * <code>repeated string authorized_channels = 6 [json_name = "authorizedChannels"];</code>
+     * @return The count of authorizedChannels.
+     */
+    public int getAuthorizedChannelsCount() {
+      return authorizedChannels_.size();
+    }
+    /**
+     * <pre>
+     * authorized_channels is the list of authorized channel identifiers that can perform address
+     * attestations via IBC.
+     * </pre>
+     *
+     * <code>repeated string authorized_channels = 6 [json_name = "authorizedChannels"];</code>
+     * @param index The index of the element to return.
+     * @return The authorizedChannels at the given index.
+     */
+    public java.lang.String getAuthorizedChannels(int index) {
+      return authorizedChannels_.get(index);
+    }
+    /**
+     * <pre>
+     * authorized_channels is the list of authorized channel identifiers that can perform address
+     * attestations via IBC.
+     * </pre>
+     *
+     * <code>repeated string authorized_channels = 6 [json_name = "authorizedChannels"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the authorizedChannels at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getAuthorizedChannelsBytes(int index) {
+      return authorizedChannels_.getByteString(index);
+    }
+
+    public static final int EVM_CHANNELS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList evmChannels_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * evm_channels is the list of channel identifiers from EVM compatible chains
+     * </pre>
+     *
+     * <code>repeated string evm_channels = 7 [json_name = "evmChannels", (.gogoproto.customname) = "EVMChannels"];</code>
+     * @return A list containing the evmChannels.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getEvmChannelsList() {
+      return evmChannels_;
+    }
+    /**
+     * <pre>
+     * evm_channels is the list of channel identifiers from EVM compatible chains
+     * </pre>
+     *
+     * <code>repeated string evm_channels = 7 [json_name = "evmChannels", (.gogoproto.customname) = "EVMChannels"];</code>
+     * @return The count of evmChannels.
+     */
+    public int getEvmChannelsCount() {
+      return evmChannels_.size();
+    }
+    /**
+     * <pre>
+     * evm_channels is the list of channel identifiers from EVM compatible chains
+     * </pre>
+     *
+     * <code>repeated string evm_channels = 7 [json_name = "evmChannels", (.gogoproto.customname) = "EVMChannels"];</code>
+     * @param index The index of the element to return.
+     * @return The evmChannels at the given index.
+     */
+    public java.lang.String getEvmChannels(int index) {
+      return evmChannels_.get(index);
+    }
+    /**
+     * <pre>
+     * evm_channels is the list of channel identifiers from EVM compatible chains
+     * </pre>
+     *
+     * <code>repeated string evm_channels = 7 [json_name = "evmChannels", (.gogoproto.customname) = "EVMChannels"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the evmChannels at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getEvmChannelsBytes(int index) {
+      return evmChannels_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (enableClaims_ != false) {
+        output.writeBool(1, enableClaims_);
+      }
+      if (airdropStartTime_ != null) {
+        output.writeMessage(2, getAirdropStartTime());
+      }
+      if (durationUntilDecay_ != null) {
+        output.writeMessage(3, getDurationUntilDecay());
+      }
+      if (durationOfDecay_ != null) {
+        output.writeMessage(4, getDurationOfDecay());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(claimsDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, claimsDenom_);
+      }
+      for (int i = 0; i < authorizedChannels_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, authorizedChannels_.getRaw(i));
+      }
+      for (int i = 0; i < evmChannels_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, evmChannels_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (enableClaims_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, enableClaims_);
+      }
+      if (airdropStartTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getAirdropStartTime());
+      }
+      if (durationUntilDecay_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getDurationUntilDecay());
+      }
+      if (durationOfDecay_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getDurationOfDecay());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(claimsDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, claimsDenom_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < authorizedChannels_.size(); i++) {
+          dataSize += computeStringSizeNoTag(authorizedChannels_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getAuthorizedChannelsList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < evmChannels_.size(); i++) {
+          dataSize += computeStringSizeNoTag(evmChannels_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getEvmChannelsList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.claims.v1.GenesisProto.Params)) {
+        return super.equals(obj);
+      }
+      com.evmos.claims.v1.GenesisProto.Params other = (com.evmos.claims.v1.GenesisProto.Params) obj;
+
+      if (getEnableClaims()
+          != other.getEnableClaims()) return false;
+      if (hasAirdropStartTime() != other.hasAirdropStartTime()) return false;
+      if (hasAirdropStartTime()) {
+        if (!getAirdropStartTime()
+            .equals(other.getAirdropStartTime())) return false;
+      }
+      if (hasDurationUntilDecay() != other.hasDurationUntilDecay()) return false;
+      if (hasDurationUntilDecay()) {
+        if (!getDurationUntilDecay()
+            .equals(other.getDurationUntilDecay())) return false;
+      }
+      if (hasDurationOfDecay() != other.hasDurationOfDecay()) return false;
+      if (hasDurationOfDecay()) {
+        if (!getDurationOfDecay()
+            .equals(other.getDurationOfDecay())) return false;
+      }
+      if (!getClaimsDenom()
+          .equals(other.getClaimsDenom())) return false;
+      if (!getAuthorizedChannelsList()
+          .equals(other.getAuthorizedChannelsList())) return false;
+      if (!getEvmChannelsList()
+          .equals(other.getEvmChannelsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENABLE_CLAIMS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnableClaims());
+      if (hasAirdropStartTime()) {
+        hash = (37 * hash) + AIRDROP_START_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getAirdropStartTime().hashCode();
+      }
+      if (hasDurationUntilDecay()) {
+        hash = (37 * hash) + DURATION_UNTIL_DECAY_FIELD_NUMBER;
+        hash = (53 * hash) + getDurationUntilDecay().hashCode();
+      }
+      if (hasDurationOfDecay()) {
+        hash = (37 * hash) + DURATION_OF_DECAY_FIELD_NUMBER;
+        hash = (53 * hash) + getDurationOfDecay().hashCode();
+      }
+      hash = (37 * hash) + CLAIMS_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getClaimsDenom().hashCode();
+      if (getAuthorizedChannelsCount() > 0) {
+        hash = (37 * hash) + AUTHORIZED_CHANNELS_FIELD_NUMBER;
+        hash = (53 * hash) + getAuthorizedChannelsList().hashCode();
+      }
+      if (getEvmChannelsCount() > 0) {
+        hash = (37 * hash) + EVM_CHANNELS_FIELD_NUMBER;
+        hash = (53 * hash) + getEvmChannelsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.claims.v1.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.GenesisProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.GenesisProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.GenesisProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.claims.v1.GenesisProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.claims.v1.GenesisProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.claims.v1.GenesisProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.claims.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.claims.v1.GenesisProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params defines the claims module's parameters.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.claims.v1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.claims.v1.Params)
+        com.evmos.claims.v1.GenesisProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.claims.v1.GenesisProto.internal_static_evmos_claims_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.claims.v1.GenesisProto.internal_static_evmos_claims_v1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.claims.v1.GenesisProto.Params.class, com.evmos.claims.v1.GenesisProto.Params.Builder.class);
+      }
+
+      // Construct using com.evmos.claims.v1.GenesisProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        enableClaims_ = false;
+        airdropStartTime_ = null;
+        if (airdropStartTimeBuilder_ != null) {
+          airdropStartTimeBuilder_.dispose();
+          airdropStartTimeBuilder_ = null;
+        }
+        durationUntilDecay_ = null;
+        if (durationUntilDecayBuilder_ != null) {
+          durationUntilDecayBuilder_.dispose();
+          durationUntilDecayBuilder_ = null;
+        }
+        durationOfDecay_ = null;
+        if (durationOfDecayBuilder_ != null) {
+          durationOfDecayBuilder_.dispose();
+          durationOfDecayBuilder_ = null;
+        }
+        claimsDenom_ = "";
+        authorizedChannels_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        evmChannels_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.claims.v1.GenesisProto.internal_static_evmos_claims_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.GenesisProto.Params getDefaultInstanceForType() {
+        return com.evmos.claims.v1.GenesisProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.GenesisProto.Params build() {
+        com.evmos.claims.v1.GenesisProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.GenesisProto.Params buildPartial() {
+        com.evmos.claims.v1.GenesisProto.Params result = new com.evmos.claims.v1.GenesisProto.Params(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.claims.v1.GenesisProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.enableClaims_ = enableClaims_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.airdropStartTime_ = airdropStartTimeBuilder_ == null
+              ? airdropStartTime_
+              : airdropStartTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.durationUntilDecay_ = durationUntilDecayBuilder_ == null
+              ? durationUntilDecay_
+              : durationUntilDecayBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.durationOfDecay_ = durationOfDecayBuilder_ == null
+              ? durationOfDecay_
+              : durationOfDecayBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.claimsDenom_ = claimsDenom_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          authorizedChannels_.makeImmutable();
+          result.authorizedChannels_ = authorizedChannels_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          evmChannels_.makeImmutable();
+          result.evmChannels_ = evmChannels_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.claims.v1.GenesisProto.Params) {
+          return mergeFrom((com.evmos.claims.v1.GenesisProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.claims.v1.GenesisProto.Params other) {
+        if (other == com.evmos.claims.v1.GenesisProto.Params.getDefaultInstance()) return this;
+        if (other.getEnableClaims() != false) {
+          setEnableClaims(other.getEnableClaims());
+        }
+        if (other.hasAirdropStartTime()) {
+          mergeAirdropStartTime(other.getAirdropStartTime());
+        }
+        if (other.hasDurationUntilDecay()) {
+          mergeDurationUntilDecay(other.getDurationUntilDecay());
+        }
+        if (other.hasDurationOfDecay()) {
+          mergeDurationOfDecay(other.getDurationOfDecay());
+        }
+        if (!other.getClaimsDenom().isEmpty()) {
+          claimsDenom_ = other.claimsDenom_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.authorizedChannels_.isEmpty()) {
+          if (authorizedChannels_.isEmpty()) {
+            authorizedChannels_ = other.authorizedChannels_;
+            bitField0_ |= 0x00000020;
+          } else {
+            ensureAuthorizedChannelsIsMutable();
+            authorizedChannels_.addAll(other.authorizedChannels_);
+          }
+          onChanged();
+        }
+        if (!other.evmChannels_.isEmpty()) {
+          if (evmChannels_.isEmpty()) {
+            evmChannels_ = other.evmChannels_;
+            bitField0_ |= 0x00000040;
+          } else {
+            ensureEvmChannelsIsMutable();
+            evmChannels_.addAll(other.evmChannels_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                enableClaims_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getAirdropStartTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getDurationUntilDecayFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getDurationOfDecayFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                claimsDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureAuthorizedChannelsIsMutable();
+                authorizedChannels_.add(s);
+                break;
+              } // case 50
+              case 58: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureEvmChannelsIsMutable();
+                evmChannels_.add(s);
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean enableClaims_ ;
+      /**
+       * <pre>
+       * enable_claims is the parameter to enable the claiming process
+       * </pre>
+       *
+       * <code>bool enable_claims = 1 [json_name = "enableClaims"];</code>
+       * @return The enableClaims.
+       */
+      @java.lang.Override
+      public boolean getEnableClaims() {
+        return enableClaims_;
+      }
+      /**
+       * <pre>
+       * enable_claims is the parameter to enable the claiming process
+       * </pre>
+       *
+       * <code>bool enable_claims = 1 [json_name = "enableClaims"];</code>
+       * @param value The enableClaims to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnableClaims(boolean value) {
+
+        enableClaims_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * enable_claims is the parameter to enable the claiming process
+       * </pre>
+       *
+       * <code>bool enable_claims = 1 [json_name = "enableClaims"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnableClaims() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        enableClaims_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp airdropStartTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> airdropStartTimeBuilder_;
+      /**
+       * <pre>
+       * airdrop_start_time defines the timestamp of the airdrop start
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp airdrop_start_time = 2 [json_name = "airdropStartTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return Whether the airdropStartTime field is set.
+       */
+      public boolean hasAirdropStartTime() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * airdrop_start_time defines the timestamp of the airdrop start
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp airdrop_start_time = 2 [json_name = "airdropStartTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return The airdropStartTime.
+       */
+      public com.google.protobuf.Timestamp getAirdropStartTime() {
+        if (airdropStartTimeBuilder_ == null) {
+          return airdropStartTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : airdropStartTime_;
+        } else {
+          return airdropStartTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * airdrop_start_time defines the timestamp of the airdrop start
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp airdrop_start_time = 2 [json_name = "airdropStartTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setAirdropStartTime(com.google.protobuf.Timestamp value) {
+        if (airdropStartTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          airdropStartTime_ = value;
+        } else {
+          airdropStartTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * airdrop_start_time defines the timestamp of the airdrop start
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp airdrop_start_time = 2 [json_name = "airdropStartTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setAirdropStartTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (airdropStartTimeBuilder_ == null) {
+          airdropStartTime_ = builderForValue.build();
+        } else {
+          airdropStartTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * airdrop_start_time defines the timestamp of the airdrop start
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp airdrop_start_time = 2 [json_name = "airdropStartTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeAirdropStartTime(com.google.protobuf.Timestamp value) {
+        if (airdropStartTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            airdropStartTime_ != null &&
+            airdropStartTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getAirdropStartTimeBuilder().mergeFrom(value);
+          } else {
+            airdropStartTime_ = value;
+          }
+        } else {
+          airdropStartTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * airdrop_start_time defines the timestamp of the airdrop start
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp airdrop_start_time = 2 [json_name = "airdropStartTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearAirdropStartTime() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        airdropStartTime_ = null;
+        if (airdropStartTimeBuilder_ != null) {
+          airdropStartTimeBuilder_.dispose();
+          airdropStartTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * airdrop_start_time defines the timestamp of the airdrop start
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp airdrop_start_time = 2 [json_name = "airdropStartTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getAirdropStartTimeBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getAirdropStartTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * airdrop_start_time defines the timestamp of the airdrop start
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp airdrop_start_time = 2 [json_name = "airdropStartTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getAirdropStartTimeOrBuilder() {
+        if (airdropStartTimeBuilder_ != null) {
+          return airdropStartTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return airdropStartTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : airdropStartTime_;
+        }
+      }
+      /**
+       * <pre>
+       * airdrop_start_time defines the timestamp of the airdrop start
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp airdrop_start_time = 2 [json_name = "airdropStartTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getAirdropStartTimeFieldBuilder() {
+        if (airdropStartTimeBuilder_ == null) {
+          airdropStartTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getAirdropStartTime(),
+                  getParentForChildren(),
+                  isClean());
+          airdropStartTime_ = null;
+        }
+        return airdropStartTimeBuilder_;
+      }
+
+      private com.google.protobuf.Duration durationUntilDecay_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> durationUntilDecayBuilder_;
+      /**
+       * <pre>
+       * duration_until_decay of claimable tokens begin
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration_until_decay = 3 [json_name = "durationUntilDecay", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       * @return Whether the durationUntilDecay field is set.
+       */
+      public boolean hasDurationUntilDecay() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * duration_until_decay of claimable tokens begin
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration_until_decay = 3 [json_name = "durationUntilDecay", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       * @return The durationUntilDecay.
+       */
+      public com.google.protobuf.Duration getDurationUntilDecay() {
+        if (durationUntilDecayBuilder_ == null) {
+          return durationUntilDecay_ == null ? com.google.protobuf.Duration.getDefaultInstance() : durationUntilDecay_;
+        } else {
+          return durationUntilDecayBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * duration_until_decay of claimable tokens begin
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration_until_decay = 3 [json_name = "durationUntilDecay", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setDurationUntilDecay(com.google.protobuf.Duration value) {
+        if (durationUntilDecayBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          durationUntilDecay_ = value;
+        } else {
+          durationUntilDecayBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * duration_until_decay of claimable tokens begin
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration_until_decay = 3 [json_name = "durationUntilDecay", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setDurationUntilDecay(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (durationUntilDecayBuilder_ == null) {
+          durationUntilDecay_ = builderForValue.build();
+        } else {
+          durationUntilDecayBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * duration_until_decay of claimable tokens begin
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration_until_decay = 3 [json_name = "durationUntilDecay", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeDurationUntilDecay(com.google.protobuf.Duration value) {
+        if (durationUntilDecayBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            durationUntilDecay_ != null &&
+            durationUntilDecay_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getDurationUntilDecayBuilder().mergeFrom(value);
+          } else {
+            durationUntilDecay_ = value;
+          }
+        } else {
+          durationUntilDecayBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * duration_until_decay of claimable tokens begin
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration_until_decay = 3 [json_name = "durationUntilDecay", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearDurationUntilDecay() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        durationUntilDecay_ = null;
+        if (durationUntilDecayBuilder_ != null) {
+          durationUntilDecayBuilder_.dispose();
+          durationUntilDecayBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * duration_until_decay of claimable tokens begin
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration_until_decay = 3 [json_name = "durationUntilDecay", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getDurationUntilDecayBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getDurationUntilDecayFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * duration_until_decay of claimable tokens begin
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration_until_decay = 3 [json_name = "durationUntilDecay", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getDurationUntilDecayOrBuilder() {
+        if (durationUntilDecayBuilder_ != null) {
+          return durationUntilDecayBuilder_.getMessageOrBuilder();
+        } else {
+          return durationUntilDecay_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : durationUntilDecay_;
+        }
+      }
+      /**
+       * <pre>
+       * duration_until_decay of claimable tokens begin
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration_until_decay = 3 [json_name = "durationUntilDecay", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getDurationUntilDecayFieldBuilder() {
+        if (durationUntilDecayBuilder_ == null) {
+          durationUntilDecayBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getDurationUntilDecay(),
+                  getParentForChildren(),
+                  isClean());
+          durationUntilDecay_ = null;
+        }
+        return durationUntilDecayBuilder_;
+      }
+
+      private com.google.protobuf.Duration durationOfDecay_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> durationOfDecayBuilder_;
+      /**
+       * <pre>
+       * duration_of_decay for token claim decay period
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration_of_decay = 4 [json_name = "durationOfDecay", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       * @return Whether the durationOfDecay field is set.
+       */
+      public boolean hasDurationOfDecay() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * duration_of_decay for token claim decay period
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration_of_decay = 4 [json_name = "durationOfDecay", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       * @return The durationOfDecay.
+       */
+      public com.google.protobuf.Duration getDurationOfDecay() {
+        if (durationOfDecayBuilder_ == null) {
+          return durationOfDecay_ == null ? com.google.protobuf.Duration.getDefaultInstance() : durationOfDecay_;
+        } else {
+          return durationOfDecayBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * duration_of_decay for token claim decay period
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration_of_decay = 4 [json_name = "durationOfDecay", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setDurationOfDecay(com.google.protobuf.Duration value) {
+        if (durationOfDecayBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          durationOfDecay_ = value;
+        } else {
+          durationOfDecayBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * duration_of_decay for token claim decay period
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration_of_decay = 4 [json_name = "durationOfDecay", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setDurationOfDecay(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (durationOfDecayBuilder_ == null) {
+          durationOfDecay_ = builderForValue.build();
+        } else {
+          durationOfDecayBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * duration_of_decay for token claim decay period
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration_of_decay = 4 [json_name = "durationOfDecay", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeDurationOfDecay(com.google.protobuf.Duration value) {
+        if (durationOfDecayBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            durationOfDecay_ != null &&
+            durationOfDecay_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getDurationOfDecayBuilder().mergeFrom(value);
+          } else {
+            durationOfDecay_ = value;
+          }
+        } else {
+          durationOfDecayBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * duration_of_decay for token claim decay period
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration_of_decay = 4 [json_name = "durationOfDecay", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearDurationOfDecay() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        durationOfDecay_ = null;
+        if (durationOfDecayBuilder_ != null) {
+          durationOfDecayBuilder_.dispose();
+          durationOfDecayBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * duration_of_decay for token claim decay period
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration_of_decay = 4 [json_name = "durationOfDecay", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getDurationOfDecayBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getDurationOfDecayFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * duration_of_decay for token claim decay period
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration_of_decay = 4 [json_name = "durationOfDecay", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getDurationOfDecayOrBuilder() {
+        if (durationOfDecayBuilder_ != null) {
+          return durationOfDecayBuilder_.getMessageOrBuilder();
+        } else {
+          return durationOfDecay_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : durationOfDecay_;
+        }
+      }
+      /**
+       * <pre>
+       * duration_of_decay for token claim decay period
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration_of_decay = 4 [json_name = "durationOfDecay", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getDurationOfDecayFieldBuilder() {
+        if (durationOfDecayBuilder_ == null) {
+          durationOfDecayBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getDurationOfDecay(),
+                  getParentForChildren(),
+                  isClean());
+          durationOfDecay_ = null;
+        }
+        return durationOfDecayBuilder_;
+      }
+
+      private java.lang.Object claimsDenom_ = "";
+      /**
+       * <pre>
+       * claims_denom is the denomination of the claimable coin
+       * </pre>
+       *
+       * <code>string claims_denom = 5 [json_name = "claimsDenom"];</code>
+       * @return The claimsDenom.
+       */
+      public java.lang.String getClaimsDenom() {
+        java.lang.Object ref = claimsDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          claimsDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * claims_denom is the denomination of the claimable coin
+       * </pre>
+       *
+       * <code>string claims_denom = 5 [json_name = "claimsDenom"];</code>
+       * @return The bytes for claimsDenom.
+       */
+      public com.google.protobuf.ByteString
+          getClaimsDenomBytes() {
+        java.lang.Object ref = claimsDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          claimsDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * claims_denom is the denomination of the claimable coin
+       * </pre>
+       *
+       * <code>string claims_denom = 5 [json_name = "claimsDenom"];</code>
+       * @param value The claimsDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimsDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        claimsDenom_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * claims_denom is the denomination of the claimable coin
+       * </pre>
+       *
+       * <code>string claims_denom = 5 [json_name = "claimsDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClaimsDenom() {
+        claimsDenom_ = getDefaultInstance().getClaimsDenom();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * claims_denom is the denomination of the claimable coin
+       * </pre>
+       *
+       * <code>string claims_denom = 5 [json_name = "claimsDenom"];</code>
+       * @param value The bytes for claimsDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimsDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        claimsDenom_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList authorizedChannels_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureAuthorizedChannelsIsMutable() {
+        if (!authorizedChannels_.isModifiable()) {
+          authorizedChannels_ = new com.google.protobuf.LazyStringArrayList(authorizedChannels_);
+        }
+        bitField0_ |= 0x00000020;
+      }
+      /**
+       * <pre>
+       * authorized_channels is the list of authorized channel identifiers that can perform address
+       * attestations via IBC.
+       * </pre>
+       *
+       * <code>repeated string authorized_channels = 6 [json_name = "authorizedChannels"];</code>
+       * @return A list containing the authorizedChannels.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getAuthorizedChannelsList() {
+        authorizedChannels_.makeImmutable();
+        return authorizedChannels_;
+      }
+      /**
+       * <pre>
+       * authorized_channels is the list of authorized channel identifiers that can perform address
+       * attestations via IBC.
+       * </pre>
+       *
+       * <code>repeated string authorized_channels = 6 [json_name = "authorizedChannels"];</code>
+       * @return The count of authorizedChannels.
+       */
+      public int getAuthorizedChannelsCount() {
+        return authorizedChannels_.size();
+      }
+      /**
+       * <pre>
+       * authorized_channels is the list of authorized channel identifiers that can perform address
+       * attestations via IBC.
+       * </pre>
+       *
+       * <code>repeated string authorized_channels = 6 [json_name = "authorizedChannels"];</code>
+       * @param index The index of the element to return.
+       * @return The authorizedChannels at the given index.
+       */
+      public java.lang.String getAuthorizedChannels(int index) {
+        return authorizedChannels_.get(index);
+      }
+      /**
+       * <pre>
+       * authorized_channels is the list of authorized channel identifiers that can perform address
+       * attestations via IBC.
+       * </pre>
+       *
+       * <code>repeated string authorized_channels = 6 [json_name = "authorizedChannels"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the authorizedChannels at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getAuthorizedChannelsBytes(int index) {
+        return authorizedChannels_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * authorized_channels is the list of authorized channel identifiers that can perform address
+       * attestations via IBC.
+       * </pre>
+       *
+       * <code>repeated string authorized_channels = 6 [json_name = "authorizedChannels"];</code>
+       * @param index The index to set the value at.
+       * @param value The authorizedChannels to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthorizedChannels(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureAuthorizedChannelsIsMutable();
+        authorizedChannels_.set(index, value);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authorized_channels is the list of authorized channel identifiers that can perform address
+       * attestations via IBC.
+       * </pre>
+       *
+       * <code>repeated string authorized_channels = 6 [json_name = "authorizedChannels"];</code>
+       * @param value The authorizedChannels to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAuthorizedChannels(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureAuthorizedChannelsIsMutable();
+        authorizedChannels_.add(value);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authorized_channels is the list of authorized channel identifiers that can perform address
+       * attestations via IBC.
+       * </pre>
+       *
+       * <code>repeated string authorized_channels = 6 [json_name = "authorizedChannels"];</code>
+       * @param values The authorizedChannels to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAuthorizedChannels(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureAuthorizedChannelsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, authorizedChannels_);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authorized_channels is the list of authorized channel identifiers that can perform address
+       * attestations via IBC.
+       * </pre>
+       *
+       * <code>repeated string authorized_channels = 6 [json_name = "authorizedChannels"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthorizedChannels() {
+        authorizedChannels_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authorized_channels is the list of authorized channel identifiers that can perform address
+       * attestations via IBC.
+       * </pre>
+       *
+       * <code>repeated string authorized_channels = 6 [json_name = "authorizedChannels"];</code>
+       * @param value The bytes of the authorizedChannels to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAuthorizedChannelsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureAuthorizedChannelsIsMutable();
+        authorizedChannels_.add(value);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList evmChannels_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureEvmChannelsIsMutable() {
+        if (!evmChannels_.isModifiable()) {
+          evmChannels_ = new com.google.protobuf.LazyStringArrayList(evmChannels_);
+        }
+        bitField0_ |= 0x00000040;
+      }
+      /**
+       * <pre>
+       * evm_channels is the list of channel identifiers from EVM compatible chains
+       * </pre>
+       *
+       * <code>repeated string evm_channels = 7 [json_name = "evmChannels", (.gogoproto.customname) = "EVMChannels"];</code>
+       * @return A list containing the evmChannels.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getEvmChannelsList() {
+        evmChannels_.makeImmutable();
+        return evmChannels_;
+      }
+      /**
+       * <pre>
+       * evm_channels is the list of channel identifiers from EVM compatible chains
+       * </pre>
+       *
+       * <code>repeated string evm_channels = 7 [json_name = "evmChannels", (.gogoproto.customname) = "EVMChannels"];</code>
+       * @return The count of evmChannels.
+       */
+      public int getEvmChannelsCount() {
+        return evmChannels_.size();
+      }
+      /**
+       * <pre>
+       * evm_channels is the list of channel identifiers from EVM compatible chains
+       * </pre>
+       *
+       * <code>repeated string evm_channels = 7 [json_name = "evmChannels", (.gogoproto.customname) = "EVMChannels"];</code>
+       * @param index The index of the element to return.
+       * @return The evmChannels at the given index.
+       */
+      public java.lang.String getEvmChannels(int index) {
+        return evmChannels_.get(index);
+      }
+      /**
+       * <pre>
+       * evm_channels is the list of channel identifiers from EVM compatible chains
+       * </pre>
+       *
+       * <code>repeated string evm_channels = 7 [json_name = "evmChannels", (.gogoproto.customname) = "EVMChannels"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the evmChannels at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getEvmChannelsBytes(int index) {
+        return evmChannels_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * evm_channels is the list of channel identifiers from EVM compatible chains
+       * </pre>
+       *
+       * <code>repeated string evm_channels = 7 [json_name = "evmChannels", (.gogoproto.customname) = "EVMChannels"];</code>
+       * @param index The index to set the value at.
+       * @param value The evmChannels to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEvmChannels(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureEvmChannelsIsMutable();
+        evmChannels_.set(index, value);
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * evm_channels is the list of channel identifiers from EVM compatible chains
+       * </pre>
+       *
+       * <code>repeated string evm_channels = 7 [json_name = "evmChannels", (.gogoproto.customname) = "EVMChannels"];</code>
+       * @param value The evmChannels to add.
+       * @return This builder for chaining.
+       */
+      public Builder addEvmChannels(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureEvmChannelsIsMutable();
+        evmChannels_.add(value);
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * evm_channels is the list of channel identifiers from EVM compatible chains
+       * </pre>
+       *
+       * <code>repeated string evm_channels = 7 [json_name = "evmChannels", (.gogoproto.customname) = "EVMChannels"];</code>
+       * @param values The evmChannels to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllEvmChannels(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureEvmChannelsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, evmChannels_);
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * evm_channels is the list of channel identifiers from EVM compatible chains
+       * </pre>
+       *
+       * <code>repeated string evm_channels = 7 [json_name = "evmChannels", (.gogoproto.customname) = "EVMChannels"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEvmChannels() {
+        evmChannels_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000040);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * evm_channels is the list of channel identifiers from EVM compatible chains
+       * </pre>
+       *
+       * <code>repeated string evm_channels = 7 [json_name = "evmChannels", (.gogoproto.customname) = "EVMChannels"];</code>
+       * @param value The bytes of the evmChannels to add.
+       * @return This builder for chaining.
+       */
+      public Builder addEvmChannelsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureEvmChannelsIsMutable();
+        evmChannels_.add(value);
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.claims.v1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.claims.v1.Params)
+    private static final com.evmos.claims.v1.GenesisProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.claims.v1.GenesisProto.Params();
+    }
+
+    public static com.evmos.claims.v1.GenesisProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.claims.v1.GenesisProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_claims_v1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_claims_v1_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_claims_v1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_claims_v1_Params_fieldAccessorTable;
 
@@ -51,12 +3247,12 @@ public final class GenesisProto {
       "\337\037\001R\017durationOfDecay\022!\n\014claims_denom\030\005 \001" +
       "(\tR\013claimsDenom\022/\n\023authorized_channels\030\006" +
       " \003(\tR\022authorizedChannels\0222\n\014evm_channels" +
-      "\030\007 \003(\tB\017\342\336\037\013EVMChannelsR\013evmChannelsB\254\001\n" +
-      "\023com.evmos.claims.v1B\014GenesisProtoP\001Z)gi" +
-      "thub.com/evmos/evmos/v13/x/claims/types\242" +
-      "\002\003ECX\252\002\017Evmos.Claims.V1\312\002\017Evmos\\Claims\\V" +
-      "1\342\002\033Evmos\\Claims\\V1\\GPBMetadata\352\002\021Evmos:" +
-      ":Claims::V1b\006proto3"
+      "\030\007 \003(\tB\017\342\336\037\013EVMChannelsR\013evmChannelsB\252\001\n" +
+      "\023com.evmos.claims.v1B\014GenesisProtoZ)gith" +
+      "ub.com/evmos/evmos/v13/x/claims/types\242\002\003" +
+      "ECX\252\002\017Evmos.Claims.V1\312\002\017Evmos\\Claims\\V1\342" +
+      "\002\033Evmos\\Claims\\V1\\GPBMetadata\352\002\021Evmos::C" +
+      "laims::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

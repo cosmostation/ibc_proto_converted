@@ -34,15 +34,15 @@ public final class ServiceProto {
       "s.transactions.quash.Message\032F.assetmant" +
       "le.modules.identities.transactions.quash" +
       ".TransactionResponse\" \202\323\344\223\002\032\"\030/mantle/id" +
-      "entities/quashB\257\002\n5com.assetmantle.modul" +
+      "entities/quashB\255\002\n5com.assetmantle.modul" +
       "es.identities.transactions.quashB\014Servic" +
-      "eProtoP\001\242\002\005AMITQ\252\0021Assetmantle.Modules.I" +
-      "dentities.Transactions.Quash\312\0021Assetmant" +
-      "le\\Modules\\Identities\\Transactions\\Quash" +
-      "\342\002=Assetmantle\\Modules\\Identities\\Transa" +
-      "ctions\\Quash\\GPBMetadata\352\0025Assetmantle::" +
-      "Modules::Identities::Transactions::Quash" +
-      "b\006proto3"
+      "eProto\242\002\005AMITQ\252\0021Assetmantle.Modules.Ide" +
+      "ntities.Transactions.Quash\312\0021Assetmantle" +
+      "\\Modules\\Identities\\Transactions\\Quash\342\002" +
+      "=Assetmantle\\Modules\\Identities\\Transact" +
+      "ions\\Quash\\GPBMetadata\352\0025Assetmantle::Mo" +
+      "dules::Identities::Transactions::Quashb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

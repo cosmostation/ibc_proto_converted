@@ -14,9 +14,1075 @@ public final class ParamsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.tokenfactory.v1beta1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * DenomCreationFee defines the fee to be charged on the creation of a new
+     * denom. The fee is drawn from the MsgCreateDenom's sender account, and
+     * transferred to the community pool.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin denom_creation_fee = 1 [json_name = "denomCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getDenomCreationFeeList();
+    /**
+     * <pre>
+     * DenomCreationFee defines the fee to be charged on the creation of a new
+     * denom. The fee is drawn from the MsgCreateDenom's sender account, and
+     * transferred to the community pool.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin denom_creation_fee = 1 [json_name = "denomCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getDenomCreationFee(int index);
+    /**
+     * <pre>
+     * DenomCreationFee defines the fee to be charged on the creation of a new
+     * denom. The fee is drawn from the MsgCreateDenom's sender account, and
+     * transferred to the community pool.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin denom_creation_fee = 1 [json_name = "denomCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getDenomCreationFeeCount();
+    /**
+     * <pre>
+     * DenomCreationFee defines the fee to be charged on the creation of a new
+     * denom. The fee is drawn from the MsgCreateDenom's sender account, and
+     * transferred to the community pool.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin denom_creation_fee = 1 [json_name = "denomCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getDenomCreationFeeOrBuilderList();
+    /**
+     * <pre>
+     * DenomCreationFee defines the fee to be charged on the creation of a new
+     * denom. The fee is drawn from the MsgCreateDenom's sender account, and
+     * transferred to the community pool.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin denom_creation_fee = 1 [json_name = "denomCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDenomCreationFeeOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * DenomCreationGasConsume defines the gas cost for creating a new denom.
+     * This is intended as a spam deterrence mechanism.
+     *
+     * See: https://github.com/CosmWasm/token-factory/issues/11
+     * </pre>
+     *
+     * <code>uint64 denom_creation_gas_consume = 2 [json_name = "denomCreationGasConsume", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_gas_consume&#92;""];</code>
+     * @return The denomCreationGasConsume.
+     */
+    long getDenomCreationGasConsume();
+  }
+  /**
+   * <pre>
+   * Params defines the parameters for the tokenfactory module.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.tokenfactory.v1beta1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.tokenfactory.v1beta1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      denomCreationFee_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.tokenfactory.v1beta1.ParamsProto.internal_static_osmosis_tokenfactory_v1beta1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.tokenfactory.v1beta1.ParamsProto.internal_static_osmosis_tokenfactory_v1beta1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.tokenfactory.v1beta1.ParamsProto.Params.class, com.osmosis.tokenfactory.v1beta1.ParamsProto.Params.Builder.class);
+    }
+
+    public static final int DENOM_CREATION_FEE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> denomCreationFee_;
+    /**
+     * <pre>
+     * DenomCreationFee defines the fee to be charged on the creation of a new
+     * denom. The fee is drawn from the MsgCreateDenom's sender account, and
+     * transferred to the community pool.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin denom_creation_fee = 1 [json_name = "denomCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getDenomCreationFeeList() {
+      return denomCreationFee_;
+    }
+    /**
+     * <pre>
+     * DenomCreationFee defines the fee to be charged on the creation of a new
+     * denom. The fee is drawn from the MsgCreateDenom's sender account, and
+     * transferred to the community pool.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin denom_creation_fee = 1 [json_name = "denomCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getDenomCreationFeeOrBuilderList() {
+      return denomCreationFee_;
+    }
+    /**
+     * <pre>
+     * DenomCreationFee defines the fee to be charged on the creation of a new
+     * denom. The fee is drawn from the MsgCreateDenom's sender account, and
+     * transferred to the community pool.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin denom_creation_fee = 1 [json_name = "denomCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getDenomCreationFeeCount() {
+      return denomCreationFee_.size();
+    }
+    /**
+     * <pre>
+     * DenomCreationFee defines the fee to be charged on the creation of a new
+     * denom. The fee is drawn from the MsgCreateDenom's sender account, and
+     * transferred to the community pool.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin denom_creation_fee = 1 [json_name = "denomCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getDenomCreationFee(int index) {
+      return denomCreationFee_.get(index);
+    }
+    /**
+     * <pre>
+     * DenomCreationFee defines the fee to be charged on the creation of a new
+     * denom. The fee is drawn from the MsgCreateDenom's sender account, and
+     * transferred to the community pool.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin denom_creation_fee = 1 [json_name = "denomCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDenomCreationFeeOrBuilder(
+        int index) {
+      return denomCreationFee_.get(index);
+    }
+
+    public static final int DENOM_CREATION_GAS_CONSUME_FIELD_NUMBER = 2;
+    private long denomCreationGasConsume_ = 0L;
+    /**
+     * <pre>
+     * DenomCreationGasConsume defines the gas cost for creating a new denom.
+     * This is intended as a spam deterrence mechanism.
+     *
+     * See: https://github.com/CosmWasm/token-factory/issues/11
+     * </pre>
+     *
+     * <code>uint64 denom_creation_gas_consume = 2 [json_name = "denomCreationGasConsume", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_gas_consume&#92;""];</code>
+     * @return The denomCreationGasConsume.
+     */
+    @java.lang.Override
+    public long getDenomCreationGasConsume() {
+      return denomCreationGasConsume_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < denomCreationFee_.size(); i++) {
+        output.writeMessage(1, denomCreationFee_.get(i));
+      }
+      if (denomCreationGasConsume_ != 0L) {
+        output.writeUInt64(2, denomCreationGasConsume_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < denomCreationFee_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, denomCreationFee_.get(i));
+      }
+      if (denomCreationGasConsume_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, denomCreationGasConsume_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.tokenfactory.v1beta1.ParamsProto.Params)) {
+        return super.equals(obj);
+      }
+      com.osmosis.tokenfactory.v1beta1.ParamsProto.Params other = (com.osmosis.tokenfactory.v1beta1.ParamsProto.Params) obj;
+
+      if (!getDenomCreationFeeList()
+          .equals(other.getDenomCreationFeeList())) return false;
+      if (getDenomCreationGasConsume()
+          != other.getDenomCreationGasConsume()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getDenomCreationFeeCount() > 0) {
+        hash = (37 * hash) + DENOM_CREATION_FEE_FIELD_NUMBER;
+        hash = (53 * hash) + getDenomCreationFeeList().hashCode();
+      }
+      hash = (37 * hash) + DENOM_CREATION_GAS_CONSUME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDenomCreationGasConsume());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.tokenfactory.v1beta1.ParamsProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.tokenfactory.v1beta1.ParamsProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.tokenfactory.v1beta1.ParamsProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.tokenfactory.v1beta1.ParamsProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.tokenfactory.v1beta1.ParamsProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.tokenfactory.v1beta1.ParamsProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.tokenfactory.v1beta1.ParamsProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.tokenfactory.v1beta1.ParamsProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.tokenfactory.v1beta1.ParamsProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.tokenfactory.v1beta1.ParamsProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.tokenfactory.v1beta1.ParamsProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.tokenfactory.v1beta1.ParamsProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.tokenfactory.v1beta1.ParamsProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params defines the parameters for the tokenfactory module.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.tokenfactory.v1beta1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.tokenfactory.v1beta1.Params)
+        com.osmosis.tokenfactory.v1beta1.ParamsProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.tokenfactory.v1beta1.ParamsProto.internal_static_osmosis_tokenfactory_v1beta1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.tokenfactory.v1beta1.ParamsProto.internal_static_osmosis_tokenfactory_v1beta1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.tokenfactory.v1beta1.ParamsProto.Params.class, com.osmosis.tokenfactory.v1beta1.ParamsProto.Params.Builder.class);
+      }
+
+      // Construct using com.osmosis.tokenfactory.v1beta1.ParamsProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (denomCreationFeeBuilder_ == null) {
+          denomCreationFee_ = java.util.Collections.emptyList();
+        } else {
+          denomCreationFee_ = null;
+          denomCreationFeeBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        denomCreationGasConsume_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.tokenfactory.v1beta1.ParamsProto.internal_static_osmosis_tokenfactory_v1beta1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.tokenfactory.v1beta1.ParamsProto.Params getDefaultInstanceForType() {
+        return com.osmosis.tokenfactory.v1beta1.ParamsProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.tokenfactory.v1beta1.ParamsProto.Params build() {
+        com.osmosis.tokenfactory.v1beta1.ParamsProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.tokenfactory.v1beta1.ParamsProto.Params buildPartial() {
+        com.osmosis.tokenfactory.v1beta1.ParamsProto.Params result = new com.osmosis.tokenfactory.v1beta1.ParamsProto.Params(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.tokenfactory.v1beta1.ParamsProto.Params result) {
+        if (denomCreationFeeBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            denomCreationFee_ = java.util.Collections.unmodifiableList(denomCreationFee_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.denomCreationFee_ = denomCreationFee_;
+        } else {
+          result.denomCreationFee_ = denomCreationFeeBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.tokenfactory.v1beta1.ParamsProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.denomCreationGasConsume_ = denomCreationGasConsume_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.tokenfactory.v1beta1.ParamsProto.Params) {
+          return mergeFrom((com.osmosis.tokenfactory.v1beta1.ParamsProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.tokenfactory.v1beta1.ParamsProto.Params other) {
+        if (other == com.osmosis.tokenfactory.v1beta1.ParamsProto.Params.getDefaultInstance()) return this;
+        if (denomCreationFeeBuilder_ == null) {
+          if (!other.denomCreationFee_.isEmpty()) {
+            if (denomCreationFee_.isEmpty()) {
+              denomCreationFee_ = other.denomCreationFee_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureDenomCreationFeeIsMutable();
+              denomCreationFee_.addAll(other.denomCreationFee_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.denomCreationFee_.isEmpty()) {
+            if (denomCreationFeeBuilder_.isEmpty()) {
+              denomCreationFeeBuilder_.dispose();
+              denomCreationFeeBuilder_ = null;
+              denomCreationFee_ = other.denomCreationFee_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              denomCreationFeeBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDenomCreationFeeFieldBuilder() : null;
+            } else {
+              denomCreationFeeBuilder_.addAllMessages(other.denomCreationFee_);
+            }
+          }
+        }
+        if (other.getDenomCreationGasConsume() != 0L) {
+          setDenomCreationGasConsume(other.getDenomCreationGasConsume());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (denomCreationFeeBuilder_ == null) {
+                  ensureDenomCreationFeeIsMutable();
+                  denomCreationFee_.add(m);
+                } else {
+                  denomCreationFeeBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 16: {
+                denomCreationGasConsume_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> denomCreationFee_ =
+        java.util.Collections.emptyList();
+      private void ensureDenomCreationFeeIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          denomCreationFee_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(denomCreationFee_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> denomCreationFeeBuilder_;
+
+      /**
+       * <pre>
+       * DenomCreationFee defines the fee to be charged on the creation of a new
+       * denom. The fee is drawn from the MsgCreateDenom's sender account, and
+       * transferred to the community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin denom_creation_fee = 1 [json_name = "denomCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getDenomCreationFeeList() {
+        if (denomCreationFeeBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(denomCreationFee_);
+        } else {
+          return denomCreationFeeBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * DenomCreationFee defines the fee to be charged on the creation of a new
+       * denom. The fee is drawn from the MsgCreateDenom's sender account, and
+       * transferred to the community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin denom_creation_fee = 1 [json_name = "denomCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getDenomCreationFeeCount() {
+        if (denomCreationFeeBuilder_ == null) {
+          return denomCreationFee_.size();
+        } else {
+          return denomCreationFeeBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * DenomCreationFee defines the fee to be charged on the creation of a new
+       * denom. The fee is drawn from the MsgCreateDenom's sender account, and
+       * transferred to the community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin denom_creation_fee = 1 [json_name = "denomCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getDenomCreationFee(int index) {
+        if (denomCreationFeeBuilder_ == null) {
+          return denomCreationFee_.get(index);
+        } else {
+          return denomCreationFeeBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * DenomCreationFee defines the fee to be charged on the creation of a new
+       * denom. The fee is drawn from the MsgCreateDenom's sender account, and
+       * transferred to the community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin denom_creation_fee = 1 [json_name = "denomCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setDenomCreationFee(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (denomCreationFeeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDenomCreationFeeIsMutable();
+          denomCreationFee_.set(index, value);
+          onChanged();
+        } else {
+          denomCreationFeeBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * DenomCreationFee defines the fee to be charged on the creation of a new
+       * denom. The fee is drawn from the MsgCreateDenom's sender account, and
+       * transferred to the community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin denom_creation_fee = 1 [json_name = "denomCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setDenomCreationFee(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (denomCreationFeeBuilder_ == null) {
+          ensureDenomCreationFeeIsMutable();
+          denomCreationFee_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          denomCreationFeeBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * DenomCreationFee defines the fee to be charged on the creation of a new
+       * denom. The fee is drawn from the MsgCreateDenom's sender account, and
+       * transferred to the community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin denom_creation_fee = 1 [json_name = "denomCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addDenomCreationFee(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (denomCreationFeeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDenomCreationFeeIsMutable();
+          denomCreationFee_.add(value);
+          onChanged();
+        } else {
+          denomCreationFeeBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * DenomCreationFee defines the fee to be charged on the creation of a new
+       * denom. The fee is drawn from the MsgCreateDenom's sender account, and
+       * transferred to the community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin denom_creation_fee = 1 [json_name = "denomCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addDenomCreationFee(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (denomCreationFeeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDenomCreationFeeIsMutable();
+          denomCreationFee_.add(index, value);
+          onChanged();
+        } else {
+          denomCreationFeeBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * DenomCreationFee defines the fee to be charged on the creation of a new
+       * denom. The fee is drawn from the MsgCreateDenom's sender account, and
+       * transferred to the community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin denom_creation_fee = 1 [json_name = "denomCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addDenomCreationFee(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (denomCreationFeeBuilder_ == null) {
+          ensureDenomCreationFeeIsMutable();
+          denomCreationFee_.add(builderForValue.build());
+          onChanged();
+        } else {
+          denomCreationFeeBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * DenomCreationFee defines the fee to be charged on the creation of a new
+       * denom. The fee is drawn from the MsgCreateDenom's sender account, and
+       * transferred to the community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin denom_creation_fee = 1 [json_name = "denomCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addDenomCreationFee(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (denomCreationFeeBuilder_ == null) {
+          ensureDenomCreationFeeIsMutable();
+          denomCreationFee_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          denomCreationFeeBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * DenomCreationFee defines the fee to be charged on the creation of a new
+       * denom. The fee is drawn from the MsgCreateDenom's sender account, and
+       * transferred to the community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin denom_creation_fee = 1 [json_name = "denomCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllDenomCreationFee(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (denomCreationFeeBuilder_ == null) {
+          ensureDenomCreationFeeIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, denomCreationFee_);
+          onChanged();
+        } else {
+          denomCreationFeeBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * DenomCreationFee defines the fee to be charged on the creation of a new
+       * denom. The fee is drawn from the MsgCreateDenom's sender account, and
+       * transferred to the community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin denom_creation_fee = 1 [json_name = "denomCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearDenomCreationFee() {
+        if (denomCreationFeeBuilder_ == null) {
+          denomCreationFee_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          denomCreationFeeBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * DenomCreationFee defines the fee to be charged on the creation of a new
+       * denom. The fee is drawn from the MsgCreateDenom's sender account, and
+       * transferred to the community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin denom_creation_fee = 1 [json_name = "denomCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeDenomCreationFee(int index) {
+        if (denomCreationFeeBuilder_ == null) {
+          ensureDenomCreationFeeIsMutable();
+          denomCreationFee_.remove(index);
+          onChanged();
+        } else {
+          denomCreationFeeBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * DenomCreationFee defines the fee to be charged on the creation of a new
+       * denom. The fee is drawn from the MsgCreateDenom's sender account, and
+       * transferred to the community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin denom_creation_fee = 1 [json_name = "denomCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getDenomCreationFeeBuilder(
+          int index) {
+        return getDenomCreationFeeFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * DenomCreationFee defines the fee to be charged on the creation of a new
+       * denom. The fee is drawn from the MsgCreateDenom's sender account, and
+       * transferred to the community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin denom_creation_fee = 1 [json_name = "denomCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDenomCreationFeeOrBuilder(
+          int index) {
+        if (denomCreationFeeBuilder_ == null) {
+          return denomCreationFee_.get(index);  } else {
+          return denomCreationFeeBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * DenomCreationFee defines the fee to be charged on the creation of a new
+       * denom. The fee is drawn from the MsgCreateDenom's sender account, and
+       * transferred to the community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin denom_creation_fee = 1 [json_name = "denomCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getDenomCreationFeeOrBuilderList() {
+        if (denomCreationFeeBuilder_ != null) {
+          return denomCreationFeeBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(denomCreationFee_);
+        }
+      }
+      /**
+       * <pre>
+       * DenomCreationFee defines the fee to be charged on the creation of a new
+       * denom. The fee is drawn from the MsgCreateDenom's sender account, and
+       * transferred to the community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin denom_creation_fee = 1 [json_name = "denomCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addDenomCreationFeeBuilder() {
+        return getDenomCreationFeeFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * DenomCreationFee defines the fee to be charged on the creation of a new
+       * denom. The fee is drawn from the MsgCreateDenom's sender account, and
+       * transferred to the community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin denom_creation_fee = 1 [json_name = "denomCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addDenomCreationFeeBuilder(
+          int index) {
+        return getDenomCreationFeeFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * DenomCreationFee defines the fee to be charged on the creation of a new
+       * denom. The fee is drawn from the MsgCreateDenom's sender account, and
+       * transferred to the community pool.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin denom_creation_fee = 1 [json_name = "denomCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getDenomCreationFeeBuilderList() {
+        return getDenomCreationFeeFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getDenomCreationFeeFieldBuilder() {
+        if (denomCreationFeeBuilder_ == null) {
+          denomCreationFeeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  denomCreationFee_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          denomCreationFee_ = null;
+        }
+        return denomCreationFeeBuilder_;
+      }
+
+      private long denomCreationGasConsume_ ;
+      /**
+       * <pre>
+       * DenomCreationGasConsume defines the gas cost for creating a new denom.
+       * This is intended as a spam deterrence mechanism.
+       *
+       * See: https://github.com/CosmWasm/token-factory/issues/11
+       * </pre>
+       *
+       * <code>uint64 denom_creation_gas_consume = 2 [json_name = "denomCreationGasConsume", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_gas_consume&#92;""];</code>
+       * @return The denomCreationGasConsume.
+       */
+      @java.lang.Override
+      public long getDenomCreationGasConsume() {
+        return denomCreationGasConsume_;
+      }
+      /**
+       * <pre>
+       * DenomCreationGasConsume defines the gas cost for creating a new denom.
+       * This is intended as a spam deterrence mechanism.
+       *
+       * See: https://github.com/CosmWasm/token-factory/issues/11
+       * </pre>
+       *
+       * <code>uint64 denom_creation_gas_consume = 2 [json_name = "denomCreationGasConsume", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_gas_consume&#92;""];</code>
+       * @param value The denomCreationGasConsume to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomCreationGasConsume(long value) {
+
+        denomCreationGasConsume_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DenomCreationGasConsume defines the gas cost for creating a new denom.
+       * This is intended as a spam deterrence mechanism.
+       *
+       * See: https://github.com/CosmWasm/token-factory/issues/11
+       * </pre>
+       *
+       * <code>uint64 denom_creation_gas_consume = 2 [json_name = "denomCreationGasConsume", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"denom_creation_gas_consume&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenomCreationGasConsume() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        denomCreationGasConsume_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.tokenfactory.v1beta1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.tokenfactory.v1beta1.Params)
+    private static final com.osmosis.tokenfactory.v1beta1.ParamsProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.tokenfactory.v1beta1.ParamsProto.Params();
+    }
+
+    public static com.osmosis.tokenfactory.v1beta1.ParamsProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.tokenfactory.v1beta1.ParamsProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_tokenfactory_v1beta1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_tokenfactory_v1beta1_Params_fieldAccessorTable;
 
@@ -39,14 +1105,14 @@ public final class ParamsProto {
       ".com/cosmos/cosmos-sdk/types.CoinsR\020deno" +
       "mCreationFee\022f\n\032denom_creation_gas_consu" +
       "me\030\002 \001(\004B)\310\336\037\001\362\336\037!yaml:\"denom_creation_g" +
-      "as_consume\"R\027denomCreationGasConsumeB\373\001\n" +
+      "as_consume\"R\027denomCreationGasConsumeB\371\001\n" +
       " com.osmosis.tokenfactory.v1beta1B\013Param" +
-      "sProtoP\001Z8github.com/osmosis-labs/osmosi" +
-      "s/v15/x/tokenfactory/types\242\002\003OTX\252\002\034Osmos" +
-      "is.Tokenfactory.V1beta1\312\002\034Osmosis\\Tokenf" +
-      "actory\\V1beta1\342\002(Osmosis\\Tokenfactory\\V1" +
-      "beta1\\GPBMetadata\352\002\036Osmosis::Tokenfactor" +
-      "y::V1beta1b\006proto3"
+      "sProtoZ8github.com/osmosis-labs/osmosis/" +
+      "v15/x/tokenfactory/types\242\002\003OTX\252\002\034Osmosis" +
+      ".Tokenfactory.V1beta1\312\002\034Osmosis\\Tokenfac" +
+      "tory\\V1beta1\342\002(Osmosis\\Tokenfactory\\V1be" +
+      "ta1\\GPBMetadata\352\002\036Osmosis::Tokenfactory:" +
+      ":V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,39 +14,6223 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryByIRIRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.data.v1alpha2.QueryByIRIRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * hash is the hash-based identifier for the anchored content.
+     * </pre>
+     *
+     * <code>string iri = 1 [json_name = "iri"];</code>
+     * @return The iri.
+     */
+    java.lang.String getIri();
+    /**
+     * <pre>
+     * hash is the hash-based identifier for the anchored content.
+     * </pre>
+     *
+     * <code>string iri = 1 [json_name = "iri"];</code>
+     * @return The bytes for iri.
+     */
+    com.google.protobuf.ByteString
+        getIriBytes();
+  }
+  /**
+   * <pre>
+   * QueryByContentHashRequest is the Query/ByContentHash request type.
+   * </pre>
+   *
+   * Protobuf type {@code regen.data.v1alpha2.QueryByIRIRequest}
+   */
+  public static final class QueryByIRIRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.data.v1alpha2.QueryByIRIRequest)
+      QueryByIRIRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryByIRIRequest.newBuilder() to construct.
+    private QueryByIRIRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryByIRIRequest() {
+      iri_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryByIRIRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_QueryByIRIRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_QueryByIRIRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest.class, com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest.Builder.class);
+    }
+
+    public static final int IRI_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object iri_ = "";
+    /**
+     * <pre>
+     * hash is the hash-based identifier for the anchored content.
+     * </pre>
+     *
+     * <code>string iri = 1 [json_name = "iri"];</code>
+     * @return The iri.
+     */
+    @java.lang.Override
+    public java.lang.String getIri() {
+      java.lang.Object ref = iri_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        iri_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * hash is the hash-based identifier for the anchored content.
+     * </pre>
+     *
+     * <code>string iri = 1 [json_name = "iri"];</code>
+     * @return The bytes for iri.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIriBytes() {
+      java.lang.Object ref = iri_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        iri_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iri_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, iri_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iri_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, iri_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest)) {
+        return super.equals(obj);
+      }
+      com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest other = (com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest) obj;
+
+      if (!getIri()
+          .equals(other.getIri())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + IRI_FIELD_NUMBER;
+      hash = (53 * hash) + getIri().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryByContentHashRequest is the Query/ByContentHash request type.
+     * </pre>
+     *
+     * Protobuf type {@code regen.data.v1alpha2.QueryByIRIRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.data.v1alpha2.QueryByIRIRequest)
+        com.regen.data.v1alpha2.QueryProto.QueryByIRIRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_QueryByIRIRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_QueryByIRIRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest.class, com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest.Builder.class);
+      }
+
+      // Construct using com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        iri_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_QueryByIRIRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest getDefaultInstanceForType() {
+        return com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest build() {
+        com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest buildPartial() {
+        com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest result = new com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.iri_ = iri_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest) {
+          return mergeFrom((com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest other) {
+        if (other == com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest.getDefaultInstance()) return this;
+        if (!other.getIri().isEmpty()) {
+          iri_ = other.iri_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                iri_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object iri_ = "";
+      /**
+       * <pre>
+       * hash is the hash-based identifier for the anchored content.
+       * </pre>
+       *
+       * <code>string iri = 1 [json_name = "iri"];</code>
+       * @return The iri.
+       */
+      public java.lang.String getIri() {
+        java.lang.Object ref = iri_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          iri_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * hash is the hash-based identifier for the anchored content.
+       * </pre>
+       *
+       * <code>string iri = 1 [json_name = "iri"];</code>
+       * @return The bytes for iri.
+       */
+      public com.google.protobuf.ByteString
+          getIriBytes() {
+        java.lang.Object ref = iri_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          iri_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * hash is the hash-based identifier for the anchored content.
+       * </pre>
+       *
+       * <code>string iri = 1 [json_name = "iri"];</code>
+       * @param value The iri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIri(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        iri_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * hash is the hash-based identifier for the anchored content.
+       * </pre>
+       *
+       * <code>string iri = 1 [json_name = "iri"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIri() {
+        iri_ = getDefaultInstance().getIri();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * hash is the hash-based identifier for the anchored content.
+       * </pre>
+       *
+       * <code>string iri = 1 [json_name = "iri"];</code>
+       * @param value The bytes for iri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIriBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        iri_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.data.v1alpha2.QueryByIRIRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.data.v1alpha2.QueryByIRIRequest)
+    private static final com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest();
+    }
+
+    public static com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryByIRIRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryByIRIRequest>() {
+      @java.lang.Override
+      public QueryByIRIRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryByIRIRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryByIRIRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.data.v1alpha2.QueryProto.QueryByIRIRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryByIRIResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.data.v1alpha2.QueryByIRIResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * entry is the ContentEntry
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentEntry entry = 1 [json_name = "entry"];</code>
+     * @return Whether the entry field is set.
+     */
+    boolean hasEntry();
+    /**
+     * <pre>
+     * entry is the ContentEntry
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentEntry entry = 1 [json_name = "entry"];</code>
+     * @return The entry.
+     */
+    com.regen.data.v1alpha2.QueryProto.ContentEntry getEntry();
+    /**
+     * <pre>
+     * entry is the ContentEntry
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentEntry entry = 1 [json_name = "entry"];</code>
+     */
+    com.regen.data.v1alpha2.QueryProto.ContentEntryOrBuilder getEntryOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryByContentHashResponse is the Query/ByContentHash response type.
+   * </pre>
+   *
+   * Protobuf type {@code regen.data.v1alpha2.QueryByIRIResponse}
+   */
+  public static final class QueryByIRIResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.data.v1alpha2.QueryByIRIResponse)
+      QueryByIRIResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryByIRIResponse.newBuilder() to construct.
+    private QueryByIRIResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryByIRIResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryByIRIResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_QueryByIRIResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_QueryByIRIResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse.class, com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse.Builder.class);
+    }
+
+    public static final int ENTRY_FIELD_NUMBER = 1;
+    private com.regen.data.v1alpha2.QueryProto.ContentEntry entry_;
+    /**
+     * <pre>
+     * entry is the ContentEntry
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentEntry entry = 1 [json_name = "entry"];</code>
+     * @return Whether the entry field is set.
+     */
+    @java.lang.Override
+    public boolean hasEntry() {
+      return entry_ != null;
+    }
+    /**
+     * <pre>
+     * entry is the ContentEntry
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentEntry entry = 1 [json_name = "entry"];</code>
+     * @return The entry.
+     */
+    @java.lang.Override
+    public com.regen.data.v1alpha2.QueryProto.ContentEntry getEntry() {
+      return entry_ == null ? com.regen.data.v1alpha2.QueryProto.ContentEntry.getDefaultInstance() : entry_;
+    }
+    /**
+     * <pre>
+     * entry is the ContentEntry
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentEntry entry = 1 [json_name = "entry"];</code>
+     */
+    @java.lang.Override
+    public com.regen.data.v1alpha2.QueryProto.ContentEntryOrBuilder getEntryOrBuilder() {
+      return entry_ == null ? com.regen.data.v1alpha2.QueryProto.ContentEntry.getDefaultInstance() : entry_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (entry_ != null) {
+        output.writeMessage(1, getEntry());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (entry_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getEntry());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse)) {
+        return super.equals(obj);
+      }
+      com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse other = (com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse) obj;
+
+      if (hasEntry() != other.hasEntry()) return false;
+      if (hasEntry()) {
+        if (!getEntry()
+            .equals(other.getEntry())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasEntry()) {
+        hash = (37 * hash) + ENTRY_FIELD_NUMBER;
+        hash = (53 * hash) + getEntry().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryByContentHashResponse is the Query/ByContentHash response type.
+     * </pre>
+     *
+     * Protobuf type {@code regen.data.v1alpha2.QueryByIRIResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.data.v1alpha2.QueryByIRIResponse)
+        com.regen.data.v1alpha2.QueryProto.QueryByIRIResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_QueryByIRIResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_QueryByIRIResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse.class, com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse.Builder.class);
+      }
+
+      // Construct using com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        entry_ = null;
+        if (entryBuilder_ != null) {
+          entryBuilder_.dispose();
+          entryBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_QueryByIRIResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse getDefaultInstanceForType() {
+        return com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse build() {
+        com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse buildPartial() {
+        com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse result = new com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.entry_ = entryBuilder_ == null
+              ? entry_
+              : entryBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse) {
+          return mergeFrom((com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse other) {
+        if (other == com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse.getDefaultInstance()) return this;
+        if (other.hasEntry()) {
+          mergeEntry(other.getEntry());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getEntryFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.regen.data.v1alpha2.QueryProto.ContentEntry entry_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.regen.data.v1alpha2.QueryProto.ContentEntry, com.regen.data.v1alpha2.QueryProto.ContentEntry.Builder, com.regen.data.v1alpha2.QueryProto.ContentEntryOrBuilder> entryBuilder_;
+      /**
+       * <pre>
+       * entry is the ContentEntry
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentEntry entry = 1 [json_name = "entry"];</code>
+       * @return Whether the entry field is set.
+       */
+      public boolean hasEntry() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * entry is the ContentEntry
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentEntry entry = 1 [json_name = "entry"];</code>
+       * @return The entry.
+       */
+      public com.regen.data.v1alpha2.QueryProto.ContentEntry getEntry() {
+        if (entryBuilder_ == null) {
+          return entry_ == null ? com.regen.data.v1alpha2.QueryProto.ContentEntry.getDefaultInstance() : entry_;
+        } else {
+          return entryBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * entry is the ContentEntry
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentEntry entry = 1 [json_name = "entry"];</code>
+       */
+      public Builder setEntry(com.regen.data.v1alpha2.QueryProto.ContentEntry value) {
+        if (entryBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          entry_ = value;
+        } else {
+          entryBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * entry is the ContentEntry
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentEntry entry = 1 [json_name = "entry"];</code>
+       */
+      public Builder setEntry(
+          com.regen.data.v1alpha2.QueryProto.ContentEntry.Builder builderForValue) {
+        if (entryBuilder_ == null) {
+          entry_ = builderForValue.build();
+        } else {
+          entryBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * entry is the ContentEntry
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentEntry entry = 1 [json_name = "entry"];</code>
+       */
+      public Builder mergeEntry(com.regen.data.v1alpha2.QueryProto.ContentEntry value) {
+        if (entryBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            entry_ != null &&
+            entry_ != com.regen.data.v1alpha2.QueryProto.ContentEntry.getDefaultInstance()) {
+            getEntryBuilder().mergeFrom(value);
+          } else {
+            entry_ = value;
+          }
+        } else {
+          entryBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * entry is the ContentEntry
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentEntry entry = 1 [json_name = "entry"];</code>
+       */
+      public Builder clearEntry() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        entry_ = null;
+        if (entryBuilder_ != null) {
+          entryBuilder_.dispose();
+          entryBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * entry is the ContentEntry
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentEntry entry = 1 [json_name = "entry"];</code>
+       */
+      public com.regen.data.v1alpha2.QueryProto.ContentEntry.Builder getEntryBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getEntryFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * entry is the ContentEntry
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentEntry entry = 1 [json_name = "entry"];</code>
+       */
+      public com.regen.data.v1alpha2.QueryProto.ContentEntryOrBuilder getEntryOrBuilder() {
+        if (entryBuilder_ != null) {
+          return entryBuilder_.getMessageOrBuilder();
+        } else {
+          return entry_ == null ?
+              com.regen.data.v1alpha2.QueryProto.ContentEntry.getDefaultInstance() : entry_;
+        }
+      }
+      /**
+       * <pre>
+       * entry is the ContentEntry
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentEntry entry = 1 [json_name = "entry"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.regen.data.v1alpha2.QueryProto.ContentEntry, com.regen.data.v1alpha2.QueryProto.ContentEntry.Builder, com.regen.data.v1alpha2.QueryProto.ContentEntryOrBuilder> 
+          getEntryFieldBuilder() {
+        if (entryBuilder_ == null) {
+          entryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.regen.data.v1alpha2.QueryProto.ContentEntry, com.regen.data.v1alpha2.QueryProto.ContentEntry.Builder, com.regen.data.v1alpha2.QueryProto.ContentEntryOrBuilder>(
+                  getEntry(),
+                  getParentForChildren(),
+                  isClean());
+          entry_ = null;
+        }
+        return entryBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.data.v1alpha2.QueryByIRIResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.data.v1alpha2.QueryByIRIResponse)
+    private static final com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse();
+    }
+
+    public static com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryByIRIResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryByIRIResponse>() {
+      @java.lang.Override
+      public QueryByIRIResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryByIRIResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryByIRIResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.data.v1alpha2.QueryProto.QueryByIRIResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryBySignerRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.data.v1alpha2.QueryBySignerRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * signer is the address of the signer to query by.
+     * </pre>
+     *
+     * <code>string signer = 1 [json_name = "signer"];</code>
+     * @return The signer.
+     */
+    java.lang.String getSigner();
+    /**
+     * <pre>
+     * signer is the address of the signer to query by.
+     * </pre>
+     *
+     * <code>string signer = 1 [json_name = "signer"];</code>
+     * @return The bytes for signer.
+     */
+    com.google.protobuf.ByteString
+        getSignerBytes();
+
+    /**
+     * <pre>
+     * pagination is the PageRequest to use for pagination.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination is the PageRequest to use for pagination.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <pre>
+     * pagination is the PageRequest to use for pagination.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryBySignerRequest is the Query/BySigner request type.
+   * </pre>
+   *
+   * Protobuf type {@code regen.data.v1alpha2.QueryBySignerRequest}
+   */
+  public static final class QueryBySignerRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.data.v1alpha2.QueryBySignerRequest)
+      QueryBySignerRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryBySignerRequest.newBuilder() to construct.
+    private QueryBySignerRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryBySignerRequest() {
+      signer_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryBySignerRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_QueryBySignerRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_QueryBySignerRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest.class, com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest.Builder.class);
+    }
+
+    public static final int SIGNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object signer_ = "";
+    /**
+     * <pre>
+     * signer is the address of the signer to query by.
+     * </pre>
+     *
+     * <code>string signer = 1 [json_name = "signer"];</code>
+     * @return The signer.
+     */
+    @java.lang.Override
+    public java.lang.String getSigner() {
+      java.lang.Object ref = signer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        signer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * signer is the address of the signer to query by.
+     * </pre>
+     *
+     * <code>string signer = 1 [json_name = "signer"];</code>
+     * @return The bytes for signer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSignerBytes() {
+      java.lang.Object ref = signer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        signer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <pre>
+     * pagination is the PageRequest to use for pagination.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination is the PageRequest to use for pagination.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination is the PageRequest to use for pagination.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, signer_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, signer_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest)) {
+        return super.equals(obj);
+      }
+      com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest other = (com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest) obj;
+
+      if (!getSigner()
+          .equals(other.getSigner())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SIGNER_FIELD_NUMBER;
+      hash = (53 * hash) + getSigner().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryBySignerRequest is the Query/BySigner request type.
+     * </pre>
+     *
+     * Protobuf type {@code regen.data.v1alpha2.QueryBySignerRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.data.v1alpha2.QueryBySignerRequest)
+        com.regen.data.v1alpha2.QueryProto.QueryBySignerRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_QueryBySignerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_QueryBySignerRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest.class, com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest.Builder.class);
+      }
+
+      // Construct using com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        signer_ = "";
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_QueryBySignerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest getDefaultInstanceForType() {
+        return com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest build() {
+        com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest buildPartial() {
+        com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest result = new com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.signer_ = signer_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest) {
+          return mergeFrom((com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest other) {
+        if (other == com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest.getDefaultInstance()) return this;
+        if (!other.getSigner().isEmpty()) {
+          signer_ = other.signer_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                signer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object signer_ = "";
+      /**
+       * <pre>
+       * signer is the address of the signer to query by.
+       * </pre>
+       *
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @return The signer.
+       */
+      public java.lang.String getSigner() {
+        java.lang.Object ref = signer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          signer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * signer is the address of the signer to query by.
+       * </pre>
+       *
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @return The bytes for signer.
+       */
+      public com.google.protobuf.ByteString
+          getSignerBytes() {
+        java.lang.Object ref = signer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          signer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * signer is the address of the signer to query by.
+       * </pre>
+       *
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @param value The signer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSigner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        signer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * signer is the address of the signer to query by.
+       * </pre>
+       *
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSigner() {
+        signer_ = getDefaultInstance().getSigner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * signer is the address of the signer to query by.
+       * </pre>
+       *
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @param value The bytes for signer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        signer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination is the PageRequest to use for pagination.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * pagination is the PageRequest to use for pagination.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination is the PageRequest to use for pagination.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination is the PageRequest to use for pagination.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination is the PageRequest to use for pagination.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination is the PageRequest to use for pagination.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination is the PageRequest to use for pagination.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination is the PageRequest to use for pagination.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination is the PageRequest to use for pagination.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.data.v1alpha2.QueryBySignerRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.data.v1alpha2.QueryBySignerRequest)
+    private static final com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest();
+    }
+
+    public static com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryBySignerRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryBySignerRequest>() {
+      @java.lang.Override
+      public QueryBySignerRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryBySignerRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryBySignerRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.data.v1alpha2.QueryProto.QueryBySignerRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryBySignerResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.data.v1alpha2.QueryBySignerResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * entries is the ContentEntry's signed by the queried signer
+     * </pre>
+     *
+     * <code>repeated .regen.data.v1alpha2.ContentEntry entries = 1 [json_name = "entries"];</code>
+     */
+    java.util.List<com.regen.data.v1alpha2.QueryProto.ContentEntry> 
+        getEntriesList();
+    /**
+     * <pre>
+     * entries is the ContentEntry's signed by the queried signer
+     * </pre>
+     *
+     * <code>repeated .regen.data.v1alpha2.ContentEntry entries = 1 [json_name = "entries"];</code>
+     */
+    com.regen.data.v1alpha2.QueryProto.ContentEntry getEntries(int index);
+    /**
+     * <pre>
+     * entries is the ContentEntry's signed by the queried signer
+     * </pre>
+     *
+     * <code>repeated .regen.data.v1alpha2.ContentEntry entries = 1 [json_name = "entries"];</code>
+     */
+    int getEntriesCount();
+    /**
+     * <pre>
+     * entries is the ContentEntry's signed by the queried signer
+     * </pre>
+     *
+     * <code>repeated .regen.data.v1alpha2.ContentEntry entries = 1 [json_name = "entries"];</code>
+     */
+    java.util.List<? extends com.regen.data.v1alpha2.QueryProto.ContentEntryOrBuilder> 
+        getEntriesOrBuilderList();
+    /**
+     * <pre>
+     * entries is the ContentEntry's signed by the queried signer
+     * </pre>
+     *
+     * <code>repeated .regen.data.v1alpha2.ContentEntry entries = 1 [json_name = "entries"];</code>
+     */
+    com.regen.data.v1alpha2.QueryProto.ContentEntryOrBuilder getEntriesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * pagination is the pagination PageResponse.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination is the pagination PageResponse.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <pre>
+     * pagination is the pagination PageResponse.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 3 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryBySignerResponse is the Query/BySigner response type.
+   * </pre>
+   *
+   * Protobuf type {@code regen.data.v1alpha2.QueryBySignerResponse}
+   */
+  public static final class QueryBySignerResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.data.v1alpha2.QueryBySignerResponse)
+      QueryBySignerResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryBySignerResponse.newBuilder() to construct.
+    private QueryBySignerResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryBySignerResponse() {
+      entries_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryBySignerResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_QueryBySignerResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_QueryBySignerResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse.class, com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse.Builder.class);
+    }
+
+    public static final int ENTRIES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.regen.data.v1alpha2.QueryProto.ContentEntry> entries_;
+    /**
+     * <pre>
+     * entries is the ContentEntry's signed by the queried signer
+     * </pre>
+     *
+     * <code>repeated .regen.data.v1alpha2.ContentEntry entries = 1 [json_name = "entries"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.regen.data.v1alpha2.QueryProto.ContentEntry> getEntriesList() {
+      return entries_;
+    }
+    /**
+     * <pre>
+     * entries is the ContentEntry's signed by the queried signer
+     * </pre>
+     *
+     * <code>repeated .regen.data.v1alpha2.ContentEntry entries = 1 [json_name = "entries"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.regen.data.v1alpha2.QueryProto.ContentEntryOrBuilder> 
+        getEntriesOrBuilderList() {
+      return entries_;
+    }
+    /**
+     * <pre>
+     * entries is the ContentEntry's signed by the queried signer
+     * </pre>
+     *
+     * <code>repeated .regen.data.v1alpha2.ContentEntry entries = 1 [json_name = "entries"];</code>
+     */
+    @java.lang.Override
+    public int getEntriesCount() {
+      return entries_.size();
+    }
+    /**
+     * <pre>
+     * entries is the ContentEntry's signed by the queried signer
+     * </pre>
+     *
+     * <code>repeated .regen.data.v1alpha2.ContentEntry entries = 1 [json_name = "entries"];</code>
+     */
+    @java.lang.Override
+    public com.regen.data.v1alpha2.QueryProto.ContentEntry getEntries(int index) {
+      return entries_.get(index);
+    }
+    /**
+     * <pre>
+     * entries is the ContentEntry's signed by the queried signer
+     * </pre>
+     *
+     * <code>repeated .regen.data.v1alpha2.ContentEntry entries = 1 [json_name = "entries"];</code>
+     */
+    @java.lang.Override
+    public com.regen.data.v1alpha2.QueryProto.ContentEntryOrBuilder getEntriesOrBuilder(
+        int index) {
+      return entries_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 3;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <pre>
+     * pagination is the pagination PageResponse.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination is the pagination PageResponse.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination is the pagination PageResponse.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 3 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < entries_.size(); i++) {
+        output.writeMessage(1, entries_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(3, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < entries_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, entries_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse)) {
+        return super.equals(obj);
+      }
+      com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse other = (com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse) obj;
+
+      if (!getEntriesList()
+          .equals(other.getEntriesList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getEntriesCount() > 0) {
+        hash = (37 * hash) + ENTRIES_FIELD_NUMBER;
+        hash = (53 * hash) + getEntriesList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryBySignerResponse is the Query/BySigner response type.
+     * </pre>
+     *
+     * Protobuf type {@code regen.data.v1alpha2.QueryBySignerResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.data.v1alpha2.QueryBySignerResponse)
+        com.regen.data.v1alpha2.QueryProto.QueryBySignerResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_QueryBySignerResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_QueryBySignerResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse.class, com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse.Builder.class);
+      }
+
+      // Construct using com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (entriesBuilder_ == null) {
+          entries_ = java.util.Collections.emptyList();
+        } else {
+          entries_ = null;
+          entriesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_QueryBySignerResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse getDefaultInstanceForType() {
+        return com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse build() {
+        com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse buildPartial() {
+        com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse result = new com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse result) {
+        if (entriesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            entries_ = java.util.Collections.unmodifiableList(entries_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.entries_ = entries_;
+        } else {
+          result.entries_ = entriesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse) {
+          return mergeFrom((com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse other) {
+        if (other == com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse.getDefaultInstance()) return this;
+        if (entriesBuilder_ == null) {
+          if (!other.entries_.isEmpty()) {
+            if (entries_.isEmpty()) {
+              entries_ = other.entries_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureEntriesIsMutable();
+              entries_.addAll(other.entries_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.entries_.isEmpty()) {
+            if (entriesBuilder_.isEmpty()) {
+              entriesBuilder_.dispose();
+              entriesBuilder_ = null;
+              entries_ = other.entries_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              entriesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEntriesFieldBuilder() : null;
+            } else {
+              entriesBuilder_.addAllMessages(other.entries_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.regen.data.v1alpha2.QueryProto.ContentEntry m =
+                    input.readMessage(
+                        com.regen.data.v1alpha2.QueryProto.ContentEntry.parser(),
+                        extensionRegistry);
+                if (entriesBuilder_ == null) {
+                  ensureEntriesIsMutable();
+                  entries_.add(m);
+                } else {
+                  entriesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 26: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.regen.data.v1alpha2.QueryProto.ContentEntry> entries_ =
+        java.util.Collections.emptyList();
+      private void ensureEntriesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          entries_ = new java.util.ArrayList<com.regen.data.v1alpha2.QueryProto.ContentEntry>(entries_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.regen.data.v1alpha2.QueryProto.ContentEntry, com.regen.data.v1alpha2.QueryProto.ContentEntry.Builder, com.regen.data.v1alpha2.QueryProto.ContentEntryOrBuilder> entriesBuilder_;
+
+      /**
+       * <pre>
+       * entries is the ContentEntry's signed by the queried signer
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.ContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public java.util.List<com.regen.data.v1alpha2.QueryProto.ContentEntry> getEntriesList() {
+        if (entriesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(entries_);
+        } else {
+          return entriesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * entries is the ContentEntry's signed by the queried signer
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.ContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public int getEntriesCount() {
+        if (entriesBuilder_ == null) {
+          return entries_.size();
+        } else {
+          return entriesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * entries is the ContentEntry's signed by the queried signer
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.ContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public com.regen.data.v1alpha2.QueryProto.ContentEntry getEntries(int index) {
+        if (entriesBuilder_ == null) {
+          return entries_.get(index);
+        } else {
+          return entriesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * entries is the ContentEntry's signed by the queried signer
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.ContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public Builder setEntries(
+          int index, com.regen.data.v1alpha2.QueryProto.ContentEntry value) {
+        if (entriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntriesIsMutable();
+          entries_.set(index, value);
+          onChanged();
+        } else {
+          entriesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * entries is the ContentEntry's signed by the queried signer
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.ContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public Builder setEntries(
+          int index, com.regen.data.v1alpha2.QueryProto.ContentEntry.Builder builderForValue) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          entriesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * entries is the ContentEntry's signed by the queried signer
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.ContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public Builder addEntries(com.regen.data.v1alpha2.QueryProto.ContentEntry value) {
+        if (entriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntriesIsMutable();
+          entries_.add(value);
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * entries is the ContentEntry's signed by the queried signer
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.ContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public Builder addEntries(
+          int index, com.regen.data.v1alpha2.QueryProto.ContentEntry value) {
+        if (entriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntriesIsMutable();
+          entries_.add(index, value);
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * entries is the ContentEntry's signed by the queried signer
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.ContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public Builder addEntries(
+          com.regen.data.v1alpha2.QueryProto.ContentEntry.Builder builderForValue) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.add(builderForValue.build());
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * entries is the ContentEntry's signed by the queried signer
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.ContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public Builder addEntries(
+          int index, com.regen.data.v1alpha2.QueryProto.ContentEntry.Builder builderForValue) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * entries is the ContentEntry's signed by the queried signer
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.ContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public Builder addAllEntries(
+          java.lang.Iterable<? extends com.regen.data.v1alpha2.QueryProto.ContentEntry> values) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, entries_);
+          onChanged();
+        } else {
+          entriesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * entries is the ContentEntry's signed by the queried signer
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.ContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public Builder clearEntries() {
+        if (entriesBuilder_ == null) {
+          entries_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          entriesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * entries is the ContentEntry's signed by the queried signer
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.ContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public Builder removeEntries(int index) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.remove(index);
+          onChanged();
+        } else {
+          entriesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * entries is the ContentEntry's signed by the queried signer
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.ContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public com.regen.data.v1alpha2.QueryProto.ContentEntry.Builder getEntriesBuilder(
+          int index) {
+        return getEntriesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * entries is the ContentEntry's signed by the queried signer
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.ContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public com.regen.data.v1alpha2.QueryProto.ContentEntryOrBuilder getEntriesOrBuilder(
+          int index) {
+        if (entriesBuilder_ == null) {
+          return entries_.get(index);  } else {
+          return entriesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * entries is the ContentEntry's signed by the queried signer
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.ContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public java.util.List<? extends com.regen.data.v1alpha2.QueryProto.ContentEntryOrBuilder> 
+           getEntriesOrBuilderList() {
+        if (entriesBuilder_ != null) {
+          return entriesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(entries_);
+        }
+      }
+      /**
+       * <pre>
+       * entries is the ContentEntry's signed by the queried signer
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.ContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public com.regen.data.v1alpha2.QueryProto.ContentEntry.Builder addEntriesBuilder() {
+        return getEntriesFieldBuilder().addBuilder(
+            com.regen.data.v1alpha2.QueryProto.ContentEntry.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * entries is the ContentEntry's signed by the queried signer
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.ContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public com.regen.data.v1alpha2.QueryProto.ContentEntry.Builder addEntriesBuilder(
+          int index) {
+        return getEntriesFieldBuilder().addBuilder(
+            index, com.regen.data.v1alpha2.QueryProto.ContentEntry.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * entries is the ContentEntry's signed by the queried signer
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.ContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public java.util.List<com.regen.data.v1alpha2.QueryProto.ContentEntry.Builder> 
+           getEntriesBuilderList() {
+        return getEntriesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.regen.data.v1alpha2.QueryProto.ContentEntry, com.regen.data.v1alpha2.QueryProto.ContentEntry.Builder, com.regen.data.v1alpha2.QueryProto.ContentEntryOrBuilder> 
+          getEntriesFieldBuilder() {
+        if (entriesBuilder_ == null) {
+          entriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.regen.data.v1alpha2.QueryProto.ContentEntry, com.regen.data.v1alpha2.QueryProto.ContentEntry.Builder, com.regen.data.v1alpha2.QueryProto.ContentEntryOrBuilder>(
+                  entries_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          entries_ = null;
+        }
+        return entriesBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination is the pagination PageResponse.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 3 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * pagination is the pagination PageResponse.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 3 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination is the pagination PageResponse.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination is the pagination PageResponse.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination is the pagination PageResponse.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination is the pagination PageResponse.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination is the pagination PageResponse.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination is the pagination PageResponse.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination is the pagination PageResponse.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 3 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.data.v1alpha2.QueryBySignerResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.data.v1alpha2.QueryBySignerResponse)
+    private static final com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse();
+    }
+
+    public static com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryBySignerResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryBySignerResponse>() {
+      @java.lang.Override
+      public QueryBySignerResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryBySignerResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryBySignerResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.data.v1alpha2.QueryProto.QueryBySignerResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ContentEntryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.data.v1alpha2.ContentEntry)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * hash is the content hash
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash hash = 1 [json_name = "hash"];</code>
+     * @return Whether the hash field is set.
+     */
+    boolean hasHash();
+    /**
+     * <pre>
+     * hash is the content hash
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash hash = 1 [json_name = "hash"];</code>
+     * @return The hash.
+     */
+    com.regen.data.v1alpha2.TypesProto.ContentHash getHash();
+    /**
+     * <pre>
+     * hash is the content hash
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash hash = 1 [json_name = "hash"];</code>
+     */
+    com.regen.data.v1alpha2.TypesProto.ContentHashOrBuilder getHashOrBuilder();
+
+    /**
+     * <pre>
+     * iri is the content IRI
+     * </pre>
+     *
+     * <code>string iri = 2 [json_name = "iri"];</code>
+     * @return The iri.
+     */
+    java.lang.String getIri();
+    /**
+     * <pre>
+     * iri is the content IRI
+     * </pre>
+     *
+     * <code>string iri = 2 [json_name = "iri"];</code>
+     * @return The bytes for iri.
+     */
+    com.google.protobuf.ByteString
+        getIriBytes();
+
+    /**
+     * <pre>
+     * timestamp is the anchor Timestamp
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 3 [json_name = "timestamp"];</code>
+     * @return Whether the timestamp field is set.
+     */
+    boolean hasTimestamp();
+    /**
+     * <pre>
+     * timestamp is the anchor Timestamp
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 3 [json_name = "timestamp"];</code>
+     * @return The timestamp.
+     */
+    com.google.protobuf.Timestamp getTimestamp();
+    /**
+     * <pre>
+     * timestamp is the anchor Timestamp
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 3 [json_name = "timestamp"];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder();
+  }
+  /**
+   * <pre>
+   * ContentEntry describes data referenced and possibly stored on chain
+   * </pre>
+   *
+   * Protobuf type {@code regen.data.v1alpha2.ContentEntry}
+   */
+  public static final class ContentEntry extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.data.v1alpha2.ContentEntry)
+      ContentEntryOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ContentEntry.newBuilder() to construct.
+    private ContentEntry(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ContentEntry() {
+      iri_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ContentEntry();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_ContentEntry_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_ContentEntry_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.data.v1alpha2.QueryProto.ContentEntry.class, com.regen.data.v1alpha2.QueryProto.ContentEntry.Builder.class);
+    }
+
+    public static final int HASH_FIELD_NUMBER = 1;
+    private com.regen.data.v1alpha2.TypesProto.ContentHash hash_;
+    /**
+     * <pre>
+     * hash is the content hash
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash hash = 1 [json_name = "hash"];</code>
+     * @return Whether the hash field is set.
+     */
+    @java.lang.Override
+    public boolean hasHash() {
+      return hash_ != null;
+    }
+    /**
+     * <pre>
+     * hash is the content hash
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash hash = 1 [json_name = "hash"];</code>
+     * @return The hash.
+     */
+    @java.lang.Override
+    public com.regen.data.v1alpha2.TypesProto.ContentHash getHash() {
+      return hash_ == null ? com.regen.data.v1alpha2.TypesProto.ContentHash.getDefaultInstance() : hash_;
+    }
+    /**
+     * <pre>
+     * hash is the content hash
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash hash = 1 [json_name = "hash"];</code>
+     */
+    @java.lang.Override
+    public com.regen.data.v1alpha2.TypesProto.ContentHashOrBuilder getHashOrBuilder() {
+      return hash_ == null ? com.regen.data.v1alpha2.TypesProto.ContentHash.getDefaultInstance() : hash_;
+    }
+
+    public static final int IRI_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object iri_ = "";
+    /**
+     * <pre>
+     * iri is the content IRI
+     * </pre>
+     *
+     * <code>string iri = 2 [json_name = "iri"];</code>
+     * @return The iri.
+     */
+    @java.lang.Override
+    public java.lang.String getIri() {
+      java.lang.Object ref = iri_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        iri_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * iri is the content IRI
+     * </pre>
+     *
+     * <code>string iri = 2 [json_name = "iri"];</code>
+     * @return The bytes for iri.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIriBytes() {
+      java.lang.Object ref = iri_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        iri_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TIMESTAMP_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp timestamp_;
+    /**
+     * <pre>
+     * timestamp is the anchor Timestamp
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 3 [json_name = "timestamp"];</code>
+     * @return Whether the timestamp field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimestamp() {
+      return timestamp_ != null;
+    }
+    /**
+     * <pre>
+     * timestamp is the anchor Timestamp
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 3 [json_name = "timestamp"];</code>
+     * @return The timestamp.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getTimestamp() {
+      return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+    }
+    /**
+     * <pre>
+     * timestamp is the anchor Timestamp
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 3 [json_name = "timestamp"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
+      return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (hash_ != null) {
+        output.writeMessage(1, getHash());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iri_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, iri_);
+      }
+      if (timestamp_ != null) {
+        output.writeMessage(3, getTimestamp());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (hash_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getHash());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iri_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, iri_);
+      }
+      if (timestamp_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getTimestamp());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.data.v1alpha2.QueryProto.ContentEntry)) {
+        return super.equals(obj);
+      }
+      com.regen.data.v1alpha2.QueryProto.ContentEntry other = (com.regen.data.v1alpha2.QueryProto.ContentEntry) obj;
+
+      if (hasHash() != other.hasHash()) return false;
+      if (hasHash()) {
+        if (!getHash()
+            .equals(other.getHash())) return false;
+      }
+      if (!getIri()
+          .equals(other.getIri())) return false;
+      if (hasTimestamp() != other.hasTimestamp()) return false;
+      if (hasTimestamp()) {
+        if (!getTimestamp()
+            .equals(other.getTimestamp())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasHash()) {
+        hash = (37 * hash) + HASH_FIELD_NUMBER;
+        hash = (53 * hash) + getHash().hashCode();
+      }
+      hash = (37 * hash) + IRI_FIELD_NUMBER;
+      hash = (53 * hash) + getIri().hashCode();
+      if (hasTimestamp()) {
+        hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
+        hash = (53 * hash) + getTimestamp().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.data.v1alpha2.QueryProto.ContentEntry parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.ContentEntry parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.ContentEntry parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.ContentEntry parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.ContentEntry parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.ContentEntry parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.ContentEntry parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.ContentEntry parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.data.v1alpha2.QueryProto.ContentEntry parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.data.v1alpha2.QueryProto.ContentEntry parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.ContentEntry parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.ContentEntry parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.data.v1alpha2.QueryProto.ContentEntry prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ContentEntry describes data referenced and possibly stored on chain
+     * </pre>
+     *
+     * Protobuf type {@code regen.data.v1alpha2.ContentEntry}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.data.v1alpha2.ContentEntry)
+        com.regen.data.v1alpha2.QueryProto.ContentEntryOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_ContentEntry_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_ContentEntry_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.data.v1alpha2.QueryProto.ContentEntry.class, com.regen.data.v1alpha2.QueryProto.ContentEntry.Builder.class);
+      }
+
+      // Construct using com.regen.data.v1alpha2.QueryProto.ContentEntry.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        hash_ = null;
+        if (hashBuilder_ != null) {
+          hashBuilder_.dispose();
+          hashBuilder_ = null;
+        }
+        iri_ = "";
+        timestamp_ = null;
+        if (timestampBuilder_ != null) {
+          timestampBuilder_.dispose();
+          timestampBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_ContentEntry_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.QueryProto.ContentEntry getDefaultInstanceForType() {
+        return com.regen.data.v1alpha2.QueryProto.ContentEntry.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.QueryProto.ContentEntry build() {
+        com.regen.data.v1alpha2.QueryProto.ContentEntry result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.QueryProto.ContentEntry buildPartial() {
+        com.regen.data.v1alpha2.QueryProto.ContentEntry result = new com.regen.data.v1alpha2.QueryProto.ContentEntry(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.data.v1alpha2.QueryProto.ContentEntry result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.hash_ = hashBuilder_ == null
+              ? hash_
+              : hashBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.iri_ = iri_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.timestamp_ = timestampBuilder_ == null
+              ? timestamp_
+              : timestampBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.data.v1alpha2.QueryProto.ContentEntry) {
+          return mergeFrom((com.regen.data.v1alpha2.QueryProto.ContentEntry)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.data.v1alpha2.QueryProto.ContentEntry other) {
+        if (other == com.regen.data.v1alpha2.QueryProto.ContentEntry.getDefaultInstance()) return this;
+        if (other.hasHash()) {
+          mergeHash(other.getHash());
+        }
+        if (!other.getIri().isEmpty()) {
+          iri_ = other.iri_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasTimestamp()) {
+          mergeTimestamp(other.getTimestamp());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getHashFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                iri_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getTimestampFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.regen.data.v1alpha2.TypesProto.ContentHash hash_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.regen.data.v1alpha2.TypesProto.ContentHash, com.regen.data.v1alpha2.TypesProto.ContentHash.Builder, com.regen.data.v1alpha2.TypesProto.ContentHashOrBuilder> hashBuilder_;
+      /**
+       * <pre>
+       * hash is the content hash
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash hash = 1 [json_name = "hash"];</code>
+       * @return Whether the hash field is set.
+       */
+      public boolean hasHash() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * hash is the content hash
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash hash = 1 [json_name = "hash"];</code>
+       * @return The hash.
+       */
+      public com.regen.data.v1alpha2.TypesProto.ContentHash getHash() {
+        if (hashBuilder_ == null) {
+          return hash_ == null ? com.regen.data.v1alpha2.TypesProto.ContentHash.getDefaultInstance() : hash_;
+        } else {
+          return hashBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * hash is the content hash
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash hash = 1 [json_name = "hash"];</code>
+       */
+      public Builder setHash(com.regen.data.v1alpha2.TypesProto.ContentHash value) {
+        if (hashBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          hash_ = value;
+        } else {
+          hashBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * hash is the content hash
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash hash = 1 [json_name = "hash"];</code>
+       */
+      public Builder setHash(
+          com.regen.data.v1alpha2.TypesProto.ContentHash.Builder builderForValue) {
+        if (hashBuilder_ == null) {
+          hash_ = builderForValue.build();
+        } else {
+          hashBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * hash is the content hash
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash hash = 1 [json_name = "hash"];</code>
+       */
+      public Builder mergeHash(com.regen.data.v1alpha2.TypesProto.ContentHash value) {
+        if (hashBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            hash_ != null &&
+            hash_ != com.regen.data.v1alpha2.TypesProto.ContentHash.getDefaultInstance()) {
+            getHashBuilder().mergeFrom(value);
+          } else {
+            hash_ = value;
+          }
+        } else {
+          hashBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * hash is the content hash
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash hash = 1 [json_name = "hash"];</code>
+       */
+      public Builder clearHash() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        hash_ = null;
+        if (hashBuilder_ != null) {
+          hashBuilder_.dispose();
+          hashBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * hash is the content hash
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash hash = 1 [json_name = "hash"];</code>
+       */
+      public com.regen.data.v1alpha2.TypesProto.ContentHash.Builder getHashBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getHashFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * hash is the content hash
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash hash = 1 [json_name = "hash"];</code>
+       */
+      public com.regen.data.v1alpha2.TypesProto.ContentHashOrBuilder getHashOrBuilder() {
+        if (hashBuilder_ != null) {
+          return hashBuilder_.getMessageOrBuilder();
+        } else {
+          return hash_ == null ?
+              com.regen.data.v1alpha2.TypesProto.ContentHash.getDefaultInstance() : hash_;
+        }
+      }
+      /**
+       * <pre>
+       * hash is the content hash
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash hash = 1 [json_name = "hash"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.regen.data.v1alpha2.TypesProto.ContentHash, com.regen.data.v1alpha2.TypesProto.ContentHash.Builder, com.regen.data.v1alpha2.TypesProto.ContentHashOrBuilder> 
+          getHashFieldBuilder() {
+        if (hashBuilder_ == null) {
+          hashBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.regen.data.v1alpha2.TypesProto.ContentHash, com.regen.data.v1alpha2.TypesProto.ContentHash.Builder, com.regen.data.v1alpha2.TypesProto.ContentHashOrBuilder>(
+                  getHash(),
+                  getParentForChildren(),
+                  isClean());
+          hash_ = null;
+        }
+        return hashBuilder_;
+      }
+
+      private java.lang.Object iri_ = "";
+      /**
+       * <pre>
+       * iri is the content IRI
+       * </pre>
+       *
+       * <code>string iri = 2 [json_name = "iri"];</code>
+       * @return The iri.
+       */
+      public java.lang.String getIri() {
+        java.lang.Object ref = iri_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          iri_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * iri is the content IRI
+       * </pre>
+       *
+       * <code>string iri = 2 [json_name = "iri"];</code>
+       * @return The bytes for iri.
+       */
+      public com.google.protobuf.ByteString
+          getIriBytes() {
+        java.lang.Object ref = iri_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          iri_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * iri is the content IRI
+       * </pre>
+       *
+       * <code>string iri = 2 [json_name = "iri"];</code>
+       * @param value The iri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIri(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        iri_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * iri is the content IRI
+       * </pre>
+       *
+       * <code>string iri = 2 [json_name = "iri"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIri() {
+        iri_ = getDefaultInstance().getIri();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * iri is the content IRI
+       * </pre>
+       *
+       * <code>string iri = 2 [json_name = "iri"];</code>
+       * @param value The bytes for iri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIriBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        iri_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp timestamp_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timestampBuilder_;
+      /**
+       * <pre>
+       * timestamp is the anchor Timestamp
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 3 [json_name = "timestamp"];</code>
+       * @return Whether the timestamp field is set.
+       */
+      public boolean hasTimestamp() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * timestamp is the anchor Timestamp
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 3 [json_name = "timestamp"];</code>
+       * @return The timestamp.
+       */
+      public com.google.protobuf.Timestamp getTimestamp() {
+        if (timestampBuilder_ == null) {
+          return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+        } else {
+          return timestampBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * timestamp is the anchor Timestamp
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 3 [json_name = "timestamp"];</code>
+       */
+      public Builder setTimestamp(com.google.protobuf.Timestamp value) {
+        if (timestampBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          timestamp_ = value;
+        } else {
+          timestampBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * timestamp is the anchor Timestamp
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 3 [json_name = "timestamp"];</code>
+       */
+      public Builder setTimestamp(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (timestampBuilder_ == null) {
+          timestamp_ = builderForValue.build();
+        } else {
+          timestampBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * timestamp is the anchor Timestamp
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 3 [json_name = "timestamp"];</code>
+       */
+      public Builder mergeTimestamp(com.google.protobuf.Timestamp value) {
+        if (timestampBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            timestamp_ != null &&
+            timestamp_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getTimestampBuilder().mergeFrom(value);
+          } else {
+            timestamp_ = value;
+          }
+        } else {
+          timestampBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * timestamp is the anchor Timestamp
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 3 [json_name = "timestamp"];</code>
+       */
+      public Builder clearTimestamp() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        timestamp_ = null;
+        if (timestampBuilder_ != null) {
+          timestampBuilder_.dispose();
+          timestampBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * timestamp is the anchor Timestamp
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 3 [json_name = "timestamp"];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getTimestampBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getTimestampFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * timestamp is the anchor Timestamp
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 3 [json_name = "timestamp"];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
+        if (timestampBuilder_ != null) {
+          return timestampBuilder_.getMessageOrBuilder();
+        } else {
+          return timestamp_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+        }
+      }
+      /**
+       * <pre>
+       * timestamp is the anchor Timestamp
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 3 [json_name = "timestamp"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getTimestampFieldBuilder() {
+        if (timestampBuilder_ == null) {
+          timestampBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getTimestamp(),
+                  getParentForChildren(),
+                  isClean());
+          timestamp_ = null;
+        }
+        return timestampBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.data.v1alpha2.ContentEntry)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.data.v1alpha2.ContentEntry)
+    private static final com.regen.data.v1alpha2.QueryProto.ContentEntry DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.data.v1alpha2.QueryProto.ContentEntry();
+    }
+
+    public static com.regen.data.v1alpha2.QueryProto.ContentEntry getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ContentEntry>
+        PARSER = new com.google.protobuf.AbstractParser<ContentEntry>() {
+      @java.lang.Override
+      public ContentEntry parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ContentEntry> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ContentEntry> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.data.v1alpha2.QueryProto.ContentEntry getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySignersRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.data.v1alpha2.QuerySignersRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * iri is the content IRI
+     * </pre>
+     *
+     * <code>string iri = 1 [json_name = "iri"];</code>
+     * @return The iri.
+     */
+    java.lang.String getIri();
+    /**
+     * <pre>
+     * iri is the content IRI
+     * </pre>
+     *
+     * <code>string iri = 1 [json_name = "iri"];</code>
+     * @return The bytes for iri.
+     */
+    com.google.protobuf.ByteString
+        getIriBytes();
+
+    /**
+     * <pre>
+     * pagination is the PageRequest to use for pagination.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination is the PageRequest to use for pagination.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <pre>
+     * pagination is the PageRequest to use for pagination.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QuerySignersRequest is the Query/Signers request type.
+   * </pre>
+   *
+   * Protobuf type {@code regen.data.v1alpha2.QuerySignersRequest}
+   */
+  public static final class QuerySignersRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.data.v1alpha2.QuerySignersRequest)
+      QuerySignersRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySignersRequest.newBuilder() to construct.
+    private QuerySignersRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySignersRequest() {
+      iri_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySignersRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_QuerySignersRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_QuerySignersRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.data.v1alpha2.QueryProto.QuerySignersRequest.class, com.regen.data.v1alpha2.QueryProto.QuerySignersRequest.Builder.class);
+    }
+
+    public static final int IRI_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object iri_ = "";
+    /**
+     * <pre>
+     * iri is the content IRI
+     * </pre>
+     *
+     * <code>string iri = 1 [json_name = "iri"];</code>
+     * @return The iri.
+     */
+    @java.lang.Override
+    public java.lang.String getIri() {
+      java.lang.Object ref = iri_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        iri_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * iri is the content IRI
+     * </pre>
+     *
+     * <code>string iri = 1 [json_name = "iri"];</code>
+     * @return The bytes for iri.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIriBytes() {
+      java.lang.Object ref = iri_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        iri_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <pre>
+     * pagination is the PageRequest to use for pagination.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination is the PageRequest to use for pagination.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination is the PageRequest to use for pagination.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iri_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, iri_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iri_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, iri_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.data.v1alpha2.QueryProto.QuerySignersRequest)) {
+        return super.equals(obj);
+      }
+      com.regen.data.v1alpha2.QueryProto.QuerySignersRequest other = (com.regen.data.v1alpha2.QueryProto.QuerySignersRequest) obj;
+
+      if (!getIri()
+          .equals(other.getIri())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + IRI_FIELD_NUMBER;
+      hash = (53 * hash) + getIri().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.data.v1alpha2.QueryProto.QuerySignersRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QuerySignersRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QuerySignersRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QuerySignersRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QuerySignersRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QuerySignersRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QuerySignersRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QuerySignersRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.data.v1alpha2.QueryProto.QuerySignersRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.data.v1alpha2.QueryProto.QuerySignersRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QuerySignersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QuerySignersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.data.v1alpha2.QueryProto.QuerySignersRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QuerySignersRequest is the Query/Signers request type.
+     * </pre>
+     *
+     * Protobuf type {@code regen.data.v1alpha2.QuerySignersRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.data.v1alpha2.QuerySignersRequest)
+        com.regen.data.v1alpha2.QueryProto.QuerySignersRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_QuerySignersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_QuerySignersRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.data.v1alpha2.QueryProto.QuerySignersRequest.class, com.regen.data.v1alpha2.QueryProto.QuerySignersRequest.Builder.class);
+      }
+
+      // Construct using com.regen.data.v1alpha2.QueryProto.QuerySignersRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        iri_ = "";
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_QuerySignersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.QueryProto.QuerySignersRequest getDefaultInstanceForType() {
+        return com.regen.data.v1alpha2.QueryProto.QuerySignersRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.QueryProto.QuerySignersRequest build() {
+        com.regen.data.v1alpha2.QueryProto.QuerySignersRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.QueryProto.QuerySignersRequest buildPartial() {
+        com.regen.data.v1alpha2.QueryProto.QuerySignersRequest result = new com.regen.data.v1alpha2.QueryProto.QuerySignersRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.data.v1alpha2.QueryProto.QuerySignersRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.iri_ = iri_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.data.v1alpha2.QueryProto.QuerySignersRequest) {
+          return mergeFrom((com.regen.data.v1alpha2.QueryProto.QuerySignersRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.data.v1alpha2.QueryProto.QuerySignersRequest other) {
+        if (other == com.regen.data.v1alpha2.QueryProto.QuerySignersRequest.getDefaultInstance()) return this;
+        if (!other.getIri().isEmpty()) {
+          iri_ = other.iri_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                iri_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object iri_ = "";
+      /**
+       * <pre>
+       * iri is the content IRI
+       * </pre>
+       *
+       * <code>string iri = 1 [json_name = "iri"];</code>
+       * @return The iri.
+       */
+      public java.lang.String getIri() {
+        java.lang.Object ref = iri_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          iri_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * iri is the content IRI
+       * </pre>
+       *
+       * <code>string iri = 1 [json_name = "iri"];</code>
+       * @return The bytes for iri.
+       */
+      public com.google.protobuf.ByteString
+          getIriBytes() {
+        java.lang.Object ref = iri_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          iri_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * iri is the content IRI
+       * </pre>
+       *
+       * <code>string iri = 1 [json_name = "iri"];</code>
+       * @param value The iri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIri(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        iri_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * iri is the content IRI
+       * </pre>
+       *
+       * <code>string iri = 1 [json_name = "iri"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIri() {
+        iri_ = getDefaultInstance().getIri();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * iri is the content IRI
+       * </pre>
+       *
+       * <code>string iri = 1 [json_name = "iri"];</code>
+       * @param value The bytes for iri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIriBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        iri_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination is the PageRequest to use for pagination.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * pagination is the PageRequest to use for pagination.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination is the PageRequest to use for pagination.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination is the PageRequest to use for pagination.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination is the PageRequest to use for pagination.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination is the PageRequest to use for pagination.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination is the PageRequest to use for pagination.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination is the PageRequest to use for pagination.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination is the PageRequest to use for pagination.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.data.v1alpha2.QuerySignersRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.data.v1alpha2.QuerySignersRequest)
+    private static final com.regen.data.v1alpha2.QueryProto.QuerySignersRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.data.v1alpha2.QueryProto.QuerySignersRequest();
+    }
+
+    public static com.regen.data.v1alpha2.QueryProto.QuerySignersRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySignersRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySignersRequest>() {
+      @java.lang.Override
+      public QuerySignersRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySignersRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySignersRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.data.v1alpha2.QueryProto.QuerySignersRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySignersResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.data.v1alpha2.QuerySignersResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * signers are the addresses of the signers.
+     * </pre>
+     *
+     * <code>repeated string signers = 1 [json_name = "signers"];</code>
+     * @return A list containing the signers.
+     */
+    java.util.List<java.lang.String>
+        getSignersList();
+    /**
+     * <pre>
+     * signers are the addresses of the signers.
+     * </pre>
+     *
+     * <code>repeated string signers = 1 [json_name = "signers"];</code>
+     * @return The count of signers.
+     */
+    int getSignersCount();
+    /**
+     * <pre>
+     * signers are the addresses of the signers.
+     * </pre>
+     *
+     * <code>repeated string signers = 1 [json_name = "signers"];</code>
+     * @param index The index of the element to return.
+     * @return The signers at the given index.
+     */
+    java.lang.String getSigners(int index);
+    /**
+     * <pre>
+     * signers are the addresses of the signers.
+     * </pre>
+     *
+     * <code>repeated string signers = 1 [json_name = "signers"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the signers at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSignersBytes(int index);
+
+    /**
+     * <pre>
+     * pagination is the pagination PageResponse.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination is the pagination PageResponse.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <pre>
+     * pagination is the pagination PageResponse.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QuerySignersResponse is the Query/QuerySigners response type.
+   * </pre>
+   *
+   * Protobuf type {@code regen.data.v1alpha2.QuerySignersResponse}
+   */
+  public static final class QuerySignersResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.data.v1alpha2.QuerySignersResponse)
+      QuerySignersResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySignersResponse.newBuilder() to construct.
+    private QuerySignersResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySignersResponse() {
+      signers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySignersResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_QuerySignersResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_QuerySignersResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.data.v1alpha2.QueryProto.QuerySignersResponse.class, com.regen.data.v1alpha2.QueryProto.QuerySignersResponse.Builder.class);
+    }
+
+    public static final int SIGNERS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList signers_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * signers are the addresses of the signers.
+     * </pre>
+     *
+     * <code>repeated string signers = 1 [json_name = "signers"];</code>
+     * @return A list containing the signers.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSignersList() {
+      return signers_;
+    }
+    /**
+     * <pre>
+     * signers are the addresses of the signers.
+     * </pre>
+     *
+     * <code>repeated string signers = 1 [json_name = "signers"];</code>
+     * @return The count of signers.
+     */
+    public int getSignersCount() {
+      return signers_.size();
+    }
+    /**
+     * <pre>
+     * signers are the addresses of the signers.
+     * </pre>
+     *
+     * <code>repeated string signers = 1 [json_name = "signers"];</code>
+     * @param index The index of the element to return.
+     * @return The signers at the given index.
+     */
+    public java.lang.String getSigners(int index) {
+      return signers_.get(index);
+    }
+    /**
+     * <pre>
+     * signers are the addresses of the signers.
+     * </pre>
+     *
+     * <code>repeated string signers = 1 [json_name = "signers"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the signers at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSignersBytes(int index) {
+      return signers_.getByteString(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <pre>
+     * pagination is the pagination PageResponse.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination is the pagination PageResponse.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination is the pagination PageResponse.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < signers_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, signers_.getRaw(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < signers_.size(); i++) {
+          dataSize += computeStringSizeNoTag(signers_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSignersList().size();
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.data.v1alpha2.QueryProto.QuerySignersResponse)) {
+        return super.equals(obj);
+      }
+      com.regen.data.v1alpha2.QueryProto.QuerySignersResponse other = (com.regen.data.v1alpha2.QueryProto.QuerySignersResponse) obj;
+
+      if (!getSignersList()
+          .equals(other.getSignersList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getSignersCount() > 0) {
+        hash = (37 * hash) + SIGNERS_FIELD_NUMBER;
+        hash = (53 * hash) + getSignersList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.data.v1alpha2.QueryProto.QuerySignersResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QuerySignersResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QuerySignersResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QuerySignersResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QuerySignersResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QuerySignersResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QuerySignersResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QuerySignersResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.data.v1alpha2.QueryProto.QuerySignersResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.data.v1alpha2.QueryProto.QuerySignersResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QuerySignersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.QueryProto.QuerySignersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.data.v1alpha2.QueryProto.QuerySignersResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QuerySignersResponse is the Query/QuerySigners response type.
+     * </pre>
+     *
+     * Protobuf type {@code regen.data.v1alpha2.QuerySignersResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.data.v1alpha2.QuerySignersResponse)
+        com.regen.data.v1alpha2.QueryProto.QuerySignersResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_QuerySignersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_QuerySignersResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.data.v1alpha2.QueryProto.QuerySignersResponse.class, com.regen.data.v1alpha2.QueryProto.QuerySignersResponse.Builder.class);
+      }
+
+      // Construct using com.regen.data.v1alpha2.QueryProto.QuerySignersResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        signers_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.data.v1alpha2.QueryProto.internal_static_regen_data_v1alpha2_QuerySignersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.QueryProto.QuerySignersResponse getDefaultInstanceForType() {
+        return com.regen.data.v1alpha2.QueryProto.QuerySignersResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.QueryProto.QuerySignersResponse build() {
+        com.regen.data.v1alpha2.QueryProto.QuerySignersResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.QueryProto.QuerySignersResponse buildPartial() {
+        com.regen.data.v1alpha2.QueryProto.QuerySignersResponse result = new com.regen.data.v1alpha2.QueryProto.QuerySignersResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.data.v1alpha2.QueryProto.QuerySignersResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          signers_.makeImmutable();
+          result.signers_ = signers_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.data.v1alpha2.QueryProto.QuerySignersResponse) {
+          return mergeFrom((com.regen.data.v1alpha2.QueryProto.QuerySignersResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.data.v1alpha2.QueryProto.QuerySignersResponse other) {
+        if (other == com.regen.data.v1alpha2.QueryProto.QuerySignersResponse.getDefaultInstance()) return this;
+        if (!other.signers_.isEmpty()) {
+          if (signers_.isEmpty()) {
+            signers_ = other.signers_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureSignersIsMutable();
+            signers_.addAll(other.signers_);
+          }
+          onChanged();
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureSignersIsMutable();
+                signers_.add(s);
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList signers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureSignersIsMutable() {
+        if (!signers_.isModifiable()) {
+          signers_ = new com.google.protobuf.LazyStringArrayList(signers_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <pre>
+       * signers are the addresses of the signers.
+       * </pre>
+       *
+       * <code>repeated string signers = 1 [json_name = "signers"];</code>
+       * @return A list containing the signers.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSignersList() {
+        signers_.makeImmutable();
+        return signers_;
+      }
+      /**
+       * <pre>
+       * signers are the addresses of the signers.
+       * </pre>
+       *
+       * <code>repeated string signers = 1 [json_name = "signers"];</code>
+       * @return The count of signers.
+       */
+      public int getSignersCount() {
+        return signers_.size();
+      }
+      /**
+       * <pre>
+       * signers are the addresses of the signers.
+       * </pre>
+       *
+       * <code>repeated string signers = 1 [json_name = "signers"];</code>
+       * @param index The index of the element to return.
+       * @return The signers at the given index.
+       */
+      public java.lang.String getSigners(int index) {
+        return signers_.get(index);
+      }
+      /**
+       * <pre>
+       * signers are the addresses of the signers.
+       * </pre>
+       *
+       * <code>repeated string signers = 1 [json_name = "signers"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the signers at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSignersBytes(int index) {
+        return signers_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * signers are the addresses of the signers.
+       * </pre>
+       *
+       * <code>repeated string signers = 1 [json_name = "signers"];</code>
+       * @param index The index to set the value at.
+       * @param value The signers to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSigners(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureSignersIsMutable();
+        signers_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * signers are the addresses of the signers.
+       * </pre>
+       *
+       * <code>repeated string signers = 1 [json_name = "signers"];</code>
+       * @param value The signers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSigners(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureSignersIsMutable();
+        signers_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * signers are the addresses of the signers.
+       * </pre>
+       *
+       * <code>repeated string signers = 1 [json_name = "signers"];</code>
+       * @param values The signers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSigners(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSignersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, signers_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * signers are the addresses of the signers.
+       * </pre>
+       *
+       * <code>repeated string signers = 1 [json_name = "signers"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSigners() {
+        signers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * signers are the addresses of the signers.
+       * </pre>
+       *
+       * <code>repeated string signers = 1 [json_name = "signers"];</code>
+       * @param value The bytes of the signers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSignersBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureSignersIsMutable();
+        signers_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination is the pagination PageResponse.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * pagination is the pagination PageResponse.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination is the pagination PageResponse.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination is the pagination PageResponse.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination is the pagination PageResponse.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination is the pagination PageResponse.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination is the pagination PageResponse.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination is the pagination PageResponse.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination is the pagination PageResponse.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.data.v1alpha2.QuerySignersResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.data.v1alpha2.QuerySignersResponse)
+    private static final com.regen.data.v1alpha2.QueryProto.QuerySignersResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.data.v1alpha2.QueryProto.QuerySignersResponse();
+    }
+
+    public static com.regen.data.v1alpha2.QueryProto.QuerySignersResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySignersResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySignersResponse>() {
+      @java.lang.Override
+      public QuerySignersResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySignersResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySignersResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.data.v1alpha2.QueryProto.QuerySignersResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_data_v1alpha2_QueryByIRIRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_data_v1alpha2_QueryByIRIRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_data_v1alpha2_QueryByIRIResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_data_v1alpha2_QueryByIRIResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_data_v1alpha2_QueryBySignerRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_data_v1alpha2_QueryBySignerRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_data_v1alpha2_QueryBySignerResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_data_v1alpha2_QueryBySignerResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_data_v1alpha2_ContentEntry_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_data_v1alpha2_ContentEntry_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_data_v1alpha2_QuerySignersRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_data_v1alpha2_QuerySignersRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_data_v1alpha2_QuerySignersResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_data_v1alpha2_QuerySignersResponse_fieldAccessorTable;
 
@@ -93,12 +6277,12 @@ public final class QueryProto {
       "(.regen.data.v1alpha2.QuerySignersReques" +
       "t\032).regen.data.v1alpha2.QuerySignersResp" +
       "onse\"*\202\323\344\223\002$\022\"/regen/data/v1alpha2/signe" +
-      "rs/{iri}B\301\001\n\027com.regen.data.v1alpha2B\nQu" +
-      "eryProtoP\001Z,github.com/regen-network/reg" +
-      "en-ledger/x/data\242\002\003RDX\252\002\023Regen.Data.V1al" +
-      "pha2\312\002\023Regen\\Data\\V1alpha2\342\002\037Regen\\Data\\" +
-      "V1alpha2\\GPBMetadata\352\002\025Regen::Data::V1al" +
-      "pha2b\006proto3"
+      "rs/{iri}B\277\001\n\027com.regen.data.v1alpha2B\nQu" +
+      "eryProtoZ,github.com/regen-network/regen" +
+      "-ledger/x/data\242\002\003RDX\252\002\023Regen.Data.V1alph" +
+      "a2\312\002\023Regen\\Data\\V1alpha2\342\002\037Regen\\Data\\V1" +
+      "alpha2\\GPBMetadata\352\002\025Regen::Data::V1alph" +
+      "a2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

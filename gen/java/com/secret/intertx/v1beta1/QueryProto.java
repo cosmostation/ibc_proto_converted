@@ -14,14 +14,1282 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryInterchainAccountFromAddressRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:secret.intertx.v1beta1.QueryInterchainAccountFromAddressRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <code>string connection_id = 2 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+     * @return The connectionId.
+     */
+    java.lang.String getConnectionId();
+    /**
+     * <code>string connection_id = 2 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+     * @return The bytes for connectionId.
+     */
+    com.google.protobuf.ByteString
+        getConnectionIdBytes();
+  }
+  /**
+   * <pre>
+   * QueryInterchainAccountFromAddressRequest is the request type for the Query/InterchainAccountAddress RPC
+   * </pre>
+   *
+   * Protobuf type {@code secret.intertx.v1beta1.QueryInterchainAccountFromAddressRequest}
+   */
+  public static final class QueryInterchainAccountFromAddressRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:secret.intertx.v1beta1.QueryInterchainAccountFromAddressRequest)
+      QueryInterchainAccountFromAddressRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryInterchainAccountFromAddressRequest.newBuilder() to construct.
+    private QueryInterchainAccountFromAddressRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryInterchainAccountFromAddressRequest() {
+      owner_ = "";
+      connectionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryInterchainAccountFromAddressRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.secret.intertx.v1beta1.QueryProto.internal_static_secret_intertx_v1beta1_QueryInterchainAccountFromAddressRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.secret.intertx.v1beta1.QueryProto.internal_static_secret_intertx_v1beta1_QueryInterchainAccountFromAddressRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest.class, com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest.Builder.class);
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONNECTION_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object connectionId_ = "";
+    /**
+     * <code>string connection_id = 2 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+     * @return The connectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getConnectionId() {
+      java.lang.Object ref = connectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        connectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string connection_id = 2 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+     * @return The bytes for connectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConnectionIdBytes() {
+      java.lang.Object ref = connectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        connectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, connectionId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, connectionId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest)) {
+        return super.equals(obj);
+      }
+      com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest other = (com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest) obj;
+
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getConnectionId()
+          .equals(other.getConnectionId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getConnectionId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryInterchainAccountFromAddressRequest is the request type for the Query/InterchainAccountAddress RPC
+     * </pre>
+     *
+     * Protobuf type {@code secret.intertx.v1beta1.QueryInterchainAccountFromAddressRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:secret.intertx.v1beta1.QueryInterchainAccountFromAddressRequest)
+        com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.secret.intertx.v1beta1.QueryProto.internal_static_secret_intertx_v1beta1_QueryInterchainAccountFromAddressRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.secret.intertx.v1beta1.QueryProto.internal_static_secret_intertx_v1beta1_QueryInterchainAccountFromAddressRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest.class, com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest.Builder.class);
+      }
+
+      // Construct using com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        owner_ = "";
+        connectionId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.secret.intertx.v1beta1.QueryProto.internal_static_secret_intertx_v1beta1_QueryInterchainAccountFromAddressRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest getDefaultInstanceForType() {
+        return com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest build() {
+        com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest buildPartial() {
+        com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest result = new com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.connectionId_ = connectionId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest) {
+          return mergeFrom((com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest other) {
+        if (other == com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest.getDefaultInstance()) return this;
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getConnectionId().isEmpty()) {
+          connectionId_ = other.connectionId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                connectionId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object connectionId_ = "";
+      /**
+       * <code>string connection_id = 2 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+       * @return The connectionId.
+       */
+      public java.lang.String getConnectionId() {
+        java.lang.Object ref = connectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          connectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string connection_id = 2 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+       * @return The bytes for connectionId.
+       */
+      public com.google.protobuf.ByteString
+          getConnectionIdBytes() {
+        java.lang.Object ref = connectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          connectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string connection_id = 2 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+       * @param value The connectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectionId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        connectionId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string connection_id = 2 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConnectionId() {
+        connectionId_ = getDefaultInstance().getConnectionId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string connection_id = 2 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+       * @param value The bytes for connectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        connectionId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:secret.intertx.v1beta1.QueryInterchainAccountFromAddressRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:secret.intertx.v1beta1.QueryInterchainAccountFromAddressRequest)
+    private static final com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest();
+    }
+
+    public static com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryInterchainAccountFromAddressRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryInterchainAccountFromAddressRequest>() {
+      @java.lang.Override
+      public QueryInterchainAccountFromAddressRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryInterchainAccountFromAddressRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryInterchainAccountFromAddressRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryInterchainAccountFromAddressResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:secret.intertx.v1beta1.QueryInterchainAccountFromAddressResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string interchain_account_address = 1 [json_name = "interchainAccountAddress", (.gogoproto.moretags) = "yaml:&#92;"interchain_account_address&#92;""];</code>
+     * @return The interchainAccountAddress.
+     */
+    java.lang.String getInterchainAccountAddress();
+    /**
+     * <code>string interchain_account_address = 1 [json_name = "interchainAccountAddress", (.gogoproto.moretags) = "yaml:&#92;"interchain_account_address&#92;""];</code>
+     * @return The bytes for interchainAccountAddress.
+     */
+    com.google.protobuf.ByteString
+        getInterchainAccountAddressBytes();
+  }
+  /**
+   * <pre>
+   * QueryInterchainAccountFromAddressResponse the response type for the Query/InterchainAccountAddress RPC
+   * </pre>
+   *
+   * Protobuf type {@code secret.intertx.v1beta1.QueryInterchainAccountFromAddressResponse}
+   */
+  public static final class QueryInterchainAccountFromAddressResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:secret.intertx.v1beta1.QueryInterchainAccountFromAddressResponse)
+      QueryInterchainAccountFromAddressResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryInterchainAccountFromAddressResponse.newBuilder() to construct.
+    private QueryInterchainAccountFromAddressResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryInterchainAccountFromAddressResponse() {
+      interchainAccountAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryInterchainAccountFromAddressResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.secret.intertx.v1beta1.QueryProto.internal_static_secret_intertx_v1beta1_QueryInterchainAccountFromAddressResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.secret.intertx.v1beta1.QueryProto.internal_static_secret_intertx_v1beta1_QueryInterchainAccountFromAddressResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse.class, com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse.Builder.class);
+    }
+
+    public static final int INTERCHAIN_ACCOUNT_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object interchainAccountAddress_ = "";
+    /**
+     * <code>string interchain_account_address = 1 [json_name = "interchainAccountAddress", (.gogoproto.moretags) = "yaml:&#92;"interchain_account_address&#92;""];</code>
+     * @return The interchainAccountAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getInterchainAccountAddress() {
+      java.lang.Object ref = interchainAccountAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        interchainAccountAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string interchain_account_address = 1 [json_name = "interchainAccountAddress", (.gogoproto.moretags) = "yaml:&#92;"interchain_account_address&#92;""];</code>
+     * @return The bytes for interchainAccountAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInterchainAccountAddressBytes() {
+      java.lang.Object ref = interchainAccountAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        interchainAccountAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(interchainAccountAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, interchainAccountAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(interchainAccountAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, interchainAccountAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse)) {
+        return super.equals(obj);
+      }
+      com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse other = (com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse) obj;
+
+      if (!getInterchainAccountAddress()
+          .equals(other.getInterchainAccountAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INTERCHAIN_ACCOUNT_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getInterchainAccountAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryInterchainAccountFromAddressResponse the response type for the Query/InterchainAccountAddress RPC
+     * </pre>
+     *
+     * Protobuf type {@code secret.intertx.v1beta1.QueryInterchainAccountFromAddressResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:secret.intertx.v1beta1.QueryInterchainAccountFromAddressResponse)
+        com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.secret.intertx.v1beta1.QueryProto.internal_static_secret_intertx_v1beta1_QueryInterchainAccountFromAddressResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.secret.intertx.v1beta1.QueryProto.internal_static_secret_intertx_v1beta1_QueryInterchainAccountFromAddressResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse.class, com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse.Builder.class);
+      }
+
+      // Construct using com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        interchainAccountAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.secret.intertx.v1beta1.QueryProto.internal_static_secret_intertx_v1beta1_QueryInterchainAccountFromAddressResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse getDefaultInstanceForType() {
+        return com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse build() {
+        com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse buildPartial() {
+        com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse result = new com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.interchainAccountAddress_ = interchainAccountAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse) {
+          return mergeFrom((com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse other) {
+        if (other == com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse.getDefaultInstance()) return this;
+        if (!other.getInterchainAccountAddress().isEmpty()) {
+          interchainAccountAddress_ = other.interchainAccountAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                interchainAccountAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object interchainAccountAddress_ = "";
+      /**
+       * <code>string interchain_account_address = 1 [json_name = "interchainAccountAddress", (.gogoproto.moretags) = "yaml:&#92;"interchain_account_address&#92;""];</code>
+       * @return The interchainAccountAddress.
+       */
+      public java.lang.String getInterchainAccountAddress() {
+        java.lang.Object ref = interchainAccountAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          interchainAccountAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string interchain_account_address = 1 [json_name = "interchainAccountAddress", (.gogoproto.moretags) = "yaml:&#92;"interchain_account_address&#92;""];</code>
+       * @return The bytes for interchainAccountAddress.
+       */
+      public com.google.protobuf.ByteString
+          getInterchainAccountAddressBytes() {
+        java.lang.Object ref = interchainAccountAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          interchainAccountAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string interchain_account_address = 1 [json_name = "interchainAccountAddress", (.gogoproto.moretags) = "yaml:&#92;"interchain_account_address&#92;""];</code>
+       * @param value The interchainAccountAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInterchainAccountAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        interchainAccountAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string interchain_account_address = 1 [json_name = "interchainAccountAddress", (.gogoproto.moretags) = "yaml:&#92;"interchain_account_address&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInterchainAccountAddress() {
+        interchainAccountAddress_ = getDefaultInstance().getInterchainAccountAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string interchain_account_address = 1 [json_name = "interchainAccountAddress", (.gogoproto.moretags) = "yaml:&#92;"interchain_account_address&#92;""];</code>
+       * @param value The bytes for interchainAccountAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInterchainAccountAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        interchainAccountAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:secret.intertx.v1beta1.QueryInterchainAccountFromAddressResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:secret.intertx.v1beta1.QueryInterchainAccountFromAddressResponse)
+    private static final com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse();
+    }
+
+    public static com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryInterchainAccountFromAddressResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryInterchainAccountFromAddressResponse>() {
+      @java.lang.Override
+      public QueryInterchainAccountFromAddressResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryInterchainAccountFromAddressResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryInterchainAccountFromAddressResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.secret.intertx.v1beta1.QueryProto.QueryInterchainAccountFromAddressResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_secret_intertx_v1beta1_QueryInterchainAccountFromAddressRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_secret_intertx_v1beta1_QueryInterchainAccountFromAddressRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_secret_intertx_v1beta1_QueryInterchainAccountFromAddressResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_secret_intertx_v1beta1_QueryInterchainAccountFromAddressResponse_fieldAccessorTable;
 
@@ -49,12 +1317,12 @@ public final class QueryProto {
       "a1.QueryInterchainAccountFromAddressResp" +
       "onse\"J\202\323\344\223\002D\022B/mauth/interchain_account/" +
       "owner/{owner}/connection/{connection_id}" +
-      "B\333\001\n\032com.secret.intertx.v1beta1B\nQueryPr" +
-      "otoP\001Z/github.com/scrtlabs/SecretNetwork" +
-      "/x/mauth/types\242\002\003SIX\252\002\026Secret.Intertx.V1" +
-      "beta1\312\002\026Secret\\Intertx\\V1beta1\342\002\"Secret\\" +
-      "Intertx\\V1beta1\\GPBMetadata\352\002\030Secret::In" +
-      "tertx::V1beta1\310\341\036\000\250\342\036\001b\006proto3"
+      "B\331\001\n\032com.secret.intertx.v1beta1B\nQueryPr" +
+      "otoZ/github.com/scrtlabs/SecretNetwork/x" +
+      "/mauth/types\242\002\003SIX\252\002\026Secret.Intertx.V1be" +
+      "ta1\312\002\026Secret\\Intertx\\V1beta1\342\002\"Secret\\In" +
+      "tertx\\V1beta1\\GPBMetadata\352\002\030Secret::Inte" +
+      "rtx::V1beta1\310\341\036\000\250\342\036\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

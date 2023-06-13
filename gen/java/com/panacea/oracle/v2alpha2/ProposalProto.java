@@ -14,14 +14,1551 @@ public final class ProposalProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface PlanOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.oracle.v2alpha2.Plan)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+     * @return The uniqueId.
+     */
+    java.lang.String getUniqueId();
+    /**
+     * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+     * @return The bytes for uniqueId.
+     */
+    com.google.protobuf.ByteString
+        getUniqueIdBytes();
+
+    /**
+     * <code>int64 height = 2 [json_name = "height"];</code>
+     * @return The height.
+     */
+    long getHeight();
+  }
+  /**
+   * <pre>
+   * Plan defines upgrade plan information.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.oracle.v2alpha2.Plan}
+   */
+  public static final class Plan extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.oracle.v2alpha2.Plan)
+      PlanOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Plan.newBuilder() to construct.
+    private Plan(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Plan() {
+      uniqueId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Plan();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.oracle.v2alpha2.ProposalProto.internal_static_panacea_oracle_v2alpha2_Plan_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.oracle.v2alpha2.ProposalProto.internal_static_panacea_oracle_v2alpha2_Plan_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.oracle.v2alpha2.ProposalProto.Plan.class, com.panacea.oracle.v2alpha2.ProposalProto.Plan.Builder.class);
+    }
+
+    public static final int UNIQUE_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object uniqueId_ = "";
+    /**
+     * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+     * @return The uniqueId.
+     */
+    @java.lang.Override
+    public java.lang.String getUniqueId() {
+      java.lang.Object ref = uniqueId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uniqueId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+     * @return The bytes for uniqueId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUniqueIdBytes() {
+      java.lang.Object ref = uniqueId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uniqueId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HEIGHT_FIELD_NUMBER = 2;
+    private long height_ = 0L;
+    /**
+     * <code>int64 height = 2 [json_name = "height"];</code>
+     * @return The height.
+     */
+    @java.lang.Override
+    public long getHeight() {
+      return height_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uniqueId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uniqueId_);
+      }
+      if (height_ != 0L) {
+        output.writeInt64(2, height_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uniqueId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uniqueId_);
+      }
+      if (height_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, height_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.oracle.v2alpha2.ProposalProto.Plan)) {
+        return super.equals(obj);
+      }
+      com.panacea.oracle.v2alpha2.ProposalProto.Plan other = (com.panacea.oracle.v2alpha2.ProposalProto.Plan) obj;
+
+      if (!getUniqueId()
+          .equals(other.getUniqueId())) return false;
+      if (getHeight()
+          != other.getHeight()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + UNIQUE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getUniqueId().hashCode();
+      hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getHeight());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.oracle.v2alpha2.ProposalProto.Plan parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.ProposalProto.Plan parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.ProposalProto.Plan parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.ProposalProto.Plan parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.ProposalProto.Plan parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.ProposalProto.Plan parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.ProposalProto.Plan parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.ProposalProto.Plan parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.oracle.v2alpha2.ProposalProto.Plan parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.oracle.v2alpha2.ProposalProto.Plan parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.ProposalProto.Plan parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.ProposalProto.Plan parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.oracle.v2alpha2.ProposalProto.Plan prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Plan defines upgrade plan information.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.oracle.v2alpha2.Plan}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.oracle.v2alpha2.Plan)
+        com.panacea.oracle.v2alpha2.ProposalProto.PlanOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.oracle.v2alpha2.ProposalProto.internal_static_panacea_oracle_v2alpha2_Plan_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.oracle.v2alpha2.ProposalProto.internal_static_panacea_oracle_v2alpha2_Plan_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.oracle.v2alpha2.ProposalProto.Plan.class, com.panacea.oracle.v2alpha2.ProposalProto.Plan.Builder.class);
+      }
+
+      // Construct using com.panacea.oracle.v2alpha2.ProposalProto.Plan.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        uniqueId_ = "";
+        height_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.oracle.v2alpha2.ProposalProto.internal_static_panacea_oracle_v2alpha2_Plan_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.ProposalProto.Plan getDefaultInstanceForType() {
+        return com.panacea.oracle.v2alpha2.ProposalProto.Plan.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.ProposalProto.Plan build() {
+        com.panacea.oracle.v2alpha2.ProposalProto.Plan result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.ProposalProto.Plan buildPartial() {
+        com.panacea.oracle.v2alpha2.ProposalProto.Plan result = new com.panacea.oracle.v2alpha2.ProposalProto.Plan(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.oracle.v2alpha2.ProposalProto.Plan result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.uniqueId_ = uniqueId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.height_ = height_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.oracle.v2alpha2.ProposalProto.Plan) {
+          return mergeFrom((com.panacea.oracle.v2alpha2.ProposalProto.Plan)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.oracle.v2alpha2.ProposalProto.Plan other) {
+        if (other == com.panacea.oracle.v2alpha2.ProposalProto.Plan.getDefaultInstance()) return this;
+        if (!other.getUniqueId().isEmpty()) {
+          uniqueId_ = other.uniqueId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getHeight() != 0L) {
+          setHeight(other.getHeight());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                uniqueId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                height_ = input.readInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object uniqueId_ = "";
+      /**
+       * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+       * @return The uniqueId.
+       */
+      public java.lang.String getUniqueId() {
+        java.lang.Object ref = uniqueId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uniqueId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+       * @return The bytes for uniqueId.
+       */
+      public com.google.protobuf.ByteString
+          getUniqueIdBytes() {
+        java.lang.Object ref = uniqueId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uniqueId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+       * @param value The uniqueId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUniqueId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        uniqueId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUniqueId() {
+        uniqueId_ = getDefaultInstance().getUniqueId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+       * @param value The bytes for uniqueId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUniqueIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        uniqueId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long height_ ;
+      /**
+       * <code>int64 height = 2 [json_name = "height"];</code>
+       * @return The height.
+       */
+      @java.lang.Override
+      public long getHeight() {
+        return height_;
+      }
+      /**
+       * <code>int64 height = 2 [json_name = "height"];</code>
+       * @param value The height to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeight(long value) {
+
+        height_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 height = 2 [json_name = "height"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHeight() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        height_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.oracle.v2alpha2.Plan)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.oracle.v2alpha2.Plan)
+    private static final com.panacea.oracle.v2alpha2.ProposalProto.Plan DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.oracle.v2alpha2.ProposalProto.Plan();
+    }
+
+    public static com.panacea.oracle.v2alpha2.ProposalProto.Plan getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Plan>
+        PARSER = new com.google.protobuf.AbstractParser<Plan>() {
+      @java.lang.Override
+      public Plan parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Plan> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Plan> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.ProposalProto.Plan getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface OracleUpgradeProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.oracle.v2alpha2.OracleUpgradeProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>.panacea.oracle.v2alpha2.Plan plan = 3 [json_name = "plan", (.gogoproto.nullable) = false];</code>
+     * @return Whether the plan field is set.
+     */
+    boolean hasPlan();
+    /**
+     * <code>.panacea.oracle.v2alpha2.Plan plan = 3 [json_name = "plan", (.gogoproto.nullable) = false];</code>
+     * @return The plan.
+     */
+    com.panacea.oracle.v2alpha2.ProposalProto.Plan getPlan();
+    /**
+     * <code>.panacea.oracle.v2alpha2.Plan plan = 3 [json_name = "plan", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.oracle.v2alpha2.ProposalProto.PlanOrBuilder getPlanOrBuilder();
+  }
+  /**
+   * <pre>
+   * OracleUpgradeProposal defines the information required for a proposal.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.oracle.v2alpha2.OracleUpgradeProposal}
+   */
+  public static final class OracleUpgradeProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.oracle.v2alpha2.OracleUpgradeProposal)
+      OracleUpgradeProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use OracleUpgradeProposal.newBuilder() to construct.
+    private OracleUpgradeProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private OracleUpgradeProposal() {
+      title_ = "";
+      description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new OracleUpgradeProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.oracle.v2alpha2.ProposalProto.internal_static_panacea_oracle_v2alpha2_OracleUpgradeProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.oracle.v2alpha2.ProposalProto.internal_static_panacea_oracle_v2alpha2_OracleUpgradeProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal.class, com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PLAN_FIELD_NUMBER = 3;
+    private com.panacea.oracle.v2alpha2.ProposalProto.Plan plan_;
+    /**
+     * <code>.panacea.oracle.v2alpha2.Plan plan = 3 [json_name = "plan", (.gogoproto.nullable) = false];</code>
+     * @return Whether the plan field is set.
+     */
+    @java.lang.Override
+    public boolean hasPlan() {
+      return plan_ != null;
+    }
+    /**
+     * <code>.panacea.oracle.v2alpha2.Plan plan = 3 [json_name = "plan", (.gogoproto.nullable) = false];</code>
+     * @return The plan.
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.ProposalProto.Plan getPlan() {
+      return plan_ == null ? com.panacea.oracle.v2alpha2.ProposalProto.Plan.getDefaultInstance() : plan_;
+    }
+    /**
+     * <code>.panacea.oracle.v2alpha2.Plan plan = 3 [json_name = "plan", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.ProposalProto.PlanOrBuilder getPlanOrBuilder() {
+      return plan_ == null ? com.panacea.oracle.v2alpha2.ProposalProto.Plan.getDefaultInstance() : plan_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (plan_ != null) {
+        output.writeMessage(3, getPlan());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (plan_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPlan());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal)) {
+        return super.equals(obj);
+      }
+      com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal other = (com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (hasPlan() != other.hasPlan()) return false;
+      if (hasPlan()) {
+        if (!getPlan()
+            .equals(other.getPlan())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (hasPlan()) {
+        hash = (37 * hash) + PLAN_FIELD_NUMBER;
+        hash = (53 * hash) + getPlan().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * OracleUpgradeProposal defines the information required for a proposal.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.oracle.v2alpha2.OracleUpgradeProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.oracle.v2alpha2.OracleUpgradeProposal)
+        com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.oracle.v2alpha2.ProposalProto.internal_static_panacea_oracle_v2alpha2_OracleUpgradeProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.oracle.v2alpha2.ProposalProto.internal_static_panacea_oracle_v2alpha2_OracleUpgradeProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal.class, com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal.Builder.class);
+      }
+
+      // Construct using com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        plan_ = null;
+        if (planBuilder_ != null) {
+          planBuilder_.dispose();
+          planBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.oracle.v2alpha2.ProposalProto.internal_static_panacea_oracle_v2alpha2_OracleUpgradeProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal getDefaultInstanceForType() {
+        return com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal build() {
+        com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal buildPartial() {
+        com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal result = new com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.plan_ = planBuilder_ == null
+              ? plan_
+              : planBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal) {
+          return mergeFrom((com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal other) {
+        if (other == com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasPlan()) {
+          mergePlan(other.getPlan());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getPlanFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.panacea.oracle.v2alpha2.ProposalProto.Plan plan_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.oracle.v2alpha2.ProposalProto.Plan, com.panacea.oracle.v2alpha2.ProposalProto.Plan.Builder, com.panacea.oracle.v2alpha2.ProposalProto.PlanOrBuilder> planBuilder_;
+      /**
+       * <code>.panacea.oracle.v2alpha2.Plan plan = 3 [json_name = "plan", (.gogoproto.nullable) = false];</code>
+       * @return Whether the plan field is set.
+       */
+      public boolean hasPlan() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Plan plan = 3 [json_name = "plan", (.gogoproto.nullable) = false];</code>
+       * @return The plan.
+       */
+      public com.panacea.oracle.v2alpha2.ProposalProto.Plan getPlan() {
+        if (planBuilder_ == null) {
+          return plan_ == null ? com.panacea.oracle.v2alpha2.ProposalProto.Plan.getDefaultInstance() : plan_;
+        } else {
+          return planBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Plan plan = 3 [json_name = "plan", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPlan(com.panacea.oracle.v2alpha2.ProposalProto.Plan value) {
+        if (planBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          plan_ = value;
+        } else {
+          planBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Plan plan = 3 [json_name = "plan", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPlan(
+          com.panacea.oracle.v2alpha2.ProposalProto.Plan.Builder builderForValue) {
+        if (planBuilder_ == null) {
+          plan_ = builderForValue.build();
+        } else {
+          planBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Plan plan = 3 [json_name = "plan", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergePlan(com.panacea.oracle.v2alpha2.ProposalProto.Plan value) {
+        if (planBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            plan_ != null &&
+            plan_ != com.panacea.oracle.v2alpha2.ProposalProto.Plan.getDefaultInstance()) {
+            getPlanBuilder().mergeFrom(value);
+          } else {
+            plan_ = value;
+          }
+        } else {
+          planBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Plan plan = 3 [json_name = "plan", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPlan() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        plan_ = null;
+        if (planBuilder_ != null) {
+          planBuilder_.dispose();
+          planBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Plan plan = 3 [json_name = "plan", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.oracle.v2alpha2.ProposalProto.Plan.Builder getPlanBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getPlanFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Plan plan = 3 [json_name = "plan", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.oracle.v2alpha2.ProposalProto.PlanOrBuilder getPlanOrBuilder() {
+        if (planBuilder_ != null) {
+          return planBuilder_.getMessageOrBuilder();
+        } else {
+          return plan_ == null ?
+              com.panacea.oracle.v2alpha2.ProposalProto.Plan.getDefaultInstance() : plan_;
+        }
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Plan plan = 3 [json_name = "plan", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.oracle.v2alpha2.ProposalProto.Plan, com.panacea.oracle.v2alpha2.ProposalProto.Plan.Builder, com.panacea.oracle.v2alpha2.ProposalProto.PlanOrBuilder> 
+          getPlanFieldBuilder() {
+        if (planBuilder_ == null) {
+          planBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.panacea.oracle.v2alpha2.ProposalProto.Plan, com.panacea.oracle.v2alpha2.ProposalProto.Plan.Builder, com.panacea.oracle.v2alpha2.ProposalProto.PlanOrBuilder>(
+                  getPlan(),
+                  getParentForChildren(),
+                  isClean());
+          plan_ = null;
+        }
+        return planBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.oracle.v2alpha2.OracleUpgradeProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.oracle.v2alpha2.OracleUpgradeProposal)
+    private static final com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal();
+    }
+
+    public static com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<OracleUpgradeProposal>
+        PARSER = new com.google.protobuf.AbstractParser<OracleUpgradeProposal>() {
+      @java.lang.Override
+      public OracleUpgradeProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<OracleUpgradeProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OracleUpgradeProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.ProposalProto.OracleUpgradeProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_oracle_v2alpha2_Plan_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_oracle_v2alpha2_Plan_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_oracle_v2alpha2_OracleUpgradeProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_oracle_v2alpha2_OracleUpgradeProposal_fieldAccessorTable;
 
@@ -40,13 +1577,13 @@ public final class ProposalProto {
       "racleUpgradeProposal\022\024\n\005title\030\001 \001(\tR\005tit" +
       "le\022 \n\013description\030\002 \001(\tR\013description\0227\n\004" +
       "plan\030\003 \001(\0132\035.panacea.oracle.v2alpha2.Pla" +
-      "nB\004\310\336\037\000R\004plan:\004\350\240\037\001B\342\001\n\033com.panacea.orac" +
-      "le.v2alpha2B\rProposalProtoP\001Z2github.com" +
-      "/medibloc/panacea-core/v2/x/oracle/types" +
-      "\242\002\003POX\252\002\027Panacea.Oracle.V2alpha2\312\002\027Panac" +
-      "ea\\Oracle\\V2alpha2\342\002#Panacea\\Oracle\\V2al" +
-      "pha2\\GPBMetadata\352\002\031Panacea::Oracle::V2al" +
-      "pha2\310\341\036\000b\006proto3"
+      "nB\004\310\336\037\000R\004plan:\004\350\240\037\001B\340\001\n\033com.panacea.orac" +
+      "le.v2alpha2B\rProposalProtoZ2github.com/m" +
+      "edibloc/panacea-core/v2/x/oracle/types\242\002" +
+      "\003POX\252\002\027Panacea.Oracle.V2alpha2\312\002\027Panacea" +
+      "\\Oracle\\V2alpha2\342\002#Panacea\\Oracle\\V2alph" +
+      "a2\\GPBMetadata\352\002\031Panacea::Oracle::V2alph" +
+      "a2\310\341\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

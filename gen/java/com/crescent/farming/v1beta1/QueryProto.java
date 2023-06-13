@@ -14,139 +14,22692 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.QueryParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryParamsRequest is the request type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.QueryParamsRequest}
+   */
+  public static final class QueryParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.QueryParamsRequest)
+      QueryParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsRequest.newBuilder() to construct.
+    private QueryParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest.class, com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest other = (com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsRequest is the request type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.QueryParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.QueryParamsRequest)
+        com.crescent.farming.v1beta1.QueryProto.QueryParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest.class, com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest build() {
+        com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest buildPartial() {
+        com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest result = new com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest) {
+          return mergeFrom((com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest other) {
+        if (other == com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.QueryParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.QueryParamsRequest)
+    private static final com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest();
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsRequest>() {
+      @java.lang.Override
+      public QueryParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.crescent.farming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.crescent.farming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.crescent.farming.v1beta1.FarmingProto.Params getParams();
+    /**
+     * <code>.crescent.farming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.farming.v1beta1.FarmingProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryParamsResponse is the response type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse.class, com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.crescent.farming.v1beta1.FarmingProto.Params params_;
+    /**
+     * <code>.crescent.farming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.crescent.farming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.FarmingProto.Params getParams() {
+      return params_ == null ? com.crescent.farming.v1beta1.FarmingProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.crescent.farming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.FarmingProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.crescent.farming.v1beta1.FarmingProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse other = (com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsResponse is the response type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.QueryParamsResponse)
+        com.crescent.farming.v1beta1.QueryProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse.class, com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse build() {
+        com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse buildPartial() {
+        com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse result = new com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse) {
+          return mergeFrom((com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse other) {
+        if (other == com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.crescent.farming.v1beta1.FarmingProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.farming.v1beta1.FarmingProto.Params, com.crescent.farming.v1beta1.FarmingProto.Params.Builder, com.crescent.farming.v1beta1.FarmingProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.crescent.farming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.crescent.farming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.crescent.farming.v1beta1.FarmingProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.crescent.farming.v1beta1.FarmingProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.crescent.farming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.crescent.farming.v1beta1.FarmingProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.farming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.crescent.farming.v1beta1.FarmingProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.farming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.crescent.farming.v1beta1.FarmingProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.crescent.farming.v1beta1.FarmingProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.farming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.farming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.farming.v1beta1.FarmingProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.crescent.farming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.farming.v1beta1.FarmingProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.crescent.farming.v1beta1.FarmingProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.crescent.farming.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.farming.v1beta1.FarmingProto.Params, com.crescent.farming.v1beta1.FarmingProto.Params.Builder, com.crescent.farming.v1beta1.FarmingProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.crescent.farming.v1beta1.FarmingProto.Params, com.crescent.farming.v1beta1.FarmingProto.Params.Builder, com.crescent.farming.v1beta1.FarmingProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.QueryParamsResponse)
+    private static final com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse();
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPlansRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.QueryPlansRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The type.
+     */
+    java.lang.String getType();
+    /**
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The bytes for type.
+     */
+    com.google.protobuf.ByteString
+        getTypeBytes();
+
+    /**
+     * <code>string farming_pool_address = 2 [json_name = "farmingPoolAddress"];</code>
+     * @return The farmingPoolAddress.
+     */
+    java.lang.String getFarmingPoolAddress();
+    /**
+     * <code>string farming_pool_address = 2 [json_name = "farmingPoolAddress"];</code>
+     * @return The bytes for farmingPoolAddress.
+     */
+    com.google.protobuf.ByteString
+        getFarmingPoolAddressBytes();
+
+    /**
+     * <code>string termination_address = 3 [json_name = "terminationAddress"];</code>
+     * @return The terminationAddress.
+     */
+    java.lang.String getTerminationAddress();
+    /**
+     * <code>string termination_address = 3 [json_name = "terminationAddress"];</code>
+     * @return The bytes for terminationAddress.
+     */
+    com.google.protobuf.ByteString
+        getTerminationAddressBytes();
+
+    /**
+     * <code>string staking_coin_denom = 4 [json_name = "stakingCoinDenom"];</code>
+     * @return The stakingCoinDenom.
+     */
+    java.lang.String getStakingCoinDenom();
+    /**
+     * <code>string staking_coin_denom = 4 [json_name = "stakingCoinDenom"];</code>
+     * @return The bytes for stakingCoinDenom.
+     */
+    com.google.protobuf.ByteString
+        getStakingCoinDenomBytes();
+
+    /**
+     * <code>string terminated = 5 [json_name = "terminated"];</code>
+     * @return The terminated.
+     */
+    java.lang.String getTerminated();
+    /**
+     * <code>string terminated = 5 [json_name = "terminated"];</code>
+     * @return The bytes for terminated.
+     */
+    com.google.protobuf.ByteString
+        getTerminatedBytes();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 6 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 6 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 6 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryPlansRequest is the request type for the Query/Plans RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.QueryPlansRequest}
+   */
+  public static final class QueryPlansRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.QueryPlansRequest)
+      QueryPlansRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPlansRequest.newBuilder() to construct.
+    private QueryPlansRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPlansRequest() {
+      type_ = "";
+      farmingPoolAddress_ = "";
+      terminationAddress_ = "";
+      stakingCoinDenom_ = "";
+      terminated_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPlansRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryPlansRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryPlansRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest.class, com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest.Builder.class);
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object type_ = "";
+    /**
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        type_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The bytes for type.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        type_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FARMING_POOL_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object farmingPoolAddress_ = "";
+    /**
+     * <code>string farming_pool_address = 2 [json_name = "farmingPoolAddress"];</code>
+     * @return The farmingPoolAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getFarmingPoolAddress() {
+      java.lang.Object ref = farmingPoolAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        farmingPoolAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string farming_pool_address = 2 [json_name = "farmingPoolAddress"];</code>
+     * @return The bytes for farmingPoolAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFarmingPoolAddressBytes() {
+      java.lang.Object ref = farmingPoolAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        farmingPoolAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TERMINATION_ADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object terminationAddress_ = "";
+    /**
+     * <code>string termination_address = 3 [json_name = "terminationAddress"];</code>
+     * @return The terminationAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getTerminationAddress() {
+      java.lang.Object ref = terminationAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        terminationAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string termination_address = 3 [json_name = "terminationAddress"];</code>
+     * @return The bytes for terminationAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTerminationAddressBytes() {
+      java.lang.Object ref = terminationAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        terminationAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STAKING_COIN_DENOM_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakingCoinDenom_ = "";
+    /**
+     * <code>string staking_coin_denom = 4 [json_name = "stakingCoinDenom"];</code>
+     * @return The stakingCoinDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getStakingCoinDenom() {
+      java.lang.Object ref = stakingCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakingCoinDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string staking_coin_denom = 4 [json_name = "stakingCoinDenom"];</code>
+     * @return The bytes for stakingCoinDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakingCoinDenomBytes() {
+      java.lang.Object ref = stakingCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakingCoinDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TERMINATED_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object terminated_ = "";
+    /**
+     * <code>string terminated = 5 [json_name = "terminated"];</code>
+     * @return The terminated.
+     */
+    @java.lang.Override
+    public java.lang.String getTerminated() {
+      java.lang.Object ref = terminated_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        terminated_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string terminated = 5 [json_name = "terminated"];</code>
+     * @return The bytes for terminated.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTerminatedBytes() {
+      java.lang.Object ref = terminated_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        terminated_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 6;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 6 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 6 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 6 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmingPoolAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, farmingPoolAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terminationAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, terminationAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingCoinDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, stakingCoinDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terminated_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, terminated_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(6, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmingPoolAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, farmingPoolAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terminationAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, terminationAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingCoinDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, stakingCoinDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terminated_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, terminated_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest other = (com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest) obj;
+
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!getFarmingPoolAddress()
+          .equals(other.getFarmingPoolAddress())) return false;
+      if (!getTerminationAddress()
+          .equals(other.getTerminationAddress())) return false;
+      if (!getStakingCoinDenom()
+          .equals(other.getStakingCoinDenom())) return false;
+      if (!getTerminated()
+          .equals(other.getTerminated())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getType().hashCode();
+      hash = (37 * hash) + FARMING_POOL_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getFarmingPoolAddress().hashCode();
+      hash = (37 * hash) + TERMINATION_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getTerminationAddress().hashCode();
+      hash = (37 * hash) + STAKING_COIN_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingCoinDenom().hashCode();
+      hash = (37 * hash) + TERMINATED_FIELD_NUMBER;
+      hash = (53 * hash) + getTerminated().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryPlansRequest is the request type for the Query/Plans RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.QueryPlansRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.QueryPlansRequest)
+        com.crescent.farming.v1beta1.QueryProto.QueryPlansRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryPlansRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryPlansRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest.class, com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        type_ = "";
+        farmingPoolAddress_ = "";
+        terminationAddress_ = "";
+        stakingCoinDenom_ = "";
+        terminated_ = "";
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryPlansRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest build() {
+        com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest buildPartial() {
+        com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest result = new com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.type_ = type_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.farmingPoolAddress_ = farmingPoolAddress_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.terminationAddress_ = terminationAddress_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.stakingCoinDenom_ = stakingCoinDenom_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.terminated_ = terminated_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest) {
+          return mergeFrom((com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest other) {
+        if (other == com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest.getDefaultInstance()) return this;
+        if (!other.getType().isEmpty()) {
+          type_ = other.type_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getFarmingPoolAddress().isEmpty()) {
+          farmingPoolAddress_ = other.farmingPoolAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getTerminationAddress().isEmpty()) {
+          terminationAddress_ = other.terminationAddress_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getStakingCoinDenom().isEmpty()) {
+          stakingCoinDenom_ = other.stakingCoinDenom_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getTerminated().isEmpty()) {
+          terminated_ = other.terminated_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                type_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                farmingPoolAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                terminationAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                stakingCoinDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                terminated_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object type_ = "";
+      /**
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @return The type.
+       */
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          type_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @return The bytes for type.
+       */
+      public com.google.protobuf.ByteString
+          getTypeBytes() {
+        java.lang.Object ref = type_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          type_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        type_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        type_ = getDefaultInstance().getType();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        type_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object farmingPoolAddress_ = "";
+      /**
+       * <code>string farming_pool_address = 2 [json_name = "farmingPoolAddress"];</code>
+       * @return The farmingPoolAddress.
+       */
+      public java.lang.String getFarmingPoolAddress() {
+        java.lang.Object ref = farmingPoolAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          farmingPoolAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string farming_pool_address = 2 [json_name = "farmingPoolAddress"];</code>
+       * @return The bytes for farmingPoolAddress.
+       */
+      public com.google.protobuf.ByteString
+          getFarmingPoolAddressBytes() {
+        java.lang.Object ref = farmingPoolAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          farmingPoolAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string farming_pool_address = 2 [json_name = "farmingPoolAddress"];</code>
+       * @param value The farmingPoolAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFarmingPoolAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        farmingPoolAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string farming_pool_address = 2 [json_name = "farmingPoolAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFarmingPoolAddress() {
+        farmingPoolAddress_ = getDefaultInstance().getFarmingPoolAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string farming_pool_address = 2 [json_name = "farmingPoolAddress"];</code>
+       * @param value The bytes for farmingPoolAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFarmingPoolAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        farmingPoolAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object terminationAddress_ = "";
+      /**
+       * <code>string termination_address = 3 [json_name = "terminationAddress"];</code>
+       * @return The terminationAddress.
+       */
+      public java.lang.String getTerminationAddress() {
+        java.lang.Object ref = terminationAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          terminationAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string termination_address = 3 [json_name = "terminationAddress"];</code>
+       * @return The bytes for terminationAddress.
+       */
+      public com.google.protobuf.ByteString
+          getTerminationAddressBytes() {
+        java.lang.Object ref = terminationAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          terminationAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string termination_address = 3 [json_name = "terminationAddress"];</code>
+       * @param value The terminationAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTerminationAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        terminationAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string termination_address = 3 [json_name = "terminationAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTerminationAddress() {
+        terminationAddress_ = getDefaultInstance().getTerminationAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string termination_address = 3 [json_name = "terminationAddress"];</code>
+       * @param value The bytes for terminationAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTerminationAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        terminationAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object stakingCoinDenom_ = "";
+      /**
+       * <code>string staking_coin_denom = 4 [json_name = "stakingCoinDenom"];</code>
+       * @return The stakingCoinDenom.
+       */
+      public java.lang.String getStakingCoinDenom() {
+        java.lang.Object ref = stakingCoinDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakingCoinDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string staking_coin_denom = 4 [json_name = "stakingCoinDenom"];</code>
+       * @return The bytes for stakingCoinDenom.
+       */
+      public com.google.protobuf.ByteString
+          getStakingCoinDenomBytes() {
+        java.lang.Object ref = stakingCoinDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakingCoinDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string staking_coin_denom = 4 [json_name = "stakingCoinDenom"];</code>
+       * @param value The stakingCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingCoinDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakingCoinDenom_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string staking_coin_denom = 4 [json_name = "stakingCoinDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingCoinDenom() {
+        stakingCoinDenom_ = getDefaultInstance().getStakingCoinDenom();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string staking_coin_denom = 4 [json_name = "stakingCoinDenom"];</code>
+       * @param value The bytes for stakingCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingCoinDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakingCoinDenom_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object terminated_ = "";
+      /**
+       * <code>string terminated = 5 [json_name = "terminated"];</code>
+       * @return The terminated.
+       */
+      public java.lang.String getTerminated() {
+        java.lang.Object ref = terminated_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          terminated_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string terminated = 5 [json_name = "terminated"];</code>
+       * @return The bytes for terminated.
+       */
+      public com.google.protobuf.ByteString
+          getTerminatedBytes() {
+        java.lang.Object ref = terminated_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          terminated_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string terminated = 5 [json_name = "terminated"];</code>
+       * @param value The terminated to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTerminated(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        terminated_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string terminated = 5 [json_name = "terminated"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTerminated() {
+        terminated_ = getDefaultInstance().getTerminated();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string terminated = 5 [json_name = "terminated"];</code>
+       * @param value The bytes for terminated to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTerminatedBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        terminated_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 6 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 6 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 6 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 6 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 6 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 6 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 6 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 6 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 6 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.QueryPlansRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.QueryPlansRequest)
+    private static final com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest();
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPlansRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPlansRequest>() {
+      @java.lang.Override
+      public QueryPlansRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPlansRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPlansRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.QueryPlansRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPlansResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.QueryPlansResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * plans are the existing plans
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.Any plans = 1 [json_name = "plans", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+     */
+    java.util.List<com.google.protobuf.Any> 
+        getPlansList();
+    /**
+     * <pre>
+     * plans are the existing plans
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.Any plans = 1 [json_name = "plans", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+     */
+    com.google.protobuf.Any getPlans(int index);
+    /**
+     * <pre>
+     * plans are the existing plans
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.Any plans = 1 [json_name = "plans", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+     */
+    int getPlansCount();
+    /**
+     * <pre>
+     * plans are the existing plans
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.Any plans = 1 [json_name = "plans", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+     */
+    java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
+        getPlansOrBuilderList();
+    /**
+     * <pre>
+     * plans are the existing plans
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.Any plans = 1 [json_name = "plans", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+     */
+    com.google.protobuf.AnyOrBuilder getPlansOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryPlansResponse is the response type for the Query/Plans RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.QueryPlansResponse}
+   */
+  public static final class QueryPlansResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.QueryPlansResponse)
+      QueryPlansResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPlansResponse.newBuilder() to construct.
+    private QueryPlansResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPlansResponse() {
+      plans_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPlansResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryPlansResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryPlansResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse.class, com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse.Builder.class);
+    }
+
+    public static final int PLANS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.google.protobuf.Any> plans_;
+    /**
+     * <pre>
+     * plans are the existing plans
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.Any plans = 1 [json_name = "plans", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.Any> getPlansList() {
+      return plans_;
+    }
+    /**
+     * <pre>
+     * plans are the existing plans
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.Any plans = 1 [json_name = "plans", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
+        getPlansOrBuilderList() {
+      return plans_;
+    }
+    /**
+     * <pre>
+     * plans are the existing plans
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.Any plans = 1 [json_name = "plans", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+     */
+    @java.lang.Override
+    public int getPlansCount() {
+      return plans_.size();
+    }
+    /**
+     * <pre>
+     * plans are the existing plans
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.Any plans = 1 [json_name = "plans", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Any getPlans(int index) {
+      return plans_.get(index);
+    }
+    /**
+     * <pre>
+     * plans are the existing plans
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.Any plans = 1 [json_name = "plans", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.AnyOrBuilder getPlansOrBuilder(
+        int index) {
+      return plans_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < plans_.size(); i++) {
+        output.writeMessage(1, plans_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < plans_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, plans_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse other = (com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse) obj;
+
+      if (!getPlansList()
+          .equals(other.getPlansList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPlansCount() > 0) {
+        hash = (37 * hash) + PLANS_FIELD_NUMBER;
+        hash = (53 * hash) + getPlansList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryPlansResponse is the response type for the Query/Plans RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.QueryPlansResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.QueryPlansResponse)
+        com.crescent.farming.v1beta1.QueryProto.QueryPlansResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryPlansResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryPlansResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse.class, com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (plansBuilder_ == null) {
+          plans_ = java.util.Collections.emptyList();
+        } else {
+          plans_ = null;
+          plansBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryPlansResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse build() {
+        com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse buildPartial() {
+        com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse result = new com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse result) {
+        if (plansBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            plans_ = java.util.Collections.unmodifiableList(plans_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.plans_ = plans_;
+        } else {
+          result.plans_ = plansBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse) {
+          return mergeFrom((com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse other) {
+        if (other == com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse.getDefaultInstance()) return this;
+        if (plansBuilder_ == null) {
+          if (!other.plans_.isEmpty()) {
+            if (plans_.isEmpty()) {
+              plans_ = other.plans_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePlansIsMutable();
+              plans_.addAll(other.plans_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.plans_.isEmpty()) {
+            if (plansBuilder_.isEmpty()) {
+              plansBuilder_.dispose();
+              plansBuilder_ = null;
+              plans_ = other.plans_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              plansBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPlansFieldBuilder() : null;
+            } else {
+              plansBuilder_.addAllMessages(other.plans_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.protobuf.Any m =
+                    input.readMessage(
+                        com.google.protobuf.Any.parser(),
+                        extensionRegistry);
+                if (plansBuilder_ == null) {
+                  ensurePlansIsMutable();
+                  plans_.add(m);
+                } else {
+                  plansBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.google.protobuf.Any> plans_ =
+        java.util.Collections.emptyList();
+      private void ensurePlansIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          plans_ = new java.util.ArrayList<com.google.protobuf.Any>(plans_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> plansBuilder_;
+
+      /**
+       * <pre>
+       * plans are the existing plans
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any plans = 1 [json_name = "plans", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+       */
+      public java.util.List<com.google.protobuf.Any> getPlansList() {
+        if (plansBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(plans_);
+        } else {
+          return plansBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * plans are the existing plans
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any plans = 1 [json_name = "plans", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+       */
+      public int getPlansCount() {
+        if (plansBuilder_ == null) {
+          return plans_.size();
+        } else {
+          return plansBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * plans are the existing plans
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any plans = 1 [json_name = "plans", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+       */
+      public com.google.protobuf.Any getPlans(int index) {
+        if (plansBuilder_ == null) {
+          return plans_.get(index);
+        } else {
+          return plansBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * plans are the existing plans
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any plans = 1 [json_name = "plans", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+       */
+      public Builder setPlans(
+          int index, com.google.protobuf.Any value) {
+        if (plansBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePlansIsMutable();
+          plans_.set(index, value);
+          onChanged();
+        } else {
+          plansBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * plans are the existing plans
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any plans = 1 [json_name = "plans", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+       */
+      public Builder setPlans(
+          int index, com.google.protobuf.Any.Builder builderForValue) {
+        if (plansBuilder_ == null) {
+          ensurePlansIsMutable();
+          plans_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          plansBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * plans are the existing plans
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any plans = 1 [json_name = "plans", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+       */
+      public Builder addPlans(com.google.protobuf.Any value) {
+        if (plansBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePlansIsMutable();
+          plans_.add(value);
+          onChanged();
+        } else {
+          plansBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * plans are the existing plans
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any plans = 1 [json_name = "plans", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+       */
+      public Builder addPlans(
+          int index, com.google.protobuf.Any value) {
+        if (plansBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePlansIsMutable();
+          plans_.add(index, value);
+          onChanged();
+        } else {
+          plansBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * plans are the existing plans
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any plans = 1 [json_name = "plans", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+       */
+      public Builder addPlans(
+          com.google.protobuf.Any.Builder builderForValue) {
+        if (plansBuilder_ == null) {
+          ensurePlansIsMutable();
+          plans_.add(builderForValue.build());
+          onChanged();
+        } else {
+          plansBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * plans are the existing plans
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any plans = 1 [json_name = "plans", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+       */
+      public Builder addPlans(
+          int index, com.google.protobuf.Any.Builder builderForValue) {
+        if (plansBuilder_ == null) {
+          ensurePlansIsMutable();
+          plans_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          plansBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * plans are the existing plans
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any plans = 1 [json_name = "plans", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+       */
+      public Builder addAllPlans(
+          java.lang.Iterable<? extends com.google.protobuf.Any> values) {
+        if (plansBuilder_ == null) {
+          ensurePlansIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, plans_);
+          onChanged();
+        } else {
+          plansBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * plans are the existing plans
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any plans = 1 [json_name = "plans", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+       */
+      public Builder clearPlans() {
+        if (plansBuilder_ == null) {
+          plans_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          plansBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * plans are the existing plans
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any plans = 1 [json_name = "plans", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+       */
+      public Builder removePlans(int index) {
+        if (plansBuilder_ == null) {
+          ensurePlansIsMutable();
+          plans_.remove(index);
+          onChanged();
+        } else {
+          plansBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * plans are the existing plans
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any plans = 1 [json_name = "plans", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+       */
+      public com.google.protobuf.Any.Builder getPlansBuilder(
+          int index) {
+        return getPlansFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * plans are the existing plans
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any plans = 1 [json_name = "plans", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+       */
+      public com.google.protobuf.AnyOrBuilder getPlansOrBuilder(
+          int index) {
+        if (plansBuilder_ == null) {
+          return plans_.get(index);  } else {
+          return plansBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * plans are the existing plans
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any plans = 1 [json_name = "plans", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+       */
+      public java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
+           getPlansOrBuilderList() {
+        if (plansBuilder_ != null) {
+          return plansBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(plans_);
+        }
+      }
+      /**
+       * <pre>
+       * plans are the existing plans
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any plans = 1 [json_name = "plans", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+       */
+      public com.google.protobuf.Any.Builder addPlansBuilder() {
+        return getPlansFieldBuilder().addBuilder(
+            com.google.protobuf.Any.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * plans are the existing plans
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any plans = 1 [json_name = "plans", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+       */
+      public com.google.protobuf.Any.Builder addPlansBuilder(
+          int index) {
+        return getPlansFieldBuilder().addBuilder(
+            index, com.google.protobuf.Any.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * plans are the existing plans
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.Any plans = 1 [json_name = "plans", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+       */
+      public java.util.List<com.google.protobuf.Any.Builder> 
+           getPlansBuilderList() {
+        return getPlansFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
+          getPlansFieldBuilder() {
+        if (plansBuilder_ == null) {
+          plansBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
+                  plans_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          plans_ = null;
+        }
+        return plansBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.QueryPlansResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.QueryPlansResponse)
+    private static final com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse();
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPlansResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPlansResponse>() {
+      @java.lang.Override
+      public QueryPlansResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPlansResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPlansResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.QueryPlansResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPlanRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.QueryPlanRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 plan_id = 1 [json_name = "planId"];</code>
+     * @return The planId.
+     */
+    long getPlanId();
+  }
+  /**
+   * <pre>
+   * QueryPlanRequest is the request type for the Query/Plan RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.QueryPlanRequest}
+   */
+  public static final class QueryPlanRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.QueryPlanRequest)
+      QueryPlanRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPlanRequest.newBuilder() to construct.
+    private QueryPlanRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPlanRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPlanRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryPlanRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryPlanRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest.class, com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest.Builder.class);
+    }
+
+    public static final int PLAN_ID_FIELD_NUMBER = 1;
+    private long planId_ = 0L;
+    /**
+     * <code>uint64 plan_id = 1 [json_name = "planId"];</code>
+     * @return The planId.
+     */
+    @java.lang.Override
+    public long getPlanId() {
+      return planId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (planId_ != 0L) {
+        output.writeUInt64(1, planId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (planId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, planId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest other = (com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest) obj;
+
+      if (getPlanId()
+          != other.getPlanId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PLAN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPlanId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryPlanRequest is the request type for the Query/Plan RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.QueryPlanRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.QueryPlanRequest)
+        com.crescent.farming.v1beta1.QueryProto.QueryPlanRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryPlanRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryPlanRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest.class, com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        planId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryPlanRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest build() {
+        com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest buildPartial() {
+        com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest result = new com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.planId_ = planId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest) {
+          return mergeFrom((com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest other) {
+        if (other == com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest.getDefaultInstance()) return this;
+        if (other.getPlanId() != 0L) {
+          setPlanId(other.getPlanId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                planId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long planId_ ;
+      /**
+       * <code>uint64 plan_id = 1 [json_name = "planId"];</code>
+       * @return The planId.
+       */
+      @java.lang.Override
+      public long getPlanId() {
+        return planId_;
+      }
+      /**
+       * <code>uint64 plan_id = 1 [json_name = "planId"];</code>
+       * @param value The planId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlanId(long value) {
+
+        planId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 plan_id = 1 [json_name = "planId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPlanId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        planId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.QueryPlanRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.QueryPlanRequest)
+    private static final com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest();
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPlanRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPlanRequest>() {
+      @java.lang.Override
+      public QueryPlanRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPlanRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPlanRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.QueryPlanRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPlanResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.QueryPlanResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.google.protobuf.Any plan = 1 [json_name = "plan", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+     * @return Whether the plan field is set.
+     */
+    boolean hasPlan();
+    /**
+     * <code>.google.protobuf.Any plan = 1 [json_name = "plan", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+     * @return The plan.
+     */
+    com.google.protobuf.Any getPlan();
+    /**
+     * <code>.google.protobuf.Any plan = 1 [json_name = "plan", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+     */
+    com.google.protobuf.AnyOrBuilder getPlanOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryPlanResponse is the response type for the Query/Plan RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.QueryPlanResponse}
+   */
+  public static final class QueryPlanResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.QueryPlanResponse)
+      QueryPlanResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPlanResponse.newBuilder() to construct.
+    private QueryPlanResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPlanResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPlanResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryPlanResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryPlanResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse.class, com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse.Builder.class);
+    }
+
+    public static final int PLAN_FIELD_NUMBER = 1;
+    private com.google.protobuf.Any plan_;
+    /**
+     * <code>.google.protobuf.Any plan = 1 [json_name = "plan", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+     * @return Whether the plan field is set.
+     */
+    @java.lang.Override
+    public boolean hasPlan() {
+      return plan_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Any plan = 1 [json_name = "plan", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+     * @return The plan.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Any getPlan() {
+      return plan_ == null ? com.google.protobuf.Any.getDefaultInstance() : plan_;
+    }
+    /**
+     * <code>.google.protobuf.Any plan = 1 [json_name = "plan", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.AnyOrBuilder getPlanOrBuilder() {
+      return plan_ == null ? com.google.protobuf.Any.getDefaultInstance() : plan_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (plan_ != null) {
+        output.writeMessage(1, getPlan());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (plan_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPlan());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse other = (com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse) obj;
+
+      if (hasPlan() != other.hasPlan()) return false;
+      if (hasPlan()) {
+        if (!getPlan()
+            .equals(other.getPlan())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPlan()) {
+        hash = (37 * hash) + PLAN_FIELD_NUMBER;
+        hash = (53 * hash) + getPlan().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryPlanResponse is the response type for the Query/Plan RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.QueryPlanResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.QueryPlanResponse)
+        com.crescent.farming.v1beta1.QueryProto.QueryPlanResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryPlanResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryPlanResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse.class, com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        plan_ = null;
+        if (planBuilder_ != null) {
+          planBuilder_.dispose();
+          planBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryPlanResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse build() {
+        com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse buildPartial() {
+        com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse result = new com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.plan_ = planBuilder_ == null
+              ? plan_
+              : planBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse) {
+          return mergeFrom((com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse other) {
+        if (other == com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse.getDefaultInstance()) return this;
+        if (other.hasPlan()) {
+          mergePlan(other.getPlan());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPlanFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Any plan_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> planBuilder_;
+      /**
+       * <code>.google.protobuf.Any plan = 1 [json_name = "plan", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+       * @return Whether the plan field is set.
+       */
+      public boolean hasPlan() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Any plan = 1 [json_name = "plan", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+       * @return The plan.
+       */
+      public com.google.protobuf.Any getPlan() {
+        if (planBuilder_ == null) {
+          return plan_ == null ? com.google.protobuf.Any.getDefaultInstance() : plan_;
+        } else {
+          return planBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Any plan = 1 [json_name = "plan", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+       */
+      public Builder setPlan(com.google.protobuf.Any value) {
+        if (planBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          plan_ = value;
+        } else {
+          planBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Any plan = 1 [json_name = "plan", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+       */
+      public Builder setPlan(
+          com.google.protobuf.Any.Builder builderForValue) {
+        if (planBuilder_ == null) {
+          plan_ = builderForValue.build();
+        } else {
+          planBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Any plan = 1 [json_name = "plan", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+       */
+      public Builder mergePlan(com.google.protobuf.Any value) {
+        if (planBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            plan_ != null &&
+            plan_ != com.google.protobuf.Any.getDefaultInstance()) {
+            getPlanBuilder().mergeFrom(value);
+          } else {
+            plan_ = value;
+          }
+        } else {
+          planBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Any plan = 1 [json_name = "plan", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+       */
+      public Builder clearPlan() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        plan_ = null;
+        if (planBuilder_ != null) {
+          planBuilder_.dispose();
+          planBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Any plan = 1 [json_name = "plan", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+       */
+      public com.google.protobuf.Any.Builder getPlanBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPlanFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Any plan = 1 [json_name = "plan", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+       */
+      public com.google.protobuf.AnyOrBuilder getPlanOrBuilder() {
+        if (planBuilder_ != null) {
+          return planBuilder_.getMessageOrBuilder();
+        } else {
+          return plan_ == null ?
+              com.google.protobuf.Any.getDefaultInstance() : plan_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Any plan = 1 [json_name = "plan", (.cosmos_proto.accepts_interface) = "PlanI"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
+          getPlanFieldBuilder() {
+        if (planBuilder_ == null) {
+          planBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
+                  getPlan(),
+                  getParentForChildren(),
+                  isClean());
+          plan_ = null;
+        }
+        return planBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.QueryPlanResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.QueryPlanResponse)
+    private static final com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse();
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPlanResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPlanResponse>() {
+      @java.lang.Override
+      public QueryPlanResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPlanResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPlanResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.QueryPlanResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPositionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.QueryPositionRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The farmer.
+     */
+    java.lang.String getFarmer();
+    /**
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The bytes for farmer.
+     */
+    com.google.protobuf.ByteString
+        getFarmerBytes();
+
+    /**
+     * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+     * @return The stakingCoinDenom.
+     */
+    java.lang.String getStakingCoinDenom();
+    /**
+     * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+     * @return The bytes for stakingCoinDenom.
+     */
+    com.google.protobuf.ByteString
+        getStakingCoinDenomBytes();
+  }
+  /**
+   * <pre>
+   * QueryPositionRequest is the request type for the Query/Position RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.QueryPositionRequest}
+   */
+  public static final class QueryPositionRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.QueryPositionRequest)
+      QueryPositionRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPositionRequest.newBuilder() to construct.
+    private QueryPositionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPositionRequest() {
+      farmer_ = "";
+      stakingCoinDenom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPositionRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryPositionRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryPositionRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest.class, com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest.Builder.class);
+    }
+
+    public static final int FARMER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object farmer_ = "";
+    /**
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The farmer.
+     */
+    @java.lang.Override
+    public java.lang.String getFarmer() {
+      java.lang.Object ref = farmer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        farmer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The bytes for farmer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFarmerBytes() {
+      java.lang.Object ref = farmer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        farmer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STAKING_COIN_DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakingCoinDenom_ = "";
+    /**
+     * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+     * @return The stakingCoinDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getStakingCoinDenom() {
+      java.lang.Object ref = stakingCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakingCoinDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+     * @return The bytes for stakingCoinDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakingCoinDenomBytes() {
+      java.lang.Object ref = stakingCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakingCoinDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, farmer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingCoinDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, stakingCoinDenom_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, farmer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingCoinDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, stakingCoinDenom_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest other = (com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest) obj;
+
+      if (!getFarmer()
+          .equals(other.getFarmer())) return false;
+      if (!getStakingCoinDenom()
+          .equals(other.getStakingCoinDenom())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FARMER_FIELD_NUMBER;
+      hash = (53 * hash) + getFarmer().hashCode();
+      hash = (37 * hash) + STAKING_COIN_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingCoinDenom().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryPositionRequest is the request type for the Query/Position RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.QueryPositionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.QueryPositionRequest)
+        com.crescent.farming.v1beta1.QueryProto.QueryPositionRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryPositionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryPositionRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest.class, com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        farmer_ = "";
+        stakingCoinDenom_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryPositionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest build() {
+        com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest buildPartial() {
+        com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest result = new com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.farmer_ = farmer_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.stakingCoinDenom_ = stakingCoinDenom_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest) {
+          return mergeFrom((com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest other) {
+        if (other == com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest.getDefaultInstance()) return this;
+        if (!other.getFarmer().isEmpty()) {
+          farmer_ = other.farmer_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getStakingCoinDenom().isEmpty()) {
+          stakingCoinDenom_ = other.stakingCoinDenom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                farmer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                stakingCoinDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object farmer_ = "";
+      /**
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @return The farmer.
+       */
+      public java.lang.String getFarmer() {
+        java.lang.Object ref = farmer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          farmer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @return The bytes for farmer.
+       */
+      public com.google.protobuf.ByteString
+          getFarmerBytes() {
+        java.lang.Object ref = farmer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          farmer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @param value The farmer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFarmer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        farmer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFarmer() {
+        farmer_ = getDefaultInstance().getFarmer();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @param value The bytes for farmer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFarmerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        farmer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object stakingCoinDenom_ = "";
+      /**
+       * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+       * @return The stakingCoinDenom.
+       */
+      public java.lang.String getStakingCoinDenom() {
+        java.lang.Object ref = stakingCoinDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakingCoinDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+       * @return The bytes for stakingCoinDenom.
+       */
+      public com.google.protobuf.ByteString
+          getStakingCoinDenomBytes() {
+        java.lang.Object ref = stakingCoinDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakingCoinDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+       * @param value The stakingCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingCoinDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakingCoinDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingCoinDenom() {
+        stakingCoinDenom_ = getDefaultInstance().getStakingCoinDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+       * @param value The bytes for stakingCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingCoinDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakingCoinDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.QueryPositionRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.QueryPositionRequest)
+    private static final com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest();
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPositionRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPositionRequest>() {
+      @java.lang.Override
+      public QueryPositionRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPositionRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPositionRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.QueryPositionRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPositionResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.QueryPositionResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin staked_coins = 1 [json_name = "stakedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getStakedCoinsList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin staked_coins = 1 [json_name = "stakedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getStakedCoins(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin staked_coins = 1 [json_name = "stakedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getStakedCoinsCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin staked_coins = 1 [json_name = "stakedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getStakedCoinsOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin staked_coins = 1 [json_name = "stakedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getStakedCoinsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin queued_coins = 2 [json_name = "queuedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getQueuedCoinsList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin queued_coins = 2 [json_name = "queuedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getQueuedCoins(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin queued_coins = 2 [json_name = "queuedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getQueuedCoinsCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin queued_coins = 2 [json_name = "queuedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getQueuedCoinsOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin queued_coins = 2 [json_name = "queuedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getQueuedCoinsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getRewardsList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getRewards(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getRewardsCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getRewardsOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRewardsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * QueryPositionResponse is the response type for the Query/Position RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.QueryPositionResponse}
+   */
+  public static final class QueryPositionResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.QueryPositionResponse)
+      QueryPositionResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPositionResponse.newBuilder() to construct.
+    private QueryPositionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPositionResponse() {
+      stakedCoins_ = java.util.Collections.emptyList();
+      queuedCoins_ = java.util.Collections.emptyList();
+      rewards_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPositionResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryPositionResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryPositionResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse.class, com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse.Builder.class);
+    }
+
+    public static final int STAKED_COINS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> stakedCoins_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin staked_coins = 1 [json_name = "stakedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getStakedCoinsList() {
+      return stakedCoins_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin staked_coins = 1 [json_name = "stakedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getStakedCoinsOrBuilderList() {
+      return stakedCoins_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin staked_coins = 1 [json_name = "stakedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getStakedCoinsCount() {
+      return stakedCoins_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin staked_coins = 1 [json_name = "stakedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getStakedCoins(int index) {
+      return stakedCoins_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin staked_coins = 1 [json_name = "stakedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getStakedCoinsOrBuilder(
+        int index) {
+      return stakedCoins_.get(index);
+    }
+
+    public static final int QUEUED_COINS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> queuedCoins_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin queued_coins = 2 [json_name = "queuedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getQueuedCoinsList() {
+      return queuedCoins_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin queued_coins = 2 [json_name = "queuedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getQueuedCoinsOrBuilderList() {
+      return queuedCoins_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin queued_coins = 2 [json_name = "queuedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getQueuedCoinsCount() {
+      return queuedCoins_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin queued_coins = 2 [json_name = "queuedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getQueuedCoins(int index) {
+      return queuedCoins_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin queued_coins = 2 [json_name = "queuedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getQueuedCoinsOrBuilder(
+        int index) {
+      return queuedCoins_.get(index);
+    }
+
+    public static final int REWARDS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> rewards_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getRewardsList() {
+      return rewards_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getRewardsOrBuilderList() {
+      return rewards_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getRewardsCount() {
+      return rewards_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getRewards(int index) {
+      return rewards_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRewardsOrBuilder(
+        int index) {
+      return rewards_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < stakedCoins_.size(); i++) {
+        output.writeMessage(1, stakedCoins_.get(i));
+      }
+      for (int i = 0; i < queuedCoins_.size(); i++) {
+        output.writeMessage(2, queuedCoins_.get(i));
+      }
+      for (int i = 0; i < rewards_.size(); i++) {
+        output.writeMessage(3, rewards_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < stakedCoins_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, stakedCoins_.get(i));
+      }
+      for (int i = 0; i < queuedCoins_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, queuedCoins_.get(i));
+      }
+      for (int i = 0; i < rewards_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, rewards_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse other = (com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse) obj;
+
+      if (!getStakedCoinsList()
+          .equals(other.getStakedCoinsList())) return false;
+      if (!getQueuedCoinsList()
+          .equals(other.getQueuedCoinsList())) return false;
+      if (!getRewardsList()
+          .equals(other.getRewardsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getStakedCoinsCount() > 0) {
+        hash = (37 * hash) + STAKED_COINS_FIELD_NUMBER;
+        hash = (53 * hash) + getStakedCoinsList().hashCode();
+      }
+      if (getQueuedCoinsCount() > 0) {
+        hash = (37 * hash) + QUEUED_COINS_FIELD_NUMBER;
+        hash = (53 * hash) + getQueuedCoinsList().hashCode();
+      }
+      if (getRewardsCount() > 0) {
+        hash = (37 * hash) + REWARDS_FIELD_NUMBER;
+        hash = (53 * hash) + getRewardsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryPositionResponse is the response type for the Query/Position RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.QueryPositionResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.QueryPositionResponse)
+        com.crescent.farming.v1beta1.QueryProto.QueryPositionResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryPositionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryPositionResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse.class, com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (stakedCoinsBuilder_ == null) {
+          stakedCoins_ = java.util.Collections.emptyList();
+        } else {
+          stakedCoins_ = null;
+          stakedCoinsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (queuedCoinsBuilder_ == null) {
+          queuedCoins_ = java.util.Collections.emptyList();
+        } else {
+          queuedCoins_ = null;
+          queuedCoinsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (rewardsBuilder_ == null) {
+          rewards_ = java.util.Collections.emptyList();
+        } else {
+          rewards_ = null;
+          rewardsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryPositionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse build() {
+        com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse buildPartial() {
+        com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse result = new com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse result) {
+        if (stakedCoinsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            stakedCoins_ = java.util.Collections.unmodifiableList(stakedCoins_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.stakedCoins_ = stakedCoins_;
+        } else {
+          result.stakedCoins_ = stakedCoinsBuilder_.build();
+        }
+        if (queuedCoinsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            queuedCoins_ = java.util.Collections.unmodifiableList(queuedCoins_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.queuedCoins_ = queuedCoins_;
+        } else {
+          result.queuedCoins_ = queuedCoinsBuilder_.build();
+        }
+        if (rewardsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            rewards_ = java.util.Collections.unmodifiableList(rewards_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.rewards_ = rewards_;
+        } else {
+          result.rewards_ = rewardsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse) {
+          return mergeFrom((com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse other) {
+        if (other == com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse.getDefaultInstance()) return this;
+        if (stakedCoinsBuilder_ == null) {
+          if (!other.stakedCoins_.isEmpty()) {
+            if (stakedCoins_.isEmpty()) {
+              stakedCoins_ = other.stakedCoins_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureStakedCoinsIsMutable();
+              stakedCoins_.addAll(other.stakedCoins_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.stakedCoins_.isEmpty()) {
+            if (stakedCoinsBuilder_.isEmpty()) {
+              stakedCoinsBuilder_.dispose();
+              stakedCoinsBuilder_ = null;
+              stakedCoins_ = other.stakedCoins_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              stakedCoinsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getStakedCoinsFieldBuilder() : null;
+            } else {
+              stakedCoinsBuilder_.addAllMessages(other.stakedCoins_);
+            }
+          }
+        }
+        if (queuedCoinsBuilder_ == null) {
+          if (!other.queuedCoins_.isEmpty()) {
+            if (queuedCoins_.isEmpty()) {
+              queuedCoins_ = other.queuedCoins_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureQueuedCoinsIsMutable();
+              queuedCoins_.addAll(other.queuedCoins_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.queuedCoins_.isEmpty()) {
+            if (queuedCoinsBuilder_.isEmpty()) {
+              queuedCoinsBuilder_.dispose();
+              queuedCoinsBuilder_ = null;
+              queuedCoins_ = other.queuedCoins_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              queuedCoinsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getQueuedCoinsFieldBuilder() : null;
+            } else {
+              queuedCoinsBuilder_.addAllMessages(other.queuedCoins_);
+            }
+          }
+        }
+        if (rewardsBuilder_ == null) {
+          if (!other.rewards_.isEmpty()) {
+            if (rewards_.isEmpty()) {
+              rewards_ = other.rewards_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureRewardsIsMutable();
+              rewards_.addAll(other.rewards_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.rewards_.isEmpty()) {
+            if (rewardsBuilder_.isEmpty()) {
+              rewardsBuilder_.dispose();
+              rewardsBuilder_ = null;
+              rewards_ = other.rewards_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              rewardsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRewardsFieldBuilder() : null;
+            } else {
+              rewardsBuilder_.addAllMessages(other.rewards_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (stakedCoinsBuilder_ == null) {
+                  ensureStakedCoinsIsMutable();
+                  stakedCoins_.add(m);
+                } else {
+                  stakedCoinsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (queuedCoinsBuilder_ == null) {
+                  ensureQueuedCoinsIsMutable();
+                  queuedCoins_.add(m);
+                } else {
+                  queuedCoinsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (rewardsBuilder_ == null) {
+                  ensureRewardsIsMutable();
+                  rewards_.add(m);
+                } else {
+                  rewardsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> stakedCoins_ =
+        java.util.Collections.emptyList();
+      private void ensureStakedCoinsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          stakedCoins_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(stakedCoins_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> stakedCoinsBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin staked_coins = 1 [json_name = "stakedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getStakedCoinsList() {
+        if (stakedCoinsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(stakedCoins_);
+        } else {
+          return stakedCoinsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin staked_coins = 1 [json_name = "stakedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getStakedCoinsCount() {
+        if (stakedCoinsBuilder_ == null) {
+          return stakedCoins_.size();
+        } else {
+          return stakedCoinsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin staked_coins = 1 [json_name = "stakedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getStakedCoins(int index) {
+        if (stakedCoinsBuilder_ == null) {
+          return stakedCoins_.get(index);
+        } else {
+          return stakedCoinsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin staked_coins = 1 [json_name = "stakedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setStakedCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (stakedCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakedCoinsIsMutable();
+          stakedCoins_.set(index, value);
+          onChanged();
+        } else {
+          stakedCoinsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin staked_coins = 1 [json_name = "stakedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setStakedCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (stakedCoinsBuilder_ == null) {
+          ensureStakedCoinsIsMutable();
+          stakedCoins_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          stakedCoinsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin staked_coins = 1 [json_name = "stakedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addStakedCoins(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (stakedCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakedCoinsIsMutable();
+          stakedCoins_.add(value);
+          onChanged();
+        } else {
+          stakedCoinsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin staked_coins = 1 [json_name = "stakedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addStakedCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (stakedCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakedCoinsIsMutable();
+          stakedCoins_.add(index, value);
+          onChanged();
+        } else {
+          stakedCoinsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin staked_coins = 1 [json_name = "stakedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addStakedCoins(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (stakedCoinsBuilder_ == null) {
+          ensureStakedCoinsIsMutable();
+          stakedCoins_.add(builderForValue.build());
+          onChanged();
+        } else {
+          stakedCoinsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin staked_coins = 1 [json_name = "stakedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addStakedCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (stakedCoinsBuilder_ == null) {
+          ensureStakedCoinsIsMutable();
+          stakedCoins_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          stakedCoinsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin staked_coins = 1 [json_name = "stakedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllStakedCoins(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (stakedCoinsBuilder_ == null) {
+          ensureStakedCoinsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, stakedCoins_);
+          onChanged();
+        } else {
+          stakedCoinsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin staked_coins = 1 [json_name = "stakedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearStakedCoins() {
+        if (stakedCoinsBuilder_ == null) {
+          stakedCoins_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          stakedCoinsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin staked_coins = 1 [json_name = "stakedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeStakedCoins(int index) {
+        if (stakedCoinsBuilder_ == null) {
+          ensureStakedCoinsIsMutable();
+          stakedCoins_.remove(index);
+          onChanged();
+        } else {
+          stakedCoinsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin staked_coins = 1 [json_name = "stakedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getStakedCoinsBuilder(
+          int index) {
+        return getStakedCoinsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin staked_coins = 1 [json_name = "stakedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getStakedCoinsOrBuilder(
+          int index) {
+        if (stakedCoinsBuilder_ == null) {
+          return stakedCoins_.get(index);  } else {
+          return stakedCoinsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin staked_coins = 1 [json_name = "stakedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getStakedCoinsOrBuilderList() {
+        if (stakedCoinsBuilder_ != null) {
+          return stakedCoinsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(stakedCoins_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin staked_coins = 1 [json_name = "stakedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addStakedCoinsBuilder() {
+        return getStakedCoinsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin staked_coins = 1 [json_name = "stakedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addStakedCoinsBuilder(
+          int index) {
+        return getStakedCoinsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin staked_coins = 1 [json_name = "stakedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getStakedCoinsBuilderList() {
+        return getStakedCoinsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getStakedCoinsFieldBuilder() {
+        if (stakedCoinsBuilder_ == null) {
+          stakedCoinsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  stakedCoins_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          stakedCoins_ = null;
+        }
+        return stakedCoinsBuilder_;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> queuedCoins_ =
+        java.util.Collections.emptyList();
+      private void ensureQueuedCoinsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          queuedCoins_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(queuedCoins_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> queuedCoinsBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin queued_coins = 2 [json_name = "queuedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getQueuedCoinsList() {
+        if (queuedCoinsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(queuedCoins_);
+        } else {
+          return queuedCoinsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin queued_coins = 2 [json_name = "queuedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getQueuedCoinsCount() {
+        if (queuedCoinsBuilder_ == null) {
+          return queuedCoins_.size();
+        } else {
+          return queuedCoinsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin queued_coins = 2 [json_name = "queuedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getQueuedCoins(int index) {
+        if (queuedCoinsBuilder_ == null) {
+          return queuedCoins_.get(index);
+        } else {
+          return queuedCoinsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin queued_coins = 2 [json_name = "queuedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setQueuedCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (queuedCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQueuedCoinsIsMutable();
+          queuedCoins_.set(index, value);
+          onChanged();
+        } else {
+          queuedCoinsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin queued_coins = 2 [json_name = "queuedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setQueuedCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (queuedCoinsBuilder_ == null) {
+          ensureQueuedCoinsIsMutable();
+          queuedCoins_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          queuedCoinsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin queued_coins = 2 [json_name = "queuedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addQueuedCoins(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (queuedCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQueuedCoinsIsMutable();
+          queuedCoins_.add(value);
+          onChanged();
+        } else {
+          queuedCoinsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin queued_coins = 2 [json_name = "queuedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addQueuedCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (queuedCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQueuedCoinsIsMutable();
+          queuedCoins_.add(index, value);
+          onChanged();
+        } else {
+          queuedCoinsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin queued_coins = 2 [json_name = "queuedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addQueuedCoins(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (queuedCoinsBuilder_ == null) {
+          ensureQueuedCoinsIsMutable();
+          queuedCoins_.add(builderForValue.build());
+          onChanged();
+        } else {
+          queuedCoinsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin queued_coins = 2 [json_name = "queuedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addQueuedCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (queuedCoinsBuilder_ == null) {
+          ensureQueuedCoinsIsMutable();
+          queuedCoins_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          queuedCoinsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin queued_coins = 2 [json_name = "queuedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllQueuedCoins(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (queuedCoinsBuilder_ == null) {
+          ensureQueuedCoinsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, queuedCoins_);
+          onChanged();
+        } else {
+          queuedCoinsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin queued_coins = 2 [json_name = "queuedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearQueuedCoins() {
+        if (queuedCoinsBuilder_ == null) {
+          queuedCoins_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          queuedCoinsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin queued_coins = 2 [json_name = "queuedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeQueuedCoins(int index) {
+        if (queuedCoinsBuilder_ == null) {
+          ensureQueuedCoinsIsMutable();
+          queuedCoins_.remove(index);
+          onChanged();
+        } else {
+          queuedCoinsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin queued_coins = 2 [json_name = "queuedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getQueuedCoinsBuilder(
+          int index) {
+        return getQueuedCoinsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin queued_coins = 2 [json_name = "queuedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getQueuedCoinsOrBuilder(
+          int index) {
+        if (queuedCoinsBuilder_ == null) {
+          return queuedCoins_.get(index);  } else {
+          return queuedCoinsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin queued_coins = 2 [json_name = "queuedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getQueuedCoinsOrBuilderList() {
+        if (queuedCoinsBuilder_ != null) {
+          return queuedCoinsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(queuedCoins_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin queued_coins = 2 [json_name = "queuedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addQueuedCoinsBuilder() {
+        return getQueuedCoinsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin queued_coins = 2 [json_name = "queuedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addQueuedCoinsBuilder(
+          int index) {
+        return getQueuedCoinsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin queued_coins = 2 [json_name = "queuedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getQueuedCoinsBuilderList() {
+        return getQueuedCoinsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getQueuedCoinsFieldBuilder() {
+        if (queuedCoinsBuilder_ == null) {
+          queuedCoinsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  queuedCoins_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          queuedCoins_ = null;
+        }
+        return queuedCoinsBuilder_;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> rewards_ =
+        java.util.Collections.emptyList();
+      private void ensureRewardsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          rewards_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(rewards_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> rewardsBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getRewardsList() {
+        if (rewardsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(rewards_);
+        } else {
+          return rewardsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getRewardsCount() {
+        if (rewardsBuilder_ == null) {
+          return rewards_.size();
+        } else {
+          return rewardsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getRewards(int index) {
+        if (rewardsBuilder_ == null) {
+          return rewards_.get(index);
+        } else {
+          return rewardsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.set(index, value);
+          onChanged();
+        } else {
+          rewardsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addRewards(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.add(value);
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.add(index, value);
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addRewards(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.add(builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllRewards(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, rewards_);
+          onChanged();
+        } else {
+          rewardsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearRewards() {
+        if (rewardsBuilder_ == null) {
+          rewards_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          rewardsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeRewards(int index) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.remove(index);
+          onChanged();
+        } else {
+          rewardsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getRewardsBuilder(
+          int index) {
+        return getRewardsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRewardsOrBuilder(
+          int index) {
+        if (rewardsBuilder_ == null) {
+          return rewards_.get(index);  } else {
+          return rewardsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getRewardsOrBuilderList() {
+        if (rewardsBuilder_ != null) {
+          return rewardsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(rewards_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addRewardsBuilder() {
+        return getRewardsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addRewardsBuilder(
+          int index) {
+        return getRewardsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getRewardsBuilderList() {
+        return getRewardsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getRewardsFieldBuilder() {
+        if (rewardsBuilder_ == null) {
+          rewardsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  rewards_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          rewards_ = null;
+        }
+        return rewardsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.QueryPositionResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.QueryPositionResponse)
+    private static final com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse();
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPositionResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPositionResponse>() {
+      @java.lang.Override
+      public QueryPositionResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPositionResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPositionResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.QueryPositionResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryStakingsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.QueryStakingsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The farmer.
+     */
+    java.lang.String getFarmer();
+    /**
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The bytes for farmer.
+     */
+    com.google.protobuf.ByteString
+        getFarmerBytes();
+
+    /**
+     * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+     * @return The stakingCoinDenom.
+     */
+    java.lang.String getStakingCoinDenom();
+    /**
+     * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+     * @return The bytes for stakingCoinDenom.
+     */
+    com.google.protobuf.ByteString
+        getStakingCoinDenomBytes();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryStakingsRequest is the request type for the Query/Stakings RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.QueryStakingsRequest}
+   */
+  public static final class QueryStakingsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.QueryStakingsRequest)
+      QueryStakingsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryStakingsRequest.newBuilder() to construct.
+    private QueryStakingsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryStakingsRequest() {
+      farmer_ = "";
+      stakingCoinDenom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryStakingsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryStakingsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryStakingsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest.class, com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest.Builder.class);
+    }
+
+    public static final int FARMER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object farmer_ = "";
+    /**
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The farmer.
+     */
+    @java.lang.Override
+    public java.lang.String getFarmer() {
+      java.lang.Object ref = farmer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        farmer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The bytes for farmer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFarmerBytes() {
+      java.lang.Object ref = farmer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        farmer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STAKING_COIN_DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakingCoinDenom_ = "";
+    /**
+     * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+     * @return The stakingCoinDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getStakingCoinDenom() {
+      java.lang.Object ref = stakingCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakingCoinDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+     * @return The bytes for stakingCoinDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakingCoinDenomBytes() {
+      java.lang.Object ref = stakingCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakingCoinDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 3;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, farmer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingCoinDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, stakingCoinDenom_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(3, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, farmer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingCoinDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, stakingCoinDenom_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest other = (com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest) obj;
+
+      if (!getFarmer()
+          .equals(other.getFarmer())) return false;
+      if (!getStakingCoinDenom()
+          .equals(other.getStakingCoinDenom())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FARMER_FIELD_NUMBER;
+      hash = (53 * hash) + getFarmer().hashCode();
+      hash = (37 * hash) + STAKING_COIN_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingCoinDenom().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryStakingsRequest is the request type for the Query/Stakings RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.QueryStakingsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.QueryStakingsRequest)
+        com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryStakingsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryStakingsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest.class, com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        farmer_ = "";
+        stakingCoinDenom_ = "";
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryStakingsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest build() {
+        com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest buildPartial() {
+        com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest result = new com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.farmer_ = farmer_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.stakingCoinDenom_ = stakingCoinDenom_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest) {
+          return mergeFrom((com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest other) {
+        if (other == com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest.getDefaultInstance()) return this;
+        if (!other.getFarmer().isEmpty()) {
+          farmer_ = other.farmer_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getStakingCoinDenom().isEmpty()) {
+          stakingCoinDenom_ = other.stakingCoinDenom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                farmer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                stakingCoinDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object farmer_ = "";
+      /**
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @return The farmer.
+       */
+      public java.lang.String getFarmer() {
+        java.lang.Object ref = farmer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          farmer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @return The bytes for farmer.
+       */
+      public com.google.protobuf.ByteString
+          getFarmerBytes() {
+        java.lang.Object ref = farmer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          farmer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @param value The farmer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFarmer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        farmer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFarmer() {
+        farmer_ = getDefaultInstance().getFarmer();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @param value The bytes for farmer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFarmerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        farmer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object stakingCoinDenom_ = "";
+      /**
+       * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+       * @return The stakingCoinDenom.
+       */
+      public java.lang.String getStakingCoinDenom() {
+        java.lang.Object ref = stakingCoinDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakingCoinDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+       * @return The bytes for stakingCoinDenom.
+       */
+      public com.google.protobuf.ByteString
+          getStakingCoinDenomBytes() {
+        java.lang.Object ref = stakingCoinDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakingCoinDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+       * @param value The stakingCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingCoinDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakingCoinDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingCoinDenom() {
+        stakingCoinDenom_ = getDefaultInstance().getStakingCoinDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+       * @param value The bytes for stakingCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingCoinDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakingCoinDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.QueryStakingsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.QueryStakingsRequest)
+    private static final com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest();
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryStakingsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryStakingsRequest>() {
+      @java.lang.Override
+      public QueryStakingsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryStakingsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryStakingsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.QueryStakingsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryStakingsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.QueryStakingsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .crescent.farming.v1beta1.StakingResponse stakings = 1 [json_name = "stakings", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.crescent.farming.v1beta1.QueryProto.StakingResponse> 
+        getStakingsList();
+    /**
+     * <code>repeated .crescent.farming.v1beta1.StakingResponse stakings = 1 [json_name = "stakings", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.farming.v1beta1.QueryProto.StakingResponse getStakings(int index);
+    /**
+     * <code>repeated .crescent.farming.v1beta1.StakingResponse stakings = 1 [json_name = "stakings", (.gogoproto.nullable) = false];</code>
+     */
+    int getStakingsCount();
+    /**
+     * <code>repeated .crescent.farming.v1beta1.StakingResponse stakings = 1 [json_name = "stakings", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.crescent.farming.v1beta1.QueryProto.StakingResponseOrBuilder> 
+        getStakingsOrBuilderList();
+    /**
+     * <code>repeated .crescent.farming.v1beta1.StakingResponse stakings = 1 [json_name = "stakings", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.farming.v1beta1.QueryProto.StakingResponseOrBuilder getStakingsOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryStakingsResponse is the response type for the Query/Stakings RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.QueryStakingsResponse}
+   */
+  public static final class QueryStakingsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.QueryStakingsResponse)
+      QueryStakingsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryStakingsResponse.newBuilder() to construct.
+    private QueryStakingsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryStakingsResponse() {
+      stakings_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryStakingsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryStakingsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryStakingsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse.class, com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse.Builder.class);
+    }
+
+    public static final int STAKINGS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.crescent.farming.v1beta1.QueryProto.StakingResponse> stakings_;
+    /**
+     * <code>repeated .crescent.farming.v1beta1.StakingResponse stakings = 1 [json_name = "stakings", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.crescent.farming.v1beta1.QueryProto.StakingResponse> getStakingsList() {
+      return stakings_;
+    }
+    /**
+     * <code>repeated .crescent.farming.v1beta1.StakingResponse stakings = 1 [json_name = "stakings", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.crescent.farming.v1beta1.QueryProto.StakingResponseOrBuilder> 
+        getStakingsOrBuilderList() {
+      return stakings_;
+    }
+    /**
+     * <code>repeated .crescent.farming.v1beta1.StakingResponse stakings = 1 [json_name = "stakings", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getStakingsCount() {
+      return stakings_.size();
+    }
+    /**
+     * <code>repeated .crescent.farming.v1beta1.StakingResponse stakings = 1 [json_name = "stakings", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.StakingResponse getStakings(int index) {
+      return stakings_.get(index);
+    }
+    /**
+     * <code>repeated .crescent.farming.v1beta1.StakingResponse stakings = 1 [json_name = "stakings", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.StakingResponseOrBuilder getStakingsOrBuilder(
+        int index) {
+      return stakings_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < stakings_.size(); i++) {
+        output.writeMessage(1, stakings_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < stakings_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, stakings_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse other = (com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse) obj;
+
+      if (!getStakingsList()
+          .equals(other.getStakingsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getStakingsCount() > 0) {
+        hash = (37 * hash) + STAKINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getStakingsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryStakingsResponse is the response type for the Query/Stakings RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.QueryStakingsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.QueryStakingsResponse)
+        com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryStakingsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryStakingsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse.class, com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (stakingsBuilder_ == null) {
+          stakings_ = java.util.Collections.emptyList();
+        } else {
+          stakings_ = null;
+          stakingsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryStakingsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse build() {
+        com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse buildPartial() {
+        com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse result = new com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse result) {
+        if (stakingsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            stakings_ = java.util.Collections.unmodifiableList(stakings_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.stakings_ = stakings_;
+        } else {
+          result.stakings_ = stakingsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse) {
+          return mergeFrom((com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse other) {
+        if (other == com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse.getDefaultInstance()) return this;
+        if (stakingsBuilder_ == null) {
+          if (!other.stakings_.isEmpty()) {
+            if (stakings_.isEmpty()) {
+              stakings_ = other.stakings_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureStakingsIsMutable();
+              stakings_.addAll(other.stakings_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.stakings_.isEmpty()) {
+            if (stakingsBuilder_.isEmpty()) {
+              stakingsBuilder_.dispose();
+              stakingsBuilder_ = null;
+              stakings_ = other.stakings_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              stakingsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getStakingsFieldBuilder() : null;
+            } else {
+              stakingsBuilder_.addAllMessages(other.stakings_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.crescent.farming.v1beta1.QueryProto.StakingResponse m =
+                    input.readMessage(
+                        com.crescent.farming.v1beta1.QueryProto.StakingResponse.parser(),
+                        extensionRegistry);
+                if (stakingsBuilder_ == null) {
+                  ensureStakingsIsMutable();
+                  stakings_.add(m);
+                } else {
+                  stakingsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.crescent.farming.v1beta1.QueryProto.StakingResponse> stakings_ =
+        java.util.Collections.emptyList();
+      private void ensureStakingsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          stakings_ = new java.util.ArrayList<com.crescent.farming.v1beta1.QueryProto.StakingResponse>(stakings_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.farming.v1beta1.QueryProto.StakingResponse, com.crescent.farming.v1beta1.QueryProto.StakingResponse.Builder, com.crescent.farming.v1beta1.QueryProto.StakingResponseOrBuilder> stakingsBuilder_;
+
+      /**
+       * <code>repeated .crescent.farming.v1beta1.StakingResponse stakings = 1 [json_name = "stakings", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.farming.v1beta1.QueryProto.StakingResponse> getStakingsList() {
+        if (stakingsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(stakings_);
+        } else {
+          return stakingsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.StakingResponse stakings = 1 [json_name = "stakings", (.gogoproto.nullable) = false];</code>
+       */
+      public int getStakingsCount() {
+        if (stakingsBuilder_ == null) {
+          return stakings_.size();
+        } else {
+          return stakingsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.StakingResponse stakings = 1 [json_name = "stakings", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.farming.v1beta1.QueryProto.StakingResponse getStakings(int index) {
+        if (stakingsBuilder_ == null) {
+          return stakings_.get(index);
+        } else {
+          return stakingsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.StakingResponse stakings = 1 [json_name = "stakings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setStakings(
+          int index, com.crescent.farming.v1beta1.QueryProto.StakingResponse value) {
+        if (stakingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakingsIsMutable();
+          stakings_.set(index, value);
+          onChanged();
+        } else {
+          stakingsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.StakingResponse stakings = 1 [json_name = "stakings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setStakings(
+          int index, com.crescent.farming.v1beta1.QueryProto.StakingResponse.Builder builderForValue) {
+        if (stakingsBuilder_ == null) {
+          ensureStakingsIsMutable();
+          stakings_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          stakingsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.StakingResponse stakings = 1 [json_name = "stakings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addStakings(com.crescent.farming.v1beta1.QueryProto.StakingResponse value) {
+        if (stakingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakingsIsMutable();
+          stakings_.add(value);
+          onChanged();
+        } else {
+          stakingsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.StakingResponse stakings = 1 [json_name = "stakings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addStakings(
+          int index, com.crescent.farming.v1beta1.QueryProto.StakingResponse value) {
+        if (stakingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakingsIsMutable();
+          stakings_.add(index, value);
+          onChanged();
+        } else {
+          stakingsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.StakingResponse stakings = 1 [json_name = "stakings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addStakings(
+          com.crescent.farming.v1beta1.QueryProto.StakingResponse.Builder builderForValue) {
+        if (stakingsBuilder_ == null) {
+          ensureStakingsIsMutable();
+          stakings_.add(builderForValue.build());
+          onChanged();
+        } else {
+          stakingsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.StakingResponse stakings = 1 [json_name = "stakings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addStakings(
+          int index, com.crescent.farming.v1beta1.QueryProto.StakingResponse.Builder builderForValue) {
+        if (stakingsBuilder_ == null) {
+          ensureStakingsIsMutable();
+          stakings_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          stakingsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.StakingResponse stakings = 1 [json_name = "stakings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllStakings(
+          java.lang.Iterable<? extends com.crescent.farming.v1beta1.QueryProto.StakingResponse> values) {
+        if (stakingsBuilder_ == null) {
+          ensureStakingsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, stakings_);
+          onChanged();
+        } else {
+          stakingsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.StakingResponse stakings = 1 [json_name = "stakings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearStakings() {
+        if (stakingsBuilder_ == null) {
+          stakings_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          stakingsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.StakingResponse stakings = 1 [json_name = "stakings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeStakings(int index) {
+        if (stakingsBuilder_ == null) {
+          ensureStakingsIsMutable();
+          stakings_.remove(index);
+          onChanged();
+        } else {
+          stakingsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.StakingResponse stakings = 1 [json_name = "stakings", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.farming.v1beta1.QueryProto.StakingResponse.Builder getStakingsBuilder(
+          int index) {
+        return getStakingsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.StakingResponse stakings = 1 [json_name = "stakings", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.farming.v1beta1.QueryProto.StakingResponseOrBuilder getStakingsOrBuilder(
+          int index) {
+        if (stakingsBuilder_ == null) {
+          return stakings_.get(index);  } else {
+          return stakingsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.StakingResponse stakings = 1 [json_name = "stakings", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.crescent.farming.v1beta1.QueryProto.StakingResponseOrBuilder> 
+           getStakingsOrBuilderList() {
+        if (stakingsBuilder_ != null) {
+          return stakingsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(stakings_);
+        }
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.StakingResponse stakings = 1 [json_name = "stakings", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.farming.v1beta1.QueryProto.StakingResponse.Builder addStakingsBuilder() {
+        return getStakingsFieldBuilder().addBuilder(
+            com.crescent.farming.v1beta1.QueryProto.StakingResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.StakingResponse stakings = 1 [json_name = "stakings", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.farming.v1beta1.QueryProto.StakingResponse.Builder addStakingsBuilder(
+          int index) {
+        return getStakingsFieldBuilder().addBuilder(
+            index, com.crescent.farming.v1beta1.QueryProto.StakingResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.StakingResponse stakings = 1 [json_name = "stakings", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.farming.v1beta1.QueryProto.StakingResponse.Builder> 
+           getStakingsBuilderList() {
+        return getStakingsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.farming.v1beta1.QueryProto.StakingResponse, com.crescent.farming.v1beta1.QueryProto.StakingResponse.Builder, com.crescent.farming.v1beta1.QueryProto.StakingResponseOrBuilder> 
+          getStakingsFieldBuilder() {
+        if (stakingsBuilder_ == null) {
+          stakingsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.crescent.farming.v1beta1.QueryProto.StakingResponse, com.crescent.farming.v1beta1.QueryProto.StakingResponse.Builder, com.crescent.farming.v1beta1.QueryProto.StakingResponseOrBuilder>(
+                  stakings_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          stakings_ = null;
+        }
+        return stakingsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.QueryStakingsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.QueryStakingsResponse)
+    private static final com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse();
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryStakingsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryStakingsResponse>() {
+      @java.lang.Override
+      public QueryStakingsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryStakingsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryStakingsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.QueryStakingsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryQueuedStakingsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.QueryQueuedStakingsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The farmer.
+     */
+    java.lang.String getFarmer();
+    /**
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The bytes for farmer.
+     */
+    com.google.protobuf.ByteString
+        getFarmerBytes();
+
+    /**
+     * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+     * @return The stakingCoinDenom.
+     */
+    java.lang.String getStakingCoinDenom();
+    /**
+     * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+     * @return The bytes for stakingCoinDenom.
+     */
+    com.google.protobuf.ByteString
+        getStakingCoinDenomBytes();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryQueuedStakingsRequest is the request type for the Query/QueuedStakings RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.QueryQueuedStakingsRequest}
+   */
+  public static final class QueryQueuedStakingsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.QueryQueuedStakingsRequest)
+      QueryQueuedStakingsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryQueuedStakingsRequest.newBuilder() to construct.
+    private QueryQueuedStakingsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryQueuedStakingsRequest() {
+      farmer_ = "";
+      stakingCoinDenom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryQueuedStakingsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryQueuedStakingsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryQueuedStakingsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest.class, com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest.Builder.class);
+    }
+
+    public static final int FARMER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object farmer_ = "";
+    /**
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The farmer.
+     */
+    @java.lang.Override
+    public java.lang.String getFarmer() {
+      java.lang.Object ref = farmer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        farmer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The bytes for farmer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFarmerBytes() {
+      java.lang.Object ref = farmer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        farmer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STAKING_COIN_DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakingCoinDenom_ = "";
+    /**
+     * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+     * @return The stakingCoinDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getStakingCoinDenom() {
+      java.lang.Object ref = stakingCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakingCoinDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+     * @return The bytes for stakingCoinDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakingCoinDenomBytes() {
+      java.lang.Object ref = stakingCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakingCoinDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 3;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, farmer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingCoinDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, stakingCoinDenom_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(3, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, farmer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingCoinDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, stakingCoinDenom_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest other = (com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest) obj;
+
+      if (!getFarmer()
+          .equals(other.getFarmer())) return false;
+      if (!getStakingCoinDenom()
+          .equals(other.getStakingCoinDenom())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FARMER_FIELD_NUMBER;
+      hash = (53 * hash) + getFarmer().hashCode();
+      hash = (37 * hash) + STAKING_COIN_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingCoinDenom().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryQueuedStakingsRequest is the request type for the Query/QueuedStakings RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.QueryQueuedStakingsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.QueryQueuedStakingsRequest)
+        com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryQueuedStakingsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryQueuedStakingsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest.class, com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        farmer_ = "";
+        stakingCoinDenom_ = "";
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryQueuedStakingsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest build() {
+        com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest buildPartial() {
+        com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest result = new com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.farmer_ = farmer_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.stakingCoinDenom_ = stakingCoinDenom_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest) {
+          return mergeFrom((com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest other) {
+        if (other == com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest.getDefaultInstance()) return this;
+        if (!other.getFarmer().isEmpty()) {
+          farmer_ = other.farmer_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getStakingCoinDenom().isEmpty()) {
+          stakingCoinDenom_ = other.stakingCoinDenom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                farmer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                stakingCoinDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object farmer_ = "";
+      /**
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @return The farmer.
+       */
+      public java.lang.String getFarmer() {
+        java.lang.Object ref = farmer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          farmer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @return The bytes for farmer.
+       */
+      public com.google.protobuf.ByteString
+          getFarmerBytes() {
+        java.lang.Object ref = farmer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          farmer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @param value The farmer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFarmer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        farmer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFarmer() {
+        farmer_ = getDefaultInstance().getFarmer();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @param value The bytes for farmer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFarmerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        farmer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object stakingCoinDenom_ = "";
+      /**
+       * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+       * @return The stakingCoinDenom.
+       */
+      public java.lang.String getStakingCoinDenom() {
+        java.lang.Object ref = stakingCoinDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakingCoinDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+       * @return The bytes for stakingCoinDenom.
+       */
+      public com.google.protobuf.ByteString
+          getStakingCoinDenomBytes() {
+        java.lang.Object ref = stakingCoinDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakingCoinDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+       * @param value The stakingCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingCoinDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakingCoinDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingCoinDenom() {
+        stakingCoinDenom_ = getDefaultInstance().getStakingCoinDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+       * @param value The bytes for stakingCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingCoinDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakingCoinDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.QueryQueuedStakingsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.QueryQueuedStakingsRequest)
+    private static final com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest();
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryQueuedStakingsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryQueuedStakingsRequest>() {
+      @java.lang.Override
+      public QueryQueuedStakingsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryQueuedStakingsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryQueuedStakingsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryQueuedStakingsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.QueryQueuedStakingsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .crescent.farming.v1beta1.QueuedStakingResponse queued_stakings = 1 [json_name = "queuedStakings", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse> 
+        getQueuedStakingsList();
+    /**
+     * <code>repeated .crescent.farming.v1beta1.QueuedStakingResponse queued_stakings = 1 [json_name = "queuedStakings", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse getQueuedStakings(int index);
+    /**
+     * <code>repeated .crescent.farming.v1beta1.QueuedStakingResponse queued_stakings = 1 [json_name = "queuedStakings", (.gogoproto.nullable) = false];</code>
+     */
+    int getQueuedStakingsCount();
+    /**
+     * <code>repeated .crescent.farming.v1beta1.QueuedStakingResponse queued_stakings = 1 [json_name = "queuedStakings", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponseOrBuilder> 
+        getQueuedStakingsOrBuilderList();
+    /**
+     * <code>repeated .crescent.farming.v1beta1.QueuedStakingResponse queued_stakings = 1 [json_name = "queuedStakings", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponseOrBuilder getQueuedStakingsOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryQueuedStakingsResponse is the response type for the Query/QueuedStakings RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.QueryQueuedStakingsResponse}
+   */
+  public static final class QueryQueuedStakingsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.QueryQueuedStakingsResponse)
+      QueryQueuedStakingsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryQueuedStakingsResponse.newBuilder() to construct.
+    private QueryQueuedStakingsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryQueuedStakingsResponse() {
+      queuedStakings_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryQueuedStakingsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryQueuedStakingsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryQueuedStakingsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse.class, com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse.Builder.class);
+    }
+
+    public static final int QUEUED_STAKINGS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse> queuedStakings_;
+    /**
+     * <code>repeated .crescent.farming.v1beta1.QueuedStakingResponse queued_stakings = 1 [json_name = "queuedStakings", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse> getQueuedStakingsList() {
+      return queuedStakings_;
+    }
+    /**
+     * <code>repeated .crescent.farming.v1beta1.QueuedStakingResponse queued_stakings = 1 [json_name = "queuedStakings", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponseOrBuilder> 
+        getQueuedStakingsOrBuilderList() {
+      return queuedStakings_;
+    }
+    /**
+     * <code>repeated .crescent.farming.v1beta1.QueuedStakingResponse queued_stakings = 1 [json_name = "queuedStakings", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getQueuedStakingsCount() {
+      return queuedStakings_.size();
+    }
+    /**
+     * <code>repeated .crescent.farming.v1beta1.QueuedStakingResponse queued_stakings = 1 [json_name = "queuedStakings", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse getQueuedStakings(int index) {
+      return queuedStakings_.get(index);
+    }
+    /**
+     * <code>repeated .crescent.farming.v1beta1.QueuedStakingResponse queued_stakings = 1 [json_name = "queuedStakings", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponseOrBuilder getQueuedStakingsOrBuilder(
+        int index) {
+      return queuedStakings_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < queuedStakings_.size(); i++) {
+        output.writeMessage(1, queuedStakings_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < queuedStakings_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, queuedStakings_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse other = (com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse) obj;
+
+      if (!getQueuedStakingsList()
+          .equals(other.getQueuedStakingsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getQueuedStakingsCount() > 0) {
+        hash = (37 * hash) + QUEUED_STAKINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getQueuedStakingsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryQueuedStakingsResponse is the response type for the Query/QueuedStakings RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.QueryQueuedStakingsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.QueryQueuedStakingsResponse)
+        com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryQueuedStakingsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryQueuedStakingsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse.class, com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (queuedStakingsBuilder_ == null) {
+          queuedStakings_ = java.util.Collections.emptyList();
+        } else {
+          queuedStakings_ = null;
+          queuedStakingsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryQueuedStakingsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse build() {
+        com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse buildPartial() {
+        com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse result = new com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse result) {
+        if (queuedStakingsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            queuedStakings_ = java.util.Collections.unmodifiableList(queuedStakings_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.queuedStakings_ = queuedStakings_;
+        } else {
+          result.queuedStakings_ = queuedStakingsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse) {
+          return mergeFrom((com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse other) {
+        if (other == com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse.getDefaultInstance()) return this;
+        if (queuedStakingsBuilder_ == null) {
+          if (!other.queuedStakings_.isEmpty()) {
+            if (queuedStakings_.isEmpty()) {
+              queuedStakings_ = other.queuedStakings_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureQueuedStakingsIsMutable();
+              queuedStakings_.addAll(other.queuedStakings_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.queuedStakings_.isEmpty()) {
+            if (queuedStakingsBuilder_.isEmpty()) {
+              queuedStakingsBuilder_.dispose();
+              queuedStakingsBuilder_ = null;
+              queuedStakings_ = other.queuedStakings_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              queuedStakingsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getQueuedStakingsFieldBuilder() : null;
+            } else {
+              queuedStakingsBuilder_.addAllMessages(other.queuedStakings_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse m =
+                    input.readMessage(
+                        com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse.parser(),
+                        extensionRegistry);
+                if (queuedStakingsBuilder_ == null) {
+                  ensureQueuedStakingsIsMutable();
+                  queuedStakings_.add(m);
+                } else {
+                  queuedStakingsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse> queuedStakings_ =
+        java.util.Collections.emptyList();
+      private void ensureQueuedStakingsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          queuedStakings_ = new java.util.ArrayList<com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse>(queuedStakings_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse, com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse.Builder, com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponseOrBuilder> queuedStakingsBuilder_;
+
+      /**
+       * <code>repeated .crescent.farming.v1beta1.QueuedStakingResponse queued_stakings = 1 [json_name = "queuedStakings", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse> getQueuedStakingsList() {
+        if (queuedStakingsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(queuedStakings_);
+        } else {
+          return queuedStakingsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.QueuedStakingResponse queued_stakings = 1 [json_name = "queuedStakings", (.gogoproto.nullable) = false];</code>
+       */
+      public int getQueuedStakingsCount() {
+        if (queuedStakingsBuilder_ == null) {
+          return queuedStakings_.size();
+        } else {
+          return queuedStakingsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.QueuedStakingResponse queued_stakings = 1 [json_name = "queuedStakings", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse getQueuedStakings(int index) {
+        if (queuedStakingsBuilder_ == null) {
+          return queuedStakings_.get(index);
+        } else {
+          return queuedStakingsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.QueuedStakingResponse queued_stakings = 1 [json_name = "queuedStakings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setQueuedStakings(
+          int index, com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse value) {
+        if (queuedStakingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQueuedStakingsIsMutable();
+          queuedStakings_.set(index, value);
+          onChanged();
+        } else {
+          queuedStakingsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.QueuedStakingResponse queued_stakings = 1 [json_name = "queuedStakings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setQueuedStakings(
+          int index, com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse.Builder builderForValue) {
+        if (queuedStakingsBuilder_ == null) {
+          ensureQueuedStakingsIsMutable();
+          queuedStakings_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          queuedStakingsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.QueuedStakingResponse queued_stakings = 1 [json_name = "queuedStakings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addQueuedStakings(com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse value) {
+        if (queuedStakingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQueuedStakingsIsMutable();
+          queuedStakings_.add(value);
+          onChanged();
+        } else {
+          queuedStakingsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.QueuedStakingResponse queued_stakings = 1 [json_name = "queuedStakings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addQueuedStakings(
+          int index, com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse value) {
+        if (queuedStakingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQueuedStakingsIsMutable();
+          queuedStakings_.add(index, value);
+          onChanged();
+        } else {
+          queuedStakingsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.QueuedStakingResponse queued_stakings = 1 [json_name = "queuedStakings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addQueuedStakings(
+          com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse.Builder builderForValue) {
+        if (queuedStakingsBuilder_ == null) {
+          ensureQueuedStakingsIsMutable();
+          queuedStakings_.add(builderForValue.build());
+          onChanged();
+        } else {
+          queuedStakingsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.QueuedStakingResponse queued_stakings = 1 [json_name = "queuedStakings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addQueuedStakings(
+          int index, com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse.Builder builderForValue) {
+        if (queuedStakingsBuilder_ == null) {
+          ensureQueuedStakingsIsMutable();
+          queuedStakings_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          queuedStakingsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.QueuedStakingResponse queued_stakings = 1 [json_name = "queuedStakings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllQueuedStakings(
+          java.lang.Iterable<? extends com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse> values) {
+        if (queuedStakingsBuilder_ == null) {
+          ensureQueuedStakingsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, queuedStakings_);
+          onChanged();
+        } else {
+          queuedStakingsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.QueuedStakingResponse queued_stakings = 1 [json_name = "queuedStakings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearQueuedStakings() {
+        if (queuedStakingsBuilder_ == null) {
+          queuedStakings_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          queuedStakingsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.QueuedStakingResponse queued_stakings = 1 [json_name = "queuedStakings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeQueuedStakings(int index) {
+        if (queuedStakingsBuilder_ == null) {
+          ensureQueuedStakingsIsMutable();
+          queuedStakings_.remove(index);
+          onChanged();
+        } else {
+          queuedStakingsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.QueuedStakingResponse queued_stakings = 1 [json_name = "queuedStakings", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse.Builder getQueuedStakingsBuilder(
+          int index) {
+        return getQueuedStakingsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.QueuedStakingResponse queued_stakings = 1 [json_name = "queuedStakings", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponseOrBuilder getQueuedStakingsOrBuilder(
+          int index) {
+        if (queuedStakingsBuilder_ == null) {
+          return queuedStakings_.get(index);  } else {
+          return queuedStakingsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.QueuedStakingResponse queued_stakings = 1 [json_name = "queuedStakings", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponseOrBuilder> 
+           getQueuedStakingsOrBuilderList() {
+        if (queuedStakingsBuilder_ != null) {
+          return queuedStakingsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(queuedStakings_);
+        }
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.QueuedStakingResponse queued_stakings = 1 [json_name = "queuedStakings", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse.Builder addQueuedStakingsBuilder() {
+        return getQueuedStakingsFieldBuilder().addBuilder(
+            com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.QueuedStakingResponse queued_stakings = 1 [json_name = "queuedStakings", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse.Builder addQueuedStakingsBuilder(
+          int index) {
+        return getQueuedStakingsFieldBuilder().addBuilder(
+            index, com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.QueuedStakingResponse queued_stakings = 1 [json_name = "queuedStakings", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse.Builder> 
+           getQueuedStakingsBuilderList() {
+        return getQueuedStakingsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse, com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse.Builder, com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponseOrBuilder> 
+          getQueuedStakingsFieldBuilder() {
+        if (queuedStakingsBuilder_ == null) {
+          queuedStakingsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse, com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse.Builder, com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponseOrBuilder>(
+                  queuedStakings_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          queuedStakings_ = null;
+        }
+        return queuedStakingsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.QueryQueuedStakingsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.QueryQueuedStakingsResponse)
+    private static final com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse();
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryQueuedStakingsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryQueuedStakingsResponse>() {
+      @java.lang.Override
+      public QueryQueuedStakingsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryQueuedStakingsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryQueuedStakingsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.QueryQueuedStakingsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTotalStakingsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.QueryTotalStakingsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+     * @return The stakingCoinDenom.
+     */
+    java.lang.String getStakingCoinDenom();
+    /**
+     * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+     * @return The bytes for stakingCoinDenom.
+     */
+    com.google.protobuf.ByteString
+        getStakingCoinDenomBytes();
+  }
+  /**
+   * <pre>
+   * QueryTotalStakingsRequest is the request type for the Query/TotalStakings RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.QueryTotalStakingsRequest}
+   */
+  public static final class QueryTotalStakingsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.QueryTotalStakingsRequest)
+      QueryTotalStakingsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTotalStakingsRequest.newBuilder() to construct.
+    private QueryTotalStakingsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTotalStakingsRequest() {
+      stakingCoinDenom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTotalStakingsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryTotalStakingsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryTotalStakingsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest.class, com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest.Builder.class);
+    }
+
+    public static final int STAKING_COIN_DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakingCoinDenom_ = "";
+    /**
+     * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+     * @return The stakingCoinDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getStakingCoinDenom() {
+      java.lang.Object ref = stakingCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakingCoinDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+     * @return The bytes for stakingCoinDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakingCoinDenomBytes() {
+      java.lang.Object ref = stakingCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakingCoinDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingCoinDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, stakingCoinDenom_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingCoinDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, stakingCoinDenom_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest other = (com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest) obj;
+
+      if (!getStakingCoinDenom()
+          .equals(other.getStakingCoinDenom())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STAKING_COIN_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingCoinDenom().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryTotalStakingsRequest is the request type for the Query/TotalStakings RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.QueryTotalStakingsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.QueryTotalStakingsRequest)
+        com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryTotalStakingsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryTotalStakingsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest.class, com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        stakingCoinDenom_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryTotalStakingsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest build() {
+        com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest buildPartial() {
+        com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest result = new com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.stakingCoinDenom_ = stakingCoinDenom_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest) {
+          return mergeFrom((com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest other) {
+        if (other == com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest.getDefaultInstance()) return this;
+        if (!other.getStakingCoinDenom().isEmpty()) {
+          stakingCoinDenom_ = other.stakingCoinDenom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                stakingCoinDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object stakingCoinDenom_ = "";
+      /**
+       * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+       * @return The stakingCoinDenom.
+       */
+      public java.lang.String getStakingCoinDenom() {
+        java.lang.Object ref = stakingCoinDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakingCoinDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+       * @return The bytes for stakingCoinDenom.
+       */
+      public com.google.protobuf.ByteString
+          getStakingCoinDenomBytes() {
+        java.lang.Object ref = stakingCoinDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakingCoinDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+       * @param value The stakingCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingCoinDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakingCoinDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingCoinDenom() {
+        stakingCoinDenom_ = getDefaultInstance().getStakingCoinDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+       * @param value The bytes for stakingCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingCoinDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakingCoinDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.QueryTotalStakingsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.QueryTotalStakingsRequest)
+    private static final com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest();
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTotalStakingsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTotalStakingsRequest>() {
+      @java.lang.Override
+      public QueryTotalStakingsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTotalStakingsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTotalStakingsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTotalStakingsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.QueryTotalStakingsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The amount.
+     */
+    java.lang.String getAmount();
+    /**
+     * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for amount.
+     */
+    com.google.protobuf.ByteString
+        getAmountBytes();
+  }
+  /**
+   * <pre>
+   * QueryTotalStakingsResponse is the response type for the Query/TotalStakings RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.QueryTotalStakingsResponse}
+   */
+  public static final class QueryTotalStakingsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.QueryTotalStakingsResponse)
+      QueryTotalStakingsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTotalStakingsResponse.newBuilder() to construct.
+    private QueryTotalStakingsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTotalStakingsResponse() {
+      amount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTotalStakingsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryTotalStakingsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryTotalStakingsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse.class, com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse.Builder.class);
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object amount_ = "";
+    /**
+     * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public java.lang.String getAmount() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        amount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for amount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAmountBytes() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        amount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, amount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, amount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse other = (com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse) obj;
+
+      if (!getAmount()
+          .equals(other.getAmount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAmount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryTotalStakingsResponse is the response type for the Query/TotalStakings RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.QueryTotalStakingsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.QueryTotalStakingsResponse)
+        com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryTotalStakingsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryTotalStakingsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse.class, com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        amount_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryTotalStakingsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse build() {
+        com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse buildPartial() {
+        com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse result = new com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.amount_ = amount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse) {
+          return mergeFrom((com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse other) {
+        if (other == com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse.getDefaultInstance()) return this;
+        if (!other.getAmount().isEmpty()) {
+          amount_ = other.amount_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                amount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object amount_ = "";
+      /**
+       * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The amount.
+       */
+      public java.lang.String getAmount() {
+        java.lang.Object ref = amount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          amount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for amount.
+       */
+      public com.google.protobuf.ByteString
+          getAmountBytes() {
+        java.lang.Object ref = amount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        amount_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        amount_ = getDefaultInstance().getAmount();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 1 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        amount_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.QueryTotalStakingsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.QueryTotalStakingsResponse)
+    private static final com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse();
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTotalStakingsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTotalStakingsResponse>() {
+      @java.lang.Override
+      public QueryTotalStakingsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTotalStakingsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTotalStakingsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.QueryTotalStakingsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRewardsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.QueryRewardsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The farmer.
+     */
+    java.lang.String getFarmer();
+    /**
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The bytes for farmer.
+     */
+    com.google.protobuf.ByteString
+        getFarmerBytes();
+
+    /**
+     * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+     * @return The stakingCoinDenom.
+     */
+    java.lang.String getStakingCoinDenom();
+    /**
+     * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+     * @return The bytes for stakingCoinDenom.
+     */
+    com.google.protobuf.ByteString
+        getStakingCoinDenomBytes();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryRewardsRequest is the request type for the Query/Rewards RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.QueryRewardsRequest}
+   */
+  public static final class QueryRewardsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.QueryRewardsRequest)
+      QueryRewardsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRewardsRequest.newBuilder() to construct.
+    private QueryRewardsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRewardsRequest() {
+      farmer_ = "";
+      stakingCoinDenom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRewardsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryRewardsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryRewardsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest.class, com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest.Builder.class);
+    }
+
+    public static final int FARMER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object farmer_ = "";
+    /**
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The farmer.
+     */
+    @java.lang.Override
+    public java.lang.String getFarmer() {
+      java.lang.Object ref = farmer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        farmer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The bytes for farmer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFarmerBytes() {
+      java.lang.Object ref = farmer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        farmer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STAKING_COIN_DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakingCoinDenom_ = "";
+    /**
+     * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+     * @return The stakingCoinDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getStakingCoinDenom() {
+      java.lang.Object ref = stakingCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakingCoinDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+     * @return The bytes for stakingCoinDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakingCoinDenomBytes() {
+      java.lang.Object ref = stakingCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakingCoinDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 3;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, farmer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingCoinDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, stakingCoinDenom_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(3, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, farmer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingCoinDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, stakingCoinDenom_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest other = (com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest) obj;
+
+      if (!getFarmer()
+          .equals(other.getFarmer())) return false;
+      if (!getStakingCoinDenom()
+          .equals(other.getStakingCoinDenom())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FARMER_FIELD_NUMBER;
+      hash = (53 * hash) + getFarmer().hashCode();
+      hash = (37 * hash) + STAKING_COIN_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingCoinDenom().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryRewardsRequest is the request type for the Query/Rewards RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.QueryRewardsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.QueryRewardsRequest)
+        com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryRewardsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryRewardsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest.class, com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        farmer_ = "";
+        stakingCoinDenom_ = "";
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryRewardsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest build() {
+        com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest buildPartial() {
+        com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest result = new com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.farmer_ = farmer_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.stakingCoinDenom_ = stakingCoinDenom_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest) {
+          return mergeFrom((com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest other) {
+        if (other == com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest.getDefaultInstance()) return this;
+        if (!other.getFarmer().isEmpty()) {
+          farmer_ = other.farmer_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getStakingCoinDenom().isEmpty()) {
+          stakingCoinDenom_ = other.stakingCoinDenom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                farmer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                stakingCoinDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object farmer_ = "";
+      /**
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @return The farmer.
+       */
+      public java.lang.String getFarmer() {
+        java.lang.Object ref = farmer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          farmer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @return The bytes for farmer.
+       */
+      public com.google.protobuf.ByteString
+          getFarmerBytes() {
+        java.lang.Object ref = farmer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          farmer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @param value The farmer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFarmer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        farmer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFarmer() {
+        farmer_ = getDefaultInstance().getFarmer();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @param value The bytes for farmer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFarmerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        farmer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object stakingCoinDenom_ = "";
+      /**
+       * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+       * @return The stakingCoinDenom.
+       */
+      public java.lang.String getStakingCoinDenom() {
+        java.lang.Object ref = stakingCoinDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakingCoinDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+       * @return The bytes for stakingCoinDenom.
+       */
+      public com.google.protobuf.ByteString
+          getStakingCoinDenomBytes() {
+        java.lang.Object ref = stakingCoinDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakingCoinDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+       * @param value The stakingCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingCoinDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakingCoinDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingCoinDenom() {
+        stakingCoinDenom_ = getDefaultInstance().getStakingCoinDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+       * @param value The bytes for stakingCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingCoinDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakingCoinDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.QueryRewardsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.QueryRewardsRequest)
+    private static final com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest();
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRewardsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRewardsRequest>() {
+      @java.lang.Override
+      public QueryRewardsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRewardsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRewardsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.QueryRewardsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRewardsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.QueryRewardsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .crescent.farming.v1beta1.RewardsResponse rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.crescent.farming.v1beta1.QueryProto.RewardsResponse> 
+        getRewardsList();
+    /**
+     * <code>repeated .crescent.farming.v1beta1.RewardsResponse rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.farming.v1beta1.QueryProto.RewardsResponse getRewards(int index);
+    /**
+     * <code>repeated .crescent.farming.v1beta1.RewardsResponse rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+     */
+    int getRewardsCount();
+    /**
+     * <code>repeated .crescent.farming.v1beta1.RewardsResponse rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.crescent.farming.v1beta1.QueryProto.RewardsResponseOrBuilder> 
+        getRewardsOrBuilderList();
+    /**
+     * <code>repeated .crescent.farming.v1beta1.RewardsResponse rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.farming.v1beta1.QueryProto.RewardsResponseOrBuilder getRewardsOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryRewardsResponse is the response type for the Query/Rewards RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.QueryRewardsResponse}
+   */
+  public static final class QueryRewardsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.QueryRewardsResponse)
+      QueryRewardsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRewardsResponse.newBuilder() to construct.
+    private QueryRewardsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRewardsResponse() {
+      rewards_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRewardsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryRewardsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryRewardsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse.class, com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse.Builder.class);
+    }
+
+    public static final int REWARDS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.crescent.farming.v1beta1.QueryProto.RewardsResponse> rewards_;
+    /**
+     * <code>repeated .crescent.farming.v1beta1.RewardsResponse rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.crescent.farming.v1beta1.QueryProto.RewardsResponse> getRewardsList() {
+      return rewards_;
+    }
+    /**
+     * <code>repeated .crescent.farming.v1beta1.RewardsResponse rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.crescent.farming.v1beta1.QueryProto.RewardsResponseOrBuilder> 
+        getRewardsOrBuilderList() {
+      return rewards_;
+    }
+    /**
+     * <code>repeated .crescent.farming.v1beta1.RewardsResponse rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getRewardsCount() {
+      return rewards_.size();
+    }
+    /**
+     * <code>repeated .crescent.farming.v1beta1.RewardsResponse rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.RewardsResponse getRewards(int index) {
+      return rewards_.get(index);
+    }
+    /**
+     * <code>repeated .crescent.farming.v1beta1.RewardsResponse rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.RewardsResponseOrBuilder getRewardsOrBuilder(
+        int index) {
+      return rewards_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < rewards_.size(); i++) {
+        output.writeMessage(1, rewards_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < rewards_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, rewards_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse other = (com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse) obj;
+
+      if (!getRewardsList()
+          .equals(other.getRewardsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getRewardsCount() > 0) {
+        hash = (37 * hash) + REWARDS_FIELD_NUMBER;
+        hash = (53 * hash) + getRewardsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryRewardsResponse is the response type for the Query/Rewards RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.QueryRewardsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.QueryRewardsResponse)
+        com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryRewardsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryRewardsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse.class, com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (rewardsBuilder_ == null) {
+          rewards_ = java.util.Collections.emptyList();
+        } else {
+          rewards_ = null;
+          rewardsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryRewardsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse build() {
+        com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse buildPartial() {
+        com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse result = new com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse result) {
+        if (rewardsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            rewards_ = java.util.Collections.unmodifiableList(rewards_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.rewards_ = rewards_;
+        } else {
+          result.rewards_ = rewardsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse) {
+          return mergeFrom((com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse other) {
+        if (other == com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse.getDefaultInstance()) return this;
+        if (rewardsBuilder_ == null) {
+          if (!other.rewards_.isEmpty()) {
+            if (rewards_.isEmpty()) {
+              rewards_ = other.rewards_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRewardsIsMutable();
+              rewards_.addAll(other.rewards_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.rewards_.isEmpty()) {
+            if (rewardsBuilder_.isEmpty()) {
+              rewardsBuilder_.dispose();
+              rewardsBuilder_ = null;
+              rewards_ = other.rewards_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              rewardsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRewardsFieldBuilder() : null;
+            } else {
+              rewardsBuilder_.addAllMessages(other.rewards_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.crescent.farming.v1beta1.QueryProto.RewardsResponse m =
+                    input.readMessage(
+                        com.crescent.farming.v1beta1.QueryProto.RewardsResponse.parser(),
+                        extensionRegistry);
+                if (rewardsBuilder_ == null) {
+                  ensureRewardsIsMutable();
+                  rewards_.add(m);
+                } else {
+                  rewardsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.crescent.farming.v1beta1.QueryProto.RewardsResponse> rewards_ =
+        java.util.Collections.emptyList();
+      private void ensureRewardsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          rewards_ = new java.util.ArrayList<com.crescent.farming.v1beta1.QueryProto.RewardsResponse>(rewards_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.farming.v1beta1.QueryProto.RewardsResponse, com.crescent.farming.v1beta1.QueryProto.RewardsResponse.Builder, com.crescent.farming.v1beta1.QueryProto.RewardsResponseOrBuilder> rewardsBuilder_;
+
+      /**
+       * <code>repeated .crescent.farming.v1beta1.RewardsResponse rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.farming.v1beta1.QueryProto.RewardsResponse> getRewardsList() {
+        if (rewardsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(rewards_);
+        } else {
+          return rewardsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.RewardsResponse rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public int getRewardsCount() {
+        if (rewardsBuilder_ == null) {
+          return rewards_.size();
+        } else {
+          return rewardsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.RewardsResponse rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.farming.v1beta1.QueryProto.RewardsResponse getRewards(int index) {
+        if (rewardsBuilder_ == null) {
+          return rewards_.get(index);
+        } else {
+          return rewardsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.RewardsResponse rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRewards(
+          int index, com.crescent.farming.v1beta1.QueryProto.RewardsResponse value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.set(index, value);
+          onChanged();
+        } else {
+          rewardsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.RewardsResponse rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRewards(
+          int index, com.crescent.farming.v1beta1.QueryProto.RewardsResponse.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.RewardsResponse rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRewards(com.crescent.farming.v1beta1.QueryProto.RewardsResponse value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.add(value);
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.RewardsResponse rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRewards(
+          int index, com.crescent.farming.v1beta1.QueryProto.RewardsResponse value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.add(index, value);
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.RewardsResponse rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRewards(
+          com.crescent.farming.v1beta1.QueryProto.RewardsResponse.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.add(builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.RewardsResponse rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRewards(
+          int index, com.crescent.farming.v1beta1.QueryProto.RewardsResponse.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.RewardsResponse rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllRewards(
+          java.lang.Iterable<? extends com.crescent.farming.v1beta1.QueryProto.RewardsResponse> values) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, rewards_);
+          onChanged();
+        } else {
+          rewardsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.RewardsResponse rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearRewards() {
+        if (rewardsBuilder_ == null) {
+          rewards_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          rewardsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.RewardsResponse rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeRewards(int index) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.remove(index);
+          onChanged();
+        } else {
+          rewardsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.RewardsResponse rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.farming.v1beta1.QueryProto.RewardsResponse.Builder getRewardsBuilder(
+          int index) {
+        return getRewardsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.RewardsResponse rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.farming.v1beta1.QueryProto.RewardsResponseOrBuilder getRewardsOrBuilder(
+          int index) {
+        if (rewardsBuilder_ == null) {
+          return rewards_.get(index);  } else {
+          return rewardsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.RewardsResponse rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.crescent.farming.v1beta1.QueryProto.RewardsResponseOrBuilder> 
+           getRewardsOrBuilderList() {
+        if (rewardsBuilder_ != null) {
+          return rewardsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(rewards_);
+        }
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.RewardsResponse rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.farming.v1beta1.QueryProto.RewardsResponse.Builder addRewardsBuilder() {
+        return getRewardsFieldBuilder().addBuilder(
+            com.crescent.farming.v1beta1.QueryProto.RewardsResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.RewardsResponse rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.farming.v1beta1.QueryProto.RewardsResponse.Builder addRewardsBuilder(
+          int index) {
+        return getRewardsFieldBuilder().addBuilder(
+            index, com.crescent.farming.v1beta1.QueryProto.RewardsResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.RewardsResponse rewards = 1 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.farming.v1beta1.QueryProto.RewardsResponse.Builder> 
+           getRewardsBuilderList() {
+        return getRewardsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.farming.v1beta1.QueryProto.RewardsResponse, com.crescent.farming.v1beta1.QueryProto.RewardsResponse.Builder, com.crescent.farming.v1beta1.QueryProto.RewardsResponseOrBuilder> 
+          getRewardsFieldBuilder() {
+        if (rewardsBuilder_ == null) {
+          rewardsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.crescent.farming.v1beta1.QueryProto.RewardsResponse, com.crescent.farming.v1beta1.QueryProto.RewardsResponse.Builder, com.crescent.farming.v1beta1.QueryProto.RewardsResponseOrBuilder>(
+                  rewards_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          rewards_ = null;
+        }
+        return rewardsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.QueryRewardsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.QueryRewardsResponse)
+    private static final com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse();
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRewardsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRewardsResponse>() {
+      @java.lang.Override
+      public QueryRewardsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRewardsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRewardsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.QueryRewardsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryUnharvestedRewardsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.QueryUnharvestedRewardsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The farmer.
+     */
+    java.lang.String getFarmer();
+    /**
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The bytes for farmer.
+     */
+    com.google.protobuf.ByteString
+        getFarmerBytes();
+
+    /**
+     * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+     * @return The stakingCoinDenom.
+     */
+    java.lang.String getStakingCoinDenom();
+    /**
+     * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+     * @return The bytes for stakingCoinDenom.
+     */
+    com.google.protobuf.ByteString
+        getStakingCoinDenomBytes();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryUnharvestedRewardsRequest is the request type for the Query/UnharvestedRewards RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.QueryUnharvestedRewardsRequest}
+   */
+  public static final class QueryUnharvestedRewardsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.QueryUnharvestedRewardsRequest)
+      QueryUnharvestedRewardsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryUnharvestedRewardsRequest.newBuilder() to construct.
+    private QueryUnharvestedRewardsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryUnharvestedRewardsRequest() {
+      farmer_ = "";
+      stakingCoinDenom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryUnharvestedRewardsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryUnharvestedRewardsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryUnharvestedRewardsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest.class, com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest.Builder.class);
+    }
+
+    public static final int FARMER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object farmer_ = "";
+    /**
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The farmer.
+     */
+    @java.lang.Override
+    public java.lang.String getFarmer() {
+      java.lang.Object ref = farmer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        farmer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The bytes for farmer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFarmerBytes() {
+      java.lang.Object ref = farmer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        farmer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STAKING_COIN_DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakingCoinDenom_ = "";
+    /**
+     * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+     * @return The stakingCoinDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getStakingCoinDenom() {
+      java.lang.Object ref = stakingCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakingCoinDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+     * @return The bytes for stakingCoinDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakingCoinDenomBytes() {
+      java.lang.Object ref = stakingCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakingCoinDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 3;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, farmer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingCoinDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, stakingCoinDenom_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(3, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, farmer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingCoinDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, stakingCoinDenom_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest other = (com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest) obj;
+
+      if (!getFarmer()
+          .equals(other.getFarmer())) return false;
+      if (!getStakingCoinDenom()
+          .equals(other.getStakingCoinDenom())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FARMER_FIELD_NUMBER;
+      hash = (53 * hash) + getFarmer().hashCode();
+      hash = (37 * hash) + STAKING_COIN_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingCoinDenom().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryUnharvestedRewardsRequest is the request type for the Query/UnharvestedRewards RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.QueryUnharvestedRewardsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.QueryUnharvestedRewardsRequest)
+        com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryUnharvestedRewardsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryUnharvestedRewardsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest.class, com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        farmer_ = "";
+        stakingCoinDenom_ = "";
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryUnharvestedRewardsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest build() {
+        com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest buildPartial() {
+        com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest result = new com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.farmer_ = farmer_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.stakingCoinDenom_ = stakingCoinDenom_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest) {
+          return mergeFrom((com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest other) {
+        if (other == com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest.getDefaultInstance()) return this;
+        if (!other.getFarmer().isEmpty()) {
+          farmer_ = other.farmer_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getStakingCoinDenom().isEmpty()) {
+          stakingCoinDenom_ = other.stakingCoinDenom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                farmer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                stakingCoinDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object farmer_ = "";
+      /**
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @return The farmer.
+       */
+      public java.lang.String getFarmer() {
+        java.lang.Object ref = farmer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          farmer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @return The bytes for farmer.
+       */
+      public com.google.protobuf.ByteString
+          getFarmerBytes() {
+        java.lang.Object ref = farmer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          farmer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @param value The farmer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFarmer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        farmer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFarmer() {
+        farmer_ = getDefaultInstance().getFarmer();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @param value The bytes for farmer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFarmerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        farmer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object stakingCoinDenom_ = "";
+      /**
+       * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+       * @return The stakingCoinDenom.
+       */
+      public java.lang.String getStakingCoinDenom() {
+        java.lang.Object ref = stakingCoinDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakingCoinDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+       * @return The bytes for stakingCoinDenom.
+       */
+      public com.google.protobuf.ByteString
+          getStakingCoinDenomBytes() {
+        java.lang.Object ref = stakingCoinDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakingCoinDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+       * @param value The stakingCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingCoinDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakingCoinDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingCoinDenom() {
+        stakingCoinDenom_ = getDefaultInstance().getStakingCoinDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string staking_coin_denom = 2 [json_name = "stakingCoinDenom"];</code>
+       * @param value The bytes for stakingCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingCoinDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakingCoinDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.QueryUnharvestedRewardsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.QueryUnharvestedRewardsRequest)
+    private static final com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest();
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryUnharvestedRewardsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryUnharvestedRewardsRequest>() {
+      @java.lang.Override
+      public QueryUnharvestedRewardsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryUnharvestedRewardsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryUnharvestedRewardsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryUnharvestedRewardsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.QueryUnharvestedRewardsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .crescent.farming.v1beta1.UnharvestedRewardsResponse unharvested_rewards = 1 [json_name = "unharvestedRewards", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse> 
+        getUnharvestedRewardsList();
+    /**
+     * <code>repeated .crescent.farming.v1beta1.UnharvestedRewardsResponse unharvested_rewards = 1 [json_name = "unharvestedRewards", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse getUnharvestedRewards(int index);
+    /**
+     * <code>repeated .crescent.farming.v1beta1.UnharvestedRewardsResponse unharvested_rewards = 1 [json_name = "unharvestedRewards", (.gogoproto.nullable) = false];</code>
+     */
+    int getUnharvestedRewardsCount();
+    /**
+     * <code>repeated .crescent.farming.v1beta1.UnharvestedRewardsResponse unharvested_rewards = 1 [json_name = "unharvestedRewards", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponseOrBuilder> 
+        getUnharvestedRewardsOrBuilderList();
+    /**
+     * <code>repeated .crescent.farming.v1beta1.UnharvestedRewardsResponse unharvested_rewards = 1 [json_name = "unharvestedRewards", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponseOrBuilder getUnharvestedRewardsOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryUnharvestedRewardsResponse is the response type for the Query/UnharvestedRewards RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.QueryUnharvestedRewardsResponse}
+   */
+  public static final class QueryUnharvestedRewardsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.QueryUnharvestedRewardsResponse)
+      QueryUnharvestedRewardsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryUnharvestedRewardsResponse.newBuilder() to construct.
+    private QueryUnharvestedRewardsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryUnharvestedRewardsResponse() {
+      unharvestedRewards_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryUnharvestedRewardsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryUnharvestedRewardsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryUnharvestedRewardsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse.class, com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse.Builder.class);
+    }
+
+    public static final int UNHARVESTED_REWARDS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse> unharvestedRewards_;
+    /**
+     * <code>repeated .crescent.farming.v1beta1.UnharvestedRewardsResponse unharvested_rewards = 1 [json_name = "unharvestedRewards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse> getUnharvestedRewardsList() {
+      return unharvestedRewards_;
+    }
+    /**
+     * <code>repeated .crescent.farming.v1beta1.UnharvestedRewardsResponse unharvested_rewards = 1 [json_name = "unharvestedRewards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponseOrBuilder> 
+        getUnharvestedRewardsOrBuilderList() {
+      return unharvestedRewards_;
+    }
+    /**
+     * <code>repeated .crescent.farming.v1beta1.UnharvestedRewardsResponse unharvested_rewards = 1 [json_name = "unharvestedRewards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getUnharvestedRewardsCount() {
+      return unharvestedRewards_.size();
+    }
+    /**
+     * <code>repeated .crescent.farming.v1beta1.UnharvestedRewardsResponse unharvested_rewards = 1 [json_name = "unharvestedRewards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse getUnharvestedRewards(int index) {
+      return unharvestedRewards_.get(index);
+    }
+    /**
+     * <code>repeated .crescent.farming.v1beta1.UnharvestedRewardsResponse unharvested_rewards = 1 [json_name = "unharvestedRewards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponseOrBuilder getUnharvestedRewardsOrBuilder(
+        int index) {
+      return unharvestedRewards_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < unharvestedRewards_.size(); i++) {
+        output.writeMessage(1, unharvestedRewards_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < unharvestedRewards_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, unharvestedRewards_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse other = (com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse) obj;
+
+      if (!getUnharvestedRewardsList()
+          .equals(other.getUnharvestedRewardsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getUnharvestedRewardsCount() > 0) {
+        hash = (37 * hash) + UNHARVESTED_REWARDS_FIELD_NUMBER;
+        hash = (53 * hash) + getUnharvestedRewardsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryUnharvestedRewardsResponse is the response type for the Query/UnharvestedRewards RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.QueryUnharvestedRewardsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.QueryUnharvestedRewardsResponse)
+        com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryUnharvestedRewardsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryUnharvestedRewardsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse.class, com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (unharvestedRewardsBuilder_ == null) {
+          unharvestedRewards_ = java.util.Collections.emptyList();
+        } else {
+          unharvestedRewards_ = null;
+          unharvestedRewardsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryUnharvestedRewardsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse build() {
+        com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse buildPartial() {
+        com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse result = new com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse result) {
+        if (unharvestedRewardsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            unharvestedRewards_ = java.util.Collections.unmodifiableList(unharvestedRewards_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.unharvestedRewards_ = unharvestedRewards_;
+        } else {
+          result.unharvestedRewards_ = unharvestedRewardsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse) {
+          return mergeFrom((com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse other) {
+        if (other == com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse.getDefaultInstance()) return this;
+        if (unharvestedRewardsBuilder_ == null) {
+          if (!other.unharvestedRewards_.isEmpty()) {
+            if (unharvestedRewards_.isEmpty()) {
+              unharvestedRewards_ = other.unharvestedRewards_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureUnharvestedRewardsIsMutable();
+              unharvestedRewards_.addAll(other.unharvestedRewards_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.unharvestedRewards_.isEmpty()) {
+            if (unharvestedRewardsBuilder_.isEmpty()) {
+              unharvestedRewardsBuilder_.dispose();
+              unharvestedRewardsBuilder_ = null;
+              unharvestedRewards_ = other.unharvestedRewards_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              unharvestedRewardsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getUnharvestedRewardsFieldBuilder() : null;
+            } else {
+              unharvestedRewardsBuilder_.addAllMessages(other.unharvestedRewards_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse m =
+                    input.readMessage(
+                        com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse.parser(),
+                        extensionRegistry);
+                if (unharvestedRewardsBuilder_ == null) {
+                  ensureUnharvestedRewardsIsMutable();
+                  unharvestedRewards_.add(m);
+                } else {
+                  unharvestedRewardsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse> unharvestedRewards_ =
+        java.util.Collections.emptyList();
+      private void ensureUnharvestedRewardsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          unharvestedRewards_ = new java.util.ArrayList<com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse>(unharvestedRewards_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse, com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse.Builder, com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponseOrBuilder> unharvestedRewardsBuilder_;
+
+      /**
+       * <code>repeated .crescent.farming.v1beta1.UnharvestedRewardsResponse unharvested_rewards = 1 [json_name = "unharvestedRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse> getUnharvestedRewardsList() {
+        if (unharvestedRewardsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(unharvestedRewards_);
+        } else {
+          return unharvestedRewardsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.UnharvestedRewardsResponse unharvested_rewards = 1 [json_name = "unharvestedRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public int getUnharvestedRewardsCount() {
+        if (unharvestedRewardsBuilder_ == null) {
+          return unharvestedRewards_.size();
+        } else {
+          return unharvestedRewardsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.UnharvestedRewardsResponse unharvested_rewards = 1 [json_name = "unharvestedRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse getUnharvestedRewards(int index) {
+        if (unharvestedRewardsBuilder_ == null) {
+          return unharvestedRewards_.get(index);
+        } else {
+          return unharvestedRewardsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.UnharvestedRewardsResponse unharvested_rewards = 1 [json_name = "unharvestedRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setUnharvestedRewards(
+          int index, com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse value) {
+        if (unharvestedRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnharvestedRewardsIsMutable();
+          unharvestedRewards_.set(index, value);
+          onChanged();
+        } else {
+          unharvestedRewardsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.UnharvestedRewardsResponse unharvested_rewards = 1 [json_name = "unharvestedRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setUnharvestedRewards(
+          int index, com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse.Builder builderForValue) {
+        if (unharvestedRewardsBuilder_ == null) {
+          ensureUnharvestedRewardsIsMutable();
+          unharvestedRewards_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          unharvestedRewardsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.UnharvestedRewardsResponse unharvested_rewards = 1 [json_name = "unharvestedRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addUnharvestedRewards(com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse value) {
+        if (unharvestedRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnharvestedRewardsIsMutable();
+          unharvestedRewards_.add(value);
+          onChanged();
+        } else {
+          unharvestedRewardsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.UnharvestedRewardsResponse unharvested_rewards = 1 [json_name = "unharvestedRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addUnharvestedRewards(
+          int index, com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse value) {
+        if (unharvestedRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnharvestedRewardsIsMutable();
+          unharvestedRewards_.add(index, value);
+          onChanged();
+        } else {
+          unharvestedRewardsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.UnharvestedRewardsResponse unharvested_rewards = 1 [json_name = "unharvestedRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addUnharvestedRewards(
+          com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse.Builder builderForValue) {
+        if (unharvestedRewardsBuilder_ == null) {
+          ensureUnharvestedRewardsIsMutable();
+          unharvestedRewards_.add(builderForValue.build());
+          onChanged();
+        } else {
+          unharvestedRewardsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.UnharvestedRewardsResponse unharvested_rewards = 1 [json_name = "unharvestedRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addUnharvestedRewards(
+          int index, com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse.Builder builderForValue) {
+        if (unharvestedRewardsBuilder_ == null) {
+          ensureUnharvestedRewardsIsMutable();
+          unharvestedRewards_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          unharvestedRewardsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.UnharvestedRewardsResponse unharvested_rewards = 1 [json_name = "unharvestedRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllUnharvestedRewards(
+          java.lang.Iterable<? extends com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse> values) {
+        if (unharvestedRewardsBuilder_ == null) {
+          ensureUnharvestedRewardsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, unharvestedRewards_);
+          onChanged();
+        } else {
+          unharvestedRewardsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.UnharvestedRewardsResponse unharvested_rewards = 1 [json_name = "unharvestedRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearUnharvestedRewards() {
+        if (unharvestedRewardsBuilder_ == null) {
+          unharvestedRewards_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          unharvestedRewardsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.UnharvestedRewardsResponse unharvested_rewards = 1 [json_name = "unharvestedRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeUnharvestedRewards(int index) {
+        if (unharvestedRewardsBuilder_ == null) {
+          ensureUnharvestedRewardsIsMutable();
+          unharvestedRewards_.remove(index);
+          onChanged();
+        } else {
+          unharvestedRewardsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.UnharvestedRewardsResponse unharvested_rewards = 1 [json_name = "unharvestedRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse.Builder getUnharvestedRewardsBuilder(
+          int index) {
+        return getUnharvestedRewardsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.UnharvestedRewardsResponse unharvested_rewards = 1 [json_name = "unharvestedRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponseOrBuilder getUnharvestedRewardsOrBuilder(
+          int index) {
+        if (unharvestedRewardsBuilder_ == null) {
+          return unharvestedRewards_.get(index);  } else {
+          return unharvestedRewardsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.UnharvestedRewardsResponse unharvested_rewards = 1 [json_name = "unharvestedRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponseOrBuilder> 
+           getUnharvestedRewardsOrBuilderList() {
+        if (unharvestedRewardsBuilder_ != null) {
+          return unharvestedRewardsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(unharvestedRewards_);
+        }
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.UnharvestedRewardsResponse unharvested_rewards = 1 [json_name = "unharvestedRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse.Builder addUnharvestedRewardsBuilder() {
+        return getUnharvestedRewardsFieldBuilder().addBuilder(
+            com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.UnharvestedRewardsResponse unharvested_rewards = 1 [json_name = "unharvestedRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse.Builder addUnharvestedRewardsBuilder(
+          int index) {
+        return getUnharvestedRewardsFieldBuilder().addBuilder(
+            index, com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.UnharvestedRewardsResponse unharvested_rewards = 1 [json_name = "unharvestedRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse.Builder> 
+           getUnharvestedRewardsBuilderList() {
+        return getUnharvestedRewardsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse, com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse.Builder, com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponseOrBuilder> 
+          getUnharvestedRewardsFieldBuilder() {
+        if (unharvestedRewardsBuilder_ == null) {
+          unharvestedRewardsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse, com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse.Builder, com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponseOrBuilder>(
+                  unharvestedRewards_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          unharvestedRewards_ = null;
+        }
+        return unharvestedRewardsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.QueryUnharvestedRewardsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.QueryUnharvestedRewardsResponse)
+    private static final com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse();
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryUnharvestedRewardsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryUnharvestedRewardsResponse>() {
+      @java.lang.Override
+      public QueryUnharvestedRewardsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryUnharvestedRewardsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryUnharvestedRewardsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.QueryUnharvestedRewardsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryCurrentEpochDaysRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.QueryCurrentEpochDaysRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryCurrentEpochDaysRequest is the request type for the Query/CurrentEpochDays RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.QueryCurrentEpochDaysRequest}
+   */
+  public static final class QueryCurrentEpochDaysRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.QueryCurrentEpochDaysRequest)
+      QueryCurrentEpochDaysRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCurrentEpochDaysRequest.newBuilder() to construct.
+    private QueryCurrentEpochDaysRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCurrentEpochDaysRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCurrentEpochDaysRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryCurrentEpochDaysRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryCurrentEpochDaysRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest.class, com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest other = (com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryCurrentEpochDaysRequest is the request type for the Query/CurrentEpochDays RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.QueryCurrentEpochDaysRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.QueryCurrentEpochDaysRequest)
+        com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryCurrentEpochDaysRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryCurrentEpochDaysRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest.class, com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryCurrentEpochDaysRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest build() {
+        com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest buildPartial() {
+        com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest result = new com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest) {
+          return mergeFrom((com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest other) {
+        if (other == com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.QueryCurrentEpochDaysRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.QueryCurrentEpochDaysRequest)
+    private static final com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest();
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCurrentEpochDaysRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCurrentEpochDaysRequest>() {
+      @java.lang.Override
+      public QueryCurrentEpochDaysRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCurrentEpochDaysRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCurrentEpochDaysRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryCurrentEpochDaysResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.QueryCurrentEpochDaysResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint32 current_epoch_days = 1 [json_name = "currentEpochDays"];</code>
+     * @return The currentEpochDays.
+     */
+    int getCurrentEpochDays();
+  }
+  /**
+   * <pre>
+   * QueryCurrentEpochDaysResponse is the response type for the Query/CurrentEpochDays RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.QueryCurrentEpochDaysResponse}
+   */
+  public static final class QueryCurrentEpochDaysResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.QueryCurrentEpochDaysResponse)
+      QueryCurrentEpochDaysResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCurrentEpochDaysResponse.newBuilder() to construct.
+    private QueryCurrentEpochDaysResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCurrentEpochDaysResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCurrentEpochDaysResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryCurrentEpochDaysResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryCurrentEpochDaysResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse.class, com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse.Builder.class);
+    }
+
+    public static final int CURRENT_EPOCH_DAYS_FIELD_NUMBER = 1;
+    private int currentEpochDays_ = 0;
+    /**
+     * <code>uint32 current_epoch_days = 1 [json_name = "currentEpochDays"];</code>
+     * @return The currentEpochDays.
+     */
+    @java.lang.Override
+    public int getCurrentEpochDays() {
+      return currentEpochDays_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (currentEpochDays_ != 0) {
+        output.writeUInt32(1, currentEpochDays_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (currentEpochDays_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, currentEpochDays_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse other = (com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse) obj;
+
+      if (getCurrentEpochDays()
+          != other.getCurrentEpochDays()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CURRENT_EPOCH_DAYS_FIELD_NUMBER;
+      hash = (53 * hash) + getCurrentEpochDays();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryCurrentEpochDaysResponse is the response type for the Query/CurrentEpochDays RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.QueryCurrentEpochDaysResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.QueryCurrentEpochDaysResponse)
+        com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryCurrentEpochDaysResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryCurrentEpochDaysResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse.class, com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        currentEpochDays_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryCurrentEpochDaysResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse build() {
+        com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse buildPartial() {
+        com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse result = new com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.currentEpochDays_ = currentEpochDays_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse) {
+          return mergeFrom((com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse other) {
+        if (other == com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse.getDefaultInstance()) return this;
+        if (other.getCurrentEpochDays() != 0) {
+          setCurrentEpochDays(other.getCurrentEpochDays());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                currentEpochDays_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int currentEpochDays_ ;
+      /**
+       * <code>uint32 current_epoch_days = 1 [json_name = "currentEpochDays"];</code>
+       * @return The currentEpochDays.
+       */
+      @java.lang.Override
+      public int getCurrentEpochDays() {
+        return currentEpochDays_;
+      }
+      /**
+       * <code>uint32 current_epoch_days = 1 [json_name = "currentEpochDays"];</code>
+       * @param value The currentEpochDays to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurrentEpochDays(int value) {
+
+        currentEpochDays_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 current_epoch_days = 1 [json_name = "currentEpochDays"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurrentEpochDays() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        currentEpochDays_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.QueryCurrentEpochDaysResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.QueryCurrentEpochDaysResponse)
+    private static final com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse();
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCurrentEpochDaysResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCurrentEpochDaysResponse>() {
+      @java.lang.Override
+      public QueryCurrentEpochDaysResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCurrentEpochDaysResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCurrentEpochDaysResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.QueryCurrentEpochDaysResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryHistoricalRewardsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.QueryHistoricalRewardsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+     * @return The stakingCoinDenom.
+     */
+    java.lang.String getStakingCoinDenom();
+    /**
+     * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+     * @return The bytes for stakingCoinDenom.
+     */
+    com.google.protobuf.ByteString
+        getStakingCoinDenomBytes();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryHistoricalRewardsRequest is the request type for the Query/HistoricalRewards RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.QueryHistoricalRewardsRequest}
+   */
+  public static final class QueryHistoricalRewardsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.QueryHistoricalRewardsRequest)
+      QueryHistoricalRewardsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryHistoricalRewardsRequest.newBuilder() to construct.
+    private QueryHistoricalRewardsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryHistoricalRewardsRequest() {
+      stakingCoinDenom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryHistoricalRewardsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryHistoricalRewardsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryHistoricalRewardsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest.class, com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest.Builder.class);
+    }
+
+    public static final int STAKING_COIN_DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakingCoinDenom_ = "";
+    /**
+     * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+     * @return The stakingCoinDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getStakingCoinDenom() {
+      java.lang.Object ref = stakingCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakingCoinDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+     * @return The bytes for stakingCoinDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakingCoinDenomBytes() {
+      java.lang.Object ref = stakingCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakingCoinDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingCoinDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, stakingCoinDenom_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingCoinDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, stakingCoinDenom_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest other = (com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest) obj;
+
+      if (!getStakingCoinDenom()
+          .equals(other.getStakingCoinDenom())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STAKING_COIN_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingCoinDenom().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryHistoricalRewardsRequest is the request type for the Query/HistoricalRewards RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.QueryHistoricalRewardsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.QueryHistoricalRewardsRequest)
+        com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryHistoricalRewardsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryHistoricalRewardsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest.class, com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        stakingCoinDenom_ = "";
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryHistoricalRewardsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest build() {
+        com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest buildPartial() {
+        com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest result = new com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.stakingCoinDenom_ = stakingCoinDenom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest) {
+          return mergeFrom((com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest other) {
+        if (other == com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest.getDefaultInstance()) return this;
+        if (!other.getStakingCoinDenom().isEmpty()) {
+          stakingCoinDenom_ = other.stakingCoinDenom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                stakingCoinDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object stakingCoinDenom_ = "";
+      /**
+       * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+       * @return The stakingCoinDenom.
+       */
+      public java.lang.String getStakingCoinDenom() {
+        java.lang.Object ref = stakingCoinDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakingCoinDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+       * @return The bytes for stakingCoinDenom.
+       */
+      public com.google.protobuf.ByteString
+          getStakingCoinDenomBytes() {
+        java.lang.Object ref = stakingCoinDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakingCoinDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+       * @param value The stakingCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingCoinDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakingCoinDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingCoinDenom() {
+        stakingCoinDenom_ = getDefaultInstance().getStakingCoinDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+       * @param value The bytes for stakingCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingCoinDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakingCoinDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.QueryHistoricalRewardsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.QueryHistoricalRewardsRequest)
+    private static final com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest();
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryHistoricalRewardsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryHistoricalRewardsRequest>() {
+      @java.lang.Override
+      public QueryHistoricalRewardsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryHistoricalRewardsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryHistoricalRewardsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryHistoricalRewardsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.QueryHistoricalRewardsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .crescent.farming.v1beta1.HistoricalRewardsResponse historical_rewards = 1 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse> 
+        getHistoricalRewardsList();
+    /**
+     * <code>repeated .crescent.farming.v1beta1.HistoricalRewardsResponse historical_rewards = 1 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse getHistoricalRewards(int index);
+    /**
+     * <code>repeated .crescent.farming.v1beta1.HistoricalRewardsResponse historical_rewards = 1 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+     */
+    int getHistoricalRewardsCount();
+    /**
+     * <code>repeated .crescent.farming.v1beta1.HistoricalRewardsResponse historical_rewards = 1 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponseOrBuilder> 
+        getHistoricalRewardsOrBuilderList();
+    /**
+     * <code>repeated .crescent.farming.v1beta1.HistoricalRewardsResponse historical_rewards = 1 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponseOrBuilder getHistoricalRewardsOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryHistoricalRewardsResponse is the response type for the Query/HistoricalRewards RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.QueryHistoricalRewardsResponse}
+   */
+  public static final class QueryHistoricalRewardsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.QueryHistoricalRewardsResponse)
+      QueryHistoricalRewardsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryHistoricalRewardsResponse.newBuilder() to construct.
+    private QueryHistoricalRewardsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryHistoricalRewardsResponse() {
+      historicalRewards_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryHistoricalRewardsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryHistoricalRewardsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryHistoricalRewardsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse.class, com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse.Builder.class);
+    }
+
+    public static final int HISTORICAL_REWARDS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse> historicalRewards_;
+    /**
+     * <code>repeated .crescent.farming.v1beta1.HistoricalRewardsResponse historical_rewards = 1 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse> getHistoricalRewardsList() {
+      return historicalRewards_;
+    }
+    /**
+     * <code>repeated .crescent.farming.v1beta1.HistoricalRewardsResponse historical_rewards = 1 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponseOrBuilder> 
+        getHistoricalRewardsOrBuilderList() {
+      return historicalRewards_;
+    }
+    /**
+     * <code>repeated .crescent.farming.v1beta1.HistoricalRewardsResponse historical_rewards = 1 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getHistoricalRewardsCount() {
+      return historicalRewards_.size();
+    }
+    /**
+     * <code>repeated .crescent.farming.v1beta1.HistoricalRewardsResponse historical_rewards = 1 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse getHistoricalRewards(int index) {
+      return historicalRewards_.get(index);
+    }
+    /**
+     * <code>repeated .crescent.farming.v1beta1.HistoricalRewardsResponse historical_rewards = 1 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponseOrBuilder getHistoricalRewardsOrBuilder(
+        int index) {
+      return historicalRewards_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < historicalRewards_.size(); i++) {
+        output.writeMessage(1, historicalRewards_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < historicalRewards_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, historicalRewards_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse other = (com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse) obj;
+
+      if (!getHistoricalRewardsList()
+          .equals(other.getHistoricalRewardsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getHistoricalRewardsCount() > 0) {
+        hash = (37 * hash) + HISTORICAL_REWARDS_FIELD_NUMBER;
+        hash = (53 * hash) + getHistoricalRewardsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryHistoricalRewardsResponse is the response type for the Query/HistoricalRewards RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.QueryHistoricalRewardsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.QueryHistoricalRewardsResponse)
+        com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryHistoricalRewardsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryHistoricalRewardsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse.class, com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (historicalRewardsBuilder_ == null) {
+          historicalRewards_ = java.util.Collections.emptyList();
+        } else {
+          historicalRewards_ = null;
+          historicalRewardsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueryHistoricalRewardsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse build() {
+        com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse buildPartial() {
+        com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse result = new com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse result) {
+        if (historicalRewardsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            historicalRewards_ = java.util.Collections.unmodifiableList(historicalRewards_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.historicalRewards_ = historicalRewards_;
+        } else {
+          result.historicalRewards_ = historicalRewardsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse) {
+          return mergeFrom((com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse other) {
+        if (other == com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse.getDefaultInstance()) return this;
+        if (historicalRewardsBuilder_ == null) {
+          if (!other.historicalRewards_.isEmpty()) {
+            if (historicalRewards_.isEmpty()) {
+              historicalRewards_ = other.historicalRewards_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureHistoricalRewardsIsMutable();
+              historicalRewards_.addAll(other.historicalRewards_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.historicalRewards_.isEmpty()) {
+            if (historicalRewardsBuilder_.isEmpty()) {
+              historicalRewardsBuilder_.dispose();
+              historicalRewardsBuilder_ = null;
+              historicalRewards_ = other.historicalRewards_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              historicalRewardsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getHistoricalRewardsFieldBuilder() : null;
+            } else {
+              historicalRewardsBuilder_.addAllMessages(other.historicalRewards_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse m =
+                    input.readMessage(
+                        com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse.parser(),
+                        extensionRegistry);
+                if (historicalRewardsBuilder_ == null) {
+                  ensureHistoricalRewardsIsMutable();
+                  historicalRewards_.add(m);
+                } else {
+                  historicalRewardsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse> historicalRewards_ =
+        java.util.Collections.emptyList();
+      private void ensureHistoricalRewardsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          historicalRewards_ = new java.util.ArrayList<com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse>(historicalRewards_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse, com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse.Builder, com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponseOrBuilder> historicalRewardsBuilder_;
+
+      /**
+       * <code>repeated .crescent.farming.v1beta1.HistoricalRewardsResponse historical_rewards = 1 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse> getHistoricalRewardsList() {
+        if (historicalRewardsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(historicalRewards_);
+        } else {
+          return historicalRewardsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.HistoricalRewardsResponse historical_rewards = 1 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public int getHistoricalRewardsCount() {
+        if (historicalRewardsBuilder_ == null) {
+          return historicalRewards_.size();
+        } else {
+          return historicalRewardsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.HistoricalRewardsResponse historical_rewards = 1 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse getHistoricalRewards(int index) {
+        if (historicalRewardsBuilder_ == null) {
+          return historicalRewards_.get(index);
+        } else {
+          return historicalRewardsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.HistoricalRewardsResponse historical_rewards = 1 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setHistoricalRewards(
+          int index, com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse value) {
+        if (historicalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHistoricalRewardsIsMutable();
+          historicalRewards_.set(index, value);
+          onChanged();
+        } else {
+          historicalRewardsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.HistoricalRewardsResponse historical_rewards = 1 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setHistoricalRewards(
+          int index, com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse.Builder builderForValue) {
+        if (historicalRewardsBuilder_ == null) {
+          ensureHistoricalRewardsIsMutable();
+          historicalRewards_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          historicalRewardsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.HistoricalRewardsResponse historical_rewards = 1 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addHistoricalRewards(com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse value) {
+        if (historicalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHistoricalRewardsIsMutable();
+          historicalRewards_.add(value);
+          onChanged();
+        } else {
+          historicalRewardsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.HistoricalRewardsResponse historical_rewards = 1 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addHistoricalRewards(
+          int index, com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse value) {
+        if (historicalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHistoricalRewardsIsMutable();
+          historicalRewards_.add(index, value);
+          onChanged();
+        } else {
+          historicalRewardsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.HistoricalRewardsResponse historical_rewards = 1 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addHistoricalRewards(
+          com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse.Builder builderForValue) {
+        if (historicalRewardsBuilder_ == null) {
+          ensureHistoricalRewardsIsMutable();
+          historicalRewards_.add(builderForValue.build());
+          onChanged();
+        } else {
+          historicalRewardsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.HistoricalRewardsResponse historical_rewards = 1 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addHistoricalRewards(
+          int index, com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse.Builder builderForValue) {
+        if (historicalRewardsBuilder_ == null) {
+          ensureHistoricalRewardsIsMutable();
+          historicalRewards_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          historicalRewardsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.HistoricalRewardsResponse historical_rewards = 1 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllHistoricalRewards(
+          java.lang.Iterable<? extends com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse> values) {
+        if (historicalRewardsBuilder_ == null) {
+          ensureHistoricalRewardsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, historicalRewards_);
+          onChanged();
+        } else {
+          historicalRewardsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.HistoricalRewardsResponse historical_rewards = 1 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearHistoricalRewards() {
+        if (historicalRewardsBuilder_ == null) {
+          historicalRewards_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          historicalRewardsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.HistoricalRewardsResponse historical_rewards = 1 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeHistoricalRewards(int index) {
+        if (historicalRewardsBuilder_ == null) {
+          ensureHistoricalRewardsIsMutable();
+          historicalRewards_.remove(index);
+          onChanged();
+        } else {
+          historicalRewardsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.HistoricalRewardsResponse historical_rewards = 1 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse.Builder getHistoricalRewardsBuilder(
+          int index) {
+        return getHistoricalRewardsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.HistoricalRewardsResponse historical_rewards = 1 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponseOrBuilder getHistoricalRewardsOrBuilder(
+          int index) {
+        if (historicalRewardsBuilder_ == null) {
+          return historicalRewards_.get(index);  } else {
+          return historicalRewardsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.HistoricalRewardsResponse historical_rewards = 1 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponseOrBuilder> 
+           getHistoricalRewardsOrBuilderList() {
+        if (historicalRewardsBuilder_ != null) {
+          return historicalRewardsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(historicalRewards_);
+        }
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.HistoricalRewardsResponse historical_rewards = 1 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse.Builder addHistoricalRewardsBuilder() {
+        return getHistoricalRewardsFieldBuilder().addBuilder(
+            com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.HistoricalRewardsResponse historical_rewards = 1 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse.Builder addHistoricalRewardsBuilder(
+          int index) {
+        return getHistoricalRewardsFieldBuilder().addBuilder(
+            index, com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.farming.v1beta1.HistoricalRewardsResponse historical_rewards = 1 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse.Builder> 
+           getHistoricalRewardsBuilderList() {
+        return getHistoricalRewardsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse, com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse.Builder, com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponseOrBuilder> 
+          getHistoricalRewardsFieldBuilder() {
+        if (historicalRewardsBuilder_ == null) {
+          historicalRewardsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse, com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse.Builder, com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponseOrBuilder>(
+                  historicalRewards_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          historicalRewards_ = null;
+        }
+        return historicalRewardsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.QueryHistoricalRewardsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.QueryHistoricalRewardsResponse)
+    private static final com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse();
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryHistoricalRewardsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryHistoricalRewardsResponse>() {
+      @java.lang.Override
+      public QueryHistoricalRewardsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryHistoricalRewardsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryHistoricalRewardsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.QueryHistoricalRewardsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StakingResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.StakingResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+     * @return The stakingCoinDenom.
+     */
+    java.lang.String getStakingCoinDenom();
+    /**
+     * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+     * @return The bytes for stakingCoinDenom.
+     */
+    com.google.protobuf.ByteString
+        getStakingCoinDenomBytes();
+
+    /**
+     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The amount.
+     */
+    java.lang.String getAmount();
+    /**
+     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for amount.
+     */
+    com.google.protobuf.ByteString
+        getAmountBytes();
+
+    /**
+     * <code>uint64 starting_epoch = 3 [json_name = "startingEpoch"];</code>
+     * @return The startingEpoch.
+     */
+    long getStartingEpoch();
+  }
+  /**
+   * Protobuf type {@code crescent.farming.v1beta1.StakingResponse}
+   */
+  public static final class StakingResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.StakingResponse)
+      StakingResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StakingResponse.newBuilder() to construct.
+    private StakingResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StakingResponse() {
+      stakingCoinDenom_ = "";
+      amount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StakingResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_StakingResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_StakingResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.QueryProto.StakingResponse.class, com.crescent.farming.v1beta1.QueryProto.StakingResponse.Builder.class);
+    }
+
+    public static final int STAKING_COIN_DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakingCoinDenom_ = "";
+    /**
+     * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+     * @return The stakingCoinDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getStakingCoinDenom() {
+      java.lang.Object ref = stakingCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakingCoinDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+     * @return The bytes for stakingCoinDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakingCoinDenomBytes() {
+      java.lang.Object ref = stakingCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakingCoinDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object amount_ = "";
+    /**
+     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public java.lang.String getAmount() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        amount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for amount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAmountBytes() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        amount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STARTING_EPOCH_FIELD_NUMBER = 3;
+    private long startingEpoch_ = 0L;
+    /**
+     * <code>uint64 starting_epoch = 3 [json_name = "startingEpoch"];</code>
+     * @return The startingEpoch.
+     */
+    @java.lang.Override
+    public long getStartingEpoch() {
+      return startingEpoch_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingCoinDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, stakingCoinDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, amount_);
+      }
+      if (startingEpoch_ != 0L) {
+        output.writeUInt64(3, startingEpoch_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingCoinDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, stakingCoinDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, amount_);
+      }
+      if (startingEpoch_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, startingEpoch_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.QueryProto.StakingResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.QueryProto.StakingResponse other = (com.crescent.farming.v1beta1.QueryProto.StakingResponse) obj;
+
+      if (!getStakingCoinDenom()
+          .equals(other.getStakingCoinDenom())) return false;
+      if (!getAmount()
+          .equals(other.getAmount())) return false;
+      if (getStartingEpoch()
+          != other.getStartingEpoch()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STAKING_COIN_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingCoinDenom().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAmount().hashCode();
+      hash = (37 * hash) + STARTING_EPOCH_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getStartingEpoch());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.StakingResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.StakingResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.StakingResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.StakingResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.StakingResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.StakingResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.StakingResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.StakingResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.StakingResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.StakingResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.StakingResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.StakingResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.QueryProto.StakingResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code crescent.farming.v1beta1.StakingResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.StakingResponse)
+        com.crescent.farming.v1beta1.QueryProto.StakingResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_StakingResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_StakingResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.QueryProto.StakingResponse.class, com.crescent.farming.v1beta1.QueryProto.StakingResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.QueryProto.StakingResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        stakingCoinDenom_ = "";
+        amount_ = "";
+        startingEpoch_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_StakingResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.StakingResponse getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.QueryProto.StakingResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.StakingResponse build() {
+        com.crescent.farming.v1beta1.QueryProto.StakingResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.StakingResponse buildPartial() {
+        com.crescent.farming.v1beta1.QueryProto.StakingResponse result = new com.crescent.farming.v1beta1.QueryProto.StakingResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.QueryProto.StakingResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.stakingCoinDenom_ = stakingCoinDenom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.amount_ = amount_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.startingEpoch_ = startingEpoch_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.QueryProto.StakingResponse) {
+          return mergeFrom((com.crescent.farming.v1beta1.QueryProto.StakingResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.QueryProto.StakingResponse other) {
+        if (other == com.crescent.farming.v1beta1.QueryProto.StakingResponse.getDefaultInstance()) return this;
+        if (!other.getStakingCoinDenom().isEmpty()) {
+          stakingCoinDenom_ = other.stakingCoinDenom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getAmount().isEmpty()) {
+          amount_ = other.amount_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getStartingEpoch() != 0L) {
+          setStartingEpoch(other.getStartingEpoch());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                stakingCoinDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                amount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                startingEpoch_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object stakingCoinDenom_ = "";
+      /**
+       * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+       * @return The stakingCoinDenom.
+       */
+      public java.lang.String getStakingCoinDenom() {
+        java.lang.Object ref = stakingCoinDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakingCoinDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+       * @return The bytes for stakingCoinDenom.
+       */
+      public com.google.protobuf.ByteString
+          getStakingCoinDenomBytes() {
+        java.lang.Object ref = stakingCoinDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakingCoinDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+       * @param value The stakingCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingCoinDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakingCoinDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingCoinDenom() {
+        stakingCoinDenom_ = getDefaultInstance().getStakingCoinDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+       * @param value The bytes for stakingCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingCoinDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakingCoinDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object amount_ = "";
+      /**
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The amount.
+       */
+      public java.lang.String getAmount() {
+        java.lang.Object ref = amount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          amount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for amount.
+       */
+      public com.google.protobuf.ByteString
+          getAmountBytes() {
+        java.lang.Object ref = amount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        amount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        amount_ = getDefaultInstance().getAmount();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        amount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long startingEpoch_ ;
+      /**
+       * <code>uint64 starting_epoch = 3 [json_name = "startingEpoch"];</code>
+       * @return The startingEpoch.
+       */
+      @java.lang.Override
+      public long getStartingEpoch() {
+        return startingEpoch_;
+      }
+      /**
+       * <code>uint64 starting_epoch = 3 [json_name = "startingEpoch"];</code>
+       * @param value The startingEpoch to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartingEpoch(long value) {
+
+        startingEpoch_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 starting_epoch = 3 [json_name = "startingEpoch"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStartingEpoch() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        startingEpoch_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.StakingResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.StakingResponse)
+    private static final com.crescent.farming.v1beta1.QueryProto.StakingResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.QueryProto.StakingResponse();
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.StakingResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StakingResponse>
+        PARSER = new com.google.protobuf.AbstractParser<StakingResponse>() {
+      @java.lang.Override
+      public StakingResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<StakingResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StakingResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.StakingResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueuedStakingResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.QueuedStakingResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+     * @return The stakingCoinDenom.
+     */
+    java.lang.String getStakingCoinDenom();
+    /**
+     * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+     * @return The bytes for stakingCoinDenom.
+     */
+    com.google.protobuf.ByteString
+        getStakingCoinDenomBytes();
+
+    /**
+     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The amount.
+     */
+    java.lang.String getAmount();
+    /**
+     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for amount.
+     */
+    com.google.protobuf.ByteString
+        getAmountBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the endTime field is set.
+     */
+    boolean hasEndTime();
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The endTime.
+     */
+    com.google.protobuf.Timestamp getEndTime();
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder();
+  }
+  /**
+   * Protobuf type {@code crescent.farming.v1beta1.QueuedStakingResponse}
+   */
+  public static final class QueuedStakingResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.QueuedStakingResponse)
+      QueuedStakingResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueuedStakingResponse.newBuilder() to construct.
+    private QueuedStakingResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueuedStakingResponse() {
+      stakingCoinDenom_ = "";
+      amount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueuedStakingResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueuedStakingResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueuedStakingResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse.class, com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse.Builder.class);
+    }
+
+    public static final int STAKING_COIN_DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakingCoinDenom_ = "";
+    /**
+     * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+     * @return The stakingCoinDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getStakingCoinDenom() {
+      java.lang.Object ref = stakingCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakingCoinDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+     * @return The bytes for stakingCoinDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakingCoinDenomBytes() {
+      java.lang.Object ref = stakingCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakingCoinDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object amount_ = "";
+    /**
+     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public java.lang.String getAmount() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        amount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for amount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAmountBytes() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        amount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int END_TIME_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp endTime_;
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the endTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasEndTime() {
+      return endTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The endTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getEndTime() {
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingCoinDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, stakingCoinDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, amount_);
+      }
+      if (endTime_ != null) {
+        output.writeMessage(3, getEndTime());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingCoinDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, stakingCoinDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, amount_);
+      }
+      if (endTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getEndTime());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse other = (com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse) obj;
+
+      if (!getStakingCoinDenom()
+          .equals(other.getStakingCoinDenom())) return false;
+      if (!getAmount()
+          .equals(other.getAmount())) return false;
+      if (hasEndTime() != other.hasEndTime()) return false;
+      if (hasEndTime()) {
+        if (!getEndTime()
+            .equals(other.getEndTime())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STAKING_COIN_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingCoinDenom().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAmount().hashCode();
+      if (hasEndTime()) {
+        hash = (37 * hash) + END_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getEndTime().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code crescent.farming.v1beta1.QueuedStakingResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.QueuedStakingResponse)
+        com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueuedStakingResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueuedStakingResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse.class, com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        stakingCoinDenom_ = "";
+        amount_ = "";
+        endTime_ = null;
+        if (endTimeBuilder_ != null) {
+          endTimeBuilder_.dispose();
+          endTimeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_QueuedStakingResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse build() {
+        com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse buildPartial() {
+        com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse result = new com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.stakingCoinDenom_ = stakingCoinDenom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.amount_ = amount_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.endTime_ = endTimeBuilder_ == null
+              ? endTime_
+              : endTimeBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse) {
+          return mergeFrom((com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse other) {
+        if (other == com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse.getDefaultInstance()) return this;
+        if (!other.getStakingCoinDenom().isEmpty()) {
+          stakingCoinDenom_ = other.stakingCoinDenom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getAmount().isEmpty()) {
+          amount_ = other.amount_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasEndTime()) {
+          mergeEndTime(other.getEndTime());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                stakingCoinDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                amount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getEndTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object stakingCoinDenom_ = "";
+      /**
+       * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+       * @return The stakingCoinDenom.
+       */
+      public java.lang.String getStakingCoinDenom() {
+        java.lang.Object ref = stakingCoinDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakingCoinDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+       * @return The bytes for stakingCoinDenom.
+       */
+      public com.google.protobuf.ByteString
+          getStakingCoinDenomBytes() {
+        java.lang.Object ref = stakingCoinDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakingCoinDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+       * @param value The stakingCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingCoinDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakingCoinDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingCoinDenom() {
+        stakingCoinDenom_ = getDefaultInstance().getStakingCoinDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+       * @param value The bytes for stakingCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingCoinDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakingCoinDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object amount_ = "";
+      /**
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The amount.
+       */
+      public java.lang.String getAmount() {
+        java.lang.Object ref = amount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          amount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for amount.
+       */
+      public com.google.protobuf.ByteString
+          getAmountBytes() {
+        java.lang.Object ref = amount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        amount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        amount_ = getDefaultInstance().getAmount();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        amount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp endTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return Whether the endTime field is set.
+       */
+      public boolean hasEndTime() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return The endTime.
+       */
+      public com.google.protobuf.Timestamp getEndTime() {
+        if (endTimeBuilder_ == null) {
+          return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+        } else {
+          return endTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setEndTime(com.google.protobuf.Timestamp value) {
+        if (endTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          endTime_ = value;
+        } else {
+          endTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setEndTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (endTimeBuilder_ == null) {
+          endTime_ = builderForValue.build();
+        } else {
+          endTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeEndTime(com.google.protobuf.Timestamp value) {
+        if (endTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            endTime_ != null &&
+            endTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getEndTimeBuilder().mergeFrom(value);
+          } else {
+            endTime_ = value;
+          }
+        } else {
+          endTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearEndTime() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        endTime_ = null;
+        if (endTimeBuilder_ != null) {
+          endTimeBuilder_.dispose();
+          endTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getEndTimeBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getEndTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+        if (endTimeBuilder_ != null) {
+          return endTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return endTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getEndTimeFieldBuilder() {
+        if (endTimeBuilder_ == null) {
+          endTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getEndTime(),
+                  getParentForChildren(),
+                  isClean());
+          endTime_ = null;
+        }
+        return endTimeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.QueuedStakingResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.QueuedStakingResponse)
+    private static final com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse();
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueuedStakingResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueuedStakingResponse>() {
+      @java.lang.Override
+      public QueuedStakingResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueuedStakingResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueuedStakingResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.QueuedStakingResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RewardsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.RewardsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+     * @return The stakingCoinDenom.
+     */
+    java.lang.String getStakingCoinDenom();
+    /**
+     * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+     * @return The bytes for stakingCoinDenom.
+     */
+    com.google.protobuf.ByteString
+        getStakingCoinDenomBytes();
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getRewardsList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getRewards(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getRewardsCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getRewardsOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRewardsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code crescent.farming.v1beta1.RewardsResponse}
+   */
+  public static final class RewardsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.RewardsResponse)
+      RewardsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RewardsResponse.newBuilder() to construct.
+    private RewardsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RewardsResponse() {
+      stakingCoinDenom_ = "";
+      rewards_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RewardsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_RewardsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_RewardsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.QueryProto.RewardsResponse.class, com.crescent.farming.v1beta1.QueryProto.RewardsResponse.Builder.class);
+    }
+
+    public static final int STAKING_COIN_DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakingCoinDenom_ = "";
+    /**
+     * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+     * @return The stakingCoinDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getStakingCoinDenom() {
+      java.lang.Object ref = stakingCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakingCoinDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+     * @return The bytes for stakingCoinDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakingCoinDenomBytes() {
+      java.lang.Object ref = stakingCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakingCoinDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REWARDS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> rewards_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getRewardsList() {
+      return rewards_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getRewardsOrBuilderList() {
+      return rewards_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getRewardsCount() {
+      return rewards_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getRewards(int index) {
+      return rewards_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRewardsOrBuilder(
+        int index) {
+      return rewards_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingCoinDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, stakingCoinDenom_);
+      }
+      for (int i = 0; i < rewards_.size(); i++) {
+        output.writeMessage(2, rewards_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingCoinDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, stakingCoinDenom_);
+      }
+      for (int i = 0; i < rewards_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, rewards_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.QueryProto.RewardsResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.QueryProto.RewardsResponse other = (com.crescent.farming.v1beta1.QueryProto.RewardsResponse) obj;
+
+      if (!getStakingCoinDenom()
+          .equals(other.getStakingCoinDenom())) return false;
+      if (!getRewardsList()
+          .equals(other.getRewardsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STAKING_COIN_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingCoinDenom().hashCode();
+      if (getRewardsCount() > 0) {
+        hash = (37 * hash) + REWARDS_FIELD_NUMBER;
+        hash = (53 * hash) + getRewardsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.RewardsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.RewardsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.RewardsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.RewardsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.RewardsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.RewardsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.RewardsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.RewardsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.RewardsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.RewardsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.RewardsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.RewardsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.QueryProto.RewardsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code crescent.farming.v1beta1.RewardsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.RewardsResponse)
+        com.crescent.farming.v1beta1.QueryProto.RewardsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_RewardsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_RewardsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.QueryProto.RewardsResponse.class, com.crescent.farming.v1beta1.QueryProto.RewardsResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.QueryProto.RewardsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        stakingCoinDenom_ = "";
+        if (rewardsBuilder_ == null) {
+          rewards_ = java.util.Collections.emptyList();
+        } else {
+          rewards_ = null;
+          rewardsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_RewardsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.RewardsResponse getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.QueryProto.RewardsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.RewardsResponse build() {
+        com.crescent.farming.v1beta1.QueryProto.RewardsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.RewardsResponse buildPartial() {
+        com.crescent.farming.v1beta1.QueryProto.RewardsResponse result = new com.crescent.farming.v1beta1.QueryProto.RewardsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.crescent.farming.v1beta1.QueryProto.RewardsResponse result) {
+        if (rewardsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            rewards_ = java.util.Collections.unmodifiableList(rewards_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.rewards_ = rewards_;
+        } else {
+          result.rewards_ = rewardsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.QueryProto.RewardsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.stakingCoinDenom_ = stakingCoinDenom_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.QueryProto.RewardsResponse) {
+          return mergeFrom((com.crescent.farming.v1beta1.QueryProto.RewardsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.QueryProto.RewardsResponse other) {
+        if (other == com.crescent.farming.v1beta1.QueryProto.RewardsResponse.getDefaultInstance()) return this;
+        if (!other.getStakingCoinDenom().isEmpty()) {
+          stakingCoinDenom_ = other.stakingCoinDenom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (rewardsBuilder_ == null) {
+          if (!other.rewards_.isEmpty()) {
+            if (rewards_.isEmpty()) {
+              rewards_ = other.rewards_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureRewardsIsMutable();
+              rewards_.addAll(other.rewards_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.rewards_.isEmpty()) {
+            if (rewardsBuilder_.isEmpty()) {
+              rewardsBuilder_.dispose();
+              rewardsBuilder_ = null;
+              rewards_ = other.rewards_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              rewardsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRewardsFieldBuilder() : null;
+            } else {
+              rewardsBuilder_.addAllMessages(other.rewards_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                stakingCoinDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (rewardsBuilder_ == null) {
+                  ensureRewardsIsMutable();
+                  rewards_.add(m);
+                } else {
+                  rewardsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object stakingCoinDenom_ = "";
+      /**
+       * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+       * @return The stakingCoinDenom.
+       */
+      public java.lang.String getStakingCoinDenom() {
+        java.lang.Object ref = stakingCoinDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakingCoinDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+       * @return The bytes for stakingCoinDenom.
+       */
+      public com.google.protobuf.ByteString
+          getStakingCoinDenomBytes() {
+        java.lang.Object ref = stakingCoinDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakingCoinDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+       * @param value The stakingCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingCoinDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakingCoinDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingCoinDenom() {
+        stakingCoinDenom_ = getDefaultInstance().getStakingCoinDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+       * @param value The bytes for stakingCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingCoinDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakingCoinDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> rewards_ =
+        java.util.Collections.emptyList();
+      private void ensureRewardsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          rewards_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(rewards_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> rewardsBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getRewardsList() {
+        if (rewardsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(rewards_);
+        } else {
+          return rewardsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getRewardsCount() {
+        if (rewardsBuilder_ == null) {
+          return rewards_.size();
+        } else {
+          return rewardsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getRewards(int index) {
+        if (rewardsBuilder_ == null) {
+          return rewards_.get(index);
+        } else {
+          return rewardsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.set(index, value);
+          onChanged();
+        } else {
+          rewardsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addRewards(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.add(value);
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.add(index, value);
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addRewards(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.add(builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllRewards(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, rewards_);
+          onChanged();
+        } else {
+          rewardsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearRewards() {
+        if (rewardsBuilder_ == null) {
+          rewards_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          rewardsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeRewards(int index) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.remove(index);
+          onChanged();
+        } else {
+          rewardsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getRewardsBuilder(
+          int index) {
+        return getRewardsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRewardsOrBuilder(
+          int index) {
+        if (rewardsBuilder_ == null) {
+          return rewards_.get(index);  } else {
+          return rewardsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getRewardsOrBuilderList() {
+        if (rewardsBuilder_ != null) {
+          return rewardsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(rewards_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addRewardsBuilder() {
+        return getRewardsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addRewardsBuilder(
+          int index) {
+        return getRewardsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getRewardsBuilderList() {
+        return getRewardsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getRewardsFieldBuilder() {
+        if (rewardsBuilder_ == null) {
+          rewardsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  rewards_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          rewards_ = null;
+        }
+        return rewardsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.RewardsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.RewardsResponse)
+    private static final com.crescent.farming.v1beta1.QueryProto.RewardsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.QueryProto.RewardsResponse();
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.RewardsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RewardsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<RewardsResponse>() {
+      @java.lang.Override
+      public RewardsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RewardsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RewardsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.RewardsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UnharvestedRewardsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.UnharvestedRewardsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+     * @return The stakingCoinDenom.
+     */
+    java.lang.String getStakingCoinDenom();
+    /**
+     * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+     * @return The bytes for stakingCoinDenom.
+     */
+    com.google.protobuf.ByteString
+        getStakingCoinDenomBytes();
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getRewardsList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getRewards(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getRewardsCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getRewardsOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRewardsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code crescent.farming.v1beta1.UnharvestedRewardsResponse}
+   */
+  public static final class UnharvestedRewardsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.UnharvestedRewardsResponse)
+      UnharvestedRewardsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UnharvestedRewardsResponse.newBuilder() to construct.
+    private UnharvestedRewardsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UnharvestedRewardsResponse() {
+      stakingCoinDenom_ = "";
+      rewards_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UnharvestedRewardsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_UnharvestedRewardsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_UnharvestedRewardsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse.class, com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse.Builder.class);
+    }
+
+    public static final int STAKING_COIN_DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakingCoinDenom_ = "";
+    /**
+     * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+     * @return The stakingCoinDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getStakingCoinDenom() {
+      java.lang.Object ref = stakingCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakingCoinDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+     * @return The bytes for stakingCoinDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakingCoinDenomBytes() {
+      java.lang.Object ref = stakingCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakingCoinDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REWARDS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> rewards_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getRewardsList() {
+      return rewards_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getRewardsOrBuilderList() {
+      return rewards_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getRewardsCount() {
+      return rewards_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getRewards(int index) {
+      return rewards_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRewardsOrBuilder(
+        int index) {
+      return rewards_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingCoinDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, stakingCoinDenom_);
+      }
+      for (int i = 0; i < rewards_.size(); i++) {
+        output.writeMessage(2, rewards_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingCoinDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, stakingCoinDenom_);
+      }
+      for (int i = 0; i < rewards_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, rewards_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse other = (com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse) obj;
+
+      if (!getStakingCoinDenom()
+          .equals(other.getStakingCoinDenom())) return false;
+      if (!getRewardsList()
+          .equals(other.getRewardsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STAKING_COIN_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingCoinDenom().hashCode();
+      if (getRewardsCount() > 0) {
+        hash = (37 * hash) + REWARDS_FIELD_NUMBER;
+        hash = (53 * hash) + getRewardsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code crescent.farming.v1beta1.UnharvestedRewardsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.UnharvestedRewardsResponse)
+        com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_UnharvestedRewardsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_UnharvestedRewardsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse.class, com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        stakingCoinDenom_ = "";
+        if (rewardsBuilder_ == null) {
+          rewards_ = java.util.Collections.emptyList();
+        } else {
+          rewards_ = null;
+          rewardsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_UnharvestedRewardsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse build() {
+        com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse buildPartial() {
+        com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse result = new com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse result) {
+        if (rewardsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            rewards_ = java.util.Collections.unmodifiableList(rewards_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.rewards_ = rewards_;
+        } else {
+          result.rewards_ = rewardsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.stakingCoinDenom_ = stakingCoinDenom_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse) {
+          return mergeFrom((com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse other) {
+        if (other == com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse.getDefaultInstance()) return this;
+        if (!other.getStakingCoinDenom().isEmpty()) {
+          stakingCoinDenom_ = other.stakingCoinDenom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (rewardsBuilder_ == null) {
+          if (!other.rewards_.isEmpty()) {
+            if (rewards_.isEmpty()) {
+              rewards_ = other.rewards_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureRewardsIsMutable();
+              rewards_.addAll(other.rewards_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.rewards_.isEmpty()) {
+            if (rewardsBuilder_.isEmpty()) {
+              rewardsBuilder_.dispose();
+              rewardsBuilder_ = null;
+              rewards_ = other.rewards_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              rewardsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRewardsFieldBuilder() : null;
+            } else {
+              rewardsBuilder_.addAllMessages(other.rewards_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                stakingCoinDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (rewardsBuilder_ == null) {
+                  ensureRewardsIsMutable();
+                  rewards_.add(m);
+                } else {
+                  rewardsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object stakingCoinDenom_ = "";
+      /**
+       * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+       * @return The stakingCoinDenom.
+       */
+      public java.lang.String getStakingCoinDenom() {
+        java.lang.Object ref = stakingCoinDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakingCoinDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+       * @return The bytes for stakingCoinDenom.
+       */
+      public com.google.protobuf.ByteString
+          getStakingCoinDenomBytes() {
+        java.lang.Object ref = stakingCoinDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakingCoinDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+       * @param value The stakingCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingCoinDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakingCoinDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingCoinDenom() {
+        stakingCoinDenom_ = getDefaultInstance().getStakingCoinDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string staking_coin_denom = 1 [json_name = "stakingCoinDenom"];</code>
+       * @param value The bytes for stakingCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingCoinDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakingCoinDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> rewards_ =
+        java.util.Collections.emptyList();
+      private void ensureRewardsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          rewards_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(rewards_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> rewardsBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getRewardsList() {
+        if (rewardsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(rewards_);
+        } else {
+          return rewardsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getRewardsCount() {
+        if (rewardsBuilder_ == null) {
+          return rewards_.size();
+        } else {
+          return rewardsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getRewards(int index) {
+        if (rewardsBuilder_ == null) {
+          return rewards_.get(index);
+        } else {
+          return rewardsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.set(index, value);
+          onChanged();
+        } else {
+          rewardsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addRewards(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.add(value);
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.add(index, value);
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addRewards(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.add(builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllRewards(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, rewards_);
+          onChanged();
+        } else {
+          rewardsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearRewards() {
+        if (rewardsBuilder_ == null) {
+          rewards_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          rewardsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeRewards(int index) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.remove(index);
+          onChanged();
+        } else {
+          rewardsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getRewardsBuilder(
+          int index) {
+        return getRewardsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRewardsOrBuilder(
+          int index) {
+        if (rewardsBuilder_ == null) {
+          return rewards_.get(index);  } else {
+          return rewardsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getRewardsOrBuilderList() {
+        if (rewardsBuilder_ != null) {
+          return rewardsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(rewards_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addRewardsBuilder() {
+        return getRewardsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addRewardsBuilder(
+          int index) {
+        return getRewardsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getRewardsBuilderList() {
+        return getRewardsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getRewardsFieldBuilder() {
+        if (rewardsBuilder_ == null) {
+          rewardsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  rewards_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          rewards_ = null;
+        }
+        return rewardsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.UnharvestedRewardsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.UnharvestedRewardsResponse)
+    private static final com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse();
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UnharvestedRewardsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<UnharvestedRewardsResponse>() {
+      @java.lang.Override
+      public UnharvestedRewardsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UnharvestedRewardsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UnharvestedRewardsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.UnharvestedRewardsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface HistoricalRewardsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.HistoricalRewardsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 epoch = 1 [json_name = "epoch"];</code>
+     * @return The epoch.
+     */
+    long getEpoch();
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin cumulative_unit_rewards = 2 [json_name = "cumulativeUnitRewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> 
+        getCumulativeUnitRewardsList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin cumulative_unit_rewards = 2 [json_name = "cumulativeUnitRewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getCumulativeUnitRewards(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin cumulative_unit_rewards = 2 [json_name = "cumulativeUnitRewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    int getCumulativeUnitRewardsCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin cumulative_unit_rewards = 2 [json_name = "cumulativeUnitRewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getCumulativeUnitRewardsOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin cumulative_unit_rewards = 2 [json_name = "cumulativeUnitRewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getCumulativeUnitRewardsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code crescent.farming.v1beta1.HistoricalRewardsResponse}
+   */
+  public static final class HistoricalRewardsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.HistoricalRewardsResponse)
+      HistoricalRewardsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use HistoricalRewardsResponse.newBuilder() to construct.
+    private HistoricalRewardsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private HistoricalRewardsResponse() {
+      cumulativeUnitRewards_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HistoricalRewardsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_HistoricalRewardsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_HistoricalRewardsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse.class, com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse.Builder.class);
+    }
+
+    public static final int EPOCH_FIELD_NUMBER = 1;
+    private long epoch_ = 0L;
+    /**
+     * <code>uint64 epoch = 1 [json_name = "epoch"];</code>
+     * @return The epoch.
+     */
+    @java.lang.Override
+    public long getEpoch() {
+      return epoch_;
+    }
+
+    public static final int CUMULATIVE_UNIT_REWARDS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> cumulativeUnitRewards_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin cumulative_unit_rewards = 2 [json_name = "cumulativeUnitRewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getCumulativeUnitRewardsList() {
+      return cumulativeUnitRewards_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin cumulative_unit_rewards = 2 [json_name = "cumulativeUnitRewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getCumulativeUnitRewardsOrBuilderList() {
+      return cumulativeUnitRewards_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin cumulative_unit_rewards = 2 [json_name = "cumulativeUnitRewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public int getCumulativeUnitRewardsCount() {
+      return cumulativeUnitRewards_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin cumulative_unit_rewards = 2 [json_name = "cumulativeUnitRewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getCumulativeUnitRewards(int index) {
+      return cumulativeUnitRewards_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin cumulative_unit_rewards = 2 [json_name = "cumulativeUnitRewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getCumulativeUnitRewardsOrBuilder(
+        int index) {
+      return cumulativeUnitRewards_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (epoch_ != 0L) {
+        output.writeUInt64(1, epoch_);
+      }
+      for (int i = 0; i < cumulativeUnitRewards_.size(); i++) {
+        output.writeMessage(2, cumulativeUnitRewards_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (epoch_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, epoch_);
+      }
+      for (int i = 0; i < cumulativeUnitRewards_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, cumulativeUnitRewards_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse other = (com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse) obj;
+
+      if (getEpoch()
+          != other.getEpoch()) return false;
+      if (!getCumulativeUnitRewardsList()
+          .equals(other.getCumulativeUnitRewardsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + EPOCH_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getEpoch());
+      if (getCumulativeUnitRewardsCount() > 0) {
+        hash = (37 * hash) + CUMULATIVE_UNIT_REWARDS_FIELD_NUMBER;
+        hash = (53 * hash) + getCumulativeUnitRewardsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code crescent.farming.v1beta1.HistoricalRewardsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.HistoricalRewardsResponse)
+        com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_HistoricalRewardsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_HistoricalRewardsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse.class, com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        epoch_ = 0L;
+        if (cumulativeUnitRewardsBuilder_ == null) {
+          cumulativeUnitRewards_ = java.util.Collections.emptyList();
+        } else {
+          cumulativeUnitRewards_ = null;
+          cumulativeUnitRewardsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.QueryProto.internal_static_crescent_farming_v1beta1_HistoricalRewardsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse build() {
+        com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse buildPartial() {
+        com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse result = new com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse result) {
+        if (cumulativeUnitRewardsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            cumulativeUnitRewards_ = java.util.Collections.unmodifiableList(cumulativeUnitRewards_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.cumulativeUnitRewards_ = cumulativeUnitRewards_;
+        } else {
+          result.cumulativeUnitRewards_ = cumulativeUnitRewardsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.epoch_ = epoch_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse) {
+          return mergeFrom((com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse other) {
+        if (other == com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse.getDefaultInstance()) return this;
+        if (other.getEpoch() != 0L) {
+          setEpoch(other.getEpoch());
+        }
+        if (cumulativeUnitRewardsBuilder_ == null) {
+          if (!other.cumulativeUnitRewards_.isEmpty()) {
+            if (cumulativeUnitRewards_.isEmpty()) {
+              cumulativeUnitRewards_ = other.cumulativeUnitRewards_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureCumulativeUnitRewardsIsMutable();
+              cumulativeUnitRewards_.addAll(other.cumulativeUnitRewards_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.cumulativeUnitRewards_.isEmpty()) {
+            if (cumulativeUnitRewardsBuilder_.isEmpty()) {
+              cumulativeUnitRewardsBuilder_.dispose();
+              cumulativeUnitRewardsBuilder_ = null;
+              cumulativeUnitRewards_ = other.cumulativeUnitRewards_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              cumulativeUnitRewardsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCumulativeUnitRewardsFieldBuilder() : null;
+            } else {
+              cumulativeUnitRewardsBuilder_.addAllMessages(other.cumulativeUnitRewards_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                epoch_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                com.cosmos.base.v1beta1.CoinProto.DecCoin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.DecCoin.parser(),
+                        extensionRegistry);
+                if (cumulativeUnitRewardsBuilder_ == null) {
+                  ensureCumulativeUnitRewardsIsMutable();
+                  cumulativeUnitRewards_.add(m);
+                } else {
+                  cumulativeUnitRewardsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long epoch_ ;
+      /**
+       * <code>uint64 epoch = 1 [json_name = "epoch"];</code>
+       * @return The epoch.
+       */
+      @java.lang.Override
+      public long getEpoch() {
+        return epoch_;
+      }
+      /**
+       * <code>uint64 epoch = 1 [json_name = "epoch"];</code>
+       * @param value The epoch to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEpoch(long value) {
+
+        epoch_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 epoch = 1 [json_name = "epoch"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEpoch() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        epoch_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> cumulativeUnitRewards_ =
+        java.util.Collections.emptyList();
+      private void ensureCumulativeUnitRewardsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          cumulativeUnitRewards_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.DecCoin>(cumulativeUnitRewards_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> cumulativeUnitRewardsBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin cumulative_unit_rewards = 2 [json_name = "cumulativeUnitRewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getCumulativeUnitRewardsList() {
+        if (cumulativeUnitRewardsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(cumulativeUnitRewards_);
+        } else {
+          return cumulativeUnitRewardsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin cumulative_unit_rewards = 2 [json_name = "cumulativeUnitRewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public int getCumulativeUnitRewardsCount() {
+        if (cumulativeUnitRewardsBuilder_ == null) {
+          return cumulativeUnitRewards_.size();
+        } else {
+          return cumulativeUnitRewardsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin cumulative_unit_rewards = 2 [json_name = "cumulativeUnitRewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getCumulativeUnitRewards(int index) {
+        if (cumulativeUnitRewardsBuilder_ == null) {
+          return cumulativeUnitRewards_.get(index);
+        } else {
+          return cumulativeUnitRewardsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin cumulative_unit_rewards = 2 [json_name = "cumulativeUnitRewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setCumulativeUnitRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (cumulativeUnitRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCumulativeUnitRewardsIsMutable();
+          cumulativeUnitRewards_.set(index, value);
+          onChanged();
+        } else {
+          cumulativeUnitRewardsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin cumulative_unit_rewards = 2 [json_name = "cumulativeUnitRewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setCumulativeUnitRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (cumulativeUnitRewardsBuilder_ == null) {
+          ensureCumulativeUnitRewardsIsMutable();
+          cumulativeUnitRewards_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          cumulativeUnitRewardsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin cumulative_unit_rewards = 2 [json_name = "cumulativeUnitRewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addCumulativeUnitRewards(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (cumulativeUnitRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCumulativeUnitRewardsIsMutable();
+          cumulativeUnitRewards_.add(value);
+          onChanged();
+        } else {
+          cumulativeUnitRewardsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin cumulative_unit_rewards = 2 [json_name = "cumulativeUnitRewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addCumulativeUnitRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (cumulativeUnitRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCumulativeUnitRewardsIsMutable();
+          cumulativeUnitRewards_.add(index, value);
+          onChanged();
+        } else {
+          cumulativeUnitRewardsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin cumulative_unit_rewards = 2 [json_name = "cumulativeUnitRewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addCumulativeUnitRewards(
+          com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (cumulativeUnitRewardsBuilder_ == null) {
+          ensureCumulativeUnitRewardsIsMutable();
+          cumulativeUnitRewards_.add(builderForValue.build());
+          onChanged();
+        } else {
+          cumulativeUnitRewardsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin cumulative_unit_rewards = 2 [json_name = "cumulativeUnitRewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addCumulativeUnitRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (cumulativeUnitRewardsBuilder_ == null) {
+          ensureCumulativeUnitRewardsIsMutable();
+          cumulativeUnitRewards_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          cumulativeUnitRewardsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin cumulative_unit_rewards = 2 [json_name = "cumulativeUnitRewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllCumulativeUnitRewards(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.DecCoin> values) {
+        if (cumulativeUnitRewardsBuilder_ == null) {
+          ensureCumulativeUnitRewardsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, cumulativeUnitRewards_);
+          onChanged();
+        } else {
+          cumulativeUnitRewardsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin cumulative_unit_rewards = 2 [json_name = "cumulativeUnitRewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder clearCumulativeUnitRewards() {
+        if (cumulativeUnitRewardsBuilder_ == null) {
+          cumulativeUnitRewards_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          cumulativeUnitRewardsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin cumulative_unit_rewards = 2 [json_name = "cumulativeUnitRewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder removeCumulativeUnitRewards(int index) {
+        if (cumulativeUnitRewardsBuilder_ == null) {
+          ensureCumulativeUnitRewardsIsMutable();
+          cumulativeUnitRewards_.remove(index);
+          onChanged();
+        } else {
+          cumulativeUnitRewardsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin cumulative_unit_rewards = 2 [json_name = "cumulativeUnitRewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getCumulativeUnitRewardsBuilder(
+          int index) {
+        return getCumulativeUnitRewardsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin cumulative_unit_rewards = 2 [json_name = "cumulativeUnitRewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getCumulativeUnitRewardsOrBuilder(
+          int index) {
+        if (cumulativeUnitRewardsBuilder_ == null) {
+          return cumulativeUnitRewards_.get(index);  } else {
+          return cumulativeUnitRewardsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin cumulative_unit_rewards = 2 [json_name = "cumulativeUnitRewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+           getCumulativeUnitRewardsOrBuilderList() {
+        if (cumulativeUnitRewardsBuilder_ != null) {
+          return cumulativeUnitRewardsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(cumulativeUnitRewards_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin cumulative_unit_rewards = 2 [json_name = "cumulativeUnitRewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addCumulativeUnitRewardsBuilder() {
+        return getCumulativeUnitRewardsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin cumulative_unit_rewards = 2 [json_name = "cumulativeUnitRewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addCumulativeUnitRewardsBuilder(
+          int index) {
+        return getCumulativeUnitRewardsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin cumulative_unit_rewards = 2 [json_name = "cumulativeUnitRewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder> 
+           getCumulativeUnitRewardsBuilderList() {
+        return getCumulativeUnitRewardsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+          getCumulativeUnitRewardsFieldBuilder() {
+        if (cumulativeUnitRewardsBuilder_ == null) {
+          cumulativeUnitRewardsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
+                  cumulativeUnitRewards_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          cumulativeUnitRewards_ = null;
+        }
+        return cumulativeUnitRewardsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.HistoricalRewardsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.HistoricalRewardsResponse)
+    private static final com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse();
+    }
+
+    public static com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<HistoricalRewardsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<HistoricalRewardsResponse>() {
+      @java.lang.Override
+      public HistoricalRewardsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<HistoricalRewardsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<HistoricalRewardsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.QueryProto.HistoricalRewardsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_QueryParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_QueryParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_QueryParamsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_QueryPlansRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_QueryPlansRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_QueryPlansResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_QueryPlansResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_QueryPlanRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_QueryPlanRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_QueryPlanResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_QueryPlanResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_QueryPositionRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_QueryPositionRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_QueryPositionResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_QueryPositionResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_QueryStakingsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_QueryStakingsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_QueryStakingsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_QueryStakingsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_QueryQueuedStakingsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_QueryQueuedStakingsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_QueryQueuedStakingsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_QueryQueuedStakingsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_QueryTotalStakingsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_QueryTotalStakingsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_QueryTotalStakingsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_QueryTotalStakingsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_QueryRewardsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_QueryRewardsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_QueryRewardsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_QueryRewardsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_QueryUnharvestedRewardsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_QueryUnharvestedRewardsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_QueryUnharvestedRewardsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_QueryUnharvestedRewardsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_QueryCurrentEpochDaysRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_QueryCurrentEpochDaysRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_QueryCurrentEpochDaysResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_QueryCurrentEpochDaysResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_QueryHistoricalRewardsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_QueryHistoricalRewardsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_QueryHistoricalRewardsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_QueryHistoricalRewardsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_StakingResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_StakingResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_QueuedStakingResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_QueuedStakingResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_RewardsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_RewardsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_UnharvestedRewardsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_UnharvestedRewardsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_HistoricalRewardsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_HistoricalRewardsResponse_fieldAccessorTable;
 
@@ -317,13 +22870,13 @@ public final class QueryProto {
       "alRewardsRequest\0328.crescent.farming.v1be" +
       "ta1.QueryHistoricalRewardsResponse\"I\202\323\344\223" +
       "\002C\022A/crescent/farming/v1beta1/historical" +
-      "_rewards/{staking_coin_denom}B\345\001\n\034com.cr" +
-      "escent.farming.v1beta1B\nQueryProtoP\001Z7gi" +
-      "thub.com/crescent-network/crescent/v5/x/" +
-      "farming/types\242\002\003CFX\252\002\030Crescent.Farming.V" +
-      "1beta1\312\002\030Crescent\\Farming\\V1beta1\342\002$Cres" +
-      "cent\\Farming\\V1beta1\\GPBMetadata\352\002\032Cresc" +
-      "ent::Farming::V1beta1b\006proto3"
+      "_rewards/{staking_coin_denom}B\343\001\n\034com.cr" +
+      "escent.farming.v1beta1B\nQueryProtoZ7gith" +
+      "ub.com/crescent-network/crescent/v5/x/fa" +
+      "rming/types\242\002\003CFX\252\002\030Crescent.Farming.V1b" +
+      "eta1\312\002\030Crescent\\Farming\\V1beta1\342\002$Cresce" +
+      "nt\\Farming\\V1beta1\\GPBMetadata\352\002\032Crescen" +
+      "t::Farming::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

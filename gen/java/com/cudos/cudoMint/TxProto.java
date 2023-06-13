@@ -24,11 +24,11 @@ public final class TxProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\027cudos/cudoMint/tx.proto\022\016cudos.cudoMin" +
-      "t2\005\n\003MsgB\253\001\n\022com.cudos.cudoMintB\007TxProto" +
-      "P\001Z3github.com/CudoVentures/cudos-node/x" +
-      "/cudoMint/types\242\002\003CCX\252\002\016Cudos.CudoMint\312\002" +
-      "\016Cudos\\CudoMint\342\002\032Cudos\\CudoMint\\GPBMeta" +
-      "data\352\002\017Cudos::CudoMintb\006proto3"
+      "t2\005\n\003MsgB\251\001\n\022com.cudos.cudoMintB\007TxProto" +
+      "Z3github.com/CudoVentures/cudos-node/x/c" +
+      "udoMint/types\242\002\003CCX\252\002\016Cudos.CudoMint\312\002\016C" +
+      "udos\\CudoMint\342\002\032Cudos\\CudoMint\\GPBMetada" +
+      "ta\352\002\017Cudos::CudoMintb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,64 +14,7632 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryOraclesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.oracle.v2alpha2.QueryOraclesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryOraclesRequest is the request type for the Query/Oracles RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.oracle.v2alpha2.QueryOraclesRequest}
+   */
+  public static final class QueryOraclesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.oracle.v2alpha2.QueryOraclesRequest)
+      QueryOraclesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryOraclesRequest.newBuilder() to construct.
+    private QueryOraclesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryOraclesRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryOraclesRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOraclesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOraclesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest.class, com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 1;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(1, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest)) {
+        return super.equals(obj);
+      }
+      com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest other = (com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryOraclesRequest is the request type for the Query/Oracles RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.oracle.v2alpha2.QueryOraclesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.oracle.v2alpha2.QueryOraclesRequest)
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOraclesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOraclesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest.class, com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest.Builder.class);
+      }
+
+      // Construct using com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOraclesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest getDefaultInstanceForType() {
+        return com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest build() {
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest buildPartial() {
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest result = new com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest) {
+          return mergeFrom((com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest other) {
+        if (other == com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.oracle.v2alpha2.QueryOraclesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.oracle.v2alpha2.QueryOraclesRequest)
+    private static final com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest();
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryOraclesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryOraclesRequest>() {
+      @java.lang.Override
+      public QueryOraclesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryOraclesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryOraclesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryOraclesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.oracle.v2alpha2.QueryOraclesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles"];</code>
+     */
+    java.util.List<com.panacea.oracle.v2alpha2.OracleProto.Oracle> 
+        getOraclesList();
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles"];</code>
+     */
+    com.panacea.oracle.v2alpha2.OracleProto.Oracle getOracles(int index);
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles"];</code>
+     */
+    int getOraclesCount();
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles"];</code>
+     */
+    java.util.List<? extends com.panacea.oracle.v2alpha2.OracleProto.OracleOrBuilder> 
+        getOraclesOrBuilderList();
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles"];</code>
+     */
+    com.panacea.oracle.v2alpha2.OracleProto.OracleOrBuilder getOraclesOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryOracleResponse is the response type for the Query/Oracles RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.oracle.v2alpha2.QueryOraclesResponse}
+   */
+  public static final class QueryOraclesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.oracle.v2alpha2.QueryOraclesResponse)
+      QueryOraclesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryOraclesResponse.newBuilder() to construct.
+    private QueryOraclesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryOraclesResponse() {
+      oracles_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryOraclesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOraclesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOraclesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse.class, com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse.Builder.class);
+    }
+
+    public static final int ORACLES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.panacea.oracle.v2alpha2.OracleProto.Oracle> oracles_;
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.panacea.oracle.v2alpha2.OracleProto.Oracle> getOraclesList() {
+      return oracles_;
+    }
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.panacea.oracle.v2alpha2.OracleProto.OracleOrBuilder> 
+        getOraclesOrBuilderList() {
+      return oracles_;
+    }
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles"];</code>
+     */
+    @java.lang.Override
+    public int getOraclesCount() {
+      return oracles_.size();
+    }
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.OracleProto.Oracle getOracles(int index) {
+      return oracles_.get(index);
+    }
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.OracleProto.OracleOrBuilder getOraclesOrBuilder(
+        int index) {
+      return oracles_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < oracles_.size(); i++) {
+        output.writeMessage(1, oracles_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < oracles_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, oracles_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse)) {
+        return super.equals(obj);
+      }
+      com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse other = (com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse) obj;
+
+      if (!getOraclesList()
+          .equals(other.getOraclesList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getOraclesCount() > 0) {
+        hash = (37 * hash) + ORACLES_FIELD_NUMBER;
+        hash = (53 * hash) + getOraclesList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryOracleResponse is the response type for the Query/Oracles RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.oracle.v2alpha2.QueryOraclesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.oracle.v2alpha2.QueryOraclesResponse)
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOraclesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOraclesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse.class, com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse.Builder.class);
+      }
+
+      // Construct using com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (oraclesBuilder_ == null) {
+          oracles_ = java.util.Collections.emptyList();
+        } else {
+          oracles_ = null;
+          oraclesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOraclesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse getDefaultInstanceForType() {
+        return com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse build() {
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse buildPartial() {
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse result = new com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse result) {
+        if (oraclesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            oracles_ = java.util.Collections.unmodifiableList(oracles_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.oracles_ = oracles_;
+        } else {
+          result.oracles_ = oraclesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse) {
+          return mergeFrom((com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse other) {
+        if (other == com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse.getDefaultInstance()) return this;
+        if (oraclesBuilder_ == null) {
+          if (!other.oracles_.isEmpty()) {
+            if (oracles_.isEmpty()) {
+              oracles_ = other.oracles_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureOraclesIsMutable();
+              oracles_.addAll(other.oracles_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.oracles_.isEmpty()) {
+            if (oraclesBuilder_.isEmpty()) {
+              oraclesBuilder_.dispose();
+              oraclesBuilder_ = null;
+              oracles_ = other.oracles_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              oraclesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOraclesFieldBuilder() : null;
+            } else {
+              oraclesBuilder_.addAllMessages(other.oracles_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.panacea.oracle.v2alpha2.OracleProto.Oracle m =
+                    input.readMessage(
+                        com.panacea.oracle.v2alpha2.OracleProto.Oracle.parser(),
+                        extensionRegistry);
+                if (oraclesBuilder_ == null) {
+                  ensureOraclesIsMutable();
+                  oracles_.add(m);
+                } else {
+                  oraclesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.panacea.oracle.v2alpha2.OracleProto.Oracle> oracles_ =
+        java.util.Collections.emptyList();
+      private void ensureOraclesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          oracles_ = new java.util.ArrayList<com.panacea.oracle.v2alpha2.OracleProto.Oracle>(oracles_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.oracle.v2alpha2.OracleProto.Oracle, com.panacea.oracle.v2alpha2.OracleProto.Oracle.Builder, com.panacea.oracle.v2alpha2.OracleProto.OracleOrBuilder> oraclesBuilder_;
+
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles"];</code>
+       */
+      public java.util.List<com.panacea.oracle.v2alpha2.OracleProto.Oracle> getOraclesList() {
+        if (oraclesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(oracles_);
+        } else {
+          return oraclesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles"];</code>
+       */
+      public int getOraclesCount() {
+        if (oraclesBuilder_ == null) {
+          return oracles_.size();
+        } else {
+          return oraclesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles"];</code>
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.Oracle getOracles(int index) {
+        if (oraclesBuilder_ == null) {
+          return oracles_.get(index);
+        } else {
+          return oraclesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles"];</code>
+       */
+      public Builder setOracles(
+          int index, com.panacea.oracle.v2alpha2.OracleProto.Oracle value) {
+        if (oraclesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOraclesIsMutable();
+          oracles_.set(index, value);
+          onChanged();
+        } else {
+          oraclesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles"];</code>
+       */
+      public Builder setOracles(
+          int index, com.panacea.oracle.v2alpha2.OracleProto.Oracle.Builder builderForValue) {
+        if (oraclesBuilder_ == null) {
+          ensureOraclesIsMutable();
+          oracles_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          oraclesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles"];</code>
+       */
+      public Builder addOracles(com.panacea.oracle.v2alpha2.OracleProto.Oracle value) {
+        if (oraclesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOraclesIsMutable();
+          oracles_.add(value);
+          onChanged();
+        } else {
+          oraclesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles"];</code>
+       */
+      public Builder addOracles(
+          int index, com.panacea.oracle.v2alpha2.OracleProto.Oracle value) {
+        if (oraclesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOraclesIsMutable();
+          oracles_.add(index, value);
+          onChanged();
+        } else {
+          oraclesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles"];</code>
+       */
+      public Builder addOracles(
+          com.panacea.oracle.v2alpha2.OracleProto.Oracle.Builder builderForValue) {
+        if (oraclesBuilder_ == null) {
+          ensureOraclesIsMutable();
+          oracles_.add(builderForValue.build());
+          onChanged();
+        } else {
+          oraclesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles"];</code>
+       */
+      public Builder addOracles(
+          int index, com.panacea.oracle.v2alpha2.OracleProto.Oracle.Builder builderForValue) {
+        if (oraclesBuilder_ == null) {
+          ensureOraclesIsMutable();
+          oracles_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          oraclesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles"];</code>
+       */
+      public Builder addAllOracles(
+          java.lang.Iterable<? extends com.panacea.oracle.v2alpha2.OracleProto.Oracle> values) {
+        if (oraclesBuilder_ == null) {
+          ensureOraclesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, oracles_);
+          onChanged();
+        } else {
+          oraclesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles"];</code>
+       */
+      public Builder clearOracles() {
+        if (oraclesBuilder_ == null) {
+          oracles_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          oraclesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles"];</code>
+       */
+      public Builder removeOracles(int index) {
+        if (oraclesBuilder_ == null) {
+          ensureOraclesIsMutable();
+          oracles_.remove(index);
+          onChanged();
+        } else {
+          oraclesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles"];</code>
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.Oracle.Builder getOraclesBuilder(
+          int index) {
+        return getOraclesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles"];</code>
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.OracleOrBuilder getOraclesOrBuilder(
+          int index) {
+        if (oraclesBuilder_ == null) {
+          return oracles_.get(index);  } else {
+          return oraclesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles"];</code>
+       */
+      public java.util.List<? extends com.panacea.oracle.v2alpha2.OracleProto.OracleOrBuilder> 
+           getOraclesOrBuilderList() {
+        if (oraclesBuilder_ != null) {
+          return oraclesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(oracles_);
+        }
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles"];</code>
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.Oracle.Builder addOraclesBuilder() {
+        return getOraclesFieldBuilder().addBuilder(
+            com.panacea.oracle.v2alpha2.OracleProto.Oracle.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles"];</code>
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.Oracle.Builder addOraclesBuilder(
+          int index) {
+        return getOraclesFieldBuilder().addBuilder(
+            index, com.panacea.oracle.v2alpha2.OracleProto.Oracle.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles"];</code>
+       */
+      public java.util.List<com.panacea.oracle.v2alpha2.OracleProto.Oracle.Builder> 
+           getOraclesBuilderList() {
+        return getOraclesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.oracle.v2alpha2.OracleProto.Oracle, com.panacea.oracle.v2alpha2.OracleProto.Oracle.Builder, com.panacea.oracle.v2alpha2.OracleProto.OracleOrBuilder> 
+          getOraclesFieldBuilder() {
+        if (oraclesBuilder_ == null) {
+          oraclesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.panacea.oracle.v2alpha2.OracleProto.Oracle, com.panacea.oracle.v2alpha2.OracleProto.Oracle.Builder, com.panacea.oracle.v2alpha2.OracleProto.OracleOrBuilder>(
+                  oracles_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          oracles_ = null;
+        }
+        return oraclesBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.oracle.v2alpha2.QueryOraclesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.oracle.v2alpha2.QueryOraclesResponse)
+    private static final com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse();
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryOraclesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryOraclesResponse>() {
+      @java.lang.Override
+      public QueryOraclesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryOraclesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryOraclesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.QueryProto.QueryOraclesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryOracleRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.oracle.v2alpha2.QueryOracleRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+  }
+  /**
+   * <pre>
+   * QueryOracleRequest is the request type for the Query/Oracle RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.oracle.v2alpha2.QueryOracleRequest}
+   */
+  public static final class QueryOracleRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.oracle.v2alpha2.QueryOracleRequest)
+      QueryOracleRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryOracleRequest.newBuilder() to construct.
+    private QueryOracleRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryOracleRequest() {
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryOracleRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest.class, com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest)) {
+        return super.equals(obj);
+      }
+      com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest other = (com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryOracleRequest is the request type for the Query/Oracle RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.oracle.v2alpha2.QueryOracleRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.oracle.v2alpha2.QueryOracleRequest)
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest.class, com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest.Builder.class);
+      }
+
+      // Construct using com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest getDefaultInstanceForType() {
+        return com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest build() {
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest buildPartial() {
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest result = new com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest) {
+          return mergeFrom((com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest other) {
+        if (other == com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.oracle.v2alpha2.QueryOracleRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.oracle.v2alpha2.QueryOracleRequest)
+    private static final com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest();
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryOracleRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryOracleRequest>() {
+      @java.lang.Override
+      public QueryOracleRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryOracleRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryOracleRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryOracleResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.oracle.v2alpha2.QueryOracleResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.panacea.oracle.v2alpha2.Oracle oracle = 1 [json_name = "oracle"];</code>
+     * @return Whether the oracle field is set.
+     */
+    boolean hasOracle();
+    /**
+     * <code>.panacea.oracle.v2alpha2.Oracle oracle = 1 [json_name = "oracle"];</code>
+     * @return The oracle.
+     */
+    com.panacea.oracle.v2alpha2.OracleProto.Oracle getOracle();
+    /**
+     * <code>.panacea.oracle.v2alpha2.Oracle oracle = 1 [json_name = "oracle"];</code>
+     */
+    com.panacea.oracle.v2alpha2.OracleProto.OracleOrBuilder getOracleOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryOracleResponse is the response type for the Query/Oracle RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.oracle.v2alpha2.QueryOracleResponse}
+   */
+  public static final class QueryOracleResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.oracle.v2alpha2.QueryOracleResponse)
+      QueryOracleResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryOracleResponse.newBuilder() to construct.
+    private QueryOracleResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryOracleResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryOracleResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse.class, com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse.Builder.class);
+    }
+
+    public static final int ORACLE_FIELD_NUMBER = 1;
+    private com.panacea.oracle.v2alpha2.OracleProto.Oracle oracle_;
+    /**
+     * <code>.panacea.oracle.v2alpha2.Oracle oracle = 1 [json_name = "oracle"];</code>
+     * @return Whether the oracle field is set.
+     */
+    @java.lang.Override
+    public boolean hasOracle() {
+      return oracle_ != null;
+    }
+    /**
+     * <code>.panacea.oracle.v2alpha2.Oracle oracle = 1 [json_name = "oracle"];</code>
+     * @return The oracle.
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.OracleProto.Oracle getOracle() {
+      return oracle_ == null ? com.panacea.oracle.v2alpha2.OracleProto.Oracle.getDefaultInstance() : oracle_;
+    }
+    /**
+     * <code>.panacea.oracle.v2alpha2.Oracle oracle = 1 [json_name = "oracle"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.OracleProto.OracleOrBuilder getOracleOrBuilder() {
+      return oracle_ == null ? com.panacea.oracle.v2alpha2.OracleProto.Oracle.getDefaultInstance() : oracle_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (oracle_ != null) {
+        output.writeMessage(1, getOracle());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (oracle_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getOracle());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse)) {
+        return super.equals(obj);
+      }
+      com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse other = (com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse) obj;
+
+      if (hasOracle() != other.hasOracle()) return false;
+      if (hasOracle()) {
+        if (!getOracle()
+            .equals(other.getOracle())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasOracle()) {
+        hash = (37 * hash) + ORACLE_FIELD_NUMBER;
+        hash = (53 * hash) + getOracle().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryOracleResponse is the response type for the Query/Oracle RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.oracle.v2alpha2.QueryOracleResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.oracle.v2alpha2.QueryOracleResponse)
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse.class, com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse.Builder.class);
+      }
+
+      // Construct using com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        oracle_ = null;
+        if (oracleBuilder_ != null) {
+          oracleBuilder_.dispose();
+          oracleBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse getDefaultInstanceForType() {
+        return com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse build() {
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse buildPartial() {
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse result = new com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.oracle_ = oracleBuilder_ == null
+              ? oracle_
+              : oracleBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse) {
+          return mergeFrom((com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse other) {
+        if (other == com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse.getDefaultInstance()) return this;
+        if (other.hasOracle()) {
+          mergeOracle(other.getOracle());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getOracleFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.panacea.oracle.v2alpha2.OracleProto.Oracle oracle_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.oracle.v2alpha2.OracleProto.Oracle, com.panacea.oracle.v2alpha2.OracleProto.Oracle.Builder, com.panacea.oracle.v2alpha2.OracleProto.OracleOrBuilder> oracleBuilder_;
+      /**
+       * <code>.panacea.oracle.v2alpha2.Oracle oracle = 1 [json_name = "oracle"];</code>
+       * @return Whether the oracle field is set.
+       */
+      public boolean hasOracle() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Oracle oracle = 1 [json_name = "oracle"];</code>
+       * @return The oracle.
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.Oracle getOracle() {
+        if (oracleBuilder_ == null) {
+          return oracle_ == null ? com.panacea.oracle.v2alpha2.OracleProto.Oracle.getDefaultInstance() : oracle_;
+        } else {
+          return oracleBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Oracle oracle = 1 [json_name = "oracle"];</code>
+       */
+      public Builder setOracle(com.panacea.oracle.v2alpha2.OracleProto.Oracle value) {
+        if (oracleBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          oracle_ = value;
+        } else {
+          oracleBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Oracle oracle = 1 [json_name = "oracle"];</code>
+       */
+      public Builder setOracle(
+          com.panacea.oracle.v2alpha2.OracleProto.Oracle.Builder builderForValue) {
+        if (oracleBuilder_ == null) {
+          oracle_ = builderForValue.build();
+        } else {
+          oracleBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Oracle oracle = 1 [json_name = "oracle"];</code>
+       */
+      public Builder mergeOracle(com.panacea.oracle.v2alpha2.OracleProto.Oracle value) {
+        if (oracleBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            oracle_ != null &&
+            oracle_ != com.panacea.oracle.v2alpha2.OracleProto.Oracle.getDefaultInstance()) {
+            getOracleBuilder().mergeFrom(value);
+          } else {
+            oracle_ = value;
+          }
+        } else {
+          oracleBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Oracle oracle = 1 [json_name = "oracle"];</code>
+       */
+      public Builder clearOracle() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        oracle_ = null;
+        if (oracleBuilder_ != null) {
+          oracleBuilder_.dispose();
+          oracleBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Oracle oracle = 1 [json_name = "oracle"];</code>
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.Oracle.Builder getOracleBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getOracleFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Oracle oracle = 1 [json_name = "oracle"];</code>
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.OracleOrBuilder getOracleOrBuilder() {
+        if (oracleBuilder_ != null) {
+          return oracleBuilder_.getMessageOrBuilder();
+        } else {
+          return oracle_ == null ?
+              com.panacea.oracle.v2alpha2.OracleProto.Oracle.getDefaultInstance() : oracle_;
+        }
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Oracle oracle = 1 [json_name = "oracle"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.oracle.v2alpha2.OracleProto.Oracle, com.panacea.oracle.v2alpha2.OracleProto.Oracle.Builder, com.panacea.oracle.v2alpha2.OracleProto.OracleOrBuilder> 
+          getOracleFieldBuilder() {
+        if (oracleBuilder_ == null) {
+          oracleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.panacea.oracle.v2alpha2.OracleProto.Oracle, com.panacea.oracle.v2alpha2.OracleProto.Oracle.Builder, com.panacea.oracle.v2alpha2.OracleProto.OracleOrBuilder>(
+                  getOracle(),
+                  getParentForChildren(),
+                  isClean());
+          oracle_ = null;
+        }
+        return oracleBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.oracle.v2alpha2.QueryOracleResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.oracle.v2alpha2.QueryOracleResponse)
+    private static final com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse();
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryOracleResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryOracleResponse>() {
+      @java.lang.Override
+      public QueryOracleResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryOracleResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryOracleResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryOracleRegistrationRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.oracle.v2alpha2.QueryOracleRegistrationRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+     * @return The uniqueId.
+     */
+    java.lang.String getUniqueId();
+    /**
+     * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+     * @return The bytes for uniqueId.
+     */
+    com.google.protobuf.ByteString
+        getUniqueIdBytes();
+
+    /**
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+  }
+  /**
+   * <pre>
+   * QueryOracleRegistrationRequest is the request type for the Query/OracleRegistration RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.oracle.v2alpha2.QueryOracleRegistrationRequest}
+   */
+  public static final class QueryOracleRegistrationRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.oracle.v2alpha2.QueryOracleRegistrationRequest)
+      QueryOracleRegistrationRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryOracleRegistrationRequest.newBuilder() to construct.
+    private QueryOracleRegistrationRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryOracleRegistrationRequest() {
+      uniqueId_ = "";
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryOracleRegistrationRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleRegistrationRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleRegistrationRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest.class, com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest.Builder.class);
+    }
+
+    public static final int UNIQUE_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object uniqueId_ = "";
+    /**
+     * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+     * @return The uniqueId.
+     */
+    @java.lang.Override
+    public java.lang.String getUniqueId() {
+      java.lang.Object ref = uniqueId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uniqueId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+     * @return The bytes for uniqueId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUniqueIdBytes() {
+      java.lang.Object ref = uniqueId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uniqueId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uniqueId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uniqueId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, address_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uniqueId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uniqueId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, address_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest)) {
+        return super.equals(obj);
+      }
+      com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest other = (com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest) obj;
+
+      if (!getUniqueId()
+          .equals(other.getUniqueId())) return false;
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + UNIQUE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getUniqueId().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryOracleRegistrationRequest is the request type for the Query/OracleRegistration RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.oracle.v2alpha2.QueryOracleRegistrationRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.oracle.v2alpha2.QueryOracleRegistrationRequest)
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleRegistrationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleRegistrationRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest.class, com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest.Builder.class);
+      }
+
+      // Construct using com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        uniqueId_ = "";
+        address_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleRegistrationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest getDefaultInstanceForType() {
+        return com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest build() {
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest buildPartial() {
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest result = new com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.uniqueId_ = uniqueId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.address_ = address_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest) {
+          return mergeFrom((com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest other) {
+        if (other == com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest.getDefaultInstance()) return this;
+        if (!other.getUniqueId().isEmpty()) {
+          uniqueId_ = other.uniqueId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                uniqueId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object uniqueId_ = "";
+      /**
+       * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+       * @return The uniqueId.
+       */
+      public java.lang.String getUniqueId() {
+        java.lang.Object ref = uniqueId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uniqueId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+       * @return The bytes for uniqueId.
+       */
+      public com.google.protobuf.ByteString
+          getUniqueIdBytes() {
+        java.lang.Object ref = uniqueId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uniqueId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+       * @param value The uniqueId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUniqueId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        uniqueId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUniqueId() {
+        uniqueId_ = getDefaultInstance().getUniqueId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+       * @param value The bytes for uniqueId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUniqueIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        uniqueId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.oracle.v2alpha2.QueryOracleRegistrationRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.oracle.v2alpha2.QueryOracleRegistrationRequest)
+    private static final com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest();
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryOracleRegistrationRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryOracleRegistrationRequest>() {
+      @java.lang.Override
+      public QueryOracleRegistrationRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryOracleRegistrationRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryOracleRegistrationRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryOracleRegistrationResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.oracle.v2alpha2.QueryOracleRegistrationResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.panacea.oracle.v2alpha2.OracleRegistration oracle_registration = 1 [json_name = "oracleRegistration"];</code>
+     * @return Whether the oracleRegistration field is set.
+     */
+    boolean hasOracleRegistration();
+    /**
+     * <code>.panacea.oracle.v2alpha2.OracleRegistration oracle_registration = 1 [json_name = "oracleRegistration"];</code>
+     * @return The oracleRegistration.
+     */
+    com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration getOracleRegistration();
+    /**
+     * <code>.panacea.oracle.v2alpha2.OracleRegistration oracle_registration = 1 [json_name = "oracleRegistration"];</code>
+     */
+    com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationOrBuilder getOracleRegistrationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryOracleRegistrationResponse is the response type for the Query/OracleRegistration RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.oracle.v2alpha2.QueryOracleRegistrationResponse}
+   */
+  public static final class QueryOracleRegistrationResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.oracle.v2alpha2.QueryOracleRegistrationResponse)
+      QueryOracleRegistrationResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryOracleRegistrationResponse.newBuilder() to construct.
+    private QueryOracleRegistrationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryOracleRegistrationResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryOracleRegistrationResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleRegistrationResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleRegistrationResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse.class, com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse.Builder.class);
+    }
+
+    public static final int ORACLE_REGISTRATION_FIELD_NUMBER = 1;
+    private com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration oracleRegistration_;
+    /**
+     * <code>.panacea.oracle.v2alpha2.OracleRegistration oracle_registration = 1 [json_name = "oracleRegistration"];</code>
+     * @return Whether the oracleRegistration field is set.
+     */
+    @java.lang.Override
+    public boolean hasOracleRegistration() {
+      return oracleRegistration_ != null;
+    }
+    /**
+     * <code>.panacea.oracle.v2alpha2.OracleRegistration oracle_registration = 1 [json_name = "oracleRegistration"];</code>
+     * @return The oracleRegistration.
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration getOracleRegistration() {
+      return oracleRegistration_ == null ? com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration.getDefaultInstance() : oracleRegistration_;
+    }
+    /**
+     * <code>.panacea.oracle.v2alpha2.OracleRegistration oracle_registration = 1 [json_name = "oracleRegistration"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationOrBuilder getOracleRegistrationOrBuilder() {
+      return oracleRegistration_ == null ? com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration.getDefaultInstance() : oracleRegistration_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (oracleRegistration_ != null) {
+        output.writeMessage(1, getOracleRegistration());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (oracleRegistration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getOracleRegistration());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse)) {
+        return super.equals(obj);
+      }
+      com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse other = (com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse) obj;
+
+      if (hasOracleRegistration() != other.hasOracleRegistration()) return false;
+      if (hasOracleRegistration()) {
+        if (!getOracleRegistration()
+            .equals(other.getOracleRegistration())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasOracleRegistration()) {
+        hash = (37 * hash) + ORACLE_REGISTRATION_FIELD_NUMBER;
+        hash = (53 * hash) + getOracleRegistration().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryOracleRegistrationResponse is the response type for the Query/OracleRegistration RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.oracle.v2alpha2.QueryOracleRegistrationResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.oracle.v2alpha2.QueryOracleRegistrationResponse)
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleRegistrationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleRegistrationResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse.class, com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse.Builder.class);
+      }
+
+      // Construct using com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        oracleRegistration_ = null;
+        if (oracleRegistrationBuilder_ != null) {
+          oracleRegistrationBuilder_.dispose();
+          oracleRegistrationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleRegistrationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse getDefaultInstanceForType() {
+        return com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse build() {
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse buildPartial() {
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse result = new com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.oracleRegistration_ = oracleRegistrationBuilder_ == null
+              ? oracleRegistration_
+              : oracleRegistrationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse) {
+          return mergeFrom((com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse other) {
+        if (other == com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse.getDefaultInstance()) return this;
+        if (other.hasOracleRegistration()) {
+          mergeOracleRegistration(other.getOracleRegistration());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getOracleRegistrationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration oracleRegistration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration.Builder, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationOrBuilder> oracleRegistrationBuilder_;
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleRegistration oracle_registration = 1 [json_name = "oracleRegistration"];</code>
+       * @return Whether the oracleRegistration field is set.
+       */
+      public boolean hasOracleRegistration() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleRegistration oracle_registration = 1 [json_name = "oracleRegistration"];</code>
+       * @return The oracleRegistration.
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration getOracleRegistration() {
+        if (oracleRegistrationBuilder_ == null) {
+          return oracleRegistration_ == null ? com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration.getDefaultInstance() : oracleRegistration_;
+        } else {
+          return oracleRegistrationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleRegistration oracle_registration = 1 [json_name = "oracleRegistration"];</code>
+       */
+      public Builder setOracleRegistration(com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration value) {
+        if (oracleRegistrationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          oracleRegistration_ = value;
+        } else {
+          oracleRegistrationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleRegistration oracle_registration = 1 [json_name = "oracleRegistration"];</code>
+       */
+      public Builder setOracleRegistration(
+          com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration.Builder builderForValue) {
+        if (oracleRegistrationBuilder_ == null) {
+          oracleRegistration_ = builderForValue.build();
+        } else {
+          oracleRegistrationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleRegistration oracle_registration = 1 [json_name = "oracleRegistration"];</code>
+       */
+      public Builder mergeOracleRegistration(com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration value) {
+        if (oracleRegistrationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            oracleRegistration_ != null &&
+            oracleRegistration_ != com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration.getDefaultInstance()) {
+            getOracleRegistrationBuilder().mergeFrom(value);
+          } else {
+            oracleRegistration_ = value;
+          }
+        } else {
+          oracleRegistrationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleRegistration oracle_registration = 1 [json_name = "oracleRegistration"];</code>
+       */
+      public Builder clearOracleRegistration() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        oracleRegistration_ = null;
+        if (oracleRegistrationBuilder_ != null) {
+          oracleRegistrationBuilder_.dispose();
+          oracleRegistrationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleRegistration oracle_registration = 1 [json_name = "oracleRegistration"];</code>
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration.Builder getOracleRegistrationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getOracleRegistrationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleRegistration oracle_registration = 1 [json_name = "oracleRegistration"];</code>
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationOrBuilder getOracleRegistrationOrBuilder() {
+        if (oracleRegistrationBuilder_ != null) {
+          return oracleRegistrationBuilder_.getMessageOrBuilder();
+        } else {
+          return oracleRegistration_ == null ?
+              com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration.getDefaultInstance() : oracleRegistration_;
+        }
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleRegistration oracle_registration = 1 [json_name = "oracleRegistration"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration.Builder, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationOrBuilder> 
+          getOracleRegistrationFieldBuilder() {
+        if (oracleRegistrationBuilder_ == null) {
+          oracleRegistrationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration.Builder, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationOrBuilder>(
+                  getOracleRegistration(),
+                  getParentForChildren(),
+                  isClean());
+          oracleRegistration_ = null;
+        }
+        return oracleRegistrationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.oracle.v2alpha2.QueryOracleRegistrationResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.oracle.v2alpha2.QueryOracleRegistrationResponse)
+    private static final com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse();
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryOracleRegistrationResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryOracleRegistrationResponse>() {
+      @java.lang.Override
+      public QueryOracleRegistrationResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryOracleRegistrationResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryOracleRegistrationResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryOracleRegistrationVoteRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.oracle.v2alpha2.QueryOracleRegistrationVoteRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+     * @return The uniqueId.
+     */
+    java.lang.String getUniqueId();
+    /**
+     * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+     * @return The bytes for uniqueId.
+     */
+    com.google.protobuf.ByteString
+        getUniqueIdBytes();
+
+    /**
+     * <code>string voter_address = 2 [json_name = "voterAddress"];</code>
+     * @return The voterAddress.
+     */
+    java.lang.String getVoterAddress();
+    /**
+     * <code>string voter_address = 2 [json_name = "voterAddress"];</code>
+     * @return The bytes for voterAddress.
+     */
+    com.google.protobuf.ByteString
+        getVoterAddressBytes();
+
+    /**
+     * <code>string voting_target_address = 3 [json_name = "votingTargetAddress"];</code>
+     * @return The votingTargetAddress.
+     */
+    java.lang.String getVotingTargetAddress();
+    /**
+     * <code>string voting_target_address = 3 [json_name = "votingTargetAddress"];</code>
+     * @return The bytes for votingTargetAddress.
+     */
+    com.google.protobuf.ByteString
+        getVotingTargetAddressBytes();
+  }
+  /**
+   * <pre>
+   * QueryOracleRegistrationVoteRequest is the request type for Query/OracleRegistrationVote RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.oracle.v2alpha2.QueryOracleRegistrationVoteRequest}
+   */
+  public static final class QueryOracleRegistrationVoteRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.oracle.v2alpha2.QueryOracleRegistrationVoteRequest)
+      QueryOracleRegistrationVoteRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryOracleRegistrationVoteRequest.newBuilder() to construct.
+    private QueryOracleRegistrationVoteRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryOracleRegistrationVoteRequest() {
+      uniqueId_ = "";
+      voterAddress_ = "";
+      votingTargetAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryOracleRegistrationVoteRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleRegistrationVoteRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleRegistrationVoteRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest.class, com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest.Builder.class);
+    }
+
+    public static final int UNIQUE_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object uniqueId_ = "";
+    /**
+     * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+     * @return The uniqueId.
+     */
+    @java.lang.Override
+    public java.lang.String getUniqueId() {
+      java.lang.Object ref = uniqueId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uniqueId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+     * @return The bytes for uniqueId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUniqueIdBytes() {
+      java.lang.Object ref = uniqueId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uniqueId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VOTER_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object voterAddress_ = "";
+    /**
+     * <code>string voter_address = 2 [json_name = "voterAddress"];</code>
+     * @return The voterAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getVoterAddress() {
+      java.lang.Object ref = voterAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        voterAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string voter_address = 2 [json_name = "voterAddress"];</code>
+     * @return The bytes for voterAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVoterAddressBytes() {
+      java.lang.Object ref = voterAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        voterAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VOTING_TARGET_ADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object votingTargetAddress_ = "";
+    /**
+     * <code>string voting_target_address = 3 [json_name = "votingTargetAddress"];</code>
+     * @return The votingTargetAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getVotingTargetAddress() {
+      java.lang.Object ref = votingTargetAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        votingTargetAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string voting_target_address = 3 [json_name = "votingTargetAddress"];</code>
+     * @return The bytes for votingTargetAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVotingTargetAddressBytes() {
+      java.lang.Object ref = votingTargetAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        votingTargetAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uniqueId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uniqueId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voterAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, voterAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(votingTargetAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, votingTargetAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uniqueId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uniqueId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voterAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, voterAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(votingTargetAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, votingTargetAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest)) {
+        return super.equals(obj);
+      }
+      com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest other = (com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest) obj;
+
+      if (!getUniqueId()
+          .equals(other.getUniqueId())) return false;
+      if (!getVoterAddress()
+          .equals(other.getVoterAddress())) return false;
+      if (!getVotingTargetAddress()
+          .equals(other.getVotingTargetAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + UNIQUE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getUniqueId().hashCode();
+      hash = (37 * hash) + VOTER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getVoterAddress().hashCode();
+      hash = (37 * hash) + VOTING_TARGET_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getVotingTargetAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryOracleRegistrationVoteRequest is the request type for Query/OracleRegistrationVote RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.oracle.v2alpha2.QueryOracleRegistrationVoteRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.oracle.v2alpha2.QueryOracleRegistrationVoteRequest)
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleRegistrationVoteRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleRegistrationVoteRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest.class, com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest.Builder.class);
+      }
+
+      // Construct using com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        uniqueId_ = "";
+        voterAddress_ = "";
+        votingTargetAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleRegistrationVoteRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest getDefaultInstanceForType() {
+        return com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest build() {
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest buildPartial() {
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest result = new com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.uniqueId_ = uniqueId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.voterAddress_ = voterAddress_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.votingTargetAddress_ = votingTargetAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest) {
+          return mergeFrom((com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest other) {
+        if (other == com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest.getDefaultInstance()) return this;
+        if (!other.getUniqueId().isEmpty()) {
+          uniqueId_ = other.uniqueId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getVoterAddress().isEmpty()) {
+          voterAddress_ = other.voterAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getVotingTargetAddress().isEmpty()) {
+          votingTargetAddress_ = other.votingTargetAddress_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                uniqueId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                voterAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                votingTargetAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object uniqueId_ = "";
+      /**
+       * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+       * @return The uniqueId.
+       */
+      public java.lang.String getUniqueId() {
+        java.lang.Object ref = uniqueId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uniqueId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+       * @return The bytes for uniqueId.
+       */
+      public com.google.protobuf.ByteString
+          getUniqueIdBytes() {
+        java.lang.Object ref = uniqueId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uniqueId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+       * @param value The uniqueId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUniqueId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        uniqueId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUniqueId() {
+        uniqueId_ = getDefaultInstance().getUniqueId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+       * @param value The bytes for uniqueId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUniqueIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        uniqueId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object voterAddress_ = "";
+      /**
+       * <code>string voter_address = 2 [json_name = "voterAddress"];</code>
+       * @return The voterAddress.
+       */
+      public java.lang.String getVoterAddress() {
+        java.lang.Object ref = voterAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          voterAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string voter_address = 2 [json_name = "voterAddress"];</code>
+       * @return The bytes for voterAddress.
+       */
+      public com.google.protobuf.ByteString
+          getVoterAddressBytes() {
+        java.lang.Object ref = voterAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          voterAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string voter_address = 2 [json_name = "voterAddress"];</code>
+       * @param value The voterAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVoterAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        voterAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string voter_address = 2 [json_name = "voterAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVoterAddress() {
+        voterAddress_ = getDefaultInstance().getVoterAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string voter_address = 2 [json_name = "voterAddress"];</code>
+       * @param value The bytes for voterAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVoterAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        voterAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object votingTargetAddress_ = "";
+      /**
+       * <code>string voting_target_address = 3 [json_name = "votingTargetAddress"];</code>
+       * @return The votingTargetAddress.
+       */
+      public java.lang.String getVotingTargetAddress() {
+        java.lang.Object ref = votingTargetAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          votingTargetAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string voting_target_address = 3 [json_name = "votingTargetAddress"];</code>
+       * @return The bytes for votingTargetAddress.
+       */
+      public com.google.protobuf.ByteString
+          getVotingTargetAddressBytes() {
+        java.lang.Object ref = votingTargetAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          votingTargetAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string voting_target_address = 3 [json_name = "votingTargetAddress"];</code>
+       * @param value The votingTargetAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVotingTargetAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        votingTargetAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string voting_target_address = 3 [json_name = "votingTargetAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVotingTargetAddress() {
+        votingTargetAddress_ = getDefaultInstance().getVotingTargetAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string voting_target_address = 3 [json_name = "votingTargetAddress"];</code>
+       * @param value The bytes for votingTargetAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVotingTargetAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        votingTargetAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.oracle.v2alpha2.QueryOracleRegistrationVoteRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.oracle.v2alpha2.QueryOracleRegistrationVoteRequest)
+    private static final com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest();
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryOracleRegistrationVoteRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryOracleRegistrationVoteRequest>() {
+      @java.lang.Override
+      public QueryOracleRegistrationVoteRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryOracleRegistrationVoteRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryOracleRegistrationVoteRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryOracleRegistrationVoteResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.oracle.v2alpha2.QueryOracleRegistrationVoteResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_vote = 1 [json_name = "oracleRegistrationVote"];</code>
+     * @return Whether the oracleRegistrationVote field is set.
+     */
+    boolean hasOracleRegistrationVote();
+    /**
+     * <code>.panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_vote = 1 [json_name = "oracleRegistrationVote"];</code>
+     * @return The oracleRegistrationVote.
+     */
+    com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote getOracleRegistrationVote();
+    /**
+     * <code>.panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_vote = 1 [json_name = "oracleRegistrationVote"];</code>
+     */
+    com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVoteOrBuilder getOracleRegistrationVoteOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryOracleRegistrationVoteResponse is the response type for the Query/OracleRegistrationVote RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.oracle.v2alpha2.QueryOracleRegistrationVoteResponse}
+   */
+  public static final class QueryOracleRegistrationVoteResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.oracle.v2alpha2.QueryOracleRegistrationVoteResponse)
+      QueryOracleRegistrationVoteResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryOracleRegistrationVoteResponse.newBuilder() to construct.
+    private QueryOracleRegistrationVoteResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryOracleRegistrationVoteResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryOracleRegistrationVoteResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleRegistrationVoteResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleRegistrationVoteResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse.class, com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse.Builder.class);
+    }
+
+    public static final int ORACLE_REGISTRATION_VOTE_FIELD_NUMBER = 1;
+    private com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote oracleRegistrationVote_;
+    /**
+     * <code>.panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_vote = 1 [json_name = "oracleRegistrationVote"];</code>
+     * @return Whether the oracleRegistrationVote field is set.
+     */
+    @java.lang.Override
+    public boolean hasOracleRegistrationVote() {
+      return oracleRegistrationVote_ != null;
+    }
+    /**
+     * <code>.panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_vote = 1 [json_name = "oracleRegistrationVote"];</code>
+     * @return The oracleRegistrationVote.
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote getOracleRegistrationVote() {
+      return oracleRegistrationVote_ == null ? com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote.getDefaultInstance() : oracleRegistrationVote_;
+    }
+    /**
+     * <code>.panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_vote = 1 [json_name = "oracleRegistrationVote"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVoteOrBuilder getOracleRegistrationVoteOrBuilder() {
+      return oracleRegistrationVote_ == null ? com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote.getDefaultInstance() : oracleRegistrationVote_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (oracleRegistrationVote_ != null) {
+        output.writeMessage(1, getOracleRegistrationVote());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (oracleRegistrationVote_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getOracleRegistrationVote());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse)) {
+        return super.equals(obj);
+      }
+      com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse other = (com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse) obj;
+
+      if (hasOracleRegistrationVote() != other.hasOracleRegistrationVote()) return false;
+      if (hasOracleRegistrationVote()) {
+        if (!getOracleRegistrationVote()
+            .equals(other.getOracleRegistrationVote())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasOracleRegistrationVote()) {
+        hash = (37 * hash) + ORACLE_REGISTRATION_VOTE_FIELD_NUMBER;
+        hash = (53 * hash) + getOracleRegistrationVote().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryOracleRegistrationVoteResponse is the response type for the Query/OracleRegistrationVote RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.oracle.v2alpha2.QueryOracleRegistrationVoteResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.oracle.v2alpha2.QueryOracleRegistrationVoteResponse)
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleRegistrationVoteResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleRegistrationVoteResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse.class, com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse.Builder.class);
+      }
+
+      // Construct using com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        oracleRegistrationVote_ = null;
+        if (oracleRegistrationVoteBuilder_ != null) {
+          oracleRegistrationVoteBuilder_.dispose();
+          oracleRegistrationVoteBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleRegistrationVoteResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse getDefaultInstanceForType() {
+        return com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse build() {
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse buildPartial() {
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse result = new com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.oracleRegistrationVote_ = oracleRegistrationVoteBuilder_ == null
+              ? oracleRegistrationVote_
+              : oracleRegistrationVoteBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse) {
+          return mergeFrom((com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse other) {
+        if (other == com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse.getDefaultInstance()) return this;
+        if (other.hasOracleRegistrationVote()) {
+          mergeOracleRegistrationVote(other.getOracleRegistrationVote());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getOracleRegistrationVoteFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote oracleRegistrationVote_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote.Builder, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVoteOrBuilder> oracleRegistrationVoteBuilder_;
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_vote = 1 [json_name = "oracleRegistrationVote"];</code>
+       * @return Whether the oracleRegistrationVote field is set.
+       */
+      public boolean hasOracleRegistrationVote() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_vote = 1 [json_name = "oracleRegistrationVote"];</code>
+       * @return The oracleRegistrationVote.
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote getOracleRegistrationVote() {
+        if (oracleRegistrationVoteBuilder_ == null) {
+          return oracleRegistrationVote_ == null ? com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote.getDefaultInstance() : oracleRegistrationVote_;
+        } else {
+          return oracleRegistrationVoteBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_vote = 1 [json_name = "oracleRegistrationVote"];</code>
+       */
+      public Builder setOracleRegistrationVote(com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote value) {
+        if (oracleRegistrationVoteBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          oracleRegistrationVote_ = value;
+        } else {
+          oracleRegistrationVoteBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_vote = 1 [json_name = "oracleRegistrationVote"];</code>
+       */
+      public Builder setOracleRegistrationVote(
+          com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote.Builder builderForValue) {
+        if (oracleRegistrationVoteBuilder_ == null) {
+          oracleRegistrationVote_ = builderForValue.build();
+        } else {
+          oracleRegistrationVoteBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_vote = 1 [json_name = "oracleRegistrationVote"];</code>
+       */
+      public Builder mergeOracleRegistrationVote(com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote value) {
+        if (oracleRegistrationVoteBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            oracleRegistrationVote_ != null &&
+            oracleRegistrationVote_ != com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote.getDefaultInstance()) {
+            getOracleRegistrationVoteBuilder().mergeFrom(value);
+          } else {
+            oracleRegistrationVote_ = value;
+          }
+        } else {
+          oracleRegistrationVoteBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_vote = 1 [json_name = "oracleRegistrationVote"];</code>
+       */
+      public Builder clearOracleRegistrationVote() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        oracleRegistrationVote_ = null;
+        if (oracleRegistrationVoteBuilder_ != null) {
+          oracleRegistrationVoteBuilder_.dispose();
+          oracleRegistrationVoteBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_vote = 1 [json_name = "oracleRegistrationVote"];</code>
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote.Builder getOracleRegistrationVoteBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getOracleRegistrationVoteFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_vote = 1 [json_name = "oracleRegistrationVote"];</code>
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVoteOrBuilder getOracleRegistrationVoteOrBuilder() {
+        if (oracleRegistrationVoteBuilder_ != null) {
+          return oracleRegistrationVoteBuilder_.getMessageOrBuilder();
+        } else {
+          return oracleRegistrationVote_ == null ?
+              com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote.getDefaultInstance() : oracleRegistrationVote_;
+        }
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_vote = 1 [json_name = "oracleRegistrationVote"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote.Builder, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVoteOrBuilder> 
+          getOracleRegistrationVoteFieldBuilder() {
+        if (oracleRegistrationVoteBuilder_ == null) {
+          oracleRegistrationVoteBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote.Builder, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVoteOrBuilder>(
+                  getOracleRegistrationVote(),
+                  getParentForChildren(),
+                  isClean());
+          oracleRegistrationVote_ = null;
+        }
+        return oracleRegistrationVoteBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.oracle.v2alpha2.QueryOracleRegistrationVoteResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.oracle.v2alpha2.QueryOracleRegistrationVoteResponse)
+    private static final com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse();
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryOracleRegistrationVoteResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryOracleRegistrationVoteResponse>() {
+      @java.lang.Override
+      public QueryOracleRegistrationVoteResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryOracleRegistrationVoteResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryOracleRegistrationVoteResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleRegistrationVoteResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryOracleParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.oracle.v2alpha2.QueryOracleParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryOracleParamsRequest is the request type for the Query/OracleParams RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.oracle.v2alpha2.QueryOracleParamsRequest}
+   */
+  public static final class QueryOracleParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.oracle.v2alpha2.QueryOracleParamsRequest)
+      QueryOracleParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryOracleParamsRequest.newBuilder() to construct.
+    private QueryOracleParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryOracleParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryOracleParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest.class, com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest other = (com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryOracleParamsRequest is the request type for the Query/OracleParams RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.oracle.v2alpha2.QueryOracleParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.oracle.v2alpha2.QueryOracleParamsRequest)
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest.class, com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest.Builder.class);
+      }
+
+      // Construct using com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest getDefaultInstanceForType() {
+        return com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest build() {
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest buildPartial() {
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest result = new com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest) {
+          return mergeFrom((com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest other) {
+        if (other == com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.oracle.v2alpha2.QueryOracleParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.oracle.v2alpha2.QueryOracleParamsRequest)
+    private static final com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest();
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryOracleParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryOracleParamsRequest>() {
+      @java.lang.Override
+      public QueryOracleParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryOracleParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryOracleParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.oracle.v2alpha2.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.panacea.oracle.v2alpha2.Params params = 1 [json_name = "params"];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.panacea.oracle.v2alpha2.Params params = 1 [json_name = "params"];</code>
+     * @return The params.
+     */
+    com.panacea.oracle.v2alpha2.GenesisProto.Params getParams();
+    /**
+     * <code>.panacea.oracle.v2alpha2.Params params = 1 [json_name = "params"];</code>
+     */
+    com.panacea.oracle.v2alpha2.GenesisProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryParamsResponse is the response type for the Query/OracleParams RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.oracle.v2alpha2.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.oracle.v2alpha2.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse.class, com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.panacea.oracle.v2alpha2.GenesisProto.Params params_;
+    /**
+     * <code>.panacea.oracle.v2alpha2.Params params = 1 [json_name = "params"];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.panacea.oracle.v2alpha2.Params params = 1 [json_name = "params"];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.GenesisProto.Params getParams() {
+      return params_ == null ? com.panacea.oracle.v2alpha2.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.panacea.oracle.v2alpha2.Params params = 1 [json_name = "params"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.panacea.oracle.v2alpha2.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse other = (com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsResponse is the response type for the Query/OracleParams RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.oracle.v2alpha2.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.oracle.v2alpha2.QueryParamsResponse)
+        com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse.class, com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse build() {
+        com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse buildPartial() {
+        com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse result = new com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse) {
+          return mergeFrom((com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse other) {
+        if (other == com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.panacea.oracle.v2alpha2.GenesisProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.oracle.v2alpha2.GenesisProto.Params, com.panacea.oracle.v2alpha2.GenesisProto.Params.Builder, com.panacea.oracle.v2alpha2.GenesisProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.panacea.oracle.v2alpha2.Params params = 1 [json_name = "params"];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Params params = 1 [json_name = "params"];</code>
+       * @return The params.
+       */
+      public com.panacea.oracle.v2alpha2.GenesisProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.panacea.oracle.v2alpha2.GenesisProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Params params = 1 [json_name = "params"];</code>
+       */
+      public Builder setParams(com.panacea.oracle.v2alpha2.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Params params = 1 [json_name = "params"];</code>
+       */
+      public Builder setParams(
+          com.panacea.oracle.v2alpha2.GenesisProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Params params = 1 [json_name = "params"];</code>
+       */
+      public Builder mergeParams(com.panacea.oracle.v2alpha2.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.panacea.oracle.v2alpha2.GenesisProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Params params = 1 [json_name = "params"];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Params params = 1 [json_name = "params"];</code>
+       */
+      public com.panacea.oracle.v2alpha2.GenesisProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Params params = 1 [json_name = "params"];</code>
+       */
+      public com.panacea.oracle.v2alpha2.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.panacea.oracle.v2alpha2.GenesisProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Params params = 1 [json_name = "params"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.oracle.v2alpha2.GenesisProto.Params, com.panacea.oracle.v2alpha2.GenesisProto.Params.Builder, com.panacea.oracle.v2alpha2.GenesisProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.panacea.oracle.v2alpha2.GenesisProto.Params, com.panacea.oracle.v2alpha2.GenesisProto.Params.Builder, com.panacea.oracle.v2alpha2.GenesisProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.oracle.v2alpha2.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.oracle.v2alpha2.QueryParamsResponse)
+    private static final com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse();
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryOracleUpgradeInfoRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.oracle.v2alpha2.QueryOracleUpgradeInfoRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryOracleUpgradeInfoRequest is the request type for the Query/OracleUpgradeInfo RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.oracle.v2alpha2.QueryOracleUpgradeInfoRequest}
+   */
+  public static final class QueryOracleUpgradeInfoRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.oracle.v2alpha2.QueryOracleUpgradeInfoRequest)
+      QueryOracleUpgradeInfoRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryOracleUpgradeInfoRequest.newBuilder() to construct.
+    private QueryOracleUpgradeInfoRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryOracleUpgradeInfoRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryOracleUpgradeInfoRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleUpgradeInfoRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleUpgradeInfoRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest.class, com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest)) {
+        return super.equals(obj);
+      }
+      com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest other = (com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryOracleUpgradeInfoRequest is the request type for the Query/OracleUpgradeInfo RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.oracle.v2alpha2.QueryOracleUpgradeInfoRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.oracle.v2alpha2.QueryOracleUpgradeInfoRequest)
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleUpgradeInfoRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleUpgradeInfoRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest.class, com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest.Builder.class);
+      }
+
+      // Construct using com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleUpgradeInfoRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest getDefaultInstanceForType() {
+        return com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest build() {
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest buildPartial() {
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest result = new com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest) {
+          return mergeFrom((com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest other) {
+        if (other == com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.oracle.v2alpha2.QueryOracleUpgradeInfoRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.oracle.v2alpha2.QueryOracleUpgradeInfoRequest)
+    private static final com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest();
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryOracleUpgradeInfoRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryOracleUpgradeInfoRequest>() {
+      @java.lang.Override
+      public QueryOracleUpgradeInfoRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryOracleUpgradeInfoRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryOracleUpgradeInfoRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryOracleUpgradeInfoResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.oracle.v2alpha2.QueryOracleUpgradeInfoResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 1 [json_name = "oracleUpgradeInfo"];</code>
+     * @return Whether the oracleUpgradeInfo field is set.
+     */
+    boolean hasOracleUpgradeInfo();
+    /**
+     * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 1 [json_name = "oracleUpgradeInfo"];</code>
+     * @return The oracleUpgradeInfo.
+     */
+    com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo getOracleUpgradeInfo();
+    /**
+     * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 1 [json_name = "oracleUpgradeInfo"];</code>
+     */
+    com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfoOrBuilder getOracleUpgradeInfoOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryOracleUpgradeInfoRequest is the response type for the Query/OracleUpgradeInfo RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.oracle.v2alpha2.QueryOracleUpgradeInfoResponse}
+   */
+  public static final class QueryOracleUpgradeInfoResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.oracle.v2alpha2.QueryOracleUpgradeInfoResponse)
+      QueryOracleUpgradeInfoResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryOracleUpgradeInfoResponse.newBuilder() to construct.
+    private QueryOracleUpgradeInfoResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryOracleUpgradeInfoResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryOracleUpgradeInfoResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleUpgradeInfoResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleUpgradeInfoResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse.class, com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse.Builder.class);
+    }
+
+    public static final int ORACLE_UPGRADE_INFO_FIELD_NUMBER = 1;
+    private com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo oracleUpgradeInfo_;
+    /**
+     * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 1 [json_name = "oracleUpgradeInfo"];</code>
+     * @return Whether the oracleUpgradeInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasOracleUpgradeInfo() {
+      return oracleUpgradeInfo_ != null;
+    }
+    /**
+     * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 1 [json_name = "oracleUpgradeInfo"];</code>
+     * @return The oracleUpgradeInfo.
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo getOracleUpgradeInfo() {
+      return oracleUpgradeInfo_ == null ? com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo.getDefaultInstance() : oracleUpgradeInfo_;
+    }
+    /**
+     * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 1 [json_name = "oracleUpgradeInfo"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfoOrBuilder getOracleUpgradeInfoOrBuilder() {
+      return oracleUpgradeInfo_ == null ? com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo.getDefaultInstance() : oracleUpgradeInfo_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (oracleUpgradeInfo_ != null) {
+        output.writeMessage(1, getOracleUpgradeInfo());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (oracleUpgradeInfo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getOracleUpgradeInfo());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse)) {
+        return super.equals(obj);
+      }
+      com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse other = (com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse) obj;
+
+      if (hasOracleUpgradeInfo() != other.hasOracleUpgradeInfo()) return false;
+      if (hasOracleUpgradeInfo()) {
+        if (!getOracleUpgradeInfo()
+            .equals(other.getOracleUpgradeInfo())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasOracleUpgradeInfo()) {
+        hash = (37 * hash) + ORACLE_UPGRADE_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getOracleUpgradeInfo().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryOracleUpgradeInfoRequest is the response type for the Query/OracleUpgradeInfo RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.oracle.v2alpha2.QueryOracleUpgradeInfoResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.oracle.v2alpha2.QueryOracleUpgradeInfoResponse)
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleUpgradeInfoResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleUpgradeInfoResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse.class, com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse.Builder.class);
+      }
+
+      // Construct using com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        oracleUpgradeInfo_ = null;
+        if (oracleUpgradeInfoBuilder_ != null) {
+          oracleUpgradeInfoBuilder_.dispose();
+          oracleUpgradeInfoBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.oracle.v2alpha2.QueryProto.internal_static_panacea_oracle_v2alpha2_QueryOracleUpgradeInfoResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse getDefaultInstanceForType() {
+        return com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse build() {
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse buildPartial() {
+        com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse result = new com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.oracleUpgradeInfo_ = oracleUpgradeInfoBuilder_ == null
+              ? oracleUpgradeInfo_
+              : oracleUpgradeInfoBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse) {
+          return mergeFrom((com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse other) {
+        if (other == com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse.getDefaultInstance()) return this;
+        if (other.hasOracleUpgradeInfo()) {
+          mergeOracleUpgradeInfo(other.getOracleUpgradeInfo());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getOracleUpgradeInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo oracleUpgradeInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo, com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo.Builder, com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfoOrBuilder> oracleUpgradeInfoBuilder_;
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 1 [json_name = "oracleUpgradeInfo"];</code>
+       * @return Whether the oracleUpgradeInfo field is set.
+       */
+      public boolean hasOracleUpgradeInfo() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 1 [json_name = "oracleUpgradeInfo"];</code>
+       * @return The oracleUpgradeInfo.
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo getOracleUpgradeInfo() {
+        if (oracleUpgradeInfoBuilder_ == null) {
+          return oracleUpgradeInfo_ == null ? com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo.getDefaultInstance() : oracleUpgradeInfo_;
+        } else {
+          return oracleUpgradeInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 1 [json_name = "oracleUpgradeInfo"];</code>
+       */
+      public Builder setOracleUpgradeInfo(com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo value) {
+        if (oracleUpgradeInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          oracleUpgradeInfo_ = value;
+        } else {
+          oracleUpgradeInfoBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 1 [json_name = "oracleUpgradeInfo"];</code>
+       */
+      public Builder setOracleUpgradeInfo(
+          com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo.Builder builderForValue) {
+        if (oracleUpgradeInfoBuilder_ == null) {
+          oracleUpgradeInfo_ = builderForValue.build();
+        } else {
+          oracleUpgradeInfoBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 1 [json_name = "oracleUpgradeInfo"];</code>
+       */
+      public Builder mergeOracleUpgradeInfo(com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo value) {
+        if (oracleUpgradeInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            oracleUpgradeInfo_ != null &&
+            oracleUpgradeInfo_ != com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo.getDefaultInstance()) {
+            getOracleUpgradeInfoBuilder().mergeFrom(value);
+          } else {
+            oracleUpgradeInfo_ = value;
+          }
+        } else {
+          oracleUpgradeInfoBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 1 [json_name = "oracleUpgradeInfo"];</code>
+       */
+      public Builder clearOracleUpgradeInfo() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        oracleUpgradeInfo_ = null;
+        if (oracleUpgradeInfoBuilder_ != null) {
+          oracleUpgradeInfoBuilder_.dispose();
+          oracleUpgradeInfoBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 1 [json_name = "oracleUpgradeInfo"];</code>
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo.Builder getOracleUpgradeInfoBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getOracleUpgradeInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 1 [json_name = "oracleUpgradeInfo"];</code>
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfoOrBuilder getOracleUpgradeInfoOrBuilder() {
+        if (oracleUpgradeInfoBuilder_ != null) {
+          return oracleUpgradeInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return oracleUpgradeInfo_ == null ?
+              com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo.getDefaultInstance() : oracleUpgradeInfo_;
+        }
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 1 [json_name = "oracleUpgradeInfo"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo, com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo.Builder, com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfoOrBuilder> 
+          getOracleUpgradeInfoFieldBuilder() {
+        if (oracleUpgradeInfoBuilder_ == null) {
+          oracleUpgradeInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo, com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo.Builder, com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfoOrBuilder>(
+                  getOracleUpgradeInfo(),
+                  getParentForChildren(),
+                  isClean());
+          oracleUpgradeInfo_ = null;
+        }
+        return oracleUpgradeInfoBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.oracle.v2alpha2.QueryOracleUpgradeInfoResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.oracle.v2alpha2.QueryOracleUpgradeInfoResponse)
+    private static final com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse();
+    }
+
+    public static com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryOracleUpgradeInfoResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryOracleUpgradeInfoResponse>() {
+      @java.lang.Override
+      public QueryOracleUpgradeInfoResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryOracleUpgradeInfoResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryOracleUpgradeInfoResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.QueryProto.QueryOracleUpgradeInfoResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_oracle_v2alpha2_QueryOraclesRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_oracle_v2alpha2_QueryOraclesRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_oracle_v2alpha2_QueryOraclesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_oracle_v2alpha2_QueryOraclesResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_oracle_v2alpha2_QueryOracleRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_oracle_v2alpha2_QueryOracleRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_oracle_v2alpha2_QueryOracleResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_oracle_v2alpha2_QueryOracleResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_oracle_v2alpha2_QueryOracleRegistrationRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_oracle_v2alpha2_QueryOracleRegistrationRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_oracle_v2alpha2_QueryOracleRegistrationResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_oracle_v2alpha2_QueryOracleRegistrationResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_oracle_v2alpha2_QueryOracleRegistrationVoteRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_oracle_v2alpha2_QueryOracleRegistrationVoteRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_oracle_v2alpha2_QueryOracleRegistrationVoteResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_oracle_v2alpha2_QueryOracleRegistrationVoteResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_oracle_v2alpha2_QueryOracleParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_oracle_v2alpha2_QueryOracleParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_oracle_v2alpha2_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_oracle_v2alpha2_QueryParamsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_oracle_v2alpha2_QueryOracleUpgradeInfoRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_oracle_v2alpha2_QueryOracleUpgradeInfoRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_oracle_v2alpha2_QueryOracleUpgradeInfoResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_oracle_v2alpha2_QueryOracleUpgradeInfoResponse_fieldAccessorTable;
 
@@ -146,12 +7714,12 @@ public final class QueryProto {
       "eUpgradeInfoRequest\0327.panacea.oracle.v2a" +
       "lpha2.QueryOracleUpgradeInfoResponse\"4\202\323" +
       "\344\223\002.\022,/panacea/oracle/v2alpha2/oracle_up" +
-      "grade_infoB\333\001\n\033com.panacea.oracle.v2alph" +
-      "a2B\nQueryProtoP\001Z2github.com/medibloc/pa" +
-      "nacea-core/v2/x/oracle/types\242\002\003POX\252\002\027Pan" +
-      "acea.Oracle.V2alpha2\312\002\027Panacea\\Oracle\\V2" +
-      "alpha2\342\002#Panacea\\Oracle\\V2alpha2\\GPBMeta" +
-      "data\352\002\031Panacea::Oracle::V2alpha2b\006proto3"
+      "grade_infoB\331\001\n\033com.panacea.oracle.v2alph" +
+      "a2B\nQueryProtoZ2github.com/medibloc/pana" +
+      "cea-core/v2/x/oracle/types\242\002\003POX\252\002\027Panac" +
+      "ea.Oracle.V2alpha2\312\002\027Panacea\\Oracle\\V2al" +
+      "pha2\342\002#Panacea\\Oracle\\V2alpha2\\GPBMetada" +
+      "ta\352\002\031Panacea::Oracle::V2alpha2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

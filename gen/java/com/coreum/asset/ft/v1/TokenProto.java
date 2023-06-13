@@ -14,14 +14,3503 @@ public final class TokenProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * <pre>
+   * Feature defines possible features of fungible token.
+   * </pre>
+   *
+   * Protobuf enum {@code coreum.asset.ft.v1.Feature}
+   */
+  public enum Feature
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>minting = 0;</code>
+     */
+    minting(0),
+    /**
+     * <code>burning = 1;</code>
+     */
+    burning(1),
+    /**
+     * <code>freezing = 2;</code>
+     */
+    freezing(2),
+    /**
+     * <code>whitelisting = 3;</code>
+     */
+    whitelisting(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>minting = 0;</code>
+     */
+    public static final int minting_VALUE = 0;
+    /**
+     * <code>burning = 1;</code>
+     */
+    public static final int burning_VALUE = 1;
+    /**
+     * <code>freezing = 2;</code>
+     */
+    public static final int freezing_VALUE = 2;
+    /**
+     * <code>whitelisting = 3;</code>
+     */
+    public static final int whitelisting_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static Feature valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static Feature forNumber(int value) {
+      switch (value) {
+        case 0: return minting;
+        case 1: return burning;
+        case 2: return freezing;
+        case 3: return whitelisting;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<Feature>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        Feature> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Feature>() {
+            public Feature findValueByNumber(int number) {
+              return Feature.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.coreum.asset.ft.v1.TokenProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final Feature[] VALUES = values();
+
+    public static Feature valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private Feature(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:coreum.asset.ft.v1.Feature)
+  }
+
+  public interface DefinitionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:coreum.asset.ft.v1.Definition)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>string issuer = 2 [json_name = "issuer"];</code>
+     * @return The issuer.
+     */
+    java.lang.String getIssuer();
+    /**
+     * <code>string issuer = 2 [json_name = "issuer"];</code>
+     * @return The bytes for issuer.
+     */
+    com.google.protobuf.ByteString
+        getIssuerBytes();
+
+    /**
+     * <code>repeated .coreum.asset.ft.v1.Feature features = 3 [json_name = "features"];</code>
+     * @return A list containing the features.
+     */
+    java.util.List<com.coreum.asset.ft.v1.TokenProto.Feature> getFeaturesList();
+    /**
+     * <code>repeated .coreum.asset.ft.v1.Feature features = 3 [json_name = "features"];</code>
+     * @return The count of features.
+     */
+    int getFeaturesCount();
+    /**
+     * <code>repeated .coreum.asset.ft.v1.Feature features = 3 [json_name = "features"];</code>
+     * @param index The index of the element to return.
+     * @return The features at the given index.
+     */
+    com.coreum.asset.ft.v1.TokenProto.Feature getFeatures(int index);
+    /**
+     * <code>repeated .coreum.asset.ft.v1.Feature features = 3 [json_name = "features"];</code>
+     * @return A list containing the enum numeric values on the wire for features.
+     */
+    java.util.List<java.lang.Integer>
+    getFeaturesValueList();
+    /**
+     * <code>repeated .coreum.asset.ft.v1.Feature features = 3 [json_name = "features"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of features at the given index.
+     */
+    int getFeaturesValue(int index);
+
+    /**
+     * <pre>
+     * burn_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+     * burn_amount. This value will be burnt on top of the send amount.
+     * </pre>
+     *
+     * <code>string burn_rate = 4 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The burnRate.
+     */
+    java.lang.String getBurnRate();
+    /**
+     * <pre>
+     * burn_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+     * burn_amount. This value will be burnt on top of the send amount.
+     * </pre>
+     *
+     * <code>string burn_rate = 4 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for burnRate.
+     */
+    com.google.protobuf.ByteString
+        getBurnRateBytes();
+
+    /**
+     * <pre>
+     * send_commission_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+     * amount sent to the token issuer account.
+     * </pre>
+     *
+     * <code>string send_commission_rate = 5 [json_name = "sendCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The sendCommissionRate.
+     */
+    java.lang.String getSendCommissionRate();
+    /**
+     * <pre>
+     * send_commission_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+     * amount sent to the token issuer account.
+     * </pre>
+     *
+     * <code>string send_commission_rate = 5 [json_name = "sendCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for sendCommissionRate.
+     */
+    com.google.protobuf.ByteString
+        getSendCommissionRateBytes();
+  }
+  /**
+   * <pre>
+   * Definition defines the fungible token settings to store.
+   * </pre>
+   *
+   * Protobuf type {@code coreum.asset.ft.v1.Definition}
+   */
+  public static final class Definition extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:coreum.asset.ft.v1.Definition)
+      DefinitionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Definition.newBuilder() to construct.
+    private Definition(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Definition() {
+      denom_ = "";
+      issuer_ = "";
+      features_ = java.util.Collections.emptyList();
+      burnRate_ = "";
+      sendCommissionRate_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Definition();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.coreum.asset.ft.v1.TokenProto.internal_static_coreum_asset_ft_v1_Definition_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.coreum.asset.ft.v1.TokenProto.internal_static_coreum_asset_ft_v1_Definition_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.coreum.asset.ft.v1.TokenProto.Definition.class, com.coreum.asset.ft.v1.TokenProto.Definition.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ISSUER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object issuer_ = "";
+    /**
+     * <code>string issuer = 2 [json_name = "issuer"];</code>
+     * @return The issuer.
+     */
+    @java.lang.Override
+    public java.lang.String getIssuer() {
+      java.lang.Object ref = issuer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        issuer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string issuer = 2 [json_name = "issuer"];</code>
+     * @return The bytes for issuer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIssuerBytes() {
+      java.lang.Object ref = issuer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        issuer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FEATURES_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<java.lang.Integer> features_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, com.coreum.asset.ft.v1.TokenProto.Feature> features_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, com.coreum.asset.ft.v1.TokenProto.Feature>() {
+              public com.coreum.asset.ft.v1.TokenProto.Feature convert(java.lang.Integer from) {
+                com.coreum.asset.ft.v1.TokenProto.Feature result = com.coreum.asset.ft.v1.TokenProto.Feature.forNumber(from);
+                return result == null ? com.coreum.asset.ft.v1.TokenProto.Feature.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <code>repeated .coreum.asset.ft.v1.Feature features = 3 [json_name = "features"];</code>
+     * @return A list containing the features.
+     */
+    @java.lang.Override
+    public java.util.List<com.coreum.asset.ft.v1.TokenProto.Feature> getFeaturesList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.coreum.asset.ft.v1.TokenProto.Feature>(features_, features_converter_);
+    }
+    /**
+     * <code>repeated .coreum.asset.ft.v1.Feature features = 3 [json_name = "features"];</code>
+     * @return The count of features.
+     */
+    @java.lang.Override
+    public int getFeaturesCount() {
+      return features_.size();
+    }
+    /**
+     * <code>repeated .coreum.asset.ft.v1.Feature features = 3 [json_name = "features"];</code>
+     * @param index The index of the element to return.
+     * @return The features at the given index.
+     */
+    @java.lang.Override
+    public com.coreum.asset.ft.v1.TokenProto.Feature getFeatures(int index) {
+      return features_converter_.convert(features_.get(index));
+    }
+    /**
+     * <code>repeated .coreum.asset.ft.v1.Feature features = 3 [json_name = "features"];</code>
+     * @return A list containing the enum numeric values on the wire for features.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+    getFeaturesValueList() {
+      return features_;
+    }
+    /**
+     * <code>repeated .coreum.asset.ft.v1.Feature features = 3 [json_name = "features"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of features at the given index.
+     */
+    @java.lang.Override
+    public int getFeaturesValue(int index) {
+      return features_.get(index);
+    }
+    private int featuresMemoizedSerializedSize;
+
+    public static final int BURN_RATE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object burnRate_ = "";
+    /**
+     * <pre>
+     * burn_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+     * burn_amount. This value will be burnt on top of the send amount.
+     * </pre>
+     *
+     * <code>string burn_rate = 4 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The burnRate.
+     */
+    @java.lang.Override
+    public java.lang.String getBurnRate() {
+      java.lang.Object ref = burnRate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        burnRate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * burn_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+     * burn_amount. This value will be burnt on top of the send amount.
+     * </pre>
+     *
+     * <code>string burn_rate = 4 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for burnRate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBurnRateBytes() {
+      java.lang.Object ref = burnRate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        burnRate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SEND_COMMISSION_RATE_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sendCommissionRate_ = "";
+    /**
+     * <pre>
+     * send_commission_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+     * amount sent to the token issuer account.
+     * </pre>
+     *
+     * <code>string send_commission_rate = 5 [json_name = "sendCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The sendCommissionRate.
+     */
+    @java.lang.Override
+    public java.lang.String getSendCommissionRate() {
+      java.lang.Object ref = sendCommissionRate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sendCommissionRate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * send_commission_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+     * amount sent to the token issuer account.
+     * </pre>
+     *
+     * <code>string send_commission_rate = 5 [json_name = "sendCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for sendCommissionRate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSendCommissionRateBytes() {
+      java.lang.Object ref = sendCommissionRate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sendCommissionRate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(issuer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, issuer_);
+      }
+      if (getFeaturesList().size() > 0) {
+        output.writeUInt32NoTag(26);
+        output.writeUInt32NoTag(featuresMemoizedSerializedSize);
+      }
+      for (int i = 0; i < features_.size(); i++) {
+        output.writeEnumNoTag(features_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(burnRate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, burnRate_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sendCommissionRate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, sendCommissionRate_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(issuer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, issuer_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < features_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(features_.get(i));
+        }
+        size += dataSize;
+        if (!getFeaturesList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }featuresMemoizedSerializedSize = dataSize;
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(burnRate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, burnRate_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sendCommissionRate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, sendCommissionRate_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.coreum.asset.ft.v1.TokenProto.Definition)) {
+        return super.equals(obj);
+      }
+      com.coreum.asset.ft.v1.TokenProto.Definition other = (com.coreum.asset.ft.v1.TokenProto.Definition) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getIssuer()
+          .equals(other.getIssuer())) return false;
+      if (!features_.equals(other.features_)) return false;
+      if (!getBurnRate()
+          .equals(other.getBurnRate())) return false;
+      if (!getSendCommissionRate()
+          .equals(other.getSendCommissionRate())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + ISSUER_FIELD_NUMBER;
+      hash = (53 * hash) + getIssuer().hashCode();
+      if (getFeaturesCount() > 0) {
+        hash = (37 * hash) + FEATURES_FIELD_NUMBER;
+        hash = (53 * hash) + features_.hashCode();
+      }
+      hash = (37 * hash) + BURN_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getBurnRate().hashCode();
+      hash = (37 * hash) + SEND_COMMISSION_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getSendCommissionRate().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.coreum.asset.ft.v1.TokenProto.Definition parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TokenProto.Definition parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TokenProto.Definition parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TokenProto.Definition parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TokenProto.Definition parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TokenProto.Definition parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TokenProto.Definition parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.ft.v1.TokenProto.Definition parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.coreum.asset.ft.v1.TokenProto.Definition parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.coreum.asset.ft.v1.TokenProto.Definition parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TokenProto.Definition parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.ft.v1.TokenProto.Definition parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.coreum.asset.ft.v1.TokenProto.Definition prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Definition defines the fungible token settings to store.
+     * </pre>
+     *
+     * Protobuf type {@code coreum.asset.ft.v1.Definition}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:coreum.asset.ft.v1.Definition)
+        com.coreum.asset.ft.v1.TokenProto.DefinitionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.coreum.asset.ft.v1.TokenProto.internal_static_coreum_asset_ft_v1_Definition_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.coreum.asset.ft.v1.TokenProto.internal_static_coreum_asset_ft_v1_Definition_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.coreum.asset.ft.v1.TokenProto.Definition.class, com.coreum.asset.ft.v1.TokenProto.Definition.Builder.class);
+      }
+
+      // Construct using com.coreum.asset.ft.v1.TokenProto.Definition.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        issuer_ = "";
+        features_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        burnRate_ = "";
+        sendCommissionRate_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.coreum.asset.ft.v1.TokenProto.internal_static_coreum_asset_ft_v1_Definition_descriptor;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TokenProto.Definition getDefaultInstanceForType() {
+        return com.coreum.asset.ft.v1.TokenProto.Definition.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TokenProto.Definition build() {
+        com.coreum.asset.ft.v1.TokenProto.Definition result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TokenProto.Definition buildPartial() {
+        com.coreum.asset.ft.v1.TokenProto.Definition result = new com.coreum.asset.ft.v1.TokenProto.Definition(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.coreum.asset.ft.v1.TokenProto.Definition result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          features_ = java.util.Collections.unmodifiableList(features_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.features_ = features_;
+      }
+
+      private void buildPartial0(com.coreum.asset.ft.v1.TokenProto.Definition result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.issuer_ = issuer_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.burnRate_ = burnRate_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.sendCommissionRate_ = sendCommissionRate_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.coreum.asset.ft.v1.TokenProto.Definition) {
+          return mergeFrom((com.coreum.asset.ft.v1.TokenProto.Definition)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.coreum.asset.ft.v1.TokenProto.Definition other) {
+        if (other == com.coreum.asset.ft.v1.TokenProto.Definition.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getIssuer().isEmpty()) {
+          issuer_ = other.issuer_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.features_.isEmpty()) {
+          if (features_.isEmpty()) {
+            features_ = other.features_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureFeaturesIsMutable();
+            features_.addAll(other.features_);
+          }
+          onChanged();
+        }
+        if (!other.getBurnRate().isEmpty()) {
+          burnRate_ = other.burnRate_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getSendCommissionRate().isEmpty()) {
+          sendCommissionRate_ = other.sendCommissionRate_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                issuer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                int tmpRaw = input.readEnum();
+                ensureFeaturesIsMutable();
+                features_.add(tmpRaw);
+                break;
+              } // case 24
+              case 26: {
+                int length = input.readRawVarint32();
+                int oldLimit = input.pushLimit(length);
+                while(input.getBytesUntilLimit() > 0) {
+                  int tmpRaw = input.readEnum();
+                  ensureFeaturesIsMutable();
+                  features_.add(tmpRaw);
+                }
+                input.popLimit(oldLimit);
+                break;
+              } // case 26
+              case 34: {
+                burnRate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                sendCommissionRate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object issuer_ = "";
+      /**
+       * <code>string issuer = 2 [json_name = "issuer"];</code>
+       * @return The issuer.
+       */
+      public java.lang.String getIssuer() {
+        java.lang.Object ref = issuer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          issuer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string issuer = 2 [json_name = "issuer"];</code>
+       * @return The bytes for issuer.
+       */
+      public com.google.protobuf.ByteString
+          getIssuerBytes() {
+        java.lang.Object ref = issuer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          issuer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string issuer = 2 [json_name = "issuer"];</code>
+       * @param value The issuer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssuer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        issuer_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string issuer = 2 [json_name = "issuer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIssuer() {
+        issuer_ = getDefaultInstance().getIssuer();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string issuer = 2 [json_name = "issuer"];</code>
+       * @param value The bytes for issuer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssuerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        issuer_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Integer> features_ =
+        java.util.Collections.emptyList();
+      private void ensureFeaturesIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          features_ = new java.util.ArrayList<java.lang.Integer>(features_);
+          bitField0_ |= 0x00000004;
+        }
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 3 [json_name = "features"];</code>
+       * @return A list containing the features.
+       */
+      public java.util.List<com.coreum.asset.ft.v1.TokenProto.Feature> getFeaturesList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, com.coreum.asset.ft.v1.TokenProto.Feature>(features_, features_converter_);
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 3 [json_name = "features"];</code>
+       * @return The count of features.
+       */
+      public int getFeaturesCount() {
+        return features_.size();
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 3 [json_name = "features"];</code>
+       * @param index The index of the element to return.
+       * @return The features at the given index.
+       */
+      public com.coreum.asset.ft.v1.TokenProto.Feature getFeatures(int index) {
+        return features_converter_.convert(features_.get(index));
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 3 [json_name = "features"];</code>
+       * @param index The index to set the value at.
+       * @param value The features to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeatures(
+          int index, com.coreum.asset.ft.v1.TokenProto.Feature value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFeaturesIsMutable();
+        features_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 3 [json_name = "features"];</code>
+       * @param value The features to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFeatures(com.coreum.asset.ft.v1.TokenProto.Feature value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFeaturesIsMutable();
+        features_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 3 [json_name = "features"];</code>
+       * @param values The features to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllFeatures(
+          java.lang.Iterable<? extends com.coreum.asset.ft.v1.TokenProto.Feature> values) {
+        ensureFeaturesIsMutable();
+        for (com.coreum.asset.ft.v1.TokenProto.Feature value : values) {
+          features_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 3 [json_name = "features"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeatures() {
+        features_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 3 [json_name = "features"];</code>
+       * @return A list containing the enum numeric values on the wire for features.
+       */
+      public java.util.List<java.lang.Integer>
+      getFeaturesValueList() {
+        return java.util.Collections.unmodifiableList(features_);
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 3 [json_name = "features"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of features at the given index.
+       */
+      public int getFeaturesValue(int index) {
+        return features_.get(index);
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 3 [json_name = "features"];</code>
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for features to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeaturesValue(
+          int index, int value) {
+        ensureFeaturesIsMutable();
+        features_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 3 [json_name = "features"];</code>
+       * @param value The enum numeric value on the wire for features to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFeaturesValue(int value) {
+        ensureFeaturesIsMutable();
+        features_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 3 [json_name = "features"];</code>
+       * @param values The enum numeric values on the wire for features to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllFeaturesValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureFeaturesIsMutable();
+        for (int value : values) {
+          features_.add(value);
+        }
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object burnRate_ = "";
+      /**
+       * <pre>
+       * burn_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+       * burn_amount. This value will be burnt on top of the send amount.
+       * </pre>
+       *
+       * <code>string burn_rate = 4 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The burnRate.
+       */
+      public java.lang.String getBurnRate() {
+        java.lang.Object ref = burnRate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          burnRate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * burn_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+       * burn_amount. This value will be burnt on top of the send amount.
+       * </pre>
+       *
+       * <code>string burn_rate = 4 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for burnRate.
+       */
+      public com.google.protobuf.ByteString
+          getBurnRateBytes() {
+        java.lang.Object ref = burnRate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          burnRate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * burn_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+       * burn_amount. This value will be burnt on top of the send amount.
+       * </pre>
+       *
+       * <code>string burn_rate = 4 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The burnRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBurnRate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        burnRate_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * burn_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+       * burn_amount. This value will be burnt on top of the send amount.
+       * </pre>
+       *
+       * <code>string burn_rate = 4 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBurnRate() {
+        burnRate_ = getDefaultInstance().getBurnRate();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * burn_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+       * burn_amount. This value will be burnt on top of the send amount.
+       * </pre>
+       *
+       * <code>string burn_rate = 4 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for burnRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBurnRateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        burnRate_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sendCommissionRate_ = "";
+      /**
+       * <pre>
+       * send_commission_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+       * amount sent to the token issuer account.
+       * </pre>
+       *
+       * <code>string send_commission_rate = 5 [json_name = "sendCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The sendCommissionRate.
+       */
+      public java.lang.String getSendCommissionRate() {
+        java.lang.Object ref = sendCommissionRate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sendCommissionRate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * send_commission_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+       * amount sent to the token issuer account.
+       * </pre>
+       *
+       * <code>string send_commission_rate = 5 [json_name = "sendCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for sendCommissionRate.
+       */
+      public com.google.protobuf.ByteString
+          getSendCommissionRateBytes() {
+        java.lang.Object ref = sendCommissionRate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sendCommissionRate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * send_commission_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+       * amount sent to the token issuer account.
+       * </pre>
+       *
+       * <code>string send_commission_rate = 5 [json_name = "sendCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The sendCommissionRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSendCommissionRate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sendCommissionRate_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * send_commission_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+       * amount sent to the token issuer account.
+       * </pre>
+       *
+       * <code>string send_commission_rate = 5 [json_name = "sendCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSendCommissionRate() {
+        sendCommissionRate_ = getDefaultInstance().getSendCommissionRate();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * send_commission_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+       * amount sent to the token issuer account.
+       * </pre>
+       *
+       * <code>string send_commission_rate = 5 [json_name = "sendCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for sendCommissionRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSendCommissionRateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sendCommissionRate_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:coreum.asset.ft.v1.Definition)
+    }
+
+    // @@protoc_insertion_point(class_scope:coreum.asset.ft.v1.Definition)
+    private static final com.coreum.asset.ft.v1.TokenProto.Definition DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.coreum.asset.ft.v1.TokenProto.Definition();
+    }
+
+    public static com.coreum.asset.ft.v1.TokenProto.Definition getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Definition>
+        PARSER = new com.google.protobuf.AbstractParser<Definition>() {
+      @java.lang.Override
+      public Definition parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Definition> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Definition> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.coreum.asset.ft.v1.TokenProto.Definition getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TokenOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:coreum.asset.ft.v1.Token)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>string issuer = 2 [json_name = "issuer"];</code>
+     * @return The issuer.
+     */
+    java.lang.String getIssuer();
+    /**
+     * <code>string issuer = 2 [json_name = "issuer"];</code>
+     * @return The bytes for issuer.
+     */
+    com.google.protobuf.ByteString
+        getIssuerBytes();
+
+    /**
+     * <code>string symbol = 3 [json_name = "symbol"];</code>
+     * @return The symbol.
+     */
+    java.lang.String getSymbol();
+    /**
+     * <code>string symbol = 3 [json_name = "symbol"];</code>
+     * @return The bytes for symbol.
+     */
+    com.google.protobuf.ByteString
+        getSymbolBytes();
+
+    /**
+     * <code>string subunit = 4 [json_name = "subunit"];</code>
+     * @return The subunit.
+     */
+    java.lang.String getSubunit();
+    /**
+     * <code>string subunit = 4 [json_name = "subunit"];</code>
+     * @return The bytes for subunit.
+     */
+    com.google.protobuf.ByteString
+        getSubunitBytes();
+
+    /**
+     * <code>uint32 precision = 5 [json_name = "precision"];</code>
+     * @return The precision.
+     */
+    int getPrecision();
+
+    /**
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>bool globally_frozen = 7 [json_name = "globallyFrozen"];</code>
+     * @return The globallyFrozen.
+     */
+    boolean getGloballyFrozen();
+
+    /**
+     * <code>repeated .coreum.asset.ft.v1.Feature features = 8 [json_name = "features"];</code>
+     * @return A list containing the features.
+     */
+    java.util.List<com.coreum.asset.ft.v1.TokenProto.Feature> getFeaturesList();
+    /**
+     * <code>repeated .coreum.asset.ft.v1.Feature features = 8 [json_name = "features"];</code>
+     * @return The count of features.
+     */
+    int getFeaturesCount();
+    /**
+     * <code>repeated .coreum.asset.ft.v1.Feature features = 8 [json_name = "features"];</code>
+     * @param index The index of the element to return.
+     * @return The features at the given index.
+     */
+    com.coreum.asset.ft.v1.TokenProto.Feature getFeatures(int index);
+    /**
+     * <code>repeated .coreum.asset.ft.v1.Feature features = 8 [json_name = "features"];</code>
+     * @return A list containing the enum numeric values on the wire for features.
+     */
+    java.util.List<java.lang.Integer>
+    getFeaturesValueList();
+    /**
+     * <code>repeated .coreum.asset.ft.v1.Feature features = 8 [json_name = "features"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of features at the given index.
+     */
+    int getFeaturesValue(int index);
+
+    /**
+     * <pre>
+     * burn_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+     * burn_amount. This value will be burnt on top of the send amount.
+     * </pre>
+     *
+     * <code>string burn_rate = 9 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The burnRate.
+     */
+    java.lang.String getBurnRate();
+    /**
+     * <pre>
+     * burn_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+     * burn_amount. This value will be burnt on top of the send amount.
+     * </pre>
+     *
+     * <code>string burn_rate = 9 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for burnRate.
+     */
+    com.google.protobuf.ByteString
+        getBurnRateBytes();
+
+    /**
+     * <pre>
+     * send_commission_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+     * amount sent to the token issuer account.
+     * </pre>
+     *
+     * <code>string send_commission_rate = 10 [json_name = "sendCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The sendCommissionRate.
+     */
+    java.lang.String getSendCommissionRate();
+    /**
+     * <pre>
+     * send_commission_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+     * amount sent to the token issuer account.
+     * </pre>
+     *
+     * <code>string send_commission_rate = 10 [json_name = "sendCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for sendCommissionRate.
+     */
+    com.google.protobuf.ByteString
+        getSendCommissionRateBytes();
+  }
+  /**
+   * <pre>
+   * Token is a full representation of the fungible token.
+   * </pre>
+   *
+   * Protobuf type {@code coreum.asset.ft.v1.Token}
+   */
+  public static final class Token extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:coreum.asset.ft.v1.Token)
+      TokenOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Token.newBuilder() to construct.
+    private Token(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Token() {
+      denom_ = "";
+      issuer_ = "";
+      symbol_ = "";
+      subunit_ = "";
+      description_ = "";
+      features_ = java.util.Collections.emptyList();
+      burnRate_ = "";
+      sendCommissionRate_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Token();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.coreum.asset.ft.v1.TokenProto.internal_static_coreum_asset_ft_v1_Token_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.coreum.asset.ft.v1.TokenProto.internal_static_coreum_asset_ft_v1_Token_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.coreum.asset.ft.v1.TokenProto.Token.class, com.coreum.asset.ft.v1.TokenProto.Token.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ISSUER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object issuer_ = "";
+    /**
+     * <code>string issuer = 2 [json_name = "issuer"];</code>
+     * @return The issuer.
+     */
+    @java.lang.Override
+    public java.lang.String getIssuer() {
+      java.lang.Object ref = issuer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        issuer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string issuer = 2 [json_name = "issuer"];</code>
+     * @return The bytes for issuer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIssuerBytes() {
+      java.lang.Object ref = issuer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        issuer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SYMBOL_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object symbol_ = "";
+    /**
+     * <code>string symbol = 3 [json_name = "symbol"];</code>
+     * @return The symbol.
+     */
+    @java.lang.Override
+    public java.lang.String getSymbol() {
+      java.lang.Object ref = symbol_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        symbol_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string symbol = 3 [json_name = "symbol"];</code>
+     * @return The bytes for symbol.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSymbolBytes() {
+      java.lang.Object ref = symbol_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        symbol_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUBUNIT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object subunit_ = "";
+    /**
+     * <code>string subunit = 4 [json_name = "subunit"];</code>
+     * @return The subunit.
+     */
+    @java.lang.Override
+    public java.lang.String getSubunit() {
+      java.lang.Object ref = subunit_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subunit_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string subunit = 4 [json_name = "subunit"];</code>
+     * @return The bytes for subunit.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubunitBytes() {
+      java.lang.Object ref = subunit_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subunit_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PRECISION_FIELD_NUMBER = 5;
+    private int precision_ = 0;
+    /**
+     * <code>uint32 precision = 5 [json_name = "precision"];</code>
+     * @return The precision.
+     */
+    @java.lang.Override
+    public int getPrecision() {
+      return precision_;
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GLOBALLY_FROZEN_FIELD_NUMBER = 7;
+    private boolean globallyFrozen_ = false;
+    /**
+     * <code>bool globally_frozen = 7 [json_name = "globallyFrozen"];</code>
+     * @return The globallyFrozen.
+     */
+    @java.lang.Override
+    public boolean getGloballyFrozen() {
+      return globallyFrozen_;
+    }
+
+    public static final int FEATURES_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private java.util.List<java.lang.Integer> features_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, com.coreum.asset.ft.v1.TokenProto.Feature> features_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, com.coreum.asset.ft.v1.TokenProto.Feature>() {
+              public com.coreum.asset.ft.v1.TokenProto.Feature convert(java.lang.Integer from) {
+                com.coreum.asset.ft.v1.TokenProto.Feature result = com.coreum.asset.ft.v1.TokenProto.Feature.forNumber(from);
+                return result == null ? com.coreum.asset.ft.v1.TokenProto.Feature.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <code>repeated .coreum.asset.ft.v1.Feature features = 8 [json_name = "features"];</code>
+     * @return A list containing the features.
+     */
+    @java.lang.Override
+    public java.util.List<com.coreum.asset.ft.v1.TokenProto.Feature> getFeaturesList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.coreum.asset.ft.v1.TokenProto.Feature>(features_, features_converter_);
+    }
+    /**
+     * <code>repeated .coreum.asset.ft.v1.Feature features = 8 [json_name = "features"];</code>
+     * @return The count of features.
+     */
+    @java.lang.Override
+    public int getFeaturesCount() {
+      return features_.size();
+    }
+    /**
+     * <code>repeated .coreum.asset.ft.v1.Feature features = 8 [json_name = "features"];</code>
+     * @param index The index of the element to return.
+     * @return The features at the given index.
+     */
+    @java.lang.Override
+    public com.coreum.asset.ft.v1.TokenProto.Feature getFeatures(int index) {
+      return features_converter_.convert(features_.get(index));
+    }
+    /**
+     * <code>repeated .coreum.asset.ft.v1.Feature features = 8 [json_name = "features"];</code>
+     * @return A list containing the enum numeric values on the wire for features.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+    getFeaturesValueList() {
+      return features_;
+    }
+    /**
+     * <code>repeated .coreum.asset.ft.v1.Feature features = 8 [json_name = "features"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of features at the given index.
+     */
+    @java.lang.Override
+    public int getFeaturesValue(int index) {
+      return features_.get(index);
+    }
+    private int featuresMemoizedSerializedSize;
+
+    public static final int BURN_RATE_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object burnRate_ = "";
+    /**
+     * <pre>
+     * burn_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+     * burn_amount. This value will be burnt on top of the send amount.
+     * </pre>
+     *
+     * <code>string burn_rate = 9 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The burnRate.
+     */
+    @java.lang.Override
+    public java.lang.String getBurnRate() {
+      java.lang.Object ref = burnRate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        burnRate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * burn_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+     * burn_amount. This value will be burnt on top of the send amount.
+     * </pre>
+     *
+     * <code>string burn_rate = 9 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for burnRate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBurnRateBytes() {
+      java.lang.Object ref = burnRate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        burnRate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SEND_COMMISSION_RATE_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sendCommissionRate_ = "";
+    /**
+     * <pre>
+     * send_commission_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+     * amount sent to the token issuer account.
+     * </pre>
+     *
+     * <code>string send_commission_rate = 10 [json_name = "sendCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The sendCommissionRate.
+     */
+    @java.lang.Override
+    public java.lang.String getSendCommissionRate() {
+      java.lang.Object ref = sendCommissionRate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sendCommissionRate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * send_commission_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+     * amount sent to the token issuer account.
+     * </pre>
+     *
+     * <code>string send_commission_rate = 10 [json_name = "sendCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for sendCommissionRate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSendCommissionRateBytes() {
+      java.lang.Object ref = sendCommissionRate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sendCommissionRate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(issuer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, issuer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symbol_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, symbol_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subunit_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, subunit_);
+      }
+      if (precision_ != 0) {
+        output.writeUInt32(5, precision_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, description_);
+      }
+      if (globallyFrozen_ != false) {
+        output.writeBool(7, globallyFrozen_);
+      }
+      if (getFeaturesList().size() > 0) {
+        output.writeUInt32NoTag(66);
+        output.writeUInt32NoTag(featuresMemoizedSerializedSize);
+      }
+      for (int i = 0; i < features_.size(); i++) {
+        output.writeEnumNoTag(features_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(burnRate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, burnRate_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sendCommissionRate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, sendCommissionRate_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(issuer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, issuer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symbol_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, symbol_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subunit_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, subunit_);
+      }
+      if (precision_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(5, precision_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, description_);
+      }
+      if (globallyFrozen_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, globallyFrozen_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < features_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(features_.get(i));
+        }
+        size += dataSize;
+        if (!getFeaturesList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }featuresMemoizedSerializedSize = dataSize;
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(burnRate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, burnRate_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sendCommissionRate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, sendCommissionRate_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.coreum.asset.ft.v1.TokenProto.Token)) {
+        return super.equals(obj);
+      }
+      com.coreum.asset.ft.v1.TokenProto.Token other = (com.coreum.asset.ft.v1.TokenProto.Token) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getIssuer()
+          .equals(other.getIssuer())) return false;
+      if (!getSymbol()
+          .equals(other.getSymbol())) return false;
+      if (!getSubunit()
+          .equals(other.getSubunit())) return false;
+      if (getPrecision()
+          != other.getPrecision()) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (getGloballyFrozen()
+          != other.getGloballyFrozen()) return false;
+      if (!features_.equals(other.features_)) return false;
+      if (!getBurnRate()
+          .equals(other.getBurnRate())) return false;
+      if (!getSendCommissionRate()
+          .equals(other.getSendCommissionRate())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + ISSUER_FIELD_NUMBER;
+      hash = (53 * hash) + getIssuer().hashCode();
+      hash = (37 * hash) + SYMBOL_FIELD_NUMBER;
+      hash = (53 * hash) + getSymbol().hashCode();
+      hash = (37 * hash) + SUBUNIT_FIELD_NUMBER;
+      hash = (53 * hash) + getSubunit().hashCode();
+      hash = (37 * hash) + PRECISION_FIELD_NUMBER;
+      hash = (53 * hash) + getPrecision();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + GLOBALLY_FROZEN_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getGloballyFrozen());
+      if (getFeaturesCount() > 0) {
+        hash = (37 * hash) + FEATURES_FIELD_NUMBER;
+        hash = (53 * hash) + features_.hashCode();
+      }
+      hash = (37 * hash) + BURN_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getBurnRate().hashCode();
+      hash = (37 * hash) + SEND_COMMISSION_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getSendCommissionRate().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.coreum.asset.ft.v1.TokenProto.Token parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TokenProto.Token parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TokenProto.Token parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TokenProto.Token parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TokenProto.Token parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.TokenProto.Token parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TokenProto.Token parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.ft.v1.TokenProto.Token parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.coreum.asset.ft.v1.TokenProto.Token parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.coreum.asset.ft.v1.TokenProto.Token parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.TokenProto.Token parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.ft.v1.TokenProto.Token parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.coreum.asset.ft.v1.TokenProto.Token prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Token is a full representation of the fungible token.
+     * </pre>
+     *
+     * Protobuf type {@code coreum.asset.ft.v1.Token}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:coreum.asset.ft.v1.Token)
+        com.coreum.asset.ft.v1.TokenProto.TokenOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.coreum.asset.ft.v1.TokenProto.internal_static_coreum_asset_ft_v1_Token_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.coreum.asset.ft.v1.TokenProto.internal_static_coreum_asset_ft_v1_Token_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.coreum.asset.ft.v1.TokenProto.Token.class, com.coreum.asset.ft.v1.TokenProto.Token.Builder.class);
+      }
+
+      // Construct using com.coreum.asset.ft.v1.TokenProto.Token.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        issuer_ = "";
+        symbol_ = "";
+        subunit_ = "";
+        precision_ = 0;
+        description_ = "";
+        globallyFrozen_ = false;
+        features_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        burnRate_ = "";
+        sendCommissionRate_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.coreum.asset.ft.v1.TokenProto.internal_static_coreum_asset_ft_v1_Token_descriptor;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TokenProto.Token getDefaultInstanceForType() {
+        return com.coreum.asset.ft.v1.TokenProto.Token.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TokenProto.Token build() {
+        com.coreum.asset.ft.v1.TokenProto.Token result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.TokenProto.Token buildPartial() {
+        com.coreum.asset.ft.v1.TokenProto.Token result = new com.coreum.asset.ft.v1.TokenProto.Token(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.coreum.asset.ft.v1.TokenProto.Token result) {
+        if (((bitField0_ & 0x00000080) != 0)) {
+          features_ = java.util.Collections.unmodifiableList(features_);
+          bitField0_ = (bitField0_ & ~0x00000080);
+        }
+        result.features_ = features_;
+      }
+
+      private void buildPartial0(com.coreum.asset.ft.v1.TokenProto.Token result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.issuer_ = issuer_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.symbol_ = symbol_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.subunit_ = subunit_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.precision_ = precision_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.globallyFrozen_ = globallyFrozen_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.burnRate_ = burnRate_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.sendCommissionRate_ = sendCommissionRate_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.coreum.asset.ft.v1.TokenProto.Token) {
+          return mergeFrom((com.coreum.asset.ft.v1.TokenProto.Token)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.coreum.asset.ft.v1.TokenProto.Token other) {
+        if (other == com.coreum.asset.ft.v1.TokenProto.Token.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getIssuer().isEmpty()) {
+          issuer_ = other.issuer_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getSymbol().isEmpty()) {
+          symbol_ = other.symbol_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getSubunit().isEmpty()) {
+          subunit_ = other.subunit_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.getPrecision() != 0) {
+          setPrecision(other.getPrecision());
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (other.getGloballyFrozen() != false) {
+          setGloballyFrozen(other.getGloballyFrozen());
+        }
+        if (!other.features_.isEmpty()) {
+          if (features_.isEmpty()) {
+            features_ = other.features_;
+            bitField0_ = (bitField0_ & ~0x00000080);
+          } else {
+            ensureFeaturesIsMutable();
+            features_.addAll(other.features_);
+          }
+          onChanged();
+        }
+        if (!other.getBurnRate().isEmpty()) {
+          burnRate_ = other.burnRate_;
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
+        if (!other.getSendCommissionRate().isEmpty()) {
+          sendCommissionRate_ = other.sendCommissionRate_;
+          bitField0_ |= 0x00000200;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                issuer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                symbol_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                subunit_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                precision_ = input.readUInt32();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 50: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 56: {
+                globallyFrozen_ = input.readBool();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              case 64: {
+                int tmpRaw = input.readEnum();
+                ensureFeaturesIsMutable();
+                features_.add(tmpRaw);
+                break;
+              } // case 64
+              case 66: {
+                int length = input.readRawVarint32();
+                int oldLimit = input.pushLimit(length);
+                while(input.getBytesUntilLimit() > 0) {
+                  int tmpRaw = input.readEnum();
+                  ensureFeaturesIsMutable();
+                  features_.add(tmpRaw);
+                }
+                input.popLimit(oldLimit);
+                break;
+              } // case 66
+              case 74: {
+                burnRate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              case 82: {
+                sendCommissionRate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object issuer_ = "";
+      /**
+       * <code>string issuer = 2 [json_name = "issuer"];</code>
+       * @return The issuer.
+       */
+      public java.lang.String getIssuer() {
+        java.lang.Object ref = issuer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          issuer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string issuer = 2 [json_name = "issuer"];</code>
+       * @return The bytes for issuer.
+       */
+      public com.google.protobuf.ByteString
+          getIssuerBytes() {
+        java.lang.Object ref = issuer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          issuer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string issuer = 2 [json_name = "issuer"];</code>
+       * @param value The issuer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssuer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        issuer_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string issuer = 2 [json_name = "issuer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIssuer() {
+        issuer_ = getDefaultInstance().getIssuer();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string issuer = 2 [json_name = "issuer"];</code>
+       * @param value The bytes for issuer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssuerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        issuer_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object symbol_ = "";
+      /**
+       * <code>string symbol = 3 [json_name = "symbol"];</code>
+       * @return The symbol.
+       */
+      public java.lang.String getSymbol() {
+        java.lang.Object ref = symbol_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          symbol_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string symbol = 3 [json_name = "symbol"];</code>
+       * @return The bytes for symbol.
+       */
+      public com.google.protobuf.ByteString
+          getSymbolBytes() {
+        java.lang.Object ref = symbol_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          symbol_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string symbol = 3 [json_name = "symbol"];</code>
+       * @param value The symbol to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSymbol(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        symbol_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string symbol = 3 [json_name = "symbol"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSymbol() {
+        symbol_ = getDefaultInstance().getSymbol();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string symbol = 3 [json_name = "symbol"];</code>
+       * @param value The bytes for symbol to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSymbolBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        symbol_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object subunit_ = "";
+      /**
+       * <code>string subunit = 4 [json_name = "subunit"];</code>
+       * @return The subunit.
+       */
+      public java.lang.String getSubunit() {
+        java.lang.Object ref = subunit_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subunit_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string subunit = 4 [json_name = "subunit"];</code>
+       * @return The bytes for subunit.
+       */
+      public com.google.protobuf.ByteString
+          getSubunitBytes() {
+        java.lang.Object ref = subunit_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subunit_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string subunit = 4 [json_name = "subunit"];</code>
+       * @param value The subunit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubunit(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        subunit_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subunit = 4 [json_name = "subunit"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubunit() {
+        subunit_ = getDefaultInstance().getSubunit();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subunit = 4 [json_name = "subunit"];</code>
+       * @param value The bytes for subunit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubunitBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        subunit_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private int precision_ ;
+      /**
+       * <code>uint32 precision = 5 [json_name = "precision"];</code>
+       * @return The precision.
+       */
+      @java.lang.Override
+      public int getPrecision() {
+        return precision_;
+      }
+      /**
+       * <code>uint32 precision = 5 [json_name = "precision"];</code>
+       * @param value The precision to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrecision(int value) {
+
+        precision_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 precision = 5 [json_name = "precision"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrecision() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        precision_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 6 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 6 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 6 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 6 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 6 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private boolean globallyFrozen_ ;
+      /**
+       * <code>bool globally_frozen = 7 [json_name = "globallyFrozen"];</code>
+       * @return The globallyFrozen.
+       */
+      @java.lang.Override
+      public boolean getGloballyFrozen() {
+        return globallyFrozen_;
+      }
+      /**
+       * <code>bool globally_frozen = 7 [json_name = "globallyFrozen"];</code>
+       * @param value The globallyFrozen to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGloballyFrozen(boolean value) {
+
+        globallyFrozen_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool globally_frozen = 7 [json_name = "globallyFrozen"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGloballyFrozen() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        globallyFrozen_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Integer> features_ =
+        java.util.Collections.emptyList();
+      private void ensureFeaturesIsMutable() {
+        if (!((bitField0_ & 0x00000080) != 0)) {
+          features_ = new java.util.ArrayList<java.lang.Integer>(features_);
+          bitField0_ |= 0x00000080;
+        }
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 8 [json_name = "features"];</code>
+       * @return A list containing the features.
+       */
+      public java.util.List<com.coreum.asset.ft.v1.TokenProto.Feature> getFeaturesList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, com.coreum.asset.ft.v1.TokenProto.Feature>(features_, features_converter_);
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 8 [json_name = "features"];</code>
+       * @return The count of features.
+       */
+      public int getFeaturesCount() {
+        return features_.size();
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 8 [json_name = "features"];</code>
+       * @param index The index of the element to return.
+       * @return The features at the given index.
+       */
+      public com.coreum.asset.ft.v1.TokenProto.Feature getFeatures(int index) {
+        return features_converter_.convert(features_.get(index));
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 8 [json_name = "features"];</code>
+       * @param index The index to set the value at.
+       * @param value The features to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeatures(
+          int index, com.coreum.asset.ft.v1.TokenProto.Feature value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFeaturesIsMutable();
+        features_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 8 [json_name = "features"];</code>
+       * @param value The features to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFeatures(com.coreum.asset.ft.v1.TokenProto.Feature value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFeaturesIsMutable();
+        features_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 8 [json_name = "features"];</code>
+       * @param values The features to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllFeatures(
+          java.lang.Iterable<? extends com.coreum.asset.ft.v1.TokenProto.Feature> values) {
+        ensureFeaturesIsMutable();
+        for (com.coreum.asset.ft.v1.TokenProto.Feature value : values) {
+          features_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 8 [json_name = "features"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeatures() {
+        features_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 8 [json_name = "features"];</code>
+       * @return A list containing the enum numeric values on the wire for features.
+       */
+      public java.util.List<java.lang.Integer>
+      getFeaturesValueList() {
+        return java.util.Collections.unmodifiableList(features_);
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 8 [json_name = "features"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of features at the given index.
+       */
+      public int getFeaturesValue(int index) {
+        return features_.get(index);
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 8 [json_name = "features"];</code>
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for features to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeaturesValue(
+          int index, int value) {
+        ensureFeaturesIsMutable();
+        features_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 8 [json_name = "features"];</code>
+       * @param value The enum numeric value on the wire for features to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFeaturesValue(int value) {
+        ensureFeaturesIsMutable();
+        features_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .coreum.asset.ft.v1.Feature features = 8 [json_name = "features"];</code>
+       * @param values The enum numeric values on the wire for features to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllFeaturesValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureFeaturesIsMutable();
+        for (int value : values) {
+          features_.add(value);
+        }
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object burnRate_ = "";
+      /**
+       * <pre>
+       * burn_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+       * burn_amount. This value will be burnt on top of the send amount.
+       * </pre>
+       *
+       * <code>string burn_rate = 9 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The burnRate.
+       */
+      public java.lang.String getBurnRate() {
+        java.lang.Object ref = burnRate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          burnRate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * burn_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+       * burn_amount. This value will be burnt on top of the send amount.
+       * </pre>
+       *
+       * <code>string burn_rate = 9 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for burnRate.
+       */
+      public com.google.protobuf.ByteString
+          getBurnRateBytes() {
+        java.lang.Object ref = burnRate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          burnRate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * burn_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+       * burn_amount. This value will be burnt on top of the send amount.
+       * </pre>
+       *
+       * <code>string burn_rate = 9 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The burnRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBurnRate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        burnRate_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * burn_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+       * burn_amount. This value will be burnt on top of the send amount.
+       * </pre>
+       *
+       * <code>string burn_rate = 9 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBurnRate() {
+        burnRate_ = getDefaultInstance().getBurnRate();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * burn_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+       * burn_amount. This value will be burnt on top of the send amount.
+       * </pre>
+       *
+       * <code>string burn_rate = 9 [json_name = "burnRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for burnRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBurnRateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        burnRate_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sendCommissionRate_ = "";
+      /**
+       * <pre>
+       * send_commission_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+       * amount sent to the token issuer account.
+       * </pre>
+       *
+       * <code>string send_commission_rate = 10 [json_name = "sendCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The sendCommissionRate.
+       */
+      public java.lang.String getSendCommissionRate() {
+        java.lang.Object ref = sendCommissionRate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sendCommissionRate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * send_commission_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+       * amount sent to the token issuer account.
+       * </pre>
+       *
+       * <code>string send_commission_rate = 10 [json_name = "sendCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for sendCommissionRate.
+       */
+      public com.google.protobuf.ByteString
+          getSendCommissionRateBytes() {
+        java.lang.Object ref = sendCommissionRate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sendCommissionRate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * send_commission_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+       * amount sent to the token issuer account.
+       * </pre>
+       *
+       * <code>string send_commission_rate = 10 [json_name = "sendCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The sendCommissionRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSendCommissionRate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sendCommissionRate_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * send_commission_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+       * amount sent to the token issuer account.
+       * </pre>
+       *
+       * <code>string send_commission_rate = 10 [json_name = "sendCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSendCommissionRate() {
+        sendCommissionRate_ = getDefaultInstance().getSendCommissionRate();
+        bitField0_ = (bitField0_ & ~0x00000200);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * send_commission_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+       * amount sent to the token issuer account.
+       * </pre>
+       *
+       * <code>string send_commission_rate = 10 [json_name = "sendCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for sendCommissionRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSendCommissionRateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sendCommissionRate_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:coreum.asset.ft.v1.Token)
+    }
+
+    // @@protoc_insertion_point(class_scope:coreum.asset.ft.v1.Token)
+    private static final com.coreum.asset.ft.v1.TokenProto.Token DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.coreum.asset.ft.v1.TokenProto.Token();
+    }
+
+    public static com.coreum.asset.ft.v1.TokenProto.Token getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Token>
+        PARSER = new com.google.protobuf.AbstractParser<Token>() {
+      @java.lang.Override
+      public Token parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Token> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Token> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.coreum.asset.ft.v1.TokenProto.Token getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_coreum_asset_ft_v1_Definition_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_coreum_asset_ft_v1_Definition_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_coreum_asset_ft_v1_Token_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_coreum_asset_ft_v1_Token_fieldAccessorTable;
 
@@ -56,12 +3545,12 @@ public final class TokenProto {
       ".com/cosmos/cosmos-sdk/types.DecR\022sendCo" +
       "mmissionRate:\010\210\240\037\000\350\240\037\000*C\n\007Feature\022\013\n\007min" +
       "ting\020\000\022\013\n\007burning\020\001\022\014\n\010freezing\020\002\022\020\n\014whi" +
-      "telisting\020\003B\304\001\n\026com.coreum.asset.ft.v1B\n" +
-      "TokenProtoP\001Z3github.com/CoreumFoundatio" +
-      "n/coreum/x/asset/ft/types\242\002\003CAF\252\002\022Coreum" +
-      ".Asset.Ft.V1\312\002\022Coreum\\Asset\\Ft\\V1\342\002\036Core" +
-      "um\\Asset\\Ft\\V1\\GPBMetadata\352\002\025Coreum::Ass" +
-      "et::Ft::V1b\006proto3"
+      "telisting\020\003B\302\001\n\026com.coreum.asset.ft.v1B\n" +
+      "TokenProtoZ3github.com/CoreumFoundation/" +
+      "coreum/x/asset/ft/types\242\002\003CAF\252\002\022Coreum.A" +
+      "sset.Ft.V1\312\002\022Coreum\\Asset\\Ft\\V1\342\002\036Coreum" +
+      "\\Asset\\Ft\\V1\\GPBMetadata\352\002\025Coreum::Asset" +
+      "::Ft::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

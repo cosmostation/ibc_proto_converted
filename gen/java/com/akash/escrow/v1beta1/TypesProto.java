@@ -14,19 +14,4246 @@ public final class TypesProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface AccountIDOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.escrow.v1beta1.AccountID)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string scope = 1 [json_name = "scope", (.gogoproto.jsontag) = "scope", (.gogoproto.moretags) = "yaml:&#92;"scope&#92;""];</code>
+     * @return The scope.
+     */
+    java.lang.String getScope();
+    /**
+     * <code>string scope = 1 [json_name = "scope", (.gogoproto.jsontag) = "scope", (.gogoproto.moretags) = "yaml:&#92;"scope&#92;""];</code>
+     * @return The bytes for scope.
+     */
+    com.google.protobuf.ByteString
+        getScopeBytes();
+
+    /**
+     * <code>string xid = 2 [json_name = "xid", (.gogoproto.customname) = "XID", (.gogoproto.jsontag) = "xid", (.gogoproto.moretags) = "yaml:&#92;"xid&#92;""];</code>
+     * @return The xid.
+     */
+    java.lang.String getXid();
+    /**
+     * <code>string xid = 2 [json_name = "xid", (.gogoproto.customname) = "XID", (.gogoproto.jsontag) = "xid", (.gogoproto.moretags) = "yaml:&#92;"xid&#92;""];</code>
+     * @return The bytes for xid.
+     */
+    com.google.protobuf.ByteString
+        getXidBytes();
+  }
+  /**
+   * <pre>
+   * AccountID is the account identifier
+   * </pre>
+   *
+   * Protobuf type {@code akash.escrow.v1beta1.AccountID}
+   */
+  public static final class AccountID extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.escrow.v1beta1.AccountID)
+      AccountIDOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AccountID.newBuilder() to construct.
+    private AccountID(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AccountID() {
+      scope_ = "";
+      xid_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AccountID();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.escrow.v1beta1.TypesProto.internal_static_akash_escrow_v1beta1_AccountID_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.escrow.v1beta1.TypesProto.internal_static_akash_escrow_v1beta1_AccountID_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.escrow.v1beta1.TypesProto.AccountID.class, com.akash.escrow.v1beta1.TypesProto.AccountID.Builder.class);
+    }
+
+    public static final int SCOPE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object scope_ = "";
+    /**
+     * <code>string scope = 1 [json_name = "scope", (.gogoproto.jsontag) = "scope", (.gogoproto.moretags) = "yaml:&#92;"scope&#92;""];</code>
+     * @return The scope.
+     */
+    @java.lang.Override
+    public java.lang.String getScope() {
+      java.lang.Object ref = scope_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        scope_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string scope = 1 [json_name = "scope", (.gogoproto.jsontag) = "scope", (.gogoproto.moretags) = "yaml:&#92;"scope&#92;""];</code>
+     * @return The bytes for scope.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getScopeBytes() {
+      java.lang.Object ref = scope_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        scope_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int XID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object xid_ = "";
+    /**
+     * <code>string xid = 2 [json_name = "xid", (.gogoproto.customname) = "XID", (.gogoproto.jsontag) = "xid", (.gogoproto.moretags) = "yaml:&#92;"xid&#92;""];</code>
+     * @return The xid.
+     */
+    @java.lang.Override
+    public java.lang.String getXid() {
+      java.lang.Object ref = xid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        xid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string xid = 2 [json_name = "xid", (.gogoproto.customname) = "XID", (.gogoproto.jsontag) = "xid", (.gogoproto.moretags) = "yaml:&#92;"xid&#92;""];</code>
+     * @return The bytes for xid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getXidBytes() {
+      java.lang.Object ref = xid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        xid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scope_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, scope_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(xid_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, xid_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scope_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, scope_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(xid_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, xid_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.escrow.v1beta1.TypesProto.AccountID)) {
+        return super.equals(obj);
+      }
+      com.akash.escrow.v1beta1.TypesProto.AccountID other = (com.akash.escrow.v1beta1.TypesProto.AccountID) obj;
+
+      if (!getScope()
+          .equals(other.getScope())) return false;
+      if (!getXid()
+          .equals(other.getXid())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SCOPE_FIELD_NUMBER;
+      hash = (53 * hash) + getScope().hashCode();
+      hash = (37 * hash) + XID_FIELD_NUMBER;
+      hash = (53 * hash) + getXid().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.escrow.v1beta1.TypesProto.AccountID parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.escrow.v1beta1.TypesProto.AccountID parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.escrow.v1beta1.TypesProto.AccountID parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.escrow.v1beta1.TypesProto.AccountID parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.escrow.v1beta1.TypesProto.AccountID parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.escrow.v1beta1.TypesProto.AccountID parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.escrow.v1beta1.TypesProto.AccountID parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.escrow.v1beta1.TypesProto.AccountID parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.escrow.v1beta1.TypesProto.AccountID parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.escrow.v1beta1.TypesProto.AccountID parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.escrow.v1beta1.TypesProto.AccountID parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.escrow.v1beta1.TypesProto.AccountID parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.escrow.v1beta1.TypesProto.AccountID prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * AccountID is the account identifier
+     * </pre>
+     *
+     * Protobuf type {@code akash.escrow.v1beta1.AccountID}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.escrow.v1beta1.AccountID)
+        com.akash.escrow.v1beta1.TypesProto.AccountIDOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.escrow.v1beta1.TypesProto.internal_static_akash_escrow_v1beta1_AccountID_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.escrow.v1beta1.TypesProto.internal_static_akash_escrow_v1beta1_AccountID_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.escrow.v1beta1.TypesProto.AccountID.class, com.akash.escrow.v1beta1.TypesProto.AccountID.Builder.class);
+      }
+
+      // Construct using com.akash.escrow.v1beta1.TypesProto.AccountID.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        scope_ = "";
+        xid_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.escrow.v1beta1.TypesProto.internal_static_akash_escrow_v1beta1_AccountID_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.escrow.v1beta1.TypesProto.AccountID getDefaultInstanceForType() {
+        return com.akash.escrow.v1beta1.TypesProto.AccountID.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.escrow.v1beta1.TypesProto.AccountID build() {
+        com.akash.escrow.v1beta1.TypesProto.AccountID result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.escrow.v1beta1.TypesProto.AccountID buildPartial() {
+        com.akash.escrow.v1beta1.TypesProto.AccountID result = new com.akash.escrow.v1beta1.TypesProto.AccountID(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.escrow.v1beta1.TypesProto.AccountID result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.scope_ = scope_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.xid_ = xid_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.escrow.v1beta1.TypesProto.AccountID) {
+          return mergeFrom((com.akash.escrow.v1beta1.TypesProto.AccountID)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.escrow.v1beta1.TypesProto.AccountID other) {
+        if (other == com.akash.escrow.v1beta1.TypesProto.AccountID.getDefaultInstance()) return this;
+        if (!other.getScope().isEmpty()) {
+          scope_ = other.scope_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getXid().isEmpty()) {
+          xid_ = other.xid_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                scope_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                xid_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object scope_ = "";
+      /**
+       * <code>string scope = 1 [json_name = "scope", (.gogoproto.jsontag) = "scope", (.gogoproto.moretags) = "yaml:&#92;"scope&#92;""];</code>
+       * @return The scope.
+       */
+      public java.lang.String getScope() {
+        java.lang.Object ref = scope_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          scope_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string scope = 1 [json_name = "scope", (.gogoproto.jsontag) = "scope", (.gogoproto.moretags) = "yaml:&#92;"scope&#92;""];</code>
+       * @return The bytes for scope.
+       */
+      public com.google.protobuf.ByteString
+          getScopeBytes() {
+        java.lang.Object ref = scope_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          scope_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string scope = 1 [json_name = "scope", (.gogoproto.jsontag) = "scope", (.gogoproto.moretags) = "yaml:&#92;"scope&#92;""];</code>
+       * @param value The scope to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScope(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        scope_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string scope = 1 [json_name = "scope", (.gogoproto.jsontag) = "scope", (.gogoproto.moretags) = "yaml:&#92;"scope&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScope() {
+        scope_ = getDefaultInstance().getScope();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string scope = 1 [json_name = "scope", (.gogoproto.jsontag) = "scope", (.gogoproto.moretags) = "yaml:&#92;"scope&#92;""];</code>
+       * @param value The bytes for scope to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        scope_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object xid_ = "";
+      /**
+       * <code>string xid = 2 [json_name = "xid", (.gogoproto.customname) = "XID", (.gogoproto.jsontag) = "xid", (.gogoproto.moretags) = "yaml:&#92;"xid&#92;""];</code>
+       * @return The xid.
+       */
+      public java.lang.String getXid() {
+        java.lang.Object ref = xid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          xid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string xid = 2 [json_name = "xid", (.gogoproto.customname) = "XID", (.gogoproto.jsontag) = "xid", (.gogoproto.moretags) = "yaml:&#92;"xid&#92;""];</code>
+       * @return The bytes for xid.
+       */
+      public com.google.protobuf.ByteString
+          getXidBytes() {
+        java.lang.Object ref = xid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          xid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string xid = 2 [json_name = "xid", (.gogoproto.customname) = "XID", (.gogoproto.jsontag) = "xid", (.gogoproto.moretags) = "yaml:&#92;"xid&#92;""];</code>
+       * @param value The xid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setXid(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        xid_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string xid = 2 [json_name = "xid", (.gogoproto.customname) = "XID", (.gogoproto.jsontag) = "xid", (.gogoproto.moretags) = "yaml:&#92;"xid&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearXid() {
+        xid_ = getDefaultInstance().getXid();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string xid = 2 [json_name = "xid", (.gogoproto.customname) = "XID", (.gogoproto.jsontag) = "xid", (.gogoproto.moretags) = "yaml:&#92;"xid&#92;""];</code>
+       * @param value The bytes for xid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setXidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        xid_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.escrow.v1beta1.AccountID)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.escrow.v1beta1.AccountID)
+    private static final com.akash.escrow.v1beta1.TypesProto.AccountID DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.escrow.v1beta1.TypesProto.AccountID();
+    }
+
+    public static com.akash.escrow.v1beta1.TypesProto.AccountID getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AccountID>
+        PARSER = new com.google.protobuf.AbstractParser<AccountID>() {
+      @java.lang.Override
+      public AccountID parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AccountID> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AccountID> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.escrow.v1beta1.TypesProto.AccountID getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AccountOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.escrow.v1beta1.Account)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * unique identifier for this escrow account
+     * </pre>
+     *
+     * <code>.akash.escrow.v1beta1.AccountID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return Whether the id field is set.
+     */
+    boolean hasId();
+    /**
+     * <pre>
+     * unique identifier for this escrow account
+     * </pre>
+     *
+     * <code>.akash.escrow.v1beta1.AccountID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The id.
+     */
+    com.akash.escrow.v1beta1.TypesProto.AccountID getId();
+    /**
+     * <pre>
+     * unique identifier for this escrow account
+     * </pre>
+     *
+     * <code>.akash.escrow.v1beta1.AccountID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     */
+    com.akash.escrow.v1beta1.TypesProto.AccountIDOrBuilder getIdOrBuilder();
+
+    /**
+     * <pre>
+     * bech32 encoded account address of the owner of this escrow account
+     * </pre>
+     *
+     * <code>string owner = 2 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <pre>
+     * bech32 encoded account address of the owner of this escrow account
+     * </pre>
+     *
+     * <code>string owner = 2 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <pre>
+     * current state of this escrow account
+     * </pre>
+     *
+     * <code>.akash.escrow.v1beta1.Account.State state = 3 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    int getStateValue();
+    /**
+     * <pre>
+     * current state of this escrow account
+     * </pre>
+     *
+     * <code>.akash.escrow.v1beta1.Account.State state = 3 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+     * @return The state.
+     */
+    com.akash.escrow.v1beta1.TypesProto.Account.State getState();
+
+    /**
+     * <pre>
+     * unspent coins received from the owner's wallet
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin balance = 4 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "balance", (.gogoproto.moretags) = "yaml:&#92;"balance&#92;""];</code>
+     * @return Whether the balance field is set.
+     */
+    boolean hasBalance();
+    /**
+     * <pre>
+     * unspent coins received from the owner's wallet
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin balance = 4 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "balance", (.gogoproto.moretags) = "yaml:&#92;"balance&#92;""];</code>
+     * @return The balance.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getBalance();
+    /**
+     * <pre>
+     * unspent coins received from the owner's wallet
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin balance = 4 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "balance", (.gogoproto.moretags) = "yaml:&#92;"balance&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBalanceOrBuilder();
+
+    /**
+     * <pre>
+     * total coins spent by this account
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin transferred = 5 [json_name = "transferred", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "transferred", (.gogoproto.moretags) = "yaml:&#92;"transferred&#92;""];</code>
+     * @return Whether the transferred field is set.
+     */
+    boolean hasTransferred();
+    /**
+     * <pre>
+     * total coins spent by this account
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin transferred = 5 [json_name = "transferred", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "transferred", (.gogoproto.moretags) = "yaml:&#92;"transferred&#92;""];</code>
+     * @return The transferred.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getTransferred();
+    /**
+     * <pre>
+     * total coins spent by this account
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin transferred = 5 [json_name = "transferred", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "transferred", (.gogoproto.moretags) = "yaml:&#92;"transferred&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTransferredOrBuilder();
+
+    /**
+     * <pre>
+     * block height at which this account was last settled
+     * </pre>
+     *
+     * <code>int64 settled_at = 6 [json_name = "settledAt", (.gogoproto.customname) = "SettledAt", (.gogoproto.jsontag) = "settledAt", (.gogoproto.moretags) = "yaml:&#92;"settledAt&#92;""];</code>
+     * @return The settledAt.
+     */
+    long getSettledAt();
+  }
+  /**
+   * <pre>
+   * Account stores state for an escrow account
+   * </pre>
+   *
+   * Protobuf type {@code akash.escrow.v1beta1.Account}
+   */
+  public static final class Account extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.escrow.v1beta1.Account)
+      AccountOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Account.newBuilder() to construct.
+    private Account(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Account() {
+      owner_ = "";
+      state_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Account();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.escrow.v1beta1.TypesProto.internal_static_akash_escrow_v1beta1_Account_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.escrow.v1beta1.TypesProto.internal_static_akash_escrow_v1beta1_Account_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.escrow.v1beta1.TypesProto.Account.class, com.akash.escrow.v1beta1.TypesProto.Account.Builder.class);
+    }
+
+    /**
+     * <pre>
+     * State stores state for an escrow account
+     * </pre>
+     *
+     * Protobuf enum {@code akash.escrow.v1beta1.Account.State}
+     */
+    public enum State
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <pre>
+       * AccountStateInvalid is an invalid state
+       * </pre>
+       *
+       * <code>invalid = 0 [(.gogoproto.enumvalue_customname) = "AccountStateInvalid"];</code>
+       */
+      invalid(0),
+      /**
+       * <pre>
+       * AccountOpen is the state when an account is open
+       * </pre>
+       *
+       * <code>open = 1 [(.gogoproto.enumvalue_customname) = "AccountOpen"];</code>
+       */
+      open(1),
+      /**
+       * <pre>
+       * AccountClosed is the state when an account is closed
+       * </pre>
+       *
+       * <code>closed = 2 [(.gogoproto.enumvalue_customname) = "AccountClosed"];</code>
+       */
+      closed(2),
+      /**
+       * <pre>
+       * AccountOverdrawn is the state when an account is overdrawn
+       * </pre>
+       *
+       * <code>overdrawn = 3 [(.gogoproto.enumvalue_customname) = "AccountOverdrawn"];</code>
+       */
+      overdrawn(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <pre>
+       * AccountStateInvalid is an invalid state
+       * </pre>
+       *
+       * <code>invalid = 0 [(.gogoproto.enumvalue_customname) = "AccountStateInvalid"];</code>
+       */
+      public static final int invalid_VALUE = 0;
+      /**
+       * <pre>
+       * AccountOpen is the state when an account is open
+       * </pre>
+       *
+       * <code>open = 1 [(.gogoproto.enumvalue_customname) = "AccountOpen"];</code>
+       */
+      public static final int open_VALUE = 1;
+      /**
+       * <pre>
+       * AccountClosed is the state when an account is closed
+       * </pre>
+       *
+       * <code>closed = 2 [(.gogoproto.enumvalue_customname) = "AccountClosed"];</code>
+       */
+      public static final int closed_VALUE = 2;
+      /**
+       * <pre>
+       * AccountOverdrawn is the state when an account is overdrawn
+       * </pre>
+       *
+       * <code>overdrawn = 3 [(.gogoproto.enumvalue_customname) = "AccountOverdrawn"];</code>
+       */
+      public static final int overdrawn_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static State valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static State forNumber(int value) {
+        switch (value) {
+          case 0: return invalid;
+          case 1: return open;
+          case 2: return closed;
+          case 3: return overdrawn;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<State>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          State> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<State>() {
+              public State findValueByNumber(int number) {
+                return State.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.akash.escrow.v1beta1.TypesProto.Account.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final State[] VALUES = values();
+
+      public static State valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private State(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:akash.escrow.v1beta1.Account.State)
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private com.akash.escrow.v1beta1.TypesProto.AccountID id_;
+    /**
+     * <pre>
+     * unique identifier for this escrow account
+     * </pre>
+     *
+     * <code>.akash.escrow.v1beta1.AccountID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return Whether the id field is set.
+     */
+    @java.lang.Override
+    public boolean hasId() {
+      return id_ != null;
+    }
+    /**
+     * <pre>
+     * unique identifier for this escrow account
+     * </pre>
+     *
+     * <code>.akash.escrow.v1beta1.AccountID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public com.akash.escrow.v1beta1.TypesProto.AccountID getId() {
+      return id_ == null ? com.akash.escrow.v1beta1.TypesProto.AccountID.getDefaultInstance() : id_;
+    }
+    /**
+     * <pre>
+     * unique identifier for this escrow account
+     * </pre>
+     *
+     * <code>.akash.escrow.v1beta1.AccountID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.akash.escrow.v1beta1.TypesProto.AccountIDOrBuilder getIdOrBuilder() {
+      return id_ == null ? com.akash.escrow.v1beta1.TypesProto.AccountID.getDefaultInstance() : id_;
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <pre>
+     * bech32 encoded account address of the owner of this escrow account
+     * </pre>
+     *
+     * <code>string owner = 2 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * bech32 encoded account address of the owner of this escrow account
+     * </pre>
+     *
+     * <code>string owner = 2 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATE_FIELD_NUMBER = 3;
+    private int state_ = 0;
+    /**
+     * <pre>
+     * current state of this escrow account
+     * </pre>
+     *
+     * <code>.akash.escrow.v1beta1.Account.State state = 3 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    @java.lang.Override public int getStateValue() {
+      return state_;
+    }
+    /**
+     * <pre>
+     * current state of this escrow account
+     * </pre>
+     *
+     * <code>.akash.escrow.v1beta1.Account.State state = 3 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+     * @return The state.
+     */
+    @java.lang.Override public com.akash.escrow.v1beta1.TypesProto.Account.State getState() {
+      com.akash.escrow.v1beta1.TypesProto.Account.State result = com.akash.escrow.v1beta1.TypesProto.Account.State.forNumber(state_);
+      return result == null ? com.akash.escrow.v1beta1.TypesProto.Account.State.UNRECOGNIZED : result;
+    }
+
+    public static final int BALANCE_FIELD_NUMBER = 4;
+    private com.cosmos.base.v1beta1.CoinProto.Coin balance_;
+    /**
+     * <pre>
+     * unspent coins received from the owner's wallet
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin balance = 4 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "balance", (.gogoproto.moretags) = "yaml:&#92;"balance&#92;""];</code>
+     * @return Whether the balance field is set.
+     */
+    @java.lang.Override
+    public boolean hasBalance() {
+      return balance_ != null;
+    }
+    /**
+     * <pre>
+     * unspent coins received from the owner's wallet
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin balance = 4 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "balance", (.gogoproto.moretags) = "yaml:&#92;"balance&#92;""];</code>
+     * @return The balance.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getBalance() {
+      return balance_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : balance_;
+    }
+    /**
+     * <pre>
+     * unspent coins received from the owner's wallet
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin balance = 4 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "balance", (.gogoproto.moretags) = "yaml:&#92;"balance&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBalanceOrBuilder() {
+      return balance_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : balance_;
+    }
+
+    public static final int TRANSFERRED_FIELD_NUMBER = 5;
+    private com.cosmos.base.v1beta1.CoinProto.Coin transferred_;
+    /**
+     * <pre>
+     * total coins spent by this account
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin transferred = 5 [json_name = "transferred", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "transferred", (.gogoproto.moretags) = "yaml:&#92;"transferred&#92;""];</code>
+     * @return Whether the transferred field is set.
+     */
+    @java.lang.Override
+    public boolean hasTransferred() {
+      return transferred_ != null;
+    }
+    /**
+     * <pre>
+     * total coins spent by this account
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin transferred = 5 [json_name = "transferred", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "transferred", (.gogoproto.moretags) = "yaml:&#92;"transferred&#92;""];</code>
+     * @return The transferred.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getTransferred() {
+      return transferred_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : transferred_;
+    }
+    /**
+     * <pre>
+     * total coins spent by this account
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin transferred = 5 [json_name = "transferred", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "transferred", (.gogoproto.moretags) = "yaml:&#92;"transferred&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTransferredOrBuilder() {
+      return transferred_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : transferred_;
+    }
+
+    public static final int SETTLED_AT_FIELD_NUMBER = 6;
+    private long settledAt_ = 0L;
+    /**
+     * <pre>
+     * block height at which this account was last settled
+     * </pre>
+     *
+     * <code>int64 settled_at = 6 [json_name = "settledAt", (.gogoproto.customname) = "SettledAt", (.gogoproto.jsontag) = "settledAt", (.gogoproto.moretags) = "yaml:&#92;"settledAt&#92;""];</code>
+     * @return The settledAt.
+     */
+    @java.lang.Override
+    public long getSettledAt() {
+      return settledAt_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != null) {
+        output.writeMessage(1, getId());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, owner_);
+      }
+      if (state_ != com.akash.escrow.v1beta1.TypesProto.Account.State.invalid.getNumber()) {
+        output.writeEnum(3, state_);
+      }
+      if (balance_ != null) {
+        output.writeMessage(4, getBalance());
+      }
+      if (transferred_ != null) {
+        output.writeMessage(5, getTransferred());
+      }
+      if (settledAt_ != 0L) {
+        output.writeInt64(6, settledAt_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getId());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, owner_);
+      }
+      if (state_ != com.akash.escrow.v1beta1.TypesProto.Account.State.invalid.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, state_);
+      }
+      if (balance_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getBalance());
+      }
+      if (transferred_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getTransferred());
+      }
+      if (settledAt_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, settledAt_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.escrow.v1beta1.TypesProto.Account)) {
+        return super.equals(obj);
+      }
+      com.akash.escrow.v1beta1.TypesProto.Account other = (com.akash.escrow.v1beta1.TypesProto.Account) obj;
+
+      if (hasId() != other.hasId()) return false;
+      if (hasId()) {
+        if (!getId()
+            .equals(other.getId())) return false;
+      }
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (state_ != other.state_) return false;
+      if (hasBalance() != other.hasBalance()) return false;
+      if (hasBalance()) {
+        if (!getBalance()
+            .equals(other.getBalance())) return false;
+      }
+      if (hasTransferred() != other.hasTransferred()) return false;
+      if (hasTransferred()) {
+        if (!getTransferred()
+            .equals(other.getTransferred())) return false;
+      }
+      if (getSettledAt()
+          != other.getSettledAt()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasId()) {
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId().hashCode();
+      }
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + STATE_FIELD_NUMBER;
+      hash = (53 * hash) + state_;
+      if (hasBalance()) {
+        hash = (37 * hash) + BALANCE_FIELD_NUMBER;
+        hash = (53 * hash) + getBalance().hashCode();
+      }
+      if (hasTransferred()) {
+        hash = (37 * hash) + TRANSFERRED_FIELD_NUMBER;
+        hash = (53 * hash) + getTransferred().hashCode();
+      }
+      hash = (37 * hash) + SETTLED_AT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSettledAt());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.escrow.v1beta1.TypesProto.Account parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.escrow.v1beta1.TypesProto.Account parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.escrow.v1beta1.TypesProto.Account parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.escrow.v1beta1.TypesProto.Account parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.escrow.v1beta1.TypesProto.Account parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.escrow.v1beta1.TypesProto.Account parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.escrow.v1beta1.TypesProto.Account parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.escrow.v1beta1.TypesProto.Account parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.escrow.v1beta1.TypesProto.Account parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.escrow.v1beta1.TypesProto.Account parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.escrow.v1beta1.TypesProto.Account parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.escrow.v1beta1.TypesProto.Account parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.escrow.v1beta1.TypesProto.Account prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Account stores state for an escrow account
+     * </pre>
+     *
+     * Protobuf type {@code akash.escrow.v1beta1.Account}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.escrow.v1beta1.Account)
+        com.akash.escrow.v1beta1.TypesProto.AccountOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.escrow.v1beta1.TypesProto.internal_static_akash_escrow_v1beta1_Account_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.escrow.v1beta1.TypesProto.internal_static_akash_escrow_v1beta1_Account_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.escrow.v1beta1.TypesProto.Account.class, com.akash.escrow.v1beta1.TypesProto.Account.Builder.class);
+      }
+
+      // Construct using com.akash.escrow.v1beta1.TypesProto.Account.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = null;
+        if (idBuilder_ != null) {
+          idBuilder_.dispose();
+          idBuilder_ = null;
+        }
+        owner_ = "";
+        state_ = 0;
+        balance_ = null;
+        if (balanceBuilder_ != null) {
+          balanceBuilder_.dispose();
+          balanceBuilder_ = null;
+        }
+        transferred_ = null;
+        if (transferredBuilder_ != null) {
+          transferredBuilder_.dispose();
+          transferredBuilder_ = null;
+        }
+        settledAt_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.escrow.v1beta1.TypesProto.internal_static_akash_escrow_v1beta1_Account_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.escrow.v1beta1.TypesProto.Account getDefaultInstanceForType() {
+        return com.akash.escrow.v1beta1.TypesProto.Account.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.escrow.v1beta1.TypesProto.Account build() {
+        com.akash.escrow.v1beta1.TypesProto.Account result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.escrow.v1beta1.TypesProto.Account buildPartial() {
+        com.akash.escrow.v1beta1.TypesProto.Account result = new com.akash.escrow.v1beta1.TypesProto.Account(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.escrow.v1beta1.TypesProto.Account result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = idBuilder_ == null
+              ? id_
+              : idBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.state_ = state_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.balance_ = balanceBuilder_ == null
+              ? balance_
+              : balanceBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.transferred_ = transferredBuilder_ == null
+              ? transferred_
+              : transferredBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.settledAt_ = settledAt_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.escrow.v1beta1.TypesProto.Account) {
+          return mergeFrom((com.akash.escrow.v1beta1.TypesProto.Account)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.escrow.v1beta1.TypesProto.Account other) {
+        if (other == com.akash.escrow.v1beta1.TypesProto.Account.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          mergeId(other.getId());
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.state_ != 0) {
+          setStateValue(other.getStateValue());
+        }
+        if (other.hasBalance()) {
+          mergeBalance(other.getBalance());
+        }
+        if (other.hasTransferred()) {
+          mergeTransferred(other.getTransferred());
+        }
+        if (other.getSettledAt() != 0L) {
+          setSettledAt(other.getSettledAt());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getIdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                state_ = input.readEnum();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                input.readMessage(
+                    getBalanceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getTransferredFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 48: {
+                settledAt_ = input.readInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.akash.escrow.v1beta1.TypesProto.AccountID id_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.escrow.v1beta1.TypesProto.AccountID, com.akash.escrow.v1beta1.TypesProto.AccountID.Builder, com.akash.escrow.v1beta1.TypesProto.AccountIDOrBuilder> idBuilder_;
+      /**
+       * <pre>
+       * unique identifier for this escrow account
+       * </pre>
+       *
+       * <code>.akash.escrow.v1beta1.AccountID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return Whether the id field is set.
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * unique identifier for this escrow account
+       * </pre>
+       *
+       * <code>.akash.escrow.v1beta1.AccountID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return The id.
+       */
+      public com.akash.escrow.v1beta1.TypesProto.AccountID getId() {
+        if (idBuilder_ == null) {
+          return id_ == null ? com.akash.escrow.v1beta1.TypesProto.AccountID.getDefaultInstance() : id_;
+        } else {
+          return idBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * unique identifier for this escrow account
+       * </pre>
+       *
+       * <code>.akash.escrow.v1beta1.AccountID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder setId(com.akash.escrow.v1beta1.TypesProto.AccountID value) {
+        if (idBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          id_ = value;
+        } else {
+          idBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unique identifier for this escrow account
+       * </pre>
+       *
+       * <code>.akash.escrow.v1beta1.AccountID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder setId(
+          com.akash.escrow.v1beta1.TypesProto.AccountID.Builder builderForValue) {
+        if (idBuilder_ == null) {
+          id_ = builderForValue.build();
+        } else {
+          idBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unique identifier for this escrow account
+       * </pre>
+       *
+       * <code>.akash.escrow.v1beta1.AccountID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder mergeId(com.akash.escrow.v1beta1.TypesProto.AccountID value) {
+        if (idBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            id_ != null &&
+            id_ != com.akash.escrow.v1beta1.TypesProto.AccountID.getDefaultInstance()) {
+            getIdBuilder().mergeFrom(value);
+          } else {
+            id_ = value;
+          }
+        } else {
+          idBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unique identifier for this escrow account
+       * </pre>
+       *
+       * <code>.akash.escrow.v1beta1.AccountID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = null;
+        if (idBuilder_ != null) {
+          idBuilder_.dispose();
+          idBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unique identifier for this escrow account
+       * </pre>
+       *
+       * <code>.akash.escrow.v1beta1.AccountID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public com.akash.escrow.v1beta1.TypesProto.AccountID.Builder getIdBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * unique identifier for this escrow account
+       * </pre>
+       *
+       * <code>.akash.escrow.v1beta1.AccountID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      public com.akash.escrow.v1beta1.TypesProto.AccountIDOrBuilder getIdOrBuilder() {
+        if (idBuilder_ != null) {
+          return idBuilder_.getMessageOrBuilder();
+        } else {
+          return id_ == null ?
+              com.akash.escrow.v1beta1.TypesProto.AccountID.getDefaultInstance() : id_;
+        }
+      }
+      /**
+       * <pre>
+       * unique identifier for this escrow account
+       * </pre>
+       *
+       * <code>.akash.escrow.v1beta1.AccountID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.escrow.v1beta1.TypesProto.AccountID, com.akash.escrow.v1beta1.TypesProto.AccountID.Builder, com.akash.escrow.v1beta1.TypesProto.AccountIDOrBuilder> 
+          getIdFieldBuilder() {
+        if (idBuilder_ == null) {
+          idBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.escrow.v1beta1.TypesProto.AccountID, com.akash.escrow.v1beta1.TypesProto.AccountID.Builder, com.akash.escrow.v1beta1.TypesProto.AccountIDOrBuilder>(
+                  getId(),
+                  getParentForChildren(),
+                  isClean());
+          id_ = null;
+        }
+        return idBuilder_;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <pre>
+       * bech32 encoded account address of the owner of this escrow account
+       * </pre>
+       *
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * bech32 encoded account address of the owner of this escrow account
+       * </pre>
+       *
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * bech32 encoded account address of the owner of this escrow account
+       * </pre>
+       *
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * bech32 encoded account address of the owner of this escrow account
+       * </pre>
+       *
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * bech32 encoded account address of the owner of this escrow account
+       * </pre>
+       *
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private int state_ = 0;
+      /**
+       * <pre>
+       * current state of this escrow account
+       * </pre>
+       *
+       * <code>.akash.escrow.v1beta1.Account.State state = 3 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+       * @return The enum numeric value on the wire for state.
+       */
+      @java.lang.Override public int getStateValue() {
+        return state_;
+      }
+      /**
+       * <pre>
+       * current state of this escrow account
+       * </pre>
+       *
+       * <code>.akash.escrow.v1beta1.Account.State state = 3 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+       * @param value The enum numeric value on the wire for state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStateValue(int value) {
+        state_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * current state of this escrow account
+       * </pre>
+       *
+       * <code>.akash.escrow.v1beta1.Account.State state = 3 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+       * @return The state.
+       */
+      @java.lang.Override
+      public com.akash.escrow.v1beta1.TypesProto.Account.State getState() {
+        com.akash.escrow.v1beta1.TypesProto.Account.State result = com.akash.escrow.v1beta1.TypesProto.Account.State.forNumber(state_);
+        return result == null ? com.akash.escrow.v1beta1.TypesProto.Account.State.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * current state of this escrow account
+       * </pre>
+       *
+       * <code>.akash.escrow.v1beta1.Account.State state = 3 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+       * @param value The state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setState(com.akash.escrow.v1beta1.TypesProto.Account.State value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        state_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * current state of this escrow account
+       * </pre>
+       *
+       * <code>.akash.escrow.v1beta1.Account.State state = 3 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearState() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        state_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin balance_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> balanceBuilder_;
+      /**
+       * <pre>
+       * unspent coins received from the owner's wallet
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin balance = 4 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "balance", (.gogoproto.moretags) = "yaml:&#92;"balance&#92;""];</code>
+       * @return Whether the balance field is set.
+       */
+      public boolean hasBalance() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * unspent coins received from the owner's wallet
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin balance = 4 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "balance", (.gogoproto.moretags) = "yaml:&#92;"balance&#92;""];</code>
+       * @return The balance.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getBalance() {
+        if (balanceBuilder_ == null) {
+          return balance_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : balance_;
+        } else {
+          return balanceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * unspent coins received from the owner's wallet
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin balance = 4 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "balance", (.gogoproto.moretags) = "yaml:&#92;"balance&#92;""];</code>
+       */
+      public Builder setBalance(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (balanceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          balance_ = value;
+        } else {
+          balanceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unspent coins received from the owner's wallet
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin balance = 4 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "balance", (.gogoproto.moretags) = "yaml:&#92;"balance&#92;""];</code>
+       */
+      public Builder setBalance(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (balanceBuilder_ == null) {
+          balance_ = builderForValue.build();
+        } else {
+          balanceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unspent coins received from the owner's wallet
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin balance = 4 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "balance", (.gogoproto.moretags) = "yaml:&#92;"balance&#92;""];</code>
+       */
+      public Builder mergeBalance(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (balanceBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            balance_ != null &&
+            balance_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getBalanceBuilder().mergeFrom(value);
+          } else {
+            balance_ = value;
+          }
+        } else {
+          balanceBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unspent coins received from the owner's wallet
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin balance = 4 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "balance", (.gogoproto.moretags) = "yaml:&#92;"balance&#92;""];</code>
+       */
+      public Builder clearBalance() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        balance_ = null;
+        if (balanceBuilder_ != null) {
+          balanceBuilder_.dispose();
+          balanceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unspent coins received from the owner's wallet
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin balance = 4 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "balance", (.gogoproto.moretags) = "yaml:&#92;"balance&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getBalanceBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getBalanceFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * unspent coins received from the owner's wallet
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin balance = 4 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "balance", (.gogoproto.moretags) = "yaml:&#92;"balance&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBalanceOrBuilder() {
+        if (balanceBuilder_ != null) {
+          return balanceBuilder_.getMessageOrBuilder();
+        } else {
+          return balance_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : balance_;
+        }
+      }
+      /**
+       * <pre>
+       * unspent coins received from the owner's wallet
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin balance = 4 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "balance", (.gogoproto.moretags) = "yaml:&#92;"balance&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getBalanceFieldBuilder() {
+        if (balanceBuilder_ == null) {
+          balanceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getBalance(),
+                  getParentForChildren(),
+                  isClean());
+          balance_ = null;
+        }
+        return balanceBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin transferred_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> transferredBuilder_;
+      /**
+       * <pre>
+       * total coins spent by this account
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin transferred = 5 [json_name = "transferred", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "transferred", (.gogoproto.moretags) = "yaml:&#92;"transferred&#92;""];</code>
+       * @return Whether the transferred field is set.
+       */
+      public boolean hasTransferred() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * total coins spent by this account
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin transferred = 5 [json_name = "transferred", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "transferred", (.gogoproto.moretags) = "yaml:&#92;"transferred&#92;""];</code>
+       * @return The transferred.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getTransferred() {
+        if (transferredBuilder_ == null) {
+          return transferred_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : transferred_;
+        } else {
+          return transferredBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * total coins spent by this account
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin transferred = 5 [json_name = "transferred", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "transferred", (.gogoproto.moretags) = "yaml:&#92;"transferred&#92;""];</code>
+       */
+      public Builder setTransferred(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (transferredBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          transferred_ = value;
+        } else {
+          transferredBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total coins spent by this account
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin transferred = 5 [json_name = "transferred", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "transferred", (.gogoproto.moretags) = "yaml:&#92;"transferred&#92;""];</code>
+       */
+      public Builder setTransferred(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (transferredBuilder_ == null) {
+          transferred_ = builderForValue.build();
+        } else {
+          transferredBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total coins spent by this account
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin transferred = 5 [json_name = "transferred", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "transferred", (.gogoproto.moretags) = "yaml:&#92;"transferred&#92;""];</code>
+       */
+      public Builder mergeTransferred(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (transferredBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            transferred_ != null &&
+            transferred_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getTransferredBuilder().mergeFrom(value);
+          } else {
+            transferred_ = value;
+          }
+        } else {
+          transferredBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total coins spent by this account
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin transferred = 5 [json_name = "transferred", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "transferred", (.gogoproto.moretags) = "yaml:&#92;"transferred&#92;""];</code>
+       */
+      public Builder clearTransferred() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        transferred_ = null;
+        if (transferredBuilder_ != null) {
+          transferredBuilder_.dispose();
+          transferredBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total coins spent by this account
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin transferred = 5 [json_name = "transferred", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "transferred", (.gogoproto.moretags) = "yaml:&#92;"transferred&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getTransferredBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getTransferredFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * total coins spent by this account
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin transferred = 5 [json_name = "transferred", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "transferred", (.gogoproto.moretags) = "yaml:&#92;"transferred&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTransferredOrBuilder() {
+        if (transferredBuilder_ != null) {
+          return transferredBuilder_.getMessageOrBuilder();
+        } else {
+          return transferred_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : transferred_;
+        }
+      }
+      /**
+       * <pre>
+       * total coins spent by this account
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin transferred = 5 [json_name = "transferred", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "transferred", (.gogoproto.moretags) = "yaml:&#92;"transferred&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getTransferredFieldBuilder() {
+        if (transferredBuilder_ == null) {
+          transferredBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getTransferred(),
+                  getParentForChildren(),
+                  isClean());
+          transferred_ = null;
+        }
+        return transferredBuilder_;
+      }
+
+      private long settledAt_ ;
+      /**
+       * <pre>
+       * block height at which this account was last settled
+       * </pre>
+       *
+       * <code>int64 settled_at = 6 [json_name = "settledAt", (.gogoproto.customname) = "SettledAt", (.gogoproto.jsontag) = "settledAt", (.gogoproto.moretags) = "yaml:&#92;"settledAt&#92;""];</code>
+       * @return The settledAt.
+       */
+      @java.lang.Override
+      public long getSettledAt() {
+        return settledAt_;
+      }
+      /**
+       * <pre>
+       * block height at which this account was last settled
+       * </pre>
+       *
+       * <code>int64 settled_at = 6 [json_name = "settledAt", (.gogoproto.customname) = "SettledAt", (.gogoproto.jsontag) = "settledAt", (.gogoproto.moretags) = "yaml:&#92;"settledAt&#92;""];</code>
+       * @param value The settledAt to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSettledAt(long value) {
+
+        settledAt_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * block height at which this account was last settled
+       * </pre>
+       *
+       * <code>int64 settled_at = 6 [json_name = "settledAt", (.gogoproto.customname) = "SettledAt", (.gogoproto.jsontag) = "settledAt", (.gogoproto.moretags) = "yaml:&#92;"settledAt&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSettledAt() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        settledAt_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.escrow.v1beta1.Account)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.escrow.v1beta1.Account)
+    private static final com.akash.escrow.v1beta1.TypesProto.Account DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.escrow.v1beta1.TypesProto.Account();
+    }
+
+    public static com.akash.escrow.v1beta1.TypesProto.Account getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Account>
+        PARSER = new com.google.protobuf.AbstractParser<Account>() {
+      @java.lang.Override
+      public Account parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Account> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Account> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.escrow.v1beta1.TypesProto.Account getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PaymentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.escrow.v1beta1.Payment)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.akash.escrow.v1beta1.AccountID account_id = 1 [json_name = "accountId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AccountID", (.gogoproto.jsontag) = "accountID", (.gogoproto.moretags) = "yaml:&#92;"accountID&#92;""];</code>
+     * @return Whether the accountId field is set.
+     */
+    boolean hasAccountId();
+    /**
+     * <code>.akash.escrow.v1beta1.AccountID account_id = 1 [json_name = "accountId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AccountID", (.gogoproto.jsontag) = "accountID", (.gogoproto.moretags) = "yaml:&#92;"accountID&#92;""];</code>
+     * @return The accountId.
+     */
+    com.akash.escrow.v1beta1.TypesProto.AccountID getAccountId();
+    /**
+     * <code>.akash.escrow.v1beta1.AccountID account_id = 1 [json_name = "accountId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AccountID", (.gogoproto.jsontag) = "accountID", (.gogoproto.moretags) = "yaml:&#92;"accountID&#92;""];</code>
+     */
+    com.akash.escrow.v1beta1.TypesProto.AccountIDOrBuilder getAccountIdOrBuilder();
+
+    /**
+     * <code>string payment_id = 2 [json_name = "paymentId", (.gogoproto.customname) = "PaymentID", (.gogoproto.jsontag) = "paymentID", (.gogoproto.moretags) = "yaml:&#92;"paymentID&#92;""];</code>
+     * @return The paymentId.
+     */
+    java.lang.String getPaymentId();
+    /**
+     * <code>string payment_id = 2 [json_name = "paymentId", (.gogoproto.customname) = "PaymentID", (.gogoproto.jsontag) = "paymentID", (.gogoproto.moretags) = "yaml:&#92;"paymentID&#92;""];</code>
+     * @return The bytes for paymentId.
+     */
+    com.google.protobuf.ByteString
+        getPaymentIdBytes();
+
+    /**
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <code>.akash.escrow.v1beta1.Payment.State state = 4 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    int getStateValue();
+    /**
+     * <code>.akash.escrow.v1beta1.Payment.State state = 4 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+     * @return The state.
+     */
+    com.akash.escrow.v1beta1.TypesProto.Payment.State getState();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin rate = 5 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "rate", (.gogoproto.moretags) = "yaml:&#92;"rate&#92;""];</code>
+     * @return Whether the rate field is set.
+     */
+    boolean hasRate();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin rate = 5 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "rate", (.gogoproto.moretags) = "yaml:&#92;"rate&#92;""];</code>
+     * @return The rate.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getRate();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin rate = 5 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "rate", (.gogoproto.moretags) = "yaml:&#92;"rate&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRateOrBuilder();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin balance = 6 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "balance", (.gogoproto.moretags) = "yaml:&#92;"balance&#92;""];</code>
+     * @return Whether the balance field is set.
+     */
+    boolean hasBalance();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin balance = 6 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "balance", (.gogoproto.moretags) = "yaml:&#92;"balance&#92;""];</code>
+     * @return The balance.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getBalance();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin balance = 6 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "balance", (.gogoproto.moretags) = "yaml:&#92;"balance&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBalanceOrBuilder();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin withdrawn = 7 [json_name = "withdrawn", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "withdrawn", (.gogoproto.moretags) = "yaml:&#92;"withdrawn&#92;""];</code>
+     * @return Whether the withdrawn field is set.
+     */
+    boolean hasWithdrawn();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin withdrawn = 7 [json_name = "withdrawn", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "withdrawn", (.gogoproto.moretags) = "yaml:&#92;"withdrawn&#92;""];</code>
+     * @return The withdrawn.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getWithdrawn();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin withdrawn = 7 [json_name = "withdrawn", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "withdrawn", (.gogoproto.moretags) = "yaml:&#92;"withdrawn&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getWithdrawnOrBuilder();
+  }
+  /**
+   * <pre>
+   * Payment stores state for a payment
+   * </pre>
+   *
+   * Protobuf type {@code akash.escrow.v1beta1.Payment}
+   */
+  public static final class Payment extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.escrow.v1beta1.Payment)
+      PaymentOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Payment.newBuilder() to construct.
+    private Payment(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Payment() {
+      paymentId_ = "";
+      owner_ = "";
+      state_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Payment();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.escrow.v1beta1.TypesProto.internal_static_akash_escrow_v1beta1_Payment_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.escrow.v1beta1.TypesProto.internal_static_akash_escrow_v1beta1_Payment_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.escrow.v1beta1.TypesProto.Payment.class, com.akash.escrow.v1beta1.TypesProto.Payment.Builder.class);
+    }
+
+    /**
+     * <pre>
+     * Payment State
+     * </pre>
+     *
+     * Protobuf enum {@code akash.escrow.v1beta1.Payment.State}
+     */
+    public enum State
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <pre>
+       * PaymentStateInvalid is the state when the payment is invalid
+       * </pre>
+       *
+       * <code>invalid = 0 [(.gogoproto.enumvalue_customname) = "PaymentStateInvalid"];</code>
+       */
+      invalid(0),
+      /**
+       * <pre>
+       * PaymentStateOpen is the state when the payment is open
+       * </pre>
+       *
+       * <code>open = 1 [(.gogoproto.enumvalue_customname) = "PaymentOpen"];</code>
+       */
+      open(1),
+      /**
+       * <pre>
+       * PaymentStateClosed is the state when the payment is closed
+       * </pre>
+       *
+       * <code>closed = 2 [(.gogoproto.enumvalue_customname) = "PaymentClosed"];</code>
+       */
+      closed(2),
+      /**
+       * <pre>
+       * PaymentStateOverdrawn is the state when the payment is overdrawn
+       * </pre>
+       *
+       * <code>overdrawn = 3 [(.gogoproto.enumvalue_customname) = "PaymentOverdrawn"];</code>
+       */
+      overdrawn(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <pre>
+       * PaymentStateInvalid is the state when the payment is invalid
+       * </pre>
+       *
+       * <code>invalid = 0 [(.gogoproto.enumvalue_customname) = "PaymentStateInvalid"];</code>
+       */
+      public static final int invalid_VALUE = 0;
+      /**
+       * <pre>
+       * PaymentStateOpen is the state when the payment is open
+       * </pre>
+       *
+       * <code>open = 1 [(.gogoproto.enumvalue_customname) = "PaymentOpen"];</code>
+       */
+      public static final int open_VALUE = 1;
+      /**
+       * <pre>
+       * PaymentStateClosed is the state when the payment is closed
+       * </pre>
+       *
+       * <code>closed = 2 [(.gogoproto.enumvalue_customname) = "PaymentClosed"];</code>
+       */
+      public static final int closed_VALUE = 2;
+      /**
+       * <pre>
+       * PaymentStateOverdrawn is the state when the payment is overdrawn
+       * </pre>
+       *
+       * <code>overdrawn = 3 [(.gogoproto.enumvalue_customname) = "PaymentOverdrawn"];</code>
+       */
+      public static final int overdrawn_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static State valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static State forNumber(int value) {
+        switch (value) {
+          case 0: return invalid;
+          case 1: return open;
+          case 2: return closed;
+          case 3: return overdrawn;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<State>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          State> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<State>() {
+              public State findValueByNumber(int number) {
+                return State.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.akash.escrow.v1beta1.TypesProto.Payment.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final State[] VALUES = values();
+
+      public static State valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private State(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:akash.escrow.v1beta1.Payment.State)
+    }
+
+    public static final int ACCOUNT_ID_FIELD_NUMBER = 1;
+    private com.akash.escrow.v1beta1.TypesProto.AccountID accountId_;
+    /**
+     * <code>.akash.escrow.v1beta1.AccountID account_id = 1 [json_name = "accountId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AccountID", (.gogoproto.jsontag) = "accountID", (.gogoproto.moretags) = "yaml:&#92;"accountID&#92;""];</code>
+     * @return Whether the accountId field is set.
+     */
+    @java.lang.Override
+    public boolean hasAccountId() {
+      return accountId_ != null;
+    }
+    /**
+     * <code>.akash.escrow.v1beta1.AccountID account_id = 1 [json_name = "accountId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AccountID", (.gogoproto.jsontag) = "accountID", (.gogoproto.moretags) = "yaml:&#92;"accountID&#92;""];</code>
+     * @return The accountId.
+     */
+    @java.lang.Override
+    public com.akash.escrow.v1beta1.TypesProto.AccountID getAccountId() {
+      return accountId_ == null ? com.akash.escrow.v1beta1.TypesProto.AccountID.getDefaultInstance() : accountId_;
+    }
+    /**
+     * <code>.akash.escrow.v1beta1.AccountID account_id = 1 [json_name = "accountId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AccountID", (.gogoproto.jsontag) = "accountID", (.gogoproto.moretags) = "yaml:&#92;"accountID&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.akash.escrow.v1beta1.TypesProto.AccountIDOrBuilder getAccountIdOrBuilder() {
+      return accountId_ == null ? com.akash.escrow.v1beta1.TypesProto.AccountID.getDefaultInstance() : accountId_;
+    }
+
+    public static final int PAYMENT_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object paymentId_ = "";
+    /**
+     * <code>string payment_id = 2 [json_name = "paymentId", (.gogoproto.customname) = "PaymentID", (.gogoproto.jsontag) = "paymentID", (.gogoproto.moretags) = "yaml:&#92;"paymentID&#92;""];</code>
+     * @return The paymentId.
+     */
+    @java.lang.Override
+    public java.lang.String getPaymentId() {
+      java.lang.Object ref = paymentId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        paymentId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string payment_id = 2 [json_name = "paymentId", (.gogoproto.customname) = "PaymentID", (.gogoproto.jsontag) = "paymentID", (.gogoproto.moretags) = "yaml:&#92;"paymentID&#92;""];</code>
+     * @return The bytes for paymentId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPaymentIdBytes() {
+      java.lang.Object ref = paymentId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        paymentId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner = 3 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATE_FIELD_NUMBER = 4;
+    private int state_ = 0;
+    /**
+     * <code>.akash.escrow.v1beta1.Payment.State state = 4 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    @java.lang.Override public int getStateValue() {
+      return state_;
+    }
+    /**
+     * <code>.akash.escrow.v1beta1.Payment.State state = 4 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+     * @return The state.
+     */
+    @java.lang.Override public com.akash.escrow.v1beta1.TypesProto.Payment.State getState() {
+      com.akash.escrow.v1beta1.TypesProto.Payment.State result = com.akash.escrow.v1beta1.TypesProto.Payment.State.forNumber(state_);
+      return result == null ? com.akash.escrow.v1beta1.TypesProto.Payment.State.UNRECOGNIZED : result;
+    }
+
+    public static final int RATE_FIELD_NUMBER = 5;
+    private com.cosmos.base.v1beta1.CoinProto.Coin rate_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin rate = 5 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "rate", (.gogoproto.moretags) = "yaml:&#92;"rate&#92;""];</code>
+     * @return Whether the rate field is set.
+     */
+    @java.lang.Override
+    public boolean hasRate() {
+      return rate_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin rate = 5 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "rate", (.gogoproto.moretags) = "yaml:&#92;"rate&#92;""];</code>
+     * @return The rate.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getRate() {
+      return rate_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : rate_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin rate = 5 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "rate", (.gogoproto.moretags) = "yaml:&#92;"rate&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRateOrBuilder() {
+      return rate_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : rate_;
+    }
+
+    public static final int BALANCE_FIELD_NUMBER = 6;
+    private com.cosmos.base.v1beta1.CoinProto.Coin balance_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin balance = 6 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "balance", (.gogoproto.moretags) = "yaml:&#92;"balance&#92;""];</code>
+     * @return Whether the balance field is set.
+     */
+    @java.lang.Override
+    public boolean hasBalance() {
+      return balance_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin balance = 6 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "balance", (.gogoproto.moretags) = "yaml:&#92;"balance&#92;""];</code>
+     * @return The balance.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getBalance() {
+      return balance_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : balance_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin balance = 6 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "balance", (.gogoproto.moretags) = "yaml:&#92;"balance&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBalanceOrBuilder() {
+      return balance_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : balance_;
+    }
+
+    public static final int WITHDRAWN_FIELD_NUMBER = 7;
+    private com.cosmos.base.v1beta1.CoinProto.Coin withdrawn_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin withdrawn = 7 [json_name = "withdrawn", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "withdrawn", (.gogoproto.moretags) = "yaml:&#92;"withdrawn&#92;""];</code>
+     * @return Whether the withdrawn field is set.
+     */
+    @java.lang.Override
+    public boolean hasWithdrawn() {
+      return withdrawn_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin withdrawn = 7 [json_name = "withdrawn", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "withdrawn", (.gogoproto.moretags) = "yaml:&#92;"withdrawn&#92;""];</code>
+     * @return The withdrawn.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getWithdrawn() {
+      return withdrawn_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : withdrawn_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin withdrawn = 7 [json_name = "withdrawn", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "withdrawn", (.gogoproto.moretags) = "yaml:&#92;"withdrawn&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getWithdrawnOrBuilder() {
+      return withdrawn_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : withdrawn_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (accountId_ != null) {
+        output.writeMessage(1, getAccountId());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(paymentId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, paymentId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, owner_);
+      }
+      if (state_ != com.akash.escrow.v1beta1.TypesProto.Payment.State.invalid.getNumber()) {
+        output.writeEnum(4, state_);
+      }
+      if (rate_ != null) {
+        output.writeMessage(5, getRate());
+      }
+      if (balance_ != null) {
+        output.writeMessage(6, getBalance());
+      }
+      if (withdrawn_ != null) {
+        output.writeMessage(7, getWithdrawn());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (accountId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getAccountId());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(paymentId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, paymentId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, owner_);
+      }
+      if (state_ != com.akash.escrow.v1beta1.TypesProto.Payment.State.invalid.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, state_);
+      }
+      if (rate_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getRate());
+      }
+      if (balance_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getBalance());
+      }
+      if (withdrawn_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getWithdrawn());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.escrow.v1beta1.TypesProto.Payment)) {
+        return super.equals(obj);
+      }
+      com.akash.escrow.v1beta1.TypesProto.Payment other = (com.akash.escrow.v1beta1.TypesProto.Payment) obj;
+
+      if (hasAccountId() != other.hasAccountId()) return false;
+      if (hasAccountId()) {
+        if (!getAccountId()
+            .equals(other.getAccountId())) return false;
+      }
+      if (!getPaymentId()
+          .equals(other.getPaymentId())) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (state_ != other.state_) return false;
+      if (hasRate() != other.hasRate()) return false;
+      if (hasRate()) {
+        if (!getRate()
+            .equals(other.getRate())) return false;
+      }
+      if (hasBalance() != other.hasBalance()) return false;
+      if (hasBalance()) {
+        if (!getBalance()
+            .equals(other.getBalance())) return false;
+      }
+      if (hasWithdrawn() != other.hasWithdrawn()) return false;
+      if (hasWithdrawn()) {
+        if (!getWithdrawn()
+            .equals(other.getWithdrawn())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAccountId()) {
+        hash = (37 * hash) + ACCOUNT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getAccountId().hashCode();
+      }
+      hash = (37 * hash) + PAYMENT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPaymentId().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + STATE_FIELD_NUMBER;
+      hash = (53 * hash) + state_;
+      if (hasRate()) {
+        hash = (37 * hash) + RATE_FIELD_NUMBER;
+        hash = (53 * hash) + getRate().hashCode();
+      }
+      if (hasBalance()) {
+        hash = (37 * hash) + BALANCE_FIELD_NUMBER;
+        hash = (53 * hash) + getBalance().hashCode();
+      }
+      if (hasWithdrawn()) {
+        hash = (37 * hash) + WITHDRAWN_FIELD_NUMBER;
+        hash = (53 * hash) + getWithdrawn().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.escrow.v1beta1.TypesProto.Payment parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.escrow.v1beta1.TypesProto.Payment parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.escrow.v1beta1.TypesProto.Payment parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.escrow.v1beta1.TypesProto.Payment parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.escrow.v1beta1.TypesProto.Payment parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.escrow.v1beta1.TypesProto.Payment parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.escrow.v1beta1.TypesProto.Payment parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.escrow.v1beta1.TypesProto.Payment parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.escrow.v1beta1.TypesProto.Payment parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.escrow.v1beta1.TypesProto.Payment parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.escrow.v1beta1.TypesProto.Payment parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.escrow.v1beta1.TypesProto.Payment parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.escrow.v1beta1.TypesProto.Payment prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Payment stores state for a payment
+     * </pre>
+     *
+     * Protobuf type {@code akash.escrow.v1beta1.Payment}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.escrow.v1beta1.Payment)
+        com.akash.escrow.v1beta1.TypesProto.PaymentOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.escrow.v1beta1.TypesProto.internal_static_akash_escrow_v1beta1_Payment_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.escrow.v1beta1.TypesProto.internal_static_akash_escrow_v1beta1_Payment_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.escrow.v1beta1.TypesProto.Payment.class, com.akash.escrow.v1beta1.TypesProto.Payment.Builder.class);
+      }
+
+      // Construct using com.akash.escrow.v1beta1.TypesProto.Payment.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        accountId_ = null;
+        if (accountIdBuilder_ != null) {
+          accountIdBuilder_.dispose();
+          accountIdBuilder_ = null;
+        }
+        paymentId_ = "";
+        owner_ = "";
+        state_ = 0;
+        rate_ = null;
+        if (rateBuilder_ != null) {
+          rateBuilder_.dispose();
+          rateBuilder_ = null;
+        }
+        balance_ = null;
+        if (balanceBuilder_ != null) {
+          balanceBuilder_.dispose();
+          balanceBuilder_ = null;
+        }
+        withdrawn_ = null;
+        if (withdrawnBuilder_ != null) {
+          withdrawnBuilder_.dispose();
+          withdrawnBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.escrow.v1beta1.TypesProto.internal_static_akash_escrow_v1beta1_Payment_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.escrow.v1beta1.TypesProto.Payment getDefaultInstanceForType() {
+        return com.akash.escrow.v1beta1.TypesProto.Payment.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.escrow.v1beta1.TypesProto.Payment build() {
+        com.akash.escrow.v1beta1.TypesProto.Payment result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.escrow.v1beta1.TypesProto.Payment buildPartial() {
+        com.akash.escrow.v1beta1.TypesProto.Payment result = new com.akash.escrow.v1beta1.TypesProto.Payment(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.escrow.v1beta1.TypesProto.Payment result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.accountId_ = accountIdBuilder_ == null
+              ? accountId_
+              : accountIdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.paymentId_ = paymentId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.state_ = state_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.rate_ = rateBuilder_ == null
+              ? rate_
+              : rateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.balance_ = balanceBuilder_ == null
+              ? balance_
+              : balanceBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.withdrawn_ = withdrawnBuilder_ == null
+              ? withdrawn_
+              : withdrawnBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.escrow.v1beta1.TypesProto.Payment) {
+          return mergeFrom((com.akash.escrow.v1beta1.TypesProto.Payment)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.escrow.v1beta1.TypesProto.Payment other) {
+        if (other == com.akash.escrow.v1beta1.TypesProto.Payment.getDefaultInstance()) return this;
+        if (other.hasAccountId()) {
+          mergeAccountId(other.getAccountId());
+        }
+        if (!other.getPaymentId().isEmpty()) {
+          paymentId_ = other.paymentId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.state_ != 0) {
+          setStateValue(other.getStateValue());
+        }
+        if (other.hasRate()) {
+          mergeRate(other.getRate());
+        }
+        if (other.hasBalance()) {
+          mergeBalance(other.getBalance());
+        }
+        if (other.hasWithdrawn()) {
+          mergeWithdrawn(other.getWithdrawn());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getAccountIdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                paymentId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                state_ = input.readEnum();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                input.readMessage(
+                    getRateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getBalanceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                input.readMessage(
+                    getWithdrawnFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.akash.escrow.v1beta1.TypesProto.AccountID accountId_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.escrow.v1beta1.TypesProto.AccountID, com.akash.escrow.v1beta1.TypesProto.AccountID.Builder, com.akash.escrow.v1beta1.TypesProto.AccountIDOrBuilder> accountIdBuilder_;
+      /**
+       * <code>.akash.escrow.v1beta1.AccountID account_id = 1 [json_name = "accountId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AccountID", (.gogoproto.jsontag) = "accountID", (.gogoproto.moretags) = "yaml:&#92;"accountID&#92;""];</code>
+       * @return Whether the accountId field is set.
+       */
+      public boolean hasAccountId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.akash.escrow.v1beta1.AccountID account_id = 1 [json_name = "accountId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AccountID", (.gogoproto.jsontag) = "accountID", (.gogoproto.moretags) = "yaml:&#92;"accountID&#92;""];</code>
+       * @return The accountId.
+       */
+      public com.akash.escrow.v1beta1.TypesProto.AccountID getAccountId() {
+        if (accountIdBuilder_ == null) {
+          return accountId_ == null ? com.akash.escrow.v1beta1.TypesProto.AccountID.getDefaultInstance() : accountId_;
+        } else {
+          return accountIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.escrow.v1beta1.AccountID account_id = 1 [json_name = "accountId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AccountID", (.gogoproto.jsontag) = "accountID", (.gogoproto.moretags) = "yaml:&#92;"accountID&#92;""];</code>
+       */
+      public Builder setAccountId(com.akash.escrow.v1beta1.TypesProto.AccountID value) {
+        if (accountIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          accountId_ = value;
+        } else {
+          accountIdBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.escrow.v1beta1.AccountID account_id = 1 [json_name = "accountId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AccountID", (.gogoproto.jsontag) = "accountID", (.gogoproto.moretags) = "yaml:&#92;"accountID&#92;""];</code>
+       */
+      public Builder setAccountId(
+          com.akash.escrow.v1beta1.TypesProto.AccountID.Builder builderForValue) {
+        if (accountIdBuilder_ == null) {
+          accountId_ = builderForValue.build();
+        } else {
+          accountIdBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.escrow.v1beta1.AccountID account_id = 1 [json_name = "accountId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AccountID", (.gogoproto.jsontag) = "accountID", (.gogoproto.moretags) = "yaml:&#92;"accountID&#92;""];</code>
+       */
+      public Builder mergeAccountId(com.akash.escrow.v1beta1.TypesProto.AccountID value) {
+        if (accountIdBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            accountId_ != null &&
+            accountId_ != com.akash.escrow.v1beta1.TypesProto.AccountID.getDefaultInstance()) {
+            getAccountIdBuilder().mergeFrom(value);
+          } else {
+            accountId_ = value;
+          }
+        } else {
+          accountIdBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.escrow.v1beta1.AccountID account_id = 1 [json_name = "accountId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AccountID", (.gogoproto.jsontag) = "accountID", (.gogoproto.moretags) = "yaml:&#92;"accountID&#92;""];</code>
+       */
+      public Builder clearAccountId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        accountId_ = null;
+        if (accountIdBuilder_ != null) {
+          accountIdBuilder_.dispose();
+          accountIdBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.escrow.v1beta1.AccountID account_id = 1 [json_name = "accountId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AccountID", (.gogoproto.jsontag) = "accountID", (.gogoproto.moretags) = "yaml:&#92;"accountID&#92;""];</code>
+       */
+      public com.akash.escrow.v1beta1.TypesProto.AccountID.Builder getAccountIdBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getAccountIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.escrow.v1beta1.AccountID account_id = 1 [json_name = "accountId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AccountID", (.gogoproto.jsontag) = "accountID", (.gogoproto.moretags) = "yaml:&#92;"accountID&#92;""];</code>
+       */
+      public com.akash.escrow.v1beta1.TypesProto.AccountIDOrBuilder getAccountIdOrBuilder() {
+        if (accountIdBuilder_ != null) {
+          return accountIdBuilder_.getMessageOrBuilder();
+        } else {
+          return accountId_ == null ?
+              com.akash.escrow.v1beta1.TypesProto.AccountID.getDefaultInstance() : accountId_;
+        }
+      }
+      /**
+       * <code>.akash.escrow.v1beta1.AccountID account_id = 1 [json_name = "accountId", (.gogoproto.nullable) = false, (.gogoproto.customname) = "AccountID", (.gogoproto.jsontag) = "accountID", (.gogoproto.moretags) = "yaml:&#92;"accountID&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.escrow.v1beta1.TypesProto.AccountID, com.akash.escrow.v1beta1.TypesProto.AccountID.Builder, com.akash.escrow.v1beta1.TypesProto.AccountIDOrBuilder> 
+          getAccountIdFieldBuilder() {
+        if (accountIdBuilder_ == null) {
+          accountIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.escrow.v1beta1.TypesProto.AccountID, com.akash.escrow.v1beta1.TypesProto.AccountID.Builder, com.akash.escrow.v1beta1.TypesProto.AccountIDOrBuilder>(
+                  getAccountId(),
+                  getParentForChildren(),
+                  isClean());
+          accountId_ = null;
+        }
+        return accountIdBuilder_;
+      }
+
+      private java.lang.Object paymentId_ = "";
+      /**
+       * <code>string payment_id = 2 [json_name = "paymentId", (.gogoproto.customname) = "PaymentID", (.gogoproto.jsontag) = "paymentID", (.gogoproto.moretags) = "yaml:&#92;"paymentID&#92;""];</code>
+       * @return The paymentId.
+       */
+      public java.lang.String getPaymentId() {
+        java.lang.Object ref = paymentId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          paymentId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string payment_id = 2 [json_name = "paymentId", (.gogoproto.customname) = "PaymentID", (.gogoproto.jsontag) = "paymentID", (.gogoproto.moretags) = "yaml:&#92;"paymentID&#92;""];</code>
+       * @return The bytes for paymentId.
+       */
+      public com.google.protobuf.ByteString
+          getPaymentIdBytes() {
+        java.lang.Object ref = paymentId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          paymentId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string payment_id = 2 [json_name = "paymentId", (.gogoproto.customname) = "PaymentID", (.gogoproto.jsontag) = "paymentID", (.gogoproto.moretags) = "yaml:&#92;"paymentID&#92;""];</code>
+       * @param value The paymentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPaymentId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        paymentId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string payment_id = 2 [json_name = "paymentId", (.gogoproto.customname) = "PaymentID", (.gogoproto.jsontag) = "paymentID", (.gogoproto.moretags) = "yaml:&#92;"paymentID&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPaymentId() {
+        paymentId_ = getDefaultInstance().getPaymentId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string payment_id = 2 [json_name = "paymentId", (.gogoproto.customname) = "PaymentID", (.gogoproto.jsontag) = "paymentID", (.gogoproto.moretags) = "yaml:&#92;"paymentID&#92;""];</code>
+       * @param value The bytes for paymentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPaymentIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        paymentId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 3 [json_name = "owner", (.gogoproto.jsontag) = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private int state_ = 0;
+      /**
+       * <code>.akash.escrow.v1beta1.Payment.State state = 4 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+       * @return The enum numeric value on the wire for state.
+       */
+      @java.lang.Override public int getStateValue() {
+        return state_;
+      }
+      /**
+       * <code>.akash.escrow.v1beta1.Payment.State state = 4 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+       * @param value The enum numeric value on the wire for state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStateValue(int value) {
+        state_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.escrow.v1beta1.Payment.State state = 4 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+       * @return The state.
+       */
+      @java.lang.Override
+      public com.akash.escrow.v1beta1.TypesProto.Payment.State getState() {
+        com.akash.escrow.v1beta1.TypesProto.Payment.State result = com.akash.escrow.v1beta1.TypesProto.Payment.State.forNumber(state_);
+        return result == null ? com.akash.escrow.v1beta1.TypesProto.Payment.State.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.akash.escrow.v1beta1.Payment.State state = 4 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+       * @param value The state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setState(com.akash.escrow.v1beta1.TypesProto.Payment.State value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000008;
+        state_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.escrow.v1beta1.Payment.State state = 4 [json_name = "state", (.gogoproto.jsontag) = "state", (.gogoproto.moretags) = "yaml:&#92;"state&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearState() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        state_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin rate_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> rateBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin rate = 5 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "rate", (.gogoproto.moretags) = "yaml:&#92;"rate&#92;""];</code>
+       * @return Whether the rate field is set.
+       */
+      public boolean hasRate() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin rate = 5 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "rate", (.gogoproto.moretags) = "yaml:&#92;"rate&#92;""];</code>
+       * @return The rate.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getRate() {
+        if (rateBuilder_ == null) {
+          return rate_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : rate_;
+        } else {
+          return rateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin rate = 5 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "rate", (.gogoproto.moretags) = "yaml:&#92;"rate&#92;""];</code>
+       */
+      public Builder setRate(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (rateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rate_ = value;
+        } else {
+          rateBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin rate = 5 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "rate", (.gogoproto.moretags) = "yaml:&#92;"rate&#92;""];</code>
+       */
+      public Builder setRate(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (rateBuilder_ == null) {
+          rate_ = builderForValue.build();
+        } else {
+          rateBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin rate = 5 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "rate", (.gogoproto.moretags) = "yaml:&#92;"rate&#92;""];</code>
+       */
+      public Builder mergeRate(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (rateBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            rate_ != null &&
+            rate_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getRateBuilder().mergeFrom(value);
+          } else {
+            rate_ = value;
+          }
+        } else {
+          rateBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin rate = 5 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "rate", (.gogoproto.moretags) = "yaml:&#92;"rate&#92;""];</code>
+       */
+      public Builder clearRate() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        rate_ = null;
+        if (rateBuilder_ != null) {
+          rateBuilder_.dispose();
+          rateBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin rate = 5 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "rate", (.gogoproto.moretags) = "yaml:&#92;"rate&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getRateBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getRateFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin rate = 5 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "rate", (.gogoproto.moretags) = "yaml:&#92;"rate&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRateOrBuilder() {
+        if (rateBuilder_ != null) {
+          return rateBuilder_.getMessageOrBuilder();
+        } else {
+          return rate_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : rate_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin rate = 5 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "rate", (.gogoproto.moretags) = "yaml:&#92;"rate&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getRateFieldBuilder() {
+        if (rateBuilder_ == null) {
+          rateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getRate(),
+                  getParentForChildren(),
+                  isClean());
+          rate_ = null;
+        }
+        return rateBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin balance_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> balanceBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 6 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "balance", (.gogoproto.moretags) = "yaml:&#92;"balance&#92;""];</code>
+       * @return Whether the balance field is set.
+       */
+      public boolean hasBalance() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 6 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "balance", (.gogoproto.moretags) = "yaml:&#92;"balance&#92;""];</code>
+       * @return The balance.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getBalance() {
+        if (balanceBuilder_ == null) {
+          return balance_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : balance_;
+        } else {
+          return balanceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 6 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "balance", (.gogoproto.moretags) = "yaml:&#92;"balance&#92;""];</code>
+       */
+      public Builder setBalance(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (balanceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          balance_ = value;
+        } else {
+          balanceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 6 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "balance", (.gogoproto.moretags) = "yaml:&#92;"balance&#92;""];</code>
+       */
+      public Builder setBalance(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (balanceBuilder_ == null) {
+          balance_ = builderForValue.build();
+        } else {
+          balanceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 6 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "balance", (.gogoproto.moretags) = "yaml:&#92;"balance&#92;""];</code>
+       */
+      public Builder mergeBalance(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (balanceBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            balance_ != null &&
+            balance_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getBalanceBuilder().mergeFrom(value);
+          } else {
+            balance_ = value;
+          }
+        } else {
+          balanceBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 6 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "balance", (.gogoproto.moretags) = "yaml:&#92;"balance&#92;""];</code>
+       */
+      public Builder clearBalance() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        balance_ = null;
+        if (balanceBuilder_ != null) {
+          balanceBuilder_.dispose();
+          balanceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 6 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "balance", (.gogoproto.moretags) = "yaml:&#92;"balance&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getBalanceBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getBalanceFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 6 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "balance", (.gogoproto.moretags) = "yaml:&#92;"balance&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBalanceOrBuilder() {
+        if (balanceBuilder_ != null) {
+          return balanceBuilder_.getMessageOrBuilder();
+        } else {
+          return balance_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : balance_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin balance = 6 [json_name = "balance", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "balance", (.gogoproto.moretags) = "yaml:&#92;"balance&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getBalanceFieldBuilder() {
+        if (balanceBuilder_ == null) {
+          balanceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getBalance(),
+                  getParentForChildren(),
+                  isClean());
+          balance_ = null;
+        }
+        return balanceBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin withdrawn_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> withdrawnBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin withdrawn = 7 [json_name = "withdrawn", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "withdrawn", (.gogoproto.moretags) = "yaml:&#92;"withdrawn&#92;""];</code>
+       * @return Whether the withdrawn field is set.
+       */
+      public boolean hasWithdrawn() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin withdrawn = 7 [json_name = "withdrawn", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "withdrawn", (.gogoproto.moretags) = "yaml:&#92;"withdrawn&#92;""];</code>
+       * @return The withdrawn.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getWithdrawn() {
+        if (withdrawnBuilder_ == null) {
+          return withdrawn_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : withdrawn_;
+        } else {
+          return withdrawnBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin withdrawn = 7 [json_name = "withdrawn", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "withdrawn", (.gogoproto.moretags) = "yaml:&#92;"withdrawn&#92;""];</code>
+       */
+      public Builder setWithdrawn(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (withdrawnBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          withdrawn_ = value;
+        } else {
+          withdrawnBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin withdrawn = 7 [json_name = "withdrawn", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "withdrawn", (.gogoproto.moretags) = "yaml:&#92;"withdrawn&#92;""];</code>
+       */
+      public Builder setWithdrawn(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (withdrawnBuilder_ == null) {
+          withdrawn_ = builderForValue.build();
+        } else {
+          withdrawnBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin withdrawn = 7 [json_name = "withdrawn", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "withdrawn", (.gogoproto.moretags) = "yaml:&#92;"withdrawn&#92;""];</code>
+       */
+      public Builder mergeWithdrawn(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (withdrawnBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0) &&
+            withdrawn_ != null &&
+            withdrawn_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getWithdrawnBuilder().mergeFrom(value);
+          } else {
+            withdrawn_ = value;
+          }
+        } else {
+          withdrawnBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin withdrawn = 7 [json_name = "withdrawn", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "withdrawn", (.gogoproto.moretags) = "yaml:&#92;"withdrawn&#92;""];</code>
+       */
+      public Builder clearWithdrawn() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        withdrawn_ = null;
+        if (withdrawnBuilder_ != null) {
+          withdrawnBuilder_.dispose();
+          withdrawnBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin withdrawn = 7 [json_name = "withdrawn", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "withdrawn", (.gogoproto.moretags) = "yaml:&#92;"withdrawn&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getWithdrawnBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return getWithdrawnFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin withdrawn = 7 [json_name = "withdrawn", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "withdrawn", (.gogoproto.moretags) = "yaml:&#92;"withdrawn&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getWithdrawnOrBuilder() {
+        if (withdrawnBuilder_ != null) {
+          return withdrawnBuilder_.getMessageOrBuilder();
+        } else {
+          return withdrawn_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : withdrawn_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin withdrawn = 7 [json_name = "withdrawn", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "withdrawn", (.gogoproto.moretags) = "yaml:&#92;"withdrawn&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getWithdrawnFieldBuilder() {
+        if (withdrawnBuilder_ == null) {
+          withdrawnBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getWithdrawn(),
+                  getParentForChildren(),
+                  isClean());
+          withdrawn_ = null;
+        }
+        return withdrawnBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.escrow.v1beta1.Payment)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.escrow.v1beta1.Payment)
+    private static final com.akash.escrow.v1beta1.TypesProto.Payment DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.escrow.v1beta1.TypesProto.Payment();
+    }
+
+    public static com.akash.escrow.v1beta1.TypesProto.Payment getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Payment>
+        PARSER = new com.google.protobuf.AbstractParser<Payment>() {
+      @java.lang.Override
+      public Payment parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Payment> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Payment> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.escrow.v1beta1.TypesProto.Payment getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_escrow_v1beta1_AccountID_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_escrow_v1beta1_AccountID_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_escrow_v1beta1_Account_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_escrow_v1beta1_Account_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_escrow_v1beta1_Payment_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_escrow_v1beta1_Payment_fieldAccessorTable;
 
@@ -78,13 +4305,13 @@ public final class TypesProto {
       "$\n\007invalid\020\000\032\027\212\235 \023PaymentStateInvalid\022\031\n" +
       "\004open\020\001\032\017\212\235 \013PaymentOpen\022\035\n\006closed\020\002\032\021\212\235" +
       " \rPaymentClosed\022#\n\toverdrawn\020\003\032\024\212\235 \020Paym" +
-      "entOverdrawn\032\004\210\243\036\000:\004\230\240\037\001B\323\001\n\030com.akash.e" +
-      "scrow.v1beta1B\nTypesProtoP\001Z9github.com/" +
-      "akash-network/akash-api/go/node/escrow/v" +
-      "1beta1\242\002\003AEX\252\002\024Akash.Escrow.V1beta1\312\002\024Ak" +
-      "ash\\Escrow\\V1beta1\342\002 Akash\\Escrow\\V1beta" +
-      "1\\GPBMetadata\352\002\026Akash::Escrow::V1beta1b\006" +
-      "proto3"
+      "entOverdrawn\032\004\210\243\036\000:\004\230\240\037\001B\321\001\n\030com.akash.e" +
+      "scrow.v1beta1B\nTypesProtoZ9github.com/ak" +
+      "ash-network/akash-api/go/node/escrow/v1b" +
+      "eta1\242\002\003AEX\252\002\024Akash.Escrow.V1beta1\312\002\024Akas" +
+      "h\\Escrow\\V1beta1\342\002 Akash\\Escrow\\V1beta1\\" +
+      "GPBMetadata\352\002\026Akash::Escrow::V1beta1b\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

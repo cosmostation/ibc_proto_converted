@@ -14,79 +14,18113 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * params defines all the parameter of the module
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params defines all the parameter of the module
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.confio.poe.v1beta1.PoeProto.Params getParams();
+    /**
+     * <pre>
+     * params defines all the parameter of the module
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.confio.poe.v1beta1.PoeProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <pre>
+     * SeedContracts stores and instantiates the Proof of Engagement
+     * contracts on the chain.
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.SeedContracts seed_contracts = 2 [json_name = "seedContracts"];</code>
+     * @return Whether the seedContracts field is set.
+     */
+    boolean hasSeedContracts();
+    /**
+     * <pre>
+     * SeedContracts stores and instantiates the Proof of Engagement
+     * contracts on the chain.
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.SeedContracts seed_contracts = 2 [json_name = "seedContracts"];</code>
+     * @return The seedContracts.
+     */
+    com.confio.poe.v1beta1.GenesisProto.SeedContracts getSeedContracts();
+    /**
+     * <pre>
+     * SeedContracts stores and instantiates the Proof of Engagement
+     * contracts on the chain.
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.SeedContracts seed_contracts = 2 [json_name = "seedContracts"];</code>
+     */
+    com.confio.poe.v1beta1.GenesisProto.SeedContractsOrBuilder getSeedContractsOrBuilder();
+
+    /**
+     * <pre>
+     * ImportDump restores the state from an exported state genesis
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.ImportDump import_dump = 3 [json_name = "importDump"];</code>
+     * @return Whether the importDump field is set.
+     */
+    boolean hasImportDump();
+    /**
+     * <pre>
+     * ImportDump restores the state from an exported state genesis
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.ImportDump import_dump = 3 [json_name = "importDump"];</code>
+     * @return The importDump.
+     */
+    com.confio.poe.v1beta1.GenesisProto.ImportDump getImportDump();
+    /**
+     * <pre>
+     * ImportDump restores the state from an exported state genesis
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.ImportDump import_dump = 3 [json_name = "importDump"];</code>
+     */
+    com.confio.poe.v1beta1.GenesisProto.ImportDumpOrBuilder getImportDumpOrBuilder();
+
+    com.confio.poe.v1beta1.GenesisProto.GenesisState.SetupModeCase getSetupModeCase();
+  }
+  /**
+   * <pre>
+   * GenesisState - initial state of module
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.GenesisProto.GenesisState.class, com.confio.poe.v1beta1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    private int setupModeCase_ = 0;
+    @SuppressWarnings("serial")
+    private java.lang.Object setupMode_;
+    public enum SetupModeCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      SEED_CONTRACTS(2),
+      IMPORT_DUMP(3),
+      SETUPMODE_NOT_SET(0);
+      private final int value;
+      private SetupModeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static SetupModeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static SetupModeCase forNumber(int value) {
+        switch (value) {
+          case 2: return SEED_CONTRACTS;
+          case 3: return IMPORT_DUMP;
+          case 0: return SETUPMODE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public SetupModeCase
+    getSetupModeCase() {
+      return SetupModeCase.forNumber(
+          setupModeCase_);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.confio.poe.v1beta1.PoeProto.Params params_;
+    /**
+     * <pre>
+     * params defines all the parameter of the module
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params defines all the parameter of the module
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.PoeProto.Params getParams() {
+      return params_ == null ? com.confio.poe.v1beta1.PoeProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params defines all the parameter of the module
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.PoeProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.confio.poe.v1beta1.PoeProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int SEED_CONTRACTS_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * SeedContracts stores and instantiates the Proof of Engagement
+     * contracts on the chain.
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.SeedContracts seed_contracts = 2 [json_name = "seedContracts"];</code>
+     * @return Whether the seedContracts field is set.
+     */
+    @java.lang.Override
+    public boolean hasSeedContracts() {
+      return setupModeCase_ == 2;
+    }
+    /**
+     * <pre>
+     * SeedContracts stores and instantiates the Proof of Engagement
+     * contracts on the chain.
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.SeedContracts seed_contracts = 2 [json_name = "seedContracts"];</code>
+     * @return The seedContracts.
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.SeedContracts getSeedContracts() {
+      if (setupModeCase_ == 2) {
+         return (com.confio.poe.v1beta1.GenesisProto.SeedContracts) setupMode_;
+      }
+      return com.confio.poe.v1beta1.GenesisProto.SeedContracts.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * SeedContracts stores and instantiates the Proof of Engagement
+     * contracts on the chain.
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.SeedContracts seed_contracts = 2 [json_name = "seedContracts"];</code>
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.SeedContractsOrBuilder getSeedContractsOrBuilder() {
+      if (setupModeCase_ == 2) {
+         return (com.confio.poe.v1beta1.GenesisProto.SeedContracts) setupMode_;
+      }
+      return com.confio.poe.v1beta1.GenesisProto.SeedContracts.getDefaultInstance();
+    }
+
+    public static final int IMPORT_DUMP_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * ImportDump restores the state from an exported state genesis
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.ImportDump import_dump = 3 [json_name = "importDump"];</code>
+     * @return Whether the importDump field is set.
+     */
+    @java.lang.Override
+    public boolean hasImportDump() {
+      return setupModeCase_ == 3;
+    }
+    /**
+     * <pre>
+     * ImportDump restores the state from an exported state genesis
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.ImportDump import_dump = 3 [json_name = "importDump"];</code>
+     * @return The importDump.
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.ImportDump getImportDump() {
+      if (setupModeCase_ == 3) {
+         return (com.confio.poe.v1beta1.GenesisProto.ImportDump) setupMode_;
+      }
+      return com.confio.poe.v1beta1.GenesisProto.ImportDump.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * ImportDump restores the state from an exported state genesis
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.ImportDump import_dump = 3 [json_name = "importDump"];</code>
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.ImportDumpOrBuilder getImportDumpOrBuilder() {
+      if (setupModeCase_ == 3) {
+         return (com.confio.poe.v1beta1.GenesisProto.ImportDump) setupMode_;
+      }
+      return com.confio.poe.v1beta1.GenesisProto.ImportDump.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      if (setupModeCase_ == 2) {
+        output.writeMessage(2, (com.confio.poe.v1beta1.GenesisProto.SeedContracts) setupMode_);
+      }
+      if (setupModeCase_ == 3) {
+        output.writeMessage(3, (com.confio.poe.v1beta1.GenesisProto.ImportDump) setupMode_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      if (setupModeCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (com.confio.poe.v1beta1.GenesisProto.SeedContracts) setupMode_);
+      }
+      if (setupModeCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (com.confio.poe.v1beta1.GenesisProto.ImportDump) setupMode_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.GenesisProto.GenesisState other = (com.confio.poe.v1beta1.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getSetupModeCase().equals(other.getSetupModeCase())) return false;
+      switch (setupModeCase_) {
+        case 2:
+          if (!getSeedContracts()
+              .equals(other.getSeedContracts())) return false;
+          break;
+        case 3:
+          if (!getImportDump()
+              .equals(other.getImportDump())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      switch (setupModeCase_) {
+        case 2:
+          hash = (37 * hash) + SEED_CONTRACTS_FIELD_NUMBER;
+          hash = (53 * hash) + getSeedContracts().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + IMPORT_DUMP_FIELD_NUMBER;
+          hash = (53 * hash) + getImportDump().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState - initial state of module
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.GenesisState)
+        com.confio.poe.v1beta1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.GenesisProto.GenesisState.class, com.confio.poe.v1beta1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        if (seedContractsBuilder_ != null) {
+          seedContractsBuilder_.clear();
+        }
+        if (importDumpBuilder_ != null) {
+          importDumpBuilder_.clear();
+        }
+        setupModeCase_ = 0;
+        setupMode_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.GenesisState build() {
+        com.confio.poe.v1beta1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.GenesisState buildPartial() {
+        com.confio.poe.v1beta1.GenesisProto.GenesisState result = new com.confio.poe.v1beta1.GenesisProto.GenesisState(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.poe.v1beta1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      private void buildPartialOneofs(com.confio.poe.v1beta1.GenesisProto.GenesisState result) {
+        result.setupModeCase_ = setupModeCase_;
+        result.setupMode_ = this.setupMode_;
+        if (setupModeCase_ == 2 &&
+            seedContractsBuilder_ != null) {
+          result.setupMode_ = seedContractsBuilder_.build();
+        }
+        if (setupModeCase_ == 3 &&
+            importDumpBuilder_ != null) {
+          result.setupMode_ = importDumpBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.GenesisProto.GenesisState) {
+          return mergeFrom((com.confio.poe.v1beta1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.GenesisProto.GenesisState other) {
+        if (other == com.confio.poe.v1beta1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        switch (other.getSetupModeCase()) {
+          case SEED_CONTRACTS: {
+            mergeSeedContracts(other.getSeedContracts());
+            break;
+          }
+          case IMPORT_DUMP: {
+            mergeImportDump(other.getImportDump());
+            break;
+          }
+          case SETUPMODE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getSeedContractsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                setupModeCase_ = 2;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getImportDumpFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                setupModeCase_ = 3;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int setupModeCase_ = 0;
+      private java.lang.Object setupMode_;
+      public SetupModeCase
+          getSetupModeCase() {
+        return SetupModeCase.forNumber(
+            setupModeCase_);
+      }
+
+      public Builder clearSetupMode() {
+        setupModeCase_ = 0;
+        setupMode_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private com.confio.poe.v1beta1.PoeProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.PoeProto.Params, com.confio.poe.v1beta1.PoeProto.Params.Builder, com.confio.poe.v1beta1.PoeProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params defines all the parameter of the module
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * params defines all the parameter of the module
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.confio.poe.v1beta1.PoeProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.confio.poe.v1beta1.PoeProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameter of the module
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.confio.poe.v1beta1.PoeProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameter of the module
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.confio.poe.v1beta1.PoeProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameter of the module
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.confio.poe.v1beta1.PoeProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.confio.poe.v1beta1.PoeProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameter of the module
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameter of the module
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.confio.poe.v1beta1.PoeProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params defines all the parameter of the module
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.confio.poe.v1beta1.PoeProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.confio.poe.v1beta1.PoeProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameter of the module
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.PoeProto.Params, com.confio.poe.v1beta1.PoeProto.Params.Builder, com.confio.poe.v1beta1.PoeProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.confio.poe.v1beta1.PoeProto.Params, com.confio.poe.v1beta1.PoeProto.Params.Builder, com.confio.poe.v1beta1.PoeProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.SeedContracts, com.confio.poe.v1beta1.GenesisProto.SeedContracts.Builder, com.confio.poe.v1beta1.GenesisProto.SeedContractsOrBuilder> seedContractsBuilder_;
+      /**
+       * <pre>
+       * SeedContracts stores and instantiates the Proof of Engagement
+       * contracts on the chain.
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.SeedContracts seed_contracts = 2 [json_name = "seedContracts"];</code>
+       * @return Whether the seedContracts field is set.
+       */
+      @java.lang.Override
+      public boolean hasSeedContracts() {
+        return setupModeCase_ == 2;
+      }
+      /**
+       * <pre>
+       * SeedContracts stores and instantiates the Proof of Engagement
+       * contracts on the chain.
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.SeedContracts seed_contracts = 2 [json_name = "seedContracts"];</code>
+       * @return The seedContracts.
+       */
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.SeedContracts getSeedContracts() {
+        if (seedContractsBuilder_ == null) {
+          if (setupModeCase_ == 2) {
+            return (com.confio.poe.v1beta1.GenesisProto.SeedContracts) setupMode_;
+          }
+          return com.confio.poe.v1beta1.GenesisProto.SeedContracts.getDefaultInstance();
+        } else {
+          if (setupModeCase_ == 2) {
+            return seedContractsBuilder_.getMessage();
+          }
+          return com.confio.poe.v1beta1.GenesisProto.SeedContracts.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * SeedContracts stores and instantiates the Proof of Engagement
+       * contracts on the chain.
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.SeedContracts seed_contracts = 2 [json_name = "seedContracts"];</code>
+       */
+      public Builder setSeedContracts(com.confio.poe.v1beta1.GenesisProto.SeedContracts value) {
+        if (seedContractsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          setupMode_ = value;
+          onChanged();
+        } else {
+          seedContractsBuilder_.setMessage(value);
+        }
+        setupModeCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * SeedContracts stores and instantiates the Proof of Engagement
+       * contracts on the chain.
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.SeedContracts seed_contracts = 2 [json_name = "seedContracts"];</code>
+       */
+      public Builder setSeedContracts(
+          com.confio.poe.v1beta1.GenesisProto.SeedContracts.Builder builderForValue) {
+        if (seedContractsBuilder_ == null) {
+          setupMode_ = builderForValue.build();
+          onChanged();
+        } else {
+          seedContractsBuilder_.setMessage(builderForValue.build());
+        }
+        setupModeCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * SeedContracts stores and instantiates the Proof of Engagement
+       * contracts on the chain.
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.SeedContracts seed_contracts = 2 [json_name = "seedContracts"];</code>
+       */
+      public Builder mergeSeedContracts(com.confio.poe.v1beta1.GenesisProto.SeedContracts value) {
+        if (seedContractsBuilder_ == null) {
+          if (setupModeCase_ == 2 &&
+              setupMode_ != com.confio.poe.v1beta1.GenesisProto.SeedContracts.getDefaultInstance()) {
+            setupMode_ = com.confio.poe.v1beta1.GenesisProto.SeedContracts.newBuilder((com.confio.poe.v1beta1.GenesisProto.SeedContracts) setupMode_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            setupMode_ = value;
+          }
+          onChanged();
+        } else {
+          if (setupModeCase_ == 2) {
+            seedContractsBuilder_.mergeFrom(value);
+          } else {
+            seedContractsBuilder_.setMessage(value);
+          }
+        }
+        setupModeCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * SeedContracts stores and instantiates the Proof of Engagement
+       * contracts on the chain.
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.SeedContracts seed_contracts = 2 [json_name = "seedContracts"];</code>
+       */
+      public Builder clearSeedContracts() {
+        if (seedContractsBuilder_ == null) {
+          if (setupModeCase_ == 2) {
+            setupModeCase_ = 0;
+            setupMode_ = null;
+            onChanged();
+          }
+        } else {
+          if (setupModeCase_ == 2) {
+            setupModeCase_ = 0;
+            setupMode_ = null;
+          }
+          seedContractsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * SeedContracts stores and instantiates the Proof of Engagement
+       * contracts on the chain.
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.SeedContracts seed_contracts = 2 [json_name = "seedContracts"];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.SeedContracts.Builder getSeedContractsBuilder() {
+        return getSeedContractsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * SeedContracts stores and instantiates the Proof of Engagement
+       * contracts on the chain.
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.SeedContracts seed_contracts = 2 [json_name = "seedContracts"];</code>
+       */
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.SeedContractsOrBuilder getSeedContractsOrBuilder() {
+        if ((setupModeCase_ == 2) && (seedContractsBuilder_ != null)) {
+          return seedContractsBuilder_.getMessageOrBuilder();
+        } else {
+          if (setupModeCase_ == 2) {
+            return (com.confio.poe.v1beta1.GenesisProto.SeedContracts) setupMode_;
+          }
+          return com.confio.poe.v1beta1.GenesisProto.SeedContracts.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * SeedContracts stores and instantiates the Proof of Engagement
+       * contracts on the chain.
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.SeedContracts seed_contracts = 2 [json_name = "seedContracts"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.SeedContracts, com.confio.poe.v1beta1.GenesisProto.SeedContracts.Builder, com.confio.poe.v1beta1.GenesisProto.SeedContractsOrBuilder> 
+          getSeedContractsFieldBuilder() {
+        if (seedContractsBuilder_ == null) {
+          if (!(setupModeCase_ == 2)) {
+            setupMode_ = com.confio.poe.v1beta1.GenesisProto.SeedContracts.getDefaultInstance();
+          }
+          seedContractsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.confio.poe.v1beta1.GenesisProto.SeedContracts, com.confio.poe.v1beta1.GenesisProto.SeedContracts.Builder, com.confio.poe.v1beta1.GenesisProto.SeedContractsOrBuilder>(
+                  (com.confio.poe.v1beta1.GenesisProto.SeedContracts) setupMode_,
+                  getParentForChildren(),
+                  isClean());
+          setupMode_ = null;
+        }
+        setupModeCase_ = 2;
+        onChanged();
+        return seedContractsBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.ImportDump, com.confio.poe.v1beta1.GenesisProto.ImportDump.Builder, com.confio.poe.v1beta1.GenesisProto.ImportDumpOrBuilder> importDumpBuilder_;
+      /**
+       * <pre>
+       * ImportDump restores the state from an exported state genesis
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.ImportDump import_dump = 3 [json_name = "importDump"];</code>
+       * @return Whether the importDump field is set.
+       */
+      @java.lang.Override
+      public boolean hasImportDump() {
+        return setupModeCase_ == 3;
+      }
+      /**
+       * <pre>
+       * ImportDump restores the state from an exported state genesis
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.ImportDump import_dump = 3 [json_name = "importDump"];</code>
+       * @return The importDump.
+       */
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.ImportDump getImportDump() {
+        if (importDumpBuilder_ == null) {
+          if (setupModeCase_ == 3) {
+            return (com.confio.poe.v1beta1.GenesisProto.ImportDump) setupMode_;
+          }
+          return com.confio.poe.v1beta1.GenesisProto.ImportDump.getDefaultInstance();
+        } else {
+          if (setupModeCase_ == 3) {
+            return importDumpBuilder_.getMessage();
+          }
+          return com.confio.poe.v1beta1.GenesisProto.ImportDump.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * ImportDump restores the state from an exported state genesis
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.ImportDump import_dump = 3 [json_name = "importDump"];</code>
+       */
+      public Builder setImportDump(com.confio.poe.v1beta1.GenesisProto.ImportDump value) {
+        if (importDumpBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          setupMode_ = value;
+          onChanged();
+        } else {
+          importDumpBuilder_.setMessage(value);
+        }
+        setupModeCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * ImportDump restores the state from an exported state genesis
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.ImportDump import_dump = 3 [json_name = "importDump"];</code>
+       */
+      public Builder setImportDump(
+          com.confio.poe.v1beta1.GenesisProto.ImportDump.Builder builderForValue) {
+        if (importDumpBuilder_ == null) {
+          setupMode_ = builderForValue.build();
+          onChanged();
+        } else {
+          importDumpBuilder_.setMessage(builderForValue.build());
+        }
+        setupModeCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * ImportDump restores the state from an exported state genesis
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.ImportDump import_dump = 3 [json_name = "importDump"];</code>
+       */
+      public Builder mergeImportDump(com.confio.poe.v1beta1.GenesisProto.ImportDump value) {
+        if (importDumpBuilder_ == null) {
+          if (setupModeCase_ == 3 &&
+              setupMode_ != com.confio.poe.v1beta1.GenesisProto.ImportDump.getDefaultInstance()) {
+            setupMode_ = com.confio.poe.v1beta1.GenesisProto.ImportDump.newBuilder((com.confio.poe.v1beta1.GenesisProto.ImportDump) setupMode_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            setupMode_ = value;
+          }
+          onChanged();
+        } else {
+          if (setupModeCase_ == 3) {
+            importDumpBuilder_.mergeFrom(value);
+          } else {
+            importDumpBuilder_.setMessage(value);
+          }
+        }
+        setupModeCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * ImportDump restores the state from an exported state genesis
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.ImportDump import_dump = 3 [json_name = "importDump"];</code>
+       */
+      public Builder clearImportDump() {
+        if (importDumpBuilder_ == null) {
+          if (setupModeCase_ == 3) {
+            setupModeCase_ = 0;
+            setupMode_ = null;
+            onChanged();
+          }
+        } else {
+          if (setupModeCase_ == 3) {
+            setupModeCase_ = 0;
+            setupMode_ = null;
+          }
+          importDumpBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * ImportDump restores the state from an exported state genesis
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.ImportDump import_dump = 3 [json_name = "importDump"];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.ImportDump.Builder getImportDumpBuilder() {
+        return getImportDumpFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * ImportDump restores the state from an exported state genesis
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.ImportDump import_dump = 3 [json_name = "importDump"];</code>
+       */
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.ImportDumpOrBuilder getImportDumpOrBuilder() {
+        if ((setupModeCase_ == 3) && (importDumpBuilder_ != null)) {
+          return importDumpBuilder_.getMessageOrBuilder();
+        } else {
+          if (setupModeCase_ == 3) {
+            return (com.confio.poe.v1beta1.GenesisProto.ImportDump) setupMode_;
+          }
+          return com.confio.poe.v1beta1.GenesisProto.ImportDump.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * ImportDump restores the state from an exported state genesis
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.ImportDump import_dump = 3 [json_name = "importDump"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.ImportDump, com.confio.poe.v1beta1.GenesisProto.ImportDump.Builder, com.confio.poe.v1beta1.GenesisProto.ImportDumpOrBuilder> 
+          getImportDumpFieldBuilder() {
+        if (importDumpBuilder_ == null) {
+          if (!(setupModeCase_ == 3)) {
+            setupMode_ = com.confio.poe.v1beta1.GenesisProto.ImportDump.getDefaultInstance();
+          }
+          importDumpBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.confio.poe.v1beta1.GenesisProto.ImportDump, com.confio.poe.v1beta1.GenesisProto.ImportDump.Builder, com.confio.poe.v1beta1.GenesisProto.ImportDumpOrBuilder>(
+                  (com.confio.poe.v1beta1.GenesisProto.ImportDump) setupMode_,
+                  getParentForChildren(),
+                  isClean());
+          setupMode_ = null;
+        }
+        setupModeCase_ = 3;
+        onChanged();
+        return importDumpBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.GenesisState)
+    private static final com.confio.poe.v1beta1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.GenesisProto.GenesisState();
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ImportDumpOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.ImportDump)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Contracts PoE contract addresses and types
+     * </pre>
+     *
+     * <code>repeated .confio.poe.v1beta1.PoEContract contracts = 1 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+     */
+    java.util.List<com.confio.poe.v1beta1.GenesisProto.PoEContract> 
+        getContractsList();
+    /**
+     * <pre>
+     * Contracts PoE contract addresses and types
+     * </pre>
+     *
+     * <code>repeated .confio.poe.v1beta1.PoEContract contracts = 1 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+     */
+    com.confio.poe.v1beta1.GenesisProto.PoEContract getContracts(int index);
+    /**
+     * <pre>
+     * Contracts PoE contract addresses and types
+     * </pre>
+     *
+     * <code>repeated .confio.poe.v1beta1.PoEContract contracts = 1 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+     */
+    int getContractsCount();
+    /**
+     * <pre>
+     * Contracts PoE contract addresses and types
+     * </pre>
+     *
+     * <code>repeated .confio.poe.v1beta1.PoEContract contracts = 1 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+     */
+    java.util.List<? extends com.confio.poe.v1beta1.GenesisProto.PoEContractOrBuilder> 
+        getContractsOrBuilderList();
+    /**
+     * <pre>
+     * Contracts PoE contract addresses and types
+     * </pre>
+     *
+     * <code>repeated .confio.poe.v1beta1.PoEContract contracts = 1 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+     */
+    com.confio.poe.v1beta1.GenesisProto.PoEContractOrBuilder getContractsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * ImportDump has all module data for non seed mode.
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.ImportDump}
+   */
+  public static final class ImportDump extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.ImportDump)
+      ImportDumpOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ImportDump.newBuilder() to construct.
+    private ImportDump(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ImportDump() {
+      contracts_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ImportDump();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_ImportDump_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_ImportDump_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.GenesisProto.ImportDump.class, com.confio.poe.v1beta1.GenesisProto.ImportDump.Builder.class);
+    }
+
+    public static final int CONTRACTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.confio.poe.v1beta1.GenesisProto.PoEContract> contracts_;
+    /**
+     * <pre>
+     * Contracts PoE contract addresses and types
+     * </pre>
+     *
+     * <code>repeated .confio.poe.v1beta1.PoEContract contracts = 1 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.confio.poe.v1beta1.GenesisProto.PoEContract> getContractsList() {
+      return contracts_;
+    }
+    /**
+     * <pre>
+     * Contracts PoE contract addresses and types
+     * </pre>
+     *
+     * <code>repeated .confio.poe.v1beta1.PoEContract contracts = 1 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.confio.poe.v1beta1.GenesisProto.PoEContractOrBuilder> 
+        getContractsOrBuilderList() {
+      return contracts_;
+    }
+    /**
+     * <pre>
+     * Contracts PoE contract addresses and types
+     * </pre>
+     *
+     * <code>repeated .confio.poe.v1beta1.PoEContract contracts = 1 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+     */
+    @java.lang.Override
+    public int getContractsCount() {
+      return contracts_.size();
+    }
+    /**
+     * <pre>
+     * Contracts PoE contract addresses and types
+     * </pre>
+     *
+     * <code>repeated .confio.poe.v1beta1.PoEContract contracts = 1 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.PoEContract getContracts(int index) {
+      return contracts_.get(index);
+    }
+    /**
+     * <pre>
+     * Contracts PoE contract addresses and types
+     * </pre>
+     *
+     * <code>repeated .confio.poe.v1beta1.PoEContract contracts = 1 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.PoEContractOrBuilder getContractsOrBuilder(
+        int index) {
+      return contracts_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < contracts_.size(); i++) {
+        output.writeMessage(1, contracts_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < contracts_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, contracts_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.GenesisProto.ImportDump)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.GenesisProto.ImportDump other = (com.confio.poe.v1beta1.GenesisProto.ImportDump) obj;
+
+      if (!getContractsList()
+          .equals(other.getContractsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getContractsCount() > 0) {
+        hash = (37 * hash) + CONTRACTS_FIELD_NUMBER;
+        hash = (53 * hash) + getContractsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.ImportDump parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ImportDump parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ImportDump parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ImportDump parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ImportDump parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ImportDump parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ImportDump parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ImportDump parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.ImportDump parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.ImportDump parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ImportDump parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ImportDump parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.GenesisProto.ImportDump prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ImportDump has all module data for non seed mode.
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.ImportDump}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.ImportDump)
+        com.confio.poe.v1beta1.GenesisProto.ImportDumpOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_ImportDump_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_ImportDump_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.GenesisProto.ImportDump.class, com.confio.poe.v1beta1.GenesisProto.ImportDump.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.GenesisProto.ImportDump.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (contractsBuilder_ == null) {
+          contracts_ = java.util.Collections.emptyList();
+        } else {
+          contracts_ = null;
+          contractsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_ImportDump_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.ImportDump getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.GenesisProto.ImportDump.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.ImportDump build() {
+        com.confio.poe.v1beta1.GenesisProto.ImportDump result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.ImportDump buildPartial() {
+        com.confio.poe.v1beta1.GenesisProto.ImportDump result = new com.confio.poe.v1beta1.GenesisProto.ImportDump(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.confio.poe.v1beta1.GenesisProto.ImportDump result) {
+        if (contractsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            contracts_ = java.util.Collections.unmodifiableList(contracts_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.contracts_ = contracts_;
+        } else {
+          result.contracts_ = contractsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.confio.poe.v1beta1.GenesisProto.ImportDump result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.GenesisProto.ImportDump) {
+          return mergeFrom((com.confio.poe.v1beta1.GenesisProto.ImportDump)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.GenesisProto.ImportDump other) {
+        if (other == com.confio.poe.v1beta1.GenesisProto.ImportDump.getDefaultInstance()) return this;
+        if (contractsBuilder_ == null) {
+          if (!other.contracts_.isEmpty()) {
+            if (contracts_.isEmpty()) {
+              contracts_ = other.contracts_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureContractsIsMutable();
+              contracts_.addAll(other.contracts_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.contracts_.isEmpty()) {
+            if (contractsBuilder_.isEmpty()) {
+              contractsBuilder_.dispose();
+              contractsBuilder_ = null;
+              contracts_ = other.contracts_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              contractsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getContractsFieldBuilder() : null;
+            } else {
+              contractsBuilder_.addAllMessages(other.contracts_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.confio.poe.v1beta1.GenesisProto.PoEContract m =
+                    input.readMessage(
+                        com.confio.poe.v1beta1.GenesisProto.PoEContract.parser(),
+                        extensionRegistry);
+                if (contractsBuilder_ == null) {
+                  ensureContractsIsMutable();
+                  contracts_.add(m);
+                } else {
+                  contractsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.confio.poe.v1beta1.GenesisProto.PoEContract> contracts_ =
+        java.util.Collections.emptyList();
+      private void ensureContractsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          contracts_ = new java.util.ArrayList<com.confio.poe.v1beta1.GenesisProto.PoEContract>(contracts_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.PoEContract, com.confio.poe.v1beta1.GenesisProto.PoEContract.Builder, com.confio.poe.v1beta1.GenesisProto.PoEContractOrBuilder> contractsBuilder_;
+
+      /**
+       * <pre>
+       * Contracts PoE contract addresses and types
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.PoEContract contracts = 1 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public java.util.List<com.confio.poe.v1beta1.GenesisProto.PoEContract> getContractsList() {
+        if (contractsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(contracts_);
+        } else {
+          return contractsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Contracts PoE contract addresses and types
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.PoEContract contracts = 1 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public int getContractsCount() {
+        if (contractsBuilder_ == null) {
+          return contracts_.size();
+        } else {
+          return contractsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Contracts PoE contract addresses and types
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.PoEContract contracts = 1 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.PoEContract getContracts(int index) {
+        if (contractsBuilder_ == null) {
+          return contracts_.get(index);
+        } else {
+          return contractsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Contracts PoE contract addresses and types
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.PoEContract contracts = 1 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public Builder setContracts(
+          int index, com.confio.poe.v1beta1.GenesisProto.PoEContract value) {
+        if (contractsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContractsIsMutable();
+          contracts_.set(index, value);
+          onChanged();
+        } else {
+          contractsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Contracts PoE contract addresses and types
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.PoEContract contracts = 1 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public Builder setContracts(
+          int index, com.confio.poe.v1beta1.GenesisProto.PoEContract.Builder builderForValue) {
+        if (contractsBuilder_ == null) {
+          ensureContractsIsMutable();
+          contracts_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          contractsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Contracts PoE contract addresses and types
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.PoEContract contracts = 1 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public Builder addContracts(com.confio.poe.v1beta1.GenesisProto.PoEContract value) {
+        if (contractsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContractsIsMutable();
+          contracts_.add(value);
+          onChanged();
+        } else {
+          contractsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Contracts PoE contract addresses and types
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.PoEContract contracts = 1 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public Builder addContracts(
+          int index, com.confio.poe.v1beta1.GenesisProto.PoEContract value) {
+        if (contractsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContractsIsMutable();
+          contracts_.add(index, value);
+          onChanged();
+        } else {
+          contractsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Contracts PoE contract addresses and types
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.PoEContract contracts = 1 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public Builder addContracts(
+          com.confio.poe.v1beta1.GenesisProto.PoEContract.Builder builderForValue) {
+        if (contractsBuilder_ == null) {
+          ensureContractsIsMutable();
+          contracts_.add(builderForValue.build());
+          onChanged();
+        } else {
+          contractsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Contracts PoE contract addresses and types
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.PoEContract contracts = 1 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public Builder addContracts(
+          int index, com.confio.poe.v1beta1.GenesisProto.PoEContract.Builder builderForValue) {
+        if (contractsBuilder_ == null) {
+          ensureContractsIsMutable();
+          contracts_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          contractsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Contracts PoE contract addresses and types
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.PoEContract contracts = 1 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public Builder addAllContracts(
+          java.lang.Iterable<? extends com.confio.poe.v1beta1.GenesisProto.PoEContract> values) {
+        if (contractsBuilder_ == null) {
+          ensureContractsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, contracts_);
+          onChanged();
+        } else {
+          contractsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Contracts PoE contract addresses and types
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.PoEContract contracts = 1 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public Builder clearContracts() {
+        if (contractsBuilder_ == null) {
+          contracts_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          contractsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Contracts PoE contract addresses and types
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.PoEContract contracts = 1 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public Builder removeContracts(int index) {
+        if (contractsBuilder_ == null) {
+          ensureContractsIsMutable();
+          contracts_.remove(index);
+          onChanged();
+        } else {
+          contractsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Contracts PoE contract addresses and types
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.PoEContract contracts = 1 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.PoEContract.Builder getContractsBuilder(
+          int index) {
+        return getContractsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Contracts PoE contract addresses and types
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.PoEContract contracts = 1 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.PoEContractOrBuilder getContractsOrBuilder(
+          int index) {
+        if (contractsBuilder_ == null) {
+          return contracts_.get(index);  } else {
+          return contractsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Contracts PoE contract addresses and types
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.PoEContract contracts = 1 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public java.util.List<? extends com.confio.poe.v1beta1.GenesisProto.PoEContractOrBuilder> 
+           getContractsOrBuilderList() {
+        if (contractsBuilder_ != null) {
+          return contractsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(contracts_);
+        }
+      }
+      /**
+       * <pre>
+       * Contracts PoE contract addresses and types
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.PoEContract contracts = 1 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.PoEContract.Builder addContractsBuilder() {
+        return getContractsFieldBuilder().addBuilder(
+            com.confio.poe.v1beta1.GenesisProto.PoEContract.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Contracts PoE contract addresses and types
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.PoEContract contracts = 1 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.PoEContract.Builder addContractsBuilder(
+          int index) {
+        return getContractsFieldBuilder().addBuilder(
+            index, com.confio.poe.v1beta1.GenesisProto.PoEContract.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Contracts PoE contract addresses and types
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.PoEContract contracts = 1 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public java.util.List<com.confio.poe.v1beta1.GenesisProto.PoEContract.Builder> 
+           getContractsBuilderList() {
+        return getContractsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.PoEContract, com.confio.poe.v1beta1.GenesisProto.PoEContract.Builder, com.confio.poe.v1beta1.GenesisProto.PoEContractOrBuilder> 
+          getContractsFieldBuilder() {
+        if (contractsBuilder_ == null) {
+          contractsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.confio.poe.v1beta1.GenesisProto.PoEContract, com.confio.poe.v1beta1.GenesisProto.PoEContract.Builder, com.confio.poe.v1beta1.GenesisProto.PoEContractOrBuilder>(
+                  contracts_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          contracts_ = null;
+        }
+        return contractsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.ImportDump)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.ImportDump)
+    private static final com.confio.poe.v1beta1.GenesisProto.ImportDump DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.GenesisProto.ImportDump();
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.ImportDump getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ImportDump>
+        PARSER = new com.google.protobuf.AbstractParser<ImportDump>() {
+      @java.lang.Override
+      public ImportDump parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ImportDump> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ImportDump> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.ImportDump getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SeedContractsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.SeedContracts)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * GenTxs defines the genesis transactions to create a validator.
+     * </pre>
+     *
+     * <code>repeated bytes gen_txs = 1 [json_name = "genTxs", (.gogoproto.jsontag) = "gentxs", (.gogoproto.moretags) = "yaml:&#92;"gentxs&#92;"", (.gogoproto.casttype) = "encoding/json.RawMessage"];</code>
+     * @return A list containing the genTxs.
+     */
+    java.util.List<com.google.protobuf.ByteString> getGenTxsList();
+    /**
+     * <pre>
+     * GenTxs defines the genesis transactions to create a validator.
+     * </pre>
+     *
+     * <code>repeated bytes gen_txs = 1 [json_name = "genTxs", (.gogoproto.jsontag) = "gentxs", (.gogoproto.moretags) = "yaml:&#92;"gentxs&#92;"", (.gogoproto.casttype) = "encoding/json.RawMessage"];</code>
+     * @return The count of genTxs.
+     */
+    int getGenTxsCount();
+    /**
+     * <pre>
+     * GenTxs defines the genesis transactions to create a validator.
+     * </pre>
+     *
+     * <code>repeated bytes gen_txs = 1 [json_name = "genTxs", (.gogoproto.jsontag) = "gentxs", (.gogoproto.moretags) = "yaml:&#92;"gentxs&#92;"", (.gogoproto.casttype) = "encoding/json.RawMessage"];</code>
+     * @param index The index of the element to return.
+     * @return The genTxs at the given index.
+     */
+    com.google.protobuf.ByteString getGenTxs(int index);
+
+    /**
+     * <pre>
+     * BootstrapAccountAddress single address that is set as bootstrap-account for
+     * the PoE contracts in seed mode.
+     * </pre>
+     *
+     * <code>string bootstrap_account_address = 2 [json_name = "bootstrapAccountAddress"];</code>
+     * @return The bootstrapAccountAddress.
+     */
+    java.lang.String getBootstrapAccountAddress();
+    /**
+     * <pre>
+     * BootstrapAccountAddress single address that is set as bootstrap-account for
+     * the PoE contracts in seed mode.
+     * </pre>
+     *
+     * <code>string bootstrap_account_address = 2 [json_name = "bootstrapAccountAddress"];</code>
+     * @return The bytes for bootstrapAccountAddress.
+     */
+    com.google.protobuf.ByteString
+        getBootstrapAccountAddressBytes();
+
+    /**
+     * <pre>
+     * Engagement weighted members of the engagement group. Validators should be
+     * in here.
+     * </pre>
+     *
+     * <code>repeated .confio.poe.v1beta1.TG4Member engagement = 3 [json_name = "engagement", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "engagement,omitempty"];</code>
+     */
+    java.util.List<com.confio.poe.v1beta1.GenesisProto.TG4Member> 
+        getEngagementList();
+    /**
+     * <pre>
+     * Engagement weighted members of the engagement group. Validators should be
+     * in here.
+     * </pre>
+     *
+     * <code>repeated .confio.poe.v1beta1.TG4Member engagement = 3 [json_name = "engagement", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "engagement,omitempty"];</code>
+     */
+    com.confio.poe.v1beta1.GenesisProto.TG4Member getEngagement(int index);
+    /**
+     * <pre>
+     * Engagement weighted members of the engagement group. Validators should be
+     * in here.
+     * </pre>
+     *
+     * <code>repeated .confio.poe.v1beta1.TG4Member engagement = 3 [json_name = "engagement", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "engagement,omitempty"];</code>
+     */
+    int getEngagementCount();
+    /**
+     * <pre>
+     * Engagement weighted members of the engagement group. Validators should be
+     * in here.
+     * </pre>
+     *
+     * <code>repeated .confio.poe.v1beta1.TG4Member engagement = 3 [json_name = "engagement", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "engagement,omitempty"];</code>
+     */
+    java.util.List<? extends com.confio.poe.v1beta1.GenesisProto.TG4MemberOrBuilder> 
+        getEngagementOrBuilderList();
+    /**
+     * <pre>
+     * Engagement weighted members of the engagement group. Validators should be
+     * in here.
+     * </pre>
+     *
+     * <code>repeated .confio.poe.v1beta1.TG4Member engagement = 3 [json_name = "engagement", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "engagement,omitempty"];</code>
+     */
+    com.confio.poe.v1beta1.GenesisProto.TG4MemberOrBuilder getEngagementOrBuilder(
+        int index);
+
+    /**
+     * <code>.confio.poe.v1beta1.StakeContractConfig stake_contract_config = 4 [json_name = "stakeContractConfig", (.gogoproto.jsontag) = "stake_contract_config,omitempty"];</code>
+     * @return Whether the stakeContractConfig field is set.
+     */
+    boolean hasStakeContractConfig();
+    /**
+     * <code>.confio.poe.v1beta1.StakeContractConfig stake_contract_config = 4 [json_name = "stakeContractConfig", (.gogoproto.jsontag) = "stake_contract_config,omitempty"];</code>
+     * @return The stakeContractConfig.
+     */
+    com.confio.poe.v1beta1.GenesisProto.StakeContractConfig getStakeContractConfig();
+    /**
+     * <code>.confio.poe.v1beta1.StakeContractConfig stake_contract_config = 4 [json_name = "stakeContractConfig", (.gogoproto.jsontag) = "stake_contract_config,omitempty"];</code>
+     */
+    com.confio.poe.v1beta1.GenesisProto.StakeContractConfigOrBuilder getStakeContractConfigOrBuilder();
+
+    /**
+     * <code>.confio.poe.v1beta1.ValsetContractConfig valset_contract_config = 5 [json_name = "valsetContractConfig", (.gogoproto.jsontag) = "valset_contract_config,omitempty"];</code>
+     * @return Whether the valsetContractConfig field is set.
+     */
+    boolean hasValsetContractConfig();
+    /**
+     * <code>.confio.poe.v1beta1.ValsetContractConfig valset_contract_config = 5 [json_name = "valsetContractConfig", (.gogoproto.jsontag) = "valset_contract_config,omitempty"];</code>
+     * @return The valsetContractConfig.
+     */
+    com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig getValsetContractConfig();
+    /**
+     * <code>.confio.poe.v1beta1.ValsetContractConfig valset_contract_config = 5 [json_name = "valsetContractConfig", (.gogoproto.jsontag) = "valset_contract_config,omitempty"];</code>
+     */
+    com.confio.poe.v1beta1.GenesisProto.ValsetContractConfigOrBuilder getValsetContractConfigOrBuilder();
+
+    /**
+     * <code>.confio.poe.v1beta1.EngagementContractConfig engagement_contract_config = 6 [json_name = "engagementContractConfig", (.gogoproto.jsontag) = "engagement_contract_config,omitempty"];</code>
+     * @return Whether the engagementContractConfig field is set.
+     */
+    boolean hasEngagementContractConfig();
+    /**
+     * <code>.confio.poe.v1beta1.EngagementContractConfig engagement_contract_config = 6 [json_name = "engagementContractConfig", (.gogoproto.jsontag) = "engagement_contract_config,omitempty"];</code>
+     * @return The engagementContractConfig.
+     */
+    com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig getEngagementContractConfig();
+    /**
+     * <code>.confio.poe.v1beta1.EngagementContractConfig engagement_contract_config = 6 [json_name = "engagementContractConfig", (.gogoproto.jsontag) = "engagement_contract_config,omitempty"];</code>
+     */
+    com.confio.poe.v1beta1.GenesisProto.EngagementContractConfigOrBuilder getEngagementContractConfigOrBuilder();
+
+    /**
+     * <pre>
+     * BondDenom defines the bondable coin denomination.
+     * </pre>
+     *
+     * <code>string bond_denom = 7 [json_name = "bondDenom", (.gogoproto.moretags) = "yaml:&#92;"bond_denom&#92;""];</code>
+     * @return The bondDenom.
+     */
+    java.lang.String getBondDenom();
+    /**
+     * <pre>
+     * BondDenom defines the bondable coin denomination.
+     * </pre>
+     *
+     * <code>string bond_denom = 7 [json_name = "bondDenom", (.gogoproto.moretags) = "yaml:&#92;"bond_denom&#92;""];</code>
+     * @return The bytes for bondDenom.
+     */
+    com.google.protobuf.ByteString
+        getBondDenomBytes();
+
+    /**
+     * <code>.confio.poe.v1beta1.OversightCommitteeContractConfig oversight_committee_contract_config = 8 [json_name = "oversightCommitteeContractConfig", (.gogoproto.jsontag) = "oversight_committee_contract_config,omitempty"];</code>
+     * @return Whether the oversightCommitteeContractConfig field is set.
+     */
+    boolean hasOversightCommitteeContractConfig();
+    /**
+     * <code>.confio.poe.v1beta1.OversightCommitteeContractConfig oversight_committee_contract_config = 8 [json_name = "oversightCommitteeContractConfig", (.gogoproto.jsontag) = "oversight_committee_contract_config,omitempty"];</code>
+     * @return The oversightCommitteeContractConfig.
+     */
+    com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig getOversightCommitteeContractConfig();
+    /**
+     * <code>.confio.poe.v1beta1.OversightCommitteeContractConfig oversight_committee_contract_config = 8 [json_name = "oversightCommitteeContractConfig", (.gogoproto.jsontag) = "oversight_committee_contract_config,omitempty"];</code>
+     */
+    com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfigOrBuilder getOversightCommitteeContractConfigOrBuilder();
+
+    /**
+     * <code>.confio.poe.v1beta1.CommunityPoolContractConfig community_pool_contract_config = 9 [json_name = "communityPoolContractConfig", (.gogoproto.jsontag) = "community_pool_contract_config,omitempty"];</code>
+     * @return Whether the communityPoolContractConfig field is set.
+     */
+    boolean hasCommunityPoolContractConfig();
+    /**
+     * <code>.confio.poe.v1beta1.CommunityPoolContractConfig community_pool_contract_config = 9 [json_name = "communityPoolContractConfig", (.gogoproto.jsontag) = "community_pool_contract_config,omitempty"];</code>
+     * @return The communityPoolContractConfig.
+     */
+    com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig getCommunityPoolContractConfig();
+    /**
+     * <code>.confio.poe.v1beta1.CommunityPoolContractConfig community_pool_contract_config = 9 [json_name = "communityPoolContractConfig", (.gogoproto.jsontag) = "community_pool_contract_config,omitempty"];</code>
+     */
+    com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfigOrBuilder getCommunityPoolContractConfigOrBuilder();
+
+    /**
+     * <code>.confio.poe.v1beta1.ValidatorVotingContractConfig validator_voting_contract_config = 10 [json_name = "validatorVotingContractConfig", (.gogoproto.jsontag) = "validator_voting_contract_config,omitempty"];</code>
+     * @return Whether the validatorVotingContractConfig field is set.
+     */
+    boolean hasValidatorVotingContractConfig();
+    /**
+     * <code>.confio.poe.v1beta1.ValidatorVotingContractConfig validator_voting_contract_config = 10 [json_name = "validatorVotingContractConfig", (.gogoproto.jsontag) = "validator_voting_contract_config,omitempty"];</code>
+     * @return The validatorVotingContractConfig.
+     */
+    com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig getValidatorVotingContractConfig();
+    /**
+     * <code>.confio.poe.v1beta1.ValidatorVotingContractConfig validator_voting_contract_config = 10 [json_name = "validatorVotingContractConfig", (.gogoproto.jsontag) = "validator_voting_contract_config,omitempty"];</code>
+     */
+    com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfigOrBuilder getValidatorVotingContractConfigOrBuilder();
+
+    /**
+     * <code>repeated string oversight_community_members = 11 [json_name = "oversightCommunityMembers", (.gogoproto.jsontag) = "oversight_community_members,omitempty"];</code>
+     * @return A list containing the oversightCommunityMembers.
+     */
+    java.util.List<java.lang.String>
+        getOversightCommunityMembersList();
+    /**
+     * <code>repeated string oversight_community_members = 11 [json_name = "oversightCommunityMembers", (.gogoproto.jsontag) = "oversight_community_members,omitempty"];</code>
+     * @return The count of oversightCommunityMembers.
+     */
+    int getOversightCommunityMembersCount();
+    /**
+     * <code>repeated string oversight_community_members = 11 [json_name = "oversightCommunityMembers", (.gogoproto.jsontag) = "oversight_community_members,omitempty"];</code>
+     * @param index The index of the element to return.
+     * @return The oversightCommunityMembers at the given index.
+     */
+    java.lang.String getOversightCommunityMembers(int index);
+    /**
+     * <code>repeated string oversight_community_members = 11 [json_name = "oversightCommunityMembers", (.gogoproto.jsontag) = "oversight_community_members,omitempty"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the oversightCommunityMembers at the given index.
+     */
+    com.google.protobuf.ByteString
+        getOversightCommunityMembersBytes(int index);
+
+    /**
+     * <code>repeated string arbiter_pool_members = 12 [json_name = "arbiterPoolMembers", (.gogoproto.jsontag) = "arbiter_pool_members,omitempty"];</code>
+     * @return A list containing the arbiterPoolMembers.
+     */
+    java.util.List<java.lang.String>
+        getArbiterPoolMembersList();
+    /**
+     * <code>repeated string arbiter_pool_members = 12 [json_name = "arbiterPoolMembers", (.gogoproto.jsontag) = "arbiter_pool_members,omitempty"];</code>
+     * @return The count of arbiterPoolMembers.
+     */
+    int getArbiterPoolMembersCount();
+    /**
+     * <code>repeated string arbiter_pool_members = 12 [json_name = "arbiterPoolMembers", (.gogoproto.jsontag) = "arbiter_pool_members,omitempty"];</code>
+     * @param index The index of the element to return.
+     * @return The arbiterPoolMembers at the given index.
+     */
+    java.lang.String getArbiterPoolMembers(int index);
+    /**
+     * <code>repeated string arbiter_pool_members = 12 [json_name = "arbiterPoolMembers", (.gogoproto.jsontag) = "arbiter_pool_members,omitempty"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the arbiterPoolMembers at the given index.
+     */
+    com.google.protobuf.ByteString
+        getArbiterPoolMembersBytes(int index);
+
+    /**
+     * <code>.confio.poe.v1beta1.ArbiterPoolContractConfig arbiter_pool_contract_config = 13 [json_name = "arbiterPoolContractConfig", (.gogoproto.jsontag) = "arbiter_pool_contract_config,omitempty"];</code>
+     * @return Whether the arbiterPoolContractConfig field is set.
+     */
+    boolean hasArbiterPoolContractConfig();
+    /**
+     * <code>.confio.poe.v1beta1.ArbiterPoolContractConfig arbiter_pool_contract_config = 13 [json_name = "arbiterPoolContractConfig", (.gogoproto.jsontag) = "arbiter_pool_contract_config,omitempty"];</code>
+     * @return The arbiterPoolContractConfig.
+     */
+    com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig getArbiterPoolContractConfig();
+    /**
+     * <code>.confio.poe.v1beta1.ArbiterPoolContractConfig arbiter_pool_contract_config = 13 [json_name = "arbiterPoolContractConfig", (.gogoproto.jsontag) = "arbiter_pool_contract_config,omitempty"];</code>
+     */
+    com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfigOrBuilder getArbiterPoolContractConfigOrBuilder();
+
+    /**
+     * <code>.confio.poe.v1beta1.MixerContractConfig mixer_contract_config = 14 [json_name = "mixerContractConfig", (.gogoproto.jsontag) = "mixer_contract_config,omitempty"];</code>
+     * @return Whether the mixerContractConfig field is set.
+     */
+    boolean hasMixerContractConfig();
+    /**
+     * <code>.confio.poe.v1beta1.MixerContractConfig mixer_contract_config = 14 [json_name = "mixerContractConfig", (.gogoproto.jsontag) = "mixer_contract_config,omitempty"];</code>
+     * @return The mixerContractConfig.
+     */
+    com.confio.poe.v1beta1.GenesisProto.MixerContractConfig getMixerContractConfig();
+    /**
+     * <code>.confio.poe.v1beta1.MixerContractConfig mixer_contract_config = 14 [json_name = "mixerContractConfig", (.gogoproto.jsontag) = "mixer_contract_config,omitempty"];</code>
+     */
+    com.confio.poe.v1beta1.GenesisProto.MixerContractConfigOrBuilder getMixerContractConfigOrBuilder();
+  }
+  /**
+   * <pre>
+   * SeedContracts contains the contract configuration and group members to setup
+   * all PoE contracts on chain.
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.SeedContracts}
+   */
+  public static final class SeedContracts extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.SeedContracts)
+      SeedContractsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SeedContracts.newBuilder() to construct.
+    private SeedContracts(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SeedContracts() {
+      genTxs_ = java.util.Collections.emptyList();
+      bootstrapAccountAddress_ = "";
+      engagement_ = java.util.Collections.emptyList();
+      bondDenom_ = "";
+      oversightCommunityMembers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      arbiterPoolMembers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SeedContracts();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_SeedContracts_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_SeedContracts_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.GenesisProto.SeedContracts.class, com.confio.poe.v1beta1.GenesisProto.SeedContracts.Builder.class);
+    }
+
+    public static final int GEN_TXS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.google.protobuf.ByteString> genTxs_;
+    /**
+     * <pre>
+     * GenTxs defines the genesis transactions to create a validator.
+     * </pre>
+     *
+     * <code>repeated bytes gen_txs = 1 [json_name = "genTxs", (.gogoproto.jsontag) = "gentxs", (.gogoproto.moretags) = "yaml:&#92;"gentxs&#92;"", (.gogoproto.casttype) = "encoding/json.RawMessage"];</code>
+     * @return A list containing the genTxs.
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.ByteString>
+        getGenTxsList() {
+      return genTxs_;
+    }
+    /**
+     * <pre>
+     * GenTxs defines the genesis transactions to create a validator.
+     * </pre>
+     *
+     * <code>repeated bytes gen_txs = 1 [json_name = "genTxs", (.gogoproto.jsontag) = "gentxs", (.gogoproto.moretags) = "yaml:&#92;"gentxs&#92;"", (.gogoproto.casttype) = "encoding/json.RawMessage"];</code>
+     * @return The count of genTxs.
+     */
+    public int getGenTxsCount() {
+      return genTxs_.size();
+    }
+    /**
+     * <pre>
+     * GenTxs defines the genesis transactions to create a validator.
+     * </pre>
+     *
+     * <code>repeated bytes gen_txs = 1 [json_name = "genTxs", (.gogoproto.jsontag) = "gentxs", (.gogoproto.moretags) = "yaml:&#92;"gentxs&#92;"", (.gogoproto.casttype) = "encoding/json.RawMessage"];</code>
+     * @param index The index of the element to return.
+     * @return The genTxs at the given index.
+     */
+    public com.google.protobuf.ByteString getGenTxs(int index) {
+      return genTxs_.get(index);
+    }
+
+    public static final int BOOTSTRAP_ACCOUNT_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object bootstrapAccountAddress_ = "";
+    /**
+     * <pre>
+     * BootstrapAccountAddress single address that is set as bootstrap-account for
+     * the PoE contracts in seed mode.
+     * </pre>
+     *
+     * <code>string bootstrap_account_address = 2 [json_name = "bootstrapAccountAddress"];</code>
+     * @return The bootstrapAccountAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getBootstrapAccountAddress() {
+      java.lang.Object ref = bootstrapAccountAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bootstrapAccountAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * BootstrapAccountAddress single address that is set as bootstrap-account for
+     * the PoE contracts in seed mode.
+     * </pre>
+     *
+     * <code>string bootstrap_account_address = 2 [json_name = "bootstrapAccountAddress"];</code>
+     * @return The bytes for bootstrapAccountAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBootstrapAccountAddressBytes() {
+      java.lang.Object ref = bootstrapAccountAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bootstrapAccountAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENGAGEMENT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.confio.poe.v1beta1.GenesisProto.TG4Member> engagement_;
+    /**
+     * <pre>
+     * Engagement weighted members of the engagement group. Validators should be
+     * in here.
+     * </pre>
+     *
+     * <code>repeated .confio.poe.v1beta1.TG4Member engagement = 3 [json_name = "engagement", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "engagement,omitempty"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.confio.poe.v1beta1.GenesisProto.TG4Member> getEngagementList() {
+      return engagement_;
+    }
+    /**
+     * <pre>
+     * Engagement weighted members of the engagement group. Validators should be
+     * in here.
+     * </pre>
+     *
+     * <code>repeated .confio.poe.v1beta1.TG4Member engagement = 3 [json_name = "engagement", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "engagement,omitempty"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.confio.poe.v1beta1.GenesisProto.TG4MemberOrBuilder> 
+        getEngagementOrBuilderList() {
+      return engagement_;
+    }
+    /**
+     * <pre>
+     * Engagement weighted members of the engagement group. Validators should be
+     * in here.
+     * </pre>
+     *
+     * <code>repeated .confio.poe.v1beta1.TG4Member engagement = 3 [json_name = "engagement", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "engagement,omitempty"];</code>
+     */
+    @java.lang.Override
+    public int getEngagementCount() {
+      return engagement_.size();
+    }
+    /**
+     * <pre>
+     * Engagement weighted members of the engagement group. Validators should be
+     * in here.
+     * </pre>
+     *
+     * <code>repeated .confio.poe.v1beta1.TG4Member engagement = 3 [json_name = "engagement", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "engagement,omitempty"];</code>
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.TG4Member getEngagement(int index) {
+      return engagement_.get(index);
+    }
+    /**
+     * <pre>
+     * Engagement weighted members of the engagement group. Validators should be
+     * in here.
+     * </pre>
+     *
+     * <code>repeated .confio.poe.v1beta1.TG4Member engagement = 3 [json_name = "engagement", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "engagement,omitempty"];</code>
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.TG4MemberOrBuilder getEngagementOrBuilder(
+        int index) {
+      return engagement_.get(index);
+    }
+
+    public static final int STAKE_CONTRACT_CONFIG_FIELD_NUMBER = 4;
+    private com.confio.poe.v1beta1.GenesisProto.StakeContractConfig stakeContractConfig_;
+    /**
+     * <code>.confio.poe.v1beta1.StakeContractConfig stake_contract_config = 4 [json_name = "stakeContractConfig", (.gogoproto.jsontag) = "stake_contract_config,omitempty"];</code>
+     * @return Whether the stakeContractConfig field is set.
+     */
+    @java.lang.Override
+    public boolean hasStakeContractConfig() {
+      return stakeContractConfig_ != null;
+    }
+    /**
+     * <code>.confio.poe.v1beta1.StakeContractConfig stake_contract_config = 4 [json_name = "stakeContractConfig", (.gogoproto.jsontag) = "stake_contract_config,omitempty"];</code>
+     * @return The stakeContractConfig.
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.StakeContractConfig getStakeContractConfig() {
+      return stakeContractConfig_ == null ? com.confio.poe.v1beta1.GenesisProto.StakeContractConfig.getDefaultInstance() : stakeContractConfig_;
+    }
+    /**
+     * <code>.confio.poe.v1beta1.StakeContractConfig stake_contract_config = 4 [json_name = "stakeContractConfig", (.gogoproto.jsontag) = "stake_contract_config,omitempty"];</code>
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.StakeContractConfigOrBuilder getStakeContractConfigOrBuilder() {
+      return stakeContractConfig_ == null ? com.confio.poe.v1beta1.GenesisProto.StakeContractConfig.getDefaultInstance() : stakeContractConfig_;
+    }
+
+    public static final int VALSET_CONTRACT_CONFIG_FIELD_NUMBER = 5;
+    private com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig valsetContractConfig_;
+    /**
+     * <code>.confio.poe.v1beta1.ValsetContractConfig valset_contract_config = 5 [json_name = "valsetContractConfig", (.gogoproto.jsontag) = "valset_contract_config,omitempty"];</code>
+     * @return Whether the valsetContractConfig field is set.
+     */
+    @java.lang.Override
+    public boolean hasValsetContractConfig() {
+      return valsetContractConfig_ != null;
+    }
+    /**
+     * <code>.confio.poe.v1beta1.ValsetContractConfig valset_contract_config = 5 [json_name = "valsetContractConfig", (.gogoproto.jsontag) = "valset_contract_config,omitempty"];</code>
+     * @return The valsetContractConfig.
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig getValsetContractConfig() {
+      return valsetContractConfig_ == null ? com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig.getDefaultInstance() : valsetContractConfig_;
+    }
+    /**
+     * <code>.confio.poe.v1beta1.ValsetContractConfig valset_contract_config = 5 [json_name = "valsetContractConfig", (.gogoproto.jsontag) = "valset_contract_config,omitempty"];</code>
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.ValsetContractConfigOrBuilder getValsetContractConfigOrBuilder() {
+      return valsetContractConfig_ == null ? com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig.getDefaultInstance() : valsetContractConfig_;
+    }
+
+    public static final int ENGAGEMENT_CONTRACT_CONFIG_FIELD_NUMBER = 6;
+    private com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig engagementContractConfig_;
+    /**
+     * <code>.confio.poe.v1beta1.EngagementContractConfig engagement_contract_config = 6 [json_name = "engagementContractConfig", (.gogoproto.jsontag) = "engagement_contract_config,omitempty"];</code>
+     * @return Whether the engagementContractConfig field is set.
+     */
+    @java.lang.Override
+    public boolean hasEngagementContractConfig() {
+      return engagementContractConfig_ != null;
+    }
+    /**
+     * <code>.confio.poe.v1beta1.EngagementContractConfig engagement_contract_config = 6 [json_name = "engagementContractConfig", (.gogoproto.jsontag) = "engagement_contract_config,omitempty"];</code>
+     * @return The engagementContractConfig.
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig getEngagementContractConfig() {
+      return engagementContractConfig_ == null ? com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig.getDefaultInstance() : engagementContractConfig_;
+    }
+    /**
+     * <code>.confio.poe.v1beta1.EngagementContractConfig engagement_contract_config = 6 [json_name = "engagementContractConfig", (.gogoproto.jsontag) = "engagement_contract_config,omitempty"];</code>
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.EngagementContractConfigOrBuilder getEngagementContractConfigOrBuilder() {
+      return engagementContractConfig_ == null ? com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig.getDefaultInstance() : engagementContractConfig_;
+    }
+
+    public static final int BOND_DENOM_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object bondDenom_ = "";
+    /**
+     * <pre>
+     * BondDenom defines the bondable coin denomination.
+     * </pre>
+     *
+     * <code>string bond_denom = 7 [json_name = "bondDenom", (.gogoproto.moretags) = "yaml:&#92;"bond_denom&#92;""];</code>
+     * @return The bondDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getBondDenom() {
+      java.lang.Object ref = bondDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bondDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * BondDenom defines the bondable coin denomination.
+     * </pre>
+     *
+     * <code>string bond_denom = 7 [json_name = "bondDenom", (.gogoproto.moretags) = "yaml:&#92;"bond_denom&#92;""];</code>
+     * @return The bytes for bondDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBondDenomBytes() {
+      java.lang.Object ref = bondDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bondDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OVERSIGHT_COMMITTEE_CONTRACT_CONFIG_FIELD_NUMBER = 8;
+    private com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig oversightCommitteeContractConfig_;
+    /**
+     * <code>.confio.poe.v1beta1.OversightCommitteeContractConfig oversight_committee_contract_config = 8 [json_name = "oversightCommitteeContractConfig", (.gogoproto.jsontag) = "oversight_committee_contract_config,omitempty"];</code>
+     * @return Whether the oversightCommitteeContractConfig field is set.
+     */
+    @java.lang.Override
+    public boolean hasOversightCommitteeContractConfig() {
+      return oversightCommitteeContractConfig_ != null;
+    }
+    /**
+     * <code>.confio.poe.v1beta1.OversightCommitteeContractConfig oversight_committee_contract_config = 8 [json_name = "oversightCommitteeContractConfig", (.gogoproto.jsontag) = "oversight_committee_contract_config,omitempty"];</code>
+     * @return The oversightCommitteeContractConfig.
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig getOversightCommitteeContractConfig() {
+      return oversightCommitteeContractConfig_ == null ? com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig.getDefaultInstance() : oversightCommitteeContractConfig_;
+    }
+    /**
+     * <code>.confio.poe.v1beta1.OversightCommitteeContractConfig oversight_committee_contract_config = 8 [json_name = "oversightCommitteeContractConfig", (.gogoproto.jsontag) = "oversight_committee_contract_config,omitempty"];</code>
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfigOrBuilder getOversightCommitteeContractConfigOrBuilder() {
+      return oversightCommitteeContractConfig_ == null ? com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig.getDefaultInstance() : oversightCommitteeContractConfig_;
+    }
+
+    public static final int COMMUNITY_POOL_CONTRACT_CONFIG_FIELD_NUMBER = 9;
+    private com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig communityPoolContractConfig_;
+    /**
+     * <code>.confio.poe.v1beta1.CommunityPoolContractConfig community_pool_contract_config = 9 [json_name = "communityPoolContractConfig", (.gogoproto.jsontag) = "community_pool_contract_config,omitempty"];</code>
+     * @return Whether the communityPoolContractConfig field is set.
+     */
+    @java.lang.Override
+    public boolean hasCommunityPoolContractConfig() {
+      return communityPoolContractConfig_ != null;
+    }
+    /**
+     * <code>.confio.poe.v1beta1.CommunityPoolContractConfig community_pool_contract_config = 9 [json_name = "communityPoolContractConfig", (.gogoproto.jsontag) = "community_pool_contract_config,omitempty"];</code>
+     * @return The communityPoolContractConfig.
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig getCommunityPoolContractConfig() {
+      return communityPoolContractConfig_ == null ? com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig.getDefaultInstance() : communityPoolContractConfig_;
+    }
+    /**
+     * <code>.confio.poe.v1beta1.CommunityPoolContractConfig community_pool_contract_config = 9 [json_name = "communityPoolContractConfig", (.gogoproto.jsontag) = "community_pool_contract_config,omitempty"];</code>
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfigOrBuilder getCommunityPoolContractConfigOrBuilder() {
+      return communityPoolContractConfig_ == null ? com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig.getDefaultInstance() : communityPoolContractConfig_;
+    }
+
+    public static final int VALIDATOR_VOTING_CONTRACT_CONFIG_FIELD_NUMBER = 10;
+    private com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig validatorVotingContractConfig_;
+    /**
+     * <code>.confio.poe.v1beta1.ValidatorVotingContractConfig validator_voting_contract_config = 10 [json_name = "validatorVotingContractConfig", (.gogoproto.jsontag) = "validator_voting_contract_config,omitempty"];</code>
+     * @return Whether the validatorVotingContractConfig field is set.
+     */
+    @java.lang.Override
+    public boolean hasValidatorVotingContractConfig() {
+      return validatorVotingContractConfig_ != null;
+    }
+    /**
+     * <code>.confio.poe.v1beta1.ValidatorVotingContractConfig validator_voting_contract_config = 10 [json_name = "validatorVotingContractConfig", (.gogoproto.jsontag) = "validator_voting_contract_config,omitempty"];</code>
+     * @return The validatorVotingContractConfig.
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig getValidatorVotingContractConfig() {
+      return validatorVotingContractConfig_ == null ? com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig.getDefaultInstance() : validatorVotingContractConfig_;
+    }
+    /**
+     * <code>.confio.poe.v1beta1.ValidatorVotingContractConfig validator_voting_contract_config = 10 [json_name = "validatorVotingContractConfig", (.gogoproto.jsontag) = "validator_voting_contract_config,omitempty"];</code>
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfigOrBuilder getValidatorVotingContractConfigOrBuilder() {
+      return validatorVotingContractConfig_ == null ? com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig.getDefaultInstance() : validatorVotingContractConfig_;
+    }
+
+    public static final int OVERSIGHT_COMMUNITY_MEMBERS_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList oversightCommunityMembers_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string oversight_community_members = 11 [json_name = "oversightCommunityMembers", (.gogoproto.jsontag) = "oversight_community_members,omitempty"];</code>
+     * @return A list containing the oversightCommunityMembers.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getOversightCommunityMembersList() {
+      return oversightCommunityMembers_;
+    }
+    /**
+     * <code>repeated string oversight_community_members = 11 [json_name = "oversightCommunityMembers", (.gogoproto.jsontag) = "oversight_community_members,omitempty"];</code>
+     * @return The count of oversightCommunityMembers.
+     */
+    public int getOversightCommunityMembersCount() {
+      return oversightCommunityMembers_.size();
+    }
+    /**
+     * <code>repeated string oversight_community_members = 11 [json_name = "oversightCommunityMembers", (.gogoproto.jsontag) = "oversight_community_members,omitempty"];</code>
+     * @param index The index of the element to return.
+     * @return The oversightCommunityMembers at the given index.
+     */
+    public java.lang.String getOversightCommunityMembers(int index) {
+      return oversightCommunityMembers_.get(index);
+    }
+    /**
+     * <code>repeated string oversight_community_members = 11 [json_name = "oversightCommunityMembers", (.gogoproto.jsontag) = "oversight_community_members,omitempty"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the oversightCommunityMembers at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getOversightCommunityMembersBytes(int index) {
+      return oversightCommunityMembers_.getByteString(index);
+    }
+
+    public static final int ARBITER_POOL_MEMBERS_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList arbiterPoolMembers_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string arbiter_pool_members = 12 [json_name = "arbiterPoolMembers", (.gogoproto.jsontag) = "arbiter_pool_members,omitempty"];</code>
+     * @return A list containing the arbiterPoolMembers.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getArbiterPoolMembersList() {
+      return arbiterPoolMembers_;
+    }
+    /**
+     * <code>repeated string arbiter_pool_members = 12 [json_name = "arbiterPoolMembers", (.gogoproto.jsontag) = "arbiter_pool_members,omitempty"];</code>
+     * @return The count of arbiterPoolMembers.
+     */
+    public int getArbiterPoolMembersCount() {
+      return arbiterPoolMembers_.size();
+    }
+    /**
+     * <code>repeated string arbiter_pool_members = 12 [json_name = "arbiterPoolMembers", (.gogoproto.jsontag) = "arbiter_pool_members,omitempty"];</code>
+     * @param index The index of the element to return.
+     * @return The arbiterPoolMembers at the given index.
+     */
+    public java.lang.String getArbiterPoolMembers(int index) {
+      return arbiterPoolMembers_.get(index);
+    }
+    /**
+     * <code>repeated string arbiter_pool_members = 12 [json_name = "arbiterPoolMembers", (.gogoproto.jsontag) = "arbiter_pool_members,omitempty"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the arbiterPoolMembers at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getArbiterPoolMembersBytes(int index) {
+      return arbiterPoolMembers_.getByteString(index);
+    }
+
+    public static final int ARBITER_POOL_CONTRACT_CONFIG_FIELD_NUMBER = 13;
+    private com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig arbiterPoolContractConfig_;
+    /**
+     * <code>.confio.poe.v1beta1.ArbiterPoolContractConfig arbiter_pool_contract_config = 13 [json_name = "arbiterPoolContractConfig", (.gogoproto.jsontag) = "arbiter_pool_contract_config,omitempty"];</code>
+     * @return Whether the arbiterPoolContractConfig field is set.
+     */
+    @java.lang.Override
+    public boolean hasArbiterPoolContractConfig() {
+      return arbiterPoolContractConfig_ != null;
+    }
+    /**
+     * <code>.confio.poe.v1beta1.ArbiterPoolContractConfig arbiter_pool_contract_config = 13 [json_name = "arbiterPoolContractConfig", (.gogoproto.jsontag) = "arbiter_pool_contract_config,omitempty"];</code>
+     * @return The arbiterPoolContractConfig.
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig getArbiterPoolContractConfig() {
+      return arbiterPoolContractConfig_ == null ? com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig.getDefaultInstance() : arbiterPoolContractConfig_;
+    }
+    /**
+     * <code>.confio.poe.v1beta1.ArbiterPoolContractConfig arbiter_pool_contract_config = 13 [json_name = "arbiterPoolContractConfig", (.gogoproto.jsontag) = "arbiter_pool_contract_config,omitempty"];</code>
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfigOrBuilder getArbiterPoolContractConfigOrBuilder() {
+      return arbiterPoolContractConfig_ == null ? com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig.getDefaultInstance() : arbiterPoolContractConfig_;
+    }
+
+    public static final int MIXER_CONTRACT_CONFIG_FIELD_NUMBER = 14;
+    private com.confio.poe.v1beta1.GenesisProto.MixerContractConfig mixerContractConfig_;
+    /**
+     * <code>.confio.poe.v1beta1.MixerContractConfig mixer_contract_config = 14 [json_name = "mixerContractConfig", (.gogoproto.jsontag) = "mixer_contract_config,omitempty"];</code>
+     * @return Whether the mixerContractConfig field is set.
+     */
+    @java.lang.Override
+    public boolean hasMixerContractConfig() {
+      return mixerContractConfig_ != null;
+    }
+    /**
+     * <code>.confio.poe.v1beta1.MixerContractConfig mixer_contract_config = 14 [json_name = "mixerContractConfig", (.gogoproto.jsontag) = "mixer_contract_config,omitempty"];</code>
+     * @return The mixerContractConfig.
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.MixerContractConfig getMixerContractConfig() {
+      return mixerContractConfig_ == null ? com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.getDefaultInstance() : mixerContractConfig_;
+    }
+    /**
+     * <code>.confio.poe.v1beta1.MixerContractConfig mixer_contract_config = 14 [json_name = "mixerContractConfig", (.gogoproto.jsontag) = "mixer_contract_config,omitempty"];</code>
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.MixerContractConfigOrBuilder getMixerContractConfigOrBuilder() {
+      return mixerContractConfig_ == null ? com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.getDefaultInstance() : mixerContractConfig_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < genTxs_.size(); i++) {
+        output.writeBytes(1, genTxs_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bootstrapAccountAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, bootstrapAccountAddress_);
+      }
+      for (int i = 0; i < engagement_.size(); i++) {
+        output.writeMessage(3, engagement_.get(i));
+      }
+      if (stakeContractConfig_ != null) {
+        output.writeMessage(4, getStakeContractConfig());
+      }
+      if (valsetContractConfig_ != null) {
+        output.writeMessage(5, getValsetContractConfig());
+      }
+      if (engagementContractConfig_ != null) {
+        output.writeMessage(6, getEngagementContractConfig());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bondDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, bondDenom_);
+      }
+      if (oversightCommitteeContractConfig_ != null) {
+        output.writeMessage(8, getOversightCommitteeContractConfig());
+      }
+      if (communityPoolContractConfig_ != null) {
+        output.writeMessage(9, getCommunityPoolContractConfig());
+      }
+      if (validatorVotingContractConfig_ != null) {
+        output.writeMessage(10, getValidatorVotingContractConfig());
+      }
+      for (int i = 0; i < oversightCommunityMembers_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, oversightCommunityMembers_.getRaw(i));
+      }
+      for (int i = 0; i < arbiterPoolMembers_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, arbiterPoolMembers_.getRaw(i));
+      }
+      if (arbiterPoolContractConfig_ != null) {
+        output.writeMessage(13, getArbiterPoolContractConfig());
+      }
+      if (mixerContractConfig_ != null) {
+        output.writeMessage(14, getMixerContractConfig());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < genTxs_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(genTxs_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getGenTxsList().size();
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bootstrapAccountAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, bootstrapAccountAddress_);
+      }
+      for (int i = 0; i < engagement_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, engagement_.get(i));
+      }
+      if (stakeContractConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getStakeContractConfig());
+      }
+      if (valsetContractConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getValsetContractConfig());
+      }
+      if (engagementContractConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getEngagementContractConfig());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bondDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, bondDenom_);
+      }
+      if (oversightCommitteeContractConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getOversightCommitteeContractConfig());
+      }
+      if (communityPoolContractConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getCommunityPoolContractConfig());
+      }
+      if (validatorVotingContractConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getValidatorVotingContractConfig());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < oversightCommunityMembers_.size(); i++) {
+          dataSize += computeStringSizeNoTag(oversightCommunityMembers_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getOversightCommunityMembersList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < arbiterPoolMembers_.size(); i++) {
+          dataSize += computeStringSizeNoTag(arbiterPoolMembers_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getArbiterPoolMembersList().size();
+      }
+      if (arbiterPoolContractConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getArbiterPoolContractConfig());
+      }
+      if (mixerContractConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, getMixerContractConfig());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.GenesisProto.SeedContracts)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.GenesisProto.SeedContracts other = (com.confio.poe.v1beta1.GenesisProto.SeedContracts) obj;
+
+      if (!getGenTxsList()
+          .equals(other.getGenTxsList())) return false;
+      if (!getBootstrapAccountAddress()
+          .equals(other.getBootstrapAccountAddress())) return false;
+      if (!getEngagementList()
+          .equals(other.getEngagementList())) return false;
+      if (hasStakeContractConfig() != other.hasStakeContractConfig()) return false;
+      if (hasStakeContractConfig()) {
+        if (!getStakeContractConfig()
+            .equals(other.getStakeContractConfig())) return false;
+      }
+      if (hasValsetContractConfig() != other.hasValsetContractConfig()) return false;
+      if (hasValsetContractConfig()) {
+        if (!getValsetContractConfig()
+            .equals(other.getValsetContractConfig())) return false;
+      }
+      if (hasEngagementContractConfig() != other.hasEngagementContractConfig()) return false;
+      if (hasEngagementContractConfig()) {
+        if (!getEngagementContractConfig()
+            .equals(other.getEngagementContractConfig())) return false;
+      }
+      if (!getBondDenom()
+          .equals(other.getBondDenom())) return false;
+      if (hasOversightCommitteeContractConfig() != other.hasOversightCommitteeContractConfig()) return false;
+      if (hasOversightCommitteeContractConfig()) {
+        if (!getOversightCommitteeContractConfig()
+            .equals(other.getOversightCommitteeContractConfig())) return false;
+      }
+      if (hasCommunityPoolContractConfig() != other.hasCommunityPoolContractConfig()) return false;
+      if (hasCommunityPoolContractConfig()) {
+        if (!getCommunityPoolContractConfig()
+            .equals(other.getCommunityPoolContractConfig())) return false;
+      }
+      if (hasValidatorVotingContractConfig() != other.hasValidatorVotingContractConfig()) return false;
+      if (hasValidatorVotingContractConfig()) {
+        if (!getValidatorVotingContractConfig()
+            .equals(other.getValidatorVotingContractConfig())) return false;
+      }
+      if (!getOversightCommunityMembersList()
+          .equals(other.getOversightCommunityMembersList())) return false;
+      if (!getArbiterPoolMembersList()
+          .equals(other.getArbiterPoolMembersList())) return false;
+      if (hasArbiterPoolContractConfig() != other.hasArbiterPoolContractConfig()) return false;
+      if (hasArbiterPoolContractConfig()) {
+        if (!getArbiterPoolContractConfig()
+            .equals(other.getArbiterPoolContractConfig())) return false;
+      }
+      if (hasMixerContractConfig() != other.hasMixerContractConfig()) return false;
+      if (hasMixerContractConfig()) {
+        if (!getMixerContractConfig()
+            .equals(other.getMixerContractConfig())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getGenTxsCount() > 0) {
+        hash = (37 * hash) + GEN_TXS_FIELD_NUMBER;
+        hash = (53 * hash) + getGenTxsList().hashCode();
+      }
+      hash = (37 * hash) + BOOTSTRAP_ACCOUNT_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getBootstrapAccountAddress().hashCode();
+      if (getEngagementCount() > 0) {
+        hash = (37 * hash) + ENGAGEMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getEngagementList().hashCode();
+      }
+      if (hasStakeContractConfig()) {
+        hash = (37 * hash) + STAKE_CONTRACT_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getStakeContractConfig().hashCode();
+      }
+      if (hasValsetContractConfig()) {
+        hash = (37 * hash) + VALSET_CONTRACT_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getValsetContractConfig().hashCode();
+      }
+      if (hasEngagementContractConfig()) {
+        hash = (37 * hash) + ENGAGEMENT_CONTRACT_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getEngagementContractConfig().hashCode();
+      }
+      hash = (37 * hash) + BOND_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getBondDenom().hashCode();
+      if (hasOversightCommitteeContractConfig()) {
+        hash = (37 * hash) + OVERSIGHT_COMMITTEE_CONTRACT_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getOversightCommitteeContractConfig().hashCode();
+      }
+      if (hasCommunityPoolContractConfig()) {
+        hash = (37 * hash) + COMMUNITY_POOL_CONTRACT_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getCommunityPoolContractConfig().hashCode();
+      }
+      if (hasValidatorVotingContractConfig()) {
+        hash = (37 * hash) + VALIDATOR_VOTING_CONTRACT_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getValidatorVotingContractConfig().hashCode();
+      }
+      if (getOversightCommunityMembersCount() > 0) {
+        hash = (37 * hash) + OVERSIGHT_COMMUNITY_MEMBERS_FIELD_NUMBER;
+        hash = (53 * hash) + getOversightCommunityMembersList().hashCode();
+      }
+      if (getArbiterPoolMembersCount() > 0) {
+        hash = (37 * hash) + ARBITER_POOL_MEMBERS_FIELD_NUMBER;
+        hash = (53 * hash) + getArbiterPoolMembersList().hashCode();
+      }
+      if (hasArbiterPoolContractConfig()) {
+        hash = (37 * hash) + ARBITER_POOL_CONTRACT_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getArbiterPoolContractConfig().hashCode();
+      }
+      if (hasMixerContractConfig()) {
+        hash = (37 * hash) + MIXER_CONTRACT_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getMixerContractConfig().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.SeedContracts parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.SeedContracts parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.SeedContracts parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.SeedContracts parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.SeedContracts parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.SeedContracts parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.SeedContracts parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.SeedContracts parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.SeedContracts parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.SeedContracts parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.SeedContracts parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.SeedContracts parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.GenesisProto.SeedContracts prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * SeedContracts contains the contract configuration and group members to setup
+     * all PoE contracts on chain.
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.SeedContracts}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.SeedContracts)
+        com.confio.poe.v1beta1.GenesisProto.SeedContractsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_SeedContracts_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_SeedContracts_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.GenesisProto.SeedContracts.class, com.confio.poe.v1beta1.GenesisProto.SeedContracts.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.GenesisProto.SeedContracts.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        genTxs_ = java.util.Collections.emptyList();
+        bootstrapAccountAddress_ = "";
+        if (engagementBuilder_ == null) {
+          engagement_ = java.util.Collections.emptyList();
+        } else {
+          engagement_ = null;
+          engagementBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        stakeContractConfig_ = null;
+        if (stakeContractConfigBuilder_ != null) {
+          stakeContractConfigBuilder_.dispose();
+          stakeContractConfigBuilder_ = null;
+        }
+        valsetContractConfig_ = null;
+        if (valsetContractConfigBuilder_ != null) {
+          valsetContractConfigBuilder_.dispose();
+          valsetContractConfigBuilder_ = null;
+        }
+        engagementContractConfig_ = null;
+        if (engagementContractConfigBuilder_ != null) {
+          engagementContractConfigBuilder_.dispose();
+          engagementContractConfigBuilder_ = null;
+        }
+        bondDenom_ = "";
+        oversightCommitteeContractConfig_ = null;
+        if (oversightCommitteeContractConfigBuilder_ != null) {
+          oversightCommitteeContractConfigBuilder_.dispose();
+          oversightCommitteeContractConfigBuilder_ = null;
+        }
+        communityPoolContractConfig_ = null;
+        if (communityPoolContractConfigBuilder_ != null) {
+          communityPoolContractConfigBuilder_.dispose();
+          communityPoolContractConfigBuilder_ = null;
+        }
+        validatorVotingContractConfig_ = null;
+        if (validatorVotingContractConfigBuilder_ != null) {
+          validatorVotingContractConfigBuilder_.dispose();
+          validatorVotingContractConfigBuilder_ = null;
+        }
+        oversightCommunityMembers_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        arbiterPoolMembers_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        arbiterPoolContractConfig_ = null;
+        if (arbiterPoolContractConfigBuilder_ != null) {
+          arbiterPoolContractConfigBuilder_.dispose();
+          arbiterPoolContractConfigBuilder_ = null;
+        }
+        mixerContractConfig_ = null;
+        if (mixerContractConfigBuilder_ != null) {
+          mixerContractConfigBuilder_.dispose();
+          mixerContractConfigBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_SeedContracts_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.SeedContracts getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.GenesisProto.SeedContracts.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.SeedContracts build() {
+        com.confio.poe.v1beta1.GenesisProto.SeedContracts result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.SeedContracts buildPartial() {
+        com.confio.poe.v1beta1.GenesisProto.SeedContracts result = new com.confio.poe.v1beta1.GenesisProto.SeedContracts(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.confio.poe.v1beta1.GenesisProto.SeedContracts result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          genTxs_ = java.util.Collections.unmodifiableList(genTxs_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.genTxs_ = genTxs_;
+        if (engagementBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            engagement_ = java.util.Collections.unmodifiableList(engagement_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.engagement_ = engagement_;
+        } else {
+          result.engagement_ = engagementBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.confio.poe.v1beta1.GenesisProto.SeedContracts result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.bootstrapAccountAddress_ = bootstrapAccountAddress_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.stakeContractConfig_ = stakeContractConfigBuilder_ == null
+              ? stakeContractConfig_
+              : stakeContractConfigBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.valsetContractConfig_ = valsetContractConfigBuilder_ == null
+              ? valsetContractConfig_
+              : valsetContractConfigBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.engagementContractConfig_ = engagementContractConfigBuilder_ == null
+              ? engagementContractConfig_
+              : engagementContractConfigBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.bondDenom_ = bondDenom_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.oversightCommitteeContractConfig_ = oversightCommitteeContractConfigBuilder_ == null
+              ? oversightCommitteeContractConfig_
+              : oversightCommitteeContractConfigBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.communityPoolContractConfig_ = communityPoolContractConfigBuilder_ == null
+              ? communityPoolContractConfig_
+              : communityPoolContractConfigBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.validatorVotingContractConfig_ = validatorVotingContractConfigBuilder_ == null
+              ? validatorVotingContractConfig_
+              : validatorVotingContractConfigBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          oversightCommunityMembers_.makeImmutable();
+          result.oversightCommunityMembers_ = oversightCommunityMembers_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          arbiterPoolMembers_.makeImmutable();
+          result.arbiterPoolMembers_ = arbiterPoolMembers_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.arbiterPoolContractConfig_ = arbiterPoolContractConfigBuilder_ == null
+              ? arbiterPoolContractConfig_
+              : arbiterPoolContractConfigBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.mixerContractConfig_ = mixerContractConfigBuilder_ == null
+              ? mixerContractConfig_
+              : mixerContractConfigBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.GenesisProto.SeedContracts) {
+          return mergeFrom((com.confio.poe.v1beta1.GenesisProto.SeedContracts)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.GenesisProto.SeedContracts other) {
+        if (other == com.confio.poe.v1beta1.GenesisProto.SeedContracts.getDefaultInstance()) return this;
+        if (!other.genTxs_.isEmpty()) {
+          if (genTxs_.isEmpty()) {
+            genTxs_ = other.genTxs_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureGenTxsIsMutable();
+            genTxs_.addAll(other.genTxs_);
+          }
+          onChanged();
+        }
+        if (!other.getBootstrapAccountAddress().isEmpty()) {
+          bootstrapAccountAddress_ = other.bootstrapAccountAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (engagementBuilder_ == null) {
+          if (!other.engagement_.isEmpty()) {
+            if (engagement_.isEmpty()) {
+              engagement_ = other.engagement_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureEngagementIsMutable();
+              engagement_.addAll(other.engagement_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.engagement_.isEmpty()) {
+            if (engagementBuilder_.isEmpty()) {
+              engagementBuilder_.dispose();
+              engagementBuilder_ = null;
+              engagement_ = other.engagement_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              engagementBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEngagementFieldBuilder() : null;
+            } else {
+              engagementBuilder_.addAllMessages(other.engagement_);
+            }
+          }
+        }
+        if (other.hasStakeContractConfig()) {
+          mergeStakeContractConfig(other.getStakeContractConfig());
+        }
+        if (other.hasValsetContractConfig()) {
+          mergeValsetContractConfig(other.getValsetContractConfig());
+        }
+        if (other.hasEngagementContractConfig()) {
+          mergeEngagementContractConfig(other.getEngagementContractConfig());
+        }
+        if (!other.getBondDenom().isEmpty()) {
+          bondDenom_ = other.bondDenom_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (other.hasOversightCommitteeContractConfig()) {
+          mergeOversightCommitteeContractConfig(other.getOversightCommitteeContractConfig());
+        }
+        if (other.hasCommunityPoolContractConfig()) {
+          mergeCommunityPoolContractConfig(other.getCommunityPoolContractConfig());
+        }
+        if (other.hasValidatorVotingContractConfig()) {
+          mergeValidatorVotingContractConfig(other.getValidatorVotingContractConfig());
+        }
+        if (!other.oversightCommunityMembers_.isEmpty()) {
+          if (oversightCommunityMembers_.isEmpty()) {
+            oversightCommunityMembers_ = other.oversightCommunityMembers_;
+            bitField0_ |= 0x00000400;
+          } else {
+            ensureOversightCommunityMembersIsMutable();
+            oversightCommunityMembers_.addAll(other.oversightCommunityMembers_);
+          }
+          onChanged();
+        }
+        if (!other.arbiterPoolMembers_.isEmpty()) {
+          if (arbiterPoolMembers_.isEmpty()) {
+            arbiterPoolMembers_ = other.arbiterPoolMembers_;
+            bitField0_ |= 0x00000800;
+          } else {
+            ensureArbiterPoolMembersIsMutable();
+            arbiterPoolMembers_.addAll(other.arbiterPoolMembers_);
+          }
+          onChanged();
+        }
+        if (other.hasArbiterPoolContractConfig()) {
+          mergeArbiterPoolContractConfig(other.getArbiterPoolContractConfig());
+        }
+        if (other.hasMixerContractConfig()) {
+          mergeMixerContractConfig(other.getMixerContractConfig());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.protobuf.ByteString v = input.readBytes();
+                ensureGenTxsIsMutable();
+                genTxs_.add(v);
+                break;
+              } // case 10
+              case 18: {
+                bootstrapAccountAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.confio.poe.v1beta1.GenesisProto.TG4Member m =
+                    input.readMessage(
+                        com.confio.poe.v1beta1.GenesisProto.TG4Member.parser(),
+                        extensionRegistry);
+                if (engagementBuilder_ == null) {
+                  ensureEngagementIsMutable();
+                  engagement_.add(m);
+                } else {
+                  engagementBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getStakeContractConfigFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getValsetContractConfigFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getEngagementContractConfigFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                bondDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                input.readMessage(
+                    getOversightCommitteeContractConfigFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                input.readMessage(
+                    getCommunityPoolContractConfigFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              case 82: {
+                input.readMessage(
+                    getValidatorVotingContractConfigFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+              case 90: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureOversightCommunityMembersIsMutable();
+                oversightCommunityMembers_.add(s);
+                break;
+              } // case 90
+              case 98: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureArbiterPoolMembersIsMutable();
+                arbiterPoolMembers_.add(s);
+                break;
+              } // case 98
+              case 106: {
+                input.readMessage(
+                    getArbiterPoolContractConfigFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 106
+              case 114: {
+                input.readMessage(
+                    getMixerContractConfigFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 114
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.google.protobuf.ByteString> genTxs_ = java.util.Collections.emptyList();
+      private void ensureGenTxsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          genTxs_ = new java.util.ArrayList<com.google.protobuf.ByteString>(genTxs_);
+          bitField0_ |= 0x00000001;
+        }
+      }
+      /**
+       * <pre>
+       * GenTxs defines the genesis transactions to create a validator.
+       * </pre>
+       *
+       * <code>repeated bytes gen_txs = 1 [json_name = "genTxs", (.gogoproto.jsontag) = "gentxs", (.gogoproto.moretags) = "yaml:&#92;"gentxs&#92;"", (.gogoproto.casttype) = "encoding/json.RawMessage"];</code>
+       * @return A list containing the genTxs.
+       */
+      public java.util.List<com.google.protobuf.ByteString>
+          getGenTxsList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(genTxs_) : genTxs_;
+      }
+      /**
+       * <pre>
+       * GenTxs defines the genesis transactions to create a validator.
+       * </pre>
+       *
+       * <code>repeated bytes gen_txs = 1 [json_name = "genTxs", (.gogoproto.jsontag) = "gentxs", (.gogoproto.moretags) = "yaml:&#92;"gentxs&#92;"", (.gogoproto.casttype) = "encoding/json.RawMessage"];</code>
+       * @return The count of genTxs.
+       */
+      public int getGenTxsCount() {
+        return genTxs_.size();
+      }
+      /**
+       * <pre>
+       * GenTxs defines the genesis transactions to create a validator.
+       * </pre>
+       *
+       * <code>repeated bytes gen_txs = 1 [json_name = "genTxs", (.gogoproto.jsontag) = "gentxs", (.gogoproto.moretags) = "yaml:&#92;"gentxs&#92;"", (.gogoproto.casttype) = "encoding/json.RawMessage"];</code>
+       * @param index The index of the element to return.
+       * @return The genTxs at the given index.
+       */
+      public com.google.protobuf.ByteString getGenTxs(int index) {
+        return genTxs_.get(index);
+      }
+      /**
+       * <pre>
+       * GenTxs defines the genesis transactions to create a validator.
+       * </pre>
+       *
+       * <code>repeated bytes gen_txs = 1 [json_name = "genTxs", (.gogoproto.jsontag) = "gentxs", (.gogoproto.moretags) = "yaml:&#92;"gentxs&#92;"", (.gogoproto.casttype) = "encoding/json.RawMessage"];</code>
+       * @param index The index to set the value at.
+       * @param value The genTxs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGenTxs(
+          int index, com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureGenTxsIsMutable();
+        genTxs_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * GenTxs defines the genesis transactions to create a validator.
+       * </pre>
+       *
+       * <code>repeated bytes gen_txs = 1 [json_name = "genTxs", (.gogoproto.jsontag) = "gentxs", (.gogoproto.moretags) = "yaml:&#92;"gentxs&#92;"", (.gogoproto.casttype) = "encoding/json.RawMessage"];</code>
+       * @param value The genTxs to add.
+       * @return This builder for chaining.
+       */
+      public Builder addGenTxs(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureGenTxsIsMutable();
+        genTxs_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * GenTxs defines the genesis transactions to create a validator.
+       * </pre>
+       *
+       * <code>repeated bytes gen_txs = 1 [json_name = "genTxs", (.gogoproto.jsontag) = "gentxs", (.gogoproto.moretags) = "yaml:&#92;"gentxs&#92;"", (.gogoproto.casttype) = "encoding/json.RawMessage"];</code>
+       * @param values The genTxs to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllGenTxs(
+          java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+        ensureGenTxsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, genTxs_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * GenTxs defines the genesis transactions to create a validator.
+       * </pre>
+       *
+       * <code>repeated bytes gen_txs = 1 [json_name = "genTxs", (.gogoproto.jsontag) = "gentxs", (.gogoproto.moretags) = "yaml:&#92;"gentxs&#92;"", (.gogoproto.casttype) = "encoding/json.RawMessage"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGenTxs() {
+        genTxs_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object bootstrapAccountAddress_ = "";
+      /**
+       * <pre>
+       * BootstrapAccountAddress single address that is set as bootstrap-account for
+       * the PoE contracts in seed mode.
+       * </pre>
+       *
+       * <code>string bootstrap_account_address = 2 [json_name = "bootstrapAccountAddress"];</code>
+       * @return The bootstrapAccountAddress.
+       */
+      public java.lang.String getBootstrapAccountAddress() {
+        java.lang.Object ref = bootstrapAccountAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bootstrapAccountAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * BootstrapAccountAddress single address that is set as bootstrap-account for
+       * the PoE contracts in seed mode.
+       * </pre>
+       *
+       * <code>string bootstrap_account_address = 2 [json_name = "bootstrapAccountAddress"];</code>
+       * @return The bytes for bootstrapAccountAddress.
+       */
+      public com.google.protobuf.ByteString
+          getBootstrapAccountAddressBytes() {
+        java.lang.Object ref = bootstrapAccountAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bootstrapAccountAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * BootstrapAccountAddress single address that is set as bootstrap-account for
+       * the PoE contracts in seed mode.
+       * </pre>
+       *
+       * <code>string bootstrap_account_address = 2 [json_name = "bootstrapAccountAddress"];</code>
+       * @param value The bootstrapAccountAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBootstrapAccountAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        bootstrapAccountAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * BootstrapAccountAddress single address that is set as bootstrap-account for
+       * the PoE contracts in seed mode.
+       * </pre>
+       *
+       * <code>string bootstrap_account_address = 2 [json_name = "bootstrapAccountAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBootstrapAccountAddress() {
+        bootstrapAccountAddress_ = getDefaultInstance().getBootstrapAccountAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * BootstrapAccountAddress single address that is set as bootstrap-account for
+       * the PoE contracts in seed mode.
+       * </pre>
+       *
+       * <code>string bootstrap_account_address = 2 [json_name = "bootstrapAccountAddress"];</code>
+       * @param value The bytes for bootstrapAccountAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBootstrapAccountAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        bootstrapAccountAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.confio.poe.v1beta1.GenesisProto.TG4Member> engagement_ =
+        java.util.Collections.emptyList();
+      private void ensureEngagementIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          engagement_ = new java.util.ArrayList<com.confio.poe.v1beta1.GenesisProto.TG4Member>(engagement_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.TG4Member, com.confio.poe.v1beta1.GenesisProto.TG4Member.Builder, com.confio.poe.v1beta1.GenesisProto.TG4MemberOrBuilder> engagementBuilder_;
+
+      /**
+       * <pre>
+       * Engagement weighted members of the engagement group. Validators should be
+       * in here.
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.TG4Member engagement = 3 [json_name = "engagement", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "engagement,omitempty"];</code>
+       */
+      public java.util.List<com.confio.poe.v1beta1.GenesisProto.TG4Member> getEngagementList() {
+        if (engagementBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(engagement_);
+        } else {
+          return engagementBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Engagement weighted members of the engagement group. Validators should be
+       * in here.
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.TG4Member engagement = 3 [json_name = "engagement", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "engagement,omitempty"];</code>
+       */
+      public int getEngagementCount() {
+        if (engagementBuilder_ == null) {
+          return engagement_.size();
+        } else {
+          return engagementBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Engagement weighted members of the engagement group. Validators should be
+       * in here.
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.TG4Member engagement = 3 [json_name = "engagement", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "engagement,omitempty"];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.TG4Member getEngagement(int index) {
+        if (engagementBuilder_ == null) {
+          return engagement_.get(index);
+        } else {
+          return engagementBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Engagement weighted members of the engagement group. Validators should be
+       * in here.
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.TG4Member engagement = 3 [json_name = "engagement", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "engagement,omitempty"];</code>
+       */
+      public Builder setEngagement(
+          int index, com.confio.poe.v1beta1.GenesisProto.TG4Member value) {
+        if (engagementBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEngagementIsMutable();
+          engagement_.set(index, value);
+          onChanged();
+        } else {
+          engagementBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Engagement weighted members of the engagement group. Validators should be
+       * in here.
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.TG4Member engagement = 3 [json_name = "engagement", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "engagement,omitempty"];</code>
+       */
+      public Builder setEngagement(
+          int index, com.confio.poe.v1beta1.GenesisProto.TG4Member.Builder builderForValue) {
+        if (engagementBuilder_ == null) {
+          ensureEngagementIsMutable();
+          engagement_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          engagementBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Engagement weighted members of the engagement group. Validators should be
+       * in here.
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.TG4Member engagement = 3 [json_name = "engagement", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "engagement,omitempty"];</code>
+       */
+      public Builder addEngagement(com.confio.poe.v1beta1.GenesisProto.TG4Member value) {
+        if (engagementBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEngagementIsMutable();
+          engagement_.add(value);
+          onChanged();
+        } else {
+          engagementBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Engagement weighted members of the engagement group. Validators should be
+       * in here.
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.TG4Member engagement = 3 [json_name = "engagement", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "engagement,omitempty"];</code>
+       */
+      public Builder addEngagement(
+          int index, com.confio.poe.v1beta1.GenesisProto.TG4Member value) {
+        if (engagementBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEngagementIsMutable();
+          engagement_.add(index, value);
+          onChanged();
+        } else {
+          engagementBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Engagement weighted members of the engagement group. Validators should be
+       * in here.
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.TG4Member engagement = 3 [json_name = "engagement", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "engagement,omitempty"];</code>
+       */
+      public Builder addEngagement(
+          com.confio.poe.v1beta1.GenesisProto.TG4Member.Builder builderForValue) {
+        if (engagementBuilder_ == null) {
+          ensureEngagementIsMutable();
+          engagement_.add(builderForValue.build());
+          onChanged();
+        } else {
+          engagementBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Engagement weighted members of the engagement group. Validators should be
+       * in here.
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.TG4Member engagement = 3 [json_name = "engagement", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "engagement,omitempty"];</code>
+       */
+      public Builder addEngagement(
+          int index, com.confio.poe.v1beta1.GenesisProto.TG4Member.Builder builderForValue) {
+        if (engagementBuilder_ == null) {
+          ensureEngagementIsMutable();
+          engagement_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          engagementBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Engagement weighted members of the engagement group. Validators should be
+       * in here.
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.TG4Member engagement = 3 [json_name = "engagement", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "engagement,omitempty"];</code>
+       */
+      public Builder addAllEngagement(
+          java.lang.Iterable<? extends com.confio.poe.v1beta1.GenesisProto.TG4Member> values) {
+        if (engagementBuilder_ == null) {
+          ensureEngagementIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, engagement_);
+          onChanged();
+        } else {
+          engagementBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Engagement weighted members of the engagement group. Validators should be
+       * in here.
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.TG4Member engagement = 3 [json_name = "engagement", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "engagement,omitempty"];</code>
+       */
+      public Builder clearEngagement() {
+        if (engagementBuilder_ == null) {
+          engagement_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          engagementBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Engagement weighted members of the engagement group. Validators should be
+       * in here.
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.TG4Member engagement = 3 [json_name = "engagement", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "engagement,omitempty"];</code>
+       */
+      public Builder removeEngagement(int index) {
+        if (engagementBuilder_ == null) {
+          ensureEngagementIsMutable();
+          engagement_.remove(index);
+          onChanged();
+        } else {
+          engagementBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Engagement weighted members of the engagement group. Validators should be
+       * in here.
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.TG4Member engagement = 3 [json_name = "engagement", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "engagement,omitempty"];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.TG4Member.Builder getEngagementBuilder(
+          int index) {
+        return getEngagementFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Engagement weighted members of the engagement group. Validators should be
+       * in here.
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.TG4Member engagement = 3 [json_name = "engagement", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "engagement,omitempty"];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.TG4MemberOrBuilder getEngagementOrBuilder(
+          int index) {
+        if (engagementBuilder_ == null) {
+          return engagement_.get(index);  } else {
+          return engagementBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Engagement weighted members of the engagement group. Validators should be
+       * in here.
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.TG4Member engagement = 3 [json_name = "engagement", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "engagement,omitempty"];</code>
+       */
+      public java.util.List<? extends com.confio.poe.v1beta1.GenesisProto.TG4MemberOrBuilder> 
+           getEngagementOrBuilderList() {
+        if (engagementBuilder_ != null) {
+          return engagementBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(engagement_);
+        }
+      }
+      /**
+       * <pre>
+       * Engagement weighted members of the engagement group. Validators should be
+       * in here.
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.TG4Member engagement = 3 [json_name = "engagement", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "engagement,omitempty"];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.TG4Member.Builder addEngagementBuilder() {
+        return getEngagementFieldBuilder().addBuilder(
+            com.confio.poe.v1beta1.GenesisProto.TG4Member.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Engagement weighted members of the engagement group. Validators should be
+       * in here.
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.TG4Member engagement = 3 [json_name = "engagement", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "engagement,omitempty"];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.TG4Member.Builder addEngagementBuilder(
+          int index) {
+        return getEngagementFieldBuilder().addBuilder(
+            index, com.confio.poe.v1beta1.GenesisProto.TG4Member.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Engagement weighted members of the engagement group. Validators should be
+       * in here.
+       * </pre>
+       *
+       * <code>repeated .confio.poe.v1beta1.TG4Member engagement = 3 [json_name = "engagement", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "engagement,omitempty"];</code>
+       */
+      public java.util.List<com.confio.poe.v1beta1.GenesisProto.TG4Member.Builder> 
+           getEngagementBuilderList() {
+        return getEngagementFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.TG4Member, com.confio.poe.v1beta1.GenesisProto.TG4Member.Builder, com.confio.poe.v1beta1.GenesisProto.TG4MemberOrBuilder> 
+          getEngagementFieldBuilder() {
+        if (engagementBuilder_ == null) {
+          engagementBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.confio.poe.v1beta1.GenesisProto.TG4Member, com.confio.poe.v1beta1.GenesisProto.TG4Member.Builder, com.confio.poe.v1beta1.GenesisProto.TG4MemberOrBuilder>(
+                  engagement_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          engagement_ = null;
+        }
+        return engagementBuilder_;
+      }
+
+      private com.confio.poe.v1beta1.GenesisProto.StakeContractConfig stakeContractConfig_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.StakeContractConfig, com.confio.poe.v1beta1.GenesisProto.StakeContractConfig.Builder, com.confio.poe.v1beta1.GenesisProto.StakeContractConfigOrBuilder> stakeContractConfigBuilder_;
+      /**
+       * <code>.confio.poe.v1beta1.StakeContractConfig stake_contract_config = 4 [json_name = "stakeContractConfig", (.gogoproto.jsontag) = "stake_contract_config,omitempty"];</code>
+       * @return Whether the stakeContractConfig field is set.
+       */
+      public boolean hasStakeContractConfig() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.confio.poe.v1beta1.StakeContractConfig stake_contract_config = 4 [json_name = "stakeContractConfig", (.gogoproto.jsontag) = "stake_contract_config,omitempty"];</code>
+       * @return The stakeContractConfig.
+       */
+      public com.confio.poe.v1beta1.GenesisProto.StakeContractConfig getStakeContractConfig() {
+        if (stakeContractConfigBuilder_ == null) {
+          return stakeContractConfig_ == null ? com.confio.poe.v1beta1.GenesisProto.StakeContractConfig.getDefaultInstance() : stakeContractConfig_;
+        } else {
+          return stakeContractConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.confio.poe.v1beta1.StakeContractConfig stake_contract_config = 4 [json_name = "stakeContractConfig", (.gogoproto.jsontag) = "stake_contract_config,omitempty"];</code>
+       */
+      public Builder setStakeContractConfig(com.confio.poe.v1beta1.GenesisProto.StakeContractConfig value) {
+        if (stakeContractConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          stakeContractConfig_ = value;
+        } else {
+          stakeContractConfigBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.StakeContractConfig stake_contract_config = 4 [json_name = "stakeContractConfig", (.gogoproto.jsontag) = "stake_contract_config,omitempty"];</code>
+       */
+      public Builder setStakeContractConfig(
+          com.confio.poe.v1beta1.GenesisProto.StakeContractConfig.Builder builderForValue) {
+        if (stakeContractConfigBuilder_ == null) {
+          stakeContractConfig_ = builderForValue.build();
+        } else {
+          stakeContractConfigBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.StakeContractConfig stake_contract_config = 4 [json_name = "stakeContractConfig", (.gogoproto.jsontag) = "stake_contract_config,omitempty"];</code>
+       */
+      public Builder mergeStakeContractConfig(com.confio.poe.v1beta1.GenesisProto.StakeContractConfig value) {
+        if (stakeContractConfigBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            stakeContractConfig_ != null &&
+            stakeContractConfig_ != com.confio.poe.v1beta1.GenesisProto.StakeContractConfig.getDefaultInstance()) {
+            getStakeContractConfigBuilder().mergeFrom(value);
+          } else {
+            stakeContractConfig_ = value;
+          }
+        } else {
+          stakeContractConfigBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.StakeContractConfig stake_contract_config = 4 [json_name = "stakeContractConfig", (.gogoproto.jsontag) = "stake_contract_config,omitempty"];</code>
+       */
+      public Builder clearStakeContractConfig() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        stakeContractConfig_ = null;
+        if (stakeContractConfigBuilder_ != null) {
+          stakeContractConfigBuilder_.dispose();
+          stakeContractConfigBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.StakeContractConfig stake_contract_config = 4 [json_name = "stakeContractConfig", (.gogoproto.jsontag) = "stake_contract_config,omitempty"];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.StakeContractConfig.Builder getStakeContractConfigBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getStakeContractConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.confio.poe.v1beta1.StakeContractConfig stake_contract_config = 4 [json_name = "stakeContractConfig", (.gogoproto.jsontag) = "stake_contract_config,omitempty"];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.StakeContractConfigOrBuilder getStakeContractConfigOrBuilder() {
+        if (stakeContractConfigBuilder_ != null) {
+          return stakeContractConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return stakeContractConfig_ == null ?
+              com.confio.poe.v1beta1.GenesisProto.StakeContractConfig.getDefaultInstance() : stakeContractConfig_;
+        }
+      }
+      /**
+       * <code>.confio.poe.v1beta1.StakeContractConfig stake_contract_config = 4 [json_name = "stakeContractConfig", (.gogoproto.jsontag) = "stake_contract_config,omitempty"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.StakeContractConfig, com.confio.poe.v1beta1.GenesisProto.StakeContractConfig.Builder, com.confio.poe.v1beta1.GenesisProto.StakeContractConfigOrBuilder> 
+          getStakeContractConfigFieldBuilder() {
+        if (stakeContractConfigBuilder_ == null) {
+          stakeContractConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.confio.poe.v1beta1.GenesisProto.StakeContractConfig, com.confio.poe.v1beta1.GenesisProto.StakeContractConfig.Builder, com.confio.poe.v1beta1.GenesisProto.StakeContractConfigOrBuilder>(
+                  getStakeContractConfig(),
+                  getParentForChildren(),
+                  isClean());
+          stakeContractConfig_ = null;
+        }
+        return stakeContractConfigBuilder_;
+      }
+
+      private com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig valsetContractConfig_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig, com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig.Builder, com.confio.poe.v1beta1.GenesisProto.ValsetContractConfigOrBuilder> valsetContractConfigBuilder_;
+      /**
+       * <code>.confio.poe.v1beta1.ValsetContractConfig valset_contract_config = 5 [json_name = "valsetContractConfig", (.gogoproto.jsontag) = "valset_contract_config,omitempty"];</code>
+       * @return Whether the valsetContractConfig field is set.
+       */
+      public boolean hasValsetContractConfig() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>.confio.poe.v1beta1.ValsetContractConfig valset_contract_config = 5 [json_name = "valsetContractConfig", (.gogoproto.jsontag) = "valset_contract_config,omitempty"];</code>
+       * @return The valsetContractConfig.
+       */
+      public com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig getValsetContractConfig() {
+        if (valsetContractConfigBuilder_ == null) {
+          return valsetContractConfig_ == null ? com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig.getDefaultInstance() : valsetContractConfig_;
+        } else {
+          return valsetContractConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.confio.poe.v1beta1.ValsetContractConfig valset_contract_config = 5 [json_name = "valsetContractConfig", (.gogoproto.jsontag) = "valset_contract_config,omitempty"];</code>
+       */
+      public Builder setValsetContractConfig(com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig value) {
+        if (valsetContractConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          valsetContractConfig_ = value;
+        } else {
+          valsetContractConfigBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.ValsetContractConfig valset_contract_config = 5 [json_name = "valsetContractConfig", (.gogoproto.jsontag) = "valset_contract_config,omitempty"];</code>
+       */
+      public Builder setValsetContractConfig(
+          com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig.Builder builderForValue) {
+        if (valsetContractConfigBuilder_ == null) {
+          valsetContractConfig_ = builderForValue.build();
+        } else {
+          valsetContractConfigBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.ValsetContractConfig valset_contract_config = 5 [json_name = "valsetContractConfig", (.gogoproto.jsontag) = "valset_contract_config,omitempty"];</code>
+       */
+      public Builder mergeValsetContractConfig(com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig value) {
+        if (valsetContractConfigBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            valsetContractConfig_ != null &&
+            valsetContractConfig_ != com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig.getDefaultInstance()) {
+            getValsetContractConfigBuilder().mergeFrom(value);
+          } else {
+            valsetContractConfig_ = value;
+          }
+        } else {
+          valsetContractConfigBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.ValsetContractConfig valset_contract_config = 5 [json_name = "valsetContractConfig", (.gogoproto.jsontag) = "valset_contract_config,omitempty"];</code>
+       */
+      public Builder clearValsetContractConfig() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        valsetContractConfig_ = null;
+        if (valsetContractConfigBuilder_ != null) {
+          valsetContractConfigBuilder_.dispose();
+          valsetContractConfigBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.ValsetContractConfig valset_contract_config = 5 [json_name = "valsetContractConfig", (.gogoproto.jsontag) = "valset_contract_config,omitempty"];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig.Builder getValsetContractConfigBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getValsetContractConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.confio.poe.v1beta1.ValsetContractConfig valset_contract_config = 5 [json_name = "valsetContractConfig", (.gogoproto.jsontag) = "valset_contract_config,omitempty"];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.ValsetContractConfigOrBuilder getValsetContractConfigOrBuilder() {
+        if (valsetContractConfigBuilder_ != null) {
+          return valsetContractConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return valsetContractConfig_ == null ?
+              com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig.getDefaultInstance() : valsetContractConfig_;
+        }
+      }
+      /**
+       * <code>.confio.poe.v1beta1.ValsetContractConfig valset_contract_config = 5 [json_name = "valsetContractConfig", (.gogoproto.jsontag) = "valset_contract_config,omitempty"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig, com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig.Builder, com.confio.poe.v1beta1.GenesisProto.ValsetContractConfigOrBuilder> 
+          getValsetContractConfigFieldBuilder() {
+        if (valsetContractConfigBuilder_ == null) {
+          valsetContractConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig, com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig.Builder, com.confio.poe.v1beta1.GenesisProto.ValsetContractConfigOrBuilder>(
+                  getValsetContractConfig(),
+                  getParentForChildren(),
+                  isClean());
+          valsetContractConfig_ = null;
+        }
+        return valsetContractConfigBuilder_;
+      }
+
+      private com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig engagementContractConfig_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig, com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig.Builder, com.confio.poe.v1beta1.GenesisProto.EngagementContractConfigOrBuilder> engagementContractConfigBuilder_;
+      /**
+       * <code>.confio.poe.v1beta1.EngagementContractConfig engagement_contract_config = 6 [json_name = "engagementContractConfig", (.gogoproto.jsontag) = "engagement_contract_config,omitempty"];</code>
+       * @return Whether the engagementContractConfig field is set.
+       */
+      public boolean hasEngagementContractConfig() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>.confio.poe.v1beta1.EngagementContractConfig engagement_contract_config = 6 [json_name = "engagementContractConfig", (.gogoproto.jsontag) = "engagement_contract_config,omitempty"];</code>
+       * @return The engagementContractConfig.
+       */
+      public com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig getEngagementContractConfig() {
+        if (engagementContractConfigBuilder_ == null) {
+          return engagementContractConfig_ == null ? com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig.getDefaultInstance() : engagementContractConfig_;
+        } else {
+          return engagementContractConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.confio.poe.v1beta1.EngagementContractConfig engagement_contract_config = 6 [json_name = "engagementContractConfig", (.gogoproto.jsontag) = "engagement_contract_config,omitempty"];</code>
+       */
+      public Builder setEngagementContractConfig(com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig value) {
+        if (engagementContractConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          engagementContractConfig_ = value;
+        } else {
+          engagementContractConfigBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.EngagementContractConfig engagement_contract_config = 6 [json_name = "engagementContractConfig", (.gogoproto.jsontag) = "engagement_contract_config,omitempty"];</code>
+       */
+      public Builder setEngagementContractConfig(
+          com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig.Builder builderForValue) {
+        if (engagementContractConfigBuilder_ == null) {
+          engagementContractConfig_ = builderForValue.build();
+        } else {
+          engagementContractConfigBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.EngagementContractConfig engagement_contract_config = 6 [json_name = "engagementContractConfig", (.gogoproto.jsontag) = "engagement_contract_config,omitempty"];</code>
+       */
+      public Builder mergeEngagementContractConfig(com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig value) {
+        if (engagementContractConfigBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            engagementContractConfig_ != null &&
+            engagementContractConfig_ != com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig.getDefaultInstance()) {
+            getEngagementContractConfigBuilder().mergeFrom(value);
+          } else {
+            engagementContractConfig_ = value;
+          }
+        } else {
+          engagementContractConfigBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.EngagementContractConfig engagement_contract_config = 6 [json_name = "engagementContractConfig", (.gogoproto.jsontag) = "engagement_contract_config,omitempty"];</code>
+       */
+      public Builder clearEngagementContractConfig() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        engagementContractConfig_ = null;
+        if (engagementContractConfigBuilder_ != null) {
+          engagementContractConfigBuilder_.dispose();
+          engagementContractConfigBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.EngagementContractConfig engagement_contract_config = 6 [json_name = "engagementContractConfig", (.gogoproto.jsontag) = "engagement_contract_config,omitempty"];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig.Builder getEngagementContractConfigBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getEngagementContractConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.confio.poe.v1beta1.EngagementContractConfig engagement_contract_config = 6 [json_name = "engagementContractConfig", (.gogoproto.jsontag) = "engagement_contract_config,omitempty"];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.EngagementContractConfigOrBuilder getEngagementContractConfigOrBuilder() {
+        if (engagementContractConfigBuilder_ != null) {
+          return engagementContractConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return engagementContractConfig_ == null ?
+              com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig.getDefaultInstance() : engagementContractConfig_;
+        }
+      }
+      /**
+       * <code>.confio.poe.v1beta1.EngagementContractConfig engagement_contract_config = 6 [json_name = "engagementContractConfig", (.gogoproto.jsontag) = "engagement_contract_config,omitempty"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig, com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig.Builder, com.confio.poe.v1beta1.GenesisProto.EngagementContractConfigOrBuilder> 
+          getEngagementContractConfigFieldBuilder() {
+        if (engagementContractConfigBuilder_ == null) {
+          engagementContractConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig, com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig.Builder, com.confio.poe.v1beta1.GenesisProto.EngagementContractConfigOrBuilder>(
+                  getEngagementContractConfig(),
+                  getParentForChildren(),
+                  isClean());
+          engagementContractConfig_ = null;
+        }
+        return engagementContractConfigBuilder_;
+      }
+
+      private java.lang.Object bondDenom_ = "";
+      /**
+       * <pre>
+       * BondDenom defines the bondable coin denomination.
+       * </pre>
+       *
+       * <code>string bond_denom = 7 [json_name = "bondDenom", (.gogoproto.moretags) = "yaml:&#92;"bond_denom&#92;""];</code>
+       * @return The bondDenom.
+       */
+      public java.lang.String getBondDenom() {
+        java.lang.Object ref = bondDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bondDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * BondDenom defines the bondable coin denomination.
+       * </pre>
+       *
+       * <code>string bond_denom = 7 [json_name = "bondDenom", (.gogoproto.moretags) = "yaml:&#92;"bond_denom&#92;""];</code>
+       * @return The bytes for bondDenom.
+       */
+      public com.google.protobuf.ByteString
+          getBondDenomBytes() {
+        java.lang.Object ref = bondDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bondDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * BondDenom defines the bondable coin denomination.
+       * </pre>
+       *
+       * <code>string bond_denom = 7 [json_name = "bondDenom", (.gogoproto.moretags) = "yaml:&#92;"bond_denom&#92;""];</code>
+       * @param value The bondDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBondDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        bondDenom_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * BondDenom defines the bondable coin denomination.
+       * </pre>
+       *
+       * <code>string bond_denom = 7 [json_name = "bondDenom", (.gogoproto.moretags) = "yaml:&#92;"bond_denom&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBondDenom() {
+        bondDenom_ = getDefaultInstance().getBondDenom();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * BondDenom defines the bondable coin denomination.
+       * </pre>
+       *
+       * <code>string bond_denom = 7 [json_name = "bondDenom", (.gogoproto.moretags) = "yaml:&#92;"bond_denom&#92;""];</code>
+       * @param value The bytes for bondDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBondDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        bondDenom_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig oversightCommitteeContractConfig_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig, com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig.Builder, com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfigOrBuilder> oversightCommitteeContractConfigBuilder_;
+      /**
+       * <code>.confio.poe.v1beta1.OversightCommitteeContractConfig oversight_committee_contract_config = 8 [json_name = "oversightCommitteeContractConfig", (.gogoproto.jsontag) = "oversight_committee_contract_config,omitempty"];</code>
+       * @return Whether the oversightCommitteeContractConfig field is set.
+       */
+      public boolean hasOversightCommitteeContractConfig() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>.confio.poe.v1beta1.OversightCommitteeContractConfig oversight_committee_contract_config = 8 [json_name = "oversightCommitteeContractConfig", (.gogoproto.jsontag) = "oversight_committee_contract_config,omitempty"];</code>
+       * @return The oversightCommitteeContractConfig.
+       */
+      public com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig getOversightCommitteeContractConfig() {
+        if (oversightCommitteeContractConfigBuilder_ == null) {
+          return oversightCommitteeContractConfig_ == null ? com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig.getDefaultInstance() : oversightCommitteeContractConfig_;
+        } else {
+          return oversightCommitteeContractConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.confio.poe.v1beta1.OversightCommitteeContractConfig oversight_committee_contract_config = 8 [json_name = "oversightCommitteeContractConfig", (.gogoproto.jsontag) = "oversight_committee_contract_config,omitempty"];</code>
+       */
+      public Builder setOversightCommitteeContractConfig(com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig value) {
+        if (oversightCommitteeContractConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          oversightCommitteeContractConfig_ = value;
+        } else {
+          oversightCommitteeContractConfigBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.OversightCommitteeContractConfig oversight_committee_contract_config = 8 [json_name = "oversightCommitteeContractConfig", (.gogoproto.jsontag) = "oversight_committee_contract_config,omitempty"];</code>
+       */
+      public Builder setOversightCommitteeContractConfig(
+          com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig.Builder builderForValue) {
+        if (oversightCommitteeContractConfigBuilder_ == null) {
+          oversightCommitteeContractConfig_ = builderForValue.build();
+        } else {
+          oversightCommitteeContractConfigBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.OversightCommitteeContractConfig oversight_committee_contract_config = 8 [json_name = "oversightCommitteeContractConfig", (.gogoproto.jsontag) = "oversight_committee_contract_config,omitempty"];</code>
+       */
+      public Builder mergeOversightCommitteeContractConfig(com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig value) {
+        if (oversightCommitteeContractConfigBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0) &&
+            oversightCommitteeContractConfig_ != null &&
+            oversightCommitteeContractConfig_ != com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig.getDefaultInstance()) {
+            getOversightCommitteeContractConfigBuilder().mergeFrom(value);
+          } else {
+            oversightCommitteeContractConfig_ = value;
+          }
+        } else {
+          oversightCommitteeContractConfigBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.OversightCommitteeContractConfig oversight_committee_contract_config = 8 [json_name = "oversightCommitteeContractConfig", (.gogoproto.jsontag) = "oversight_committee_contract_config,omitempty"];</code>
+       */
+      public Builder clearOversightCommitteeContractConfig() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        oversightCommitteeContractConfig_ = null;
+        if (oversightCommitteeContractConfigBuilder_ != null) {
+          oversightCommitteeContractConfigBuilder_.dispose();
+          oversightCommitteeContractConfigBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.OversightCommitteeContractConfig oversight_committee_contract_config = 8 [json_name = "oversightCommitteeContractConfig", (.gogoproto.jsontag) = "oversight_committee_contract_config,omitempty"];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig.Builder getOversightCommitteeContractConfigBuilder() {
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return getOversightCommitteeContractConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.confio.poe.v1beta1.OversightCommitteeContractConfig oversight_committee_contract_config = 8 [json_name = "oversightCommitteeContractConfig", (.gogoproto.jsontag) = "oversight_committee_contract_config,omitempty"];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfigOrBuilder getOversightCommitteeContractConfigOrBuilder() {
+        if (oversightCommitteeContractConfigBuilder_ != null) {
+          return oversightCommitteeContractConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return oversightCommitteeContractConfig_ == null ?
+              com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig.getDefaultInstance() : oversightCommitteeContractConfig_;
+        }
+      }
+      /**
+       * <code>.confio.poe.v1beta1.OversightCommitteeContractConfig oversight_committee_contract_config = 8 [json_name = "oversightCommitteeContractConfig", (.gogoproto.jsontag) = "oversight_committee_contract_config,omitempty"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig, com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig.Builder, com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfigOrBuilder> 
+          getOversightCommitteeContractConfigFieldBuilder() {
+        if (oversightCommitteeContractConfigBuilder_ == null) {
+          oversightCommitteeContractConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig, com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig.Builder, com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfigOrBuilder>(
+                  getOversightCommitteeContractConfig(),
+                  getParentForChildren(),
+                  isClean());
+          oversightCommitteeContractConfig_ = null;
+        }
+        return oversightCommitteeContractConfigBuilder_;
+      }
+
+      private com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig communityPoolContractConfig_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig, com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig.Builder, com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfigOrBuilder> communityPoolContractConfigBuilder_;
+      /**
+       * <code>.confio.poe.v1beta1.CommunityPoolContractConfig community_pool_contract_config = 9 [json_name = "communityPoolContractConfig", (.gogoproto.jsontag) = "community_pool_contract_config,omitempty"];</code>
+       * @return Whether the communityPoolContractConfig field is set.
+       */
+      public boolean hasCommunityPoolContractConfig() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>.confio.poe.v1beta1.CommunityPoolContractConfig community_pool_contract_config = 9 [json_name = "communityPoolContractConfig", (.gogoproto.jsontag) = "community_pool_contract_config,omitempty"];</code>
+       * @return The communityPoolContractConfig.
+       */
+      public com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig getCommunityPoolContractConfig() {
+        if (communityPoolContractConfigBuilder_ == null) {
+          return communityPoolContractConfig_ == null ? com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig.getDefaultInstance() : communityPoolContractConfig_;
+        } else {
+          return communityPoolContractConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.confio.poe.v1beta1.CommunityPoolContractConfig community_pool_contract_config = 9 [json_name = "communityPoolContractConfig", (.gogoproto.jsontag) = "community_pool_contract_config,omitempty"];</code>
+       */
+      public Builder setCommunityPoolContractConfig(com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig value) {
+        if (communityPoolContractConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          communityPoolContractConfig_ = value;
+        } else {
+          communityPoolContractConfigBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.CommunityPoolContractConfig community_pool_contract_config = 9 [json_name = "communityPoolContractConfig", (.gogoproto.jsontag) = "community_pool_contract_config,omitempty"];</code>
+       */
+      public Builder setCommunityPoolContractConfig(
+          com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig.Builder builderForValue) {
+        if (communityPoolContractConfigBuilder_ == null) {
+          communityPoolContractConfig_ = builderForValue.build();
+        } else {
+          communityPoolContractConfigBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.CommunityPoolContractConfig community_pool_contract_config = 9 [json_name = "communityPoolContractConfig", (.gogoproto.jsontag) = "community_pool_contract_config,omitempty"];</code>
+       */
+      public Builder mergeCommunityPoolContractConfig(com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig value) {
+        if (communityPoolContractConfigBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0) &&
+            communityPoolContractConfig_ != null &&
+            communityPoolContractConfig_ != com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig.getDefaultInstance()) {
+            getCommunityPoolContractConfigBuilder().mergeFrom(value);
+          } else {
+            communityPoolContractConfig_ = value;
+          }
+        } else {
+          communityPoolContractConfigBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.CommunityPoolContractConfig community_pool_contract_config = 9 [json_name = "communityPoolContractConfig", (.gogoproto.jsontag) = "community_pool_contract_config,omitempty"];</code>
+       */
+      public Builder clearCommunityPoolContractConfig() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        communityPoolContractConfig_ = null;
+        if (communityPoolContractConfigBuilder_ != null) {
+          communityPoolContractConfigBuilder_.dispose();
+          communityPoolContractConfigBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.CommunityPoolContractConfig community_pool_contract_config = 9 [json_name = "communityPoolContractConfig", (.gogoproto.jsontag) = "community_pool_contract_config,omitempty"];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig.Builder getCommunityPoolContractConfigBuilder() {
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return getCommunityPoolContractConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.confio.poe.v1beta1.CommunityPoolContractConfig community_pool_contract_config = 9 [json_name = "communityPoolContractConfig", (.gogoproto.jsontag) = "community_pool_contract_config,omitempty"];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfigOrBuilder getCommunityPoolContractConfigOrBuilder() {
+        if (communityPoolContractConfigBuilder_ != null) {
+          return communityPoolContractConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return communityPoolContractConfig_ == null ?
+              com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig.getDefaultInstance() : communityPoolContractConfig_;
+        }
+      }
+      /**
+       * <code>.confio.poe.v1beta1.CommunityPoolContractConfig community_pool_contract_config = 9 [json_name = "communityPoolContractConfig", (.gogoproto.jsontag) = "community_pool_contract_config,omitempty"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig, com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig.Builder, com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfigOrBuilder> 
+          getCommunityPoolContractConfigFieldBuilder() {
+        if (communityPoolContractConfigBuilder_ == null) {
+          communityPoolContractConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig, com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig.Builder, com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfigOrBuilder>(
+                  getCommunityPoolContractConfig(),
+                  getParentForChildren(),
+                  isClean());
+          communityPoolContractConfig_ = null;
+        }
+        return communityPoolContractConfigBuilder_;
+      }
+
+      private com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig validatorVotingContractConfig_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig, com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig.Builder, com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfigOrBuilder> validatorVotingContractConfigBuilder_;
+      /**
+       * <code>.confio.poe.v1beta1.ValidatorVotingContractConfig validator_voting_contract_config = 10 [json_name = "validatorVotingContractConfig", (.gogoproto.jsontag) = "validator_voting_contract_config,omitempty"];</code>
+       * @return Whether the validatorVotingContractConfig field is set.
+       */
+      public boolean hasValidatorVotingContractConfig() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <code>.confio.poe.v1beta1.ValidatorVotingContractConfig validator_voting_contract_config = 10 [json_name = "validatorVotingContractConfig", (.gogoproto.jsontag) = "validator_voting_contract_config,omitempty"];</code>
+       * @return The validatorVotingContractConfig.
+       */
+      public com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig getValidatorVotingContractConfig() {
+        if (validatorVotingContractConfigBuilder_ == null) {
+          return validatorVotingContractConfig_ == null ? com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig.getDefaultInstance() : validatorVotingContractConfig_;
+        } else {
+          return validatorVotingContractConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.confio.poe.v1beta1.ValidatorVotingContractConfig validator_voting_contract_config = 10 [json_name = "validatorVotingContractConfig", (.gogoproto.jsontag) = "validator_voting_contract_config,omitempty"];</code>
+       */
+      public Builder setValidatorVotingContractConfig(com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig value) {
+        if (validatorVotingContractConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          validatorVotingContractConfig_ = value;
+        } else {
+          validatorVotingContractConfigBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.ValidatorVotingContractConfig validator_voting_contract_config = 10 [json_name = "validatorVotingContractConfig", (.gogoproto.jsontag) = "validator_voting_contract_config,omitempty"];</code>
+       */
+      public Builder setValidatorVotingContractConfig(
+          com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig.Builder builderForValue) {
+        if (validatorVotingContractConfigBuilder_ == null) {
+          validatorVotingContractConfig_ = builderForValue.build();
+        } else {
+          validatorVotingContractConfigBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.ValidatorVotingContractConfig validator_voting_contract_config = 10 [json_name = "validatorVotingContractConfig", (.gogoproto.jsontag) = "validator_voting_contract_config,omitempty"];</code>
+       */
+      public Builder mergeValidatorVotingContractConfig(com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig value) {
+        if (validatorVotingContractConfigBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) != 0) &&
+            validatorVotingContractConfig_ != null &&
+            validatorVotingContractConfig_ != com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig.getDefaultInstance()) {
+            getValidatorVotingContractConfigBuilder().mergeFrom(value);
+          } else {
+            validatorVotingContractConfig_ = value;
+          }
+        } else {
+          validatorVotingContractConfigBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.ValidatorVotingContractConfig validator_voting_contract_config = 10 [json_name = "validatorVotingContractConfig", (.gogoproto.jsontag) = "validator_voting_contract_config,omitempty"];</code>
+       */
+      public Builder clearValidatorVotingContractConfig() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        validatorVotingContractConfig_ = null;
+        if (validatorVotingContractConfigBuilder_ != null) {
+          validatorVotingContractConfigBuilder_.dispose();
+          validatorVotingContractConfigBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.ValidatorVotingContractConfig validator_voting_contract_config = 10 [json_name = "validatorVotingContractConfig", (.gogoproto.jsontag) = "validator_voting_contract_config,omitempty"];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig.Builder getValidatorVotingContractConfigBuilder() {
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return getValidatorVotingContractConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.confio.poe.v1beta1.ValidatorVotingContractConfig validator_voting_contract_config = 10 [json_name = "validatorVotingContractConfig", (.gogoproto.jsontag) = "validator_voting_contract_config,omitempty"];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfigOrBuilder getValidatorVotingContractConfigOrBuilder() {
+        if (validatorVotingContractConfigBuilder_ != null) {
+          return validatorVotingContractConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return validatorVotingContractConfig_ == null ?
+              com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig.getDefaultInstance() : validatorVotingContractConfig_;
+        }
+      }
+      /**
+       * <code>.confio.poe.v1beta1.ValidatorVotingContractConfig validator_voting_contract_config = 10 [json_name = "validatorVotingContractConfig", (.gogoproto.jsontag) = "validator_voting_contract_config,omitempty"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig, com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig.Builder, com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfigOrBuilder> 
+          getValidatorVotingContractConfigFieldBuilder() {
+        if (validatorVotingContractConfigBuilder_ == null) {
+          validatorVotingContractConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig, com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig.Builder, com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfigOrBuilder>(
+                  getValidatorVotingContractConfig(),
+                  getParentForChildren(),
+                  isClean());
+          validatorVotingContractConfig_ = null;
+        }
+        return validatorVotingContractConfigBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringArrayList oversightCommunityMembers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureOversightCommunityMembersIsMutable() {
+        if (!oversightCommunityMembers_.isModifiable()) {
+          oversightCommunityMembers_ = new com.google.protobuf.LazyStringArrayList(oversightCommunityMembers_);
+        }
+        bitField0_ |= 0x00000400;
+      }
+      /**
+       * <code>repeated string oversight_community_members = 11 [json_name = "oversightCommunityMembers", (.gogoproto.jsontag) = "oversight_community_members,omitempty"];</code>
+       * @return A list containing the oversightCommunityMembers.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getOversightCommunityMembersList() {
+        oversightCommunityMembers_.makeImmutable();
+        return oversightCommunityMembers_;
+      }
+      /**
+       * <code>repeated string oversight_community_members = 11 [json_name = "oversightCommunityMembers", (.gogoproto.jsontag) = "oversight_community_members,omitempty"];</code>
+       * @return The count of oversightCommunityMembers.
+       */
+      public int getOversightCommunityMembersCount() {
+        return oversightCommunityMembers_.size();
+      }
+      /**
+       * <code>repeated string oversight_community_members = 11 [json_name = "oversightCommunityMembers", (.gogoproto.jsontag) = "oversight_community_members,omitempty"];</code>
+       * @param index The index of the element to return.
+       * @return The oversightCommunityMembers at the given index.
+       */
+      public java.lang.String getOversightCommunityMembers(int index) {
+        return oversightCommunityMembers_.get(index);
+      }
+      /**
+       * <code>repeated string oversight_community_members = 11 [json_name = "oversightCommunityMembers", (.gogoproto.jsontag) = "oversight_community_members,omitempty"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the oversightCommunityMembers at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getOversightCommunityMembersBytes(int index) {
+        return oversightCommunityMembers_.getByteString(index);
+      }
+      /**
+       * <code>repeated string oversight_community_members = 11 [json_name = "oversightCommunityMembers", (.gogoproto.jsontag) = "oversight_community_members,omitempty"];</code>
+       * @param index The index to set the value at.
+       * @param value The oversightCommunityMembers to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOversightCommunityMembers(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureOversightCommunityMembersIsMutable();
+        oversightCommunityMembers_.set(index, value);
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string oversight_community_members = 11 [json_name = "oversightCommunityMembers", (.gogoproto.jsontag) = "oversight_community_members,omitempty"];</code>
+       * @param value The oversightCommunityMembers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addOversightCommunityMembers(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureOversightCommunityMembersIsMutable();
+        oversightCommunityMembers_.add(value);
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string oversight_community_members = 11 [json_name = "oversightCommunityMembers", (.gogoproto.jsontag) = "oversight_community_members,omitempty"];</code>
+       * @param values The oversightCommunityMembers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllOversightCommunityMembers(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureOversightCommunityMembersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, oversightCommunityMembers_);
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string oversight_community_members = 11 [json_name = "oversightCommunityMembers", (.gogoproto.jsontag) = "oversight_community_members,omitempty"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOversightCommunityMembers() {
+        oversightCommunityMembers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000400);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string oversight_community_members = 11 [json_name = "oversightCommunityMembers", (.gogoproto.jsontag) = "oversight_community_members,omitempty"];</code>
+       * @param value The bytes of the oversightCommunityMembers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addOversightCommunityMembersBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureOversightCommunityMembersIsMutable();
+        oversightCommunityMembers_.add(value);
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList arbiterPoolMembers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureArbiterPoolMembersIsMutable() {
+        if (!arbiterPoolMembers_.isModifiable()) {
+          arbiterPoolMembers_ = new com.google.protobuf.LazyStringArrayList(arbiterPoolMembers_);
+        }
+        bitField0_ |= 0x00000800;
+      }
+      /**
+       * <code>repeated string arbiter_pool_members = 12 [json_name = "arbiterPoolMembers", (.gogoproto.jsontag) = "arbiter_pool_members,omitempty"];</code>
+       * @return A list containing the arbiterPoolMembers.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getArbiterPoolMembersList() {
+        arbiterPoolMembers_.makeImmutable();
+        return arbiterPoolMembers_;
+      }
+      /**
+       * <code>repeated string arbiter_pool_members = 12 [json_name = "arbiterPoolMembers", (.gogoproto.jsontag) = "arbiter_pool_members,omitempty"];</code>
+       * @return The count of arbiterPoolMembers.
+       */
+      public int getArbiterPoolMembersCount() {
+        return arbiterPoolMembers_.size();
+      }
+      /**
+       * <code>repeated string arbiter_pool_members = 12 [json_name = "arbiterPoolMembers", (.gogoproto.jsontag) = "arbiter_pool_members,omitempty"];</code>
+       * @param index The index of the element to return.
+       * @return The arbiterPoolMembers at the given index.
+       */
+      public java.lang.String getArbiterPoolMembers(int index) {
+        return arbiterPoolMembers_.get(index);
+      }
+      /**
+       * <code>repeated string arbiter_pool_members = 12 [json_name = "arbiterPoolMembers", (.gogoproto.jsontag) = "arbiter_pool_members,omitempty"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the arbiterPoolMembers at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getArbiterPoolMembersBytes(int index) {
+        return arbiterPoolMembers_.getByteString(index);
+      }
+      /**
+       * <code>repeated string arbiter_pool_members = 12 [json_name = "arbiterPoolMembers", (.gogoproto.jsontag) = "arbiter_pool_members,omitempty"];</code>
+       * @param index The index to set the value at.
+       * @param value The arbiterPoolMembers to set.
+       * @return This builder for chaining.
+       */
+      public Builder setArbiterPoolMembers(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureArbiterPoolMembersIsMutable();
+        arbiterPoolMembers_.set(index, value);
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string arbiter_pool_members = 12 [json_name = "arbiterPoolMembers", (.gogoproto.jsontag) = "arbiter_pool_members,omitempty"];</code>
+       * @param value The arbiterPoolMembers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addArbiterPoolMembers(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureArbiterPoolMembersIsMutable();
+        arbiterPoolMembers_.add(value);
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string arbiter_pool_members = 12 [json_name = "arbiterPoolMembers", (.gogoproto.jsontag) = "arbiter_pool_members,omitempty"];</code>
+       * @param values The arbiterPoolMembers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllArbiterPoolMembers(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureArbiterPoolMembersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, arbiterPoolMembers_);
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string arbiter_pool_members = 12 [json_name = "arbiterPoolMembers", (.gogoproto.jsontag) = "arbiter_pool_members,omitempty"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearArbiterPoolMembers() {
+        arbiterPoolMembers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000800);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string arbiter_pool_members = 12 [json_name = "arbiterPoolMembers", (.gogoproto.jsontag) = "arbiter_pool_members,omitempty"];</code>
+       * @param value The bytes of the arbiterPoolMembers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addArbiterPoolMembersBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureArbiterPoolMembersIsMutable();
+        arbiterPoolMembers_.add(value);
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+
+      private com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig arbiterPoolContractConfig_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig, com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig.Builder, com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfigOrBuilder> arbiterPoolContractConfigBuilder_;
+      /**
+       * <code>.confio.poe.v1beta1.ArbiterPoolContractConfig arbiter_pool_contract_config = 13 [json_name = "arbiterPoolContractConfig", (.gogoproto.jsontag) = "arbiter_pool_contract_config,omitempty"];</code>
+       * @return Whether the arbiterPoolContractConfig field is set.
+       */
+      public boolean hasArbiterPoolContractConfig() {
+        return ((bitField0_ & 0x00001000) != 0);
+      }
+      /**
+       * <code>.confio.poe.v1beta1.ArbiterPoolContractConfig arbiter_pool_contract_config = 13 [json_name = "arbiterPoolContractConfig", (.gogoproto.jsontag) = "arbiter_pool_contract_config,omitempty"];</code>
+       * @return The arbiterPoolContractConfig.
+       */
+      public com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig getArbiterPoolContractConfig() {
+        if (arbiterPoolContractConfigBuilder_ == null) {
+          return arbiterPoolContractConfig_ == null ? com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig.getDefaultInstance() : arbiterPoolContractConfig_;
+        } else {
+          return arbiterPoolContractConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.confio.poe.v1beta1.ArbiterPoolContractConfig arbiter_pool_contract_config = 13 [json_name = "arbiterPoolContractConfig", (.gogoproto.jsontag) = "arbiter_pool_contract_config,omitempty"];</code>
+       */
+      public Builder setArbiterPoolContractConfig(com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig value) {
+        if (arbiterPoolContractConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          arbiterPoolContractConfig_ = value;
+        } else {
+          arbiterPoolContractConfigBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.ArbiterPoolContractConfig arbiter_pool_contract_config = 13 [json_name = "arbiterPoolContractConfig", (.gogoproto.jsontag) = "arbiter_pool_contract_config,omitempty"];</code>
+       */
+      public Builder setArbiterPoolContractConfig(
+          com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig.Builder builderForValue) {
+        if (arbiterPoolContractConfigBuilder_ == null) {
+          arbiterPoolContractConfig_ = builderForValue.build();
+        } else {
+          arbiterPoolContractConfigBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.ArbiterPoolContractConfig arbiter_pool_contract_config = 13 [json_name = "arbiterPoolContractConfig", (.gogoproto.jsontag) = "arbiter_pool_contract_config,omitempty"];</code>
+       */
+      public Builder mergeArbiterPoolContractConfig(com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig value) {
+        if (arbiterPoolContractConfigBuilder_ == null) {
+          if (((bitField0_ & 0x00001000) != 0) &&
+            arbiterPoolContractConfig_ != null &&
+            arbiterPoolContractConfig_ != com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig.getDefaultInstance()) {
+            getArbiterPoolContractConfigBuilder().mergeFrom(value);
+          } else {
+            arbiterPoolContractConfig_ = value;
+          }
+        } else {
+          arbiterPoolContractConfigBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.ArbiterPoolContractConfig arbiter_pool_contract_config = 13 [json_name = "arbiterPoolContractConfig", (.gogoproto.jsontag) = "arbiter_pool_contract_config,omitempty"];</code>
+       */
+      public Builder clearArbiterPoolContractConfig() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        arbiterPoolContractConfig_ = null;
+        if (arbiterPoolContractConfigBuilder_ != null) {
+          arbiterPoolContractConfigBuilder_.dispose();
+          arbiterPoolContractConfigBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.ArbiterPoolContractConfig arbiter_pool_contract_config = 13 [json_name = "arbiterPoolContractConfig", (.gogoproto.jsontag) = "arbiter_pool_contract_config,omitempty"];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig.Builder getArbiterPoolContractConfigBuilder() {
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return getArbiterPoolContractConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.confio.poe.v1beta1.ArbiterPoolContractConfig arbiter_pool_contract_config = 13 [json_name = "arbiterPoolContractConfig", (.gogoproto.jsontag) = "arbiter_pool_contract_config,omitempty"];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfigOrBuilder getArbiterPoolContractConfigOrBuilder() {
+        if (arbiterPoolContractConfigBuilder_ != null) {
+          return arbiterPoolContractConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return arbiterPoolContractConfig_ == null ?
+              com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig.getDefaultInstance() : arbiterPoolContractConfig_;
+        }
+      }
+      /**
+       * <code>.confio.poe.v1beta1.ArbiterPoolContractConfig arbiter_pool_contract_config = 13 [json_name = "arbiterPoolContractConfig", (.gogoproto.jsontag) = "arbiter_pool_contract_config,omitempty"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig, com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig.Builder, com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfigOrBuilder> 
+          getArbiterPoolContractConfigFieldBuilder() {
+        if (arbiterPoolContractConfigBuilder_ == null) {
+          arbiterPoolContractConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig, com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig.Builder, com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfigOrBuilder>(
+                  getArbiterPoolContractConfig(),
+                  getParentForChildren(),
+                  isClean());
+          arbiterPoolContractConfig_ = null;
+        }
+        return arbiterPoolContractConfigBuilder_;
+      }
+
+      private com.confio.poe.v1beta1.GenesisProto.MixerContractConfig mixerContractConfig_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.MixerContractConfig, com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Builder, com.confio.poe.v1beta1.GenesisProto.MixerContractConfigOrBuilder> mixerContractConfigBuilder_;
+      /**
+       * <code>.confio.poe.v1beta1.MixerContractConfig mixer_contract_config = 14 [json_name = "mixerContractConfig", (.gogoproto.jsontag) = "mixer_contract_config,omitempty"];</code>
+       * @return Whether the mixerContractConfig field is set.
+       */
+      public boolean hasMixerContractConfig() {
+        return ((bitField0_ & 0x00002000) != 0);
+      }
+      /**
+       * <code>.confio.poe.v1beta1.MixerContractConfig mixer_contract_config = 14 [json_name = "mixerContractConfig", (.gogoproto.jsontag) = "mixer_contract_config,omitempty"];</code>
+       * @return The mixerContractConfig.
+       */
+      public com.confio.poe.v1beta1.GenesisProto.MixerContractConfig getMixerContractConfig() {
+        if (mixerContractConfigBuilder_ == null) {
+          return mixerContractConfig_ == null ? com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.getDefaultInstance() : mixerContractConfig_;
+        } else {
+          return mixerContractConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.confio.poe.v1beta1.MixerContractConfig mixer_contract_config = 14 [json_name = "mixerContractConfig", (.gogoproto.jsontag) = "mixer_contract_config,omitempty"];</code>
+       */
+      public Builder setMixerContractConfig(com.confio.poe.v1beta1.GenesisProto.MixerContractConfig value) {
+        if (mixerContractConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mixerContractConfig_ = value;
+        } else {
+          mixerContractConfigBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.MixerContractConfig mixer_contract_config = 14 [json_name = "mixerContractConfig", (.gogoproto.jsontag) = "mixer_contract_config,omitempty"];</code>
+       */
+      public Builder setMixerContractConfig(
+          com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Builder builderForValue) {
+        if (mixerContractConfigBuilder_ == null) {
+          mixerContractConfig_ = builderForValue.build();
+        } else {
+          mixerContractConfigBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.MixerContractConfig mixer_contract_config = 14 [json_name = "mixerContractConfig", (.gogoproto.jsontag) = "mixer_contract_config,omitempty"];</code>
+       */
+      public Builder mergeMixerContractConfig(com.confio.poe.v1beta1.GenesisProto.MixerContractConfig value) {
+        if (mixerContractConfigBuilder_ == null) {
+          if (((bitField0_ & 0x00002000) != 0) &&
+            mixerContractConfig_ != null &&
+            mixerContractConfig_ != com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.getDefaultInstance()) {
+            getMixerContractConfigBuilder().mergeFrom(value);
+          } else {
+            mixerContractConfig_ = value;
+          }
+        } else {
+          mixerContractConfigBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.MixerContractConfig mixer_contract_config = 14 [json_name = "mixerContractConfig", (.gogoproto.jsontag) = "mixer_contract_config,omitempty"];</code>
+       */
+      public Builder clearMixerContractConfig() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        mixerContractConfig_ = null;
+        if (mixerContractConfigBuilder_ != null) {
+          mixerContractConfigBuilder_.dispose();
+          mixerContractConfigBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.confio.poe.v1beta1.MixerContractConfig mixer_contract_config = 14 [json_name = "mixerContractConfig", (.gogoproto.jsontag) = "mixer_contract_config,omitempty"];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Builder getMixerContractConfigBuilder() {
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return getMixerContractConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.confio.poe.v1beta1.MixerContractConfig mixer_contract_config = 14 [json_name = "mixerContractConfig", (.gogoproto.jsontag) = "mixer_contract_config,omitempty"];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.MixerContractConfigOrBuilder getMixerContractConfigOrBuilder() {
+        if (mixerContractConfigBuilder_ != null) {
+          return mixerContractConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return mixerContractConfig_ == null ?
+              com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.getDefaultInstance() : mixerContractConfig_;
+        }
+      }
+      /**
+       * <code>.confio.poe.v1beta1.MixerContractConfig mixer_contract_config = 14 [json_name = "mixerContractConfig", (.gogoproto.jsontag) = "mixer_contract_config,omitempty"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.MixerContractConfig, com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Builder, com.confio.poe.v1beta1.GenesisProto.MixerContractConfigOrBuilder> 
+          getMixerContractConfigFieldBuilder() {
+        if (mixerContractConfigBuilder_ == null) {
+          mixerContractConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.confio.poe.v1beta1.GenesisProto.MixerContractConfig, com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Builder, com.confio.poe.v1beta1.GenesisProto.MixerContractConfigOrBuilder>(
+                  getMixerContractConfig(),
+                  getParentForChildren(),
+                  isClean());
+          mixerContractConfig_ = null;
+        }
+        return mixerContractConfigBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.SeedContracts)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.SeedContracts)
+    private static final com.confio.poe.v1beta1.GenesisProto.SeedContracts DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.GenesisProto.SeedContracts();
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.SeedContracts getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SeedContracts>
+        PARSER = new com.google.protobuf.AbstractParser<SeedContracts>() {
+      @java.lang.Override
+      public SeedContracts parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SeedContracts> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SeedContracts> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.SeedContracts getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MixerContractConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.MixerContractConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Sigmoid returns a sigmoid-like value of staked amount times engagement
+     * points. See the Proof-of-Engagement white-paper for details.
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.MixerContractConfig.Sigmoid sigmoid = 1 [json_name = "sigmoid", (.gogoproto.nullable) = false];</code>
+     * @return Whether the sigmoid field is set.
+     */
+    boolean hasSigmoid();
+    /**
+     * <pre>
+     * Sigmoid returns a sigmoid-like value of staked amount times engagement
+     * points. See the Proof-of-Engagement white-paper for details.
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.MixerContractConfig.Sigmoid sigmoid = 1 [json_name = "sigmoid", (.gogoproto.nullable) = false];</code>
+     * @return The sigmoid.
+     */
+    com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid getSigmoid();
+    /**
+     * <pre>
+     * Sigmoid returns a sigmoid-like value of staked amount times engagement
+     * points. See the Proof-of-Engagement white-paper for details.
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.MixerContractConfig.Sigmoid sigmoid = 1 [json_name = "sigmoid", (.gogoproto.nullable) = false];</code>
+     */
+    com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.SigmoidOrBuilder getSigmoidOrBuilder();
+  }
+  /**
+   * <pre>
+   * Mixer contract setup. See
+   * https://github.com/confio/poe-contracts/tree/main/contracts/tg4-mixer
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.MixerContractConfig}
+   */
+  public static final class MixerContractConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.MixerContractConfig)
+      MixerContractConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MixerContractConfig.newBuilder() to construct.
+    private MixerContractConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MixerContractConfig() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MixerContractConfig();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_MixerContractConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_MixerContractConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.class, com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Builder.class);
+    }
+
+    public interface SigmoidOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.MixerContractConfig.Sigmoid)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>uint64 max_points = 1 [json_name = "maxPoints"];</code>
+       * @return The maxPoints.
+       */
+      long getMaxPoints();
+
+      /**
+       * <code>string p = 2 [json_name = "p", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The p.
+       */
+      java.lang.String getP();
+      /**
+       * <code>string p = 2 [json_name = "p", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for p.
+       */
+      com.google.protobuf.ByteString
+          getPBytes();
+
+      /**
+       * <code>string s = 3 [json_name = "s", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The s.
+       */
+      java.lang.String getS();
+      /**
+       * <code>string s = 3 [json_name = "s", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for s.
+       */
+      com.google.protobuf.ByteString
+          getSBytes();
+    }
+    /**
+     * Protobuf type {@code confio.poe.v1beta1.MixerContractConfig.Sigmoid}
+     */
+    public static final class Sigmoid extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.MixerContractConfig.Sigmoid)
+        SigmoidOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Sigmoid.newBuilder() to construct.
+      private Sigmoid(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Sigmoid() {
+        p_ = "";
+        s_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Sigmoid();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_MixerContractConfig_Sigmoid_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_MixerContractConfig_Sigmoid_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid.class, com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid.Builder.class);
+      }
+
+      public static final int MAX_POINTS_FIELD_NUMBER = 1;
+      private long maxPoints_ = 0L;
+      /**
+       * <code>uint64 max_points = 1 [json_name = "maxPoints"];</code>
+       * @return The maxPoints.
+       */
+      @java.lang.Override
+      public long getMaxPoints() {
+        return maxPoints_;
+      }
+
+      public static final int P_FIELD_NUMBER = 2;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object p_ = "";
+      /**
+       * <code>string p = 2 [json_name = "p", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The p.
+       */
+      @java.lang.Override
+      public java.lang.String getP() {
+        java.lang.Object ref = p_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          p_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string p = 2 [json_name = "p", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for p.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPBytes() {
+        java.lang.Object ref = p_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          p_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int S_FIELD_NUMBER = 3;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object s_ = "";
+      /**
+       * <code>string s = 3 [json_name = "s", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The s.
+       */
+      @java.lang.Override
+      public java.lang.String getS() {
+        java.lang.Object ref = s_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          s_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string s = 3 [json_name = "s", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for s.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSBytes() {
+        java.lang.Object ref = s_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          s_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (maxPoints_ != 0L) {
+          output.writeUInt64(1, maxPoints_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(p_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, p_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(s_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 3, s_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (maxPoints_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(1, maxPoints_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(p_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, p_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(s_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, s_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid)) {
+          return super.equals(obj);
+        }
+        com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid other = (com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid) obj;
+
+        if (getMaxPoints()
+            != other.getMaxPoints()) return false;
+        if (!getP()
+            .equals(other.getP())) return false;
+        if (!getS()
+            .equals(other.getS())) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + MAX_POINTS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getMaxPoints());
+        hash = (37 * hash) + P_FIELD_NUMBER;
+        hash = (53 * hash) + getP().hashCode();
+        hash = (37 * hash) + S_FIELD_NUMBER;
+        hash = (53 * hash) + getS().hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code confio.poe.v1beta1.MixerContractConfig.Sigmoid}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.MixerContractConfig.Sigmoid)
+          com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.SigmoidOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_MixerContractConfig_Sigmoid_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_MixerContractConfig_Sigmoid_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid.class, com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid.Builder.class);
+        }
+
+        // Construct using com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          maxPoints_ = 0L;
+          p_ = "";
+          s_ = "";
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_MixerContractConfig_Sigmoid_descriptor;
+        }
+
+        @java.lang.Override
+        public com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid getDefaultInstanceForType() {
+          return com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid build() {
+          com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid buildPartial() {
+          com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid result = new com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.maxPoints_ = maxPoints_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.p_ = p_;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.s_ = s_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid) {
+            return mergeFrom((com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid other) {
+          if (other == com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid.getDefaultInstance()) return this;
+          if (other.getMaxPoints() != 0L) {
+            setMaxPoints(other.getMaxPoints());
+          }
+          if (!other.getP().isEmpty()) {
+            p_ = other.p_;
+            bitField0_ |= 0x00000002;
+            onChanged();
+          }
+          if (!other.getS().isEmpty()) {
+            s_ = other.s_;
+            bitField0_ |= 0x00000004;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  maxPoints_ = input.readUInt64();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 8
+                case 18: {
+                  p_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+                case 26: {
+                  s_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 26
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private long maxPoints_ ;
+        /**
+         * <code>uint64 max_points = 1 [json_name = "maxPoints"];</code>
+         * @return The maxPoints.
+         */
+        @java.lang.Override
+        public long getMaxPoints() {
+          return maxPoints_;
+        }
+        /**
+         * <code>uint64 max_points = 1 [json_name = "maxPoints"];</code>
+         * @param value The maxPoints to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMaxPoints(long value) {
+
+          maxPoints_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>uint64 max_points = 1 [json_name = "maxPoints"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMaxPoints() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          maxPoints_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object p_ = "";
+        /**
+         * <code>string p = 2 [json_name = "p", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+         * @return The p.
+         */
+        public java.lang.String getP() {
+          java.lang.Object ref = p_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            p_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string p = 2 [json_name = "p", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+         * @return The bytes for p.
+         */
+        public com.google.protobuf.ByteString
+            getPBytes() {
+          java.lang.Object ref = p_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            p_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string p = 2 [json_name = "p", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+         * @param value The p to set.
+         * @return This builder for chaining.
+         */
+        public Builder setP(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          p_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string p = 2 [json_name = "p", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearP() {
+          p_ = getDefaultInstance().getP();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string p = 2 [json_name = "p", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+         * @param value The bytes for p to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          p_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object s_ = "";
+        /**
+         * <code>string s = 3 [json_name = "s", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+         * @return The s.
+         */
+        public java.lang.String getS() {
+          java.lang.Object ref = s_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            s_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string s = 3 [json_name = "s", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+         * @return The bytes for s.
+         */
+        public com.google.protobuf.ByteString
+            getSBytes() {
+          java.lang.Object ref = s_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            s_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string s = 3 [json_name = "s", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+         * @param value The s to set.
+         * @return This builder for chaining.
+         */
+        public Builder setS(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          s_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string s = 3 [json_name = "s", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearS() {
+          s_ = getDefaultInstance().getS();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string s = 3 [json_name = "s", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+         * @param value The bytes for s to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          s_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.MixerContractConfig.Sigmoid)
+      }
+
+      // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.MixerContractConfig.Sigmoid)
+      private static final com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid();
+      }
+
+      public static com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Sigmoid>
+          PARSER = new com.google.protobuf.AbstractParser<Sigmoid>() {
+        @java.lang.Override
+        public Sigmoid parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<Sigmoid> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Sigmoid> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int SIGMOID_FIELD_NUMBER = 1;
+    private com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid sigmoid_;
+    /**
+     * <pre>
+     * Sigmoid returns a sigmoid-like value of staked amount times engagement
+     * points. See the Proof-of-Engagement white-paper for details.
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.MixerContractConfig.Sigmoid sigmoid = 1 [json_name = "sigmoid", (.gogoproto.nullable) = false];</code>
+     * @return Whether the sigmoid field is set.
+     */
+    @java.lang.Override
+    public boolean hasSigmoid() {
+      return sigmoid_ != null;
+    }
+    /**
+     * <pre>
+     * Sigmoid returns a sigmoid-like value of staked amount times engagement
+     * points. See the Proof-of-Engagement white-paper for details.
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.MixerContractConfig.Sigmoid sigmoid = 1 [json_name = "sigmoid", (.gogoproto.nullable) = false];</code>
+     * @return The sigmoid.
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid getSigmoid() {
+      return sigmoid_ == null ? com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid.getDefaultInstance() : sigmoid_;
+    }
+    /**
+     * <pre>
+     * Sigmoid returns a sigmoid-like value of staked amount times engagement
+     * points. See the Proof-of-Engagement white-paper for details.
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.MixerContractConfig.Sigmoid sigmoid = 1 [json_name = "sigmoid", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.SigmoidOrBuilder getSigmoidOrBuilder() {
+      return sigmoid_ == null ? com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid.getDefaultInstance() : sigmoid_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (sigmoid_ != null) {
+        output.writeMessage(1, getSigmoid());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (sigmoid_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getSigmoid());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.GenesisProto.MixerContractConfig)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.GenesisProto.MixerContractConfig other = (com.confio.poe.v1beta1.GenesisProto.MixerContractConfig) obj;
+
+      if (hasSigmoid() != other.hasSigmoid()) return false;
+      if (hasSigmoid()) {
+        if (!getSigmoid()
+            .equals(other.getSigmoid())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSigmoid()) {
+        hash = (37 * hash) + SIGMOID_FIELD_NUMBER;
+        hash = (53 * hash) + getSigmoid().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.MixerContractConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.MixerContractConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.MixerContractConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.MixerContractConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.MixerContractConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.MixerContractConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.MixerContractConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.MixerContractConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.MixerContractConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.MixerContractConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.MixerContractConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.MixerContractConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.GenesisProto.MixerContractConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Mixer contract setup. See
+     * https://github.com/confio/poe-contracts/tree/main/contracts/tg4-mixer
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.MixerContractConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.MixerContractConfig)
+        com.confio.poe.v1beta1.GenesisProto.MixerContractConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_MixerContractConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_MixerContractConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.class, com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sigmoid_ = null;
+        if (sigmoidBuilder_ != null) {
+          sigmoidBuilder_.dispose();
+          sigmoidBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_MixerContractConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.MixerContractConfig getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.MixerContractConfig build() {
+        com.confio.poe.v1beta1.GenesisProto.MixerContractConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.MixerContractConfig buildPartial() {
+        com.confio.poe.v1beta1.GenesisProto.MixerContractConfig result = new com.confio.poe.v1beta1.GenesisProto.MixerContractConfig(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.poe.v1beta1.GenesisProto.MixerContractConfig result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sigmoid_ = sigmoidBuilder_ == null
+              ? sigmoid_
+              : sigmoidBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.GenesisProto.MixerContractConfig) {
+          return mergeFrom((com.confio.poe.v1beta1.GenesisProto.MixerContractConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.GenesisProto.MixerContractConfig other) {
+        if (other == com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.getDefaultInstance()) return this;
+        if (other.hasSigmoid()) {
+          mergeSigmoid(other.getSigmoid());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getSigmoidFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid sigmoid_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid, com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid.Builder, com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.SigmoidOrBuilder> sigmoidBuilder_;
+      /**
+       * <pre>
+       * Sigmoid returns a sigmoid-like value of staked amount times engagement
+       * points. See the Proof-of-Engagement white-paper for details.
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.MixerContractConfig.Sigmoid sigmoid = 1 [json_name = "sigmoid", (.gogoproto.nullable) = false];</code>
+       * @return Whether the sigmoid field is set.
+       */
+      public boolean hasSigmoid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Sigmoid returns a sigmoid-like value of staked amount times engagement
+       * points. See the Proof-of-Engagement white-paper for details.
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.MixerContractConfig.Sigmoid sigmoid = 1 [json_name = "sigmoid", (.gogoproto.nullable) = false];</code>
+       * @return The sigmoid.
+       */
+      public com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid getSigmoid() {
+        if (sigmoidBuilder_ == null) {
+          return sigmoid_ == null ? com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid.getDefaultInstance() : sigmoid_;
+        } else {
+          return sigmoidBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Sigmoid returns a sigmoid-like value of staked amount times engagement
+       * points. See the Proof-of-Engagement white-paper for details.
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.MixerContractConfig.Sigmoid sigmoid = 1 [json_name = "sigmoid", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSigmoid(com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid value) {
+        if (sigmoidBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sigmoid_ = value;
+        } else {
+          sigmoidBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Sigmoid returns a sigmoid-like value of staked amount times engagement
+       * points. See the Proof-of-Engagement white-paper for details.
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.MixerContractConfig.Sigmoid sigmoid = 1 [json_name = "sigmoid", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSigmoid(
+          com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid.Builder builderForValue) {
+        if (sigmoidBuilder_ == null) {
+          sigmoid_ = builderForValue.build();
+        } else {
+          sigmoidBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Sigmoid returns a sigmoid-like value of staked amount times engagement
+       * points. See the Proof-of-Engagement white-paper for details.
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.MixerContractConfig.Sigmoid sigmoid = 1 [json_name = "sigmoid", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeSigmoid(com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid value) {
+        if (sigmoidBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            sigmoid_ != null &&
+            sigmoid_ != com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid.getDefaultInstance()) {
+            getSigmoidBuilder().mergeFrom(value);
+          } else {
+            sigmoid_ = value;
+          }
+        } else {
+          sigmoidBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Sigmoid returns a sigmoid-like value of staked amount times engagement
+       * points. See the Proof-of-Engagement white-paper for details.
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.MixerContractConfig.Sigmoid sigmoid = 1 [json_name = "sigmoid", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearSigmoid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sigmoid_ = null;
+        if (sigmoidBuilder_ != null) {
+          sigmoidBuilder_.dispose();
+          sigmoidBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Sigmoid returns a sigmoid-like value of staked amount times engagement
+       * points. See the Proof-of-Engagement white-paper for details.
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.MixerContractConfig.Sigmoid sigmoid = 1 [json_name = "sigmoid", (.gogoproto.nullable) = false];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid.Builder getSigmoidBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getSigmoidFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Sigmoid returns a sigmoid-like value of staked amount times engagement
+       * points. See the Proof-of-Engagement white-paper for details.
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.MixerContractConfig.Sigmoid sigmoid = 1 [json_name = "sigmoid", (.gogoproto.nullable) = false];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.SigmoidOrBuilder getSigmoidOrBuilder() {
+        if (sigmoidBuilder_ != null) {
+          return sigmoidBuilder_.getMessageOrBuilder();
+        } else {
+          return sigmoid_ == null ?
+              com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid.getDefaultInstance() : sigmoid_;
+        }
+      }
+      /**
+       * <pre>
+       * Sigmoid returns a sigmoid-like value of staked amount times engagement
+       * points. See the Proof-of-Engagement white-paper for details.
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.MixerContractConfig.Sigmoid sigmoid = 1 [json_name = "sigmoid", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid, com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid.Builder, com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.SigmoidOrBuilder> 
+          getSigmoidFieldBuilder() {
+        if (sigmoidBuilder_ == null) {
+          sigmoidBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid, com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.Sigmoid.Builder, com.confio.poe.v1beta1.GenesisProto.MixerContractConfig.SigmoidOrBuilder>(
+                  getSigmoid(),
+                  getParentForChildren(),
+                  isClean());
+          sigmoid_ = null;
+        }
+        return sigmoidBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.MixerContractConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.MixerContractConfig)
+    private static final com.confio.poe.v1beta1.GenesisProto.MixerContractConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.GenesisProto.MixerContractConfig();
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.MixerContractConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MixerContractConfig>
+        PARSER = new com.google.protobuf.AbstractParser<MixerContractConfig>() {
+      @java.lang.Override
+      public MixerContractConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MixerContractConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MixerContractConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.MixerContractConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StakeContractConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.StakeContractConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 min_bond = 1 [json_name = "minBond"];</code>
+     * @return The minBond.
+     */
+    long getMinBond();
+
+    /**
+     * <code>uint64 tokens_per_point = 2 [json_name = "tokensPerPoint"];</code>
+     * @return The tokensPerPoint.
+     */
+    long getTokensPerPoint();
+
+    /**
+     * <code>.google.protobuf.Duration unbonding_period = 3 [json_name = "unbondingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the unbondingPeriod field is set.
+     */
+    boolean hasUnbondingPeriod();
+    /**
+     * <code>.google.protobuf.Duration unbonding_period = 3 [json_name = "unbondingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return The unbondingPeriod.
+     */
+    com.google.protobuf.Duration getUnbondingPeriod();
+    /**
+     * <code>.google.protobuf.Duration unbonding_period = 3 [json_name = "unbondingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getUnbondingPeriodOrBuilder();
+
+    /**
+     * <code>uint32 claim_autoreturn_limit = 4 [json_name = "claimAutoreturnLimit"];</code>
+     * @return The claimAutoreturnLimit.
+     */
+    int getClaimAutoreturnLimit();
+  }
+  /**
+   * <pre>
+   * StakeContractConfig initial setup config
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.StakeContractConfig}
+   */
+  public static final class StakeContractConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.StakeContractConfig)
+      StakeContractConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StakeContractConfig.newBuilder() to construct.
+    private StakeContractConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StakeContractConfig() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StakeContractConfig();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_StakeContractConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_StakeContractConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.GenesisProto.StakeContractConfig.class, com.confio.poe.v1beta1.GenesisProto.StakeContractConfig.Builder.class);
+    }
+
+    public static final int MIN_BOND_FIELD_NUMBER = 1;
+    private long minBond_ = 0L;
+    /**
+     * <code>uint64 min_bond = 1 [json_name = "minBond"];</code>
+     * @return The minBond.
+     */
+    @java.lang.Override
+    public long getMinBond() {
+      return minBond_;
+    }
+
+    public static final int TOKENS_PER_POINT_FIELD_NUMBER = 2;
+    private long tokensPerPoint_ = 0L;
+    /**
+     * <code>uint64 tokens_per_point = 2 [json_name = "tokensPerPoint"];</code>
+     * @return The tokensPerPoint.
+     */
+    @java.lang.Override
+    public long getTokensPerPoint() {
+      return tokensPerPoint_;
+    }
+
+    public static final int UNBONDING_PERIOD_FIELD_NUMBER = 3;
+    private com.google.protobuf.Duration unbondingPeriod_;
+    /**
+     * <code>.google.protobuf.Duration unbonding_period = 3 [json_name = "unbondingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the unbondingPeriod field is set.
+     */
+    @java.lang.Override
+    public boolean hasUnbondingPeriod() {
+      return unbondingPeriod_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Duration unbonding_period = 3 [json_name = "unbondingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return The unbondingPeriod.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getUnbondingPeriod() {
+      return unbondingPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : unbondingPeriod_;
+    }
+    /**
+     * <code>.google.protobuf.Duration unbonding_period = 3 [json_name = "unbondingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getUnbondingPeriodOrBuilder() {
+      return unbondingPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : unbondingPeriod_;
+    }
+
+    public static final int CLAIM_AUTORETURN_LIMIT_FIELD_NUMBER = 4;
+    private int claimAutoreturnLimit_ = 0;
+    /**
+     * <code>uint32 claim_autoreturn_limit = 4 [json_name = "claimAutoreturnLimit"];</code>
+     * @return The claimAutoreturnLimit.
+     */
+    @java.lang.Override
+    public int getClaimAutoreturnLimit() {
+      return claimAutoreturnLimit_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (minBond_ != 0L) {
+        output.writeUInt64(1, minBond_);
+      }
+      if (tokensPerPoint_ != 0L) {
+        output.writeUInt64(2, tokensPerPoint_);
+      }
+      if (unbondingPeriod_ != null) {
+        output.writeMessage(3, getUnbondingPeriod());
+      }
+      if (claimAutoreturnLimit_ != 0) {
+        output.writeUInt32(4, claimAutoreturnLimit_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (minBond_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, minBond_);
+      }
+      if (tokensPerPoint_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, tokensPerPoint_);
+      }
+      if (unbondingPeriod_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getUnbondingPeriod());
+      }
+      if (claimAutoreturnLimit_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, claimAutoreturnLimit_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.GenesisProto.StakeContractConfig)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.GenesisProto.StakeContractConfig other = (com.confio.poe.v1beta1.GenesisProto.StakeContractConfig) obj;
+
+      if (getMinBond()
+          != other.getMinBond()) return false;
+      if (getTokensPerPoint()
+          != other.getTokensPerPoint()) return false;
+      if (hasUnbondingPeriod() != other.hasUnbondingPeriod()) return false;
+      if (hasUnbondingPeriod()) {
+        if (!getUnbondingPeriod()
+            .equals(other.getUnbondingPeriod())) return false;
+      }
+      if (getClaimAutoreturnLimit()
+          != other.getClaimAutoreturnLimit()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MIN_BOND_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMinBond());
+      hash = (37 * hash) + TOKENS_PER_POINT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTokensPerPoint());
+      if (hasUnbondingPeriod()) {
+        hash = (37 * hash) + UNBONDING_PERIOD_FIELD_NUMBER;
+        hash = (53 * hash) + getUnbondingPeriod().hashCode();
+      }
+      hash = (37 * hash) + CLAIM_AUTORETURN_LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + getClaimAutoreturnLimit();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.StakeContractConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.StakeContractConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.StakeContractConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.StakeContractConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.StakeContractConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.StakeContractConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.StakeContractConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.StakeContractConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.StakeContractConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.StakeContractConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.StakeContractConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.StakeContractConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.GenesisProto.StakeContractConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * StakeContractConfig initial setup config
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.StakeContractConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.StakeContractConfig)
+        com.confio.poe.v1beta1.GenesisProto.StakeContractConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_StakeContractConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_StakeContractConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.GenesisProto.StakeContractConfig.class, com.confio.poe.v1beta1.GenesisProto.StakeContractConfig.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.GenesisProto.StakeContractConfig.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        minBond_ = 0L;
+        tokensPerPoint_ = 0L;
+        unbondingPeriod_ = null;
+        if (unbondingPeriodBuilder_ != null) {
+          unbondingPeriodBuilder_.dispose();
+          unbondingPeriodBuilder_ = null;
+        }
+        claimAutoreturnLimit_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_StakeContractConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.StakeContractConfig getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.GenesisProto.StakeContractConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.StakeContractConfig build() {
+        com.confio.poe.v1beta1.GenesisProto.StakeContractConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.StakeContractConfig buildPartial() {
+        com.confio.poe.v1beta1.GenesisProto.StakeContractConfig result = new com.confio.poe.v1beta1.GenesisProto.StakeContractConfig(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.poe.v1beta1.GenesisProto.StakeContractConfig result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.minBond_ = minBond_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.tokensPerPoint_ = tokensPerPoint_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.unbondingPeriod_ = unbondingPeriodBuilder_ == null
+              ? unbondingPeriod_
+              : unbondingPeriodBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.claimAutoreturnLimit_ = claimAutoreturnLimit_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.GenesisProto.StakeContractConfig) {
+          return mergeFrom((com.confio.poe.v1beta1.GenesisProto.StakeContractConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.GenesisProto.StakeContractConfig other) {
+        if (other == com.confio.poe.v1beta1.GenesisProto.StakeContractConfig.getDefaultInstance()) return this;
+        if (other.getMinBond() != 0L) {
+          setMinBond(other.getMinBond());
+        }
+        if (other.getTokensPerPoint() != 0L) {
+          setTokensPerPoint(other.getTokensPerPoint());
+        }
+        if (other.hasUnbondingPeriod()) {
+          mergeUnbondingPeriod(other.getUnbondingPeriod());
+        }
+        if (other.getClaimAutoreturnLimit() != 0) {
+          setClaimAutoreturnLimit(other.getClaimAutoreturnLimit());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                minBond_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                tokensPerPoint_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                input.readMessage(
+                    getUnbondingPeriodFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                claimAutoreturnLimit_ = input.readUInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long minBond_ ;
+      /**
+       * <code>uint64 min_bond = 1 [json_name = "minBond"];</code>
+       * @return The minBond.
+       */
+      @java.lang.Override
+      public long getMinBond() {
+        return minBond_;
+      }
+      /**
+       * <code>uint64 min_bond = 1 [json_name = "minBond"];</code>
+       * @param value The minBond to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinBond(long value) {
+
+        minBond_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 min_bond = 1 [json_name = "minBond"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinBond() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        minBond_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long tokensPerPoint_ ;
+      /**
+       * <code>uint64 tokens_per_point = 2 [json_name = "tokensPerPoint"];</code>
+       * @return The tokensPerPoint.
+       */
+      @java.lang.Override
+      public long getTokensPerPoint() {
+        return tokensPerPoint_;
+      }
+      /**
+       * <code>uint64 tokens_per_point = 2 [json_name = "tokensPerPoint"];</code>
+       * @param value The tokensPerPoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokensPerPoint(long value) {
+
+        tokensPerPoint_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 tokens_per_point = 2 [json_name = "tokensPerPoint"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTokensPerPoint() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        tokensPerPoint_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration unbondingPeriod_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> unbondingPeriodBuilder_;
+      /**
+       * <code>.google.protobuf.Duration unbonding_period = 3 [json_name = "unbondingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       * @return Whether the unbondingPeriod field is set.
+       */
+      public boolean hasUnbondingPeriod() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Duration unbonding_period = 3 [json_name = "unbondingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       * @return The unbondingPeriod.
+       */
+      public com.google.protobuf.Duration getUnbondingPeriod() {
+        if (unbondingPeriodBuilder_ == null) {
+          return unbondingPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : unbondingPeriod_;
+        } else {
+          return unbondingPeriodBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration unbonding_period = 3 [json_name = "unbondingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setUnbondingPeriod(com.google.protobuf.Duration value) {
+        if (unbondingPeriodBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          unbondingPeriod_ = value;
+        } else {
+          unbondingPeriodBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration unbonding_period = 3 [json_name = "unbondingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setUnbondingPeriod(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (unbondingPeriodBuilder_ == null) {
+          unbondingPeriod_ = builderForValue.build();
+        } else {
+          unbondingPeriodBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration unbonding_period = 3 [json_name = "unbondingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeUnbondingPeriod(com.google.protobuf.Duration value) {
+        if (unbondingPeriodBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            unbondingPeriod_ != null &&
+            unbondingPeriod_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getUnbondingPeriodBuilder().mergeFrom(value);
+          } else {
+            unbondingPeriod_ = value;
+          }
+        } else {
+          unbondingPeriodBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration unbonding_period = 3 [json_name = "unbondingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearUnbondingPeriod() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        unbondingPeriod_ = null;
+        if (unbondingPeriodBuilder_ != null) {
+          unbondingPeriodBuilder_.dispose();
+          unbondingPeriodBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration unbonding_period = 3 [json_name = "unbondingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getUnbondingPeriodBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getUnbondingPeriodFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Duration unbonding_period = 3 [json_name = "unbondingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getUnbondingPeriodOrBuilder() {
+        if (unbondingPeriodBuilder_ != null) {
+          return unbondingPeriodBuilder_.getMessageOrBuilder();
+        } else {
+          return unbondingPeriod_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : unbondingPeriod_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration unbonding_period = 3 [json_name = "unbondingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getUnbondingPeriodFieldBuilder() {
+        if (unbondingPeriodBuilder_ == null) {
+          unbondingPeriodBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getUnbondingPeriod(),
+                  getParentForChildren(),
+                  isClean());
+          unbondingPeriod_ = null;
+        }
+        return unbondingPeriodBuilder_;
+      }
+
+      private int claimAutoreturnLimit_ ;
+      /**
+       * <code>uint32 claim_autoreturn_limit = 4 [json_name = "claimAutoreturnLimit"];</code>
+       * @return The claimAutoreturnLimit.
+       */
+      @java.lang.Override
+      public int getClaimAutoreturnLimit() {
+        return claimAutoreturnLimit_;
+      }
+      /**
+       * <code>uint32 claim_autoreturn_limit = 4 [json_name = "claimAutoreturnLimit"];</code>
+       * @param value The claimAutoreturnLimit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimAutoreturnLimit(int value) {
+
+        claimAutoreturnLimit_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 claim_autoreturn_limit = 4 [json_name = "claimAutoreturnLimit"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClaimAutoreturnLimit() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        claimAutoreturnLimit_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.StakeContractConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.StakeContractConfig)
+    private static final com.confio.poe.v1beta1.GenesisProto.StakeContractConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.GenesisProto.StakeContractConfig();
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.StakeContractConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StakeContractConfig>
+        PARSER = new com.google.protobuf.AbstractParser<StakeContractConfig>() {
+      @java.lang.Override
+      public StakeContractConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<StakeContractConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StakeContractConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.StakeContractConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ValsetContractConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.ValsetContractConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 min_points = 1 [json_name = "minPoints"];</code>
+     * @return The minPoints.
+     */
+    long getMinPoints();
+
+    /**
+     * <pre>
+     * MaxValidators The maximum number of validators that can be included in the
+     * Tendermint validator set.
+     * </pre>
+     *
+     * <code>uint32 max_validators = 2 [json_name = "maxValidators"];</code>
+     * @return The maxValidators.
+     */
+    int getMaxValidators();
+
+    /**
+     * <pre>
+     * EpochLength We update the Tendermint validator set only once per epoch.
+     * Epoch # is env.block.time/epoch_length (round down). The first block with a
+     * new epoch number will trigger a new validator calculation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration epoch_length = 3 [json_name = "epochLength", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the epochLength field is set.
+     */
+    boolean hasEpochLength();
+    /**
+     * <pre>
+     * EpochLength We update the Tendermint validator set only once per epoch.
+     * Epoch # is env.block.time/epoch_length (round down). The first block with a
+     * new epoch number will trigger a new validator calculation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration epoch_length = 3 [json_name = "epochLength", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return The epochLength.
+     */
+    com.google.protobuf.Duration getEpochLength();
+    /**
+     * <pre>
+     * EpochLength We update the Tendermint validator set only once per epoch.
+     * Epoch # is env.block.time/epoch_length (round down). The first block with a
+     * new epoch number will trigger a new validator calculation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration epoch_length = 3 [json_name = "epochLength", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getEpochLengthOrBuilder();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin epoch_reward = 4 [json_name = "epochReward", (.gogoproto.nullable) = false];</code>
+     * @return Whether the epochReward field is set.
+     */
+    boolean hasEpochReward();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin epoch_reward = 4 [json_name = "epochReward", (.gogoproto.nullable) = false];</code>
+     * @return The epochReward.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getEpochReward();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin epoch_reward = 4 [json_name = "epochReward", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getEpochRewardOrBuilder();
+
+    /**
+     * <pre>
+     * Scaling is the factor to multiply cw4-group weights to produce the
+     * Tendermint validator power
+     * </pre>
+     *
+     * <code>uint32 scaling = 5 [json_name = "scaling"];</code>
+     * @return The scaling.
+     */
+    int getScaling();
+
+    /**
+     * <pre>
+     * FeePercentage is the percentage of total accumulated fees that is
+     * subtracted from tokens minted as rewards. 50% by default. To disable this
+     * feature just set it to 0 (which effectively means that fees don't affect
+     * the per-epoch reward).
+     * </pre>
+     *
+     * <code>string fee_percentage = 6 [json_name = "feePercentage", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The feePercentage.
+     */
+    java.lang.String getFeePercentage();
+    /**
+     * <pre>
+     * FeePercentage is the percentage of total accumulated fees that is
+     * subtracted from tokens minted as rewards. 50% by default. To disable this
+     * feature just set it to 0 (which effectively means that fees don't affect
+     * the per-epoch reward).
+     * </pre>
+     *
+     * <code>string fee_percentage = 6 [json_name = "feePercentage", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for feePercentage.
+     */
+    com.google.protobuf.ByteString
+        getFeePercentageBytes();
+
+    /**
+     * <pre>
+     * CommunityPoolRewardRation in percentage
+     * </pre>
+     *
+     * <code>string community_pool_reward_ratio = 7 [json_name = "communityPoolRewardRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The communityPoolRewardRatio.
+     */
+    java.lang.String getCommunityPoolRewardRatio();
+    /**
+     * <pre>
+     * CommunityPoolRewardRation in percentage
+     * </pre>
+     *
+     * <code>string community_pool_reward_ratio = 7 [json_name = "communityPoolRewardRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for communityPoolRewardRatio.
+     */
+    com.google.protobuf.ByteString
+        getCommunityPoolRewardRatioBytes();
+
+    /**
+     * <pre>
+     * EngagementRewardRatio reward ration in percentage for all
+     * </pre>
+     *
+     * <code>string engagement_reward_ratio = 8 [json_name = "engagementRewardRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The engagementRewardRatio.
+     */
+    java.lang.String getEngagementRewardRatio();
+    /**
+     * <pre>
+     * EngagementRewardRatio reward ration in percentage for all
+     * </pre>
+     *
+     * <code>string engagement_reward_ratio = 8 [json_name = "engagementRewardRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for engagementRewardRatio.
+     */
+    com.google.protobuf.ByteString
+        getEngagementRewardRatioBytes();
+
+    /**
+     * <pre>
+     * ValidatorRewardRation in percentage for all
+     * </pre>
+     *
+     * <code>string validator_reward_ratio = 9 [json_name = "validatorRewardRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The validatorRewardRatio.
+     */
+    java.lang.String getValidatorRewardRatio();
+    /**
+     * <pre>
+     * ValidatorRewardRation in percentage for all
+     * </pre>
+     *
+     * <code>string validator_reward_ratio = 9 [json_name = "validatorRewardRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for validatorRewardRatio.
+     */
+    com.google.protobuf.ByteString
+        getValidatorRewardRatioBytes();
+
+    /**
+     * <pre>
+     * AutoUnjail if set to true, we will auto-unjail any validator after their
+     * jailtime is over.
+     * </pre>
+     *
+     * <code>bool auto_unjail = 10 [json_name = "autoUnjail"];</code>
+     * @return The autoUnjail.
+     */
+    boolean getAutoUnjail();
+
+    /**
+     * <pre>
+     * DoubleSignSlashRatio Validators who are caught double signing are jailed
+     * forever and their bonded tokens are slashed based on this value.
+     * </pre>
+     *
+     * <code>string double_sign_slash_ratio = 11 [json_name = "doubleSignSlashRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The doubleSignSlashRatio.
+     */
+    java.lang.String getDoubleSignSlashRatio();
+    /**
+     * <pre>
+     * DoubleSignSlashRatio Validators who are caught double signing are jailed
+     * forever and their bonded tokens are slashed based on this value.
+     * </pre>
+     *
+     * <code>string double_sign_slash_ratio = 11 [json_name = "doubleSignSlashRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for doubleSignSlashRatio.
+     */
+    com.google.protobuf.ByteString
+        getDoubleSignSlashRatioBytes();
+
+    /**
+     * <pre>
+     * When a validator joins the valset, verify they sign the first block since
+     * joining or jail them for a period otherwise.
+     *
+     * The verification happens every time the validator becomes an active
+     * validator, including when they are unjailed or when they just gain enough
+     * power to participate.
+     * </pre>
+     *
+     * <code>bool verify_validators = 12 [json_name = "verifyValidators"];</code>
+     * @return The verifyValidators.
+     */
+    boolean getVerifyValidators();
+
+    /**
+     * <pre>
+     * OfflineJailDuration duration to jail a validator for in case they don't
+     * sign their first epoch boundary block. After the period, they have to pass
+     * verification again, ad infinitum.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration offlineJailDuration = 13 [json_name = "offlineJailDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the offlineJailDuration field is set.
+     */
+    boolean hasOfflineJailDuration();
+    /**
+     * <pre>
+     * OfflineJailDuration duration to jail a validator for in case they don't
+     * sign their first epoch boundary block. After the period, they have to pass
+     * verification again, ad infinitum.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration offlineJailDuration = 13 [json_name = "offlineJailDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return The offlineJailDuration.
+     */
+    com.google.protobuf.Duration getOfflineJailDuration();
+    /**
+     * <pre>
+     * OfflineJailDuration duration to jail a validator for in case they don't
+     * sign their first epoch boundary block. After the period, they have to pass
+     * verification again, ad infinitum.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration offlineJailDuration = 13 [json_name = "offlineJailDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getOfflineJailDurationOrBuilder();
+  }
+  /**
+   * <pre>
+   * ValsetContractConfig initial setup config
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.ValsetContractConfig}
+   */
+  public static final class ValsetContractConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.ValsetContractConfig)
+      ValsetContractConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ValsetContractConfig.newBuilder() to construct.
+    private ValsetContractConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ValsetContractConfig() {
+      feePercentage_ = "";
+      communityPoolRewardRatio_ = "";
+      engagementRewardRatio_ = "";
+      validatorRewardRatio_ = "";
+      doubleSignSlashRatio_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ValsetContractConfig();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_ValsetContractConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_ValsetContractConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig.class, com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig.Builder.class);
+    }
+
+    public static final int MIN_POINTS_FIELD_NUMBER = 1;
+    private long minPoints_ = 0L;
+    /**
+     * <code>uint64 min_points = 1 [json_name = "minPoints"];</code>
+     * @return The minPoints.
+     */
+    @java.lang.Override
+    public long getMinPoints() {
+      return minPoints_;
+    }
+
+    public static final int MAX_VALIDATORS_FIELD_NUMBER = 2;
+    private int maxValidators_ = 0;
+    /**
+     * <pre>
+     * MaxValidators The maximum number of validators that can be included in the
+     * Tendermint validator set.
+     * </pre>
+     *
+     * <code>uint32 max_validators = 2 [json_name = "maxValidators"];</code>
+     * @return The maxValidators.
+     */
+    @java.lang.Override
+    public int getMaxValidators() {
+      return maxValidators_;
+    }
+
+    public static final int EPOCH_LENGTH_FIELD_NUMBER = 3;
+    private com.google.protobuf.Duration epochLength_;
+    /**
+     * <pre>
+     * EpochLength We update the Tendermint validator set only once per epoch.
+     * Epoch # is env.block.time/epoch_length (round down). The first block with a
+     * new epoch number will trigger a new validator calculation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration epoch_length = 3 [json_name = "epochLength", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the epochLength field is set.
+     */
+    @java.lang.Override
+    public boolean hasEpochLength() {
+      return epochLength_ != null;
+    }
+    /**
+     * <pre>
+     * EpochLength We update the Tendermint validator set only once per epoch.
+     * Epoch # is env.block.time/epoch_length (round down). The first block with a
+     * new epoch number will trigger a new validator calculation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration epoch_length = 3 [json_name = "epochLength", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return The epochLength.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getEpochLength() {
+      return epochLength_ == null ? com.google.protobuf.Duration.getDefaultInstance() : epochLength_;
+    }
+    /**
+     * <pre>
+     * EpochLength We update the Tendermint validator set only once per epoch.
+     * Epoch # is env.block.time/epoch_length (round down). The first block with a
+     * new epoch number will trigger a new validator calculation.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration epoch_length = 3 [json_name = "epochLength", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getEpochLengthOrBuilder() {
+      return epochLength_ == null ? com.google.protobuf.Duration.getDefaultInstance() : epochLength_;
+    }
+
+    public static final int EPOCH_REWARD_FIELD_NUMBER = 4;
+    private com.cosmos.base.v1beta1.CoinProto.Coin epochReward_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin epoch_reward = 4 [json_name = "epochReward", (.gogoproto.nullable) = false];</code>
+     * @return Whether the epochReward field is set.
+     */
+    @java.lang.Override
+    public boolean hasEpochReward() {
+      return epochReward_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin epoch_reward = 4 [json_name = "epochReward", (.gogoproto.nullable) = false];</code>
+     * @return The epochReward.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getEpochReward() {
+      return epochReward_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : epochReward_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin epoch_reward = 4 [json_name = "epochReward", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getEpochRewardOrBuilder() {
+      return epochReward_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : epochReward_;
+    }
+
+    public static final int SCALING_FIELD_NUMBER = 5;
+    private int scaling_ = 0;
+    /**
+     * <pre>
+     * Scaling is the factor to multiply cw4-group weights to produce the
+     * Tendermint validator power
+     * </pre>
+     *
+     * <code>uint32 scaling = 5 [json_name = "scaling"];</code>
+     * @return The scaling.
+     */
+    @java.lang.Override
+    public int getScaling() {
+      return scaling_;
+    }
+
+    public static final int FEE_PERCENTAGE_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object feePercentage_ = "";
+    /**
+     * <pre>
+     * FeePercentage is the percentage of total accumulated fees that is
+     * subtracted from tokens minted as rewards. 50% by default. To disable this
+     * feature just set it to 0 (which effectively means that fees don't affect
+     * the per-epoch reward).
+     * </pre>
+     *
+     * <code>string fee_percentage = 6 [json_name = "feePercentage", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The feePercentage.
+     */
+    @java.lang.Override
+    public java.lang.String getFeePercentage() {
+      java.lang.Object ref = feePercentage_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        feePercentage_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * FeePercentage is the percentage of total accumulated fees that is
+     * subtracted from tokens minted as rewards. 50% by default. To disable this
+     * feature just set it to 0 (which effectively means that fees don't affect
+     * the per-epoch reward).
+     * </pre>
+     *
+     * <code>string fee_percentage = 6 [json_name = "feePercentage", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for feePercentage.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFeePercentageBytes() {
+      java.lang.Object ref = feePercentage_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        feePercentage_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COMMUNITY_POOL_REWARD_RATIO_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object communityPoolRewardRatio_ = "";
+    /**
+     * <pre>
+     * CommunityPoolRewardRation in percentage
+     * </pre>
+     *
+     * <code>string community_pool_reward_ratio = 7 [json_name = "communityPoolRewardRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The communityPoolRewardRatio.
+     */
+    @java.lang.Override
+    public java.lang.String getCommunityPoolRewardRatio() {
+      java.lang.Object ref = communityPoolRewardRatio_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        communityPoolRewardRatio_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * CommunityPoolRewardRation in percentage
+     * </pre>
+     *
+     * <code>string community_pool_reward_ratio = 7 [json_name = "communityPoolRewardRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for communityPoolRewardRatio.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCommunityPoolRewardRatioBytes() {
+      java.lang.Object ref = communityPoolRewardRatio_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        communityPoolRewardRatio_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENGAGEMENT_REWARD_RATIO_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object engagementRewardRatio_ = "";
+    /**
+     * <pre>
+     * EngagementRewardRatio reward ration in percentage for all
+     * </pre>
+     *
+     * <code>string engagement_reward_ratio = 8 [json_name = "engagementRewardRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The engagementRewardRatio.
+     */
+    @java.lang.Override
+    public java.lang.String getEngagementRewardRatio() {
+      java.lang.Object ref = engagementRewardRatio_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        engagementRewardRatio_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * EngagementRewardRatio reward ration in percentage for all
+     * </pre>
+     *
+     * <code>string engagement_reward_ratio = 8 [json_name = "engagementRewardRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for engagementRewardRatio.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEngagementRewardRatioBytes() {
+      java.lang.Object ref = engagementRewardRatio_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        engagementRewardRatio_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALIDATOR_REWARD_RATIO_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object validatorRewardRatio_ = "";
+    /**
+     * <pre>
+     * ValidatorRewardRation in percentage for all
+     * </pre>
+     *
+     * <code>string validator_reward_ratio = 9 [json_name = "validatorRewardRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The validatorRewardRatio.
+     */
+    @java.lang.Override
+    public java.lang.String getValidatorRewardRatio() {
+      java.lang.Object ref = validatorRewardRatio_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        validatorRewardRatio_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ValidatorRewardRation in percentage for all
+     * </pre>
+     *
+     * <code>string validator_reward_ratio = 9 [json_name = "validatorRewardRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for validatorRewardRatio.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValidatorRewardRatioBytes() {
+      java.lang.Object ref = validatorRewardRatio_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        validatorRewardRatio_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AUTO_UNJAIL_FIELD_NUMBER = 10;
+    private boolean autoUnjail_ = false;
+    /**
+     * <pre>
+     * AutoUnjail if set to true, we will auto-unjail any validator after their
+     * jailtime is over.
+     * </pre>
+     *
+     * <code>bool auto_unjail = 10 [json_name = "autoUnjail"];</code>
+     * @return The autoUnjail.
+     */
+    @java.lang.Override
+    public boolean getAutoUnjail() {
+      return autoUnjail_;
+    }
+
+    public static final int DOUBLE_SIGN_SLASH_RATIO_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object doubleSignSlashRatio_ = "";
+    /**
+     * <pre>
+     * DoubleSignSlashRatio Validators who are caught double signing are jailed
+     * forever and their bonded tokens are slashed based on this value.
+     * </pre>
+     *
+     * <code>string double_sign_slash_ratio = 11 [json_name = "doubleSignSlashRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The doubleSignSlashRatio.
+     */
+    @java.lang.Override
+    public java.lang.String getDoubleSignSlashRatio() {
+      java.lang.Object ref = doubleSignSlashRatio_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        doubleSignSlashRatio_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * DoubleSignSlashRatio Validators who are caught double signing are jailed
+     * forever and their bonded tokens are slashed based on this value.
+     * </pre>
+     *
+     * <code>string double_sign_slash_ratio = 11 [json_name = "doubleSignSlashRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for doubleSignSlashRatio.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDoubleSignSlashRatioBytes() {
+      java.lang.Object ref = doubleSignSlashRatio_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        doubleSignSlashRatio_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VERIFY_VALIDATORS_FIELD_NUMBER = 12;
+    private boolean verifyValidators_ = false;
+    /**
+     * <pre>
+     * When a validator joins the valset, verify they sign the first block since
+     * joining or jail them for a period otherwise.
+     *
+     * The verification happens every time the validator becomes an active
+     * validator, including when they are unjailed or when they just gain enough
+     * power to participate.
+     * </pre>
+     *
+     * <code>bool verify_validators = 12 [json_name = "verifyValidators"];</code>
+     * @return The verifyValidators.
+     */
+    @java.lang.Override
+    public boolean getVerifyValidators() {
+      return verifyValidators_;
+    }
+
+    public static final int OFFLINEJAILDURATION_FIELD_NUMBER = 13;
+    private com.google.protobuf.Duration offlineJailDuration_;
+    /**
+     * <pre>
+     * OfflineJailDuration duration to jail a validator for in case they don't
+     * sign their first epoch boundary block. After the period, they have to pass
+     * verification again, ad infinitum.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration offlineJailDuration = 13 [json_name = "offlineJailDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the offlineJailDuration field is set.
+     */
+    @java.lang.Override
+    public boolean hasOfflineJailDuration() {
+      return offlineJailDuration_ != null;
+    }
+    /**
+     * <pre>
+     * OfflineJailDuration duration to jail a validator for in case they don't
+     * sign their first epoch boundary block. After the period, they have to pass
+     * verification again, ad infinitum.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration offlineJailDuration = 13 [json_name = "offlineJailDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return The offlineJailDuration.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getOfflineJailDuration() {
+      return offlineJailDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : offlineJailDuration_;
+    }
+    /**
+     * <pre>
+     * OfflineJailDuration duration to jail a validator for in case they don't
+     * sign their first epoch boundary block. After the period, they have to pass
+     * verification again, ad infinitum.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration offlineJailDuration = 13 [json_name = "offlineJailDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getOfflineJailDurationOrBuilder() {
+      return offlineJailDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : offlineJailDuration_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (minPoints_ != 0L) {
+        output.writeUInt64(1, minPoints_);
+      }
+      if (maxValidators_ != 0) {
+        output.writeUInt32(2, maxValidators_);
+      }
+      if (epochLength_ != null) {
+        output.writeMessage(3, getEpochLength());
+      }
+      if (epochReward_ != null) {
+        output.writeMessage(4, getEpochReward());
+      }
+      if (scaling_ != 0) {
+        output.writeUInt32(5, scaling_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feePercentage_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, feePercentage_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(communityPoolRewardRatio_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, communityPoolRewardRatio_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(engagementRewardRatio_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, engagementRewardRatio_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorRewardRatio_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, validatorRewardRatio_);
+      }
+      if (autoUnjail_ != false) {
+        output.writeBool(10, autoUnjail_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(doubleSignSlashRatio_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, doubleSignSlashRatio_);
+      }
+      if (verifyValidators_ != false) {
+        output.writeBool(12, verifyValidators_);
+      }
+      if (offlineJailDuration_ != null) {
+        output.writeMessage(13, getOfflineJailDuration());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (minPoints_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, minPoints_);
+      }
+      if (maxValidators_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, maxValidators_);
+      }
+      if (epochLength_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getEpochLength());
+      }
+      if (epochReward_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getEpochReward());
+      }
+      if (scaling_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(5, scaling_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feePercentage_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, feePercentage_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(communityPoolRewardRatio_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, communityPoolRewardRatio_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(engagementRewardRatio_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, engagementRewardRatio_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorRewardRatio_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, validatorRewardRatio_);
+      }
+      if (autoUnjail_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(10, autoUnjail_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(doubleSignSlashRatio_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, doubleSignSlashRatio_);
+      }
+      if (verifyValidators_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(12, verifyValidators_);
+      }
+      if (offlineJailDuration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getOfflineJailDuration());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig other = (com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig) obj;
+
+      if (getMinPoints()
+          != other.getMinPoints()) return false;
+      if (getMaxValidators()
+          != other.getMaxValidators()) return false;
+      if (hasEpochLength() != other.hasEpochLength()) return false;
+      if (hasEpochLength()) {
+        if (!getEpochLength()
+            .equals(other.getEpochLength())) return false;
+      }
+      if (hasEpochReward() != other.hasEpochReward()) return false;
+      if (hasEpochReward()) {
+        if (!getEpochReward()
+            .equals(other.getEpochReward())) return false;
+      }
+      if (getScaling()
+          != other.getScaling()) return false;
+      if (!getFeePercentage()
+          .equals(other.getFeePercentage())) return false;
+      if (!getCommunityPoolRewardRatio()
+          .equals(other.getCommunityPoolRewardRatio())) return false;
+      if (!getEngagementRewardRatio()
+          .equals(other.getEngagementRewardRatio())) return false;
+      if (!getValidatorRewardRatio()
+          .equals(other.getValidatorRewardRatio())) return false;
+      if (getAutoUnjail()
+          != other.getAutoUnjail()) return false;
+      if (!getDoubleSignSlashRatio()
+          .equals(other.getDoubleSignSlashRatio())) return false;
+      if (getVerifyValidators()
+          != other.getVerifyValidators()) return false;
+      if (hasOfflineJailDuration() != other.hasOfflineJailDuration()) return false;
+      if (hasOfflineJailDuration()) {
+        if (!getOfflineJailDuration()
+            .equals(other.getOfflineJailDuration())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MIN_POINTS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMinPoints());
+      hash = (37 * hash) + MAX_VALIDATORS_FIELD_NUMBER;
+      hash = (53 * hash) + getMaxValidators();
+      if (hasEpochLength()) {
+        hash = (37 * hash) + EPOCH_LENGTH_FIELD_NUMBER;
+        hash = (53 * hash) + getEpochLength().hashCode();
+      }
+      if (hasEpochReward()) {
+        hash = (37 * hash) + EPOCH_REWARD_FIELD_NUMBER;
+        hash = (53 * hash) + getEpochReward().hashCode();
+      }
+      hash = (37 * hash) + SCALING_FIELD_NUMBER;
+      hash = (53 * hash) + getScaling();
+      hash = (37 * hash) + FEE_PERCENTAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getFeePercentage().hashCode();
+      hash = (37 * hash) + COMMUNITY_POOL_REWARD_RATIO_FIELD_NUMBER;
+      hash = (53 * hash) + getCommunityPoolRewardRatio().hashCode();
+      hash = (37 * hash) + ENGAGEMENT_REWARD_RATIO_FIELD_NUMBER;
+      hash = (53 * hash) + getEngagementRewardRatio().hashCode();
+      hash = (37 * hash) + VALIDATOR_REWARD_RATIO_FIELD_NUMBER;
+      hash = (53 * hash) + getValidatorRewardRatio().hashCode();
+      hash = (37 * hash) + AUTO_UNJAIL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAutoUnjail());
+      hash = (37 * hash) + DOUBLE_SIGN_SLASH_RATIO_FIELD_NUMBER;
+      hash = (53 * hash) + getDoubleSignSlashRatio().hashCode();
+      hash = (37 * hash) + VERIFY_VALIDATORS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getVerifyValidators());
+      if (hasOfflineJailDuration()) {
+        hash = (37 * hash) + OFFLINEJAILDURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getOfflineJailDuration().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ValsetContractConfig initial setup config
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.ValsetContractConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.ValsetContractConfig)
+        com.confio.poe.v1beta1.GenesisProto.ValsetContractConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_ValsetContractConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_ValsetContractConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig.class, com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        minPoints_ = 0L;
+        maxValidators_ = 0;
+        epochLength_ = null;
+        if (epochLengthBuilder_ != null) {
+          epochLengthBuilder_.dispose();
+          epochLengthBuilder_ = null;
+        }
+        epochReward_ = null;
+        if (epochRewardBuilder_ != null) {
+          epochRewardBuilder_.dispose();
+          epochRewardBuilder_ = null;
+        }
+        scaling_ = 0;
+        feePercentage_ = "";
+        communityPoolRewardRatio_ = "";
+        engagementRewardRatio_ = "";
+        validatorRewardRatio_ = "";
+        autoUnjail_ = false;
+        doubleSignSlashRatio_ = "";
+        verifyValidators_ = false;
+        offlineJailDuration_ = null;
+        if (offlineJailDurationBuilder_ != null) {
+          offlineJailDurationBuilder_.dispose();
+          offlineJailDurationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_ValsetContractConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig build() {
+        com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig buildPartial() {
+        com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig result = new com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.minPoints_ = minPoints_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.maxValidators_ = maxValidators_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.epochLength_ = epochLengthBuilder_ == null
+              ? epochLength_
+              : epochLengthBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.epochReward_ = epochRewardBuilder_ == null
+              ? epochReward_
+              : epochRewardBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.scaling_ = scaling_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.feePercentage_ = feePercentage_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.communityPoolRewardRatio_ = communityPoolRewardRatio_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.engagementRewardRatio_ = engagementRewardRatio_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.validatorRewardRatio_ = validatorRewardRatio_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.autoUnjail_ = autoUnjail_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.doubleSignSlashRatio_ = doubleSignSlashRatio_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.verifyValidators_ = verifyValidators_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.offlineJailDuration_ = offlineJailDurationBuilder_ == null
+              ? offlineJailDuration_
+              : offlineJailDurationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig) {
+          return mergeFrom((com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig other) {
+        if (other == com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig.getDefaultInstance()) return this;
+        if (other.getMinPoints() != 0L) {
+          setMinPoints(other.getMinPoints());
+        }
+        if (other.getMaxValidators() != 0) {
+          setMaxValidators(other.getMaxValidators());
+        }
+        if (other.hasEpochLength()) {
+          mergeEpochLength(other.getEpochLength());
+        }
+        if (other.hasEpochReward()) {
+          mergeEpochReward(other.getEpochReward());
+        }
+        if (other.getScaling() != 0) {
+          setScaling(other.getScaling());
+        }
+        if (!other.getFeePercentage().isEmpty()) {
+          feePercentage_ = other.feePercentage_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getCommunityPoolRewardRatio().isEmpty()) {
+          communityPoolRewardRatio_ = other.communityPoolRewardRatio_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (!other.getEngagementRewardRatio().isEmpty()) {
+          engagementRewardRatio_ = other.engagementRewardRatio_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        if (!other.getValidatorRewardRatio().isEmpty()) {
+          validatorRewardRatio_ = other.validatorRewardRatio_;
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
+        if (other.getAutoUnjail() != false) {
+          setAutoUnjail(other.getAutoUnjail());
+        }
+        if (!other.getDoubleSignSlashRatio().isEmpty()) {
+          doubleSignSlashRatio_ = other.doubleSignSlashRatio_;
+          bitField0_ |= 0x00000400;
+          onChanged();
+        }
+        if (other.getVerifyValidators() != false) {
+          setVerifyValidators(other.getVerifyValidators());
+        }
+        if (other.hasOfflineJailDuration()) {
+          mergeOfflineJailDuration(other.getOfflineJailDuration());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                minPoints_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                maxValidators_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                input.readMessage(
+                    getEpochLengthFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getEpochRewardFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                scaling_ = input.readUInt32();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 50: {
+                feePercentage_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                communityPoolRewardRatio_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                engagementRewardRatio_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                validatorRewardRatio_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              case 80: {
+                autoUnjail_ = input.readBool();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 80
+              case 90: {
+                doubleSignSlashRatio_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
+              case 96: {
+                verifyValidators_ = input.readBool();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 96
+              case 106: {
+                input.readMessage(
+                    getOfflineJailDurationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 106
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long minPoints_ ;
+      /**
+       * <code>uint64 min_points = 1 [json_name = "minPoints"];</code>
+       * @return The minPoints.
+       */
+      @java.lang.Override
+      public long getMinPoints() {
+        return minPoints_;
+      }
+      /**
+       * <code>uint64 min_points = 1 [json_name = "minPoints"];</code>
+       * @param value The minPoints to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinPoints(long value) {
+
+        minPoints_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 min_points = 1 [json_name = "minPoints"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinPoints() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        minPoints_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int maxValidators_ ;
+      /**
+       * <pre>
+       * MaxValidators The maximum number of validators that can be included in the
+       * Tendermint validator set.
+       * </pre>
+       *
+       * <code>uint32 max_validators = 2 [json_name = "maxValidators"];</code>
+       * @return The maxValidators.
+       */
+      @java.lang.Override
+      public int getMaxValidators() {
+        return maxValidators_;
+      }
+      /**
+       * <pre>
+       * MaxValidators The maximum number of validators that can be included in the
+       * Tendermint validator set.
+       * </pre>
+       *
+       * <code>uint32 max_validators = 2 [json_name = "maxValidators"];</code>
+       * @param value The maxValidators to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxValidators(int value) {
+
+        maxValidators_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * MaxValidators The maximum number of validators that can be included in the
+       * Tendermint validator set.
+       * </pre>
+       *
+       * <code>uint32 max_validators = 2 [json_name = "maxValidators"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxValidators() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        maxValidators_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration epochLength_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> epochLengthBuilder_;
+      /**
+       * <pre>
+       * EpochLength We update the Tendermint validator set only once per epoch.
+       * Epoch # is env.block.time/epoch_length (round down). The first block with a
+       * new epoch number will trigger a new validator calculation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration epoch_length = 3 [json_name = "epochLength", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       * @return Whether the epochLength field is set.
+       */
+      public boolean hasEpochLength() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * EpochLength We update the Tendermint validator set only once per epoch.
+       * Epoch # is env.block.time/epoch_length (round down). The first block with a
+       * new epoch number will trigger a new validator calculation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration epoch_length = 3 [json_name = "epochLength", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       * @return The epochLength.
+       */
+      public com.google.protobuf.Duration getEpochLength() {
+        if (epochLengthBuilder_ == null) {
+          return epochLength_ == null ? com.google.protobuf.Duration.getDefaultInstance() : epochLength_;
+        } else {
+          return epochLengthBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * EpochLength We update the Tendermint validator set only once per epoch.
+       * Epoch # is env.block.time/epoch_length (round down). The first block with a
+       * new epoch number will trigger a new validator calculation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration epoch_length = 3 [json_name = "epochLength", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setEpochLength(com.google.protobuf.Duration value) {
+        if (epochLengthBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          epochLength_ = value;
+        } else {
+          epochLengthBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EpochLength We update the Tendermint validator set only once per epoch.
+       * Epoch # is env.block.time/epoch_length (round down). The first block with a
+       * new epoch number will trigger a new validator calculation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration epoch_length = 3 [json_name = "epochLength", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setEpochLength(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (epochLengthBuilder_ == null) {
+          epochLength_ = builderForValue.build();
+        } else {
+          epochLengthBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EpochLength We update the Tendermint validator set only once per epoch.
+       * Epoch # is env.block.time/epoch_length (round down). The first block with a
+       * new epoch number will trigger a new validator calculation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration epoch_length = 3 [json_name = "epochLength", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeEpochLength(com.google.protobuf.Duration value) {
+        if (epochLengthBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            epochLength_ != null &&
+            epochLength_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getEpochLengthBuilder().mergeFrom(value);
+          } else {
+            epochLength_ = value;
+          }
+        } else {
+          epochLengthBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EpochLength We update the Tendermint validator set only once per epoch.
+       * Epoch # is env.block.time/epoch_length (round down). The first block with a
+       * new epoch number will trigger a new validator calculation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration epoch_length = 3 [json_name = "epochLength", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearEpochLength() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        epochLength_ = null;
+        if (epochLengthBuilder_ != null) {
+          epochLengthBuilder_.dispose();
+          epochLengthBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EpochLength We update the Tendermint validator set only once per epoch.
+       * Epoch # is env.block.time/epoch_length (round down). The first block with a
+       * new epoch number will trigger a new validator calculation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration epoch_length = 3 [json_name = "epochLength", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getEpochLengthBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getEpochLengthFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * EpochLength We update the Tendermint validator set only once per epoch.
+       * Epoch # is env.block.time/epoch_length (round down). The first block with a
+       * new epoch number will trigger a new validator calculation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration epoch_length = 3 [json_name = "epochLength", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getEpochLengthOrBuilder() {
+        if (epochLengthBuilder_ != null) {
+          return epochLengthBuilder_.getMessageOrBuilder();
+        } else {
+          return epochLength_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : epochLength_;
+        }
+      }
+      /**
+       * <pre>
+       * EpochLength We update the Tendermint validator set only once per epoch.
+       * Epoch # is env.block.time/epoch_length (round down). The first block with a
+       * new epoch number will trigger a new validator calculation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration epoch_length = 3 [json_name = "epochLength", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getEpochLengthFieldBuilder() {
+        if (epochLengthBuilder_ == null) {
+          epochLengthBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getEpochLength(),
+                  getParentForChildren(),
+                  isClean());
+          epochLength_ = null;
+        }
+        return epochLengthBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin epochReward_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> epochRewardBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin epoch_reward = 4 [json_name = "epochReward", (.gogoproto.nullable) = false];</code>
+       * @return Whether the epochReward field is set.
+       */
+      public boolean hasEpochReward() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin epoch_reward = 4 [json_name = "epochReward", (.gogoproto.nullable) = false];</code>
+       * @return The epochReward.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getEpochReward() {
+        if (epochRewardBuilder_ == null) {
+          return epochReward_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : epochReward_;
+        } else {
+          return epochRewardBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin epoch_reward = 4 [json_name = "epochReward", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setEpochReward(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (epochRewardBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          epochReward_ = value;
+        } else {
+          epochRewardBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin epoch_reward = 4 [json_name = "epochReward", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setEpochReward(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (epochRewardBuilder_ == null) {
+          epochReward_ = builderForValue.build();
+        } else {
+          epochRewardBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin epoch_reward = 4 [json_name = "epochReward", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeEpochReward(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (epochRewardBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            epochReward_ != null &&
+            epochReward_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getEpochRewardBuilder().mergeFrom(value);
+          } else {
+            epochReward_ = value;
+          }
+        } else {
+          epochRewardBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin epoch_reward = 4 [json_name = "epochReward", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearEpochReward() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        epochReward_ = null;
+        if (epochRewardBuilder_ != null) {
+          epochRewardBuilder_.dispose();
+          epochRewardBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin epoch_reward = 4 [json_name = "epochReward", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getEpochRewardBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getEpochRewardFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin epoch_reward = 4 [json_name = "epochReward", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getEpochRewardOrBuilder() {
+        if (epochRewardBuilder_ != null) {
+          return epochRewardBuilder_.getMessageOrBuilder();
+        } else {
+          return epochReward_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : epochReward_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin epoch_reward = 4 [json_name = "epochReward", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getEpochRewardFieldBuilder() {
+        if (epochRewardBuilder_ == null) {
+          epochRewardBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getEpochReward(),
+                  getParentForChildren(),
+                  isClean());
+          epochReward_ = null;
+        }
+        return epochRewardBuilder_;
+      }
+
+      private int scaling_ ;
+      /**
+       * <pre>
+       * Scaling is the factor to multiply cw4-group weights to produce the
+       * Tendermint validator power
+       * </pre>
+       *
+       * <code>uint32 scaling = 5 [json_name = "scaling"];</code>
+       * @return The scaling.
+       */
+      @java.lang.Override
+      public int getScaling() {
+        return scaling_;
+      }
+      /**
+       * <pre>
+       * Scaling is the factor to multiply cw4-group weights to produce the
+       * Tendermint validator power
+       * </pre>
+       *
+       * <code>uint32 scaling = 5 [json_name = "scaling"];</code>
+       * @param value The scaling to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScaling(int value) {
+
+        scaling_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Scaling is the factor to multiply cw4-group weights to produce the
+       * Tendermint validator power
+       * </pre>
+       *
+       * <code>uint32 scaling = 5 [json_name = "scaling"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScaling() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        scaling_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object feePercentage_ = "";
+      /**
+       * <pre>
+       * FeePercentage is the percentage of total accumulated fees that is
+       * subtracted from tokens minted as rewards. 50% by default. To disable this
+       * feature just set it to 0 (which effectively means that fees don't affect
+       * the per-epoch reward).
+       * </pre>
+       *
+       * <code>string fee_percentage = 6 [json_name = "feePercentage", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The feePercentage.
+       */
+      public java.lang.String getFeePercentage() {
+        java.lang.Object ref = feePercentage_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          feePercentage_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * FeePercentage is the percentage of total accumulated fees that is
+       * subtracted from tokens minted as rewards. 50% by default. To disable this
+       * feature just set it to 0 (which effectively means that fees don't affect
+       * the per-epoch reward).
+       * </pre>
+       *
+       * <code>string fee_percentage = 6 [json_name = "feePercentage", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for feePercentage.
+       */
+      public com.google.protobuf.ByteString
+          getFeePercentageBytes() {
+        java.lang.Object ref = feePercentage_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          feePercentage_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * FeePercentage is the percentage of total accumulated fees that is
+       * subtracted from tokens minted as rewards. 50% by default. To disable this
+       * feature just set it to 0 (which effectively means that fees don't affect
+       * the per-epoch reward).
+       * </pre>
+       *
+       * <code>string fee_percentage = 6 [json_name = "feePercentage", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The feePercentage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeePercentage(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        feePercentage_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * FeePercentage is the percentage of total accumulated fees that is
+       * subtracted from tokens minted as rewards. 50% by default. To disable this
+       * feature just set it to 0 (which effectively means that fees don't affect
+       * the per-epoch reward).
+       * </pre>
+       *
+       * <code>string fee_percentage = 6 [json_name = "feePercentage", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeePercentage() {
+        feePercentage_ = getDefaultInstance().getFeePercentage();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * FeePercentage is the percentage of total accumulated fees that is
+       * subtracted from tokens minted as rewards. 50% by default. To disable this
+       * feature just set it to 0 (which effectively means that fees don't affect
+       * the per-epoch reward).
+       * </pre>
+       *
+       * <code>string fee_percentage = 6 [json_name = "feePercentage", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for feePercentage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeePercentageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        feePercentage_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object communityPoolRewardRatio_ = "";
+      /**
+       * <pre>
+       * CommunityPoolRewardRation in percentage
+       * </pre>
+       *
+       * <code>string community_pool_reward_ratio = 7 [json_name = "communityPoolRewardRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The communityPoolRewardRatio.
+       */
+      public java.lang.String getCommunityPoolRewardRatio() {
+        java.lang.Object ref = communityPoolRewardRatio_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          communityPoolRewardRatio_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * CommunityPoolRewardRation in percentage
+       * </pre>
+       *
+       * <code>string community_pool_reward_ratio = 7 [json_name = "communityPoolRewardRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for communityPoolRewardRatio.
+       */
+      public com.google.protobuf.ByteString
+          getCommunityPoolRewardRatioBytes() {
+        java.lang.Object ref = communityPoolRewardRatio_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          communityPoolRewardRatio_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * CommunityPoolRewardRation in percentage
+       * </pre>
+       *
+       * <code>string community_pool_reward_ratio = 7 [json_name = "communityPoolRewardRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The communityPoolRewardRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommunityPoolRewardRatio(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        communityPoolRewardRatio_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * CommunityPoolRewardRation in percentage
+       * </pre>
+       *
+       * <code>string community_pool_reward_ratio = 7 [json_name = "communityPoolRewardRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCommunityPoolRewardRatio() {
+        communityPoolRewardRatio_ = getDefaultInstance().getCommunityPoolRewardRatio();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * CommunityPoolRewardRation in percentage
+       * </pre>
+       *
+       * <code>string community_pool_reward_ratio = 7 [json_name = "communityPoolRewardRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for communityPoolRewardRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommunityPoolRewardRatioBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        communityPoolRewardRatio_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object engagementRewardRatio_ = "";
+      /**
+       * <pre>
+       * EngagementRewardRatio reward ration in percentage for all
+       * </pre>
+       *
+       * <code>string engagement_reward_ratio = 8 [json_name = "engagementRewardRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The engagementRewardRatio.
+       */
+      public java.lang.String getEngagementRewardRatio() {
+        java.lang.Object ref = engagementRewardRatio_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          engagementRewardRatio_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * EngagementRewardRatio reward ration in percentage for all
+       * </pre>
+       *
+       * <code>string engagement_reward_ratio = 8 [json_name = "engagementRewardRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for engagementRewardRatio.
+       */
+      public com.google.protobuf.ByteString
+          getEngagementRewardRatioBytes() {
+        java.lang.Object ref = engagementRewardRatio_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          engagementRewardRatio_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * EngagementRewardRatio reward ration in percentage for all
+       * </pre>
+       *
+       * <code>string engagement_reward_ratio = 8 [json_name = "engagementRewardRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The engagementRewardRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEngagementRewardRatio(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        engagementRewardRatio_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EngagementRewardRatio reward ration in percentage for all
+       * </pre>
+       *
+       * <code>string engagement_reward_ratio = 8 [json_name = "engagementRewardRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEngagementRewardRatio() {
+        engagementRewardRatio_ = getDefaultInstance().getEngagementRewardRatio();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EngagementRewardRatio reward ration in percentage for all
+       * </pre>
+       *
+       * <code>string engagement_reward_ratio = 8 [json_name = "engagementRewardRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for engagementRewardRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEngagementRewardRatioBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        engagementRewardRatio_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object validatorRewardRatio_ = "";
+      /**
+       * <pre>
+       * ValidatorRewardRation in percentage for all
+       * </pre>
+       *
+       * <code>string validator_reward_ratio = 9 [json_name = "validatorRewardRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The validatorRewardRatio.
+       */
+      public java.lang.String getValidatorRewardRatio() {
+        java.lang.Object ref = validatorRewardRatio_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          validatorRewardRatio_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ValidatorRewardRation in percentage for all
+       * </pre>
+       *
+       * <code>string validator_reward_ratio = 9 [json_name = "validatorRewardRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for validatorRewardRatio.
+       */
+      public com.google.protobuf.ByteString
+          getValidatorRewardRatioBytes() {
+        java.lang.Object ref = validatorRewardRatio_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          validatorRewardRatio_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ValidatorRewardRation in percentage for all
+       * </pre>
+       *
+       * <code>string validator_reward_ratio = 9 [json_name = "validatorRewardRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The validatorRewardRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorRewardRatio(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        validatorRewardRatio_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ValidatorRewardRation in percentage for all
+       * </pre>
+       *
+       * <code>string validator_reward_ratio = 9 [json_name = "validatorRewardRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidatorRewardRatio() {
+        validatorRewardRatio_ = getDefaultInstance().getValidatorRewardRatio();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ValidatorRewardRation in percentage for all
+       * </pre>
+       *
+       * <code>string validator_reward_ratio = 9 [json_name = "validatorRewardRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for validatorRewardRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorRewardRatioBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        validatorRewardRatio_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+
+      private boolean autoUnjail_ ;
+      /**
+       * <pre>
+       * AutoUnjail if set to true, we will auto-unjail any validator after their
+       * jailtime is over.
+       * </pre>
+       *
+       * <code>bool auto_unjail = 10 [json_name = "autoUnjail"];</code>
+       * @return The autoUnjail.
+       */
+      @java.lang.Override
+      public boolean getAutoUnjail() {
+        return autoUnjail_;
+      }
+      /**
+       * <pre>
+       * AutoUnjail if set to true, we will auto-unjail any validator after their
+       * jailtime is over.
+       * </pre>
+       *
+       * <code>bool auto_unjail = 10 [json_name = "autoUnjail"];</code>
+       * @param value The autoUnjail to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAutoUnjail(boolean value) {
+
+        autoUnjail_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * AutoUnjail if set to true, we will auto-unjail any validator after their
+       * jailtime is over.
+       * </pre>
+       *
+       * <code>bool auto_unjail = 10 [json_name = "autoUnjail"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAutoUnjail() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        autoUnjail_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object doubleSignSlashRatio_ = "";
+      /**
+       * <pre>
+       * DoubleSignSlashRatio Validators who are caught double signing are jailed
+       * forever and their bonded tokens are slashed based on this value.
+       * </pre>
+       *
+       * <code>string double_sign_slash_ratio = 11 [json_name = "doubleSignSlashRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The doubleSignSlashRatio.
+       */
+      public java.lang.String getDoubleSignSlashRatio() {
+        java.lang.Object ref = doubleSignSlashRatio_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          doubleSignSlashRatio_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * DoubleSignSlashRatio Validators who are caught double signing are jailed
+       * forever and their bonded tokens are slashed based on this value.
+       * </pre>
+       *
+       * <code>string double_sign_slash_ratio = 11 [json_name = "doubleSignSlashRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for doubleSignSlashRatio.
+       */
+      public com.google.protobuf.ByteString
+          getDoubleSignSlashRatioBytes() {
+        java.lang.Object ref = doubleSignSlashRatio_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          doubleSignSlashRatio_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * DoubleSignSlashRatio Validators who are caught double signing are jailed
+       * forever and their bonded tokens are slashed based on this value.
+       * </pre>
+       *
+       * <code>string double_sign_slash_ratio = 11 [json_name = "doubleSignSlashRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The doubleSignSlashRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDoubleSignSlashRatio(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        doubleSignSlashRatio_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DoubleSignSlashRatio Validators who are caught double signing are jailed
+       * forever and their bonded tokens are slashed based on this value.
+       * </pre>
+       *
+       * <code>string double_sign_slash_ratio = 11 [json_name = "doubleSignSlashRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDoubleSignSlashRatio() {
+        doubleSignSlashRatio_ = getDefaultInstance().getDoubleSignSlashRatio();
+        bitField0_ = (bitField0_ & ~0x00000400);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DoubleSignSlashRatio Validators who are caught double signing are jailed
+       * forever and their bonded tokens are slashed based on this value.
+       * </pre>
+       *
+       * <code>string double_sign_slash_ratio = 11 [json_name = "doubleSignSlashRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for doubleSignSlashRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDoubleSignSlashRatioBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        doubleSignSlashRatio_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+
+      private boolean verifyValidators_ ;
+      /**
+       * <pre>
+       * When a validator joins the valset, verify they sign the first block since
+       * joining or jail them for a period otherwise.
+       *
+       * The verification happens every time the validator becomes an active
+       * validator, including when they are unjailed or when they just gain enough
+       * power to participate.
+       * </pre>
+       *
+       * <code>bool verify_validators = 12 [json_name = "verifyValidators"];</code>
+       * @return The verifyValidators.
+       */
+      @java.lang.Override
+      public boolean getVerifyValidators() {
+        return verifyValidators_;
+      }
+      /**
+       * <pre>
+       * When a validator joins the valset, verify they sign the first block since
+       * joining or jail them for a period otherwise.
+       *
+       * The verification happens every time the validator becomes an active
+       * validator, including when they are unjailed or when they just gain enough
+       * power to participate.
+       * </pre>
+       *
+       * <code>bool verify_validators = 12 [json_name = "verifyValidators"];</code>
+       * @param value The verifyValidators to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVerifyValidators(boolean value) {
+
+        verifyValidators_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * When a validator joins the valset, verify they sign the first block since
+       * joining or jail them for a period otherwise.
+       *
+       * The verification happens every time the validator becomes an active
+       * validator, including when they are unjailed or when they just gain enough
+       * power to participate.
+       * </pre>
+       *
+       * <code>bool verify_validators = 12 [json_name = "verifyValidators"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVerifyValidators() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        verifyValidators_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration offlineJailDuration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> offlineJailDurationBuilder_;
+      /**
+       * <pre>
+       * OfflineJailDuration duration to jail a validator for in case they don't
+       * sign their first epoch boundary block. After the period, they have to pass
+       * verification again, ad infinitum.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration offlineJailDuration = 13 [json_name = "offlineJailDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       * @return Whether the offlineJailDuration field is set.
+       */
+      public boolean hasOfflineJailDuration() {
+        return ((bitField0_ & 0x00001000) != 0);
+      }
+      /**
+       * <pre>
+       * OfflineJailDuration duration to jail a validator for in case they don't
+       * sign their first epoch boundary block. After the period, they have to pass
+       * verification again, ad infinitum.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration offlineJailDuration = 13 [json_name = "offlineJailDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       * @return The offlineJailDuration.
+       */
+      public com.google.protobuf.Duration getOfflineJailDuration() {
+        if (offlineJailDurationBuilder_ == null) {
+          return offlineJailDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : offlineJailDuration_;
+        } else {
+          return offlineJailDurationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * OfflineJailDuration duration to jail a validator for in case they don't
+       * sign their first epoch boundary block. After the period, they have to pass
+       * verification again, ad infinitum.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration offlineJailDuration = 13 [json_name = "offlineJailDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setOfflineJailDuration(com.google.protobuf.Duration value) {
+        if (offlineJailDurationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          offlineJailDuration_ = value;
+        } else {
+          offlineJailDurationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * OfflineJailDuration duration to jail a validator for in case they don't
+       * sign their first epoch boundary block. After the period, they have to pass
+       * verification again, ad infinitum.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration offlineJailDuration = 13 [json_name = "offlineJailDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setOfflineJailDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (offlineJailDurationBuilder_ == null) {
+          offlineJailDuration_ = builderForValue.build();
+        } else {
+          offlineJailDurationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * OfflineJailDuration duration to jail a validator for in case they don't
+       * sign their first epoch boundary block. After the period, they have to pass
+       * verification again, ad infinitum.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration offlineJailDuration = 13 [json_name = "offlineJailDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeOfflineJailDuration(com.google.protobuf.Duration value) {
+        if (offlineJailDurationBuilder_ == null) {
+          if (((bitField0_ & 0x00001000) != 0) &&
+            offlineJailDuration_ != null &&
+            offlineJailDuration_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getOfflineJailDurationBuilder().mergeFrom(value);
+          } else {
+            offlineJailDuration_ = value;
+          }
+        } else {
+          offlineJailDurationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * OfflineJailDuration duration to jail a validator for in case they don't
+       * sign their first epoch boundary block. After the period, they have to pass
+       * verification again, ad infinitum.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration offlineJailDuration = 13 [json_name = "offlineJailDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearOfflineJailDuration() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        offlineJailDuration_ = null;
+        if (offlineJailDurationBuilder_ != null) {
+          offlineJailDurationBuilder_.dispose();
+          offlineJailDurationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * OfflineJailDuration duration to jail a validator for in case they don't
+       * sign their first epoch boundary block. After the period, they have to pass
+       * verification again, ad infinitum.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration offlineJailDuration = 13 [json_name = "offlineJailDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getOfflineJailDurationBuilder() {
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return getOfflineJailDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * OfflineJailDuration duration to jail a validator for in case they don't
+       * sign their first epoch boundary block. After the period, they have to pass
+       * verification again, ad infinitum.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration offlineJailDuration = 13 [json_name = "offlineJailDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getOfflineJailDurationOrBuilder() {
+        if (offlineJailDurationBuilder_ != null) {
+          return offlineJailDurationBuilder_.getMessageOrBuilder();
+        } else {
+          return offlineJailDuration_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : offlineJailDuration_;
+        }
+      }
+      /**
+       * <pre>
+       * OfflineJailDuration duration to jail a validator for in case they don't
+       * sign their first epoch boundary block. After the period, they have to pass
+       * verification again, ad infinitum.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration offlineJailDuration = 13 [json_name = "offlineJailDuration", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getOfflineJailDurationFieldBuilder() {
+        if (offlineJailDurationBuilder_ == null) {
+          offlineJailDurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getOfflineJailDuration(),
+                  getParentForChildren(),
+                  isClean());
+          offlineJailDuration_ = null;
+        }
+        return offlineJailDurationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.ValsetContractConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.ValsetContractConfig)
+    private static final com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig();
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ValsetContractConfig>
+        PARSER = new com.google.protobuf.AbstractParser<ValsetContractConfig>() {
+      @java.lang.Override
+      public ValsetContractConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ValsetContractConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ValsetContractConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.ValsetContractConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EngagementContractConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.EngagementContractConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.google.protobuf.Duration halflife = 1 [json_name = "halflife", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the halflife field is set.
+     */
+    boolean hasHalflife();
+    /**
+     * <code>.google.protobuf.Duration halflife = 1 [json_name = "halflife", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return The halflife.
+     */
+    com.google.protobuf.Duration getHalflife();
+    /**
+     * <code>.google.protobuf.Duration halflife = 1 [json_name = "halflife", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getHalflifeOrBuilder();
+  }
+  /**
+   * <pre>
+   * EngagementContractConfig initial setup config
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.EngagementContractConfig}
+   */
+  public static final class EngagementContractConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.EngagementContractConfig)
+      EngagementContractConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EngagementContractConfig.newBuilder() to construct.
+    private EngagementContractConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EngagementContractConfig() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EngagementContractConfig();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_EngagementContractConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_EngagementContractConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig.class, com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig.Builder.class);
+    }
+
+    public static final int HALFLIFE_FIELD_NUMBER = 1;
+    private com.google.protobuf.Duration halflife_;
+    /**
+     * <code>.google.protobuf.Duration halflife = 1 [json_name = "halflife", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the halflife field is set.
+     */
+    @java.lang.Override
+    public boolean hasHalflife() {
+      return halflife_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Duration halflife = 1 [json_name = "halflife", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return The halflife.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getHalflife() {
+      return halflife_ == null ? com.google.protobuf.Duration.getDefaultInstance() : halflife_;
+    }
+    /**
+     * <code>.google.protobuf.Duration halflife = 1 [json_name = "halflife", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getHalflifeOrBuilder() {
+      return halflife_ == null ? com.google.protobuf.Duration.getDefaultInstance() : halflife_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (halflife_ != null) {
+        output.writeMessage(1, getHalflife());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (halflife_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getHalflife());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig other = (com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig) obj;
+
+      if (hasHalflife() != other.hasHalflife()) return false;
+      if (hasHalflife()) {
+        if (!getHalflife()
+            .equals(other.getHalflife())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasHalflife()) {
+        hash = (37 * hash) + HALFLIFE_FIELD_NUMBER;
+        hash = (53 * hash) + getHalflife().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EngagementContractConfig initial setup config
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.EngagementContractConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.EngagementContractConfig)
+        com.confio.poe.v1beta1.GenesisProto.EngagementContractConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_EngagementContractConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_EngagementContractConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig.class, com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        halflife_ = null;
+        if (halflifeBuilder_ != null) {
+          halflifeBuilder_.dispose();
+          halflifeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_EngagementContractConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig build() {
+        com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig buildPartial() {
+        com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig result = new com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.halflife_ = halflifeBuilder_ == null
+              ? halflife_
+              : halflifeBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig) {
+          return mergeFrom((com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig other) {
+        if (other == com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig.getDefaultInstance()) return this;
+        if (other.hasHalflife()) {
+          mergeHalflife(other.getHalflife());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getHalflifeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Duration halflife_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> halflifeBuilder_;
+      /**
+       * <code>.google.protobuf.Duration halflife = 1 [json_name = "halflife", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       * @return Whether the halflife field is set.
+       */
+      public boolean hasHalflife() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Duration halflife = 1 [json_name = "halflife", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       * @return The halflife.
+       */
+      public com.google.protobuf.Duration getHalflife() {
+        if (halflifeBuilder_ == null) {
+          return halflife_ == null ? com.google.protobuf.Duration.getDefaultInstance() : halflife_;
+        } else {
+          return halflifeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration halflife = 1 [json_name = "halflife", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setHalflife(com.google.protobuf.Duration value) {
+        if (halflifeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          halflife_ = value;
+        } else {
+          halflifeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration halflife = 1 [json_name = "halflife", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setHalflife(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (halflifeBuilder_ == null) {
+          halflife_ = builderForValue.build();
+        } else {
+          halflifeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration halflife = 1 [json_name = "halflife", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeHalflife(com.google.protobuf.Duration value) {
+        if (halflifeBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            halflife_ != null &&
+            halflife_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getHalflifeBuilder().mergeFrom(value);
+          } else {
+            halflife_ = value;
+          }
+        } else {
+          halflifeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration halflife = 1 [json_name = "halflife", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearHalflife() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        halflife_ = null;
+        if (halflifeBuilder_ != null) {
+          halflifeBuilder_.dispose();
+          halflifeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration halflife = 1 [json_name = "halflife", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getHalflifeBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getHalflifeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Duration halflife = 1 [json_name = "halflife", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getHalflifeOrBuilder() {
+        if (halflifeBuilder_ != null) {
+          return halflifeBuilder_.getMessageOrBuilder();
+        } else {
+          return halflife_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : halflife_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration halflife = 1 [json_name = "halflife", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getHalflifeFieldBuilder() {
+        if (halflifeBuilder_ == null) {
+          halflifeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getHalflife(),
+                  getParentForChildren(),
+                  isClean());
+          halflife_ = null;
+        }
+        return halflifeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.EngagementContractConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.EngagementContractConfig)
+    private static final com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig();
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EngagementContractConfig>
+        PARSER = new com.google.protobuf.AbstractParser<EngagementContractConfig>() {
+      @java.lang.Override
+      public EngagementContractConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EngagementContractConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EngagementContractConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.EngagementContractConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface OversightCommitteeContractConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.OversightCommitteeContractConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Name of TRUSTED_CIRCLE
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name of TRUSTED_CIRCLE
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * EscrowAmount The required escrow amount, in the default denom (utgd)
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin escrow_amount = 2 [json_name = "escrowAmount", (.gogoproto.nullable) = false];</code>
+     * @return Whether the escrowAmount field is set.
+     */
+    boolean hasEscrowAmount();
+    /**
+     * <pre>
+     * EscrowAmount The required escrow amount, in the default denom (utgd)
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin escrow_amount = 2 [json_name = "escrowAmount", (.gogoproto.nullable) = false];</code>
+     * @return The escrowAmount.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getEscrowAmount();
+    /**
+     * <pre>
+     * EscrowAmount The required escrow amount, in the default denom (utgd)
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin escrow_amount = 2 [json_name = "escrowAmount", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getEscrowAmountOrBuilder();
+
+    /**
+     * <pre>
+     * VotingRules rules for the tally
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.VotingRules voting_rules = 3 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+     * @return Whether the votingRules field is set.
+     */
+    boolean hasVotingRules();
+    /**
+     * <pre>
+     * VotingRules rules for the tally
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.VotingRules voting_rules = 3 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+     * @return The votingRules.
+     */
+    com.confio.poe.v1beta1.GenesisProto.VotingRules getVotingRules();
+    /**
+     * <pre>
+     * VotingRules rules for the tally
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.VotingRules voting_rules = 3 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+     */
+    com.confio.poe.v1beta1.GenesisProto.VotingRulesOrBuilder getVotingRulesOrBuilder();
+
+    /**
+     * <pre>
+     * DenyListContractAddress is an optional cw4 contract with list of addresses
+     * denied to be part of TrustedCircle
+     * </pre>
+     *
+     * <code>string deny_list_contract_address = 4 [json_name = "denyListContractAddress"];</code>
+     * @return The denyListContractAddress.
+     */
+    java.lang.String getDenyListContractAddress();
+    /**
+     * <pre>
+     * DenyListContractAddress is an optional cw4 contract with list of addresses
+     * denied to be part of TrustedCircle
+     * </pre>
+     *
+     * <code>string deny_list_contract_address = 4 [json_name = "denyListContractAddress"];</code>
+     * @return The bytes for denyListContractAddress.
+     */
+    com.google.protobuf.ByteString
+        getDenyListContractAddressBytes();
+  }
+  /**
+   * <pre>
+   * OversightCommitteeContractConfig initial setup config for the trusted circle
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.OversightCommitteeContractConfig}
+   */
+  public static final class OversightCommitteeContractConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.OversightCommitteeContractConfig)
+      OversightCommitteeContractConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use OversightCommitteeContractConfig.newBuilder() to construct.
+    private OversightCommitteeContractConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private OversightCommitteeContractConfig() {
+      name_ = "";
+      denyListContractAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new OversightCommitteeContractConfig();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_OversightCommitteeContractConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_OversightCommitteeContractConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig.class, com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * Name of TRUSTED_CIRCLE
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of TRUSTED_CIRCLE
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ESCROW_AMOUNT_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin escrowAmount_;
+    /**
+     * <pre>
+     * EscrowAmount The required escrow amount, in the default denom (utgd)
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin escrow_amount = 2 [json_name = "escrowAmount", (.gogoproto.nullable) = false];</code>
+     * @return Whether the escrowAmount field is set.
+     */
+    @java.lang.Override
+    public boolean hasEscrowAmount() {
+      return escrowAmount_ != null;
+    }
+    /**
+     * <pre>
+     * EscrowAmount The required escrow amount, in the default denom (utgd)
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin escrow_amount = 2 [json_name = "escrowAmount", (.gogoproto.nullable) = false];</code>
+     * @return The escrowAmount.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getEscrowAmount() {
+      return escrowAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : escrowAmount_;
+    }
+    /**
+     * <pre>
+     * EscrowAmount The required escrow amount, in the default denom (utgd)
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin escrow_amount = 2 [json_name = "escrowAmount", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getEscrowAmountOrBuilder() {
+      return escrowAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : escrowAmount_;
+    }
+
+    public static final int VOTING_RULES_FIELD_NUMBER = 3;
+    private com.confio.poe.v1beta1.GenesisProto.VotingRules votingRules_;
+    /**
+     * <pre>
+     * VotingRules rules for the tally
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.VotingRules voting_rules = 3 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+     * @return Whether the votingRules field is set.
+     */
+    @java.lang.Override
+    public boolean hasVotingRules() {
+      return votingRules_ != null;
+    }
+    /**
+     * <pre>
+     * VotingRules rules for the tally
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.VotingRules voting_rules = 3 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+     * @return The votingRules.
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.VotingRules getVotingRules() {
+      return votingRules_ == null ? com.confio.poe.v1beta1.GenesisProto.VotingRules.getDefaultInstance() : votingRules_;
+    }
+    /**
+     * <pre>
+     * VotingRules rules for the tally
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.VotingRules voting_rules = 3 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.VotingRulesOrBuilder getVotingRulesOrBuilder() {
+      return votingRules_ == null ? com.confio.poe.v1beta1.GenesisProto.VotingRules.getDefaultInstance() : votingRules_;
+    }
+
+    public static final int DENY_LIST_CONTRACT_ADDRESS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denyListContractAddress_ = "";
+    /**
+     * <pre>
+     * DenyListContractAddress is an optional cw4 contract with list of addresses
+     * denied to be part of TrustedCircle
+     * </pre>
+     *
+     * <code>string deny_list_contract_address = 4 [json_name = "denyListContractAddress"];</code>
+     * @return The denyListContractAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getDenyListContractAddress() {
+      java.lang.Object ref = denyListContractAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denyListContractAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * DenyListContractAddress is an optional cw4 contract with list of addresses
+     * denied to be part of TrustedCircle
+     * </pre>
+     *
+     * <code>string deny_list_contract_address = 4 [json_name = "denyListContractAddress"];</code>
+     * @return The bytes for denyListContractAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenyListContractAddressBytes() {
+      java.lang.Object ref = denyListContractAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denyListContractAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (escrowAmount_ != null) {
+        output.writeMessage(2, getEscrowAmount());
+      }
+      if (votingRules_ != null) {
+        output.writeMessage(3, getVotingRules());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denyListContractAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, denyListContractAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (escrowAmount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getEscrowAmount());
+      }
+      if (votingRules_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getVotingRules());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denyListContractAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, denyListContractAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig other = (com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (hasEscrowAmount() != other.hasEscrowAmount()) return false;
+      if (hasEscrowAmount()) {
+        if (!getEscrowAmount()
+            .equals(other.getEscrowAmount())) return false;
+      }
+      if (hasVotingRules() != other.hasVotingRules()) return false;
+      if (hasVotingRules()) {
+        if (!getVotingRules()
+            .equals(other.getVotingRules())) return false;
+      }
+      if (!getDenyListContractAddress()
+          .equals(other.getDenyListContractAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      if (hasEscrowAmount()) {
+        hash = (37 * hash) + ESCROW_AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getEscrowAmount().hashCode();
+      }
+      if (hasVotingRules()) {
+        hash = (37 * hash) + VOTING_RULES_FIELD_NUMBER;
+        hash = (53 * hash) + getVotingRules().hashCode();
+      }
+      hash = (37 * hash) + DENY_LIST_CONTRACT_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getDenyListContractAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * OversightCommitteeContractConfig initial setup config for the trusted circle
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.OversightCommitteeContractConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.OversightCommitteeContractConfig)
+        com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_OversightCommitteeContractConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_OversightCommitteeContractConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig.class, com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        name_ = "";
+        escrowAmount_ = null;
+        if (escrowAmountBuilder_ != null) {
+          escrowAmountBuilder_.dispose();
+          escrowAmountBuilder_ = null;
+        }
+        votingRules_ = null;
+        if (votingRulesBuilder_ != null) {
+          votingRulesBuilder_.dispose();
+          votingRulesBuilder_ = null;
+        }
+        denyListContractAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_OversightCommitteeContractConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig build() {
+        com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig buildPartial() {
+        com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig result = new com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.escrowAmount_ = escrowAmountBuilder_ == null
+              ? escrowAmount_
+              : escrowAmountBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.votingRules_ = votingRulesBuilder_ == null
+              ? votingRules_
+              : votingRulesBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.denyListContractAddress_ = denyListContractAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig) {
+          return mergeFrom((com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig other) {
+        if (other == com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasEscrowAmount()) {
+          mergeEscrowAmount(other.getEscrowAmount());
+        }
+        if (other.hasVotingRules()) {
+          mergeVotingRules(other.getVotingRules());
+        }
+        if (!other.getDenyListContractAddress().isEmpty()) {
+          denyListContractAddress_ = other.denyListContractAddress_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getEscrowAmountFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getVotingRulesFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                denyListContractAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name of TRUSTED_CIRCLE
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of TRUSTED_CIRCLE
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of TRUSTED_CIRCLE
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of TRUSTED_CIRCLE
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of TRUSTED_CIRCLE
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin escrowAmount_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> escrowAmountBuilder_;
+      /**
+       * <pre>
+       * EscrowAmount The required escrow amount, in the default denom (utgd)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin escrow_amount = 2 [json_name = "escrowAmount", (.gogoproto.nullable) = false];</code>
+       * @return Whether the escrowAmount field is set.
+       */
+      public boolean hasEscrowAmount() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * EscrowAmount The required escrow amount, in the default denom (utgd)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin escrow_amount = 2 [json_name = "escrowAmount", (.gogoproto.nullable) = false];</code>
+       * @return The escrowAmount.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getEscrowAmount() {
+        if (escrowAmountBuilder_ == null) {
+          return escrowAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : escrowAmount_;
+        } else {
+          return escrowAmountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * EscrowAmount The required escrow amount, in the default denom (utgd)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin escrow_amount = 2 [json_name = "escrowAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setEscrowAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (escrowAmountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          escrowAmount_ = value;
+        } else {
+          escrowAmountBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EscrowAmount The required escrow amount, in the default denom (utgd)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin escrow_amount = 2 [json_name = "escrowAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setEscrowAmount(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (escrowAmountBuilder_ == null) {
+          escrowAmount_ = builderForValue.build();
+        } else {
+          escrowAmountBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EscrowAmount The required escrow amount, in the default denom (utgd)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin escrow_amount = 2 [json_name = "escrowAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeEscrowAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (escrowAmountBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            escrowAmount_ != null &&
+            escrowAmount_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getEscrowAmountBuilder().mergeFrom(value);
+          } else {
+            escrowAmount_ = value;
+          }
+        } else {
+          escrowAmountBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EscrowAmount The required escrow amount, in the default denom (utgd)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin escrow_amount = 2 [json_name = "escrowAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearEscrowAmount() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        escrowAmount_ = null;
+        if (escrowAmountBuilder_ != null) {
+          escrowAmountBuilder_.dispose();
+          escrowAmountBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EscrowAmount The required escrow amount, in the default denom (utgd)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin escrow_amount = 2 [json_name = "escrowAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getEscrowAmountBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getEscrowAmountFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * EscrowAmount The required escrow amount, in the default denom (utgd)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin escrow_amount = 2 [json_name = "escrowAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getEscrowAmountOrBuilder() {
+        if (escrowAmountBuilder_ != null) {
+          return escrowAmountBuilder_.getMessageOrBuilder();
+        } else {
+          return escrowAmount_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : escrowAmount_;
+        }
+      }
+      /**
+       * <pre>
+       * EscrowAmount The required escrow amount, in the default denom (utgd)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin escrow_amount = 2 [json_name = "escrowAmount", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getEscrowAmountFieldBuilder() {
+        if (escrowAmountBuilder_ == null) {
+          escrowAmountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getEscrowAmount(),
+                  getParentForChildren(),
+                  isClean());
+          escrowAmount_ = null;
+        }
+        return escrowAmountBuilder_;
+      }
+
+      private com.confio.poe.v1beta1.GenesisProto.VotingRules votingRules_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.VotingRules, com.confio.poe.v1beta1.GenesisProto.VotingRules.Builder, com.confio.poe.v1beta1.GenesisProto.VotingRulesOrBuilder> votingRulesBuilder_;
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 3 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       * @return Whether the votingRules field is set.
+       */
+      public boolean hasVotingRules() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 3 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       * @return The votingRules.
+       */
+      public com.confio.poe.v1beta1.GenesisProto.VotingRules getVotingRules() {
+        if (votingRulesBuilder_ == null) {
+          return votingRules_ == null ? com.confio.poe.v1beta1.GenesisProto.VotingRules.getDefaultInstance() : votingRules_;
+        } else {
+          return votingRulesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 3 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setVotingRules(com.confio.poe.v1beta1.GenesisProto.VotingRules value) {
+        if (votingRulesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          votingRules_ = value;
+        } else {
+          votingRulesBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 3 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setVotingRules(
+          com.confio.poe.v1beta1.GenesisProto.VotingRules.Builder builderForValue) {
+        if (votingRulesBuilder_ == null) {
+          votingRules_ = builderForValue.build();
+        } else {
+          votingRulesBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 3 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeVotingRules(com.confio.poe.v1beta1.GenesisProto.VotingRules value) {
+        if (votingRulesBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            votingRules_ != null &&
+            votingRules_ != com.confio.poe.v1beta1.GenesisProto.VotingRules.getDefaultInstance()) {
+            getVotingRulesBuilder().mergeFrom(value);
+          } else {
+            votingRules_ = value;
+          }
+        } else {
+          votingRulesBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 3 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearVotingRules() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        votingRules_ = null;
+        if (votingRulesBuilder_ != null) {
+          votingRulesBuilder_.dispose();
+          votingRulesBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 3 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.VotingRules.Builder getVotingRulesBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getVotingRulesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 3 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.VotingRulesOrBuilder getVotingRulesOrBuilder() {
+        if (votingRulesBuilder_ != null) {
+          return votingRulesBuilder_.getMessageOrBuilder();
+        } else {
+          return votingRules_ == null ?
+              com.confio.poe.v1beta1.GenesisProto.VotingRules.getDefaultInstance() : votingRules_;
+        }
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 3 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.VotingRules, com.confio.poe.v1beta1.GenesisProto.VotingRules.Builder, com.confio.poe.v1beta1.GenesisProto.VotingRulesOrBuilder> 
+          getVotingRulesFieldBuilder() {
+        if (votingRulesBuilder_ == null) {
+          votingRulesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.confio.poe.v1beta1.GenesisProto.VotingRules, com.confio.poe.v1beta1.GenesisProto.VotingRules.Builder, com.confio.poe.v1beta1.GenesisProto.VotingRulesOrBuilder>(
+                  getVotingRules(),
+                  getParentForChildren(),
+                  isClean());
+          votingRules_ = null;
+        }
+        return votingRulesBuilder_;
+      }
+
+      private java.lang.Object denyListContractAddress_ = "";
+      /**
+       * <pre>
+       * DenyListContractAddress is an optional cw4 contract with list of addresses
+       * denied to be part of TrustedCircle
+       * </pre>
+       *
+       * <code>string deny_list_contract_address = 4 [json_name = "denyListContractAddress"];</code>
+       * @return The denyListContractAddress.
+       */
+      public java.lang.String getDenyListContractAddress() {
+        java.lang.Object ref = denyListContractAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denyListContractAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * DenyListContractAddress is an optional cw4 contract with list of addresses
+       * denied to be part of TrustedCircle
+       * </pre>
+       *
+       * <code>string deny_list_contract_address = 4 [json_name = "denyListContractAddress"];</code>
+       * @return The bytes for denyListContractAddress.
+       */
+      public com.google.protobuf.ByteString
+          getDenyListContractAddressBytes() {
+        java.lang.Object ref = denyListContractAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denyListContractAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * DenyListContractAddress is an optional cw4 contract with list of addresses
+       * denied to be part of TrustedCircle
+       * </pre>
+       *
+       * <code>string deny_list_contract_address = 4 [json_name = "denyListContractAddress"];</code>
+       * @param value The denyListContractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenyListContractAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denyListContractAddress_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DenyListContractAddress is an optional cw4 contract with list of addresses
+       * denied to be part of TrustedCircle
+       * </pre>
+       *
+       * <code>string deny_list_contract_address = 4 [json_name = "denyListContractAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenyListContractAddress() {
+        denyListContractAddress_ = getDefaultInstance().getDenyListContractAddress();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DenyListContractAddress is an optional cw4 contract with list of addresses
+       * denied to be part of TrustedCircle
+       * </pre>
+       *
+       * <code>string deny_list_contract_address = 4 [json_name = "denyListContractAddress"];</code>
+       * @param value The bytes for denyListContractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenyListContractAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denyListContractAddress_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.OversightCommitteeContractConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.OversightCommitteeContractConfig)
+    private static final com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig();
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<OversightCommitteeContractConfig>
+        PARSER = new com.google.protobuf.AbstractParser<OversightCommitteeContractConfig>() {
+      @java.lang.Override
+      public OversightCommitteeContractConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<OversightCommitteeContractConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OversightCommitteeContractConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.OversightCommitteeContractConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CommunityPoolContractConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.CommunityPoolContractConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * VotingRules rules for the tally
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.VotingRules voting_rules = 1 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+     * @return Whether the votingRules field is set.
+     */
+    boolean hasVotingRules();
+    /**
+     * <pre>
+     * VotingRules rules for the tally
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.VotingRules voting_rules = 1 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+     * @return The votingRules.
+     */
+    com.confio.poe.v1beta1.GenesisProto.VotingRules getVotingRules();
+    /**
+     * <pre>
+     * VotingRules rules for the tally
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.VotingRules voting_rules = 1 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+     */
+    com.confio.poe.v1beta1.GenesisProto.VotingRulesOrBuilder getVotingRulesOrBuilder();
+  }
+  /**
+   * <pre>
+   * CommunityPoolContractConfig initial setup config for the contract
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.CommunityPoolContractConfig}
+   */
+  public static final class CommunityPoolContractConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.CommunityPoolContractConfig)
+      CommunityPoolContractConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CommunityPoolContractConfig.newBuilder() to construct.
+    private CommunityPoolContractConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CommunityPoolContractConfig() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CommunityPoolContractConfig();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_CommunityPoolContractConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_CommunityPoolContractConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig.class, com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig.Builder.class);
+    }
+
+    public static final int VOTING_RULES_FIELD_NUMBER = 1;
+    private com.confio.poe.v1beta1.GenesisProto.VotingRules votingRules_;
+    /**
+     * <pre>
+     * VotingRules rules for the tally
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.VotingRules voting_rules = 1 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+     * @return Whether the votingRules field is set.
+     */
+    @java.lang.Override
+    public boolean hasVotingRules() {
+      return votingRules_ != null;
+    }
+    /**
+     * <pre>
+     * VotingRules rules for the tally
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.VotingRules voting_rules = 1 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+     * @return The votingRules.
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.VotingRules getVotingRules() {
+      return votingRules_ == null ? com.confio.poe.v1beta1.GenesisProto.VotingRules.getDefaultInstance() : votingRules_;
+    }
+    /**
+     * <pre>
+     * VotingRules rules for the tally
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.VotingRules voting_rules = 1 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.VotingRulesOrBuilder getVotingRulesOrBuilder() {
+      return votingRules_ == null ? com.confio.poe.v1beta1.GenesisProto.VotingRules.getDefaultInstance() : votingRules_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (votingRules_ != null) {
+        output.writeMessage(1, getVotingRules());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (votingRules_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getVotingRules());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig other = (com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig) obj;
+
+      if (hasVotingRules() != other.hasVotingRules()) return false;
+      if (hasVotingRules()) {
+        if (!getVotingRules()
+            .equals(other.getVotingRules())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasVotingRules()) {
+        hash = (37 * hash) + VOTING_RULES_FIELD_NUMBER;
+        hash = (53 * hash) + getVotingRules().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * CommunityPoolContractConfig initial setup config for the contract
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.CommunityPoolContractConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.CommunityPoolContractConfig)
+        com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_CommunityPoolContractConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_CommunityPoolContractConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig.class, com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        votingRules_ = null;
+        if (votingRulesBuilder_ != null) {
+          votingRulesBuilder_.dispose();
+          votingRulesBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_CommunityPoolContractConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig build() {
+        com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig buildPartial() {
+        com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig result = new com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.votingRules_ = votingRulesBuilder_ == null
+              ? votingRules_
+              : votingRulesBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig) {
+          return mergeFrom((com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig other) {
+        if (other == com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig.getDefaultInstance()) return this;
+        if (other.hasVotingRules()) {
+          mergeVotingRules(other.getVotingRules());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getVotingRulesFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.confio.poe.v1beta1.GenesisProto.VotingRules votingRules_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.VotingRules, com.confio.poe.v1beta1.GenesisProto.VotingRules.Builder, com.confio.poe.v1beta1.GenesisProto.VotingRulesOrBuilder> votingRulesBuilder_;
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 1 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       * @return Whether the votingRules field is set.
+       */
+      public boolean hasVotingRules() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 1 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       * @return The votingRules.
+       */
+      public com.confio.poe.v1beta1.GenesisProto.VotingRules getVotingRules() {
+        if (votingRulesBuilder_ == null) {
+          return votingRules_ == null ? com.confio.poe.v1beta1.GenesisProto.VotingRules.getDefaultInstance() : votingRules_;
+        } else {
+          return votingRulesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 1 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setVotingRules(com.confio.poe.v1beta1.GenesisProto.VotingRules value) {
+        if (votingRulesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          votingRules_ = value;
+        } else {
+          votingRulesBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 1 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setVotingRules(
+          com.confio.poe.v1beta1.GenesisProto.VotingRules.Builder builderForValue) {
+        if (votingRulesBuilder_ == null) {
+          votingRules_ = builderForValue.build();
+        } else {
+          votingRulesBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 1 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeVotingRules(com.confio.poe.v1beta1.GenesisProto.VotingRules value) {
+        if (votingRulesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            votingRules_ != null &&
+            votingRules_ != com.confio.poe.v1beta1.GenesisProto.VotingRules.getDefaultInstance()) {
+            getVotingRulesBuilder().mergeFrom(value);
+          } else {
+            votingRules_ = value;
+          }
+        } else {
+          votingRulesBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 1 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearVotingRules() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        votingRules_ = null;
+        if (votingRulesBuilder_ != null) {
+          votingRulesBuilder_.dispose();
+          votingRulesBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 1 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.VotingRules.Builder getVotingRulesBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getVotingRulesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 1 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.VotingRulesOrBuilder getVotingRulesOrBuilder() {
+        if (votingRulesBuilder_ != null) {
+          return votingRulesBuilder_.getMessageOrBuilder();
+        } else {
+          return votingRules_ == null ?
+              com.confio.poe.v1beta1.GenesisProto.VotingRules.getDefaultInstance() : votingRules_;
+        }
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 1 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.VotingRules, com.confio.poe.v1beta1.GenesisProto.VotingRules.Builder, com.confio.poe.v1beta1.GenesisProto.VotingRulesOrBuilder> 
+          getVotingRulesFieldBuilder() {
+        if (votingRulesBuilder_ == null) {
+          votingRulesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.confio.poe.v1beta1.GenesisProto.VotingRules, com.confio.poe.v1beta1.GenesisProto.VotingRules.Builder, com.confio.poe.v1beta1.GenesisProto.VotingRulesOrBuilder>(
+                  getVotingRules(),
+                  getParentForChildren(),
+                  isClean());
+          votingRules_ = null;
+        }
+        return votingRulesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.CommunityPoolContractConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.CommunityPoolContractConfig)
+    private static final com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig();
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CommunityPoolContractConfig>
+        PARSER = new com.google.protobuf.AbstractParser<CommunityPoolContractConfig>() {
+      @java.lang.Override
+      public CommunityPoolContractConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CommunityPoolContractConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CommunityPoolContractConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.CommunityPoolContractConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ValidatorVotingContractConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.ValidatorVotingContractConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * VotingRules rules for the tally
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.VotingRules voting_rules = 1 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+     * @return Whether the votingRules field is set.
+     */
+    boolean hasVotingRules();
+    /**
+     * <pre>
+     * VotingRules rules for the tally
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.VotingRules voting_rules = 1 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+     * @return The votingRules.
+     */
+    com.confio.poe.v1beta1.GenesisProto.VotingRules getVotingRules();
+    /**
+     * <pre>
+     * VotingRules rules for the tally
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.VotingRules voting_rules = 1 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+     */
+    com.confio.poe.v1beta1.GenesisProto.VotingRulesOrBuilder getVotingRulesOrBuilder();
+  }
+  /**
+   * <pre>
+   * ValidatorVotingContractConfig CommunityPoolContractConfig
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.ValidatorVotingContractConfig}
+   */
+  public static final class ValidatorVotingContractConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.ValidatorVotingContractConfig)
+      ValidatorVotingContractConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ValidatorVotingContractConfig.newBuilder() to construct.
+    private ValidatorVotingContractConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ValidatorVotingContractConfig() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ValidatorVotingContractConfig();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_ValidatorVotingContractConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_ValidatorVotingContractConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig.class, com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig.Builder.class);
+    }
+
+    public static final int VOTING_RULES_FIELD_NUMBER = 1;
+    private com.confio.poe.v1beta1.GenesisProto.VotingRules votingRules_;
+    /**
+     * <pre>
+     * VotingRules rules for the tally
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.VotingRules voting_rules = 1 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+     * @return Whether the votingRules field is set.
+     */
+    @java.lang.Override
+    public boolean hasVotingRules() {
+      return votingRules_ != null;
+    }
+    /**
+     * <pre>
+     * VotingRules rules for the tally
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.VotingRules voting_rules = 1 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+     * @return The votingRules.
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.VotingRules getVotingRules() {
+      return votingRules_ == null ? com.confio.poe.v1beta1.GenesisProto.VotingRules.getDefaultInstance() : votingRules_;
+    }
+    /**
+     * <pre>
+     * VotingRules rules for the tally
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.VotingRules voting_rules = 1 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.VotingRulesOrBuilder getVotingRulesOrBuilder() {
+      return votingRules_ == null ? com.confio.poe.v1beta1.GenesisProto.VotingRules.getDefaultInstance() : votingRules_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (votingRules_ != null) {
+        output.writeMessage(1, getVotingRules());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (votingRules_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getVotingRules());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig other = (com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig) obj;
+
+      if (hasVotingRules() != other.hasVotingRules()) return false;
+      if (hasVotingRules()) {
+        if (!getVotingRules()
+            .equals(other.getVotingRules())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasVotingRules()) {
+        hash = (37 * hash) + VOTING_RULES_FIELD_NUMBER;
+        hash = (53 * hash) + getVotingRules().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ValidatorVotingContractConfig CommunityPoolContractConfig
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.ValidatorVotingContractConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.ValidatorVotingContractConfig)
+        com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_ValidatorVotingContractConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_ValidatorVotingContractConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig.class, com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        votingRules_ = null;
+        if (votingRulesBuilder_ != null) {
+          votingRulesBuilder_.dispose();
+          votingRulesBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_ValidatorVotingContractConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig build() {
+        com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig buildPartial() {
+        com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig result = new com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.votingRules_ = votingRulesBuilder_ == null
+              ? votingRules_
+              : votingRulesBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig) {
+          return mergeFrom((com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig other) {
+        if (other == com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig.getDefaultInstance()) return this;
+        if (other.hasVotingRules()) {
+          mergeVotingRules(other.getVotingRules());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getVotingRulesFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.confio.poe.v1beta1.GenesisProto.VotingRules votingRules_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.VotingRules, com.confio.poe.v1beta1.GenesisProto.VotingRules.Builder, com.confio.poe.v1beta1.GenesisProto.VotingRulesOrBuilder> votingRulesBuilder_;
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 1 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       * @return Whether the votingRules field is set.
+       */
+      public boolean hasVotingRules() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 1 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       * @return The votingRules.
+       */
+      public com.confio.poe.v1beta1.GenesisProto.VotingRules getVotingRules() {
+        if (votingRulesBuilder_ == null) {
+          return votingRules_ == null ? com.confio.poe.v1beta1.GenesisProto.VotingRules.getDefaultInstance() : votingRules_;
+        } else {
+          return votingRulesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 1 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setVotingRules(com.confio.poe.v1beta1.GenesisProto.VotingRules value) {
+        if (votingRulesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          votingRules_ = value;
+        } else {
+          votingRulesBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 1 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setVotingRules(
+          com.confio.poe.v1beta1.GenesisProto.VotingRules.Builder builderForValue) {
+        if (votingRulesBuilder_ == null) {
+          votingRules_ = builderForValue.build();
+        } else {
+          votingRulesBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 1 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeVotingRules(com.confio.poe.v1beta1.GenesisProto.VotingRules value) {
+        if (votingRulesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            votingRules_ != null &&
+            votingRules_ != com.confio.poe.v1beta1.GenesisProto.VotingRules.getDefaultInstance()) {
+            getVotingRulesBuilder().mergeFrom(value);
+          } else {
+            votingRules_ = value;
+          }
+        } else {
+          votingRulesBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 1 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearVotingRules() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        votingRules_ = null;
+        if (votingRulesBuilder_ != null) {
+          votingRulesBuilder_.dispose();
+          votingRulesBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 1 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.VotingRules.Builder getVotingRulesBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getVotingRulesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 1 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.VotingRulesOrBuilder getVotingRulesOrBuilder() {
+        if (votingRulesBuilder_ != null) {
+          return votingRulesBuilder_.getMessageOrBuilder();
+        } else {
+          return votingRules_ == null ?
+              com.confio.poe.v1beta1.GenesisProto.VotingRules.getDefaultInstance() : votingRules_;
+        }
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 1 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.VotingRules, com.confio.poe.v1beta1.GenesisProto.VotingRules.Builder, com.confio.poe.v1beta1.GenesisProto.VotingRulesOrBuilder> 
+          getVotingRulesFieldBuilder() {
+        if (votingRulesBuilder_ == null) {
+          votingRulesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.confio.poe.v1beta1.GenesisProto.VotingRules, com.confio.poe.v1beta1.GenesisProto.VotingRules.Builder, com.confio.poe.v1beta1.GenesisProto.VotingRulesOrBuilder>(
+                  getVotingRules(),
+                  getParentForChildren(),
+                  isClean());
+          votingRules_ = null;
+        }
+        return votingRulesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.ValidatorVotingContractConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.ValidatorVotingContractConfig)
+    private static final com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig();
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ValidatorVotingContractConfig>
+        PARSER = new com.google.protobuf.AbstractParser<ValidatorVotingContractConfig>() {
+      @java.lang.Override
+      public ValidatorVotingContractConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ValidatorVotingContractConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ValidatorVotingContractConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.ValidatorVotingContractConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PoEContractOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.PoEContract)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ContractType type.
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.PoEContractType contract_type = 1 [json_name = "contractType"];</code>
+     * @return The enum numeric value on the wire for contractType.
+     */
+    int getContractTypeValue();
+    /**
+     * <pre>
+     * ContractType type.
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.PoEContractType contract_type = 1 [json_name = "contractType"];</code>
+     * @return The contractType.
+     */
+    com.confio.poe.v1beta1.PoeProto.PoEContractType getContractType();
+
+    /**
+     * <pre>
+     * Address is the bech32 address string
+     * </pre>
+     *
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <pre>
+     * Address is the bech32 address string
+     * </pre>
+     *
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+  }
+  /**
+   * <pre>
+   * PoEContract address and type information
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.PoEContract}
+   */
+  public static final class PoEContract extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.PoEContract)
+      PoEContractOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PoEContract.newBuilder() to construct.
+    private PoEContract(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PoEContract() {
+      contractType_ = 0;
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PoEContract();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_PoEContract_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_PoEContract_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.GenesisProto.PoEContract.class, com.confio.poe.v1beta1.GenesisProto.PoEContract.Builder.class);
+    }
+
+    public static final int CONTRACT_TYPE_FIELD_NUMBER = 1;
+    private int contractType_ = 0;
+    /**
+     * <pre>
+     * ContractType type.
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.PoEContractType contract_type = 1 [json_name = "contractType"];</code>
+     * @return The enum numeric value on the wire for contractType.
+     */
+    @java.lang.Override public int getContractTypeValue() {
+      return contractType_;
+    }
+    /**
+     * <pre>
+     * ContractType type.
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.PoEContractType contract_type = 1 [json_name = "contractType"];</code>
+     * @return The contractType.
+     */
+    @java.lang.Override public com.confio.poe.v1beta1.PoeProto.PoEContractType getContractType() {
+      com.confio.poe.v1beta1.PoeProto.PoEContractType result = com.confio.poe.v1beta1.PoeProto.PoEContractType.forNumber(contractType_);
+      return result == null ? com.confio.poe.v1beta1.PoeProto.PoEContractType.UNRECOGNIZED : result;
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <pre>
+     * Address is the bech32 address string
+     * </pre>
+     *
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Address is the bech32 address string
+     * </pre>
+     *
+     * <code>string address = 2 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (contractType_ != com.confio.poe.v1beta1.PoeProto.PoEContractType.UNDEFINED.getNumber()) {
+        output.writeEnum(1, contractType_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, address_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (contractType_ != com.confio.poe.v1beta1.PoeProto.PoEContractType.UNDEFINED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, contractType_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, address_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.GenesisProto.PoEContract)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.GenesisProto.PoEContract other = (com.confio.poe.v1beta1.GenesisProto.PoEContract) obj;
+
+      if (contractType_ != other.contractType_) return false;
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTRACT_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + contractType_;
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.PoEContract parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.PoEContract parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.PoEContract parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.PoEContract parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.PoEContract parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.PoEContract parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.PoEContract parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.PoEContract parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.PoEContract parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.PoEContract parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.PoEContract parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.PoEContract parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.GenesisProto.PoEContract prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * PoEContract address and type information
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.PoEContract}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.PoEContract)
+        com.confio.poe.v1beta1.GenesisProto.PoEContractOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_PoEContract_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_PoEContract_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.GenesisProto.PoEContract.class, com.confio.poe.v1beta1.GenesisProto.PoEContract.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.GenesisProto.PoEContract.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contractType_ = 0;
+        address_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_PoEContract_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.PoEContract getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.GenesisProto.PoEContract.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.PoEContract build() {
+        com.confio.poe.v1beta1.GenesisProto.PoEContract result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.PoEContract buildPartial() {
+        com.confio.poe.v1beta1.GenesisProto.PoEContract result = new com.confio.poe.v1beta1.GenesisProto.PoEContract(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.poe.v1beta1.GenesisProto.PoEContract result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.contractType_ = contractType_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.address_ = address_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.GenesisProto.PoEContract) {
+          return mergeFrom((com.confio.poe.v1beta1.GenesisProto.PoEContract)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.GenesisProto.PoEContract other) {
+        if (other == com.confio.poe.v1beta1.GenesisProto.PoEContract.getDefaultInstance()) return this;
+        if (other.contractType_ != 0) {
+          setContractTypeValue(other.getContractTypeValue());
+        }
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                contractType_ = input.readEnum();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int contractType_ = 0;
+      /**
+       * <pre>
+       * ContractType type.
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.PoEContractType contract_type = 1 [json_name = "contractType"];</code>
+       * @return The enum numeric value on the wire for contractType.
+       */
+      @java.lang.Override public int getContractTypeValue() {
+        return contractType_;
+      }
+      /**
+       * <pre>
+       * ContractType type.
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.PoEContractType contract_type = 1 [json_name = "contractType"];</code>
+       * @param value The enum numeric value on the wire for contractType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractTypeValue(int value) {
+        contractType_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ContractType type.
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.PoEContractType contract_type = 1 [json_name = "contractType"];</code>
+       * @return The contractType.
+       */
+      @java.lang.Override
+      public com.confio.poe.v1beta1.PoeProto.PoEContractType getContractType() {
+        com.confio.poe.v1beta1.PoeProto.PoEContractType result = com.confio.poe.v1beta1.PoeProto.PoEContractType.forNumber(contractType_);
+        return result == null ? com.confio.poe.v1beta1.PoeProto.PoEContractType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * ContractType type.
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.PoEContractType contract_type = 1 [json_name = "contractType"];</code>
+       * @param value The contractType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractType(com.confio.poe.v1beta1.PoeProto.PoEContractType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        contractType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ContractType type.
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.PoEContractType contract_type = 1 [json_name = "contractType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        contractType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object address_ = "";
+      /**
+       * <pre>
+       * Address is the bech32 address string
+       * </pre>
+       *
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Address is the bech32 address string
+       * </pre>
+       *
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Address is the bech32 address string
+       * </pre>
+       *
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Address is the bech32 address string
+       * </pre>
+       *
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Address is the bech32 address string
+       * </pre>
+       *
+       * <code>string address = 2 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.PoEContract)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.PoEContract)
+    private static final com.confio.poe.v1beta1.GenesisProto.PoEContract DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.GenesisProto.PoEContract();
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.PoEContract getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PoEContract>
+        PARSER = new com.google.protobuf.AbstractParser<PoEContract>() {
+      @java.lang.Override
+      public PoEContract parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PoEContract> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PoEContract> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.PoEContract getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TG4MemberOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.TG4Member)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Address is the bech32 address string
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address", (.gogoproto.jsontag) = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <pre>
+     * Address is the bech32 address string
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address", (.gogoproto.jsontag) = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <code>uint64 points = 2 [json_name = "points", (.gogoproto.jsontag) = "points"];</code>
+     * @return The points.
+     */
+    long getPoints();
+  }
+  /**
+   * <pre>
+   * TG4Member member of the Engagement group.
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.TG4Member}
+   */
+  public static final class TG4Member extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.TG4Member)
+      TG4MemberOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TG4Member.newBuilder() to construct.
+    private TG4Member(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TG4Member() {
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TG4Member();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_TG4Member_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_TG4Member_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.GenesisProto.TG4Member.class, com.confio.poe.v1beta1.GenesisProto.TG4Member.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <pre>
+     * Address is the bech32 address string
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address", (.gogoproto.jsontag) = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Address is the bech32 address string
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address", (.gogoproto.jsontag) = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int POINTS_FIELD_NUMBER = 2;
+    private long points_ = 0L;
+    /**
+     * <code>uint64 points = 2 [json_name = "points", (.gogoproto.jsontag) = "points"];</code>
+     * @return The points.
+     */
+    @java.lang.Override
+    public long getPoints() {
+      return points_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      if (points_ != 0L) {
+        output.writeUInt64(2, points_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      if (points_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, points_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.GenesisProto.TG4Member)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.GenesisProto.TG4Member other = (com.confio.poe.v1beta1.GenesisProto.TG4Member) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (getPoints()
+          != other.getPoints()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + POINTS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoints());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.TG4Member parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.TG4Member parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.TG4Member parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.TG4Member parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.TG4Member parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.TG4Member parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.TG4Member parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.TG4Member parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.TG4Member parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.TG4Member parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.TG4Member parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.TG4Member parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.GenesisProto.TG4Member prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * TG4Member member of the Engagement group.
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.TG4Member}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.TG4Member)
+        com.confio.poe.v1beta1.GenesisProto.TG4MemberOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_TG4Member_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_TG4Member_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.GenesisProto.TG4Member.class, com.confio.poe.v1beta1.GenesisProto.TG4Member.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.GenesisProto.TG4Member.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        points_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_TG4Member_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.TG4Member getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.GenesisProto.TG4Member.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.TG4Member build() {
+        com.confio.poe.v1beta1.GenesisProto.TG4Member result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.TG4Member buildPartial() {
+        com.confio.poe.v1beta1.GenesisProto.TG4Member result = new com.confio.poe.v1beta1.GenesisProto.TG4Member(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.poe.v1beta1.GenesisProto.TG4Member result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.points_ = points_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.GenesisProto.TG4Member) {
+          return mergeFrom((com.confio.poe.v1beta1.GenesisProto.TG4Member)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.GenesisProto.TG4Member other) {
+        if (other == com.confio.poe.v1beta1.GenesisProto.TG4Member.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getPoints() != 0L) {
+          setPoints(other.getPoints());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                points_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <pre>
+       * Address is the bech32 address string
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address", (.gogoproto.jsontag) = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Address is the bech32 address string
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address", (.gogoproto.jsontag) = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Address is the bech32 address string
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address", (.gogoproto.jsontag) = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Address is the bech32 address string
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address", (.gogoproto.jsontag) = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Address is the bech32 address string
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address", (.gogoproto.jsontag) = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long points_ ;
+      /**
+       * <code>uint64 points = 2 [json_name = "points", (.gogoproto.jsontag) = "points"];</code>
+       * @return The points.
+       */
+      @java.lang.Override
+      public long getPoints() {
+        return points_;
+      }
+      /**
+       * <code>uint64 points = 2 [json_name = "points", (.gogoproto.jsontag) = "points"];</code>
+       * @param value The points to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoints(long value) {
+
+        points_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 points = 2 [json_name = "points", (.gogoproto.jsontag) = "points"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoints() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        points_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.TG4Member)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.TG4Member)
+    private static final com.confio.poe.v1beta1.GenesisProto.TG4Member DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.GenesisProto.TG4Member();
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.TG4Member getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TG4Member>
+        PARSER = new com.google.protobuf.AbstractParser<TG4Member>() {
+      @java.lang.Override
+      public TG4Member parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TG4Member> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TG4Member> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.TG4Member getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface VotingRulesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.VotingRules)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * VotingPeriod Voting period in days
+     * </pre>
+     *
+     * <code>uint32 voting_period = 1 [json_name = "votingPeriod"];</code>
+     * @return The votingPeriod.
+     */
+    int getVotingPeriod();
+
+    /**
+     * <pre>
+     * Quorum  voting quorum percentage (1-100)
+     * </pre>
+     *
+     * <code>string quorum = 2 [json_name = "quorum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The quorum.
+     */
+    java.lang.String getQuorum();
+    /**
+     * <pre>
+     * Quorum  voting quorum percentage (1-100)
+     * </pre>
+     *
+     * <code>string quorum = 2 [json_name = "quorum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for quorum.
+     */
+    com.google.protobuf.ByteString
+        getQuorumBytes();
+
+    /**
+     * <pre>
+     * Threshold voting threshold percentage (50-100)
+     * </pre>
+     *
+     * <code>string threshold = 3 [json_name = "threshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The threshold.
+     */
+    java.lang.String getThreshold();
+    /**
+     * <pre>
+     * Threshold voting threshold percentage (50-100)
+     * </pre>
+     *
+     * <code>string threshold = 3 [json_name = "threshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for threshold.
+     */
+    com.google.protobuf.ByteString
+        getThresholdBytes();
+
+    /**
+     * <pre>
+     * AllowEndEarly If true, and absolute threshold and quorum are met, we can
+     * end before voting period finished. (Recommended value: true, unless you
+     * have special needs)
+     * </pre>
+     *
+     * <code>bool allow_end_early = 4 [json_name = "allowEndEarly"];</code>
+     * @return The allowEndEarly.
+     */
+    boolean getAllowEndEarly();
+  }
+  /**
+   * <pre>
+   * VotingRules contains configuration for the tally.
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.VotingRules}
+   */
+  public static final class VotingRules extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.VotingRules)
+      VotingRulesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use VotingRules.newBuilder() to construct.
+    private VotingRules(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private VotingRules() {
+      quorum_ = "";
+      threshold_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VotingRules();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_VotingRules_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_VotingRules_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.GenesisProto.VotingRules.class, com.confio.poe.v1beta1.GenesisProto.VotingRules.Builder.class);
+    }
+
+    public static final int VOTING_PERIOD_FIELD_NUMBER = 1;
+    private int votingPeriod_ = 0;
+    /**
+     * <pre>
+     * VotingPeriod Voting period in days
+     * </pre>
+     *
+     * <code>uint32 voting_period = 1 [json_name = "votingPeriod"];</code>
+     * @return The votingPeriod.
+     */
+    @java.lang.Override
+    public int getVotingPeriod() {
+      return votingPeriod_;
+    }
+
+    public static final int QUORUM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object quorum_ = "";
+    /**
+     * <pre>
+     * Quorum  voting quorum percentage (1-100)
+     * </pre>
+     *
+     * <code>string quorum = 2 [json_name = "quorum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The quorum.
+     */
+    @java.lang.Override
+    public java.lang.String getQuorum() {
+      java.lang.Object ref = quorum_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        quorum_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Quorum  voting quorum percentage (1-100)
+     * </pre>
+     *
+     * <code>string quorum = 2 [json_name = "quorum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for quorum.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getQuorumBytes() {
+      java.lang.Object ref = quorum_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        quorum_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int THRESHOLD_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object threshold_ = "";
+    /**
+     * <pre>
+     * Threshold voting threshold percentage (50-100)
+     * </pre>
+     *
+     * <code>string threshold = 3 [json_name = "threshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The threshold.
+     */
+    @java.lang.Override
+    public java.lang.String getThreshold() {
+      java.lang.Object ref = threshold_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        threshold_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Threshold voting threshold percentage (50-100)
+     * </pre>
+     *
+     * <code>string threshold = 3 [json_name = "threshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for threshold.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getThresholdBytes() {
+      java.lang.Object ref = threshold_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        threshold_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ALLOW_END_EARLY_FIELD_NUMBER = 4;
+    private boolean allowEndEarly_ = false;
+    /**
+     * <pre>
+     * AllowEndEarly If true, and absolute threshold and quorum are met, we can
+     * end before voting period finished. (Recommended value: true, unless you
+     * have special needs)
+     * </pre>
+     *
+     * <code>bool allow_end_early = 4 [json_name = "allowEndEarly"];</code>
+     * @return The allowEndEarly.
+     */
+    @java.lang.Override
+    public boolean getAllowEndEarly() {
+      return allowEndEarly_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (votingPeriod_ != 0) {
+        output.writeUInt32(1, votingPeriod_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quorum_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, quorum_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(threshold_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, threshold_);
+      }
+      if (allowEndEarly_ != false) {
+        output.writeBool(4, allowEndEarly_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (votingPeriod_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, votingPeriod_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quorum_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, quorum_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(threshold_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, threshold_);
+      }
+      if (allowEndEarly_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, allowEndEarly_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.GenesisProto.VotingRules)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.GenesisProto.VotingRules other = (com.confio.poe.v1beta1.GenesisProto.VotingRules) obj;
+
+      if (getVotingPeriod()
+          != other.getVotingPeriod()) return false;
+      if (!getQuorum()
+          .equals(other.getQuorum())) return false;
+      if (!getThreshold()
+          .equals(other.getThreshold())) return false;
+      if (getAllowEndEarly()
+          != other.getAllowEndEarly()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VOTING_PERIOD_FIELD_NUMBER;
+      hash = (53 * hash) + getVotingPeriod();
+      hash = (37 * hash) + QUORUM_FIELD_NUMBER;
+      hash = (53 * hash) + getQuorum().hashCode();
+      hash = (37 * hash) + THRESHOLD_FIELD_NUMBER;
+      hash = (53 * hash) + getThreshold().hashCode();
+      hash = (37 * hash) + ALLOW_END_EARLY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAllowEndEarly());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.VotingRules parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.VotingRules parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.VotingRules parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.VotingRules parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.VotingRules parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.VotingRules parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.VotingRules parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.VotingRules parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.VotingRules parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.VotingRules parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.VotingRules parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.VotingRules parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.GenesisProto.VotingRules prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * VotingRules contains configuration for the tally.
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.VotingRules}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.VotingRules)
+        com.confio.poe.v1beta1.GenesisProto.VotingRulesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_VotingRules_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_VotingRules_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.GenesisProto.VotingRules.class, com.confio.poe.v1beta1.GenesisProto.VotingRules.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.GenesisProto.VotingRules.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        votingPeriod_ = 0;
+        quorum_ = "";
+        threshold_ = "";
+        allowEndEarly_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_VotingRules_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.VotingRules getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.GenesisProto.VotingRules.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.VotingRules build() {
+        com.confio.poe.v1beta1.GenesisProto.VotingRules result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.VotingRules buildPartial() {
+        com.confio.poe.v1beta1.GenesisProto.VotingRules result = new com.confio.poe.v1beta1.GenesisProto.VotingRules(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.poe.v1beta1.GenesisProto.VotingRules result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.votingPeriod_ = votingPeriod_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.quorum_ = quorum_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.threshold_ = threshold_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.allowEndEarly_ = allowEndEarly_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.GenesisProto.VotingRules) {
+          return mergeFrom((com.confio.poe.v1beta1.GenesisProto.VotingRules)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.GenesisProto.VotingRules other) {
+        if (other == com.confio.poe.v1beta1.GenesisProto.VotingRules.getDefaultInstance()) return this;
+        if (other.getVotingPeriod() != 0) {
+          setVotingPeriod(other.getVotingPeriod());
+        }
+        if (!other.getQuorum().isEmpty()) {
+          quorum_ = other.quorum_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getThreshold().isEmpty()) {
+          threshold_ = other.threshold_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.getAllowEndEarly() != false) {
+          setAllowEndEarly(other.getAllowEndEarly());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                votingPeriod_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                quorum_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                threshold_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                allowEndEarly_ = input.readBool();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int votingPeriod_ ;
+      /**
+       * <pre>
+       * VotingPeriod Voting period in days
+       * </pre>
+       *
+       * <code>uint32 voting_period = 1 [json_name = "votingPeriod"];</code>
+       * @return The votingPeriod.
+       */
+      @java.lang.Override
+      public int getVotingPeriod() {
+        return votingPeriod_;
+      }
+      /**
+       * <pre>
+       * VotingPeriod Voting period in days
+       * </pre>
+       *
+       * <code>uint32 voting_period = 1 [json_name = "votingPeriod"];</code>
+       * @param value The votingPeriod to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVotingPeriod(int value) {
+
+        votingPeriod_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * VotingPeriod Voting period in days
+       * </pre>
+       *
+       * <code>uint32 voting_period = 1 [json_name = "votingPeriod"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVotingPeriod() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        votingPeriod_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object quorum_ = "";
+      /**
+       * <pre>
+       * Quorum  voting quorum percentage (1-100)
+       * </pre>
+       *
+       * <code>string quorum = 2 [json_name = "quorum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The quorum.
+       */
+      public java.lang.String getQuorum() {
+        java.lang.Object ref = quorum_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          quorum_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Quorum  voting quorum percentage (1-100)
+       * </pre>
+       *
+       * <code>string quorum = 2 [json_name = "quorum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for quorum.
+       */
+      public com.google.protobuf.ByteString
+          getQuorumBytes() {
+        java.lang.Object ref = quorum_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          quorum_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Quorum  voting quorum percentage (1-100)
+       * </pre>
+       *
+       * <code>string quorum = 2 [json_name = "quorum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The quorum to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuorum(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        quorum_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Quorum  voting quorum percentage (1-100)
+       * </pre>
+       *
+       * <code>string quorum = 2 [json_name = "quorum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQuorum() {
+        quorum_ = getDefaultInstance().getQuorum();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Quorum  voting quorum percentage (1-100)
+       * </pre>
+       *
+       * <code>string quorum = 2 [json_name = "quorum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for quorum to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuorumBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        quorum_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object threshold_ = "";
+      /**
+       * <pre>
+       * Threshold voting threshold percentage (50-100)
+       * </pre>
+       *
+       * <code>string threshold = 3 [json_name = "threshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The threshold.
+       */
+      public java.lang.String getThreshold() {
+        java.lang.Object ref = threshold_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          threshold_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Threshold voting threshold percentage (50-100)
+       * </pre>
+       *
+       * <code>string threshold = 3 [json_name = "threshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for threshold.
+       */
+      public com.google.protobuf.ByteString
+          getThresholdBytes() {
+        java.lang.Object ref = threshold_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          threshold_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Threshold voting threshold percentage (50-100)
+       * </pre>
+       *
+       * <code>string threshold = 3 [json_name = "threshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The threshold to set.
+       * @return This builder for chaining.
+       */
+      public Builder setThreshold(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        threshold_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Threshold voting threshold percentage (50-100)
+       * </pre>
+       *
+       * <code>string threshold = 3 [json_name = "threshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearThreshold() {
+        threshold_ = getDefaultInstance().getThreshold();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Threshold voting threshold percentage (50-100)
+       * </pre>
+       *
+       * <code>string threshold = 3 [json_name = "threshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for threshold to set.
+       * @return This builder for chaining.
+       */
+      public Builder setThresholdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        threshold_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private boolean allowEndEarly_ ;
+      /**
+       * <pre>
+       * AllowEndEarly If true, and absolute threshold and quorum are met, we can
+       * end before voting period finished. (Recommended value: true, unless you
+       * have special needs)
+       * </pre>
+       *
+       * <code>bool allow_end_early = 4 [json_name = "allowEndEarly"];</code>
+       * @return The allowEndEarly.
+       */
+      @java.lang.Override
+      public boolean getAllowEndEarly() {
+        return allowEndEarly_;
+      }
+      /**
+       * <pre>
+       * AllowEndEarly If true, and absolute threshold and quorum are met, we can
+       * end before voting period finished. (Recommended value: true, unless you
+       * have special needs)
+       * </pre>
+       *
+       * <code>bool allow_end_early = 4 [json_name = "allowEndEarly"];</code>
+       * @param value The allowEndEarly to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllowEndEarly(boolean value) {
+
+        allowEndEarly_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * AllowEndEarly If true, and absolute threshold and quorum are met, we can
+       * end before voting period finished. (Recommended value: true, unless you
+       * have special needs)
+       * </pre>
+       *
+       * <code>bool allow_end_early = 4 [json_name = "allowEndEarly"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllowEndEarly() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        allowEndEarly_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.VotingRules)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.VotingRules)
+    private static final com.confio.poe.v1beta1.GenesisProto.VotingRules DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.GenesisProto.VotingRules();
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.VotingRules getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<VotingRules>
+        PARSER = new com.google.protobuf.AbstractParser<VotingRules>() {
+      @java.lang.Override
+      public VotingRules parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<VotingRules> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VotingRules> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.VotingRules getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ArbiterPoolContractConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.poe.v1beta1.ArbiterPoolContractConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Name of TRUSTED_CIRCLE
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name of TRUSTED_CIRCLE
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * EscrowAmount The required escrow amount, in the default denom (utgd)
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin escrow_amount = 2 [json_name = "escrowAmount", (.gogoproto.nullable) = false];</code>
+     * @return Whether the escrowAmount field is set.
+     */
+    boolean hasEscrowAmount();
+    /**
+     * <pre>
+     * EscrowAmount The required escrow amount, in the default denom (utgd)
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin escrow_amount = 2 [json_name = "escrowAmount", (.gogoproto.nullable) = false];</code>
+     * @return The escrowAmount.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getEscrowAmount();
+    /**
+     * <pre>
+     * EscrowAmount The required escrow amount, in the default denom (utgd)
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin escrow_amount = 2 [json_name = "escrowAmount", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getEscrowAmountOrBuilder();
+
+    /**
+     * <pre>
+     * VotingRules rules for the tally
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.VotingRules voting_rules = 3 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+     * @return Whether the votingRules field is set.
+     */
+    boolean hasVotingRules();
+    /**
+     * <pre>
+     * VotingRules rules for the tally
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.VotingRules voting_rules = 3 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+     * @return The votingRules.
+     */
+    com.confio.poe.v1beta1.GenesisProto.VotingRules getVotingRules();
+    /**
+     * <pre>
+     * VotingRules rules for the tally
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.VotingRules voting_rules = 3 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+     */
+    com.confio.poe.v1beta1.GenesisProto.VotingRulesOrBuilder getVotingRulesOrBuilder();
+
+    /**
+     * <pre>
+     * DenyListContractAddress is an optional cw4 contract with list of addresses
+     * denied to be part of TrustedCircle
+     * </pre>
+     *
+     * <code>string deny_list_contract_address = 4 [json_name = "denyListContractAddress"];</code>
+     * @return The denyListContractAddress.
+     */
+    java.lang.String getDenyListContractAddress();
+    /**
+     * <pre>
+     * DenyListContractAddress is an optional cw4 contract with list of addresses
+     * denied to be part of TrustedCircle
+     * </pre>
+     *
+     * <code>string deny_list_contract_address = 4 [json_name = "denyListContractAddress"];</code>
+     * @return The bytes for denyListContractAddress.
+     */
+    com.google.protobuf.ByteString
+        getDenyListContractAddressBytes();
+
+    /**
+     * <pre>
+     * DisputeCost The required dispute amount, in the default denom (utgd)
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin dispute_cost = 5 [json_name = "disputeCost", (.gogoproto.nullable) = false];</code>
+     * @return Whether the disputeCost field is set.
+     */
+    boolean hasDisputeCost();
+    /**
+     * <pre>
+     * DisputeCost The required dispute amount, in the default denom (utgd)
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin dispute_cost = 5 [json_name = "disputeCost", (.gogoproto.nullable) = false];</code>
+     * @return The disputeCost.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getDisputeCost();
+    /**
+     * <pre>
+     * DisputeCost The required dispute amount, in the default denom (utgd)
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin dispute_cost = 5 [json_name = "disputeCost", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDisputeCostOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Duration waiting_period = 6 [json_name = "waitingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the waitingPeriod field is set.
+     */
+    boolean hasWaitingPeriod();
+    /**
+     * <code>.google.protobuf.Duration waiting_period = 6 [json_name = "waitingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return The waitingPeriod.
+     */
+    com.google.protobuf.Duration getWaitingPeriod();
+    /**
+     * <code>.google.protobuf.Duration waiting_period = 6 [json_name = "waitingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getWaitingPeriodOrBuilder();
+  }
+  /**
+   * <pre>
+   * ArbiterPoolContractConfig initial setup config for the trusted circle
+   * </pre>
+   *
+   * Protobuf type {@code confio.poe.v1beta1.ArbiterPoolContractConfig}
+   */
+  public static final class ArbiterPoolContractConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.poe.v1beta1.ArbiterPoolContractConfig)
+      ArbiterPoolContractConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ArbiterPoolContractConfig.newBuilder() to construct.
+    private ArbiterPoolContractConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ArbiterPoolContractConfig() {
+      name_ = "";
+      denyListContractAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ArbiterPoolContractConfig();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_ArbiterPoolContractConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_ArbiterPoolContractConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig.class, com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * Name of TRUSTED_CIRCLE
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of TRUSTED_CIRCLE
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ESCROW_AMOUNT_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin escrowAmount_;
+    /**
+     * <pre>
+     * EscrowAmount The required escrow amount, in the default denom (utgd)
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin escrow_amount = 2 [json_name = "escrowAmount", (.gogoproto.nullable) = false];</code>
+     * @return Whether the escrowAmount field is set.
+     */
+    @java.lang.Override
+    public boolean hasEscrowAmount() {
+      return escrowAmount_ != null;
+    }
+    /**
+     * <pre>
+     * EscrowAmount The required escrow amount, in the default denom (utgd)
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin escrow_amount = 2 [json_name = "escrowAmount", (.gogoproto.nullable) = false];</code>
+     * @return The escrowAmount.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getEscrowAmount() {
+      return escrowAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : escrowAmount_;
+    }
+    /**
+     * <pre>
+     * EscrowAmount The required escrow amount, in the default denom (utgd)
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin escrow_amount = 2 [json_name = "escrowAmount", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getEscrowAmountOrBuilder() {
+      return escrowAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : escrowAmount_;
+    }
+
+    public static final int VOTING_RULES_FIELD_NUMBER = 3;
+    private com.confio.poe.v1beta1.GenesisProto.VotingRules votingRules_;
+    /**
+     * <pre>
+     * VotingRules rules for the tally
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.VotingRules voting_rules = 3 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+     * @return Whether the votingRules field is set.
+     */
+    @java.lang.Override
+    public boolean hasVotingRules() {
+      return votingRules_ != null;
+    }
+    /**
+     * <pre>
+     * VotingRules rules for the tally
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.VotingRules voting_rules = 3 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+     * @return The votingRules.
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.VotingRules getVotingRules() {
+      return votingRules_ == null ? com.confio.poe.v1beta1.GenesisProto.VotingRules.getDefaultInstance() : votingRules_;
+    }
+    /**
+     * <pre>
+     * VotingRules rules for the tally
+     * </pre>
+     *
+     * <code>.confio.poe.v1beta1.VotingRules voting_rules = 3 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.VotingRulesOrBuilder getVotingRulesOrBuilder() {
+      return votingRules_ == null ? com.confio.poe.v1beta1.GenesisProto.VotingRules.getDefaultInstance() : votingRules_;
+    }
+
+    public static final int DENY_LIST_CONTRACT_ADDRESS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denyListContractAddress_ = "";
+    /**
+     * <pre>
+     * DenyListContractAddress is an optional cw4 contract with list of addresses
+     * denied to be part of TrustedCircle
+     * </pre>
+     *
+     * <code>string deny_list_contract_address = 4 [json_name = "denyListContractAddress"];</code>
+     * @return The denyListContractAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getDenyListContractAddress() {
+      java.lang.Object ref = denyListContractAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denyListContractAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * DenyListContractAddress is an optional cw4 contract with list of addresses
+     * denied to be part of TrustedCircle
+     * </pre>
+     *
+     * <code>string deny_list_contract_address = 4 [json_name = "denyListContractAddress"];</code>
+     * @return The bytes for denyListContractAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenyListContractAddressBytes() {
+      java.lang.Object ref = denyListContractAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denyListContractAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DISPUTE_COST_FIELD_NUMBER = 5;
+    private com.cosmos.base.v1beta1.CoinProto.Coin disputeCost_;
+    /**
+     * <pre>
+     * DisputeCost The required dispute amount, in the default denom (utgd)
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin dispute_cost = 5 [json_name = "disputeCost", (.gogoproto.nullable) = false];</code>
+     * @return Whether the disputeCost field is set.
+     */
+    @java.lang.Override
+    public boolean hasDisputeCost() {
+      return disputeCost_ != null;
+    }
+    /**
+     * <pre>
+     * DisputeCost The required dispute amount, in the default denom (utgd)
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin dispute_cost = 5 [json_name = "disputeCost", (.gogoproto.nullable) = false];</code>
+     * @return The disputeCost.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getDisputeCost() {
+      return disputeCost_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : disputeCost_;
+    }
+    /**
+     * <pre>
+     * DisputeCost The required dispute amount, in the default denom (utgd)
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin dispute_cost = 5 [json_name = "disputeCost", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDisputeCostOrBuilder() {
+      return disputeCost_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : disputeCost_;
+    }
+
+    public static final int WAITING_PERIOD_FIELD_NUMBER = 6;
+    private com.google.protobuf.Duration waitingPeriod_;
+    /**
+     * <code>.google.protobuf.Duration waiting_period = 6 [json_name = "waitingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the waitingPeriod field is set.
+     */
+    @java.lang.Override
+    public boolean hasWaitingPeriod() {
+      return waitingPeriod_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Duration waiting_period = 6 [json_name = "waitingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return The waitingPeriod.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getWaitingPeriod() {
+      return waitingPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : waitingPeriod_;
+    }
+    /**
+     * <code>.google.protobuf.Duration waiting_period = 6 [json_name = "waitingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getWaitingPeriodOrBuilder() {
+      return waitingPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : waitingPeriod_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (escrowAmount_ != null) {
+        output.writeMessage(2, getEscrowAmount());
+      }
+      if (votingRules_ != null) {
+        output.writeMessage(3, getVotingRules());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denyListContractAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, denyListContractAddress_);
+      }
+      if (disputeCost_ != null) {
+        output.writeMessage(5, getDisputeCost());
+      }
+      if (waitingPeriod_ != null) {
+        output.writeMessage(6, getWaitingPeriod());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (escrowAmount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getEscrowAmount());
+      }
+      if (votingRules_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getVotingRules());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denyListContractAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, denyListContractAddress_);
+      }
+      if (disputeCost_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getDisputeCost());
+      }
+      if (waitingPeriod_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getWaitingPeriod());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig)) {
+        return super.equals(obj);
+      }
+      com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig other = (com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (hasEscrowAmount() != other.hasEscrowAmount()) return false;
+      if (hasEscrowAmount()) {
+        if (!getEscrowAmount()
+            .equals(other.getEscrowAmount())) return false;
+      }
+      if (hasVotingRules() != other.hasVotingRules()) return false;
+      if (hasVotingRules()) {
+        if (!getVotingRules()
+            .equals(other.getVotingRules())) return false;
+      }
+      if (!getDenyListContractAddress()
+          .equals(other.getDenyListContractAddress())) return false;
+      if (hasDisputeCost() != other.hasDisputeCost()) return false;
+      if (hasDisputeCost()) {
+        if (!getDisputeCost()
+            .equals(other.getDisputeCost())) return false;
+      }
+      if (hasWaitingPeriod() != other.hasWaitingPeriod()) return false;
+      if (hasWaitingPeriod()) {
+        if (!getWaitingPeriod()
+            .equals(other.getWaitingPeriod())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      if (hasEscrowAmount()) {
+        hash = (37 * hash) + ESCROW_AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getEscrowAmount().hashCode();
+      }
+      if (hasVotingRules()) {
+        hash = (37 * hash) + VOTING_RULES_FIELD_NUMBER;
+        hash = (53 * hash) + getVotingRules().hashCode();
+      }
+      hash = (37 * hash) + DENY_LIST_CONTRACT_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getDenyListContractAddress().hashCode();
+      if (hasDisputeCost()) {
+        hash = (37 * hash) + DISPUTE_COST_FIELD_NUMBER;
+        hash = (53 * hash) + getDisputeCost().hashCode();
+      }
+      if (hasWaitingPeriod()) {
+        hash = (37 * hash) + WAITING_PERIOD_FIELD_NUMBER;
+        hash = (53 * hash) + getWaitingPeriod().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ArbiterPoolContractConfig initial setup config for the trusted circle
+     * </pre>
+     *
+     * Protobuf type {@code confio.poe.v1beta1.ArbiterPoolContractConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.poe.v1beta1.ArbiterPoolContractConfig)
+        com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_ArbiterPoolContractConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_ArbiterPoolContractConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig.class, com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig.Builder.class);
+      }
+
+      // Construct using com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        name_ = "";
+        escrowAmount_ = null;
+        if (escrowAmountBuilder_ != null) {
+          escrowAmountBuilder_.dispose();
+          escrowAmountBuilder_ = null;
+        }
+        votingRules_ = null;
+        if (votingRulesBuilder_ != null) {
+          votingRulesBuilder_.dispose();
+          votingRulesBuilder_ = null;
+        }
+        denyListContractAddress_ = "";
+        disputeCost_ = null;
+        if (disputeCostBuilder_ != null) {
+          disputeCostBuilder_.dispose();
+          disputeCostBuilder_ = null;
+        }
+        waitingPeriod_ = null;
+        if (waitingPeriodBuilder_ != null) {
+          waitingPeriodBuilder_.dispose();
+          waitingPeriodBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.poe.v1beta1.GenesisProto.internal_static_confio_poe_v1beta1_ArbiterPoolContractConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig getDefaultInstanceForType() {
+        return com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig build() {
+        com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig buildPartial() {
+        com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig result = new com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.escrowAmount_ = escrowAmountBuilder_ == null
+              ? escrowAmount_
+              : escrowAmountBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.votingRules_ = votingRulesBuilder_ == null
+              ? votingRules_
+              : votingRulesBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.denyListContractAddress_ = denyListContractAddress_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.disputeCost_ = disputeCostBuilder_ == null
+              ? disputeCost_
+              : disputeCostBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.waitingPeriod_ = waitingPeriodBuilder_ == null
+              ? waitingPeriod_
+              : waitingPeriodBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig) {
+          return mergeFrom((com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig other) {
+        if (other == com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasEscrowAmount()) {
+          mergeEscrowAmount(other.getEscrowAmount());
+        }
+        if (other.hasVotingRules()) {
+          mergeVotingRules(other.getVotingRules());
+        }
+        if (!other.getDenyListContractAddress().isEmpty()) {
+          denyListContractAddress_ = other.denyListContractAddress_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.hasDisputeCost()) {
+          mergeDisputeCost(other.getDisputeCost());
+        }
+        if (other.hasWaitingPeriod()) {
+          mergeWaitingPeriod(other.getWaitingPeriod());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getEscrowAmountFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getVotingRulesFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                denyListContractAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getDisputeCostFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getWaitingPeriodFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name of TRUSTED_CIRCLE
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of TRUSTED_CIRCLE
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of TRUSTED_CIRCLE
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of TRUSTED_CIRCLE
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of TRUSTED_CIRCLE
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin escrowAmount_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> escrowAmountBuilder_;
+      /**
+       * <pre>
+       * EscrowAmount The required escrow amount, in the default denom (utgd)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin escrow_amount = 2 [json_name = "escrowAmount", (.gogoproto.nullable) = false];</code>
+       * @return Whether the escrowAmount field is set.
+       */
+      public boolean hasEscrowAmount() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * EscrowAmount The required escrow amount, in the default denom (utgd)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin escrow_amount = 2 [json_name = "escrowAmount", (.gogoproto.nullable) = false];</code>
+       * @return The escrowAmount.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getEscrowAmount() {
+        if (escrowAmountBuilder_ == null) {
+          return escrowAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : escrowAmount_;
+        } else {
+          return escrowAmountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * EscrowAmount The required escrow amount, in the default denom (utgd)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin escrow_amount = 2 [json_name = "escrowAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setEscrowAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (escrowAmountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          escrowAmount_ = value;
+        } else {
+          escrowAmountBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EscrowAmount The required escrow amount, in the default denom (utgd)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin escrow_amount = 2 [json_name = "escrowAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setEscrowAmount(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (escrowAmountBuilder_ == null) {
+          escrowAmount_ = builderForValue.build();
+        } else {
+          escrowAmountBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EscrowAmount The required escrow amount, in the default denom (utgd)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin escrow_amount = 2 [json_name = "escrowAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeEscrowAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (escrowAmountBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            escrowAmount_ != null &&
+            escrowAmount_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getEscrowAmountBuilder().mergeFrom(value);
+          } else {
+            escrowAmount_ = value;
+          }
+        } else {
+          escrowAmountBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EscrowAmount The required escrow amount, in the default denom (utgd)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin escrow_amount = 2 [json_name = "escrowAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearEscrowAmount() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        escrowAmount_ = null;
+        if (escrowAmountBuilder_ != null) {
+          escrowAmountBuilder_.dispose();
+          escrowAmountBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EscrowAmount The required escrow amount, in the default denom (utgd)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin escrow_amount = 2 [json_name = "escrowAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getEscrowAmountBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getEscrowAmountFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * EscrowAmount The required escrow amount, in the default denom (utgd)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin escrow_amount = 2 [json_name = "escrowAmount", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getEscrowAmountOrBuilder() {
+        if (escrowAmountBuilder_ != null) {
+          return escrowAmountBuilder_.getMessageOrBuilder();
+        } else {
+          return escrowAmount_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : escrowAmount_;
+        }
+      }
+      /**
+       * <pre>
+       * EscrowAmount The required escrow amount, in the default denom (utgd)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin escrow_amount = 2 [json_name = "escrowAmount", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getEscrowAmountFieldBuilder() {
+        if (escrowAmountBuilder_ == null) {
+          escrowAmountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getEscrowAmount(),
+                  getParentForChildren(),
+                  isClean());
+          escrowAmount_ = null;
+        }
+        return escrowAmountBuilder_;
+      }
+
+      private com.confio.poe.v1beta1.GenesisProto.VotingRules votingRules_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.VotingRules, com.confio.poe.v1beta1.GenesisProto.VotingRules.Builder, com.confio.poe.v1beta1.GenesisProto.VotingRulesOrBuilder> votingRulesBuilder_;
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 3 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       * @return Whether the votingRules field is set.
+       */
+      public boolean hasVotingRules() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 3 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       * @return The votingRules.
+       */
+      public com.confio.poe.v1beta1.GenesisProto.VotingRules getVotingRules() {
+        if (votingRulesBuilder_ == null) {
+          return votingRules_ == null ? com.confio.poe.v1beta1.GenesisProto.VotingRules.getDefaultInstance() : votingRules_;
+        } else {
+          return votingRulesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 3 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setVotingRules(com.confio.poe.v1beta1.GenesisProto.VotingRules value) {
+        if (votingRulesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          votingRules_ = value;
+        } else {
+          votingRulesBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 3 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setVotingRules(
+          com.confio.poe.v1beta1.GenesisProto.VotingRules.Builder builderForValue) {
+        if (votingRulesBuilder_ == null) {
+          votingRules_ = builderForValue.build();
+        } else {
+          votingRulesBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 3 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeVotingRules(com.confio.poe.v1beta1.GenesisProto.VotingRules value) {
+        if (votingRulesBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            votingRules_ != null &&
+            votingRules_ != com.confio.poe.v1beta1.GenesisProto.VotingRules.getDefaultInstance()) {
+            getVotingRulesBuilder().mergeFrom(value);
+          } else {
+            votingRules_ = value;
+          }
+        } else {
+          votingRulesBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 3 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearVotingRules() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        votingRules_ = null;
+        if (votingRulesBuilder_ != null) {
+          votingRulesBuilder_.dispose();
+          votingRulesBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 3 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.VotingRules.Builder getVotingRulesBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getVotingRulesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 3 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       */
+      public com.confio.poe.v1beta1.GenesisProto.VotingRulesOrBuilder getVotingRulesOrBuilder() {
+        if (votingRulesBuilder_ != null) {
+          return votingRulesBuilder_.getMessageOrBuilder();
+        } else {
+          return votingRules_ == null ?
+              com.confio.poe.v1beta1.GenesisProto.VotingRules.getDefaultInstance() : votingRules_;
+        }
+      }
+      /**
+       * <pre>
+       * VotingRules rules for the tally
+       * </pre>
+       *
+       * <code>.confio.poe.v1beta1.VotingRules voting_rules = 3 [json_name = "votingRules", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.confio.poe.v1beta1.GenesisProto.VotingRules, com.confio.poe.v1beta1.GenesisProto.VotingRules.Builder, com.confio.poe.v1beta1.GenesisProto.VotingRulesOrBuilder> 
+          getVotingRulesFieldBuilder() {
+        if (votingRulesBuilder_ == null) {
+          votingRulesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.confio.poe.v1beta1.GenesisProto.VotingRules, com.confio.poe.v1beta1.GenesisProto.VotingRules.Builder, com.confio.poe.v1beta1.GenesisProto.VotingRulesOrBuilder>(
+                  getVotingRules(),
+                  getParentForChildren(),
+                  isClean());
+          votingRules_ = null;
+        }
+        return votingRulesBuilder_;
+      }
+
+      private java.lang.Object denyListContractAddress_ = "";
+      /**
+       * <pre>
+       * DenyListContractAddress is an optional cw4 contract with list of addresses
+       * denied to be part of TrustedCircle
+       * </pre>
+       *
+       * <code>string deny_list_contract_address = 4 [json_name = "denyListContractAddress"];</code>
+       * @return The denyListContractAddress.
+       */
+      public java.lang.String getDenyListContractAddress() {
+        java.lang.Object ref = denyListContractAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denyListContractAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * DenyListContractAddress is an optional cw4 contract with list of addresses
+       * denied to be part of TrustedCircle
+       * </pre>
+       *
+       * <code>string deny_list_contract_address = 4 [json_name = "denyListContractAddress"];</code>
+       * @return The bytes for denyListContractAddress.
+       */
+      public com.google.protobuf.ByteString
+          getDenyListContractAddressBytes() {
+        java.lang.Object ref = denyListContractAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denyListContractAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * DenyListContractAddress is an optional cw4 contract with list of addresses
+       * denied to be part of TrustedCircle
+       * </pre>
+       *
+       * <code>string deny_list_contract_address = 4 [json_name = "denyListContractAddress"];</code>
+       * @param value The denyListContractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenyListContractAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denyListContractAddress_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DenyListContractAddress is an optional cw4 contract with list of addresses
+       * denied to be part of TrustedCircle
+       * </pre>
+       *
+       * <code>string deny_list_contract_address = 4 [json_name = "denyListContractAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenyListContractAddress() {
+        denyListContractAddress_ = getDefaultInstance().getDenyListContractAddress();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DenyListContractAddress is an optional cw4 contract with list of addresses
+       * denied to be part of TrustedCircle
+       * </pre>
+       *
+       * <code>string deny_list_contract_address = 4 [json_name = "denyListContractAddress"];</code>
+       * @param value The bytes for denyListContractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenyListContractAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denyListContractAddress_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin disputeCost_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> disputeCostBuilder_;
+      /**
+       * <pre>
+       * DisputeCost The required dispute amount, in the default denom (utgd)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin dispute_cost = 5 [json_name = "disputeCost", (.gogoproto.nullable) = false];</code>
+       * @return Whether the disputeCost field is set.
+       */
+      public boolean hasDisputeCost() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * DisputeCost The required dispute amount, in the default denom (utgd)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin dispute_cost = 5 [json_name = "disputeCost", (.gogoproto.nullable) = false];</code>
+       * @return The disputeCost.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getDisputeCost() {
+        if (disputeCostBuilder_ == null) {
+          return disputeCost_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : disputeCost_;
+        } else {
+          return disputeCostBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * DisputeCost The required dispute amount, in the default denom (utgd)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin dispute_cost = 5 [json_name = "disputeCost", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDisputeCost(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (disputeCostBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          disputeCost_ = value;
+        } else {
+          disputeCostBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DisputeCost The required dispute amount, in the default denom (utgd)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin dispute_cost = 5 [json_name = "disputeCost", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDisputeCost(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (disputeCostBuilder_ == null) {
+          disputeCost_ = builderForValue.build();
+        } else {
+          disputeCostBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DisputeCost The required dispute amount, in the default denom (utgd)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin dispute_cost = 5 [json_name = "disputeCost", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeDisputeCost(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (disputeCostBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            disputeCost_ != null &&
+            disputeCost_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getDisputeCostBuilder().mergeFrom(value);
+          } else {
+            disputeCost_ = value;
+          }
+        } else {
+          disputeCostBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DisputeCost The required dispute amount, in the default denom (utgd)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin dispute_cost = 5 [json_name = "disputeCost", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDisputeCost() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        disputeCost_ = null;
+        if (disputeCostBuilder_ != null) {
+          disputeCostBuilder_.dispose();
+          disputeCostBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DisputeCost The required dispute amount, in the default denom (utgd)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin dispute_cost = 5 [json_name = "disputeCost", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getDisputeCostBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getDisputeCostFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * DisputeCost The required dispute amount, in the default denom (utgd)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin dispute_cost = 5 [json_name = "disputeCost", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDisputeCostOrBuilder() {
+        if (disputeCostBuilder_ != null) {
+          return disputeCostBuilder_.getMessageOrBuilder();
+        } else {
+          return disputeCost_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : disputeCost_;
+        }
+      }
+      /**
+       * <pre>
+       * DisputeCost The required dispute amount, in the default denom (utgd)
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin dispute_cost = 5 [json_name = "disputeCost", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getDisputeCostFieldBuilder() {
+        if (disputeCostBuilder_ == null) {
+          disputeCostBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getDisputeCost(),
+                  getParentForChildren(),
+                  isClean());
+          disputeCost_ = null;
+        }
+        return disputeCostBuilder_;
+      }
+
+      private com.google.protobuf.Duration waitingPeriod_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> waitingPeriodBuilder_;
+      /**
+       * <code>.google.protobuf.Duration waiting_period = 6 [json_name = "waitingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       * @return Whether the waitingPeriod field is set.
+       */
+      public boolean hasWaitingPeriod() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Duration waiting_period = 6 [json_name = "waitingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       * @return The waitingPeriod.
+       */
+      public com.google.protobuf.Duration getWaitingPeriod() {
+        if (waitingPeriodBuilder_ == null) {
+          return waitingPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : waitingPeriod_;
+        } else {
+          return waitingPeriodBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration waiting_period = 6 [json_name = "waitingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setWaitingPeriod(com.google.protobuf.Duration value) {
+        if (waitingPeriodBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          waitingPeriod_ = value;
+        } else {
+          waitingPeriodBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration waiting_period = 6 [json_name = "waitingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setWaitingPeriod(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (waitingPeriodBuilder_ == null) {
+          waitingPeriod_ = builderForValue.build();
+        } else {
+          waitingPeriodBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration waiting_period = 6 [json_name = "waitingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeWaitingPeriod(com.google.protobuf.Duration value) {
+        if (waitingPeriodBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            waitingPeriod_ != null &&
+            waitingPeriod_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getWaitingPeriodBuilder().mergeFrom(value);
+          } else {
+            waitingPeriod_ = value;
+          }
+        } else {
+          waitingPeriodBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration waiting_period = 6 [json_name = "waitingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearWaitingPeriod() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        waitingPeriod_ = null;
+        if (waitingPeriodBuilder_ != null) {
+          waitingPeriodBuilder_.dispose();
+          waitingPeriodBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration waiting_period = 6 [json_name = "waitingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getWaitingPeriodBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getWaitingPeriodFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Duration waiting_period = 6 [json_name = "waitingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getWaitingPeriodOrBuilder() {
+        if (waitingPeriodBuilder_ != null) {
+          return waitingPeriodBuilder_.getMessageOrBuilder();
+        } else {
+          return waitingPeriod_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : waitingPeriod_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration waiting_period = 6 [json_name = "waitingPeriod", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getWaitingPeriodFieldBuilder() {
+        if (waitingPeriodBuilder_ == null) {
+          waitingPeriodBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getWaitingPeriod(),
+                  getParentForChildren(),
+                  isClean());
+          waitingPeriod_ = null;
+        }
+        return waitingPeriodBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.poe.v1beta1.ArbiterPoolContractConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.poe.v1beta1.ArbiterPoolContractConfig)
+    private static final com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig();
+    }
+
+    public static com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ArbiterPoolContractConfig>
+        PARSER = new com.google.protobuf.AbstractParser<ArbiterPoolContractConfig>() {
+      @java.lang.Override
+      public ArbiterPoolContractConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ArbiterPoolContractConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ArbiterPoolContractConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.poe.v1beta1.GenesisProto.ArbiterPoolContractConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_ImportDump_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_ImportDump_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_SeedContracts_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_SeedContracts_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_MixerContractConfig_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_MixerContractConfig_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_MixerContractConfig_Sigmoid_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_MixerContractConfig_Sigmoid_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_StakeContractConfig_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_StakeContractConfig_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_ValsetContractConfig_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_ValsetContractConfig_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_EngagementContractConfig_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_EngagementContractConfig_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_OversightCommitteeContractConfig_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_OversightCommitteeContractConfig_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_CommunityPoolContractConfig_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_CommunityPoolContractConfig_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_ValidatorVotingContractConfig_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_ValidatorVotingContractConfig_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_PoEContract_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_PoEContract_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_TG4Member_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_TG4Member_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_VotingRules_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_VotingRules_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_poe_v1beta1_ArbiterPoolContractConfig_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_poe_v1beta1_ArbiterPoolContractConfig_fieldAccessorTable;
 
@@ -225,12 +18259,12 @@ public final class GenesisProto {
       "tAddress\022B\n\014dispute_cost\030\005 \001(\0132\031.cosmos." +
       "base.v1beta1.CoinB\004\310\336\037\000R\013disputeCost\022J\n\016" +
       "waiting_period\030\006 \001(\0132\031.google.protobuf.D" +
-      "urationB\010\310\336\037\000\230\337\037\001R\rwaitingPeriodB\266\001\n\026com" +
-      ".confio.poe.v1beta1B\014GenesisProtoP\001Z$git" +
-      "hub.com/confio/tgrade/x/poe/types\242\002\003CPX\252" +
-      "\002\022Confio.Poe.V1beta1\312\002\022Confio\\Poe\\V1beta" +
-      "1\342\002\036Confio\\Poe\\V1beta1\\GPBMetadata\352\002\024Con" +
-      "fio::Poe::V1beta1b\006proto3"
+      "urationB\010\310\336\037\000\230\337\037\001R\rwaitingPeriodB\264\001\n\026com" +
+      ".confio.poe.v1beta1B\014GenesisProtoZ$githu" +
+      "b.com/confio/tgrade/x/poe/types\242\002\003CPX\252\002\022" +
+      "Confio.Poe.V1beta1\312\002\022Confio\\Poe\\V1beta1\342" +
+      "\002\036Confio\\Poe\\V1beta1\\GPBMetadata\352\002\024Confi" +
+      "o::Poe::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

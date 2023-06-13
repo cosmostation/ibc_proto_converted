@@ -14,9 +14,799 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irishub.guardian.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.irishub.guardian.GuardianProto.Super> 
+        getSupersList();
+    /**
+     * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+     */
+    com.irishub.guardian.GuardianProto.Super getSupers(int index);
+    /**
+     * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+     */
+    int getSupersCount();
+    /**
+     * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.irishub.guardian.GuardianProto.SuperOrBuilder> 
+        getSupersOrBuilderList();
+    /**
+     * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+     */
+    com.irishub.guardian.GuardianProto.SuperOrBuilder getSupersOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the guardian module's genesis state
+   * </pre>
+   *
+   * Protobuf type {@code irishub.guardian.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irishub.guardian.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      supers_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irishub.guardian.GenesisProto.internal_static_irishub_guardian_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irishub.guardian.GenesisProto.internal_static_irishub_guardian_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irishub.guardian.GenesisProto.GenesisState.class, com.irishub.guardian.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int SUPERS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.irishub.guardian.GuardianProto.Super> supers_;
+    /**
+     * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.irishub.guardian.GuardianProto.Super> getSupersList() {
+      return supers_;
+    }
+    /**
+     * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.irishub.guardian.GuardianProto.SuperOrBuilder> 
+        getSupersOrBuilderList() {
+      return supers_;
+    }
+    /**
+     * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getSupersCount() {
+      return supers_.size();
+    }
+    /**
+     * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.irishub.guardian.GuardianProto.Super getSupers(int index) {
+      return supers_.get(index);
+    }
+    /**
+     * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.irishub.guardian.GuardianProto.SuperOrBuilder getSupersOrBuilder(
+        int index) {
+      return supers_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < supers_.size(); i++) {
+        output.writeMessage(1, supers_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < supers_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, supers_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irishub.guardian.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.irishub.guardian.GenesisProto.GenesisState other = (com.irishub.guardian.GenesisProto.GenesisState) obj;
+
+      if (!getSupersList()
+          .equals(other.getSupersList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getSupersCount() > 0) {
+        hash = (37 * hash) + SUPERS_FIELD_NUMBER;
+        hash = (53 * hash) + getSupersList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irishub.guardian.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irishub.guardian.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irishub.guardian.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irishub.guardian.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irishub.guardian.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irishub.guardian.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irishub.guardian.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irishub.guardian.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irishub.guardian.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irishub.guardian.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irishub.guardian.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irishub.guardian.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irishub.guardian.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the guardian module's genesis state
+     * </pre>
+     *
+     * Protobuf type {@code irishub.guardian.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irishub.guardian.GenesisState)
+        com.irishub.guardian.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irishub.guardian.GenesisProto.internal_static_irishub_guardian_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irishub.guardian.GenesisProto.internal_static_irishub_guardian_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irishub.guardian.GenesisProto.GenesisState.class, com.irishub.guardian.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.irishub.guardian.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (supersBuilder_ == null) {
+          supers_ = java.util.Collections.emptyList();
+        } else {
+          supers_ = null;
+          supersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irishub.guardian.GenesisProto.internal_static_irishub_guardian_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irishub.guardian.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.irishub.guardian.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irishub.guardian.GenesisProto.GenesisState build() {
+        com.irishub.guardian.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irishub.guardian.GenesisProto.GenesisState buildPartial() {
+        com.irishub.guardian.GenesisProto.GenesisState result = new com.irishub.guardian.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.irishub.guardian.GenesisProto.GenesisState result) {
+        if (supersBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            supers_ = java.util.Collections.unmodifiableList(supers_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.supers_ = supers_;
+        } else {
+          result.supers_ = supersBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.irishub.guardian.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irishub.guardian.GenesisProto.GenesisState) {
+          return mergeFrom((com.irishub.guardian.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irishub.guardian.GenesisProto.GenesisState other) {
+        if (other == com.irishub.guardian.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (supersBuilder_ == null) {
+          if (!other.supers_.isEmpty()) {
+            if (supers_.isEmpty()) {
+              supers_ = other.supers_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureSupersIsMutable();
+              supers_.addAll(other.supers_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.supers_.isEmpty()) {
+            if (supersBuilder_.isEmpty()) {
+              supersBuilder_.dispose();
+              supersBuilder_ = null;
+              supers_ = other.supers_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              supersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSupersFieldBuilder() : null;
+            } else {
+              supersBuilder_.addAllMessages(other.supers_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.irishub.guardian.GuardianProto.Super m =
+                    input.readMessage(
+                        com.irishub.guardian.GuardianProto.Super.parser(),
+                        extensionRegistry);
+                if (supersBuilder_ == null) {
+                  ensureSupersIsMutable();
+                  supers_.add(m);
+                } else {
+                  supersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.irishub.guardian.GuardianProto.Super> supers_ =
+        java.util.Collections.emptyList();
+      private void ensureSupersIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          supers_ = new java.util.ArrayList<com.irishub.guardian.GuardianProto.Super>(supers_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.irishub.guardian.GuardianProto.Super, com.irishub.guardian.GuardianProto.Super.Builder, com.irishub.guardian.GuardianProto.SuperOrBuilder> supersBuilder_;
+
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.irishub.guardian.GuardianProto.Super> getSupersList() {
+        if (supersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(supers_);
+        } else {
+          return supersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public int getSupersCount() {
+        if (supersBuilder_ == null) {
+          return supers_.size();
+        } else {
+          return supersBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irishub.guardian.GuardianProto.Super getSupers(int index) {
+        if (supersBuilder_ == null) {
+          return supers_.get(index);
+        } else {
+          return supersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSupers(
+          int index, com.irishub.guardian.GuardianProto.Super value) {
+        if (supersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupersIsMutable();
+          supers_.set(index, value);
+          onChanged();
+        } else {
+          supersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSupers(
+          int index, com.irishub.guardian.GuardianProto.Super.Builder builderForValue) {
+        if (supersBuilder_ == null) {
+          ensureSupersIsMutable();
+          supers_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          supersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSupers(com.irishub.guardian.GuardianProto.Super value) {
+        if (supersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupersIsMutable();
+          supers_.add(value);
+          onChanged();
+        } else {
+          supersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSupers(
+          int index, com.irishub.guardian.GuardianProto.Super value) {
+        if (supersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupersIsMutable();
+          supers_.add(index, value);
+          onChanged();
+        } else {
+          supersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSupers(
+          com.irishub.guardian.GuardianProto.Super.Builder builderForValue) {
+        if (supersBuilder_ == null) {
+          ensureSupersIsMutable();
+          supers_.add(builderForValue.build());
+          onChanged();
+        } else {
+          supersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSupers(
+          int index, com.irishub.guardian.GuardianProto.Super.Builder builderForValue) {
+        if (supersBuilder_ == null) {
+          ensureSupersIsMutable();
+          supers_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          supersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllSupers(
+          java.lang.Iterable<? extends com.irishub.guardian.GuardianProto.Super> values) {
+        if (supersBuilder_ == null) {
+          ensureSupersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, supers_);
+          onChanged();
+        } else {
+          supersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearSupers() {
+        if (supersBuilder_ == null) {
+          supers_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          supersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeSupers(int index) {
+        if (supersBuilder_ == null) {
+          ensureSupersIsMutable();
+          supers_.remove(index);
+          onChanged();
+        } else {
+          supersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irishub.guardian.GuardianProto.Super.Builder getSupersBuilder(
+          int index) {
+        return getSupersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irishub.guardian.GuardianProto.SuperOrBuilder getSupersOrBuilder(
+          int index) {
+        if (supersBuilder_ == null) {
+          return supers_.get(index);  } else {
+          return supersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.irishub.guardian.GuardianProto.SuperOrBuilder> 
+           getSupersOrBuilderList() {
+        if (supersBuilder_ != null) {
+          return supersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(supers_);
+        }
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irishub.guardian.GuardianProto.Super.Builder addSupersBuilder() {
+        return getSupersFieldBuilder().addBuilder(
+            com.irishub.guardian.GuardianProto.Super.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irishub.guardian.GuardianProto.Super.Builder addSupersBuilder(
+          int index) {
+        return getSupersFieldBuilder().addBuilder(
+            index, com.irishub.guardian.GuardianProto.Super.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .irishub.guardian.Super supers = 1 [json_name = "supers", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.irishub.guardian.GuardianProto.Super.Builder> 
+           getSupersBuilderList() {
+        return getSupersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.irishub.guardian.GuardianProto.Super, com.irishub.guardian.GuardianProto.Super.Builder, com.irishub.guardian.GuardianProto.SuperOrBuilder> 
+          getSupersFieldBuilder() {
+        if (supersBuilder_ == null) {
+          supersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.irishub.guardian.GuardianProto.Super, com.irishub.guardian.GuardianProto.Super.Builder, com.irishub.guardian.GuardianProto.SuperOrBuilder>(
+                  supers_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          supers_ = null;
+        }
+        return supersBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irishub.guardian.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:irishub.guardian.GenesisState)
+    private static final com.irishub.guardian.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irishub.guardian.GenesisProto.GenesisState();
+    }
+
+    public static com.irishub.guardian.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irishub.guardian.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irishub_guardian_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irishub_guardian_GenesisState_fieldAccessorTable;
 
@@ -32,12 +822,12 @@ public final class GenesisProto {
       "b.guardian\032\037irishub/guardian/guardian.pr" +
       "oto\032\024gogoproto/gogo.proto\"E\n\014GenesisStat" +
       "e\0225\n\006supers\030\001 \003(\0132\027.irishub.guardian.Sup" +
-      "erB\004\310\336\037\000R\006supersB\270\001\n\024com.irishub.guardia" +
-      "nB\014GenesisProtoP\001Z1github.com/irisnet/ir" +
-      "ishub/modules/guardian/types\242\002\003IGX\252\002\020Iri" +
-      "shub.Guardian\312\002\020Irishub\\Guardian\342\002\034Irish" +
-      "ub\\Guardian\\GPBMetadata\352\002\021Irishub::Guard" +
-      "ianb\006proto3"
+      "erB\004\310\336\037\000R\006supersB\266\001\n\024com.irishub.guardia" +
+      "nB\014GenesisProtoZ1github.com/irisnet/iris" +
+      "hub/modules/guardian/types\242\002\003IGX\252\002\020Irish" +
+      "ub.Guardian\312\002\020Irishub\\Guardian\342\002\034Irishub" +
+      "\\Guardian\\GPBMetadata\352\002\021Irishub::Guardia" +
+      "nb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

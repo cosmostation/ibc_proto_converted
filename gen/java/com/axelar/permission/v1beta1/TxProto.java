@@ -14,34 +14,3014 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface UpdateGovernanceKeyRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.permission.v1beta1.UpdateGovernanceKeyRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The sender.
+     */
+    com.google.protobuf.ByteString getSender();
+
+    /**
+     * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 2 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
+     * @return Whether the governanceKey field is set.
+     */
+    boolean hasGovernanceKey();
+    /**
+     * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 2 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
+     * @return The governanceKey.
+     */
+    com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey getGovernanceKey();
+    /**
+     * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 2 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKeyOrBuilder getGovernanceKeyOrBuilder();
+  }
+  /**
+   * Protobuf type {@code axelar.permission.v1beta1.UpdateGovernanceKeyRequest}
+   */
+  public static final class UpdateGovernanceKeyRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.permission.v1beta1.UpdateGovernanceKeyRequest)
+      UpdateGovernanceKeyRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateGovernanceKeyRequest.newBuilder() to construct.
+    private UpdateGovernanceKeyRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateGovernanceKeyRequest() {
+      sender_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateGovernanceKeyRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.permission.v1beta1.TxProto.internal_static_axelar_permission_v1beta1_UpdateGovernanceKeyRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.permission.v1beta1.TxProto.internal_static_axelar_permission_v1beta1_UpdateGovernanceKeyRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest.class, com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSender() {
+      return sender_;
+    }
+
+    public static final int GOVERNANCE_KEY_FIELD_NUMBER = 2;
+    private com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey governanceKey_;
+    /**
+     * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 2 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
+     * @return Whether the governanceKey field is set.
+     */
+    @java.lang.Override
+    public boolean hasGovernanceKey() {
+      return governanceKey_ != null;
+    }
+    /**
+     * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 2 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
+     * @return The governanceKey.
+     */
+    @java.lang.Override
+    public com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey getGovernanceKey() {
+      return governanceKey_ == null ? com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey.getDefaultInstance() : governanceKey_;
+    }
+    /**
+     * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 2 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKeyOrBuilder getGovernanceKeyOrBuilder() {
+      return governanceKey_ == null ? com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey.getDefaultInstance() : governanceKey_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!sender_.isEmpty()) {
+        output.writeBytes(1, sender_);
+      }
+      if (governanceKey_ != null) {
+        output.writeMessage(2, getGovernanceKey());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!sender_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, sender_);
+      }
+      if (governanceKey_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getGovernanceKey());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest)) {
+        return super.equals(obj);
+      }
+      com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest other = (com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (hasGovernanceKey() != other.hasGovernanceKey()) return false;
+      if (hasGovernanceKey()) {
+        if (!getGovernanceKey()
+            .equals(other.getGovernanceKey())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      if (hasGovernanceKey()) {
+        hash = (37 * hash) + GOVERNANCE_KEY_FIELD_NUMBER;
+        hash = (53 * hash) + getGovernanceKey().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.permission.v1beta1.UpdateGovernanceKeyRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.permission.v1beta1.UpdateGovernanceKeyRequest)
+        com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.permission.v1beta1.TxProto.internal_static_axelar_permission_v1beta1_UpdateGovernanceKeyRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.permission.v1beta1.TxProto.internal_static_axelar_permission_v1beta1_UpdateGovernanceKeyRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest.class, com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest.Builder.class);
+      }
+
+      // Construct using com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = com.google.protobuf.ByteString.EMPTY;
+        governanceKey_ = null;
+        if (governanceKeyBuilder_ != null) {
+          governanceKeyBuilder_.dispose();
+          governanceKeyBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.permission.v1beta1.TxProto.internal_static_axelar_permission_v1beta1_UpdateGovernanceKeyRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest getDefaultInstanceForType() {
+        return com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest build() {
+        com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest buildPartial() {
+        com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest result = new com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.governanceKey_ = governanceKeyBuilder_ == null
+              ? governanceKey_
+              : governanceKeyBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest) {
+          return mergeFrom((com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest other) {
+        if (other == com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest.getDefaultInstance()) return this;
+        if (other.getSender() != com.google.protobuf.ByteString.EMPTY) {
+          setSender(other.getSender());
+        }
+        if (other.hasGovernanceKey()) {
+          mergeGovernanceKey(other.getGovernanceKey());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getGovernanceKeyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return The sender.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSender() {
+        return sender_;
+      }
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sender_ = getDefaultInstance().getSender();
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey governanceKey_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey, com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey.Builder, com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKeyOrBuilder> governanceKeyBuilder_;
+      /**
+       * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 2 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
+       * @return Whether the governanceKey field is set.
+       */
+      public boolean hasGovernanceKey() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 2 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
+       * @return The governanceKey.
+       */
+      public com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey getGovernanceKey() {
+        if (governanceKeyBuilder_ == null) {
+          return governanceKey_ == null ? com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey.getDefaultInstance() : governanceKey_;
+        } else {
+          return governanceKeyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 2 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGovernanceKey(com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey value) {
+        if (governanceKeyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          governanceKey_ = value;
+        } else {
+          governanceKeyBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 2 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGovernanceKey(
+          com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey.Builder builderForValue) {
+        if (governanceKeyBuilder_ == null) {
+          governanceKey_ = builderForValue.build();
+        } else {
+          governanceKeyBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 2 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeGovernanceKey(com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey value) {
+        if (governanceKeyBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            governanceKey_ != null &&
+            governanceKey_ != com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey.getDefaultInstance()) {
+            getGovernanceKeyBuilder().mergeFrom(value);
+          } else {
+            governanceKey_ = value;
+          }
+        } else {
+          governanceKeyBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 2 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearGovernanceKey() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        governanceKey_ = null;
+        if (governanceKeyBuilder_ != null) {
+          governanceKeyBuilder_.dispose();
+          governanceKeyBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 2 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey.Builder getGovernanceKeyBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getGovernanceKeyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 2 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKeyOrBuilder getGovernanceKeyOrBuilder() {
+        if (governanceKeyBuilder_ != null) {
+          return governanceKeyBuilder_.getMessageOrBuilder();
+        } else {
+          return governanceKey_ == null ?
+              com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey.getDefaultInstance() : governanceKey_;
+        }
+      }
+      /**
+       * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 2 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey, com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey.Builder, com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKeyOrBuilder> 
+          getGovernanceKeyFieldBuilder() {
+        if (governanceKeyBuilder_ == null) {
+          governanceKeyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey, com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey.Builder, com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKeyOrBuilder>(
+                  getGovernanceKey(),
+                  getParentForChildren(),
+                  isClean());
+          governanceKey_ = null;
+        }
+        return governanceKeyBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.permission.v1beta1.UpdateGovernanceKeyRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.permission.v1beta1.UpdateGovernanceKeyRequest)
+    private static final com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest();
+    }
+
+    public static com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateGovernanceKeyRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateGovernanceKeyRequest>() {
+      @java.lang.Override
+      public UpdateGovernanceKeyRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateGovernanceKeyRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateGovernanceKeyRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateGovernanceKeyResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.permission.v1beta1.UpdateGovernanceKeyResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code axelar.permission.v1beta1.UpdateGovernanceKeyResponse}
+   */
+  public static final class UpdateGovernanceKeyResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.permission.v1beta1.UpdateGovernanceKeyResponse)
+      UpdateGovernanceKeyResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateGovernanceKeyResponse.newBuilder() to construct.
+    private UpdateGovernanceKeyResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateGovernanceKeyResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateGovernanceKeyResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.permission.v1beta1.TxProto.internal_static_axelar_permission_v1beta1_UpdateGovernanceKeyResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.permission.v1beta1.TxProto.internal_static_axelar_permission_v1beta1_UpdateGovernanceKeyResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse.class, com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse)) {
+        return super.equals(obj);
+      }
+      com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse other = (com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.permission.v1beta1.UpdateGovernanceKeyResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.permission.v1beta1.UpdateGovernanceKeyResponse)
+        com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.permission.v1beta1.TxProto.internal_static_axelar_permission_v1beta1_UpdateGovernanceKeyResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.permission.v1beta1.TxProto.internal_static_axelar_permission_v1beta1_UpdateGovernanceKeyResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse.class, com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse.Builder.class);
+      }
+
+      // Construct using com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.permission.v1beta1.TxProto.internal_static_axelar_permission_v1beta1_UpdateGovernanceKeyResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse getDefaultInstanceForType() {
+        return com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse build() {
+        com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse buildPartial() {
+        com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse result = new com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse) {
+          return mergeFrom((com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse other) {
+        if (other == com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.permission.v1beta1.UpdateGovernanceKeyResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.permission.v1beta1.UpdateGovernanceKeyResponse)
+    private static final com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse();
+    }
+
+    public static com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateGovernanceKeyResponse>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateGovernanceKeyResponse>() {
+      @java.lang.Override
+      public UpdateGovernanceKeyResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateGovernanceKeyResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateGovernanceKeyResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.permission.v1beta1.TxProto.UpdateGovernanceKeyResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RegisterControllerRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.permission.v1beta1.RegisterControllerRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The sender.
+     */
+    com.google.protobuf.ByteString getSender();
+
+    /**
+     * <code>bytes controller = 2 [json_name = "controller", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The controller.
+     */
+    com.google.protobuf.ByteString getController();
+  }
+  /**
+   * <pre>
+   * MsgRegisterController represents a message to register a controller account
+   * </pre>
+   *
+   * Protobuf type {@code axelar.permission.v1beta1.RegisterControllerRequest}
+   */
+  public static final class RegisterControllerRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.permission.v1beta1.RegisterControllerRequest)
+      RegisterControllerRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RegisterControllerRequest.newBuilder() to construct.
+    private RegisterControllerRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RegisterControllerRequest() {
+      sender_ = com.google.protobuf.ByteString.EMPTY;
+      controller_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RegisterControllerRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.permission.v1beta1.TxProto.internal_static_axelar_permission_v1beta1_RegisterControllerRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.permission.v1beta1.TxProto.internal_static_axelar_permission_v1beta1_RegisterControllerRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest.class, com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSender() {
+      return sender_;
+    }
+
+    public static final int CONTROLLER_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString controller_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes controller = 2 [json_name = "controller", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The controller.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getController() {
+      return controller_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!sender_.isEmpty()) {
+        output.writeBytes(1, sender_);
+      }
+      if (!controller_.isEmpty()) {
+        output.writeBytes(2, controller_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!sender_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, sender_);
+      }
+      if (!controller_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, controller_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest)) {
+        return super.equals(obj);
+      }
+      com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest other = (com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getController()
+          .equals(other.getController())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (37 * hash) + CONTROLLER_FIELD_NUMBER;
+      hash = (53 * hash) + getController().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgRegisterController represents a message to register a controller account
+     * </pre>
+     *
+     * Protobuf type {@code axelar.permission.v1beta1.RegisterControllerRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.permission.v1beta1.RegisterControllerRequest)
+        com.axelar.permission.v1beta1.TxProto.RegisterControllerRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.permission.v1beta1.TxProto.internal_static_axelar_permission_v1beta1_RegisterControllerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.permission.v1beta1.TxProto.internal_static_axelar_permission_v1beta1_RegisterControllerRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest.class, com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest.Builder.class);
+      }
+
+      // Construct using com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = com.google.protobuf.ByteString.EMPTY;
+        controller_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.permission.v1beta1.TxProto.internal_static_axelar_permission_v1beta1_RegisterControllerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest getDefaultInstanceForType() {
+        return com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest build() {
+        com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest buildPartial() {
+        com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest result = new com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.controller_ = controller_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest) {
+          return mergeFrom((com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest other) {
+        if (other == com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest.getDefaultInstance()) return this;
+        if (other.getSender() != com.google.protobuf.ByteString.EMPTY) {
+          setSender(other.getSender());
+        }
+        if (other.getController() != com.google.protobuf.ByteString.EMPTY) {
+          setController(other.getController());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                controller_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return The sender.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSender() {
+        return sender_;
+      }
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sender_ = getDefaultInstance().getSender();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString controller_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes controller = 2 [json_name = "controller", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return The controller.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getController() {
+        return controller_;
+      }
+      /**
+       * <code>bytes controller = 2 [json_name = "controller", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @param value The controller to set.
+       * @return This builder for chaining.
+       */
+      public Builder setController(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        controller_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes controller = 2 [json_name = "controller", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearController() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        controller_ = getDefaultInstance().getController();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.permission.v1beta1.RegisterControllerRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.permission.v1beta1.RegisterControllerRequest)
+    private static final com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest();
+    }
+
+    public static com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RegisterControllerRequest>
+        PARSER = new com.google.protobuf.AbstractParser<RegisterControllerRequest>() {
+      @java.lang.Override
+      public RegisterControllerRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RegisterControllerRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RegisterControllerRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.permission.v1beta1.TxProto.RegisterControllerRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RegisterControllerResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.permission.v1beta1.RegisterControllerResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code axelar.permission.v1beta1.RegisterControllerResponse}
+   */
+  public static final class RegisterControllerResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.permission.v1beta1.RegisterControllerResponse)
+      RegisterControllerResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RegisterControllerResponse.newBuilder() to construct.
+    private RegisterControllerResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RegisterControllerResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RegisterControllerResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.permission.v1beta1.TxProto.internal_static_axelar_permission_v1beta1_RegisterControllerResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.permission.v1beta1.TxProto.internal_static_axelar_permission_v1beta1_RegisterControllerResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse.class, com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse)) {
+        return super.equals(obj);
+      }
+      com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse other = (com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.permission.v1beta1.RegisterControllerResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.permission.v1beta1.RegisterControllerResponse)
+        com.axelar.permission.v1beta1.TxProto.RegisterControllerResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.permission.v1beta1.TxProto.internal_static_axelar_permission_v1beta1_RegisterControllerResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.permission.v1beta1.TxProto.internal_static_axelar_permission_v1beta1_RegisterControllerResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse.class, com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse.Builder.class);
+      }
+
+      // Construct using com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.permission.v1beta1.TxProto.internal_static_axelar_permission_v1beta1_RegisterControllerResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse getDefaultInstanceForType() {
+        return com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse build() {
+        com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse buildPartial() {
+        com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse result = new com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse) {
+          return mergeFrom((com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse other) {
+        if (other == com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.permission.v1beta1.RegisterControllerResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.permission.v1beta1.RegisterControllerResponse)
+    private static final com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse();
+    }
+
+    public static com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RegisterControllerResponse>
+        PARSER = new com.google.protobuf.AbstractParser<RegisterControllerResponse>() {
+      @java.lang.Override
+      public RegisterControllerResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RegisterControllerResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RegisterControllerResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.permission.v1beta1.TxProto.RegisterControllerResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeregisterControllerRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.permission.v1beta1.DeregisterControllerRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The sender.
+     */
+    com.google.protobuf.ByteString getSender();
+
+    /**
+     * <code>bytes controller = 2 [json_name = "controller", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The controller.
+     */
+    com.google.protobuf.ByteString getController();
+  }
+  /**
+   * <pre>
+   * DeregisterController represents a message to deregister a controller account
+   * </pre>
+   *
+   * Protobuf type {@code axelar.permission.v1beta1.DeregisterControllerRequest}
+   */
+  public static final class DeregisterControllerRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.permission.v1beta1.DeregisterControllerRequest)
+      DeregisterControllerRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeregisterControllerRequest.newBuilder() to construct.
+    private DeregisterControllerRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeregisterControllerRequest() {
+      sender_ = com.google.protobuf.ByteString.EMPTY;
+      controller_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeregisterControllerRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.permission.v1beta1.TxProto.internal_static_axelar_permission_v1beta1_DeregisterControllerRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.permission.v1beta1.TxProto.internal_static_axelar_permission_v1beta1_DeregisterControllerRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest.class, com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSender() {
+      return sender_;
+    }
+
+    public static final int CONTROLLER_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString controller_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes controller = 2 [json_name = "controller", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The controller.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getController() {
+      return controller_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!sender_.isEmpty()) {
+        output.writeBytes(1, sender_);
+      }
+      if (!controller_.isEmpty()) {
+        output.writeBytes(2, controller_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!sender_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, sender_);
+      }
+      if (!controller_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, controller_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest)) {
+        return super.equals(obj);
+      }
+      com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest other = (com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getController()
+          .equals(other.getController())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (37 * hash) + CONTROLLER_FIELD_NUMBER;
+      hash = (53 * hash) + getController().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * DeregisterController represents a message to deregister a controller account
+     * </pre>
+     *
+     * Protobuf type {@code axelar.permission.v1beta1.DeregisterControllerRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.permission.v1beta1.DeregisterControllerRequest)
+        com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.permission.v1beta1.TxProto.internal_static_axelar_permission_v1beta1_DeregisterControllerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.permission.v1beta1.TxProto.internal_static_axelar_permission_v1beta1_DeregisterControllerRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest.class, com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest.Builder.class);
+      }
+
+      // Construct using com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = com.google.protobuf.ByteString.EMPTY;
+        controller_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.permission.v1beta1.TxProto.internal_static_axelar_permission_v1beta1_DeregisterControllerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest getDefaultInstanceForType() {
+        return com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest build() {
+        com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest buildPartial() {
+        com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest result = new com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.controller_ = controller_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest) {
+          return mergeFrom((com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest other) {
+        if (other == com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest.getDefaultInstance()) return this;
+        if (other.getSender() != com.google.protobuf.ByteString.EMPTY) {
+          setSender(other.getSender());
+        }
+        if (other.getController() != com.google.protobuf.ByteString.EMPTY) {
+          setController(other.getController());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                controller_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return The sender.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSender() {
+        return sender_;
+      }
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sender_ = getDefaultInstance().getSender();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString controller_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes controller = 2 [json_name = "controller", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return The controller.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getController() {
+        return controller_;
+      }
+      /**
+       * <code>bytes controller = 2 [json_name = "controller", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @param value The controller to set.
+       * @return This builder for chaining.
+       */
+      public Builder setController(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        controller_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes controller = 2 [json_name = "controller", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearController() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        controller_ = getDefaultInstance().getController();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.permission.v1beta1.DeregisterControllerRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.permission.v1beta1.DeregisterControllerRequest)
+    private static final com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest();
+    }
+
+    public static com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeregisterControllerRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DeregisterControllerRequest>() {
+      @java.lang.Override
+      public DeregisterControllerRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeregisterControllerRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeregisterControllerRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.permission.v1beta1.TxProto.DeregisterControllerRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeregisterControllerResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.permission.v1beta1.DeregisterControllerResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code axelar.permission.v1beta1.DeregisterControllerResponse}
+   */
+  public static final class DeregisterControllerResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.permission.v1beta1.DeregisterControllerResponse)
+      DeregisterControllerResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeregisterControllerResponse.newBuilder() to construct.
+    private DeregisterControllerResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeregisterControllerResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeregisterControllerResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.permission.v1beta1.TxProto.internal_static_axelar_permission_v1beta1_DeregisterControllerResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.permission.v1beta1.TxProto.internal_static_axelar_permission_v1beta1_DeregisterControllerResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse.class, com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse)) {
+        return super.equals(obj);
+      }
+      com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse other = (com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.permission.v1beta1.DeregisterControllerResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.permission.v1beta1.DeregisterControllerResponse)
+        com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.permission.v1beta1.TxProto.internal_static_axelar_permission_v1beta1_DeregisterControllerResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.permission.v1beta1.TxProto.internal_static_axelar_permission_v1beta1_DeregisterControllerResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse.class, com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse.Builder.class);
+      }
+
+      // Construct using com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.permission.v1beta1.TxProto.internal_static_axelar_permission_v1beta1_DeregisterControllerResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse getDefaultInstanceForType() {
+        return com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse build() {
+        com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse buildPartial() {
+        com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse result = new com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse) {
+          return mergeFrom((com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse other) {
+        if (other == com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.permission.v1beta1.DeregisterControllerResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.permission.v1beta1.DeregisterControllerResponse)
+    private static final com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse();
+    }
+
+    public static com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeregisterControllerResponse>
+        PARSER = new com.google.protobuf.AbstractParser<DeregisterControllerResponse>() {
+      @java.lang.Override
+      public DeregisterControllerResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeregisterControllerResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeregisterControllerResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.permission.v1beta1.TxProto.DeregisterControllerResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_permission_v1beta1_UpdateGovernanceKeyRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_permission_v1beta1_UpdateGovernanceKeyRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_permission_v1beta1_UpdateGovernanceKeyResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_permission_v1beta1_UpdateGovernanceKeyResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_permission_v1beta1_RegisterControllerRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_permission_v1beta1_RegisterControllerRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_permission_v1beta1_RegisterControllerResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_permission_v1beta1_RegisterControllerResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_permission_v1beta1_DeregisterControllerRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_permission_v1beta1_DeregisterControllerRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_permission_v1beta1_DeregisterControllerResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_permission_v1beta1_DeregisterControllerResponse_fieldAccessorTable;
 
@@ -74,13 +3054,13 @@ public final class TxProto {
       "ssR\006sender\022Q\n\ncontroller\030\002 \001(\014B1\372\336\037-gith" +
       "ub.com/cosmos/cosmos-sdk/types.AccAddres" +
       "sR\ncontroller:\004\200\265\030\003\"\036\n\034DeregisterControl" +
-      "lerResponseB\353\001\n\035com.axelar.permission.v1" +
-      "beta1B\007TxProtoP\001Z7github.com/axelarnetwo" +
-      "rk/axelar-core/x/permission/types\242\002\003APX\252" +
-      "\002\031Axelar.Permission.V1beta1\312\002\031Axelar\\Per" +
-      "mission\\V1beta1\342\002%Axelar\\Permission\\V1be" +
-      "ta1\\GPBMetadata\352\002\033Axelar::Permission::V1" +
-      "beta1\310\341\036\000b\006proto3"
+      "lerResponseB\351\001\n\035com.axelar.permission.v1" +
+      "beta1B\007TxProtoZ7github.com/axelarnetwork" +
+      "/axelar-core/x/permission/types\242\002\003APX\252\002\031" +
+      "Axelar.Permission.V1beta1\312\002\031Axelar\\Permi" +
+      "ssion\\V1beta1\342\002%Axelar\\Permission\\V1beta" +
+      "1\\GPBMetadata\352\002\033Axelar::Permission::V1be" +
+      "ta1\310\341\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

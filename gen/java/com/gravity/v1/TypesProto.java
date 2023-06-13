@@ -14,44 +14,7342 @@ public final class TypesProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface BridgeValidatorOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:gravity.v1.BridgeValidator)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 power = 1 [json_name = "power"];</code>
+     * @return The power.
+     */
+    long getPower();
+
+    /**
+     * <code>string ethereum_address = 2 [json_name = "ethereumAddress"];</code>
+     * @return The ethereumAddress.
+     */
+    java.lang.String getEthereumAddress();
+    /**
+     * <code>string ethereum_address = 2 [json_name = "ethereumAddress"];</code>
+     * @return The bytes for ethereumAddress.
+     */
+    com.google.protobuf.ByteString
+        getEthereumAddressBytes();
+  }
+  /**
+   * <pre>
+   * BridgeValidator represents a validator's ETH address and its power
+   * </pre>
+   *
+   * Protobuf type {@code gravity.v1.BridgeValidator}
+   */
+  public static final class BridgeValidator extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:gravity.v1.BridgeValidator)
+      BridgeValidatorOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BridgeValidator.newBuilder() to construct.
+    private BridgeValidator(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BridgeValidator() {
+      ethereumAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BridgeValidator();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.gravity.v1.TypesProto.internal_static_gravity_v1_BridgeValidator_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.gravity.v1.TypesProto.internal_static_gravity_v1_BridgeValidator_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.gravity.v1.TypesProto.BridgeValidator.class, com.gravity.v1.TypesProto.BridgeValidator.Builder.class);
+    }
+
+    public static final int POWER_FIELD_NUMBER = 1;
+    private long power_ = 0L;
+    /**
+     * <code>uint64 power = 1 [json_name = "power"];</code>
+     * @return The power.
+     */
+    @java.lang.Override
+    public long getPower() {
+      return power_;
+    }
+
+    public static final int ETHEREUM_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ethereumAddress_ = "";
+    /**
+     * <code>string ethereum_address = 2 [json_name = "ethereumAddress"];</code>
+     * @return The ethereumAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getEthereumAddress() {
+      java.lang.Object ref = ethereumAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ethereumAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string ethereum_address = 2 [json_name = "ethereumAddress"];</code>
+     * @return The bytes for ethereumAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEthereumAddressBytes() {
+      java.lang.Object ref = ethereumAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ethereumAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (power_ != 0L) {
+        output.writeUInt64(1, power_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ethereumAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, ethereumAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (power_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, power_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ethereumAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, ethereumAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.gravity.v1.TypesProto.BridgeValidator)) {
+        return super.equals(obj);
+      }
+      com.gravity.v1.TypesProto.BridgeValidator other = (com.gravity.v1.TypesProto.BridgeValidator) obj;
+
+      if (getPower()
+          != other.getPower()) return false;
+      if (!getEthereumAddress()
+          .equals(other.getEthereumAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POWER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPower());
+      hash = (37 * hash) + ETHEREUM_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getEthereumAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.gravity.v1.TypesProto.BridgeValidator parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.TypesProto.BridgeValidator parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.BridgeValidator parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.TypesProto.BridgeValidator parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.BridgeValidator parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.TypesProto.BridgeValidator parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.BridgeValidator parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gravity.v1.TypesProto.BridgeValidator parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.gravity.v1.TypesProto.BridgeValidator parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.gravity.v1.TypesProto.BridgeValidator parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.BridgeValidator parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gravity.v1.TypesProto.BridgeValidator parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.gravity.v1.TypesProto.BridgeValidator prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * BridgeValidator represents a validator's ETH address and its power
+     * </pre>
+     *
+     * Protobuf type {@code gravity.v1.BridgeValidator}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:gravity.v1.BridgeValidator)
+        com.gravity.v1.TypesProto.BridgeValidatorOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.gravity.v1.TypesProto.internal_static_gravity_v1_BridgeValidator_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.gravity.v1.TypesProto.internal_static_gravity_v1_BridgeValidator_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.gravity.v1.TypesProto.BridgeValidator.class, com.gravity.v1.TypesProto.BridgeValidator.Builder.class);
+      }
+
+      // Construct using com.gravity.v1.TypesProto.BridgeValidator.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        power_ = 0L;
+        ethereumAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.gravity.v1.TypesProto.internal_static_gravity_v1_BridgeValidator_descriptor;
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.TypesProto.BridgeValidator getDefaultInstanceForType() {
+        return com.gravity.v1.TypesProto.BridgeValidator.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.TypesProto.BridgeValidator build() {
+        com.gravity.v1.TypesProto.BridgeValidator result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.TypesProto.BridgeValidator buildPartial() {
+        com.gravity.v1.TypesProto.BridgeValidator result = new com.gravity.v1.TypesProto.BridgeValidator(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.gravity.v1.TypesProto.BridgeValidator result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.power_ = power_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.ethereumAddress_ = ethereumAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.gravity.v1.TypesProto.BridgeValidator) {
+          return mergeFrom((com.gravity.v1.TypesProto.BridgeValidator)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.gravity.v1.TypesProto.BridgeValidator other) {
+        if (other == com.gravity.v1.TypesProto.BridgeValidator.getDefaultInstance()) return this;
+        if (other.getPower() != 0L) {
+          setPower(other.getPower());
+        }
+        if (!other.getEthereumAddress().isEmpty()) {
+          ethereumAddress_ = other.ethereumAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                power_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                ethereumAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long power_ ;
+      /**
+       * <code>uint64 power = 1 [json_name = "power"];</code>
+       * @return The power.
+       */
+      @java.lang.Override
+      public long getPower() {
+        return power_;
+      }
+      /**
+       * <code>uint64 power = 1 [json_name = "power"];</code>
+       * @param value The power to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPower(long value) {
+
+        power_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 power = 1 [json_name = "power"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPower() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        power_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object ethereumAddress_ = "";
+      /**
+       * <code>string ethereum_address = 2 [json_name = "ethereumAddress"];</code>
+       * @return The ethereumAddress.
+       */
+      public java.lang.String getEthereumAddress() {
+        java.lang.Object ref = ethereumAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ethereumAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string ethereum_address = 2 [json_name = "ethereumAddress"];</code>
+       * @return The bytes for ethereumAddress.
+       */
+      public com.google.protobuf.ByteString
+          getEthereumAddressBytes() {
+        java.lang.Object ref = ethereumAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ethereumAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string ethereum_address = 2 [json_name = "ethereumAddress"];</code>
+       * @param value The ethereumAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEthereumAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ethereumAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ethereum_address = 2 [json_name = "ethereumAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEthereumAddress() {
+        ethereumAddress_ = getDefaultInstance().getEthereumAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ethereum_address = 2 [json_name = "ethereumAddress"];</code>
+       * @param value The bytes for ethereumAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEthereumAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ethereumAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:gravity.v1.BridgeValidator)
+    }
+
+    // @@protoc_insertion_point(class_scope:gravity.v1.BridgeValidator)
+    private static final com.gravity.v1.TypesProto.BridgeValidator DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.gravity.v1.TypesProto.BridgeValidator();
+    }
+
+    public static com.gravity.v1.TypesProto.BridgeValidator getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BridgeValidator>
+        PARSER = new com.google.protobuf.AbstractParser<BridgeValidator>() {
+      @java.lang.Override
+      public BridgeValidator parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<BridgeValidator> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BridgeValidator> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.gravity.v1.TypesProto.BridgeValidator getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ValsetOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:gravity.v1.Valset)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 nonce = 1 [json_name = "nonce"];</code>
+     * @return The nonce.
+     */
+    long getNonce();
+
+    /**
+     * <code>repeated .gravity.v1.BridgeValidator members = 2 [json_name = "members", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.gravity.v1.TypesProto.BridgeValidator> 
+        getMembersList();
+    /**
+     * <code>repeated .gravity.v1.BridgeValidator members = 2 [json_name = "members", (.gogoproto.nullable) = false];</code>
+     */
+    com.gravity.v1.TypesProto.BridgeValidator getMembers(int index);
+    /**
+     * <code>repeated .gravity.v1.BridgeValidator members = 2 [json_name = "members", (.gogoproto.nullable) = false];</code>
+     */
+    int getMembersCount();
+    /**
+     * <code>repeated .gravity.v1.BridgeValidator members = 2 [json_name = "members", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.gravity.v1.TypesProto.BridgeValidatorOrBuilder> 
+        getMembersOrBuilderList();
+    /**
+     * <code>repeated .gravity.v1.BridgeValidator members = 2 [json_name = "members", (.gogoproto.nullable) = false];</code>
+     */
+    com.gravity.v1.TypesProto.BridgeValidatorOrBuilder getMembersOrBuilder(
+        int index);
+
+    /**
+     * <code>uint64 height = 3 [json_name = "height"];</code>
+     * @return The height.
+     */
+    long getHeight();
+
+    /**
+     * <code>string reward_amount = 4 [json_name = "rewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The rewardAmount.
+     */
+    java.lang.String getRewardAmount();
+    /**
+     * <code>string reward_amount = 4 [json_name = "rewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for rewardAmount.
+     */
+    com.google.protobuf.ByteString
+        getRewardAmountBytes();
+
+    /**
+     * <pre>
+     * the reward token in it's Ethereum hex address representation
+     * </pre>
+     *
+     * <code>string reward_token = 5 [json_name = "rewardToken"];</code>
+     * @return The rewardToken.
+     */
+    java.lang.String getRewardToken();
+    /**
+     * <pre>
+     * the reward token in it's Ethereum hex address representation
+     * </pre>
+     *
+     * <code>string reward_token = 5 [json_name = "rewardToken"];</code>
+     * @return The bytes for rewardToken.
+     */
+    com.google.protobuf.ByteString
+        getRewardTokenBytes();
+  }
+  /**
+   * <pre>
+   * Valset is the Ethereum Bridge Multsig Set, each gravity validator also
+   * maintains an ETH key to sign messages, these are used to check signatures on
+   * ETH because of the significant gas savings
+   * </pre>
+   *
+   * Protobuf type {@code gravity.v1.Valset}
+   */
+  public static final class Valset extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:gravity.v1.Valset)
+      ValsetOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Valset.newBuilder() to construct.
+    private Valset(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Valset() {
+      members_ = java.util.Collections.emptyList();
+      rewardAmount_ = "";
+      rewardToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Valset();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.gravity.v1.TypesProto.internal_static_gravity_v1_Valset_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.gravity.v1.TypesProto.internal_static_gravity_v1_Valset_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.gravity.v1.TypesProto.Valset.class, com.gravity.v1.TypesProto.Valset.Builder.class);
+    }
+
+    public static final int NONCE_FIELD_NUMBER = 1;
+    private long nonce_ = 0L;
+    /**
+     * <code>uint64 nonce = 1 [json_name = "nonce"];</code>
+     * @return The nonce.
+     */
+    @java.lang.Override
+    public long getNonce() {
+      return nonce_;
+    }
+
+    public static final int MEMBERS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.gravity.v1.TypesProto.BridgeValidator> members_;
+    /**
+     * <code>repeated .gravity.v1.BridgeValidator members = 2 [json_name = "members", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.gravity.v1.TypesProto.BridgeValidator> getMembersList() {
+      return members_;
+    }
+    /**
+     * <code>repeated .gravity.v1.BridgeValidator members = 2 [json_name = "members", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.gravity.v1.TypesProto.BridgeValidatorOrBuilder> 
+        getMembersOrBuilderList() {
+      return members_;
+    }
+    /**
+     * <code>repeated .gravity.v1.BridgeValidator members = 2 [json_name = "members", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getMembersCount() {
+      return members_.size();
+    }
+    /**
+     * <code>repeated .gravity.v1.BridgeValidator members = 2 [json_name = "members", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.gravity.v1.TypesProto.BridgeValidator getMembers(int index) {
+      return members_.get(index);
+    }
+    /**
+     * <code>repeated .gravity.v1.BridgeValidator members = 2 [json_name = "members", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.gravity.v1.TypesProto.BridgeValidatorOrBuilder getMembersOrBuilder(
+        int index) {
+      return members_.get(index);
+    }
+
+    public static final int HEIGHT_FIELD_NUMBER = 3;
+    private long height_ = 0L;
+    /**
+     * <code>uint64 height = 3 [json_name = "height"];</code>
+     * @return The height.
+     */
+    @java.lang.Override
+    public long getHeight() {
+      return height_;
+    }
+
+    public static final int REWARD_AMOUNT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object rewardAmount_ = "";
+    /**
+     * <code>string reward_amount = 4 [json_name = "rewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The rewardAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getRewardAmount() {
+      java.lang.Object ref = rewardAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        rewardAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string reward_amount = 4 [json_name = "rewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for rewardAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRewardAmountBytes() {
+      java.lang.Object ref = rewardAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        rewardAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REWARD_TOKEN_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object rewardToken_ = "";
+    /**
+     * <pre>
+     * the reward token in it's Ethereum hex address representation
+     * </pre>
+     *
+     * <code>string reward_token = 5 [json_name = "rewardToken"];</code>
+     * @return The rewardToken.
+     */
+    @java.lang.Override
+    public java.lang.String getRewardToken() {
+      java.lang.Object ref = rewardToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        rewardToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * the reward token in it's Ethereum hex address representation
+     * </pre>
+     *
+     * <code>string reward_token = 5 [json_name = "rewardToken"];</code>
+     * @return The bytes for rewardToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRewardTokenBytes() {
+      java.lang.Object ref = rewardToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        rewardToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (nonce_ != 0L) {
+        output.writeUInt64(1, nonce_);
+      }
+      for (int i = 0; i < members_.size(); i++) {
+        output.writeMessage(2, members_.get(i));
+      }
+      if (height_ != 0L) {
+        output.writeUInt64(3, height_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, rewardAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, rewardToken_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (nonce_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, nonce_);
+      }
+      for (int i = 0; i < members_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, members_.get(i));
+      }
+      if (height_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, height_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, rewardAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, rewardToken_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.gravity.v1.TypesProto.Valset)) {
+        return super.equals(obj);
+      }
+      com.gravity.v1.TypesProto.Valset other = (com.gravity.v1.TypesProto.Valset) obj;
+
+      if (getNonce()
+          != other.getNonce()) return false;
+      if (!getMembersList()
+          .equals(other.getMembersList())) return false;
+      if (getHeight()
+          != other.getHeight()) return false;
+      if (!getRewardAmount()
+          .equals(other.getRewardAmount())) return false;
+      if (!getRewardToken()
+          .equals(other.getRewardToken())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NONCE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getNonce());
+      if (getMembersCount() > 0) {
+        hash = (37 * hash) + MEMBERS_FIELD_NUMBER;
+        hash = (53 * hash) + getMembersList().hashCode();
+      }
+      hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getHeight());
+      hash = (37 * hash) + REWARD_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getRewardAmount().hashCode();
+      hash = (37 * hash) + REWARD_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getRewardToken().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.gravity.v1.TypesProto.Valset parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.TypesProto.Valset parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.Valset parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.TypesProto.Valset parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.Valset parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.TypesProto.Valset parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.Valset parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gravity.v1.TypesProto.Valset parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.gravity.v1.TypesProto.Valset parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.gravity.v1.TypesProto.Valset parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.Valset parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gravity.v1.TypesProto.Valset parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.gravity.v1.TypesProto.Valset prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Valset is the Ethereum Bridge Multsig Set, each gravity validator also
+     * maintains an ETH key to sign messages, these are used to check signatures on
+     * ETH because of the significant gas savings
+     * </pre>
+     *
+     * Protobuf type {@code gravity.v1.Valset}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:gravity.v1.Valset)
+        com.gravity.v1.TypesProto.ValsetOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.gravity.v1.TypesProto.internal_static_gravity_v1_Valset_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.gravity.v1.TypesProto.internal_static_gravity_v1_Valset_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.gravity.v1.TypesProto.Valset.class, com.gravity.v1.TypesProto.Valset.Builder.class);
+      }
+
+      // Construct using com.gravity.v1.TypesProto.Valset.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        nonce_ = 0L;
+        if (membersBuilder_ == null) {
+          members_ = java.util.Collections.emptyList();
+        } else {
+          members_ = null;
+          membersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        height_ = 0L;
+        rewardAmount_ = "";
+        rewardToken_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.gravity.v1.TypesProto.internal_static_gravity_v1_Valset_descriptor;
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.TypesProto.Valset getDefaultInstanceForType() {
+        return com.gravity.v1.TypesProto.Valset.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.TypesProto.Valset build() {
+        com.gravity.v1.TypesProto.Valset result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.TypesProto.Valset buildPartial() {
+        com.gravity.v1.TypesProto.Valset result = new com.gravity.v1.TypesProto.Valset(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.gravity.v1.TypesProto.Valset result) {
+        if (membersBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            members_ = java.util.Collections.unmodifiableList(members_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.members_ = members_;
+        } else {
+          result.members_ = membersBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.gravity.v1.TypesProto.Valset result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.nonce_ = nonce_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.height_ = height_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.rewardAmount_ = rewardAmount_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.rewardToken_ = rewardToken_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.gravity.v1.TypesProto.Valset) {
+          return mergeFrom((com.gravity.v1.TypesProto.Valset)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.gravity.v1.TypesProto.Valset other) {
+        if (other == com.gravity.v1.TypesProto.Valset.getDefaultInstance()) return this;
+        if (other.getNonce() != 0L) {
+          setNonce(other.getNonce());
+        }
+        if (membersBuilder_ == null) {
+          if (!other.members_.isEmpty()) {
+            if (members_.isEmpty()) {
+              members_ = other.members_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureMembersIsMutable();
+              members_.addAll(other.members_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.members_.isEmpty()) {
+            if (membersBuilder_.isEmpty()) {
+              membersBuilder_.dispose();
+              membersBuilder_ = null;
+              members_ = other.members_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              membersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMembersFieldBuilder() : null;
+            } else {
+              membersBuilder_.addAllMessages(other.members_);
+            }
+          }
+        }
+        if (other.getHeight() != 0L) {
+          setHeight(other.getHeight());
+        }
+        if (!other.getRewardAmount().isEmpty()) {
+          rewardAmount_ = other.rewardAmount_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getRewardToken().isEmpty()) {
+          rewardToken_ = other.rewardToken_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                nonce_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                com.gravity.v1.TypesProto.BridgeValidator m =
+                    input.readMessage(
+                        com.gravity.v1.TypesProto.BridgeValidator.parser(),
+                        extensionRegistry);
+                if (membersBuilder_ == null) {
+                  ensureMembersIsMutable();
+                  members_.add(m);
+                } else {
+                  membersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 24: {
+                height_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                rewardAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                rewardToken_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long nonce_ ;
+      /**
+       * <code>uint64 nonce = 1 [json_name = "nonce"];</code>
+       * @return The nonce.
+       */
+      @java.lang.Override
+      public long getNonce() {
+        return nonce_;
+      }
+      /**
+       * <code>uint64 nonce = 1 [json_name = "nonce"];</code>
+       * @param value The nonce to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNonce(long value) {
+
+        nonce_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 nonce = 1 [json_name = "nonce"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNonce() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        nonce_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.gravity.v1.TypesProto.BridgeValidator> members_ =
+        java.util.Collections.emptyList();
+      private void ensureMembersIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          members_ = new java.util.ArrayList<com.gravity.v1.TypesProto.BridgeValidator>(members_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.gravity.v1.TypesProto.BridgeValidator, com.gravity.v1.TypesProto.BridgeValidator.Builder, com.gravity.v1.TypesProto.BridgeValidatorOrBuilder> membersBuilder_;
+
+      /**
+       * <code>repeated .gravity.v1.BridgeValidator members = 2 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.gravity.v1.TypesProto.BridgeValidator> getMembersList() {
+        if (membersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(members_);
+        } else {
+          return membersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.BridgeValidator members = 2 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public int getMembersCount() {
+        if (membersBuilder_ == null) {
+          return members_.size();
+        } else {
+          return membersBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.BridgeValidator members = 2 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.TypesProto.BridgeValidator getMembers(int index) {
+        if (membersBuilder_ == null) {
+          return members_.get(index);
+        } else {
+          return membersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.BridgeValidator members = 2 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMembers(
+          int index, com.gravity.v1.TypesProto.BridgeValidator value) {
+        if (membersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMembersIsMutable();
+          members_.set(index, value);
+          onChanged();
+        } else {
+          membersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.BridgeValidator members = 2 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMembers(
+          int index, com.gravity.v1.TypesProto.BridgeValidator.Builder builderForValue) {
+        if (membersBuilder_ == null) {
+          ensureMembersIsMutable();
+          members_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          membersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.BridgeValidator members = 2 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMembers(com.gravity.v1.TypesProto.BridgeValidator value) {
+        if (membersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMembersIsMutable();
+          members_.add(value);
+          onChanged();
+        } else {
+          membersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.BridgeValidator members = 2 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMembers(
+          int index, com.gravity.v1.TypesProto.BridgeValidator value) {
+        if (membersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMembersIsMutable();
+          members_.add(index, value);
+          onChanged();
+        } else {
+          membersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.BridgeValidator members = 2 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMembers(
+          com.gravity.v1.TypesProto.BridgeValidator.Builder builderForValue) {
+        if (membersBuilder_ == null) {
+          ensureMembersIsMutable();
+          members_.add(builderForValue.build());
+          onChanged();
+        } else {
+          membersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.BridgeValidator members = 2 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMembers(
+          int index, com.gravity.v1.TypesProto.BridgeValidator.Builder builderForValue) {
+        if (membersBuilder_ == null) {
+          ensureMembersIsMutable();
+          members_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          membersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.BridgeValidator members = 2 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllMembers(
+          java.lang.Iterable<? extends com.gravity.v1.TypesProto.BridgeValidator> values) {
+        if (membersBuilder_ == null) {
+          ensureMembersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, members_);
+          onChanged();
+        } else {
+          membersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.BridgeValidator members = 2 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMembers() {
+        if (membersBuilder_ == null) {
+          members_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          membersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.BridgeValidator members = 2 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeMembers(int index) {
+        if (membersBuilder_ == null) {
+          ensureMembersIsMutable();
+          members_.remove(index);
+          onChanged();
+        } else {
+          membersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .gravity.v1.BridgeValidator members = 2 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.TypesProto.BridgeValidator.Builder getMembersBuilder(
+          int index) {
+        return getMembersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .gravity.v1.BridgeValidator members = 2 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.TypesProto.BridgeValidatorOrBuilder getMembersOrBuilder(
+          int index) {
+        if (membersBuilder_ == null) {
+          return members_.get(index);  } else {
+          return membersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.BridgeValidator members = 2 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.gravity.v1.TypesProto.BridgeValidatorOrBuilder> 
+           getMembersOrBuilderList() {
+        if (membersBuilder_ != null) {
+          return membersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(members_);
+        }
+      }
+      /**
+       * <code>repeated .gravity.v1.BridgeValidator members = 2 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.TypesProto.BridgeValidator.Builder addMembersBuilder() {
+        return getMembersFieldBuilder().addBuilder(
+            com.gravity.v1.TypesProto.BridgeValidator.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .gravity.v1.BridgeValidator members = 2 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public com.gravity.v1.TypesProto.BridgeValidator.Builder addMembersBuilder(
+          int index) {
+        return getMembersFieldBuilder().addBuilder(
+            index, com.gravity.v1.TypesProto.BridgeValidator.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .gravity.v1.BridgeValidator members = 2 [json_name = "members", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.gravity.v1.TypesProto.BridgeValidator.Builder> 
+           getMembersBuilderList() {
+        return getMembersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.gravity.v1.TypesProto.BridgeValidator, com.gravity.v1.TypesProto.BridgeValidator.Builder, com.gravity.v1.TypesProto.BridgeValidatorOrBuilder> 
+          getMembersFieldBuilder() {
+        if (membersBuilder_ == null) {
+          membersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.gravity.v1.TypesProto.BridgeValidator, com.gravity.v1.TypesProto.BridgeValidator.Builder, com.gravity.v1.TypesProto.BridgeValidatorOrBuilder>(
+                  members_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          members_ = null;
+        }
+        return membersBuilder_;
+      }
+
+      private long height_ ;
+      /**
+       * <code>uint64 height = 3 [json_name = "height"];</code>
+       * @return The height.
+       */
+      @java.lang.Override
+      public long getHeight() {
+        return height_;
+      }
+      /**
+       * <code>uint64 height = 3 [json_name = "height"];</code>
+       * @param value The height to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeight(long value) {
+
+        height_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 height = 3 [json_name = "height"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHeight() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        height_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object rewardAmount_ = "";
+      /**
+       * <code>string reward_amount = 4 [json_name = "rewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The rewardAmount.
+       */
+      public java.lang.String getRewardAmount() {
+        java.lang.Object ref = rewardAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          rewardAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string reward_amount = 4 [json_name = "rewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for rewardAmount.
+       */
+      public com.google.protobuf.ByteString
+          getRewardAmountBytes() {
+        java.lang.Object ref = rewardAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          rewardAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string reward_amount = 4 [json_name = "rewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The rewardAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        rewardAmount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string reward_amount = 4 [json_name = "rewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRewardAmount() {
+        rewardAmount_ = getDefaultInstance().getRewardAmount();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string reward_amount = 4 [json_name = "rewardAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for rewardAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        rewardAmount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object rewardToken_ = "";
+      /**
+       * <pre>
+       * the reward token in it's Ethereum hex address representation
+       * </pre>
+       *
+       * <code>string reward_token = 5 [json_name = "rewardToken"];</code>
+       * @return The rewardToken.
+       */
+      public java.lang.String getRewardToken() {
+        java.lang.Object ref = rewardToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          rewardToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the reward token in it's Ethereum hex address representation
+       * </pre>
+       *
+       * <code>string reward_token = 5 [json_name = "rewardToken"];</code>
+       * @return The bytes for rewardToken.
+       */
+      public com.google.protobuf.ByteString
+          getRewardTokenBytes() {
+        java.lang.Object ref = rewardToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          rewardToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the reward token in it's Ethereum hex address representation
+       * </pre>
+       *
+       * <code>string reward_token = 5 [json_name = "rewardToken"];</code>
+       * @param value The rewardToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardToken(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        rewardToken_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the reward token in it's Ethereum hex address representation
+       * </pre>
+       *
+       * <code>string reward_token = 5 [json_name = "rewardToken"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRewardToken() {
+        rewardToken_ = getDefaultInstance().getRewardToken();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the reward token in it's Ethereum hex address representation
+       * </pre>
+       *
+       * <code>string reward_token = 5 [json_name = "rewardToken"];</code>
+       * @param value The bytes for rewardToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        rewardToken_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:gravity.v1.Valset)
+    }
+
+    // @@protoc_insertion_point(class_scope:gravity.v1.Valset)
+    private static final com.gravity.v1.TypesProto.Valset DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.gravity.v1.TypesProto.Valset();
+    }
+
+    public static com.gravity.v1.TypesProto.Valset getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Valset>
+        PARSER = new com.google.protobuf.AbstractParser<Valset>() {
+      @java.lang.Override
+      public Valset parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Valset> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Valset> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.gravity.v1.TypesProto.Valset getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface LastObservedEthereumBlockHeightOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:gravity.v1.LastObservedEthereumBlockHeight)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 cosmos_block_height = 1 [json_name = "cosmosBlockHeight"];</code>
+     * @return The cosmosBlockHeight.
+     */
+    long getCosmosBlockHeight();
+
+    /**
+     * <code>uint64 ethereum_block_height = 2 [json_name = "ethereumBlockHeight"];</code>
+     * @return The ethereumBlockHeight.
+     */
+    long getEthereumBlockHeight();
+  }
+  /**
+   * <pre>
+   * LastObservedEthereumBlockHeight stores the last observed
+   * Ethereum block height along with the Cosmos block height that
+   * it was observed at. These two numbers can be used to project
+   * outward and always produce batches with timeouts in the future
+   * even if no Ethereum block height has been relayed for a long time
+   * </pre>
+   *
+   * Protobuf type {@code gravity.v1.LastObservedEthereumBlockHeight}
+   */
+  public static final class LastObservedEthereumBlockHeight extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:gravity.v1.LastObservedEthereumBlockHeight)
+      LastObservedEthereumBlockHeightOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LastObservedEthereumBlockHeight.newBuilder() to construct.
+    private LastObservedEthereumBlockHeight(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LastObservedEthereumBlockHeight() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LastObservedEthereumBlockHeight();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.gravity.v1.TypesProto.internal_static_gravity_v1_LastObservedEthereumBlockHeight_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.gravity.v1.TypesProto.internal_static_gravity_v1_LastObservedEthereumBlockHeight_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight.class, com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight.Builder.class);
+    }
+
+    public static final int COSMOS_BLOCK_HEIGHT_FIELD_NUMBER = 1;
+    private long cosmosBlockHeight_ = 0L;
+    /**
+     * <code>uint64 cosmos_block_height = 1 [json_name = "cosmosBlockHeight"];</code>
+     * @return The cosmosBlockHeight.
+     */
+    @java.lang.Override
+    public long getCosmosBlockHeight() {
+      return cosmosBlockHeight_;
+    }
+
+    public static final int ETHEREUM_BLOCK_HEIGHT_FIELD_NUMBER = 2;
+    private long ethereumBlockHeight_ = 0L;
+    /**
+     * <code>uint64 ethereum_block_height = 2 [json_name = "ethereumBlockHeight"];</code>
+     * @return The ethereumBlockHeight.
+     */
+    @java.lang.Override
+    public long getEthereumBlockHeight() {
+      return ethereumBlockHeight_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (cosmosBlockHeight_ != 0L) {
+        output.writeUInt64(1, cosmosBlockHeight_);
+      }
+      if (ethereumBlockHeight_ != 0L) {
+        output.writeUInt64(2, ethereumBlockHeight_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (cosmosBlockHeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, cosmosBlockHeight_);
+      }
+      if (ethereumBlockHeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, ethereumBlockHeight_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight)) {
+        return super.equals(obj);
+      }
+      com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight other = (com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight) obj;
+
+      if (getCosmosBlockHeight()
+          != other.getCosmosBlockHeight()) return false;
+      if (getEthereumBlockHeight()
+          != other.getEthereumBlockHeight()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + COSMOS_BLOCK_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCosmosBlockHeight());
+      hash = (37 * hash) + ETHEREUM_BLOCK_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getEthereumBlockHeight());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * LastObservedEthereumBlockHeight stores the last observed
+     * Ethereum block height along with the Cosmos block height that
+     * it was observed at. These two numbers can be used to project
+     * outward and always produce batches with timeouts in the future
+     * even if no Ethereum block height has been relayed for a long time
+     * </pre>
+     *
+     * Protobuf type {@code gravity.v1.LastObservedEthereumBlockHeight}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:gravity.v1.LastObservedEthereumBlockHeight)
+        com.gravity.v1.TypesProto.LastObservedEthereumBlockHeightOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.gravity.v1.TypesProto.internal_static_gravity_v1_LastObservedEthereumBlockHeight_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.gravity.v1.TypesProto.internal_static_gravity_v1_LastObservedEthereumBlockHeight_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight.class, com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight.Builder.class);
+      }
+
+      // Construct using com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        cosmosBlockHeight_ = 0L;
+        ethereumBlockHeight_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.gravity.v1.TypesProto.internal_static_gravity_v1_LastObservedEthereumBlockHeight_descriptor;
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight getDefaultInstanceForType() {
+        return com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight build() {
+        com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight buildPartial() {
+        com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight result = new com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.cosmosBlockHeight_ = cosmosBlockHeight_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.ethereumBlockHeight_ = ethereumBlockHeight_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight) {
+          return mergeFrom((com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight other) {
+        if (other == com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight.getDefaultInstance()) return this;
+        if (other.getCosmosBlockHeight() != 0L) {
+          setCosmosBlockHeight(other.getCosmosBlockHeight());
+        }
+        if (other.getEthereumBlockHeight() != 0L) {
+          setEthereumBlockHeight(other.getEthereumBlockHeight());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                cosmosBlockHeight_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                ethereumBlockHeight_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long cosmosBlockHeight_ ;
+      /**
+       * <code>uint64 cosmos_block_height = 1 [json_name = "cosmosBlockHeight"];</code>
+       * @return The cosmosBlockHeight.
+       */
+      @java.lang.Override
+      public long getCosmosBlockHeight() {
+        return cosmosBlockHeight_;
+      }
+      /**
+       * <code>uint64 cosmos_block_height = 1 [json_name = "cosmosBlockHeight"];</code>
+       * @param value The cosmosBlockHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCosmosBlockHeight(long value) {
+
+        cosmosBlockHeight_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 cosmos_block_height = 1 [json_name = "cosmosBlockHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCosmosBlockHeight() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        cosmosBlockHeight_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long ethereumBlockHeight_ ;
+      /**
+       * <code>uint64 ethereum_block_height = 2 [json_name = "ethereumBlockHeight"];</code>
+       * @return The ethereumBlockHeight.
+       */
+      @java.lang.Override
+      public long getEthereumBlockHeight() {
+        return ethereumBlockHeight_;
+      }
+      /**
+       * <code>uint64 ethereum_block_height = 2 [json_name = "ethereumBlockHeight"];</code>
+       * @param value The ethereumBlockHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEthereumBlockHeight(long value) {
+
+        ethereumBlockHeight_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 ethereum_block_height = 2 [json_name = "ethereumBlockHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEthereumBlockHeight() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        ethereumBlockHeight_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:gravity.v1.LastObservedEthereumBlockHeight)
+    }
+
+    // @@protoc_insertion_point(class_scope:gravity.v1.LastObservedEthereumBlockHeight)
+    private static final com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight();
+    }
+
+    public static com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LastObservedEthereumBlockHeight>
+        PARSER = new com.google.protobuf.AbstractParser<LastObservedEthereumBlockHeight>() {
+      @java.lang.Override
+      public LastObservedEthereumBlockHeight parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<LastObservedEthereumBlockHeight> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LastObservedEthereumBlockHeight> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.gravity.v1.TypesProto.LastObservedEthereumBlockHeight getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ERC20ToDenomOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:gravity.v1.ERC20ToDenom)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string erc20 = 1 [json_name = "erc20"];</code>
+     * @return The erc20.
+     */
+    java.lang.String getErc20();
+    /**
+     * <code>string erc20 = 1 [json_name = "erc20"];</code>
+     * @return The bytes for erc20.
+     */
+    com.google.protobuf.ByteString
+        getErc20Bytes();
+
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+  }
+  /**
+   * <pre>
+   * This records the relationship between an ERC20 token and the denom
+   * of the corresponding Cosmos originated asset
+   * </pre>
+   *
+   * Protobuf type {@code gravity.v1.ERC20ToDenom}
+   */
+  public static final class ERC20ToDenom extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:gravity.v1.ERC20ToDenom)
+      ERC20ToDenomOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ERC20ToDenom.newBuilder() to construct.
+    private ERC20ToDenom(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ERC20ToDenom() {
+      erc20_ = "";
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ERC20ToDenom();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.gravity.v1.TypesProto.internal_static_gravity_v1_ERC20ToDenom_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.gravity.v1.TypesProto.internal_static_gravity_v1_ERC20ToDenom_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.gravity.v1.TypesProto.ERC20ToDenom.class, com.gravity.v1.TypesProto.ERC20ToDenom.Builder.class);
+    }
+
+    public static final int ERC20_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object erc20_ = "";
+    /**
+     * <code>string erc20 = 1 [json_name = "erc20"];</code>
+     * @return The erc20.
+     */
+    @java.lang.Override
+    public java.lang.String getErc20() {
+      java.lang.Object ref = erc20_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        erc20_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string erc20 = 1 [json_name = "erc20"];</code>
+     * @return The bytes for erc20.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getErc20Bytes() {
+      java.lang.Object ref = erc20_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        erc20_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(erc20_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, erc20_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, denom_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(erc20_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, erc20_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, denom_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.gravity.v1.TypesProto.ERC20ToDenom)) {
+        return super.equals(obj);
+      }
+      com.gravity.v1.TypesProto.ERC20ToDenom other = (com.gravity.v1.TypesProto.ERC20ToDenom) obj;
+
+      if (!getErc20()
+          .equals(other.getErc20())) return false;
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ERC20_FIELD_NUMBER;
+      hash = (53 * hash) + getErc20().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.gravity.v1.TypesProto.ERC20ToDenom parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.TypesProto.ERC20ToDenom parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.ERC20ToDenom parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.TypesProto.ERC20ToDenom parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.ERC20ToDenom parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.TypesProto.ERC20ToDenom parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.ERC20ToDenom parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gravity.v1.TypesProto.ERC20ToDenom parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.gravity.v1.TypesProto.ERC20ToDenom parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.gravity.v1.TypesProto.ERC20ToDenom parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.ERC20ToDenom parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gravity.v1.TypesProto.ERC20ToDenom parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.gravity.v1.TypesProto.ERC20ToDenom prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * This records the relationship between an ERC20 token and the denom
+     * of the corresponding Cosmos originated asset
+     * </pre>
+     *
+     * Protobuf type {@code gravity.v1.ERC20ToDenom}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:gravity.v1.ERC20ToDenom)
+        com.gravity.v1.TypesProto.ERC20ToDenomOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.gravity.v1.TypesProto.internal_static_gravity_v1_ERC20ToDenom_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.gravity.v1.TypesProto.internal_static_gravity_v1_ERC20ToDenom_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.gravity.v1.TypesProto.ERC20ToDenom.class, com.gravity.v1.TypesProto.ERC20ToDenom.Builder.class);
+      }
+
+      // Construct using com.gravity.v1.TypesProto.ERC20ToDenom.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        erc20_ = "";
+        denom_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.gravity.v1.TypesProto.internal_static_gravity_v1_ERC20ToDenom_descriptor;
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.TypesProto.ERC20ToDenom getDefaultInstanceForType() {
+        return com.gravity.v1.TypesProto.ERC20ToDenom.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.TypesProto.ERC20ToDenom build() {
+        com.gravity.v1.TypesProto.ERC20ToDenom result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.TypesProto.ERC20ToDenom buildPartial() {
+        com.gravity.v1.TypesProto.ERC20ToDenom result = new com.gravity.v1.TypesProto.ERC20ToDenom(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.gravity.v1.TypesProto.ERC20ToDenom result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.erc20_ = erc20_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.denom_ = denom_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.gravity.v1.TypesProto.ERC20ToDenom) {
+          return mergeFrom((com.gravity.v1.TypesProto.ERC20ToDenom)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.gravity.v1.TypesProto.ERC20ToDenom other) {
+        if (other == com.gravity.v1.TypesProto.ERC20ToDenom.getDefaultInstance()) return this;
+        if (!other.getErc20().isEmpty()) {
+          erc20_ = other.erc20_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                erc20_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object erc20_ = "";
+      /**
+       * <code>string erc20 = 1 [json_name = "erc20"];</code>
+       * @return The erc20.
+       */
+      public java.lang.String getErc20() {
+        java.lang.Object ref = erc20_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          erc20_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string erc20 = 1 [json_name = "erc20"];</code>
+       * @return The bytes for erc20.
+       */
+      public com.google.protobuf.ByteString
+          getErc20Bytes() {
+        java.lang.Object ref = erc20_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          erc20_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string erc20 = 1 [json_name = "erc20"];</code>
+       * @param value The erc20 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErc20(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        erc20_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string erc20 = 1 [json_name = "erc20"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearErc20() {
+        erc20_ = getDefaultInstance().getErc20();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string erc20 = 1 [json_name = "erc20"];</code>
+       * @param value The bytes for erc20 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErc20Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        erc20_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:gravity.v1.ERC20ToDenom)
+    }
+
+    // @@protoc_insertion_point(class_scope:gravity.v1.ERC20ToDenom)
+    private static final com.gravity.v1.TypesProto.ERC20ToDenom DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.gravity.v1.TypesProto.ERC20ToDenom();
+    }
+
+    public static com.gravity.v1.TypesProto.ERC20ToDenom getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ERC20ToDenom>
+        PARSER = new com.google.protobuf.AbstractParser<ERC20ToDenom>() {
+      @java.lang.Override
+      public ERC20ToDenom parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ERC20ToDenom> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ERC20ToDenom> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.gravity.v1.TypesProto.ERC20ToDenom getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UnhaltBridgeProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:gravity.v1.UnhaltBridgeProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>uint64 target_nonce = 4 [json_name = "targetNonce"];</code>
+     * @return The targetNonce.
+     */
+    long getTargetNonce();
+  }
+  /**
+   * <pre>
+   * UnhaltBridgeProposal defines a custom governance proposal useful for restoring
+   * the bridge after a oracle disagreement. Once this proposal is passed bridge state will roll back events 
+   * to the nonce provided in target_nonce if and only if those events have not yet been observed (executed on the Cosmos chain). This allows for easy
+   * handling of cases where for example an Ethereum hardfork has occured and more than 1/3 of the vlaidtor set
+   * disagrees with the rest. Normally this would require a chain halt, manual genesis editing and restar to resolve
+   * with this feature a governance proposal can be used instead
+   * </pre>
+   *
+   * Protobuf type {@code gravity.v1.UnhaltBridgeProposal}
+   */
+  public static final class UnhaltBridgeProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:gravity.v1.UnhaltBridgeProposal)
+      UnhaltBridgeProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UnhaltBridgeProposal.newBuilder() to construct.
+    private UnhaltBridgeProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UnhaltBridgeProposal() {
+      title_ = "";
+      description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UnhaltBridgeProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.gravity.v1.TypesProto.internal_static_gravity_v1_UnhaltBridgeProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.gravity.v1.TypesProto.internal_static_gravity_v1_UnhaltBridgeProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.gravity.v1.TypesProto.UnhaltBridgeProposal.class, com.gravity.v1.TypesProto.UnhaltBridgeProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TARGET_NONCE_FIELD_NUMBER = 4;
+    private long targetNonce_ = 0L;
+    /**
+     * <code>uint64 target_nonce = 4 [json_name = "targetNonce"];</code>
+     * @return The targetNonce.
+     */
+    @java.lang.Override
+    public long getTargetNonce() {
+      return targetNonce_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (targetNonce_ != 0L) {
+        output.writeUInt64(4, targetNonce_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (targetNonce_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, targetNonce_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.gravity.v1.TypesProto.UnhaltBridgeProposal)) {
+        return super.equals(obj);
+      }
+      com.gravity.v1.TypesProto.UnhaltBridgeProposal other = (com.gravity.v1.TypesProto.UnhaltBridgeProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (getTargetNonce()
+          != other.getTargetNonce()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + TARGET_NONCE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTargetNonce());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.gravity.v1.TypesProto.UnhaltBridgeProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.TypesProto.UnhaltBridgeProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.UnhaltBridgeProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.TypesProto.UnhaltBridgeProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.UnhaltBridgeProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.TypesProto.UnhaltBridgeProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.UnhaltBridgeProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gravity.v1.TypesProto.UnhaltBridgeProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.gravity.v1.TypesProto.UnhaltBridgeProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.gravity.v1.TypesProto.UnhaltBridgeProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.UnhaltBridgeProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gravity.v1.TypesProto.UnhaltBridgeProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.gravity.v1.TypesProto.UnhaltBridgeProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * UnhaltBridgeProposal defines a custom governance proposal useful for restoring
+     * the bridge after a oracle disagreement. Once this proposal is passed bridge state will roll back events 
+     * to the nonce provided in target_nonce if and only if those events have not yet been observed (executed on the Cosmos chain). This allows for easy
+     * handling of cases where for example an Ethereum hardfork has occured and more than 1/3 of the vlaidtor set
+     * disagrees with the rest. Normally this would require a chain halt, manual genesis editing and restar to resolve
+     * with this feature a governance proposal can be used instead
+     * </pre>
+     *
+     * Protobuf type {@code gravity.v1.UnhaltBridgeProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:gravity.v1.UnhaltBridgeProposal)
+        com.gravity.v1.TypesProto.UnhaltBridgeProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.gravity.v1.TypesProto.internal_static_gravity_v1_UnhaltBridgeProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.gravity.v1.TypesProto.internal_static_gravity_v1_UnhaltBridgeProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.gravity.v1.TypesProto.UnhaltBridgeProposal.class, com.gravity.v1.TypesProto.UnhaltBridgeProposal.Builder.class);
+      }
+
+      // Construct using com.gravity.v1.TypesProto.UnhaltBridgeProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        targetNonce_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.gravity.v1.TypesProto.internal_static_gravity_v1_UnhaltBridgeProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.TypesProto.UnhaltBridgeProposal getDefaultInstanceForType() {
+        return com.gravity.v1.TypesProto.UnhaltBridgeProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.TypesProto.UnhaltBridgeProposal build() {
+        com.gravity.v1.TypesProto.UnhaltBridgeProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.TypesProto.UnhaltBridgeProposal buildPartial() {
+        com.gravity.v1.TypesProto.UnhaltBridgeProposal result = new com.gravity.v1.TypesProto.UnhaltBridgeProposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.gravity.v1.TypesProto.UnhaltBridgeProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.targetNonce_ = targetNonce_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.gravity.v1.TypesProto.UnhaltBridgeProposal) {
+          return mergeFrom((com.gravity.v1.TypesProto.UnhaltBridgeProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.gravity.v1.TypesProto.UnhaltBridgeProposal other) {
+        if (other == com.gravity.v1.TypesProto.UnhaltBridgeProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getTargetNonce() != 0L) {
+          setTargetNonce(other.getTargetNonce());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 32: {
+                targetNonce_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long targetNonce_ ;
+      /**
+       * <code>uint64 target_nonce = 4 [json_name = "targetNonce"];</code>
+       * @return The targetNonce.
+       */
+      @java.lang.Override
+      public long getTargetNonce() {
+        return targetNonce_;
+      }
+      /**
+       * <code>uint64 target_nonce = 4 [json_name = "targetNonce"];</code>
+       * @param value The targetNonce to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTargetNonce(long value) {
+
+        targetNonce_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 target_nonce = 4 [json_name = "targetNonce"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTargetNonce() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        targetNonce_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:gravity.v1.UnhaltBridgeProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:gravity.v1.UnhaltBridgeProposal)
+    private static final com.gravity.v1.TypesProto.UnhaltBridgeProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.gravity.v1.TypesProto.UnhaltBridgeProposal();
+    }
+
+    public static com.gravity.v1.TypesProto.UnhaltBridgeProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UnhaltBridgeProposal>
+        PARSER = new com.google.protobuf.AbstractParser<UnhaltBridgeProposal>() {
+      @java.lang.Override
+      public UnhaltBridgeProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UnhaltBridgeProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UnhaltBridgeProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.gravity.v1.TypesProto.UnhaltBridgeProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AirdropProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:gravity.v1.AirdropProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>string denom = 3 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 3 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>bytes recipients = 4 [json_name = "recipients"];</code>
+     * @return The recipients.
+     */
+    com.google.protobuf.ByteString getRecipients();
+
+    /**
+     * <code>repeated uint64 amounts = 5 [json_name = "amounts"];</code>
+     * @return A list containing the amounts.
+     */
+    java.util.List<java.lang.Long> getAmountsList();
+    /**
+     * <code>repeated uint64 amounts = 5 [json_name = "amounts"];</code>
+     * @return The count of amounts.
+     */
+    int getAmountsCount();
+    /**
+     * <code>repeated uint64 amounts = 5 [json_name = "amounts"];</code>
+     * @param index The index of the element to return.
+     * @return The amounts at the given index.
+     */
+    long getAmounts(int index);
+  }
+  /**
+   * <pre>
+   * AirdropProposal defines a custom governance proposal type that allows an airdrop to occur in a decentralized
+   * fashion. A list of destination addresses and an amount per airdrop recipient is provided. The funds for this
+   * airdrop are removed from the Community Pool, if the community pool does not have sufficient funding to perform
+   * the airdrop to all provided recipients nothing will occur
+   * </pre>
+   *
+   * Protobuf type {@code gravity.v1.AirdropProposal}
+   */
+  public static final class AirdropProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:gravity.v1.AirdropProposal)
+      AirdropProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AirdropProposal.newBuilder() to construct.
+    private AirdropProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AirdropProposal() {
+      title_ = "";
+      description_ = "";
+      denom_ = "";
+      recipients_ = com.google.protobuf.ByteString.EMPTY;
+      amounts_ = emptyLongList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AirdropProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.gravity.v1.TypesProto.internal_static_gravity_v1_AirdropProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.gravity.v1.TypesProto.internal_static_gravity_v1_AirdropProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.gravity.v1.TypesProto.AirdropProposal.class, com.gravity.v1.TypesProto.AirdropProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 3 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 3 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RECIPIENTS_FIELD_NUMBER = 4;
+    private com.google.protobuf.ByteString recipients_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes recipients = 4 [json_name = "recipients"];</code>
+     * @return The recipients.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getRecipients() {
+      return recipients_;
+    }
+
+    public static final int AMOUNTS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.LongList amounts_;
+    /**
+     * <code>repeated uint64 amounts = 5 [json_name = "amounts"];</code>
+     * @return A list containing the amounts.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Long>
+        getAmountsList() {
+      return amounts_;
+    }
+    /**
+     * <code>repeated uint64 amounts = 5 [json_name = "amounts"];</code>
+     * @return The count of amounts.
+     */
+    public int getAmountsCount() {
+      return amounts_.size();
+    }
+    /**
+     * <code>repeated uint64 amounts = 5 [json_name = "amounts"];</code>
+     * @param index The index of the element to return.
+     * @return The amounts at the given index.
+     */
+    public long getAmounts(int index) {
+      return amounts_.getLong(index);
+    }
+    private int amountsMemoizedSerializedSize = -1;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, denom_);
+      }
+      if (!recipients_.isEmpty()) {
+        output.writeBytes(4, recipients_);
+      }
+      if (getAmountsList().size() > 0) {
+        output.writeUInt32NoTag(42);
+        output.writeUInt32NoTag(amountsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < amounts_.size(); i++) {
+        output.writeUInt64NoTag(amounts_.getLong(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, denom_);
+      }
+      if (!recipients_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, recipients_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < amounts_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt64SizeNoTag(amounts_.getLong(i));
+        }
+        size += dataSize;
+        if (!getAmountsList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        amountsMemoizedSerializedSize = dataSize;
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.gravity.v1.TypesProto.AirdropProposal)) {
+        return super.equals(obj);
+      }
+      com.gravity.v1.TypesProto.AirdropProposal other = (com.gravity.v1.TypesProto.AirdropProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getRecipients()
+          .equals(other.getRecipients())) return false;
+      if (!getAmountsList()
+          .equals(other.getAmountsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + RECIPIENTS_FIELD_NUMBER;
+      hash = (53 * hash) + getRecipients().hashCode();
+      if (getAmountsCount() > 0) {
+        hash = (37 * hash) + AMOUNTS_FIELD_NUMBER;
+        hash = (53 * hash) + getAmountsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.gravity.v1.TypesProto.AirdropProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.TypesProto.AirdropProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.AirdropProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.TypesProto.AirdropProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.AirdropProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.TypesProto.AirdropProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.AirdropProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gravity.v1.TypesProto.AirdropProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.gravity.v1.TypesProto.AirdropProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.gravity.v1.TypesProto.AirdropProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.AirdropProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gravity.v1.TypesProto.AirdropProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.gravity.v1.TypesProto.AirdropProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * AirdropProposal defines a custom governance proposal type that allows an airdrop to occur in a decentralized
+     * fashion. A list of destination addresses and an amount per airdrop recipient is provided. The funds for this
+     * airdrop are removed from the Community Pool, if the community pool does not have sufficient funding to perform
+     * the airdrop to all provided recipients nothing will occur
+     * </pre>
+     *
+     * Protobuf type {@code gravity.v1.AirdropProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:gravity.v1.AirdropProposal)
+        com.gravity.v1.TypesProto.AirdropProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.gravity.v1.TypesProto.internal_static_gravity_v1_AirdropProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.gravity.v1.TypesProto.internal_static_gravity_v1_AirdropProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.gravity.v1.TypesProto.AirdropProposal.class, com.gravity.v1.TypesProto.AirdropProposal.Builder.class);
+      }
+
+      // Construct using com.gravity.v1.TypesProto.AirdropProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        denom_ = "";
+        recipients_ = com.google.protobuf.ByteString.EMPTY;
+        amounts_ = emptyLongList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.gravity.v1.TypesProto.internal_static_gravity_v1_AirdropProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.TypesProto.AirdropProposal getDefaultInstanceForType() {
+        return com.gravity.v1.TypesProto.AirdropProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.TypesProto.AirdropProposal build() {
+        com.gravity.v1.TypesProto.AirdropProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.TypesProto.AirdropProposal buildPartial() {
+        com.gravity.v1.TypesProto.AirdropProposal result = new com.gravity.v1.TypesProto.AirdropProposal(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.gravity.v1.TypesProto.AirdropProposal result) {
+        if (((bitField0_ & 0x00000010) != 0)) {
+          amounts_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.amounts_ = amounts_;
+      }
+
+      private void buildPartial0(com.gravity.v1.TypesProto.AirdropProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.recipients_ = recipients_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.gravity.v1.TypesProto.AirdropProposal) {
+          return mergeFrom((com.gravity.v1.TypesProto.AirdropProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.gravity.v1.TypesProto.AirdropProposal other) {
+        if (other == com.gravity.v1.TypesProto.AirdropProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.getRecipients() != com.google.protobuf.ByteString.EMPTY) {
+          setRecipients(other.getRecipients());
+        }
+        if (!other.amounts_.isEmpty()) {
+          if (amounts_.isEmpty()) {
+            amounts_ = other.amounts_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureAmountsIsMutable();
+            amounts_.addAll(other.amounts_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                recipients_ = input.readBytes();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                long v = input.readUInt64();
+                ensureAmountsIsMutable();
+                amounts_.addLong(v);
+                break;
+              } // case 40
+              case 42: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureAmountsIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  amounts_.addLong(input.readUInt64());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 3 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 3 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 3 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 3 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 3 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString recipients_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes recipients = 4 [json_name = "recipients"];</code>
+       * @return The recipients.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getRecipients() {
+        return recipients_;
+      }
+      /**
+       * <code>bytes recipients = 4 [json_name = "recipients"];</code>
+       * @param value The recipients to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipients(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        recipients_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes recipients = 4 [json_name = "recipients"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecipients() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        recipients_ = getDefaultInstance().getRecipients();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.LongList amounts_ = emptyLongList();
+      private void ensureAmountsIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          amounts_ = mutableCopy(amounts_);
+          bitField0_ |= 0x00000010;
+        }
+      }
+      /**
+       * <code>repeated uint64 amounts = 5 [json_name = "amounts"];</code>
+       * @return A list containing the amounts.
+       */
+      public java.util.List<java.lang.Long>
+          getAmountsList() {
+        return ((bitField0_ & 0x00000010) != 0) ?
+                 java.util.Collections.unmodifiableList(amounts_) : amounts_;
+      }
+      /**
+       * <code>repeated uint64 amounts = 5 [json_name = "amounts"];</code>
+       * @return The count of amounts.
+       */
+      public int getAmountsCount() {
+        return amounts_.size();
+      }
+      /**
+       * <code>repeated uint64 amounts = 5 [json_name = "amounts"];</code>
+       * @param index The index of the element to return.
+       * @return The amounts at the given index.
+       */
+      public long getAmounts(int index) {
+        return amounts_.getLong(index);
+      }
+      /**
+       * <code>repeated uint64 amounts = 5 [json_name = "amounts"];</code>
+       * @param index The index to set the value at.
+       * @param value The amounts to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmounts(
+          int index, long value) {
+
+        ensureAmountsIsMutable();
+        amounts_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 amounts = 5 [json_name = "amounts"];</code>
+       * @param value The amounts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAmounts(long value) {
+
+        ensureAmountsIsMutable();
+        amounts_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 amounts = 5 [json_name = "amounts"];</code>
+       * @param values The amounts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAmounts(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureAmountsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, amounts_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 amounts = 5 [json_name = "amounts"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmounts() {
+        amounts_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:gravity.v1.AirdropProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:gravity.v1.AirdropProposal)
+    private static final com.gravity.v1.TypesProto.AirdropProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.gravity.v1.TypesProto.AirdropProposal();
+    }
+
+    public static com.gravity.v1.TypesProto.AirdropProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AirdropProposal>
+        PARSER = new com.google.protobuf.AbstractParser<AirdropProposal>() {
+      @java.lang.Override
+      public AirdropProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AirdropProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AirdropProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.gravity.v1.TypesProto.AirdropProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface IBCMetadataProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:gravity.v1.IBCMetadataProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
+     * @return Whether the metadata field is set.
+     */
+    boolean hasMetadata();
+    /**
+     * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
+     * @return The metadata.
+     */
+    com.cosmos.bank.v1beta1.BankProto.Metadata getMetadata();
+    /**
+     * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.bank.v1beta1.BankProto.MetadataOrBuilder getMetadataOrBuilder();
+
+    /**
+     * <code>string ibc_denom = 4 [json_name = "ibcDenom"];</code>
+     * @return The ibcDenom.
+     */
+    java.lang.String getIbcDenom();
+    /**
+     * <code>string ibc_denom = 4 [json_name = "ibcDenom"];</code>
+     * @return The bytes for ibcDenom.
+     */
+    com.google.protobuf.ByteString
+        getIbcDenomBytes();
+  }
+  /**
+   * <pre>
+   * IBCMetadataProposal defines a custom governance proposal type that allows governance to set the
+   * metadata for an IBC token, this will allow Gravity to deploy an ERC20 representing this token on
+   * Ethereum
+   * Name: the token name
+   * Symbol: the token symbol
+   * Description: the token description, not sent to ETH at all, only used on Cosmos
+   * Display: the token display name (only used on Cosmos to decide ERC20 Decimals)
+   * Deicmals: the decimals for the display unit
+   * ibc_denom is the denom of the token in question on this chain
+   * </pre>
+   *
+   * Protobuf type {@code gravity.v1.IBCMetadataProposal}
+   */
+  public static final class IBCMetadataProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:gravity.v1.IBCMetadataProposal)
+      IBCMetadataProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IBCMetadataProposal.newBuilder() to construct.
+    private IBCMetadataProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IBCMetadataProposal() {
+      title_ = "";
+      description_ = "";
+      ibcDenom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IBCMetadataProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.gravity.v1.TypesProto.internal_static_gravity_v1_IBCMetadataProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.gravity.v1.TypesProto.internal_static_gravity_v1_IBCMetadataProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.gravity.v1.TypesProto.IBCMetadataProposal.class, com.gravity.v1.TypesProto.IBCMetadataProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int METADATA_FIELD_NUMBER = 3;
+    private com.cosmos.bank.v1beta1.BankProto.Metadata metadata_;
+    /**
+     * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
+     * @return Whether the metadata field is set.
+     */
+    @java.lang.Override
+    public boolean hasMetadata() {
+      return metadata_ != null;
+    }
+    /**
+     * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
+     * @return The metadata.
+     */
+    @java.lang.Override
+    public com.cosmos.bank.v1beta1.BankProto.Metadata getMetadata() {
+      return metadata_ == null ? com.cosmos.bank.v1beta1.BankProto.Metadata.getDefaultInstance() : metadata_;
+    }
+    /**
+     * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.bank.v1beta1.BankProto.MetadataOrBuilder getMetadataOrBuilder() {
+      return metadata_ == null ? com.cosmos.bank.v1beta1.BankProto.Metadata.getDefaultInstance() : metadata_;
+    }
+
+    public static final int IBC_DENOM_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ibcDenom_ = "";
+    /**
+     * <code>string ibc_denom = 4 [json_name = "ibcDenom"];</code>
+     * @return The ibcDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getIbcDenom() {
+      java.lang.Object ref = ibcDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ibcDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string ibc_denom = 4 [json_name = "ibcDenom"];</code>
+     * @return The bytes for ibcDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIbcDenomBytes() {
+      java.lang.Object ref = ibcDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ibcDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (metadata_ != null) {
+        output.writeMessage(3, getMetadata());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ibcDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, ibcDenom_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (metadata_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getMetadata());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ibcDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, ibcDenom_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.gravity.v1.TypesProto.IBCMetadataProposal)) {
+        return super.equals(obj);
+      }
+      com.gravity.v1.TypesProto.IBCMetadataProposal other = (com.gravity.v1.TypesProto.IBCMetadataProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (hasMetadata() != other.hasMetadata()) return false;
+      if (hasMetadata()) {
+        if (!getMetadata()
+            .equals(other.getMetadata())) return false;
+      }
+      if (!getIbcDenom()
+          .equals(other.getIbcDenom())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (hasMetadata()) {
+        hash = (37 * hash) + METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getMetadata().hashCode();
+      }
+      hash = (37 * hash) + IBC_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getIbcDenom().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.gravity.v1.TypesProto.IBCMetadataProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.TypesProto.IBCMetadataProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.IBCMetadataProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.TypesProto.IBCMetadataProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.IBCMetadataProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.TypesProto.IBCMetadataProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.IBCMetadataProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gravity.v1.TypesProto.IBCMetadataProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.gravity.v1.TypesProto.IBCMetadataProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.gravity.v1.TypesProto.IBCMetadataProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.IBCMetadataProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gravity.v1.TypesProto.IBCMetadataProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.gravity.v1.TypesProto.IBCMetadataProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * IBCMetadataProposal defines a custom governance proposal type that allows governance to set the
+     * metadata for an IBC token, this will allow Gravity to deploy an ERC20 representing this token on
+     * Ethereum
+     * Name: the token name
+     * Symbol: the token symbol
+     * Description: the token description, not sent to ETH at all, only used on Cosmos
+     * Display: the token display name (only used on Cosmos to decide ERC20 Decimals)
+     * Deicmals: the decimals for the display unit
+     * ibc_denom is the denom of the token in question on this chain
+     * </pre>
+     *
+     * Protobuf type {@code gravity.v1.IBCMetadataProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:gravity.v1.IBCMetadataProposal)
+        com.gravity.v1.TypesProto.IBCMetadataProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.gravity.v1.TypesProto.internal_static_gravity_v1_IBCMetadataProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.gravity.v1.TypesProto.internal_static_gravity_v1_IBCMetadataProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.gravity.v1.TypesProto.IBCMetadataProposal.class, com.gravity.v1.TypesProto.IBCMetadataProposal.Builder.class);
+      }
+
+      // Construct using com.gravity.v1.TypesProto.IBCMetadataProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        metadata_ = null;
+        if (metadataBuilder_ != null) {
+          metadataBuilder_.dispose();
+          metadataBuilder_ = null;
+        }
+        ibcDenom_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.gravity.v1.TypesProto.internal_static_gravity_v1_IBCMetadataProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.TypesProto.IBCMetadataProposal getDefaultInstanceForType() {
+        return com.gravity.v1.TypesProto.IBCMetadataProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.TypesProto.IBCMetadataProposal build() {
+        com.gravity.v1.TypesProto.IBCMetadataProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.TypesProto.IBCMetadataProposal buildPartial() {
+        com.gravity.v1.TypesProto.IBCMetadataProposal result = new com.gravity.v1.TypesProto.IBCMetadataProposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.gravity.v1.TypesProto.IBCMetadataProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.metadata_ = metadataBuilder_ == null
+              ? metadata_
+              : metadataBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.ibcDenom_ = ibcDenom_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.gravity.v1.TypesProto.IBCMetadataProposal) {
+          return mergeFrom((com.gravity.v1.TypesProto.IBCMetadataProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.gravity.v1.TypesProto.IBCMetadataProposal other) {
+        if (other == com.gravity.v1.TypesProto.IBCMetadataProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasMetadata()) {
+          mergeMetadata(other.getMetadata());
+        }
+        if (!other.getIbcDenom().isEmpty()) {
+          ibcDenom_ = other.ibcDenom_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getMetadataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                ibcDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.bank.v1beta1.BankProto.Metadata metadata_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.bank.v1beta1.BankProto.Metadata, com.cosmos.bank.v1beta1.BankProto.Metadata.Builder, com.cosmos.bank.v1beta1.BankProto.MetadataOrBuilder> metadataBuilder_;
+      /**
+       * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
+       * @return Whether the metadata field is set.
+       */
+      public boolean hasMetadata() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
+       * @return The metadata.
+       */
+      public com.cosmos.bank.v1beta1.BankProto.Metadata getMetadata() {
+        if (metadataBuilder_ == null) {
+          return metadata_ == null ? com.cosmos.bank.v1beta1.BankProto.Metadata.getDefaultInstance() : metadata_;
+        } else {
+          return metadataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMetadata(com.cosmos.bank.v1beta1.BankProto.Metadata value) {
+        if (metadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metadata_ = value;
+        } else {
+          metadataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMetadata(
+          com.cosmos.bank.v1beta1.BankProto.Metadata.Builder builderForValue) {
+        if (metadataBuilder_ == null) {
+          metadata_ = builderForValue.build();
+        } else {
+          metadataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeMetadata(com.cosmos.bank.v1beta1.BankProto.Metadata value) {
+        if (metadataBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            metadata_ != null &&
+            metadata_ != com.cosmos.bank.v1beta1.BankProto.Metadata.getDefaultInstance()) {
+            getMetadataBuilder().mergeFrom(value);
+          } else {
+            metadata_ = value;
+          }
+        } else {
+          metadataBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMetadata() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        metadata_ = null;
+        if (metadataBuilder_ != null) {
+          metadataBuilder_.dispose();
+          metadataBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.bank.v1beta1.BankProto.Metadata.Builder getMetadataBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getMetadataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.bank.v1beta1.BankProto.MetadataOrBuilder getMetadataOrBuilder() {
+        if (metadataBuilder_ != null) {
+          return metadataBuilder_.getMessageOrBuilder();
+        } else {
+          return metadata_ == null ?
+              com.cosmos.bank.v1beta1.BankProto.Metadata.getDefaultInstance() : metadata_;
+        }
+      }
+      /**
+       * <code>.cosmos.bank.v1beta1.Metadata metadata = 3 [json_name = "metadata", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.bank.v1beta1.BankProto.Metadata, com.cosmos.bank.v1beta1.BankProto.Metadata.Builder, com.cosmos.bank.v1beta1.BankProto.MetadataOrBuilder> 
+          getMetadataFieldBuilder() {
+        if (metadataBuilder_ == null) {
+          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.bank.v1beta1.BankProto.Metadata, com.cosmos.bank.v1beta1.BankProto.Metadata.Builder, com.cosmos.bank.v1beta1.BankProto.MetadataOrBuilder>(
+                  getMetadata(),
+                  getParentForChildren(),
+                  isClean());
+          metadata_ = null;
+        }
+        return metadataBuilder_;
+      }
+
+      private java.lang.Object ibcDenom_ = "";
+      /**
+       * <code>string ibc_denom = 4 [json_name = "ibcDenom"];</code>
+       * @return The ibcDenom.
+       */
+      public java.lang.String getIbcDenom() {
+        java.lang.Object ref = ibcDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ibcDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string ibc_denom = 4 [json_name = "ibcDenom"];</code>
+       * @return The bytes for ibcDenom.
+       */
+      public com.google.protobuf.ByteString
+          getIbcDenomBytes() {
+        java.lang.Object ref = ibcDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ibcDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string ibc_denom = 4 [json_name = "ibcDenom"];</code>
+       * @param value The ibcDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIbcDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ibcDenom_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ibc_denom = 4 [json_name = "ibcDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIbcDenom() {
+        ibcDenom_ = getDefaultInstance().getIbcDenom();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ibc_denom = 4 [json_name = "ibcDenom"];</code>
+       * @param value The bytes for ibcDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIbcDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ibcDenom_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:gravity.v1.IBCMetadataProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:gravity.v1.IBCMetadataProposal)
+    private static final com.gravity.v1.TypesProto.IBCMetadataProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.gravity.v1.TypesProto.IBCMetadataProposal();
+    }
+
+    public static com.gravity.v1.TypesProto.IBCMetadataProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<IBCMetadataProposal>
+        PARSER = new com.google.protobuf.AbstractParser<IBCMetadataProposal>() {
+      @java.lang.Override
+      public IBCMetadataProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<IBCMetadataProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IBCMetadataProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.gravity.v1.TypesProto.IBCMetadataProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PendingIbcAutoForwardOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:gravity.v1.PendingIbcAutoForward)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * the destination address. sdk.AccAddress does not preserve foreign prefixes
+     * </pre>
+     *
+     * <code>string foreign_receiver = 1 [json_name = "foreignReceiver"];</code>
+     * @return The foreignReceiver.
+     */
+    java.lang.String getForeignReceiver();
+    /**
+     * <pre>
+     * the destination address. sdk.AccAddress does not preserve foreign prefixes
+     * </pre>
+     *
+     * <code>string foreign_receiver = 1 [json_name = "foreignReceiver"];</code>
+     * @return The bytes for foreignReceiver.
+     */
+    com.google.protobuf.ByteString
+        getForeignReceiverBytes();
+
+    /**
+     * <pre>
+     * the token sent from ethereum to the ibc-enabled chain over `IbcChannel`
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin token = 2 [json_name = "token"];</code>
+     * @return Whether the token field is set.
+     */
+    boolean hasToken();
+    /**
+     * <pre>
+     * the token sent from ethereum to the ibc-enabled chain over `IbcChannel`
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin token = 2 [json_name = "token"];</code>
+     * @return The token.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getToken();
+    /**
+     * <pre>
+     * the token sent from ethereum to the ibc-enabled chain over `IbcChannel`
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin token = 2 [json_name = "token"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTokenOrBuilder();
+
+    /**
+     * <pre>
+     * the IBC channel to send `Amount` over via ibc-transfer module
+     * </pre>
+     *
+     * <code>string ibc_channel = 3 [json_name = "ibcChannel"];</code>
+     * @return The ibcChannel.
+     */
+    java.lang.String getIbcChannel();
+    /**
+     * <pre>
+     * the IBC channel to send `Amount` over via ibc-transfer module
+     * </pre>
+     *
+     * <code>string ibc_channel = 3 [json_name = "ibcChannel"];</code>
+     * @return The bytes for ibcChannel.
+     */
+    com.google.protobuf.ByteString
+        getIbcChannelBytes();
+
+    /**
+     * <pre>
+     * the EventNonce from the MsgSendToCosmosClaim, used for ordering the queue
+     * </pre>
+     *
+     * <code>uint64 event_nonce = 4 [json_name = "eventNonce"];</code>
+     * @return The eventNonce.
+     */
+    long getEventNonce();
+  }
+  /**
+   * <pre>
+   * PendingIbcAutoForward represents a SendToCosmos transaction with a foreign CosmosReceiver which will be added to the
+   * PendingIbcAutoForward queue in attestation_handler and sent over IBC on some submission of a MsgExecuteIbcAutoForwards
+   * </pre>
+   *
+   * Protobuf type {@code gravity.v1.PendingIbcAutoForward}
+   */
+  public static final class PendingIbcAutoForward extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:gravity.v1.PendingIbcAutoForward)
+      PendingIbcAutoForwardOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PendingIbcAutoForward.newBuilder() to construct.
+    private PendingIbcAutoForward(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PendingIbcAutoForward() {
+      foreignReceiver_ = "";
+      ibcChannel_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PendingIbcAutoForward();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.gravity.v1.TypesProto.internal_static_gravity_v1_PendingIbcAutoForward_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.gravity.v1.TypesProto.internal_static_gravity_v1_PendingIbcAutoForward_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.gravity.v1.TypesProto.PendingIbcAutoForward.class, com.gravity.v1.TypesProto.PendingIbcAutoForward.Builder.class);
+    }
+
+    public static final int FOREIGN_RECEIVER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object foreignReceiver_ = "";
+    /**
+     * <pre>
+     * the destination address. sdk.AccAddress does not preserve foreign prefixes
+     * </pre>
+     *
+     * <code>string foreign_receiver = 1 [json_name = "foreignReceiver"];</code>
+     * @return The foreignReceiver.
+     */
+    @java.lang.Override
+    public java.lang.String getForeignReceiver() {
+      java.lang.Object ref = foreignReceiver_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        foreignReceiver_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * the destination address. sdk.AccAddress does not preserve foreign prefixes
+     * </pre>
+     *
+     * <code>string foreign_receiver = 1 [json_name = "foreignReceiver"];</code>
+     * @return The bytes for foreignReceiver.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getForeignReceiverBytes() {
+      java.lang.Object ref = foreignReceiver_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        foreignReceiver_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOKEN_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin token_;
+    /**
+     * <pre>
+     * the token sent from ethereum to the ibc-enabled chain over `IbcChannel`
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin token = 2 [json_name = "token"];</code>
+     * @return Whether the token field is set.
+     */
+    @java.lang.Override
+    public boolean hasToken() {
+      return token_ != null;
+    }
+    /**
+     * <pre>
+     * the token sent from ethereum to the ibc-enabled chain over `IbcChannel`
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin token = 2 [json_name = "token"];</code>
+     * @return The token.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getToken() {
+      return token_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : token_;
+    }
+    /**
+     * <pre>
+     * the token sent from ethereum to the ibc-enabled chain over `IbcChannel`
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin token = 2 [json_name = "token"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTokenOrBuilder() {
+      return token_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : token_;
+    }
+
+    public static final int IBC_CHANNEL_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ibcChannel_ = "";
+    /**
+     * <pre>
+     * the IBC channel to send `Amount` over via ibc-transfer module
+     * </pre>
+     *
+     * <code>string ibc_channel = 3 [json_name = "ibcChannel"];</code>
+     * @return The ibcChannel.
+     */
+    @java.lang.Override
+    public java.lang.String getIbcChannel() {
+      java.lang.Object ref = ibcChannel_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ibcChannel_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * the IBC channel to send `Amount` over via ibc-transfer module
+     * </pre>
+     *
+     * <code>string ibc_channel = 3 [json_name = "ibcChannel"];</code>
+     * @return The bytes for ibcChannel.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIbcChannelBytes() {
+      java.lang.Object ref = ibcChannel_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ibcChannel_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EVENT_NONCE_FIELD_NUMBER = 4;
+    private long eventNonce_ = 0L;
+    /**
+     * <pre>
+     * the EventNonce from the MsgSendToCosmosClaim, used for ordering the queue
+     * </pre>
+     *
+     * <code>uint64 event_nonce = 4 [json_name = "eventNonce"];</code>
+     * @return The eventNonce.
+     */
+    @java.lang.Override
+    public long getEventNonce() {
+      return eventNonce_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(foreignReceiver_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, foreignReceiver_);
+      }
+      if (token_ != null) {
+        output.writeMessage(2, getToken());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ibcChannel_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, ibcChannel_);
+      }
+      if (eventNonce_ != 0L) {
+        output.writeUInt64(4, eventNonce_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(foreignReceiver_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, foreignReceiver_);
+      }
+      if (token_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getToken());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ibcChannel_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, ibcChannel_);
+      }
+      if (eventNonce_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, eventNonce_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.gravity.v1.TypesProto.PendingIbcAutoForward)) {
+        return super.equals(obj);
+      }
+      com.gravity.v1.TypesProto.PendingIbcAutoForward other = (com.gravity.v1.TypesProto.PendingIbcAutoForward) obj;
+
+      if (!getForeignReceiver()
+          .equals(other.getForeignReceiver())) return false;
+      if (hasToken() != other.hasToken()) return false;
+      if (hasToken()) {
+        if (!getToken()
+            .equals(other.getToken())) return false;
+      }
+      if (!getIbcChannel()
+          .equals(other.getIbcChannel())) return false;
+      if (getEventNonce()
+          != other.getEventNonce()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FOREIGN_RECEIVER_FIELD_NUMBER;
+      hash = (53 * hash) + getForeignReceiver().hashCode();
+      if (hasToken()) {
+        hash = (37 * hash) + TOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getToken().hashCode();
+      }
+      hash = (37 * hash) + IBC_CHANNEL_FIELD_NUMBER;
+      hash = (53 * hash) + getIbcChannel().hashCode();
+      hash = (37 * hash) + EVENT_NONCE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getEventNonce());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.gravity.v1.TypesProto.PendingIbcAutoForward parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.TypesProto.PendingIbcAutoForward parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.PendingIbcAutoForward parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.TypesProto.PendingIbcAutoForward parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.PendingIbcAutoForward parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.gravity.v1.TypesProto.PendingIbcAutoForward parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.PendingIbcAutoForward parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gravity.v1.TypesProto.PendingIbcAutoForward parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.gravity.v1.TypesProto.PendingIbcAutoForward parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.gravity.v1.TypesProto.PendingIbcAutoForward parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.gravity.v1.TypesProto.PendingIbcAutoForward parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.gravity.v1.TypesProto.PendingIbcAutoForward parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.gravity.v1.TypesProto.PendingIbcAutoForward prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * PendingIbcAutoForward represents a SendToCosmos transaction with a foreign CosmosReceiver which will be added to the
+     * PendingIbcAutoForward queue in attestation_handler and sent over IBC on some submission of a MsgExecuteIbcAutoForwards
+     * </pre>
+     *
+     * Protobuf type {@code gravity.v1.PendingIbcAutoForward}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:gravity.v1.PendingIbcAutoForward)
+        com.gravity.v1.TypesProto.PendingIbcAutoForwardOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.gravity.v1.TypesProto.internal_static_gravity_v1_PendingIbcAutoForward_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.gravity.v1.TypesProto.internal_static_gravity_v1_PendingIbcAutoForward_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.gravity.v1.TypesProto.PendingIbcAutoForward.class, com.gravity.v1.TypesProto.PendingIbcAutoForward.Builder.class);
+      }
+
+      // Construct using com.gravity.v1.TypesProto.PendingIbcAutoForward.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        foreignReceiver_ = "";
+        token_ = null;
+        if (tokenBuilder_ != null) {
+          tokenBuilder_.dispose();
+          tokenBuilder_ = null;
+        }
+        ibcChannel_ = "";
+        eventNonce_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.gravity.v1.TypesProto.internal_static_gravity_v1_PendingIbcAutoForward_descriptor;
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.TypesProto.PendingIbcAutoForward getDefaultInstanceForType() {
+        return com.gravity.v1.TypesProto.PendingIbcAutoForward.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.TypesProto.PendingIbcAutoForward build() {
+        com.gravity.v1.TypesProto.PendingIbcAutoForward result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.gravity.v1.TypesProto.PendingIbcAutoForward buildPartial() {
+        com.gravity.v1.TypesProto.PendingIbcAutoForward result = new com.gravity.v1.TypesProto.PendingIbcAutoForward(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.gravity.v1.TypesProto.PendingIbcAutoForward result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.foreignReceiver_ = foreignReceiver_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.token_ = tokenBuilder_ == null
+              ? token_
+              : tokenBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.ibcChannel_ = ibcChannel_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.eventNonce_ = eventNonce_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.gravity.v1.TypesProto.PendingIbcAutoForward) {
+          return mergeFrom((com.gravity.v1.TypesProto.PendingIbcAutoForward)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.gravity.v1.TypesProto.PendingIbcAutoForward other) {
+        if (other == com.gravity.v1.TypesProto.PendingIbcAutoForward.getDefaultInstance()) return this;
+        if (!other.getForeignReceiver().isEmpty()) {
+          foreignReceiver_ = other.foreignReceiver_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasToken()) {
+          mergeToken(other.getToken());
+        }
+        if (!other.getIbcChannel().isEmpty()) {
+          ibcChannel_ = other.ibcChannel_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.getEventNonce() != 0L) {
+          setEventNonce(other.getEventNonce());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                foreignReceiver_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getTokenFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                ibcChannel_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                eventNonce_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object foreignReceiver_ = "";
+      /**
+       * <pre>
+       * the destination address. sdk.AccAddress does not preserve foreign prefixes
+       * </pre>
+       *
+       * <code>string foreign_receiver = 1 [json_name = "foreignReceiver"];</code>
+       * @return The foreignReceiver.
+       */
+      public java.lang.String getForeignReceiver() {
+        java.lang.Object ref = foreignReceiver_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          foreignReceiver_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the destination address. sdk.AccAddress does not preserve foreign prefixes
+       * </pre>
+       *
+       * <code>string foreign_receiver = 1 [json_name = "foreignReceiver"];</code>
+       * @return The bytes for foreignReceiver.
+       */
+      public com.google.protobuf.ByteString
+          getForeignReceiverBytes() {
+        java.lang.Object ref = foreignReceiver_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          foreignReceiver_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the destination address. sdk.AccAddress does not preserve foreign prefixes
+       * </pre>
+       *
+       * <code>string foreign_receiver = 1 [json_name = "foreignReceiver"];</code>
+       * @param value The foreignReceiver to set.
+       * @return This builder for chaining.
+       */
+      public Builder setForeignReceiver(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        foreignReceiver_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the destination address. sdk.AccAddress does not preserve foreign prefixes
+       * </pre>
+       *
+       * <code>string foreign_receiver = 1 [json_name = "foreignReceiver"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearForeignReceiver() {
+        foreignReceiver_ = getDefaultInstance().getForeignReceiver();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the destination address. sdk.AccAddress does not preserve foreign prefixes
+       * </pre>
+       *
+       * <code>string foreign_receiver = 1 [json_name = "foreignReceiver"];</code>
+       * @param value The bytes for foreignReceiver to set.
+       * @return This builder for chaining.
+       */
+      public Builder setForeignReceiverBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        foreignReceiver_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin token_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> tokenBuilder_;
+      /**
+       * <pre>
+       * the token sent from ethereum to the ibc-enabled chain over `IbcChannel`
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token = 2 [json_name = "token"];</code>
+       * @return Whether the token field is set.
+       */
+      public boolean hasToken() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * the token sent from ethereum to the ibc-enabled chain over `IbcChannel`
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token = 2 [json_name = "token"];</code>
+       * @return The token.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getToken() {
+        if (tokenBuilder_ == null) {
+          return token_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : token_;
+        } else {
+          return tokenBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * the token sent from ethereum to the ibc-enabled chain over `IbcChannel`
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token = 2 [json_name = "token"];</code>
+       */
+      public Builder setToken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (tokenBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          token_ = value;
+        } else {
+          tokenBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the token sent from ethereum to the ibc-enabled chain over `IbcChannel`
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token = 2 [json_name = "token"];</code>
+       */
+      public Builder setToken(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (tokenBuilder_ == null) {
+          token_ = builderForValue.build();
+        } else {
+          tokenBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the token sent from ethereum to the ibc-enabled chain over `IbcChannel`
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token = 2 [json_name = "token"];</code>
+       */
+      public Builder mergeToken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (tokenBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            token_ != null &&
+            token_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getTokenBuilder().mergeFrom(value);
+          } else {
+            token_ = value;
+          }
+        } else {
+          tokenBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the token sent from ethereum to the ibc-enabled chain over `IbcChannel`
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token = 2 [json_name = "token"];</code>
+       */
+      public Builder clearToken() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        token_ = null;
+        if (tokenBuilder_ != null) {
+          tokenBuilder_.dispose();
+          tokenBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the token sent from ethereum to the ibc-enabled chain over `IbcChannel`
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token = 2 [json_name = "token"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getTokenBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getTokenFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * the token sent from ethereum to the ibc-enabled chain over `IbcChannel`
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token = 2 [json_name = "token"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTokenOrBuilder() {
+        if (tokenBuilder_ != null) {
+          return tokenBuilder_.getMessageOrBuilder();
+        } else {
+          return token_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : token_;
+        }
+      }
+      /**
+       * <pre>
+       * the token sent from ethereum to the ibc-enabled chain over `IbcChannel`
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin token = 2 [json_name = "token"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getTokenFieldBuilder() {
+        if (tokenBuilder_ == null) {
+          tokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getToken(),
+                  getParentForChildren(),
+                  isClean());
+          token_ = null;
+        }
+        return tokenBuilder_;
+      }
+
+      private java.lang.Object ibcChannel_ = "";
+      /**
+       * <pre>
+       * the IBC channel to send `Amount` over via ibc-transfer module
+       * </pre>
+       *
+       * <code>string ibc_channel = 3 [json_name = "ibcChannel"];</code>
+       * @return The ibcChannel.
+       */
+      public java.lang.String getIbcChannel() {
+        java.lang.Object ref = ibcChannel_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ibcChannel_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the IBC channel to send `Amount` over via ibc-transfer module
+       * </pre>
+       *
+       * <code>string ibc_channel = 3 [json_name = "ibcChannel"];</code>
+       * @return The bytes for ibcChannel.
+       */
+      public com.google.protobuf.ByteString
+          getIbcChannelBytes() {
+        java.lang.Object ref = ibcChannel_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ibcChannel_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the IBC channel to send `Amount` over via ibc-transfer module
+       * </pre>
+       *
+       * <code>string ibc_channel = 3 [json_name = "ibcChannel"];</code>
+       * @param value The ibcChannel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIbcChannel(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ibcChannel_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the IBC channel to send `Amount` over via ibc-transfer module
+       * </pre>
+       *
+       * <code>string ibc_channel = 3 [json_name = "ibcChannel"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIbcChannel() {
+        ibcChannel_ = getDefaultInstance().getIbcChannel();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the IBC channel to send `Amount` over via ibc-transfer module
+       * </pre>
+       *
+       * <code>string ibc_channel = 3 [json_name = "ibcChannel"];</code>
+       * @param value The bytes for ibcChannel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIbcChannelBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ibcChannel_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private long eventNonce_ ;
+      /**
+       * <pre>
+       * the EventNonce from the MsgSendToCosmosClaim, used for ordering the queue
+       * </pre>
+       *
+       * <code>uint64 event_nonce = 4 [json_name = "eventNonce"];</code>
+       * @return The eventNonce.
+       */
+      @java.lang.Override
+      public long getEventNonce() {
+        return eventNonce_;
+      }
+      /**
+       * <pre>
+       * the EventNonce from the MsgSendToCosmosClaim, used for ordering the queue
+       * </pre>
+       *
+       * <code>uint64 event_nonce = 4 [json_name = "eventNonce"];</code>
+       * @param value The eventNonce to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEventNonce(long value) {
+
+        eventNonce_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the EventNonce from the MsgSendToCosmosClaim, used for ordering the queue
+       * </pre>
+       *
+       * <code>uint64 event_nonce = 4 [json_name = "eventNonce"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEventNonce() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        eventNonce_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:gravity.v1.PendingIbcAutoForward)
+    }
+
+    // @@protoc_insertion_point(class_scope:gravity.v1.PendingIbcAutoForward)
+    private static final com.gravity.v1.TypesProto.PendingIbcAutoForward DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.gravity.v1.TypesProto.PendingIbcAutoForward();
+    }
+
+    public static com.gravity.v1.TypesProto.PendingIbcAutoForward getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PendingIbcAutoForward>
+        PARSER = new com.google.protobuf.AbstractParser<PendingIbcAutoForward>() {
+      @java.lang.Override
+      public PendingIbcAutoForward parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PendingIbcAutoForward> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PendingIbcAutoForward> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.gravity.v1.TypesProto.PendingIbcAutoForward getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_gravity_v1_BridgeValidator_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_gravity_v1_BridgeValidator_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_gravity_v1_Valset_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_gravity_v1_Valset_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_gravity_v1_LastObservedEthereumBlockHeight_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_gravity_v1_LastObservedEthereumBlockHeight_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_gravity_v1_ERC20ToDenom_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_gravity_v1_ERC20ToDenom_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_gravity_v1_UnhaltBridgeProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_gravity_v1_UnhaltBridgeProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_gravity_v1_AirdropProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_gravity_v1_AirdropProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_gravity_v1_IBCMetadataProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_gravity_v1_IBCMetadataProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_gravity_v1_PendingIbcAutoForward_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_gravity_v1_PendingIbcAutoForward_fieldAccessorTable;
 
@@ -95,12 +7393,12 @@ public final class TypesProto {
       "eign_receiver\030\001 \001(\tR\017foreignReceiver\022/\n\005" +
       "token\030\002 \001(\0132\031.cosmos.base.v1beta1.CoinR\005" +
       "token\022\037\n\013ibc_channel\030\003 \001(\tR\nibcChannel\022\037" +
-      "\n\013event_nonce\030\004 \001(\004R\neventNonceB\246\001\n\016com." +
-      "gravity.v1B\nTypesProtoP\001Z?github.com/Gra" +
-      "vity-Bridge/Gravity-Bridge/module/x/grav" +
-      "ity/types\242\002\003GXX\252\002\nGravity.V1\312\002\nGravity\\V" +
-      "1\342\002\026Gravity\\V1\\GPBMetadata\352\002\013Gravity::V1" +
-      "b\006proto3"
+      "\n\013event_nonce\030\004 \001(\004R\neventNonceB\244\001\n\016com." +
+      "gravity.v1B\nTypesProtoZ?github.com/Gravi" +
+      "ty-Bridge/Gravity-Bridge/module/x/gravit" +
+      "y/types\242\002\003GXX\252\002\nGravity.V1\312\002\nGravity\\V1\342" +
+      "\002\026Gravity\\V1\\GPBMetadata\352\002\013Gravity::V1b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

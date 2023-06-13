@@ -14,9 +14,1515 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bitcannaglobal.bcna.bcna.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.bitcannaglobal.bcna.bcna.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.bitcannaglobal.bcna.bcna.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.bitcannaglobal.bcna.bcna.ParamsProto.Params getParams();
+    /**
+     * <code>.bitcannaglobal.bcna.bcna.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.bitcannaglobal.bcna.bcna.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <code>repeated .bitcannaglobal.bcna.bcna.Bitcannaid bitcannaidList = 2 [json_name = "bitcannaidList", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid> 
+        getBitcannaidListList();
+    /**
+     * <code>repeated .bitcannaglobal.bcna.bcna.Bitcannaid bitcannaidList = 2 [json_name = "bitcannaidList", (.gogoproto.nullable) = false];</code>
+     */
+    com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid getBitcannaidList(int index);
+    /**
+     * <code>repeated .bitcannaglobal.bcna.bcna.Bitcannaid bitcannaidList = 2 [json_name = "bitcannaidList", (.gogoproto.nullable) = false];</code>
+     */
+    int getBitcannaidListCount();
+    /**
+     * <code>repeated .bitcannaglobal.bcna.bcna.Bitcannaid bitcannaidList = 2 [json_name = "bitcannaidList", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.bitcannaglobal.bcna.bcna.BitcannaidProto.BitcannaidOrBuilder> 
+        getBitcannaidListOrBuilderList();
+    /**
+     * <code>repeated .bitcannaglobal.bcna.bcna.Bitcannaid bitcannaidList = 2 [json_name = "bitcannaidList", (.gogoproto.nullable) = false];</code>
+     */
+    com.bitcannaglobal.bcna.bcna.BitcannaidProto.BitcannaidOrBuilder getBitcannaidListOrBuilder(
+        int index);
+
+    /**
+     * <code>uint64 bitcannaidCount = 3 [json_name = "bitcannaidCount"];</code>
+     * @return The bitcannaidCount.
+     */
+    long getBitcannaidCount();
+
+    /**
+     * <code>repeated .bitcannaglobal.bcna.bcna.Supplychain supplychainList = 4 [json_name = "supplychainList", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain> 
+        getSupplychainListList();
+    /**
+     * <code>repeated .bitcannaglobal.bcna.bcna.Supplychain supplychainList = 4 [json_name = "supplychainList", (.gogoproto.nullable) = false];</code>
+     */
+    com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain getSupplychainList(int index);
+    /**
+     * <code>repeated .bitcannaglobal.bcna.bcna.Supplychain supplychainList = 4 [json_name = "supplychainList", (.gogoproto.nullable) = false];</code>
+     */
+    int getSupplychainListCount();
+    /**
+     * <code>repeated .bitcannaglobal.bcna.bcna.Supplychain supplychainList = 4 [json_name = "supplychainList", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.bitcannaglobal.bcna.bcna.SupplychainProto.SupplychainOrBuilder> 
+        getSupplychainListOrBuilderList();
+    /**
+     * <code>repeated .bitcannaglobal.bcna.bcna.Supplychain supplychainList = 4 [json_name = "supplychainList", (.gogoproto.nullable) = false];</code>
+     */
+    com.bitcannaglobal.bcna.bcna.SupplychainProto.SupplychainOrBuilder getSupplychainListOrBuilder(
+        int index);
+
+    /**
+     * <code>uint64 supplychainCount = 5 [json_name = "supplychainCount"];</code>
+     * @return The supplychainCount.
+     */
+    long getSupplychainCount();
+  }
+  /**
+   * <pre>
+   * GenesisState defines the bcna module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code bitcannaglobal.bcna.bcna.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bitcannaglobal.bcna.bcna.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      bitcannaidList_ = java.util.Collections.emptyList();
+      supplychainList_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bitcannaglobal.bcna.bcna.GenesisProto.internal_static_bitcannaglobal_bcna_bcna_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bitcannaglobal.bcna.bcna.GenesisProto.internal_static_bitcannaglobal_bcna_bcna_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState.class, com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.bitcannaglobal.bcna.bcna.ParamsProto.Params params_;
+    /**
+     * <code>.bitcannaglobal.bcna.bcna.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.bitcannaglobal.bcna.bcna.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.bitcannaglobal.bcna.bcna.ParamsProto.Params getParams() {
+      return params_ == null ? com.bitcannaglobal.bcna.bcna.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.bitcannaglobal.bcna.bcna.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bitcannaglobal.bcna.bcna.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.bitcannaglobal.bcna.bcna.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int BITCANNAIDLIST_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid> bitcannaidList_;
+    /**
+     * <code>repeated .bitcannaglobal.bcna.bcna.Bitcannaid bitcannaidList = 2 [json_name = "bitcannaidList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid> getBitcannaidListList() {
+      return bitcannaidList_;
+    }
+    /**
+     * <code>repeated .bitcannaglobal.bcna.bcna.Bitcannaid bitcannaidList = 2 [json_name = "bitcannaidList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.bitcannaglobal.bcna.bcna.BitcannaidProto.BitcannaidOrBuilder> 
+        getBitcannaidListOrBuilderList() {
+      return bitcannaidList_;
+    }
+    /**
+     * <code>repeated .bitcannaglobal.bcna.bcna.Bitcannaid bitcannaidList = 2 [json_name = "bitcannaidList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getBitcannaidListCount() {
+      return bitcannaidList_.size();
+    }
+    /**
+     * <code>repeated .bitcannaglobal.bcna.bcna.Bitcannaid bitcannaidList = 2 [json_name = "bitcannaidList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid getBitcannaidList(int index) {
+      return bitcannaidList_.get(index);
+    }
+    /**
+     * <code>repeated .bitcannaglobal.bcna.bcna.Bitcannaid bitcannaidList = 2 [json_name = "bitcannaidList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bitcannaglobal.bcna.bcna.BitcannaidProto.BitcannaidOrBuilder getBitcannaidListOrBuilder(
+        int index) {
+      return bitcannaidList_.get(index);
+    }
+
+    public static final int BITCANNAIDCOUNT_FIELD_NUMBER = 3;
+    private long bitcannaidCount_ = 0L;
+    /**
+     * <code>uint64 bitcannaidCount = 3 [json_name = "bitcannaidCount"];</code>
+     * @return The bitcannaidCount.
+     */
+    @java.lang.Override
+    public long getBitcannaidCount() {
+      return bitcannaidCount_;
+    }
+
+    public static final int SUPPLYCHAINLIST_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain> supplychainList_;
+    /**
+     * <code>repeated .bitcannaglobal.bcna.bcna.Supplychain supplychainList = 4 [json_name = "supplychainList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain> getSupplychainListList() {
+      return supplychainList_;
+    }
+    /**
+     * <code>repeated .bitcannaglobal.bcna.bcna.Supplychain supplychainList = 4 [json_name = "supplychainList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.bitcannaglobal.bcna.bcna.SupplychainProto.SupplychainOrBuilder> 
+        getSupplychainListOrBuilderList() {
+      return supplychainList_;
+    }
+    /**
+     * <code>repeated .bitcannaglobal.bcna.bcna.Supplychain supplychainList = 4 [json_name = "supplychainList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getSupplychainListCount() {
+      return supplychainList_.size();
+    }
+    /**
+     * <code>repeated .bitcannaglobal.bcna.bcna.Supplychain supplychainList = 4 [json_name = "supplychainList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain getSupplychainList(int index) {
+      return supplychainList_.get(index);
+    }
+    /**
+     * <code>repeated .bitcannaglobal.bcna.bcna.Supplychain supplychainList = 4 [json_name = "supplychainList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bitcannaglobal.bcna.bcna.SupplychainProto.SupplychainOrBuilder getSupplychainListOrBuilder(
+        int index) {
+      return supplychainList_.get(index);
+    }
+
+    public static final int SUPPLYCHAINCOUNT_FIELD_NUMBER = 5;
+    private long supplychainCount_ = 0L;
+    /**
+     * <code>uint64 supplychainCount = 5 [json_name = "supplychainCount"];</code>
+     * @return The supplychainCount.
+     */
+    @java.lang.Override
+    public long getSupplychainCount() {
+      return supplychainCount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      for (int i = 0; i < bitcannaidList_.size(); i++) {
+        output.writeMessage(2, bitcannaidList_.get(i));
+      }
+      if (bitcannaidCount_ != 0L) {
+        output.writeUInt64(3, bitcannaidCount_);
+      }
+      for (int i = 0; i < supplychainList_.size(); i++) {
+        output.writeMessage(4, supplychainList_.get(i));
+      }
+      if (supplychainCount_ != 0L) {
+        output.writeUInt64(5, supplychainCount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      for (int i = 0; i < bitcannaidList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, bitcannaidList_.get(i));
+      }
+      if (bitcannaidCount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, bitcannaidCount_);
+      }
+      for (int i = 0; i < supplychainList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, supplychainList_.get(i));
+      }
+      if (supplychainCount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, supplychainCount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState other = (com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getBitcannaidListList()
+          .equals(other.getBitcannaidListList())) return false;
+      if (getBitcannaidCount()
+          != other.getBitcannaidCount()) return false;
+      if (!getSupplychainListList()
+          .equals(other.getSupplychainListList())) return false;
+      if (getSupplychainCount()
+          != other.getSupplychainCount()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (getBitcannaidListCount() > 0) {
+        hash = (37 * hash) + BITCANNAIDLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getBitcannaidListList().hashCode();
+      }
+      hash = (37 * hash) + BITCANNAIDCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getBitcannaidCount());
+      if (getSupplychainListCount() > 0) {
+        hash = (37 * hash) + SUPPLYCHAINLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getSupplychainListList().hashCode();
+      }
+      hash = (37 * hash) + SUPPLYCHAINCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSupplychainCount());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the bcna module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code bitcannaglobal.bcna.bcna.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bitcannaglobal.bcna.bcna.GenesisState)
+        com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bitcannaglobal.bcna.bcna.GenesisProto.internal_static_bitcannaglobal_bcna_bcna_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bitcannaglobal.bcna.bcna.GenesisProto.internal_static_bitcannaglobal_bcna_bcna_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState.class, com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        if (bitcannaidListBuilder_ == null) {
+          bitcannaidList_ = java.util.Collections.emptyList();
+        } else {
+          bitcannaidList_ = null;
+          bitcannaidListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        bitcannaidCount_ = 0L;
+        if (supplychainListBuilder_ == null) {
+          supplychainList_ = java.util.Collections.emptyList();
+        } else {
+          supplychainList_ = null;
+          supplychainListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        supplychainCount_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bitcannaglobal.bcna.bcna.GenesisProto.internal_static_bitcannaglobal_bcna_bcna_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState build() {
+        com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState buildPartial() {
+        com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState result = new com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState result) {
+        if (bitcannaidListBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            bitcannaidList_ = java.util.Collections.unmodifiableList(bitcannaidList_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.bitcannaidList_ = bitcannaidList_;
+        } else {
+          result.bitcannaidList_ = bitcannaidListBuilder_.build();
+        }
+        if (supplychainListBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            supplychainList_ = java.util.Collections.unmodifiableList(supplychainList_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.supplychainList_ = supplychainList_;
+        } else {
+          result.supplychainList_ = supplychainListBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.bitcannaidCount_ = bitcannaidCount_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.supplychainCount_ = supplychainCount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState) {
+          return mergeFrom((com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState other) {
+        if (other == com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (bitcannaidListBuilder_ == null) {
+          if (!other.bitcannaidList_.isEmpty()) {
+            if (bitcannaidList_.isEmpty()) {
+              bitcannaidList_ = other.bitcannaidList_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureBitcannaidListIsMutable();
+              bitcannaidList_.addAll(other.bitcannaidList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.bitcannaidList_.isEmpty()) {
+            if (bitcannaidListBuilder_.isEmpty()) {
+              bitcannaidListBuilder_.dispose();
+              bitcannaidListBuilder_ = null;
+              bitcannaidList_ = other.bitcannaidList_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              bitcannaidListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBitcannaidListFieldBuilder() : null;
+            } else {
+              bitcannaidListBuilder_.addAllMessages(other.bitcannaidList_);
+            }
+          }
+        }
+        if (other.getBitcannaidCount() != 0L) {
+          setBitcannaidCount(other.getBitcannaidCount());
+        }
+        if (supplychainListBuilder_ == null) {
+          if (!other.supplychainList_.isEmpty()) {
+            if (supplychainList_.isEmpty()) {
+              supplychainList_ = other.supplychainList_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureSupplychainListIsMutable();
+              supplychainList_.addAll(other.supplychainList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.supplychainList_.isEmpty()) {
+            if (supplychainListBuilder_.isEmpty()) {
+              supplychainListBuilder_.dispose();
+              supplychainListBuilder_ = null;
+              supplychainList_ = other.supplychainList_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              supplychainListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSupplychainListFieldBuilder() : null;
+            } else {
+              supplychainListBuilder_.addAllMessages(other.supplychainList_);
+            }
+          }
+        }
+        if (other.getSupplychainCount() != 0L) {
+          setSupplychainCount(other.getSupplychainCount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid m =
+                    input.readMessage(
+                        com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid.parser(),
+                        extensionRegistry);
+                if (bitcannaidListBuilder_ == null) {
+                  ensureBitcannaidListIsMutable();
+                  bitcannaidList_.add(m);
+                } else {
+                  bitcannaidListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 24: {
+                bitcannaidCount_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain m =
+                    input.readMessage(
+                        com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain.parser(),
+                        extensionRegistry);
+                if (supplychainListBuilder_ == null) {
+                  ensureSupplychainListIsMutable();
+                  supplychainList_.add(m);
+                } else {
+                  supplychainListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 40: {
+                supplychainCount_ = input.readUInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.bitcannaglobal.bcna.bcna.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bitcannaglobal.bcna.bcna.ParamsProto.Params, com.bitcannaglobal.bcna.bcna.ParamsProto.Params.Builder, com.bitcannaglobal.bcna.bcna.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.bitcannaglobal.bcna.bcna.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.bitcannaglobal.bcna.bcna.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.bitcannaglobal.bcna.bcna.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.bitcannaglobal.bcna.bcna.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.bitcannaglobal.bcna.bcna.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.bitcannaglobal.bcna.bcna.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bitcannaglobal.bcna.bcna.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.bitcannaglobal.bcna.bcna.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bitcannaglobal.bcna.bcna.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.bitcannaglobal.bcna.bcna.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.bitcannaglobal.bcna.bcna.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bitcannaglobal.bcna.bcna.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bitcannaglobal.bcna.bcna.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bitcannaglobal.bcna.bcna.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.bitcannaglobal.bcna.bcna.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bitcannaglobal.bcna.bcna.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.bitcannaglobal.bcna.bcna.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.bitcannaglobal.bcna.bcna.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bitcannaglobal.bcna.bcna.ParamsProto.Params, com.bitcannaglobal.bcna.bcna.ParamsProto.Params.Builder, com.bitcannaglobal.bcna.bcna.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.bitcannaglobal.bcna.bcna.ParamsProto.Params, com.bitcannaglobal.bcna.bcna.ParamsProto.Params.Builder, com.bitcannaglobal.bcna.bcna.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private java.util.List<com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid> bitcannaidList_ =
+        java.util.Collections.emptyList();
+      private void ensureBitcannaidListIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          bitcannaidList_ = new java.util.ArrayList<com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid>(bitcannaidList_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid, com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid.Builder, com.bitcannaglobal.bcna.bcna.BitcannaidProto.BitcannaidOrBuilder> bitcannaidListBuilder_;
+
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Bitcannaid bitcannaidList = 2 [json_name = "bitcannaidList", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid> getBitcannaidListList() {
+        if (bitcannaidListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(bitcannaidList_);
+        } else {
+          return bitcannaidListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Bitcannaid bitcannaidList = 2 [json_name = "bitcannaidList", (.gogoproto.nullable) = false];</code>
+       */
+      public int getBitcannaidListCount() {
+        if (bitcannaidListBuilder_ == null) {
+          return bitcannaidList_.size();
+        } else {
+          return bitcannaidListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Bitcannaid bitcannaidList = 2 [json_name = "bitcannaidList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid getBitcannaidList(int index) {
+        if (bitcannaidListBuilder_ == null) {
+          return bitcannaidList_.get(index);
+        } else {
+          return bitcannaidListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Bitcannaid bitcannaidList = 2 [json_name = "bitcannaidList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBitcannaidList(
+          int index, com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid value) {
+        if (bitcannaidListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBitcannaidListIsMutable();
+          bitcannaidList_.set(index, value);
+          onChanged();
+        } else {
+          bitcannaidListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Bitcannaid bitcannaidList = 2 [json_name = "bitcannaidList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBitcannaidList(
+          int index, com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid.Builder builderForValue) {
+        if (bitcannaidListBuilder_ == null) {
+          ensureBitcannaidListIsMutable();
+          bitcannaidList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          bitcannaidListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Bitcannaid bitcannaidList = 2 [json_name = "bitcannaidList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBitcannaidList(com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid value) {
+        if (bitcannaidListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBitcannaidListIsMutable();
+          bitcannaidList_.add(value);
+          onChanged();
+        } else {
+          bitcannaidListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Bitcannaid bitcannaidList = 2 [json_name = "bitcannaidList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBitcannaidList(
+          int index, com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid value) {
+        if (bitcannaidListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBitcannaidListIsMutable();
+          bitcannaidList_.add(index, value);
+          onChanged();
+        } else {
+          bitcannaidListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Bitcannaid bitcannaidList = 2 [json_name = "bitcannaidList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBitcannaidList(
+          com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid.Builder builderForValue) {
+        if (bitcannaidListBuilder_ == null) {
+          ensureBitcannaidListIsMutable();
+          bitcannaidList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          bitcannaidListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Bitcannaid bitcannaidList = 2 [json_name = "bitcannaidList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBitcannaidList(
+          int index, com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid.Builder builderForValue) {
+        if (bitcannaidListBuilder_ == null) {
+          ensureBitcannaidListIsMutable();
+          bitcannaidList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          bitcannaidListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Bitcannaid bitcannaidList = 2 [json_name = "bitcannaidList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllBitcannaidList(
+          java.lang.Iterable<? extends com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid> values) {
+        if (bitcannaidListBuilder_ == null) {
+          ensureBitcannaidListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, bitcannaidList_);
+          onChanged();
+        } else {
+          bitcannaidListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Bitcannaid bitcannaidList = 2 [json_name = "bitcannaidList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearBitcannaidList() {
+        if (bitcannaidListBuilder_ == null) {
+          bitcannaidList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          bitcannaidListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Bitcannaid bitcannaidList = 2 [json_name = "bitcannaidList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeBitcannaidList(int index) {
+        if (bitcannaidListBuilder_ == null) {
+          ensureBitcannaidListIsMutable();
+          bitcannaidList_.remove(index);
+          onChanged();
+        } else {
+          bitcannaidListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Bitcannaid bitcannaidList = 2 [json_name = "bitcannaidList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid.Builder getBitcannaidListBuilder(
+          int index) {
+        return getBitcannaidListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Bitcannaid bitcannaidList = 2 [json_name = "bitcannaidList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bitcannaglobal.bcna.bcna.BitcannaidProto.BitcannaidOrBuilder getBitcannaidListOrBuilder(
+          int index) {
+        if (bitcannaidListBuilder_ == null) {
+          return bitcannaidList_.get(index);  } else {
+          return bitcannaidListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Bitcannaid bitcannaidList = 2 [json_name = "bitcannaidList", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.bitcannaglobal.bcna.bcna.BitcannaidProto.BitcannaidOrBuilder> 
+           getBitcannaidListOrBuilderList() {
+        if (bitcannaidListBuilder_ != null) {
+          return bitcannaidListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(bitcannaidList_);
+        }
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Bitcannaid bitcannaidList = 2 [json_name = "bitcannaidList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid.Builder addBitcannaidListBuilder() {
+        return getBitcannaidListFieldBuilder().addBuilder(
+            com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Bitcannaid bitcannaidList = 2 [json_name = "bitcannaidList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid.Builder addBitcannaidListBuilder(
+          int index) {
+        return getBitcannaidListFieldBuilder().addBuilder(
+            index, com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Bitcannaid bitcannaidList = 2 [json_name = "bitcannaidList", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid.Builder> 
+           getBitcannaidListBuilderList() {
+        return getBitcannaidListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid, com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid.Builder, com.bitcannaglobal.bcna.bcna.BitcannaidProto.BitcannaidOrBuilder> 
+          getBitcannaidListFieldBuilder() {
+        if (bitcannaidListBuilder_ == null) {
+          bitcannaidListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid, com.bitcannaglobal.bcna.bcna.BitcannaidProto.Bitcannaid.Builder, com.bitcannaglobal.bcna.bcna.BitcannaidProto.BitcannaidOrBuilder>(
+                  bitcannaidList_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          bitcannaidList_ = null;
+        }
+        return bitcannaidListBuilder_;
+      }
+
+      private long bitcannaidCount_ ;
+      /**
+       * <code>uint64 bitcannaidCount = 3 [json_name = "bitcannaidCount"];</code>
+       * @return The bitcannaidCount.
+       */
+      @java.lang.Override
+      public long getBitcannaidCount() {
+        return bitcannaidCount_;
+      }
+      /**
+       * <code>uint64 bitcannaidCount = 3 [json_name = "bitcannaidCount"];</code>
+       * @param value The bitcannaidCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBitcannaidCount(long value) {
+
+        bitcannaidCount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 bitcannaidCount = 3 [json_name = "bitcannaidCount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBitcannaidCount() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        bitcannaidCount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain> supplychainList_ =
+        java.util.Collections.emptyList();
+      private void ensureSupplychainListIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          supplychainList_ = new java.util.ArrayList<com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain>(supplychainList_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain, com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain.Builder, com.bitcannaglobal.bcna.bcna.SupplychainProto.SupplychainOrBuilder> supplychainListBuilder_;
+
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Supplychain supplychainList = 4 [json_name = "supplychainList", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain> getSupplychainListList() {
+        if (supplychainListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(supplychainList_);
+        } else {
+          return supplychainListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Supplychain supplychainList = 4 [json_name = "supplychainList", (.gogoproto.nullable) = false];</code>
+       */
+      public int getSupplychainListCount() {
+        if (supplychainListBuilder_ == null) {
+          return supplychainList_.size();
+        } else {
+          return supplychainListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Supplychain supplychainList = 4 [json_name = "supplychainList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain getSupplychainList(int index) {
+        if (supplychainListBuilder_ == null) {
+          return supplychainList_.get(index);
+        } else {
+          return supplychainListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Supplychain supplychainList = 4 [json_name = "supplychainList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSupplychainList(
+          int index, com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain value) {
+        if (supplychainListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplychainListIsMutable();
+          supplychainList_.set(index, value);
+          onChanged();
+        } else {
+          supplychainListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Supplychain supplychainList = 4 [json_name = "supplychainList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSupplychainList(
+          int index, com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain.Builder builderForValue) {
+        if (supplychainListBuilder_ == null) {
+          ensureSupplychainListIsMutable();
+          supplychainList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplychainListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Supplychain supplychainList = 4 [json_name = "supplychainList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSupplychainList(com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain value) {
+        if (supplychainListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplychainListIsMutable();
+          supplychainList_.add(value);
+          onChanged();
+        } else {
+          supplychainListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Supplychain supplychainList = 4 [json_name = "supplychainList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSupplychainList(
+          int index, com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain value) {
+        if (supplychainListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplychainListIsMutable();
+          supplychainList_.add(index, value);
+          onChanged();
+        } else {
+          supplychainListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Supplychain supplychainList = 4 [json_name = "supplychainList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSupplychainList(
+          com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain.Builder builderForValue) {
+        if (supplychainListBuilder_ == null) {
+          ensureSupplychainListIsMutable();
+          supplychainList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          supplychainListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Supplychain supplychainList = 4 [json_name = "supplychainList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSupplychainList(
+          int index, com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain.Builder builderForValue) {
+        if (supplychainListBuilder_ == null) {
+          ensureSupplychainListIsMutable();
+          supplychainList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplychainListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Supplychain supplychainList = 4 [json_name = "supplychainList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllSupplychainList(
+          java.lang.Iterable<? extends com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain> values) {
+        if (supplychainListBuilder_ == null) {
+          ensureSupplychainListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, supplychainList_);
+          onChanged();
+        } else {
+          supplychainListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Supplychain supplychainList = 4 [json_name = "supplychainList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearSupplychainList() {
+        if (supplychainListBuilder_ == null) {
+          supplychainList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          supplychainListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Supplychain supplychainList = 4 [json_name = "supplychainList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeSupplychainList(int index) {
+        if (supplychainListBuilder_ == null) {
+          ensureSupplychainListIsMutable();
+          supplychainList_.remove(index);
+          onChanged();
+        } else {
+          supplychainListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Supplychain supplychainList = 4 [json_name = "supplychainList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain.Builder getSupplychainListBuilder(
+          int index) {
+        return getSupplychainListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Supplychain supplychainList = 4 [json_name = "supplychainList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bitcannaglobal.bcna.bcna.SupplychainProto.SupplychainOrBuilder getSupplychainListOrBuilder(
+          int index) {
+        if (supplychainListBuilder_ == null) {
+          return supplychainList_.get(index);  } else {
+          return supplychainListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Supplychain supplychainList = 4 [json_name = "supplychainList", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.bitcannaglobal.bcna.bcna.SupplychainProto.SupplychainOrBuilder> 
+           getSupplychainListOrBuilderList() {
+        if (supplychainListBuilder_ != null) {
+          return supplychainListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(supplychainList_);
+        }
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Supplychain supplychainList = 4 [json_name = "supplychainList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain.Builder addSupplychainListBuilder() {
+        return getSupplychainListFieldBuilder().addBuilder(
+            com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Supplychain supplychainList = 4 [json_name = "supplychainList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain.Builder addSupplychainListBuilder(
+          int index) {
+        return getSupplychainListFieldBuilder().addBuilder(
+            index, com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bitcannaglobal.bcna.bcna.Supplychain supplychainList = 4 [json_name = "supplychainList", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain.Builder> 
+           getSupplychainListBuilderList() {
+        return getSupplychainListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain, com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain.Builder, com.bitcannaglobal.bcna.bcna.SupplychainProto.SupplychainOrBuilder> 
+          getSupplychainListFieldBuilder() {
+        if (supplychainListBuilder_ == null) {
+          supplychainListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain, com.bitcannaglobal.bcna.bcna.SupplychainProto.Supplychain.Builder, com.bitcannaglobal.bcna.bcna.SupplychainProto.SupplychainOrBuilder>(
+                  supplychainList_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          supplychainList_ = null;
+        }
+        return supplychainListBuilder_;
+      }
+
+      private long supplychainCount_ ;
+      /**
+       * <code>uint64 supplychainCount = 5 [json_name = "supplychainCount"];</code>
+       * @return The supplychainCount.
+       */
+      @java.lang.Override
+      public long getSupplychainCount() {
+        return supplychainCount_;
+      }
+      /**
+       * <code>uint64 supplychainCount = 5 [json_name = "supplychainCount"];</code>
+       * @param value The supplychainCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSupplychainCount(long value) {
+
+        supplychainCount_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 supplychainCount = 5 [json_name = "supplychainCount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSupplychainCount() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        supplychainCount_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bitcannaglobal.bcna.bcna.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:bitcannaglobal.bcna.bcna.GenesisState)
+    private static final com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState();
+    }
+
+    public static com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bitcannaglobal.bcna.bcna.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bitcannaglobal_bcna_bcna_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bitcannaglobal_bcna_bcna_GenesisState_fieldAccessorTable;
 
@@ -40,13 +1546,12 @@ public final class GenesisProto {
       "t\022U\n\017supplychainList\030\004 \003(\0132%.bitcannaglo" +
       "bal.bcna.bcna.SupplychainB\004\310\336\037\000R\017supplyc" +
       "hainList\022*\n\020supplychainCount\030\005 \001(\004R\020supp" +
-      "lychainCountB\333\001\n\034com.bitcannaglobal.bcna" +
-      ".bcnaB\014GenesisProtoP\001Z+github.com/BitCan" +
-      "naGlobal/bcna/x/bcna/types\242\002\003BBB\252\002\030Bitca" +
-      "nnaglobal.Bcna.Bcna\312\002\030Bitcannaglobal\\Bcn" +
-      "a\\Bcna\342\002$Bitcannaglobal\\Bcna\\Bcna\\GPBMet" +
-      "adata\352\002\032Bitcannaglobal::Bcna::Bcnab\006prot" +
-      "o3"
+      "lychainCountB\331\001\n\034com.bitcannaglobal.bcna" +
+      ".bcnaB\014GenesisProtoZ+github.com/BitCanna" +
+      "Global/bcna/x/bcna/types\242\002\003BBB\252\002\030Bitcann" +
+      "aglobal.Bcna.Bcna\312\002\030Bitcannaglobal\\Bcna\\" +
+      "Bcna\342\002$Bitcannaglobal\\Bcna\\Bcna\\GPBMetad" +
+      "ata\352\002\032Bitcannaglobal::Bcna::Bcnab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

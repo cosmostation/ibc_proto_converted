@@ -33,15 +33,15 @@ public final class ServiceProto {
       "ssetmantle.modules.orders.transactions.c" +
       "ancel.Message\032C.assetmantle.modules.orde" +
       "rs.transactions.cancel.TransactionRespon" +
-      "se\"\035\202\323\344\223\002\027\"\025/mantle/orders/cancelB\240\002\n2co" +
+      "se\"\035\202\323\344\223\002\027\"\025/mantle/orders/cancelB\236\002\n2co" +
       "m.assetmantle.modules.orders.transaction" +
-      "s.cancelB\014ServiceProtoP\001\242\002\005AMOTC\252\002.Asset" +
-      "mantle.Modules.Orders.Transactions.Cance" +
-      "l\312\002.Assetmantle\\Modules\\Orders\\Transacti" +
-      "ons\\Cancel\342\002:Assetmantle\\Modules\\Orders\\" +
-      "Transactions\\Cancel\\GPBMetadata\352\0022Assetm" +
-      "antle::Modules::Orders::Transactions::Ca" +
-      "ncelb\006proto3"
+      "s.cancelB\014ServiceProto\242\002\005AMOTC\252\002.Assetma" +
+      "ntle.Modules.Orders.Transactions.Cancel\312" +
+      "\002.Assetmantle\\Modules\\Orders\\Transaction" +
+      "s\\Cancel\342\002:Assetmantle\\Modules\\Orders\\Tr" +
+      "ansactions\\Cancel\\GPBMetadata\352\0022Assetman" +
+      "tle::Modules::Orders::Transactions::Canc" +
+      "elb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

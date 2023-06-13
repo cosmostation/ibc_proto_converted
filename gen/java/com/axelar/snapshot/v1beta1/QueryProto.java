@@ -14,19 +14,2612 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryValidatorsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.snapshot.v1beta1.QueryValidatorsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator validators = 1 [json_name = "validators"];</code>
+     */
+    java.util.List<com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator> 
+        getValidatorsList();
+    /**
+     * <code>repeated .axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator validators = 1 [json_name = "validators"];</code>
+     */
+    com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator getValidators(int index);
+    /**
+     * <code>repeated .axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator validators = 1 [json_name = "validators"];</code>
+     */
+    int getValidatorsCount();
+    /**
+     * <code>repeated .axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator validators = 1 [json_name = "validators"];</code>
+     */
+    java.util.List<? extends com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.ValidatorOrBuilder> 
+        getValidatorsOrBuilderList();
+    /**
+     * <code>repeated .axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator validators = 1 [json_name = "validators"];</code>
+     */
+    com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.ValidatorOrBuilder getValidatorsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code axelar.snapshot.v1beta1.QueryValidatorsResponse}
+   */
+  public static final class QueryValidatorsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.snapshot.v1beta1.QueryValidatorsResponse)
+      QueryValidatorsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryValidatorsResponse.newBuilder() to construct.
+    private QueryValidatorsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryValidatorsResponse() {
+      validators_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryValidatorsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.snapshot.v1beta1.QueryProto.internal_static_axelar_snapshot_v1beta1_QueryValidatorsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.snapshot.v1beta1.QueryProto.internal_static_axelar_snapshot_v1beta1_QueryValidatorsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.class, com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Builder.class);
+    }
+
+    public interface TssIllegibilityInfoOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:axelar.snapshot.v1beta1.QueryValidatorsResponse.TssIllegibilityInfo)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>bool tombstoned = 1 [json_name = "tombstoned"];</code>
+       * @return The tombstoned.
+       */
+      boolean getTombstoned();
+
+      /**
+       * <code>bool jailed = 2 [json_name = "jailed"];</code>
+       * @return The jailed.
+       */
+      boolean getJailed();
+
+      /**
+       * <code>bool missed_too_many_blocks = 3 [json_name = "missedTooManyBlocks"];</code>
+       * @return The missedTooManyBlocks.
+       */
+      boolean getMissedTooManyBlocks();
+
+      /**
+       * <code>bool no_proxy_registered = 4 [json_name = "noProxyRegistered"];</code>
+       * @return The noProxyRegistered.
+       */
+      boolean getNoProxyRegistered();
+
+      /**
+       * <code>bool tss_suspended = 5 [json_name = "tssSuspended"];</code>
+       * @return The tssSuspended.
+       */
+      boolean getTssSuspended();
+
+      /**
+       * <code>bool proxy_insuficient_funds = 6 [json_name = "proxyInsuficientFunds"];</code>
+       * @return The proxyInsuficientFunds.
+       */
+      boolean getProxyInsuficientFunds();
+
+      /**
+       * <code>bool stale_tss_heartbeat = 7 [json_name = "staleTssHeartbeat"];</code>
+       * @return The staleTssHeartbeat.
+       */
+      boolean getStaleTssHeartbeat();
+    }
+    /**
+     * Protobuf type {@code axelar.snapshot.v1beta1.QueryValidatorsResponse.TssIllegibilityInfo}
+     */
+    public static final class TssIllegibilityInfo extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:axelar.snapshot.v1beta1.QueryValidatorsResponse.TssIllegibilityInfo)
+        TssIllegibilityInfoOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use TssIllegibilityInfo.newBuilder() to construct.
+      private TssIllegibilityInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private TssIllegibilityInfo() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new TssIllegibilityInfo();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.snapshot.v1beta1.QueryProto.internal_static_axelar_snapshot_v1beta1_QueryValidatorsResponse_TssIllegibilityInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.snapshot.v1beta1.QueryProto.internal_static_axelar_snapshot_v1beta1_QueryValidatorsResponse_TssIllegibilityInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo.class, com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo.Builder.class);
+      }
+
+      public static final int TOMBSTONED_FIELD_NUMBER = 1;
+      private boolean tombstoned_ = false;
+      /**
+       * <code>bool tombstoned = 1 [json_name = "tombstoned"];</code>
+       * @return The tombstoned.
+       */
+      @java.lang.Override
+      public boolean getTombstoned() {
+        return tombstoned_;
+      }
+
+      public static final int JAILED_FIELD_NUMBER = 2;
+      private boolean jailed_ = false;
+      /**
+       * <code>bool jailed = 2 [json_name = "jailed"];</code>
+       * @return The jailed.
+       */
+      @java.lang.Override
+      public boolean getJailed() {
+        return jailed_;
+      }
+
+      public static final int MISSED_TOO_MANY_BLOCKS_FIELD_NUMBER = 3;
+      private boolean missedTooManyBlocks_ = false;
+      /**
+       * <code>bool missed_too_many_blocks = 3 [json_name = "missedTooManyBlocks"];</code>
+       * @return The missedTooManyBlocks.
+       */
+      @java.lang.Override
+      public boolean getMissedTooManyBlocks() {
+        return missedTooManyBlocks_;
+      }
+
+      public static final int NO_PROXY_REGISTERED_FIELD_NUMBER = 4;
+      private boolean noProxyRegistered_ = false;
+      /**
+       * <code>bool no_proxy_registered = 4 [json_name = "noProxyRegistered"];</code>
+       * @return The noProxyRegistered.
+       */
+      @java.lang.Override
+      public boolean getNoProxyRegistered() {
+        return noProxyRegistered_;
+      }
+
+      public static final int TSS_SUSPENDED_FIELD_NUMBER = 5;
+      private boolean tssSuspended_ = false;
+      /**
+       * <code>bool tss_suspended = 5 [json_name = "tssSuspended"];</code>
+       * @return The tssSuspended.
+       */
+      @java.lang.Override
+      public boolean getTssSuspended() {
+        return tssSuspended_;
+      }
+
+      public static final int PROXY_INSUFICIENT_FUNDS_FIELD_NUMBER = 6;
+      private boolean proxyInsuficientFunds_ = false;
+      /**
+       * <code>bool proxy_insuficient_funds = 6 [json_name = "proxyInsuficientFunds"];</code>
+       * @return The proxyInsuficientFunds.
+       */
+      @java.lang.Override
+      public boolean getProxyInsuficientFunds() {
+        return proxyInsuficientFunds_;
+      }
+
+      public static final int STALE_TSS_HEARTBEAT_FIELD_NUMBER = 7;
+      private boolean staleTssHeartbeat_ = false;
+      /**
+       * <code>bool stale_tss_heartbeat = 7 [json_name = "staleTssHeartbeat"];</code>
+       * @return The staleTssHeartbeat.
+       */
+      @java.lang.Override
+      public boolean getStaleTssHeartbeat() {
+        return staleTssHeartbeat_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (tombstoned_ != false) {
+          output.writeBool(1, tombstoned_);
+        }
+        if (jailed_ != false) {
+          output.writeBool(2, jailed_);
+        }
+        if (missedTooManyBlocks_ != false) {
+          output.writeBool(3, missedTooManyBlocks_);
+        }
+        if (noProxyRegistered_ != false) {
+          output.writeBool(4, noProxyRegistered_);
+        }
+        if (tssSuspended_ != false) {
+          output.writeBool(5, tssSuspended_);
+        }
+        if (proxyInsuficientFunds_ != false) {
+          output.writeBool(6, proxyInsuficientFunds_);
+        }
+        if (staleTssHeartbeat_ != false) {
+          output.writeBool(7, staleTssHeartbeat_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (tombstoned_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(1, tombstoned_);
+        }
+        if (jailed_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(2, jailed_);
+        }
+        if (missedTooManyBlocks_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(3, missedTooManyBlocks_);
+        }
+        if (noProxyRegistered_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(4, noProxyRegistered_);
+        }
+        if (tssSuspended_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(5, tssSuspended_);
+        }
+        if (proxyInsuficientFunds_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(6, proxyInsuficientFunds_);
+        }
+        if (staleTssHeartbeat_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(7, staleTssHeartbeat_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo)) {
+          return super.equals(obj);
+        }
+        com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo other = (com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo) obj;
+
+        if (getTombstoned()
+            != other.getTombstoned()) return false;
+        if (getJailed()
+            != other.getJailed()) return false;
+        if (getMissedTooManyBlocks()
+            != other.getMissedTooManyBlocks()) return false;
+        if (getNoProxyRegistered()
+            != other.getNoProxyRegistered()) return false;
+        if (getTssSuspended()
+            != other.getTssSuspended()) return false;
+        if (getProxyInsuficientFunds()
+            != other.getProxyInsuficientFunds()) return false;
+        if (getStaleTssHeartbeat()
+            != other.getStaleTssHeartbeat()) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + TOMBSTONED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getTombstoned());
+        hash = (37 * hash) + JAILED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getJailed());
+        hash = (37 * hash) + MISSED_TOO_MANY_BLOCKS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getMissedTooManyBlocks());
+        hash = (37 * hash) + NO_PROXY_REGISTERED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getNoProxyRegistered());
+        hash = (37 * hash) + TSS_SUSPENDED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getTssSuspended());
+        hash = (37 * hash) + PROXY_INSUFICIENT_FUNDS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getProxyInsuficientFunds());
+        hash = (37 * hash) + STALE_TSS_HEARTBEAT_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getStaleTssHeartbeat());
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code axelar.snapshot.v1beta1.QueryValidatorsResponse.TssIllegibilityInfo}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:axelar.snapshot.v1beta1.QueryValidatorsResponse.TssIllegibilityInfo)
+          com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfoOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.axelar.snapshot.v1beta1.QueryProto.internal_static_axelar_snapshot_v1beta1_QueryValidatorsResponse_TssIllegibilityInfo_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.axelar.snapshot.v1beta1.QueryProto.internal_static_axelar_snapshot_v1beta1_QueryValidatorsResponse_TssIllegibilityInfo_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo.class, com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo.Builder.class);
+        }
+
+        // Construct using com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          tombstoned_ = false;
+          jailed_ = false;
+          missedTooManyBlocks_ = false;
+          noProxyRegistered_ = false;
+          tssSuspended_ = false;
+          proxyInsuficientFunds_ = false;
+          staleTssHeartbeat_ = false;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.axelar.snapshot.v1beta1.QueryProto.internal_static_axelar_snapshot_v1beta1_QueryValidatorsResponse_TssIllegibilityInfo_descriptor;
+        }
+
+        @java.lang.Override
+        public com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo getDefaultInstanceForType() {
+          return com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo build() {
+          com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo buildPartial() {
+          com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo result = new com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.tombstoned_ = tombstoned_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.jailed_ = jailed_;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.missedTooManyBlocks_ = missedTooManyBlocks_;
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.noProxyRegistered_ = noProxyRegistered_;
+          }
+          if (((from_bitField0_ & 0x00000010) != 0)) {
+            result.tssSuspended_ = tssSuspended_;
+          }
+          if (((from_bitField0_ & 0x00000020) != 0)) {
+            result.proxyInsuficientFunds_ = proxyInsuficientFunds_;
+          }
+          if (((from_bitField0_ & 0x00000040) != 0)) {
+            result.staleTssHeartbeat_ = staleTssHeartbeat_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo) {
+            return mergeFrom((com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo other) {
+          if (other == com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo.getDefaultInstance()) return this;
+          if (other.getTombstoned() != false) {
+            setTombstoned(other.getTombstoned());
+          }
+          if (other.getJailed() != false) {
+            setJailed(other.getJailed());
+          }
+          if (other.getMissedTooManyBlocks() != false) {
+            setMissedTooManyBlocks(other.getMissedTooManyBlocks());
+          }
+          if (other.getNoProxyRegistered() != false) {
+            setNoProxyRegistered(other.getNoProxyRegistered());
+          }
+          if (other.getTssSuspended() != false) {
+            setTssSuspended(other.getTssSuspended());
+          }
+          if (other.getProxyInsuficientFunds() != false) {
+            setProxyInsuficientFunds(other.getProxyInsuficientFunds());
+          }
+          if (other.getStaleTssHeartbeat() != false) {
+            setStaleTssHeartbeat(other.getStaleTssHeartbeat());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  tombstoned_ = input.readBool();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 8
+                case 16: {
+                  jailed_ = input.readBool();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 16
+                case 24: {
+                  missedTooManyBlocks_ = input.readBool();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 24
+                case 32: {
+                  noProxyRegistered_ = input.readBool();
+                  bitField0_ |= 0x00000008;
+                  break;
+                } // case 32
+                case 40: {
+                  tssSuspended_ = input.readBool();
+                  bitField0_ |= 0x00000010;
+                  break;
+                } // case 40
+                case 48: {
+                  proxyInsuficientFunds_ = input.readBool();
+                  bitField0_ |= 0x00000020;
+                  break;
+                } // case 48
+                case 56: {
+                  staleTssHeartbeat_ = input.readBool();
+                  bitField0_ |= 0x00000040;
+                  break;
+                } // case 56
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private boolean tombstoned_ ;
+        /**
+         * <code>bool tombstoned = 1 [json_name = "tombstoned"];</code>
+         * @return The tombstoned.
+         */
+        @java.lang.Override
+        public boolean getTombstoned() {
+          return tombstoned_;
+        }
+        /**
+         * <code>bool tombstoned = 1 [json_name = "tombstoned"];</code>
+         * @param value The tombstoned to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTombstoned(boolean value) {
+
+          tombstoned_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>bool tombstoned = 1 [json_name = "tombstoned"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearTombstoned() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          tombstoned_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean jailed_ ;
+        /**
+         * <code>bool jailed = 2 [json_name = "jailed"];</code>
+         * @return The jailed.
+         */
+        @java.lang.Override
+        public boolean getJailed() {
+          return jailed_;
+        }
+        /**
+         * <code>bool jailed = 2 [json_name = "jailed"];</code>
+         * @param value The jailed to set.
+         * @return This builder for chaining.
+         */
+        public Builder setJailed(boolean value) {
+
+          jailed_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>bool jailed = 2 [json_name = "jailed"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearJailed() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          jailed_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean missedTooManyBlocks_ ;
+        /**
+         * <code>bool missed_too_many_blocks = 3 [json_name = "missedTooManyBlocks"];</code>
+         * @return The missedTooManyBlocks.
+         */
+        @java.lang.Override
+        public boolean getMissedTooManyBlocks() {
+          return missedTooManyBlocks_;
+        }
+        /**
+         * <code>bool missed_too_many_blocks = 3 [json_name = "missedTooManyBlocks"];</code>
+         * @param value The missedTooManyBlocks to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMissedTooManyBlocks(boolean value) {
+
+          missedTooManyBlocks_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>bool missed_too_many_blocks = 3 [json_name = "missedTooManyBlocks"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMissedTooManyBlocks() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          missedTooManyBlocks_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean noProxyRegistered_ ;
+        /**
+         * <code>bool no_proxy_registered = 4 [json_name = "noProxyRegistered"];</code>
+         * @return The noProxyRegistered.
+         */
+        @java.lang.Override
+        public boolean getNoProxyRegistered() {
+          return noProxyRegistered_;
+        }
+        /**
+         * <code>bool no_proxy_registered = 4 [json_name = "noProxyRegistered"];</code>
+         * @param value The noProxyRegistered to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNoProxyRegistered(boolean value) {
+
+          noProxyRegistered_ = value;
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>bool no_proxy_registered = 4 [json_name = "noProxyRegistered"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearNoProxyRegistered() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          noProxyRegistered_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean tssSuspended_ ;
+        /**
+         * <code>bool tss_suspended = 5 [json_name = "tssSuspended"];</code>
+         * @return The tssSuspended.
+         */
+        @java.lang.Override
+        public boolean getTssSuspended() {
+          return tssSuspended_;
+        }
+        /**
+         * <code>bool tss_suspended = 5 [json_name = "tssSuspended"];</code>
+         * @param value The tssSuspended to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTssSuspended(boolean value) {
+
+          tssSuspended_ = value;
+          bitField0_ |= 0x00000010;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>bool tss_suspended = 5 [json_name = "tssSuspended"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearTssSuspended() {
+          bitField0_ = (bitField0_ & ~0x00000010);
+          tssSuspended_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean proxyInsuficientFunds_ ;
+        /**
+         * <code>bool proxy_insuficient_funds = 6 [json_name = "proxyInsuficientFunds"];</code>
+         * @return The proxyInsuficientFunds.
+         */
+        @java.lang.Override
+        public boolean getProxyInsuficientFunds() {
+          return proxyInsuficientFunds_;
+        }
+        /**
+         * <code>bool proxy_insuficient_funds = 6 [json_name = "proxyInsuficientFunds"];</code>
+         * @param value The proxyInsuficientFunds to set.
+         * @return This builder for chaining.
+         */
+        public Builder setProxyInsuficientFunds(boolean value) {
+
+          proxyInsuficientFunds_ = value;
+          bitField0_ |= 0x00000020;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>bool proxy_insuficient_funds = 6 [json_name = "proxyInsuficientFunds"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearProxyInsuficientFunds() {
+          bitField0_ = (bitField0_ & ~0x00000020);
+          proxyInsuficientFunds_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean staleTssHeartbeat_ ;
+        /**
+         * <code>bool stale_tss_heartbeat = 7 [json_name = "staleTssHeartbeat"];</code>
+         * @return The staleTssHeartbeat.
+         */
+        @java.lang.Override
+        public boolean getStaleTssHeartbeat() {
+          return staleTssHeartbeat_;
+        }
+        /**
+         * <code>bool stale_tss_heartbeat = 7 [json_name = "staleTssHeartbeat"];</code>
+         * @param value The staleTssHeartbeat to set.
+         * @return This builder for chaining.
+         */
+        public Builder setStaleTssHeartbeat(boolean value) {
+
+          staleTssHeartbeat_ = value;
+          bitField0_ |= 0x00000040;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>bool stale_tss_heartbeat = 7 [json_name = "staleTssHeartbeat"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearStaleTssHeartbeat() {
+          bitField0_ = (bitField0_ & ~0x00000040);
+          staleTssHeartbeat_ = false;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:axelar.snapshot.v1beta1.QueryValidatorsResponse.TssIllegibilityInfo)
+      }
+
+      // @@protoc_insertion_point(class_scope:axelar.snapshot.v1beta1.QueryValidatorsResponse.TssIllegibilityInfo)
+      private static final com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo();
+      }
+
+      public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<TssIllegibilityInfo>
+          PARSER = new com.google.protobuf.AbstractParser<TssIllegibilityInfo>() {
+        @java.lang.Override
+        public TssIllegibilityInfo parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<TssIllegibilityInfo> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<TssIllegibilityInfo> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface ValidatorOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>string operator_address = 1 [json_name = "operatorAddress"];</code>
+       * @return The operatorAddress.
+       */
+      java.lang.String getOperatorAddress();
+      /**
+       * <code>string operator_address = 1 [json_name = "operatorAddress"];</code>
+       * @return The bytes for operatorAddress.
+       */
+      com.google.protobuf.ByteString
+          getOperatorAddressBytes();
+
+      /**
+       * <code>string moniker = 2 [json_name = "moniker"];</code>
+       * @return The moniker.
+       */
+      java.lang.String getMoniker();
+      /**
+       * <code>string moniker = 2 [json_name = "moniker"];</code>
+       * @return The bytes for moniker.
+       */
+      com.google.protobuf.ByteString
+          getMonikerBytes();
+
+      /**
+       * <code>.axelar.snapshot.v1beta1.QueryValidatorsResponse.TssIllegibilityInfo tss_illegibility_info = 3 [json_name = "tssIllegibilityInfo", (.gogoproto.nullable) = false];</code>
+       * @return Whether the tssIllegibilityInfo field is set.
+       */
+      boolean hasTssIllegibilityInfo();
+      /**
+       * <code>.axelar.snapshot.v1beta1.QueryValidatorsResponse.TssIllegibilityInfo tss_illegibility_info = 3 [json_name = "tssIllegibilityInfo", (.gogoproto.nullable) = false];</code>
+       * @return The tssIllegibilityInfo.
+       */
+      com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo getTssIllegibilityInfo();
+      /**
+       * <code>.axelar.snapshot.v1beta1.QueryValidatorsResponse.TssIllegibilityInfo tss_illegibility_info = 3 [json_name = "tssIllegibilityInfo", (.gogoproto.nullable) = false];</code>
+       */
+      com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfoOrBuilder getTssIllegibilityInfoOrBuilder();
+    }
+    /**
+     * Protobuf type {@code axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator}
+     */
+    public static final class Validator extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator)
+        ValidatorOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Validator.newBuilder() to construct.
+      private Validator(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Validator() {
+        operatorAddress_ = "";
+        moniker_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Validator();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.snapshot.v1beta1.QueryProto.internal_static_axelar_snapshot_v1beta1_QueryValidatorsResponse_Validator_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.snapshot.v1beta1.QueryProto.internal_static_axelar_snapshot_v1beta1_QueryValidatorsResponse_Validator_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator.class, com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator.Builder.class);
+      }
+
+      public static final int OPERATOR_ADDRESS_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object operatorAddress_ = "";
+      /**
+       * <code>string operator_address = 1 [json_name = "operatorAddress"];</code>
+       * @return The operatorAddress.
+       */
+      @java.lang.Override
+      public java.lang.String getOperatorAddress() {
+        java.lang.Object ref = operatorAddress_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          operatorAddress_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string operator_address = 1 [json_name = "operatorAddress"];</code>
+       * @return The bytes for operatorAddress.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOperatorAddressBytes() {
+        java.lang.Object ref = operatorAddress_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          operatorAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int MONIKER_FIELD_NUMBER = 2;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object moniker_ = "";
+      /**
+       * <code>string moniker = 2 [json_name = "moniker"];</code>
+       * @return The moniker.
+       */
+      @java.lang.Override
+      public java.lang.String getMoniker() {
+        java.lang.Object ref = moniker_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          moniker_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string moniker = 2 [json_name = "moniker"];</code>
+       * @return The bytes for moniker.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getMonikerBytes() {
+        java.lang.Object ref = moniker_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          moniker_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int TSS_ILLEGIBILITY_INFO_FIELD_NUMBER = 3;
+      private com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo tssIllegibilityInfo_;
+      /**
+       * <code>.axelar.snapshot.v1beta1.QueryValidatorsResponse.TssIllegibilityInfo tss_illegibility_info = 3 [json_name = "tssIllegibilityInfo", (.gogoproto.nullable) = false];</code>
+       * @return Whether the tssIllegibilityInfo field is set.
+       */
+      @java.lang.Override
+      public boolean hasTssIllegibilityInfo() {
+        return tssIllegibilityInfo_ != null;
+      }
+      /**
+       * <code>.axelar.snapshot.v1beta1.QueryValidatorsResponse.TssIllegibilityInfo tss_illegibility_info = 3 [json_name = "tssIllegibilityInfo", (.gogoproto.nullable) = false];</code>
+       * @return The tssIllegibilityInfo.
+       */
+      @java.lang.Override
+      public com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo getTssIllegibilityInfo() {
+        return tssIllegibilityInfo_ == null ? com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo.getDefaultInstance() : tssIllegibilityInfo_;
+      }
+      /**
+       * <code>.axelar.snapshot.v1beta1.QueryValidatorsResponse.TssIllegibilityInfo tss_illegibility_info = 3 [json_name = "tssIllegibilityInfo", (.gogoproto.nullable) = false];</code>
+       */
+      @java.lang.Override
+      public com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfoOrBuilder getTssIllegibilityInfoOrBuilder() {
+        return tssIllegibilityInfo_ == null ? com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo.getDefaultInstance() : tssIllegibilityInfo_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatorAddress_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, operatorAddress_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(moniker_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, moniker_);
+        }
+        if (tssIllegibilityInfo_ != null) {
+          output.writeMessage(3, getTssIllegibilityInfo());
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatorAddress_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, operatorAddress_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(moniker_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, moniker_);
+        }
+        if (tssIllegibilityInfo_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getTssIllegibilityInfo());
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator)) {
+          return super.equals(obj);
+        }
+        com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator other = (com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator) obj;
+
+        if (!getOperatorAddress()
+            .equals(other.getOperatorAddress())) return false;
+        if (!getMoniker()
+            .equals(other.getMoniker())) return false;
+        if (hasTssIllegibilityInfo() != other.hasTssIllegibilityInfo()) return false;
+        if (hasTssIllegibilityInfo()) {
+          if (!getTssIllegibilityInfo()
+              .equals(other.getTssIllegibilityInfo())) return false;
+        }
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + OPERATOR_ADDRESS_FIELD_NUMBER;
+        hash = (53 * hash) + getOperatorAddress().hashCode();
+        hash = (37 * hash) + MONIKER_FIELD_NUMBER;
+        hash = (53 * hash) + getMoniker().hashCode();
+        if (hasTssIllegibilityInfo()) {
+          hash = (37 * hash) + TSS_ILLEGIBILITY_INFO_FIELD_NUMBER;
+          hash = (53 * hash) + getTssIllegibilityInfo().hashCode();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator)
+          com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.ValidatorOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.axelar.snapshot.v1beta1.QueryProto.internal_static_axelar_snapshot_v1beta1_QueryValidatorsResponse_Validator_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.axelar.snapshot.v1beta1.QueryProto.internal_static_axelar_snapshot_v1beta1_QueryValidatorsResponse_Validator_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator.class, com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator.Builder.class);
+        }
+
+        // Construct using com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          operatorAddress_ = "";
+          moniker_ = "";
+          tssIllegibilityInfo_ = null;
+          if (tssIllegibilityInfoBuilder_ != null) {
+            tssIllegibilityInfoBuilder_.dispose();
+            tssIllegibilityInfoBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.axelar.snapshot.v1beta1.QueryProto.internal_static_axelar_snapshot_v1beta1_QueryValidatorsResponse_Validator_descriptor;
+        }
+
+        @java.lang.Override
+        public com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator getDefaultInstanceForType() {
+          return com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator build() {
+          com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator buildPartial() {
+          com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator result = new com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.operatorAddress_ = operatorAddress_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.moniker_ = moniker_;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.tssIllegibilityInfo_ = tssIllegibilityInfoBuilder_ == null
+                ? tssIllegibilityInfo_
+                : tssIllegibilityInfoBuilder_.build();
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator) {
+            return mergeFrom((com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator other) {
+          if (other == com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator.getDefaultInstance()) return this;
+          if (!other.getOperatorAddress().isEmpty()) {
+            operatorAddress_ = other.operatorAddress_;
+            bitField0_ |= 0x00000001;
+            onChanged();
+          }
+          if (!other.getMoniker().isEmpty()) {
+            moniker_ = other.moniker_;
+            bitField0_ |= 0x00000002;
+            onChanged();
+          }
+          if (other.hasTssIllegibilityInfo()) {
+            mergeTssIllegibilityInfo(other.getTssIllegibilityInfo());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  operatorAddress_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+                case 18: {
+                  moniker_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+                case 26: {
+                  input.readMessage(
+                      getTssIllegibilityInfoFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 26
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object operatorAddress_ = "";
+        /**
+         * <code>string operator_address = 1 [json_name = "operatorAddress"];</code>
+         * @return The operatorAddress.
+         */
+        public java.lang.String getOperatorAddress() {
+          java.lang.Object ref = operatorAddress_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            operatorAddress_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string operator_address = 1 [json_name = "operatorAddress"];</code>
+         * @return The bytes for operatorAddress.
+         */
+        public com.google.protobuf.ByteString
+            getOperatorAddressBytes() {
+          java.lang.Object ref = operatorAddress_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            operatorAddress_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string operator_address = 1 [json_name = "operatorAddress"];</code>
+         * @param value The operatorAddress to set.
+         * @return This builder for chaining.
+         */
+        public Builder setOperatorAddress(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          operatorAddress_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string operator_address = 1 [json_name = "operatorAddress"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearOperatorAddress() {
+          operatorAddress_ = getDefaultInstance().getOperatorAddress();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string operator_address = 1 [json_name = "operatorAddress"];</code>
+         * @param value The bytes for operatorAddress to set.
+         * @return This builder for chaining.
+         */
+        public Builder setOperatorAddressBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          operatorAddress_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object moniker_ = "";
+        /**
+         * <code>string moniker = 2 [json_name = "moniker"];</code>
+         * @return The moniker.
+         */
+        public java.lang.String getMoniker() {
+          java.lang.Object ref = moniker_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            moniker_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string moniker = 2 [json_name = "moniker"];</code>
+         * @return The bytes for moniker.
+         */
+        public com.google.protobuf.ByteString
+            getMonikerBytes() {
+          java.lang.Object ref = moniker_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            moniker_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string moniker = 2 [json_name = "moniker"];</code>
+         * @param value The moniker to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMoniker(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          moniker_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string moniker = 2 [json_name = "moniker"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMoniker() {
+          moniker_ = getDefaultInstance().getMoniker();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string moniker = 2 [json_name = "moniker"];</code>
+         * @param value The bytes for moniker to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMonikerBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          moniker_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+
+        private com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo tssIllegibilityInfo_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo, com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo.Builder, com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfoOrBuilder> tssIllegibilityInfoBuilder_;
+        /**
+         * <code>.axelar.snapshot.v1beta1.QueryValidatorsResponse.TssIllegibilityInfo tss_illegibility_info = 3 [json_name = "tssIllegibilityInfo", (.gogoproto.nullable) = false];</code>
+         * @return Whether the tssIllegibilityInfo field is set.
+         */
+        public boolean hasTssIllegibilityInfo() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <code>.axelar.snapshot.v1beta1.QueryValidatorsResponse.TssIllegibilityInfo tss_illegibility_info = 3 [json_name = "tssIllegibilityInfo", (.gogoproto.nullable) = false];</code>
+         * @return The tssIllegibilityInfo.
+         */
+        public com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo getTssIllegibilityInfo() {
+          if (tssIllegibilityInfoBuilder_ == null) {
+            return tssIllegibilityInfo_ == null ? com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo.getDefaultInstance() : tssIllegibilityInfo_;
+          } else {
+            return tssIllegibilityInfoBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.axelar.snapshot.v1beta1.QueryValidatorsResponse.TssIllegibilityInfo tss_illegibility_info = 3 [json_name = "tssIllegibilityInfo", (.gogoproto.nullable) = false];</code>
+         */
+        public Builder setTssIllegibilityInfo(com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo value) {
+          if (tssIllegibilityInfoBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            tssIllegibilityInfo_ = value;
+          } else {
+            tssIllegibilityInfoBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>.axelar.snapshot.v1beta1.QueryValidatorsResponse.TssIllegibilityInfo tss_illegibility_info = 3 [json_name = "tssIllegibilityInfo", (.gogoproto.nullable) = false];</code>
+         */
+        public Builder setTssIllegibilityInfo(
+            com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo.Builder builderForValue) {
+          if (tssIllegibilityInfoBuilder_ == null) {
+            tssIllegibilityInfo_ = builderForValue.build();
+          } else {
+            tssIllegibilityInfoBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>.axelar.snapshot.v1beta1.QueryValidatorsResponse.TssIllegibilityInfo tss_illegibility_info = 3 [json_name = "tssIllegibilityInfo", (.gogoproto.nullable) = false];</code>
+         */
+        public Builder mergeTssIllegibilityInfo(com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo value) {
+          if (tssIllegibilityInfoBuilder_ == null) {
+            if (((bitField0_ & 0x00000004) != 0) &&
+              tssIllegibilityInfo_ != null &&
+              tssIllegibilityInfo_ != com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo.getDefaultInstance()) {
+              getTssIllegibilityInfoBuilder().mergeFrom(value);
+            } else {
+              tssIllegibilityInfo_ = value;
+            }
+          } else {
+            tssIllegibilityInfoBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>.axelar.snapshot.v1beta1.QueryValidatorsResponse.TssIllegibilityInfo tss_illegibility_info = 3 [json_name = "tssIllegibilityInfo", (.gogoproto.nullable) = false];</code>
+         */
+        public Builder clearTssIllegibilityInfo() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          tssIllegibilityInfo_ = null;
+          if (tssIllegibilityInfoBuilder_ != null) {
+            tssIllegibilityInfoBuilder_.dispose();
+            tssIllegibilityInfoBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>.axelar.snapshot.v1beta1.QueryValidatorsResponse.TssIllegibilityInfo tss_illegibility_info = 3 [json_name = "tssIllegibilityInfo", (.gogoproto.nullable) = false];</code>
+         */
+        public com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo.Builder getTssIllegibilityInfoBuilder() {
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return getTssIllegibilityInfoFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.axelar.snapshot.v1beta1.QueryValidatorsResponse.TssIllegibilityInfo tss_illegibility_info = 3 [json_name = "tssIllegibilityInfo", (.gogoproto.nullable) = false];</code>
+         */
+        public com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfoOrBuilder getTssIllegibilityInfoOrBuilder() {
+          if (tssIllegibilityInfoBuilder_ != null) {
+            return tssIllegibilityInfoBuilder_.getMessageOrBuilder();
+          } else {
+            return tssIllegibilityInfo_ == null ?
+                com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo.getDefaultInstance() : tssIllegibilityInfo_;
+          }
+        }
+        /**
+         * <code>.axelar.snapshot.v1beta1.QueryValidatorsResponse.TssIllegibilityInfo tss_illegibility_info = 3 [json_name = "tssIllegibilityInfo", (.gogoproto.nullable) = false];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo, com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo.Builder, com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfoOrBuilder> 
+            getTssIllegibilityInfoFieldBuilder() {
+          if (tssIllegibilityInfoBuilder_ == null) {
+            tssIllegibilityInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo, com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfo.Builder, com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.TssIllegibilityInfoOrBuilder>(
+                    getTssIllegibilityInfo(),
+                    getParentForChildren(),
+                    isClean());
+            tssIllegibilityInfo_ = null;
+          }
+          return tssIllegibilityInfoBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator)
+      }
+
+      // @@protoc_insertion_point(class_scope:axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator)
+      private static final com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator();
+      }
+
+      public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Validator>
+          PARSER = new com.google.protobuf.AbstractParser<Validator>() {
+        @java.lang.Override
+        public Validator parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<Validator> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Validator> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int VALIDATORS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator> validators_;
+    /**
+     * <code>repeated .axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator validators = 1 [json_name = "validators"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator> getValidatorsList() {
+      return validators_;
+    }
+    /**
+     * <code>repeated .axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator validators = 1 [json_name = "validators"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.ValidatorOrBuilder> 
+        getValidatorsOrBuilderList() {
+      return validators_;
+    }
+    /**
+     * <code>repeated .axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator validators = 1 [json_name = "validators"];</code>
+     */
+    @java.lang.Override
+    public int getValidatorsCount() {
+      return validators_.size();
+    }
+    /**
+     * <code>repeated .axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator validators = 1 [json_name = "validators"];</code>
+     */
+    @java.lang.Override
+    public com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator getValidators(int index) {
+      return validators_.get(index);
+    }
+    /**
+     * <code>repeated .axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator validators = 1 [json_name = "validators"];</code>
+     */
+    @java.lang.Override
+    public com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.ValidatorOrBuilder getValidatorsOrBuilder(
+        int index) {
+      return validators_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < validators_.size(); i++) {
+        output.writeMessage(1, validators_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < validators_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, validators_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse)) {
+        return super.equals(obj);
+      }
+      com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse other = (com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse) obj;
+
+      if (!getValidatorsList()
+          .equals(other.getValidatorsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getValidatorsCount() > 0) {
+        hash = (37 * hash) + VALIDATORS_FIELD_NUMBER;
+        hash = (53 * hash) + getValidatorsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.snapshot.v1beta1.QueryValidatorsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.snapshot.v1beta1.QueryValidatorsResponse)
+        com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.snapshot.v1beta1.QueryProto.internal_static_axelar_snapshot_v1beta1_QueryValidatorsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.snapshot.v1beta1.QueryProto.internal_static_axelar_snapshot_v1beta1_QueryValidatorsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.class, com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Builder.class);
+      }
+
+      // Construct using com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (validatorsBuilder_ == null) {
+          validators_ = java.util.Collections.emptyList();
+        } else {
+          validators_ = null;
+          validatorsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.snapshot.v1beta1.QueryProto.internal_static_axelar_snapshot_v1beta1_QueryValidatorsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse getDefaultInstanceForType() {
+        return com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse build() {
+        com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse buildPartial() {
+        com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse result = new com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse result) {
+        if (validatorsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            validators_ = java.util.Collections.unmodifiableList(validators_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.validators_ = validators_;
+        } else {
+          result.validators_ = validatorsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse) {
+          return mergeFrom((com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse other) {
+        if (other == com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.getDefaultInstance()) return this;
+        if (validatorsBuilder_ == null) {
+          if (!other.validators_.isEmpty()) {
+            if (validators_.isEmpty()) {
+              validators_ = other.validators_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureValidatorsIsMutable();
+              validators_.addAll(other.validators_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.validators_.isEmpty()) {
+            if (validatorsBuilder_.isEmpty()) {
+              validatorsBuilder_.dispose();
+              validatorsBuilder_ = null;
+              validators_ = other.validators_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              validatorsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getValidatorsFieldBuilder() : null;
+            } else {
+              validatorsBuilder_.addAllMessages(other.validators_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator m =
+                    input.readMessage(
+                        com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator.parser(),
+                        extensionRegistry);
+                if (validatorsBuilder_ == null) {
+                  ensureValidatorsIsMutable();
+                  validators_.add(m);
+                } else {
+                  validatorsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator> validators_ =
+        java.util.Collections.emptyList();
+      private void ensureValidatorsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          validators_ = new java.util.ArrayList<com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator>(validators_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator, com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator.Builder, com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.ValidatorOrBuilder> validatorsBuilder_;
+
+      /**
+       * <code>repeated .axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator validators = 1 [json_name = "validators"];</code>
+       */
+      public java.util.List<com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator> getValidatorsList() {
+        if (validatorsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(validators_);
+        } else {
+          return validatorsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator validators = 1 [json_name = "validators"];</code>
+       */
+      public int getValidatorsCount() {
+        if (validatorsBuilder_ == null) {
+          return validators_.size();
+        } else {
+          return validatorsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator validators = 1 [json_name = "validators"];</code>
+       */
+      public com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator getValidators(int index) {
+        if (validatorsBuilder_ == null) {
+          return validators_.get(index);
+        } else {
+          return validatorsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator validators = 1 [json_name = "validators"];</code>
+       */
+      public Builder setValidators(
+          int index, com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator value) {
+        if (validatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValidatorsIsMutable();
+          validators_.set(index, value);
+          onChanged();
+        } else {
+          validatorsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator validators = 1 [json_name = "validators"];</code>
+       */
+      public Builder setValidators(
+          int index, com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator.Builder builderForValue) {
+        if (validatorsBuilder_ == null) {
+          ensureValidatorsIsMutable();
+          validators_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          validatorsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator validators = 1 [json_name = "validators"];</code>
+       */
+      public Builder addValidators(com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator value) {
+        if (validatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValidatorsIsMutable();
+          validators_.add(value);
+          onChanged();
+        } else {
+          validatorsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator validators = 1 [json_name = "validators"];</code>
+       */
+      public Builder addValidators(
+          int index, com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator value) {
+        if (validatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValidatorsIsMutable();
+          validators_.add(index, value);
+          onChanged();
+        } else {
+          validatorsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator validators = 1 [json_name = "validators"];</code>
+       */
+      public Builder addValidators(
+          com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator.Builder builderForValue) {
+        if (validatorsBuilder_ == null) {
+          ensureValidatorsIsMutable();
+          validators_.add(builderForValue.build());
+          onChanged();
+        } else {
+          validatorsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator validators = 1 [json_name = "validators"];</code>
+       */
+      public Builder addValidators(
+          int index, com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator.Builder builderForValue) {
+        if (validatorsBuilder_ == null) {
+          ensureValidatorsIsMutable();
+          validators_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          validatorsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator validators = 1 [json_name = "validators"];</code>
+       */
+      public Builder addAllValidators(
+          java.lang.Iterable<? extends com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator> values) {
+        if (validatorsBuilder_ == null) {
+          ensureValidatorsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, validators_);
+          onChanged();
+        } else {
+          validatorsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator validators = 1 [json_name = "validators"];</code>
+       */
+      public Builder clearValidators() {
+        if (validatorsBuilder_ == null) {
+          validators_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          validatorsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator validators = 1 [json_name = "validators"];</code>
+       */
+      public Builder removeValidators(int index) {
+        if (validatorsBuilder_ == null) {
+          ensureValidatorsIsMutable();
+          validators_.remove(index);
+          onChanged();
+        } else {
+          validatorsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator validators = 1 [json_name = "validators"];</code>
+       */
+      public com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator.Builder getValidatorsBuilder(
+          int index) {
+        return getValidatorsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator validators = 1 [json_name = "validators"];</code>
+       */
+      public com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.ValidatorOrBuilder getValidatorsOrBuilder(
+          int index) {
+        if (validatorsBuilder_ == null) {
+          return validators_.get(index);  } else {
+          return validatorsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator validators = 1 [json_name = "validators"];</code>
+       */
+      public java.util.List<? extends com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.ValidatorOrBuilder> 
+           getValidatorsOrBuilderList() {
+        if (validatorsBuilder_ != null) {
+          return validatorsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(validators_);
+        }
+      }
+      /**
+       * <code>repeated .axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator validators = 1 [json_name = "validators"];</code>
+       */
+      public com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator.Builder addValidatorsBuilder() {
+        return getValidatorsFieldBuilder().addBuilder(
+            com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator validators = 1 [json_name = "validators"];</code>
+       */
+      public com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator.Builder addValidatorsBuilder(
+          int index) {
+        return getValidatorsFieldBuilder().addBuilder(
+            index, com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .axelar.snapshot.v1beta1.QueryValidatorsResponse.Validator validators = 1 [json_name = "validators"];</code>
+       */
+      public java.util.List<com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator.Builder> 
+           getValidatorsBuilderList() {
+        return getValidatorsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator, com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator.Builder, com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.ValidatorOrBuilder> 
+          getValidatorsFieldBuilder() {
+        if (validatorsBuilder_ == null) {
+          validatorsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator, com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.Validator.Builder, com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse.ValidatorOrBuilder>(
+                  validators_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          validators_ = null;
+        }
+        return validatorsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.snapshot.v1beta1.QueryValidatorsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.snapshot.v1beta1.QueryValidatorsResponse)
+    private static final com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse();
+    }
+
+    public static com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryValidatorsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryValidatorsResponse>() {
+      @java.lang.Override
+      public QueryValidatorsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryValidatorsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryValidatorsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.snapshot.v1beta1.QueryProto.QueryValidatorsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_snapshot_v1beta1_QueryValidatorsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_snapshot_v1beta1_QueryValidatorsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_snapshot_v1beta1_QueryValidatorsResponse_TssIllegibilityInfo_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_snapshot_v1beta1_QueryValidatorsResponse_TssIllegibilityInfo_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_snapshot_v1beta1_QueryValidatorsResponse_Validator_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_snapshot_v1beta1_QueryValidatorsResponse_Validator_fieldAccessorTable;
 
@@ -56,13 +2649,13 @@ public final class QueryProto {
       "R\007moniker\022~\n\025tss_illegibility_info\030\003 \001(\013" +
       "2D.axelar.snapshot.v1beta1.QueryValidato" +
       "rsResponse.TssIllegibilityInfoB\004\310\336\037\000R\023ts" +
-      "sIllegibilityInfoB\342\001\n\033com.axelar.snapsho" +
-      "t.v1beta1B\nQueryProtoP\001Z5github.com/axel" +
-      "arnetwork/axelar-core/x/snapshot/types\242\002" +
-      "\003ASX\252\002\027Axelar.Snapshot.V1beta1\312\002\027Axelar\\" +
-      "Snapshot\\V1beta1\342\002#Axelar\\Snapshot\\V1bet" +
-      "a1\\GPBMetadata\352\002\031Axelar::Snapshot::V1bet" +
-      "a1\310\341\036\000b\006proto3"
+      "sIllegibilityInfoB\340\001\n\033com.axelar.snapsho" +
+      "t.v1beta1B\nQueryProtoZ5github.com/axelar" +
+      "network/axelar-core/x/snapshot/types\242\002\003A" +
+      "SX\252\002\027Axelar.Snapshot.V1beta1\312\002\027Axelar\\Sn" +
+      "apshot\\V1beta1\342\002#Axelar\\Snapshot\\V1beta1" +
+      "\\GPBMetadata\352\002\031Axelar::Snapshot::V1beta1" +
+      "\310\341\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,49 +14,5568 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgSetAllocationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:teritori.airdrop.v1beta1.MsgSetAllocation)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+
+    /**
+     * <code>.teritori.airdrop.v1beta1.AirdropAllocation allocation = 2 [json_name = "allocation", (.gogoproto.nullable) = false];</code>
+     * @return Whether the allocation field is set.
+     */
+    boolean hasAllocation();
+    /**
+     * <code>.teritori.airdrop.v1beta1.AirdropAllocation allocation = 2 [json_name = "allocation", (.gogoproto.nullable) = false];</code>
+     * @return The allocation.
+     */
+    com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation getAllocation();
+    /**
+     * <code>.teritori.airdrop.v1beta1.AirdropAllocation allocation = 2 [json_name = "allocation", (.gogoproto.nullable) = false];</code>
+     */
+    com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocationOrBuilder getAllocationOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgSetAllocation defines an sdk.Msg type that set airdrop allocation
+   * </pre>
+   *
+   * Protobuf type {@code teritori.airdrop.v1beta1.MsgSetAllocation}
+   */
+  public static final class MsgSetAllocation extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:teritori.airdrop.v1beta1.MsgSetAllocation)
+      MsgSetAllocationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSetAllocation.newBuilder() to construct.
+    private MsgSetAllocation(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSetAllocation() {
+      sender_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSetAllocation();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgSetAllocation_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgSetAllocation_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation.class, com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ALLOCATION_FIELD_NUMBER = 2;
+    private com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation allocation_;
+    /**
+     * <code>.teritori.airdrop.v1beta1.AirdropAllocation allocation = 2 [json_name = "allocation", (.gogoproto.nullable) = false];</code>
+     * @return Whether the allocation field is set.
+     */
+    @java.lang.Override
+    public boolean hasAllocation() {
+      return allocation_ != null;
+    }
+    /**
+     * <code>.teritori.airdrop.v1beta1.AirdropAllocation allocation = 2 [json_name = "allocation", (.gogoproto.nullable) = false];</code>
+     * @return The allocation.
+     */
+    @java.lang.Override
+    public com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation getAllocation() {
+      return allocation_ == null ? com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation.getDefaultInstance() : allocation_;
+    }
+    /**
+     * <code>.teritori.airdrop.v1beta1.AirdropAllocation allocation = 2 [json_name = "allocation", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocationOrBuilder getAllocationOrBuilder() {
+      return allocation_ == null ? com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation.getDefaultInstance() : allocation_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
+      }
+      if (allocation_ != null) {
+        output.writeMessage(2, getAllocation());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
+      }
+      if (allocation_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getAllocation());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation)) {
+        return super.equals(obj);
+      }
+      com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation other = (com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (hasAllocation() != other.hasAllocation()) return false;
+      if (hasAllocation()) {
+        if (!getAllocation()
+            .equals(other.getAllocation())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      if (hasAllocation()) {
+        hash = (37 * hash) + ALLOCATION_FIELD_NUMBER;
+        hash = (53 * hash) + getAllocation().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgSetAllocation defines an sdk.Msg type that set airdrop allocation
+     * </pre>
+     *
+     * Protobuf type {@code teritori.airdrop.v1beta1.MsgSetAllocation}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:teritori.airdrop.v1beta1.MsgSetAllocation)
+        com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgSetAllocation_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgSetAllocation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation.class, com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation.Builder.class);
+      }
+
+      // Construct using com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = "";
+        allocation_ = null;
+        if (allocationBuilder_ != null) {
+          allocationBuilder_.dispose();
+          allocationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgSetAllocation_descriptor;
+      }
+
+      @java.lang.Override
+      public com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation getDefaultInstanceForType() {
+        return com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation build() {
+        com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation buildPartial() {
+        com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation result = new com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.allocation_ = allocationBuilder_ == null
+              ? allocation_
+              : allocationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation) {
+          return mergeFrom((com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation other) {
+        if (other == com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation.getDefaultInstance()) return this;
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasAllocation()) {
+          mergeAllocation(other.getAllocation());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getAllocationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation allocation_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation, com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation.Builder, com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocationOrBuilder> allocationBuilder_;
+      /**
+       * <code>.teritori.airdrop.v1beta1.AirdropAllocation allocation = 2 [json_name = "allocation", (.gogoproto.nullable) = false];</code>
+       * @return Whether the allocation field is set.
+       */
+      public boolean hasAllocation() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.teritori.airdrop.v1beta1.AirdropAllocation allocation = 2 [json_name = "allocation", (.gogoproto.nullable) = false];</code>
+       * @return The allocation.
+       */
+      public com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation getAllocation() {
+        if (allocationBuilder_ == null) {
+          return allocation_ == null ? com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation.getDefaultInstance() : allocation_;
+        } else {
+          return allocationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.teritori.airdrop.v1beta1.AirdropAllocation allocation = 2 [json_name = "allocation", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAllocation(com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation value) {
+        if (allocationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          allocation_ = value;
+        } else {
+          allocationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.teritori.airdrop.v1beta1.AirdropAllocation allocation = 2 [json_name = "allocation", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAllocation(
+          com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation.Builder builderForValue) {
+        if (allocationBuilder_ == null) {
+          allocation_ = builderForValue.build();
+        } else {
+          allocationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.teritori.airdrop.v1beta1.AirdropAllocation allocation = 2 [json_name = "allocation", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeAllocation(com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation value) {
+        if (allocationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            allocation_ != null &&
+            allocation_ != com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation.getDefaultInstance()) {
+            getAllocationBuilder().mergeFrom(value);
+          } else {
+            allocation_ = value;
+          }
+        } else {
+          allocationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.teritori.airdrop.v1beta1.AirdropAllocation allocation = 2 [json_name = "allocation", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAllocation() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        allocation_ = null;
+        if (allocationBuilder_ != null) {
+          allocationBuilder_.dispose();
+          allocationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.teritori.airdrop.v1beta1.AirdropAllocation allocation = 2 [json_name = "allocation", (.gogoproto.nullable) = false];</code>
+       */
+      public com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation.Builder getAllocationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getAllocationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.teritori.airdrop.v1beta1.AirdropAllocation allocation = 2 [json_name = "allocation", (.gogoproto.nullable) = false];</code>
+       */
+      public com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocationOrBuilder getAllocationOrBuilder() {
+        if (allocationBuilder_ != null) {
+          return allocationBuilder_.getMessageOrBuilder();
+        } else {
+          return allocation_ == null ?
+              com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation.getDefaultInstance() : allocation_;
+        }
+      }
+      /**
+       * <code>.teritori.airdrop.v1beta1.AirdropAllocation allocation = 2 [json_name = "allocation", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation, com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation.Builder, com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocationOrBuilder> 
+          getAllocationFieldBuilder() {
+        if (allocationBuilder_ == null) {
+          allocationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation, com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocation.Builder, com.teritori.airdrop.v1beta1.AllocationProto.AirdropAllocationOrBuilder>(
+                  getAllocation(),
+                  getParentForChildren(),
+                  isClean());
+          allocation_ = null;
+        }
+        return allocationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:teritori.airdrop.v1beta1.MsgSetAllocation)
+    }
+
+    // @@protoc_insertion_point(class_scope:teritori.airdrop.v1beta1.MsgSetAllocation)
+    private static final com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation();
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSetAllocation>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSetAllocation>() {
+      @java.lang.Override
+      public MsgSetAllocation parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSetAllocation> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSetAllocation> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocation getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSetAllocationResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:teritori.airdrop.v1beta1.MsgSetAllocationResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgSetAllocationResponse defines the Msg/SetAllocation response type.
+   * </pre>
+   *
+   * Protobuf type {@code teritori.airdrop.v1beta1.MsgSetAllocationResponse}
+   */
+  public static final class MsgSetAllocationResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:teritori.airdrop.v1beta1.MsgSetAllocationResponse)
+      MsgSetAllocationResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSetAllocationResponse.newBuilder() to construct.
+    private MsgSetAllocationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSetAllocationResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSetAllocationResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgSetAllocationResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgSetAllocationResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse.class, com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse)) {
+        return super.equals(obj);
+      }
+      com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse other = (com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgSetAllocationResponse defines the Msg/SetAllocation response type.
+     * </pre>
+     *
+     * Protobuf type {@code teritori.airdrop.v1beta1.MsgSetAllocationResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:teritori.airdrop.v1beta1.MsgSetAllocationResponse)
+        com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgSetAllocationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgSetAllocationResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse.class, com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse.Builder.class);
+      }
+
+      // Construct using com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgSetAllocationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse getDefaultInstanceForType() {
+        return com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse build() {
+        com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse buildPartial() {
+        com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse result = new com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse) {
+          return mergeFrom((com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse other) {
+        if (other == com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:teritori.airdrop.v1beta1.MsgSetAllocationResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:teritori.airdrop.v1beta1.MsgSetAllocationResponse)
+    private static final com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse();
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSetAllocationResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSetAllocationResponse>() {
+      @java.lang.Override
+      public MsgSetAllocationResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSetAllocationResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSetAllocationResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.teritori.airdrop.v1beta1.TxProto.MsgSetAllocationResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgClaimAllocationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:teritori.airdrop.v1beta1.MsgClaimAllocation)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <code>string pub_key = 2 [json_name = "pubKey"];</code>
+     * @return The pubKey.
+     */
+    java.lang.String getPubKey();
+    /**
+     * <code>string pub_key = 2 [json_name = "pubKey"];</code>
+     * @return The bytes for pubKey.
+     */
+    com.google.protobuf.ByteString
+        getPubKeyBytes();
+
+    /**
+     * <code>string reward_address = 3 [json_name = "rewardAddress"];</code>
+     * @return The rewardAddress.
+     */
+    java.lang.String getRewardAddress();
+    /**
+     * <code>string reward_address = 3 [json_name = "rewardAddress"];</code>
+     * @return The bytes for rewardAddress.
+     */
+    com.google.protobuf.ByteString
+        getRewardAddressBytes();
+
+    /**
+     * <code>string signature = 4 [json_name = "signature"];</code>
+     * @return The signature.
+     */
+    java.lang.String getSignature();
+    /**
+     * <code>string signature = 4 [json_name = "signature"];</code>
+     * @return The bytes for signature.
+     */
+    com.google.protobuf.ByteString
+        getSignatureBytes();
+  }
+  /**
+   * <pre>
+   * MsgClaimAllocation defines an sdk.Msg type that claims airdrop allocation
+   * </pre>
+   *
+   * Protobuf type {@code teritori.airdrop.v1beta1.MsgClaimAllocation}
+   */
+  public static final class MsgClaimAllocation extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:teritori.airdrop.v1beta1.MsgClaimAllocation)
+      MsgClaimAllocationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgClaimAllocation.newBuilder() to construct.
+    private MsgClaimAllocation(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgClaimAllocation() {
+      address_ = "";
+      pubKey_ = "";
+      rewardAddress_ = "";
+      signature_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgClaimAllocation();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgClaimAllocation_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgClaimAllocation_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation.class, com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PUB_KEY_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object pubKey_ = "";
+    /**
+     * <code>string pub_key = 2 [json_name = "pubKey"];</code>
+     * @return The pubKey.
+     */
+    @java.lang.Override
+    public java.lang.String getPubKey() {
+      java.lang.Object ref = pubKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pubKey_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string pub_key = 2 [json_name = "pubKey"];</code>
+     * @return The bytes for pubKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPubKeyBytes() {
+      java.lang.Object ref = pubKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pubKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REWARD_ADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object rewardAddress_ = "";
+    /**
+     * <code>string reward_address = 3 [json_name = "rewardAddress"];</code>
+     * @return The rewardAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getRewardAddress() {
+      java.lang.Object ref = rewardAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        rewardAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string reward_address = 3 [json_name = "rewardAddress"];</code>
+     * @return The bytes for rewardAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRewardAddressBytes() {
+      java.lang.Object ref = rewardAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        rewardAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SIGNATURE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object signature_ = "";
+    /**
+     * <code>string signature = 4 [json_name = "signature"];</code>
+     * @return The signature.
+     */
+    @java.lang.Override
+    public java.lang.String getSignature() {
+      java.lang.Object ref = signature_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        signature_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string signature = 4 [json_name = "signature"];</code>
+     * @return The bytes for signature.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSignatureBytes() {
+      java.lang.Object ref = signature_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        signature_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pubKey_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, pubKey_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, rewardAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signature_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, signature_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pubKey_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, pubKey_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, rewardAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signature_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, signature_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation)) {
+        return super.equals(obj);
+      }
+      com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation other = (com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getPubKey()
+          .equals(other.getPubKey())) return false;
+      if (!getRewardAddress()
+          .equals(other.getRewardAddress())) return false;
+      if (!getSignature()
+          .equals(other.getSignature())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + PUB_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getPubKey().hashCode();
+      hash = (37 * hash) + REWARD_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getRewardAddress().hashCode();
+      hash = (37 * hash) + SIGNATURE_FIELD_NUMBER;
+      hash = (53 * hash) + getSignature().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgClaimAllocation defines an sdk.Msg type that claims airdrop allocation
+     * </pre>
+     *
+     * Protobuf type {@code teritori.airdrop.v1beta1.MsgClaimAllocation}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:teritori.airdrop.v1beta1.MsgClaimAllocation)
+        com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgClaimAllocation_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgClaimAllocation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation.class, com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation.Builder.class);
+      }
+
+      // Construct using com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        pubKey_ = "";
+        rewardAddress_ = "";
+        signature_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgClaimAllocation_descriptor;
+      }
+
+      @java.lang.Override
+      public com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation getDefaultInstanceForType() {
+        return com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation build() {
+        com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation buildPartial() {
+        com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation result = new com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pubKey_ = pubKey_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.rewardAddress_ = rewardAddress_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.signature_ = signature_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation) {
+          return mergeFrom((com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation other) {
+        if (other == com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getPubKey().isEmpty()) {
+          pubKey_ = other.pubKey_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getRewardAddress().isEmpty()) {
+          rewardAddress_ = other.rewardAddress_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getSignature().isEmpty()) {
+          signature_ = other.signature_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                pubKey_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                rewardAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                signature_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pubKey_ = "";
+      /**
+       * <code>string pub_key = 2 [json_name = "pubKey"];</code>
+       * @return The pubKey.
+       */
+      public java.lang.String getPubKey() {
+        java.lang.Object ref = pubKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pubKey_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string pub_key = 2 [json_name = "pubKey"];</code>
+       * @return The bytes for pubKey.
+       */
+      public com.google.protobuf.ByteString
+          getPubKeyBytes() {
+        java.lang.Object ref = pubKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pubKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string pub_key = 2 [json_name = "pubKey"];</code>
+       * @param value The pubKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPubKey(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        pubKey_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string pub_key = 2 [json_name = "pubKey"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPubKey() {
+        pubKey_ = getDefaultInstance().getPubKey();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string pub_key = 2 [json_name = "pubKey"];</code>
+       * @param value The bytes for pubKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPubKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        pubKey_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object rewardAddress_ = "";
+      /**
+       * <code>string reward_address = 3 [json_name = "rewardAddress"];</code>
+       * @return The rewardAddress.
+       */
+      public java.lang.String getRewardAddress() {
+        java.lang.Object ref = rewardAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          rewardAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string reward_address = 3 [json_name = "rewardAddress"];</code>
+       * @return The bytes for rewardAddress.
+       */
+      public com.google.protobuf.ByteString
+          getRewardAddressBytes() {
+        java.lang.Object ref = rewardAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          rewardAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string reward_address = 3 [json_name = "rewardAddress"];</code>
+       * @param value The rewardAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        rewardAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string reward_address = 3 [json_name = "rewardAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRewardAddress() {
+        rewardAddress_ = getDefaultInstance().getRewardAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string reward_address = 3 [json_name = "rewardAddress"];</code>
+       * @param value The bytes for rewardAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        rewardAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object signature_ = "";
+      /**
+       * <code>string signature = 4 [json_name = "signature"];</code>
+       * @return The signature.
+       */
+      public java.lang.String getSignature() {
+        java.lang.Object ref = signature_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          signature_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string signature = 4 [json_name = "signature"];</code>
+       * @return The bytes for signature.
+       */
+      public com.google.protobuf.ByteString
+          getSignatureBytes() {
+        java.lang.Object ref = signature_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          signature_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string signature = 4 [json_name = "signature"];</code>
+       * @param value The signature to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignature(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        signature_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string signature = 4 [json_name = "signature"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSignature() {
+        signature_ = getDefaultInstance().getSignature();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string signature = 4 [json_name = "signature"];</code>
+       * @param value The bytes for signature to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignatureBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        signature_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:teritori.airdrop.v1beta1.MsgClaimAllocation)
+    }
+
+    // @@protoc_insertion_point(class_scope:teritori.airdrop.v1beta1.MsgClaimAllocation)
+    private static final com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation();
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgClaimAllocation>
+        PARSER = new com.google.protobuf.AbstractParser<MsgClaimAllocation>() {
+      @java.lang.Override
+      public MsgClaimAllocation parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgClaimAllocation> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgClaimAllocation> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocation getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgClaimAllocationResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:teritori.airdrop.v1beta1.MsgClaimAllocationResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgClaimAllocationResponse defines the Msg/ClaimAllocation response type.
+   * </pre>
+   *
+   * Protobuf type {@code teritori.airdrop.v1beta1.MsgClaimAllocationResponse}
+   */
+  public static final class MsgClaimAllocationResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:teritori.airdrop.v1beta1.MsgClaimAllocationResponse)
+      MsgClaimAllocationResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgClaimAllocationResponse.newBuilder() to construct.
+    private MsgClaimAllocationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgClaimAllocationResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgClaimAllocationResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgClaimAllocationResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgClaimAllocationResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse.class, com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse)) {
+        return super.equals(obj);
+      }
+      com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse other = (com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgClaimAllocationResponse defines the Msg/ClaimAllocation response type.
+     * </pre>
+     *
+     * Protobuf type {@code teritori.airdrop.v1beta1.MsgClaimAllocationResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:teritori.airdrop.v1beta1.MsgClaimAllocationResponse)
+        com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgClaimAllocationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgClaimAllocationResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse.class, com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse.Builder.class);
+      }
+
+      // Construct using com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgClaimAllocationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse getDefaultInstanceForType() {
+        return com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse build() {
+        com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse buildPartial() {
+        com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse result = new com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse) {
+          return mergeFrom((com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse other) {
+        if (other == com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:teritori.airdrop.v1beta1.MsgClaimAllocationResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:teritori.airdrop.v1beta1.MsgClaimAllocationResponse)
+    private static final com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse();
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgClaimAllocationResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgClaimAllocationResponse>() {
+      @java.lang.Override
+      public MsgClaimAllocationResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgClaimAllocationResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgClaimAllocationResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.teritori.airdrop.v1beta1.TxProto.MsgClaimAllocationResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSignDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:teritori.airdrop.v1beta1.MsgSignData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Signer is the sdk.AccAddress of the message signer
+     * </pre>
+     *
+     * <code>string signer = 1 [json_name = "signer", (.gogoproto.jsontag) = "signer"];</code>
+     * @return The signer.
+     */
+    java.lang.String getSigner();
+    /**
+     * <pre>
+     * Signer is the sdk.AccAddress of the message signer
+     * </pre>
+     *
+     * <code>string signer = 1 [json_name = "signer", (.gogoproto.jsontag) = "signer"];</code>
+     * @return The bytes for signer.
+     */
+    com.google.protobuf.ByteString
+        getSignerBytes();
+
+    /**
+     * <pre>
+     * data represents the raw bytes of the content that is signed (text, json, etc)
+     * </pre>
+     *
+     * <code>bytes data = 2 [json_name = "data", (.gogoproto.jsontag) = "data"];</code>
+     * @return The data.
+     */
+    com.google.protobuf.ByteString getData();
+  }
+  /**
+   * <pre>
+   * MsgSignData defines an arbitrary, general-purpose, off-chain message
+   * </pre>
+   *
+   * Protobuf type {@code teritori.airdrop.v1beta1.MsgSignData}
+   */
+  public static final class MsgSignData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:teritori.airdrop.v1beta1.MsgSignData)
+      MsgSignDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSignData.newBuilder() to construct.
+    private MsgSignData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSignData() {
+      signer_ = "";
+      data_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSignData();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgSignData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgSignData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.teritori.airdrop.v1beta1.TxProto.MsgSignData.class, com.teritori.airdrop.v1beta1.TxProto.MsgSignData.Builder.class);
+    }
+
+    public static final int SIGNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object signer_ = "";
+    /**
+     * <pre>
+     * Signer is the sdk.AccAddress of the message signer
+     * </pre>
+     *
+     * <code>string signer = 1 [json_name = "signer", (.gogoproto.jsontag) = "signer"];</code>
+     * @return The signer.
+     */
+    @java.lang.Override
+    public java.lang.String getSigner() {
+      java.lang.Object ref = signer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        signer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Signer is the sdk.AccAddress of the message signer
+     * </pre>
+     *
+     * <code>string signer = 1 [json_name = "signer", (.gogoproto.jsontag) = "signer"];</code>
+     * @return The bytes for signer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSignerBytes() {
+      java.lang.Object ref = signer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        signer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATA_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * data represents the raw bytes of the content that is signed (text, json, etc)
+     * </pre>
+     *
+     * <code>bytes data = 2 [json_name = "data", (.gogoproto.jsontag) = "data"];</code>
+     * @return The data.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getData() {
+      return data_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, signer_);
+      }
+      if (!data_.isEmpty()) {
+        output.writeBytes(2, data_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, signer_);
+      }
+      if (!data_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, data_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.teritori.airdrop.v1beta1.TxProto.MsgSignData)) {
+        return super.equals(obj);
+      }
+      com.teritori.airdrop.v1beta1.TxProto.MsgSignData other = (com.teritori.airdrop.v1beta1.TxProto.MsgSignData) obj;
+
+      if (!getSigner()
+          .equals(other.getSigner())) return false;
+      if (!getData()
+          .equals(other.getData())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SIGNER_FIELD_NUMBER;
+      hash = (53 * hash) + getSigner().hashCode();
+      hash = (37 * hash) + DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getData().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSignData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSignData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSignData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSignData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSignData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSignData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSignData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSignData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSignData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSignData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSignData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSignData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.teritori.airdrop.v1beta1.TxProto.MsgSignData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgSignData defines an arbitrary, general-purpose, off-chain message
+     * </pre>
+     *
+     * Protobuf type {@code teritori.airdrop.v1beta1.MsgSignData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:teritori.airdrop.v1beta1.MsgSignData)
+        com.teritori.airdrop.v1beta1.TxProto.MsgSignDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgSignData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgSignData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.teritori.airdrop.v1beta1.TxProto.MsgSignData.class, com.teritori.airdrop.v1beta1.TxProto.MsgSignData.Builder.class);
+      }
+
+      // Construct using com.teritori.airdrop.v1beta1.TxProto.MsgSignData.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        signer_ = "";
+        data_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgSignData_descriptor;
+      }
+
+      @java.lang.Override
+      public com.teritori.airdrop.v1beta1.TxProto.MsgSignData getDefaultInstanceForType() {
+        return com.teritori.airdrop.v1beta1.TxProto.MsgSignData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.teritori.airdrop.v1beta1.TxProto.MsgSignData build() {
+        com.teritori.airdrop.v1beta1.TxProto.MsgSignData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.teritori.airdrop.v1beta1.TxProto.MsgSignData buildPartial() {
+        com.teritori.airdrop.v1beta1.TxProto.MsgSignData result = new com.teritori.airdrop.v1beta1.TxProto.MsgSignData(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.teritori.airdrop.v1beta1.TxProto.MsgSignData result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.signer_ = signer_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.data_ = data_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.teritori.airdrop.v1beta1.TxProto.MsgSignData) {
+          return mergeFrom((com.teritori.airdrop.v1beta1.TxProto.MsgSignData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.teritori.airdrop.v1beta1.TxProto.MsgSignData other) {
+        if (other == com.teritori.airdrop.v1beta1.TxProto.MsgSignData.getDefaultInstance()) return this;
+        if (!other.getSigner().isEmpty()) {
+          signer_ = other.signer_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
+          setData(other.getData());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                signer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                data_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object signer_ = "";
+      /**
+       * <pre>
+       * Signer is the sdk.AccAddress of the message signer
+       * </pre>
+       *
+       * <code>string signer = 1 [json_name = "signer", (.gogoproto.jsontag) = "signer"];</code>
+       * @return The signer.
+       */
+      public java.lang.String getSigner() {
+        java.lang.Object ref = signer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          signer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Signer is the sdk.AccAddress of the message signer
+       * </pre>
+       *
+       * <code>string signer = 1 [json_name = "signer", (.gogoproto.jsontag) = "signer"];</code>
+       * @return The bytes for signer.
+       */
+      public com.google.protobuf.ByteString
+          getSignerBytes() {
+        java.lang.Object ref = signer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          signer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Signer is the sdk.AccAddress of the message signer
+       * </pre>
+       *
+       * <code>string signer = 1 [json_name = "signer", (.gogoproto.jsontag) = "signer"];</code>
+       * @param value The signer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSigner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        signer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Signer is the sdk.AccAddress of the message signer
+       * </pre>
+       *
+       * <code>string signer = 1 [json_name = "signer", (.gogoproto.jsontag) = "signer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSigner() {
+        signer_ = getDefaultInstance().getSigner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Signer is the sdk.AccAddress of the message signer
+       * </pre>
+       *
+       * <code>string signer = 1 [json_name = "signer", (.gogoproto.jsontag) = "signer"];</code>
+       * @param value The bytes for signer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        signer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * data represents the raw bytes of the content that is signed (text, json, etc)
+       * </pre>
+       *
+       * <code>bytes data = 2 [json_name = "data", (.gogoproto.jsontag) = "data"];</code>
+       * @return The data.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getData() {
+        return data_;
+      }
+      /**
+       * <pre>
+       * data represents the raw bytes of the content that is signed (text, json, etc)
+       * </pre>
+       *
+       * <code>bytes data = 2 [json_name = "data", (.gogoproto.jsontag) = "data"];</code>
+       * @param value The data to set.
+       * @return This builder for chaining.
+       */
+      public Builder setData(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        data_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * data represents the raw bytes of the content that is signed (text, json, etc)
+       * </pre>
+       *
+       * <code>bytes data = 2 [json_name = "data", (.gogoproto.jsontag) = "data"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearData() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        data_ = getDefaultInstance().getData();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:teritori.airdrop.v1beta1.MsgSignData)
+    }
+
+    // @@protoc_insertion_point(class_scope:teritori.airdrop.v1beta1.MsgSignData)
+    private static final com.teritori.airdrop.v1beta1.TxProto.MsgSignData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.teritori.airdrop.v1beta1.TxProto.MsgSignData();
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgSignData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSignData>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSignData>() {
+      @java.lang.Override
+      public MsgSignData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSignData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSignData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.teritori.airdrop.v1beta1.TxProto.MsgSignData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgTransferModuleOwnershipOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:teritori.airdrop.v1beta1.MsgTransferModuleOwnership)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+
+    /**
+     * <code>string new_owner = 2 [json_name = "newOwner"];</code>
+     * @return The newOwner.
+     */
+    java.lang.String getNewOwner();
+    /**
+     * <code>string new_owner = 2 [json_name = "newOwner"];</code>
+     * @return The bytes for newOwner.
+     */
+    com.google.protobuf.ByteString
+        getNewOwnerBytes();
+  }
+  /**
+   * Protobuf type {@code teritori.airdrop.v1beta1.MsgTransferModuleOwnership}
+   */
+  public static final class MsgTransferModuleOwnership extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:teritori.airdrop.v1beta1.MsgTransferModuleOwnership)
+      MsgTransferModuleOwnershipOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgTransferModuleOwnership.newBuilder() to construct.
+    private MsgTransferModuleOwnership(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgTransferModuleOwnership() {
+      sender_ = "";
+      newOwner_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgTransferModuleOwnership();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgTransferModuleOwnership_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgTransferModuleOwnership_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership.class, com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NEW_OWNER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object newOwner_ = "";
+    /**
+     * <code>string new_owner = 2 [json_name = "newOwner"];</code>
+     * @return The newOwner.
+     */
+    @java.lang.Override
+    public java.lang.String getNewOwner() {
+      java.lang.Object ref = newOwner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        newOwner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string new_owner = 2 [json_name = "newOwner"];</code>
+     * @return The bytes for newOwner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNewOwnerBytes() {
+      java.lang.Object ref = newOwner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        newOwner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newOwner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, newOwner_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newOwner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, newOwner_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership)) {
+        return super.equals(obj);
+      }
+      com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership other = (com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getNewOwner()
+          .equals(other.getNewOwner())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (37 * hash) + NEW_OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getNewOwner().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code teritori.airdrop.v1beta1.MsgTransferModuleOwnership}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:teritori.airdrop.v1beta1.MsgTransferModuleOwnership)
+        com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgTransferModuleOwnership_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgTransferModuleOwnership_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership.class, com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership.Builder.class);
+      }
+
+      // Construct using com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = "";
+        newOwner_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgTransferModuleOwnership_descriptor;
+      }
+
+      @java.lang.Override
+      public com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership getDefaultInstanceForType() {
+        return com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership build() {
+        com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership buildPartial() {
+        com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership result = new com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.newOwner_ = newOwner_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership) {
+          return mergeFrom((com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership other) {
+        if (other == com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership.getDefaultInstance()) return this;
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getNewOwner().isEmpty()) {
+          newOwner_ = other.newOwner_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                newOwner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object newOwner_ = "";
+      /**
+       * <code>string new_owner = 2 [json_name = "newOwner"];</code>
+       * @return The newOwner.
+       */
+      public java.lang.String getNewOwner() {
+        java.lang.Object ref = newOwner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          newOwner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string new_owner = 2 [json_name = "newOwner"];</code>
+       * @return The bytes for newOwner.
+       */
+      public com.google.protobuf.ByteString
+          getNewOwnerBytes() {
+        java.lang.Object ref = newOwner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          newOwner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string new_owner = 2 [json_name = "newOwner"];</code>
+       * @param value The newOwner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        newOwner_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string new_owner = 2 [json_name = "newOwner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewOwner() {
+        newOwner_ = getDefaultInstance().getNewOwner();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string new_owner = 2 [json_name = "newOwner"];</code>
+       * @param value The bytes for newOwner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        newOwner_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:teritori.airdrop.v1beta1.MsgTransferModuleOwnership)
+    }
+
+    // @@protoc_insertion_point(class_scope:teritori.airdrop.v1beta1.MsgTransferModuleOwnership)
+    private static final com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership();
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgTransferModuleOwnership>
+        PARSER = new com.google.protobuf.AbstractParser<MsgTransferModuleOwnership>() {
+      @java.lang.Override
+      public MsgTransferModuleOwnership parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgTransferModuleOwnership> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgTransferModuleOwnership> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnership getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgTransferModuleOwnershipResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:teritori.airdrop.v1beta1.MsgTransferModuleOwnershipResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code teritori.airdrop.v1beta1.MsgTransferModuleOwnershipResponse}
+   */
+  public static final class MsgTransferModuleOwnershipResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:teritori.airdrop.v1beta1.MsgTransferModuleOwnershipResponse)
+      MsgTransferModuleOwnershipResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgTransferModuleOwnershipResponse.newBuilder() to construct.
+    private MsgTransferModuleOwnershipResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgTransferModuleOwnershipResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgTransferModuleOwnershipResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgTransferModuleOwnershipResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgTransferModuleOwnershipResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse.class, com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse)) {
+        return super.equals(obj);
+      }
+      com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse other = (com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code teritori.airdrop.v1beta1.MsgTransferModuleOwnershipResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:teritori.airdrop.v1beta1.MsgTransferModuleOwnershipResponse)
+        com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgTransferModuleOwnershipResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgTransferModuleOwnershipResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse.class, com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse.Builder.class);
+      }
+
+      // Construct using com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgTransferModuleOwnershipResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse getDefaultInstanceForType() {
+        return com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse build() {
+        com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse buildPartial() {
+        com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse result = new com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse) {
+          return mergeFrom((com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse other) {
+        if (other == com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:teritori.airdrop.v1beta1.MsgTransferModuleOwnershipResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:teritori.airdrop.v1beta1.MsgTransferModuleOwnershipResponse)
+    private static final com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse();
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgTransferModuleOwnershipResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgTransferModuleOwnershipResponse>() {
+      @java.lang.Override
+      public MsgTransferModuleOwnershipResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgTransferModuleOwnershipResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgTransferModuleOwnershipResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.teritori.airdrop.v1beta1.TxProto.MsgTransferModuleOwnershipResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDepositTokensOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:teritori.airdrop.v1beta1.MsgDepositTokens)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+
+    /**
+     * <code>repeated string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return A list containing the amount.
+     */
+    java.util.List<java.lang.String>
+        getAmountList();
+    /**
+     * <code>repeated string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The count of amount.
+     */
+    int getAmountCount();
+    /**
+     * <code>repeated string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @param index The index of the element to return.
+     * @return The amount at the given index.
+     */
+    java.lang.String getAmount(int index);
+    /**
+     * <code>repeated string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the amount at the given index.
+     */
+    com.google.protobuf.ByteString
+        getAmountBytes(int index);
+  }
+  /**
+   * Protobuf type {@code teritori.airdrop.v1beta1.MsgDepositTokens}
+   */
+  public static final class MsgDepositTokens extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:teritori.airdrop.v1beta1.MsgDepositTokens)
+      MsgDepositTokensOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDepositTokens.newBuilder() to construct.
+    private MsgDepositTokens(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDepositTokens() {
+      sender_ = "";
+      amount_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDepositTokens();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgDepositTokens_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgDepositTokens_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens.class, com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList amount_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return A list containing the amount.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getAmountList() {
+      return amount_;
+    }
+    /**
+     * <code>repeated string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The count of amount.
+     */
+    public int getAmountCount() {
+      return amount_.size();
+    }
+    /**
+     * <code>repeated string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @param index The index of the element to return.
+     * @return The amount at the given index.
+     */
+    public java.lang.String getAmount(int index) {
+      return amount_.get(index);
+    }
+    /**
+     * <code>repeated string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the amount at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getAmountBytes(int index) {
+      return amount_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
+      }
+      for (int i = 0; i < amount_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, amount_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < amount_.size(); i++) {
+          dataSize += computeStringSizeNoTag(amount_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getAmountList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens)) {
+        return super.equals(obj);
+      }
+      com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens other = (com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getAmountList()
+          .equals(other.getAmountList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      if (getAmountCount() > 0) {
+        hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getAmountList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code teritori.airdrop.v1beta1.MsgDepositTokens}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:teritori.airdrop.v1beta1.MsgDepositTokens)
+        com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgDepositTokens_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgDepositTokens_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens.class, com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens.Builder.class);
+      }
+
+      // Construct using com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = "";
+        amount_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgDepositTokens_descriptor;
+      }
+
+      @java.lang.Override
+      public com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens getDefaultInstanceForType() {
+        return com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens build() {
+        com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens buildPartial() {
+        com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens result = new com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          amount_.makeImmutable();
+          result.amount_ = amount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens) {
+          return mergeFrom((com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens other) {
+        if (other == com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens.getDefaultInstance()) return this;
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.amount_.isEmpty()) {
+          if (amount_.isEmpty()) {
+            amount_ = other.amount_;
+            bitField0_ |= 0x00000002;
+          } else {
+            ensureAmountIsMutable();
+            amount_.addAll(other.amount_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureAmountIsMutable();
+                amount_.add(s);
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList amount_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureAmountIsMutable() {
+        if (!amount_.isModifiable()) {
+          amount_ = new com.google.protobuf.LazyStringArrayList(amount_);
+        }
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <code>repeated string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return A list containing the amount.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getAmountList() {
+        amount_.makeImmutable();
+        return amount_;
+      }
+      /**
+       * <code>repeated string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The count of amount.
+       */
+      public int getAmountCount() {
+        return amount_.size();
+      }
+      /**
+       * <code>repeated string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @param index The index of the element to return.
+       * @return The amount at the given index.
+       */
+      public java.lang.String getAmount(int index) {
+        return amount_.get(index);
+      }
+      /**
+       * <code>repeated string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the amount at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getAmountBytes(int index) {
+        return amount_.getByteString(index);
+      }
+      /**
+       * <code>repeated string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @param index The index to set the value at.
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureAmountIsMutable();
+        amount_.set(index, value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @param value The amount to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureAmountIsMutable();
+        amount_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @param values The amount to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAmount(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureAmountIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, amount_);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        amount_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @param value The bytes of the amount to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureAmountIsMutable();
+        amount_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:teritori.airdrop.v1beta1.MsgDepositTokens)
+    }
+
+    // @@protoc_insertion_point(class_scope:teritori.airdrop.v1beta1.MsgDepositTokens)
+    private static final com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens();
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDepositTokens>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDepositTokens>() {
+      @java.lang.Override
+      public MsgDepositTokens parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDepositTokens> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDepositTokens> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokens getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDepositTokensResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:teritori.airdrop.v1beta1.MsgDepositTokensResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code teritori.airdrop.v1beta1.MsgDepositTokensResponse}
+   */
+  public static final class MsgDepositTokensResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:teritori.airdrop.v1beta1.MsgDepositTokensResponse)
+      MsgDepositTokensResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDepositTokensResponse.newBuilder() to construct.
+    private MsgDepositTokensResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDepositTokensResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDepositTokensResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgDepositTokensResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgDepositTokensResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse.class, com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse)) {
+        return super.equals(obj);
+      }
+      com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse other = (com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code teritori.airdrop.v1beta1.MsgDepositTokensResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:teritori.airdrop.v1beta1.MsgDepositTokensResponse)
+        com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgDepositTokensResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgDepositTokensResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse.class, com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse.Builder.class);
+      }
+
+      // Construct using com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.teritori.airdrop.v1beta1.TxProto.internal_static_teritori_airdrop_v1beta1_MsgDepositTokensResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse getDefaultInstanceForType() {
+        return com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse build() {
+        com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse buildPartial() {
+        com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse result = new com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse) {
+          return mergeFrom((com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse other) {
+        if (other == com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:teritori.airdrop.v1beta1.MsgDepositTokensResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:teritori.airdrop.v1beta1.MsgDepositTokensResponse)
+    private static final com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse();
+    }
+
+    public static com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDepositTokensResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDepositTokensResponse>() {
+      @java.lang.Override
+      public MsgDepositTokensResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDepositTokensResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDepositTokensResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.teritori.airdrop.v1beta1.TxProto.MsgDepositTokensResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_teritori_airdrop_v1beta1_MsgSetAllocation_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_teritori_airdrop_v1beta1_MsgSetAllocation_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_teritori_airdrop_v1beta1_MsgSetAllocationResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_teritori_airdrop_v1beta1_MsgSetAllocationResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_teritori_airdrop_v1beta1_MsgClaimAllocation_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_teritori_airdrop_v1beta1_MsgClaimAllocation_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_teritori_airdrop_v1beta1_MsgClaimAllocationResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_teritori_airdrop_v1beta1_MsgClaimAllocationResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_teritori_airdrop_v1beta1_MsgSignData_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_teritori_airdrop_v1beta1_MsgSignData_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_teritori_airdrop_v1beta1_MsgTransferModuleOwnership_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_teritori_airdrop_v1beta1_MsgTransferModuleOwnership_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_teritori_airdrop_v1beta1_MsgTransferModuleOwnershipResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_teritori_airdrop_v1beta1_MsgTransferModuleOwnershipResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_teritori_airdrop_v1beta1_MsgDepositTokens_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_teritori_airdrop_v1beta1_MsgDepositTokens_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_teritori_airdrop_v1beta1_MsgDepositTokensResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_teritori_airdrop_v1beta1_MsgDepositTokensResponse_fieldAccessorTable;
 
@@ -101,13 +5620,13 @@ public final class TxProto {
       "oduleOwnershipResponse\022o\n\rDepositTokens\022" +
       "*.teritori.airdrop.v1beta1.MsgDepositTok" +
       "ens\0322.teritori.airdrop.v1beta1.MsgDeposi" +
-      "tTokensResponseB\335\001\n\034com.teritori.airdrop" +
-      ".v1beta1B\007TxProtoP\001Z2github.com/TERITORI" +
-      "/teritori-chain/x/airdrop/types\242\002\003TAX\252\002\030" +
-      "Teritori.Airdrop.V1beta1\312\002\030Teritori\\Aird" +
-      "rop\\V1beta1\342\002$Teritori\\Airdrop\\V1beta1\\G" +
-      "PBMetadata\352\002\032Teritori::Airdrop::V1beta1b" +
-      "\006proto3"
+      "tTokensResponseB\333\001\n\034com.teritori.airdrop" +
+      ".v1beta1B\007TxProtoZ2github.com/TERITORI/t" +
+      "eritori-chain/x/airdrop/types\242\002\003TAX\252\002\030Te" +
+      "ritori.Airdrop.V1beta1\312\002\030Teritori\\Airdro" +
+      "p\\V1beta1\342\002$Teritori\\Airdrop\\V1beta1\\GPB" +
+      "Metadata\352\002\032Teritori::Airdrop::V1beta1b\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

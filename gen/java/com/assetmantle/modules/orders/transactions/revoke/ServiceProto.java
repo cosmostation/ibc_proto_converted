@@ -33,15 +33,15 @@ public final class ServiceProto {
       "ssetmantle.modules.orders.transactions.r" +
       "evoke.Message\032C.assetmantle.modules.orde" +
       "rs.transactions.revoke.TransactionRespon" +
-      "se\"\035\202\323\344\223\002\027\"\025/mantle/orders/revokeB\240\002\n2co" +
+      "se\"\035\202\323\344\223\002\027\"\025/mantle/orders/revokeB\236\002\n2co" +
       "m.assetmantle.modules.orders.transaction" +
-      "s.revokeB\014ServiceProtoP\001\242\002\005AMOTR\252\002.Asset" +
-      "mantle.Modules.Orders.Transactions.Revok" +
-      "e\312\002.Assetmantle\\Modules\\Orders\\Transacti" +
-      "ons\\Revoke\342\002:Assetmantle\\Modules\\Orders\\" +
-      "Transactions\\Revoke\\GPBMetadata\352\0022Assetm" +
-      "antle::Modules::Orders::Transactions::Re" +
-      "vokeb\006proto3"
+      "s.revokeB\014ServiceProto\242\002\005AMOTR\252\002.Assetma" +
+      "ntle.Modules.Orders.Transactions.Revoke\312" +
+      "\002.Assetmantle\\Modules\\Orders\\Transaction" +
+      "s\\Revoke\342\002:Assetmantle\\Modules\\Orders\\Tr" +
+      "ansactions\\Revoke\\GPBMetadata\352\0022Assetman" +
+      "tle::Modules::Orders::Transactions::Revo" +
+      "keb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

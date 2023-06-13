@@ -14,64 +14,6936 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface RegisterChainMaintainerRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.nexus.v1beta1.RegisterChainMaintainerRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The sender.
+     */
+    com.google.protobuf.ByteString getSender();
+
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return A list containing the chains.
+     */
+    java.util.List<java.lang.String>
+        getChainsList();
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return The count of chains.
+     */
+    int getChainsCount();
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @param index The index of the element to return.
+     * @return The chains at the given index.
+     */
+    java.lang.String getChains(int index);
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the chains at the given index.
+     */
+    com.google.protobuf.ByteString
+        getChainsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code axelar.nexus.v1beta1.RegisterChainMaintainerRequest}
+   */
+  public static final class RegisterChainMaintainerRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.nexus.v1beta1.RegisterChainMaintainerRequest)
+      RegisterChainMaintainerRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RegisterChainMaintainerRequest.newBuilder() to construct.
+    private RegisterChainMaintainerRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RegisterChainMaintainerRequest() {
+      sender_ = com.google.protobuf.ByteString.EMPTY;
+      chains_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RegisterChainMaintainerRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_RegisterChainMaintainerRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_RegisterChainMaintainerRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest.class, com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSender() {
+      return sender_;
+    }
+
+    public static final int CHAINS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList chains_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return A list containing the chains.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getChainsList() {
+      return chains_;
+    }
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return The count of chains.
+     */
+    public int getChainsCount() {
+      return chains_.size();
+    }
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @param index The index of the element to return.
+     * @return The chains at the given index.
+     */
+    public java.lang.String getChains(int index) {
+      return chains_.get(index);
+    }
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the chains at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getChainsBytes(int index) {
+      return chains_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!sender_.isEmpty()) {
+        output.writeBytes(1, sender_);
+      }
+      for (int i = 0; i < chains_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, chains_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!sender_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, sender_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < chains_.size(); i++) {
+          dataSize += computeStringSizeNoTag(chains_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getChainsList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest)) {
+        return super.equals(obj);
+      }
+      com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest other = (com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getChainsList()
+          .equals(other.getChainsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      if (getChainsCount() > 0) {
+        hash = (37 * hash) + CHAINS_FIELD_NUMBER;
+        hash = (53 * hash) + getChainsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.nexus.v1beta1.RegisterChainMaintainerRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.nexus.v1beta1.RegisterChainMaintainerRequest)
+        com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_RegisterChainMaintainerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_RegisterChainMaintainerRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest.class, com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest.Builder.class);
+      }
+
+      // Construct using com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = com.google.protobuf.ByteString.EMPTY;
+        chains_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_RegisterChainMaintainerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest getDefaultInstanceForType() {
+        return com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest build() {
+        com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest buildPartial() {
+        com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest result = new com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          chains_.makeImmutable();
+          result.chains_ = chains_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest) {
+          return mergeFrom((com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest other) {
+        if (other == com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest.getDefaultInstance()) return this;
+        if (other.getSender() != com.google.protobuf.ByteString.EMPTY) {
+          setSender(other.getSender());
+        }
+        if (!other.chains_.isEmpty()) {
+          if (chains_.isEmpty()) {
+            chains_ = other.chains_;
+            bitField0_ |= 0x00000002;
+          } else {
+            ensureChainsIsMutable();
+            chains_.addAll(other.chains_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureChainsIsMutable();
+                chains_.add(s);
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return The sender.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSender() {
+        return sender_;
+      }
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sender_ = getDefaultInstance().getSender();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList chains_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureChainsIsMutable() {
+        if (!chains_.isModifiable()) {
+          chains_ = new com.google.protobuf.LazyStringArrayList(chains_);
+        }
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @return A list containing the chains.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getChainsList() {
+        chains_.makeImmutable();
+        return chains_;
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @return The count of chains.
+       */
+      public int getChainsCount() {
+        return chains_.size();
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param index The index of the element to return.
+       * @return The chains at the given index.
+       */
+      public java.lang.String getChains(int index) {
+        return chains_.get(index);
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the chains at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getChainsBytes(int index) {
+        return chains_.getByteString(index);
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param index The index to set the value at.
+       * @param value The chains to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChains(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureChainsIsMutable();
+        chains_.set(index, value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param value The chains to add.
+       * @return This builder for chaining.
+       */
+      public Builder addChains(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureChainsIsMutable();
+        chains_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param values The chains to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllChains(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureChainsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, chains_);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChains() {
+        chains_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param value The bytes of the chains to add.
+       * @return This builder for chaining.
+       */
+      public Builder addChainsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureChainsIsMutable();
+        chains_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.nexus.v1beta1.RegisterChainMaintainerRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.nexus.v1beta1.RegisterChainMaintainerRequest)
+    private static final com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest();
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RegisterChainMaintainerRequest>
+        PARSER = new com.google.protobuf.AbstractParser<RegisterChainMaintainerRequest>() {
+      @java.lang.Override
+      public RegisterChainMaintainerRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RegisterChainMaintainerRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RegisterChainMaintainerRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RegisterChainMaintainerResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.nexus.v1beta1.RegisterChainMaintainerResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code axelar.nexus.v1beta1.RegisterChainMaintainerResponse}
+   */
+  public static final class RegisterChainMaintainerResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.nexus.v1beta1.RegisterChainMaintainerResponse)
+      RegisterChainMaintainerResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RegisterChainMaintainerResponse.newBuilder() to construct.
+    private RegisterChainMaintainerResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RegisterChainMaintainerResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RegisterChainMaintainerResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_RegisterChainMaintainerResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_RegisterChainMaintainerResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse.class, com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse)) {
+        return super.equals(obj);
+      }
+      com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse other = (com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.nexus.v1beta1.RegisterChainMaintainerResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.nexus.v1beta1.RegisterChainMaintainerResponse)
+        com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_RegisterChainMaintainerResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_RegisterChainMaintainerResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse.class, com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse.Builder.class);
+      }
+
+      // Construct using com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_RegisterChainMaintainerResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse getDefaultInstanceForType() {
+        return com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse build() {
+        com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse buildPartial() {
+        com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse result = new com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse) {
+          return mergeFrom((com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse other) {
+        if (other == com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.nexus.v1beta1.RegisterChainMaintainerResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.nexus.v1beta1.RegisterChainMaintainerResponse)
+    private static final com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse();
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RegisterChainMaintainerResponse>
+        PARSER = new com.google.protobuf.AbstractParser<RegisterChainMaintainerResponse>() {
+      @java.lang.Override
+      public RegisterChainMaintainerResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RegisterChainMaintainerResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RegisterChainMaintainerResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.nexus.v1beta1.TxProto.RegisterChainMaintainerResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeregisterChainMaintainerRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.nexus.v1beta1.DeregisterChainMaintainerRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The sender.
+     */
+    com.google.protobuf.ByteString getSender();
+
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return A list containing the chains.
+     */
+    java.util.List<java.lang.String>
+        getChainsList();
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return The count of chains.
+     */
+    int getChainsCount();
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @param index The index of the element to return.
+     * @return The chains at the given index.
+     */
+    java.lang.String getChains(int index);
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the chains at the given index.
+     */
+    com.google.protobuf.ByteString
+        getChainsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code axelar.nexus.v1beta1.DeregisterChainMaintainerRequest}
+   */
+  public static final class DeregisterChainMaintainerRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.nexus.v1beta1.DeregisterChainMaintainerRequest)
+      DeregisterChainMaintainerRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeregisterChainMaintainerRequest.newBuilder() to construct.
+    private DeregisterChainMaintainerRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeregisterChainMaintainerRequest() {
+      sender_ = com.google.protobuf.ByteString.EMPTY;
+      chains_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeregisterChainMaintainerRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_DeregisterChainMaintainerRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_DeregisterChainMaintainerRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest.class, com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSender() {
+      return sender_;
+    }
+
+    public static final int CHAINS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList chains_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return A list containing the chains.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getChainsList() {
+      return chains_;
+    }
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return The count of chains.
+     */
+    public int getChainsCount() {
+      return chains_.size();
+    }
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @param index The index of the element to return.
+     * @return The chains at the given index.
+     */
+    public java.lang.String getChains(int index) {
+      return chains_.get(index);
+    }
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the chains at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getChainsBytes(int index) {
+      return chains_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!sender_.isEmpty()) {
+        output.writeBytes(1, sender_);
+      }
+      for (int i = 0; i < chains_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, chains_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!sender_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, sender_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < chains_.size(); i++) {
+          dataSize += computeStringSizeNoTag(chains_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getChainsList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest)) {
+        return super.equals(obj);
+      }
+      com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest other = (com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getChainsList()
+          .equals(other.getChainsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      if (getChainsCount() > 0) {
+        hash = (37 * hash) + CHAINS_FIELD_NUMBER;
+        hash = (53 * hash) + getChainsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.nexus.v1beta1.DeregisterChainMaintainerRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.nexus.v1beta1.DeregisterChainMaintainerRequest)
+        com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_DeregisterChainMaintainerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_DeregisterChainMaintainerRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest.class, com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest.Builder.class);
+      }
+
+      // Construct using com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = com.google.protobuf.ByteString.EMPTY;
+        chains_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_DeregisterChainMaintainerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest getDefaultInstanceForType() {
+        return com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest build() {
+        com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest buildPartial() {
+        com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest result = new com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          chains_.makeImmutable();
+          result.chains_ = chains_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest) {
+          return mergeFrom((com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest other) {
+        if (other == com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest.getDefaultInstance()) return this;
+        if (other.getSender() != com.google.protobuf.ByteString.EMPTY) {
+          setSender(other.getSender());
+        }
+        if (!other.chains_.isEmpty()) {
+          if (chains_.isEmpty()) {
+            chains_ = other.chains_;
+            bitField0_ |= 0x00000002;
+          } else {
+            ensureChainsIsMutable();
+            chains_.addAll(other.chains_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureChainsIsMutable();
+                chains_.add(s);
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return The sender.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSender() {
+        return sender_;
+      }
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sender_ = getDefaultInstance().getSender();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList chains_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureChainsIsMutable() {
+        if (!chains_.isModifiable()) {
+          chains_ = new com.google.protobuf.LazyStringArrayList(chains_);
+        }
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @return A list containing the chains.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getChainsList() {
+        chains_.makeImmutable();
+        return chains_;
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @return The count of chains.
+       */
+      public int getChainsCount() {
+        return chains_.size();
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param index The index of the element to return.
+       * @return The chains at the given index.
+       */
+      public java.lang.String getChains(int index) {
+        return chains_.get(index);
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the chains at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getChainsBytes(int index) {
+        return chains_.getByteString(index);
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param index The index to set the value at.
+       * @param value The chains to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChains(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureChainsIsMutable();
+        chains_.set(index, value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param value The chains to add.
+       * @return This builder for chaining.
+       */
+      public Builder addChains(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureChainsIsMutable();
+        chains_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param values The chains to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllChains(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureChainsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, chains_);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChains() {
+        chains_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param value The bytes of the chains to add.
+       * @return This builder for chaining.
+       */
+      public Builder addChainsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureChainsIsMutable();
+        chains_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.nexus.v1beta1.DeregisterChainMaintainerRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.nexus.v1beta1.DeregisterChainMaintainerRequest)
+    private static final com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest();
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeregisterChainMaintainerRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DeregisterChainMaintainerRequest>() {
+      @java.lang.Override
+      public DeregisterChainMaintainerRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeregisterChainMaintainerRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeregisterChainMaintainerRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeregisterChainMaintainerResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.nexus.v1beta1.DeregisterChainMaintainerResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code axelar.nexus.v1beta1.DeregisterChainMaintainerResponse}
+   */
+  public static final class DeregisterChainMaintainerResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.nexus.v1beta1.DeregisterChainMaintainerResponse)
+      DeregisterChainMaintainerResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeregisterChainMaintainerResponse.newBuilder() to construct.
+    private DeregisterChainMaintainerResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeregisterChainMaintainerResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeregisterChainMaintainerResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_DeregisterChainMaintainerResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_DeregisterChainMaintainerResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse.class, com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse)) {
+        return super.equals(obj);
+      }
+      com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse other = (com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.nexus.v1beta1.DeregisterChainMaintainerResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.nexus.v1beta1.DeregisterChainMaintainerResponse)
+        com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_DeregisterChainMaintainerResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_DeregisterChainMaintainerResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse.class, com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse.Builder.class);
+      }
+
+      // Construct using com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_DeregisterChainMaintainerResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse getDefaultInstanceForType() {
+        return com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse build() {
+        com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse buildPartial() {
+        com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse result = new com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse) {
+          return mergeFrom((com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse other) {
+        if (other == com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.nexus.v1beta1.DeregisterChainMaintainerResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.nexus.v1beta1.DeregisterChainMaintainerResponse)
+    private static final com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse();
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeregisterChainMaintainerResponse>
+        PARSER = new com.google.protobuf.AbstractParser<DeregisterChainMaintainerResponse>() {
+      @java.lang.Override
+      public DeregisterChainMaintainerResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeregisterChainMaintainerResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeregisterChainMaintainerResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.nexus.v1beta1.TxProto.DeregisterChainMaintainerResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ActivateChainRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.nexus.v1beta1.ActivateChainRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The sender.
+     */
+    com.google.protobuf.ByteString getSender();
+
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return A list containing the chains.
+     */
+    java.util.List<java.lang.String>
+        getChainsList();
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return The count of chains.
+     */
+    int getChainsCount();
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @param index The index of the element to return.
+     * @return The chains at the given index.
+     */
+    java.lang.String getChains(int index);
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the chains at the given index.
+     */
+    com.google.protobuf.ByteString
+        getChainsBytes(int index);
+  }
+  /**
+   * <pre>
+   * ActivateChainRequest represents a message to activate chains
+   * </pre>
+   *
+   * Protobuf type {@code axelar.nexus.v1beta1.ActivateChainRequest}
+   */
+  public static final class ActivateChainRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.nexus.v1beta1.ActivateChainRequest)
+      ActivateChainRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ActivateChainRequest.newBuilder() to construct.
+    private ActivateChainRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ActivateChainRequest() {
+      sender_ = com.google.protobuf.ByteString.EMPTY;
+      chains_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ActivateChainRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_ActivateChainRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_ActivateChainRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest.class, com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSender() {
+      return sender_;
+    }
+
+    public static final int CHAINS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList chains_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return A list containing the chains.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getChainsList() {
+      return chains_;
+    }
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return The count of chains.
+     */
+    public int getChainsCount() {
+      return chains_.size();
+    }
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @param index The index of the element to return.
+     * @return The chains at the given index.
+     */
+    public java.lang.String getChains(int index) {
+      return chains_.get(index);
+    }
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the chains at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getChainsBytes(int index) {
+      return chains_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!sender_.isEmpty()) {
+        output.writeBytes(1, sender_);
+      }
+      for (int i = 0; i < chains_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, chains_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!sender_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, sender_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < chains_.size(); i++) {
+          dataSize += computeStringSizeNoTag(chains_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getChainsList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest)) {
+        return super.equals(obj);
+      }
+      com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest other = (com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getChainsList()
+          .equals(other.getChainsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      if (getChainsCount() > 0) {
+        hash = (37 * hash) + CHAINS_FIELD_NUMBER;
+        hash = (53 * hash) + getChainsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ActivateChainRequest represents a message to activate chains
+     * </pre>
+     *
+     * Protobuf type {@code axelar.nexus.v1beta1.ActivateChainRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.nexus.v1beta1.ActivateChainRequest)
+        com.axelar.nexus.v1beta1.TxProto.ActivateChainRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_ActivateChainRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_ActivateChainRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest.class, com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest.Builder.class);
+      }
+
+      // Construct using com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = com.google.protobuf.ByteString.EMPTY;
+        chains_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_ActivateChainRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest getDefaultInstanceForType() {
+        return com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest build() {
+        com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest buildPartial() {
+        com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest result = new com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          chains_.makeImmutable();
+          result.chains_ = chains_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest) {
+          return mergeFrom((com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest other) {
+        if (other == com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest.getDefaultInstance()) return this;
+        if (other.getSender() != com.google.protobuf.ByteString.EMPTY) {
+          setSender(other.getSender());
+        }
+        if (!other.chains_.isEmpty()) {
+          if (chains_.isEmpty()) {
+            chains_ = other.chains_;
+            bitField0_ |= 0x00000002;
+          } else {
+            ensureChainsIsMutable();
+            chains_.addAll(other.chains_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureChainsIsMutable();
+                chains_.add(s);
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return The sender.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSender() {
+        return sender_;
+      }
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sender_ = getDefaultInstance().getSender();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList chains_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureChainsIsMutable() {
+        if (!chains_.isModifiable()) {
+          chains_ = new com.google.protobuf.LazyStringArrayList(chains_);
+        }
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @return A list containing the chains.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getChainsList() {
+        chains_.makeImmutable();
+        return chains_;
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @return The count of chains.
+       */
+      public int getChainsCount() {
+        return chains_.size();
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param index The index of the element to return.
+       * @return The chains at the given index.
+       */
+      public java.lang.String getChains(int index) {
+        return chains_.get(index);
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the chains at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getChainsBytes(int index) {
+        return chains_.getByteString(index);
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param index The index to set the value at.
+       * @param value The chains to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChains(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureChainsIsMutable();
+        chains_.set(index, value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param value The chains to add.
+       * @return This builder for chaining.
+       */
+      public Builder addChains(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureChainsIsMutable();
+        chains_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param values The chains to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllChains(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureChainsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, chains_);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChains() {
+        chains_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param value The bytes of the chains to add.
+       * @return This builder for chaining.
+       */
+      public Builder addChainsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureChainsIsMutable();
+        chains_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.nexus.v1beta1.ActivateChainRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.nexus.v1beta1.ActivateChainRequest)
+    private static final com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest();
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ActivateChainRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ActivateChainRequest>() {
+      @java.lang.Override
+      public ActivateChainRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ActivateChainRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ActivateChainRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.nexus.v1beta1.TxProto.ActivateChainRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ActivateChainResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.nexus.v1beta1.ActivateChainResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code axelar.nexus.v1beta1.ActivateChainResponse}
+   */
+  public static final class ActivateChainResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.nexus.v1beta1.ActivateChainResponse)
+      ActivateChainResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ActivateChainResponse.newBuilder() to construct.
+    private ActivateChainResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ActivateChainResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ActivateChainResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_ActivateChainResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_ActivateChainResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse.class, com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse)) {
+        return super.equals(obj);
+      }
+      com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse other = (com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.nexus.v1beta1.ActivateChainResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.nexus.v1beta1.ActivateChainResponse)
+        com.axelar.nexus.v1beta1.TxProto.ActivateChainResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_ActivateChainResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_ActivateChainResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse.class, com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse.Builder.class);
+      }
+
+      // Construct using com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_ActivateChainResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse getDefaultInstanceForType() {
+        return com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse build() {
+        com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse buildPartial() {
+        com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse result = new com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse) {
+          return mergeFrom((com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse other) {
+        if (other == com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.nexus.v1beta1.ActivateChainResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.nexus.v1beta1.ActivateChainResponse)
+    private static final com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse();
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ActivateChainResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ActivateChainResponse>() {
+      @java.lang.Override
+      public ActivateChainResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ActivateChainResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ActivateChainResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.nexus.v1beta1.TxProto.ActivateChainResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeactivateChainRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.nexus.v1beta1.DeactivateChainRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The sender.
+     */
+    com.google.protobuf.ByteString getSender();
+
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return A list containing the chains.
+     */
+    java.util.List<java.lang.String>
+        getChainsList();
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return The count of chains.
+     */
+    int getChainsCount();
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @param index The index of the element to return.
+     * @return The chains at the given index.
+     */
+    java.lang.String getChains(int index);
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the chains at the given index.
+     */
+    com.google.protobuf.ByteString
+        getChainsBytes(int index);
+  }
+  /**
+   * <pre>
+   * DeactivateChainRequest represents a message to deactivate chains
+   * </pre>
+   *
+   * Protobuf type {@code axelar.nexus.v1beta1.DeactivateChainRequest}
+   */
+  public static final class DeactivateChainRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.nexus.v1beta1.DeactivateChainRequest)
+      DeactivateChainRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeactivateChainRequest.newBuilder() to construct.
+    private DeactivateChainRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeactivateChainRequest() {
+      sender_ = com.google.protobuf.ByteString.EMPTY;
+      chains_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeactivateChainRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_DeactivateChainRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_DeactivateChainRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest.class, com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSender() {
+      return sender_;
+    }
+
+    public static final int CHAINS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList chains_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return A list containing the chains.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getChainsList() {
+      return chains_;
+    }
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return The count of chains.
+     */
+    public int getChainsCount() {
+      return chains_.size();
+    }
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @param index The index of the element to return.
+     * @return The chains at the given index.
+     */
+    public java.lang.String getChains(int index) {
+      return chains_.get(index);
+    }
+    /**
+     * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the chains at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getChainsBytes(int index) {
+      return chains_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!sender_.isEmpty()) {
+        output.writeBytes(1, sender_);
+      }
+      for (int i = 0; i < chains_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, chains_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!sender_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, sender_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < chains_.size(); i++) {
+          dataSize += computeStringSizeNoTag(chains_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getChainsList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest)) {
+        return super.equals(obj);
+      }
+      com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest other = (com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getChainsList()
+          .equals(other.getChainsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      if (getChainsCount() > 0) {
+        hash = (37 * hash) + CHAINS_FIELD_NUMBER;
+        hash = (53 * hash) + getChainsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * DeactivateChainRequest represents a message to deactivate chains
+     * </pre>
+     *
+     * Protobuf type {@code axelar.nexus.v1beta1.DeactivateChainRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.nexus.v1beta1.DeactivateChainRequest)
+        com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_DeactivateChainRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_DeactivateChainRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest.class, com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest.Builder.class);
+      }
+
+      // Construct using com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = com.google.protobuf.ByteString.EMPTY;
+        chains_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_DeactivateChainRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest getDefaultInstanceForType() {
+        return com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest build() {
+        com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest buildPartial() {
+        com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest result = new com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          chains_.makeImmutable();
+          result.chains_ = chains_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest) {
+          return mergeFrom((com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest other) {
+        if (other == com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest.getDefaultInstance()) return this;
+        if (other.getSender() != com.google.protobuf.ByteString.EMPTY) {
+          setSender(other.getSender());
+        }
+        if (!other.chains_.isEmpty()) {
+          if (chains_.isEmpty()) {
+            chains_ = other.chains_;
+            bitField0_ |= 0x00000002;
+          } else {
+            ensureChainsIsMutable();
+            chains_.addAll(other.chains_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureChainsIsMutable();
+                chains_.add(s);
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return The sender.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSender() {
+        return sender_;
+      }
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sender_ = getDefaultInstance().getSender();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList chains_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureChainsIsMutable() {
+        if (!chains_.isModifiable()) {
+          chains_ = new com.google.protobuf.LazyStringArrayList(chains_);
+        }
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @return A list containing the chains.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getChainsList() {
+        chains_.makeImmutable();
+        return chains_;
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @return The count of chains.
+       */
+      public int getChainsCount() {
+        return chains_.size();
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param index The index of the element to return.
+       * @return The chains at the given index.
+       */
+      public java.lang.String getChains(int index) {
+        return chains_.get(index);
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the chains at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getChainsBytes(int index) {
+        return chains_.getByteString(index);
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param index The index to set the value at.
+       * @param value The chains to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChains(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureChainsIsMutable();
+        chains_.set(index, value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param value The chains to add.
+       * @return This builder for chaining.
+       */
+      public Builder addChains(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureChainsIsMutable();
+        chains_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param values The chains to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllChains(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureChainsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, chains_);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChains() {
+        chains_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string chains = 2 [json_name = "chains", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param value The bytes of the chains to add.
+       * @return This builder for chaining.
+       */
+      public Builder addChainsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureChainsIsMutable();
+        chains_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.nexus.v1beta1.DeactivateChainRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.nexus.v1beta1.DeactivateChainRequest)
+    private static final com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest();
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeactivateChainRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DeactivateChainRequest>() {
+      @java.lang.Override
+      public DeactivateChainRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeactivateChainRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeactivateChainRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.nexus.v1beta1.TxProto.DeactivateChainRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeactivateChainResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.nexus.v1beta1.DeactivateChainResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code axelar.nexus.v1beta1.DeactivateChainResponse}
+   */
+  public static final class DeactivateChainResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.nexus.v1beta1.DeactivateChainResponse)
+      DeactivateChainResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeactivateChainResponse.newBuilder() to construct.
+    private DeactivateChainResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeactivateChainResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeactivateChainResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_DeactivateChainResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_DeactivateChainResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse.class, com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse)) {
+        return super.equals(obj);
+      }
+      com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse other = (com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.nexus.v1beta1.DeactivateChainResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.nexus.v1beta1.DeactivateChainResponse)
+        com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_DeactivateChainResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_DeactivateChainResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse.class, com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse.Builder.class);
+      }
+
+      // Construct using com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_DeactivateChainResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse getDefaultInstanceForType() {
+        return com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse build() {
+        com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse buildPartial() {
+        com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse result = new com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse) {
+          return mergeFrom((com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse other) {
+        if (other == com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.nexus.v1beta1.DeactivateChainResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.nexus.v1beta1.DeactivateChainResponse)
+    private static final com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse();
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeactivateChainResponse>
+        PARSER = new com.google.protobuf.AbstractParser<DeactivateChainResponse>() {
+      @java.lang.Override
+      public DeactivateChainResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeactivateChainResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeactivateChainResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.nexus.v1beta1.TxProto.DeactivateChainResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RegisterAssetFeeRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.nexus.v1beta1.RegisterAssetFeeRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The sender.
+     */
+    com.google.protobuf.ByteString getSender();
+
+    /**
+     * <code>.axelar.nexus.exported.v1beta1.FeeInfo fee_info = 2 [json_name = "feeInfo", (.gogoproto.nullable) = false];</code>
+     * @return Whether the feeInfo field is set.
+     */
+    boolean hasFeeInfo();
+    /**
+     * <code>.axelar.nexus.exported.v1beta1.FeeInfo fee_info = 2 [json_name = "feeInfo", (.gogoproto.nullable) = false];</code>
+     * @return The feeInfo.
+     */
+    com.axelar.nexus.exported.v1beta1.TypesProto.FeeInfo getFeeInfo();
+    /**
+     * <code>.axelar.nexus.exported.v1beta1.FeeInfo fee_info = 2 [json_name = "feeInfo", (.gogoproto.nullable) = false];</code>
+     */
+    com.axelar.nexus.exported.v1beta1.TypesProto.FeeInfoOrBuilder getFeeInfoOrBuilder();
+  }
+  /**
+   * <pre>
+   * RegisterAssetFeeRequest represents a message to register the transfer fee
+   * info associated to an asset on a chain
+   * </pre>
+   *
+   * Protobuf type {@code axelar.nexus.v1beta1.RegisterAssetFeeRequest}
+   */
+  public static final class RegisterAssetFeeRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.nexus.v1beta1.RegisterAssetFeeRequest)
+      RegisterAssetFeeRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RegisterAssetFeeRequest.newBuilder() to construct.
+    private RegisterAssetFeeRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RegisterAssetFeeRequest() {
+      sender_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RegisterAssetFeeRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_RegisterAssetFeeRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_RegisterAssetFeeRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest.class, com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSender() {
+      return sender_;
+    }
+
+    public static final int FEE_INFO_FIELD_NUMBER = 2;
+    private com.axelar.nexus.exported.v1beta1.TypesProto.FeeInfo feeInfo_;
+    /**
+     * <code>.axelar.nexus.exported.v1beta1.FeeInfo fee_info = 2 [json_name = "feeInfo", (.gogoproto.nullable) = false];</code>
+     * @return Whether the feeInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasFeeInfo() {
+      return feeInfo_ != null;
+    }
+    /**
+     * <code>.axelar.nexus.exported.v1beta1.FeeInfo fee_info = 2 [json_name = "feeInfo", (.gogoproto.nullable) = false];</code>
+     * @return The feeInfo.
+     */
+    @java.lang.Override
+    public com.axelar.nexus.exported.v1beta1.TypesProto.FeeInfo getFeeInfo() {
+      return feeInfo_ == null ? com.axelar.nexus.exported.v1beta1.TypesProto.FeeInfo.getDefaultInstance() : feeInfo_;
+    }
+    /**
+     * <code>.axelar.nexus.exported.v1beta1.FeeInfo fee_info = 2 [json_name = "feeInfo", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.axelar.nexus.exported.v1beta1.TypesProto.FeeInfoOrBuilder getFeeInfoOrBuilder() {
+      return feeInfo_ == null ? com.axelar.nexus.exported.v1beta1.TypesProto.FeeInfo.getDefaultInstance() : feeInfo_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!sender_.isEmpty()) {
+        output.writeBytes(1, sender_);
+      }
+      if (feeInfo_ != null) {
+        output.writeMessage(2, getFeeInfo());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!sender_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, sender_);
+      }
+      if (feeInfo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getFeeInfo());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest)) {
+        return super.equals(obj);
+      }
+      com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest other = (com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (hasFeeInfo() != other.hasFeeInfo()) return false;
+      if (hasFeeInfo()) {
+        if (!getFeeInfo()
+            .equals(other.getFeeInfo())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      if (hasFeeInfo()) {
+        hash = (37 * hash) + FEE_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getFeeInfo().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * RegisterAssetFeeRequest represents a message to register the transfer fee
+     * info associated to an asset on a chain
+     * </pre>
+     *
+     * Protobuf type {@code axelar.nexus.v1beta1.RegisterAssetFeeRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.nexus.v1beta1.RegisterAssetFeeRequest)
+        com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_RegisterAssetFeeRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_RegisterAssetFeeRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest.class, com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest.Builder.class);
+      }
+
+      // Construct using com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = com.google.protobuf.ByteString.EMPTY;
+        feeInfo_ = null;
+        if (feeInfoBuilder_ != null) {
+          feeInfoBuilder_.dispose();
+          feeInfoBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_RegisterAssetFeeRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest getDefaultInstanceForType() {
+        return com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest build() {
+        com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest buildPartial() {
+        com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest result = new com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.feeInfo_ = feeInfoBuilder_ == null
+              ? feeInfo_
+              : feeInfoBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest) {
+          return mergeFrom((com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest other) {
+        if (other == com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest.getDefaultInstance()) return this;
+        if (other.getSender() != com.google.protobuf.ByteString.EMPTY) {
+          setSender(other.getSender());
+        }
+        if (other.hasFeeInfo()) {
+          mergeFeeInfo(other.getFeeInfo());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getFeeInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return The sender.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSender() {
+        return sender_;
+      }
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sender_ = getDefaultInstance().getSender();
+        onChanged();
+        return this;
+      }
+
+      private com.axelar.nexus.exported.v1beta1.TypesProto.FeeInfo feeInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.nexus.exported.v1beta1.TypesProto.FeeInfo, com.axelar.nexus.exported.v1beta1.TypesProto.FeeInfo.Builder, com.axelar.nexus.exported.v1beta1.TypesProto.FeeInfoOrBuilder> feeInfoBuilder_;
+      /**
+       * <code>.axelar.nexus.exported.v1beta1.FeeInfo fee_info = 2 [json_name = "feeInfo", (.gogoproto.nullable) = false];</code>
+       * @return Whether the feeInfo field is set.
+       */
+      public boolean hasFeeInfo() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.axelar.nexus.exported.v1beta1.FeeInfo fee_info = 2 [json_name = "feeInfo", (.gogoproto.nullable) = false];</code>
+       * @return The feeInfo.
+       */
+      public com.axelar.nexus.exported.v1beta1.TypesProto.FeeInfo getFeeInfo() {
+        if (feeInfoBuilder_ == null) {
+          return feeInfo_ == null ? com.axelar.nexus.exported.v1beta1.TypesProto.FeeInfo.getDefaultInstance() : feeInfo_;
+        } else {
+          return feeInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.axelar.nexus.exported.v1beta1.FeeInfo fee_info = 2 [json_name = "feeInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFeeInfo(com.axelar.nexus.exported.v1beta1.TypesProto.FeeInfo value) {
+        if (feeInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          feeInfo_ = value;
+        } else {
+          feeInfoBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.nexus.exported.v1beta1.FeeInfo fee_info = 2 [json_name = "feeInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFeeInfo(
+          com.axelar.nexus.exported.v1beta1.TypesProto.FeeInfo.Builder builderForValue) {
+        if (feeInfoBuilder_ == null) {
+          feeInfo_ = builderForValue.build();
+        } else {
+          feeInfoBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.nexus.exported.v1beta1.FeeInfo fee_info = 2 [json_name = "feeInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeFeeInfo(com.axelar.nexus.exported.v1beta1.TypesProto.FeeInfo value) {
+        if (feeInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            feeInfo_ != null &&
+            feeInfo_ != com.axelar.nexus.exported.v1beta1.TypesProto.FeeInfo.getDefaultInstance()) {
+            getFeeInfoBuilder().mergeFrom(value);
+          } else {
+            feeInfo_ = value;
+          }
+        } else {
+          feeInfoBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.nexus.exported.v1beta1.FeeInfo fee_info = 2 [json_name = "feeInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearFeeInfo() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        feeInfo_ = null;
+        if (feeInfoBuilder_ != null) {
+          feeInfoBuilder_.dispose();
+          feeInfoBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.nexus.exported.v1beta1.FeeInfo fee_info = 2 [json_name = "feeInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.nexus.exported.v1beta1.TypesProto.FeeInfo.Builder getFeeInfoBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getFeeInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.axelar.nexus.exported.v1beta1.FeeInfo fee_info = 2 [json_name = "feeInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.nexus.exported.v1beta1.TypesProto.FeeInfoOrBuilder getFeeInfoOrBuilder() {
+        if (feeInfoBuilder_ != null) {
+          return feeInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return feeInfo_ == null ?
+              com.axelar.nexus.exported.v1beta1.TypesProto.FeeInfo.getDefaultInstance() : feeInfo_;
+        }
+      }
+      /**
+       * <code>.axelar.nexus.exported.v1beta1.FeeInfo fee_info = 2 [json_name = "feeInfo", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.nexus.exported.v1beta1.TypesProto.FeeInfo, com.axelar.nexus.exported.v1beta1.TypesProto.FeeInfo.Builder, com.axelar.nexus.exported.v1beta1.TypesProto.FeeInfoOrBuilder> 
+          getFeeInfoFieldBuilder() {
+        if (feeInfoBuilder_ == null) {
+          feeInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.axelar.nexus.exported.v1beta1.TypesProto.FeeInfo, com.axelar.nexus.exported.v1beta1.TypesProto.FeeInfo.Builder, com.axelar.nexus.exported.v1beta1.TypesProto.FeeInfoOrBuilder>(
+                  getFeeInfo(),
+                  getParentForChildren(),
+                  isClean());
+          feeInfo_ = null;
+        }
+        return feeInfoBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.nexus.v1beta1.RegisterAssetFeeRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.nexus.v1beta1.RegisterAssetFeeRequest)
+    private static final com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest();
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RegisterAssetFeeRequest>
+        PARSER = new com.google.protobuf.AbstractParser<RegisterAssetFeeRequest>() {
+      @java.lang.Override
+      public RegisterAssetFeeRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RegisterAssetFeeRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RegisterAssetFeeRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RegisterAssetFeeResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.nexus.v1beta1.RegisterAssetFeeResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code axelar.nexus.v1beta1.RegisterAssetFeeResponse}
+   */
+  public static final class RegisterAssetFeeResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.nexus.v1beta1.RegisterAssetFeeResponse)
+      RegisterAssetFeeResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RegisterAssetFeeResponse.newBuilder() to construct.
+    private RegisterAssetFeeResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RegisterAssetFeeResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RegisterAssetFeeResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_RegisterAssetFeeResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_RegisterAssetFeeResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse.class, com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse)) {
+        return super.equals(obj);
+      }
+      com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse other = (com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.nexus.v1beta1.RegisterAssetFeeResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.nexus.v1beta1.RegisterAssetFeeResponse)
+        com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_RegisterAssetFeeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_RegisterAssetFeeResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse.class, com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse.Builder.class);
+      }
+
+      // Construct using com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_RegisterAssetFeeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse getDefaultInstanceForType() {
+        return com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse build() {
+        com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse buildPartial() {
+        com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse result = new com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse) {
+          return mergeFrom((com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse other) {
+        if (other == com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.nexus.v1beta1.RegisterAssetFeeResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.nexus.v1beta1.RegisterAssetFeeResponse)
+    private static final com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse();
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RegisterAssetFeeResponse>
+        PARSER = new com.google.protobuf.AbstractParser<RegisterAssetFeeResponse>() {
+      @java.lang.Override
+      public RegisterAssetFeeResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RegisterAssetFeeResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RegisterAssetFeeResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.nexus.v1beta1.TxProto.RegisterAssetFeeResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SetTransferRateLimitRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.nexus.v1beta1.SetTransferRateLimitRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The sender.
+     */
+    com.google.protobuf.ByteString getSender();
+
+    /**
+     * <code>string chain = 2 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return The chain.
+     */
+    java.lang.String getChain();
+    /**
+     * <code>string chain = 2 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return The bytes for chain.
+     */
+    com.google.protobuf.ByteString
+        getChainBytes();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin limit = 3 [json_name = "limit", (.gogoproto.nullable) = false];</code>
+     * @return Whether the limit field is set.
+     */
+    boolean hasLimit();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin limit = 3 [json_name = "limit", (.gogoproto.nullable) = false];</code>
+     * @return The limit.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getLimit();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin limit = 3 [json_name = "limit", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getLimitOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Duration window = 4 [json_name = "window", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the window field is set.
+     */
+    boolean hasWindow();
+    /**
+     * <code>.google.protobuf.Duration window = 4 [json_name = "window", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return The window.
+     */
+    com.google.protobuf.Duration getWindow();
+    /**
+     * <code>.google.protobuf.Duration window = 4 [json_name = "window", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getWindowOrBuilder();
+  }
+  /**
+   * <pre>
+   * SetTransferRateLimitRequest represents a message to set rate limits on
+   * transfers
+   * </pre>
+   *
+   * Protobuf type {@code axelar.nexus.v1beta1.SetTransferRateLimitRequest}
+   */
+  public static final class SetTransferRateLimitRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.nexus.v1beta1.SetTransferRateLimitRequest)
+      SetTransferRateLimitRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SetTransferRateLimitRequest.newBuilder() to construct.
+    private SetTransferRateLimitRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SetTransferRateLimitRequest() {
+      sender_ = com.google.protobuf.ByteString.EMPTY;
+      chain_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SetTransferRateLimitRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_SetTransferRateLimitRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_SetTransferRateLimitRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest.class, com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSender() {
+      return sender_;
+    }
+
+    public static final int CHAIN_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object chain_ = "";
+    /**
+     * <code>string chain = 2 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return The chain.
+     */
+    @java.lang.Override
+    public java.lang.String getChain() {
+      java.lang.Object ref = chain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        chain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string chain = 2 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return The bytes for chain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChainBytes() {
+      java.lang.Object ref = chain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        chain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LIMIT_FIELD_NUMBER = 3;
+    private com.cosmos.base.v1beta1.CoinProto.Coin limit_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin limit = 3 [json_name = "limit", (.gogoproto.nullable) = false];</code>
+     * @return Whether the limit field is set.
+     */
+    @java.lang.Override
+    public boolean hasLimit() {
+      return limit_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin limit = 3 [json_name = "limit", (.gogoproto.nullable) = false];</code>
+     * @return The limit.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getLimit() {
+      return limit_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : limit_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin limit = 3 [json_name = "limit", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getLimitOrBuilder() {
+      return limit_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : limit_;
+    }
+
+    public static final int WINDOW_FIELD_NUMBER = 4;
+    private com.google.protobuf.Duration window_;
+    /**
+     * <code>.google.protobuf.Duration window = 4 [json_name = "window", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the window field is set.
+     */
+    @java.lang.Override
+    public boolean hasWindow() {
+      return window_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Duration window = 4 [json_name = "window", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     * @return The window.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getWindow() {
+      return window_ == null ? com.google.protobuf.Duration.getDefaultInstance() : window_;
+    }
+    /**
+     * <code>.google.protobuf.Duration window = 4 [json_name = "window", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getWindowOrBuilder() {
+      return window_ == null ? com.google.protobuf.Duration.getDefaultInstance() : window_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!sender_.isEmpty()) {
+        output.writeBytes(1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, chain_);
+      }
+      if (limit_ != null) {
+        output.writeMessage(3, getLimit());
+      }
+      if (window_ != null) {
+        output.writeMessage(4, getWindow());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!sender_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, chain_);
+      }
+      if (limit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getLimit());
+      }
+      if (window_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getWindow());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest)) {
+        return super.equals(obj);
+      }
+      com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest other = (com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getChain()
+          .equals(other.getChain())) return false;
+      if (hasLimit() != other.hasLimit()) return false;
+      if (hasLimit()) {
+        if (!getLimit()
+            .equals(other.getLimit())) return false;
+      }
+      if (hasWindow() != other.hasWindow()) return false;
+      if (hasWindow()) {
+        if (!getWindow()
+            .equals(other.getWindow())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (37 * hash) + CHAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getChain().hashCode();
+      if (hasLimit()) {
+        hash = (37 * hash) + LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getLimit().hashCode();
+      }
+      if (hasWindow()) {
+        hash = (37 * hash) + WINDOW_FIELD_NUMBER;
+        hash = (53 * hash) + getWindow().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * SetTransferRateLimitRequest represents a message to set rate limits on
+     * transfers
+     * </pre>
+     *
+     * Protobuf type {@code axelar.nexus.v1beta1.SetTransferRateLimitRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.nexus.v1beta1.SetTransferRateLimitRequest)
+        com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_SetTransferRateLimitRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_SetTransferRateLimitRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest.class, com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest.Builder.class);
+      }
+
+      // Construct using com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = com.google.protobuf.ByteString.EMPTY;
+        chain_ = "";
+        limit_ = null;
+        if (limitBuilder_ != null) {
+          limitBuilder_.dispose();
+          limitBuilder_ = null;
+        }
+        window_ = null;
+        if (windowBuilder_ != null) {
+          windowBuilder_.dispose();
+          windowBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_SetTransferRateLimitRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest getDefaultInstanceForType() {
+        return com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest build() {
+        com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest buildPartial() {
+        com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest result = new com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.chain_ = chain_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.limit_ = limitBuilder_ == null
+              ? limit_
+              : limitBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.window_ = windowBuilder_ == null
+              ? window_
+              : windowBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest) {
+          return mergeFrom((com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest other) {
+        if (other == com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest.getDefaultInstance()) return this;
+        if (other.getSender() != com.google.protobuf.ByteString.EMPTY) {
+          setSender(other.getSender());
+        }
+        if (!other.getChain().isEmpty()) {
+          chain_ = other.chain_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasLimit()) {
+          mergeLimit(other.getLimit());
+        }
+        if (other.hasWindow()) {
+          mergeWindow(other.getWindow());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                chain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getLimitFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getWindowFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return The sender.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSender() {
+        return sender_;
+      }
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sender_ = getDefaultInstance().getSender();
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object chain_ = "";
+      /**
+       * <code>string chain = 2 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @return The chain.
+       */
+      public java.lang.String getChain() {
+        java.lang.Object ref = chain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          chain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string chain = 2 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @return The bytes for chain.
+       */
+      public com.google.protobuf.ByteString
+          getChainBytes() {
+        java.lang.Object ref = chain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          chain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string chain = 2 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param value The chain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        chain_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain = 2 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChain() {
+        chain_ = getDefaultInstance().getChain();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain = 2 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param value The bytes for chain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        chain_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin limit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> limitBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin limit = 3 [json_name = "limit", (.gogoproto.nullable) = false];</code>
+       * @return Whether the limit field is set.
+       */
+      public boolean hasLimit() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin limit = 3 [json_name = "limit", (.gogoproto.nullable) = false];</code>
+       * @return The limit.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getLimit() {
+        if (limitBuilder_ == null) {
+          return limit_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : limit_;
+        } else {
+          return limitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin limit = 3 [json_name = "limit", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setLimit(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (limitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          limit_ = value;
+        } else {
+          limitBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin limit = 3 [json_name = "limit", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setLimit(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (limitBuilder_ == null) {
+          limit_ = builderForValue.build();
+        } else {
+          limitBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin limit = 3 [json_name = "limit", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeLimit(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (limitBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            limit_ != null &&
+            limit_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getLimitBuilder().mergeFrom(value);
+          } else {
+            limit_ = value;
+          }
+        } else {
+          limitBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin limit = 3 [json_name = "limit", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearLimit() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        limit_ = null;
+        if (limitBuilder_ != null) {
+          limitBuilder_.dispose();
+          limitBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin limit = 3 [json_name = "limit", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getLimitBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin limit = 3 [json_name = "limit", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getLimitOrBuilder() {
+        if (limitBuilder_ != null) {
+          return limitBuilder_.getMessageOrBuilder();
+        } else {
+          return limit_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : limit_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin limit = 3 [json_name = "limit", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getLimitFieldBuilder() {
+        if (limitBuilder_ == null) {
+          limitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getLimit(),
+                  getParentForChildren(),
+                  isClean());
+          limit_ = null;
+        }
+        return limitBuilder_;
+      }
+
+      private com.google.protobuf.Duration window_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> windowBuilder_;
+      /**
+       * <code>.google.protobuf.Duration window = 4 [json_name = "window", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       * @return Whether the window field is set.
+       */
+      public boolean hasWindow() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Duration window = 4 [json_name = "window", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       * @return The window.
+       */
+      public com.google.protobuf.Duration getWindow() {
+        if (windowBuilder_ == null) {
+          return window_ == null ? com.google.protobuf.Duration.getDefaultInstance() : window_;
+        } else {
+          return windowBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration window = 4 [json_name = "window", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setWindow(com.google.protobuf.Duration value) {
+        if (windowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          window_ = value;
+        } else {
+          windowBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration window = 4 [json_name = "window", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setWindow(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (windowBuilder_ == null) {
+          window_ = builderForValue.build();
+        } else {
+          windowBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration window = 4 [json_name = "window", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeWindow(com.google.protobuf.Duration value) {
+        if (windowBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            window_ != null &&
+            window_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getWindowBuilder().mergeFrom(value);
+          } else {
+            window_ = value;
+          }
+        } else {
+          windowBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration window = 4 [json_name = "window", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearWindow() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        window_ = null;
+        if (windowBuilder_ != null) {
+          windowBuilder_.dispose();
+          windowBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration window = 4 [json_name = "window", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getWindowBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getWindowFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Duration window = 4 [json_name = "window", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getWindowOrBuilder() {
+        if (windowBuilder_ != null) {
+          return windowBuilder_.getMessageOrBuilder();
+        } else {
+          return window_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : window_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration window = 4 [json_name = "window", (.gogoproto.nullable) = false, (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getWindowFieldBuilder() {
+        if (windowBuilder_ == null) {
+          windowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getWindow(),
+                  getParentForChildren(),
+                  isClean());
+          window_ = null;
+        }
+        return windowBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.nexus.v1beta1.SetTransferRateLimitRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.nexus.v1beta1.SetTransferRateLimitRequest)
+    private static final com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest();
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SetTransferRateLimitRequest>
+        PARSER = new com.google.protobuf.AbstractParser<SetTransferRateLimitRequest>() {
+      @java.lang.Override
+      public SetTransferRateLimitRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SetTransferRateLimitRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SetTransferRateLimitRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SetTransferRateLimitResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.nexus.v1beta1.SetTransferRateLimitResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code axelar.nexus.v1beta1.SetTransferRateLimitResponse}
+   */
+  public static final class SetTransferRateLimitResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.nexus.v1beta1.SetTransferRateLimitResponse)
+      SetTransferRateLimitResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SetTransferRateLimitResponse.newBuilder() to construct.
+    private SetTransferRateLimitResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SetTransferRateLimitResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SetTransferRateLimitResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_SetTransferRateLimitResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_SetTransferRateLimitResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse.class, com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse)) {
+        return super.equals(obj);
+      }
+      com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse other = (com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.nexus.v1beta1.SetTransferRateLimitResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.nexus.v1beta1.SetTransferRateLimitResponse)
+        com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_SetTransferRateLimitResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_SetTransferRateLimitResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse.class, com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse.Builder.class);
+      }
+
+      // Construct using com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.nexus.v1beta1.TxProto.internal_static_axelar_nexus_v1beta1_SetTransferRateLimitResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse getDefaultInstanceForType() {
+        return com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse build() {
+        com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse buildPartial() {
+        com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse result = new com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse) {
+          return mergeFrom((com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse other) {
+        if (other == com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.nexus.v1beta1.SetTransferRateLimitResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.nexus.v1beta1.SetTransferRateLimitResponse)
+    private static final com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse();
+    }
+
+    public static com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SetTransferRateLimitResponse>
+        PARSER = new com.google.protobuf.AbstractParser<SetTransferRateLimitResponse>() {
+      @java.lang.Override
+      public SetTransferRateLimitResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SetTransferRateLimitResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SetTransferRateLimitResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.nexus.v1beta1.TxProto.SetTransferRateLimitResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_nexus_v1beta1_RegisterChainMaintainerRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_nexus_v1beta1_RegisterChainMaintainerRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_nexus_v1beta1_RegisterChainMaintainerResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_nexus_v1beta1_RegisterChainMaintainerResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_nexus_v1beta1_DeregisterChainMaintainerRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_nexus_v1beta1_DeregisterChainMaintainerRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_nexus_v1beta1_DeregisterChainMaintainerResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_nexus_v1beta1_DeregisterChainMaintainerResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_nexus_v1beta1_ActivateChainRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_nexus_v1beta1_ActivateChainRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_nexus_v1beta1_ActivateChainResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_nexus_v1beta1_ActivateChainResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_nexus_v1beta1_DeactivateChainRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_nexus_v1beta1_DeactivateChainRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_nexus_v1beta1_DeactivateChainResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_nexus_v1beta1_DeactivateChainResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_nexus_v1beta1_RegisterAssetFeeRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_nexus_v1beta1_RegisterAssetFeeRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_nexus_v1beta1_RegisterAssetFeeResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_nexus_v1beta1_RegisterAssetFeeResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_nexus_v1beta1_SetTransferRateLimitRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_nexus_v1beta1_SetTransferRateLimitRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_nexus_v1beta1_SetTransferRateLimitResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_nexus_v1beta1_SetTransferRateLimitResponse_fieldAccessorTable;
 
@@ -127,12 +6999,12 @@ public final class TxProto {
       "e.v1beta1.CoinB\004\310\336\037\000R\005limit\022;\n\006window\030\004 " +
       "\001(\0132\031.google.protobuf.DurationB\010\310\336\037\000\230\337\037\001" +
       "R\006window:\004\200\265\030\003\"\036\n\034SetTransferRateLimitRe" +
-      "sponseB\315\001\n\030com.axelar.nexus.v1beta1B\007TxP" +
-      "rotoP\001Z2github.com/axelarnetwork/axelar-" +
-      "core/x/nexus/types\242\002\003ANX\252\002\024Axelar.Nexus." +
-      "V1beta1\312\002\024Axelar\\Nexus\\V1beta1\342\002 Axelar\\" +
-      "Nexus\\V1beta1\\GPBMetadata\352\002\026Axelar::Nexu" +
-      "s::V1beta1\310\341\036\000b\006proto3"
+      "sponseB\313\001\n\030com.axelar.nexus.v1beta1B\007TxP" +
+      "rotoZ2github.com/axelarnetwork/axelar-co" +
+      "re/x/nexus/types\242\002\003ANX\252\002\024Axelar.Nexus.V1" +
+      "beta1\312\002\024Axelar\\Nexus\\V1beta1\342\002 Axelar\\Ne" +
+      "xus\\V1beta1\\GPBMetadata\352\002\026Axelar::Nexus:" +
+      ":V1beta1\310\341\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

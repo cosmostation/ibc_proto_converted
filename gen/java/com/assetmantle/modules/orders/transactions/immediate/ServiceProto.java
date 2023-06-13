@@ -34,15 +34,15 @@ public final class ServiceProto {
       "ansactions.immediate.Message\032F.assetmant" +
       "le.modules.orders.transactions.immediate" +
       ".TransactionResponse\" \202\323\344\223\002\032\"\030/mantle/or" +
-      "ders/immediateB\257\002\n5com.assetmantle.modul" +
+      "ders/immediateB\255\002\n5com.assetmantle.modul" +
       "es.orders.transactions.immediateB\014Servic" +
-      "eProtoP\001\242\002\005AMOTI\252\0021Assetmantle.Modules.O" +
-      "rders.Transactions.Immediate\312\0021Assetmant" +
-      "le\\Modules\\Orders\\Transactions\\Immediate" +
-      "\342\002=Assetmantle\\Modules\\Orders\\Transactio" +
-      "ns\\Immediate\\GPBMetadata\352\0025Assetmantle::" +
-      "Modules::Orders::Transactions::Immediate" +
-      "b\006proto3"
+      "eProto\242\002\005AMOTI\252\0021Assetmantle.Modules.Ord" +
+      "ers.Transactions.Immediate\312\0021Assetmantle" +
+      "\\Modules\\Orders\\Transactions\\Immediate\342\002" +
+      "=Assetmantle\\Modules\\Orders\\Transactions" +
+      "\\Immediate\\GPBMetadata\352\0025Assetmantle::Mo" +
+      "dules::Orders::Transactions::Immediateb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

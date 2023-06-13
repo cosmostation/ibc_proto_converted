@@ -14,14 +14,1846 @@ public final class MintProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface TokenMintOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.tokenmint.v1beta1.TokenMint)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.customname) = "AppId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>repeated .comdex.tokenmint.v1beta1.MintedTokens minted_tokens = 2 [json_name = "mintedTokens", (.gogoproto.moretags) = "yaml:&#92;"minted_tokens&#92;""];</code>
+     */
+    java.util.List<com.comdex.tokenmint.v1beta1.MintProto.MintedTokens> 
+        getMintedTokensList();
+    /**
+     * <code>repeated .comdex.tokenmint.v1beta1.MintedTokens minted_tokens = 2 [json_name = "mintedTokens", (.gogoproto.moretags) = "yaml:&#92;"minted_tokens&#92;""];</code>
+     */
+    com.comdex.tokenmint.v1beta1.MintProto.MintedTokens getMintedTokens(int index);
+    /**
+     * <code>repeated .comdex.tokenmint.v1beta1.MintedTokens minted_tokens = 2 [json_name = "mintedTokens", (.gogoproto.moretags) = "yaml:&#92;"minted_tokens&#92;""];</code>
+     */
+    int getMintedTokensCount();
+    /**
+     * <code>repeated .comdex.tokenmint.v1beta1.MintedTokens minted_tokens = 2 [json_name = "mintedTokens", (.gogoproto.moretags) = "yaml:&#92;"minted_tokens&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.tokenmint.v1beta1.MintProto.MintedTokensOrBuilder> 
+        getMintedTokensOrBuilderList();
+    /**
+     * <code>repeated .comdex.tokenmint.v1beta1.MintedTokens minted_tokens = 2 [json_name = "mintedTokens", (.gogoproto.moretags) = "yaml:&#92;"minted_tokens&#92;""];</code>
+     */
+    com.comdex.tokenmint.v1beta1.MintProto.MintedTokensOrBuilder getMintedTokensOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   *app_vault_type_id will be the key for  the KVStore for this value.
+   * </pre>
+   *
+   * Protobuf type {@code comdex.tokenmint.v1beta1.TokenMint}
+   */
+  public static final class TokenMint extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.tokenmint.v1beta1.TokenMint)
+      TokenMintOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TokenMint.newBuilder() to construct.
+    private TokenMint(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TokenMint() {
+      mintedTokens_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TokenMint();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.tokenmint.v1beta1.MintProto.internal_static_comdex_tokenmint_v1beta1_TokenMint_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.tokenmint.v1beta1.MintProto.internal_static_comdex_tokenmint_v1beta1_TokenMint_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.tokenmint.v1beta1.MintProto.TokenMint.class, com.comdex.tokenmint.v1beta1.MintProto.TokenMint.Builder.class);
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 1;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.customname) = "AppId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int MINTED_TOKENS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.tokenmint.v1beta1.MintProto.MintedTokens> mintedTokens_;
+    /**
+     * <code>repeated .comdex.tokenmint.v1beta1.MintedTokens minted_tokens = 2 [json_name = "mintedTokens", (.gogoproto.moretags) = "yaml:&#92;"minted_tokens&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.tokenmint.v1beta1.MintProto.MintedTokens> getMintedTokensList() {
+      return mintedTokens_;
+    }
+    /**
+     * <code>repeated .comdex.tokenmint.v1beta1.MintedTokens minted_tokens = 2 [json_name = "mintedTokens", (.gogoproto.moretags) = "yaml:&#92;"minted_tokens&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.tokenmint.v1beta1.MintProto.MintedTokensOrBuilder> 
+        getMintedTokensOrBuilderList() {
+      return mintedTokens_;
+    }
+    /**
+     * <code>repeated .comdex.tokenmint.v1beta1.MintedTokens minted_tokens = 2 [json_name = "mintedTokens", (.gogoproto.moretags) = "yaml:&#92;"minted_tokens&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getMintedTokensCount() {
+      return mintedTokens_.size();
+    }
+    /**
+     * <code>repeated .comdex.tokenmint.v1beta1.MintedTokens minted_tokens = 2 [json_name = "mintedTokens", (.gogoproto.moretags) = "yaml:&#92;"minted_tokens&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.tokenmint.v1beta1.MintProto.MintedTokens getMintedTokens(int index) {
+      return mintedTokens_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.tokenmint.v1beta1.MintedTokens minted_tokens = 2 [json_name = "mintedTokens", (.gogoproto.moretags) = "yaml:&#92;"minted_tokens&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.tokenmint.v1beta1.MintProto.MintedTokensOrBuilder getMintedTokensOrBuilder(
+        int index) {
+      return mintedTokens_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (appId_ != 0L) {
+        output.writeUInt64(1, appId_);
+      }
+      for (int i = 0; i < mintedTokens_.size(); i++) {
+        output.writeMessage(2, mintedTokens_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, appId_);
+      }
+      for (int i = 0; i < mintedTokens_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, mintedTokens_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.tokenmint.v1beta1.MintProto.TokenMint)) {
+        return super.equals(obj);
+      }
+      com.comdex.tokenmint.v1beta1.MintProto.TokenMint other = (com.comdex.tokenmint.v1beta1.MintProto.TokenMint) obj;
+
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (!getMintedTokensList()
+          .equals(other.getMintedTokensList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      if (getMintedTokensCount() > 0) {
+        hash = (37 * hash) + MINTED_TOKENS_FIELD_NUMBER;
+        hash = (53 * hash) + getMintedTokensList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.tokenmint.v1beta1.MintProto.TokenMint parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.tokenmint.v1beta1.MintProto.TokenMint parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.MintProto.TokenMint parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.tokenmint.v1beta1.MintProto.TokenMint parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.MintProto.TokenMint parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.tokenmint.v1beta1.MintProto.TokenMint parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.MintProto.TokenMint parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.tokenmint.v1beta1.MintProto.TokenMint parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.tokenmint.v1beta1.MintProto.TokenMint parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.tokenmint.v1beta1.MintProto.TokenMint parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.MintProto.TokenMint parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.tokenmint.v1beta1.MintProto.TokenMint parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.tokenmint.v1beta1.MintProto.TokenMint prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     *app_vault_type_id will be the key for  the KVStore for this value.
+     * </pre>
+     *
+     * Protobuf type {@code comdex.tokenmint.v1beta1.TokenMint}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.tokenmint.v1beta1.TokenMint)
+        com.comdex.tokenmint.v1beta1.MintProto.TokenMintOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.tokenmint.v1beta1.MintProto.internal_static_comdex_tokenmint_v1beta1_TokenMint_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.tokenmint.v1beta1.MintProto.internal_static_comdex_tokenmint_v1beta1_TokenMint_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.tokenmint.v1beta1.MintProto.TokenMint.class, com.comdex.tokenmint.v1beta1.MintProto.TokenMint.Builder.class);
+      }
+
+      // Construct using com.comdex.tokenmint.v1beta1.MintProto.TokenMint.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        appId_ = 0L;
+        if (mintedTokensBuilder_ == null) {
+          mintedTokens_ = java.util.Collections.emptyList();
+        } else {
+          mintedTokens_ = null;
+          mintedTokensBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.tokenmint.v1beta1.MintProto.internal_static_comdex_tokenmint_v1beta1_TokenMint_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.tokenmint.v1beta1.MintProto.TokenMint getDefaultInstanceForType() {
+        return com.comdex.tokenmint.v1beta1.MintProto.TokenMint.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.tokenmint.v1beta1.MintProto.TokenMint build() {
+        com.comdex.tokenmint.v1beta1.MintProto.TokenMint result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.tokenmint.v1beta1.MintProto.TokenMint buildPartial() {
+        com.comdex.tokenmint.v1beta1.MintProto.TokenMint result = new com.comdex.tokenmint.v1beta1.MintProto.TokenMint(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.tokenmint.v1beta1.MintProto.TokenMint result) {
+        if (mintedTokensBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            mintedTokens_ = java.util.Collections.unmodifiableList(mintedTokens_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.mintedTokens_ = mintedTokens_;
+        } else {
+          result.mintedTokens_ = mintedTokensBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.comdex.tokenmint.v1beta1.MintProto.TokenMint result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.appId_ = appId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.tokenmint.v1beta1.MintProto.TokenMint) {
+          return mergeFrom((com.comdex.tokenmint.v1beta1.MintProto.TokenMint)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.tokenmint.v1beta1.MintProto.TokenMint other) {
+        if (other == com.comdex.tokenmint.v1beta1.MintProto.TokenMint.getDefaultInstance()) return this;
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (mintedTokensBuilder_ == null) {
+          if (!other.mintedTokens_.isEmpty()) {
+            if (mintedTokens_.isEmpty()) {
+              mintedTokens_ = other.mintedTokens_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureMintedTokensIsMutable();
+              mintedTokens_.addAll(other.mintedTokens_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.mintedTokens_.isEmpty()) {
+            if (mintedTokensBuilder_.isEmpty()) {
+              mintedTokensBuilder_.dispose();
+              mintedTokensBuilder_ = null;
+              mintedTokens_ = other.mintedTokens_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              mintedTokensBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMintedTokensFieldBuilder() : null;
+            } else {
+              mintedTokensBuilder_.addAllMessages(other.mintedTokens_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                com.comdex.tokenmint.v1beta1.MintProto.MintedTokens m =
+                    input.readMessage(
+                        com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.parser(),
+                        extensionRegistry);
+                if (mintedTokensBuilder_ == null) {
+                  ensureMintedTokensIsMutable();
+                  mintedTokens_.add(m);
+                } else {
+                  mintedTokensBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.customname) = "AppId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.customname) = "AppId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.customname) = "AppId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.comdex.tokenmint.v1beta1.MintProto.MintedTokens> mintedTokens_ =
+        java.util.Collections.emptyList();
+      private void ensureMintedTokensIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          mintedTokens_ = new java.util.ArrayList<com.comdex.tokenmint.v1beta1.MintProto.MintedTokens>(mintedTokens_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.tokenmint.v1beta1.MintProto.MintedTokens, com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.Builder, com.comdex.tokenmint.v1beta1.MintProto.MintedTokensOrBuilder> mintedTokensBuilder_;
+
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.MintedTokens minted_tokens = 2 [json_name = "mintedTokens", (.gogoproto.moretags) = "yaml:&#92;"minted_tokens&#92;""];</code>
+       */
+      public java.util.List<com.comdex.tokenmint.v1beta1.MintProto.MintedTokens> getMintedTokensList() {
+        if (mintedTokensBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(mintedTokens_);
+        } else {
+          return mintedTokensBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.MintedTokens minted_tokens = 2 [json_name = "mintedTokens", (.gogoproto.moretags) = "yaml:&#92;"minted_tokens&#92;""];</code>
+       */
+      public int getMintedTokensCount() {
+        if (mintedTokensBuilder_ == null) {
+          return mintedTokens_.size();
+        } else {
+          return mintedTokensBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.MintedTokens minted_tokens = 2 [json_name = "mintedTokens", (.gogoproto.moretags) = "yaml:&#92;"minted_tokens&#92;""];</code>
+       */
+      public com.comdex.tokenmint.v1beta1.MintProto.MintedTokens getMintedTokens(int index) {
+        if (mintedTokensBuilder_ == null) {
+          return mintedTokens_.get(index);
+        } else {
+          return mintedTokensBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.MintedTokens minted_tokens = 2 [json_name = "mintedTokens", (.gogoproto.moretags) = "yaml:&#92;"minted_tokens&#92;""];</code>
+       */
+      public Builder setMintedTokens(
+          int index, com.comdex.tokenmint.v1beta1.MintProto.MintedTokens value) {
+        if (mintedTokensBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMintedTokensIsMutable();
+          mintedTokens_.set(index, value);
+          onChanged();
+        } else {
+          mintedTokensBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.MintedTokens minted_tokens = 2 [json_name = "mintedTokens", (.gogoproto.moretags) = "yaml:&#92;"minted_tokens&#92;""];</code>
+       */
+      public Builder setMintedTokens(
+          int index, com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.Builder builderForValue) {
+        if (mintedTokensBuilder_ == null) {
+          ensureMintedTokensIsMutable();
+          mintedTokens_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          mintedTokensBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.MintedTokens minted_tokens = 2 [json_name = "mintedTokens", (.gogoproto.moretags) = "yaml:&#92;"minted_tokens&#92;""];</code>
+       */
+      public Builder addMintedTokens(com.comdex.tokenmint.v1beta1.MintProto.MintedTokens value) {
+        if (mintedTokensBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMintedTokensIsMutable();
+          mintedTokens_.add(value);
+          onChanged();
+        } else {
+          mintedTokensBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.MintedTokens minted_tokens = 2 [json_name = "mintedTokens", (.gogoproto.moretags) = "yaml:&#92;"minted_tokens&#92;""];</code>
+       */
+      public Builder addMintedTokens(
+          int index, com.comdex.tokenmint.v1beta1.MintProto.MintedTokens value) {
+        if (mintedTokensBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMintedTokensIsMutable();
+          mintedTokens_.add(index, value);
+          onChanged();
+        } else {
+          mintedTokensBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.MintedTokens minted_tokens = 2 [json_name = "mintedTokens", (.gogoproto.moretags) = "yaml:&#92;"minted_tokens&#92;""];</code>
+       */
+      public Builder addMintedTokens(
+          com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.Builder builderForValue) {
+        if (mintedTokensBuilder_ == null) {
+          ensureMintedTokensIsMutable();
+          mintedTokens_.add(builderForValue.build());
+          onChanged();
+        } else {
+          mintedTokensBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.MintedTokens minted_tokens = 2 [json_name = "mintedTokens", (.gogoproto.moretags) = "yaml:&#92;"minted_tokens&#92;""];</code>
+       */
+      public Builder addMintedTokens(
+          int index, com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.Builder builderForValue) {
+        if (mintedTokensBuilder_ == null) {
+          ensureMintedTokensIsMutable();
+          mintedTokens_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          mintedTokensBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.MintedTokens minted_tokens = 2 [json_name = "mintedTokens", (.gogoproto.moretags) = "yaml:&#92;"minted_tokens&#92;""];</code>
+       */
+      public Builder addAllMintedTokens(
+          java.lang.Iterable<? extends com.comdex.tokenmint.v1beta1.MintProto.MintedTokens> values) {
+        if (mintedTokensBuilder_ == null) {
+          ensureMintedTokensIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, mintedTokens_);
+          onChanged();
+        } else {
+          mintedTokensBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.MintedTokens minted_tokens = 2 [json_name = "mintedTokens", (.gogoproto.moretags) = "yaml:&#92;"minted_tokens&#92;""];</code>
+       */
+      public Builder clearMintedTokens() {
+        if (mintedTokensBuilder_ == null) {
+          mintedTokens_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          mintedTokensBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.MintedTokens minted_tokens = 2 [json_name = "mintedTokens", (.gogoproto.moretags) = "yaml:&#92;"minted_tokens&#92;""];</code>
+       */
+      public Builder removeMintedTokens(int index) {
+        if (mintedTokensBuilder_ == null) {
+          ensureMintedTokensIsMutable();
+          mintedTokens_.remove(index);
+          onChanged();
+        } else {
+          mintedTokensBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.MintedTokens minted_tokens = 2 [json_name = "mintedTokens", (.gogoproto.moretags) = "yaml:&#92;"minted_tokens&#92;""];</code>
+       */
+      public com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.Builder getMintedTokensBuilder(
+          int index) {
+        return getMintedTokensFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.MintedTokens minted_tokens = 2 [json_name = "mintedTokens", (.gogoproto.moretags) = "yaml:&#92;"minted_tokens&#92;""];</code>
+       */
+      public com.comdex.tokenmint.v1beta1.MintProto.MintedTokensOrBuilder getMintedTokensOrBuilder(
+          int index) {
+        if (mintedTokensBuilder_ == null) {
+          return mintedTokens_.get(index);  } else {
+          return mintedTokensBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.MintedTokens minted_tokens = 2 [json_name = "mintedTokens", (.gogoproto.moretags) = "yaml:&#92;"minted_tokens&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.tokenmint.v1beta1.MintProto.MintedTokensOrBuilder> 
+           getMintedTokensOrBuilderList() {
+        if (mintedTokensBuilder_ != null) {
+          return mintedTokensBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(mintedTokens_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.MintedTokens minted_tokens = 2 [json_name = "mintedTokens", (.gogoproto.moretags) = "yaml:&#92;"minted_tokens&#92;""];</code>
+       */
+      public com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.Builder addMintedTokensBuilder() {
+        return getMintedTokensFieldBuilder().addBuilder(
+            com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.MintedTokens minted_tokens = 2 [json_name = "mintedTokens", (.gogoproto.moretags) = "yaml:&#92;"minted_tokens&#92;""];</code>
+       */
+      public com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.Builder addMintedTokensBuilder(
+          int index) {
+        return getMintedTokensFieldBuilder().addBuilder(
+            index, com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.tokenmint.v1beta1.MintedTokens minted_tokens = 2 [json_name = "mintedTokens", (.gogoproto.moretags) = "yaml:&#92;"minted_tokens&#92;""];</code>
+       */
+      public java.util.List<com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.Builder> 
+           getMintedTokensBuilderList() {
+        return getMintedTokensFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.tokenmint.v1beta1.MintProto.MintedTokens, com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.Builder, com.comdex.tokenmint.v1beta1.MintProto.MintedTokensOrBuilder> 
+          getMintedTokensFieldBuilder() {
+        if (mintedTokensBuilder_ == null) {
+          mintedTokensBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.tokenmint.v1beta1.MintProto.MintedTokens, com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.Builder, com.comdex.tokenmint.v1beta1.MintProto.MintedTokensOrBuilder>(
+                  mintedTokens_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          mintedTokens_ = null;
+        }
+        return mintedTokensBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.tokenmint.v1beta1.TokenMint)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.tokenmint.v1beta1.TokenMint)
+    private static final com.comdex.tokenmint.v1beta1.MintProto.TokenMint DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.tokenmint.v1beta1.MintProto.TokenMint();
+    }
+
+    public static com.comdex.tokenmint.v1beta1.MintProto.TokenMint getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TokenMint>
+        PARSER = new com.google.protobuf.AbstractParser<TokenMint>() {
+      @java.lang.Override
+      public TokenMint parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TokenMint> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TokenMint> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.tokenmint.v1beta1.MintProto.TokenMint getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MintedTokensOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.tokenmint.v1beta1.MintedTokens)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 asset_id = 1 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+     * @return The assetId.
+     */
+    long getAssetId();
+
+    /**
+     * <code>string genesis_supply = 2 [json_name = "genesisSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"genesis_supply&#92;""];</code>
+     * @return The genesisSupply.
+     */
+    java.lang.String getGenesisSupply();
+    /**
+     * <code>string genesis_supply = 2 [json_name = "genesisSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"genesis_supply&#92;""];</code>
+     * @return The bytes for genesisSupply.
+     */
+    com.google.protobuf.ByteString
+        getGenesisSupplyBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the createdAt field is set.
+     */
+    boolean hasCreatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The createdAt.
+     */
+    com.google.protobuf.Timestamp getCreatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
+
+    /**
+     * <code>string current_supply = 4 [json_name = "currentSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"current_supply&#92;""];</code>
+     * @return The currentSupply.
+     */
+    java.lang.String getCurrentSupply();
+    /**
+     * <code>string current_supply = 4 [json_name = "currentSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"current_supply&#92;""];</code>
+     * @return The bytes for currentSupply.
+     */
+    com.google.protobuf.ByteString
+        getCurrentSupplyBytes();
+  }
+  /**
+   * Protobuf type {@code comdex.tokenmint.v1beta1.MintedTokens}
+   */
+  public static final class MintedTokens extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.tokenmint.v1beta1.MintedTokens)
+      MintedTokensOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MintedTokens.newBuilder() to construct.
+    private MintedTokens(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MintedTokens() {
+      genesisSupply_ = "";
+      currentSupply_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MintedTokens();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.tokenmint.v1beta1.MintProto.internal_static_comdex_tokenmint_v1beta1_MintedTokens_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.tokenmint.v1beta1.MintProto.internal_static_comdex_tokenmint_v1beta1_MintedTokens_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.class, com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.Builder.class);
+    }
+
+    public static final int ASSET_ID_FIELD_NUMBER = 1;
+    private long assetId_ = 0L;
+    /**
+     * <code>uint64 asset_id = 1 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+     * @return The assetId.
+     */
+    @java.lang.Override
+    public long getAssetId() {
+      return assetId_;
+    }
+
+    public static final int GENESIS_SUPPLY_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object genesisSupply_ = "";
+    /**
+     * <code>string genesis_supply = 2 [json_name = "genesisSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"genesis_supply&#92;""];</code>
+     * @return The genesisSupply.
+     */
+    @java.lang.Override
+    public java.lang.String getGenesisSupply() {
+      java.lang.Object ref = genesisSupply_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        genesisSupply_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string genesis_supply = 2 [json_name = "genesisSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"genesis_supply&#92;""];</code>
+     * @return The bytes for genesisSupply.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGenesisSupplyBytes() {
+      java.lang.Object ref = genesisSupply_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        genesisSupply_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CREATED_AT_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp createdAt_;
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the createdAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreatedAt() {
+      return createdAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The createdAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+
+    public static final int CURRENT_SUPPLY_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object currentSupply_ = "";
+    /**
+     * <code>string current_supply = 4 [json_name = "currentSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"current_supply&#92;""];</code>
+     * @return The currentSupply.
+     */
+    @java.lang.Override
+    public java.lang.String getCurrentSupply() {
+      java.lang.Object ref = currentSupply_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        currentSupply_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string current_supply = 4 [json_name = "currentSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"current_supply&#92;""];</code>
+     * @return The bytes for currentSupply.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCurrentSupplyBytes() {
+      java.lang.Object ref = currentSupply_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        currentSupply_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (assetId_ != 0L) {
+        output.writeUInt64(1, assetId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(genesisSupply_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, genesisSupply_);
+      }
+      if (createdAt_ != null) {
+        output.writeMessage(3, getCreatedAt());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currentSupply_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, currentSupply_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (assetId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, assetId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(genesisSupply_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, genesisSupply_);
+      }
+      if (createdAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getCreatedAt());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currentSupply_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, currentSupply_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.tokenmint.v1beta1.MintProto.MintedTokens)) {
+        return super.equals(obj);
+      }
+      com.comdex.tokenmint.v1beta1.MintProto.MintedTokens other = (com.comdex.tokenmint.v1beta1.MintProto.MintedTokens) obj;
+
+      if (getAssetId()
+          != other.getAssetId()) return false;
+      if (!getGenesisSupply()
+          .equals(other.getGenesisSupply())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
+      if (hasCreatedAt()) {
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
+      }
+      if (!getCurrentSupply()
+          .equals(other.getCurrentSupply())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ASSET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAssetId());
+      hash = (37 * hash) + GENESIS_SUPPLY_FIELD_NUMBER;
+      hash = (53 * hash) + getGenesisSupply().hashCode();
+      if (hasCreatedAt()) {
+        hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getCreatedAt().hashCode();
+      }
+      hash = (37 * hash) + CURRENT_SUPPLY_FIELD_NUMBER;
+      hash = (53 * hash) + getCurrentSupply().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.tokenmint.v1beta1.MintProto.MintedTokens parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.tokenmint.v1beta1.MintProto.MintedTokens parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.MintProto.MintedTokens parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.tokenmint.v1beta1.MintProto.MintedTokens parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.MintProto.MintedTokens parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.tokenmint.v1beta1.MintProto.MintedTokens parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.MintProto.MintedTokens parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.tokenmint.v1beta1.MintProto.MintedTokens parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.tokenmint.v1beta1.MintProto.MintedTokens parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.tokenmint.v1beta1.MintProto.MintedTokens parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.tokenmint.v1beta1.MintProto.MintedTokens parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.tokenmint.v1beta1.MintProto.MintedTokens parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.tokenmint.v1beta1.MintProto.MintedTokens prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.tokenmint.v1beta1.MintedTokens}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.tokenmint.v1beta1.MintedTokens)
+        com.comdex.tokenmint.v1beta1.MintProto.MintedTokensOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.tokenmint.v1beta1.MintProto.internal_static_comdex_tokenmint_v1beta1_MintedTokens_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.tokenmint.v1beta1.MintProto.internal_static_comdex_tokenmint_v1beta1_MintedTokens_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.class, com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.Builder.class);
+      }
+
+      // Construct using com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        assetId_ = 0L;
+        genesisSupply_ = "";
+        createdAt_ = null;
+        if (createdAtBuilder_ != null) {
+          createdAtBuilder_.dispose();
+          createdAtBuilder_ = null;
+        }
+        currentSupply_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.tokenmint.v1beta1.MintProto.internal_static_comdex_tokenmint_v1beta1_MintedTokens_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.tokenmint.v1beta1.MintProto.MintedTokens getDefaultInstanceForType() {
+        return com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.tokenmint.v1beta1.MintProto.MintedTokens build() {
+        com.comdex.tokenmint.v1beta1.MintProto.MintedTokens result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.tokenmint.v1beta1.MintProto.MintedTokens buildPartial() {
+        com.comdex.tokenmint.v1beta1.MintProto.MintedTokens result = new com.comdex.tokenmint.v1beta1.MintProto.MintedTokens(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.tokenmint.v1beta1.MintProto.MintedTokens result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.assetId_ = assetId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.genesisSupply_ = genesisSupply_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.createdAt_ = createdAtBuilder_ == null
+              ? createdAt_
+              : createdAtBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.currentSupply_ = currentSupply_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.tokenmint.v1beta1.MintProto.MintedTokens) {
+          return mergeFrom((com.comdex.tokenmint.v1beta1.MintProto.MintedTokens)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.tokenmint.v1beta1.MintProto.MintedTokens other) {
+        if (other == com.comdex.tokenmint.v1beta1.MintProto.MintedTokens.getDefaultInstance()) return this;
+        if (other.getAssetId() != 0L) {
+          setAssetId(other.getAssetId());
+        }
+        if (!other.getGenesisSupply().isEmpty()) {
+          genesisSupply_ = other.genesisSupply_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasCreatedAt()) {
+          mergeCreatedAt(other.getCreatedAt());
+        }
+        if (!other.getCurrentSupply().isEmpty()) {
+          currentSupply_ = other.currentSupply_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                assetId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                genesisSupply_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getCreatedAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                currentSupply_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long assetId_ ;
+      /**
+       * <code>uint64 asset_id = 1 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+       * @return The assetId.
+       */
+      @java.lang.Override
+      public long getAssetId() {
+        return assetId_;
+      }
+      /**
+       * <code>uint64 asset_id = 1 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+       * @param value The assetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssetId(long value) {
+
+        assetId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 asset_id = 1 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAssetId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        assetId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object genesisSupply_ = "";
+      /**
+       * <code>string genesis_supply = 2 [json_name = "genesisSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"genesis_supply&#92;""];</code>
+       * @return The genesisSupply.
+       */
+      public java.lang.String getGenesisSupply() {
+        java.lang.Object ref = genesisSupply_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          genesisSupply_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string genesis_supply = 2 [json_name = "genesisSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"genesis_supply&#92;""];</code>
+       * @return The bytes for genesisSupply.
+       */
+      public com.google.protobuf.ByteString
+          getGenesisSupplyBytes() {
+        java.lang.Object ref = genesisSupply_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          genesisSupply_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string genesis_supply = 2 [json_name = "genesisSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"genesis_supply&#92;""];</code>
+       * @param value The genesisSupply to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGenesisSupply(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        genesisSupply_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string genesis_supply = 2 [json_name = "genesisSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"genesis_supply&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGenesisSupply() {
+        genesisSupply_ = getDefaultInstance().getGenesisSupply();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string genesis_supply = 2 [json_name = "genesisSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"genesis_supply&#92;""];</code>
+       * @param value The bytes for genesisSupply to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGenesisSupplyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        genesisSupply_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp createdAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the createdAt field is set.
+       */
+      public boolean hasCreatedAt() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The createdAt.
+       */
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        } else {
+          return createdAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          createdAt_ = value;
+        } else {
+          createdAtBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = builderForValue.build();
+        } else {
+          createdAtBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            createdAt_ != null &&
+            createdAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCreatedAtBuilder().mergeFrom(value);
+          } else {
+            createdAt_ = value;
+          }
+        } else {
+          createdAtBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearCreatedAt() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        createdAt_ = null;
+        if (createdAtBuilder_ != null) {
+          createdAtBuilder_.dispose();
+          createdAtBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getCreatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+        if (createdAtBuilder_ != null) {
+          return createdAtBuilder_.getMessageOrBuilder();
+        } else {
+          return createdAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCreatedAtFieldBuilder() {
+        if (createdAtBuilder_ == null) {
+          createdAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCreatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          createdAt_ = null;
+        }
+        return createdAtBuilder_;
+      }
+
+      private java.lang.Object currentSupply_ = "";
+      /**
+       * <code>string current_supply = 4 [json_name = "currentSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"current_supply&#92;""];</code>
+       * @return The currentSupply.
+       */
+      public java.lang.String getCurrentSupply() {
+        java.lang.Object ref = currentSupply_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          currentSupply_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string current_supply = 4 [json_name = "currentSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"current_supply&#92;""];</code>
+       * @return The bytes for currentSupply.
+       */
+      public com.google.protobuf.ByteString
+          getCurrentSupplyBytes() {
+        java.lang.Object ref = currentSupply_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          currentSupply_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string current_supply = 4 [json_name = "currentSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"current_supply&#92;""];</code>
+       * @param value The currentSupply to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurrentSupply(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        currentSupply_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string current_supply = 4 [json_name = "currentSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"current_supply&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurrentSupply() {
+        currentSupply_ = getDefaultInstance().getCurrentSupply();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string current_supply = 4 [json_name = "currentSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"current_supply&#92;""];</code>
+       * @param value The bytes for currentSupply to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurrentSupplyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        currentSupply_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.tokenmint.v1beta1.MintedTokens)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.tokenmint.v1beta1.MintedTokens)
+    private static final com.comdex.tokenmint.v1beta1.MintProto.MintedTokens DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.tokenmint.v1beta1.MintProto.MintedTokens();
+    }
+
+    public static com.comdex.tokenmint.v1beta1.MintProto.MintedTokens getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MintedTokens>
+        PARSER = new com.google.protobuf.AbstractParser<MintedTokens>() {
+      @java.lang.Override
+      public MintedTokens parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MintedTokens> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MintedTokens> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.tokenmint.v1beta1.MintProto.MintedTokens getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_tokenmint_v1beta1_TokenMint_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_tokenmint_v1beta1_TokenMint_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_tokenmint_v1beta1_MintedTokens_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_tokenmint_v1beta1_MintedTokens_fieldAccessorTable;
 
@@ -49,13 +1881,13 @@ public final class MintProto {
       "\021yaml:\"created_at\"\220\337\037\001R\tcreatedAt\022n\n\016cur" +
       "rent_supply\030\004 \001(\tBG\310\336\037\000\332\336\037&github.com/co" +
       "smos/cosmos-sdk/types.Int\362\336\037\025yaml:\"curre" +
-      "nt_supply\"R\rcurrentSupplyB\350\001\n\034com.comdex" +
-      ".tokenmint.v1beta1B\tMintProtoP\001Z3github." +
-      "com/comdex-official/comdex/x/tokenmint/t" +
-      "ypes\242\002\003CTX\252\002\030Comdex.Tokenmint.V1beta1\312\002\030" +
-      "Comdex\\Tokenmint\\V1beta1\342\002$Comdex\\Tokenm" +
-      "int\\V1beta1\\GPBMetadata\352\002\032Comdex::Tokenm" +
-      "int::V1beta1\310\341\036\000\250\342\036\000b\006proto3"
+      "nt_supply\"R\rcurrentSupplyB\346\001\n\034com.comdex" +
+      ".tokenmint.v1beta1B\tMintProtoZ3github.co" +
+      "m/comdex-official/comdex/x/tokenmint/typ" +
+      "es\242\002\003CTX\252\002\030Comdex.Tokenmint.V1beta1\312\002\030Co" +
+      "mdex\\Tokenmint\\V1beta1\342\002$Comdex\\Tokenmin" +
+      "t\\V1beta1\\GPBMetadata\352\002\032Comdex::Tokenmin" +
+      "t::V1beta1\310\341\036\000\250\342\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

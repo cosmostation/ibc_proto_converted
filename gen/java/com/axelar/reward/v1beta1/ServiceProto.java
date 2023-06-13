@@ -38,13 +38,13 @@ public final class ServiceProto {
       "ard/v1beta1/inflation_rate\022|\n\006Params\022$.a" +
       "xelar.reward.v1beta1.ParamsRequest\032%.axe" +
       "lar.reward.v1beta1.ParamsResponse\"%\202\323\344\223\002" +
-      "\037\022\035/axelar/reward/v1beta1/paramsB\330\001\n\031com" +
-      ".axelar.reward.v1beta1B\014ServiceProtoP\001Z3" +
-      "github.com/axelarnetwork/axelar-core/x/r" +
-      "eward/types\242\002\003ARX\252\002\025Axelar.Reward.V1beta" +
-      "1\312\002\025Axelar\\Reward\\V1beta1\342\002!Axelar\\Rewar" +
-      "d\\V1beta1\\GPBMetadata\352\002\027Axelar::Reward::" +
-      "V1beta1\300\343\036\001b\006proto3"
+      "\037\022\035/axelar/reward/v1beta1/paramsB\326\001\n\031com" +
+      ".axelar.reward.v1beta1B\014ServiceProtoZ3gi" +
+      "thub.com/axelarnetwork/axelar-core/x/rew" +
+      "ard/types\242\002\003ARX\252\002\025Axelar.Reward.V1beta1\312" +
+      "\002\025Axelar\\Reward\\V1beta1\342\002!Axelar\\Reward\\" +
+      "V1beta1\\GPBMetadata\352\002\027Axelar::Reward::V1" +
+      "beta1\300\343\036\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

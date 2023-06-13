@@ -34,14 +34,14 @@ public final class ServiceProto {
       "ctions.deputize.Message\032E.assetmantle.mo" +
       "dules.orders.transactions.deputize.Trans" +
       "actionResponse\"\037\202\323\344\223\002\031\"\027/mantle/orders/d" +
-      "eputizeB\252\002\n4com.assetmantle.modules.orde" +
-      "rs.transactions.deputizeB\014ServiceProtoP\001" +
-      "\242\002\005AMOTD\252\0020Assetmantle.Modules.Orders.Tr" +
-      "ansactions.Deputize\312\0020Assetmantle\\Module" +
-      "s\\Orders\\Transactions\\Deputize\342\002<Assetma" +
-      "ntle\\Modules\\Orders\\Transactions\\Deputiz" +
-      "e\\GPBMetadata\352\0024Assetmantle::Modules::Or" +
-      "ders::Transactions::Deputizeb\006proto3"
+      "eputizeB\250\002\n4com.assetmantle.modules.orde" +
+      "rs.transactions.deputizeB\014ServiceProto\242\002" +
+      "\005AMOTD\252\0020Assetmantle.Modules.Orders.Tran" +
+      "sactions.Deputize\312\0020Assetmantle\\Modules\\" +
+      "Orders\\Transactions\\Deputize\342\002<Assetmant" +
+      "le\\Modules\\Orders\\Transactions\\Deputize\\" +
+      "GPBMetadata\352\0024Assetmantle::Modules::Orde" +
+      "rs::Transactions::Deputizeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
